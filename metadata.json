@@ -1,0 +1,6 @@
+{
+  "name": "MedLingua DZ",
+  "description": "Application d'anglais médical trilingue (Arabe, Français, Anglais) avec flashcards SM-2, quiz et mode hors-ligne pour étudiants en médecine en Algérie.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

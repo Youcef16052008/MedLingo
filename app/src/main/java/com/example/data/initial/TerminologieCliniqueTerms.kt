@@ -1,0 +1,117 @@
+package com.example.data.initial
+
+import com.example.data.local.entity.MedicalTermEntity
+
+val terminologieCliniqueTerms = listOf(
+    // === PRÉFIXES ET SUFFIXES ESSENTIELS ===
+    MedicalTermEntity(
+        id = 311,
+        termEn = "Dyspnea",
+        termFr = "Dyspnée",
+        termAr = "عسر التنفس / ضيق التنفس",
+        definitionEn = "The subjective clinical symptom of difficult, labored, uncomfortable, or distressing awareness of breathing.",
+        definitionFr = "Sensation subjective d'inconfort respiratoire ou de difficulté à ventiler ressentie péniblement par le patient.",
+        definitionAr = "العَرَض السريري الذاتي لشعور المريض بصعوبة ومشقة غير طبيعية في التنفس.",
+        etymology = "Greek: δυσ- (dys-) — 'bad / difficult / painful' + πνοή (pnoe) — 'breathing'.",
+        clinicalPearl = "Classified into exertional dyspnea, orthopnea (recumbent dyspnea, hallmark of left heart failure), and paroxysmal nocturnal dyspnea.",
+        mnemonic = "Prefix Dys- = Difficult / Abnormal (Dysphagia = swallowing; Dysuria = urination; Dyspnea = breathing).",
+        module = "Terminologie Médicale",
+        chapter = "Préfixes et Suffixes",
+        exampleEn = "The patient presented to the emergency department with acute orthopnea and paroxysmal nocturnal dyspnea.",
+        exampleFr = "Le patient s'est présenté aux urgences avec une orthopnée aiguë et une dyspnée paroxystique nocturne.",
+        exampleAr = "راجع المريض قسم الطوارئ وهو يعاني من ضيق تنفس استلقائي حاد ونوبات ضيق تنفس ليلية فجائية.",
+        ipaPhonetic = "/dɪspˈniː.ə/"
+    ),
+    MedicalTermEntity(
+        id = 312,
+        termEn = "Splenomegaly and Hepatomegaly",
+        termFr = "Splénomégalie et Hépatomégalie",
+        termAr = "ضخامة الطحال وضخامة الكبد",
+        definitionEn = "The pathological enlargement of the spleen and liver beyond their standard anatomical boundaries detectable by palpation or ultrasonography.",
+        definitionFr = "Augmentation anormale du volume de la rate et du foie au-delà des limites anatomiques physiologiques normales.",
+        definitionAr = "التضخم المرضي غير الطبيعي في حجم الطحال والكبد بما يتجاوز حدودهما التشريحية الطبيعية.",
+        etymology = "Greek: σπλήν (splen) / ἧπαρ (hepar) + μέγας (megas) — 'large / huge'.",
+        clinicalPearl = "A palpable spleen tip beneath the left costal margin is pathologically enlarged by at least two- to three-fold.",
+        mnemonic = "Suffix -megaly = Enlargement (Cardiomegaly = heart; Hepatomegaly = liver; Splenomegaly = spleen).",
+        module = "Terminologie Médicale",
+        chapter = "Préfixes et Suffixes",
+        exampleEn = "Deep inspiration allowed clear palpation of an enlarged spleen tip 3 cm below the left costal margin.",
+        exampleFr = "L'inspiration profonde a permis de palper le bord splénique à 3 cm sous le rebord costal gauche.",
+        exampleAr = "أتاح الشهيق العميق جس حافة الطحال المتضخم على بعد 3 سنتيمترات أسفل الحافة الضلعية اليسرى.",
+        ipaPhonetic = "/ˌsplek.nəʊˈmeɡ.ə.li/"
+    ),
+    MedicalTermEntity(
+        id = 313,
+        termEn = "Laparotomy vs Laparoscopy",
+        termFr = "Laparotomie vs Laparoscopie (Coelioscopie)",
+        termAr = "فتح البطن الجراحي مقابل تنظير البطن",
+        definitionEn = "Surgical access routes: Laparotomy is an open surgical incision into the abdominal wall; Laparoscopy uses rigid fiberoptic trocars and insufflated CO2.",
+        definitionFr = "Voies d'abord chirurgicales abdominales: laparotomie par incision large versus laparoscopie par trocarts mini-invasifs sous pneumopéritoine.",
+        definitionAr = "طرق التدخل الجراحي على البطن: فتح البطن التقليدي عبر شق جراحي واسع مقابل تنظير البطن طفيف التوغل عبر منافذ صغيرة.",
+        etymology = "Greek: λαπάρα (lapara) — 'flank / abdominal wall' + τομή (tome) — 'cutting' / σκοπέω (skopeo) — 'to examine'.",
+        clinicalPearl = "Suffix -otomy means surgical incising; -ostomy means fashioning an opening to exterior; -ectomy means surgical excision.",
+        mnemonic = "Surgical Suffixes: -otomy = Cut into; -ectomy = Cut out; -ostomy = Make a stoma; -scopy = Look with camera.",
+        module = "Terminologie Médicale",
+        chapter = "Suffixes Chirurgicaux",
+        exampleEn = "Laparoscopic cholecystectomy is the surgical gold standard for symptomatic cholelithiasis.",
+        exampleFr = "La cholécystectomie par laparoscopie est le traitement de référence de la lithiase biliaire symptomatique.",
+        exampleAr = "يعد استئصال المرارة بالتنظير المعيار الجراحي الذهبي لعلاج الحصيات الصفراوية العَرَضية.",
+        ipaPhonetic = "/ˌlæp.əˈrɒt.ə.mi/"
+    ),
+
+    // === SÉMIOLOGIE ET DIAGNOSTIC CLINIQUE ===
+    MedicalTermEntity(
+        id = 314,
+        termEn = "Acyanotic vs Cyanotic Heart Defect",
+        termFr = "Cardiopathie congénitale cyanogène vs non cyanogène",
+        termAr = "اعتلالات القلب الخلقية المزرقة وغير المزرقة",
+        definitionEn = "Classification of congenital heart anomalies based on presence of deoxyhemoglobin >5 g/dL resulting from right-to-left shunting (cyanotic) vs left-to-right shunting (acyanotic).",
+        definitionFr = "Classification pédiatrique selon la présence de cyanose: shunt droite-gauche (cyanogène: Tétralogie de Fallot) vs shunt gauche-droite (non cyanogène: CIV, CIA, PCA).",
+        definitionAr = "تصنيف تشوهات القلب الخلقية بناء على وجود الزراق الناجم عن تحويلة من اليمين إلى اليسار مقابل التحويلات غير المزرقة من اليسار إلى اليمين.",
+        etymology = "Greek: κυανός (kyanos) — 'dark blue' + pathos — 'suffering'.",
+        clinicalPearl = "5 'T's of cyanotic congenital heart disease: Tetralogy of Fallot, Transposition of great arteries, Truncus arteriosus, Tricuspid atresia, Total anomalous pulmonary venous return.",
+        mnemonic = "The 5 Ts = Cyanotic (Right to Left shunt); VSD, ASD, PDA = Acyanotic (Left to Right shunt).",
+        module = "Terminologie Médicale",
+        chapter = "Sémiologie Cardio-Vasculaire",
+        exampleEn = "Hypercyanotic 'tet spells' in Tetralogy of Fallot improve with squatting by increasing systemic vascular resistance.",
+        exampleFr = "Les malaises de Fallot s'améliorent en position accroupie par augmentation des résistances systémiques.",
+        exampleAr = "تتحسن نوبات الزراق الشديدة لدى أطفال رباعي فالو بوضعية القرفصاء عبر زيادة المقاومة الوعائية الجهازية.",
+        ipaPhonetic = "/saɪ.əˈnɒt.ɪk hɑːt dɪˈfekt/"
+    ),
+    MedicalTermEntity(
+        id = 315,
+        termEn = "Hemoptysis vs Hematemesis",
+        termFr = "Hémoptysie vs Hématémèse",
+        termAr = "نفث الدم الرئوي مقابل القيء الدموي الهضمي",
+        definitionEn = "Distinction in acute bleeding: Hemoptysis is expectoration of blood originating from the respiratory tract (frothy, bright red, alkaline pH); hematemesis is vomiting blood from GI tract (acidic, coffee-ground).",
+        definitionFr = "Différenciation sémiologique majeure: hémoptysie (expectoration de sang d'origine sous-glottique, aéré, rouge vif) versus hématémèse (rejet de sang digestif noir ou digéré).",
+        definitionAr = "التمييز السريري الحاسم: نفث الدم هو سعال دموي رغوي قادم من الجهاز التنفسي، بينما القيء الدموي هو تقيؤ دم مهضوم قادم من الجهاز الهضمي.",
+        etymology = "Greek: αἷμα (haima) — 'blood' + πτύσις (ptysis) — 'spitting' / ἔμετος (emetos) — 'vomiting'.",
+        clinicalPearl = "Massive hemoptysis (>100-600 mL/24h) poses an acute asphyxiation threat; requires urgent bronchoscopy and bronchial artery embolization.",
+        mnemonic = "Hemoptysis = Ptysis (Spit / Cough from Lungs); Hematemesis = Emetic (Vomit from Stomach).",
+        module = "Terminologie Médicale",
+        chapter = "Sémiologie Respiratoire & Digestive",
+        exampleEn = "The emergency team quickly differentiated true pulmonary hemoptysis from upper GI coffee-ground hematemesis.",
+        exampleFr = "L'équipe d'urgence a rapidement différencié une hémoptysie pulmonaire d'une hématémèse haute.",
+        exampleAr = "ميز فريق الطوارئ بسرعة بين نفث الدم الرئوي والقيء الدموي الناتج عن نزف هضمي علوي.",
+        ipaPhonetic = "/hɪˈmɒp.tɪ.sɪs ænd ˌhiː.məˈtem.ə.sɪs/"
+    ),
+    MedicalTermEntity(
+        id = 316,
+        termEn = "Polyuria, Polydipsia, and Polyphagia",
+        termFr = "Syndrome Polyuro-Polydipsique et Polyphagie",
+        termAr = "ثلاثي البوال والعطاش والنهام (أعراض السكري)",
+        definitionEn = "The classic clinical triad of overt diabetes mellitus: excessive urinary volume (>3 L/24h), excessive fluid consumption due to thirst, and paradoxical increased hunger with weight loss.",
+        definitionFr = "Triade clinique inaugurale du diabète sucré: diurèse osmotique excessive, soif inextinguible et faim accrue contrastant avec un amaigrissement.",
+        definitionAr = "الثالوث السريري الكلاسيكي لداء السكري: التبول المفرط نتيجة الإدرار الأسموزي، والعطش الشديد، وزيادة الشهية المترافقة مع نقص الوزن.",
+        etymology = "Greek: πολύς (polys) — 'much / many' + οὖρον (ouron) — 'urine' / δίψα (dipsa) — 'thirst' / φαγεῖν (phagein) — 'to eat'.",
+        clinicalPearl = "Caused by osmotic diuresis when glycemia exceeds the renal threshold (approx. 180 mg/dL or 10 mmol/L), leading to glucosuria.",
+        mnemonic = "The 3 P's of Hyperglycemia: Polyuria (Peeing), Polydipsia (Drinking), Polyphagia (Eating).",
+        module = "Terminologie Médicale",
+        chapter = "Grands Syndromes Cliniques",
+        exampleEn = "A newly diagnosed adolescent with type 1 diabetes presented with severe polyuria, polydipsia, and ketonuria.",
+        exampleFr = "Un adolescent présentant un diabète de type 1 a consulté pour syndrome polyuro-polydipsique sévère.",
+        exampleAr = "راجع مراهق مصاب حديثاً بالسكري من النوع الأول وهو يعاني من بوال وعطاش شديدين مع وجود الكيتون في البول.",
+        ipaPhonetic = "/ˌpɒl.iˈjʊə.ri.ə ˌpɒl.iˈdɪp.si.ə/"
+    )
+)

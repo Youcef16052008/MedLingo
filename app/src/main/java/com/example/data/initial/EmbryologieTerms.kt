@@ -1,0 +1,117 @@
+package com.example.data.initial
+
+import com.example.data.local.entity.MedicalTermEntity
+
+val embryologieTerms = listOf(
+    // === GAMÉTOGENÈSE & FÉCONDATION ===
+    MedicalTermEntity(
+        id = 391,
+        termEn = "Capacitation and Acrosome Reaction",
+        termFr = "Capacitation et Réaction acrosomique",
+        termAr = "نضج النطاف (التمكين) والتفاعل الجسيمي الطرفي",
+        definitionEn = "Physiological priming of spermatozoa in the female genital tract followed by exocytosis of hydrolytic enzymes from the acrosome to penetrate the zona pellucida.",
+        definitionFr = "Maturation finale des spermatozoïdes dans les voies génitales femelles suivie de la libération d'enzymes acrosomiques pour traverser la zone pellucide de l'ovocyte.",
+        definitionAr = "العملية الفيزيولوجية لاكتمال نضج الحيوانات المنوية في الجهاز التناسلي الأنثوي ثم إفراز الإنزيمات الهاضمة لاختراق المنطقة الشفافة للبويضة.",
+        etymology = "Latin: capacitas — 'capacity / fitness' + Greek: ἄκρον (akron) — 'summit' + σῶμα (soma) — 'body'.",
+        clinicalPearl = "Binding to zona pellucida protein 3 (ZP3) induces intracellular Ca2+ influx that triggers the exocytosis of acrosin and hyaluronidase.",
+        mnemonic = "Fast block to polyspermy = Oocyte membrane depolarization (Na+); Slow block = Cortical granule reaction (Ca2+ wave hardening ZP).",
+        module = "Embryologie",
+        chapter = "Gamétogenèse & Fécondation",
+        exampleEn = "Successful fertilization in vitro requires sperm capacitation prior to microinjection or insemination.",
+        exampleFr = "La fécondation nécessite la capacitation préalable des spermatozoïdes pour féconder l'ovocyte.",
+        exampleAr = "يتطلب الإخصاب الناجح حدوث نضج وتمكين مسبق للحيوانات المنوية لتتمكن من تلقيح البويضة.",
+        ipaPhonetic = "/kəˌpæs.ɪˈteɪ.ʃən/"
+    ),
+    MedicalTermEntity(
+        id = 392,
+        termEn = "Morula and Compaction",
+        termFr = "Morula et Compaction",
+        termAr = "التوتية والاندماج الخلوي الجنيني",
+        definitionEn = "The solid spherical clump of 16 to 32 blastomeres at day 3-4 post-fertilization where outer cells establish tight junctions and E-cadherin polarization.",
+        definitionFr = "Stade embryonnaire à 16-32 cellules (jour 3-4) subissant le phénomène de compaction sous l'action de l'E-cadhérine.",
+        definitionAr = "المرحلة الجنينية المصمتة المكونة من 16 إلى 32 قسيمة أريمية في اليوم الثالث إلى الرابع، تتراصف خلاياها الخارجية بروابط محكمة.",
+        etymology = "Latin: morum — 'mulberry / blackberry' (due to berry-like appearance).",
+        clinicalPearl = "Compaction is the very first cellular differentiation event in human development, segregating internal embryoblast cells from external trophoblast.",
+        mnemonic = "Zygote (day 1) → Cleavage (days 2-3) → Morula (day 4) → Blastocyst (day 5) → Implantation (day 6-7).",
+        module = "Embryologie",
+        chapter = "Segmentation & Blastocyste",
+        exampleEn = "Compaction of the morula creates an osmotic gradient that drives fluid into the central blastocoel cavity.",
+        exampleFr = "La compaction de la morula permet la formation de la cavité du blastocyste par cavitation liquidienne.",
+        exampleAr = "يؤدي اندماج خلايا التوتية إلى تكوين تجويف الكيسة الأريمية المملوء بالسائل.",
+        ipaPhonetic = "/ˈmɒr.jʊ.lə/"
+    ),
+
+    // === NEURULATION & CRÊTES NEURALES ===
+    MedicalTermEntity(
+        id = 393,
+        termEn = "Neurulation and Neural Crest Cells",
+        termFr = "Neurulation et Crêtes Neurales",
+        termAr = "التكون العصبي وخلايا العرف العصبي",
+        definitionEn = "The embryonic folding of the neuroectoderm induced by the underlying notochord to form the neural tube, while boundary neural crest cells migrate extensively.",
+        definitionFr = "Formation du tube neural à partir de la plaque neurale induite par la notochorde, avec détachement des crêtes neurales pluripotentes.",
+        definitionAr = "انثناء الصفيحة العصبية بإيعاز من الحبل الظهري لتشكيل الأنبوب العصبي وانفصال خلايا العرف العصبي ذات القدرة التمايزية الفائقة.",
+        etymology = "Greek: νεῦρον (neuron) — 'nerve / sinew'.",
+        clinicalPearl = "Neural crest derivatives: Schwann cells, melanocytes, adrenal medulla chromaffin cells, dorsal root ganglia, and craniofacial bones/cartilage.",
+        mnemonic = "Neural Crest: 'SOME CELLS MOVE' (Schwann, Odontoblasts, Melanocytes, Enteric plexuses, Craniofacial, Endocrine medulla, Leptomeninges, Sympathetic).",
+        module = "Embryologie",
+        chapter = "Neurulation & Crêtes Neurales",
+        exampleEn = "Failure of the posterior neuropore to close at day 28 results in spina bifida.",
+        exampleFr = "Le défaut de fermeture du neuropore postérieur au 28e jour entraîne un spina bifida.",
+        exampleAr = "يؤدي فشل انغلاق المسام العصبي الخلفي في اليوم الثامن والعشرين إلى الإصابة بالشوك المشقوق.",
+        ipaPhonetic = "/ˌnjʊə.rʊˈleɪ.ʃən/"
+    ),
+    MedicalTermEntity(
+        id = 394,
+        termEn = "Somites and Paraxial Mesoderm",
+        termFr = "Somites et Mésoderme Paraxial",
+        termAr = "البضعات الجسدية والميزودرم المجاور للمحور",
+        definitionEn = "Paired segmented blocks of paraxial mesoderm that flank the neural tube, subdividing into sclerotome (vertebrae, ribs), myotome (skeletal muscle), and dermatome (dermis).",
+        definitionFr = "Massifs mésodermiques pairs et métamérisés situés de part et d'autre du tube neural, à l'origine du squelette axial, des muscles et du derme.",
+        definitionAr = "كتل ميزودرمية متناظرة ومقطعة على جانبي الأنبوب العصبي، تتمايز إلى بضعة عظمية وبضعة عضلية وبضعة جلدية.",
+        etymology = "Greek: σῶμα (soma) — 'body'.",
+        clinicalPearl = "Somitogenesis occurs at a strict clock-and-wavefront periodicity driven by Notch and Wnt/FGF signaling gradients.",
+        mnemonic = "Somite Trio: Sclerotome = Skeleton (spine/ribs); Myotome = Muscle; Dermatome = Dermis.",
+        module = "Embryologie",
+        chapter = "Mésoderme & Somites",
+        exampleEn = "Human embryos develop 42 to 44 pairs of somites along the craniocaudal axis by the end of the 5th week.",
+        exampleFr = "L'embryon humain développe 42 à 44 paires de somites le long de l'axe crânio-caudal.",
+        exampleAr = "يطور الجنين البشري من 42 إلى 44 زوجاً من البضعات الجسدية على طول المحور الرأسي الذيلي.",
+        ipaPhonetic = "/ˈsəʊ.maɪts/"
+    ),
+    MedicalTermEntity(
+        id = 395,
+        termEn = "Placental Barrier and Hemochorial Villus",
+        termFr = "Barrière Placentaire et Villosité Hémochoriale",
+        termAr = "الحاجز المشيمي والزغابة المشيمية الدموية",
+        definitionEn = "The selective fetal-maternal physiological interface composed of syncytiotrophoblast, cytotrophoblast, villous mesenchyme, and fetal capillary endothelium.",
+        definitionFr = "Interface hématologique foeto-maternelle régissant les échanges d'oxygène, de nutriments et d'anticorps IgG tout en bloquant la plupart des pathogènes.",
+        definitionAr = "الفاصل الفسيولوجي الانتقائي بين دم الأم ودم الجنين، ينظم تبادل الأكسجين والمغذيات والأجسام المضادة مع حماية الجنين من مسببات الأمراض.",
+        etymology = "Latin: placenta — 'flat cake' (from Greek πλακόεις) + hemo (blood) + chorial (chorion).",
+        clinicalPearl = "Maternal IgG antibodies selectively cross the placental barrier via neonatal Fc receptors (FcRn), providing passive neonatal humoral immunity.",
+        mnemonic = "TORCH infections that bypass the placental barrier: Toxoplasmosis, Other (Syphilis, Parvovirus), Rubella, CMV, Herpes/HIV.",
+        module = "Embryologie",
+        chapter = "Placenta & Tératologie",
+        exampleEn = "The syncytiotrophoblast synthesizes progesterone, estrogen, human placental lactogen, and hCG.",
+        exampleFr = "Le syncytiotrophoblaste sécrète la progestérone, les oestrogènes et l'hormone hCG.",
+        exampleAr = "تفرز الأرومة الغاذية المخلوية هرمونات البروجسترون والإستروجين والـ hCG الأساسية لديمومة الحمل.",
+        ipaPhonetic = "/pləˈsen.təl ˈbær.i.ər/"
+    ),
+    MedicalTermEntity(
+        id = 396,
+        termEn = "Teratogenesis and Critical Embryonic Period",
+        termFr = "Tératogenèse et Période embryonnaire critique",
+        termAr = "تخلق التشوهات الجنينية والفترة الحرجة",
+        definitionEn = "The induction of structural developmental malformations in an embryo exposed to exogenous teratogens; maximum susceptibility occurs during weeks 3 to 8 (organogenesis).",
+        definitionFr = "Production d'anomalies morphologiques congénitales par des agents tératogènes (médicaments, radiations, virus), maximale durant l'organogenèse (S3-S8).",
+        definitionAr = "إحداث تشوهات خلقية في البنية التشريحية للجنين نتيجة التعرض لعوامل ماسخة خارجية؛ وتبلغ ذروة الحساسية بين الأسبوع الثالث والثامن.",
+        etymology = "Greek: τέρας (teras) — 'monster / marvel' + γένεσις (genesis) — 'origin / creation'.",
+        clinicalPearl = "Weeks 1-2 follow an 'all-or-none' rule (lethal damage vs complete recovery); weeks 3-8 cause major structural birth defects; weeks 9-38 cause functional/growth defects.",
+        mnemonic = "Major Teratogens: Thalidomide (phocomelia), Isotretinoin (craniofacial/cardiac), ACE inhibitors (renal dysgenesis), Valproate (neural tube defects).",
+        module = "Embryologie",
+        chapter = "Placenta & Tératologie",
+        exampleEn = "Periconceptional maternal folic acid supplementation reduces the risk of neural tube defects by up to 70%.",
+        exampleFr = "La supplémentation maternelle en acide folique réduit le risque d'anomalies du tube neural de 70%.",
+        exampleAr = "يقلل تناول حمض الفوليك قبل وأثناء الحمل المبكر من خطر تشوهات الأنبوب العصبي بنسبة تصل إلى 70%.",
+        ipaPhonetic = "/ˌter.ə.təʊˈdʒen.ə.sɪs/"
+    )
+)
