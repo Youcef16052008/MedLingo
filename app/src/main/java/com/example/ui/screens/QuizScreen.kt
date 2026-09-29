@@ -441,7 +441,7 @@ private fun LevelExerciseSessionView(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
-        // Header with Back Button and Level Info
+        // Header with Back Button and Level Info + Hearts (Duolingo style)
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
@@ -474,25 +474,52 @@ private fun LevelExerciseSessionView(
                 }
             }
 
-            // Score Pill
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(20.dp))
-                    .background(Color(0xFFFFF8E1))
-                    .border(1.dp, Color(0xFFFFD54F), RoundedCornerShape(20.dp))
-                    .padding(horizontal = 12.dp, vertical = 6.dp)
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                // Hearts - Duolingo Phase 1
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(20.dp))
+                        .background(if (uiState.currentHearts == 0) Color(0xFFFEE2E2) else Color(0xFFFFF1F2))
+                        .border(1.dp, if (uiState.currentHearts == 0) Color(0xFFFECACA) else Color(0xFFFFD1D9), RoundedCornerShape(20.dp))
+                        .padding(horizontal = 10.dp, vertical = 5.dp)
                 ) {
-                    Text(text = "⭐", fontSize = 14.sp)
-                    Text(
-                        text = "${uiState.levelScore} pts",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 13.sp,
-                        color = Color(0xFFE65100)
-                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(text = if (uiState.userStats.isSuperActive()) "💖" else "❤️", fontSize = 14.sp)
+                        Text(
+                            text = if (uiState.userStats.isSuperActive()) "∞" else "${uiState.currentHearts}",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 13.sp,
+                            color = if (uiState.currentHearts == 0) Color(0xFFDC2626) else Color(0xFFE11D48)
+                        )
+                    }
+                }
+
+                // Score Pill
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(20.dp))
+                        .background(Color(0xFFFFF8E1))
+                        .border(1.dp, Color(0xFFFFD54F), RoundedCornerShape(20.dp))
+                        .padding(horizontal = 12.dp, vertical = 6.dp)
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(text = "⭐", fontSize = 14.sp)
+                        Text(
+                            text = "${uiState.levelScore} pts",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 13.sp,
+                            color = Color(0xFFE65100)
+                        )
+                    }
                 }
             }
         }

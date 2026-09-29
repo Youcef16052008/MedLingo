@@ -8,6 +8,9 @@ import androidx.room.Update
 import com.example.data.local.entity.DownloadedModuleEntity
 import com.example.data.local.entity.ExerciseEntity
 import com.example.data.local.entity.FlashcardProgressEntity
+import com.example.data.local.entity.GemsTransactionEntity
+import com.example.data.local.entity.LeagueCohortEntity
+import com.example.data.local.entity.LeagueMemberEntity
 import com.example.data.local.entity.MedicalTermEntity
 import com.example.data.local.entity.UserStatsEntity
 import kotlinx.coroutines.flow.Flow
@@ -80,4 +83,49 @@ interface MedicalDao {
 
     @Query("SELECT COUNT(*) FROM medical_terms")
     suspend fun getTermsCount(): Int
+
+    // === DUOLINGO PHASE 1: Gems Ledger ===
+    @Query("SELECT * FROM gems_transactions ORDER BY timestamp DESC")
+    fun getAllGemsTransactions(): Flow<List<GemsTransactionEntity>>
+
+    @Query("SELECT * FROM gems_transactions ORDER BY timestamp DESC LIMIT :limit")
+    suspend fun getRecentGemsTransactions(limit: Int = 20): List<GemsTransactionEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertGemsTransaction(transaction: GemsTransactionEntity)
+
+    // === DUOLINGO PHASE 1: League Cohorts ===
+    @Query("SELECT * FROM league_cohorts WHERE isActive = 1 ORDER BY weekStartTimestamp DESC LIMIT 1")
+    fun getActiveLeagueCohort(): Flow<LeagueCohortEntity?>
+
+    @Query("SELECT * FROM league_cohorts WHERE cohortId = :cohortId")
+    suspend fun getLeagueCohortById(cohortId: String): LeagueCohortEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertLeagueCohort(cohort: LeagueCohortEntity)
+
+    @Query("SELECT * FROM league_cohorts ORDER BY weekStartTimestamp DESC")
+    fun getAllLeagueCohorts(): Flow<List<LeagueCohortEntity>>
+
+    // === DUOLINGO PHASE 1: League Members ===
+    @Query("SELECT * FROM league_members WHERE cohortId = :cohortId ORDER BY weeklyXp DESC")
+    fun getLeagueMembers(cohortId: String): Flow<List<LeagueMemberEntity>>
+
+    @Query("SELECT * FROM league_members WHERE cohortId = :cohortId ORDER BY weeklyXp DESC")
+    suspend fun getLeagueMembersOnce(cohortId: String): List<LeagueMemberEntity>
+
+    @Query("SELECT * FROM league_members WHERE cohortId = :cohortId AND isCurrentUser = 1 LIMIT 1")
+    suspend fun getCurrentUserLeagueMember(cohortId: String): LeagueMemberEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertLeagueMember(member: LeagueMemberEntity)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertLeagueMembers(members: List<LeagueMemberEntity>)
+
+    @Query("UPDATE league_members SET weeklyXp = weeklyXp + :xp WHERE cohortId = :cohortId AND isCurrentUser = 1")
+    suspend fun addXpToCurrentUserInLeague(cohortId: String, xp: Int)
+
+    @Query("DELETE FROM league_members WHERE cohortId = :cohortId")
+    suspend fun clearLeagueMembers(cohortId: String)
 }

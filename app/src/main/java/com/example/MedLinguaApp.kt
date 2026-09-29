@@ -1,6 +1,7 @@
 package com.example
 
 import android.app.Application
+import com.example.di.AppModule
 import com.example.data.local.database.MedLinguaDatabase
 import com.example.data.repository.MedLinguaRepository
 import com.example.service.TtsManager
@@ -10,9 +11,9 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 
 class MedLinguaApp : Application() {
-    val database by lazy { MedLinguaDatabase.getDatabase(this) }
-    val repository by lazy { MedLinguaRepository(database.medicalDao()) }
-    val ttsManager by lazy { TtsManager(this) }
+    val database by lazy { AppModule.provideDatabase(this) }
+    val repository by lazy { AppModule.provideRepository(database.medicalDao()) }
+    val ttsManager by lazy { AppModule.provideTtsManager(this) }
 
     private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 

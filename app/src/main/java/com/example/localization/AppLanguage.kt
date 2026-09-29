@@ -79,6 +79,58 @@ object Strings {
             "fr" to "🩺 Explication & Justification Clinique :",
             "en" to "🩺 Academic Clinical Rationale & Explanation:"
         ),
+        // Gamification & League Strings
+        "league_title" to mapOf(
+            "ar" to "🏆 Liga {tier}",
+            "fr" to "🏆 Ligue {tier}",
+            "en" to "🏆 League {tier}"
+        ),
+        "close" to mapOf("ar" to "إغلاق", "fr" to "Fermer", "en" to "Close"),
+        "hearts" to mapOf("ar" to "❤️ قلوب", "fr" to "❤️ Cœurs", "en" to "❤️ Hearts"),
+        "gems" to mapOf("ar" to "💎 جواهر", "fr" to "💎 Gemmes", "en" to "💎 Gems"),
+        "streak" to mapOf("ar" to "🔥 سلسلة", "fr" to "🔥 Série", "en" to "🔥 Streak"),
+        "weekly_xp" to mapOf("ar" to "⭐ XP أسبوعي", "fr" to "⭐ XP Hebdo", "en" to "⭐ Weekly XP"),
+        "super_medlingo" to mapOf(
+            "ar" to "⭐ MedLinguo الفائق",
+            "fr" to "⭐ Super MedLingua",
+            "en" to "⭐ Super MedLingua"
+        ),
+        "out_of_hearts_title" to mapOf(
+            "ar" to "😢 نفدت القلوب",
+            "fr" to "😢 Plus de cœurs",
+            "en" to "😢 Out of Hearts"
+        ),
+        "refill_with_gems" to mapOf(
+            "ar" to "إعادة تعبئة بالجواهر",
+            "fr" to "Recharger avec des gemmes",
+            "en" to "Refill with Gems"
+        ),
+        "practice_to_earn" to mapOf(
+            "ar" to "تدرب لكسب قلب",
+            "fr" to "S'entraîner pour gagner un cœur",
+            "en" to "Practice to earn a heart"
+        ),
+        "buy_super" to mapOf(
+            "ar" to "اشترِ MedLinguo الفائق",
+            "fr" to "Acheter Super MedLingua",
+            "en" to "Buy Super MedLingua"
+        ),
+        "promotion" to mapOf("ar" to "🎉 ترقية!", "fr" to "🎉 Promotion !", "en" to "🎉 Promotion!"),
+        "demotion" to mapOf("ar" to "⬇️ هبوط", "fr" to "⬇️ Relégation", "en" to "⬇️ Demotion"),
+        "no_change" to mapOf("ar" to "بقاء", "fr" to "Maintien", "en" to "No change"),
+        "rank" to mapOf("ar" to "الترتيب", "fr" to "Rang", "en" to "Rank"),
+        "top_10" to mapOf("ar" to "أفضل 10", "fr" to "Top 10", "en" to "Top 10"),
+        "bottom_5" to mapOf("ar" to "أسفل 5", "fr" to "Bottom 5", "en" to "Bottom 5"),
+        "time_until_next_heart" to mapOf(
+            "ar" to "القلب التالي بعد:",
+            "fr" to "Prochain cœur dans :",
+            "en" to "Next heart in:"
+        ),
+        "perfect_bonus" to mapOf(
+            "ar" to "✨ مكافأة الكمال",
+            "fr" to "✨ Bonus Parfait",
+            "en" to "✨ Perfect Bonus"
+        )
         // 6 Progressive Levels System Strings
         "learning_pyramid_title" to mapOf(
             "ar" to "🧠 هرم التعلّم الطبي التدريجي (6 مستويات)",

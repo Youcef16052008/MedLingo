@@ -8,8 +8,14 @@ import com.example.data.initial.InitialData
 import com.example.data.local.entity.DownloadedModuleEntity
 import com.example.data.local.entity.ExerciseEntity
 import com.example.data.local.entity.FlashcardProgressEntity
+import com.example.data.local.entity.GemsTransactionEntity
+import com.example.data.local.entity.LeagueCohortEntity
+import com.example.data.local.entity.LeagueMemberEntity
 import com.example.data.local.entity.MedicalTermEntity
 import com.example.data.local.entity.UserStatsEntity
+import com.example.domain.exercise.ExerciseLanguage
+import com.example.domain.exercise.ExerciseSpec
+import com.example.domain.gamification.HeartsManager
 import com.example.domain.sm2.ReviewResult
 import com.example.localization.Language
 import kotlinx.coroutines.delay
@@ -21,12 +27,28 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 data class UiState(
-    val terms: List<MedicalTermEntity> = com.example.data.initial.InitialData.terms,
-    val allTerms: List<MedicalTermEntity> = com.example.data.initial.InitialData.terms,
-    val exercises: List<ExerciseEntity> = com.example.data.initial.InitialData.exercises,
+    val terms: List<MedicalTermEntity> = emptyList(),
+    val allTerms: List<MedicalTermEntity> = emptyList(),
+    val exercises: List<ExerciseEntity> = emptyList(),
     val flashcardProgressList: List<FlashcardProgressEntity> = emptyList(),
     val downloadedModules: List<DownloadedModuleEntity> = emptyList(),
-    val userStats: UserStatsEntity = UserStatsEntity(learnedTermsCount = com.example.data.initial.InitialData.terms.size),
+    val userStats: UserStatsEntity = UserStatsEntity(),
+    // Duolingo Phase 1
+    val gemsTransactions: List<GemsTransactionEntity> = emptyList(),
+    val activeLeagueCohort: LeagueCohortEntity? = null,
+    val leagueMembers: List<LeagueMemberEntity> = emptyList(),
+    val currentHearts: Int = 5,
+    val timeUntilNextHeart: Long = 0L,
+    val showOutOfHeartsDialog: Boolean = false,
+    val showHeartRefillDialog: Boolean = false,
+    val showSuperPaywall: Boolean = false,
+    val lastGemsEarned: Int = 0,
+    val showGemsEarnedAnimation: Boolean = false,
+    // Duolingo Phase 2 - ExerciseSpec + Same Exam Swapped Language
+    val currentExerciseSpec: ExerciseSpec? = null,
+    val exerciseLanguage: ExerciseLanguage = ExerciseLanguage.ENGLISH,
+    val wordbankConstructed: List<String> = emptyList(),
+    val matchUserPairs: Map<String, String> = emptyMap(),
     val currentLanguage: Language = Language.FRENCH,
     val isOnline: Boolean = true,
     val selectedModuleFilter: String = "All",
@@ -36,7 +58,7 @@ data class UiState(
     val isCardFlipped: Boolean = false,
     val lastReviewResult: ReviewResult? = null,
     // 6-Level Progressive Learning State
-    val selectedLearningLevel: Int? = null, // null = show 6-Level Pyramid; 1..6 = training that level
+    val selectedLearningLevel: Int? = null,
     val levelExercises: List<ExerciseEntity> = emptyList(),
     val levelCurrentIndex: Int = 0,
     val levelScore: Int = 0,
@@ -83,11 +105,28 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     private val app = application as MedLinguaApp
     private val repository = app.repository
     val ttsManager = app.ttsManager
+    private val gamificationViewModel = GamificationViewModel(repository)
+    private val leagueViewModel = LeagueViewModel(repository)
+    private val quizLevelViewModel = QuizLevelViewModel()
 
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 
-    private var allTermsList: List<MedicalTermEntity> = com.example.data.initial.InitialData.terms
+    companion object {
+        const val DEFAULT_REMINDER_HOUR = 20
+        const val DEFAULT_REMINDER_MINUTE = 0
+        const val DEFAULT_TTS_RATE = 0.9f
+        const val DEFAULT_TTS_PITCH = 1.0f
+        const val DEFAULT_TTS_LANGUAGE = "en"
+        const val LEVEL_UNLOCK_THRESHOLD = 70
+        const val MAX_LEARNING_LEVELS = 6
+        const val DEFAULT_STREAK_DAYS = 12
+        const val DEFAULT_TOTAL_POINTS = 2450
+        const val DEFAULT_GEMS = 100
+        const val DEFAULT_MAX_HEARTS = 5
+    }
+
+    private var allTermsList: List<MedicalTermEntity> = emptyList()
 
     init {
         filterTerms()
@@ -119,7 +158,47 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch {
             repository.userStats.collect { stats ->
                 if (stats != null) {
-                    _uiState.update { it.copy(userStats = stats) }
+                    val currentHearts = HeartsManager.getCurrentHearts(stats)
+                    val timeUntilNext = HeartsManager.timeUntilNextHeartMillis(stats)
+                    _uiState.update {
+                        it.copy(
+                            userStats = stats,
+                            currentHearts = currentHearts,
+                            timeUntilNextHeart = timeUntilNext
+                        )
+                    }
+                    repository.refreshLeagueCohortIfNeeded()
+                }
+            }
+        }
+        viewModelScope.launch {
+            repository.gemsTransactions.collect { transactions ->
+                _uiState.update { it.copy(gemsTransactions = transactions) }
+            }
+        }
+        viewModelScope.launch {
+            repository.activeLeagueCohort.collect { cohort ->
+                _uiState.update { it.copy(activeLeagueCohort = cohort) }
+                if (cohort != null) {
+                    launch {
+                        repository.getLeagueMembers(cohort.cohortId).collect { members ->
+                            _uiState.update { it.copy(leagueMembers = members) }
+                        }
+                    }
+                }
+            }
+        }
+        viewModelScope.launch {
+            while (isActive) {
+                delay(60_000)
+                val stats = _uiState.value.userStats
+                val currentHearts = HeartsManager.getCurrentHearts(stats)
+                val timeUntilNext = HeartsManager.timeUntilNextHeartMillis(stats)
+                _uiState.update {
+                    it.copy(
+                        currentHearts = currentHearts,
+                        timeUntilNextHeart = timeUntilNext
+                    )
                 }
             }
         }
@@ -676,6 +755,200 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             )
             repository.saveUserStats(updated)
             _uiState.update { it.copy(userStats = updated) }
+        }
+    }
+
+    // ========================================================
+    // DUOLINGO PHASE 1: HEARTS, GEMS, LEAGUES (delegated)
+    // ========================================================
+
+    fun onWrongAnswer() {
+        viewModelScope.launch {
+            val success = gamificationViewModel.onWrongAnswer()
+            if (!success) {
+                _uiState.update { it.copy(showOutOfHeartsDialog = true) }
+            }
+        }
+    }
+
+    fun refillHeartsWithGems() {
+        viewModelScope.launch {
+            val success = gamificationViewModel.refillHeartsWithGems()
+            if (success) {
+                _uiState.update { it.copy(showOutOfHeartsDialog = false, showHeartRefillDialog = false) }
+            }
+        }
+    }
+
+    fun earnHeartFromPractice() {
+        viewModelScope.launch {
+            val success = gamificationViewModel.earnHeartFromPractice()
+            if (success) {
+                _uiState.update { it.copy(showOutOfHeartsDialog = false) }
+            }
+        }
+    }
+
+    fun purchaseSuper(months: Int = 1) {
+        viewModelScope.launch {
+            gamificationViewModel.purchaseSuper(months)
+            _uiState.update { it.copy(showSuperPaywall = false, showOutOfHeartsDialog = false) }
+        }
+    }
+
+    fun showSuperPaywall(show: Boolean) {
+        _uiState.update { it.copy(showSuperPaywall = show) }
+    }
+
+    fun dismissOutOfHeartsDialog() {
+        _uiState.update { it.copy(showOutOfHeartsDialog = false) }
+    }
+
+    fun dismissHeartRefillDialog() {
+        _uiState.update { it.copy(showHeartRefillDialog = false) }
+    }
+
+    fun showHeartRefillDialog(show: Boolean) {
+        _uiState.update { it.copy(showHeartRefillDialog = show) }
+    }
+
+    fun checkCanDoLesson(): Boolean {
+        val stats = _uiState.value.userStats
+        return gamificationViewModel.checkCanDoLesson(stats)
+    }
+
+    fun onLessonStart() {
+        if (!checkCanDoLesson()) {
+            _uiState.update { it.copy(showOutOfHeartsDialog = true) }
+        }
+    }
+
+    // Override selectLevelAnswer to include hearts logic
+    fun selectLevelAnswerWithHearts(answer: String, correctAnswer: String, points: Int) {
+        if (_uiState.value.levelIsAnswered) return
+        val isCorrect = answer.trim().equals(correctAnswer.trim(), ignoreCase = true)
+        if (!isCorrect) {
+            onWrongAnswer()
+        }
+        selectLevelAnswer(answer, correctAnswer, points)
+    }
+
+    fun showGemsEarned(amount: Int) {
+        _uiState.update { it.copy(lastGemsEarned = amount, showGemsEarnedAnimation = true) }
+        viewModelScope.launch {
+            kotlinx.coroutines.delay(3000)
+            _uiState.update { it.copy(showGemsEarnedAnimation = false) }
+        }
+    }
+
+    // ========================================================
+    // DUOLINGO PHASE 2: ExerciseSpec + Same Exam Swapped Language
+    // ========================================================
+
+    fun loadExerciseSpecForCurrentLevel() {
+        val state = _uiState.value
+        val exercises = state.levelExercises
+        val idx = state.levelCurrentIndex
+        if (exercises.isEmpty() || idx >= exercises.size) return
+        val entity = exercises[idx]
+        val spec = entity.toExerciseSpec()
+        _uiState.update {
+            it.copy(
+                currentExerciseSpec = spec,
+                wordbankConstructed = emptyList(),
+                matchUserPairs = emptyMap(),
+                levelSelectedOption = null,
+                levelIsAnswered = false
+            )
+        }
+    }
+
+    fun setExerciseLanguage(lang: ExerciseLanguage) {
+        _uiState.update { it.copy(exerciseLanguage = lang) }
+        // Reload spec with swapped language
+        val currentSpec = _uiState.value.currentExerciseSpec ?: return
+        val swapped = com.example.domain.exercise.SameExamSwappedLanguage.swapLanguage(currentSpec, lang)
+        _uiState.update { it.copy(currentExerciseSpec = swapped) }
+    }
+
+    // Wordbank methods
+    fun addWordToConstructed(word: String) {
+        _uiState.update { it.copy(wordbankConstructed = it.wordbankConstructed + word) }
+    }
+
+    fun removeWordFromConstructed(index: Int) {
+        val current = _uiState.value.wordbankConstructed.toMutableList()
+        if (index in current.indices) {
+            current.removeAt(index)
+            _uiState.update { it.copy(wordbankConstructed = current) }
+        }
+    }
+
+    fun clearWordbankConstructed() {
+        _uiState.update { it.copy(wordbankConstructed = emptyList()) }
+    }
+
+    fun checkWordbankAnswer(correctSentence: String) {
+        if (_uiState.value.levelIsAnswered) return
+        val constructed = _uiState.value.wordbankConstructed.joinToString(" ")
+        val result = com.example.domain.exercise.ExerciseChecker.checkWordbank(constructed, correctSentence)
+        if (!result.isCorrect) onWrongAnswer()
+        // Use selectLevelAnswer to record score
+        selectLevelAnswer(constructed, correctSentence, 20)
+    }
+
+    // Match methods
+    fun setMatchPair(left: String, right: String) {
+        val current = _uiState.value.matchUserPairs.toMutableMap()
+        current[left] = right
+        _uiState.update { it.copy(matchUserPairs = current) }
+    }
+
+    fun checkMatchAnswer(correctPairs: List<com.example.domain.exercise.MatchPair>) {
+        if (_uiState.value.levelIsAnswered) return
+        val userPairs = _uiState.value.matchUserPairs.map { com.example.domain.exercise.MatchPair(it.key, it.value) }
+        val result = com.example.domain.exercise.ExerciseChecker.checkMatch(userPairs, correctPairs)
+        if (!result.isCorrect) onWrongAnswer()
+        selectLevelAnswer(result.userAnswer, result.correctAnswer, 20)
+    }
+
+    // Fill blank
+    fun checkFillAnswer(userAnswer: String, accepted: List<String>) {
+        if (_uiState.value.levelIsAnswered) return
+        val result = com.example.domain.exercise.ExerciseChecker.checkFill(userAnswer, accepted)
+        if (!result.isCorrect) onWrongAnswer()
+        selectLevelAnswer(userAnswer, accepted.firstOrNull() ?: "", 20)
+    }
+
+    // Choice by index
+    fun selectChoiceByIndex(selectedIndex: Int, correctIndex: Int, points: Int) {
+        if (_uiState.value.levelIsAnswered) return
+        val isCorrect = selectedIndex == correctIndex
+        if (!isCorrect) onWrongAnswer()
+        val result = com.example.domain.exercise.ExerciseChecker.checkChoice(selectedIndex, correctIndex)
+        // Convert to legacy selectLevelAnswer for compatibility
+        selectLevelAnswer(
+            answer = selectedIndex.toString(),
+            correctAnswer = correctIndex.toString(),
+            points = if (result.isCorrect) points else 0
+        )
+    }
+
+    // Override startLevelTraining to also load spec
+    fun startLevelTrainingWithSpec(level: Int) {
+        startLevelTraining(level)
+        // Delay to allow exercises to load
+        viewModelScope.launch {
+            delay(100)
+            loadExerciseSpecForCurrentLevel()
+        }
+    }
+
+    fun nextLevelQuestionWithSpec() {
+        nextLevelQuestion()
+        viewModelScope.launch {
+            delay(100)
+            loadExerciseSpecForCurrentLevel()
         }
     }
 }

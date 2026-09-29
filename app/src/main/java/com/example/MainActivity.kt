@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -66,6 +67,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import com.example.ui.components.AudioPronunciationStudio
+import com.example.ui.components.HeartsGemsTopBar
+import com.example.ui.components.LeagueScreen
+import com.example.ui.components.OutOfHeartsDialog
+import com.example.ui.components.SuperPaywallDialog
 import com.example.service.NotificationHelper
 
 enum class MainDestination(
@@ -153,9 +158,31 @@ fun MedLinguaAppContent(
         currentDestination = MainDestination.HOME
     }
 
+    // League screen state
+    var showLeagueScreen by remember { mutableStateOf(false) }
+
     CompositionLocalProvider(LocalLayoutDirection provides layoutDirection) {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
+            topBar = {
+                // Duolingo Phase 1 Top Bar - Hearts, Gems, Streak, League
+                Column {
+                    HeartsGemsTopBar(
+                        streakDays = uiState.userStats.streakDays,
+                        gems = uiState.userStats.gems,
+                        hearts = uiState.userStats.hearts,
+                        currentHearts = uiState.currentHearts,
+                        maxHearts = uiState.userStats.maxHearts,
+                        isSuper = uiState.userStats.isSuperActive(),
+                        timeUntilNextHeart = uiState.timeUntilNextHeart,
+                        leagueTier = uiState.userStats.leagueTier,
+                        weeklyXp = uiState.userStats.weeklyXp,
+                        onHeartsClick = { viewModel.showHeartRefillDialog(true) },
+                        onGemsClick = { viewModel.showSuperPaywall(true) },
+                        onLeagueClick = { showLeagueScreen = true }
+                    )
+                }
+            },
             bottomBar = {
                 NavigationBar(
                     containerColor = Color.White,
@@ -225,7 +252,13 @@ fun MedLinguaAppContent(
                             uiState = uiState,
                             onLanguageChange = { viewModel.setLanguage(it) },
                             onToggleOnline = { viewModel.toggleOnlineStatus() },
-                            onNavigateToFlashcards = { currentDestination = MainDestination.FLASHCARDS },
+                            onNavigateToFlashcards = {
+                                if (viewModel.checkCanDoLesson()) {
+                                    currentDestination = MainDestination.FLASHCARDS
+                                } else {
+                                    viewModel.onLessonStart()
+                                }
+                            },
                             onNavigateToModules = { moduleName ->
                                 moduleName?.let { viewModel.setModuleFilter(it) }
                                 currentDestination = MainDestination.MODULES
@@ -234,7 +267,11 @@ fun MedLinguaAppContent(
                             onTestNotification = { viewModel.sendTestNotification(it) },
                             onNavigateToFlashcardsWithModule = { moduleName ->
                                 viewModel.setModuleFilter(moduleName)
-                                currentDestination = MainDestination.FLASHCARDS
+                                if (viewModel.checkCanDoLesson()) {
+                                    currentDestination = MainDestination.FLASHCARDS
+                                } else {
+                                    viewModel.onLessonStart()
+                                }
                             },
                             onStartDiagnostic = { viewModel.openDiagnosticTest() }
                         )
@@ -258,6 +295,7 @@ fun MedLinguaAppContent(
                             uiState = uiState,
                             onFlip = { viewModel.flipCard() },
                             onRate = { termId, quality ->
+                                if (quality < 3) viewModel.onWrongAnswer()
                                 viewModel.rateFlashcard(termId, quality, uiState.terms.size)
                             },
                             onNext = { viewModel.nextFlashcard(uiState.terms.size) },
@@ -275,12 +313,18 @@ fun MedLinguaAppContent(
                     MainDestination.QUIZ -> {
                         QuizScreen(
                             uiState = uiState,
-                            onStartLevel = { level -> viewModel.startLevelTraining(level) },
+                            onStartLevel = { level ->
+                                if (viewModel.checkCanDoLesson()) {
+                                    viewModel.startLevelTrainingWithSpec(level)
+                                } else {
+                                    viewModel.onLessonStart()
+                                }
+                            },
                             onExitLevel = { viewModel.exitLevelTraining() },
                             onSelectLevelOption = { answer, correct, points ->
-                                viewModel.selectLevelAnswer(answer, correct, points)
+                                viewModel.selectLevelAnswerWithHearts(answer, correct, points)
                             },
-                            onNextLevelQuestion = { viewModel.nextLevelQuestion() },
+                            onNextLevelQuestion = { viewModel.nextLevelQuestionWithSpec() },
                             onRestartLevel = { viewModel.restartCurrentLevel() }
                         )
                     }
@@ -304,6 +348,31 @@ fun MedLinguaAppContent(
                     }
                 }
 
+                // League Screen Overlay
+                if (showLeagueScreen) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        Column {
+                            // Back button
+                            androidx.compose.material3.TopAppBar(
+                                title = { Text(Strings.get("league_title", lang).replace("{tier}", uiState.userStats.leagueTier), fontWeight = FontWeight.Bold) },
+                                navigationIcon = {
+                                    androidx.compose.material3.IconButton(onClick = { showLeagueScreen = false }) {
+                                Text(Strings.get("close", lang), fontSize = 20.sp)
+                            }
+                                }
+                            )
+                            LeagueScreen(
+                                cohort = uiState.activeLeagueCohort,
+                                members = uiState.leagueMembers
+                            )
+                        }
+                    }
+                }
+
                 // Adaptive Placement & Diagnostic Assessment Modal
                 if (uiState.isDiagnosticVisible) {
                     PlacementDiagnosticScreen(
@@ -313,6 +382,31 @@ fun MedLinguaAppContent(
                         onDismiss = {
                             viewModel.closeDiagnosticTest()
                         }
+                    )
+                }
+
+                // Duolingo Phase 1: Out of Hearts Dialog
+                if (uiState.showOutOfHeartsDialog) {
+                    OutOfHeartsDialog(
+                        currentGems = uiState.userStats.gems,
+                        timeUntilNextHeart = uiState.timeUntilNextHeart,
+                        onRefillWithGems = { viewModel.refillHeartsWithGems() },
+                        onPracticeToEarn = {
+                            viewModel.earnHeartFromPractice()
+                            currentDestination = MainDestination.FLASHCARDS
+                        },
+                        onBuySuper = { viewModel.showSuperPaywall(true) },
+                        onDismiss = { viewModel.dismissOutOfHeartsDialog() }
+                    )
+                }
+
+                // Super Paywall Dialog - Tinder Plus model
+                if (uiState.showSuperPaywall) {
+                    SuperPaywallDialog(
+                        currentGems = uiState.userStats.gems,
+                        onBuyMonthly = { viewModel.purchaseSuper(1) },
+                        onBuyYearly = { viewModel.purchaseSuper(12) },
+                        onDismiss = { viewModel.showSuperPaywall(false) }
                     )
                 }
 
