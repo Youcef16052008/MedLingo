@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original simplified educational diagram, not a diagnostic anatomical plate. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp" android:height="220dp"
+    android:viewportWidth="160" android:viewportHeight="220">
+    <!-- Femoral head and neck -->
+    <path android:fillColor="#C8D6CC" android:strokeColor="#28583F"
+        android:strokeWidth="2"
+        android:pathData="M44,24 C32,20 22,29 22,40 C22,53 34,61 46,56 C53,54 57,49 59,44 L81,50 L86,63 L101,62 L101,44 L89,37 L59,32 C57,28 51,25 44,24 Z" />
+    <path android:fillColor="#E4EDE6" android:strokeColor="#28583F"
+        android:strokeWidth="2"
+        android:pathData="M86,46 C91,39 102,34 108,42 C115,49 108,61 104,71 C102,83 103,96 103,113 L107,164 C109,172 114,176 120,183 C125,188 130,198 127,204 C125,212 112,214 103,209 C98,206 95,201 92,200 C89,200 86,206 80,210 C70,214 57,209 56,202 C55,195 60,187 65,182 C73,174 78,170 79,161 L82,110 C84,95 84,81 79,69 L72,65 C70,57 79,48 86,46 Z" />
+    <!-- Greater trochanter, shaft and distal condylar separation -->
+    <path android:fillColor="#A6BEAE" android:strokeColor="#28583F"
+        android:strokeWidth="2" android:pathData="M101,46 C108,37 116,39 119,48 C120,57 114,67 107,71 L101,69 Z" />
+    <path android:fillColor="#00000000" android:strokeColor="#809E89"
+        android:strokeWidth="2" android:pathData="M91,81 C91,110 87,145 85,162" />
+    <path android:fillColor="#00000000" android:strokeColor="#28583F"
+        android:strokeWidth="2" android:pathData="M67,190 C76,187 85,190 92,198 C99,190 112,185 122,192" />
+    <path android:fillColor="#00000000" android:strokeColor="#809E89"
+        android:strokeWidth="2" android:pathData="M91,199 L92,208" />
+</vector>

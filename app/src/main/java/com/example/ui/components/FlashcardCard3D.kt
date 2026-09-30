@@ -330,6 +330,7 @@ private fun BackCardSide(
             }
 
             HorizontalDivider(color = Color(0xFFE2E8F0), thickness = 1.dp)
+            TermIllustrationView(term = term, language = currentLanguage, height = 110.dp)
 
             // Trilingual Cross-Reference (Standard Arabic & French)
             Row(

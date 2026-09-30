@@ -65,6 +65,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.initial.InitialData
 import com.example.data.local.entity.MedicalTermEntity
+import com.example.ui.components.TermIllustrationView
 import com.example.localization.Language
 import com.example.localization.Strings
 import com.example.ui.theme.AmberGold
@@ -974,6 +975,7 @@ fun MedicalTermCard(
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     HorizontalDivider(color = Color(0xFFE2E8F0))
+                    TermIllustrationView(term = term, language = currentLanguage)
 
                     // 🩺 High-Yield Clinical Pearl
                     if (term.clinicalPearl.isNotBlank()) {

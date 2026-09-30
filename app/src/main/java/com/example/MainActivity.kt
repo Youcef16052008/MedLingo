@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -67,6 +68,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import com.example.ui.components.AudioPronunciationStudio
+import com.example.ui.components.AppIntroOverlay
 import com.example.ui.components.HeartsGemsTopBar
 import com.example.ui.components.LeagueScreen
 import com.example.ui.components.OutOfHeartsDialog
@@ -94,10 +96,20 @@ class MainActivity : ComponentActivity() {
         pendingTargetScreen.value = intent?.getStringExtra(NotificationHelper.EXTRA_TARGET_SCREEN)
         setContent {
             MyApplicationTheme {
-                MedLinguaAppContent(
-                    initialTarget = pendingTargetScreen.value,
-                    onTargetHandled = { pendingTargetScreen.value = null }
-                )
+                val darkTheme = androidx.compose.foundation.isSystemInDarkTheme()
+                var introVisible by remember { mutableStateOf(true) }
+                Box(modifier = Modifier.fillMaxSize()) {
+                    MedLinguaAppContent(
+                        initialTarget = pendingTargetScreen.value,
+                        onTargetHandled = { pendingTargetScreen.value = null }
+                    )
+                    if (introVisible) {
+                        AppIntroOverlay(
+                            darkTheme = darkTheme,
+                            onTimeout = { introVisible = false }
+                        )
+                    }
+                }
             }
         }
     }
@@ -109,6 +121,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun MedLinguaAppContent(
     viewModel: MedLinguaViewModel = viewModel(),

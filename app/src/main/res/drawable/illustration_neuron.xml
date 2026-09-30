@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original simplified educational diagram: dendrites, soma, myelinated axon and terminals. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp" android:height="170dp"
+    android:viewportWidth="240" android:viewportHeight="170">
+    <!-- Dendrites -->
+    <path android:fillColor="#00000000" android:strokeColor="#276B62"
+        android:strokeWidth="3" android:strokeLineCap="round"
+        android:pathData="M82,87 L54,60 L33,54 L17,39 M54,60 L48,34 L36,22 M48,34 L58,17 M77,83 L50,85 L30,74 L12,75 M51,85 L30,99 L16,98 M82,95 L54,112 L36,138 L21,144 M54,112 L56,144 L46,156 M36,138 L31,121" />
+    <!-- Soma and nucleus -->
+    <path android:fillColor="#B7DCC9" android:strokeColor="#276B62"
+        android:strokeWidth="3"
+        android:pathData="M79,70 C92,60 110,67 115,83 C120,98 110,112 94,114 C79,117 66,102 68,88 C69,80 73,74 79,70 Z" />
+    <path android:fillColor="#418B77" android:pathData="M93,80 C101,80 106,85 106,92 C106,100 100,105 93,105 C86,105 81,99 81,92 C81,85 86,80 93,80 Z" />
+    <!-- Axon and myelin sheaths; gaps indicate nodes of Ranvier -->
+    <path android:fillColor="#00000000" android:strokeColor="#276B62"
+        android:strokeWidth="3" android:strokeLineCap="round"
+        android:pathData="M114,92 L209,92 M208,92 L222,78 M208,92 L224,101 M208,92 L220,118" />
+    <path android:fillColor="#DDE9DD" android:strokeColor="#276B62" android:strokeWidth="1.5"
+        android:pathData="M122,83 Q126,79 137,83 L137,101 Q126,104 122,100 Z M143,83 Q149,79 160,83 L160,101 Q149,104 143,100 Z M167,83 Q174,79 185,83 L185,101 Q174,104 167,100 Z M192,83 Q198,80 204,83 L204,101 Q198,103 192,100 Z" />
+    <path android:fillColor="#276B62" android:pathData="M218,75 L226,75 L226,80 L218,80 Z M222,99 L230,99 L230,104 L222,104 Z M218,116 L226,116 L226,121 L218,121 Z" />
+</vector>
