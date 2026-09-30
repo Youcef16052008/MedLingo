@@ -163,8 +163,7 @@ fun ModulesScreen(
         )
         "Anglais Médical" -> listOf(
             "All" to (if (lang == Language.ARABIC) "جميع الفصول" else "Tous les chapitres"),
-            "Communication Clinique" to "🗣️ Communication",
-            "Sémiologie Clinique" to "🩺 Sémiologie",
+            "Communication clinique" to "🗣️ Communication",
             "Examen clinique" to "📋 Examen Clinique"
         )
         "Cytologie" -> listOf(
@@ -438,11 +437,7 @@ fun ModulesScreen(
                 }
 
                 items(InitialData.modulesList, key = { it.id }) { mod ->
-                    val totalTermsInMod = uiState.allTerms.count {
-                        it.module.equals(mod.titleFr, ignoreCase = true) ||
-                                it.module.contains(mod.titleFr, ignoreCase = true) ||
-                                mod.titleFr.contains(it.module, ignoreCase = true)
-                    }
+                    val totalTermsInMod = InitialData.termsOfModule(mod.titleFr).size
 
                     FigmaModuleDetailedCard(
                         module = mod,
@@ -741,17 +736,7 @@ private fun FigmaModuleDetailedCard(
             }
 
             // Chapters Preview list
-            val chapters = when (module.id) {
-                "anat" -> listOf("Ostéologie", "Arthrologie", "Myologie", "Neurologie")
-                "biochim" -> listOf("Glucides", "Lipides", "Protéines", "Acides Nucléiques", "Bioénergétique")
-                "biophys" -> listOf("Hémodynamique", "Optique & Vision", "Rayonnements", "Électrophysiologie")
-                "histo" -> listOf("Épithéliums", "Conjonctif & Os", "Musculaire", "Nerveux", "Sanguin")
-                "physio" -> listOf("Cardiovasculaire", "Respiratoire", "Rénal & SRAA", "Endocrinologie")
-                "genet" -> listOf("Embryologie", "Génétique Médicale")
-                "termino" -> listOf("Préfixes & Suffixes", "Suffixes chirurgicaux")
-                "clinical_en" -> listOf("Communication", "Sémiologie", "Examen Clinique")
-                else -> listOf("Généralités", "Fondamentaux")
-            }
+            val chapters = InitialData.chaptersOfModule(module.titleFr)
 
             Row(
                 modifier = Modifier

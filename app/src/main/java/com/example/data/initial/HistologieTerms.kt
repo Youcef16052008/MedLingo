@@ -80,24 +80,8 @@ val histologieTerms = listOf(
     ),
 
     // === TISSU MUSCULAIRE ===
-    MedicalTermEntity(
-        id = 255,
-        termEn = "Sarcomere",
-        termFr = "Sarcomère",
-        termAr = "القسيم العضلي / الساركومير",
-        definitionEn = "The fundamental structural and contractile repeating unit of striated muscle fibrils, delineated between two consecutive Z discs and containing overlapping actin and myosin filaments.",
-        definitionFr = "Unité contractile élémentaire répétitive de la myofibrille musculaire striée, délimitée entre deux stries Z consécutives.",
-        definitionAr = "الوحدة البنائية والانقباضية الوظيفية الأساسية المتكررة في اللييف العضلي المخطط، المحصورة بين خطين متتاليين من أقراص Z.",
-        etymology = "Greek: σάρξ (sarx) — 'flesh' + μέρος (meros) — 'part'.",
-        clinicalPearl = "During sarcomeric contraction according to the sliding filament theory: A band remains constant in width, while I band and H zone shorten as thin filaments slide past thick filaments.",
-        mnemonic = "During contraction: 'H and I shrink, A stays the same' (H-I-A).",
-        module = "Histologie",
-        chapter = "Tissu Musculaire",
-        exampleEn = "Resting sarcomere length in human cardiac and skeletal muscle measures approximately 2.2 micrometers.",
-        exampleFr = "La longueur de repos d'un sarcomère musculaire humain est d'environ 2,2 micromètres.",
-        exampleAr = "يبلغ طول القسيم العضلي في وضعية الراحة لدى الإنسان حوالي 2.2 ميكرومتر.",
-        ipaPhonetic = "/ˈsɑː.kə.mɪər/"
-    ),
+    // Note: 'Sarcomere' is defined in MyologyTerms (module Anatomie) with full anatomy context;
+    // it was removed from here to avoid a duplicate term across modules.
 
     // === TISSU NERVEUX ===
     MedicalTermEntity(

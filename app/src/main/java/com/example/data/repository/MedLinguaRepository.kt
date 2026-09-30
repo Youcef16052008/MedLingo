@@ -65,15 +65,9 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
                     moduleName = mod.titleFr,
                     downloadedTimestamp = now,
                     sizeMb = mod.estimatedSizeMb,
-                    termsCount = InitialData.terms.count {
-                        it.module.equals(mod.titleFr, ignoreCase = true) ||
-                                it.module.contains(mod.titleFr, ignoreCase = true) ||
-                                mod.titleFr.contains(it.module, ignoreCase = true)
-                    },
+                    termsCount = InitialData.termsOfModule(mod.titleFr).size,
                     exercisesCount = InitialData.exercises.count {
-                        it.module.equals(mod.titleFr, ignoreCase = true) ||
-                                it.module.contains(mod.titleFr, ignoreCase = true) ||
-                                mod.titleFr.contains(it.module, ignoreCase = true)
+                        it.module.equals(mod.titleFr, ignoreCase = true)
                     },
                     isDownloaded = true
                 )

@@ -870,11 +870,7 @@ fun HomeScreen(
                 FigmaMedicalModuleCard(
                     module = module,
                     currentLanguage = lang,
-                    totalTermsInModule = uiState.allTerms.count {
-                        it.module.equals(module.titleFr, ignoreCase = true) ||
-                                it.module.contains(module.titleFr, ignoreCase = true) ||
-                                module.titleFr.contains(it.module, ignoreCase = true)
-                    },
+                    totalTermsInModule = InitialData.termsOfModule(module.titleFr).size,
                     onExploreClick = { onNavigateToModules(module.titleFr) },
                     onFlashcardsClick = { onNavigateToFlashcardsWithModule(module.titleFr) }
                 )
@@ -985,7 +981,7 @@ private fun FigmaMedicalModuleCard(
                         .padding(horizontal = 8.dp, vertical = 4.dp)
                 ) {
                     Text(
-                        text = if (totalTermsInModule > 0) "$totalTermsInModule termes" else "~${module.chaptersCount * 8} termes",
+                        text = "$totalTermsInModule termes",
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(module.colorHex)
