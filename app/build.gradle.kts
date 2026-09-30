@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-  namespace = "com.aistudio.medlingua.dzmed"
+  namespace = "com.example"
   compileSdk = 36
 
   defaultConfig {

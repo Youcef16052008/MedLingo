@@ -107,7 +107,7 @@ data class UserStatsEntity(
         if (current >= maxHearts) return clock.now()
         val elapsedMillis = clock.now() - heartsUpdatedAt
         val regenCount = ((elapsedMillis / (1000.0 * 60 * 60 * HEART_REGEN_HOURS)).toInt())
-        return heartsUpdatedAt + (regenCount * HEART_REGEN_HOURS * 60 * 60 * 1000L)
+        return heartsUpdatedAt + (regenCount * HEART_REGEN_HOURS * 60 * 60 * 1000L).toLong()
     }
 
     fun canDoLesson(): Boolean {
@@ -119,7 +119,7 @@ data class UserStatsEntity(
         if (isSuper) return 0
         if (getCurrentHearts(clock) >= maxHearts) return 0
         val elapsed = clock.now() - heartsUpdatedAt
-        val twoHoursMillis = HEART_REGEN_HOURS * 60 * 60 * 1000L
+        val twoHoursMillis = (HEART_REGEN_HOURS * 60 * 60 * 1000L).toLong()
         val timeInCurrentCycle = elapsed % twoHoursMillis
         return twoHoursMillis - timeInCurrentCycle
     }

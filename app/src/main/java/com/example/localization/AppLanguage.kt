@@ -130,7 +130,7 @@ object Strings {
             "ar" to "✨ مكافأة الكمال",
             "fr" to "✨ Bonus Parfait",
             "en" to "✨ Perfect Bonus"
-        )
+        ),
         // 6 Progressive Levels System Strings
         "learning_pyramid_title" to mapOf(
             "ar" to "🧠 هرم التعلّم الطبي التدريجي (6 مستويات)",
