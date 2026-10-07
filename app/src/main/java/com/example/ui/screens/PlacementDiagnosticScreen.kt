@@ -72,12 +72,14 @@ import com.example.domain.diagnostic.MedYear
 import com.example.domain.diagnostic.PlacementQuestion
 import com.example.domain.diagnostic.PlacementResult
 import com.example.domain.diagnostic.UserType
+import com.example.localization.Language
 import kotlinx.coroutines.delay
 
 @Composable
 fun PlacementDiagnosticScreen(
     onCompleteDiagnostic: (PlacementResult) -> Unit,
     onDismiss: () -> Unit,
+    lang: Language = Language.FRENCH,
     modifier: Modifier = Modifier
 ) {
     // 0 = Profiling Nom & Statut, 1 = Test Adaptatif CAT, 2 = Résultat Diagnostic
@@ -148,6 +150,7 @@ fun PlacementDiagnosticScreen(
         when (currentPhase) {
             0 -> {
                 ProfilingStep(
+                    lang = lang,
                     userName = userName,
                     onNameChange = { userName = it },
                     selectedUserType = selectedUserType,
@@ -194,6 +197,7 @@ fun PlacementDiagnosticScreen(
             2 -> {
                 placementResult?.let { res ->
                     DiagnosticResultStep(
+                        lang = lang,
                         result = res,
                         onContinue = {
                             onCompleteDiagnostic(res)
@@ -212,6 +216,7 @@ fun PlacementDiagnosticScreen(
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ProfilingStep(
+    lang: Language,
     userName: String,
     onNameChange: (String) -> Unit,
     selectedUserType: UserType,
@@ -365,13 +370,13 @@ private fun ProfilingStep(
                             Text(text = type.icon, fontSize = 28.sp)
                             Column(modifier = Modifier.weight(1f)) {
                                 Text(
-                                    text = type.labelFr,
+                                    text = type.label(lang),
                                     fontSize = 15.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = if (isSelected) Color(0xFF00695C) else Color(0xFF1E293B)
                                 )
                                 Text(
-                                    text = type.descFr,
+                                    text = type.desc(lang),
                                     fontSize = 12.sp,
                                     color = Color(0xFF64748B)
                                 )
@@ -424,7 +429,7 @@ private fun ProfilingStep(
                             ) {
                                 Text(year.icon, fontSize = 14.sp)
                                 Text(
-                                    text = year.labelFr,
+                                    text = year.label(lang),
                                     fontSize = 12.sp,
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
                                     color = if (isSelected) Color.White else Color(0xFF334155)
@@ -722,6 +727,7 @@ private fun AdaptiveTestStep(
 
 @Composable
 private fun DiagnosticResultStep(
+    lang: Language,
     result: PlacementResult,
     onContinue: () -> Unit
 ) {
@@ -748,7 +754,7 @@ private fun DiagnosticResultStep(
                 color = Color(0xFF64748B)
             )
             Text(
-                text = result.level.labelFr,
+                text = result.level.label(lang),
                 fontSize = 28.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = Color(result.level.colorHex)

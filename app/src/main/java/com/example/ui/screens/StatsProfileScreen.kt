@@ -38,6 +38,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -74,6 +75,7 @@ fun StatsProfileScreen(
     onSendTestNotification: (String) -> Unit = {},
     onRequestPermission: () -> Unit = {},
     onStartDiagnostic: () -> Unit = {},
+    onBuyFreeze: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val lang = uiState.currentLanguage
@@ -126,17 +128,162 @@ fun StatsProfileScreen(
                             fontWeight = FontWeight.Bold
                         )
                         Text(
-                            text = "${uiState.userType.labelFr} ${uiState.medYear?.let { "• ${it.labelFr}" } ?: ""}",
+                            text = "${uiState.userType.label(lang)} ${uiState.medYear?.let { "• ${it.label(lang)}" } ?: ""}",
                             color = Color(0xFFA5F4AC),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold
                         )
                         Text(
-                            text = "Niveau Médical : ${uiState.userKnowledgeLevel.emoji} ${uiState.userKnowledgeLevel.labelFr}",
+                            text = Strings.get("medical_level_line", lang)
+                                .replace(
+                                    "{level}",
+                                    "${uiState.userKnowledgeLevel.emoji} ${uiState.userKnowledgeLevel.label(lang)}"
+                                ),
                             color = Color.White.copy(alpha = 0.9f),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Medium
                         )
+                    }
+                }
+            }
+        }
+
+        // ===== Duolingo Lot 2 : objectif du jour + série + congélation =====
+        Card(
+            shape = RoundedCornerShape(18.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            val now = System.currentTimeMillis()
+            val goal = com.example.domain.gamification.ProgressionManager.goalProgress(stats, now)
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Column {
+                        Text(
+                            text = Strings.get("goal_title", lang),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 15.sp,
+                            color = Color(0xFF1E2922)
+                        )
+                        Text(
+                            text = "${goal.today} / ${goal.goal} ${Strings.get("stat_xp", lang)}",
+                            fontSize = 13.sp,
+                            color = Color(0xFF64748B),
+                            modifier = Modifier.padding(top = 2.dp)
+                        )
+                        Text(
+                            text = "🔥 ${stats.streakDays} ${Strings.get("stat_streak", lang)} · ❄️ ${stats.streakFreezeCount}",
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFFEA580C),
+                            modifier = Modifier.padding(top = 4.dp)
+                        )
+                    }
+                    com.example.ui.components.GoalRing(pct = goal.pct, done = goal.done)
+                }
+
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    val canBuy = stats.gems >= com.example.domain.gamification.FREEZE_COST_GEMS
+                    Text(
+                        text = "❄️ ${Strings.get("freeze_buy", lang)} · " +
+                            "${com.example.domain.gamification.FREEZE_COST_GEMS} 💎",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = if (canBuy) Color(0xFF0284C7) else Color(0xFF90A4AE),
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(20.dp))
+                            .background(if (canBuy) Color(0xFFE0F2FE) else Color(0xFFF1F5F9))
+                            .clickable(enabled = canBuy) { onBuyFreeze() }
+                            .padding(horizontal = 12.dp, vertical = 7.dp)
+                    )
+                }
+            }
+        }
+
+        // ===== Duolingo Lot 2 : grille des 12 trophées =====
+        Card(
+            shape = RoundedCornerShape(18.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                Row(
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = Strings.get("trophies_title", lang),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp,
+                        color = Color(0xFF1E2922)
+                    )
+                    Text(
+                        text = "${uiState.trophies.size}/12",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFFB45309)
+                    )
+                }
+
+                com.example.domain.gamification.TrophyId.entries.chunked(4).forEach { row ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        row.forEach { trophy ->
+                            val won = uiState.trophies.contains(trophy.name)
+                            Column(
+                                modifier = Modifier.weight(1f),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.spacedBy(4.dp)
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(46.dp)
+                                        .clip(CircleShape)
+                                        .background(
+                                            if (won) Color(0xFFFFF3C4) else Color(0xFFF1F5F9)
+                                        ),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = trophy.icon,
+                                        fontSize = 20.sp,
+                                        modifier = if (won) Modifier else Modifier.alpha(0.35f)
+                                    )
+                                }
+                                Text(
+                                    text = Strings.get(trophy.titleKey, lang),
+                                    fontSize = 9.sp,
+                                    fontWeight = if (won) FontWeight.Bold else FontWeight.Normal,
+                                    color = if (won) Color(0xFF1E2922) else Color(0xFF90A4AE),
+                                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                                )
+                            }
+                        }
+                        repeat(4 - row.size) {
+                            Spacer(modifier = Modifier.weight(1f))
+                        }
                     }
                 }
             }
@@ -176,7 +323,7 @@ fun StatsProfileScreen(
 
                     Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         Text(
-                            text = "DIAGNOSTIC ADAPTATIF (CAT)",
+                            text = Strings.get("cat_title", lang),
                             color = Color(0xFF2DD4BF),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold,
@@ -184,18 +331,24 @@ fun StatsProfileScreen(
                         )
                         Text(
                             text = if (uiState.diagnosticResult != null)
-                                "Niveau : ${uiState.diagnosticResult.level.emoji} ${uiState.diagnosticResult.level.labelFr} (${uiState.diagnosticResult.score}/100)"
+                                Strings.get("cat_level_result", lang)
+                                    .replace(
+                                        "{level}",
+                                        "${uiState.diagnosticResult.level.emoji} ${uiState.diagnosticResult.level.label(lang)}"
+                                    )
+                                    .replace("{score}", "${uiState.diagnosticResult.score}")
                             else
-                                "Évaluer mon niveau médical",
+                                Strings.get("cat_eval", lang),
                             color = Color.White,
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = if (uiState.diagnosticResult != null)
-                                "Recommandé : ${uiState.diagnosticResult.startModuleName} • Refaire"
+                                Strings.get("cat_recommended", lang)
+                                    .replace("{module}", uiState.diagnosticResult.startModuleName)
                             else
-                                "Test personnalisé de 5 à 10 questions",
+                                Strings.get("cat_desc", lang),
                             color = Color(0xFF94A3B8),
                             fontSize = 11.sp
                         )
@@ -207,7 +360,10 @@ fun StatsProfileScreen(
                     color = Color(0xFF00897B)
                 ) {
                     Text(
-                        text = if (uiState.diagnosticResult != null) "Refaire" else "Démarrer",
+                        text = if (uiState.diagnosticResult != null)
+                            Strings.get("retry_label", lang)
+                        else
+                            Strings.get("start_label", lang),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color.White,
@@ -224,26 +380,27 @@ fun StatsProfileScreen(
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
-            Row(
+            // Colonne plutôt que Row(SpaceBetween) : la libellé + le sélecteur dépassent
+            // la largeur de la carte côte à côte, et Row donne alors au troisième bouton
+            // (English) une largeur nulle — il disparaissait de l'écran et de l'arbre
+            // d'accessibilité. En pile, le sélecteur a toute la largeur de la carte.
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(16.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween
+                verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                Column {
-                    Text(
-                        text = "🌐 Langue de l'application",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
-                        color = Color(0xFF1E2922)
-                    )
-                    Text(
-                        text = "Arabe • Français • Anglais",
-                        fontSize = 12.sp,
-                        color = Color(0xFF78909C)
-                    )
-                }
+                Text(
+                    text = Strings.get("app_language_title", lang),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
+                    color = Color(0xFF1E2922)
+                )
+                Text(
+                    text = Strings.get("app_language_list", lang),
+                    fontSize = 12.sp,
+                    color = Color(0xFF78909C)
+                )
 
                 LanguageSelector(
                     currentLanguage = lang,
@@ -290,13 +447,17 @@ fun StatsProfileScreen(
 
                         Column {
                             Text(
-                                text = "📴 Mode Hors-Ligne (Offline)",
+                                text = Strings.get("offline_mode_title", lang),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 15.sp,
                                 color = Color(0xFF1E2922)
                             )
                             Text(
-                                text = "Taille du cache : 14.2 MB",
+                                // The content is bundled in the local database from the first launch: this is the
+    // real local footprint, not bytes "downloaded" from a server.
+                            text = Strings.get("local_content", lang)
+                                .replace("{size}", "%.2f".format(uiState.downloadedModules.sumOf { it.sizeMb }))
+                                .replace("{count}", "${uiState.downloadedModules.size}"),
                                 fontSize = 12.sp,
                                 color = Color(0xFF5A6B60)
                             )
@@ -310,7 +471,7 @@ fun StatsProfileScreen(
                             .padding(horizontal = 8.dp, vertical = 4.dp)
                     ) {
                         Text(
-                            text = "SQLite Actif ✅",
+                            text = Strings.get("sqlite_active", lang),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFF2E7D32)
@@ -319,7 +480,7 @@ fun StatsProfileScreen(
                 }
 
                 Text(
-                    text = "Modules disponibles pour téléchargement hors-ligne :",
+                    text = Strings.get("offline_content_desc", lang),
                     fontSize = 12.sp,
                     color = Color(0xFF607D8B),
                     fontWeight = FontWeight.SemiBold
@@ -352,7 +513,7 @@ fun StatsProfileScreen(
                                     color = Color(0xFF263238)
                                 )
                                 Text(
-                                    text = "~${module.estimatedSizeMb} MB",
+                                    text = "~%.3f MB".format(module.estimatedSizeMb),
                                     fontSize = 10.sp,
                                     color = Color(0xFF90A4AE)
                                 )
@@ -393,7 +554,7 @@ fun StatsProfileScreen(
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.Download,
-                                    contentDescription = "Download",
+                                    contentDescription = Strings.get("download", lang),
                                     tint = MedGreenDark
                                 )
                             }
@@ -441,13 +602,13 @@ fun StatsProfileScreen(
                         }
                         Column {
                             Text(
-                                text = if (lang == Language.ARABIC) "🔔 التنبيهات ومواعيد المراجعة" else "🔔 Notifications & Rappels",
+                                text = Strings.get("notifications_card_title", lang),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 15.sp,
                                 color = Color(0xFF1E2922)
                             )
                             Text(
-                                text = if (lang == Language.ARABIC) "تذكير يومي للمراجعة المتباعدة (SM-2)" else "Rappels quotidiens de répétition espacée",
+                                text = Strings.get("notifications_card_desc", lang),
                                 fontSize = 11.sp,
                                 color = Color(0xFF78909C)
                             )
@@ -463,7 +624,7 @@ fun StatsProfileScreen(
                                 .padding(horizontal = 8.dp, vertical = 4.dp)
                         ) {
                             Text(
-                                text = "Actif ✅",
+                                text = Strings.get("active_label", lang),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color(0xFF2E7D32)
@@ -476,7 +637,7 @@ fun StatsProfileScreen(
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier.height(32.dp).testTag("request_notification_btn")
                         ) {
-                            Text("Activer 🔔", fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                            Text(Strings.get("enable_notifications", lang), fontSize = 11.sp, fontWeight = FontWeight.Bold)
                         }
                     }
                 }
@@ -498,13 +659,13 @@ fun StatsProfileScreen(
                     ) {
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = if (lang == Language.ARABIC) "مراجعة البطاقات المستحقة (SM-2)" else "Révision espacée quotidienne",
+                                text = Strings.get("sm2_reminder_title", lang),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = Color(0xFF263238)
                             )
                             Text(
-                                text = if (lang == Language.ARABIC) "تنبيه عند حلول موعد تكرار المصطلحات" else "Alerte quand des flashcards arrivent à échéance",
+                                text = Strings.get("sm2_reminder_desc", lang),
                                 fontSize = 11.sp,
                                 color = Color(0xFF78909C)
                             )
@@ -528,13 +689,14 @@ fun StatsProfileScreen(
                     ) {
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = if (lang == Language.ARABIC) "حماية سلسلة الأيام (Streak)" else "Alerte de maintien de série",
+                                text = Strings.get("streak_reminder_title", lang),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = Color(0xFF263238)
                             )
                             Text(
-                                text = if (lang == Language.ARABIC) "تذكير مسائي لمنع انقطاع السلسلة" else "Rappel pour préserver votre série de 12 jours",
+                                text = Strings.get("streak_reminder_desc", lang)
+                                    .replace("{n}", "${stats.streakDays}"),
                                 fontSize = 11.sp,
                                 color = Color(0xFF78909C)
                             )
@@ -558,13 +720,13 @@ fun StatsProfileScreen(
                     ) {
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = if (lang == Language.ARABIC) "فائدة سريرية يومية (Clinical Pearl)" else "Perle clinique quotidienne",
+                                text = Strings.get("pearl_reminder_title", lang),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = Color(0xFF263238)
                             )
                             Text(
-                                text = if (lang == Language.ARABIC) "مصطلح وملاحظة طبية ذات أهمية سريرية" else "Terme et mnémotechnique médicale à haut rendement",
+                                text = Strings.get("pearl_reminder_desc", lang),
                                 fontSize = 11.sp,
                                 color = Color(0xFF78909C)
                             )
@@ -584,7 +746,7 @@ fun StatsProfileScreen(
                 // Reminder Schedule Time Selectors
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(
-                        text = if (lang == Language.ARABIC) "⏰ توقيت التذكير اليومي المفضل :" else "⏰ Heure de révision programmée :",
+                        text = Strings.get("reminder_time_label", lang),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = Color(0xFF37474F)
@@ -595,9 +757,9 @@ fun StatsProfileScreen(
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         val scheduleTimes = listOf(
-                            Triple(8, 0, "08:00 (Matin)"),
-                            Triple(13, 0, "13:00 (Midi)"),
-                            Triple(20, 0, "20:00 (Soir)")
+                            Triple(8, 0, Strings.get("time_morning", lang)),
+                            Triple(13, 0, Strings.get("time_noon", lang)),
+                            Triple(20, 0, Strings.get("time_evening", lang))
                         )
 
                         scheduleTimes.forEach { (hour, min, label) ->
@@ -630,7 +792,7 @@ fun StatsProfileScreen(
                 // Instant Interactive Test Trigger Buttons
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text(
-                        text = if (lang == Language.ARABIC) "🧪 تجربة إشعار فوري على جهازك الآن :" else "🧪 Tester l'envoi d'une notification :",
+                        text = Strings.get("test_notif_label", lang),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = Color(0xFF37474F)
@@ -648,7 +810,7 @@ fun StatsProfileScreen(
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier.testTag("test_notif_review_btn")
                         ) {
-                            Text("📋 Révision due", fontSize = 11.sp)
+                            Text(Strings.get("notif_review", lang), fontSize = 11.sp)
                         }
 
                         Button(
@@ -657,7 +819,10 @@ fun StatsProfileScreen(
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier.testTag("test_notif_streak_btn")
                         ) {
-                            Text("🔥 Série (12j)", fontSize = 11.sp)
+                            Text(
+                                Strings.get("notif_streak", lang).replace("{n}", "${stats.streakDays}"),
+                                fontSize = 11.sp
+                            )
                         }
 
                         Button(
@@ -666,7 +831,7 @@ fun StatsProfileScreen(
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier.testTag("test_notif_pearl_btn")
                         ) {
-                            Text("🩺 Perle clinique", fontSize = 11.sp)
+                            Text(Strings.get("notif_pearl", lang), fontSize = 11.sp)
                         }
 
                         Button(
@@ -675,7 +840,10 @@ fun StatsProfileScreen(
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier.testTag("test_notif_level_btn")
                         ) {
-                            Text("🏆 Niveau 2", fontSize = 11.sp)
+                            Text(
+                                Strings.get("notif_level", lang).replace("{n}", "${stats.highestUnlockedLevel()}"),
+                                fontSize = 11.sp
+                            )
                         }
                     }
                 }
@@ -696,7 +864,7 @@ fun StatsProfileScreen(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Text(
-                    text = "📊 Bilan d'apprentissage",
+                    text = Strings.get("learning_report_title", lang),
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
                     color = Color(0xFF1E2922)
@@ -707,13 +875,13 @@ fun StatsProfileScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     MetricBox(
-                        title = "Questions Répondues",
+                        title = Strings.get("metric_questions", lang),
                         value = "${stats.totalQuestionsAnswered}",
                         icon = "📝",
                         modifier = Modifier.weight(1f)
                     )
                     MetricBox(
-                        title = "Quiz Complétés",
+                        title = Strings.get("metric_quizzes", lang),
                         value = "${stats.quizzesCompleted}",
                         icon = "🏆",
                         modifier = Modifier.weight(1f)
@@ -725,13 +893,13 @@ fun StatsProfileScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     MetricBox(
-                        title = "Réponses Correctes",
+                        title = Strings.get("metric_correct", lang),
                         value = "${stats.correctAnswersCount}",
                         icon = "✅",
                         modifier = Modifier.weight(1f)
                     )
                     MetricBox(
-                        title = "Précision Globale",
+                        title = Strings.get("metric_accuracy", lang),
                         value = "${stats.accuracyPercentage}%",
                         icon = "🎯",
                         modifier = Modifier.weight(1f)

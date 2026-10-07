@@ -46,9 +46,7 @@ object ExerciseSpecMigrator {
                         promptFr = entity.questionFr,
                         promptAr = entity.questionAr,
                         bank = words,
-                        correctOrder = entity.correctAnswer.split(" ").map { word ->
-                            words.indexOfFirst { it.equals(word, ignoreCase = true) }.coerceAtLeast(0)
-                        },
+                        correctOrder = WordbankOrder.computeCorrectOrder(words, entity.correctAnswer),
                         correctSentence = entity.correctAnswer,
                         explanationEn = entity.explanationEn,
                         explanationFr = entity.explanationFr,
@@ -75,7 +73,8 @@ object ExerciseSpecMigrator {
                         promptEn = entity.questionEn,
                         promptFr = entity.questionFr,
                         promptAr = entity.questionAr,
-                        acceptedAnswers = listOf(entity.correctAnswer) + entity.getOptionsList().filter { it != entity.correctAnswer },
+                        // optionsRaw holds distractors (MCQ-style), not alternate answers
+                        acceptedAnswers = listOf(entity.correctAnswer),
                         explanationEn = entity.explanationEn,
                         explanationFr = entity.explanationFr,
                         explanationAr = entity.explanationAr

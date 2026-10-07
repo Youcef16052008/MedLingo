@@ -1,0 +1,19 @@
+{
+  "name": "MedLingo DZ — Anglais médical",
+  "short_name": "MedLingo DZ",
+  "description": "Flashcards SM-2, quiz et progression pour l'anglais médical (PCM1).",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F8FAFC",
+  "theme_color": "#1B5E20",
+  "lang": "fr",
+  "dir": "auto",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

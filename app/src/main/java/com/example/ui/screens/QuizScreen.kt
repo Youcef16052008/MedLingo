@@ -441,7 +441,7 @@ private fun LevelExerciseSessionView(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
-        // Header with Back Button and Level Info + Hearts (Duolingo style)
+        // Header with Back Button and Level Info + Score (Duolingo style)
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
@@ -478,27 +478,6 @@ private fun LevelExerciseSessionView(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                // Hearts - Duolingo Phase 1
-                Box(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(20.dp))
-                        .background(if (uiState.currentHearts == 0) Color(0xFFFEE2E2) else Color(0xFFFFF1F2))
-                        .border(1.dp, if (uiState.currentHearts == 0) Color(0xFFFECACA) else Color(0xFFFFD1D9), RoundedCornerShape(20.dp))
-                        .padding(horizontal = 10.dp, vertical = 5.dp)
-                ) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp)
-                    ) {
-                        Text(text = if (uiState.userStats.isSuperActive()) "💖" else "❤️", fontSize = 14.sp)
-                        Text(
-                            text = if (uiState.userStats.isSuperActive()) "∞" else "${uiState.currentHearts}",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp,
-                            color = if (uiState.currentHearts == 0) Color(0xFFDC2626) else Color(0xFFE11D48)
-                        )
-                    }
-                }
 
                 // Score Pill
                 Box(
@@ -614,10 +593,12 @@ private fun LevelExerciseSessionView(
                 "matching" -> {
                     MatchingExerciseView(
                         exercise = currentExercise,
-                        onComplete = { isSuccess ->
-                            if (isSuccess) {
-                                onSelectOption(currentExercise.correctAnswer, currentExercise.correctAnswer, currentExercise.points)
-                            }
+                        onComplete = {
+                            onSelectOption(
+                                currentExercise.correctAnswer,
+                                currentExercise.correctAnswer,
+                                currentExercise.points
+                            )
                         },
                         currentLanguage = currentLanguage
                     )
@@ -663,6 +644,23 @@ private fun LevelExerciseSessionView(
                         )
                     }
                 }
+            }
+        } else {
+            // Pool vide (leçon de module sans exercices) : état explicite.
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 48.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                Text(text = "📭", fontSize = 48.sp)
+                Text(
+                    text = Strings.get("no_exercises", currentLanguage),
+                    fontSize = 15.sp,
+                    color = Color(0xFF64748B),
+                    textAlign = TextAlign.Center
+                )
             }
         }
     }

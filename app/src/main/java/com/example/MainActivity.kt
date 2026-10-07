@@ -13,16 +13,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.EmojiEvents
+import androidx.compose.material.icons.filled.FitnessCenter
+import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Quiz
-import androidx.compose.material.icons.filled.Style
-import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.EmojiEvents
+import androidx.compose.material.icons.outlined.FitnessCenter
+import androidx.compose.material.icons.outlined.Map
 import androidx.compose.material.icons.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.Quiz
-import androidx.compose.material.icons.outlined.Style
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
@@ -49,9 +49,11 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.localization.Strings
+import com.example.ui.components.RewardPopup
 import com.example.ui.screens.FlashcardsScreen
-import com.example.ui.screens.HomeScreen
 import com.example.ui.screens.ModulesScreen
+import com.example.ui.screens.PathScreen
+import com.example.ui.screens.PracticeScreen
 import com.example.ui.screens.QuizScreen
 import com.example.ui.screens.StatsProfileScreen
 import com.example.ui.screens.PlacementDiagnosticScreen
@@ -71,7 +73,6 @@ import com.example.ui.components.AudioPronunciationStudio
 import com.example.ui.components.AppIntroOverlay
 import com.example.ui.components.HeartsGemsTopBar
 import com.example.ui.components.LeagueScreen
-import com.example.ui.components.OutOfHeartsDialog
 import com.example.ui.components.SuperPaywallDialog
 import com.example.service.NotificationHelper
 
@@ -80,10 +81,10 @@ enum class MainDestination(
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector
 ) {
-    HOME("nav_home", Icons.Filled.Home, Icons.Outlined.Home),
+    PATH("nav_path", Icons.Filled.Map, Icons.Outlined.Map),
+    PRACTICE("nav_practice", Icons.Filled.FitnessCenter, Icons.Outlined.FitnessCenter),
+    LEAGUES("nav_leagues", Icons.Filled.EmojiEvents, Icons.Outlined.EmojiEvents),
     MODULES("nav_modules", Icons.Filled.MenuBook, Icons.Outlined.MenuBook),
-    FLASHCARDS("nav_flashcards", Icons.Filled.Style, Icons.Outlined.Style),
-    QUIZ("nav_quiz", Icons.Filled.Quiz, Icons.Outlined.Quiz),
     PROFILE("nav_profile", Icons.Filled.Person, Icons.Outlined.Person)
 }
 
@@ -119,6 +120,15 @@ class MainActivity : ComponentActivity() {
         setIntent(intent)
         pendingTargetScreen.value = intent.getStringExtra(NotificationHelper.EXTRA_TARGET_SCREEN)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        // Release the TTS engine when the app really goes away (kept alive
+        // across configuration changes where isFinishing is false)
+        if (isFinishing) {
+            (application as? MedLinguaApp)?.ttsManager?.shutdown()
+        }
+    }
 }
 
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
@@ -130,7 +140,10 @@ fun MedLinguaAppContent(
 ) {
     val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    var currentDestination by remember { mutableStateOf(MainDestination.HOME) }
+    var currentDestination by remember { mutableStateOf(MainDestination.PATH) }
+    // Full-screen overlays (spec §5 : leçons hors onglets)
+    var showQuiz by remember { mutableStateOf(false) }
+    var showFlash by remember { mutableStateOf(false) }
     val lang = uiState.currentLanguage
 
     // Runtime Permission for Notifications (Android 13+ / Tiramisu)
@@ -153,10 +166,16 @@ fun MedLinguaAppContent(
     // Handle incoming deep link or notification target
     LaunchedEffect(initialTarget) {
         when (initialTarget) {
-            NotificationHelper.TARGET_FLASHCARDS -> currentDestination = MainDestination.FLASHCARDS
-            NotificationHelper.TARGET_QUIZ -> currentDestination = MainDestination.QUIZ
+            NotificationHelper.TARGET_FLASHCARDS -> {
+                currentDestination = MainDestination.PRACTICE
+                showFlash = true
+            }
+            NotificationHelper.TARGET_QUIZ -> {
+                currentDestination = MainDestination.PRACTICE
+                showQuiz = true
+            }
             NotificationHelper.TARGET_MODULES -> currentDestination = MainDestination.MODULES
-            NotificationHelper.TARGET_HOME -> currentDestination = MainDestination.HOME
+            NotificationHelper.TARGET_HOME -> currentDestination = MainDestination.PATH
         }
         if (initialTarget != null) {
             onTargetHandled()
@@ -166,33 +185,31 @@ fun MedLinguaAppContent(
     // RTL support for Arabic, LTR for French & English
     val layoutDirection = if (lang.isRtl) LayoutDirection.Rtl else LayoutDirection.Ltr
 
-    // BackHandler: if not on HOME, back button returns to HOME
-    BackHandler(enabled = currentDestination != MainDestination.HOME) {
-        currentDestination = MainDestination.HOME
+    // BackHandler: ferme le quiz/les flashcards, sinon revient au Parcours
+    BackHandler(
+        enabled = showQuiz || showFlash || currentDestination != MainDestination.PATH
+    ) {
+        when {
+            showQuiz -> showQuiz = false
+            showFlash -> showFlash = false
+            else -> currentDestination = MainDestination.PATH
+        }
     }
-
-    // League screen state
-    var showLeagueScreen by remember { mutableStateOf(false) }
 
     CompositionLocalProvider(LocalLayoutDirection provides layoutDirection) {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
             topBar = {
-                // Duolingo Phase 1 Top Bar - Hearts, Gems, Streak, League
+                // Duolingo Phase 2 Top Bar - Streak, Gems, League (plus de cœurs)
                 Column {
                     HeartsGemsTopBar(
                         streakDays = uiState.userStats.streakDays,
                         gems = uiState.userStats.gems,
-                        hearts = uiState.userStats.hearts,
-                        currentHearts = uiState.currentHearts,
-                        maxHearts = uiState.userStats.maxHearts,
                         isSuper = uiState.userStats.isSuperActive(),
-                        timeUntilNextHeart = uiState.timeUntilNextHeart,
                         leagueTier = uiState.userStats.leagueTier,
                         weeklyXp = uiState.userStats.weeklyXp,
-                        onHeartsClick = { viewModel.showHeartRefillDialog(true) },
                         onGemsClick = { viewModel.showSuperPaywall(true) },
-                        onLeagueClick = { showLeagueScreen = true }
+                        onLeagueClick = { currentDestination = MainDestination.LEAGUES }
                     )
                 }
             },
@@ -209,14 +226,18 @@ fun MedLinguaAppContent(
                             selected = isSelected,
                             onClick = { currentDestination = destination },
                             icon = {
-                                if (destination == MainDestination.FLASHCARDS) {
+                                if (destination == MainDestination.PRACTICE) {
+                                    // due cards come from the VM (repository clock), not from wall time
+                                    val dueCount = uiState.dueFlashcardProgress.size
                                     BadgedBox(
                                         badge = {
-                                            Badge(
-                                                containerColor = Color(0xFFE65100),
-                                                contentColor = Color.White
-                                            ) {
-                                                Text(text = "6", fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                                            if (dueCount > 0) {
+                                                Badge(
+                                                    containerColor = Color(0xFFE65100),
+                                                    contentColor = Color.White
+                                                ) {
+                                                    Text(text = dueCount.toString(), fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                                                }
                                             }
                                         }
                                     ) {
@@ -260,34 +281,42 @@ fun MedLinguaAppContent(
                     .padding(innerPadding)
             ) {
                 when (currentDestination) {
-                    MainDestination.HOME -> {
-                        HomeScreen(
+                    MainDestination.PATH -> {
+                        PathScreen(
                             uiState = uiState,
-                            onLanguageChange = { viewModel.setLanguage(it) },
-                            onToggleOnline = { viewModel.toggleOnlineStatus() },
-                            onNavigateToFlashcards = {
-                                if (viewModel.checkCanDoLesson()) {
-                                    currentDestination = MainDestination.FLASHCARDS
-                                } else {
-                                    viewModel.onLessonStart()
-                                }
+                            onOpenLesson = { moduleId, level ->
+                                viewModel.startPathLesson(moduleId, level)
+                                showQuiz = true
                             },
-                            onNavigateToModules = { moduleName ->
-                                moduleName?.let { viewModel.setModuleFilter(it) }
-                                currentDestination = MainDestination.MODULES
-                            },
-                            onNavigateToLevels = { currentDestination = MainDestination.QUIZ },
-                            onTestNotification = { viewModel.sendTestNotification(it) },
-                            onNavigateToFlashcardsWithModule = { moduleName ->
-                                viewModel.setModuleFilter(moduleName)
-                                if (viewModel.checkCanDoLesson()) {
-                                    currentDestination = MainDestination.FLASHCARDS
-                                } else {
-                                    viewModel.onLessonStart()
-                                }
-                            },
-                            onStartDiagnostic = { viewModel.openDiagnosticTest() }
+                            onBuyFreeze = { viewModel.buyFreeze() },
+                            onOpenChests = { viewModel.openChestRewardPopup() }
                         )
+                    }
+                    MainDestination.PRACTICE -> {
+                        PracticeScreen(
+                            uiState = uiState,
+                            onOpenReview = { showFlash = true },
+                            onOpenQuiz = { showQuiz = true },
+                            onOpenWeak = { showFlash = true },
+                            onOpenExam = { showQuiz = true }
+                        )
+                    }
+                    MainDestination.LEAGUES -> {
+                        Column(modifier = Modifier.fillMaxSize()) {
+                            androidx.compose.material3.TopAppBar(
+                                title = { Text(Strings.get("league_title", lang).replace("{tier}", uiState.userStats.leagueTier), fontWeight = FontWeight.Bold) },
+                                navigationIcon = {
+                                    androidx.compose.material3.IconButton(onClick = { currentDestination = MainDestination.PATH }) {
+                                        Text(Strings.get("close", lang), fontSize = 20.sp)
+                                    }
+                                }
+                            )
+                            LeagueScreen(
+                                cohort = uiState.activeLeagueCohort,
+                                members = uiState.leagueMembers,
+                                lang = lang
+                            )
+                        }
                     }
                     MainDestination.MODULES -> {
                         ModulesScreen(
@@ -298,47 +327,10 @@ fun MedLinguaAppContent(
                             onSpeak = { termText ->
                                 val target = uiState.terms.firstOrNull { it.termEn.equals(termText, ignoreCase = true) || it.termFr.equals(termText, ignoreCase = true) } ?: uiState.terms.firstOrNull()
                                 viewModel.toggleAudioStudio(true, target)
-                                viewModel.speak(termText)
+                                // onSpeak always carries termEn: force the English voice
+                                viewModel.speak(termText, lang = "en")
                             },
                             onToggleBookmark = { viewModel.toggleBookmark(it) }
-                        )
-                    }
-                    MainDestination.FLASHCARDS -> {
-                        FlashcardsScreen(
-                            uiState = uiState,
-                            onFlip = { viewModel.flipCard() },
-                            onRate = { termId, quality ->
-                                if (quality < 3) viewModel.onWrongAnswer()
-                                viewModel.rateFlashcard(termId, quality, uiState.terms.size)
-                            },
-                            onNext = { viewModel.nextFlashcard(uiState.terms.size) },
-                            onPrev = { viewModel.prevFlashcard(uiState.terms.size) },
-                            onSpeak = { termText ->
-                                val target = uiState.terms.firstOrNull { it.termEn.equals(termText, ignoreCase = true) || it.termFr.equals(termText, ignoreCase = true) } ?: uiState.terms.firstOrNull()
-                                viewModel.toggleAudioStudio(true, target)
-                                viewModel.speak(termText)
-                            },
-                            onBookmarkToggle = { viewModel.toggleBookmark(it) },
-                            onChapterFilterChange = { viewModel.setChapterFilter(it) },
-                            onModuleFilterChange = { viewModel.setModuleFilter(it) }
-                        )
-                    }
-                    MainDestination.QUIZ -> {
-                        QuizScreen(
-                            uiState = uiState,
-                            onStartLevel = { level ->
-                                if (viewModel.checkCanDoLesson()) {
-                                    viewModel.startLevelTrainingWithSpec(level)
-                                } else {
-                                    viewModel.onLessonStart()
-                                }
-                            },
-                            onExitLevel = { viewModel.exitLevelTraining() },
-                            onSelectLevelOption = { answer, correct, points ->
-                                viewModel.selectLevelAnswerWithHearts(answer, correct, points)
-                            },
-                            onNextLevelQuestion = { viewModel.nextLevelQuestionWithSpec() },
-                            onRestartLevel = { viewModel.restartCurrentLevel() }
                         )
                     }
                     MainDestination.PROFILE -> {
@@ -356,60 +348,87 @@ fun MedLinguaAppContent(
                                     permissionLauncher.launch(android.Manifest.permission.POST_NOTIFICATIONS)
                                 }
                             },
-                            onStartDiagnostic = { viewModel.openDiagnosticTest() }
+                            onStartDiagnostic = { viewModel.openDiagnosticTest() },
+                            onBuyFreeze = { viewModel.buyFreeze() }
                         )
                     }
                 }
 
-                // League Screen Overlay
-                if (showLeagueScreen) {
+                // ---- Overlay : flashcards plein écran ----
+                if (showFlash) {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
                             .background(Color.White)
                     ) {
-                        Column {
-                            // Back button
-                            androidx.compose.material3.TopAppBar(
-                                title = { Text(Strings.get("league_title", lang).replace("{tier}", uiState.userStats.leagueTier), fontWeight = FontWeight.Bold) },
-                                navigationIcon = {
-                                    androidx.compose.material3.IconButton(onClick = { showLeagueScreen = false }) {
-                                Text(Strings.get("close", lang), fontSize = 20.sp)
-                            }
-                                }
-                            )
-                            LeagueScreen(
-                                cohort = uiState.activeLeagueCohort,
-                                members = uiState.leagueMembers
-                            )
-                        }
+                        FlashcardsScreen(
+                            uiState = uiState,
+                            onFlip = { viewModel.flipCard() },
+                            onRate = { termId, quality ->
+                                viewModel.rateFlashcard(termId, quality, uiState.terms.size)
+                            },
+                            onNext = { viewModel.nextFlashcard(uiState.terms.size) },
+                            onPrev = { viewModel.prevFlashcard(uiState.terms.size) },
+                            onSpeak = { termText ->
+                                val target = uiState.terms.firstOrNull { it.termEn.equals(termText, ignoreCase = true) || it.termFr.equals(termText, ignoreCase = true) } ?: uiState.terms.firstOrNull()
+                                viewModel.toggleAudioStudio(true, target)
+                                // onSpeak always carries termEn: force the English voice
+                                viewModel.speak(termText, lang = "en")
+                            },
+                            onBookmarkToggle = { viewModel.toggleBookmark(it) },
+                            onChapterFilterChange = { viewModel.setChapterFilter(it) },
+                            onModuleFilterChange = { viewModel.setModuleFilter(it) }
+                        )
                     }
+                }
+
+                // ---- Overlay : quiz / leçon plein écran ----
+                if (showQuiz) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        QuizScreen(
+                            uiState = uiState,
+                            onStartLevel = { level ->
+                                viewModel.startLevelTrainingWithSpec(level)
+                            },
+                            onExitLevel = {
+                                viewModel.exitLevelTraining()
+                                showQuiz = false
+                            },
+                            onSelectLevelOption = { answer, correct, points ->
+                                viewModel.selectLevelAnswer(answer, correct, points)
+                            },
+                            onNextLevelQuestion = { viewModel.nextLevelQuestionWithSpec() },
+                            onRestartLevel = { viewModel.restartCurrentLevel() }
+                        )
+                    }
+                }
+
+                // ---- Pop-up de récompense (spec §11) ----
+                uiState.lastReward?.let { reward ->
+                    RewardPopup(
+                        data = reward,
+                        chestCount = uiState.userStats.pendingChests,
+                        chestReward = uiState.pendingChestReward,
+                        onOpenChest = { viewModel.openPendingChest() },
+                        onContinue = { viewModel.dismissReward() },
+                        lang = lang
+                    )
                 }
 
                 // Adaptive Placement & Diagnostic Assessment Modal
                 if (uiState.isDiagnosticVisible) {
                     PlacementDiagnosticScreen(
+                        lang = uiState.currentLanguage,
                         onCompleteDiagnostic = { result ->
                             viewModel.applyDiagnosticResult(result)
                         },
                         onDismiss = {
                             viewModel.closeDiagnosticTest()
                         }
-                    )
-                }
-
-                // Duolingo Phase 1: Out of Hearts Dialog
-                if (uiState.showOutOfHeartsDialog) {
-                    OutOfHeartsDialog(
-                        currentGems = uiState.userStats.gems,
-                        timeUntilNextHeart = uiState.timeUntilNextHeart,
-                        onRefillWithGems = { viewModel.refillHeartsWithGems() },
-                        onPracticeToEarn = {
-                            viewModel.earnHeartFromPractice()
-                            currentDestination = MainDestination.FLASHCARDS
-                        },
-                        onBuySuper = { viewModel.showSuperPaywall(true) },
-                        onDismiss = { viewModel.dismissOutOfHeartsDialog() }
                     )
                 }
 

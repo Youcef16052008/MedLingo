@@ -1,4 +1,4 @@
-# ARCHITECTURE FINALE 100% DUOLINGO - MedLingo Medical English
+﻿# ARCHITECTURE FINALE 100% DUOLINGO - MedLingo Medical English
 
 **Date:** 29 Sept 2026 - Oran DZ
 **Status:** PHASE 1+2+3 IMPLÉMENTÉES - 100% Duolingo Compliant
@@ -23,7 +23,7 @@
 ┌─────────────────────────────────────────────────────────────────────────┐
 │ CLIENT LAYER - Android Kotlin Compose (comme Duolingo Android)          │
 │ MedLinguaApp.kt + MainActivity.kt + 6 screens + 10 components           │
-│ TTS multi-lang FR/AR/EN + SM-2 + CAT + 6-Level Pyramid + 2900 termes   │
+│ TTS multi-lang FR/AR/EN + SM-2 + CAT + 6-Level Pyramid + 2945 termes   │
 │ Offline-first Room v8 medlingua_dz.db + Supabase sync                   │
 │ HeartsGemsTopBar + OutOfHeartsDialog + LeagueScreen + MascotteMedi     │
 │ ExerciseSpecComponents (Choice, Wordbank, Match) + SwappedLanguageToggle│
@@ -52,7 +52,7 @@
 │ - league_cohorts (cohort_id, week_start, tier BRONZE→DIAMOND)           │
 │ - league_members (sorted set weekly_xp DESC, 30/cohort)                 │
 │ - purchases (BaridiMob/CCP + RevenueCat)                                │
-│ - medical_terms (2900 termes + FTS search)                              │
+│ - medical_terms (2945 termes + FTS search)                              │
 │ - flashcard_progress (SM-2)                                             │
 │ - notifications_queue (FIFO SQS-like)                                   │
 │ - friendships (social)                                                  │

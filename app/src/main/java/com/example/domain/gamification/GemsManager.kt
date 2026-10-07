@@ -14,64 +14,83 @@ import com.example.data.local.entity.UserStatsEntity
  * - League promotion: 100 gems
  *
  * Spend:
- * - Heart refill: 50 gems
  * - Streak freeze: 200 gems
  * - Super MedLingo: 500 gems / mois ou 500 DA BaridiMob
+ * (Le refill de cœurs n'existe plus : il n'y a plus de cœurs.)
  */
 object GemsManager {
     const val GEMS_LESSON_COMPLETE = 10
     const val GEMS_PERFECT_LESSON_BONUS = 10
     const val GEMS_STREAK_7_DAYS = 50
     const val GEMS_LEAGUE_PROMOTION = 100
-    const val GEMS_HEART_REFILL = 50
     const val GEMS_STREAK_FREEZE = 200
     const val GEMS_SUPER_MONTHLY = 500
 
+    /**
+     * Single construction path for the gems ledger (type, signed amount and resulting
+     * balance are computed here, callers only state the facts).
+     *
+     * [timestamp] is mandatory: it used to default to System.currentTimeMillis(), which
+     * hid the time source inside the domain and made the ledger untestable.
+     */
     fun createEarnTransaction(
         amount: Int,
         reason: String,
         currentBalance: Int,
-        metadata: String = ""
+        metadata: String = "",
+        timestamp: Long
     ): GemsTransactionEntity {
         return GemsTransactionEntity(
             type = "EARN",
             amount = amount,
             reason = reason,
+            timestamp = timestamp,
             balanceAfter = currentBalance + amount,
             metadata = metadata
         )
     }
 
+    /**
+     * Spend transaction, or null when the balance is too low (the caller must not
+     * silently spend what the user does not have).
+     */
     fun createSpendTransaction(
         amount: Int,
         reason: String,
         currentBalance: Int,
-        metadata: String = ""
+        metadata: String = "",
+        timestamp: Long
     ): GemsTransactionEntity? {
         if (currentBalance < amount) return null // pas assez de gems
         return GemsTransactionEntity(
             type = "SPEND",
             amount = -amount,
             reason = reason,
+            timestamp = timestamp,
             balanceAfter = currentBalance - amount,
             metadata = metadata
         )
     }
 
+    /**
+     * Gems for one completed lesson.
+     *
+     * "Perfect" is derived from the answers themselves (correct == total), it is not a
+     * caller-provided flag: the quiz and the level-completion paths used to disagree
+     * (correctAnswers == total vs scorePercentage == 100), which made the perfect
+     * bonus an exploitable input.
+     */
     fun calculateGemsForLesson(
         correctAnswers: Int,
-        totalQuestions: Int,
-        isPerfect: Boolean
+        totalQuestions: Int
     ): Int {
         if (totalQuestions == 0) return 0
-        val base = GEMS_LESSON_COMPLETE
-        val bonus = if (isPerfect) GEMS_PERFECT_LESSON_BONUS else 0
-        // Si accuracy < 50%, pas de gems (évite farming)
         val accuracy = correctAnswers.toDouble() / totalQuestions
-        return if (accuracy < 0.5) 0 else base + bonus
+        // Si accuracy < 50%, pas de gems (évite farming)
+        if (accuracy < 0.5) return 0
+        val isPerfect = correctAnswers == totalQuestions
+        return GEMS_LESSON_COMPLETE + if (isPerfect) GEMS_PERFECT_LESSON_BONUS else 0
     }
-
-    fun canAfford(currentGems: Int, cost: Int): Boolean = currentGems >= cost
 
     /**
      * Super MedLingo pricing - Tinder Plus model
@@ -81,10 +100,10 @@ object GemsManager {
         return SuperPricing(
             monthlyDa = 500,
             monthlyGems = GEMS_SUPER_MONTHLY,
-            yearlyDa = 4000, // 20% discount: 333 DA/mois
+            yearlyDa = 4000, // 33% discount vs monthly: 333 DA/mois
             yearlyGems = 5000,
             benefits = listOf(
-                "Cœurs illimités ❤️",
+                "Leçons illimitées 🎓",
                 "Sans pubs 🚫",
                 "Mode hors-ligne complet 📴",
                 "Streak freeze inclus 🧊",

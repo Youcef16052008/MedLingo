@@ -30,14 +30,18 @@ import com.example.data.local.entity.LeagueCohortEntity
 import com.example.data.local.entity.LeagueMemberEntity
 import com.example.data.local.entity.LeagueTier
 import com.example.domain.gamification.LeagueManager
+import com.example.localization.Language
+import com.example.localization.LanguageLocale
 
 @Composable
 fun LeagueScreen(
     cohort: LeagueCohortEntity?,
     members: List<LeagueMemberEntity>,
+    lang: Language,
     currentUserId: Int = 1,
     modifier: Modifier = Modifier
 ) {
+    val locale = LanguageLocale.forLanguage(lang)
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -46,7 +50,8 @@ fun LeagueScreen(
     ) {
         // Header
         cohort?.let {
-            LeagueHeader(cohort = it)
+            // null while the member list is still loading: avoid flashing "0 members"
+            LeagueHeader(cohort = it, memberCount = members.size.takeIf { size -> size > 0 })
         }
 
         // Promotion/Demotion zones info
@@ -63,11 +68,11 @@ fun LeagueScreen(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(text = "🏆 Top 10 → Promotion", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFF16A34A))
-                    Text(text = "📉 Bottom 5 → Relégation", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFDC2626))
+                    Text(text = "🏆 Top ${LeagueManager.PROMOTION_COUNT} → Promotion", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFF16A34A))
+                    Text(text = "📉 Bottom ${LeagueManager.DEMOTION_COUNT} → Relégation", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFDC2626))
                 }
                 Text(
-                    text = "Semaine: ${cohort?.let { LeagueManager.formatWeekRange(it.weekStartTimestamp) } ?: ""}",
+                    text = "Semaine: ${cohort?.let { LeagueManager.formatWeekRange(it.weekStartTimestamp, locale) } ?: ""}",
                     fontSize = 11.sp,
                     color = Color(0xFF64748B)
                 )
@@ -83,8 +88,8 @@ fun LeagueScreen(
                 LeagueMemberRow(
                     member = member,
                     rank = index + 1,
-                    isPromotionZone = index < 10,
-                    isDemotionZone = index >= members.size - 5
+                    isPromotionZone = index < LeagueManager.PROMOTION_COUNT,
+                    isDemotionZone = index >= members.size - LeagueManager.DEMOTION_COUNT
                 )
             }
         }
@@ -92,7 +97,7 @@ fun LeagueScreen(
 }
 
 @Composable
-private fun LeagueHeader(cohort: LeagueCohortEntity) {
+private fun LeagueHeader(cohort: LeagueCohortEntity, memberCount: Int?) {
     val tier = LeagueTier.entries.find { it.value == cohort.tier } ?: LeagueTier.BRONZE
 
     Card(
@@ -130,7 +135,14 @@ private fun LeagueHeader(cohort: LeagueCohortEntity) {
                         color = Color(0xFF0F172A)
                     )
                     Text(
-                        text = "${cohort.cohortId.take(12)}... • 30 membres",
+                        // null while the member list is still loading: avoid flashing "0 members"
+            text = buildString {
+                append(cohort.cohortId.take(12))
+                append("...")
+                if (memberCount != null) {
+                    append(" • $memberCount membres")
+                }
+            },
                         fontSize = 11.sp,
                         color = Color(0xFF64748B)
                     )
@@ -266,7 +278,7 @@ private fun LeagueMemberRow(
                     fontSize = 14.sp,
                     color = if (isPromotionZone) Color(0xFF16A34A) else if (isDemotionZone) Color(0xFFDC2626) else Color(0xFF0F172A)
                 )
-                if (isPromotionZone && rank <= 10) {
+                if (isPromotionZone && rank <= LeagueManager.PROMOTION_COUNT) {
                     Text(text = "↑ Promotion", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = Color(0xFF16A34A))
                 } else if (isDemotionZone) {
                     Text(text = "↓ Relégation", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = Color(0xFFDC2626))

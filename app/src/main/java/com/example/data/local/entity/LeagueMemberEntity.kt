@@ -29,5 +29,7 @@ data class LeagueMemberEntity(
     val rank: Int = 0, // calculé à la volée via ORDER BY weeklyXp DESC
     val isCurrentUser: Boolean = false,
     val isBot: Boolean = false,
-    val lastActiveTimestamp: Long = System.currentTimeMillis()
+    // no System.currentTimeMillis() default: LeagueManager stamps it from the injected
+    // Clock, so "active this week" checks stay testable
+    val lastActiveTimestamp: Long
 )

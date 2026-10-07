@@ -71,6 +71,13 @@ serve(async (req) => {
     const results = []
 
     for (const cohort of endedCohorts) {
+      // Palier inconnu : on ne peut ni promouvoir ni reléguer — on ignore.
+      const currentTierIndex = tierOrder.indexOf(cohort.tier)
+      if (currentTierIndex < 0) {
+        console.error(`[LeagueCron] Unknown tier '${cohort.tier}' for cohort ${cohort.cohort_id}`)
+        continue
+      }
+
       // 2. Fetch members sorted by weekly_xp DESC
       const { data: members, error: membersError } = await supabase
         .from('league_members')
@@ -79,7 +86,7 @@ serve(async (req) => {
         .order('weekly_xp', { ascending: false })
 
       if (membersError) {
-        console.error(`[LeagueCron] Error fetching members`)
+        console.error(`[LeagueCron] Error fetching members: ${membersError.message}`)
         continue
       }
 
@@ -94,21 +101,29 @@ serve(async (req) => {
       // 3. Determine promotion/demotion
       const promotionCount = 10
       const demotionCount = 5
-      const currentTierIndex = tierOrder.indexOf(cohort.tier)
-      
+
+      let cohortOk = true
+      let hadPromotion = false
+      let hadDemotion = false
+
       for (let i = 0; i < members.length; i++) {
         const member = members[i]
         const isPromotion = i < promotionCount
-        const isDemotion = i >= members.length - demotionCount
-        
+        // Dans les petites cohortes, un même rang ne peut être à la fois promu
+        // et relégué : la promotion prioritaire du `else if` d'origine reléguait
+        // en réalité des utilisateurs du bas de classement.
+        const isDemotion = i >= members.length - demotionCount && !isPromotion
+
         let nextTier = cohort.tier
         let gemsReward = 0
 
         if (isPromotion && currentTierIndex < tierOrder.length - 1) {
           nextTier = tierOrder[currentTierIndex + 1]
           gemsReward = 100
+          hadPromotion = true
         } else if (isDemotion && currentTierIndex > 0) {
           nextTier = tierOrder[currentTierIndex - 1]
+          hadDemotion = true
         }
 
         // 4. For real users (not bots), create new cohort and update
@@ -118,7 +133,7 @@ serve(async (req) => {
           const weekEnd = new Date(weekStart.getTime() + 7 * 24 * 60 * 60 * 1000 - 1)
 
           let targetCohortId = newCohortId
-          const { data: existingCohort } = await supabase
+          const { data: existingCohort, error: existingError } = await supabase
             .from('league_cohorts')
             .select('cohort_id')
             .eq('tier', nextTier)
@@ -127,31 +142,85 @@ serve(async (req) => {
             .limit(1)
             .single()
 
+          if (existingError && existingError.code !== 'PGRST116') {
+            console.error(`[LeagueCron] Error fetching cohort: ${existingError.message}`)
+            cohortOk = false
+            continue
+          }
+
           if (existingCohort) {
             targetCohortId = existingCohort.cohort_id
           } else {
-            await supabase.from('league_cohorts').insert({
+            const { error: insertCohortError } = await supabase.from('league_cohorts').insert({
               cohort_id: newCohortId,
               week_start: weekStart.toISOString(),
               week_end: weekEnd.toISOString(),
               tier: nextTier,
               is_active: true
             })
+            if (insertCohortError) {
+              console.error(`[LeagueCron] Error inserting cohort: ${insertCohortError.message}`)
+              cohortOk = false
+              continue
+            }
             targetCohortId = newCohortId
 
             const bots = generateBotsForCohort(targetCohortId, nextTier)
-            await supabase.from('league_members').insert(bots)
+            const { error: insertBotsError } = await supabase.from('league_members').insert(bots)
+            if (insertBotsError) {
+              console.error(`[LeagueCron] Error inserting bots: ${insertBotsError.message}`)
+              cohortOk = false
+              continue
+            }
           }
 
-          const { data: user } = await supabase
+          // Idempotence : un membre déjà recensé dans la cohorte cible (rejeu
+          // après un timeout) ne doit ni être ré-inséré ni être payé deux fois.
+          const { data: alreadyMember, error: alreadyError } = await supabase
+            .from('league_members')
+            .select('id')
+            .eq('cohort_id', targetCohortId)
+            .eq('user_id', member.user_id)
+            .limit(1)
+            .maybeSingle()
+
+          if (alreadyError) {
+            console.error(`[LeagueCron] Error checking membership: ${alreadyError.message}`)
+            cohortOk = false
+            continue
+          }
+          if (alreadyMember) {
+            results.push({
+              user_id: member.user_id,
+              old_cohort: cohort.cohort_id,
+              new_cohort: targetCohortId,
+              old_tier: cohort.tier,
+              new_tier: nextTier,
+              rank: i + 1,
+              weekly_xp: member.weekly_xp,
+              promotion: isPromotion,
+              demotion: isDemotion,
+              gems_reward: 0,
+              skipped: 'already_member'
+            })
+            continue
+          }
+
+          const { data: user, error: userError } = await supabase
             .from('users')
             .select('gems')
             .eq('id', member.user_id)
             .single()
 
+          if (userError) {
+            console.error(`[LeagueCron] Error fetching user: ${userError.message}`)
+            cohortOk = false
+            continue
+          }
+
           const newGems = (user?.gems || 0) + gemsReward
 
-          await supabase
+          const { error: updateUserError } = await supabase
             .from('users')
             .update({
               league_cohort_id: targetCohortId,
@@ -161,7 +230,13 @@ serve(async (req) => {
             })
             .eq('id', member.user_id)
 
-          await supabase.from('league_members').insert({
+          if (updateUserError) {
+            console.error(`[LeagueCron] Error updating user: ${updateUserError.message}`)
+            cohortOk = false
+            continue
+          }
+
+          const { error: insertMemberError } = await supabase.from('league_members').insert({
             cohort_id: targetCohortId,
             user_id: member.user_id,
             display_name: member.display_name,
@@ -169,12 +244,19 @@ serve(async (req) => {
             weekly_xp: 0,
             total_xp: member.total_xp,
             streak_days: member.streak_days,
-            is_current_user: true,
+            rank: i + 1,
+            is_current_user: false,
             is_bot: false
           })
 
+          if (insertMemberError) {
+            console.error(`[LeagueCron] Error inserting member: ${insertMemberError.message}`)
+            cohortOk = false
+            continue
+          }
+
           if (gemsReward > 0) {
-            await supabase.from('gems_ledger').insert({
+            const { error: insertGemsError } = await supabase.from('gems_ledger').insert({
               user_id: member.user_id,
               type: 'EARN',
               amount: gemsReward,
@@ -182,6 +264,11 @@ serve(async (req) => {
               balance_after: newGems,
               metadata: { from: cohort.tier, to: nextTier, rank: i + 1 }
             })
+            if (insertGemsError) {
+              console.error(`[LeagueCron] Error inserting gems ledger: ${insertGemsError.message}`)
+              cohortOk = false
+              continue
+            }
           }
 
           results.push({
@@ -199,10 +286,19 @@ serve(async (req) => {
         }
       }
 
-      await supabase
-        .from('league_cohorts')
-        .update({ is_active: false })
-        .eq('cohort_id', cohort.cohort_id)
+      // On ne ferme la cohorte source que si tous ses membres ont été migrés ;
+      // sinon un rejeu les perdrait. On marque aussi la promotion/relégation.
+      if (cohortOk) {
+        const { error: closeError } = await supabase
+          .from('league_cohorts')
+          .update({ is_active: false, is_promoted: hadPromotion, is_demoted: hadDemotion })
+          .eq('cohort_id', cohort.cohort_id)
+        if (closeError) {
+          console.error(`[LeagueCron] Error closing cohort: ${closeError.message}`)
+        }
+      } else {
+        console.error(`[LeagueCron] Cohort ${cohort.cohort_id} kept active after partial failure`)
+      }
     }
 
     return new Response(
@@ -227,7 +323,9 @@ serve(async (req) => {
 function getNextMonday(): Date {
   const now = new Date()
   const day = now.getUTCDay()
-  const diff = day === 0 ? 1 : 8 - day
+  // Dimanche → demain (lundi). Lundi → aujourd'hui (la semaine commence ce jour).
+  // Mardi..samedi → lundi suivant.
+  const diff = day === 0 ? 1 : day === 1 ? 0 : 8 - day
   const nextMonday = new Date(now)
   nextMonday.setUTCDate(now.getUTCDate() + diff)
   nextMonday.setUTCHours(0, 0, 0, 0)
@@ -259,7 +357,7 @@ function generateBotsForCohort(cohortId: string, tier: string) {
       user_id: `00000000-0000-0000-0000-${String(100 + idx).padStart(12, '0')}`,
       display_name: name,
       avatar_emoji: emoji,
-      weekly_xp: 0,
+      weekly_xp: xp,
       total_xp: Math.floor(Math.random() * 4000) + 1000,
       streak_days: Math.floor(Math.random() * 20) + 1,
       is_current_user: false,

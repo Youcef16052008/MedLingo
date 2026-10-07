@@ -8,11 +8,22 @@ import com.example.data.local.entity.FlashcardProgressEntity
 import com.example.data.local.entity.GemsTransactionEntity
 import com.example.data.local.entity.LeagueCohortEntity
 import com.example.data.local.entity.LeagueMemberEntity
+import com.example.data.local.entity.LessonScoreEntity
 import com.example.data.local.entity.MedicalTermEntity
+import com.example.data.local.entity.TrophyEntity
 import com.example.data.local.entity.UserStatsEntity
+import com.example.domain.gamification.ChestKind
+import com.example.domain.gamification.ChestManager
+import com.example.domain.gamification.ChestReward
+import com.example.domain.gamification.ChestSource
+import com.example.domain.gamification.FREEZE_COST_GEMS
+import com.example.domain.gamification.DAILY_GOAL_OPTIONS
 import com.example.domain.gamification.GemsManager
-import com.example.domain.gamification.HeartsManager
 import com.example.domain.gamification.LeagueManager
+import com.example.domain.gamification.ProgressionManager
+import com.example.domain.gamification.TrophyId
+import com.example.domain.gamification.TrophyManager
+import com.example.domain.path.PathBuilder
 import com.example.domain.sm2.ReviewResult
 import com.example.domain.sm2.SpacedRepetitionAlgorithm
 import com.example.domain.time.Clock
@@ -22,8 +33,16 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import kotlin.random.Random
 
 class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock = SystemClock) {
+
+    /**
+ * The time source of the data layer, exposed so the UI layer schedules and reads
+ * "due" cards on the SAME clock. UI code used to read System.currentTimeMillis() while
+ * every timestamp here came from this injected clock, so the two disagreed.
+ */
+val currentClock: Clock get() = clock
 
     val allTerms: Flow<List<MedicalTermEntity>> = dao.getAllTerms()
     val allExercises: Flow<List<ExerciseEntity>> = dao.getAllExercises()
@@ -31,6 +50,8 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
     val allDownloadedModules: Flow<List<DownloadedModuleEntity>> = dao.getAllDownloadedModules()
     val userStats: Flow<UserStatsEntity?> = dao.getUserStats()
     val gemsTransactions: Flow<List<GemsTransactionEntity>> = dao.getAllGemsTransactions()
+    val trophies: Flow<List<TrophyEntity>> = dao.getAllTrophies()
+    val lessonScores: Flow<List<LessonScoreEntity>> = dao.getAllLessonScores()
     val activeLeagueCohort: Flow<LeagueCohortEntity?> = dao.getActiveLeagueCohort()
     val allLeagueCohorts: Flow<List<LeagueCohortEntity>> = dao.getAllLeagueCohorts()
 
@@ -45,8 +66,15 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
         }
     }
 
+    suspend fun isDatabaseEmpty(): Boolean = withContext(Dispatchers.IO) {
+        dao.getTermsCount() == 0
+    }
+
     suspend fun initializeDatabaseIfEmpty() = withContext(Dispatchers.IO) {
+        // Preserve user bookmarks across the REPLACE seed (seed data may update content)
+        val bookmarkedKeys = dao.getBookmarkedKeys()
         dao.insertTerms(InitialData.terms)
+        bookmarkedKeys.forEach { key -> dao.restoreBookmark(key.termEn, key.module) }
 
         // Phase 2: Migrate exercises to ExerciseSpec JSONB
         val migratedExercises = try {
@@ -93,7 +121,7 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
                 UserStatsEntity(
                     id = 1,
                     streakDays = 12,
-                    learnedTermsCount = InitialData.terms.size,
+                    learnedTermsCount = 156, // demo persona progress, NOT "all 1641 terms learned"
                     totalPoints = 2850,
                     quizzesCompleted = 18,
                     totalQuestionsAnswered = 92,
@@ -106,15 +134,17 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
                     level4Score = 0,
                     level5Score = 0,
                     level6Score = 0,
-                    hearts = 5,
-                    heartsUpdatedAt = now,
                     gems = 100,
                     weeklyXp = 0,
                     leagueTier = "BRONZE",
                     isSuper = false,
-                    streakFreezeCount = 1,
+                    streakFreezeCount = 0,
                     perfectLessonsCount = 0,
-                    lessonsCompleted = 18
+                    lessonsCompleted = 18,
+                    // La série démo (12 jours) part du jour courant : sans `lastStudy`,
+                    // la première étude la remettrait à 1.
+                    lastStudy = ProgressionManager.todayKey(now),
+                    weeklyXpReset = LeagueManager.getWeekStartTimestamp(clock)
                 )
             )
 
@@ -130,14 +160,16 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
                 )
             )
 
-            // Init league cohort
-            val cohort = LeagueManager.createNewCohort("BRONZE")
+            // Init league cohort — only one cohort may be active at a time
+            val cohort = LeagueManager.createNewCohort("BRONZE", clock)
+            dao.deactivateOtherCohorts(cohort.cohortId)
             dao.upsertLeagueCohort(cohort)
             val bots = LeagueManager.generateBotsForCohort(
                 cohortId = cohort.cohortId,
                 currentUserName = "Dr. Youcef",
                 currentUserXp = 0,
-                currentUserStreak = 12
+                currentUserStreak = 12,
+                clock = clock
             )
             dao.upsertLeagueMembers(bots)
 
@@ -149,33 +181,58 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
             // Migration check: ensure new fields have defaults if old DB
             var needsUpdate = false
             var newStats = stats
-            if (stats.hearts == 0 && stats.getCurrentHearts(clock) == 0) {
-                if (!stats.isSuper) {
-                    newStats = newStats.copy(hearts = 5, heartsUpdatedAt = now)
-                    needsUpdate = true
-                }
-            }
-            if (stats.learnedTermsCount < InitialData.terms.size) {
-                newStats = newStats.copy(learnedTermsCount = InitialData.terms.size)
-                needsUpdate = true
-            }
+            // learnedTermsCount is only ever modified by real learning progress -—
+            // the old code force-overwrote it to terms.size on every launch
             if (stats.leagueCohortId == null) {
-                val activeCohort = dao.getLeagueCohortById(stats.leagueCohortId ?: "")
+                // Reattach to an existing active cohort when possible; only create
+                // a new one when there is none (the old code queried by empty id)
+                val activeCohort = dao.getActiveLeagueCohortOnce()
                 if (activeCohort == null) {
-                    val cohort = LeagueManager.createNewCohort(stats.leagueTier)
+                    val cohort = LeagueManager.createNewCohort(stats.leagueTier, clock)
+                    dao.deactivateOtherCohorts(cohort.cohortId)
                     dao.upsertLeagueCohort(cohort)
                     val bots = LeagueManager.generateBotsForCohort(
                         cohortId = cohort.cohortId,
                         currentUserName = "Dr. Youcef",
                         currentUserXp = stats.weeklyXp,
-                        currentUserStreak = stats.streakDays
+                        currentUserStreak = stats.streakDays,
+                        clock = clock
                     )
                     dao.upsertLeagueMembers(bots)
                     newStats = newStats.copy(leagueCohortId = cohort.cohortId)
                     needsUpdate = true
+                } else {
+                    newStats = newStats.copy(leagueCohortId = activeCohort.cohortId)
+                    needsUpdate = true
                 }
             }
             if (needsUpdate) safeUpsertUserStats(newStats)
+        }
+
+        // Reseed quand le seed Kotlin a grandi (nouvelles bases intégrées) :
+        // insertTerms est un REPLACE idempotent, les bookmarks sont préservés
+        // et les compteurs par module sont rafraîchis. Sans cela, les installs
+        // existantes ne recevraient jamais les nouveaux termes.
+        if (dao.getTermsCount() < InitialData.terms.size) {
+            val reseededKeys = dao.getBookmarkedKeys()
+            dao.insertTerms(InitialData.terms)
+            reseededKeys.forEach { key -> dao.restoreBookmark(key.termEn, key.module) }
+            val reseedNow = clock.now()
+            InitialData.modulesList.forEach { mod ->
+                dao.upsertDownloadedModule(
+                    DownloadedModuleEntity(
+                        moduleId = mod.id,
+                        moduleName = mod.titleFr,
+                        downloadedTimestamp = reseedNow,
+                        sizeMb = mod.estimatedSizeMb,
+                        termsCount = InitialData.termsOfModule(mod.titleFr).size,
+                        exercisesCount = InitialData.exercises.count {
+                            it.module.equals(mod.titleFr, ignoreCase = true)
+                        },
+                        isDownloaded = true
+                    )
+                )
+            }
         }
     }
 
@@ -196,7 +253,8 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
             quality = quality,
             previousRepetitions = currentReps,
             previousEaseFactor = currentEase,
-            previousIntervalDays = currentInterval
+            previousIntervalDays = currentInterval,
+            clock = clock
         )
 
         val updatedProgress = FlashcardProgressEntity(
@@ -211,26 +269,16 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
         dao.upsertFlashcardProgress(updatedProgress)
 
         val currentStats = dao.getUserStatsOnce() ?: UserStatsEntity()
-        val currentHearts = HeartsManager.getCurrentHearts(currentStats)
-        val effectiveUpdatedAt = HeartsManager.getEffectiveHeartsUpdatedAt(currentStats)
+        // Plus de perte de cœur : une révision crédite de l'XP (objectif quotidien,
+        // ligue, série) et alimente le compteur du trophée 🗂️.
+        val gained = if (quality < 3) quality * 2 else quality * 5
+        val newStats = ProgressionManager
+            .addXp(currentStats, gained, clock.now())
+            .stats
+            .copy(flashReviewed = currentStats.flashReviewed + 1)
 
-        val newStats = if (quality < 3) {
-            if (currentHearts > 0) {
-                currentStats.copy(
-                    hearts = (currentHearts - 1).coerceAtLeast(0),
-                    heartsUpdatedAt = if (currentHearts >= 5) clock.now() else effectiveUpdatedAt,
-                    totalPoints = currentStats.totalPoints + (quality * 2)
-                )
-            } else currentStats
-        } else {
-            currentStats.copy(
-                totalPoints = currentStats.totalPoints + (quality * 5),
-                weeklyXp = currentStats.weeklyXp + (quality * 2)
-            )
-        }
-
-        if (quality >= 3 && newStats.leagueCohortId != null) {
-            dao.addXpToCurrentUserInLeague(newStats.leagueCohortId, quality * 2)
+        if (newStats.leagueCohortId != null) {
+            dao.addXpToCurrentUserInLeague(newStats.leagueCohortId, gained)
         }
 
         safeUpsertUserStats(newStats)
@@ -239,13 +287,12 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
 
     suspend fun recordQuizCompletion(pointsEarned: Int, totalQuestions: Int, correctAnswers: Int) = withContext(Dispatchers.IO) {
         val current = dao.getUserStatsOnce() ?: UserStatsEntity()
-        val currentStats = current.copy(
-            totalPoints = current.totalPoints + pointsEarned,
-            weeklyXp = current.weeklyXp + pointsEarned,
-            quizzesCompleted = current.quizzesCompleted + 1,
-            totalQuestionsAnswered = current.totalQuestionsAnswered + totalQuestions,
-            correctAnswersCount = current.correctAnswersCount + correctAnswers
-        )
+        val currentStats = ProgressionManager.addXp(current, pointsEarned, clock.now())
+            .stats
+            .copy(quizzesCompleted = current.quizzesCompleted + 1,
+                totalQuestionsAnswered = current.totalQuestionsAnswered + totalQuestions,
+                correctAnswersCount = current.correctAnswersCount + correctAnswers
+            )
         safeUpsertUserStats(currentStats)
 
         if (currentStats.leagueCohortId != null) {
@@ -253,17 +300,16 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
         }
 
         val isPerfect = correctAnswers == totalQuestions && totalQuestions > 0
-        val gemsEarned = GemsManager.calculateGemsForLesson(correctAnswers, totalQuestions, isPerfect)
+        val gemsEarned = GemsManager.calculateGemsForLesson(correctAnswers, totalQuestions)
         if (gemsEarned > 0) {
             val newBalance = currentStats.gems + gemsEarned
             dao.insertGemsTransaction(
-                GemsTransactionEntity(
-                    type = "EARN",
+                GemsManager.createEarnTransaction(
                     amount = gemsEarned,
                     reason = if (isPerfect) "perfect_lesson" else "lesson_complete",
-                    timestamp = clock.now(),
-                    balanceAfter = newBalance,
-                    metadata = "points:$pointsEarned correct:$correctAnswers/$totalQuestions"
+                    currentBalance = currentStats.gems,
+                    metadata = "points:$pointsEarned correct:$correctAnswers/$totalQuestions",
+                    timestamp = clock.now()
                 )
             )
             safeUpsertUserStats(currentStats.copy(gems = newBalance))
@@ -279,26 +325,27 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
         val prevScore = current.getScoreForLevel(level)
         val newScore = maxOf(prevScore, scorePercentage)
 
-        val isPerfect = scorePercentage == 100
-        val gemsEarned = GemsManager.calculateGemsForLesson(correctAnswers, totalQuestions, isPerfect)
+        // isPerfect is now derived inside calculateGemsForLesson; here we only need
+        // the flag for the ledger reason label, so keep it aligned with that rule.
+        val isPerfect = correctAnswers == totalQuestions && totalQuestions > 0
+        val gemsEarned = GemsManager.calculateGemsForLesson(correctAnswers, totalQuestions)
 
+        val xpStats = ProgressionManager.addXp(current, pointsEarned, clock.now()).stats
         var updated = when (level) {
-            1 -> current.copy(level1Score = newScore)
-            2 -> current.copy(level2Score = newScore)
-            3 -> current.copy(level3Score = newScore)
-            4 -> current.copy(level4Score = newScore)
-            5 -> current.copy(level5Score = newScore)
-            6 -> current.copy(level6Score = newScore)
-            else -> current
+            1 -> xpStats.copy(level1Score = newScore)
+            2 -> xpStats.copy(level2Score = newScore)
+            3 -> xpStats.copy(level3Score = newScore)
+            4 -> xpStats.copy(level4Score = newScore)
+            5 -> xpStats.copy(level5Score = newScore)
+            6 -> xpStats.copy(level6Score = newScore)
+            else -> xpStats
         }.copy(
-            totalPoints = current.totalPoints + pointsEarned,
-            weeklyXp = current.weeklyXp + pointsEarned,
-            quizzesCompleted = current.quizzesCompleted + 1,
-            totalQuestionsAnswered = current.totalQuestionsAnswered + totalQuestions,
-            correctAnswersCount = current.correctAnswersCount + correctAnswers,
-            lessonsCompleted = current.lessonsCompleted + 1,
-            perfectLessonsCount = if (isPerfect) current.perfectLessonsCount + 1 else current.perfectLessonsCount,
-            gems = current.gems + gemsEarned
+            quizzesCompleted = xpStats.quizzesCompleted + 1,
+            totalQuestionsAnswered = xpStats.totalQuestionsAnswered + totalQuestions,
+            correctAnswersCount = xpStats.correctAnswersCount + correctAnswers,
+            lessonsCompleted = xpStats.lessonsCompleted + 1,
+            perfectLessonsCount = if (isPerfect) xpStats.perfectLessonsCount + 1 else xpStats.perfectLessonsCount,
+            gems = xpStats.gems + gemsEarned
         )
         safeUpsertUserStats(updated)
 
@@ -308,57 +355,17 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
 
         if (gemsEarned > 0) {
             dao.insertGemsTransaction(
-                GemsTransactionEntity(
-                    type = "EARN",
+                GemsManager.createEarnTransaction(
                     amount = gemsEarned,
                     reason = if (isPerfect) "perfect_lesson" else "lesson_complete",
-                    timestamp = clock.now(),
-                    balanceAfter = updated.gems,
-                    metadata = "level:$level score:$scorePercentage"
+                    currentBalance = current.gems,
+                    metadata = "level:$level score:$scorePercentage",
+                    timestamp = clock.now()
                 )
             )
         }
 
         scorePercentage >= 70 && prevScore < 70
-    }
-
-    suspend fun loseHeart(): Boolean = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: return@withContext false
-        if (current.isSuperActive(clock)) return@withContext true
-        val currentHearts = HeartsManager.getCurrentHearts(current)
-        if (currentHearts <= 0) return@withContext false
-
-        val newStats = HeartsManager.loseHeart(current)
-        safeUpsertUserStats(newStats)
-        true
-    }
-
-    suspend fun refillHeartsWithGems(): Boolean = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: return@withContext false
-        val (newStats, success) = HeartsManager.refillHeartsWithGems(current)
-        if (!success) return@withContext false
-
-        safeUpsertUserStats(newStats)
-        dao.insertGemsTransaction(
-            GemsTransactionEntity(
-                type = "SPEND",
-                amount = -GemsManager.GEMS_HEART_REFILL,
-                reason = "heart_refill",
-                timestamp = clock.now(),
-                balanceAfter = newStats.gems
-            )
-        )
-        true
-    }
-
-    suspend fun earnHeartFromPractice(): Boolean = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: return@withContext false
-        val newStats = HeartsManager.earnHeartFromPractice(current)
-        if (newStats.hearts == current.hearts && HeartsManager.getCurrentHearts(current) == newStats.hearts) {
-            if (HeartsManager.getCurrentHearts(current) >= 5) return@withContext false
-        }
-        safeUpsertUserStats(newStats)
-        true
     }
 
     suspend fun addGems(amount: Int, reason: String, metadata: String = "") = withContext(Dispatchers.IO) {
@@ -400,9 +407,7 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
         val expiresAt = clock.now() + (months * 30L * 24 * 60 * 60 * 1000)
         val newStats = current.copy(
             isSuper = true,
-            superExpiresAt = expiresAt,
-            hearts = 5,
-            heartsUpdatedAt = clock.now()
+            superExpiresAt = expiresAt
         )
         safeUpsertUserStats(newStats)
         dao.insertGemsTransaction(
@@ -427,13 +432,15 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
             val result = LeagueManager.checkPromotionDemotion(members, current.id)
             val nextTier = LeagueManager.getNextTier(current.leagueTier, result)
 
-            val newCohort = LeagueManager.createNewCohort(nextTier)
+            val newCohort = LeagueManager.createNewCohort(nextTier, clock)
+            dao.deactivateOtherCohorts(newCohort.cohortId)
             dao.upsertLeagueCohort(newCohort)
             val bots = LeagueManager.generateBotsForCohort(
                 cohortId = newCohort.cohortId,
                 currentUserName = "Dr. Youcef",
                 currentUserXp = 0,
-                currentUserStreak = current.streakDays
+                currentUserStreak = current.streakDays,
+                clock = clock
             )
             dao.upsertLeagueMembers(bots)
 
@@ -457,6 +464,8 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
                     leagueCohortId = newCohort.cohortId,
                     leagueTier = nextTier,
                     weeklyXp = 0,
+                    goalDays = 0,
+                    weeklyXpReset = newCohort.weekStartTimestamp,
                     gems = newGems
                 )
             )
@@ -471,8 +480,10 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
                     moduleName = moduleInfo.titleFr,
                     downloadedTimestamp = clock.now(),
                     sizeMb = moduleInfo.estimatedSizeMb,
-                    termsCount = 10,
-                    exercisesCount = 5,
+                    termsCount = InitialData.termsOfModule(moduleInfo.titleFr).size,
+                    exercisesCount = InitialData.exercises.count {
+                        it.module.equals(moduleInfo.titleFr, ignoreCase = true)
+                    },
                     isDownloaded = true
                 )
             )
@@ -489,5 +500,98 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
     suspend fun toggleOfflineSimulation(isOffline: Boolean) = withContext(Dispatchers.IO) {
         val current = dao.getUserStatsOnce() ?: UserStatsEntity()
         safeUpsertUserStats(current.copy(isOfflineSimulated = isOffline))
+    }
+
+    // ==========================================================
+    // DUOLINGO PHASE 2: trophées, caisses, congélation, parcours
+    // ==========================================================
+
+    /** Enregistre les trophées nouvellement gagnés et ne retourne que ceux-ci. */
+    suspend fun claimNewTrophies(): List<TrophyId> = withContext(Dispatchers.IO) {
+        val stats = dao.getUserStatsOnce() ?: return@withContext emptyList()
+        val now = clock.now()
+        val earned = dao.getAllTrophiesOnce().mapTo(HashSet()) { it.id }
+        val fresh = TrophyManager.claimTrophies(stats, earned, now)
+        if (fresh.isNotEmpty()) {
+            dao.upsertTrophies(fresh.map { (id, at) -> TrophyEntity(id.name, at) })
+        }
+        fresh.map { it.first }
+    }
+
+    /** Ajoute une caisse en attente si la session en mérite une. */
+    suspend fun earnChest(source: ChestSource, score: Int): Boolean = withContext(Dispatchers.IO) {
+        if (!ChestManager.earnsChest(source, score)) return@withContext false
+        val stats = dao.getUserStatsOnce() ?: return@withContext false
+        safeUpsertUserStats(stats.copy(pendingChests = stats.pendingChests + 1))
+        true
+    }
+
+    /**
+     * Ouvre une caisse en attente, applique la récompense tirée et retourne ce qui a
+     * été gagné (`null` s'il n'y a rien à ouvrir).
+     */
+    suspend fun openChest(rand: Random = Random.Default): ChestReward? = withContext(Dispatchers.IO) {
+        val stats = dao.getUserStatsOnce() ?: return@withContext null
+        if (stats.pendingChests <= 0) return@withContext null
+
+        val reward = ChestManager.openChest { rand.nextDouble() }
+        val updated = ChestManager.applyChestReward(stats, reward, clock.now())
+            .copy(
+                pendingChests = stats.pendingChests - 1,
+                chestsOpened = stats.chestsOpened + 1
+            )
+        safeUpsertUserStats(updated)
+
+        // L'XP de caisse compte aussi dans la ligue (comme les autres sources).
+        if (reward.kind == ChestKind.XP && reward.amount > 0 && updated.leagueCohortId != null) {
+            dao.addXpToCurrentUserInLeague(updated.leagueCohortId, reward.amount)
+        }
+
+        if (reward.kind == ChestKind.GEMS && reward.amount > 0) {
+            dao.insertGemsTransaction(
+                GemsManager.createEarnTransaction(
+                    amount = reward.amount,
+                    reason = "chest",
+                    currentBalance = stats.gems,
+                    timestamp = clock.now()
+                )
+            )
+        }
+        reward
+    }
+
+    /** Achète une congélation (200 💎). `false` si les gemmes manquent. */
+    suspend fun buyFreeze(): Boolean = withContext(Dispatchers.IO) {
+        val stats = dao.getUserStatsOnce() ?: return@withContext false
+        val updated = ProgressionManager.buyFreeze(stats) ?: return@withContext false
+        safeUpsertUserStats(updated)
+        dao.insertGemsTransaction(
+            GemsManager.createSpendTransaction(
+                amount = FREEZE_COST_GEMS,
+                reason = "streak_freeze",
+                currentBalance = stats.gems,
+                timestamp = clock.now()
+            ) ?: return@withContext false
+        )
+        true
+    }
+
+    /** Change l'objectif quotidien (20 / 50 / 100 XP). */
+    suspend fun setDailyGoal(goal: Int): Boolean = withContext(Dispatchers.IO) {
+        if (goal !in DAILY_GOAL_OPTIONS) return@withContext false
+        val stats = dao.getUserStatsOnce() ?: return@withContext false
+        if (stats.dailyGoal == goal) return@withContext true
+        safeUpsertUserStats(stats.copy(dailyGoal = goal))
+        true
+    }
+
+    /** Conserve le meilleur score d'une leçon (`module:level`) du parcours. */
+    suspend fun saveLessonScore(moduleId: String, level: Int, score: Int) = withContext(Dispatchers.IO) {
+        val key = PathBuilder.lessonKey(moduleId, level)
+        val existing = dao.getAllLessonScoresOnce().firstOrNull { it.lessonKey == key }
+        if (existing != null && existing.best >= score) return@withContext
+        dao.upsertLessonScore(
+            LessonScoreEntity(lessonKey = key, moduleId = moduleId, level = level, best = score)
+        )
     }
 }

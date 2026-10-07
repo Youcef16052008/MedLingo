@@ -37,6 +37,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
@@ -171,7 +172,7 @@ fun McqQuestionView(
 @Composable
 fun MatchingExerciseView(
     exercise: ExerciseEntity,
-    onComplete: (Boolean) -> Unit,
+    onComplete: () -> Unit,
     currentLanguage: Language,
     modifier: Modifier = Modifier
 ) {
@@ -186,17 +187,30 @@ fun MatchingExerciseView(
     val col1List = remember(pairs) { pairs.map { it.first }.shuffled() }
     val col2List = remember(pairs) { pairs.map { it.second }.shuffled() }
 
-    var selectedFirst by remember { mutableStateOf<String?>(null) }
-    var selectedSecond by remember { mutableStateOf<String?>(null) }
-    val matchedPairs = remember { mutableStateMapOf<String, String>() }
+    // Keyed by exercise: the composable is reused when the exercise changes, so
+    // unkeyed state leaked previous pairs / selections into the new exercise.
+    var selectedFirst by remember(exercise) { mutableStateOf<String?>(null) }
+    var selectedSecond by remember(exercise) { mutableStateOf<String?>(null) }
+    val matchedPairs = remember(exercise) { mutableStateMapOf<String, String>() }
+    var errorFlash by remember(exercise) { mutableStateOf(false) }
+    LaunchedEffect(errorFlash) {
+        if (errorFlash) {
+            kotlinx.coroutines.delay(900)
+            errorFlash = false
+        }
+    }
 
     fun checkMatch(first: String, second: String) {
         val isCorrect = pairs.any { it.first == first && it.second == second }
         if (isCorrect) {
             matchedPairs[first] = second
+            // Réussite = toutes les paires appariées, même après une erreur
+            // corrigée : un faux départ ne doit plus faire échouer l'exercice.
             if (matchedPairs.size == pairs.size) {
-                onComplete(true)
+                onComplete()
             }
+        } else {
+            errorFlash = true
         }
         selectedFirst = null
         selectedSecond = null
@@ -212,6 +226,19 @@ fun MatchingExerciseView(
             color = Color(0xFF475569),
             fontWeight = FontWeight.Medium
         )
+
+        if (errorFlash) {
+            Text(
+                text = if (currentLanguage == Language.ARABIC) {
+                    "زوج غير صحيح — أعد المحاولة"
+                } else {
+                    "Paire incorrecte — réessaie !"
+                },
+                fontSize = 12.sp,
+                color = Color(0xFFDC2626),
+                fontWeight = FontWeight.SemiBold
+            )
+        }
 
         Row(
             modifier = Modifier.fillMaxWidth(),

@@ -36,17 +36,25 @@ data class ExerciseEntity(
 
     /**
      * Get ExerciseSpec from specJson or fallback to legacy optionsRaw
-     * Phase 2 migration: if specJson blank, build spec from legacy fields
+     * Phase 2 migration: specJson is parsed via the migrator's Json instance;
+     * if it is blank or fails to parse we rebuild the spec from legacy fields
+     * (the old code returned null for ANY non-blank specJson = dead branch).
      */
     fun toExerciseSpec(): com.example.domain.exercise.ExerciseSpec? {
         return try {
             if (specJson.isNotBlank()) {
-                // TODO: Parse JSON with kotlinx.serialization
-                // For now return null and use legacy
-                null
+                com.example.domain.exercise.ExerciseSpecMigrator.parseSpecJson(specJson)
+                    ?: buildLegacySpec()
             } else {
-                // Legacy fallback: build spec from old fields
-                when (type) {
+                buildLegacySpec()
+            }
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    private fun buildLegacySpec(): com.example.domain.exercise.ExerciseSpec? {
+        return when (type) {
                     "mcq" -> {
                         val options = getOptionsList()
                         val correctIndex = options.indexOfFirst { it.trim().equals(correctAnswer.trim(), ignoreCase = true) }.coerceAtLeast(0)
@@ -67,8 +75,8 @@ data class ExerciseEntity(
                             promptEn = questionEn,
                             promptFr = questionFr,
                             promptAr = questionAr,
-                            bank = words,
-                            correctOrder = correctAnswer.split(" ").map { words.indexOf(it).coerceAtLeast(0) },
+                        bank = words,
+                        correctOrder = com.example.domain.exercise.WordbankOrder.computeCorrectOrder(words, correctAnswer),
                             correctSentence = correctAnswer,
                             explanationEn = explanationEn,
                             explanationFr = explanationFr,
@@ -95,7 +103,8 @@ data class ExerciseEntity(
                             promptEn = questionEn,
                             promptFr = questionFr,
                             promptAr = questionAr,
-                            acceptedAnswers = listOf(correctAnswer) + getOptionsList().filter { it != correctAnswer },
+                            // optionsRaw holds distractors (MCQ-style), not alternate answers
+                            acceptedAnswers = listOf(correctAnswer),
                             explanationEn = explanationEn,
                             explanationFr = explanationFr,
                             explanationAr = explanationAr
@@ -139,9 +148,5 @@ data class ExerciseEntity(
                     }
                     else -> null
                 }
-            }
-        } catch (e: Exception) {
-            null
-        }
     }
 }

@@ -32,7 +32,6 @@ enum class GemsTransactionType(val value: String) {
     EARN("EARN"),
     SPEND("SPEND"),
     PURCHASE("PURCHASE"),
-    REFILL_HEARTS("REFILL_HEARTS"),
     STREAK_FREEZE("STREAK_FREEZE"),
     LEAGUE_REWARD("LEAGUE_REWARD")
 }

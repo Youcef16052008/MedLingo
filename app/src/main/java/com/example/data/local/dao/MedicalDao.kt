@@ -11,7 +11,9 @@ import com.example.data.local.entity.FlashcardProgressEntity
 import com.example.data.local.entity.GemsTransactionEntity
 import com.example.data.local.entity.LeagueCohortEntity
 import com.example.data.local.entity.LeagueMemberEntity
+import com.example.data.local.entity.LessonScoreEntity
 import com.example.data.local.entity.MedicalTermEntity
+import com.example.data.local.entity.TrophyEntity
 import com.example.data.local.entity.UserStatsEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -34,6 +36,12 @@ interface MedicalDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTerms(terms: List<MedicalTermEntity>)
+
+    @Query("SELECT termEn, module FROM medical_terms WHERE isBookmarked = 1")
+    suspend fun getBookmarkedKeys(): List<BookmarkedKey>
+
+    @Query("UPDATE medical_terms SET isBookmarked = 1 WHERE termEn = :termEn AND module = :module")
+    suspend fun restoreBookmark(termEn: String, module: String)
 
     @Update
     suspend fun updateTerm(term: MedicalTermEntity)
@@ -98,6 +106,12 @@ interface MedicalDao {
     @Query("SELECT * FROM league_cohorts WHERE isActive = 1 ORDER BY weekStartTimestamp DESC LIMIT 1")
     fun getActiveLeagueCohort(): Flow<LeagueCohortEntity?>
 
+    @Query("SELECT * FROM league_cohorts WHERE isActive = 1 ORDER BY weekStartTimestamp DESC LIMIT 1")
+    suspend fun getActiveLeagueCohortOnce(): LeagueCohortEntity?
+
+    @Query("UPDATE league_cohorts SET isActive = 0 WHERE cohortId != :keepCohortId")
+    suspend fun deactivateOtherCohorts(keepCohortId: String)
+
     @Query("SELECT * FROM league_cohorts WHERE cohortId = :cohortId")
     suspend fun getLeagueCohortById(cohortId: String): LeagueCohortEntity?
 
@@ -128,4 +142,26 @@ interface MedicalDao {
 
     @Query("DELETE FROM league_members WHERE cohortId = :cohortId")
     suspend fun clearLeagueMembers(cohortId: String)
+
+    // === DUOLINGO PHASE 2: Trophées ===
+    @Query("SELECT * FROM trophies")
+    fun getAllTrophies(): Flow<List<TrophyEntity>>
+
+    @Query("SELECT * FROM trophies")
+    suspend fun getAllTrophiesOnce(): List<TrophyEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertTrophies(trophies: List<TrophyEntity>)
+
+    // === DUOLINGO PHASE 2: scores du parcours ===
+    @Query("SELECT * FROM lesson_scores")
+    fun getAllLessonScores(): Flow<List<LessonScoreEntity>>
+
+    @Query("SELECT * FROM lesson_scores")
+    suspend fun getAllLessonScoresOnce(): List<LessonScoreEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertLessonScore(score: LessonScoreEntity)
 }
+
+data class BookmarkedKey(val termEn: String, val module: String)

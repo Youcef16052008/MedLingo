@@ -1,22 +1,116 @@
 package com.example.domain.diagnostic
 
-enum class UserType(val labelFr: String, val icon: String, val descFr: String) {
-    MED_STUDENT("Étudiant en Médecine", "🎓", "En cursus médecine (1ère à 7ème année)"),
-    MED_DOCTOR("Médecin / Résident", "👨‍⚕️", "Déjà diplômé ou en spécialisation"),
-    PARAMEDICAL("Paramédical", "💊", "Infirmier, pharmacien, sage-femme, kiné..."),
-    NON_MEDICAL("Autre / Passionné", "📖", "Je veux apprendre le vocabulaire médical")
+import com.example.localization.Language
+
+enum class UserType(
+    val labelFr: String,
+    val icon: String,
+    val descFr: String,
+    val labelEn: String,
+    val labelAr: String,
+    val descEn: String,
+    val descAr: String
+) {
+    MED_STUDENT(
+        "Étudiant en Médecine", "🎓", "En cursus médecine (1ère à 7ème année)",
+        "Medical Student", "طالب طب",
+        "In medical school (1st to 7th year)", "طالب في كليات الطب (من السنة الأولى إلى السابعة)"
+    ),
+    MED_DOCTOR(
+        "Médecin / Résident", "👨‍⚕️", "Déjà diplômé ou en spécialisation",
+        "Doctor / Resident", "طبيب / مقيم",
+        "Already graduated or in residency", "متخرج أو في سنة التخصص"
+    ),
+    PARAMEDICAL(
+        "Paramédical", "💊", "Infirmier, pharmacien, sage-femme, kiné...",
+        "Paramedical", "مهن صحية",
+        "Nurse, pharmacist, midwife, physio...", "ممرض، صيدلي، قابلة، علاج طبيعي..."
+    ),
+    NON_MEDICAL(
+        "Autre / Passionné", "📖", "Je veux apprendre le vocabulaire médical",
+        "Other / Enthusiast", "آخر / مهتم",
+        "I want to learn medical vocabulary", "أريد تعلم المفردات الطبية"
+    );
+
+    fun label(language: Language): String = when (language) {
+        Language.ARABIC -> labelAr
+        Language.ENGLISH -> labelEn
+        Language.FRENCH -> labelFr
+    }
+
+    fun desc(language: Language): String = when (language) {
+        Language.ARABIC -> descAr
+        Language.ENGLISH -> descEn
+        Language.FRENCH -> descFr
+    }
 }
 
-enum class MedYear(val labelFr: String, val icon: String, val descFr: String) {
-    YEAR_1("1ère Année (PCEM1)", "📚", "Anatomie, Biochimie, Histologie, Biophysique..."),
-    YEAR_2("2ème Année", "🔬", "Physiologie, Cytologie, Génétique..."),
-    YEAR_3("3ème Année", "🩺", "Sémiologie Médicale, Pharmacologie générale..."),
-    YEAR_4("4ème Année (Externat)", "🏥", "Pathologie, Cardiologie, Pneumologie..."),
-    YEAR_5("5ème Année", "💊", "Pédiatrie, Neurologie, Chirurgie, Gynécologie..."),
-    YEAR_6("6ème Année", "🎓", "Préparation des concours et stages hospitaliers..."),
-    YEAR_7("7ème Année", "🩻", "Stage interné de fin d'études médicales..."),
-    INTERN("Interne", "🔖", "Pratique clinique hospitalière approfondie..."),
-    RESIDENT("Résident", "⚕️", "Spécialisation médicale ou chirurgicale...")
+enum class MedYear(
+    val labelFr: String,
+    val icon: String,
+    val descFr: String,
+    val labelEn: String,
+    val labelAr: String,
+    val descEn: String,
+    val descAr: String
+) {
+    YEAR_1(
+        "1ère Année (PCEM1)", "📚", "Anatomie, Biochimie, Histologie, Biophysique...",
+        "1st Year (PCEM1)", "السنة الأولى (PCEM1)",
+        "Anatomy, Biochemistry, Histology, Biophysics...", "التشريح، الكيمياء الحيوية، علم الأنسجة، الفيزياء الحيوية..."
+    ),
+    YEAR_2(
+        "2ème Année", "🔬", "Physiologie, Cytologie, Génétique...",
+        "2nd Year", "السنة الثانية",
+        "Physiology, Cytology, Genetics...", "علم وظائف الأعضاء، علم الخلايا، الوراثة..."
+    ),
+    YEAR_3(
+        "3ème Année", "🩺", "Sémiologie Médicale, Pharmacologie générale...",
+        "3rd Year", "السنة الثالثة",
+        "Medical Semiology, General Pharmacology...", "الأعراضية الطبية، علم الأدوية العام..."
+    ),
+    YEAR_4(
+        "4ème Année (Externat)", "🏥", "Pathologie, Cardiologie, Pneumologie...",
+        "4th Year (Externat)", "السنة الرابعة (Externat)",
+        "Pathology, Cardiology, Pulmonology...", "علم الأمراض، أمراض القلب، الأمراض التنفسية..."
+    ),
+    YEAR_5(
+        "5ème Année", "💊", "Pédiatrie, Neurologie, Chirurgie, Gynécologie...",
+        "5th Year", "السنة الخامسة",
+        "Pediatrics, Neurology, Surgery, Gynecology...", "طب الأطفال، الأمراض العصبية، الجراحة، التوليد..."
+    ),
+    YEAR_6(
+        "6ème Année", "🎓", "Préparation des concours et stages hospitaliers...",
+        "6th Year", "السنة السادسة",
+        "Exam prep and hospital rotations...", "التحضير للامتحنات والتطبيبات المرضية..."
+    ),
+    YEAR_7(
+        "7ème Année", "🩻", "Stage interné de fin d'études médicales...",
+        "7th Year", "السنة السابعة",
+        "Final clinical internship year...", "سنة التدريب السريري الختامية..."
+    ),
+    INTERN(
+        "Interne", "🔖", "Pratique clinique hospitalière approfondie...",
+        "Intern", "متدرب",
+        "Advanced inpatient clinical practice...", "ممارسة سريرية متقدمة داخل المستشفى..."
+    ),
+    RESIDENT(
+        "Résident", "⚕️", "Spécialisation médicale ou chirurgicale...",
+        "Resident", "مقيم",
+        "Medical or surgical specialization...", "تخصص طبي أو جراحي..."
+    );
+
+    fun label(language: Language): String = when (language) {
+        Language.ARABIC -> labelAr
+        Language.ENGLISH -> labelEn
+        Language.FRENCH -> labelFr
+    }
+
+    fun desc(language: Language): String = when (language) {
+        Language.ARABIC -> descAr
+        Language.ENGLISH -> descEn
+        Language.FRENCH -> descFr
+    }
 }
 
 enum class KnowledgeLevel(
@@ -25,14 +119,22 @@ enum class KnowledgeLevel(
     val scoreRange: String,
     val colorHex: Long,
     val recommendedModuleId: String,
-    val recommendedModuleName: String
+    val recommendedModuleName: String,
+    val labelEn: String,
+    val labelAr: String
 ) {
-    ZERO("Débutant Absolu", "🌱", "0–14 pts", 0xFF78909C, "anat", "Anatomie"),
-    BEGINNER("Débutant", "📗", "15–29 pts", 0xFF4CAF50, "anat", "Anatomie"),
-    ELEMENTARY("Élémentaire", "📘", "30–49 pts", 0xFF1976D2, "physio", "Physiologie"),
-    INTERMEDIATE("Intermédiaire", "📙", "50–64 pts", 0xFFFF9800, "microbio", "Microbiologie"),
-    ADVANCED("Avancé", "🔬", "65–84 pts", 0xFF7B1FA2, "pharmaco", "Pharmacologie"),
-    EXPERT("Expert Clinique", "🏆", "85–100 pts", 0xFFD97706, "anapath", "Anatomie Pathologique")
+    ZERO("Débutant Absolu", "🌱", "0–14 pts", 0xFF78909C, "anat", "Anatomie", "Absolute Beginner", "مبتدئ تماماً"),
+    BEGINNER("Débutant", "📗", "15–29 pts", 0xFF4CAF50, "anat", "Anatomie", "Beginner", "مبتدئ"),
+    ELEMENTARY("Élémentaire", "📘", "30–49 pts", 0xFF1976D2, "physio", "Physiologie", "Elementary", "مبتدئ متقدم"),
+    INTERMEDIATE("Intermédiaire", "📙", "50–64 pts", 0xFFFF9800, "microbio", "Microbiologie", "Intermediate", "متوسط"),
+    ADVANCED("Avancé", "🔬", "65–84 pts", 0xFF7B1FA2, "pharmaco", "Pharmacologie", "Advanced", "متقدم"),
+    EXPERT("Expert Clinique", "🏆", "85–100 pts", 0xFFD97706, "anapath", "Anatomie Pathologique", "Clinical Expert", "خبير سريري");
+
+    fun label(language: Language): String = when (language) {
+        Language.ARABIC -> labelAr
+        Language.ENGLISH -> labelEn
+        Language.FRENCH -> labelFr
+    }
 }
 
 data class PlacementQuestion(
@@ -202,7 +304,7 @@ class AdaptivePlacementEngine {
     }
 
     object QuestionBank {
-        val questions = listOf(
+        private val rawQuestions = listOf(
             // Difficulté 1 (Facile)
             PlacementQuestion(
                 id = 1,
@@ -451,5 +553,22 @@ class AdaptivePlacementEngine {
                 hint = "Le saut antigénique (Shift) provoque les grandes pandémies mondiales de grippe A."
             )
         )
+
+        /**
+         * The authored bank had correctIndex = 0 on EVERY question: the right
+         * answer was always the first option (one click away from 100%).
+         * Rotate each question's options by its id so the correct answer sits
+         * on different positions, without touching the authored data.
+         */
+        val questions: List<PlacementQuestion> = rawQuestions.map { q ->
+            if (q.correctIndex != 0 || q.options.size < 2) q
+            else {
+                val shift = q.id % q.options.size
+                q.copy(
+                    options = q.options.drop(shift) + q.options.take(shift),
+                    correctIndex = (q.options.size - shift) % q.options.size
+                )
+            }
+        }
     }
 }

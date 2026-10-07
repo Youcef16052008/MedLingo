@@ -6,6 +6,7 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
@@ -34,6 +35,12 @@ object NotificationHelper {
     const val TARGET_QUIZ = "QUIZ"
     const val TARGET_MODULES = "MODULES"
     const val TARGET_HOME = "HOME"
+
+    // Persisted toggle state for the recurring reminders (survives app restarts)
+    const val PREFS_REMINDERS = "medlingua_reminder_prefs"
+    const val KEY_DAILY_REMINDER_ENABLED = "daily_reminder_enabled"
+    const val KEY_STREAK_REMINDER_ENABLED = "streak_reminder_enabled"
+    const val KEY_PEARL_REMINDER_ENABLED = "pearl_reminder_enabled"
 
     fun createNotificationChannels(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -90,6 +97,7 @@ object NotificationHelper {
         }
     }
 
+    @SuppressLint("MissingPermission")
     fun showReviewReminder(context: Context, dueCount: Int = 6) {
         if (!hasNotificationPermission(context)) return
 
@@ -126,6 +134,7 @@ object NotificationHelper {
         NotificationManagerCompat.from(context).notify(NOTIFICATION_ID_REVIEW, notification)
     }
 
+    @SuppressLint("MissingPermission")
     fun showStreakReminder(context: Context, streakDays: Int = 12) {
         if (!hasNotificationPermission(context)) return
 
@@ -157,6 +166,7 @@ object NotificationHelper {
         NotificationManagerCompat.from(context).notify(NOTIFICATION_ID_STREAK, notification)
     }
 
+    @SuppressLint("MissingPermission")
     fun showClinicalPearlNotification(context: Context, term: MedicalTermEntity? = null) {
         if (!hasNotificationPermission(context)) return
 
@@ -196,6 +206,7 @@ object NotificationHelper {
         NotificationManagerCompat.from(context).notify(NOTIFICATION_ID_PEARL, notification)
     }
 
+    @SuppressLint("MissingPermission")
     fun showLevelUnlockedNotification(context: Context, levelNumber: Int, levelName: String) {
         if (!hasNotificationPermission(context)) return
 
@@ -250,16 +261,13 @@ object NotificationHelper {
             }
         }
 
-        try {
-            alarmManager.setInexactRepeating(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                AlarmManager.INTERVAL_DAY,
-                pendingIntent
-            )
-        } catch (_: SecurityException) {
-            // Handled gracefully if exact alarm not granted
-        }
+        // setInexactRepeating never requires SCHEDULE_EXACT_ALARM: no permission check
+        alarmManager.setInexactRepeating(
+            AlarmManager.RTC_WAKEUP,
+            calendar.timeInMillis,
+            AlarmManager.INTERVAL_DAY,
+            pendingIntent
+        )
     }
 
     fun cancelDailyReminder(context: Context) {
@@ -270,6 +278,59 @@ object NotificationHelper {
         val pendingIntent = PendingIntent.getBroadcast(
             context,
             100,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        alarmManager.cancel(pendingIntent)
+    }
+
+    /**
+     * Generic daily recurring reminder for an arbitrary receiver action.
+     * Used by the streak & clinical pearl toggles (their actions were
+     * handled by the receiver but never scheduled).
+     */
+    fun scheduleRepeatingReminder(
+        context: Context,
+        action: String,
+        requestCode: Int,
+        hourOfDay: Int,
+        minute: Int
+    ) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
+        val intent = Intent(context, NotificationReceiver::class.java).apply {
+            this.action = action
+        }
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
+            requestCode,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        val calendar = Calendar.getInstance().apply {
+            timeInMillis = System.currentTimeMillis()
+            set(Calendar.HOUR_OF_DAY, hourOfDay)
+            set(Calendar.MINUTE, minute)
+            set(Calendar.SECOND, 0)
+            if (timeInMillis <= System.currentTimeMillis()) {
+                add(Calendar.DAY_OF_YEAR, 1)
+            }
+        }
+        alarmManager.setInexactRepeating(
+            AlarmManager.RTC_WAKEUP,
+            calendar.timeInMillis,
+            AlarmManager.INTERVAL_DAY,
+            pendingIntent
+        )
+    }
+
+    fun cancelRepeatingReminder(context: Context, action: String, requestCode: Int) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager ?: return
+        val intent = Intent(context, NotificationReceiver::class.java).apply {
+            this.action = action
+        }
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
+            requestCode,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )

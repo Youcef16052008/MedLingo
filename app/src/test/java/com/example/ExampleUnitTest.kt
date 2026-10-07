@@ -43,27 +43,152 @@ class ExampleUnitTest {
   @Test
   fun testAnatomyDatabaseCompleteness() {
     val allTerms = com.example.data.initial.AnatomyDatabase.getAllTerms()
-    assertEquals(150, allTerms.size)
+    // Floor instead of the exact 412: seed additions must not break the test,
+    // while a lost seed file (pre-fix this returned ~200 terms) still fails.
+    assertTrue("anatomy seed too small (${allTerms.size})", allTerms.size >= 380)
 
-    val osteo = allTerms.filter { it.chapter == "Ostéologie" }
-    val arthro = allTerms.filter { it.chapter == "Arthrologie" }
-    val myo = allTerms.filter { it.chapter == "Myologie" }
-    val neuro = allTerms.filter { it.chapter == "Neurologie" }
+    val expectedChapters = setOf(
+      "Ostéologie", "Arthrologie", "Myologie", "Neurologie", "Angiologie",
+      "Organes", "Organes sensoriels", "Appareil digestif", "Appareil respiratoire",
+      "Appareil urogénital", "Termes généraux"
+    )
+    // All 11 anatomy chapters must exist and every term must sit in one of them
+    expectedChapters.forEach { ch ->
+      val count = allTerms.count { it.chapter == ch }
+      assertTrue("chapter '$ch' has no terms (got $count)", count > 0)
+    }
+    val unknown = allTerms.filter { it.chapter !in expectedChapters }.groupBy { it.chapter }
+    assertTrue("terms outside the 11 anatomy chapters: ${unknown.keys}", unknown.isEmpty())
 
-    assertEquals(45, osteo.size)
-    assertEquals(30, arthro.size)
-    assertEquals(40, myo.size)
-    assertEquals(35, neuro.size)
+    // IDs unique inside the anatomy seed; cross-module uniqueness is asserted
+    // by testGlobalTermIdsAreUnique (seed uses OnConflictStrategy.REPLACE).
+    val ids = allTerms.map { it.id }
+    assertEquals(allTerms.size, ids.toSet().size)
+    ids.forEach { assertTrue("id $it must be positive", it > 0) }
 
     // Verify IDs and non-empty multilingual terms
     allTerms.forEach { term ->
-      assertTrue(term.id in 1..150)
       assertTrue(term.termEn.isNotBlank())
       assertTrue(term.termFr.isNotBlank())
       assertTrue(term.termAr.isNotBlank())
       assertTrue(term.definitionEn.isNotBlank())
       assertTrue(term.definitionFr.isNotBlank())
       assertTrue(term.definitionAr.isNotBlank())
+    }
+  }
+
+  @Test
+  fun testGlobalTermIdsAreUnique() {
+    // MedicalDao.insertTerms runs with OnConflictStrategy.REPLACE: a duplicated
+    // id silently overwrites another module's term at seed time.
+    val allTerms = com.example.data.initial.InitialData.terms
+    val ids = allTerms.map { it.id }
+    assertEquals(
+      "MedicalTermEntity ids must be globally unique across every seed file",
+      allTerms.size,
+      ids.toSet().size
+    )
+    ids.forEach { assertTrue("id $it must be positive", it > 0) }
+  }
+
+  @Test
+  fun testGeneticsModuleDatabase() {
+    val genetics = com.example.data.initial.InitialData.termsOfModule("Génétique")
+    // Floor instead of the exact 232 (8 legacy + 225 SQL dump − 1 duplicate):
+    // seed additions must not break the test, a lost dump still fails.
+    assertTrue("génétique seed too small (${genetics.size})", genetics.size >= 200)
+    assertTrue(
+      "génétique chapters too few",
+      com.example.data.initial.InitialData.chaptersOfModule("Génétique").size >= 10
+    )
+    genetics.forEach { term ->
+      assertTrue("termEn blank for id ${term.id}", term.termEn.isNotBlank())
+      assertTrue("termFr blank for id ${term.id}", term.termFr.isNotBlank())
+      assertTrue("termAr blank for id ${term.id}", term.termAr.isNotBlank())
+      assertTrue("definitionEn blank for id ${term.id}", term.definitionEn.isNotBlank())
+      assertTrue("definitionFr blank for id ${term.id}", term.definitionFr.isNotBlank())
+      assertTrue("definitionAr blank for id ${term.id}", term.definitionAr.isNotBlank())
+      assertTrue("ipaPhonetic blank for id ${term.id}", term.ipaPhonetic.isNotBlank())
+    }
+  }
+
+  @Test
+  fun testMicrobiologyModuleDatabase() {
+    val micro = com.example.data.initial.InitialData.termsOfModule("Microbiologie")
+    // Floor instead of the exact 235 (15 legacy + 220 SQL dump)
+    assertTrue("microbiologie seed too small (${micro.size})", micro.size >= 200)
+    assertTrue(
+      "microbiologie chapters too few",
+      com.example.data.initial.InitialData.chaptersOfModule("Microbiologie").size >= 10
+    )
+    micro.forEach { term ->
+      assertTrue("termEn blank for id ${term.id}", term.termEn.isNotBlank())
+      assertTrue("termFr blank for id ${term.id}", term.termFr.isNotBlank())
+      assertTrue("termAr blank for id ${term.id}", term.termAr.isNotBlank())
+      assertTrue("definitionEn blank for id ${term.id}", term.definitionEn.isNotBlank())
+      assertTrue("definitionFr blank for id ${term.id}", term.definitionFr.isNotBlank())
+      assertTrue("definitionAr blank for id ${term.id}", term.definitionAr.isNotBlank())
+      assertTrue("ipaPhonetic blank for id ${term.id}", term.ipaPhonetic.isNotBlank())
+    }
+  }
+
+  @Test
+  fun testPharmacologyModuleDatabase() {
+    val pharm = com.example.data.initial.InitialData.termsOfModule("Pharmacologie")
+    // Floor instead of the exact 228 (15 legacy + 213 SQL dump)
+    assertTrue("pharmacologie seed too small (${pharm.size})", pharm.size >= 200)
+    assertTrue(
+      "pharmacologie chapters too few",
+      com.example.data.initial.InitialData.chaptersOfModule("Pharmacologie").size >= 10
+    )
+    pharm.forEach { term ->
+      assertTrue("termEn blank for id ${term.id}", term.termEn.isNotBlank())
+      assertTrue("termFr blank for id ${term.id}", term.termFr.isNotBlank())
+      assertTrue("termAr blank for id ${term.id}", term.termAr.isNotBlank())
+      assertTrue("definitionEn blank for id ${term.id}", term.definitionEn.isNotBlank())
+      assertTrue("definitionFr blank for id ${term.id}", term.definitionFr.isNotBlank())
+      assertTrue("definitionAr blank for id ${term.id}", term.definitionAr.isNotBlank())
+      assertTrue("ipaPhonetic blank for id ${term.id}", term.ipaPhonetic.isNotBlank())
+    }
+  }
+
+  @Test
+  fun testSemiologyModuleDatabase() {
+    val semi = com.example.data.initial.InitialData.termsOfModule("Sémiologie Médicale")
+    // Floor instead of the exact 238 (15 legacy + 223 SQL dump)
+    assertTrue("sémiologie seed too small (${semi.size})", semi.size >= 200)
+    assertTrue(
+      "sémiologie chapters too few",
+      com.example.data.initial.InitialData.chaptersOfModule("Sémiologie Médicale").size >= 10
+    )
+    semi.forEach { term ->
+      assertTrue("termEn blank for id ${term.id}", term.termEn.isNotBlank())
+      assertTrue("termFr blank for id ${term.id}", term.termFr.isNotBlank())
+      assertTrue("termAr blank for id ${term.id}", term.termAr.isNotBlank())
+      assertTrue("definitionEn blank for id ${term.id}", term.definitionEn.isNotBlank())
+      assertTrue("definitionFr blank for id ${term.id}", term.definitionFr.isNotBlank())
+      assertTrue("definitionAr blank for id ${term.id}", term.definitionAr.isNotBlank())
+      assertTrue("ipaPhonetic blank for id ${term.id}", term.ipaPhonetic.isNotBlank())
+    }
+  }
+
+  @Test
+  fun testPathologyModuleDatabase() {
+    val patho = com.example.data.initial.InitialData.termsOfModule("Anatomie Pathologique")
+    // Floor instead of the exact 218 (15 legacy + 203 SQL dump)
+    assertTrue("anatomie pathologique seed too small (${patho.size})", patho.size >= 180)
+    assertTrue(
+      "anatomie pathologique chapters too few",
+      com.example.data.initial.InitialData.chaptersOfModule("Anatomie Pathologique").size >= 10
+    )
+    patho.forEach { term ->
+      assertTrue("termEn blank for id ${term.id}", term.termEn.isNotBlank())
+      assertTrue("termFr blank for id ${term.id}", term.termFr.isNotBlank())
+      assertTrue("termAr blank for id ${term.id}", term.termAr.isNotBlank())
+      assertTrue("definitionEn blank for id ${term.id}", term.definitionEn.isNotBlank())
+      assertTrue("definitionFr blank for id ${term.id}", term.definitionFr.isNotBlank())
+      assertTrue("definitionAr blank for id ${term.id}", term.definitionAr.isNotBlank())
+      assertTrue("ipaPhonetic blank for id ${term.id}", term.ipaPhonetic.isNotBlank())
     }
   }
 
@@ -112,7 +237,8 @@ class ExampleUnitTest {
   @Test
   fun testLearningExercisesDataCompleteness() {
     val exercises = com.example.data.initial.LearningExercisesData.exercises
-    assertTrue(exercises.size >= 44)
+    // Real count is 44: >= keeps additions harmless while still catching any loss
+    assertTrue("exercise seed too small (${exercises.size})", exercises.size >= 44)
 
     // Check that every level from 1 to 6 has exercises
     for (lvl in 1..6) {
@@ -140,7 +266,8 @@ class ExampleUnitTest {
   @Test
   fun testNewMedicalCurriculumDatabases() {
     val allTerms = com.example.data.initial.InitialData.terms
-    assertTrue("Total curriculum terms should exceed 175", allTerms.size >= 175)
+    // Real floor: the 5 SQL-dump modules alone contribute ~1150 terms
+    assertTrue("Total curriculum terms too small (${allTerms.size})", allTerms.size >= 1400)
 
     val modules = allTerms.map { it.module }.distinct()
     assertTrue(modules.contains("Anatomie"))

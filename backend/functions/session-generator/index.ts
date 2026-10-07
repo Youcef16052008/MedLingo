@@ -69,6 +69,13 @@ serve(async (req) => {
     return new Response('ok', { headers: corsHeaders })
   }
 
+  if (req.method !== 'POST') {
+    return new Response(
+      JSON.stringify({ error: 'Method not allowed' }),
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 405 }
+    )
+  }
+
   try {
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
@@ -113,13 +120,13 @@ serve(async (req) => {
     }
 
     // 1. Fetch user data (like Duolingo API injects user data into request)
-    const { data: user, error: userError } = await supabase
+    const { data: userData, error: userError } = await supabase
       .from('users')
       .select('*')
       .eq('id', user_id)
       .single()
 
-    if (userError || !user) {
+    if (userError || !userData) {
       return new Response(
         JSON.stringify({ error: 'User not found' }),
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 404 }
@@ -127,16 +134,27 @@ serve(async (req) => {
     }
 
     // Check hearts (server-authoritative)
-    const currentHearts = getCurrentHearts(user)
-    if (currentHearts <= 0 && !user.is_super) {
+    const currentHearts = getCurrentHearts(userData)
+    if (currentHearts <= 0 && !userData.is_super) {
       return new Response(
-        JSON.stringify({ 
+        JSON.stringify({
           error: 'OUT_OF_HEARTS',
           current_hearts: currentHearts,
-          time_until_next_heart: getTimeUntilNextHeart(user)
+          time_until_next_heart: getTimeUntilNextHeart(userData)
         }),
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 403 }
       )
+    }
+
+    // La régénération paresseuse est persistée : sans écriture, `hearts` et
+    // `hearts_updated_at` resteraient figés et la régén « remonterait » à
+    // chaque appel depuis un horodatage obsolète.
+    if (currentHearts !== userData.hearts) {
+      const { error: heartsError } = await supabase
+        .from('users')
+        .update({ hearts: currentHearts, hearts_updated_at: new Date().toISOString() })
+        .eq('id', user_id)
+      if (heartsError) throw heartsError
     }
 
     // 2. Fetch course data from S3 cache (like Duolingo S3 files + cache)
@@ -169,7 +187,7 @@ serve(async (req) => {
     }
 
     // 3. Birdbrain V2 lite - 14ms decision (like Duolingo)
-    const birdbrainVector: BirdbrainVector = parseBirdbrainVector(user.birdbrain_vector, user.total_xp)
+    const birdbrainVector: BirdbrainVector = parseBirdbrainVector(userData.birdbrain_vector, userData.total_xp)
 
     const scoredExercises = exercises.map(ex => {
       const difficulty = ex.birdbrain_difficulty || 0.5
@@ -188,23 +206,37 @@ serve(async (req) => {
     scoredExercises.sort((a, b) => b.birdbrain_score - a.birdbrain_score)
     const selectedExercises = scoredExercises.slice(0, count)
 
-    // 4. Same Exam Swapped Language
-    const swappedExercises = selectedExercises.map(ex => {
-      const spec = ex.spec as any
-      if (language !== 'EN' && spec) {
-        // Keep options in EN (medical terms always EN), only prompt changes
-      }
-      return ex
-    })
+    // 4. Same Exam Swapped Language — les exercices sont servis en EN (termes
+    // médicaux) ; le paramètre `language` est accepté pour compatibilité mais
+    // ne traduit pas la session.
 
     // 5. Generate session payload
+    const baseXp = selectedExercises.reduce((sum, ex) => sum + (ex.points || 10), 0)
+
+    // Récompenses de leçon : celles de `lessons` priment sur les défauts.
+    let xpReward = baseXp
+    let gemsReward = 10
+    if (lesson_id) {
+      const { data: lesson, error: lessonError } = await supabase
+        .from('lessons')
+        .select('xp_reward, gems_reward')
+        .eq('id', lesson_id)
+        .maybeSingle()
+      if (lessonError) throw lessonError
+      if (lesson) {
+        xpReward = lesson.xp_reward ?? baseXp
+        gemsReward = lesson.gems_reward ?? 10
+      }
+    }
+
     const session = {
       session_id: crypto.randomUUID(),
       user_id,
       level,
       unit_id,
+      lesson_id,
       language,
-      exercises: swappedExercises.map(ex => ({
+      exercises: selectedExercises.map(ex => ({
         id: ex.id,
         type: ex.type,
         spec: ex.spec,
@@ -212,8 +244,8 @@ serve(async (req) => {
         birdbrain_score: ex.birdbrain_score,
         birdbrain_difficulty: ex.birdbrain_difficulty
       })),
-      xp_reward: swappedExercises.reduce((sum, ex) => sum + (ex.points || 10), 0),
-      gems_reward: 10,
+      xp_reward: xpReward,
+      gems_reward: gemsReward,
       is_perfect_bonus: 10,
       birdbrain_vector: birdbrainVector.vector,
       generated_at: new Date().toISOString(),
@@ -240,8 +272,13 @@ serve(async (req) => {
 function getCurrentHearts(user: any): number {
   if (user.is_super) return user.max_hearts || 5
   if (user.hearts >= (user.max_hearts || 5)) return user.max_hearts || 5
-  
+
+  // `hearts_updated_at` NULL (ou invalide) : sans régénération, on part de
+  // maintenant — `new Date(null)` donnerait 1970 et un remplissage instantané.
+  if (!user.hearts_updated_at) return user.hearts
+
   const updatedAt = new Date(user.hearts_updated_at).getTime()
+  if (Number.isNaN(updatedAt)) return user.hearts
   const now = Date.now()
   const elapsedHours = (now - updatedAt) / (1000 * 60 * 60)
   const regenCount = Math.floor(elapsedHours / 2)

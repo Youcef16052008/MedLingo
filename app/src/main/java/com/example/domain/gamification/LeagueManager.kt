@@ -25,15 +25,26 @@ object LeagueManager {
     const val PROMOTION_COUNT = 10
     const val DEMOTION_COUNT = 5
 
-    fun getWeekStartTimestamp(): Long {
+    /**
+     * Monday 00:00 UTC of the current league week.
+     *
+     * [clock] is injectable (default: system clock) so the week boundary can be asserted
+     * without touching wall time.
+     */
+    fun getWeekStartTimestamp(clock: com.example.domain.time.Clock = com.example.domain.time.SystemClock): Long {
         val cal = Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
+        // Anchor on the injected "now". Anchoring on Calendar.getInstance() (wall clock)
+        // while only using [clock] for the comparison made the result depend on the real
+        // date: a Sunday clock in the past resolved to the current real week, not the
+        // week of the injected date.
+        cal.timeInMillis = clock.now()
         cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY)
         cal.set(Calendar.HOUR_OF_DAY, 0)
         cal.set(Calendar.MINUTE, 0)
         cal.set(Calendar.SECOND, 0)
         cal.set(Calendar.MILLISECOND, 0)
         // Si aujourd'hui est dimanche, le lundi est demain, donc reculer d'une semaine
-        if (cal.timeInMillis > System.currentTimeMillis()) {
+        if (cal.timeInMillis > clock.now()) {
             cal.add(Calendar.WEEK_OF_YEAR, -1)
         }
         return cal.timeInMillis
@@ -43,32 +54,43 @@ object LeagueManager {
         return weekStart + (7 * 24 * 60 * 60 * 1000L) - 1
     }
 
-    fun generateCohortId(tier: String = "BRONZE"): String {
-        val week = getWeekStartTimestamp()
+    fun generateCohortId(
+        tier: String = "BRONZE",
+        clock: com.example.domain.time.Clock = com.example.domain.time.SystemClock
+    ): String {
+        val week = getWeekStartTimestamp(clock)
         val random = UUID.randomUUID().toString().take(4)
         return "${week}-${tier.lowercase()}-${random}"
     }
 
-    fun createNewCohort(tier: String = "BRONZE"): LeagueCohortEntity {
-        val weekStart = getWeekStartTimestamp()
+    fun createNewCohort(
+        tier: String = "BRONZE",
+        clock: com.example.domain.time.Clock = com.example.domain.time.SystemClock
+    ): LeagueCohortEntity {
+        val weekStart = getWeekStartTimestamp(clock)
         return LeagueCohortEntity(
-            cohortId = generateCohortId(tier),
+            cohortId = generateCohortId(tier, clock),
             weekStartTimestamp = weekStart,
             weekEndTimestamp = getWeekEndTimestamp(weekStart),
             tier = tier,
-            isActive = true
+            isActive = true,
+            createdAt = clock.now()
         )
     }
 
     /**
      * Génère 29 bots + 1 user pour remplir cohorte 30
      * Bots avec XP réaliste pour compétition
+     *
+     * [clock] is injected so the members' lastActiveTimestamp follows the same time
+     * source as the cohort, instead of reading wall time from the entity default.
      */
     fun generateBotsForCohort(
         cohortId: String,
         currentUserName: String = "Dr. Youcef",
         currentUserXp: Int = 0,
-        currentUserStreak: Int = 12
+        currentUserStreak: Int = 12,
+        clock: com.example.domain.time.Clock = com.example.domain.time.SystemClock
     ): List<LeagueMemberEntity> {
         val botNames = listOf(
             "Amine_Med" to "👨‍⚕️", "Sara_Anat" to "👩‍⚕️", "Yacine_Pharm" to "💊",
@@ -96,12 +118,14 @@ object LeagueManager {
                 totalXp = 2850 + currentUserXp,
                 streakDays = currentUserStreak,
                 isCurrentUser = true,
-                isBot = false
+                isBot = false,
+                lastActiveTimestamp = clock.now()
             )
         )
 
-        // 29 bots avec XP aléatoire mais réaliste
-        botNames.forEachIndexed { index, (name, emoji) ->
+        // 29 bots avec XP aléatoire mais réaliste — take() guarantee la cohorte
+        // ne dépasse jamais COHORT_SIZE même si on ajoute des noms plus tard
+        botNames.take(COHORT_SIZE - 1).forEachIndexed { index, (name, emoji) ->
             // XP entre 0 et 500, avec quelques forts pour challenge
             val xp = when {
                 index < 3 -> (400..600).random() // top 3 forts
@@ -118,7 +142,8 @@ object LeagueManager {
                     totalXp = (1000..5000).random(),
                     streakDays = (1..20).random(),
                     isCurrentUser = false,
-                    isBot = true
+                    isBot = true,
+                    lastActiveTimestamp = clock.now()
                 )
             )
         }
@@ -153,11 +178,23 @@ object LeagueManager {
         PROMOTION, DEMOTION, STAY
     }
 
-    fun formatWeekRange(weekStart: Long): String {
-        val calStart = Calendar.getInstance().apply { timeInMillis = weekStart }
-        val calEnd = Calendar.getInstance().apply { timeInMillis = getWeekEndTimestamp(weekStart) }
-        val monthStart = calStart.getDisplayName(Calendar.MONTH, Calendar.SHORT, java.util.Locale.FRENCH) ?: ""
-        val monthEnd = calEnd.getDisplayName(Calendar.MONTH, Calendar.SHORT, java.util.Locale.FRENCH) ?: ""
+    /**
+     * Week range label, e.g. "5 janv. - 11 janv." (FR) / "5 يناير - 11 يناير" (AR).
+     *
+     * [locale] is mandatory on purpose: the month names used to be hardcoded to French,
+     * so Arabic users saw a French label. Callers must pass the app language.
+     *
+     * The day numbers come from UTC calendars (to match getWeekStartTimestamp(), Monday
+     * 00:00 UTC) — with the device timezone the displayed day/month shifted by the
+     * device offset.
+     */
+    fun formatWeekRange(weekStart: Long, locale: java.util.Locale): String {
+        val calStart = Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
+            .apply { timeInMillis = weekStart }
+        val calEnd = Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
+            .apply { timeInMillis = getWeekEndTimestamp(weekStart) }
+        val monthStart = calStart.getDisplayName(Calendar.MONTH, Calendar.SHORT, locale) ?: ""
+        val monthEnd = calEnd.getDisplayName(Calendar.MONTH, Calendar.SHORT, locale) ?: ""
         return "${calStart.get(Calendar.DAY_OF_MONTH)} $monthStart - ${calEnd.get(Calendar.DAY_OF_MONTH)} $monthEnd"
     }
 }

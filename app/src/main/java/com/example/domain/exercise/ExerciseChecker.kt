@@ -74,7 +74,12 @@ object ExerciseChecker {
                 correctCount++
             }
         }
-        val isCorrect = correctCount == correctPairs.size && userPairs.size == correctPairs.size
+        val noDuplicateLeft = userPairs.map { it.left }.toSet().size == userPairs.size
+        val noDuplicateRight = userPairs.map { it.right }.toSet().size == userPairs.size
+        val isCorrect = correctCount == correctPairs.size &&
+            userPairs.size == correctPairs.size &&
+            noDuplicateLeft &&
+            noDuplicateRight
         val score = if (correctPairs.isNotEmpty()) correctCount.toDouble() / correctPairs.size else 0.0
 
         return CheckResult(
@@ -100,16 +105,23 @@ object ExerciseChecker {
      */
     fun checkFill(userAnswer: String, acceptedAnswers: List<String>): CheckResult {
         val normalizedUser = userAnswer.trim().lowercase()
-        val isCorrect = acceptedAnswers.any { it.trim().lowercase() == normalizedUser }
-        // Also accept if user answer contains accepted (fuzzy)
-        val isFuzzyCorrect = acceptedAnswers.any { normalizedUser.contains(it.trim().lowercase()) || it.trim().lowercase().contains(normalizedUser) }
+        val normalizedAccepted = acceptedAnswers.map { it.trim().lowercase() }.filter { it.isNotEmpty() }
+        val isCorrect = normalizedUser.isNotEmpty() && normalizedAccepted.any { it == normalizedUser }
+
+        // Fuzzy (partial credit) only for meaningful answers: a 1-2 char answer like "a"
+        // would trivially satisfy contains() against any accepted answer.
+        val isFuzzyCorrect = !isCorrect &&
+            normalizedUser.length >= 3 &&
+            normalizedAccepted.any { accepted ->
+                normalizedUser.contains(accepted) || accepted.contains(normalizedUser)
+            }
 
         return CheckResult(
             isCorrect = isCorrect,
             correctAnswer = acceptedAnswers.firstOrNull() ?: "",
             userAnswer = userAnswer,
             score = if (isCorrect) 1.0 else if (isFuzzyCorrect) 0.5 else 0.0,
-            isFuzzy = isFuzzyCorrect && !isCorrect
+            isFuzzy = isFuzzyCorrect
         )
     }
 
@@ -117,7 +129,10 @@ object ExerciseChecker {
     private fun normalizeSentence(sentence: String): String {
         return sentence.trim()
             .lowercase()
-            .replace(Regex("[^a-z0-9 ]"), "")
+            // Strip Arabic diacritics (harakat), tatweel and superscript alef
+            .replace(Regex("[\\u0640\\u064B-\\u0652\\u0670]"), "")
+            // Keep all Unicode letters (incl. Arabic) and digits; drop punctuation
+            .replace(Regex("[^\\p{L}\\p{N} ]"), "")
             .replace(Regex("\\s+"), " ")
             .trim()
     }
@@ -147,40 +162,60 @@ data class CheckResult(
 object SameExamSwappedLanguage {
 
     /**
-     * Swap exercise language EN→FR→AR
-     * Garde même correctAnswer mais change prompt
+     * Swap the display language of an exercise: EN→FR→AR.
+     *
+     * Every spec type is handled (the `when` is exhaustive on purpose: adding a new
+     * ExerciseSpec subtype becomes a compile error here instead of silently keeping the
+     * English prompt for that type).
+     *
+     * The FR/AR fields always keep their canonical translations — only the display slots
+     * are overwritten:
+     *  - Choice / Fill / Wordbank / Match → promptEn
+     *  - ClinicalCase → vignetteEn + questionEn
+     *  - Reading → passageEn + questionEn
+     *
+     * Because this mutates the display slots, callers MUST derive every swap from the
+     * original spec (rebuild it with ExerciseEntity.toExerciseSpec()); swapping from an
+     * already-swapped spec would destroy the English text.
+     * generateTrilingualVersions() does it correctly by always deriving its three
+     * versions from the spec it is given.
+     *
+     * Options, acceptedAnswers, bank, correctOrder and pairs stay unchanged: they are
+     * language-neutral medical terms ("protects", "flexes"…) that remain valid regardless
+     * of the prompt language.
      */
     fun swapLanguage(
         spec: ExerciseSpec,
         targetLang: ExerciseLanguage
     ): ExerciseSpec {
-        return when (spec) {
-            is ExerciseSpec.Choice -> {
-                // Prompt reste même concept mais dans langue cible
-                // Options restent en EN (termes médicaux toujours EN)
-                spec.copy(
-                    promptEn = when (targetLang) {
-                        ExerciseLanguage.ENGLISH -> spec.promptEn
-                        ExerciseLanguage.FRENCH -> spec.promptFr
-                        ExerciseLanguage.ARABIC -> spec.promptAr
-                    }
-                )
+        fun displayText(en: String, fr: String, ar: String): String =
+            when (targetLang) {
+                ExerciseLanguage.ENGLISH -> en
+                ExerciseLanguage.FRENCH -> fr
+                ExerciseLanguage.ARABIC -> ar
             }
+
+        return when (spec) {
+            is ExerciseSpec.Choice -> spec.copy(
+                promptEn = displayText(spec.promptEn, spec.promptFr, spec.promptAr)
+            )
             is ExerciseSpec.Fill -> spec.copy(
-                promptEn = when (targetLang) {
-                    ExerciseLanguage.ENGLISH -> spec.promptEn
-                    ExerciseLanguage.FRENCH -> spec.promptFr
-                    ExerciseLanguage.ARABIC -> spec.promptAr
-                }
+                promptEn = displayText(spec.promptEn, spec.promptFr, spec.promptAr)
             )
             is ExerciseSpec.Wordbank -> spec.copy(
-                promptEn = when (targetLang) {
-                    ExerciseLanguage.ENGLISH -> spec.promptEn
-                    ExerciseLanguage.FRENCH -> spec.promptFr
-                    ExerciseLanguage.ARABIC -> spec.promptAr
-                }
+                promptEn = displayText(spec.promptEn, spec.promptFr, spec.promptAr)
             )
-            else -> spec
+            is ExerciseSpec.Match -> spec.copy(
+                promptEn = displayText(spec.promptEn, spec.promptFr, spec.promptAr)
+            )
+            is ExerciseSpec.ClinicalCase -> spec.copy(
+                vignetteEn = displayText(spec.vignetteEn, spec.vignetteFr, spec.vignetteAr),
+                questionEn = displayText(spec.questionEn, spec.questionFr, spec.questionAr)
+            )
+            is ExerciseSpec.Reading -> spec.copy(
+                passageEn = displayText(spec.passageEn, spec.passageFr, spec.passageAr),
+                questionEn = displayText(spec.questionEn, spec.questionFr, spec.questionAr)
+            )
         }
     }
 

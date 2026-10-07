@@ -13,11 +13,12 @@ import com.example.data.local.entity.LeagueCohortEntity
 import com.example.data.local.entity.LeagueMemberEntity
 import com.example.data.local.entity.MedicalTermEntity
 import com.example.data.local.entity.UserStatsEntity
-import com.example.domain.exercise.ExerciseLanguage
 import com.example.domain.exercise.ExerciseSpec
-import com.example.domain.gamification.HeartsManager
+import com.example.domain.gamification.ChestReward
+import com.example.domain.gamification.ChestSource
 import com.example.domain.sm2.ReviewResult
 import com.example.localization.Language
+import com.example.ui.components.RewardData
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -31,24 +32,22 @@ data class UiState(
     val allTerms: List<MedicalTermEntity> = emptyList(),
     val exercises: List<ExerciseEntity> = emptyList(),
     val flashcardProgressList: List<FlashcardProgressEntity> = emptyList(),
+    /**
+     * Cards ready for review, computed on the repository clock (not wall time).
+     * Single source for the home card, the tab badge and the review reminder.
+     */
+    val dueFlashcardProgress: List<FlashcardProgressEntity> = emptyList(),
     val downloadedModules: List<DownloadedModuleEntity> = emptyList(),
     val userStats: UserStatsEntity = UserStatsEntity(),
     // Duolingo Phase 1
     val gemsTransactions: List<GemsTransactionEntity> = emptyList(),
     val activeLeagueCohort: LeagueCohortEntity? = null,
     val leagueMembers: List<LeagueMemberEntity> = emptyList(),
-    val currentHearts: Int = 5,
-    val timeUntilNextHeart: Long = 0L,
-    val showOutOfHeartsDialog: Boolean = false,
-    val showHeartRefillDialog: Boolean = false,
     val showSuperPaywall: Boolean = false,
     val lastGemsEarned: Int = 0,
     val showGemsEarnedAnimation: Boolean = false,
     // Duolingo Phase 2 - ExerciseSpec + Same Exam Swapped Language
     val currentExerciseSpec: ExerciseSpec? = null,
-    val exerciseLanguage: ExerciseLanguage = ExerciseLanguage.ENGLISH,
-    val wordbankConstructed: List<String> = emptyList(),
-    val matchUserPairs: Map<String, String> = emptyMap(),
     val currentLanguage: Language = Language.FRENCH,
     val isOnline: Boolean = true,
     val selectedModuleFilter: String = "All",
@@ -67,12 +66,6 @@ data class UiState(
     val levelIsAnswered: Boolean = false,
     val levelIsCompleted: Boolean = false,
     val levelJustUnlockedNext: Boolean = false,
-    // General Quiz state (backward compatibility)
-    val quizCurrentIndex: Int = 0,
-    val quizScore: Int = 0,
-    val quizSelectedOption: String? = null,
-    val quizIsAnswered: Boolean = false,
-    val quizIsCompleted: Boolean = false,
     // Download simulation
     val downloadingModuleId: String? = null,
     val downloadProgress: Float = 0f,
@@ -98,7 +91,18 @@ data class UiState(
     val userProfileName: String = "Dr. Youcef",
     val userKnowledgeLevel: com.example.domain.diagnostic.KnowledgeLevel = com.example.domain.diagnostic.KnowledgeLevel.INTERMEDIATE,
     val userType: com.example.domain.diagnostic.UserType = com.example.domain.diagnostic.UserType.MED_STUDENT,
-    val medYear: com.example.domain.diagnostic.MedYear? = com.example.domain.diagnostic.MedYear.YEAR_1
+    val medYear: com.example.domain.diagnostic.MedYear? = com.example.domain.diagnostic.MedYear.YEAR_1,
+    // === Duolingo Lot 2 : Parcours, trophées, récompenses ===
+    /** Ids des trophées déjà gagnés (table `trophies`). */
+    val trophies: List<String> = emptyList(),
+    /** Meilleur score par leçon (`module:level`, table `lesson_scores`). */
+    val lessonBest: Map<String, Int> = emptyMap(),
+    /** Module de la leçon en cours depuis le Parcours (`null` = quiz libre). */
+    val pathLessonModuleId: String? = null,
+    /** Récompense à afficher dans la pop-up (spec §11). */
+    val lastReward: RewardData? = null,
+    /** Récompense tirée de la caisse ouverte dans la pop-up. */
+    val pendingChestReward: ChestReward? = null
 )
 
 class MedLinguaViewModel(application: Application) : AndroidViewModel(application) {
@@ -106,8 +110,6 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     private val repository = app.repository
     val ttsManager = app.ttsManager
     private val gamificationViewModel = GamificationViewModel(repository)
-    private val leagueViewModel = LeagueViewModel(repository)
-    private val quizLevelViewModel = QuizLevelViewModel()
 
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
@@ -119,16 +121,39 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         const val DEFAULT_TTS_PITCH = 1.0f
         const val DEFAULT_TTS_LANGUAGE = "en"
         const val LEVEL_UNLOCK_THRESHOLD = 70
+        // Recurring reminder slots (distinct request codes per alarm)
+        const val REQUEST_CODE_STREAK = 101
+        const val REQUEST_CODE_PEARL = 102
+        const val STREAK_REMINDER_HOUR = 21
+        const val PEARL_REMINDER_HOUR = 8
         const val MAX_LEARNING_LEVELS = 6
         const val DEFAULT_STREAK_DAYS = 12
         const val DEFAULT_TOTAL_POINTS = 2450
         const val DEFAULT_GEMS = 100
-        const val DEFAULT_MAX_HEARTS = 5
     }
 
     private var allTermsList: List<MedicalTermEntity> = emptyList()
+    private var leagueRefreshChecked = false
 
     init {
+        // Restore persisted reminder toggle state before the UI observes it.
+        val reminderPrefs = app.getSharedPreferences(
+            com.example.service.NotificationHelper.PREFS_REMINDERS,
+            android.content.Context.MODE_PRIVATE
+        )
+        _uiState.update {
+            it.copy(
+                notificationsEnabled = reminderPrefs.getBoolean(
+                    com.example.service.NotificationHelper.KEY_DAILY_REMINDER_ENABLED, true
+                ),
+                streakReminderEnabled = reminderPrefs.getBoolean(
+                    com.example.service.NotificationHelper.KEY_STREAK_REMINDER_ENABLED, true
+                ),
+                clinicalPearlReminderEnabled = reminderPrefs.getBoolean(
+                    com.example.service.NotificationHelper.KEY_PEARL_REMINDER_ENABLED, true
+                )
+            )
+        }
         filterTerms()
         viewModelScope.launch {
             repository.allTerms.collect { terms ->
@@ -147,7 +172,16 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         }
         viewModelScope.launch {
             repository.allFlashcardProgress.collect { progress ->
-                _uiState.update { it.copy(flashcardProgressList = progress) }
+                val clock = repository.currentClock
+                _uiState.update {
+                    it.copy(
+                        flashcardProgressList = progress,
+                        dueFlashcardProgress = progress.filter { card ->
+                            com.example.domain.sm2.SpacedRepetitionAlgorithm
+                                .isDue(card.nextReviewTimestamp, clock)
+                        }
+                    )
+                }
             }
         }
         viewModelScope.launch {
@@ -158,16 +192,16 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch {
             repository.userStats.collect { stats ->
                 if (stats != null) {
-                    val currentHearts = HeartsManager.getCurrentHearts(stats)
-                    val timeUntilNext = HeartsManager.timeUntilNextHeartMillis(stats)
                     _uiState.update {
                         it.copy(
                             userStats = stats,
-                            currentHearts = currentHearts,
-                            timeUntilNextHeart = timeUntilNext
+                            currentLanguage = com.example.localization.Language.fromCode(stats.selectedLanguageCode)
                         )
                     }
-                    repository.refreshLeagueCohortIfNeeded()
+                    if (!leagueRefreshChecked) {
+                        leagueRefreshChecked = true
+                        repository.refreshLeagueCohortIfNeeded()
+                    }
                 }
             }
         }
@@ -189,17 +223,23 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             }
         }
         viewModelScope.launch {
+            repository.trophies.collect { list ->
+                _uiState.update { it.copy(trophies = list.map { t -> t.id }) }
+            }
+        }
+        viewModelScope.launch {
+            repository.lessonScores.collect { list ->
+                _uiState.update {
+                    it.copy(lessonBest = list.associate { row -> row.lessonKey to row.best })
+                }
+            }
+        }
+        viewModelScope.launch {
             while (isActive) {
                 delay(60_000)
-                val stats = _uiState.value.userStats
-                val currentHearts = HeartsManager.getCurrentHearts(stats)
-                val timeUntilNext = HeartsManager.timeUntilNextHeartMillis(stats)
-                _uiState.update {
-                    it.copy(
-                        currentHearts = currentHearts,
-                        timeUntilNextHeart = timeUntilNext
-                    )
-                }
+                // Weekly league rotation check, throttled to once per minute
+                // (was previously run on EVERY stats emission)
+                repository.refreshLeagueCohortIfNeeded()
             }
         }
     }
@@ -210,10 +250,7 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         val chapterFilter = _uiState.value.selectedChapterFilter
 
         val filtered = allTermsList.filter { term ->
-            val matchesModule = (moduleFilter == "All" ||
-                    term.module.equals(moduleFilter, ignoreCase = true) ||
-                    term.module.contains(moduleFilter, ignoreCase = true) ||
-                    moduleFilter.contains(term.module, ignoreCase = true))
+            val matchesModule = com.example.domain.ModuleFilter.matchesModule(term.module, moduleFilter)
             val matchesChapter = (chapterFilter == "All" || term.chapter.equals(chapterFilter, ignoreCase = true) || term.chapter.contains(chapterFilter, ignoreCase = true))
             val matchesQuery = if (query.isBlank()) true else {
                 term.termEn.contains(query, ignoreCase = true) ||
@@ -269,7 +306,11 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun setSearchQuery(query: String) {
-        _uiState.update { it.copy(searchQuery = query) }
+        // Reset the deck position like the other filters: with a stale index,
+        // nextFlashcard/prevFlashcard wrap on a list that no longer matches.
+        _uiState.update {
+            it.copy(searchQuery = query, activeFlashcardIndex = 0, isCardFlipped = false)
+        }
         filterTerms()
     }
 
@@ -281,6 +322,12 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch {
             val result = repository.submitFlashcardRating(termId, quality)
             _uiState.update { it.copy(lastReviewResult = result) }
+            // Les trophées ne sont pas réservés aux leçons : une session de
+            // flashcards seule peut aussi en débloquer (série, cartes, objectif).
+            val freshTrophies = repository.claimNewTrophies()
+            if (freshTrophies.isNotEmpty()) {
+                _uiState.update { it.copy(trophies = it.trophies + freshTrophies.map { t -> t.name }) }
+            }
             delay(300)
             _uiState.update {
                 val nextIndex = if (totalFlashcards > 0) (it.activeFlashcardIndex + 1) % totalFlashcards else 0
@@ -320,7 +367,19 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     // ========================================================
 
     fun startLevelTraining(level: Int) {
-        val exercisesForLevel = _uiState.value.exercises.filter { it.level == level }
+        val state = _uiState.value
+        var exercisesForLevel = state.exercises.filter { it.level == level }
+        // Leçon ouverte depuis le Parcours : le pool est cadré au module tant qu'il
+        // reste au moins une question ; sinon on retombe sur tout le niveau.
+        val moduleTitle = state.pathLessonModuleId?.let { id ->
+            InitialData.modulesList.firstOrNull { it.id == id }?.titleFr
+        }
+        if (moduleTitle != null) {
+            // Leçon du Parcours : le pool est strictement cadré au module. Sans
+            // exercices propres, la leçon reste vide (état dédié à l'écran) plutôt
+            // que de faire jouer les questions d'un autre module.
+            exercisesForLevel = exercisesForLevel.filter { it.module.equals(moduleTitle, ignoreCase = true) }
+        }
         _uiState.update {
             it.copy(
                 selectedLearningLevel = level,
@@ -336,10 +395,20 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         }
     }
 
+    /**
+     * Ouvre la leçon `level` du module `moduleId` depuis le nœud du Parcours :
+     * pool cadré module + niveau, score conservé dans `lesson_scores` en fin de leçon.
+     */
+    fun startPathLesson(moduleId: String, level: Int) {
+        _uiState.update { it.copy(pathLessonModuleId = moduleId) }
+        startLevelTrainingWithSpec(level)
+    }
+
     fun exitLevelTraining() {
         _uiState.update {
             it.copy(
                 selectedLearningLevel = null,
+                pathLessonModuleId = null,
                 levelExercises = emptyList(),
                 levelCurrentIndex = 0,
                 levelScore = 0,
@@ -389,6 +458,18 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             val percentage = if (total > 0) ((correct.toDouble() / total) * 100).toInt() else 0
 
             viewModelScope.launch {
+                val preStats = _uiState.value.userStats
+                val now = repository.currentClock.now()
+                val today = com.example.domain.gamification.ProgressionManager.todayKey(now)
+                val beforeToday = if (preStats.goalDate == today) preStats.xpToday else 0
+                val goalHit = beforeToday < preStats.dailyGoal &&
+                    beforeToday + state.levelScore >= preStats.dailyGoal
+
+                // Leçon du Parcours : meilleur score conservé pour le déblocage ≥ 70 %.
+                val moduleId = state.pathLessonModuleId
+                if (moduleId != null) {
+                    repository.saveLessonScore(moduleId, level, percentage)
+                }
                 val justUnlocked = repository.recordLevelCompletion(
                     level = level,
                     scorePercentage = percentage,
@@ -396,6 +477,8 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                     totalQuestions = total,
                     correctAnswers = correct
                 )
+                repository.earnChest(ChestSource.QUIZ, correct)
+                val freshTrophies = repository.claimNewTrophies()
                 if (justUnlocked && level < 6) {
                     val nextLevelObj = com.example.domain.learning.LearningLevel.fromNumber(level + 1)
                     com.example.service.NotificationHelper.showLevelUnlockedNotification(
@@ -404,10 +487,21 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                         nextLevelObj.titleFr
                     )
                 }
+                val gems = com.example.domain.gamification.GemsManager
+                    .calculateGemsForLesson(correct, total)
+                val lang = _uiState.value.currentLanguage
                 _uiState.update {
                     it.copy(
                         levelIsCompleted = true,
-                        levelJustUnlockedNext = justUnlocked
+                        levelJustUnlockedNext = justUnlocked,
+                        lastReward = RewardData(
+                            xp = state.levelScore,
+                            gems = gems,
+                            goalHit = goalHit,
+                            trophies = freshTrophies.map { t ->
+                                t.icon to com.example.localization.Strings.get(t.titleKey, lang)
+                            }
+                        )
                     )
                 }
             }
@@ -419,68 +513,11 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         startLevelTraining(level)
     }
 
-    // ========================================================
-    // GENERAL QUIZ METHODS (FOR BACKWARD COMPATIBILITY)
-    // ========================================================
-
-    fun selectQuizAnswer(answer: String, correctAnswer: String, points: Int) {
-        if (_uiState.value.quizIsAnswered) return
-        val isCorrect = answer.trim().equals(correctAnswer.trim(), ignoreCase = true)
-        val newScore = if (isCorrect) _uiState.value.quizScore + points else _uiState.value.quizScore
-
-        _uiState.update {
-            it.copy(
-                quizSelectedOption = answer,
-                quizIsAnswered = true,
-                quizScore = newScore
-            )
-        }
-    }
-
-    fun nextQuizQuestion(totalQuestions: Int) {
-        val currentIdx = _uiState.value.quizCurrentIndex
-        if (currentIdx + 1 < totalQuestions) {
-            _uiState.update {
-                it.copy(
-                    quizCurrentIndex = currentIdx + 1,
-                    quizSelectedOption = null,
-                    quizIsAnswered = false
-                )
-            }
-        } else {
-            _uiState.update { it.copy(quizIsCompleted = true) }
-            viewModelScope.launch {
-                repository.recordQuizCompletion(
-                    pointsEarned = _uiState.value.quizScore,
-                    totalQuestions = totalQuestions,
-                    correctAnswers = (_uiState.value.quizScore / 15).coerceAtMost(totalQuestions)
-                )
-            }
-        }
-    }
-
-    fun resetQuiz() {
-        _uiState.update {
-            it.copy(
-                quizCurrentIndex = 0,
-                quizScore = 0,
-                quizSelectedOption = null,
-                quizIsAnswered = false,
-                quizIsCompleted = false
-            )
-        }
-    }
-
     private var continuousJob: kotlinx.coroutines.Job? = null
 
     fun setTtsSpeechRate(rate: Float) {
         _uiState.update { it.copy(ttsRate = rate) }
         ttsManager.setSpeechRate(rate)
-    }
-
-    fun setTtsPitch(pitch: Float) {
-        _uiState.update { it.copy(ttsPitch = pitch) }
-        ttsManager.setPitch(pitch)
     }
 
     fun setTtsLanguage(lang: String) {
@@ -498,7 +535,9 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun speak(text: String, lang: String? = null) {
-        val targetLang = lang ?: _uiState.value.ttsLanguage
+        // Without an explicit language, follow the app language instead of a
+        // hardcoded English default
+        val targetLang = lang ?: _uiState.value.currentLanguage.code
         _uiState.update { it.copy(isTtsSpeaking = true) }
         ttsManager.speak(
             text = text,
@@ -568,13 +607,25 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                     )
                 }
 
-                // 1. Pronounce English term
-                speakAndWait(current.termEn, "en")
+                // 1. Pronounce the term in the language selected in the audio studio
+                val primaryLang = _uiState.value.ttsLanguage
+                val secondaryLang = if (primaryLang.equals("en", ignoreCase = true)) "fr" else "en"
+                val primaryText = when (primaryLang.lowercase()) {
+                    "fr" -> current.termFr
+                    "ar" -> current.termAr
+                    else -> current.termEn
+                }
+                val secondaryText = when (secondaryLang.lowercase()) {
+                    "fr" -> current.termFr
+                    "ar" -> current.termAr
+                    else -> current.termEn
+                }
+                speakAndWait(primaryText, primaryLang)
                 delay(500)
                 if (!this.isActive) break
 
-                // 2. Pronounce French translation
-                speakAndWait(current.termFr, "fr")
+                // 2. Pronounce the translation in the counterpart language
+                speakAndWait(secondaryText, secondaryLang)
                 delay(1200)
                 idx++
             }
@@ -604,6 +655,10 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         )
         kotlinx.coroutines.withTimeoutOrNull(6000) {
             completer.await()
+        } ?: run {
+            // No callback ever arrived (engine stall / superseded utterance):
+            // never leave the UI stuck on "speaking"
+            _uiState.update { it.copy(isTtsSpeaking = false) }
         }
     }
 
@@ -621,7 +676,11 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         val list = _uiState.value.terms
         if (list.isEmpty()) return
         val currentIdx = list.indexOfFirst { it.id == _uiState.value.activeAudioTerm?.id }
-        val prevIdx = if (currentIdx > 0) currentIdx - 1 else list.size - 1
+        val prevIdx = when {
+            currentIdx > 0 -> currentIdx - 1
+            currentIdx == 0 -> list.size - 1
+            else -> 0 // no active term: start at the first one (indexOfFirst returned -1)
+        }
         val prevTerm = list[prevIdx]
         _uiState.update { it.copy(activeAudioTerm = prevTerm, continuousPlayTermIndex = prevIdx) }
         speakTerm(prevTerm)
@@ -673,6 +732,12 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun toggleDailyReminder(enabled: Boolean) {
         _uiState.update { it.copy(notificationsEnabled = enabled) }
+        app.getSharedPreferences(
+            com.example.service.NotificationHelper.PREFS_REMINDERS,
+            android.content.Context.MODE_PRIVATE
+        ).edit().putBoolean(
+            com.example.service.NotificationHelper.KEY_DAILY_REMINDER_ENABLED, enabled
+        ).apply()
         if (enabled) {
             com.example.service.NotificationHelper.scheduleDailyReminder(
                 app,
@@ -686,10 +751,52 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun toggleStreakReminder(enabled: Boolean) {
         _uiState.update { it.copy(streakReminderEnabled = enabled) }
+        app.getSharedPreferences(
+            com.example.service.NotificationHelper.PREFS_REMINDERS,
+            android.content.Context.MODE_PRIVATE
+        ).edit().putBoolean(
+            com.example.service.NotificationHelper.KEY_STREAK_REMINDER_ENABLED, enabled
+        ).apply()
+        if (enabled) {
+            com.example.service.NotificationHelper.scheduleRepeatingReminder(
+                app,
+                com.example.service.NotificationReceiver.ACTION_STREAK_CHECK,
+                REQUEST_CODE_STREAK,
+                STREAK_REMINDER_HOUR,
+                0
+            )
+        } else {
+            com.example.service.NotificationHelper.cancelRepeatingReminder(
+                app,
+                com.example.service.NotificationReceiver.ACTION_STREAK_CHECK,
+                REQUEST_CODE_STREAK
+            )
+        }
     }
 
     fun toggleClinicalPearlReminder(enabled: Boolean) {
         _uiState.update { it.copy(clinicalPearlReminderEnabled = enabled) }
+        app.getSharedPreferences(
+            com.example.service.NotificationHelper.PREFS_REMINDERS,
+            android.content.Context.MODE_PRIVATE
+        ).edit().putBoolean(
+            com.example.service.NotificationHelper.KEY_PEARL_REMINDER_ENABLED, enabled
+        ).apply()
+        if (enabled) {
+            com.example.service.NotificationHelper.scheduleRepeatingReminder(
+                app,
+                com.example.service.NotificationReceiver.ACTION_CLINICAL_PEARL,
+                REQUEST_CODE_PEARL,
+                PEARL_REMINDER_HOUR,
+                0
+            )
+        } else {
+            com.example.service.NotificationHelper.cancelRepeatingReminder(
+                app,
+                com.example.service.NotificationReceiver.ACTION_CLINICAL_PEARL,
+                REQUEST_CODE_PEARL
+            )
+        }
     }
 
     fun setReminderTime(hour: Int, minute: Int) {
@@ -702,7 +809,13 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     fun sendTestNotification(type: String) {
         when (type) {
             "review" -> {
-                com.example.service.NotificationHelper.showReviewReminder(app, dueCount = 6)
+                // Nothing due: a "0 flashcards ready" notification is pure noise
+                val dueCount = _uiState.value.dueFlashcardProgress.size
+                if (dueCount > 0) {
+                    com.example.service.NotificationHelper.showReviewReminder(app, dueCount = dueCount)
+                } else {
+                    android.util.Log.i("MedLinguaVM", "Review reminder test skipped: no flashcard is due")
+                }
             }
             "streak" -> {
                 com.example.service.NotificationHelper.showStreakReminder(
@@ -715,10 +828,11 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 com.example.service.NotificationHelper.showClinicalPearlNotification(app, pearlTerm)
             }
             "level" -> {
+                val levelNumber = _uiState.value.userStats.highestUnlockedLevel()
                 com.example.service.NotificationHelper.showLevelUnlockedNotification(
                     app,
-                    levelNumber = 2,
-                    levelName = "Collocations & Expressions Cliniques"
+                    levelNumber = levelNumber,
+                    levelName = com.example.domain.learning.LearningLevel.fromNumber(levelNumber).titleFr
                 )
             }
         }
@@ -750,87 +864,67 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         }
         viewModelScope.launch {
             val current = _uiState.value.userStats
-            val updated = current.copy(
-                totalPoints = current.totalPoints + result.score * 5
+            // L'XP du diagnostic transite par ProgressionManager.addXp comme toute
+            // autre source : série, objectif quotidien, XP hebdo de ligue.
+            val outcome = com.example.domain.gamification.ProgressionManager.addXp(
+                current,
+                result.score * 5,
+                repository.currentClock.now()
             )
-            repository.saveUserStats(updated)
-            _uiState.update { it.copy(userStats = updated) }
+            repository.saveUserStats(outcome.stats)
+            _uiState.update { it.copy(userStats = outcome.stats) }
         }
     }
 
     // ========================================================
-    // DUOLINGO PHASE 1: HEARTS, GEMS, LEAGUES (delegated)
+    // DUOLINGO PHASE 2: GEMS & SUPER (delegated)
+    // Les cœurs ont disparu : plus de dialogue, plus de leçon bloquée.
     // ========================================================
-
-    fun onWrongAnswer() {
-        viewModelScope.launch {
-            val success = gamificationViewModel.onWrongAnswer()
-            if (!success) {
-                _uiState.update { it.copy(showOutOfHeartsDialog = true) }
-            }
-        }
-    }
-
-    fun refillHeartsWithGems() {
-        viewModelScope.launch {
-            val success = gamificationViewModel.refillHeartsWithGems()
-            if (success) {
-                _uiState.update { it.copy(showOutOfHeartsDialog = false, showHeartRefillDialog = false) }
-            }
-        }
-    }
-
-    fun earnHeartFromPractice() {
-        viewModelScope.launch {
-            val success = gamificationViewModel.earnHeartFromPractice()
-            if (success) {
-                _uiState.update { it.copy(showOutOfHeartsDialog = false) }
-            }
-        }
-    }
 
     fun purchaseSuper(months: Int = 1) {
         viewModelScope.launch {
             gamificationViewModel.purchaseSuper(months)
-            _uiState.update { it.copy(showSuperPaywall = false, showOutOfHeartsDialog = false) }
+            _uiState.update { it.copy(showSuperPaywall = false) }
         }
+    }
+
+    /** Ferme la pop-up de récompense (spec §11). */
+    fun dismissReward() {
+        _uiState.update { it.copy(lastReward = null, pendingChestReward = null) }
+    }
+
+    /** Ouvre une caisse en attente depuis la pop-up de récompense. */
+    fun openPendingChest() {
+        viewModelScope.launch {
+            val reward = repository.openChest()
+            if (reward != null) {
+                _uiState.update { it.copy(pendingChestReward = reward) }
+            }
+        }
+    }
+
+    /**
+     * Ouvre la pop-up de récompense vide depuis le badge caisse du Parcours
+     * (ouvrir une caisse sans avoir terminé une leçon).
+     */
+    fun openChestRewardPopup() {
+        _uiState.update {
+            it.copy(lastReward = RewardData(xp = 0, gems = 0, goalHit = false, trophies = emptyList()))
+        }
+    }
+
+    /** Congélation de série ❄️ : 200 💎 (refusé si les gemmes manquent). */
+    fun buyFreeze() {
+        viewModelScope.launch { repository.buyFreeze() }
+    }
+
+    /** Objectif quotidien : 20 / 50 / 100 XP. */
+    fun setDailyGoal(goal: Int) {
+        viewModelScope.launch { repository.setDailyGoal(goal) }
     }
 
     fun showSuperPaywall(show: Boolean) {
         _uiState.update { it.copy(showSuperPaywall = show) }
-    }
-
-    fun dismissOutOfHeartsDialog() {
-        _uiState.update { it.copy(showOutOfHeartsDialog = false) }
-    }
-
-    fun dismissHeartRefillDialog() {
-        _uiState.update { it.copy(showHeartRefillDialog = false) }
-    }
-
-    fun showHeartRefillDialog(show: Boolean) {
-        _uiState.update { it.copy(showHeartRefillDialog = show) }
-    }
-
-    fun checkCanDoLesson(): Boolean {
-        val stats = _uiState.value.userStats
-        return gamificationViewModel.checkCanDoLesson(stats)
-    }
-
-    fun onLessonStart() {
-        if (!checkCanDoLesson()) {
-            _uiState.update { it.copy(showOutOfHeartsDialog = true) }
-        }
-    }
-
-    // Override selectLevelAnswer to include hearts logic
-    fun selectLevelAnswerWithHearts(answer: String, correctAnswer: String, points: Int) {
-        if (_uiState.value.levelIsAnswered) return
-        val isCorrect = answer.trim().equals(correctAnswer.trim(), ignoreCase = true)
-        if (!isCorrect) {
-            onWrongAnswer()
-        }
-        selectLevelAnswer(answer, correctAnswer, points)
     }
 
     fun showGemsEarned(amount: Int) {
@@ -851,87 +945,16 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         val idx = state.levelCurrentIndex
         if (exercises.isEmpty() || idx >= exercises.size) return
         val entity = exercises[idx]
+        // Always derive the displayed spec from the entity: swapLanguage() overwrites the
+        // display slot (promptEn), so a swapped spec must never be reused as a source.
         val spec = entity.toExerciseSpec()
         _uiState.update {
             it.copy(
                 currentExerciseSpec = spec,
-                wordbankConstructed = emptyList(),
-                matchUserPairs = emptyMap(),
                 levelSelectedOption = null,
                 levelIsAnswered = false
             )
         }
-    }
-
-    fun setExerciseLanguage(lang: ExerciseLanguage) {
-        _uiState.update { it.copy(exerciseLanguage = lang) }
-        // Reload spec with swapped language
-        val currentSpec = _uiState.value.currentExerciseSpec ?: return
-        val swapped = com.example.domain.exercise.SameExamSwappedLanguage.swapLanguage(currentSpec, lang)
-        _uiState.update { it.copy(currentExerciseSpec = swapped) }
-    }
-
-    // Wordbank methods
-    fun addWordToConstructed(word: String) {
-        _uiState.update { it.copy(wordbankConstructed = it.wordbankConstructed + word) }
-    }
-
-    fun removeWordFromConstructed(index: Int) {
-        val current = _uiState.value.wordbankConstructed.toMutableList()
-        if (index in current.indices) {
-            current.removeAt(index)
-            _uiState.update { it.copy(wordbankConstructed = current) }
-        }
-    }
-
-    fun clearWordbankConstructed() {
-        _uiState.update { it.copy(wordbankConstructed = emptyList()) }
-    }
-
-    fun checkWordbankAnswer(correctSentence: String) {
-        if (_uiState.value.levelIsAnswered) return
-        val constructed = _uiState.value.wordbankConstructed.joinToString(" ")
-        val result = com.example.domain.exercise.ExerciseChecker.checkWordbank(constructed, correctSentence)
-        if (!result.isCorrect) onWrongAnswer()
-        // Use selectLevelAnswer to record score
-        selectLevelAnswer(constructed, correctSentence, 20)
-    }
-
-    // Match methods
-    fun setMatchPair(left: String, right: String) {
-        val current = _uiState.value.matchUserPairs.toMutableMap()
-        current[left] = right
-        _uiState.update { it.copy(matchUserPairs = current) }
-    }
-
-    fun checkMatchAnswer(correctPairs: List<com.example.domain.exercise.MatchPair>) {
-        if (_uiState.value.levelIsAnswered) return
-        val userPairs = _uiState.value.matchUserPairs.map { com.example.domain.exercise.MatchPair(it.key, it.value) }
-        val result = com.example.domain.exercise.ExerciseChecker.checkMatch(userPairs, correctPairs)
-        if (!result.isCorrect) onWrongAnswer()
-        selectLevelAnswer(result.userAnswer, result.correctAnswer, 20)
-    }
-
-    // Fill blank
-    fun checkFillAnswer(userAnswer: String, accepted: List<String>) {
-        if (_uiState.value.levelIsAnswered) return
-        val result = com.example.domain.exercise.ExerciseChecker.checkFill(userAnswer, accepted)
-        if (!result.isCorrect) onWrongAnswer()
-        selectLevelAnswer(userAnswer, accepted.firstOrNull() ?: "", 20)
-    }
-
-    // Choice by index
-    fun selectChoiceByIndex(selectedIndex: Int, correctIndex: Int, points: Int) {
-        if (_uiState.value.levelIsAnswered) return
-        val isCorrect = selectedIndex == correctIndex
-        if (!isCorrect) onWrongAnswer()
-        val result = com.example.domain.exercise.ExerciseChecker.checkChoice(selectedIndex, correctIndex)
-        // Convert to legacy selectLevelAnswer for compatibility
-        selectLevelAnswer(
-            answer = selectedIndex.toString(),
-            correctAnswer = correctIndex.toString(),
-            points = if (result.isCorrect) points else 0
-        )
     }
 
     // Override startLevelTraining to also load spec

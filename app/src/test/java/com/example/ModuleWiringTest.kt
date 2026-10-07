@@ -16,33 +16,43 @@ class ModuleWiringTest {
 
     @Test
     fun getAllTermsConcatenatesEverySeedFile() {
-        // Before the fix this returned only 4 anatomy chapters.
+        // Before the fix this returned only 4 anatomy chapters (~200 terms).
+        val all = AnatomyDatabase.getAllTerms()
         assertTrue(
-            "getAllTerms must expose every seeded term",
-            AnatomyDatabase.getAllTerms().isNotEmpty()
+            "getAllTerms must expose every seeded term (got ${all.size})",
+            all.size >= 380
         )
+        // Every registered module must contribute at least one seeded term
+        InitialData.modulesList.forEach { mod ->
+            assertTrue(
+                "module '${mod.titleFr}' has no seeded terms",
+                InitialData.termsOfModule(mod.titleFr).isNotEmpty()
+            )
+        }
     }
 
     @Test
-    fun noModuleCountedInventedByFuzzyMatching() {
-        // Every module card must be counted against the exact seed module string.
-        InitialData.modulesList.forEach { mod ->
-            val exact = InitialData.termsOfModule(mod.titleFr)
-            if (exact.isEmpty()) {
-                // Modules with no seed terms yet are allowed, but must not be inflated by
-                // bidirectional substring matching of another module's terms.
-                assertFalse(
-                    "Module '${mod.titleFr}' has no terms yet — chaptersCount must be 0, not fabricated",
-                    mod.chaptersCount > 0
-                )
-            } else {
-                assertEquals(
-                    "chaptersCount for '${mod.titleFr}' must match real seed chapters",
-                    InitialData.chaptersOfModule(mod.titleFr).size,
-                    mod.chaptersCount
-                )
-            }
-        }
+    fun moduleLookupsAreExactAndDisjoint() {
+        val titles = InitialData.modulesList.map { it.titleFr }
+        assertEquals(
+            "modulesList ids must be unique",
+            titles.size,
+            InitialData.modulesList.map { it.id }.toSet().size
+        )
+        assertEquals("modulesList titles must be unique", titles.size, titles.toSet().size)
+
+        // A lookup built on bidirectional String.contains would double-count
+        // ("Anatomie" would pull "Anatomie Pathologique" terms and vice versa):
+        // the sum of per-module lookups must equal the number of terms directly
+        // attributed to a registered module — computed via a different code path.
+        val titleSet = titles.toSet()
+        val lookedUp = titles.sumOf { InitialData.termsOfModule(it).size }
+        val directlyAttributed = InitialData.terms.count { it.module in titleSet }
+        assertEquals(
+            "per-module lookups must cover every registered-module term exactly once",
+            directlyAttributed,
+            lookedUp
+        )
     }
 
     @Test

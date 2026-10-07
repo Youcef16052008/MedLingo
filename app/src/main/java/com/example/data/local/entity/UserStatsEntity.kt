@@ -4,7 +4,6 @@ import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.example.domain.time.Clock
-import com.example.domain.time.FakeClock
 import com.example.domain.time.SystemClock
 
 @Entity(
@@ -34,12 +33,7 @@ data class UserStatsEntity(
     val level5Score: Int = 0,  // Level 5 (Paragraphes) locked
     val level6Score: Int = 0,   // Level 6 (Cas Cliniques) locked
 
-    // === DUOLINGO PHASE 1: Game Economy ===
-    // Hearts System - Duolingo model: 5 hearts max, regen 1 per 2h lazy
-    val hearts: Int = 5,
-    val heartsUpdatedAt: Long = 0L,
-    val maxHearts: Int = 5,
-
+    // === DUOLINGO PHASE 2: Game Economy (sans cœurs) ===
     // Gems Ledger - append-only balance derived (anti-cheat)
     val gems: Int = 100, // Starting gems like Duolingo
 
@@ -51,11 +45,31 @@ data class UserStatsEntity(
     // Super MedLingo (Duolingo Plus) - Tinder Plus model
     val isSuper: Boolean = false,
     val superExpiresAt: Long? = null,
-    val streakFreezeCount: Int = 1, // Like Duolingo streak freeze
+    val streakFreezeCount: Int = 0, // congélations de série (❄️, 200 💎 pièce)
 
     // Additional Duolingo stats
     val perfectLessonsCount: Int = 0,
-    val lessonsCompleted: Int = 18
+    val lessonsCompleted: Int = 18,
+
+    // === DUOLINGO PHASE 2: objectif quotidien, caisses, trophées ===
+    /** XP gagné aujourd'hui ; remis à zéro au changement de jour civil. */
+    val xpToday: Int = 0,
+    /** Jour civil (`yyyy-MM-dd`) du dernier XP crédité. */
+    val goalDate: String = "",
+    /** Objectif quotidien choisi (20 / 50 / 100 XP). */
+    val dailyGoal: Int = 50,
+    /** Jour (`yyyy-MM-dd`) de la dernière étude, pilier de la série 🔥. */
+    val lastStudy: String = "",
+    /** Jours de la fenêtre hebdomadaire ayant atteint l'objectif (trophée 🎯). */
+    val goalDays: Int = 0,
+    /** Flashcards relues depuis le début (trophée 🗂️). */
+    val flashReviewed: Int = 0,
+    /** Caisse gagnée mais pas encore ouverte. */
+    val pendingChests: Int = 0,
+    /** Caisse déjà ouverte (trophée 📦). */
+    val chestsOpened: Int = 0,
+    /** Début de semaine (ms, lundi UTC) du dernier reset hebdomadaire. */
+    val weeklyXpReset: Long = 0L
 ) {
     val accuracyPercentage: Int
         get() = if (totalQuestionsAnswered == 0) 0 else ((correctAnswersCount.toDouble() / totalQuestionsAnswered) * 100).toInt()
@@ -91,39 +105,6 @@ data class UserStatsEntity(
         return 1
     }
 
-    // === DUOLINGO HEARTS LOGIC ===
-    fun getCurrentHearts(clock: Clock = SystemClock): Int {
-        if (isSuper) return maxHearts // Super = unlimited hearts
-        if (hearts >= maxHearts) return maxHearts
-        val elapsedMillis = clock.now() - heartsUpdatedAt
-        val elapsedHours = elapsedMillis / (1000.0 * 60 * 60)
-        val regenCount = (elapsedHours / HEART_REGEN_HOURS).toInt() // 1 heart per 2 hours
-        return (hearts + regenCount).coerceAtMost(maxHearts)
-    }
-
-    fun getHeartsUpdatedAtForCurrent(clock: Clock = SystemClock): Long {
-        if (hearts >= maxHearts) return heartsUpdatedAt
-        val current = getCurrentHearts(clock)
-        if (current >= maxHearts) return clock.now()
-        val elapsedMillis = clock.now() - heartsUpdatedAt
-        val regenCount = ((elapsedMillis / (1000.0 * 60 * 60 * HEART_REGEN_HOURS)).toInt())
-        return heartsUpdatedAt + (regenCount * HEART_REGEN_HOURS * 60 * 60 * 1000L).toLong()
-    }
-
-    fun canDoLesson(): Boolean {
-        if (isSuper) return true
-        return getCurrentHearts() > 0
-    }
-
-    fun timeUntilNextHeartMillis(clock: Clock = SystemClock): Long {
-        if (isSuper) return 0
-        if (getCurrentHearts(clock) >= maxHearts) return 0
-        val elapsed = clock.now() - heartsUpdatedAt
-        val twoHoursMillis = (HEART_REGEN_HOURS * 60 * 60 * 1000L).toLong()
-        val timeInCurrentCycle = elapsed % twoHoursMillis
-        return twoHoursMillis - timeInCurrentCycle
-    }
-
     fun isSuperActive(clock: Clock = SystemClock): Boolean {
         if (!isSuper) return false
         if (superExpiresAt == null) return true // lifetime for debug
@@ -132,10 +113,8 @@ data class UserStatsEntity(
 
     companion object {
         const val UNLOCK_THRESHOLD = 70
-        const val HEART_REGEN_HOURS = 2.0
 
         fun createDefault(clock: Clock = SystemClock): UserStatsEntity {
-            val now = clock.now()
             return UserStatsEntity(
                 id = 1,
                 streakDays = 12,
@@ -152,16 +131,13 @@ data class UserStatsEntity(
                 level4Score = 0,
                 level5Score = 0,
                 level6Score = 0,
-                hearts = 5,
-                heartsUpdatedAt = now,
-                maxHearts = 5,
                 gems = 100,
                 weeklyXp = 0,
                 leagueCohortId = null,
                 leagueTier = "BRONZE",
                 isSuper = false,
                 superExpiresAt = null,
-                streakFreezeCount = 1,
+                streakFreezeCount = 0,
                 perfectLessonsCount = 0,
                 lessonsCompleted = 18
             )

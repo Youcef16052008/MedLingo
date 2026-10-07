@@ -348,18 +348,19 @@ end;
 $$ language plpgsql;
 
 -- === SEED DATA - 15 Modules ===
+-- chapters_count = nombre réel de chapitres distincts dans le seed Kotlin
 insert into units (id, title_fr, title_en, title_ar, icon, color_hex, order_index, chapters_count, estimated_size_mb) values
-('anat', 'Anatomie', 'Anatomy', 'علم التشريح', '🦴', x'1B5E20'::bigint, 1, 4, 14.2),
-('physio', 'Physiologie', 'Physiology', 'علم وظائف الأعضاء', '❤️', x'00695C'::bigint, 2, 5, 18.5),
-('biochim', 'Biochimie', 'Biochemistry', 'الكيمياء الحيوية', '🧬', x'1565C0'::bigint, 3, 5, 12.8),
-('histo', 'Histologie', 'Histology', 'علم الأنسجة', '🔬', x'6A1B9A'::bigint, 4, 5, 16.0),
-('biophys', 'Biophysique', 'Biophysics', 'الفيزياء الحيوية', '🧪', x'E65100'::bigint, 5, 5, 9.4),
-('genet', 'Génétique', 'Genetics', 'الوراثة', '🧬', x'004D40'::bigint, 6, 4, 11.0),
-('termino', 'Terminologie', 'Terminology', 'المصطلحات', '📙', x'E65100'::bigint, 7, 4, 8.5),
-('clinical_en', 'Anglais Médical', 'Medical English', 'الإنجليزية الطبية', '🩺', x'00695C'::bigint, 8, 3, 7.2),
-('cytol', 'Cytologie', 'Cytology', 'علم الخلايا', '🧫', x'00796B'::bigint, 9, 4, 10.5),
-('info_med', 'Informatique Médicale', 'Medical Informatics', 'المعلوماتية الطبية', '💻', x'1976D2'::bigint, 10, 4, 8.0),
-('embryo', 'Embryologie', 'Embryology', 'علم الأجنة', '👶', x'C2185B'::bigint, 11, 4, 9.2),
+('anat', 'Anatomie', 'Anatomy', 'علم التشريح', '🦴', x'1B5E20'::bigint, 1, 11, 14.2),
+('physio', 'Physiologie', 'Physiology', 'علم وظائف الأعضاء', '❤️', x'00695C'::bigint, 2, 14, 18.5),
+('biochim', 'Biochimie', 'Biochemistry', 'الكيمياء الحيوية', '🧬', x'1565C0'::bigint, 3, 32, 12.8),
+('histo', 'Histologie', 'Histology', 'علم الأنسجة', '🔬', x'6A1B9A'::bigint, 4, 18, 16.0),
+('biophys', 'Biophysique', 'Biophysics', 'الفيزياء الحيوية', '🧪', x'E65100'::bigint, 5, 17, 9.4),
+('genet', 'Génétique', 'Genetics', 'الوراثة', '🧬', x'004D40'::bigint, 6, 19, 11.0),
+('termino', 'Terminologie', 'Terminology', 'المصطلحات', '📙', x'E65100'::bigint, 7, 6, 8.5),
+('clinical_en', 'Anglais Médical', 'Medical English', 'الإنجليزية الطبية', '🩺', x'00695C'::bigint, 8, 2, 7.2),
+('cytol', 'Cytologie', 'Cytology', 'علم الخلايا', '🧫', x'00796B'::bigint, 9, 5, 10.5),
+('info_med', 'Informatique Médicale', 'Medical Informatics', 'المعلوماتية الطبية', '💻', x'1976D2'::bigint, 10, 20, 8.0),
+('embryo', 'Embryologie', 'Embryology', 'علم الأجنة', '👶', x'C2185B'::bigint, 11, 5, 9.2),
 ('microbio', 'Microbiologie', 'Microbiology', 'الأحياء الدقيقة', '🦠', x'00897B'::bigint, 12, 15, 13.5),
 ('pharmaco', 'Pharmacologie', 'Pharmacology', 'علم الأدوية', '💊', x'7B1FA2'::bigint, 13, 15, 14.8),
 ('semio', 'Sémiologie', 'Semiology', 'علم الأعراض', '🩺', x'0288D1'::bigint, 14, 15, 15.2),

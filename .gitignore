@@ -16,3 +16,9 @@
 local.properties
 .env
 debug.keystore
+
+# Local tooling artifacts
+tmp_*
+.kilo/
+__pycache__/
+*.pyc

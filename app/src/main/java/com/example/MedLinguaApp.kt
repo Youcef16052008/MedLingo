@@ -20,14 +20,49 @@ class MedLinguaApp : Application() {
     override fun onCreate() {
         super.onCreate()
         com.example.service.NotificationHelper.createNotificationChannels(this)
-        com.example.service.NotificationHelper.scheduleDailyReminder(this, 20, 0)
+        // All reminder toggles default to ON, but the user's OFF choice is
+        // persisted: only arm alarms that are still enabled.
+        val reminderPrefs = getSharedPreferences(
+            com.example.service.NotificationHelper.PREFS_REMINDERS,
+            MODE_PRIVATE
+        )
+        if (reminderPrefs.getBoolean(
+                com.example.service.NotificationHelper.KEY_DAILY_REMINDER_ENABLED, true
+            )
+        ) {
+            com.example.service.NotificationHelper.scheduleDailyReminder(this, 20, 0)
+        }
+        if (reminderPrefs.getBoolean(
+                com.example.service.NotificationHelper.KEY_STREAK_REMINDER_ENABLED, true
+            )
+        ) {
+            com.example.service.NotificationHelper.scheduleRepeatingReminder(
+                this,
+                com.example.service.NotificationReceiver.ACTION_STREAK_CHECK,
+                com.example.ui.viewmodel.MedLinguaViewModel.REQUEST_CODE_STREAK,
+                com.example.ui.viewmodel.MedLinguaViewModel.STREAK_REMINDER_HOUR,
+                0
+            )
+        }
+        if (reminderPrefs.getBoolean(
+                com.example.service.NotificationHelper.KEY_PEARL_REMINDER_ENABLED, true
+            )
+        ) {
+            com.example.service.NotificationHelper.scheduleRepeatingReminder(
+                this,
+                com.example.service.NotificationReceiver.ACTION_CLINICAL_PEARL,
+                com.example.ui.viewmodel.MedLinguaViewModel.REQUEST_CODE_PEARL,
+                com.example.ui.viewmodel.MedLinguaViewModel.PEARL_REMINDER_HOUR,
+                0
+            )
+        }
         applicationScope.launch {
-            repository.initializeDatabaseIfEmpty()
+            // Seed only on a truly empty database: re-running the full seed on
+            // every launch would reset the user's module-download state.
+            if (repository.isDatabaseEmpty()) {
+                repository.initializeDatabaseIfEmpty()
+            }
         }
     }
-
-    override fun onTerminate() {
-        super.onTerminate()
-        ttsManager.shutdown()
-    }
+    // TTS is released in MainActivity.onDestroy (onTerminate never runs on devices)
 }

@@ -202,7 +202,9 @@ serve(async (req) => {
       }
     }
 
-    const speedIdx = 6
+    // Index 7 (libre) : l'index 6 est déjà pris par le niveau 6 — écrire la
+    // vitesse ici écrasait le signal de niveau.
+    const speedIdx = 7
     const currentSpeed = newVector[speedIdx] || 0.5
     const newSpeed = is_correct ?
       (currentSpeed * 0.9 + (timeFactor > 1 ? 0.1 : 0)) :
@@ -228,9 +230,10 @@ serve(async (req) => {
       newVector[moduleIdx] = Math.max(0, Math.min(1, (newVector[moduleIdx] || 0.5) + abilityDelta * 0.3))
     }
 
-    // Use seeded PRNG for deterministic noise
+    // Use seeded PRNG for deterministic noise (graine stable : exercice + semaine)
     const seed = exercise_id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
-    const rng = mulberry32(seed + Date.now())
+    const weekSeed = Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000))
+    const rng = mulberry32(seed + weekSeed)
     for (let i = 31; i < 40; i++) {
       newVector[i] = (newVector[i] || 0) + (rng() - 0.5) * 0.01
       newVector[i] = Math.max(-1, Math.min(1, newVector[i]))
@@ -248,7 +251,7 @@ serve(async (req) => {
     const nextReviewHours = halfLifeHours * 0.8
 
     // 5. Update user in DB
-    await supabase
+    const { error: vectorError } = await supabase
       .from('users')
       .update({
         birdbrain_vector: newVector,
@@ -256,8 +259,16 @@ serve(async (req) => {
       })
       .eq('id', user_id)
 
+    if (vectorError) {
+      return new Response(
+        JSON.stringify({ error: 'Failed to update birdbrain vector' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
+
     // 6. Log to progress table (PII removed)
-    await supabase.from('progress').insert({
+    const { error: progressError } = await supabase.from('progress').insert({
+      user_id: user_id,
       lesson_id: 'birdbrain-update',
       unit_id: 'system',
       accuracy: is_correct ? 1 : 0,
@@ -268,6 +279,13 @@ serve(async (req) => {
       hints_used,
       is_perfect: is_correct
     })
+
+    if (progressError) {
+      return new Response(
+        JSON.stringify({ error: 'Failed to log progress' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
 
     const response: BirdbrainResponse = {
       new_vector: newVector,

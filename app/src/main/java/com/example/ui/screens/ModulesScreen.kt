@@ -87,6 +87,17 @@ fun ModulesScreen(
     // 0 = Vue Figma Catalogue des Modules; 1 = Vue Dictionnaire / Lexique des Termes
     var selectedViewTab by remember { mutableIntStateOf(if (uiState.selectedModuleFilter != "All") 1 else 0) }
 
+    // Module progress = terms of the module whose last review quality was >= 3
+    // (ModuleInfo.progress is a static 0f seed value and never moved)
+    val masteredByModule = remember(uiState.flashcardProgressList, uiState.allTerms) {
+        val termById = uiState.allTerms.associateBy { it.id }
+        uiState.flashcardProgressList
+            .filter { it.lastQuality >= 3 }
+            .mapNotNull { termById[it.termId]?.module }
+            .groupingBy { it }
+            .eachCount()
+    }
+
     val modulesList = listOf(
         "All" to Strings.get("all_modules", lang),
         "Anatomie" to "Anatomie 🦴",
@@ -107,143 +118,12 @@ fun ModulesScreen(
     )
 
     // Dynamic chapter options based on active module filter
-    val currentChapters = when (uiState.selectedModuleFilter) {
-        "Anatomie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول التشريح" else "Tous les chapitres"),
-            "Ostéologie" to "🦴 Ostéologie",
-            "Arthrologie" to "🔗 Arthrologie",
-            "Myologie" to "💪 Myologie",
-            "Neurologie" to "🧠 Neurologie"
-        )
-        "Biochimie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول الكيمياء الحيوية" else "Tous les chapitres"),
-            "Glucides et Métabolisme" to "🍞 Glucides",
-            "Lipides et Lipoprotéines" to "🥑 Lipides",
-            "Protéines et Acides Aminés" to "🥩 Protéines",
-            "Acides Nucléiques et Génome" to "🧬 Acides Nucléiques",
-            "Bioénergétique et Vitamines" to "⚡ Bioénergétique"
-        )
-        "Biophysique" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول الفيزياء الحيوية" else "Tous les chapitres"),
-            "Mécanique des Fluides et Hémodynamique" to "🌊 Hémodynamique",
-            "Optique Médicale et Vision" to "👁️ Optique & Vision",
-            "Rayonnements et Radiobiologie" to "☢️ Rayonnements",
-            "Électrophysiologie et Phénomènes de Membrane" to "⚡ Électrophysiologie",
-            "Solutions Biologiques et Échanges" to "🧪 Solutions & Starling"
-        )
-        "Histologie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول علم الأنسجة" else "Tous les chapitres"),
-            "Tissus Épithéliaux" to "🧱 Épithéliums",
-            "Tissus Conjonctifs et Cartilage/Os" to "🦴 Conjonctif & Os",
-            "Tissu Musculaire" to "💪 Musculaire",
-            "Tissu Nerveux" to "🧠 Nerveux",
-            "Tissu Sanguin et Hématopoïèse" to "🩸 Sanguin"
-        )
-        "Physiologie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول وظائف الأعضاء" else "Tous les chapitres"),
-            "Physiologie Cardiovasculaire" to "❤️ Cardiovasculaire",
-            "Physiologie Respiratoire" to "🫁 Respiratoire",
-            "Physiologie Rénale" to "🩺 Rénal & SRAA",
-            "Endocrinologie et Homéostasie" to "⚖️ Endocrinologie"
-        )
-        "Génétique" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع الفصول" else "Tous les chapitres"),
-            "Structure de l'ADN & Chromatine" to "🧬 Structure ADN & Chromatine",
-            "Réplication & Transcription" to "🔁 Réplication & Transcription",
-            "Mutations & Hérédité Mendélienne" to "👨‍👩‍👧 Hérédité Mendélienne",
-            "Anomalies Chromosomiques" to "🔬 Anomalies Chromosomiques"
-        )
-        "Terminologie Médicale" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع الفصول" else "Tous les chapitres"),
-            "Préfixes et Suffixes" to "🔤 Préfixes & Suffixes",
-            "Suffixes Chirurgicaux" to "🔪 Suffixes Chirurgicaux",
-            "Sémiologie Cardio-Vasculaire" to "❤️ Sémiologie Cardio",
-            "Sémiologie Respiratoire & Digestive" to "🩺 Sémiologie Digestive",
-            "Grands Syndromes Cliniques" to "📋 Grands Syndromes"
-        )
-        "Anglais Médical" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع الفصول" else "Tous les chapitres"),
-            "Communication clinique" to "🗣️ Communication",
-            "Examen clinique" to "📋 Examen Clinique"
-        )
-        "Cytologie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول علم الأحياء الخلوية" else "Tous les chapitres"),
-            "Membrane Plasmique & Transports" to "🧱 Membrane & Transports",
-            "Système Endomembranaire & Organites" to "📦 Organites & Golgi",
-            "Cytosquelette & Motilité cellulaire" to "🏃 Cytosquelette & Moteurs",
-            "Signalisation cellulaire & Apoptose" to "☠️ Apoptose & Signaux",
-            "Noyau & Cycle Cellulaire" to "🧬 Noyau & CPN"
-        )
-        "Informatique Médicale" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول المعلوماتية الطبية" else "Tous les chapitres"),
-            "Biostatistiques Fondamentales" to "📊 Biostatistiques (p-value, IC)",
-            "Épidémiologie & Risque Clinique" to "📈 Épidémiologie (RR, OR)",
-            "Dossier Patient Informatisé & SIH" to "📁 DMP & SIH",
-            "Intelligence Artificielle en Santé" to "🤖 IA & Imagerie",
-            "Sécurité des Données de Santé" to "🔒 Sécurité & RGPD"
-        )
-        "Embryologie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول علم الأجنة" else "Tous les chapitres"),
-            "Gamétogenèse & Fécondation" to "🥚 Fécondation & Capacitation",
-            "Segmentation & Blastocyste" to "🍇 Morula & Blastocyste",
-            "Neurulation & Crêtes Neurales" to "🧠 Neurulation & Crêtes",
-            "Mésoderme & Somites" to "🦴 Somites & Mésoderme",
-            "Placenta & Tératologie" to "🛡️ Placenta & Tératogenèse"
-        )
-        "Microbiologie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول علم الأحياء الدقيقة" else "Tous les chapitres"),
-            "Introduction" to "🔬 Introduction & Flores",
-            "Bactériologie Générale" to "🧫 Bactériologie Générale",
-            "Bactéries Pathogènes" to "🦠 Bactéries Pathogènes (SARM, BK)",
-            "Virologie" to "🧬 Virologie & Rétrovirus",
-            "Virologie Clinique" to "🧪 Virologie Clinique (Drift/Shift)",
-            "Mycologie" to "🍄 Mycologie (Candida)",
-            "Parasitologie" to "🪱 Parasitologie (Plasmodium)",
-            "Antibiotiques et Résistance" to "💊 Antibiotiques & Résistances",
-            "Diagnostic Microbiologique" to "🔍 Diagnostic & Hémocultures"
-        )
-        "Pharmacologie" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول علم الأدوية" else "Tous les chapitres"),
-            "Pharmacocinétique" to "📈 Pharmacocinétique (ADME, t½, CYP)",
-            "Pharmacodynamie" to "🎯 Pharmacodynamie (Agonistes, IT)",
-            "Médicaments Cardiovasculaires" to "❤️ Cardiovasculaires (Bêta-bloquants, IEC, Diurétiques)",
-            "Médicaments du SNC" to "🧠 Système Nerveux Central (Opioïdes, Benzos)",
-            "Anti-inflammatoires et Analgésiques" to "🩹 AINS, Antalgiques & Corticoïdes",
-            "Médicaments Digestifs" to "🫃 Gastro-entérologie (IPP, Antiacides)",
-            "Médicaments Endocriniens" to "🧬 Endocrinologie (Insulines, Metformine)",
-            "Pharmacologie Clinique et Toxicologie" to "⚠️ Toxicologie & Antidotes",
-            "Formes Pharmaceutiques" to "💉 Voies d'administration"
-        )
-        "Sémiologie Médicale" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول السيميولوجيا الطبية" else "Tous les chapitres"),
-            "Introduction à la Sémiologie" to "📋 Introduction (Signes vs Symptômes)",
-            "Sémiologie Neurologique" to "🧠 Sémiologie Neurologique (Glasgow, Babinski)",
-            "Sémiologie Cardiovasculaire" to "🫀 Cardiovasculaire (Angor, Dyspnée)",
-            "Sémiologie Respiratoire" to "🫁 Respiratoire (Crépitants, Sibilants)",
-            "Sémiologie Digestive" to "🫃 Digestive (Murphy, McBurney, Ascite)",
-            "Sémiologie Endocrinienne" to "🧬 Endocrinienne (Chvostek, Trousseau)",
-            "Sémiologie Gynécologique" to "🤰 Gynéco-Obstétrique (Prééclampsie)",
-            "Sémiologie Dermatologique" to "🩹 Dermatologique (Pétéchies, Purpura)",
-            "Sémiologie Rhumatologique" to "🦴 Rhumatologique (Lasègue)",
-            "Sémiologie Urologique" to "🫘 Urologique (Giordano)",
-            "Examen Clinique Général" to "🔍 Examen Général (Adénopathies)"
-        )
-        "Anatomie Pathologique" -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع فصول علم الأمراض" else "Tous les chapitres"),
-            "Introduction à l'Anatomie Pathologique" to "🔬 Introduction & Biopsies",
-            "Lésions Cellulaires et Mort Cellulaire" to "☠️ Nécroses & Apoptose",
-            "Inflammation Chronique et Réparation" to "🩹 Granulomes, Cellules géantes & Fibrose",
-            "Troubles Circulatoires" to "🩸 Thrombus & Triade de Virchow",
-            "Pathologie Cardiovasculaire" to "❤️ Athérosclérose & Plaques",
-            "Néoplasies - Généralités" to "🎗️ Néoplasies (Carcinomes, Sarcomes, TNM)",
-            "Cancérogenèse et Oncologie Moléculaire" to "🧬 Gènes TP53 & Oncogènes",
-            "Pathologie Digestive" to "🫃 Pathologie Digestive (Cirrhose)",
-            "Techniques en Anatomie Pathologique" to "🧪 Techniques (IHC, Congélation, Rouge Congo)"
-        )
-        else -> listOf(
-            "All" to (if (lang == Language.ARABIC) "جميع الفصول" else "Tous les chapitres (Tous modules)")
-        )
-    }
+    // Chapter chips are derived from the seed (InitialData.chaptersOfModule) so a
+    // renamed or newly added chapter is always filterable — the previous hardcoded
+    // lists had drifted away from the seed data (Anatomie 4/11, Génétique 4/19...).
+    val currentChapters: List<Pair<String, String>> = listOf(
+        "All" to (if (lang == Language.ARABIC) "الكل" else "Tous les chapitres")
+    ) + InitialData.chaptersOfModule(uiState.selectedModuleFilter).map { it to it }
 
     Column(
         modifier = modifier
@@ -293,7 +173,7 @@ fun ModulesScreen(
                                 color = Color(0xFF0F172A)
                             )
                             Text(
-                                text = "PCEM1 • 8 Modules Fondamentaux • ${uiState.allTerms.size} Termes",
+                                text = "PCEM1 • ${InitialData.modulesList.size} Modules Fondamentaux • ${uiState.allTerms.size} Termes",
                                 fontSize = 11.sp,
                                 color = Color(0xFF64748B),
                                 fontWeight = FontWeight.Medium
@@ -345,7 +225,7 @@ fun ModulesScreen(
                                 modifier = Modifier.size(16.dp)
                             )
                             Text(
-                                text = if (lang == Language.ARABIC) "دليل المقررات (8)" else "Modules (8)",
+                                text = if (lang == Language.ARABIC) "دليل المقررات (${InitialData.modulesList.size})" else "Modules (${InitialData.modulesList.size})",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = if (selectedViewTab == 0) Color.White else Color(0xFF475569)
@@ -418,16 +298,19 @@ fun ModulesScreen(
                                     letterSpacing = 0.5.sp
                                 )
                                 Text(
-                                    text = if (lang == Language.ARABIC) "جميع التخصصات الطبية الأساسية مدمجة بالكامل" else "8 Modules Médicaux Fondamentaux",
+                                    text = if (lang == Language.ARABIC)
+                                        "${InitialData.modulesList.size} مقررات طبية أساسية مدمجة بالكامل"
+                                    else
+                                        "${InitialData.modulesList.size} Modules Médicaux Fondamentaux",
                                     color = Color.White,
                                     fontSize = 18.sp,
                                     fontWeight = FontWeight.ExtraBold
                                 )
                                 Text(
                                     text = if (lang == Language.ARABIC)
-                                        "تشريح • كيمياء حيوية • فيزياء حيوية • أنسجة • وظائف أعضاء • وراثة • مصطلحات • إنجليزية سريرية"
+                                        InitialData.modulesList.joinToString(" • ") { it.titleAr }
                                     else
-                                        "Anatomie • Biochimie • Biophysique • Histologie • Physiologie • Génétique • Terminologie • Anglais Médical",
+                                        InitialData.modulesList.joinToString(" • ") { it.titleFr },
                                     color = Color.White.copy(alpha = 0.9f),
                                     fontSize = 11.sp
                                 )
@@ -443,6 +326,8 @@ fun ModulesScreen(
                         module = mod,
                         termsCount = totalTermsInMod,
                         currentLanguage = lang,
+                        progress = if (totalTermsInMod == 0) 0f
+                        else ((masteredByModule[mod.titleFr] ?: 0).coerceAtMost(totalTermsInMod) / totalTermsInMod.toFloat()),
                         onOpenModuleTerms = {
                             onModuleFilterChange(mod.titleFr)
                             onChapterFilterChange("All")
@@ -513,9 +398,7 @@ fun ModulesScreen(
                 modulesList.forEach { (moduleKey, label) ->
                     val isSelected = uiState.selectedModuleFilter == moduleKey
                     val countForModule = if (moduleKey == "All") uiState.allTerms.size else uiState.allTerms.count {
-                        it.module.equals(moduleKey, ignoreCase = true) ||
-                                it.module.contains(moduleKey, ignoreCase = true) ||
-                                moduleKey.contains(it.module, ignoreCase = true)
+                        com.example.domain.ModuleFilter.matchesModule(it.module, moduleKey)
                     }
 
                     Box(
@@ -667,6 +550,7 @@ private fun FigmaModuleDetailedCard(
     module: InitialData.ModuleInfo,
     termsCount: Int,
     currentLanguage: Language,
+    progress: Float = module.progress,
     onOpenModuleTerms: () -> Unit,
     onChapterClick: (String) -> Unit
 ) {
@@ -765,7 +649,7 @@ private fun FigmaModuleDetailedCard(
 
             // Progress bar
             LinearProgressIndicator(
-                progress = { module.progress },
+                progress = { progress },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(6.dp)

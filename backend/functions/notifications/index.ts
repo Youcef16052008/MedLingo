@@ -1,6 +1,9 @@
 // Notification Service - High-scale Duolingo FIFO SQS → APNS/FCM
 // API → 50+ msg → FIFO SQS → workers → SQS → workers → APNS/FCM
 // FIFO deduplication 5 min, 4M users 5 sec Super Bowl
+//
+// Livraison : par pull. Le client authentifié appelle GET ?user_id=… pour
+// récupérer ses notifications en attente, qui sont alors marquées is_sent.
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
@@ -17,7 +20,7 @@ const ALLOWED_ORIGINS = [
 function getCorsHeaders(origin: string | null): Record<string, string> {
   const headers: Record<string, string> = {
     'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS'
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
   }
   if (origin && ALLOWED_ORIGINS.includes(origin)) {
     headers['Access-Control-Allow-Origin'] = origin
@@ -35,6 +38,11 @@ interface NotificationRequest {
   channel_id?: string
   deduplication_key?: string
 }
+
+const KNOWN_TYPES: NotificationRequest['type'][] = [
+  'review_reminder', 'streak_reminder', 'clinical_pearl',
+  'level_unlocked', 'league_ending', 'hearts_refilled'
+]
 
 // Rate limiting: 20 req/min
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
@@ -98,18 +106,72 @@ serve(async (req) => {
       )
     }
 
+    // GET : livraison par pull — le client récupère ses notifications en
+    // attente (siennes uniquement) et elles sont marquées comme envoyées.
+    if (req.method === 'GET') {
+      const url = new URL(req.url)
+      const userId = url.searchParams.get('user_id')
+      if (!userId || userId !== user.id) {
+        return new Response(
+          JSON.stringify({ error: 'Forbidden' }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 403 }
+        )
+      }
+
+      const { data: due, error: dueError } = await supabase
+        .from('notifications_queue')
+        .select('*')
+        .eq('user_id', userId)
+        .eq('is_sent', false)
+        .order('created_at', { ascending: true })
+        .limit(50)
+
+      if (dueError) throw dueError
+
+      if (due && due.length > 0) {
+        const { error: markError } = await supabase
+          .from('notifications_queue')
+          .update({ is_sent: true, sent_at: new Date().toISOString() })
+          .in('id', due.map(n => n.id))
+        if (markError) throw markError
+      }
+
+      return new Response(
+        JSON.stringify({ notifications: due ?? [] }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+
+    if (req.method !== 'POST') {
+      return new Response(
+        JSON.stringify({ error: 'Method not allowed' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 405 }
+      )
+    }
+
     const { type, user_ids, title, body, data, channel_id, deduplication_key }: NotificationRequest = await req.json()
 
-    // 1. FIFO deduplication check (5 min like Duolingo)
+    // Type inconnu : on refuse plutôt que d'injecter un titre/corps arbitraire.
+    if (!KNOWN_TYPES.includes(type)) {
+      return new Response(
+        JSON.stringify({ error: 'Unknown notification type' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+      )
+    }
+
+    // 1. FIFO deduplication check (5 min like Duolingo) — dédup par utilisateur.
     if (deduplication_key) {
       const fiveMinAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString()
-      const { data: recent } = await supabase
+      const { data: recent, error: dedupError } = await supabase
         .from('notifications_queue')
         .select('id')
+        .eq('user_id', user.id)
         .eq('type', type)
         .gte('created_at', fiveMinAgo)
         .contains('data', { deduplication_key })
         .limit(1)
+
+      if (dedupError) throw dedupError
 
       if (recent && recent.length > 0) {
         return new Response(
@@ -122,36 +184,59 @@ serve(async (req) => {
     // 2. Fetch target users
     let targetUsers: any[] = []
     if (user_ids && user_ids.length > 0) {
-      const { data: users } = await supabase
+      // Anti-spam : un utilisateur authentifié ne peut notifier que lui-même.
+      if (user_ids.some(id => id !== user.id)) {
+        return new Response(
+          JSON.stringify({ error: 'Users can only notify themselves' }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 403 }
+        )
+      }
+      const { data: self, error: selfError } = await supabase
         .from('users')
         .select('id, display_name')
-        .in('id', user_ids)
-      targetUsers = users || []
+        .eq('id', user.id)
+      if (selfError) throw selfError
+      targetUsers = self || []
     } else {
+      // Diffusion large : réservée au cron (x-cron-secret), jamais à un client.
+      const cronSecret = req.headers.get('x-cron-secret')
+      const expectedSecret = Deno.env.get('CRON_SECRET')
+      if (!expectedSecret || cronSecret !== expectedSecret) {
+        return new Response(
+          JSON.stringify({ error: 'Unauthorized' }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 401 }
+        )
+      }
+
       if (type === 'review_reminder') {
-        const { data: users } = await supabase
+        const { data: users, error: dueError } = await supabase
           .from('flashcard_progress')
           .select('user_id')
           .lte('next_review_at', new Date().toISOString())
+          .order('next_review_at', { ascending: true })
           .limit(1000)
+        if (dueError) throw dueError
         const uniqueUserIds = [...new Set(users?.map(u => u.user_id) || [])]
-        const { data: userDetails } = await supabase
+        const { data: userDetails, error: detailsError } = await supabase
           .from('users')
           .select('id, display_name')
           .in('id', uniqueUserIds)
+        if (detailsError) throw detailsError
         targetUsers = userDetails || []
       } else if (type === 'streak_reminder') {
-        const { data: users } = await supabase
+        const { data: users, error: streakError } = await supabase
           .from('users')
           .select('id, display_name')
           .gt('streak_days', 0)
           .limit(1000)
+        if (streakError) throw streakError
         targetUsers = users || []
       } else {
-        const { data: users } = await supabase
+        const { data: users, error: allError } = await supabase
           .from('users')
           .select('id, display_name')
           .limit(100)
+        if (allError) throw allError
         targetUsers = users || []
       }
     }
@@ -212,22 +297,32 @@ serve(async (req) => {
 
     // 4. Batch insert to queue
     const batchSize = 50
+    let failed = 0
     for (let i = 0; i < notifications.length; i += batchSize) {
       const batch = notifications.slice(i, i + batchSize)
       const { error } = await supabase
         .from('notifications_queue')
         .insert(batch)
-      
+
       if (error) {
-        console.error(`[Notifications] Batch ${i} error`)
+        console.error(`[Notifications] Batch ${i} error: ${error.message}`)
+        failed += batch.length
       }
     }
 
+    if (notifications.length > 0 && failed === notifications.length) {
+      return new Response(
+        JSON.stringify({ status: 'failed', error: 'All insert batches failed' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
+
     return new Response(
-      JSON.stringify({ 
+      JSON.stringify({
         status: 'queued',
         type,
-        count: notifications.length,
+        count: notifications.length - failed,
+        failed,
         deduplication_key,
         batches: Math.ceil(notifications.length / batchSize)
       }),
@@ -235,7 +330,7 @@ serve(async (req) => {
     )
 
   } catch (error) {
-    console.error('[Notifications] Internal error')
+    console.error('[Notifications] Internal error', error)
     return new Response(
       JSON.stringify({ error: 'Internal server error' }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }

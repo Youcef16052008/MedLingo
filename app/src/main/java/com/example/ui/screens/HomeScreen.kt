@@ -89,6 +89,38 @@ fun HomeScreen(
     val userStats = uiState.userStats
     var selectedCategoryTab by remember { mutableStateOf("all") }
 
+    // Real due flashcards (the card and the tab badge used to show a hardcoded "6").
+    // Computed by the ViewModel on the repository clock: recomputing here with wall time
+    // disagreed with the timestamps the repository actually wrote.
+    val dueFlashcards = uiState.dueFlashcardProgress
+    val dueBreakdown = remember(dueFlashcards, uiState.allTerms) {
+        if (dueFlashcards.isEmpty()) ""
+        else {
+            val termById = uiState.allTerms.associateBy { it.id }
+            dueFlashcards
+                .groupingBy { termById[it.termId]?.module ?: "" }
+                .eachCount()
+                .filterKeys { it.isNotBlank() }
+                .toList()
+                .sortedByDescending { it.second }
+                .take(3)
+                .joinToString(" • ") { (module, count) ->
+                    val icon = InitialData.modulesList.find { it.titleFr == module }?.icon ?: "📘"
+                    "$icon $module ($count)"
+                }
+        }
+    }
+    // Module progress = terms of the module whose last review quality was >= 3
+    // (ModuleInfo.progress is a static 0f seed value and never moved)
+    val masteredByModule = remember(uiState.flashcardProgressList, uiState.allTerms) {
+        val termById = uiState.allTerms.associateBy { it.id }
+        uiState.flashcardProgressList
+            .filter { it.lastQuality >= 3 }
+            .mapNotNull { termById[it.termId]?.module }
+            .groupingBy { it }
+            .eachCount()
+    }
+
     val pearlTerm = remember(uiState.terms) {
         uiState.terms.firstOrNull { it.clinicalPearl.isNotBlank() && it.mnemonic.isNotBlank() }
             ?: uiState.terms.firstOrNull()
@@ -254,7 +286,7 @@ fun HomeScreen(
                                 .padding(horizontal = 8.dp, vertical = 4.dp)
                         ) {
                             Text(
-                                text = "FACULTÉ DE MÉDECINE DZ • 2026",
+                                text = "FACULTÉ DE MÉDECINE DZ • ${java.util.Calendar.getInstance().get(java.util.Calendar.YEAR)}",
                                 color = Color.White,
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Bold,
@@ -290,10 +322,11 @@ fun HomeScreen(
 
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        modifier = Modifier.horizontalScroll(rememberScrollState())
                     ) {
                         Text(
-                            text = "Anat • Biochim • Biophys • Histo • Physio • Génét • Termino • Anglais",
+                            text = InitialData.modulesList.joinToString(" • ") { it.titleFr },
                             color = Color(0xFFE2E8F0),
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Normal
@@ -446,7 +479,7 @@ fun HomeScreen(
 
                         Text(
                             text = if (uiState.diagnosticResult != null)
-                                "${uiState.diagnosticResult.level.emoji} ${uiState.diagnosticResult.level.labelFr} (${uiState.diagnosticResult.score} pts)"
+                                "${uiState.diagnosticResult.level.emoji} ${uiState.diagnosticResult.level.label(lang)} (${uiState.diagnosticResult.score} pts)"
                             else
                                 "Évaluez votre niveau en 5 à 10 questions",
                             fontWeight = FontWeight.Bold,
@@ -520,16 +553,18 @@ fun HomeScreen(
                             color = Color(0xFF92400E)
                         )
                         Text(
-                            text = "6 ${Strings.get("flashcards_due", lang)}",
+                            text = "${dueFlashcards.size} ${Strings.get("flashcards_due", lang)}",
                             fontWeight = FontWeight.Bold,
                             fontSize = 12.sp,
                             color = Color(0xFF451A03)
                         )
-                        Text(
-                            text = "🦴 Anat (3) • 🧬 Biochim (2) • ❤️ Physio (1)",
-                            fontSize = 11.sp,
-                            color = Color(0xFF78350F)
-                        )
+                        if (dueBreakdown.isNotEmpty()) {
+                            Text(
+                                text = dueBreakdown,
+                                fontSize = 11.sp,
+                                color = Color(0xFF78350F)
+                            )
+                        }
                     }
                 }
 
@@ -825,7 +860,7 @@ fun HomeScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 val categoryTabs = listOf(
-                    "all" to (if (lang == Language.ARABIC) "الكل (8)" else "Tous les modules (8)"),
+                    "all" to (if (lang == Language.ARABIC) "الكل (${InitialData.modulesList.size})" else "Tous les modules (${InitialData.modulesList.size})"),
                     "morpho" to (if (lang == Language.ARABIC) "مورفولوجيا (تشريح، أنسجة)" else "Morphologie (Anat, Histo)"),
                     "bio" to (if (lang == Language.ARABIC) "بيولوجيا وفيزياء" else "Biochimie & Biophysique"),
                     "clinical" to (if (lang == Language.ARABIC) "سريري ولغات" else "Physio & Anglais Médical")
@@ -867,10 +902,13 @@ fun HomeScreen(
 
             // Cards for every module
             filteredModules.forEach { module ->
+                val totalTerms = InitialData.termsOfModule(module.titleFr).size
                 FigmaMedicalModuleCard(
                     module = module,
                     currentLanguage = lang,
-                    totalTermsInModule = InitialData.termsOfModule(module.titleFr).size,
+                    totalTermsInModule = totalTerms,
+                    progress = if (totalTerms == 0) 0f
+                    else ((masteredByModule[module.titleFr] ?: 0).coerceAtMost(totalTerms) / totalTerms.toFloat()),
                     onExploreClick = { onNavigateToModules(module.titleFr) },
                     onFlashcardsClick = { onNavigateToFlashcardsWithModule(module.titleFr) }
                 )
@@ -922,6 +960,7 @@ private fun FigmaMedicalModuleCard(
     module: InitialData.ModuleInfo,
     currentLanguage: Language,
     totalTermsInModule: Int,
+    progress: Float = module.progress,
     onExploreClick: () -> Unit,
     onFlashcardsClick: () -> Unit
 ) {
@@ -991,7 +1030,7 @@ private fun FigmaMedicalModuleCard(
 
             // Progress bar
             LinearProgressIndicator(
-                progress = { module.progress },
+                progress = { progress },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(6.dp)

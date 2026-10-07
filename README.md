@@ -17,7 +17,7 @@ de répétition espacée **SM-2**, prononciation TTS et tableau de bord de progr
 - Test de placement adaptatif (CAT) avec moteur d'orientation
 - Prononciation audio (Android TTS) et support FR / EN / AR
 - Statistiques, séries d'apprentissage et suivi de précision
-- Base de données Room pré-remplie (295 termes médicaux sur 15 modules), 100 % hors-ligne
+- Base de données Room pré-remplie (4 512 termes médicaux sur 15 modules), 100 % hors-ligne
 - Pilote d'illustrations locales (fémur et neurone) dans le lexique et les flashcards ; stratégie et limites : [docs/IMAGE_STRATEGY.md](docs/IMAGE_STRATEGY.md)
 - Écran d'introduction à chaque ouverture, adapté au thème système (sombre ou clair)
 - Icône d'application personnalisée (icône adaptative Android 8+)

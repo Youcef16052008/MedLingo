@@ -26,7 +26,9 @@ data class LeagueCohortEntity(
     val isActive: Boolean = true,
     val isPromoted: Boolean = false,
     val isDemoted: Boolean = false,
-    val createdAt: Long = System.currentTimeMillis()
+    // no System.currentTimeMillis() default: the caller (LeagueManager) owns the time
+    // source, so a cohort can never be stamped with a different clock than its week
+    val createdAt: Long
 )
 
 enum class LeagueTier(val value: String, val order: Int, val colorHex: Long, val icon: String) {

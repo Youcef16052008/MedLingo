@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>seed</title></head>
+<body>
+<script>
+localStorage.setItem("medlingo_web_v1", JSON.stringify({
+  lang: "fr", gems: 42, hearts: 5, heartsTs: Date.now(),
+  streak: 3, lastStudy: new Date().toISOString().slice(0, 10),
+  xp: 120, answered: 12, correct: 10,
+  flashReviewed: 8, flashSuccess: 7, quizDone: 1,
+  sm2: { "1": { rep: 2, ef: 2.5, iv: 3, due: Date.now() - 3600000 },
+         "5": { rep: 4, ef: 2.6, iv: 10, due: Date.now() + 864000000 } },
+  introSeen: true
+}));
+location.replace("/#/" + (location.hash.slice(1) || "home"));
+</script>
+seed ok
+</body></html>
