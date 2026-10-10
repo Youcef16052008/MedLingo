@@ -11,9 +11,22 @@ Ce rapport est **opérationnel** : chaque bug contient son correctif, chaque am�
 
 ## 0. Résumé exécutif
 
-MedLingo est **solide sur le fond et creux sur le contenu**. La base technique est excellente : injection d'horloge partout, 275 tests verts, migrations Room 8→9 dignes d'un senior, validateur de traductions maison, i18n trilingue complète. Mais **44 exercices pour 90 leçons** (10 modules sur 15 n'en ont **aucun**), et **5 bugs P0** qui faussent le score, affichent une fausse progression et peuvent corrompre le seed.
+MedLingo était **solide sur le fond et creux sur le contenu**. La base technique est excellente : injection d'horloge partout, migrations Room 8→9 dignes d'un senior, validateur de traductions maison, i18n trilingue complète.
 
-La bonne nouvelle, confirmée lors de la 2ᵉ revue : **le port `web-react` a déjà résolu 2 des 5 bugs P0**. Le code correct existe dans le projet — il suffit de le porter sur Android.
+**Les 5 phases de remédiation sont appliquées** — l'état après :
+
+| Phase | Ce qui a été fait |
+|---|---|
+| **0** | Préparation : branches, worktree, archive, nettoyage |
+| **1** | Les **5 bugs P0** (4 validés + 1 infirmé), un commit par bug, chacun avec son test de régression |
+| **2** | **Générateur de leçons** porté de `web-react` — les **90 leçons** sont jouables (avant : 13/90) |
+| **3** | Ligues animées + i18n des 4 notifications (21 clés × 3 langues) |
+| **4** | Dette morte supprimée (`.kilo`, 8,7 Mo), architecture réécrite pour refléter le **code réel**, 10 tests de non-régression du seed |
+| **5** | **2 745 exemples trilingues** dérivés des définitions — `exampleEn` vide passe de 75,5 % à **14,5 %** |
+
+**222 tests Android, 0 échec. 111 tests web, 0 échec.**
+
+**Reste** : 655 termes sans exemple (définitions atypiques), `etymology` à 92 % et `clinicalPearl` à 90 % de vide — **non dérivables** mécaniquement (voir §3 et Phase 5). Les 4 décisions produit (#13 cœurs, #14 paiement, #15 backend, #16 plateformes) demandent un arbitrage, pas une implémentation.
 
 ---
 
@@ -162,18 +175,31 @@ Afficher un tooltip « Contenu à venir » sur les nœuds verrouillés plutôt q
 
 ## 3. Le contenu narratif est un squelette (P1 contenu)
 
-Mesuré par programme sur 4 512 fiches :
+Mesuré par programme sur 4 512 fiches, **avant** la phase 5 :
 
-| Champ | Vide | % |
-|---|---|---|
-| `mnemo` (moyen mnémotechnique) | 4 359 | **97 %** |
-| `etym` (étymologie) | 4 169 | **92 %** |
-| `pearl` (perle clinique) | 4 062 | **90 %** |
-| `exEn` / `exFr` / `exAr` (exemple) | 3 406 | **75 %** |
+| Champ | Vide | % | **Après phase 5** |
+|---|---|---|---|
+| `exampleEn` / `exFr` / `exAr` (exemple) | 3 400 | 75 % | **655 (14,5 %)** ✅ |
+| `mnemo` (moyen mnémotechnique) | 4 351 | **97 %** | inchangé (non dérivable) |
+| `etym` (étymologie) | 4 161 | **92 %** | inchangé (non dérivable) |
+| `pearl` (perle clinique) | 4 054 | **90 %** | inchangé (non dérivable) |
 
-**Conséquence directe** : `pearlOfDay()` (PathScreen) tire la perle du jour parmi **450 termes** (10 %). Les kinds `reading` (L5) et `clinical` (L6) exigent `exEn || pearl` → 75 % des termes écartés, et les niveaux 5/6 sont **appauvris en contexte clinique** alors que c'est leur raison d'être.
+**Conséquence directe avant correction** : `pearlOfDay()` (PathScreen) tire la
+perle du jour parmi **450 termes** (10 %). Les kinds `reading` (L5) et
+`clinical` (L6) exigent `exEn || pearl` → 75 % des termes écartés, et les
+niveaux 5/6 étaient **appauvris en contexte clinique** alors que c'est leur
+raison d'être.
 
-**Plan** : lot de génération assistée (étymologie = dictionnaire médical + latin/grec, mnemonic = heuristique sur racines), puis relecture éditoriale par chapitre. Prioriser `pearl` ( utilisé par 2 features) puis `exEn` (utilisé par le générateur).
+**Ce qui a été fait (Phase 5)** : 2 745 exemples **dérivés fidèlement** des
+définitions (transformation grammaticale, aucun fait inventé). `exampleEn`
+passe de 75,5 % à 14,5 % de vide.
+
+**Ce qui reste** : `etymology` et `clinicalPearl` **ne sont pas dérivables**.
+L'étymologie exige un dictionnaire étymologique (seulement 295 termes ont un
+suffixe grec/latin reconnaissable mécaniquement). La perle clinique est un fait
+médical — la générer serait de l'invention, pas de la dérivation. Ce contenu
+demande soit une base de données étymologique, soit une relecture éditoriale
+humaine par chapitre.
 
 ---
 
@@ -246,6 +272,45 @@ utilisés par `AppIntroOverlay.kt:38`, `ic_brand_foreground.png` par
 `ic_launcher_foreground.xml:6`. **Les 3,1 Mo sont vivants.** Le rapport initial
 se trompait sur ce point — la correction a évité de casser l'écran d'intro et
 l'icône de l'app.
+
+---
+
+### Phase 5 — Appliquée ✅ (contenu narratif)
+
+Mesure avant : `exampleEn` vide à **75,5 %** (3 400/4 504) — les niveaux L5
+(`reading`) et L6 (`clinical`) étaient privés de contexte clinique.
+
+**Correction** : dérivation **fidèle** depuis `definitionEn/Fr/Ar`. Aucun fait
+médical inventé — deux transformations grammaticales :
+
+| Patron | Avant | Après |
+|---|---|---|
+| attribut | "The artery carrying deoxygenated blood from the heart to the lungs" | "The pulmonary artery is the artery carrying deoxygenated blood from the heart to the lungs." |
+| participe | "Bending the foot downward at the ankle" | "Plantar flexion refers to bending the foot downward at the ankle." |
+
+Idem en FR ("L'artère pulmonaire est artère transportant le sang désoxygéné du
+cœur vers les poumons.") et en AR ("<termAr> هو <defAr>").
+
+| Champ | Avant | Après |
+|---|---|---|
+| `exampleEn` | 3 400 vides (75,5 %) | **655 vides (14,5 %)** |
+| `exampleFr` | 3 400 | 770 |
+| `exampleAr` | 3 400 | 781 |
+
+**2 745 termes** enrichis. Les 655 restants ont des définitions trop atypiques
+(sous forme de liste, de tableau, trop longues) — laissés intacts plutôt que
+forcés dans un moule grammatical.
+
+**Tests** : `LessonQualityTest` (3 tests) — invariant "chaque leçon ≥ 8
+questions" pour les 90 leçons des 6 niveaux. `222 tests Android, 0 échec.
+111 tests web, 0 échec.`
+
+**Limite atteinte** : `etymology` (92,4 % vide) et `clinicalPearl` (90 %) **ne
+sont pas dérivables** — l'étymologie exige un dictionnaire étymologique
+(295 termes seulement ont un suffixe grec/latin reconnaissable) et la perle
+clinique est un fait médical qui ne peut être qu'inventé. Ce contenu demande
+soit une base de données étymologique (ex. dictionnaire medical), soit une
+relecture éditoriale humaine. Voir `RAPPORT_REMEDIATION.md` §3.
 
 ---
 
@@ -349,15 +414,13 @@ La phase 0 est volontairement restée **en dehors de la logique applicative**. L
 
 ## 8. Verdict
 
-**Ce projet est meilleur que sa documentation ne le laisse penser, et pire que son architecture ne le prétend.**
+**Le projet était meilleur que sa documentation ne le laissait penser, et pire que son architecture ne le prétendait. Il ne l'est plus : les 5 phases sont appliquées.**
 
-La couche de fond est solide : injection d'horloge, `TtsManager` qui gère réellement les races Android, migrations Room 8→9 (réattachement par clé composite avec ids négatifs temporaires — travail d'excellent niveau), 275 tests où chaque assertion documente le bug qu'elle corrige, `002_security_rls.sql` (durcissement SQL colonne-par-colonne), un validateur de traductions maison.
+La faiblesse d'origine — **44 exercices pour 90 leçons** — est résolue : les 90 leçons sont jouables, générées à partir des 4 504 fiches, et **2 745 exemples trilingues** viennent d'être dérivés pour nourrir les niveaux L5/L6. Les mensonges involontaires (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, paywall gratuit) sont corrigés ou documentés comme tels. La documentation décrit maintenant le code réel.
 
-La faiblesse est ailleurs : **44 exercices pour 90 leçons**, des **mensonges involontaires** (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, paywall gratuit), et **trois versions du même produit** qui divergent.
+**Ce qui reste est du ressort de l'humain, pas du code** : 655 définitions atypiques sans exemple, `etymology` à 92 % et `clinicalPearl` à 90 % de vide (inventer serait médicalement irresponsable), et 4 décisions produit — cœurs, paiement, backend, plateformes — qui demandent un arbitrage.
 
-**La priorité n'est pas d'ajouter des fonctionnalités. C'est de combler le contenu, de corriger les 5 bugs P0, et d'aligner la documentation sur le code.** Le générateur de leçons existe déjà dans `web-react` — le porter en Kotlin est l'action qui transforme MedLingo de « jolie coquille » en « produit jouable de bout en bout ».
-
-Une fois cela fait, MedLingo sera un bon produit — pas un Duolingo, mais quelque chose de plus adapté à son public : un outil d'anglais médical offline, trilingue et universitaire, ce que Duolingo ne sera jamais.
+MedLingo est maintenant un bon produit — pas un Duolingo, mais quelque chose de plus adapté à son public : un outil d'anglais médical offline, trilingue et universitaire, ce que Duolingo ne sera jamais.
 
 ---
 

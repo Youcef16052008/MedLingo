@@ -2,13 +2,13 @@
 
 **Périmètre** : 6 342 fichiers, ~19 000 lignes de Kotlin/TS/SQL analysées sur 20 rapports. Chaque conclusion ci-dessous a été **vérifiée deux fois** : une fois à la lecture, une fois par programme (grep/script/parseur) lors de la seconde revue.
 
-**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **219 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
+**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **222 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
 
 ---
 
 ## 0. Ce qu'est réellement MedLingo
 
-Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 219 tests sont verts.**
+Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 222 tests sont verts.**
 
 Trois plateformes coexistent (Android, `web-react` typé/testé, `web/` vanilla JS obsolète) et **trois économies de jeu différentes** (l'Android et web-react ont supprimé les cœurs ; `web/` les a encore ; le backend SQL les promeut).
 
@@ -43,13 +43,19 @@ Trois plateformes coexistent (Android, `web-react` typé/testé, `web/` vanilla 
 
 ---
 
-## 3. Le vrai problème n'est pas le code — c'est le contenu
+## 3. Le vrai problème n'était pas le code — c'était le contenu
 
-**44 exercices pour 90 leçons.** Ratio exercices/terms = 0,98 %. Aucun `reading`, aucun `clinical_case` (alors que les specs, le checker, la UI et les niveaux 5/6 existent). Un utilisateur termine le parcours entier en **~1 heure**.
+**44 exercices pour 90 leçons.** Ratio exercices/terms = 0,98 %. Un utilisateur terminait le parcours entier en **~1 heure**.
 
-Or **tout est déjà là pour générer le contenu** : 4 512 fiches avec `exampleEn`, `definitionEn`, `clinicalPearl`, `chapter`, `module` ; un script `tools_gen_seed_sql.py` qui prouve que la génération automatique est maîtrisée ; un validateur de traductions (`tools_check_tr.py`) de très bonne facture.
+**Résolu** (Phases 2 + 5) :
 
-**L'action #1 du projet** : un générateur qui dérive ~1 800 exercices des fiches existantes (20/leçon) — mcq (3 distractrices du même module), matching (5 paires EN↔FR), wordbank (`exampleEn` découpé), fill (mot-clé masqué), reading (`clinicalPearl` comme passage), clinical_case (vignette + question). C'est mécanique, pas créatif, et ça transforme le produit.
+| Problème | État après |
+|---|---|
+| 10 modules sur 15 sans exercice | **90/90 leçons jouables** — `LessonGenerator` porté de `web-react` |
+| `exampleEn` vide à 75,5 % (3 400 fiches) | **14,5 %** (655) — 2 745 exemples trilingues dérivés des définitions |
+| Niveaux L5/L6 sans contexte clinique | Le kind `reading` s'appuie maintenant sur 3 849 termes (85 %) |
+
+**Ce qui reste non dérivable** : `etymology` (92 % vide) et `clinicalPearl` (90 %). Inventer ces champs serait médicalement irresponsable — un dictionnaire étymologique ou une relecture éditoriale humaine sont nécessaires. C'est la limite entre la mécanique et le créatif.
 
 ---
 
@@ -91,7 +97,8 @@ J'ai aussi **sous-estimé** deux choses : la solidité des migrations Room 8→9
 | `HomeScreen.kt` 1 076 lignes mortes | Maintenance | Supprimer |
 | 519 fiches `termFr == termEn` | Qualité pédagogique | Revue éditoriale (Levenshtein de `tools_check_tr.py`) |
 | 655 traductions jamais relues (cases `[ ]`) | Qualité pédagogique | Revue par lots 42 chapitres |
-| `mnemo` 97 % vide, `etym` 92 %, `pearl` 90 %, `exEn` 75 % | Contenu squelettique | Les champs narratifs qui distinguent MedLingo d'Anki existent à l'état d'ébauche |
+| ~~`exEn` 75 % vide~~ → **14,5 %** ✅ | ~~Contenu squelettique~~ **Résolu (Phase 5)** : 2 745 exemples trilingues dérivés des définitions |
+| `mnemo` 97 % vide, `etym` 92 %, `pearl` 90 % | Contenu squelettique | **Non dérivables** — inventer serait médicalement irresponsable. Demande une base de données étymologique ou une relecture éditoriale humaine |
 | 15 classes CSS mortes dans `web-react` (~8 % du CSS servi) | Esthétique | `.vitals`, `.sm2-*`, `.hero`, `.shake` → restes d'écrans supprimés |
 | Playwright non installé dans `web-react` | Filet de sécurité HS | `npm i -D playwright` — les 132 captures existantes ne sont pas rejouables |
 | `terms.json` dupliqué en 3 endroits (9 Mo) | Dérive silencieuse | L'extraction est manuelle (`npm run extract`) après chaque changement des seeds |
@@ -134,13 +141,13 @@ J'ai aussi **sous-estimé** deux choses : la solidité des migrations Room 8→9
 
 **Ce projet est meilleur que sa documentation ne le laisse penser, et pire que son architecture ne le prétend.**
 
-La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 219 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
+La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 222 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
 
 La faiblesse est ailleurs : **44 exercices pour 90 leçons**, des **mensonges involontaires** (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, paywall gratuit), et **trois versions du même produit** qui divergent.
 
 **La priorité n'est pas d'ajouter des fonctionnalités. C'est de combler le contenu, de corriger les 5 bugs P0, et d'aligner la documentation sur le code.** Une fois cela fait, MedLingo sera un bon produit — pas un Duolingo, mais quelque chose de plus adapté à son public : un outil d'anglais médical offline, trilingue et universitaire, ce que Duolingo ne sera jamais.
 
-**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 219 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
+**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 222 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
 
 ---
 

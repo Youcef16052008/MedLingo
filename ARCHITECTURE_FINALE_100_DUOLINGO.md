@@ -36,8 +36,9 @@ qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algérie
 | Modules | **15** | `ls data/terms/ \| wc -l` |
 | Exercices écrits main | **44** | `grep -rc "ExerciseEntity(" LearningExercisesData.kt` |
 | Leçons générées jouables | **90** (15 × 6) | `LessonGeneratorRealDataTest` |
+| Termes avec `exampleEn` | **3 849 (85,5 %)** | avant Phase 5 : 24,5 % |
 | Clés i18n | ~200 × 3 langues | `check:i18n` → 0 écart |
-| Tests unitaires | **209, 0 échec** | `./gradlew testDebugUnitTest` |
+| Tests unitaires | **222, 0 échec** | `./gradlew testDebugUnitTest` |
 | Images | 2 illustrations (`illustration_femur`, `illustration_neuron`) | `data/illustrations/` |
 
 ---
