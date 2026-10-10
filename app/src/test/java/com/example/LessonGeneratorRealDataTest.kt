@@ -50,14 +50,18 @@ class LessonGeneratorRealDataTest {
             }
         }
 
-        // C'est le chiffre qui compte : on passe de 13/90 à ~90/90 leçons jouables.
+        // C'est le chiffre qui compte : on passe de 13/90 à 90/90 leçons jouables.
+        // La barre est stricte (90/90) — mesurée en Phase 4, le 10/10/2026, sur
+        // les vraies données du seed. Une tolérance aurait masqué une régression
+        // silencieuse de couverture (un module qui perd ses termes).
         assertTrue(
             "leçons vides restantes : $emptyLessons",
-            emptyLessons.isEmpty() || emptyLessons.size <= 4
+            emptyLessons.isEmpty()
         )
-        assertTrue(
-            "couverture $playable/$totalLessons — attendu >= 86 (95 %)",
-            playable >= totalLessons - 4
+        assertEquals(
+            "couverture $playable/$totalLessons — attendu 90/90 (100 %)",
+            totalLessons,
+            playable
         )
     }
 
