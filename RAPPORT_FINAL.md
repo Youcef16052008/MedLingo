@@ -2,13 +2,13 @@
 
 **Périmètre** : 6 342 fichiers, ~19 000 lignes de Kotlin/TS/SQL analysées sur 20 rapports. Chaque conclusion ci-dessous a été **vérifiée deux fois** : une fois à la lecture, une fois par programme (grep/script/parseur) lors de la seconde revue.
 
-**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **209 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
+**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **219 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
 
 ---
 
 ## 0. Ce qu'est réellement MedLingo
 
-Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 209 tests sont verts.**
+Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 219 tests sont verts.**
 
 Trois plateformes coexistent (Android, `web-react` typé/testé, `web/` vanilla JS obsolète) et **trois économies de jeu différentes** (l'Android et web-react ont supprimé les cœurs ; `web/` les a encore ; le backend SQL les promeut).
 
@@ -83,9 +83,9 @@ J'ai aussi **sous-estimé** deux choses : la solidité des migrations Room 8→9
 | Élément | Coût | Action |
 |---|---|---|
 | `version old but have react and vite/` (83 fichiers, ~5,2 Mo) | Clone + confusion | Supprimer (git conserve l'historique) |
-| `.kilo/worktrees/mulberry-dart` (8,7 Mo, branche morte) | Confusion majeure (contient `SupabaseClient` !) | Archiver dans une branche, supprimer le worktree |
+| `.kilo/worktrees/mulberry-dart` (8,7 Mo, branche morte) | Confusion majeure (contient `SupabaseClient` !) | ~~Archiver~~ **Supprimé (Phase 4)** — dossier `.kilo` entier supprimé, repo 332 → 323 Mo. Les clones divergents de `SupabaseClient`/`HeartsManager` n'existent **pas** dans `app/src/` |
 | `web/` vanilla (1 179 lignes, cœurs, README à 2 945 vs 4 512) | 3ᵉ plateforme divergente | Supprimer au profit de `web-react/` |
-| 3,9 Mo de ressources mortes dans l'APK | +12 % de taille d'APK | `ic_brand_foreground.png` + 2 doublons + splashes → WebP |
+| 3,9 Mo de ressources **prétendument** mortes | ~~+12 % de taille d'APK~~ | **INFIRMÉ (Phase 4)** — vérification faite : les 3 fichiers de `drawable-nodpi/` (`intro_dark`, `intro_light`, `ic_brand_foreground.png`) sont **tous référencés** (`AppIntroOverlay.kt:38`, `ic_launcher_foreground.xml:6`). **0 ressource orpheline.** À ne pas supprimer |
 | Namespace `com.example` | Identité, `BuildConfig` | Renommer en `com.aistudio.medlingua.dzmed` |
 | ~10 artefacts catalog Gradle inutilisés | Constructions inutiles | Nettoyer `libs.versions.toml` |
 | `HomeScreen.kt` 1 076 lignes mortes | Maintenance | Supprimer |
@@ -134,13 +134,13 @@ J'ai aussi **sous-estimé** deux choses : la solidité des migrations Room 8→9
 
 **Ce projet est meilleur que sa documentation ne le laisse penser, et pire que son architecture ne le prétend.**
 
-La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 209 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
+La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 219 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
 
 La faiblesse est ailleurs : **44 exercices pour 90 leçons**, des **mensonges involontaires** (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, paywall gratuit), et **trois versions du même produit** qui divergent.
 
 **La priorité n'est pas d'ajouter des fonctionnalités. C'est de combler le contenu, de corriger les 5 bugs P0, et d'aligner la documentation sur le code.** Une fois cela fait, MedLingo sera un bon produit — pas un Duolingo, mais quelque chose de plus adapté à son public : un outil d'anglais médical offline, trilingue et universitaire, ce que Duolingo ne sera jamais.
 
-**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 209 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
+**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 219 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
 
 ---
 

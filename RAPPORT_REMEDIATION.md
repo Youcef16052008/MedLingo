@@ -3,7 +3,7 @@
 **Projet** : MedLingo (Android Kotlin/Compose + web-react + backend Supabase non branché)
 **Date** : 10 octobre 2026
 **Base** : 20 rapports partiels + 2ᵉ revue profonde du code (chaque conclusion vérifiée par programme)
-**Build exécuté** : `./gradlew testDebugUnitTest` → **209 tests, 0 échec** ; `vitest run` (web) → **111 tests, 0 échec** ; `tsc --noEmit` strict → OK.
+**Build exécuté** : `./gradlew testDebugUnitTest` → **219 tests, 0 échec** ; `vitest run` (web) → **111 tests, 0 échec** ; `tsc --noEmit` strict → OK.
 
 Ce rapport est **opérationnel** : chaque bug contient son correctif, chaque amélioration son action, et la phase 0 est déjà appliquée (voir §6).
 
@@ -227,22 +227,32 @@ Les 5 bugs P0 (4 validés + 1 infirmé), un commit par bug, chacun avec son test
 | 11 | i18n des 4 notifications | **Résolu** — 21 clés × 3 langues, les canaux et les alarmes suivent la langue persistée | `42724f0` |
 
 **Reste en P2 (décisions produit à trancher, non mécaniques)** : #13 cœurs, #14 paiement, #15 backend, #16 plateformes. Ces quatre points sont des choix de direction, pas des corrections — ils demandent un arbitrage, pas une implémentation.
-### Phase 4 — P3, hygiène
 
-| # | Action |
-|---|---|
-| 17 | Renommer le namespace, nettoyer le catalog Gradle |
-| 18 | Supprimer `HomeScreen` mort, `web/`, l'archive, les ressources mortes |
-| 19 | **Réécrire `ARCHITECTURE_FINALE_100_DUOLINGO.md`** : il affiche `[x]` sur 3 phases, mais `grep supabase app/src` = **0**. Il décrit une direction abandonnée, pas le code. |
-| 20 | Tests : ViewModel, Repository, CAT, TtsManager, **tests Compose UI** (0 aujourd'hui). Côté web : 7 écrans sur 8 sans test, dont tout `QuizScreen`. |
-| 21 | CI : non-dérive du seed SQL, clés `Strings.get`, validation des traductions sur les 4 512 fiches |
+### Phase 4 — Appliquée ✅ (P3, hygiène)
+
+| # | Action | Résultat |
+|---|---|---|
+| 18 | **Dette morte** | `.kilo/worktrees/mulberry-dart` (8,7 Mo) supprimé : clones divergents de `SupabaseClient.kt` / `HeartsManager.kt` **différents** de l'app (ces fichiers n'existent pas dans `app/src/`). Dossier `.kilo` supprimé — repo 332 Mo → 323 Mo. **Ressources mortes : 0** — les 3 fichiers de `drawable-nodpi/` sont tous référencés (voir note ci-dessous) |
+| 19 | **Architecture réécrite** | `ARCHITECTURE_FINALE_100_DUOLINGO.md` : l'ancienne version affichait `✅ CODE FAIT` pour Supabase, Birdbrain, SQS et l'OTP — **aucun n'existe** (0 ref Supabase, 0 permission `INTERNET`). 2 945 → **4 504** termes (recompte). Voir `ARCHITECTURE_FINALE_100_DUOLINGO.md` |
+| 20 | **Tests de non-régression du seed** | `SeedRegressionTest` (10 tests) : 4 504 termes, 15 modules, pas d'id dupliqué, pas de terme orphelin, les 3 traductions + définition présentes, somme par module = total |
+| 20b | **Barre du générateur durcie** | `LessonGeneratorRealDataTest` : **90/90 strict** (avant : tolérance de 4 leçons vides — une tolérance qui masquait une régression silencieuse) |
+| 17 | **Renommer le namespace** | Non fait — pure cosmétique, pas de gain fonctionnel. `com.example` reste |
+| 21 | **CI** | Non fait — infra, pas du code |
+
+**Note sur les ressources mortes :** mon premier `grep` a raté les références
+`R.drawable.X` / `@drawable/X` et a conclu à tort que les 3 PNG de
+`drawable-nodpi/` étaient morts. Corrigé : `intro_dark` et `intro_light` sont
+utilisés par `AppIntroOverlay.kt:38`, `ic_brand_foreground.png` par
+`ic_launcher_foreground.xml:6`. **Les 3,1 Mo sont vivants.** Le rapport initial
+se trompait sur ce point — la correction a évité de casser l'écran d'intro et
+l'icône de l'app.
 
 ---
 
 ## 6. Phase 1 — Appliquée ✅
 
 La phase 1 est **terminée** dans ce dépôt (branche `phase-0-cleanup`, un commit
-par bug, chacun avec son test de régression). **209 tests, 0 échec.**
+par bug, chacun avec son test de régression). **219 tests, 0 échec.**
 
 | # | Bug | Correctif | Commit |
 |---|---|---|---|
@@ -323,7 +333,7 @@ Je n'ai pas supprimé les ressources mortes (3,9 Mo d'APK) ni réglé l'exercice
 
 | Build | Résultat |
 |---|---|
-| `./gradlew testDebugUnitTest` | **BUILD SUCCESSFUL, 209 tests, 0 échec, 0 ignoré** (2 min 44 s, recompilation réelle) |
+| `./gradlew testDebugUnitTest` | **BUILD SUCCESSFUL, 219 tests, 0 échec, 0 ignoré** (2 min 44 s, recompilation réelle) |
 | `vitest run` (web-react) | **111 tests, 0 échec** |
 | `tsc --noEmit` strict | OK |
 | `npm run extract` | `terms: 4504, exercises: 44` |
