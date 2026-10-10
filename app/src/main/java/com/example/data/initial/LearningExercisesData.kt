@@ -298,11 +298,11 @@ object LearningExercisesData {
             questionEn = "Arrange the words to form the correct anatomical sentence:",
             questionFr = "Remettez les mots dans l'ordre pour former la phrase anatomique correcte :",
             questionAr = "رتب الكلمات لتكوين جملة تشريحية صحيحة :",
-            optionsRaw = "is|The|femur|the|longest|bone|in|the|body",
-            correctAnswer = "The femur is the longest bone in the body",
-            explanationEn = "'The femur is the longest bone in the body' follows standard English Subject-Verb-Object (SVO) syntax.",
-            explanationFr = "'The femur is the longest bone in the body' (Le fémur est l'os le plus long du corps).",
-            explanationAr = "'The femur is the longest bone in the body' (عظم الفخذ هو أطول عظم في جسم الإنسان).",
+            optionsRaw = "The|femur|is|longer|than|both|tibia|and|fibula",
+            correctAnswer = "The femur is longer than both tibia and fibula",
+            explanationEn = "'The femur is longer than both tibia and fibula' — comparative anatomy, standard English Subject-Verb-Object (SVO) syntax.",
+            explanationFr = "'The femur is longer than both tibia and fibula' (Le fémur est plus long que le tibia et la fibula).",
+            explanationAr = "'The femur is longer than both tibia and fibula' (عظم الفخذ أطول من عظمي الساق والشظية).",
             points = 20
         ),
         ExerciseEntity(
