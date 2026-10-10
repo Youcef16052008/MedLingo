@@ -19,7 +19,18 @@ class MedLinguaApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        com.example.service.NotificationHelper.createNotificationChannels(this)
+        // PHASE 3 #11 : les noms de canaux (visibles dans les réglages Android)
+        // suivent la langue de l'app. Android ne permet de changer le nom d'un
+        // canal existant qu'au redémarrage, d'où la lecture synchrone ici —
+        // après un changement de langue, il faut relancer l'app.
+        val lang = try {
+            com.example.localization.Language.fromCode(
+                database.medicalDao().getLanguageCodeBlocking() ?: "fr"
+            )
+        } catch (e: Exception) {
+            com.example.localization.Language.FRENCH
+        }
+        com.example.service.NotificationHelper.createNotificationChannels(this, lang)
         // All reminder toggles default to ON, but the user's OFF choice is
         // persisted: only arm alarms that are still enabled.
         val reminderPrefs = getSharedPreferences(

@@ -87,6 +87,15 @@ interface MedicalDao {
     @Query("SELECT * FROM user_stats WHERE id = 1")
     suspend fun getUserStatsOnce(): UserStatsEntity?
 
+    /**
+     * Variante **synchrone** pour les contextes non-coroutine : démarrage de
+     * l'app (`MedLinguaApp.onCreate`, avant la première lecture) et
+     * `BroadcastReceiver` (Phase 3 #11, langue des notifications).
+     * On ne lit que la langue — un SELECT simple, ~1 ms, pas de jointure.
+     */
+    @Query("SELECT selectedLanguageCode FROM user_stats WHERE id = 1")
+    fun getLanguageCodeBlocking(): String?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertUserStats(stats: UserStatsEntity)
 
@@ -137,6 +146,17 @@ interface MedicalDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertLeagueMembers(members: List<LeagueMemberEntity>)
+
+    /**
+     * PHASE 3 #8 : écrit transactionnelle des bots animés. On ne remplace que
+     * les bots — un `upsertLeagueMembers` sur toute la liste écrirait aussi
+     * l'utilisateur courant, et bien que son XP vienne d'être créditée par
+     * ailleurs, recalculer son `weeklyXp` ici serait une double écriture.
+     */
+    @Transaction
+    suspend fun upsertBots(bots: List<LeagueMemberEntity>) {
+        bots.forEach { upsertLeagueMember(it) }
+    }
 
     @Query("UPDATE league_members SET weeklyXp = weeklyXp + :xp WHERE cohortId = :cohortId AND isCurrentUser = 1")
     suspend fun addXpToCurrentUserInLeague(cohortId: String, xp: Int)

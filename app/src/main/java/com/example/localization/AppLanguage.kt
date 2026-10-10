@@ -468,7 +468,120 @@ object Strings {
             "en" to "Leave Bronze"
         ),
         "trophy_chests_5" to mapOf("ar" to "خمسة صناديق", "fr" to "Cinq caisses", "en" to "Five chests"),
-        "trophy_chests_5_d" to mapOf("ar" to "افتح ٥ صناديق", "fr" to "Ouvrir 5 caisses", "en" to "Open 5 chests")
+        "trophy_chests_5_d" to mapOf("ar" to "افتح ٥ صناديق", "fr" to "Ouvrir 5 caisses", "en" to "Open 5 chests"),
+
+        // === PHASE 3 #11 : i18n des 4 notifications ===
+        // Avant, les corps/titres étaient des chaînes FR en dur dans
+        // NotificationHelper — un utilisateur en arabe ou anglais recevait une
+        // notification en français, alors que tout le reste de l'app suit sa
+        // langue. {n} = paramètre remplacé à l'envoi (dueCount, streak, niveau).
+        "notif_review_title" to mapOf(
+            "ar" to "📋 {n} بطاقة جاهزة للمراجعة!",
+            "fr" to "📋 {n} flashcards prêtes pour révision !",
+            "en" to "📋 {n} flashcards ready for review!"
+        ),
+        "notif_review_body" to mapOf(
+            "ar" to "جلسة التكرار المتباعد (SM-2) جاهزة. عزّز ذاكرتك السريرية.",
+            "fr" to "Votre session de répétition espacée (SM-2) est prête. Consolidez votre mémoire clinique.",
+            "en" to "Your spaced-repetition session (SM-2) is ready. Consolidate your clinical memory."
+        ),
+        "notif_review_big" to mapOf(
+            "ar" to "وصلت {n} مصطلحات طبية إلى موعد التكرار المتباعد اليوم وفق خوارزمية SM-2.\n\nخصّص 3 دقائق لتقييم استرجاعك بالإنجليزية والفرنسية!",
+            "fr" to "{n} termes médicaux sont arrivés à échéance de répétition espacée aujourd'hui selon l'algorithme SM-2.\n\nPrenez 3 minutes pour évaluer votre rappel en anglais et français !",
+            "en" to "{n} medical terms are due for spaced repetition today per the SM-2 algorithm.\n\nTake 3 minutes to test your recall in English and French!"
+        ),
+        "notif_review_action" to mapOf(
+            "ar" to "راجع الآن 📚",
+            "fr" to "Réviser maintenant 📚",
+            "en" to "Review now 📚"
+        ),
+        "notif_streak_title" to mapOf(
+            "ar" to "🔥 لا تكسر سلسلتك المتواصلة لمدة {n} يومًا!",
+            "fr" to "🔥 Ne brisez pas votre série de {n} jours !",
+            "en" to "🔥 Don't break your {n}-day streak!"
+        ),
+        "notif_streak_body" to mapOf(
+            "ar" to "أنت على وتيرة ممتازة! جلسة قصيرة اليوم تحافظ على انتظامك.",
+            "fr" to "Vous êtes sur une excellente lancée ! Une courte session aujourd'hui maintient votre régularité.",
+            "en" to "You're on a great run! A short session today keeps your consistency."
+        ),
+        "notif_streak_big" to mapOf(
+            "ar" to "🔥 السلسلة الحالية: {n} يومًا متتاليًا من اللغة الطبية!\n\nكل مراجعة يومية تحوّل المفردات السلبية إلى رد فعل سريري نشط. واصل!",
+            "fr" to "🔥 Série actuelle : {n} jours consécutifs d'anglais médical !\n\nChaque révision quotidienne transforme le vocabulaire passif en réflexe clinique actif. Gardez le cap confrère !",
+            "en" to "🔥 Current streak: {n} consecutive days of medical English!\n\nDaily review turns passive vocabulary into active clinical reflexes. Keep it up!"
+        ),
+        "notif_pearl_title" to mapOf(
+            "ar" to "🩺 فائدة سريرية: {fr} ({en})",
+            "fr" to "🩺 Perle Clinique : {fr} ({en})",
+            "en" to "🩺 Clinical Pearl: {fr} ({en})"
+        ),
+        "notif_pearl_big" to mapOf(
+            "ar" to "{pearl}\n\n💡 تذكر: {mnemo}\n\n📖 الوحدة: {module} — {chapter}",
+            "fr" to "{pearl}\n\n💡 Mnémotechnique : {mnemo}\n\n📖 Module : {module} — {chapter}",
+            "en" to "{pearl}\n\n💡 Mnemonic: {mnemo}\n\n📖 Module: {module} — {chapter}"
+        ),
+        "notif_pearl_action" to mapOf(
+            "ar" to "استكشف الوحدة 📖",
+            "fr" to "Explorer le module 📖",
+            "en" to "Explore module 📖"
+        ),
+        "notif_level_title" to mapOf(
+            "ar" to "🏆 تم فتح المستوى {n}!",
+            "fr" to "🏆 Niveau {n} débloqué !",
+            "en" to "🏆 Level {n} unlocked!"
+        ),
+        "notif_level_body" to mapOf(
+            "ar" to "تهانينا! لقد بلغت المستوى: {name}.",
+            "fr" to "Félicitations ! Vous avez atteint le niveau : {name}.",
+            "en" to "Congratulations! You have reached level: {name}."
+        ),
+        "notif_level_big" to mapOf(
+            "ar" to "🏆 تهانينا يا دكتور المستقبل! لقد تجاوزت المستوى السابق بنجاح بدقة ≥70%.\n\nأصبح المستوى {n} ({name}) متاحًا الآن في هرم تعلّمك.",
+            "fr" to "🏆 Félicitations futur Dr ! Vous venez de franchir avec succès le palier précédent avec ≥70% de précision.\n\nLe Niveau {n} ({name}) est maintenant accessible dans votre Pyramide d'apprentissage.",
+            "en" to "🏆 Congratulations, future Dr! You cleared the previous tier with ≥70% accuracy.\n\nLevel {n} ({name}) is now available in your learning pyramid."
+        ),
+
+        // Noms et descriptions des 4 canaux (réglages Android → langue de l'app)
+        "channel_reviews_name" to mapOf(
+            "ar" to "تذكيرات المراجعة اليومية (SM-2)",
+            "fr" to "Rappels de Révision Quotidienne (SM-2)",
+            "en" to "Daily Review Reminders (SM-2)"
+        ),
+        "channel_reviews_desc" to mapOf(
+            "ar" to "إشعارات للبطاقات الجاهزة للتكرار المتباعد",
+            "fr" to "Notifications pour les flashcards prêtes pour la répétition espacée",
+            "en" to "Notifications for flashcards ready for spaced repetition"
+        ),
+        "channel_streaks_name" to mapOf(
+            "ar" to "الحفاظ على السلسلة (Streak)",
+            "fr" to "Maintien de la Série (Streak)",
+            "en" to "Streak Maintenance"
+        ),
+        "channel_streaks_desc" to mapOf(
+            "ar" to "تنبيهات للحفاظ على سلسلة أيام الدراسة المتتالية",
+            "fr" to "Alertes pour préserver votre série de jours d'étude consécutifs",
+            "en" to "Alerts to preserve your consecutive study-day streak"
+        ),
+        "channel_pearls_name" to mapOf(
+            "ar" to "الفائدة السريرية اليومية",
+            "fr" to "Perle Clinique du Jour",
+            "en" to "Daily Clinical Pearl"
+        ),
+        "channel_pearls_desc" to mapOf(
+            "ar" to "مفاهيم سريرية وتذكرية طبية عالية المردود",
+            "fr" to "Notions cliniques et mnémotechniques médicales à haut rendement",
+            "en" to "High-yield clinical concepts and medical mnemonics"
+        ),
+        "channel_levels_name" to mapOf(
+            "ar" to "فتح المستويات والإنجازات",
+            "fr" to "Déblocage de Niveaux & Succès",
+            "en" to "Level Unlocks & Achievements"
+        ),
+        "channel_levels_desc" to mapOf(
+            "ar" to "الاحتفاء بالمراحل المتجاوزة في هرم التعلّم",
+            "fr" to "Célébration des paliers franchis dans la pyramide d'apprentissage",
+            "en" to "Celebrating tiers cleared in the learning pyramid"
+        )
     )
 
     fun get(key: String, language: Language): String {

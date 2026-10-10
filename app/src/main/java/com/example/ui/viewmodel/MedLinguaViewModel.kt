@@ -16,6 +16,7 @@ import com.example.data.local.entity.UserStatsEntity
 import com.example.domain.exercise.ExerciseSpec
 import com.example.domain.gamification.ChestReward
 import com.example.domain.gamification.ChestSource
+import com.example.domain.gamification.LeagueBotAnimator
 import com.example.domain.lesson.LessonGenerator
 import com.example.domain.sm2.ReviewResult
 import com.example.localization.Language
@@ -231,7 +232,24 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 if (cohort != null) {
                     launch {
                         repository.getLeagueMembers(cohort.cohortId).collect { members ->
-                            _uiState.update { it.copy(leagueMembers = members) }
+                            // PHASE 3 #8 (rapport final) : animer les bots. Sans
+                            // cela, leur XP figé dès la création de la cohorte
+                            // rendait le classement statique : un seul exercice
+                            // plaçait le joueur définitivement, et l'urgence
+                            // hebdomadaire n'existait pas. Déterministe (même
+                            // instant → même classement), donc testable.
+                            val animated = LeagueBotAnimator.advanceAll(
+                                members,
+                                cohort.weekStartTimestamp,
+                                cohort.weekEndTimestamp,
+                                System.currentTimeMillis()
+                            )
+                            _uiState.update { it.copy(leagueMembers = animated) }
+
+                            // L'animation est calculée à l'affichage ; on persiste
+                            // aussi en base pour que le rang query (ORDER BY
+                            // weeklyXp DESC) reste cohérent entre les écrans.
+                            repository.persistBotAnimation(animated)
                         }
                     }
                 }
@@ -516,7 +534,8 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                     com.example.service.NotificationHelper.showLevelUnlockedNotification(
                         app,
                         level + 1,
-                        nextLevelObj.titleFr
+                        nextLevelObj.titleFr,
+                        lang = _uiState.value.currentLanguage
                     )
                 }
                 val gems = com.example.domain.gamification.GemsManager
@@ -855,7 +874,11 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 // Nothing due: a "0 flashcards ready" notification is pure noise
                 val dueCount = _uiState.value.dueFlashcardProgress.size
                 if (dueCount > 0) {
-                    com.example.service.NotificationHelper.showReviewReminder(app, dueCount = dueCount)
+                    com.example.service.NotificationHelper.showReviewReminder(
+                        app,
+                        dueCount = dueCount,
+                        lang = _uiState.value.currentLanguage
+                    )
                 } else {
                     android.util.Log.i("MedLinguaVM", "Review reminder test skipped: no flashcard is due")
                 }
@@ -863,19 +886,25 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             "streak" -> {
                 com.example.service.NotificationHelper.showStreakReminder(
                     app,
-                    streakDays = _uiState.value.userStats.streakDays
+                    streakDays = _uiState.value.userStats.streakDays,
+                    lang = _uiState.value.currentLanguage
                 )
             }
             "pearl" -> {
                 val pearlTerm = _uiState.value.terms.firstOrNull { it.clinicalPearl.isNotBlank() }
-                com.example.service.NotificationHelper.showClinicalPearlNotification(app, pearlTerm)
+                com.example.service.NotificationHelper.showClinicalPearlNotification(
+                    app,
+                    pearlTerm,
+                    lang = _uiState.value.currentLanguage
+                )
             }
             "level" -> {
                 val levelNumber = _uiState.value.userStats.highestUnlockedLevel()
                 com.example.service.NotificationHelper.showLevelUnlockedNotification(
                     app,
                     levelNumber = levelNumber,
-                    levelName = com.example.domain.learning.LearningLevel.fromNumber(levelNumber).titleFr
+                    levelName = com.example.domain.learning.LearningLevel.fromNumber(levelNumber).titleFr,
+                    lang = _uiState.value.currentLanguage
                 )
             }
         }

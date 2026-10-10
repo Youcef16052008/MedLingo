@@ -470,6 +470,17 @@ val currentClock: Clock get() = clock
         }
     }
 
+    /**
+     * PHASE 3 #8 (rapport final) : persiste l'animation des bots calculée à
+     * l'affichage. Une seule écriture transactionnelle (`@Transaction` ne
+     * fonctionne que dans un DAO Room, d'où la méthode dédiée) ; les vrais
+     * utilisateurs ne sont jamais touchés — un bug sur ce chemin effacerait la
+     * progression réelle d'un joueur, donc on filtre deux fois.
+     */
+    suspend fun persistBotAnimation(members: List<LeagueMemberEntity>) = withContext(Dispatchers.IO) {
+        dao.upsertBots(members.filter { it.isBot })
+    }
+
     suspend fun toggleModuleDownload(moduleInfo: InitialData.ModuleInfo, isDownload: Boolean) = withContext(Dispatchers.IO) {
         if (isDownload) {
             dao.upsertDownloadedModule(

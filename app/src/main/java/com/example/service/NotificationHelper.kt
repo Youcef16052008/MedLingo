@@ -16,6 +16,8 @@ import com.example.MainActivity
 import com.example.R
 import com.example.data.initial.InitialData
 import com.example.data.local.entity.MedicalTermEntity
+import com.example.localization.Language
+import com.example.localization.Strings
 import java.util.Calendar
 
 object NotificationHelper {
@@ -48,41 +50,49 @@ object NotificationHelper {
     const val KEY_REMINDER_HOUR = "reminder_hour"
     const val KEY_REMINDER_MINUTE = "reminder_minute"
 
-    fun createNotificationChannels(context: Context) {
+    /**
+     * Raccourci vers `Strings.get` pour les notifications (Phase 3 #11).
+     * Les clés manquantes retombent sur le français, puis sur la clé elle-même.
+     */
+    private fun t(key: String, lang: Language): String = Strings.get(key, lang)
+
+    fun createNotificationChannels(context: Context, lang: Language = Language.FRENCH) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
+            // PHASE 3 #11 : les noms de canaux apparaissent dans les réglages
+            // Android de l'app — ils suivent maintenant la langue de l'app.
             val reviewChannel = NotificationChannel(
                 CHANNEL_ID_REVIEWS,
-                "Rappels de Révision Quotidienne (SM-2)",
+                t("channel_reviews_name", lang),
                 NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "Notifications pour les flashcards prêtes pour la répétition espacée"
+                description = t("channel_reviews_desc", lang)
                 enableVibration(true)
             }
 
             val streakChannel = NotificationChannel(
                 CHANNEL_ID_STREAKS,
-                "Maintien de la Série (Streak)",
+                t("channel_streaks_name", lang),
                 NotificationManager.IMPORTANCE_DEFAULT
             ).apply {
-                description = "Alertes pour préserver votre série de jours d'étude consécutifs"
+                description = t("channel_streaks_desc", lang)
             }
 
             val pearlChannel = NotificationChannel(
                 CHANNEL_ID_PEARLS,
-                "Perle Clinique du Jour",
+                t("channel_pearls_name", lang),
                 NotificationManager.IMPORTANCE_DEFAULT
             ).apply {
-                description = "Notions cliniques et mnémotechniques médicales à haut rendement"
+                description = t("channel_pearls_desc", lang)
             }
 
             val levelChannel = NotificationChannel(
                 CHANNEL_ID_LEVELS,
-                "Déblocage de Niveaux & Succès",
+                t("channel_levels_name", lang),
                 NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "Célébration des paliers franchis dans la pyramide d'apprentissage"
+                description = t("channel_levels_desc", lang)
                 enableVibration(true)
             }
 
@@ -104,7 +114,7 @@ object NotificationHelper {
     }
 
     @SuppressLint("MissingPermission")
-    fun showReviewReminder(context: Context, dueCount: Int = 6) {
+    fun showReviewReminder(context: Context, dueCount: Int = 6, lang: Language = Language.FRENCH) {
         if (!hasNotificationPermission(context)) return
 
         val intent = Intent(context, MainActivity::class.java).apply {
@@ -119,20 +129,24 @@ object NotificationHelper {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
+        // PHASE 3 #11 : la notification suit la langue de l'app. Avant, ces
+        // textes étaient des chaînes FR en dur — un utilisateur arabe ou
+        // anglais recevait sa notification en français.
+        val n = dueCount.toString()
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_REVIEWS)
             .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("📋 $dueCount Flashcards prêtes pour révision !")
-            .setContentText("Votre session de répétition espacée (SM-2) est prête. Consolidez votre mémoire clinique.")
+            .setContentTitle(t("notif_review_title", lang).replace("{n}", n))
+            .setContentText(t("notif_review_body", lang))
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .bigText("📋 $dueCount termes médicaux sont arrivés à échéance de répétition espacée aujourd'hui selon l'algorithme SM-2.\n\nPrenez 3 minutes pour évaluer votre rappel en anglais et français !")
+                    .bigText(t("notif_review_big", lang).replace("{n}", n))
             )
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
             .addAction(
                 android.R.drawable.ic_media_play,
-                "Réviser maintenant 📚",
+                t("notif_review_action", lang),
                 pendingIntent
             )
             .build()
@@ -141,7 +155,7 @@ object NotificationHelper {
     }
 
     @SuppressLint("MissingPermission")
-    fun showStreakReminder(context: Context, streakDays: Int = 12) {
+    fun showStreakReminder(context: Context, streakDays: Int = 12, lang: Language = Language.FRENCH) {
         if (!hasNotificationPermission(context)) return
 
         val intent = Intent(context, MainActivity::class.java).apply {
@@ -156,13 +170,14 @@ object NotificationHelper {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
+        val n = streakDays.toString()
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_STREAKS)
             .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("🔥 Ne brisez pas votre série de $streakDays jours !")
-            .setContentText("Vous êtes sur une excellente lancée ! Une courte session aujourd'hui maintient votre régularité.")
+            .setContentTitle(t("notif_streak_title", lang).replace("{n}", n))
+            .setContentText(t("notif_streak_body", lang))
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .bigText("🔥 Série actuelle : $streakDays jours consécutifs d'anglais médical !\n\nChaque révision quotidienne transforme le vocabulaire passif en réflexe clinique actif. Gardez le cap confrère !")
+                    .bigText(t("notif_streak_big", lang).replace("{n}", n))
             )
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
@@ -173,7 +188,7 @@ object NotificationHelper {
     }
 
     @SuppressLint("MissingPermission")
-    fun showClinicalPearlNotification(context: Context, term: MedicalTermEntity? = null) {
+    fun showClinicalPearlNotification(context: Context, term: MedicalTermEntity? = null, lang: Language = Language.FRENCH) {
         if (!hasNotificationPermission(context)) return
 
         val selectedTerm = term ?: InitialData.terms.firstOrNull { it.clinicalPearl.isNotBlank() } ?: InitialData.terms.first()
@@ -190,21 +205,32 @@ object NotificationHelper {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
+        // Le titre et le corps long suivent la langue ; la perle elle-même
+        // reste dans sa langue d'origine (donnée brute du terme).
+        val title = t("notif_pearl_title", lang)
+            .replace("{fr}", selectedTerm.termFr)
+            .replace("{en}", selectedTerm.termEn)
+        val big = t("notif_pearl_big", lang)
+            .replace("{pearl}", selectedTerm.clinicalPearl)
+            .replace("{mnemo}", selectedTerm.mnemonic.ifBlank { "—" })
+            .replace("{module}", selectedTerm.module)
+            .replace("{chapter}", selectedTerm.chapter)
+
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_PEARLS)
             .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("🩺 Perle Clinique : ${selectedTerm.termFr} (${selectedTerm.termEn})")
+            .setContentTitle(title)
             .setContentText(selectedTerm.clinicalPearl)
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .setBigContentTitle("🩺 Perle Clinique : ${selectedTerm.termFr}")
-                    .bigText("${selectedTerm.clinicalPearl}\n\n💡 Mnémotechnique : ${selectedTerm.mnemonic}\n\n📖 Module : ${selectedTerm.module} — ${selectedTerm.chapter}")
+                    .setBigContentTitle(title)
+                    .bigText(big)
             )
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
             .addAction(
                 android.R.drawable.ic_menu_agenda,
-                "Explorer le module 📖",
+                t("notif_pearl_action", lang),
                 pendingIntent
             )
             .build()
@@ -213,7 +239,7 @@ object NotificationHelper {
     }
 
     @SuppressLint("MissingPermission")
-    fun showLevelUnlockedNotification(context: Context, levelNumber: Int, levelName: String) {
+    fun showLevelUnlockedNotification(context: Context, levelNumber: Int, levelName: String, lang: Language = Language.FRENCH) {
         if (!hasNotificationPermission(context)) return
 
         val intent = Intent(context, MainActivity::class.java).apply {
@@ -228,13 +254,18 @@ object NotificationHelper {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
+        val n = levelNumber.toString()
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_LEVELS)
             .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("🏆 Niveau $levelNumber débloqué !")
-            .setContentText("Félicitations ! Vous avez atteint le niveau : $levelName.")
+            .setContentTitle(t("notif_level_title", lang).replace("{n}", n))
+            .setContentText(t("notif_level_body", lang).replace("{name}", levelName))
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .bigText("🏆 Félicitations futur Dr ! Vous venez de franchir avec succès le palier précédent avec ≥70% de précision.\n\nLe Niveau $levelNumber ($levelName) est maintenant accessible dans votre Pyramide d'apprentissage.")
+                    .bigText(
+                        t("notif_level_big", lang)
+                            .replace("{n}", n)
+                            .replace("{name}", levelName)
+                    )
             )
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
