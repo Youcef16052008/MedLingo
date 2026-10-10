@@ -5,6 +5,7 @@ import com.example.domain.path.PathBuilder
 import com.example.domain.path.PathModule
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -99,5 +100,65 @@ class PathBuilderTest {
         assertEquals(NodeState.LOCKED, unit.nodes[2].state)
         assertEquals(1, unit.completed)
         assertFalse(unit.nodes.drop(2).any { it.state == NodeState.DONE })
+    }
+
+    @Test
+    fun `P0-5 un module sans exercices n offre aucun noeud jouable`() {
+        // Régression bug B5 : 10 modules sur 15 n'avaient aucun exercice, mais
+        // leur niveau 1 restait AVAILABLE. L'utilisateur cliquait sur un nœud
+        // qui pulse, tombait sur l'écran vide `no_exercises`, revenait — et le
+        // nœud pulsait encore. Maintenant un module sans contenu est entièrement
+        // verrouillé.
+        val path = PathBuilder.buildPath(
+            emptyMap(),
+            modules,
+            moduleHasContent = { id -> id == "anat" }
+        )
+        // Module avec contenu : comportement inchangé
+        val withContent = path[0]
+        assertEquals(NodeState.AVAILABLE, withContent.nodes[0].state)
+        assertEquals(NodeState.LOCKED, withContent.nodes[1].state)
+
+        // Module sans contenu : TOUT est verrouillé, même le niveau 1
+        val empty = path[1]
+        assertEquals(NodeState.LOCKED, empty.nodes[0].state)
+        assertTrue(empty.nodes.all { it.state == NodeState.LOCKED })
+        // Et nextLesson() ne pointe plus dessus
+        assertNull(PathBuilder.nextLesson(empty))
+    }
+
+    @Test
+    fun `P0-5 un module sans contenu n ouvre pas de nouvelles lecons`() {
+        // Un utilisateur pouvait avoir validé des leçons (version précédente).
+        // On ne rétrograde jamais une progression acquise (les DONE restent
+        // DONE), mais **aucune nouvelle leçon ne s'ouvre** : on ne renvoie pas
+        // vers un écran vide.
+        val best = mapOf(
+            PathBuilder.lessonKey("physio", 1) to 90,
+            PathBuilder.lessonKey("physio", 2) to 80
+        )
+        val path = PathBuilder.buildPath(
+            best,
+            modules,
+            moduleHasContent = { id -> id == "anat" }
+        )
+        val empty = path[1]
+        // L1 et L2 validées → DONE conservés
+        assertEquals(NodeState.DONE, empty.nodes[0].state)
+        assertEquals(NodeState.DONE, empty.nodes[1].state)
+        // L3 ne s'ouvre pas, malgré L2 validée : module sans contenu
+        assertEquals(NodeState.LOCKED, empty.nodes[2].state)
+        assertTrue(empty.nodes.drop(2).all { it.state == NodeState.LOCKED })
+        // Pas de prochain nœud jouable dans ce module
+        assertNull(PathBuilder.nextLesson(empty))
+    }
+
+    @Test
+    fun `P0-5 par defaut tout est jouable (retro-compatible)`() {
+        // La signature a un défaut `{ true }` : les appelants existants et les
+        // autres tests ne changent pas de comportement.
+        val path = PathBuilder.buildPath(emptyMap(), modules)
+        assertEquals(NodeState.AVAILABLE, path[0].nodes[0].state)
+        assertEquals(NodeState.AVAILABLE, path[1].nodes[0].state)
     }
 }

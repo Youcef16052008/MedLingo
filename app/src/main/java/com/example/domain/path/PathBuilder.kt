@@ -45,16 +45,25 @@ object PathBuilder {
      * Construit les unités du parcours.
      * `lessonBest` : clé `module:level` → meilleur score ; le meilleur score du module
      * sert de repli d'affichage (comme sur le web) mais ne débloque rien à lui seul.
+     *
+     * P0-5 (rapport final, bug B5) : `moduleHasContent` indique si un module a des
+     * exercices jouables. Un module sans contenu ne propose **aucun** nœud
+     * AVAILABLE — l'utilisateur ne clique pas sur un nœud qui mène à l'écran vide.
+     * Ces nœuds restent LOCKED (et l'UI affiche « Contenu à venir »).
      */
     fun buildPath(
         lessonBest: Map<String, Int>,
-        modules: List<PathModule>
+        modules: List<PathModule>,
+        moduleHasContent: (moduleId: String) -> Boolean = { true }
     ): List<PathUnit> =
         modules.map { module ->
             val moduleBest = lessonBest
                 .filterKeys { it.substringBefore(':') == module.id }
                 .values
                 .maxOrNull() ?: 0
+            // P0-5 : un module sans exercice ne débloque rien. Toute la logique
+            // ci-dessous est conservée à l'identique pour les modules normaux.
+            val hasContent = moduleHasContent(module.id)
             val nodes = mutableListOf<PathNode>()
             var previousDone = false
 
@@ -63,11 +72,10 @@ object PathBuilder {
                 val lessonScore = lessonBest[key]
                 val score = lessonScore ?: moduleBest
                 val state = when {
-                    // Le d�blocage regarde uniquement la le�on : le meilleur score du
-                    // module ne sert qu'à l'affichage (spec §7 : L(n+1) ouverte d�s
-                    // que L(n) est valid�e � >= 70 %).
                     (lessonScore ?: 0) >= UNLOCK_SCORE -> NodeState.DONE
-                    // la premi�re le�on d'une unit� est toujours ouverte
+                    // P0-5 : pas de contenu → nœud verrouillé, même au niveau 1
+                    !hasContent -> NodeState.LOCKED
+                    // la première leçon d'une unité est toujours ouverte
                     level == 1 -> NodeState.AVAILABLE
                     previousDone -> NodeState.AVAILABLE
                     else -> NodeState.LOCKED
