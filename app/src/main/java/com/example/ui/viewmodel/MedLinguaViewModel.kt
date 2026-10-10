@@ -156,6 +156,15 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 ),
                 clinicalPearlReminderEnabled = reminderPrefs.getBoolean(
                     com.example.service.NotificationHelper.KEY_PEARL_REMINDER_ENABLED, true
+                ),
+                // P0-4 : restaurer aussi l'heure choisie, sinon l'écran de
+                // réglage réaffiche 20:00 à chaque ouverture alors que
+                // l'alarme utilise bien l'heure persistée.
+                reminderHour = reminderPrefs.getInt(
+                    com.example.service.NotificationHelper.KEY_REMINDER_HOUR, 20
+                ),
+                reminderMinute = reminderPrefs.getInt(
+                    com.example.service.NotificationHelper.KEY_REMINDER_MINUTE, 0
                 )
             )
         }
@@ -806,6 +815,17 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun setReminderTime(hour: Int, minute: Int) {
         _uiState.update { it.copy(reminderHour = hour, reminderMinute = minute) }
+        // P0-4 (rapport final, bug B4) : persister l'heure. Sans cela, elle
+        // n'était en mémoire que dans UiState, et le BootReceiver réarmait à
+        // 20:00 au prochain redémarrage, ignorant le choix de l'utilisateur.
+        app.getSharedPreferences(
+            com.example.service.NotificationHelper.PREFS_REMINDERS,
+            android.content.Context.MODE_PRIVATE
+        ).edit().apply {
+            putInt(com.example.service.NotificationHelper.KEY_REMINDER_HOUR, hour)
+            putInt(com.example.service.NotificationHelper.KEY_REMINDER_MINUTE, minute)
+            apply()
+        }
         if (_uiState.value.notificationsEnabled) {
             com.example.service.NotificationHelper.scheduleDailyReminder(app, hour, minute)
         }

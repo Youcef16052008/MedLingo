@@ -17,7 +17,11 @@ class BootReceiver : BroadcastReceiver() {
             Context.MODE_PRIVATE
         )
         if (prefs.getBoolean(NotificationHelper.KEY_DAILY_REMINDER_ENABLED, true)) {
-            NotificationHelper.scheduleDailyReminder(context, 20, 0)
+            // P0-4 (rapport final, bug B4) : lire l'heure persistée au lieu du
+            // 20:00 en dur. setReminderTime() écrit maintenant ces clés.
+            val hour = prefs.getInt(NotificationHelper.KEY_REMINDER_HOUR, 20)
+            val minute = prefs.getInt(NotificationHelper.KEY_REMINDER_MINUTE, 0)
+            NotificationHelper.scheduleDailyReminder(context, hour, minute)
         }
         if (prefs.getBoolean(NotificationHelper.KEY_STREAK_REMINDER_ENABLED, true)) {
             NotificationHelper.scheduleRepeatingReminder(

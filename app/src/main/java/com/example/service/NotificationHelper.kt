@@ -42,6 +42,12 @@ object NotificationHelper {
     const val KEY_STREAK_REMINDER_ENABLED = "streak_reminder_enabled"
     const val KEY_PEARL_REMINDER_ENABLED = "pearl_reminder_enabled"
 
+    // P0-4 (rapport final, bug B4) : l'heure du rappel quotidien était perdue au
+    // reboot — setReminderTime() ne mettait à jour que l'UiState en mémoire, et
+    // BootReceiver réarmait à 20:00 en dur. Persistance ici, relue au reboot.
+    const val KEY_REMINDER_HOUR = "reminder_hour"
+    const val KEY_REMINDER_MINUTE = "reminder_minute"
+
     fun createNotificationChannels(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -114,7 +120,7 @@ object NotificationHelper {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_REVIEWS)
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle("📋 $dueCount Flashcards prêtes pour révision !")
             .setContentText("Votre session de répétition espacée (SM-2) est prête. Consolidez votre mémoire clinique.")
             .setStyle(
@@ -151,7 +157,7 @@ object NotificationHelper {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_STREAKS)
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle("🔥 Ne brisez pas votre série de $streakDays jours !")
             .setContentText("Vous êtes sur une excellente lancée ! Une courte session aujourd'hui maintient votre régularité.")
             .setStyle(
@@ -185,7 +191,7 @@ object NotificationHelper {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_PEARLS)
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle("🩺 Perle Clinique : ${selectedTerm.termFr} (${selectedTerm.termEn})")
             .setContentText(selectedTerm.clinicalPearl)
             .setStyle(
@@ -223,7 +229,7 @@ object NotificationHelper {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_LEVELS)
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle("🏆 Niveau $levelNumber débloqué !")
             .setContentText("Félicitations ! Vous avez atteint le niveau : $levelName.")
             .setStyle(
