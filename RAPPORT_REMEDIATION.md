@@ -257,22 +257,52 @@ Un **worktree git dédié** a été créé pour que les changements de la phase 
 
 ### 6.2 Suppressions de la dette morte
 
-- **`version old but have react and vite/`** — 83 fichiers, 5,2 Mo, clone confus d'une ancienne version React/Vite. Git conserve l'historique complet.
-- **`web/`** — le front vanilla (1 179 lignes) qui diverge (cœurs conservés, README 2 945 termes). `web-react` est le port fidèle et testé.
-- **`HomeScreen.kt`** — 1 076 lignes, `grep -rln HomeScreen app/src` ne retournait **que lui-même** : aucun appelant.
-- **Ressources mortes** — `ic_brand_foreground.png` (1,05 Mo), `hero_medical_dz.jpg`, splashes, 2 doublons octet-identiques → **−2,4 Mo d'APK**.
+- **`version old but have react and vite/`** — 83 fichiers, 5,2 Mo, clone confus d'une ancienne version React/Vite (dossier non suivi git). Supprimé.
+- **`web/`** — le front vanilla (1 179 lignes) qui diverge (cœurs conservés, README 2 945 termes). `web-react` est le port fidèle et testé. **14 fichiers supprimés.**
+- **`HomeScreen.kt`** — 1 076 lignes, `grep -rln HomeScreen app/src` ne retournait **que lui-même** : aucun appelant. Aucun test ne le référençait. Supprimé. `LanguageSelector` reste vivante (utilisée par `StatsProfileScreen`).
 
 ### 6.3 Nettoyage du contenu
 
-- **8 doublons de traduction** intra-module supprimés (dont `Dizziness`/`Vertigo` qui sont deux concepts cliniques distincts affichés comme un seul).
-- **Exercice id 17** (`sentence_order`) : les 3 tokens `the` identiques ont été dédoublonnés — fin des 3 boutons visuellement identiques.
+**8 doublons de traduction intra-module supprimés** — ids non renumérotés, pour préserver l'historique SM-2 et les liens profonds qui indexent `term.id` :
+
+| id | Module | `fr` |
+|---|---|---|
+| 514 | Physiologie | Loi de Frank-Starling |
+| 813 | Biochimie | Glycolyse |
+| 816 | Biochimie | Cycle de Krebs |
+| 1249 | Histologie | Basophile |
+| 1338 | Biophysique | Nombre de Reynolds |
+| 3840 | Terminologie Médicale | Malformation congénitale |
+| 4136 | Anglais Médical | Douleur sourde |
+| 4209 | Anglais Médical | Vertige |
+
+`Vertige` est le cas le plus important : `Dizziness` et `Vertigo` sont **deux concepts cliniques distincts** affichés comme un seul. Corpus : **4 512 → 4 504 termes, 0 doublon restant.**
+
+**Garanti par tests** — `extract.mjs` (web) accepte maintenant ces 8 trous explicites mais **échoue toujours sur tout trou accidentel**. Le test `i18n.test.ts` vérifie l'absence de trou accidentel, pas une contiguïté aveugle.
+
+### 6.4 Ce qui n'a PAS été fait en phase 0 (correction d'une première version)
+
+Je n'ai pas supprimé les ressources mortes (3,9 Mo d'APK) ni réglé l'exercice id 17 (tokens `the` ×3). La raison est honnête : `WordbankOrder.computeCorrectOrder` **gère déjà les tokens dupliqués** (consommation par indice, test `ExerciseSpecFixesTest`), donc la question est **jouable** — les 3 boutons identiques sont une imperfection cosmétique, pas un bug. Quant aux ressources, les supprimer demandait une revue du manifest et des mipmap, que j'ai préférée renvoyer à la phase 4 (#18) pour garder la phase 0 strictement hors de la logique.
 
 ### 6.4 Corrections de documentation
 
 - **`RAPPORT_18_20_documentation.md`** : le plan de gamification annonçait « 161 tests verts » → **164** (build exécuté, pas un cache).
 - **`ARCHITECTURE_FINALE_100_DUOLINGO.md`** : marqué — ses `[x]` sur le backend/Birdbrain/social sont **infirmés** (`grep supabase app/src` = 0). La réécriture complète est programmée en phase 4 (#19).
+- **`RAPPORT_15_20_web_react.md`** : le dernier trou de l'analyse, écrit après le crash du sous-agent. Il a établi que **le port web n'a ni le bug B1 ni le bug B2** — l'information qui a changé le plan P0.
 
-### 6.5 Ce qui n'a **pas** été touché en phase 0
+### 6.5 Vérification finale de la phase 0
+
+| Build | Résultat |
+|---|---|
+| `./gradlew testDebugUnitTest` | **BUILD SUCCESSFUL, 164 tests, 0 échec, 0 ignoré** (2 min 44 s, recompilation réelle) |
+| `vitest run` (web-react) | **111 tests, 0 échec** |
+| `tsc --noEmit` strict | OK |
+| `npm run extract` | `terms: 4504, exercises: 44` |
+| Doublons fr intra-module | **0** (mesuré) |
+
+**Commit** : `ecd42b5 Phase 0: nettoyage de la dette morte et dedoublonnage` — 50 fichiers, +1 761 / −3 542 (net **−1 781 lignes**, hors dossiers supprimés non suivis). Branche `phase-0-cleanup`.
+
+### 6.6 Ce qui n'a **pas** été touché en phase 0
 
 La phase 0 est volontairement restée **en dehors de la logique applicative**. Les 5 bugs P0 (§1) ne sont **pas** corrigés dans cette phase — ils le sont en **phase 1**, un commit par bug, chacun avec son test de régression. C'est la seule façon de garder un `git bisect` exploisible si quelque chose casse.
 
