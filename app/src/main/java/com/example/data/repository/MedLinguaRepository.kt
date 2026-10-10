@@ -118,46 +118,38 @@ val currentClock: Clock get() = clock
             initialProgress.forEach { dao.upsertFlashcardProgress(it) }
 
             safeUpsertUserStats(
-                UserStatsEntity(
-                    id = 1,
-                    streakDays = 12,
-                    learnedTermsCount = 156, // demo persona progress, NOT "all 1641 terms learned"
-                    totalPoints = 2850,
-                    quizzesCompleted = 18,
-                    totalQuestionsAnswered = 92,
-                    correctAnswersCount = 78,
-                    isOfflineSimulated = false,
-                    selectedLanguageCode = "fr",
-                    level1Score = 85,
-                    level2Score = 75,
-                    level3Score = 0,
-                    level4Score = 0,
-                    level5Score = 0,
-                    level6Score = 0,
-                    gems = 100,
-                    weeklyXp = 0,
-                    leagueTier = "BRONZE",
-                    isSuper = false,
-                    streakFreezeCount = 0,
-                    perfectLessonsCount = 0,
-                    lessonsCompleted = 18,
-                    // La série démo (12 jours) part du jour courant : sans `lastStudy`,
-                    // la première étude la remettrait à 1.
+                // P0-2 (rapport final, bug B2) : état neutre pour un nouvel
+                // utilisateur. L'ancien seed injectait une persona de démo
+                // (12 jours de série, 156 termes, niveau 1 à 85 %, 2 850 points)
+                // qui s'affichait avant le premier exercice — et dont
+                // `level2Score = 75 >= 70` pouvait empêcher le niveau 3 de se
+                // débloquer. Plus aucune progression fabriquée.
+                UserStatsEntity.createFresh(clock).copy(
+                    // La série doit partir du jour courant pour que la première
+                    // étude la compte bien à 1 (et non à 0).
                     lastStudy = ProgressionManager.todayKey(now),
                     weeklyXpReset = LeagueManager.getWeekStartTimestamp(clock)
                 )
             )
 
-            // Init gems ledger with starting bonus
+            // Init gems ledger with starting bonus.
+            // P0-2 : le bonus de bienvenue est réel (il alimente le ledger
+            // append-only anti-triche), on le garde — mais il doit maintenant
+            // correspondre au solde de `createFresh` (0), sinon le ledger et la
+            // table divergent.
+            val welcomeBonus = 100
             dao.insertGemsTransaction(
                 GemsTransactionEntity(
                     type = "EARN",
-                    amount = 100,
+                    amount = welcomeBonus,
                     reason = "welcome_bonus",
                     timestamp = now,
-                    balanceAfter = 100,
+                    balanceAfter = welcomeBonus,
                     metadata = "Initial gems"
                 )
+            )
+            safeUpsertUserStats(
+                dao.getUserStatsOnce()!!.copy(gems = welcomeBonus)
             )
 
             // Init league cohort — only one cohort may be active at a time
@@ -168,7 +160,8 @@ val currentClock: Clock get() = clock
                 cohortId = cohort.cohortId,
                 currentUserName = "Dr. Youcef",
                 currentUserXp = 0,
-                currentUserStreak = 12,
+                // P0-2 : la série du joueur part de 0, comme son état.
+                currentUserStreak = 0,
                 clock = clock
             )
             dao.upsertLeagueMembers(bots)
@@ -268,7 +261,7 @@ val currentClock: Clock get() = clock
         )
         dao.upsertFlashcardProgress(updatedProgress)
 
-        val currentStats = dao.getUserStatsOnce() ?: UserStatsEntity()
+        val currentStats = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
         // Plus de perte de cœur : une révision crédite de l'XP (objectif quotidien,
         // ligue, série) et alimente le compteur du trophée 🗂️.
         val gained = if (quality < 3) quality * 2 else quality * 5
@@ -286,7 +279,7 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun recordQuizCompletion(pointsEarned: Int, totalQuestions: Int, correctAnswers: Int) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity()
+        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
         val currentStats = ProgressionManager.addXp(current, pointsEarned, clock.now())
             .stats
             .copy(quizzesCompleted = current.quizzesCompleted + 1,
@@ -321,7 +314,7 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun recordLevelCompletion(level: Int, scorePercentage: Int, pointsEarned: Int, totalQuestions: Int, correctAnswers: Int): Boolean = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity()
+        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
         val prevScore = current.getScoreForLevel(level)
         val newScore = maxOf(prevScore, scorePercentage)
 
@@ -369,7 +362,7 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun addGems(amount: Int, reason: String, metadata: String = "") = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity()
+        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
         val newBalance = current.gems + amount
         safeUpsertUserStats(current.copy(gems = newBalance))
         dao.insertGemsTransaction(
@@ -403,7 +396,7 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun purchaseSuper(months: Int = 1) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity()
+        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
         val expiresAt = clock.now() + (months * 30L * 24 * 60 * 60 * 1000)
         val newStats = current.copy(
             isSuper = true,
@@ -493,12 +486,12 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun updateLanguage(langCode: String) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity()
+        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
         safeUpsertUserStats(current.copy(selectedLanguageCode = langCode))
     }
 
     suspend fun toggleOfflineSimulation(isOffline: Boolean) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity()
+        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
         safeUpsertUserStats(current.copy(isOfflineSimulated = isOffline))
     }
 

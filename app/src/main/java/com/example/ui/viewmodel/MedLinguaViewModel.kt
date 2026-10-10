@@ -38,7 +38,12 @@ data class UiState(
      */
     val dueFlashcardProgress: List<FlashcardProgressEntity> = emptyList(),
     val downloadedModules: List<DownloadedModuleEntity> = emptyList(),
-    val userStats: UserStatsEntity = UserStatsEntity(),
+    // P0-2 (rapport final, bug B2) : la valeur par défaut de l'UI est elle aussi
+    // la persona (les valeurs par défaut de la data class sont `streakDays = 12`,
+    // `level1Score = 85`…). À l'ouverture, avant la première lecture de la base,
+    // l'utilisateur voyait donc une progression fabriquée. `createFresh()` est
+    // neutre — un état vide est affiché le temps du chargement, pas un mensonge.
+    val userStats: UserStatsEntity = UserStatsEntity.createFresh(),
     // Duolingo Phase 1
     val gemsTransactions: List<GemsTransactionEntity> = emptyList(),
     val activeLeagueCohort: LeagueCohortEntity? = null,

@@ -114,6 +114,22 @@ data class UserStatsEntity(
     companion object {
         const val UNLOCK_THRESHOLD = 70
 
+        /**
+         * P0-2 (rapport final, bug B2) : valeurs par défaut de la table.
+         *
+         * **Ne plus utiliser en production.** Ces chiffres sont une persona de
+         * démonstration (12 jours de série, 156 termes, niveau 1 à 85 %…). Elle
+         * était injectée par le seed au premier lancement et affichée à un
+         * nouvel utilisateur — et `level2Score = 75 ≥ 70` pouvait empêcher le
+         * niveau 3 de se débloquer.
+         *
+         * Gardée uniquement pour les previews Compose qui ont besoin d'un état
+         * visuellement rempli.
+         */
+        @Deprecated(
+            "Persona de démo — utiliser createFresh() en production (P0-2)",
+            ReplaceWith("createFresh(clock)")
+        )
         fun createDefault(clock: Clock = SystemClock): UserStatsEntity {
             return UserStatsEntity(
                 id = 1,
@@ -140,6 +156,42 @@ data class UserStatsEntity(
                 streakFreezeCount = 0,
                 perfectLessonsCount = 0,
                 lessonsCompleted = 18
+            )
+        }
+
+        /**
+         * P0-2 : état neutre pour un nouvel utilisateur réel.
+         *
+         * Tout est à zéro — pas de série, pas de termes appris, pas de score de
+         * niveau. La langue par défaut reste le français (public PCEM1 algérien)
+         * et la ligue démarre en BRONZE. Aucune progression fabriquée.
+         */
+        fun createFresh(clock: Clock = SystemClock): UserStatsEntity {
+            return UserStatsEntity(
+                id = 1,
+                streakDays = 0,
+                learnedTermsCount = 0,
+                totalPoints = 0,
+                quizzesCompleted = 0,
+                totalQuestionsAnswered = 0,
+                correctAnswersCount = 0,
+                isOfflineSimulated = false,
+                selectedLanguageCode = "fr",
+                level1Score = 0,
+                level2Score = 0,
+                level3Score = 0,
+                level4Score = 0,
+                level5Score = 0,
+                level6Score = 0,
+                gems = 0,
+                weeklyXp = 0,
+                leagueCohortId = null,
+                leagueTier = "BRONZE",
+                isSuper = false,
+                superExpiresAt = null,
+                streakFreezeCount = 0,
+                perfectLessonsCount = 0,
+                lessonsCompleted = 0
             )
         }
     }

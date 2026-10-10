@@ -45,8 +45,25 @@ class TrophyManagerTest {
     }
 
     @Test
-    fun `le profil de depart gagne les trophees de serie xp et quiz`() {
-        val won = TrophyManager.evaluate(UserStatsEntity())
+    fun `un profil frais ne gagne aucun trophee`() {
+        // P0-2 (rapport final, bug B2) : un nouvel utilisateur démarre à zéro.
+        // L'ancien constructeur vide était la persona de démo (12 jours de
+        // série, 2 850 points, 18 quiz) et débloquait d'office 4 trophées.
+        val won = TrophyManager.evaluate(UserStatsEntity.createFresh())
+        assertEquals(emptyList<TrophyId>(), won.toList())
+    }
+
+    @Test
+    fun `un profil ayant vraiment joue gagne les trophees de serie xp et quiz`() {
+        // Les seuils des trophées, eux, restent valides : c'est l'état injecté
+        // qui était faux, pas les conditions de déblocage.
+        val played = emptyStats().copy(
+            streakDays = 12,
+            totalPoints = 2850,
+            quizzesCompleted = 18,
+            lessonsCompleted = 1
+        )
+        val won = TrophyManager.evaluate(played)
         assertEquals(
             setOf(
                 TrophyId.FIRST_LESSON,
