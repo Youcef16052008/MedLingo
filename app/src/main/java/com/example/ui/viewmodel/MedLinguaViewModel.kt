@@ -16,6 +16,7 @@ import com.example.data.local.entity.UserStatsEntity
 import com.example.domain.exercise.ExerciseSpec
 import com.example.domain.gamification.ChestReward
 import com.example.domain.gamification.ChestSource
+import com.example.domain.lesson.LessonGenerator
 import com.example.domain.sm2.ReviewResult
 import com.example.localization.Language
 import com.example.ui.components.RewardData
@@ -393,6 +394,23 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             // exercices propres, la leçon reste vide (état dédié à l'écran) plutôt
             // que de faire jouer les questions d'un autre module.
             exercisesForLevel = exercisesForLevel.filter { it.module.equals(moduleTitle, ignoreCase = true) }
+
+            // PHASE 2 (rapport final §2) : compléter la leçon avec les questions
+            // générées depuis les fiches du module. 10 modules sur 15 n'avaient
+            // aucun exercice écrit main → l'écran affichait `no_exercises` et le
+            // nœud pulsait indéfiniment (P0-5 les a verrouillés ; maintenant on
+            // les remplit). Tirage déterministe : mêmes questions à chaque visite.
+            //
+            // `lessonQuestions` place déjà les exercices réels en tête et ajoute
+            // le complément généré — on lui passe directement la liste filtrée.
+            if (exercisesForLevel.size < LessonGenerator.LESSON_SIZE) {
+                exercisesForLevel = LessonGenerator.lessonQuestions(
+                    moduleId = state.pathLessonModuleId!!,
+                    level = level,
+                    realExercises = exercisesForLevel,
+                    terms = InitialData.termsOfModule(moduleTitle)
+                )
+            }
         }
         _uiState.update {
             it.copy(

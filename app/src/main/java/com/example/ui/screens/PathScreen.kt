@@ -72,24 +72,19 @@ fun PathScreen(
         }
     }
     val units = remember(uiState.lessonBest, lang) {
-        // P0-5 (rapport final, bug B5) : un module sans exercice ne propose
-        // aucun nœud AVAILABLE — l'utilisateur ne tombe plus sur l'écran vide
-        // `no_exercises` en cliquant sur un nœud qui pulse comme jouable.
-        // La présence est calculée depuis `InitialData` (source de vérité du
-        // seed), pas depuis la base : au premier lancement le seed n'a pas
-        // encore tourné quand l'écran se dessine.
-        // `exercise.module` est le titre FR du module ("Anatomie", "Biochimie"…).
-        val modulesWithExercises = InitialData.exercises
-            .map { it.module.trim() }
-            .toSet()
+        // P0-5 + PHASE 2 : la présence de contenu se mesure désormais aux
+        // **termes** du module, pas aux exercices écrits main. Le générateur
+        // (`LessonGenerator`) dérive les questions des fiches : un module qui a
+        // des termes a une leçon jouable, même sans exercice écrit main.
+        // Avant la phase 2, 10 modules sur 15 affichaient l'écran vide
+        // `no_exercises` et leur nœud pulsait indéfiniment.
         PathBuilder.buildPath(
             uiState.lessonBest,
             modules,
             moduleHasContent = { modId ->
-                // id du module ("anat") → titre FR ("Anatomie"), clé des exercices.
                 val title = InitialData.modulesList
-                    .firstOrNull { it.id == modId }?.titleFr?.trim()
-                title != null && title in modulesWithExercises
+                    .firstOrNull { it.id == modId }?.titleFr
+                title != null && InitialData.termsOfModule(title).isNotEmpty()
             }
         )
     }
