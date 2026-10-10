@@ -184,6 +184,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˌɛmbriˈɒlədʒi/",
+            exampleEn = "Embryology is the science studying the development of an organism from fertilization to birth.",
+            exampleFr = "L'embryologie est science étudiant le développement d'un organisme de la fécondation à la naissance.",
+            exampleAr = "علم الأجنة هو العلم الذي يدرس تطور الكائن الحي من الإخصاب حتى الولادة.",
         ),
         MedicalTermEntity(
             id = 3411,
@@ -196,6 +199,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌɡæmɪtoʊˈdʒɛnɪsɪs/",
+            exampleEn = "The gametogenesis is the process of formation and maturation of gametes (sperm and oocytes).",
+            exampleFr = "La gamétogenèse est processus de formation et maturation des gamètes (spermatozoïdes et ovocytes).",
+            exampleAr = "تكوين الأمشاج هو عملية تكوين ونضج الأمشاج (الحيوانات المنوية والبييضات).",
         ),
         MedicalTermEntity(
             id = 3412,
@@ -208,6 +214,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmætəˈdʒɛnɪsɪs/",
+            exampleEn = "The spermatogenesis is the process of sperm cell production from spermatogonia in the seminiferous tubules.",
+            exampleFr = "La spermatogenèse est processus de production des spermatozoïdes à partir des spermatogonies dans les tubes séminifères.",
+            exampleAr = "تكوين الحيوانات المنوية هو عملية إنتاج الحيوانات المنوية من الخلايا المنوية الأولية في الأنابيب المنوية.",
         ),
         MedicalTermEntity(
             id = 3413,
@@ -220,6 +229,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌoʊəˈdʒɛnɪsɪs/",
+            exampleEn = "The oogenesis is the process of female gamete (oocyte) formation and maturation in the ovary.",
+            exampleFr = "L'ovogenèse (Ovogénèse) est processus de formation et maturation du gamète féminin (ovocyte) dans l'ovaire.",
+            exampleAr = "تكوين البييضات هو عملية تكوين ونضج المشيج الأنثوي (البييضة) في المبيض.",
         ),
         MedicalTermEntity(
             id = 3414,
@@ -232,6 +244,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈɡæmiːt/",
+            exampleEn = "The gamete is the mature reproductive cell (sperm or egg) with a haploid number of chromosomes.",
+            exampleFr = "La gamète est cellule reproductrice mature (spermatozoïde ou ovule) avec un nombre haploïde de chromosomes.",
+            exampleAr = "المشيج هو خلية تناسلية ناضجة (حيوان منوي أو بييضة) بعدد أحادي المجموعة من الصبغيات.",
         ),
         MedicalTermEntity(
             id = 3415,
@@ -244,6 +259,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmætəˈɡoʊniəm/",
+            exampleEn = "The spermatogonium is the diploid stem cell in the seminiferous tubule that undergoes mitosis to produce spermatocytes.",
+            exampleFr = "La spermatogonie est cellule souche diploïde dans le tube séminifère qui subit la mitose pour produire des spermatocytes.",
+            exampleAr = "الخلية المنوية الأولية هو خلية جذعية ثنائية المجموعة في الأنبوب المنوي تخضع للانقسام المتساوي لإنتاج خلايا منوية أولية.",
         ),
         MedicalTermEntity(
             id = 3416,
@@ -256,6 +274,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈspɜːrmətəˌsaɪt/",
+            exampleEn = "The primary spermatocyte is the diploid cell that undergoes meiosis I to produce secondary spermatocytes.",
+            exampleFr = "La spermatocyte I (primaire) est cellule diploïde qui subit la méiose I pour produire des spermatocytes secondaires.",
+            exampleAr = "الخلية المنوية الأولى هو خلية ثنائية المجموعة تخضع للانقسام الاختزالي الأول لإنتاج خلايا منوية ثانية.",
         ),
         MedicalTermEntity(
             id = 3417,
@@ -268,6 +289,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈspɜːrmətəˌsaɪt ˈsɛkəndəri/",
+            exampleEn = "The secondary spermatocyte is the haploid cell resulting from meiosis I that undergoes meiosis II to form spermatids.",
+            exampleFr = "La spermatocyte II (secondaire) est cellule haploïde résultant de la méiose I qui subit la méiose II pour former des spermatides.",
+            exampleAr = "الخلية المنوية الثانية هو خلية أحادية المجموعة ناتجة عن الانقسام الاختزالي الأول تخضع للانقسام الاختزالي الثاني لتكوين بييضات منوية.",
         ),
         MedicalTermEntity(
             id = 3418,
@@ -280,6 +304,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈspɜːrmətɪd/",
+            exampleEn = "The spermatid is the haploid cell produced by meiosis II that matures into a spermatozoon by spermiogenesis.",
+            exampleFr = "La spermatide est cellule haploïde produite par la méiose II qui mûrit en spermatozoïde par la spermiogenèse.",
+            exampleAr = "البييضة المنوية هو خلية أحادية المجموعة ناتجة عن الانقسام الاختزالي الثاني تنضج إلى حيوان منوي.",
         ),
         MedicalTermEntity(
             id = 3419,
@@ -292,6 +319,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmətəˈzoʊɒn/",
+            exampleEn = "The spermatozoon is the mature male gamete with a head (nucleus+acrosome), midpiece (mitochondria), and flagellum.",
+            exampleFr = "La spermatozoïde est le gamète mâle mature avec une tête (noyau+acrosome), une pièce intermédiaire (mitochondries) et un flagelle.",
+            exampleAr = "الحيوان المنوي هو المشيج الذكري الناضج بنواة وأكروسوم وقطعة وسطى وذيل.",
         ),
         MedicalTermEntity(
             id = 3420,
@@ -304,6 +334,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈækrəˌsoʊm/",
+            exampleEn = "The acrosome is the cap-like structure on the sperm head containing hydrolytic enzymes to penetrate the egg.",
+            exampleFr = "L'acrosome est structure en capuchon sur la tête du spermatozoïde contenant des enzymes hydrolytiques pour pénétrer l'ovule.",
+            exampleAr = "القرناء هو تركيب يشبه الغطاء على رأس الحيوان المنوي يحتوي على إنزيمات متحللة لاختراق البييضة.",
         ),
         MedicalTermEntity(
             id = 3421,
@@ -316,6 +349,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmiˈoʊdʒɛnɪsɪs/",
+            exampleEn = "The spermiogenesis is the process of transformation of spermatids into mature spermatozoa (morphological maturation).",
+            exampleFr = "La spermiogenèse est processus de transformation des spermatides en spermatozoïdes matures (maturation morphologique).",
+            exampleAr = "تمايز الحيوانات المنوية هو عملية تحول البييضات المنوية إلى حيوانات منوية ناضجة (النضج المورفولوجي).",
         ),
         MedicalTermEntity(
             id = 3422,
@@ -328,6 +364,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/sɜːrˈtoʊli/",
+            exampleEn = "The sertoli cell is the supportive cell in the seminiferous tubule providing nutrients and structural support to developing sperm.",
+            exampleFr = "La cellule de Sertoli est cellule de soutien dans le tube séminifère fournissant nutriments et support structural aux spermatozoïdes.",
+            exampleAr = "خلية سيرتولي هو خلية داعمة في الأنبوب المنوي توفر المغذيات والدعم البنيوي للحيوانات المنوية النامية.",
         ),
         MedicalTermEntity(
             id = 3423,
@@ -340,6 +379,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈlaɪdɪɡ/",
+            exampleEn = "The leydig cell is the interstitial cell in the testis producing testosterone under LH stimulation.",
+            exampleFr = "La cellule de Leydig est cellule interstitielle dans le testicule produisant la testostérone sous stimulation de la LH.",
+            exampleAr = "خلية ليديغ هو خلية خلالية في الخصية تنتج التستوستيرون تحت تحفيز LH.",
         ),
         MedicalTermEntity(
             id = 3424,
@@ -352,6 +394,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌoʊəˈɡoʊniəm/",
+            exampleEn = "The oogonium is the diploid germ cell in the female that undergoes mitosis before birth to produce primary oocytes.",
+            exampleFr = "L'ovogonie est cellule germinale diploïde chez la femelle qui subit la mitose avant la naissance pour produire des ovocytes primaires.",
+            exampleAr = "الخلية البيضية الأولية هو خلية جرثومية ثنائية المجموعة عند الأنثى تخضع للانقسام المتساوي قبل الولادة لإنتاج بييضات أولية.",
         ),
         MedicalTermEntity(
             id = 3425,
@@ -364,6 +409,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈoʊəˌsaɪt ˈpraɪməri/",
+            exampleEn = "The primary oocyte is the diploid cell arrested in prophase I of meiosis from birth until puberty.",
+            exampleFr = "L'ovocyte I (primaire) est cellule diploïde arrêtée en prophase I de la méiose de la naissance jusqu'à la puberté.",
+            exampleAr = "البييضة الأولى هو خلية ثنائية المجموعة متوقفة في الطور التمهيدي الأول من الانقسام الاختزالي من الولادة حتى البلوغ.",
         ),
         MedicalTermEntity(
             id = 3426,
@@ -376,6 +424,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈoʊəˌsaɪt ˈsɛkəndəri/",
+            exampleEn = "The secondary oocyte is the haploid cell arrested in metaphase II of meiosis released at ovulation.",
+            exampleFr = "L'ovocyte II (secondaire) est cellule haploïde arrêtée en métaphase II de la méiose libérée lors de l'ovulation.",
+            exampleAr = "البييضة الثانية هو خلية أحادية المجموعة متوقفة في الطور الاستوائي الثاني من الانقسام الاختزالي تُطلق عند التبويض.",
         ),
         MedicalTermEntity(
             id = 3427,
@@ -388,6 +439,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈpoʊlər ˈbɒdi/",
+            exampleEn = "The polar body is the small cell produced during female meiosis containing excess chromosomes; non-functional.",
+            exampleFr = "La globule polaire est petite cellule produite lors de la méiose féminine contenant des chromosomes excédentaires; non fonctionnelle.",
+            exampleAr = "الجسيم القطبي هو خلية صغيرة تُنتج أثناء الانقسام الاختزالي الأنثوي تحتوي على صبغيات فائضة؛ غير وظيفية.",
         ),
         MedicalTermEntity(
             id = 3428,
@@ -400,6 +454,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/fəˈlɪkjʊlər/",
+            exampleEn = "The follicular cell is the cell surrounding the oocyte in the ovarian follicle, producing estrogen and nurturing the oocyte.",
+            exampleFr = "La cellule folliculaire (Granulosa) est cellule entourant l'ovocyte dans le follicule ovarien, produisant des estrogènes et nourrissant l'ovocyte.",
+            exampleAr = "الخلية الجريبية هو خلية تحيط بالبييضة في الجريب المبيضي تنتج الإستروجين وتغذي البييضة.",
         ),
         MedicalTermEntity(
             id = 3429,
@@ -412,6 +469,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈzoʊnə pɛˈluːsɪdə/",
+            exampleEn = "The zona pellucida is the glycoprotein coat surrounding the oocyte involved in sperm binding and polyspermy prevention.",
+            exampleFr = "La zone pellucide est manteau glycoprotéique entourant l'ovocyte impliqué dans la fixation du sperme et la prévention de la polyspermie.",
+            exampleAr = "المنطقة الشفافة هو غلاف بروتيني سكري يحيط بالبييضة يشارك في ارتباط الحيوان المنوي ومنع تعدد الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3430,
@@ -424,6 +484,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈmɛnstruəl ˈsaɪkəl/",
+            exampleEn = "The menstrual cycle is the monthly hormonal cycle in females lasting ~28 days including follicular, ovulatory, and luteal phases.",
+            exampleFr = "La cycle menstruel est cycle hormonal mensuel chez la femelle d'environ 28 jours incluant phases folliculaire, ovulatoire et lutéale.",
+            exampleAr = "الدورة الشهرية هو الدورة الهرمونية الشهرية عند الإناث مدتها حوالي 28 يوماً تشمل مراحل جريبية وإباضية وجسم أصفر.",
         ),
         MedicalTermEntity(
             id = 3431,
@@ -460,6 +523,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˌɒvjʊˈleɪʃən/",
+            exampleEn = "The ovulation is the release of a secondary oocyte from the dominant follicle triggered by LH surge (day 14).",
+            exampleFr = "L'ovulation est libération d'un ovocyte secondaire du follicule dominant déclenchée par le pic de LH (jour 14).",
+            exampleAr = "الإباضة هو إطلاق البييضة الثانية من الجريب السائد بسبب ارتفاع LH (اليوم 14).",
         ),
         MedicalTermEntity(
             id = 3434,
@@ -472,6 +538,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈkɔːrpəs ˈluːtiəm/",
+            exampleEn = "The corpus luteum is the temporary endocrine structure formed from the ruptured follicle producing progesterone and estrogen.",
+            exampleFr = "La corps jaune est structure endocrine temporaire formée du follicule rompu produisant progestérone et estrogènes.",
+            exampleAr = "الجسم الأصفر هو تركيب غددي مؤقت يتشكل من الجريب المنفجر وينتج البروجستيرون والإستروجين.",
         ),
         MedicalTermEntity(
             id = 3435,
@@ -484,6 +553,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈkɔːrpəs ˈælbɪkænz/",
+            exampleEn = "The corpus albicans is the fibrous scar tissue formed from the degenerated corpus luteum if fertilization does not occur.",
+            exampleFr = "La corps blanc (Corpus albicans) est tissu cicatriciel fibreux formé à partir du corps jaune dégénéré si la fécondation ne se produit pas.",
+            exampleAr = "الجسم الأبيض هو النسيج الليفي الندبي المتكون من الجسم الأصفر المتحلل إذا لم يحدث إخصاب.",
         ),
         MedicalTermEntity(
             id = 3436,
@@ -496,6 +568,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈɡrɑːfiən ˈfɒlɪkəl/",
+            exampleEn = "The graafian follicle is the mature dominant ovarian follicle ready to release the secondary oocyte at ovulation.",
+            exampleFr = "La follicule de de Graaf est le follicule ovarien dominant mature prêt à libérer l'ovocyte secondaire lors de l'ovulation.",
+            exampleAr = "الجريب الناضج هو الجريب المبيضي السائد الناضج الجاهز لإطلاق البييضة الثانية عند الإباضة.",
         ),
         MedicalTermEntity(
             id = 3437,
@@ -508,6 +583,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈæntrəm/",
+            exampleEn = "The antrum is the fluid-filled cavity within a developing ovarian follicle.",
+            exampleFr = "L'antre folliculaire est cavité remplie de liquide dans un follicule ovarien en développement.",
+            exampleAr = "التجويف الجريبي هو التجويف المملوء بالسائل داخل الجريب المبيضي النامي.",
         ),
         MedicalTermEntity(
             id = 3438,
@@ -520,6 +598,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ɛf ɛs eɪtʃ/",
+            exampleEn = "The fsh (follicle-stimulating hormone) is the pituitary hormone stimulating follicle growth in females and spermatogenesis in males.",
+            exampleFr = "La FSH (Hormone folliculo-stimulante) est hormone hypophysaire stimulant la croissance folliculaire chez la femelle et la spermatogenèse chez le mâle.",
+            exampleAr = "الهرمون المنبه للجريب هو هرمون النخامية المحفز لنمو الجريب عند الإناث والتكوين المنوي عند الذكور.",
         ),
         MedicalTermEntity(
             id = 3439,
@@ -532,6 +613,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ɛl eɪtʃ/",
+            exampleEn = "The lh (luteinizing hormone) is the pituitary hormone triggering ovulation in females and testosterone production in males.",
+            exampleFr = "La LH (Hormone lutéinisante) est hormone hypophysaire déclenchant l'ovulation chez la femelle et la production de testostérone chez le mâle.",
+            exampleAr = "الهرمون الملوتن هو هرمون النخامية المحفز للإباضة عند الإناث وإنتاج التستوستيرون عند الذكور.",
         ),
         MedicalTermEntity(
             id = 3440,
@@ -556,6 +640,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/proʊˈdʒɛstəroʊn/",
+            exampleEn = "The progesterone is the hormone produced by the corpus luteum that maintains the endometrium for implantation.",
+            exampleFr = "La progestérone est hormone produite par le corps jaune maintenant l'endomètre pour l'implantation.",
+            exampleAr = "البروجستيرون هو هرمون ينتجه الجسم الأصفر يحافظ على بطانة الرحم للانغراس.",
         ),
         MedicalTermEntity(
             id = 3442,
@@ -568,6 +655,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/dʒiː ɛn ɑːr eɪtʃ/",
+            exampleEn = "The gnrh (gonadotropin-releasing hormone) is the hypothalamic hormone stimulating the pituitary to release FSH and LH.",
+            exampleFr = "La gnRH (Hormone de libération des gonadotrophines) est hormone hypothalamique stimulant l'hypophyse à libérer FSH et LH.",
+            exampleAr = "هرمون إطلاق الغدد التناسلية هو هرمون تحت المهاد الذي يحفز النخامية على إطلاق FSH و LH.",
         ),
         MedicalTermEntity(
             id = 3443,
@@ -580,6 +670,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/ˌfɜːrtɪlaɪˈzeɪʃən/",
+            exampleEn = "The fertilization is the fusion of a spermatozoon with a secondary oocyte to form a zygote, restoring the diploid number.",
+            exampleFr = "Le fécondation est fusion d'un spermatozoïde avec un ovocyte secondaire pour former un zygote, restaurant le nombre diploïde.",
+            exampleAr = "الإخصاب هو اندماج الحيوان المنوي مع البييضة الثانية لتكوين اللاقحة واستعادة العدد الثنائي للصبغيات.",
         ),
         MedicalTermEntity(
             id = 3444,
@@ -592,6 +685,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈzaɪɡoʊt/",
+            exampleEn = "The zygote is the diploid cell resulting from the fusion of sperm and egg; the first cell of the new organism.",
+            exampleFr = "La zygote est cellule diploïde résultant de la fusion du sperme et de l'ovule; première cellule du nouvel organisme.",
+            exampleAr = "اللاقحة هو الخلية الثنائية المجموعة الناتجة عن اندماج المشيجين؛ أول خلية في الكائن الحي الجديد.",
         ),
         MedicalTermEntity(
             id = 3445,
@@ -604,6 +700,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈækrəˌsoʊm riˈækʃən/",
+            exampleEn = "The acrosome reaction is the release of acrosomal enzymes (hyaluronidase, acrosin) enabling sperm to penetrate the zona pellucida.",
+            exampleFr = "Le réaction acrosomique est libération des enzymes acrosomiques (hyaluronidase, acrosine) permettant au sperme de pénétrer la zone pellucide.",
+            exampleAr = "التفاعل الأكروسومي هو إطلاق إنزيمات الأكروسوم لتمكين الحيوان المنوي من اختراق المنطقة الشفافة.",
         ),
         MedicalTermEntity(
             id = 3446,
@@ -616,6 +715,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈkɔːrtɪkəl riˈækʃən/",
+            exampleEn = "The cortical reaction is the release of cortical granules after sperm entry hardening the zona pellucida to prevent polyspermy.",
+            exampleFr = "Le réaction corticale est libération des granules corticaux après entrée du sperme durcissant la zone pellucide pour prévenir la polyspermie.",
+            exampleAr = "التفاعل القشري هو إطلاق الحبيبات القشرية بعد دخول الحيوان المنوي لتصليب المنطقة الشفافة ومنع تعدد الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3447,
@@ -628,6 +730,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈpɒliˌspɜːrmi/",
+            exampleEn = "The polyspermy is the penetration of one egg by more than one sperm; normally prevented by the cortical reaction.",
+            exampleFr = "La polyspermie est pénétration d'un ovule par plus d'un spermatozoïde; normalement prévenue par la réaction corticale.",
+            exampleAr = "تعدد الإخصاب هو اختراق أكثر من حيوان منوي للبييضة؛ يُمنع عادةً بالتفاعل القشري.",
         ),
         MedicalTermEntity(
             id = 3448,
@@ -640,6 +745,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/kəˌpæsɪˈteɪʃən/",
+            exampleEn = "The capacitation is the functional maturation of sperm in the female reproductive tract enabling fertilization.",
+            exampleFr = "Le capacitation est la maturation fonctionnelle des spermatozoïdes dans le tractus reproducteur féminin permettant la fécondation.",
+            exampleAr = "التهيؤ المنوي هو النضج الوظيفي للحيوانات المنوية في الجهاز التناسلي الأنثوي مما يمكنها من الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3449,
@@ -652,6 +760,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/proʊˈnjuːkliəs/",
+            exampleEn = "The pronucleus is the haploid nucleus of sperm or egg before fusion to form the zygote nucleus.",
+            exampleFr = "La pronucleus (Pronoyau) est noyau haploïde du sperme ou de l'œuf avant fusion pour former le noyau du zygote.",
+            exampleAr = "النويات قبل الانقسام هو النواة الأحادية المجموعة للحيوان المنوي أو البييضة قبل الاندماج لتكوين نواة اللاقحة.",
         ),
         MedicalTermEntity(
             id = 3450,
@@ -664,6 +775,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/ˌhaɪəˌlʊrəˈnaɪdeɪz/",
+            exampleEn = "The hyaluronidase is the acrosomal enzyme that disperses cumulus cells surrounding the oocyte during fertilization.",
+            exampleFr = "L'hyaluronidase est enzyme acrosomique qui disperse les cellules du cumulus entourant l'ovocyte pendant la fécondation.",
+            exampleAr = "هيالورونيداز هو إنزيم أكروسومي يبعثر الخلايا التراكمية المحيطة بالبييضة أثناء الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3451,
@@ -676,6 +790,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈkjuːmjʊləs oʊˈɒfərəs/",
+            exampleEn = "The cumulus oophorus is the cluster of granulosa cells surrounding the oocyte in the Graafian follicle.",
+            exampleFr = "La cumulus oophore est amas de cellules de la granulosa entourant l'ovocyte dans le follicule de De Graaf.",
+            exampleAr = "التراكم المحيط بالبييضة هو مجموعة من خلايا الحبيبات المحيطة بالبييضة في الجريب الناضج.",
         ),
         MedicalTermEntity(
             id = 3452,
@@ -688,6 +805,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Fécondation",
             ipaPhonetic = "/kəˈroʊnə ˌreɪdiˈɑːtə/",
+            exampleEn = "The corona radiata is the innermost layer of granulosa cells surrounding the oocyte that must be penetrated by sperm.",
+            exampleFr = "La couronne radiée est la couche la plus interne de cellules de la granulosa entourant l'ovocyte que le sperme doit traverser.",
+            exampleAr = "التاج المشع هو الطبقة الداخلية من خلايا الحبيبات المحيطة بالبييضة التي يجب على الحيوان المنوي اختراقها.",
         ),
         MedicalTermEntity(
             id = 3453,
@@ -700,6 +820,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈkliːvɪdʒ/",
+            exampleEn = "The cleavage is the series of rapid mitotic divisions of the zygote producing blastomeres without cell growth.",
+            exampleFr = "Le clivage (Segmentation) est série de divisions mitotiques rapides du zygote produisant des blastomères sans croissance cellulaire.",
+            exampleAr = "الانقسام الأولي هو سلسلة من الانقسامات المتساوية السريعة للاقحة تنتج الأرومات الأريمية دون نمو خلوي.",
         ),
         MedicalTermEntity(
             id = 3454,
@@ -724,6 +847,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈmɒrjʊlə/",
+            exampleEn = "The morula is the solid ball of 16 blastomeres formed by cleavage, resembling a mulberry (Day 3–4).",
+            exampleFr = "La morula est boule solide de 16 blastomères formée par clivage, ressemblant à une mûre (Jour 3–4).",
+            exampleAr = "التوتة هو كرة صلبة من 16 أريمة تتكون بالانقسام تشبه التوت (اليوم 3-4).",
         ),
         MedicalTermEntity(
             id = 3456,
@@ -736,6 +862,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈblæstəˌsɪst/",
+            exampleEn = "The blastocyst is the hollow ball of cells (Day 5–6) with an inner cell mass (embryoblast) and outer trophoblast layer.",
+            exampleFr = "La blastocyste est boule creuse de cellules (Jour 5–6) avec une masse cellulaire interne (embryoblaste) et couche trophoblastique externe.",
+            exampleAr = "الأريمة المكيسة هو كرة مجوفة من الخلايا (اليوم 5-6) بكتلة خلوية داخلية وطبقة أرومة غاذية خارجية.",
         ),
         MedicalTermEntity(
             id = 3457,
@@ -748,6 +877,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈɪnər sɛl mæs/",
+            exampleEn = "The inner cell mass (icm) is the embryoblast; a cluster of cells inside the blastocyst that will form the embryo and its membranes.",
+            exampleFr = "La masse cellulaire interne (Bouton embryonnaire) est l'embryoblaste; amas de cellules à l'intérieur du blastocyste qui formera l'embryon et ses membranes.",
+            exampleAr = "الكتلة الخلوية الداخلية هو الأريمة الجنينية؛ مجموعة خلايا داخل الأريمة المكيسة ستكون الجنين وأغشيته.",
         ),
         MedicalTermEntity(
             id = 3458,
@@ -760,6 +892,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈtrɒfəˌblæst/",
+            exampleEn = "The trophoblast is the outer cell layer of the blastocyst forming the placenta and extraembryonic membranes.",
+            exampleFr = "La trophoblaste est couche cellulaire externe du blastocyste formant le placenta et les membranes extra-embryonnaires.",
+            exampleAr = "الأرومة الغاذية هو الطبقة الخلوية الخارجية للأريمة المكيسة تكوّن المشيمة والأغشية خارج الجنينية.",
         ),
         MedicalTermEntity(
             id = 3459,
@@ -772,6 +907,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈblæstəˌsiːl/",
+            exampleEn = "The blastocoel is the fluid-filled cavity inside the blastocyst formed during blastulation.",
+            exampleFr = "La blastocœle est cavité remplie de liquide à l'intérieur du blastocyste formée lors de la blastulation.",
+            exampleAr = "تجويف الأريمة هو التجويف المملوء بالسائل داخل الأريمة المكيسة المتكون أثناء التأريم.",
         ),
         MedicalTermEntity(
             id = 3460,
@@ -784,6 +922,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/kəmˈpækʃən/",
+            exampleEn = "The compaction is the process at the 8-cell stage where blastomeres flatten and maximize contact via E-cadherin.",
+            exampleFr = "Le compaction est processus au stade 8 cellules où les blastomères s'aplatissent et maximisent le contact via E-cadhérine.",
+            exampleAr = "التضام هو العملية عند مرحلة 8 خلايا حيث تتسطح الأريمات وتزيد التلامس عبر E-cadherin.",
         ),
         MedicalTermEntity(
             id = 3461,
@@ -796,6 +937,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ɛmˈbriˌoʊblæst/",
+            exampleEn = "The embryoblast is the inner cell mass that gives rise to the embryo proper (epiblast and hypoblast).",
+            exampleFr = "L'embryoblaste est la masse cellulaire interne qui donne naissance à l'embryon proprement dit (épiblaste et hypoblaste).",
+            exampleAr = "الأريمة الجنينية هو الكتلة الخلوية الداخلية التي تؤدي إلى الجنين الحقيقي (الطبقة الخارجية والداخلية).",
         ),
         MedicalTermEntity(
             id = 3462,
@@ -808,6 +952,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/ˌɪmplænˈteɪʃən/",
+            exampleEn = "The implantation is the embedding of the blastocyst into the endometrium of the uterus (Day 6–10).",
+            exampleFr = "L'implantation (Nidation) est l'embedding du blastocyste dans l'endomètre de l'utérus (Jour 6–10).",
+            exampleAr = "الانغراس هو انغراس الأريمة المكيسة في بطانة الرحم (اليوم 6-10).",
         ),
         MedicalTermEntity(
             id = 3463,
@@ -820,6 +967,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/ˌɛndoʊˈmiːtriəm/",
+            exampleEn = "The endometrium is the inner mucous lining of the uterus that thickens under progesterone for implantation.",
+            exampleFr = "L'endomètre est revêtement muqueux interne de l'utérus qui s'épaissit sous la progestérone pour l'implantation.",
+            exampleAr = "بطانة الرحم هو الغشاء المخاطي الداخلي للرحم الذي يسمك تحت تأثير البروجستيرون للانغراس.",
         ),
         MedicalTermEntity(
             id = 3464,
@@ -832,6 +982,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/dɪˈsɪdjʊə/",
+            exampleEn = "The decidua is the modified endometrium during pregnancy that is shed after delivery.",
+            exampleFr = "La décidue est l'endomètre modifié pendant la grossesse qui est expulsé après l'accouchement.",
+            exampleAr = "الغشاء الساقط هو بطانة الرحم المعدلة أثناء الحمل التي تسقط بعد الولادة.",
         ),
         MedicalTermEntity(
             id = 3465,
@@ -844,6 +997,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/dɪˈsɪdjʊə beɪˈseɪlɪs/",
+            exampleEn = "The decidua basalis is the part of the decidua between the blastocyst and the myometrium; forms the maternal part of placenta.",
+            exampleFr = "La décidue basale est partie de la décidue entre le blastocyste et le myomètre; forme la partie maternelle du placenta.",
+            exampleAr = "الغشاء الساقط القاعدي هو الجزء من الغشاء الساقط بين الأريمة المكيسة وعضل الرحم يكوّن الجزء الأمومي من المشيمة.",
         ),
         MedicalTermEntity(
             id = 3466,
@@ -856,6 +1012,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/dɪˈsɪdjʊə kæpˈsjʊlərɪs/",
+            exampleEn = "The decidua capsularis is the part of decidua overlying the implanted blastocyst.",
+            exampleFr = "La décidue capsulaire est la partie de la décidue recouvrant le blastocyste implanté.",
+            exampleAr = "الغشاء الساقط المحيطي هو الجزء من الغشاء الساقط الذي يغطي الأريمة المكيسة المنغرسة.",
         ),
         MedicalTermEntity(
             id = 3467,
@@ -868,6 +1027,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/dɪˈsɪdjʊə ˌpærɪˈiːtəlɪs/",
+            exampleEn = "The decidua parietalis is the part of decidua lining the rest of the uterine cavity not related to the implantation site.",
+            exampleFr = "La décidue pariétale est la partie de la décidue tapissant le reste de la cavité utérine non liée au site d'implantation.",
+            exampleAr = "الغشاء الساقط الجداري هو الجزء من الغشاء الساقط المبطن لبقية تجويف الرحم غير المرتبط بموضع الانغراس.",
         ),
         MedicalTermEntity(
             id = 3468,
@@ -880,6 +1042,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/sɪnˈsɪtioʊˌtrɒfəˌblæst/",
+            exampleEn = "The syncytiotrophoblast is the multinucleated invasive trophoblast layer that invades the endometrium and produces hCG.",
+            exampleFr = "La syncytiotrophoblaste est couche trophoblastique multinucléée invasive qui envahit l'endomètre et produit la hCG.",
+            exampleAr = "المخلوية الغاذية هو طبقة أرومة غاذية متعددة النوى غازية تغزو بطانة الرحم وتنتج hCG.",
         ),
         MedicalTermEntity(
             id = 3469,
@@ -892,6 +1057,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/ˌsaɪtoʊˈtrɒfəˌblæst/",
+            exampleEn = "The cytotrophoblast is the inner mononuclear layer of trophoblast cells that proliferate and differentiate.",
+            exampleFr = "La cytotrophoblaste est couche interne mononucléaire de cellules trophoblastiques qui prolifèrent et se différencient.",
+            exampleAr = "الأرومة الغاذية الخلوية هو الطبقة الداخلية أحادية النواة من خلايا الأرومة الغاذية التي تتكاثر وتتمايز.",
         ),
         MedicalTermEntity(
             id = 3470,
@@ -904,6 +1072,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/eɪtʃ siː dʒiː/",
+            exampleEn = "The hcg (human chorionic gonadotropin) is the hormone produced by syncytiotrophoblast maintaining the corpus luteum in early pregnancy; basis of pregnancy test.",
+            exampleFr = "L'hCG (Gonadotrophine chorionique humaine) est hormone produite par le syncytiotrophoblaste maintenant le corps jaune en début de grossesse; base du test de grossesse.",
+            exampleAr = "موجهة الغدد التناسلية المشيمية هو هرمون تنتجه المخلوية الغاذية يحافظ على الجسم الأصفر في بداية الحمل؛ أساس اختبار الحمل.",
         ),
         MedicalTermEntity(
             id = 3471,
@@ -916,6 +1087,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Implantation",
             ipaPhonetic = "/ɛkˈtɒpɪk ˈprɛɡnənsi/",
+            exampleEn = "The ectopic pregnancy is the implantation of a blastocyst outside the uterus, most commonly in the uterine tube.",
+            exampleFr = "La grossesse ectopique (extra-utérine) est l'implantation d'un blastocyste en dehors de l'utérus, le plus souvent dans la trompe utérine.",
+            exampleAr = "الحمل خارج الرحم هو انغراس الأريمة المكيسة خارج الرحم، وأكثره شيوعاً في قناة الرحم.",
         ),
         MedicalTermEntity(
             id = 3472,
@@ -928,6 +1102,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˌɡæstrʊˈleɪʃən/",
+            exampleEn = "The gastrulation is the process transforming the bilaminar disc into a trilaminar embryonic disc with three germ layers (Week 3).",
+            exampleFr = "Le gastrulation est processus transformant le disque bilaminaire en disque embryonnaire trilaminaire avec trois feuillets (Semaine 3).",
+            exampleAr = "التمعد (تكوين المعدة الجنينية) هو العملية التي تحول القرص الثنائي الطبقة إلى قرص جنيني ثلاثي الطبقات بثلاثة طبقات جرثومية (الأسبوع 3).",
         ),
         MedicalTermEntity(
             id = 3473,
@@ -952,6 +1129,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈɛktəˌdɜːrm/",
+            exampleEn = "The ectoderm is the outermost germ layer giving rise to the nervous system, skin epidermis, and sensory organs.",
+            exampleFr = "L'ectoderme est le feuillet germinatif le plus externe donnant naissance au système nerveux, épiderme cutané et organes sensoriels.",
+            exampleAr = "الأديم الظاهر هو الطبقة الجرثومية الخارجية التي تنشأ منها المنظومة العصبية والبشرة الجلدية والأعضاء الحسية.",
         ),
         MedicalTermEntity(
             id = 3475,
@@ -964,6 +1144,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈmɛzəˌdɜːrm/",
+            exampleEn = "The mesoderm is the middle germ layer forming muscles, bones, connective tissue, cardiovascular system, and urogenital system.",
+            exampleFr = "La mésoderme est le feuillet germinatif intermédiaire formant muscles, os, tissu conjonctif, système cardiovasculaire et urogénital.",
+            exampleAr = "الأديم المتوسط هو الطبقة الجرثومية الوسطى التي تكوّن العضلات والعظام والنسيج الضام والجهاز القلبي الوعائي والبولي التناسلي.",
         ),
         MedicalTermEntity(
             id = 3476,
@@ -976,6 +1159,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈɛndəˌdɜːrm/",
+            exampleEn = "The endoderm is the innermost germ layer forming the epithelium of the gastrointestinal tract, respiratory tract, and glands.",
+            exampleFr = "L'endoderme est le feuillet germinatif le plus interne formant l'épithélium du tractus gastro-intestinal, respiratoire et des glandes.",
+            exampleAr = "الأديم الباطن هو الطبقة الجرثومية الداخلية التي تكوّن ظهارة الجهاز الهضمي والتنفسي والغدد.",
         ),
         MedicalTermEntity(
             id = 3477,
@@ -988,6 +1174,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈprɪmɪtɪv striːk/",
+            exampleEn = "The primitive streak is the thickening in the epiblast marking the onset of gastrulation and establishing body axes (Day 15).",
+            exampleFr = "La ligne primitive est un épaississement de l'épiblaste marquant le début de la gastrulation et établissant les axes corporels (Jour 15).",
+            exampleAr = "الخط البدائي هو سماكة في الأديم الظاهر تمثل بداية التمعد وتحدد محاور الجسم (اليوم 15).",
         ),
         MedicalTermEntity(
             id = 3478,
@@ -1000,6 +1189,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈprɪmɪtɪv noʊd/",
+            exampleEn = "The primitive node (hensen's node) is the anterior end of the primitive streak acting as an organizer of early embryonic development.",
+            exampleFr = "La nœud primitif (Nœud de Hensen) est l'extrémité antérieure de la ligne primitive agissant comme organisateur du développement embryonnaire précoce.",
+            exampleAr = "العقدة البدائية هو النهاية الأمامية للخط البدائي تعمل كمنظم للتطور الجنيني المبكر.",
         ),
         MedicalTermEntity(
             id = 3479,
@@ -1012,6 +1204,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈɛpɪˌblæst/",
+            exampleEn = "The epiblast is the upper layer of the bilaminar disc that gives rise to all three germ layers during gastrulation.",
+            exampleFr = "L'épiblaste est la couche supérieure du disque bilaminaire qui donne naissance aux trois feuillets germinatifs lors de la gastrulation.",
+            exampleAr = "الأديم الظاهر الجنيني هو الطبقة العلوية من القرص الثنائي الطبقة التي تنشأ منها الطبقات الجرثومية الثلاث أثناء التمعد.",
         ),
         MedicalTermEntity(
             id = 3480,
@@ -1024,6 +1219,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈhaɪpəˌblæst/",
+            exampleEn = "The hypoblast is the lower layer of the bilaminar disc forming the primary yolk sac and extraembryonic endoderm.",
+            exampleFr = "L'hypoblaste est la couche inférieure du disque bilaminaire formant le sac vitellin primaire et l'endoderme extra-embryonnaire.",
+            exampleAr = "الأديم الباطن الجنيني هو الطبقة السفلية من القرص الثنائي تكوّن الكيس المحي الأولي والأديم الباطن خارج الجنيني.",
         ),
         MedicalTermEntity(
             id = 3481,
@@ -1036,6 +1234,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˌɪntrəɛmˈbrɪɒnɪk ˈmɛzəˌdɜːrm/",
+            exampleEn = "The intraembryonic mesoderm is the mesoderm within the embryo divided into paraxial, intermediate, and lateral plate mesoderm.",
+            exampleFr = "La mésoderme intra-embryonnaire est le mésoderme à l'intérieur de l'embryon divisé en mésoderme paraaxial, intermédiaire et latéral.",
+            exampleAr = "الأديم المتوسط داخل الجنيني هو الأديم المتوسط داخل الجنين مقسم إلى محوري مجاور وسيط وصفيحة جانبية.",
         ),
         MedicalTermEntity(
             id = 3482,
@@ -1060,6 +1261,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˈlætərəl pleɪt/",
+            exampleEn = "The lateral plate mesoderm is the lateral portion of mesoderm splitting into somatic and splanchnic layers forming body cavities.",
+            exampleFr = "La mésoderme latéral est la partie latérale du mésoderme se divisant en feuillets somatique et splanchnique formant les cavités corporelles.",
+            exampleAr = "الأديم المتوسط الصفيحي الجانبي هو الجزء الجانبي من الأديم المتوسط ينقسم إلى طبقتين جسمانية وحشوية يكوّنان تجاويف الجسم.",
         ),
         MedicalTermEntity(
             id = 3484,
@@ -1072,6 +1276,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/ˌɪntərˈmiːdiət/",
+            exampleEn = "The intermediate mesoderm is the mesoderm between paraxial and lateral plate forming the urogenital system (kidneys, gonads).",
+            exampleFr = "La mésoderme intermédiaire est le mésoderme entre le mésoderme paraaxial et latéral formant le système urogénital (reins, gonades).",
+            exampleAr = "الأديم المتوسط الوسيط هو الأديم المتوسط بين المجاور للمحور والجانبي يشكل الجهاز البولي التناسلي (كلى وغدد تناسلية).",
         ),
         MedicalTermEntity(
             id = 3485,
@@ -1084,6 +1291,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˌnjʊərʊˈleɪʃən/",
+            exampleEn = "The neurulation is the process of neural plate folding to form the neural tube (Week 3–4).",
+            exampleFr = "Le neurulation est processus de pliage de la plaque neurale pour former le tube neural (Semaine 3–4).",
+            exampleAr = "تكوين الأنبوب العصبي هو عملية طي الصفيحة العصبية لتكوين الأنبوب العصبي (الأسبوع 3-4).",
         ),
         MedicalTermEntity(
             id = 3486,
@@ -1096,6 +1306,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈnoʊtəˌkɔːrd/",
+            exampleEn = "The notochord is the transient axial rod of mesodermal cells that induces the overlying ectoderm to form the neural plate.",
+            exampleFr = "La notochorde est tige axiale transitoire de cellules mésodermiques qui induit l'ectoderme sus-jacent à former la plaque neurale.",
+            exampleAr = "الحبل الظهري هو عصا محورية مؤقتة من خلايا الأديم المتوسط تحفز الأديم الظاهر العلوي لتكوين الصفيحة العصبية.",
         ),
         MedicalTermEntity(
             id = 3487,
@@ -1108,6 +1321,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈnjʊərəl pleɪt/",
+            exampleEn = "The neural plate is the thickened region of dorsal ectoderm induced by the notochord that gives rise to the nervous system.",
+            exampleFr = "La plaque neurale est région épaissie de l'ectoderme dorsal induite par la notochorde donnant naissance au système nerveux.",
+            exampleAr = "الصفيحة العصبية هو منطقة سميكة من الأديم الظاهر الظهري تحفزها الحبل الظهري وتنشأ منها المنظومة العصبية.",
         ),
         MedicalTermEntity(
             id = 3488,
@@ -1120,6 +1336,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈnjʊərəl foʊld/",
+            exampleEn = "The neural fold is the elevated lateral edges of the neural plate that fuse to form the neural tube.",
+            exampleFr = "La repli neural est les bords latéraux élevés de la plaque neurale qui fusionnent pour former le tube neural.",
+            exampleAr = "الطية العصبية هو الحواف الجانبية المرتفعة للصفيحة العصبية التي تندمج لتكوين الأنبوب العصبي.",
         ),
         MedicalTermEntity(
             id = 3489,
@@ -1132,6 +1351,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈnjʊərəl tjuːb/",
+            exampleEn = "The neural tube is the embryonic precursor of the brain and spinal cord formed by closure of neural folds (Week 4).",
+            exampleFr = "La tube neural est précurseur embryonnaire du cerveau et de la moelle épinière formé par fermeture des replis neuraux (Semaine 4).",
+            exampleAr = "الأنبوب العصبي هو السلف الجنيني للدماغ والنخاع الشوكي المتكون بانغلاق الطيات العصبية (الأسبوع 4).",
         ),
         MedicalTermEntity(
             id = 3490,
@@ -1156,6 +1378,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˌænɛnˈsɛfəli/",
+            exampleEn = "The anencephaly is the fatal neural tube defect where the anterior neural tube fails to close, absence of the brain.",
+            exampleFr = "L'anencéphalie est malformation létale du tube neural où le tube neural antérieur ne se ferme pas, absence du cerveau.",
+            exampleAr = "انعدام الدماغ هو عيب قاتل في الأنبوب العصبي حيث يفشل الجزء الأمامي في الانغلاق مما يؤدي إلى غياب الدماغ.",
         ),
         MedicalTermEntity(
             id = 3492,
@@ -1168,6 +1393,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈspaɪnə ˈbɪfɪdə/",
+            exampleEn = "The spina bifida is the neural tube defect where the posterior neural tube fails to close, exposing spinal cord.",
+            exampleFr = "La spina bifida est malformation du tube neural où le tube neural postérieur ne se ferme pas, exposant la moelle épinière.",
+            exampleAr = "السنسنة المشقوقة هو عيب في الأنبوب العصبي حيث يفشل الجزء الخلفي في الانغلاق مما يكشف النخاع الشوكي.",
         ),
         MedicalTermEntity(
             id = 3493,
@@ -1192,6 +1420,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˌprɒsɛnˈsɛfələn/",
+            exampleEn = "The prosencephalon is the forebrain dividing into telencephalon (cerebrum) and diencephalon (thalamus, hypothalamus).",
+            exampleFr = "La prosencéphale est le cerveau antérieur se divisant en télencéphale (cerveau) et diencéphale (thalamus, hypothalamus).",
+            exampleAr = "الدماغ الأمامي هو الدماغ الأمامي ينقسم إلى المخ الانتهائي والدماغ البيني (المهاد وتحت المهاد).",
         ),
         MedicalTermEntity(
             id = 3495,
@@ -1204,6 +1435,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˌmɛzɛnˈsɛfələn/",
+            exampleEn = "The mesencephalon is the midbrain; remains undivided forming the cerebral peduncles and tectum.",
+            exampleFr = "La mésencéphale est le cerveau moyen; reste non divisé formant les pédoncules cérébraux et le tectum.",
+            exampleAr = "الدماغ المتوسط هو الدماغ المتوسط يبقى غير مقسم ويكوّن السويقات الدماغية والسقف الدماغي.",
         ),
         MedicalTermEntity(
             id = 3496,
@@ -1216,6 +1450,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˌrɒmbɛnˈsɛfələn/",
+            exampleEn = "The rhombencephalon is the hindbrain dividing into metencephalon (cerebellum, pons) and myelencephalon (medulla oblongata).",
+            exampleFr = "La rhombencéphale est le cerveau postérieur se divisant en métencéphale (cervelet, pont) et myélencéphale (bulbe rachidien).",
+            exampleAr = "الدماغ المعيني هو الدماغ المؤخري ينقسم إلى مؤخر الدماغ (المخيخ والجسر) والدماغ النخاعي (النخاع المستطيل).",
         ),
         MedicalTermEntity(
             id = 3497,
@@ -1228,6 +1465,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/ˈsoʊmaɪt/",
+            exampleEn = "The somite is the block of paraxial mesoderm arranged in pairs along the notochord forming vertebrae, ribs, muscles, and dermis.",
+            exampleFr = "La somite est un bloc de mésoderme paraaxial disposé en paires le long de la notochorde formant vertèbres, côtes, muscles et derme.",
+            exampleAr = "القطيعة هو كتلة من الأديم المتوسط المجاور للمحور مرتبة في أزواج على طول الحبل الظهري تكوّن فقرات وأضلاعاً وعضلاتاً وأدمة.",
         ),
         MedicalTermEntity(
             id = 3498,
@@ -1240,6 +1480,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/ˈsklɪərəˌtoʊm/",
+            exampleEn = "The sclerotome is the ventromedial portion of a somite forming the vertebrae and ribs.",
+            exampleFr = "La sclérotome est la portion ventromédiale d'un somite formant les vertèbres et les côtes.",
+            exampleAr = "الأديم الصخري هو الجزء البطني المتوسط من القطيعة الذي يكوّن الفقرات والأضلاع.",
         ),
         MedicalTermEntity(
             id = 3499,
@@ -1252,6 +1495,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/ˈmaɪəˌtoʊm/",
+            exampleEn = "The myotome is the dorsomedial portion of a somite forming skeletal muscles of the trunk and limbs.",
+            exampleFr = "La myotome est la portion dorsomédiale d'un somite formant les muscles squelettiques du tronc et des membres.",
+            exampleAr = "الأديم العضلي هو الجزء الظهري المتوسط من القطيعة الذي يكوّن العضلات الهيكلية للجذع والأطراف.",
         ),
         MedicalTermEntity(
             id = 3500,
@@ -1264,6 +1510,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/ˈdɜːrmətˌoʊm/",
+            exampleEn = "The dermatome is the dorsolateral portion of a somite forming the dermis of the skin.",
+            exampleFr = "La dermatome est la portion dorsolatérale d'un somite formant le derme de la peau.",
+            exampleAr = "الأديم الجلدي هو الجزء الظهري الجانبي من القطيعة الذي يكوّن الأدمة الجلدية.",
         ),
         MedicalTermEntity(
             id = 3501,
@@ -1312,6 +1561,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˌkɑːrdioʊˈdʒɛnɪsɪs/",
+            exampleEn = "The cardiogenesis is the development of the heart from the cardiogenic area of lateral plate mesoderm.",
+            exampleFr = "La cardiogenèse est le développement du cœur à partir de la zone cardiogénique du mésoderme latéral.",
+            exampleAr = "تكوين القلب هو تطور القلب من المنطقة القلبية في صفيحة الأديم المتوسط الجانبية.",
         ),
         MedicalTermEntity(
             id = 3505,
@@ -1324,6 +1576,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/hɑːrt tjuːb/",
+            exampleEn = "The heart tube is the primitive paired heart tubes that fuse to form the primary heart tube (Week 3).",
+            exampleFr = "La tube cardiaque est les tubes cardiaques primitifs appariés qui fusionnent pour former le tube cardiaque primaire (Semaine 3).",
+            exampleAr = "الأنبوب القلبي هو الأنبوبان القلبيان البدائيان اللذان يندمجان لتكوين الأنبوب القلبي الأولي (الأسبوع 3).",
         ),
         MedicalTermEntity(
             id = 3506,
@@ -1336,6 +1591,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdɪæk ˈluːpɪŋ/",
+            exampleEn = "The cardiac looping is the rightward bending of the heart tube establishing cardiac chambers (Week 4).",
+            exampleFr = "La courbure cardiaque est la courbure vers la droite du tube cardiaque établissant les cavités cardiaques (Semaine 4).",
+            exampleAr = "تحدب القلب هو انحناء الأنبوب القلبي نحو اليمين مما يثبت غرف القلب (الأسبوع 4).",
         ),
         MedicalTermEntity(
             id = 3507,
@@ -1348,6 +1606,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/fəˈreɪmən oʊˈvɑːleɪ/",
+            exampleEn = "The foramen ovale is the opening in the interatrial septum allowing blood to bypass the lungs in fetal circulation.",
+            exampleFr = "La foramen ovale est une ouverture dans le septum interatrial permettant au sang de contourner les poumons dans la circulation fœtale.",
+            exampleAr = "الثقبة البيضوية هو فتحة في الحاجز بين الأذينين تسمح للدم بتجاوز الرئتين في الدورة الدموية الجنينية.",
         ),
         MedicalTermEntity(
             id = 3508,
@@ -1360,6 +1621,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈdʌktəs ˌɑːrtɪərioʊsəs/",
+            exampleEn = "The ductus arteriosus is the fetal vessel connecting the pulmonary artery to the aorta to bypass the lungs; closes at birth.",
+            exampleFr = "Le canal artériel (Ductus arteriosus) est vaisseau fœtal reliant l'artère pulmonaire à l'aorte pour contourner les poumons; se ferme à la naissance.",
+            exampleAr = "القناة الشريانية هو وعاء جنيني يصل الشريان الرئوي بالأبهر لتجاوز الرئتين؛ ينغلق عند الولادة.",
         ),
         MedicalTermEntity(
             id = 3509,
@@ -1372,6 +1636,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈdʌktəs vɪˈnoʊsəs/",
+            exampleEn = "The ductus venosus is the fetal vascular shunt directing oxygenated umbilical blood from the portal vein to the inferior vena cava.",
+            exampleFr = "Le canal veineux (Ductus venosus) est shunt vasculaire fœtal dirigeant le sang ombilical oxygéné de la veine porte vers la veine cave inférieure.",
+            exampleAr = "القناة الوريدية هو تحويلة وعائية جنينية توجه الدم المؤكسج من الوريد البابي إلى الوريد الأجوف السفلي.",
         ),
         MedicalTermEntity(
             id = 3510,
@@ -1408,6 +1675,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/vɛnˈtrɪkjʊlər ˈsɛptəl dɪˈfɛkt/",
+            exampleEn = "The ventricular septal defect (vsd) is the most common congenital heart defect; a hole in the interventricular septum.",
+            exampleFr = "Le communication interventriculaire (CIV) est la malformation cardiaque congénitale la plus courante; un trou dans le septum interventriculaire.",
+            exampleAr = "عيب الحاجز البطيني هو أكثر عيوب القلب الخلقية شيوعاً؛ ثقب في الحاجز بين البطينين.",
         ),
         MedicalTermEntity(
             id = 3513,
@@ -1432,6 +1702,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/pləˈsɛntə/",
+            exampleEn = "The placenta is the transient organ providing nutritional, respiratory, and hormonal exchange between mother and fetus.",
+            exampleFr = "La placenta est organe transitoire assurant les échanges nutritionnels, respiratoires et hormonaux entre mère et fœtus.",
+            exampleAr = "المشيمة هو عضو مؤقت يوفر التبادل الغذائي والتنفسي والهرموني بين الأم والجنين.",
         ),
         MedicalTermEntity(
             id = 3515,
@@ -1444,6 +1717,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ˈkɔːrɪɒn/",
+            exampleEn = "The chorion is the outermost extraembryonic membrane derived from trophoblast contributing to placenta formation.",
+            exampleFr = "Le chorion est la membrane extra-embryonnaire la plus externe dérivée du trophoblaste contribuant à la formation du placenta.",
+            exampleAr = "المشيماء هو الغشاء خارج الجنيني الخارجي المشتق من الأرومة الغاذية يساهم في تكوين المشيمة.",
         ),
         MedicalTermEntity(
             id = 3516,
@@ -1456,6 +1732,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ˈæmniɒn/",
+            exampleEn = "The amnion is the innermost fetal membrane forming a fluid-filled sac surrounding and protecting the embryo/fetus.",
+            exampleFr = "L'amnios est la membrane fœtale la plus interne formant un sac rempli de liquide entourant et protégeant l'embryon/fœtus.",
+            exampleAr = "السلى (الغشاء الأمنيوسي) هو الغشاء الجنيني الداخلي يكوّن كيساً مملوءاً بالسائل يحيط بالجنين ويحميه.",
         ),
         MedicalTermEntity(
             id = 3517,
@@ -1468,6 +1747,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/æmniˈɒtɪk ˈfluːɪd/",
+            exampleEn = "The amniotic fluid is the fluid surrounding the fetus providing protection, allowing movement, and lung development.",
+            exampleFr = "La liquide amniotique est le liquide entourant le fœtus assurant protection, permettant les mouvements et le développement pulmonaire.",
+            exampleAr = "السائل الأمنيوسي هو السائل المحيط بالجنين يوفر الحماية ويتيح الحركة وتطور الرئتين.",
         ),
         MedicalTermEntity(
             id = 3518,
@@ -1480,6 +1762,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/joʊk sæk/",
+            exampleEn = "The yolk sac is the extraembryonic membrane forming primordial germ cells and early hematopoiesis.",
+            exampleFr = "La vésicule ombilicale (Sac vitellin) est membrane extra-embryonnaire formant les cellules germinales primordiales et l'hématopoïèse précoce.",
+            exampleAr = "الكيس المحي هو غشاء خارج جنيني يكوّن الخلايا الجرثومية الأولية والتكوين الدموي المبكر.",
         ),
         MedicalTermEntity(
             id = 3519,
@@ -1492,6 +1777,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/əˈlæntoʊɪs/",
+            exampleEn = "The allantois is the extraembryonic membrane forming the urinary bladder, urachus, and umbilical blood vessels.",
+            exampleFr = "L'allantoïde est membrane extra-embryonnaire formant la vessie urinaire, l'ouraque et les vaisseaux sanguins ombilicaux.",
+            exampleAr = "الغشاء الخلفي (الأللانتوئيس) هو غشاء خارج جنيني يكوّن المثانة البولية والقناة السرية والأوعية الدموية السرية.",
         ),
         MedicalTermEntity(
             id = 3520,
@@ -1504,6 +1792,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ʌmˈbɪlɪkəl kɔːrd/",
+            exampleEn = "The umbilical cord is the connecting structure between the fetus and placenta containing 2 umbilical arteries and 1 umbilical vein.",
+            exampleFr = "Le cordon ombilical est la structure reliant le fœtus au placenta contenant 2 artères ombilicales et 1 veine ombilicale.",
+            exampleAr = "الحبل السري هو التركيب الرابط بين الجنين والمشيمة يحتوي على شريانين سريين ووريد سري واحد.",
         ),
         MedicalTermEntity(
             id = 3521,
@@ -1552,6 +1843,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/pləˈsɛntə ˈpriːviə/",
+            exampleEn = "The placenta previa is the obstetric complication where the placenta implants in the lower uterine segment covering the cervical os.",
+            exampleFr = "La placenta prævia est complication obstétricale où le placenta s'implante dans le segment inférieur utérin couvrant l'orifice cervical.",
+            exampleAr = "المشيمة المنزاحة هو مضاعفة توليدية تنغرس فيها المشيمة في الجزء السفلي من الرحم فوق عنق الرحم.",
         ),
         MedicalTermEntity(
             id = 3525,
@@ -1564,6 +1858,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/lɪm bʌd/",
+            exampleEn = "The limb bud is the outgrowth of lateral plate mesoderm and overlying ectoderm initiating limb development (Week 4).",
+            exampleFr = "Le bourgeon de membre est une excroissance de mésoderme latéral et d'ectoderme sus-jacent initiant le développement du membre (Semaine 4).",
+            exampleAr = "بُرعم الطرف هو نمو خارجي من صفيحة الأديم المتوسط الجانبي والأديم الظاهر العلوي يبدأ تطور الطرف (الأسبوع 4).",
         ),
         MedicalTermEntity(
             id = 3526,
@@ -1576,6 +1873,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/ˈeɪpɪkəl ˌɛktəˈdɜːrməl rɪdʒ/",
+            exampleEn = "The apical ectodermal ridge (aer) is the thickened ectodermal structure at the tip of the limb bud essential for proximal-distal limb outgrowth.",
+            exampleFr = "La bourrelet ectodermique apical (BEA) est structure ectodermique épaissie à l'extrémité du bourgeon de membre essentielle à la croissance proximo-distale du membre.",
+            exampleAr = "التلال الأديمي الظاهر القمي هو تركيب أديم ظاهر سميك في قمة برعم الطرف ضروري لنمو الطرف من القريب إلى البعيد.",
         ),
         MedicalTermEntity(
             id = 3527,
@@ -1588,6 +1888,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/zoʊn əv ˈpoʊlərˌaɪzɪŋ ækˈtɪvɪti/",
+            exampleEn = "The zone of polarizing activity (zpa) is the region of mesoderm at the posterior limb bud establishing anterior-posterior digit patterning via Sonic hedgehog.",
+            exampleFr = "La zone d'activité polarisante (ZPA) est région de mésoderme du bourgeon postérieur établissant le patron antéro-postérieur des doigts via Sonic hedgehog.",
+            exampleAr = "منطقة النشاط المستقطب هو منطقة من الأديم المتوسط في الجزء الخلفي من البرعم تحدد نمط الأصابع عبر إشارة Sonic hedgehog.",
         ),
         MedicalTermEntity(
             id = 3528,
@@ -1600,6 +1903,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/ˌpɒliˈdæktɪli/",
+            exampleEn = "The polydactyly is the congenital malformation with extra digits due to abnormal ZPA signaling or genetic mutation.",
+            exampleFr = "La polydactylie est malformation congénitale avec des doigts supplémentaires due à une signalisation ZPA anormale ou mutation génétique.",
+            exampleAr = "تعدد الأصابع هو تشوه خلقي بأصابع إضافية بسبب خلل في إشارات ZPA أو طفرة جينية.",
         ),
         MedicalTermEntity(
             id = 3529,
@@ -1612,6 +1918,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/sɪnˈdæktɪli/",
+            exampleEn = "The syndactyly is the congenital condition where two or more digits are fused due to failure of interdigital apoptosis.",
+            exampleFr = "La syndactylie est affection congénitale où deux doigts ou plus sont fusionnés due à l'échec de l'apoptose interdigitale.",
+            exampleAr = "التصاق الأصابع هو حالة خلقية تندمج فيها إصبعان أو أكثر بسبب فشل موت الخلايا المبرمج بين الأصابع.",
         ),
         MedicalTermEntity(
             id = 3530,
@@ -1624,6 +1933,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/klʌbfʊt/",
+            exampleEn = "The clubfoot (talipes equinovarus) is the common congenital foot deformity where the foot is twisted inward and downward.",
+            exampleFr = "La pied bot varus équin est déformation congénitale courante du pied où il est tordu vers l'intérieur et vers le bas.",
+            exampleAr = "القدم الحنفاء هو تشوه خلقي شائع في القدم تنعطف فيها نحو الداخل والأسفل.",
         ),
         MedicalTermEntity(
             id = 3531,
@@ -1648,6 +1960,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/proʊˈnɛfrɒs/",
+            exampleEn = "The pronephros is the first and most rudimentary kidney structure formed in Week 4; regresses quickly.",
+            exampleFr = "La pronéphros est la première structure rénale la plus rudimentaire formée à la semaine 4; régresse rapidement.",
+            exampleAr = "الكلية الأولية هو أول وأبسط تركيب كلوي يتكون في الأسبوع 4 ويتراجع سريعاً.",
         ),
         MedicalTermEntity(
             id = 3533,
@@ -1660,6 +1975,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ˌmɛzoʊˈnɛfrɒs/",
+            exampleEn = "The mesonephros is the second kidney formed in Week 4-8 that serves as the functional kidney during early fetal life.",
+            exampleFr = "La mésonéphros est le deuxième rein formé à la semaine 4-8 qui sert de rein fonctionnel au début de la vie fœtale.",
+            exampleAr = "الكلية الوسطى هو الكلية الثانية المتكونة في الأسبوع 4-8 التي تعمل ككلية وظيفية في مراحل الحياة الجنينية المبكرة.",
         ),
         MedicalTermEntity(
             id = 3534,
@@ -1672,6 +1990,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ˌmɛtəˈnɛfrɒs/",
+            exampleEn = "The metanephros is the permanent adult kidney formed from ureteric bud and metanephric mesoderm (Week 5).",
+            exampleFr = "La métanéphros est le rein adulte permanent formé à partir du bourgeon urétéral et du mésoderme métanéphrique (Semaine 5).",
+            exampleAr = "الكلية النهائية هو الكلية الدائمة للبالغ المتكونة من برعم الحالب والأديم المتوسط الكلوي النهائي (الأسبوع 5).",
         ),
         MedicalTermEntity(
             id = 3535,
@@ -1684,6 +2005,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/jʊˈrɛtərɪk bʌd/",
+            exampleEn = "The ureteric bud is the outgrowth from the mesonephric duct forming the ureter, renal pelvis, calyces, and collecting ducts.",
+            exampleFr = "Le bourgeon urétéral est une excroissance du canal mésonéphrique formant l'uretère, le bassinet, les calices et les tubes collecteurs.",
+            exampleAr = "برعم الحالب هو نمو خارجي من قناة الكلية الوسطى يكوّن الحالب والحوض الكلوي والكؤوس والأنابيب الجامعة.",
         ),
         MedicalTermEntity(
             id = 3536,
@@ -1696,6 +2020,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ˈɡoʊnæd/",
+            exampleEn = "The gonad is the primary reproductive gland (testis in males, ovary in females) developing from genital ridges.",
+            exampleFr = "La gonade est la glande reproductrice primaire (testicule chez le mâle, ovaire chez la femelle) se développant à partir des crêtes génitales.",
+            exampleAr = "الغدة التناسلية هو الغدة التناسلية الأولية (الخصية عند الذكور، المبيض عند الإناث) تتطور من التلال التناسلية.",
         ),
         MedicalTermEntity(
             id = 3537,
@@ -1708,6 +2035,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/praɪˈmɔːrdiəl dʒɜːrm sɛlz/",
+            exampleEn = "The primordial germ cells is the progenitors of gametes originating in the yolk sac wall that migrate to the genital ridges.",
+            exampleFr = "La cellules germinales primordiales est les précurseurs des gamètes originaires de la paroi du sac vitellin qui migrent vers les crêtes génitales.",
+            exampleAr = "الخلايا الجرثومية الأولية هو الأسلاف الجرثومية للمشيجات التي تنشأ في جدار الكيس المحي وتهاجر إلى التلال التناسلية.",
         ),
         MedicalTermEntity(
             id = 3538,
@@ -1720,6 +2050,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ɛs ɑːr waɪ dʒiːn/",
+            exampleEn = "The sry gene is the sex-determining region Y gene on the Y chromosome triggering testis development.",
+            exampleFr = "La gène SRY est le gène de la région déterminant le sexe sur le chromosome Y déclenchant le développement du testicule.",
+            exampleAr = "جين SRY هو جين منطقة تحديد الجنس على الكروموسوم Y الذي يحفز تطور الخصية.",
         ),
         MedicalTermEntity(
             id = 3539,
@@ -1732,6 +2065,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ˈmʌlɪərɪən dʌkt/",
+            exampleEn = "The müllerian duct is the paired embryonic duct in females forming the uterine tubes, uterus, and upper vagina.",
+            exampleFr = "Le canal de Müller (Paramésonéphrique) est canal embryonnaire apparié chez la femelle formant les trompes utérines, l'utérus et le vagin supérieur.",
+            exampleAr = "قناة مولر هو قناة جنينية مزدوجة عند الإناث تكوّن قناتي الرحم والرحم والجزء العلوي من المهبل.",
         ),
         MedicalTermEntity(
             id = 3540,
@@ -1744,6 +2080,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ˈwʊlfiən dʌkt/",
+            exampleEn = "The wolffian duct (mesonephric duct) is the paired embryonic duct in males forming the epididymis, vas deferens, seminal vesicles, and ejaculatory duct.",
+            exampleFr = "Le canal de Wolff (Mésonéphrique) est canal embryonnaire apparié chez le mâle formant l'épididyme, le canal déférent, les vésicules séminales.",
+            exampleAr = "قناة ولف هو قناة جنينية مزدوجة عند الذكور تكوّن البربخ والأسهر والحويصلات المنوية والقناة القاذفة.",
         ),
         MedicalTermEntity(
             id = 3541,
@@ -1756,6 +2095,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ˈænti ˈmʌlɪərɪən ˈhɔːrmoʊn/",
+            exampleEn = "The anti-müllerian hormone (amh) is the hormone produced by Sertoli cells causing regression of Müllerian ducts in male embryos.",
+            exampleFr = "L'hormone anti-Müllérienne (HAM) est hormone produite par les cellules de Sertoli causant la régression des canaux de Müller chez les embryons mâles.",
+            exampleAr = "الهرمون المضاد لمولر هو هرمون تنتجه خلايا سيرتولي يسبب تراجع قنوات مولر عند الأجنة الذكرية.",
         ),
         MedicalTermEntity(
             id = 3542,
@@ -1768,6 +2110,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/ˌhaɪpəˈspeɪdiəs/",
+            exampleEn = "The hypospadias is the congenital defect where the urethral opening is on the ventral surface of the penis.",
+            exampleFr = "L'hypospadias est malformation congénitale où le méat urétral s'ouvre sur la face ventrale du pénis.",
+            exampleAr = "الإحليل تحتي هو عيب خلقي تنفتح فيه فتحة الإحليل على السطح البطني للقضيب.",
         ),
         MedicalTermEntity(
             id = 3543,
@@ -1792,6 +2137,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ɡʌt tjuːb/",
+            exampleEn = "The gut tube is the primitive endodermal tube formed during lateral body folding, divided into foregut, midgut, and hindgut.",
+            exampleFr = "La tube intestinal primitif est le tube endodermique primitif formé lors du repliage latéral du corps, divisé en intestin antérieur, moyen et postérieur.",
+            exampleAr = "الأنبوب الهضمي البدائي هو الأنبوب الأديم الباطن البدائي المتكون أثناء الطي الجانبي للجسم مقسم إلى معدة أمامية ووسطى وخلفية.",
         ),
         MedicalTermEntity(
             id = 3545,
@@ -1804,6 +2152,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˈfɔːrɡʌt/",
+            exampleEn = "The foregut is the anterior gut region forming the pharynx, esophagus, stomach, upper duodenum, liver, pancreas, and gallbladder.",
+            exampleFr = "L'intestin antérieur est la région antérieure du tube intestinal formant pharynx, œsophage, estomac, duodénum supérieur, foie, pancréas.",
+            exampleAr = "الأمعاء الأمامية هو المنطقة الأمامية من الأمعاء تكوّن البلعوم والمريء والمعدة والاثني عشر العلوي والكبد والبنكرياس والمرارة.",
         ),
         MedicalTermEntity(
             id = 3546,
@@ -1816,6 +2167,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˈmɪdɡʌt/",
+            exampleEn = "The midgut is the middle gut region forming the small intestine and proximal colon; undergoes physiological herniation.",
+            exampleFr = "L'intestin moyen est la région intestinale moyenne formant l'intestin grêle et le côlon proximal; subit une hernie physiologique.",
+            exampleAr = "الأمعاء الوسطى هو المنطقة الوسطى من الأمعاء تكوّن الأمعاء الدقيقة والقولون القريب؛ تخضع لفتق فسيولوجي.",
         ),
         MedicalTermEntity(
             id = 3547,
@@ -1828,6 +2182,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˈhaɪndɡʌt/",
+            exampleEn = "The hindgut is the posterior gut region forming the distal colon, rectum, upper anal canal, bladder, and urachus.",
+            exampleFr = "L'intestin postérieur est la région intestinale postérieure formant le côlon distal, le rectum, le canal anal supérieur, la vessie et l'ouraque.",
+            exampleAr = "الأمعاء الخلفية هو المنطقة الخلفية من الأمعاء تكوّن القولون البعيد والمستقيم والقناة الشرجية العلوية والمثانة.",
         ),
         MedicalTermEntity(
             id = 3548,
@@ -1840,6 +2197,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˌfɪziəˈlɒdʒɪkəl hɜːrˈniˈeɪʃən/",
+            exampleEn = "The physiological herniation is the normal temporary herniation of midgut loops into the umbilical cord at weeks 6-10 due to rapid growth.",
+            exampleFr = "L'hernie physiologique est la hernie temporaire normale des anses intestinales moyennes dans le cordon ombilical aux semaines 6-10.",
+            exampleAr = "الفتق الفسيولوجي هو الفتق المؤقت الطبيعي لحلقات الأمعاء الوسطى في الحبل السري في الأسابيع 6-10 بسبب النمو السريع.",
         ),
         MedicalTermEntity(
             id = 3549,
@@ -1852,6 +2212,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˌɡæstroʊˈskɪsɪs/",
+            exampleEn = "The gastroschisis is the congenital abdominal wall defect with evisceration of bowel through a paraumbilical defect without a membrane.",
+            exampleFr = "Le gastroschisis est malformation de la paroi abdominale avec éventration des intestins par un défect paraombilical sans membrane.",
+            exampleAr = "الشق البطني هو عيب خلقي في جدار البطن يخرج منه الأمعاء عبر عيب جانب السرة بدون غشاء.",
         ),
         MedicalTermEntity(
             id = 3550,
@@ -1864,6 +2227,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˌɒmfəloʊˈsiːl/",
+            exampleEn = "The omphalocele is the congenital defect where abdominal organs herniate into the base of the umbilical cord covered by a membrane.",
+            exampleFr = "L'omphalocèle est malformation où les organes abdominaux hernient dans la base du cordon ombilical couverts par une membrane.",
+            exampleAr = "القيلة السرية هو عيب خلقي تنفتق فيه أعضاء البطن إلى قاعدة الحبل السري مغطاة بغشاء.",
         ),
         MedicalTermEntity(
             id = 3551,
@@ -1876,6 +2242,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˌtreɪkioʊɪˌsɒfəˈdʒiəl ˈfɪstjʊlə/",
+            exampleEn = "The tracheoesophageal fistula is the abnormal connection between trachea and esophagus often associated with esophageal atresia.",
+            exampleFr = "La fistule trachéo-œsophagienne est connexion anormale entre la trachée et l'œsophage souvent associée à une atrésie œsophagienne.",
+            exampleAr = "الناسور الرغامي المريئي هو اتصال غير طبيعي بين الرغامة والمريء مرتبط غالباً بانسداد المريء.",
         ),
         MedicalTermEntity(
             id = 3552,
@@ -1900,6 +2269,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/ˌstoʊməˈdiːəm/",
+            exampleEn = "The stomodeum is the ectodermal depression that becomes the oral cavity; separated from the pharynx by the oropharyngeal membrane.",
+            exampleFr = "La stomodeum est la dépression ectodermique qui devient la cavité buccale; séparée du pharynx par la membrane oropharyngée.",
+            exampleAr = "الفم البدائي هو الانخماص الأديمي الظاهر الذي يصبح تجويف الفم؛ يفصله عن البلعوم الغشاء الفموي البلعومي.",
         ),
         MedicalTermEntity(
             id = 3554,
@@ -1912,6 +2284,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/ˌɔːroʊfəˈrɪndʒiəl ˈmɛmbreɪn/",
+            exampleEn = "The oropharyngeal membrane is the bilaminar membrane separating the stomodeum from the foregut; ruptures in Week 4 to open the mouth.",
+            exampleFr = "La membrane oropharyngée (buccopharyngée) est membrane bilaminaire séparant le stomodeum de l'intestin antérieur; se rompt à la semaine 4 pour ouvrir la bouche.",
+            exampleAr = "الغشاء الفمي البلعومي هو غشاء ثنائي الطبقة يفصل الفم البدائي عن الأمعاء الأمامية ينكسر في الأسبوع 4 لفتح الفم.",
         ),
         MedicalTermEntity(
             id = 3555,
@@ -1924,6 +2299,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/ˌfrʌntoʊˈneɪzəl ˈprɒmɪnəns/",
+            exampleEn = "The frontonasal prominence is the unpaired midline swelling forming the forehead and nasal structures.",
+            exampleFr = "La processus frontonasal est renflement médian impair formant le front et les structures nasales.",
+            exampleAr = "البروز الجبهي الأنفي هو انتفاخ أمامي وسطي فردي يكوّن الجبهة والتراكيب الأنفية.",
         ),
         MedicalTermEntity(
             id = 3556,
@@ -1936,6 +2314,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/klɛft lɪp/",
+            exampleEn = "The cleft lip is the congenital facial malformation due to failure of fusion of the medial nasal and maxillary prominences.",
+            exampleFr = "La fente labiale (Bec de lièvre) est malformation faciale congénitale due à l'échec de la fusion des processus nasaux médiaux et maxillaires.",
+            exampleAr = "الشفة المشقوقة هو تشوه وجهي خلقي بسبب فشل اندماج البروزين الأنفي الوسطي والفكي العلوي.",
         ),
         MedicalTermEntity(
             id = 3557,
@@ -1948,6 +2329,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/klɛft ˈpælɪt/",
+            exampleEn = "The cleft palate is the congenital defect of the palate due to failure of fusion of palatal shelves, often associated with cleft lip.",
+            exampleFr = "La fente palatine est malformation congénitale du palais due à l'échec de la fusion des lames palatines, souvent associée à la fente labiale.",
+            exampleAr = "الحنك المشقوق هو عيب خلقي في الحنك بسبب فشل اندماج رفوف الحنك مرتبط غالباً بالشفة المشقوقة.",
         ),
         MedicalTermEntity(
             id = 3558,
@@ -1972,6 +2356,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/ˈpraɪməri ˈpælɪt/",
+            exampleEn = "The primary palate is the small palatal component derived from the intermaxillary segment forming the premaxilla.",
+            exampleFr = "Le palais primaire est un petit composant palatin dérivé du segment intermaxillaire formant la prémaxille.",
+            exampleAr = "الحنك الأولي هو مكوّن حنكي صغير مشتق من القطعة بين الفكين العلويين يكوّن الفك المتقدم.",
         ),
         MedicalTermEntity(
             id = 3560,
@@ -1984,6 +2371,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ˈtɛrətədʒən/",
+            exampleEn = "The teratogen is the agent (drug, chemical, infection, radiation) causing congenital malformations.",
+            exampleFr = "La tératogène est un agent (médicament, produit chimique, infection, radiation) causant des malformations congénitales.",
+            exampleAr = "المشوِّه الجنيني هو عامل (دواء أو مادة كيميائية أو عدوى أو إشعاع) يسبب تشوهات خلقية.",
         ),
         MedicalTermEntity(
             id = 3561,
@@ -1996,6 +2386,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ˌtɛrəˈtɒlədʒi/",
+            exampleEn = "The teratology is the study of abnormal prenatal development and congenital malformations.",
+            exampleFr = "La tératologie est l'étude du développement prénatal anormal et des malformations congénitales.",
+            exampleAr = "علم التشوهات الجنينية هو دراسة التطور السابق للولادة غير الطبيعي والتشوهات الخلقية.",
         ),
         MedicalTermEntity(
             id = 3562,
@@ -2008,6 +2401,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ˈkrɪtɪkəl ˈpɪəriəd/",
+            exampleEn = "The critical period is the developmental stage when an organ is most susceptible to teratogen damage (organogenesis, Week 3-8).",
+            exampleFr = "La période critique (sensible) est la phase développementale où un organe est le plus vulnérable aux tératogènes (organogenèse, Semaine 3-8).",
+            exampleAr = "الفترة الحرجة هو مرحلة التطور التي يكون فيها العضو أكثر عرضة للتلف بالمشوهات الجنينية (عضوية الأجهزة، الأسبوع 3-8).",
         ),
         MedicalTermEntity(
             id = 3563,
@@ -2020,6 +2416,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/kənˈdʒɛnɪtəl ˌmælfɔːrˈmeɪʃən/",
+            exampleEn = "The congenital malformation is the structural abnormality present at birth arising from abnormal developmental processes.",
+            exampleFr = "Le malformation congénitale est anomalie structurale présente à la naissance résultant de processus développementaux anormaux.",
+            exampleAr = "التشوه الخلقي هو شذوذ بنيوي موجود عند الولادة ناتج عن عمليات تطورية غير طبيعية.",
         ),
         MedicalTermEntity(
             id = 3564,
@@ -2116,6 +2515,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/θəˈlɪdəmaɪd/",
+            exampleEn = "The thalidomide is the historical teratogen causing phocomelia (limb reduction defects) when taken in the first trimester.",
+            exampleFr = "La thalidomide est tératogène historique causant la phocomélie (défauts de réduction des membres) pris au premier trimestre.",
+            exampleAr = "الثاليدومايد هو مشوِّه تاريخي يسبب قصور الأطراف عند تناوله في الثلث الأول من الحمل.",
         ),
         MedicalTermEntity(
             id = 3572,
@@ -2128,6 +2530,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Embryonnaire",
             ipaPhonetic = "/daʊn ˈsɪndroʊm/",
+            exampleEn = "The down syndrome (trisomy 21) is the most common chromosomal abnormality due to trisomy 21; features intellectual disability and characteristic facies.",
+            exampleFr = "La syndrome de Down (Trisomie 21) est l'anomalie chromosomique la plus courante due à la trisomie 21; présente une déficience intellectuelle et des traits caractéristiques.",
+            exampleAr = "متلازمة داون (تثلث الصبغي 21) هو أكثر الشذوذات الصبغية شيوعاً بسبب تثليث الصبغي 21؛ تتميز بإعاقة ذهنية وملامح وجهية مميزة.",
         ),
         MedicalTermEntity(
             id = 3573,
@@ -2140,6 +2545,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Embryonnaire",
             ipaPhonetic = "/ˈtɜːrnər ˈsɪndroʊm/",
+            exampleEn = "The turner syndrome (45, x) is the sex chromosome monosomy (45,X) in females causing short stature, ovarian dysgenesis, and infertility.",
+            exampleFr = "La syndrome de Turner (45, X) est monosomie du chromosome sexuel (45,X) chez la femelle causant petite taille, dysgénésie ovarienne et infertilité.",
+            exampleAr = "متلازمة تيرنر هو أحادية الكروموسوم الجنسي (45,X) عند الإناث تسبب قصر القامة وخلل الغدة المبيضية والعقم.",
         ),
         MedicalTermEntity(
             id = 3574,
@@ -2152,6 +2560,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Embryonnaire",
             ipaPhonetic = "/ˈklaɪnfɛltər/",
+            exampleEn = "The klinefelter syndrome (47, xxy) is the sex chromosome abnormality in males (47,XXY) causing hypogonadism, gynecomastia, and infertility.",
+            exampleFr = "La syndrome de Klinefelter (47, XXY) est anomalie du chromosome sexuel chez le mâle (47,XXY) causant hypogonadisme, gynécomastie et infertilité.",
+            exampleAr = "متلازمة كلاينفيلتر هو شذوذ الكروموسوم الجنسي عند الذكور (47,XXY) يسبب نقص الغدد التناسلية وتثدي الذكور والعقم.",
         ),
         MedicalTermEntity(
             id = 3575,
@@ -2164,6 +2575,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/lʌŋ bʌd/",
+            exampleEn = "The lung bud is the endodermal outgrowth from the foregut tracheal diverticulum that gives rise to the bronchi and lungs.",
+            exampleFr = "Le bourgeon pulmonaire est une excroissance endodermique du diverticule trachéal de l'intestin antérieur donnant naissance aux bronches et poumons.",
+            exampleAr = "برعم الرئة هو نمو خارجي أديم باطن من رتج الرغامة الأمامي يؤدي إلى البرونخات والرئتين.",
         ),
         MedicalTermEntity(
             id = 3576,
@@ -2176,6 +2590,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˌlærɪŋɡoʊˈtreɪkiəl ɡruːv/",
+            exampleEn = "The laryngotracheal groove is the groove in the floor of the pharynx (Week 4) that gives rise to the larynx, trachea, bronchi, and lungs.",
+            exampleFr = "Le sillon laryngotrachéal est un sillon dans le plancher du pharynx (Semaine 4) donnant naissance au larynx, trachée, bronches et poumons.",
+            exampleAr = "الأخدود الحنجري الرغامي هو أخدود في أرضية البلعوم (الأسبوع 4) ينشأ منه الحنجرة والرغامة والبرونخات والرئتان.",
         ),
         MedicalTermEntity(
             id = 3577,
@@ -2236,6 +2653,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˈsɜːrfæktənt/",
+            exampleEn = "The surfactant is the phospholipid mixture produced by type II pneumocytes reducing alveolar surface tension; essential for breathing.",
+            exampleFr = "La surfactant (Tensioactif) est mélange de phospholipides produit par les pneumocytes de type II réduisant la tension superficielle alvéolaire.",
+            exampleAr = "السرفاكتانت هو خليط من الفوسفوليبيدات تنتجه خلايا الرئة نوع II يقلل التوتر السطحي السنخي؛ ضروري للتنفس.",
         ),
         MedicalTermEntity(
             id = 3582,
@@ -2248,6 +2668,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/rɪˈspɪrətəri dɪˈstrɛs ˈsɪndroʊm/",
+            exampleEn = "The respiratory distress syndrome (rds) is the condition in premature neonates due to surfactant deficiency causing alveolar collapse (atelectasis).",
+            exampleFr = "La syndrome de détresse respiratoire (SDR) est affection du nouveau-né prématuré due à un déficit en surfactant causant un collapsus alvéolaire (atélectasie).",
+            exampleAr = "متلازمة الضائقة التنفسية هو حالة عند المواليد المبتسرين بسبب نقص السرفاكتانت مما يسبب انهيار الحويصلات الهوائية.",
         ),
         MedicalTermEntity(
             id = 3583,
@@ -2260,6 +2683,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˈdaɪəfræm/",
+            exampleEn = "The diaphragm is the musculotendinous structure separating thoracic and abdominal cavities formed from four embryonic components.",
+            exampleFr = "La diaphragme est la structure musculo-tendineuse séparant les cavités thoracique et abdominale formée de quatre composants embryonnaires.",
+            exampleAr = "الحجاب الحاجز هو التركيب العضلي الوتري الفاصل بين تجويفي الصدر والبطن المتكون من أربعة مكونات جنينية.",
         ),
         MedicalTermEntity(
             id = 3584,
@@ -2284,6 +2710,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈɛmbriˌoʊ/",
+            exampleEn = "The embryo is the developing organism from fertilization to the end of Week 8 (organogenesis phase).",
+            exampleFr = "L'embryon est l'organisme en développement de la fécondation à la fin de la semaine 8 (phase d'organogenèse).",
+            exampleAr = "الجنين (المضغة) هو الكائن الحي النامي من الإخصاب حتى نهاية الأسبوع 8 (مرحلة تشكل الأعضاء).",
         ),
         MedicalTermEntity(
             id = 3586,
@@ -2296,6 +2725,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈfiːtəs/",
+            exampleEn = "The fetus is the developing organism from Week 9 to birth when growth and maturation predominate.",
+            exampleFr = "La fœtus est l'organisme en développement de la semaine 9 à la naissance où la croissance et la maturation prédominent.",
+            exampleAr = "الجنين هو الكائن الحي النامي من الأسبوع 9 حتى الولادة حيث يسود النمو والنضج.",
         ),
         MedicalTermEntity(
             id = 3587,
@@ -2308,6 +2740,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/dʒɛˈsteɪʃən/",
+            exampleEn = "The gestation is the period of fetal development inside the uterus from fertilization to birth (~40 weeks).",
+            exampleFr = "Le gestation (Grossesse) est la période de développement fœtal à l'intérieur de l'utérus de la fécondation à la naissance (~40 semaines).",
+            exampleAr = "الحمل هو فترة تطور الجنين داخل الرحم من الإخصاب حتى الولادة (~40 أسبوع).",
         ),
         MedicalTermEntity(
             id = 3588,
@@ -2332,6 +2767,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌɔːrɡənəˈdʒɛnɪsɪs/",
+            exampleEn = "The organogenesis is the embryonic phase (Week 3-8) when all major organ systems are established from germ layers.",
+            exampleFr = "L'organogenèse est la phase embryonnaire (Semaine 3-8) où tous les grands systèmes organiques sont établis à partir des feuillets germinatifs.",
+            exampleAr = "تشكل الأعضاء هو المرحلة الجنينية (الأسبوع 3-8) التي تتشكل فيها جميع أجهزة الأعضاء الرئيسية من الطبقات الجرثومية.",
         ),
         MedicalTermEntity(
             id = 3590,
@@ -2344,6 +2782,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌpɑːrtjʊˈrɪʃən/",
+            exampleEn = "The parturition is the process of giving birth; labor and delivery of the fetus and placenta.",
+            exampleFr = "Le parturition (Accouchement) est le processus d'accouchement; travail et expulsion du fœtus et du placenta.",
+            exampleAr = "الولادة هو عملية الولادة؛ المخاض وإخراج الجنين والمشيمة.",
         ),
         MedicalTermEntity(
             id = 3591,
@@ -2380,6 +2821,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈstɪlbɜːrθ/",
+            exampleEn = "The stillbirth is the delivery of a dead fetus at or after 20 weeks gestation.",
+            exampleFr = "La mort-né est l'accouchement d'un fœtus mort à partir de 20 semaines de gestation.",
+            exampleAr = "الولادة ميتاً هو ولادة جنين ميت عند أو بعد 20 أسبوعاً من الحمل.",
         ),
         MedicalTermEntity(
             id = 3594,
@@ -2392,6 +2836,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈmɪskærɪdʒ/",
+            exampleEn = "The miscarriage (spontaneous abortion) is the spontaneous loss of a pregnancy before 20 weeks gestation.",
+            exampleFr = "La fausse couche (Avortement spontané) est la perte spontanée d'une grossesse avant 20 semaines de gestation.",
+            exampleAr = "الإجهاض التلقائي هو الفقدان التلقائي للحمل قبل 20 أسبوعاً من الحمل.",
         ),
         MedicalTermEntity(
             id = 3595,
@@ -2404,6 +2851,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌæmniəʊsɛnˈtiːsɪs/",
+            exampleEn = "The amniocentesis is the prenatal diagnostic procedure sampling amniotic fluid to analyze fetal chromosomes and proteins.",
+            exampleFr = "L'amniocentèse est procédure diagnostique prénatale prélevant le liquide amniotique pour analyser les chromosomes et protéines fœtaux.",
+            exampleAr = "بزل السائل الأمنيوسي هو إجراء تشخيصي قبل الولادة يأخذ عينة من السائل الأمنيوسي لتحليل صبغيات الجنين وبروتيناته.",
         ),
         MedicalTermEntity(
             id = 3596,
@@ -2416,6 +2866,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/kɔːrˈɪɒnɪk ˈvɪləs ˈsæmplɪŋ/",
+            exampleEn = "The chorionic villus sampling (cvs) is the prenatal test at Week 10-12 sampling chorionic villi for chromosomal analysis.",
+            exampleFr = "La biopsie de trophoblaste (choriocentèse) est test prénatal à la semaine 10-12 prélevant des villosités choriales pour analyse chromosomique.",
+            exampleAr = "أخذ عينة من الزغابات المشيمائية هو اختبار ما قبل الولادة في الأسبوع 10-12 يأخذ عينة من الزغابات المشيمائية للتحليل الصبغي.",
         ),
         MedicalTermEntity(
             id = 3597,
@@ -2428,6 +2881,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈʌltrəˌsaʊnd/",
+            exampleEn = "The ultrasound (sonography) is the imaging technique using high-frequency sound waves to visualize the fetus and uterus.",
+            exampleFr = "L'échographie (Ultrasons) est technique d'imagerie utilisant des ondes sonores haute fréquence pour visualiser le fœtus et l'utérus.",
+            exampleAr = "الموجات فوق الصوتية (التصوير الإيكوغرافي) هو تقنية تصوير تستخدم موجات صوتية عالية التردد لتصوير الجنين والرحم.",
         ),
         MedicalTermEntity(
             id = 3598,
@@ -2440,6 +2896,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈæpɡɑːr/",
+            exampleEn = "The apgar score is the newborn assessment score at 1 and 5 min evaluating Appearance, Pulse, Grimace, Activity, Respiration.",
+            exampleFr = "La score d'APGAR est score d'évaluation du nouveau-né à 1 et 5 min évaluant Apparence, Pouls, Grimace, Activité, Respiration.",
+            exampleAr = "مقياس أبغار هو مقياس تقييم المولود الجديد عند 1 و5 دقائق يقيّم المظهر والنبض والتجهم والنشاط والتنفس.",
         ),
         MedicalTermEntity(
             id = 3599,
@@ -2452,6 +2911,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/kraʊn rʌmp lɛŋθ/",
+            exampleEn = "The crown-rump length (crl) is the ultrasound measurement from top of head to bottom of buttocks used to estimate gestational age.",
+            exampleFr = "La longueur cranio-caudale (LCC) est mesure échographique du sommet de la tête au bas des fesses utilisée pour estimer l'âge gestationnel.",
+            exampleAr = "طول الرأس إلى المؤخرة هو قياس إيكوغرافي من قمة الرأس إلى أسفل المؤخرة يُستخدم لتقدير العمر الجنيني.",
         ),
         MedicalTermEntity(
             id = 3600,
@@ -2464,6 +2926,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ɪnˈdʌkʃən/",
+            exampleEn = "The induction is the process by which one cell/tissue (inducer) influences the developmental fate of another (responder).",
+            exampleFr = "L'induction (embryonnaire) est le processus par lequel une cellule/tissu (inducteur) influence le destin développemental d'un autre (répondeur).",
+            exampleAr = "التحريض الجنيني هو العملية التي تؤثر بها خلية/نسيج (محرض) على المصير التطوري لآخر (مستجيب).",
         ),
         MedicalTermEntity(
             id = 3601,
@@ -2476,6 +2941,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˈmɔːrfədʒɛn/",
+            exampleEn = "The morphogen is the signaling molecule that forms a concentration gradient specifying cell identity and tissue patterning.",
+            exampleFr = "La morphogène est une molécule de signalisation formant un gradient de concentration spécifiant l'identité cellulaire et le patron tissulaire.",
+            exampleAr = "المورفوجين هو جزيء إشارة يشكل تدرجاً تركيزياً يحدد هوية الخلية ونمط النسيج.",
         ),
         MedicalTermEntity(
             id = 3602,
@@ -2500,6 +2968,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˈsɒnɪk ˈhɛdʒhɒɡ/",
+            exampleEn = "The sonic hedgehog (shh) is the morphogen secreted by the notochord and ZPA critical for neural tube patterning and limb digit identity.",
+            exampleFr = "La sonic hedgehog (SHH) est un morphogène sécrété par la notochorde et la ZPA critique pour le patron du tube neural et l'identité des doigts.",
+            exampleAr = "هرمون سونيك هيدجهوج هو مورفوجين يُفرز من الحبل الظهري ومنطقة النشاط المستقطب ضروري لنمط الأنبوب العصبي وهوية أصابع الطرف.",
         ),
         MedicalTermEntity(
             id = 3604,
@@ -2512,6 +2983,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/wɪnt ˈsɪɡnəlɪŋ ˈpɑːθweɪ/",
+            exampleEn = "The wnt signaling pathway is the key developmental signaling pathway regulating cell proliferation, polarity, and differentiation.",
+            exampleFr = "La voie de signalisation Wnt est une voie de signalisation développementale clé régulant la prolifération, la polarité et la différenciation cellulaires.",
+            exampleAr = "مسار إشارة Wnt هو مسار إشاري تطوري رئيسي ينظم تكاثر الخلايا وقطبيتها وتمايزها.",
         ),
         MedicalTermEntity(
             id = 3605,
@@ -2536,6 +3010,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/sɛl ˈsɪɡnəlɪŋ/",
+            exampleEn = "The cell signaling is the communication between cells through chemical signals (hormones, growth factors, morphogens).",
+            exampleFr = "Le signalisation cellulaire est la communication entre cellules via des signaux chimiques (hormones, facteurs de croissance, morphogènes).",
+            exampleAr = "الإشارة الخلوية هو التواصل بين الخلايا عبر إشارات كيميائية (هرمونات وعوامل نمو ومورفوجينات).",
         ),
         MedicalTermEntity(
             id = 3607,
@@ -2548,6 +3025,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˈfaɪbrəˌblæst ɡroʊθ ˈfæktər/",
+            exampleEn = "The fibroblast growth factor (fgf) is the family of growth factors essential for limb bud formation, angiogenesis, and wound healing.",
+            exampleFr = "La facteur de croissance des fibroblastes (FGF) est une famille de facteurs de croissance essentiels pour la formation du bourgeon de membre, l'angiogenèse.",
+            exampleAr = "عامل نمو الأرومات الليفية هو عائلة من عوامل النمو ضرورية لتشكل برعم الطرف وتكوين الأوعية والتئام الجراح.",
         ),
         MedicalTermEntity(
             id = 3608,
@@ -2560,6 +3040,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/biː ɛm piː/",
+            exampleEn = "The bmp (bone morphogenetic protein) is the group of signaling proteins regulating embryonic patterning, bone formation, and neural differentiation.",
+            exampleFr = "La BMP (Protéine morphogénétique osseuse) est un groupe de protéines de signalisation régulant le patron embryonnaire, la formation osseuse et la différenciation neurale.",
+            exampleAr = "البروتين المُشكِّل للعظم هو مجموعة من بروتينات الإشارة تنظم نمط الجنين وتكوين العظام والتمايز العصبي.",
         ),
         MedicalTermEntity(
             id = 3609,
@@ -2572,6 +3055,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/dʒɪˈnoʊmɪk ɪmˈprɪntɪŋ/",
+            exampleEn = "The genomic imprinting is the epigenetic phenomenon where expression of a gene depends on the parent of origin.",
+            exampleFr = "L'empreinte génomique est un phénomène épigénétique où l'expression d'un gène dépend du parent d'origine.",
+            exampleAr = "البصمة الجينومية هو ظاهرة فوق جينية يعتمد فيها التعبير الجيني على الوالد الأصل.",
         ),
         MedicalTermEntity(
             id = 3610,
@@ -2584,6 +3070,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/ˈɒptɪk ˈvɛsɪkəl/",
+            exampleEn = "The optic vesicle is the lateral outgrowth from the prosencephalon forming the retina and inducing lens formation.",
+            exampleFr = "La vésicule optique est une excroissance latérale du prosencéphale formant la rétine et induisant la formation du cristallin.",
+            exampleAr = "الحويصلة البصرية هو نمو خارجي جانبي من الدماغ الأمامي يكوّن الشبكية ويحرض تكوين العدسة.",
         ),
         MedicalTermEntity(
             id = 3611,
@@ -2596,6 +3085,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/ˈɒptɪk kʌp/",
+            exampleEn = "The optic cup is the double-layered structure formed by invagination of the optic vesicle forming the inner retina and retinal pigment epithelium.",
+            exampleFr = "La coupe optique est structure bicouche formée par invagination de la vésicule optique formant la rétine interne et l'épithélium pigmentaire.",
+            exampleAr = "الكأس البصري هو تركيب ثنائي الطبقة يتكون من انثناء الحويصلة البصرية يكوّن الشبكية الداخلية وظهارة الصباغ الشبكي.",
         ),
         MedicalTermEntity(
             id = 3612,
@@ -2608,6 +3100,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/lɛnz ˈplækɒd/",
+            exampleEn = "The lens placode is the thickening of the surface ectoderm induced by the optic vesicle that forms the lens of the eye.",
+            exampleFr = "La placode du cristallin est un épaississement de l'ectoderme de surface induit par la vésicule optique qui forme le cristallin.",
+            exampleAr = "لويحة العدسة هو سماكة في الأديم الظاهر السطحي محرضة من الحويصلة البصرية تكوّن عدسة العين.",
         ),
         MedicalTermEntity(
             id = 3613,
@@ -2620,6 +3115,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/ˈrɛtɪnə/",
+            exampleEn = "The retina is the light-sensitive neural layer of the eye formed from the inner layer of the optic cup.",
+            exampleFr = "La rétine est la couche neurale photosensible de l'œil formée à partir de la couche interne de la coupe optique.",
+            exampleAr = "الشبكية هو الطبقة العصبية الحساسة للضوء في العين المتكونة من الطبقة الداخلية للكأس البصري.",
         ),
         MedicalTermEntity(
             id = 3614,
@@ -2632,6 +3130,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/kɒləˈboʊmə/",
+            exampleEn = "The coloboma is the congenital gap in ocular structures (iris, retina) due to failure of the choroid fissure to close.",
+            exampleFr = "La colobome est une lacune congénitale dans les structures oculaires (iris, rétine) due à l'échec de la fermeture de la fissure choroïdienne.",
+            exampleAr = "شق القزحية هو فجوة خلقية في تراكيب العين (القزحية والشبكية) بسبب فشل انغلاق الشق المشيمائي.",
         ),
         MedicalTermEntity(
             id = 3615,
@@ -2644,6 +3145,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/ˈoʊtɪk ˈplækɒd/",
+            exampleEn = "The otic placode is the thickening of ectoderm that invaginates to form the otic vesicle giving rise to the inner ear.",
+            exampleFr = "La placode otique est un épaississement de l'ectoderme qui s'invagine pour former la vésicule otique donnant naissance à l'oreille interne.",
+            exampleAr = "لويحة الأذن هو سماكة في الأديم الظاهر تنثني لتكوين الحويصلة السمعية التي تنشأ منها الأذن الداخلية.",
         ),
         MedicalTermEntity(
             id = 3616,
@@ -2656,6 +3160,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/ˈoʊtɪk ˈvɛsɪkəl/",
+            exampleEn = "The otic vesicle (otocyst) is the closed ectodermal vesicle forming all structures of the membranous labyrinth of the inner ear.",
+            exampleFr = "La vésicule otique (Otocyste) est une vésicule ectodermique fermée formant toutes les structures du labyrinthe membraneux de l'oreille interne.",
+            exampleAr = "الحويصلة السمعية هو حويصلة أديم ظاهر مغلقة تكوّن جميع تراكيب المتاه الغشائي للأذن الداخلية.",
         ),
         MedicalTermEntity(
             id = 3617,
@@ -2668,6 +3175,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Sensoriel",
             ipaPhonetic = "/ˈmɛmbrənəs ˈlæbərɪnθ/",
+            exampleEn = "The membranous labyrinth is the fluid-filled membranous structures of the inner ear (cochlear duct, semicircular canals, utricle, saccule).",
+            exampleFr = "La labyrinthe membraneux est les structures membraneuses remplies de liquide de l'oreille interne (canal cochléaire, canaux semi-circulaires).",
+            exampleAr = "المتاه الغشائي هو التراكيب الغشائية المملوءة بالسائل في الأذن الداخلية (القناة القوقعية والقنوات نصف الدائرية).",
         ),
         MedicalTermEntity(
             id = 3618,
@@ -2680,6 +3190,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Induction",
             ipaPhonetic = "/ɪnˈdʌktɪv ˌɪntərˈækʃən/",
+            exampleEn = "The inductive interaction is the reciprocal signaling between two adjacent tissues directing their differentiation.",
+            exampleFr = "L'interaction inductive est la signalisation réciproque entre deux tissus adjacents dirigeant leur différenciation.",
+            exampleAr = "التفاعل التحريضي هو الإشارة المتبادلة بين نسيجين متجاورين توجه تمايزهما.",
         ),
         MedicalTermEntity(
             id = 3619,
@@ -2692,6 +3205,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Induction",
             ipaPhonetic = "/ˈkɒmpɪtəns/",
+            exampleEn = "The competence is the ability of a tissue to respond to an inductive signal at a specific developmental stage.",
+            exampleFr = "La compétence (embryonnaire) est la capacité d'un tissu à répondre à un signal inductif à un stade développemental spécifique.",
+            exampleAr = "الاستعداد الجنيني هو قدرة نسيج على الاستجابة لإشارة تحريضية في مرحلة تطورية محددة.",
         ),
         MedicalTermEntity(
             id = 3620,
@@ -2716,6 +3232,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˌɛpɪˈθiːliəm/",
+            exampleEn = "The epithelium is the sheet of cells lining body surfaces and cavities with distinct apical, basal, and lateral domains.",
+            exampleFr = "L'épithélium est une nappe de cellules tapissant les surfaces et cavités corporelles avec des domaines apical, basal et latéral distincts.",
+            exampleAr = "الظهارة هو طبقة من الخلايا تبطن أسطح وتجاويف الجسم بأقطاب قمية وقاعدية وجانبية مميزة.",
         ),
         MedicalTermEntity(
             id = 3622,
@@ -2728,6 +3247,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˌɛpɪˈθiːliəl mɛˈzɛŋkɪməl ˈtrænzɪʃən/",
+            exampleEn = "The epithelial-mesenchymal transition (emt) is the biological process where epithelial cells acquire mesenchymal characteristics essential in gastrulation and metastasis.",
+            exampleFr = "Le transition épithéliale-mésenchymateuse (TEM) est un processus biologique où les cellules épithéliales acquièrent des caractéristiques mésenchymateuses lors de la gastrulation.",
+            exampleAr = "التحول الظهاري-السدوي هو عملية بيولوجية تكتسب فيها الخلايا الظهارية خصائص سدوية ضرورية في التمعد والانتشار السرطاني.",
         ),
         MedicalTermEntity(
             id = 3623,
@@ -2740,6 +3262,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˈlætərəl ˈbɒdi ˈfoʊldɪŋ/",
+            exampleEn = "The lateral body folding is the lateral infolding of the embryonic disc forming the cylindrical body shape and enclosing the gut tube.",
+            exampleFr = "Le repliage latéral du corps est l'invagination latérale du disque embryonnaire formant la forme cylindrique du corps et enclosant le tube intestinal.",
+            exampleAr = "الطي الجانبي للجسم هو الانثناء الجانبي للقرص الجنيني الذي يكوّن شكل الجسم الأسطواني ويحيط بالأنبوب الهضمي.",
         ),
         MedicalTermEntity(
             id = 3624,
@@ -2752,6 +3277,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˈkreɪniəl ˈkɔːdəl ˈæksɪs/",
+            exampleEn = "The cranial-caudal axis is the head-to-tail body axis established during gastrulation; Hox genes regulate segmental identity along this axis.",
+            exampleFr = "L'axe cranio-caudal est l'axe tête-queue établi lors de la gastrulation; les gènes Hox régulent l'identité segmentaire le long de cet axe.",
+            exampleAr = "المحور الرأسي الذيلي هو محور الرأس-الذيل للجسم المتأسس أثناء التمعد؛ الجينات الهيوكسية تنظم هوية القطع على طوله.",
         ),
         MedicalTermEntity(
             id = 3625,
@@ -2764,6 +3292,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˈdɔːrsəl ˈvɛntrəl/",
+            exampleEn = "The dorsal-ventral axis is the back-to-front body axis regulated by BMP and Wnt gradients during early embryonic development.",
+            exampleFr = "L'axe dorso-ventral est l'axe dos-ventre régulé par les gradients BMP et Wnt lors du développement embryonnaire précoce.",
+            exampleAr = "المحور الظهري البطني هو المحور الظهري-البطني للجسم المنظَّم بتدرجات BMP و Wnt في التطور الجنيني المبكر.",
         ),
         MedicalTermEntity(
             id = 3626,
@@ -2788,6 +3319,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌpriːɪˈklæmpsiə/",
+            exampleEn = "The preeclampsia is the pregnancy complication characterized by hypertension, proteinuria, and edema after 20 weeks.",
+            exampleFr = "La prééclampsie est une complication de la grossesse caractérisée par hypertension, protéinurie et œdème après 20 semaines.",
+            exampleAr = "تسمم الحمل هو مضاعفة الحمل المتمثلة بارتفاع ضغط الدم والبروتينية والوذمة بعد 20 أسبوعاً.",
         ),
         MedicalTermEntity(
             id = 3628,
@@ -2800,6 +3334,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/sɪˈfælɪk ˌprɛzənˈteɪʃən/",
+            exampleEn = "The cephalic presentation is the normal fetal position for delivery with the head (vertex) positioned at the cervix.",
+            exampleFr = "Le présentation céphalique est la position fœtale normale pour l'accouchement avec la tête (vertex) positionnée au niveau du col.",
+            exampleAr = "وضع رأسي هو وضع الجنين الطبيعي للولادة مع الرأس (القمة) في اتجاه عنق الرحم.",
         ),
         MedicalTermEntity(
             id = 3629,
@@ -2812,6 +3349,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/briːtʃ ˌprɛzənˈteɪʃən/",
+            exampleEn = "The breech presentation is the abnormal fetal position with the buttocks or feet presenting first at the cervix.",
+            exampleFr = "Le présentation du siège est position fœtale anormale avec les fesses ou les pieds se présentant en premier au niveau du col.",
+            exampleAr = "وضع مقعدي هو وضع جنيني غير طبيعي تكون فيه المؤخرة أو القدمان نحو عنق الرحم.",
         ),
         MedicalTermEntity(
             id = 3630,
@@ -2824,6 +3364,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈnjuːkəl trænsˈluːsənsi/",
+            exampleEn = "The nuchal translucency is the ultrasound measurement of fluid at the back of the fetal neck used to screen for Down syndrome (Week 11-14).",
+            exampleFr = "La clarté nucale est mesure échographique du liquide à l'arrière de la nuque fœtale utilisée pour dépister le syndrome de Down (Semaine 11-14).",
+            exampleAr = "الشفافية القفوية هو قياس إيكوغرافي للسائل في مؤخرة رقبة الجنين يُستخدم للكشف عن متلازمة داون (الأسبوع 11-14).",
         ),
         MedicalTermEntity(
             id = 3631,
@@ -3112,6 +3655,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/əˈnætəmi/",
+            exampleEn = "Anatomy is the study of the structure of the human body.",
+            exampleFr = "L'anatomie est étude de la structure du corps humain.",
+            exampleAr = "علم التشريح هو علم يدرس بنية جسم الإنسان.",
         ),
         MedicalTermEntity(
             id = 3655,
@@ -3124,6 +3670,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˌfɪziˈɒlədʒi/",
+            exampleEn = "Physiology is the study of the functions and mechanisms of the body.",
+            exampleFr = "La physiologie est étude des fonctions et mécanismes du corps.",
+            exampleAr = "علم وظائف الأعضاء هو علم يدرس وظائف وآليات عمل الجسم.",
         ),
         MedicalTermEntity(
             id = 3656,
@@ -3256,6 +3805,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈsædʒɪtəl/",
+            exampleEn = "The sagittal plane is the vertical plane dividing the body into right and left parts.",
+            exampleFr = "La plan sagittal est plan vertical divisant le corps en parties droite et gauche.",
+            exampleAr = "المستوى السهمي هو مستوى رأسي يقسم الجسم إلى جزأين أيمن وأيسر.",
         ),
         MedicalTermEntity(
             id = 3667,
@@ -3268,6 +3820,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/kəˈroʊnəl/",
+            exampleEn = "The coronal plane (frontal) is the vertical plane dividing the body into anterior and posterior parts.",
+            exampleFr = "La plan coronal (Frontal) est plan vertical divisant le corps en parties antérieure et postérieure.",
+            exampleAr = "المستوى الإكليلي (الجبهي) هو مستوى رأسي يقسم الجسم إلى جزأين أمامي وخلفي.",
         ),
         MedicalTermEntity(
             id = 3668,
@@ -3280,6 +3835,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/trænzˈvɜːrs/",
+            exampleEn = "The transverse plane (horizontal) is the horizontal plane dividing the body into superior and inferior parts.",
+            exampleFr = "La plan transversal (Horizontal) est plan horizontal divisant le corps en parties supérieure et inférieure.",
+            exampleAr = "المستوى المستعرض (الأفقي) هو مستوى أفقي يقسم الجسم إلى جزأين علوي وسفلي.",
         ),
         MedicalTermEntity(
             id = 3669,
@@ -3292,6 +3850,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈɔːrɡən/",
+            exampleEn = "The organ is the structure composed of several tissues performing a specific function.",
+            exampleFr = "L'organe est structure composée de plusieurs tissus remplissant une fonction spécifique.",
+            exampleAr = "عضو هو بنية مكونة من أنسجة متعددة تؤدي وظيفة محددة.",
         ),
         MedicalTermEntity(
             id = 3670,
@@ -3304,6 +3865,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈtɪʃuː/",
+            exampleEn = "The tissue is the group of similar cells performing a common function.",
+            exampleFr = "La tissu est groupe de cellules similaires remplissant une fonction commune.",
+            exampleAr = "نسيج هو مجموعة من الخلايا المتشابهة التي تؤدي وظيفة مشتركة.",
         ),
         MedicalTermEntity(
             id = 3671,
@@ -3316,6 +3880,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈɔːrɡən ˈsɪstəm/",
+            exampleEn = "The organ system is the group of organs working together to perform complex functions.",
+            exampleFr = "La système d'organes est groupe d'organes travaillant ensemble pour remplir des fonctions complexes.",
+            exampleAr = "جهاز هو مجموعة من الأعضاء تعمل معاً لأداء وظائف معقدة.",
         ),
         MedicalTermEntity(
             id = 3672,
@@ -3328,6 +3895,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/hɑːrt/",
+            exampleEn = "The heart is the muscular organ that pumps blood through the circulatory system.",
+            exampleFr = "La cœur est organe musculaire qui pompe le sang à travers le système circulatoire.",
+            exampleAr = "القلب هو العضو العضلي الذي يضخ الدم عبر الجهاز الدوري.",
         ),
         MedicalTermEntity(
             id = 3673,
@@ -3340,6 +3910,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˈɑːrtəri/",
+            exampleEn = "The artery is the blood vessel carrying oxygenated blood away from the heart.",
+            exampleFr = "L'artère est vaisseau sanguin transportant le sang oxygéné loin du cœur.",
+            exampleAr = "شريان هو وعاء دموي يحمل الدم المؤكسج بعيداً عن القلب.",
         ),
         MedicalTermEntity(
             id = 3674,
@@ -3352,6 +3925,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/veɪn/",
+            exampleEn = "The vein is the blood vessel carrying deoxygenated blood toward the heart.",
+            exampleFr = "La veine est vaisseau sanguin transportant le sang désoxygéné vers le cœur.",
+            exampleAr = "وريد هو وعاء دموي يحمل الدم غير المؤكسج نحو القلب.",
         ),
         MedicalTermEntity(
             id = 3675,
@@ -3364,6 +3940,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˈkæpɪleri/",
+            exampleEn = "The capillary is the smallest blood vessel where gas and nutrient exchange occurs.",
+            exampleFr = "La capillaire est le plus petit vaisseau sanguin où se produisent les échanges gazeux et nutritifs.",
+            exampleAr = "شعيرة دموية هو أصغر وعاء دموي حيث يحدث تبادل الغازات والمواد الغذائية.",
         ),
         MedicalTermEntity(
             id = 3676,
@@ -3376,6 +3955,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/eɪˈɔːrtə/",
+            exampleEn = "The aorta is the largest artery in the body carrying blood from the left ventricle.",
+            exampleFr = "L'aorte est la plus grande artère du corps transportant le sang depuis le ventricule gauche.",
+            exampleAr = "الشريان الأورطي هو أكبر شريان في الجسم يحمل الدم من البطين الأيسر.",
         ),
         MedicalTermEntity(
             id = 3677,
@@ -3388,6 +3970,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˈvɛntrɪkəl/",
+            exampleEn = "The ventricle is the lower chamber of the heart that pumps blood to the lungs or body.",
+            exampleFr = "La ventricule est chambre inférieure du cœur qui pompe le sang vers les poumons ou le corps.",
+            exampleAr = "البطين هو الحجرة السفلية للقلب التي تضخ الدم إلى الرئتين أو الجسم.",
         ),
         MedicalTermEntity(
             id = 3678,
@@ -3400,6 +3985,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˈeɪtriəm/",
+            exampleEn = "The atrium is the upper chamber of the heart that receives blood from veins.",
+            exampleFr = "L'oreillette est chambre supérieure du cœur qui reçoit le sang des veines.",
+            exampleAr = "الأذين هو الحجرة العلوية للقلب التي تستقبل الدم من الأوردة.",
         ),
         MedicalTermEntity(
             id = 3679,
@@ -3412,6 +4000,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌmaɪoʊˈkɑːrdiəm/",
+            exampleEn = "The myocardium is the muscular middle layer of the heart wall.",
+            exampleFr = "La myocarde est la couche musculaire intermédiaire de la paroi du cœur.",
+            exampleAr = "عضلة القلب هو الطبقة العضلية الوسطى من جدار القلب.",
         ),
         MedicalTermEntity(
             id = 3680,
@@ -3424,6 +4015,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌpɛrɪˈkɑːrdiəm/",
+            exampleEn = "The pericardium is the double-layered sac enclosing the heart.",
+            exampleFr = "La péricarde est le sac à deux couches entourant le cœur.",
+            exampleAr = "التامور هو الكيس المزدوج الطبقة المحيط بالقلب.",
         ),
         MedicalTermEntity(
             id = 3681,
@@ -3436,6 +4030,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌɛndoʊˈkɑːrdiəm/",
+            exampleEn = "The endocardium is the inner lining of the heart chambers.",
+            exampleFr = "L'endocarde est la doublure intérieure des cavités du cœur.",
+            exampleAr = "الشغاف هو البطانة الداخلية لحجرات القلب.",
         ),
         MedicalTermEntity(
             id = 3682,
@@ -3460,6 +4057,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/blʌd ˈprɛʃər/",
+            exampleEn = "The blood pressure is the force exerted by blood against vessel walls (systolic/diastolic).",
+            exampleFr = "Le pression artérielle est la force exercée par le sang contre les parois des vaisseaux (systolique/diastolique).",
+            exampleAr = "ضغط الدم هو القوة التي يمارسها الدم على جدران الأوعية (انقباضي/انبساطي).",
         ),
         MedicalTermEntity(
             id = 3684,
@@ -3472,6 +4072,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˈsɪstəli/",
+            exampleEn = "The systole is the contraction phase of the heart when blood is pumped out.",
+            exampleFr = "La systole est la phase de contraction du cœur quand le sang est expulsé.",
+            exampleAr = "الانقباض القلبي هو مرحلة انقباض القلب عندما يُضخ الدم للخارج.",
         ),
         MedicalTermEntity(
             id = 3685,
@@ -3484,6 +4087,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/daɪˈæstəli/",
+            exampleEn = "The diastole is the relaxation phase of the heart when chambers fill with blood.",
+            exampleFr = "La diastole est la phase de relaxation du cœur quand les chambres se remplissent de sang.",
+            exampleAr = "الانبساط القلبي هو مرحلة استرخاء القلب عندما تمتلئ الحجرات بالدم.",
         ),
         MedicalTermEntity(
             id = 3686,
@@ -3496,6 +4102,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈaʊtpʊt/",
+            exampleEn = "The cardiac output is the volume of blood pumped by the heart per minute (CO = HR × SV).",
+            exampleFr = "La débit cardiaque est le volume de sang pompé par le cœur par minute (DC = FC × VS).",
+            exampleAr = "النتاج القلبي هو حجم الدم المضخوم من القلب في الدقيقة (النتاج = معدل الضربات × حجم الضربة).",
         ),
         MedicalTermEntity(
             id = 3687,
@@ -3556,6 +4165,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/lʌŋ/",
+            exampleEn = "The lung is the primary organ of respiration where gas exchange occurs.",
+            exampleFr = "Le poumon est l'organe principal de la respiration où se produisent les échanges gazeux.",
+            exampleAr = "الرئة هو العضو الرئيسي للتنفس حيث يحدث تبادل الغازات.",
         ),
         MedicalTermEntity(
             id = 3692,
@@ -3568,6 +4180,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˈtreɪkiə/",
+            exampleEn = "The trachea is the cartilaginous airway connecting the larynx to the bronchi.",
+            exampleFr = "La trachée est la voie aérienne cartilagineuse reliant le larynx aux bronches.",
+            exampleAr = "القصبة الهوائية هو المجرى الهوائي الغضروفي الذي يربط الحنجرة بالشعبتين.",
         ),
         MedicalTermEntity(
             id = 3693,
@@ -3580,6 +4195,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˈbrɒŋkəs/",
+            exampleEn = "The bronchus (pl. bronchi) is the large airway branching from the trachea into each lung.",
+            exampleFr = "La bronche (pl. Bronches) est une grande voie aérienne se ramifiant de la trachée dans chaque poumon.",
+            exampleAr = "القصبة الهوائية الأولية هو مجرى هوائي كبير يتفرع من القصبة الهوائية إلى كل رئة.",
         ),
         MedicalTermEntity(
             id = 3694,
@@ -3592,6 +4210,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˈbrɒŋkiəʊl/",
+            exampleEn = "The bronchiole is the small airway branching from the bronchi without cartilage.",
+            exampleFr = "La bronchiole est une petite voie aérienne se ramifiant des bronches sans cartilage.",
+            exampleAr = "القصيبة هو مجرى هوائي صغير يتفرع من القصبات بدون غضروف.",
         ),
         MedicalTermEntity(
             id = 3695,
@@ -3604,6 +4225,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ælˈviːələs/",
+            exampleEn = "The alveolus (pl. alveoli) is the tiny air sac in the lungs where gas exchange with blood occurs.",
+            exampleFr = "L'alvéole (pl. Alvéoles) est un petit sac d'air dans les poumons où se produisent les échanges gazeux avec le sang.",
+            exampleAr = "السنخ الرئوي هو كيس هوائي صغير في الرئتين حيث يحدث تبادل الغازات مع الدم.",
         ),
         MedicalTermEntity(
             id = 3696,
@@ -3616,6 +4240,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˈplʊərə/",
+            exampleEn = "The pleura is the double-layered membrane surrounding each lung.",
+            exampleFr = "La plèvre est la membrane à deux couches entourant chaque poumon.",
+            exampleAr = "الغشاء الجنبي هو الغشاء المزدوج الطبقة المحيط بكل رئة.",
         ),
         MedicalTermEntity(
             id = 3697,
@@ -3628,6 +4255,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˌrɛspɪˈreɪʃən/",
+            exampleEn = "The respiration is the process of gas exchange between the body and the environment.",
+            exampleFr = "Le respiration est le processus d'échange gazeux entre le corps et l'environnement.",
+            exampleAr = "التنفس هو عملية تبادل الغازات بين الجسم والبيئة.",
         ),
         MedicalTermEntity(
             id = 3698,
@@ -3640,6 +4270,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˌɪnspɪˈreɪʃən/",
+            exampleEn = "The inspiration (inhalation) is the act of breathing air into the lungs.",
+            exampleFr = "L'inspiration (Inhalation) est l'acte d'aspirer de l'air dans les poumons.",
+            exampleAr = "الشهيق هو عملية سحب الهواء إلى داخل الرئتين.",
         ),
         MedicalTermEntity(
             id = 3699,
@@ -3652,6 +4285,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˌɛkspɪˈreɪʃən/",
+            exampleEn = "The expiration (exhalation) is the act of breathing air out of the lungs.",
+            exampleFr = "L'expiration (Exhalation) est l'acte d'expirer de l'air hors des poumons.",
+            exampleAr = "الزفير هو عملية إخراج الهواء من الرئتين.",
         ),
         MedicalTermEntity(
             id = 3700,
@@ -3664,6 +4300,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˈtaɪdəl ˈvɒljuːm/",
+            exampleEn = "The tidal volume is the amount of air inhaled or exhaled in a normal breath (~500 mL).",
+            exampleFr = "La volume courant est la quantité d'air inhalée ou exhalée lors d'une respiration normale (~500 mL).",
+            exampleAr = "حجم المد والجزر هو كمية الهواء المستنشقة أو المُزفورة في تنفس طبيعي (~500 مل).",
         ),
         MedicalTermEntity(
             id = 3701,
@@ -3688,6 +4327,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/ˈæzmə/",
+            exampleEn = "The asthma is the chronic disease causing airway inflammation and reversible bronchoconstriction.",
+            exampleFr = "L'asthme est maladie chronique causant une inflammation des voies aériennes et une bronchoconstriction réversible.",
+            exampleAr = "الربو هو مرض مزمن يسبب التهاباً في مجاري الهواء وتضيقاً قابلاً للانعكاس.",
         ),
         MedicalTermEntity(
             id = 3703,
@@ -3700,6 +4342,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ɪˈsɒfəɡəs/",
+            exampleEn = "The esophagus is the muscular tube connecting the pharynx to the stomach.",
+            exampleFr = "Le œsophage est le tube musculaire reliant le pharynx à l'estomac.",
+            exampleAr = "المريء هو الأنبوب العضلي الذي يربط البلعوم بالمعدة.",
         ),
         MedicalTermEntity(
             id = 3704,
@@ -3712,6 +4357,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ˈstʌmək/",
+            exampleEn = "The stomach is the muscular organ that digests food using acid and enzymes.",
+            exampleFr = "L'estomac est un organe musculaire qui digère les aliments à l'aide d'acide et d'enzymes.",
+            exampleAr = "المعدة هو عضو عضلي يهضم الطعام بالحمض والإنزيمات.",
         ),
         MedicalTermEntity(
             id = 3705,
@@ -3724,6 +4372,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/smɔːl ɪnˈtɛstɪn/",
+            exampleEn = "The small intestine is the long tubular organ where most digestion and nutrient absorption occurs.",
+            exampleFr = "L'intestin grêle est le long organe tubulaire où se produit la majeure partie de la digestion et de l'absorption des nutriments.",
+            exampleAr = "الأمعاء الدقيقة هو العضو الأنبوبي الطويل حيث يحدث معظم الهضم وامتصاص المواد الغذائية.",
         ),
         MedicalTermEntity(
             id = 3706,
@@ -3736,6 +4387,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/lɑːrdʒ ɪnˈtɛstɪn/",
+            exampleEn = "The large intestine (colon) is the organ absorbing water and forming feces from undigested material.",
+            exampleFr = "La gros intestin (Côlon) est l'organe absorbant l'eau et formant les fèces à partir de matériaux non digérés.",
+            exampleAr = "الأمعاء الغليظة (القولون) هو العضو الذي يمتص الماء ويشكل البراز من المواد غير المهضومة.",
         ),
         MedicalTermEntity(
             id = 3707,
@@ -3748,6 +4402,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ˈlɪvər/",
+            exampleEn = "The liver is the largest gland producing bile, metabolizing nutrients, and detoxifying substances.",
+            exampleFr = "La foie est la plus grande glande produisant la bile, métabolisant les nutriments et détoxifiant les substances.",
+            exampleAr = "الكبد هو أكبر غدة تنتج الصفراء وتحول المواد الغذائية وتزيل سمية المواد.",
         ),
         MedicalTermEntity(
             id = 3708,
@@ -3760,6 +4417,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ˈpæŋkriəs/",
+            exampleEn = "The pancreas is the gland producing digestive enzymes and hormones (insulin, glucagon).",
+            exampleFr = "La pancréas est une glande produisant des enzymes digestives et des hormones (insuline, glucagon).",
+            exampleAr = "البنكرياس هو غدة تنتج إنزيمات الهضم والهرمونات (الأنسولين، الغلوكاغون).",
         ),
         MedicalTermEntity(
             id = 3709,
@@ -3772,6 +4432,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ˈɡɔːlblædər/",
+            exampleEn = "The gallbladder is the sac storing bile produced by the liver until needed for digestion.",
+            exampleFr = "La vésicule biliaire est un sac stockant la bile produite par le foie jusqu'à ce qu'elle soit nécessaire à la digestion.",
+            exampleAr = "المرارة هو كيس يخزن الصفراء التي ينتجها الكبد حتى الحاجة إليها في الهضم.",
         ),
         MedicalTermEntity(
             id = 3710,
@@ -3796,6 +4459,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/daɪˈdʒɛstʃən/",
+            exampleEn = "The digestion is the process of breaking down food into absorbable nutrients.",
+            exampleFr = "Le digestion est le processus de décomposition des aliments en nutriments absorbables.",
+            exampleAr = "الهضم هو عملية تكسير الطعام إلى مواد غذائية قابلة للامتصاص.",
         ),
         MedicalTermEntity(
             id = 3712,
@@ -3808,6 +4474,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/əbˈsɔːrpʃən/",
+            exampleEn = "The absorption is the passage of digested nutrients from the intestine into the bloodstream.",
+            exampleFr = "L'absorption est le passage des nutriments digérés de l'intestin vers la circulation sanguine.",
+            exampleAr = "الامتصاص هو انتقال المواد الغذائية المهضومة من الأمعاء إلى مجرى الدم.",
         ),
         MedicalTermEntity(
             id = 3713,
@@ -3820,6 +4489,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/breɪn/",
+            exampleEn = "The brain is the central organ of the nervous system controlling all body functions.",
+            exampleFr = "Le cerveau est l'organe central du système nerveux contrôlant toutes les fonctions du corps.",
+            exampleAr = "الدماغ هو العضو المركزي للجهاز العصبي الذي يتحكم في جميع وظائف الجسم.",
         ),
         MedicalTermEntity(
             id = 3714,
@@ -3832,6 +4504,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈspaɪnəl kɔːrd/",
+            exampleEn = "The spinal cord is the cylindrical bundle of nerves extending from the brainstem through the vertebral canal.",
+            exampleFr = "La moelle épinière est le faisceau cylindrique de nerfs s'étendant du tronc cérébral à travers le canal vertébral.",
+            exampleAr = "الحبل الشوكي هو حزمة أسطوانية من الأعصاب تمتد من جذع الدماغ عبر القناة الفقرية.",
         ),
         MedicalTermEntity(
             id = 3715,
@@ -3844,6 +4519,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈnjʊərɒn/",
+            exampleEn = "The neuron is the basic functional unit of the nervous system that transmits electrical signals.",
+            exampleFr = "La neurone est l'unité fonctionnelle de base du système nerveux qui transmet des signaux électriques.",
+            exampleAr = "الخلية العصبية هو الوحدة الوظيفية الأساسية للجهاز العصبي التي تنقل الإشارات الكهربائية.",
         ),
         MedicalTermEntity(
             id = 3716,
@@ -3856,6 +4534,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈsɪnæps/",
+            exampleEn = "The synapse is the junction between two neurons where signals are transmitted.",
+            exampleFr = "La synapse est la jonction entre deux neurones où les signaux sont transmis.",
+            exampleAr = "المشبك العصبي هو التقاطع بين عصبونين حيث تُنقل الإشارات.",
         ),
         MedicalTermEntity(
             id = 3717,
@@ -3868,6 +4549,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈæksɒn/",
+            exampleEn = "The axon is the long projection of a neuron that transmits impulses away from the cell body.",
+            exampleFr = "L'axone est la longue projection d'un neurone qui transmet les impulsions loin du corps cellulaire.",
+            exampleAr = "المحور العصبي هو الامتداد الطويل للخلية العصبية الذي ينقل النبضات بعيداً عن جسم الخلية.",
         ),
         MedicalTermEntity(
             id = 3718,
@@ -3880,6 +4564,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈdɛndraɪt/",
+            exampleEn = "The dendrite is the short branching projections of a neuron that receive signals.",
+            exampleFr = "La dendrite est les courtes projections ramifiées d'un neurone qui reçoivent des signaux.",
+            exampleAr = "التشعبات العصبية هو الامتدادات القصيرة المتفرعة للخلية العصبية التي تستقبل الإشارات.",
         ),
         MedicalTermEntity(
             id = 3719,
@@ -3892,6 +4579,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˌnjʊərəʊˈtrænzmɪtər/",
+            exampleEn = "The neurotransmitter is the chemical substance released at a synapse to transmit nerve signals.",
+            exampleFr = "La neurotransmetteur est une substance chimique libérée au niveau d'une synapse pour transmettre les signaux nerveux.",
+            exampleAr = "الناقل العصبي هو مادة كيميائية تُطلق عند المشبك لنقل الإشارات العصبية.",
         ),
         MedicalTermEntity(
             id = 3720,
@@ -3904,6 +4594,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈsɛntrəl ˈnɜːrvəs ˈsɪstəm/",
+            exampleEn = "The central nervous system (cns) is the brain and spinal cord.",
+            exampleFr = "La système nerveux central (SNC) est le cerveau et la moelle épinière.",
+            exampleAr = "الجهاز العصبي المركزي هو الدماغ والحبل الشوكي.",
         ),
         MedicalTermEntity(
             id = 3721,
@@ -3928,6 +4621,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈsɛrɪbrəm/",
+            exampleEn = "The cerebrum is the largest part of the brain responsible for thought, sensation, and voluntary movement.",
+            exampleFr = "Le cerveau (hémisphères) est la plus grande partie du cerveau responsable de la pensée, la sensation et le mouvement volontaire.",
+            exampleAr = "المخ هو الجزء الأكبر من الدماغ المسؤول عن التفكير والإحساس والحركة الإرادية.",
         ),
         MedicalTermEntity(
             id = 3723,
@@ -3940,6 +4636,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˌsɛrɪˈbɛləm/",
+            exampleEn = "The cerebellum is the part of the brain coordinating balance, posture, and fine motor movements.",
+            exampleFr = "La cervelet est la partie du cerveau coordonnant l'équilibre, la posture et les mouvements fins.",
+            exampleAr = "المخيخ هو جزء الدماغ الذي يُنسق التوازن والوضعية والحركات الدقيقة.",
         ),
         MedicalTermEntity(
             id = 3724,
@@ -3952,6 +4651,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈbreɪnstɛm/",
+            exampleEn = "The brainstem is the part connecting the brain to the spinal cord regulating vital functions.",
+            exampleFr = "La tronc cérébral est la partie reliant le cerveau à la moelle épinière régulant les fonctions vitales.",
+            exampleAr = "جذع الدماغ هو الجزء الرابط بين الدماغ والحبل الشوكي الذي ينظم الوظائف الحيوية.",
         ),
         MedicalTermEntity(
             id = 3725,
@@ -3964,6 +4666,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈriːflɛks/",
+            exampleEn = "The reflex is the involuntary and rapid response to a stimulus.",
+            exampleFr = "La réflexe est une réponse involontaire et rapide à un stimulus.",
+            exampleAr = "المنعكس هو استجابة لاإرادية وسريعة لمثير.",
         ),
         MedicalTermEntity(
             id = 3726,
@@ -3976,6 +4681,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/boʊn/",
+            exampleEn = "The bone is the rigid connective tissue forming the skeleton and providing structural support.",
+            exampleFr = "L'os est un tissu conjonctif rigide formant le squelette et offrant un soutien structurel.",
+            exampleAr = "العظم هو نسيج ضام صلب يشكل الهيكل العظمي ويوفر الدعم البنيوي.",
         ),
         MedicalTermEntity(
             id = 3727,
@@ -3988,6 +4696,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈmʌsəl/",
+            exampleEn = "The muscle is the tissue composed of contractile fibers that produce movement.",
+            exampleFr = "La muscle est un tissu composé de fibres contractiles qui produisent le mouvement.",
+            exampleAr = "العضلة هو نسيج مكون من ألياف انقباضية تُنتج الحركة.",
         ),
         MedicalTermEntity(
             id = 3728,
@@ -4000,6 +4711,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈtɛndən/",
+            exampleEn = "The tendon is the tough fibrous cord connecting muscle to bone.",
+            exampleFr = "Le tendon est un cordon fibreux solide reliant le muscle à l'os.",
+            exampleAr = "الوتر هو حبل ليفي قاسٍ يربط العضلة بالعظم.",
         ),
         MedicalTermEntity(
             id = 3729,
@@ -4012,6 +4726,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈlɪɡəmənt/",
+            exampleEn = "The ligament is the fibrous band of connective tissue connecting bone to bone.",
+            exampleFr = "Le ligament est une bande fibreuse de tissu conjonctif reliant un os à un autre.",
+            exampleAr = "الرباط هو شريط ليفي من النسيج الضام يربط العظم بالعظم.",
         ),
         MedicalTermEntity(
             id = 3730,
@@ -4024,6 +4741,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/dʒɔɪnt/",
+            exampleEn = "The joint (articulation) is the point of connection between two or more bones.",
+            exampleFr = "L'articulation est le point de connexion entre deux ou plusieurs os.",
+            exampleAr = "المفصل هو نقطة الاتصال بين عظمتين أو أكثر.",
         ),
         MedicalTermEntity(
             id = 3731,
@@ -4036,6 +4756,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈkɑːrtɪlɪdʒ/",
+            exampleEn = "The cartilage is the flexible connective tissue found in joints, ears, and nose.",
+            exampleFr = "Le cartilage est un tissu conjonctif flexible trouvé dans les articulations, les oreilles et le nez.",
+            exampleAr = "الغضروف هو نسيج ضام مرن يوجد في المفاصل والأذنين والأنف.",
         ),
         MedicalTermEntity(
             id = 3732,
@@ -4048,6 +4771,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˌpɛriˈɒstiəm/",
+            exampleEn = "The periosteum is the fibrous membrane covering the outer surface of bones.",
+            exampleFr = "La périoste est la membrane fibreuse couvrant la surface externe des os.",
+            exampleAr = "السمحاق هو الغشاء الليفي الذي يغطي السطح الخارجي للعظام.",
         ),
         MedicalTermEntity(
             id = 3733,
@@ -4096,6 +4822,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈfræktʃər/",
+            exampleEn = "The fracture is the break or crack in a bone.",
+            exampleFr = "La fracture est une cassure ou fissure dans un os.",
+            exampleAr = "الكسر هو كسر أو شق في العظم.",
         ),
         MedicalTermEntity(
             id = 3737,
@@ -4108,6 +4837,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˌɒstioʊpəˈroʊsɪs/",
+            exampleEn = "The osteoporosis is the condition of decreased bone density increasing fracture risk.",
+            exampleFr = "L'ostéoporose est une condition de diminution de la densité osseuse augmentant le risque de fracture.",
+            exampleAr = "هشاشة العظام هو حالة انخفاض كثافة العظام مما يزيد من خطر الكسر.",
         ),
         MedicalTermEntity(
             id = 3738,
@@ -4120,6 +4852,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˈhɔːrmoʊn/",
+            exampleEn = "The hormone is the chemical messenger secreted by endocrine glands into the blood.",
+            exampleFr = "L'hormone est un messager chimique sécrété par les glandes endocrines dans le sang.",
+            exampleAr = "الهرمون هو رسول كيميائي تفرزه الغدد الصماء في الدم.",
         ),
         MedicalTermEntity(
             id = 3739,
@@ -4132,6 +4867,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˈɛndəkrɪn ɡlænd/",
+            exampleEn = "The endocrine gland is the ductless gland secreting hormones directly into the bloodstream.",
+            exampleFr = "La glande endocrine est une glande sans canal sécrétant des hormones directement dans la circulation sanguine.",
+            exampleAr = "الغدة الصماء هو غدة بدون قناة تُفرز الهرمونات مباشرة في مجرى الدم.",
         ),
         MedicalTermEntity(
             id = 3740,
@@ -4144,6 +4882,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˈɛksoʊkrɪn/",
+            exampleEn = "The exocrine gland is the gland secreting substances through ducts to a surface or cavity.",
+            exampleFr = "La glande exocrine est une glande sécrétant des substances à travers des canaux vers une surface ou une cavité.",
+            exampleAr = "الغدة خارجية الإفراز هو غدة تُفرز موادها عبر قنوات إلى سطح أو تجويف.",
         ),
         MedicalTermEntity(
             id = 3741,
@@ -4156,6 +4897,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/pɪˈtjuːɪtəri ɡlænd/",
+            exampleEn = "The pituitary gland is the master gland at the base of the brain controlling other endocrine glands.",
+            exampleFr = "La glande hypophyse (Hypophyse) est la glande maîtresse à la base du cerveau contrôlant les autres glandes endocrines.",
+            exampleAr = "الغدة النخامية هو الغدة الرئيسية في قاعدة الدماغ التي تتحكم في الغدد الصماء الأخرى.",
         ),
         MedicalTermEntity(
             id = 3742,
@@ -4168,6 +4912,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˈθaɪrɔɪd/",
+            exampleEn = "The thyroid gland is the gland in the neck producing hormones regulating metabolism.",
+            exampleFr = "La glande thyroïde est une glande dans le cou produisant des hormones régulant le métabolisme.",
+            exampleAr = "الغدة الدرقية هو غدة في الرقبة تنتج هرمونات تنظم الأيض.",
         ),
         MedicalTermEntity(
             id = 3743,
@@ -4180,6 +4927,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/əˈdriːnəl/",
+            exampleEn = "The adrenal gland is the gland above each kidney producing adrenaline, cortisol and aldosterone.",
+            exampleFr = "La glande surrénale est une glande au-dessus de chaque rein produisant adrénaline, cortisol et aldostérone.",
+            exampleAr = "الغدة الكظرية هو غدة فوق كل كلية تنتج الأدرينالين والكورتيزول والألدوستيرون.",
         ),
         MedicalTermEntity(
             id = 3744,
@@ -4192,6 +4942,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˈɪnsjʊlɪn/",
+            exampleEn = "The insulin is the pancreatic hormone lowering blood glucose by promoting cellular uptake.",
+            exampleFr = "L'insuline est une hormone pancréatique abaissant la glycémie en favorisant l'absorption cellulaire.",
+            exampleAr = "الأنسولين هو هرمون بنكرياسي يخفض مستوى الغلوكوز في الدم بتعزيز امتصاصه خلوياً.",
         ),
         MedicalTermEntity(
             id = 3745,
@@ -4204,6 +4957,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˈɡluːkəɡɒn/",
+            exampleEn = "The glucagon is the pancreatic hormone raising blood glucose by stimulating glycogen breakdown.",
+            exampleFr = "Le glucagon est une hormone pancréatique augmentant la glycémie en stimulant la dégradation du glycogène.",
+            exampleAr = "الغلوكاغون هو هرمون بنكرياسي يرفع مستوى الغلوكوز في الدم بتحفيز تكسير الغليكوجين.",
         ),
         MedicalTermEntity(
             id = 3746,
@@ -4216,6 +4972,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˈkɔːrtɪsɒl/",
+            exampleEn = "The cortisol is the steroid hormone from the adrenal cortex regulating stress response and metabolism.",
+            exampleFr = "La cortisol est une hormone stéroïde du cortex surrénal régulant la réponse au stress et le métabolisme.",
+            exampleAr = "الكورتيزول هو هرمون ستيرويدي من قشرة الكظر ينظم استجابة الإجهاد والأيض.",
         ),
         MedicalTermEntity(
             id = 3747,
@@ -4228,6 +4987,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Endocrinien",
             ipaPhonetic = "/ˌdaɪəˈbiːtɪs ˈmɛlɪtəs/",
+            exampleEn = "The diabetes mellitus is the metabolic disease characterized by chronic hyperglycemia due to insulin deficiency or resistance.",
+            exampleFr = "La diabète sucré est une maladie métabolique caractérisée par une hyperglycémie chronique due à un déficit ou une résistance à l'insuline.",
+            exampleAr = "داء السكري هو مرض أيضي يتميز بارتفاع مزمن في سكر الدم بسبب نقص الأنسولين أو مقاومته.",
         ),
         MedicalTermEntity(
             id = 3748,
@@ -4240,6 +5002,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/ˈkɪdni/",
+            exampleEn = "The kidney is the paired organ filtering blood and producing urine.",
+            exampleFr = "Le rein est l'organe apparié filtrant le sang et produisant l'urine.",
+            exampleAr = "الكلية هو العضو المزدوج الذي يُرشح الدم وينتج البول.",
         ),
         MedicalTermEntity(
             id = 3749,
@@ -4252,6 +5017,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/ˈnɛfrɒn/",
+            exampleEn = "The nephron is the functional unit of the kidney responsible for filtration and urine formation.",
+            exampleFr = "Le néphron est l'unité fonctionnelle du rein responsable de la filtration et de la formation de l'urine.",
+            exampleAr = "النفرون هو الوحدة الوظيفية للكلية المسؤولة عن الترشيح وتكوين البول.",
         ),
         MedicalTermEntity(
             id = 3750,
@@ -4264,6 +5032,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/ɡlɒˈmɛrjʊləs/",
+            exampleEn = "The glomerulus is the network of capillaries in the nephron where blood is filtered.",
+            exampleFr = "La glomérule est un réseau de capillaires dans le néphron où le sang est filtré.",
+            exampleAr = "الكبيبة هو شبكة من الشعيرات الدموية في النفرون حيث يُرشح الدم.",
         ),
         MedicalTermEntity(
             id = 3751,
@@ -4276,6 +5047,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/jʊˈriːtər/",
+            exampleEn = "The ureter is the tube carrying urine from the kidney to the urinary bladder.",
+            exampleFr = "L'uretère est le tube transportant l'urine du rein vers la vessie.",
+            exampleAr = "الحالب هو الأنبوب الذي ينقل البول من الكلية إلى المثانة البولية.",
         ),
         MedicalTermEntity(
             id = 3752,
@@ -4288,6 +5062,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/ˈjʊərɪnəri ˈblædər/",
+            exampleEn = "The urinary bladder is the hollow muscular organ storing urine.",
+            exampleFr = "La vessie est l'organe musculaire creux stockant l'urine.",
+            exampleAr = "المثانة البولية هو العضو العضلي الجوف الذي يخزن البول.",
         ),
         MedicalTermEntity(
             id = 3753,
@@ -4300,6 +5077,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/jʊˈriːθrə/",
+            exampleEn = "The urethra is the tube conducting urine from the bladder to the exterior.",
+            exampleFr = "L'urètre est le tube conduisant l'urine de la vessie vers l'extérieur.",
+            exampleAr = "مجرى البول هو الأنبوب الذي يُخرج البول من المثانة إلى الخارج.",
         ),
         MedicalTermEntity(
             id = 3754,
@@ -4312,6 +5092,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/fɪlˈtreɪʃən/",
+            exampleEn = "The filtration is the first step of urine formation pushing fluid from blood into the nephron.",
+            exampleFr = "Le filtration est la première étape de la formation d'urine poussant le fluide du sang dans le néphron.",
+            exampleAr = "الترشيح هو الخطوة الأولى في تكوين البول بدفع السائل من الدم إلى النفرون.",
         ),
         MedicalTermEntity(
             id = 3755,
@@ -4324,6 +5107,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/ˌriːəbˈsɔːrpʃən/",
+            exampleEn = "The reabsorption is the recapture of useful substances from the filtrate back into the blood.",
+            exampleFr = "Le réabsorption est la récupération des substances utiles du filtrat vers le sang.",
+            exampleAr = "إعادة الامتصاص هو استعادة المواد المفيدة من الرشيح إلى الدم.",
         ),
         MedicalTermEntity(
             id = 3756,
@@ -4336,6 +5122,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/sɪˈkriːʃən/",
+            exampleEn = "The secretion (renal) is the active transport of additional waste substances from blood into the nephron.",
+            exampleFr = "Le sécrétion (rénale) est le transport actif de substances supplémentaires des déchets du sang vers le néphron.",
+            exampleAr = "الإفراز (الكلوي) هو النقل النشط لمواد النفايات الإضافية من الدم إلى النفرون.",
         ),
         MedicalTermEntity(
             id = 3757,
@@ -4360,6 +5149,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/ɪˈmjuːn ˈsɪstəm/",
+            exampleEn = "The immune system is the body's defense system against pathogens and foreign substances.",
+            exampleFr = "La système immunitaire est le système de défense du corps contre les agents pathogènes et les substances étrangères.",
+            exampleAr = "الجهاز المناعي هو جهاز دفاع الجسم ضد مسببات الأمراض والمواد الغريبة.",
         ),
         MedicalTermEntity(
             id = 3759,
@@ -4372,6 +5164,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/ˈæntɪdʒən/",
+            exampleEn = "The antigen is the foreign substance triggering an immune response.",
+            exampleFr = "L'antigène est une substance étrangère déclenchant une réponse immunitaire.",
+            exampleAr = "المستضد هو مادة غريبة تُحفز استجابة مناعية.",
         ),
         MedicalTermEntity(
             id = 3760,
@@ -4384,6 +5179,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/ˈæntɪbɒdi/",
+            exampleEn = "The antibody (immunoglobulin) is the protein produced by B cells that specifically binds to an antigen.",
+            exampleFr = "L'anticorps (Immunoglobuline) est une protéine produite par les cellules B qui se lie spécifiquement à un antigène.",
+            exampleAr = "الجسم المضاد هو بروتين تنتجه الخلايا البائية يرتبط تحديداً بمستضد.",
         ),
         MedicalTermEntity(
             id = 3761,
@@ -4396,6 +5194,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/tiː ˈlɪmfəsaɪt/",
+            exampleEn = "The t lymphocyte (t cell) is the white blood cell that matures in the thymus and mediates cellular immunity.",
+            exampleFr = "La lymphocyte T (Cellule T) est un globule blanc qui mûrit dans le thymus et médie l'immunité cellulaire.",
+            exampleAr = "الخلية التائية هو كرية دم بيضاء تنضج في الغدة الصعترية وتتوسط المناعة الخلوية.",
         ),
         MedicalTermEntity(
             id = 3762,
@@ -4408,6 +5209,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/biː ˈlɪmfəsaɪt/",
+            exampleEn = "The b lymphocyte (b cell) is the white blood cell that matures in bone marrow and produces antibodies.",
+            exampleFr = "La lymphocyte B (Cellule B) est un globule blanc qui mûrit dans la moelle osseuse et produit des anticorps.",
+            exampleAr = "الخلية البائية هو كرية دم بيضاء تنضج في نقي العظم وتنتج الأجسام المضادة.",
         ),
         MedicalTermEntity(
             id = 3763,
@@ -4420,6 +5224,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/ˌɪnfləˈmeɪʃən/",
+            exampleEn = "The inflammation is the body's response to injury or infection characterized by redness, swelling, heat and pain.",
+            exampleFr = "L'inflammation est la réponse du corps à une blessure ou infection caractérisée par rougeur, gonflement, chaleur et douleur.",
+            exampleAr = "التهاب هو استجابة الجسم للإصابة أو العدوى تتميز بالاحمرار والتورم والحرارة والألم.",
         ),
         MedicalTermEntity(
             id = 3764,
@@ -4432,6 +5239,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/ˈælərdʒi/",
+            exampleEn = "The allergy is the exaggerated immune response to a harmless substance (allergen).",
+            exampleFr = "L'allergie est une réponse immunitaire exagérée à une substance inoffensive (allergène).",
+            exampleAr = "الحساسية (التأتب) هو استجابة مناعية مبالغ فيها تجاه مادة غير ضارة (مُحسِّسة).",
         ),
         MedicalTermEntity(
             id = 3765,
@@ -4444,6 +5254,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/əˈniːmiə/",
+            exampleEn = "The anemia is the condition of reduced red blood cells or hemoglobin causing inadequate oxygen transport.",
+            exampleFr = "L'anémie est une condition de réduction des globules rouges ou de l'hémoglobine causant un transport insuffisant d'oxygène.",
+            exampleAr = "فقر الدم هو حالة انخفاض كريات الدم الحمراء أو الهيموغلوبين مما يسبب نقل أكسجين غير كافٍ.",
         ),
         MedicalTermEntity(
             id = 3766,
@@ -4456,6 +5269,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/ˌhiːməˈɡloʊbɪn/",
+            exampleEn = "The hemoglobin is the iron-containing protein in red blood cells that carries oxygen.",
+            exampleFr = "L'hémoglobine est la protéine contenant du fer dans les globules rouges qui transporte l'oxygène.",
+            exampleAr = "الهيموغلوبين هو البروتين المحتوي على الحديد في كريات الدم الحمراء الذي يحمل الأكسجين.",
         ),
         MedicalTermEntity(
             id = 3767,
@@ -4468,6 +5284,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Immunitaire",
             ipaPhonetic = "/koʊˌæɡjʊˈleɪʃən/",
+            exampleEn = "The coagulation is the process by which blood forms clots to stop bleeding.",
+            exampleFr = "Le coagulation est le processus par lequel le sang forme des caillots pour arrêter le saignement.",
+            exampleAr = "التخثر هو العملية التي يشكل فيها الدم جلطات لوقف النزيف.",
         ),
         MedicalTermEntity(
             id = 3768,
@@ -4480,6 +5299,7 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˈsɪmptəm/",
+            exampleEn = "The symptom is the subjective experience reported by the patient (e.g., pain, nausea).",
         ),
         MedicalTermEntity(
             id = 3769,
@@ -4492,6 +5312,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/saɪn/",
+            exampleEn = "The sign is the objective measurable indicator of disease observed by the clinician.",
+            exampleFr = "La signe est un indicateur mesurable objectif de la maladie observé par le clinicien.",
+            exampleAr = "العلامة هو مؤشر موضوعي قابل للقياس للمرض يلاحظه الطبيب.",
         ),
         MedicalTermEntity(
             id = 3770,
@@ -4504,6 +5327,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˈfiːvər/",
+            exampleEn = "The fever (pyrexia) is the elevated core body temperature above 38°C (100.4°F).",
+            exampleFr = "La fièvre (Pyrexie) est une température corporelle centrale élevée au-dessus de 38°C.",
+            exampleAr = "الحُمى هو ارتفاع درجة الحرارة الأساسية للجسم فوق 38 درجة مئوية.",
         ),
         MedicalTermEntity(
             id = 3771,
@@ -4516,6 +5342,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/peɪn/",
+            exampleEn = "The pain is the unpleasant sensory and emotional experience associated with tissue damage.",
+            exampleFr = "La douleur est une expérience sensorielle et émotionnelle désagréable associée à des lésions tissulaires.",
+            exampleAr = "الألم هو تجربة حسية وعاطفية غير سارة مرتبطة بتلف الأنسجة.",
         ),
         MedicalTermEntity(
             id = 3772,
@@ -4552,6 +5381,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˈdʒɔːndɪs/",
+            exampleEn = "Jaundice (Icterus) refers to yellowing of skin and eyes due to elevated bilirubin levels.",
+            exampleFr = "La jaunisse (Ictère) est jaunissement de la peau et des yeux dû à des niveaux élevés de bilirubine.",
+            exampleAr = "اليرقان هو اصفرار الجلد والعيون بسبب ارتفاع مستويات البيليروبين.",
         ),
         MedicalTermEntity(
             id = 3775,
@@ -4564,6 +5396,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˈnɔːziə/",
+            exampleEn = "The nausea is the unpleasant sensation in the stomach with an urge to vomit.",
+            exampleFr = "La nausée est une sensation désagréable dans l'estomac avec envie de vomir.",
+            exampleAr = "الغثيان هو إحساس غير سار في المعدة مع الرغبة في التقيؤ.",
         ),
         MedicalTermEntity(
             id = 3776,
@@ -4576,6 +5411,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˈvɒmɪtɪŋ/",
+            exampleEn = "The vomiting (emesis) is the forceful expulsion of stomach contents through the mouth.",
+            exampleFr = "La vomissements (Émèse) est l'expulsion forcée du contenu gastrique par la bouche.",
+            exampleAr = "القيء هو طرد محتويات المعدة بعنف عبر الفم.",
         ),
         MedicalTermEntity(
             id = 3777,
@@ -4612,6 +5450,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌdaɪəɡˈnoʊsɪs/",
+            exampleEn = "The diagnosis is the identification of a disease based on symptoms, signs, and tests.",
+            exampleFr = "La diagnostic est l'identification d'une maladie sur la base des symptômes, signes et tests.",
+            exampleAr = "التشخيص هو تحديد المرض بناءً على الأعراض والعلامات والفحوصات.",
         ),
         MedicalTermEntity(
             id = 3780,
@@ -4624,6 +5465,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌdɪfəˈrɛnʃəl/",
+            exampleEn = "The differential diagnosis is the process of distinguishing a disease from others with similar symptoms.",
+            exampleFr = "La diagnostic différentiel est le processus de distinction d'une maladie d'autres ayant des symptômes similaires.",
+            exampleAr = "التشخيص التفريقي هو عملية التمييز بين مرض وأمراض أخرى ذات أعراض مشابهة.",
         ),
         MedicalTermEntity(
             id = 3781,
@@ -4636,6 +5480,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/prɒɡˈnoʊsɪs/",
+            exampleEn = "The prognosis is the predicted outcome or course of a disease.",
+            exampleFr = "La pronostic est l'évolution ou le résultat prédit d'une maladie.",
+            exampleAr = "التكهن بالمآل هو النتيجة المتوقعة أو مسار المرض.",
         ),
         MedicalTermEntity(
             id = 3782,
@@ -4648,6 +5495,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌfɑːrməˈkɒlədʒi/",
+            exampleEn = "Pharmacology is the science studying drugs and their effects on biological systems.",
+            exampleFr = "La pharmacologie est la science étudiant les médicaments et leurs effets sur les systèmes biologiques.",
+            exampleAr = "علم الأدوية هو العلم الذي يدرس الأدوية وتأثيراتها على الأنظمة البيولوجية.",
         ),
         MedicalTermEntity(
             id = 3783,
@@ -4660,6 +5510,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/drʌɡ/",
+            exampleEn = "The drug (medication) is the chemical substance used to treat, cure, prevent, or diagnose a disease.",
+            exampleFr = "Le médicament (Drogue) est une substance chimique utilisée pour traiter, guérir, prévenir ou diagnostiquer une maladie.",
+            exampleAr = "الدواء هو مادة كيميائية تُستخدم لعلاج أو شفاء أو وقاية أو تشخيص مرض.",
         ),
         MedicalTermEntity(
             id = 3784,
@@ -4672,6 +5525,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/doʊs/",
+            exampleEn = "The dose is the measured quantity of a drug administered at one time.",
+            exampleFr = "La dose est la quantité mesurée d'un médicament administrée en une fois.",
+            exampleAr = "الجرعة هو الكمية المقاسة من الدواء المُعطاة في مرة واحدة.",
         ),
         MedicalTermEntity(
             id = 3785,
@@ -4684,6 +5540,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌfɑːrməkoʊkɪˈnɛtɪks/",
+            exampleEn = "The pharmacokinetics is the study of drug absorption, distribution, metabolism and excretion (ADME).",
+            exampleFr = "La pharmacocinétique est l'étude de l'absorption, distribution, métabolisme et excrétion des médicaments (ADME).",
+            exampleAr = "الحركية الدوائية هو دراسة امتصاص الدواء وتوزيعه وأيضه وإفرازه.",
         ),
         MedicalTermEntity(
             id = 3786,
@@ -4696,6 +5555,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌfɑːrməkoʊdaɪˈnæmɪks/",
+            exampleEn = "The pharmacodynamics is the study of the effects and mechanisms of action of drugs on the body.",
+            exampleFr = "La pharmacodynamique est l'étude des effets et mécanismes d'action des médicaments sur l'organisme.",
+            exampleAr = "الديناميكا الدوائية هو دراسة تأثيرات الأدوية وآليات عملها على الجسم.",
         ),
         MedicalTermEntity(
             id = 3787,
@@ -4708,6 +5570,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/hɑːf laɪf/",
+            exampleEn = "The half-life (t½) is the time required for the plasma concentration of a drug to decrease by 50%.",
+            exampleFr = "La demi-vie (t½) est le temps nécessaire pour que la concentration plasmatique d'un médicament diminue de 50%.",
+            exampleAr = "عمر النصف هو الوقت اللازم لانخفاض تركيز الدواء في البلازما بنسبة 50%.",
         ),
         MedicalTermEntity(
             id = 3788,
@@ -4720,6 +5585,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/saɪd ɪˈfɛkt/",
+            exampleEn = "The side effect is the unintended effect of a drug occurring at therapeutic doses.",
+            exampleFr = "L'effet secondaire est un effet non intentionnel d'un médicament se produisant aux doses thérapeutiques.",
+            exampleAr = "التأثير الجانبي هو تأثير غير مقصود للدواء يحدث عند الجرعات العلاجية.",
         ),
         MedicalTermEntity(
             id = 3789,
@@ -4732,6 +5600,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌkɒntrəˌɪndɪˈkeɪʃən/",
+            exampleEn = "The contraindication is the condition making a particular treatment inadvisable.",
+            exampleFr = "Le contre-indication est une condition rendant un traitement particulier déconseillé.",
+            exampleAr = "الموانع هو حالة تجعل علاجاً معيناً غير مستحسن.",
         ),
         MedicalTermEntity(
             id = 3790,
@@ -4744,6 +5615,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌæntɪbaɪˈɒtɪk/",
+            exampleEn = "The antibiotic is the drug that kills or inhibits the growth of bacteria.",
+            exampleFr = "L'antibiotique est un médicament qui tue ou inhibe la croissance des bactéries.",
+            exampleAr = "المضاد الحيوي هو دواء يقتل البكتيريا أو يثبط نموها.",
         ),
         MedicalTermEntity(
             id = 3791,
@@ -4756,6 +5630,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌænəlˈdʒiːzɪk/",
+            exampleEn = "The analgesic is the drug that relieves pain without causing loss of consciousness.",
+            exampleFr = "L'analgésique est un médicament qui soulage la douleur sans provoquer de perte de conscience.",
+            exampleAr = "المسكن هو دواء يُخفف الألم دون التسبب بفقدان الوعي.",
         ),
         MedicalTermEntity(
             id = 3792,
@@ -4768,6 +5645,7 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌænti ɪnˈflæmətɔːri/",
+            exampleEn = "The anti-inflammatory is the drug that reduces inflammation (e.g., NSAIDs, corticosteroids).",
         ),
         MedicalTermEntity(
             id = 3793,
@@ -4780,6 +5658,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌæntiˌhaɪpərˈtɛnsɪv/",
+            exampleEn = "The antihypertensive is the drug used to treat high blood pressure.",
+            exampleFr = "L'antihypertenseur est un médicament utilisé pour traiter l'hypertension artérielle.",
+            exampleAr = "خافض ضغط الدم هو دواء يُستخدم لعلاج ارتفاع ضغط الدم.",
         ),
         MedicalTermEntity(
             id = 3794,
@@ -4792,6 +5673,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌdaɪjʊˈrɛtɪk/",
+            exampleEn = "The diuretic is the drug that increases urine production to reduce fluid retention.",
+            exampleFr = "La diurétique est un médicament qui augmente la production d'urine pour réduire la rétention de liquide.",
+            exampleAr = "مُدر البول هو دواء يزيد إنتاج البول للتخلص من احتباس السوائل.",
         ),
         MedicalTermEntity(
             id = 3795,
@@ -4804,6 +5688,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/pləˈsiːboʊ/",
+            exampleEn = "The placebo is the inert substance given to a patient that may cause improvement due to expectation.",
+            exampleFr = "La placebo est une substance inerte donnée à un patient pouvant provoquer une amélioration due aux attentes.",
+            exampleAr = "الدواء الوهمي هو مادة خاملة تُعطى للمريض وقد تسبب تحسناً بسبب التوقع.",
         ),
         MedicalTermEntity(
             id = 3796,
@@ -4828,6 +5715,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ˈpæθədʒən/",
+            exampleEn = "The pathogen is the microorganism capable of causing disease.",
+            exampleFr = "La pathogène est un micro-organisme capable de causer une maladie.",
+            exampleAr = "مسبب المرض هو كائن دقيق قادر على التسبب في المرض.",
         ),
         MedicalTermEntity(
             id = 3798,
@@ -4840,6 +5730,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/bækˈtɪəriəm/",
+            exampleEn = "The bacterium (pl. bacteria) is the single-celled prokaryotic microorganism lacking a nucleus.",
+            exampleFr = "La bactérie (pl. Bactéries) est un micro-organisme procaryote unicellulaire dépourvu de noyau.",
+            exampleAr = "البكتيريا هو كائن دقيق أحادي الخلية بدائي النواة يفتقر إلى نواة.",
         ),
         MedicalTermEntity(
             id = 3799,
@@ -4852,6 +5745,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ˈvaɪrəs/",
+            exampleEn = "The virus is the infectious agent that replicates only inside living cells.",
+            exampleFr = "La virus est un agent infectieux qui ne se réplique qu'à l'intérieur des cellules vivantes.",
+            exampleAr = "الفيروس هو عامل معدٍ يتكاثر فقط داخل الخلايا الحية.",
         ),
         MedicalTermEntity(
             id = 3800,
@@ -4864,6 +5760,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ˈfʌŋɡəs/",
+            exampleEn = "The fungus (pl. fungi) is the eukaryotic organism including yeasts and molds that can cause infections.",
+            exampleFr = "Le champignon (pl. Champignons) est un organisme eucaryote comprenant les levures et les moisissures pouvant causer des infections.",
+            exampleAr = "الفطر هو كائن حقيقي النواة يشمل الخمائر والعفن ويمكنه التسبب بالعدوى.",
         ),
         MedicalTermEntity(
             id = 3801,
@@ -4876,6 +5775,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ˈpærəsaɪt/",
+            exampleEn = "The parasite is the organism living in or on a host causing harm.",
+            exampleFr = "La parasite est un organisme vivant dans ou sur un hôte causant des dommages.",
+            exampleAr = "الطفيل هو كائن يعيش داخل أو على عائل ويُلحق به الأذى.",
         ),
         MedicalTermEntity(
             id = 3802,
@@ -4888,6 +5790,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ɪnˈfɛkʃən/",
+            exampleEn = "The infection is the invasion and multiplication of microorganisms in body tissues.",
+            exampleFr = "L'infection est l'invasion et la multiplication de micro-organismes dans les tissus du corps.",
+            exampleAr = "العدوى هو غزو الكائنات الدقيقة وتكاثرها في أنسجة الجسم.",
         ),
         MedicalTermEntity(
             id = 3803,
@@ -4900,6 +5805,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ˈsɛpsɪs/",
+            exampleEn = "The sepsis is the life-threatening organ dysfunction caused by dysregulated host response to infection.",
+            exampleFr = "Le sepsis est un dysfonctionnement organique potentiellement mortel causé par une réponse de l'hôte dérégulée à l'infection.",
+            exampleAr = "الإنتان هو خلل وظيفي في الأعضاء يهدد الحياة ناجم عن استجابة الجسم غير المنتظمة للعدوى.",
         ),
         MedicalTermEntity(
             id = 3804,
@@ -4912,6 +5820,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ˌɛpɪˈdɛmɪk/",
+            exampleEn = "The epidemic is the outbreak of disease affecting many people in a community at the same time.",
+            exampleFr = "L'épidémie est une éclosion de maladie affectant de nombreuses personnes dans une communauté en même temps.",
+            exampleAr = "وباء محلي هو تفشٍّ للمرض يصيب كثيراً من الناس في مجتمع ما في وقت واحد.",
         ),
         MedicalTermEntity(
             id = 3805,
@@ -4924,6 +5835,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/pænˈdɛmɪk/",
+            exampleEn = "The pandemic is the disease epidemic spread over a wide geographic area affecting a large proportion of the population.",
+            exampleFr = "La pandémie est une épidémie de maladie s'étendant sur une large zone géographique affectant une grande partie de la population.",
+            exampleAr = "جائحة هو وباء ينتشر على منطقة جغرافية واسعة ويصيب شريحة كبيرة من السكان.",
         ),
         MedicalTermEntity(
             id = 3806,
@@ -4936,6 +5850,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/vækˈsiːn/",
+            exampleEn = "The vaccine is the biological preparation providing active immunity to a specific disease.",
+            exampleFr = "Le vaccin est une préparation biologique fournissant une immunité active contre une maladie spécifique.",
+            exampleAr = "اللقاح هو تحضير بيولوجي يُوفر مناعة فعالة ضد مرض معين.",
         ),
         MedicalTermEntity(
             id = 3807,
@@ -4948,6 +5865,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Microbiologie",
             ipaPhonetic = "/ˌæntɪbaɪˈɒtɪk rɪˈzɪstəns/",
+            exampleEn = "The antibiotic resistance is the ability of bacteria to withstand the effects of antibiotics.",
+            exampleFr = "La résistance aux antibiotiques est la capacité des bactéries à résister aux effets des antibiotiques.",
+            exampleAr = "مقاومة المضادات الحيوية هو قدرة البكتيريا على مقاومة تأثيرات المضادات الحيوية.",
         ),
         MedicalTermEntity(
             id = 3808,
@@ -4960,6 +5880,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/ɒŋˈkɒlədʒi/",
+            exampleEn = "The oncology is the branch of medicine studying and treating tumors and cancers.",
+            exampleFr = "L'oncologie est la branche de la médecine étudiant et traitant les tumeurs et les cancers.",
+            exampleAr = "علم الأورام هو فرع الطب الذي يدرس الأورام والسرطانات ويعالجها.",
         ),
         MedicalTermEntity(
             id = 3809,
@@ -4972,6 +5895,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/ˈtjuːmər/",
+            exampleEn = "The tumor (neoplasm) is the abnormal growth of cells that can be benign or malignant.",
+            exampleFr = "La tumeur (Néoplasme) est une croissance anormale de cellules pouvant être bénigne ou maligne.",
+            exampleAr = "الورم هو نمو غير طبيعي للخلايا يمكن أن يكون حميداً أو خبيثاً.",
         ),
         MedicalTermEntity(
             id = 3810,
@@ -4984,6 +5910,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/bɪˈnaɪn/",
+            exampleEn = "The benign is the tumor that does not invade neighboring tissues or metastasize.",
+            exampleFr = "Le bénin est une tumeur qui n'envahit pas les tissus voisins et ne métastase pas.",
+            exampleAr = "حميد هو ورم لا يغزو الأنسجة المجاورة ولا ينتشر.",
         ),
         MedicalTermEntity(
             id = 3811,
@@ -4996,6 +5925,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/məˈlɪɡnənt/",
+            exampleEn = "The malignant is the tumor capable of invading surrounding tissues and spreading to distant sites.",
+            exampleFr = "Le malin est une tumeur capable d'envahir les tissus environnants et de se propager à des sites distants.",
+            exampleAr = "خبيث هو ورم قادر على غزو الأنسجة المحيطة والانتشار إلى مواقع بعيدة.",
         ),
         MedicalTermEntity(
             id = 3812,
@@ -5008,6 +5940,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/məˈtæstəsɪs/",
+            exampleEn = "The metastasis is the spread of cancer cells from the primary tumor to distant organs.",
+            exampleFr = "La métastase est la propagation des cellules cancéreuses de la tumeur primaire vers des organes distants.",
+            exampleAr = "النقيلة (الانتشار) هو انتشار الخلايا السرطانية من الورم الأولي إلى أعضاء بعيدة.",
         ),
         MedicalTermEntity(
             id = 3813,
@@ -5020,6 +5955,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/ˌkɑːrsɪˈnoʊmə/",
+            exampleEn = "The carcinoma is the malignant tumor arising from epithelial cells.",
+            exampleFr = "La carcinome est une tumeur maligne provenant de cellules épithéliales.",
+            exampleAr = "السرطانة هو ورم خبيث ينشأ من الخلايا الظهارية.",
         ),
         MedicalTermEntity(
             id = 3814,
@@ -5032,6 +5970,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/sɑːrˈkoʊmə/",
+            exampleEn = "The sarcoma is the malignant tumor arising from mesenchymal (connective) tissue.",
+            exampleFr = "La sarcome est une tumeur maligne provenant du tissu mésenchymateux (conjonctif).",
+            exampleAr = "الساركوما هو ورم خبيث ينشأ من النسيج اللحمي (الضام).",
         ),
         MedicalTermEntity(
             id = 3815,
@@ -5044,6 +5985,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/ˌkiːmoʊˈθɛrəpi/",
+            exampleEn = "The chemotherapy is the use of chemical agents to kill cancer cells.",
+            exampleFr = "La chimiothérapie est l'utilisation d'agents chimiques pour tuer les cellules cancéreuses.",
+            exampleAr = "العلاج الكيميائي هو استخدام العوامل الكيميائية للقضاء على الخلايا السرطانية.",
         ),
         MedicalTermEntity(
             id = 3816,
@@ -5056,6 +6000,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/ˌreɪdioʊˈθɛrəpi/",
+            exampleEn = "The radiotherapy is the use of ionizing radiation to destroy cancer cells.",
+            exampleFr = "La radiothérapie est l'utilisation de rayonnements ionisants pour détruire les cellules cancéreuses.",
+            exampleAr = "العلاج الإشعاعي هو استخدام الإشعاع المُؤيِّن للقضاء على الخلايا السرطانية.",
         ),
         MedicalTermEntity(
             id = 3817,
@@ -5068,6 +6015,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/ˈbaɪɒpsi/",
+            exampleEn = "The biopsy is the removal of tissue for microscopic examination to establish diagnosis.",
+            exampleFr = "La biopsie est l'ablation de tissu pour examen microscopique afin d'établir un diagnostic.",
+            exampleAr = "الخزعة هو أخذ عينة من الأنسجة للفحص المجهري لإثبات التشخيص.",
         ),
         MedicalTermEntity(
             id = 3818,
@@ -5080,6 +6030,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/rɪˈmɪʃən/",
+            exampleEn = "The remission is the period in which cancer symptoms are absent or decreased.",
+            exampleFr = "Le rémission est une période pendant laquelle les symptômes du cancer sont absents ou diminués.",
+            exampleAr = "الهدأة هو فترة تكون فيها أعراض السرطان غائبة أو منخفضة.",
         ),
         MedicalTermEntity(
             id = 3819,
@@ -5092,6 +6045,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Oncologie",
             ipaPhonetic = "/ˈsteɪdʒɪŋ/",
+            exampleEn = "The staging is the process of determining the extent and spread of cancer.",
+            exampleFr = "Le stadification est le processus de détermination de l'étendue et de la propagation du cancer.",
+            exampleAr = "تحديد المرحلة هو عملية تحديد مدى انتشار السرطان.",
         ),
         MedicalTermEntity(
             id = 3820,
@@ -5104,6 +6060,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˈsɜːrdʒəri/",
+            exampleEn = "The surgery is the branch of medicine treating diseases by manual or operative procedures.",
+            exampleFr = "La chirurgie est la branche de la médecine traitant les maladies par des procédures manuelles ou opératoires.",
+            exampleAr = "الجراحة هو فرع الطب الذي يعالج الأمراض بإجراءات يدوية أو جراحية.",
         ),
         MedicalTermEntity(
             id = 3821,
@@ -5116,6 +6075,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ɪnˈsɪʒən/",
+            exampleEn = "The incision is the surgical cut made in skin or tissue.",
+            exampleFr = "L'incision est une coupure chirurgicale dans la peau ou le tissu.",
+            exampleAr = "الشق الجراحي هو قطع جراحي يُجرى في الجلد أو الأنسجة.",
         ),
         MedicalTermEntity(
             id = 3822,
@@ -5128,6 +6090,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˈsuːtʃər/",
+            exampleEn = "The suture is the stitch used to close a wound or surgical incision.",
+            exampleFr = "La suture est un point utilisé pour fermer une plaie ou une incision chirurgicale.",
+            exampleAr = "الخياطة الجراحية هو غرزة تُستخدم لإغلاق جرح أو شق جراحي.",
         ),
         MedicalTermEntity(
             id = 3823,
@@ -5140,6 +6105,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌænɪsˈθiːziə/",
+            exampleEn = "The anesthesia is the loss of sensation induced by drugs to allow surgical procedures.",
+            exampleFr = "L'anesthésie est la perte de sensation induite par des médicaments pour permettre des procédures chirurgicales.",
+            exampleAr = "التخدير هو فقدان الإحساس المُحدَث بالأدوية للسماح بالإجراءات الجراحية.",
         ),
         MedicalTermEntity(
             id = 3824,
@@ -5200,6 +6168,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/daɪˈælɪsɪs/",
+            exampleEn = "The dialysis is the procedure artificially filtering waste from the blood when kidneys fail.",
+            exampleFr = "La dialyse est une procédure filtrant artificiellement les déchets du sang quand les reins sont défaillants.",
+            exampleAr = "الغسيل الكلوي هو إجراء يُرشح الفضلات من الدم بشكل اصطناعي عند فشل الكليتين.",
         ),
         MedicalTermEntity(
             id = 3829,
@@ -5224,6 +6195,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌreɪdiˈɒɡrəfi/",
+            exampleEn = "Radiography (X-ray) refers to imaging using X-rays to visualize internal structures.",
+            exampleFr = "La radiographie est imagerie utilisant des rayons X pour visualiser les structures internes.",
+            exampleAr = "التصوير الشعاعي هو تصوير يستخدم الأشعة السينية لرؤية البنى الداخلية.",
         ),
         MedicalTermEntity(
             id = 3831,
@@ -5236,6 +6210,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ɛm ɑːr aɪ/",
+            exampleEn = "The mri (magnetic resonance imaging) is the imaging technique using magnetic fields and radio waves to produce detailed images.",
+            exampleFr = "L'IRM (Imagerie par résonance magnétique) est une technique d'imagerie utilisant des champs magnétiques et des ondes radio pour produire des images détaillées.",
+            exampleAr = "التصوير بالرنين المغناطيسي هو تقنية تصوير تستخدم المجالات المغناطيسية وموجات الراديو لإنتاج صور مفصلة.",
         ),
         MedicalTermEntity(
             id = 3832,
@@ -5248,6 +6225,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/siː tiː skæn/",
+            exampleEn = "The ct scan (computed tomography) is the imaging method using X-rays to create detailed cross-sectional images of the body.",
+            exampleFr = "La scanner (TDM) est une méthode d'imagerie utilisant des rayons X pour créer des images en coupe transversale détaillées du corps.",
+            exampleAr = "الأشعة المقطعية هو طريقة تصوير تستخدم الأشعة السينية لإنشاء صور مقطعية مفصلة للجسم.",
         ),
         MedicalTermEntity(
             id = 3833,
@@ -5260,6 +6240,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/dʒəˈnɛtɪks/",
+            exampleEn = "Genetics is the study of genes, heredity, and genetic variation in organisms.",
+            exampleFr = "La génétique est l'étude des gènes, de l'hérédité et de la variation génétique chez les organismes.",
+            exampleAr = "علم الوراثة هو علم يدرس الجينات والوراثة والتنوع الجيني في الكائنات.",
         ),
         MedicalTermEntity(
             id = 3834,
@@ -5272,6 +6255,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈkroʊməsoʊm/",
+            exampleEn = "The chromosome is the thread-like structure of DNA and protein in the cell nucleus carrying genes.",
+            exampleFr = "La chromosome est une structure filiforme d'ADN et de protéines dans le noyau cellulaire portant des gènes.",
+            exampleAr = "الصبغي (الكروموسوم) هو بنية خيطية من الحمض النووي والبروتينات في نواة الخلية تحمل الجينات.",
         ),
         MedicalTermEntity(
             id = 3835,
@@ -5284,6 +6270,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/dʒiːn/",
+            exampleEn = "The gene is the segment of DNA encoding a functional product (protein or RNA).",
+            exampleFr = "La gène est un segment d'ADN codant un produit fonctionnel (protéine ou ARN).",
+            exampleAr = "الجين هو جزء من الحمض النووي يُشفر منتجاً وظيفياً (بروتين أو RNA).",
         ),
         MedicalTermEntity(
             id = 3836,
@@ -5296,6 +6285,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/mjuːˈteɪʃən/",
+            exampleEn = "The mutation is the permanent change in the DNA sequence of a gene.",
+            exampleFr = "Le mutation est un changement permanent dans la séquence d'ADN d'un gène.",
+            exampleAr = "الطفرة الجينية هو تغيير دائم في التسلسل النووي للجين.",
         ),
         MedicalTermEntity(
             id = 3837,
@@ -5308,6 +6300,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈdɒmɪnənt/",
+            exampleEn = "The dominant gene is the gene whose trait is expressed even when only one copy is present.",
+            exampleFr = "La gène dominant est un gène dont le trait est exprimé même quand une seule copie est présente.",
+            exampleAr = "الجين السائد هو جين يظهر تأثيره حتى عند وجود نسخة واحدة منه.",
         ),
         MedicalTermEntity(
             id = 3838,
@@ -5320,6 +6315,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/rɪˈsɛsɪv/",
+            exampleEn = "The recessive gene is the gene whose trait is expressed only when two copies are present.",
+            exampleFr = "La gène récessif est un gène dont le trait est exprimé uniquement quand deux copies sont présentes.",
+            exampleAr = "الجين المتنحي هو جين لا يظهر تأثيره إلا عند وجود نسختين منه.",
         ),
         MedicalTermEntity(
             id = 3839,
@@ -5332,6 +6330,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/həˈrɛdɪtəri/",
+            exampleEn = "The hereditary disease is the disease transmitted from parent to offspring through genes.",
+            exampleFr = "La maladie héréditaire est une maladie transmise des parents à la progéniture par les gènes.",
+            exampleAr = "المرض الوراثي هو مرض ينتقل من الوالدين إلى الأبناء عبر الجينات.",
         ),
                 MedicalTermEntity(
             id = 3841,
@@ -5344,6 +6345,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌhoʊmioʊˈsteɪsɪs/",
+            exampleEn = "The homeostasis is the body's ability to maintain a stable internal environment.",
+            exampleFr = "L'homéostasie est la capacité du corps à maintenir un environnement interne stable.",
+            exampleAr = "التوازن الداخلي هو قدرة الجسم على الحفاظ على بيئة داخلية مستقرة.",
         ),
         MedicalTermEntity(
             id = 3842,
@@ -5368,6 +6372,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/kəˈtæbəlɪzəm/",
+            exampleEn = "The catabolism is the breakdown of complex molecules to release energy.",
+            exampleFr = "Le catabolisme est la dégradation de molécules complexes pour libérer de l'énergie.",
+            exampleAr = "الهدم هو تكسير الجزيئات المعقدة لإطلاق الطاقة.",
         ),
         MedicalTermEntity(
             id = 3844,
@@ -5380,6 +6387,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/əˈnæbəlɪzəm/",
+            exampleEn = "The anabolism is the synthesis of complex molecules from simpler ones requiring energy.",
+            exampleFr = "L'anabolisme est la synthèse de molécules complexes à partir de plus simples nécessitant de l'énergie.",
+            exampleAr = "البناء الحيوي هو تصنيع الجزيئات المعقدة من بسيطة تتطلب طاقة.",
         ),
         MedicalTermEntity(
             id = 3845,
@@ -5392,6 +6402,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/pəˈθɒlədʒi/",
+            exampleEn = "Pathology is the study of diseases and their causes, processes, and effects.",
+            exampleFr = "La pathologie est l'étude des maladies, leurs causes, processus et effets.",
+            exampleAr = "علم الأمراض هو علم يدرس الأمراض وأسبابها وعملياتها وتأثيراتها.",
         ),
         MedicalTermEntity(
             id = 3846,
@@ -5404,6 +6417,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌiːtiˈɒlədʒi/",
+            exampleEn = "The etiology is the study of the causes or origin of a disease.",
+            exampleFr = "L'étiologie est l'étude des causes ou de l'origine d'une maladie.",
+            exampleAr = "علم الأسباب (المسببات) هو علم يدرس أسباب المرض أو أصله.",
         ),
         MedicalTermEntity(
             id = 3847,
@@ -5416,6 +6432,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/əˈkjuːt/",
+            exampleEn = "The acute is the condition with rapid onset, severe symptoms and short duration.",
+            exampleFr = "L'aigu est une condition d'apparition rapide, symptômes sévères et courte durée.",
+            exampleAr = "حاد هو حالة ذات بداية مفاجئة وأعراض شديدة ومدة قصيرة.",
         ),
         MedicalTermEntity(
             id = 3848,
@@ -5428,6 +6447,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkrɒnɪk/",
+            exampleEn = "The chronic is the condition persisting for a long time (>3 months) developing slowly.",
+            exampleFr = "La chronique est une condition persistant longtemps (>3 mois) se développant lentement.",
+            exampleAr = "مزمن هو حالة تستمر لفترة طويلة (>3 أشهر) وتتطور ببطء.",
         ),
         MedicalTermEntity(
             id = 3849,
@@ -5440,6 +6462,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌɪdiəˈpæθɪk/",
+            exampleEn = "The idiopathic is the disease or condition arising from an unknown or spontaneous cause.",
+            exampleFr = "L'idiopathique est une maladie ou condition provenant d'une cause inconnue ou spontanée.",
+            exampleAr = "مجهول السبب هو مرض أو حالة تنشأ من سبب مجهول أو عفوي.",
         ),
         MedicalTermEntity(
             id = 3850,
@@ -5452,6 +6477,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌaɪætrəˈdʒɛnɪk/",
+            exampleEn = "The iatrogenic is the condition caused inadvertently by medical treatment or a physician.",
+            exampleFr = "L'iatrogène est une condition causée involontairement par un traitement médical ou un médecin.",
+            exampleAr = "علاجي المنشأ هو حالة تنجم بشكل غير مقصود عن علاج طبي أو طبيب.",
         ),
         MedicalTermEntity(
             id = 3851,
@@ -5464,6 +6492,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌnɒzəˈkoʊmiəl/",
+            exampleEn = "The nosocomial infection is the infection acquired during hospitalization (healthcare-associated infection).",
+            exampleFr = "L'infection nosocomiale est une infection acquise lors d'une hospitalisation (infection associée aux soins).",
+            exampleAr = "العدوى المكتسبة في المستشفى هو عدوى مكتسبة أثناء الإقامة في المستشفى.",
         ),
         MedicalTermEntity(
             id = 3852,
@@ -5488,6 +6519,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌriːhəˌbɪlɪˈteɪʃən/",
+            exampleEn = "The rehabilitation is the process of restoring health and functional ability after illness or injury.",
+            exampleFr = "Le rééducation (Réhabilitation) est le processus de restauration de la santé et de la capacité fonctionnelle après maladie ou blessure.",
+            exampleAr = "إعادة التأهيل هو عملية استعادة الصحة والقدرة الوظيفية بعد المرض أو الإصابة.",
         ),
         MedicalTermEntity(
             id = 3854,
@@ -5524,6 +6558,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪnˈfɔːrmd kənˈsɛnt/",
+            exampleEn = "The informed consent is the patient's voluntary agreement to a medical procedure after receiving full information.",
+            exampleFr = "Le consentement éclairé est l'accord volontaire d'un patient à une procédure médicale après avoir reçu toutes les informations.",
+            exampleAr = "الموافقة المستنيرة هو موافقة المريض الطوعية على إجراء طبي بعد الحصول على معلومات كاملة.",
         ),
         MedicalTermEntity(
             id = 3857,
@@ -5536,6 +6573,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈmɛdɪkəl ˈhɪstəri/",
+            exampleEn = "The medical history is the record of a patient's past and present health conditions and treatments.",
+            exampleFr = "L'antécédents médicaux est un enregistrement des conditions de santé et traitements passés et présents d'un patient.",
+            exampleAr = "التاريخ المرضي هو سجل بالحالات الصحية والعلاجات السابقة والحالية للمريض.",
         )
     )
 }

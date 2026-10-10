@@ -19,6 +19,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌmaɪkroʊˈɔːrɡənɪzəm/",
+            exampleEn = "The microorganism is the living organism too small to be seen with the naked eye; includes bacteria, viruses, fungi, protozoa.",
+            exampleFr = "Le microorganisme est organisme vivant trop petit pour être vu à l'œil nu; inclut bactéries, virus, champignons, protozoaires.",
+            exampleAr = "الكائن الدقيق هو كائن حي صغير جداً لا يُرى بالعين المجردة؛ يشمل البكتيريا والفيروسات والفطريات والأوليات.",
         ),
         MedicalTermEntity(
             id = 2028,
@@ -31,6 +34,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˈpæθədʒən/",
+            exampleEn = "The pathogen is the microorganism capable of causing disease in a host.",
+            exampleFr = "La pathogène est microorganisme capable de provoquer une maladie chez un hôte.",
+            exampleAr = "العامل الممرض هو كائن دقيق قادر على إحداث مرض في المضيف.",
         ),
         MedicalTermEntity(
             id = 2029,
@@ -43,6 +49,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/kəˈmɛnsəl/",
+            exampleEn = "The commensal is the microorganism living on or in a host without causing harm.",
+            exampleFr = "Le commensal est microorganisme vivant sur ou dans un hôte sans lui causer de tort.",
+            exampleAr = "المتعايش هو كائن دقيق يعيش على المضيف أو بداخله دون إلحاق الأذى به.",
         ),
         MedicalTermEntity(
             id = 2030,
@@ -55,6 +64,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˈvɪrʊləns/",
+            exampleEn = "The virulence is the degree of pathogenicity of a microorganism; its ability to cause disease.",
+            exampleFr = "La virulence est le degré de pathogénicité d'un microorganisme; sa capacité à provoquer une maladie.",
+            exampleAr = "الضراوة هو درجة إمراضية الكائن الدقيق؛ قدرته على إحداث المرض.",
         ),
         MedicalTermEntity(
             id = 2031,
@@ -67,6 +79,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ɪnˈfɛkʃən/",
+            exampleEn = "The infection is the invasion and multiplication of pathogenic microorganisms in body tissues.",
+            exampleFr = "L'infection est l'invasion et la multiplication de microorganismes pathogènes dans les tissus corporels.",
+            exampleAr = "العدوى هو غزو الأنسجة الجسدية وتكاثر الكائنات الدقيقة الممرضة فيها.",
         ),
         MedicalTermEntity(
             id = 2032,
@@ -79,6 +94,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌkɒlənaɪˈzeɪʃən/",
+            exampleEn = "The colonization is the presence of microorganisms on or in a host without causing infection or disease.",
+            exampleFr = "Le colonisation est la présence de microorganismes sur ou dans un hôte sans provoquer d'infection ou de maladie.",
+            exampleAr = "الاستعمار الجرثومي هو وجود الكائنات الدقيقة على المضيف أو بداخله دون إحداث عدوى أو مرض.",
         ),
         MedicalTermEntity(
             id = 2033,
@@ -91,6 +109,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/hoʊst/",
+            exampleEn = "The host is the organism that harbors a microorganism and provides it with nutrients and shelter.",
+            exampleFr = "L'hôte est organisme qui héberge un microorganisme et lui fournit nourriture et abri.",
+            exampleAr = "المضيف هو كائن يحضن كائناً دقيقاً ويزوده بالغذاء والمأوى.",
         ),
         MedicalTermEntity(
             id = 2034,
@@ -103,6 +124,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˈrɛzəvwɑːr/",
+            exampleEn = "The reservoir is the natural habitat where a pathogen lives, multiplies, and from which it is transmitted.",
+            exampleFr = "La réservoir est l'habitat naturel où un pathogène vit, se multiplie et à partir duquel il est transmis.",
+            exampleAr = "الخزان هو الموطن الطبيعي الذي يعيش فيه العامل الممرض ويتكاثر وينتقل منه.",
         ),
         MedicalTermEntity(
             id = 2035,
@@ -115,6 +139,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˈvɛktər/",
+            exampleEn = "The vector is the organism (usually an arthropod) transmitting a pathogen from one host to another.",
+            exampleFr = "La vecteur est organisme (généralement un arthropode) transmettant un pathogène d'un hôte à un autre.",
+            exampleAr = "الناقل هو كائن (عادةً مفصلي الأرجل) ينقل العامل الممرض من مضيف إلى آخر.",
         ),
         MedicalTermEntity(
             id = 2036,
@@ -127,6 +154,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/trænsˈmɪʃən/",
+            exampleEn = "The transmission is the passage of an infectious agent from a source to a susceptible host.",
+            exampleFr = "Le transmission est le passage d'un agent infectieux d'une source à un hôte susceptible.",
+            exampleAr = "الانتقال هو انتقال العامل المعدي من مصدر إلى مضيف قابل للإصابة.",
         ),
         MedicalTermEntity(
             id = 2037,
@@ -139,6 +169,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌɪnkjʊˈbeɪʃən ˈpɪəriəd/",
+            exampleEn = "The incubation period is the time between exposure to a pathogen and the appearance of clinical symptoms.",
+            exampleFr = "La période d'incubation est le temps entre l'exposition à un pathogène et l'apparition des symptômes cliniques.",
+            exampleAr = "فترة الحضانة هو الوقت بين التعرض للعامل الممرض وظهور الأعراض السريرية.",
         ),
         MedicalTermEntity(
             id = 2038,
@@ -151,6 +184,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌɛpɪˈdɛmɪk/",
+            exampleEn = "The epidemic is the widespread occurrence of an infectious disease in a community at a particular time.",
+            exampleFr = "L'épidémie est occurrence généralisée d'une maladie infectieuse dans une communauté à un moment donné.",
+            exampleAr = "الوباء المحلي هو انتشار واسع لمرض معدٍ في مجتمع في وقت معين.",
         ),
         MedicalTermEntity(
             id = 2039,
@@ -163,6 +199,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Introduction",
             ipaPhonetic = "/pænˈdɛmɪk/",
+            exampleEn = "The pandemic is the epidemic occurring worldwide or over a very wide area crossing international boundaries.",
+            exampleFr = "La pandémie est épidémie survenant dans le monde entier ou sur une très vaste zone traversant les frontières.",
+            exampleAr = "الجائحة هو وباء يحدث في جميع أنحاء العالم أو في منطقة واسعة جداً يتجاوز الحدود الدولية.",
         ),
         MedicalTermEntity(
             id = 2040,
@@ -175,6 +214,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/bækˈtɪəriəm/",
+            exampleEn = "The bacterium is the single-celled prokaryotic microorganism; can be beneficial or pathogenic.",
+            exampleFr = "La bactérie est microorganisme procaryote unicellulaire; peut être bénéfique ou pathogène.",
+            exampleAr = "البكتيريا هو كائن دقيق وحيد الخلية بدائي النواة؛ قد يكون مفيداً أو ممرضاً.",
         ),
         MedicalTermEntity(
             id = 2041,
@@ -187,6 +229,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ɡræm steɪn/",
+            exampleEn = "The gram stain is the differential staining technique classifying bacteria as Gram-positive or Gram-negative.",
+            exampleFr = "Le coloration de Gram est technique de coloration différentielle classant les bactéries en Gram-positif ou Gram-négatif.",
+            exampleAr = "صبغة غرام هو تقنية صبغ تصنيفية تُصنِّف البكتيريا إلى موجبة الغرام أو سالبة الغرام.",
         ),
         MedicalTermEntity(
             id = 2042,
@@ -223,6 +268,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/sɛl wɔːl/",
+            exampleEn = "The cell wall is the rigid outer layer of bacteria providing shape and protection; composed of peptidoglycan.",
+            exampleFr = "La paroi cellulaire est couche externe rigide des bactéries fournissant forme et protection; composée de peptidoglycane.",
+            exampleAr = "جدار الخلية هو الطبقة الخارجية الصلبة للبكتيريا توفر الشكل والحماية؛ مكونة من الببتيدوغليكان.",
         ),
         MedicalTermEntity(
             id = 2045,
@@ -235,6 +283,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˌpɛptɪdoʊˈɡlaɪkæn/",
+            exampleEn = "The peptidoglycan is the mesh-like polymer forming the bacterial cell wall; target of many antibiotics.",
+            exampleFr = "La peptidoglycane est le polymère en maille formant la paroi cellulaire bactérienne; cible de nombreux antibiotiques.",
+            exampleAr = "الببتيدوغليكان هو البوليمر الشبكي الذي يُشكِّل جدار الخلية البكتيرية؛ هدف للعديد من المضادات الحيوية.",
         ),
         MedicalTermEntity(
             id = 2046,
@@ -247,6 +298,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˌlɪpoʊˌpɒliˈsækəraɪd/",
+            exampleEn = "The lipopolysaccharide (lps) is the major component of the outer membrane of Gram-negative bacteria; an endotoxin causing fever.",
+            exampleFr = "La lipopolysaccharide (LPS) est composant majeur de la membrane externe des bactéries Gram-négatives; endotoxine provoquant la fièvre.",
+            exampleAr = "السكاريد الدهني متعدد الوحدات هو المكوِّن الرئيسي للغشاء الخارجي للبكتيريا سالبة الغرام؛ ذيفان داخلي يسبب الحمى.",
         ),
         MedicalTermEntity(
             id = 2047,
@@ -259,6 +313,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈkæpsjuːl/",
+            exampleEn = "The capsule is the polysaccharide outer layer surrounding some bacteria protecting against phagocytosis.",
+            exampleFr = "La capsule est couche polysaccharidique externe entourant certaines bactéries les protégeant de la phagocytose.",
+            exampleAr = "الكبسولة هو طبقة خارجية من السكاريد المتعدد تُحيط ببعض البكتيريا وتحميها من الابتلاع الخلوي.",
         ),
         MedicalTermEntity(
             id = 2048,
@@ -271,6 +328,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/fləˈdʒɛləm/",
+            exampleEn = "The flagellum (bacterial) is the whip-like appendage used for bacterial motility.",
+            exampleFr = "La flagelle (bactérien) est appendice en forme de fouet utilisé pour la motilité bactérienne.",
+            exampleAr = "السوط البكتيري هو زائدة تشبه السوط تُستخدَم لحركة البكتيريا.",
         ),
         MedicalTermEntity(
             id = 2049,
@@ -295,6 +355,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/spɔːr/",
+            exampleEn = "The spore (endospore) is the dormant, highly resistant structure formed by some bacteria (e.g., Clostridium, Bacillus).",
         ),
         MedicalTermEntity(
             id = 2051,
@@ -307,6 +368,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈplæzmɪd/",
+            exampleEn = "The plasmid is the small circular extrachromosomal DNA in bacteria; often carries antibiotic resistance genes.",
+            exampleFr = "La plasmide est petite molécule d'ADN circulaire extrachromosomique chez les bactéries; souvent porteuse de résistance.",
+            exampleAr = "البلازميد هو حلقة DNA صغيرة خارج الكروموسوم في البكتيريا؛ غالباً تحمل جينات مقاومة المضادات الحيوية.",
         ),
         MedicalTermEntity(
             id = 2052,
@@ -319,6 +383,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈbaɪoʊˌfɪlm/",
+            exampleEn = "The biofilm is the structured community of bacteria embedded in a self-produced matrix adhering to surfaces.",
+            exampleFr = "La biofilm est communauté structurée de bactéries enrobées dans une matrice autoproduite adhérant aux surfaces.",
+            exampleAr = "الغشاء الحيوي هو مجتمع منظم من البكتيريا مُدمَج في مصفوفة ذاتية الإنتاج تلتصق بالأسطح.",
         ),
         MedicalTermEntity(
             id = 2053,
@@ -331,6 +398,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/bækˈtɪəriəl ɡroʊθ/",
+            exampleEn = "The bacterial growth is the increase in number of bacterial cells through binary fission.",
+            exampleFr = "La croissance bactérienne est l'augmentation du nombre de cellules bactériennes par fission binaire.",
+            exampleAr = "النمو البكتيري هو زيادة عدد الخلايا البكتيرية عن طريق الانشطار الثنائي.",
         ),
         MedicalTermEntity(
             id = 2054,
@@ -343,6 +413,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈbaɪnəri ˈfɪʃən/",
+            exampleEn = "The binary fission is the primary method of bacterial reproduction; one cell divides into two identical cells.",
+            exampleFr = "Le fission binaire est la méthode principale de reproduction bactérienne; une cellule se divise en deux cellules identiques.",
+            exampleAr = "الانشطار الثنائي هو الطريقة الأساسية للتكاثر البكتيري؛ خلية واحدة تنقسم إلى خليتين متطابقتين.",
         ),
         MedicalTermEntity(
             id = 2055,
@@ -367,6 +440,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈkʌltʃər ˈmiːdiəm/",
+            exampleEn = "The culture medium is the nutrient solution or solid used for growing microorganisms in the laboratory.",
+            exampleFr = "Le milieu de culture est solution nutritive ou solide utilisée pour faire pousser des microorganismes en laboratoire.",
+            exampleAr = "وسيط الزراعة هو محلول أو مادة صلبة غنية بالمغذيات تُستخدَم لزراعة الكائنات الدقيقة في المختبر.",
         ),
         MedicalTermEntity(
             id = 2057,
@@ -379,6 +455,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈkɒləni/",
+            exampleEn = "The colony is the visible cluster of bacteria grown from a single cell on a solid culture medium.",
+            exampleFr = "La colonie est amas visible de bactéries cultivées à partir d'une seule cellule sur un milieu solide.",
+            exampleAr = "المستعمرة هو تجمع مرئي من البكتيريا ينمو من خلية واحدة على وسيط زراعة صلب.",
         ),
         MedicalTermEntity(
             id = 2058,
@@ -391,6 +470,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈeɪɡər/",
+            exampleEn = "The agar is the polysaccharide extracted from seaweed used as a solidifying agent in culture media.",
+            exampleFr = "La gélose (Agar) est polysaccharide extrait d'algues utilisé comme agent solidifiant dans les milieux de culture.",
+            exampleAr = "الأجار هو سكاريد متعدد مستخرج من الطحالب يُستخدَم عاملاً للتصليد في وسائط الزراعة.",
         ),
         MedicalTermEntity(
             id = 2059,
@@ -403,6 +485,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˌbæktɪˈriːmiə/",
+            exampleEn = "The bacteremia is the presence of viable bacteria in the bloodstream.",
+            exampleFr = "La bactériémie est la présence de bactéries viables dans la circulation sanguine.",
+            exampleAr = "البكتيريا في الدم هو وجود بكتيريا حية في مجرى الدم.",
         ),
         MedicalTermEntity(
             id = 2060,
@@ -415,6 +500,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌstæfɪloʊˈkɒkəs ˈɔːriəs/",
+            exampleEn = "The staphylococcus aureus is the Gram-positive coccus causing skin infections, pneumonia, sepsis, and toxic shock syndrome.",
+            exampleFr = "La staphylococcus aureus est coque Gram-positif causant des infections cutanées, pneumonie, sepsis et choc toxique.",
+            exampleAr = "المكور العنقودي الذهبي هو مكورة موجبة الغرام تسبب التهابات الجلد والالتهاب الرئوي والإنتان ومتلازمة الصدمة السمية.",
         ),
         MedicalTermEntity(
             id = 2061,
@@ -451,6 +539,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌstrɛptəˈkɒkəs njʊˈmoʊniˌeɪ/",
+            exampleEn = "The streptococcus pneumoniae is the Gram-positive diplococcus causing pneumonia, meningitis, and otitis media.",
+            exampleFr = "La streptococcus pneumoniae est diplocoque Gram-positif causant pneumonie, méningite et otite moyenne.",
+            exampleAr = "العقدية الرئوية هو مكور ثنائي موجب الغرام يسبب الالتهاب الرئوي والتهاب السحايا والتهاب الأذن الوسطى.",
         ),
         MedicalTermEntity(
             id = 2064,
@@ -463,6 +554,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌɛʃəˈrɪkiə ˈkoʊlaɪ/",
+            exampleEn = "The escherichia coli (e. coli) is the Gram-negative rod; commensal in intestines but pathogenic strains cause UTI, diarrhea, meningitis.",
+            exampleFr = "L'escherichia coli (E. coli) est bacille Gram-négatif; commensal intestinal mais les souches pathogènes causent IVU, diarrhée, méningite.",
+            exampleAr = "الإشريكية القولونية هو عصية سالبة الغرام؛ متعايشة في الأمعاء لكن سلالاتها الممرضة تسبب التهابات المسالك البولية والإسهال.",
         ),
         MedicalTermEntity(
             id = 2065,
@@ -475,6 +569,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌklɒstrɪdiəm ˈdɪfɪsiːl/",
+            exampleEn = "The clostridium difficile (c. diff) is the spore-forming Gram-positive bacterium causing antibiotic-associated colitis and diarrhea.",
+            exampleFr = "La clostridium difficile est bactérie Gram-positive sporulante causant colite associée aux antibiotiques et diarrhée.",
+            exampleAr = "الكلوستريديوم العسير هو بكتيريا موجبة الغرام تشكل أبواغاً تسبب التهاب القولون المرتبط بالمضادات الحيوية والإسهال.",
         ),
         MedicalTermEntity(
             id = 2066,
@@ -487,6 +584,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌsælməˈnɛlə ˈtaɪfaɪ/",
+            exampleEn = "The salmonella typhi is the Gram-negative rod causing typhoid fever transmitted through contaminated food and water.",
+            exampleFr = "La salmonella typhi est bacille Gram-négatif causant la fièvre typhoïde transmis par aliments et eau contaminés.",
+            exampleAr = "السالمونيلا التيفية هو عصية سالبة الغرام تسبب حمى التيفوئيد تنتقل عبر الغذاء والماء الملوثَين.",
         ),
         MedicalTermEntity(
             id = 2067,
@@ -499,6 +599,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/naɪˈsɪəriə ˌmɛnɪndʒɪˈtaɪdɪs/",
+            exampleEn = "The neisseria meningitidis is the Gram-negative diplococcus causing bacterial meningitis and meningococcemia.",
+            exampleFr = "La neisseria meningitidis est diplocoque Gram-négatif causant méningite bactérienne et méningococcémie.",
+            exampleAr = "النيسيرية السحائية هو مكور ثنائي سالب الغرام يسبب التهاب السحايا البكتيري والمكورية السحائية الدموية.",
         ),
         MedicalTermEntity(
             id = 2068,
@@ -511,6 +614,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌhɛlɪkəˈbæktər paɪˈlɔːraɪ/",
+            exampleEn = "The helicobacter pylori is the Gram-negative spiral bacterium colonizing the gastric mucosa causing peptic ulcers and gastric cancer.",
+            exampleFr = "L'helicobacter pylori est bactérie spiralée Gram-négative colonisant la muqueuse gastrique causant ulcères et cancer gastrique.",
+            exampleAr = "الملوية البوابية هو بكتيريا حلزونية سالبة الغرام تستعمر الغشاء المخاطي المعدي تسبب القرحة الهضمية وسرطان المعدة.",
         ),
         MedicalTermEntity(
             id = 2069,
@@ -523,6 +629,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌsjuːdəˈmoʊnæs ɪˌruːdʒɪˈnoʊzə/",
+            exampleEn = "The pseudomonas aeruginosa is the opportunistic Gram-negative rod; major cause of nosocomial infections and burns infections.",
+            exampleFr = "La pseudomonas aeruginosa est bacille opportuniste Gram-négatif; cause majeure d'infections nosocomiales et des brûlures.",
+            exampleAr = "الزائفة الزنجارية هو عصية انتهازية سالبة الغرام؛ سبب رئيسي لعدوى المستشفيات وعدوى الحروق.",
         ),
         MedicalTermEntity(
             id = 2070,
@@ -535,6 +644,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˈvɪbriˌoʊ ˈkɒlərˌeɪ/",
+            exampleEn = "The vibrio cholerae is the Gram-negative curved rod causing cholera; produces a toxin causing profuse watery diarrhea.",
+            exampleFr = "La vibrio cholerae est bacille courbe Gram-négatif causant le choléra; produit une toxine causant diarrhée aqueuse abondante.",
+            exampleAr = "ضمة الكوليرا هو عصية منحنية سالبة الغرام تسبب الكوليرا؛ تنتج ذيفاناً يسبب إسهالاً مائياً غزيراً.",
         ),
         MedicalTermEntity(
             id = 2071,
@@ -547,6 +659,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌtrɛpəˈniːmə ˈpælɪdəm/",
+            exampleEn = "The treponema pallidum is the causative agent of syphilis; a spirochete transmitted sexually.",
+            exampleFr = "La treponema pallidum est l'agent causal de la syphilis; un spirochète transmis sexuellement.",
+            exampleAr = "اللولبية الشاحبة هو العامل المسبب للزهري؛ حلزونية تنتقل جنسياً.",
         ),
         MedicalTermEntity(
             id = 2072,
@@ -559,6 +674,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌmaɪkoʊbækˈtɪəriəm ˈlɛpreɪ/",
+            exampleEn = "The mycobacterium leprae is the causative agent of leprosy; an acid-fast bacillus affecting skin and peripheral nerves.",
+            exampleFr = "La mycobacterium leprae est l'agent causal de la lèpre; bacille acido-résistant affectant la peau et les nerfs périphériques.",
+            exampleAr = "المتفطرة الجذامية هو العامل المسبب للجذام؛ عصية صامدة للحمض تؤثر في الجلد والأعصاب المحيطية.",
         ),
         MedicalTermEntity(
             id = 2073,
@@ -571,6 +689,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/jɜːrˈsɪniə ˈpɛstɪs/",
+            exampleEn = "The yersinia pestis is the causative agent of plague (Black Death); transmitted by flea bites from rodents.",
+            exampleFr = "L'yersinia pestis est l'agent causal de la peste (Mort noire); transmis par piqûres de puces de rongeurs.",
+            exampleAr = "اليرسينية الطاعونية هو العامل المسبب للطاعون (الموت الأسود)؛ ينتقل عبر لدغات البراغيث من القوارض.",
         ),
         MedicalTermEntity(
             id = 2074,
@@ -583,6 +704,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˈvaɪrəs/",
+            exampleEn = "The virus is the obligate intracellular parasite composed of nucleic acid (DNA or RNA) and a protein coat.",
+            exampleFr = "La virus est parasite intracellulaire obligatoire composé d'acide nucléique (ADN ou ARN) et d'une enveloppe protéique.",
+            exampleAr = "الفيروس هو طفيلي داخل الخلية إلزامي مكوَّن من حمض نووي (DNA أو RNA) وغلاف بروتيني.",
         ),
         MedicalTermEntity(
             id = 2075,
@@ -595,6 +719,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˈkæpsɪd/",
+            exampleEn = "The capsid is the protein shell surrounding the nucleic acid of a virus.",
+            exampleFr = "La capside est l'enveloppe protéique entourant l'acide nucléique d'un virus.",
+            exampleAr = "القفيصة هو الغلاف البروتيني المحيط بالحمض النووي للفيروس.",
         ),
         MedicalTermEntity(
             id = 2076,
@@ -607,6 +734,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ɪnˈvɛloʊp/",
+            exampleEn = "The envelope (viral) is the lipid bilayer membrane derived from the host cell surrounding some viruses.",
+            exampleFr = "L'enveloppe (virale) est membrane de bicouche lipidique dérivée de la cellule hôte entourant certains virus.",
+            exampleAr = "الغلاف الفيروسي هو غشاء دهني ثنائي الطبقة مشتق من الخلية المضيفة يُحيط ببعض الفيروسات.",
         ),
         MedicalTermEntity(
             id = 2077,
@@ -619,6 +749,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˈvɪriɒn/",
+            exampleEn = "The virion is the complete, mature, extracellular virus particle that is capable of infecting a cell.",
+            exampleFr = "Le virion est particule virale complète, mature et extracellulaire capable d'infecter une cellule.",
+            exampleAr = "الفيريون هو جسيم فيروسي كامل وناضج خارج الخلية قادر على إصابة الخلية.",
         ),
         MedicalTermEntity(
             id = 2078,
@@ -631,6 +764,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/bækˈtɪəriəˌfeɪdʒ/",
+            exampleEn = "The bacteriophage is the virus that infects and replicates within bacteria.",
+            exampleFr = "Le bactériophage est virus infectant et se répliquant dans les bactéries.",
+            exampleAr = "عاثية البكتيريا هو فيروس يُصيب البكتيريا ويتكاثر بداخلها.",
         ),
         MedicalTermEntity(
             id = 2079,
@@ -643,6 +779,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˈlɪtɪk ˈsaɪkəl/",
+            exampleEn = "The lytic cycle is the viral replication cycle where the host cell is destroyed upon release of new virions.",
+            exampleFr = "La cycle lytique est cycle de réplication virale où la cellule hôte est détruite lors de la libération de nouveaux virions.",
+            exampleAr = "الدورة الحالة هو دورة تكاثر فيروسية تُدمَّر فيها الخلية المضيفة عند إطلاق الفيريونات الجديدة.",
         ),
         MedicalTermEntity(
             id = 2080,
@@ -655,6 +794,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˌlaɪsəˈdʒɛnɪk ˈsaɪkəl/",
+            exampleEn = "The lysogenic cycle is the viral cycle where viral DNA integrates into the host genome (prophage) without immediate cell lysis.",
+            exampleFr = "La cycle lysogénique est cycle viral où l'ADN viral s'intègre dans le génome hôte (prophage) sans lyse cellulaire immédiate.",
+            exampleAr = "الدورة الحالة اللاتكاثرية هو دورة فيروسية يندمج فيها DNA الفيروس في جينوم المضيف (الفاج الأولي) دون تحلل فوري للخلية.",
         ),
         MedicalTermEntity(
             id = 2081,
@@ -667,6 +809,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˈrɛtroʊˌvaɪrəs/",
+            exampleEn = "The retrovirus is the RNA virus that uses reverse transcriptase to convert RNA into DNA (e.g., HIV).",
         ),
         MedicalTermEntity(
             id = 2082,
@@ -679,6 +822,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/hjuːmən ɪˌmjuːnoʊdɪˈfɪʃənsi ˈvaɪrəs/",
+            exampleEn = "The hiv (human immunodeficiency virus) is the retrovirus targeting CD4+ T cells causing AIDS.",
+            exampleFr = "La VIH (Virus de l'Immunodéficience Humaine) est rétrovirus ciblant les cellules T CD4+ causant le SIDA.",
+            exampleAr = "فيروس نقص المناعة البشرية هو فيروس رجعي يستهدف الخلايا التائية CD4+ ويسبب الإيدز.",
         ),
         MedicalTermEntity(
             id = 2083,
@@ -691,6 +837,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/sɑːrz koʊ viː tuː/",
+            exampleEn = "The sars-cov-2 is the coronavirus causing COVID-19 disease; transmitted primarily by respiratory droplets.",
+            exampleFr = "La SARS-CoV-2 est le coronavirus causant la maladie COVID-19; transmis principalement par gouttelettes respiratoires.",
+            exampleAr = "الفيروس التاجي المسبب لـ COVID-19 هو الفيروس التاجي المسبب لمرض COVID-19؛ ينتقل أساساً عبر القطيرات التنفسية.",
         ),
         MedicalTermEntity(
             id = 2084,
@@ -703,6 +852,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˌɪnfluˈɛnzə ˈvaɪrəs/",
+            exampleEn = "The influenza virus is the RNA virus causing seasonal flu; classified as type A, B, or C based on surface proteins.",
+            exampleFr = "La virus de la grippe (Influenza) est virus ARN causant la grippe saisonnière; classé en types A, B ou C selon les protéines de surface.",
+            exampleAr = "فيروس الإنفلونزا هو فيروس RNA يسبب الإنفلونزا الموسمية؛ مُصنَّف أنواع A وB وC بناءً على البروتينات السطحية.",
         ),
         MedicalTermEntity(
             id = 2085,
@@ -715,6 +867,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˌhɛməˈɡluːtɪnɪn/",
+            exampleEn = "The hemagglutinin (h) is the surface glycoprotein of influenza virus enabling attachment to host cells.",
+            exampleFr = "L'hémagglutinine (H) est glycoprotéine de surface du virus de la grippe permettant la fixation aux cellules hôtes.",
+            exampleAr = "الراصة الدموية هو بروتين سكري سطحي لفيروس الإنفلونزا يُمكِّن الالتصاق بالخلايا المضيفة.",
         ),
         MedicalTermEntity(
             id = 2086,
@@ -727,6 +882,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˌnjʊərəˈmɪnɪdeɪz/",
+            exampleEn = "The neuraminidase (n) is the surface enzyme of influenza virus enabling release of new virions from infected cells.",
+            exampleFr = "La neuraminidase (N) est enzyme de surface du virus de la grippe permettant la libération de nouveaux virions.",
+            exampleAr = "النيورامينيداز هو إنزيم سطحي لفيروس الإنفلونزا يُمكِّن إطلاق الفيريونات الجديدة من الخلايا المصابة.",
         ),
         MedicalTermEntity(
             id = 2087,
@@ -739,6 +897,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/ˈhɜːrpiːz ˈsɪmplɛks ˈvaɪrəs/",
+            exampleEn = "The herpes simplex virus (hsv) is the DNA virus causing oral (HSV-1) and genital herpes (HSV-2); can establish latent infection.",
+            exampleFr = "La virus de l'herpès simplex (VHS) est virus ADN causant l'herpès buccal (VHS-1) et génital (VHS-2); peut établir une infection latente.",
+            exampleAr = "فيروس الهربس البسيط هو فيروس DNA يسبب الهربس الفموي (HSV-1) والتناسلي (HSV-2)؛ قادر على إنشاء عدوى كامنة.",
         ),
         MedicalTermEntity(
             id = 2088,
@@ -751,6 +912,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie",
             ipaPhonetic = "/hɛpəˈtaɪtɪs biː ˈvaɪrəs/",
+            exampleEn = "The hepatitis b virus (hbv) is the DNA virus causing hepatitis B; transmitted through blood and sexual contact; can cause cirrhosis.",
+            exampleFr = "La virus de l'hépatite B (VHB) est virus ADN causant l'hépatite B; transmis par le sang et contact sexuel; peut causer la cirrhose.",
+            exampleAr = "فيروس التهاب الكبد B هو فيروس DNA يسبب التهاب الكبد B؛ ينتقل عبر الدم والاتصال الجنسي؛ قد يسبب تليف الكبد.",
         ),
         MedicalTermEntity(
             id = 2089,
@@ -763,6 +927,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/maɪˈkɒlədʒi/",
+            exampleEn = "The mycology is the branch of microbiology studying fungi including yeasts and molds.",
+            exampleFr = "La mycologie est branche de la microbiologie étudiant les champignons incluant les levures et moisissures.",
+            exampleAr = "علم الفطريات هو فرع علم الأحياء الدقيقة الذي يدرس الفطريات بما فيها الخمائر والعفن.",
         ),
         MedicalTermEntity(
             id = 2090,
@@ -775,6 +942,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ˈfʌŋɡəs/",
+            exampleEn = "The fungus is the eukaryotic organism that can be unicellular (yeast) or multicellular (mold).",
+            exampleFr = "Le champignon (Fongique) est organisme eucaryote pouvant être unicellulaire (levure) ou multicellulaire (moisissure).",
+            exampleAr = "الفطر هو كائن حقيقي النواة يمكن أن يكون وحيد الخلية (خميرة) أو متعدد الخلايا (عفن).",
         ),
         MedicalTermEntity(
             id = 2091,
@@ -787,6 +957,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/jiːst/",
+            exampleEn = "The yeast is the unicellular fungus reproducing by budding (e.g., Candida).",
         ),
         MedicalTermEntity(
             id = 2092,
@@ -799,6 +970,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/moʊld/",
+            exampleEn = "The mold (mould) is the multicellular fungus growing as branching filaments called hyphae (e.g., Aspergillus).",
         ),
         MedicalTermEntity(
             id = 2093,
@@ -811,6 +983,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ˈhaɪfə/",
+            exampleEn = "The hypha is the single filamentous structure of a mold; multiple hyphae form the mycelium.",
+            exampleFr = "L'hyphe est structure filamenteuse unique d'une moisissure; plusieurs hyphes forment le mycélium.",
+            exampleAr = "الخيط الهيفي هو بنية خيطية واحدة للعفن؛ تجمع الخيوط الهيفية يُشكِّل الميسيليوم.",
         ),
         MedicalTermEntity(
             id = 2094,
@@ -823,6 +998,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/maɪˈsiːliəm/",
+            exampleEn = "The mycelium is the network of hyphae forming the vegetative body of a mold.",
+            exampleFr = "La mycélium est réseau d'hyphes formant le corps végétatif d'une moisissure.",
+            exampleAr = "الميسيليوم هو شبكة من الخيوط الهيفية تُشكِّل الجسم الخضري للعفن.",
         ),
         MedicalTermEntity(
             id = 2095,
@@ -835,6 +1013,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ˈkændɪdə ˈælbɪkænz/",
+            exampleEn = "The candida albicans is the most common opportunistic fungal pathogen causing candidiasis (thrush, vaginal infections).",
+            exampleFr = "La candida albicans est le pathogène fongique opportuniste le plus courant causant candidose (muguet, infections vaginales).",
+            exampleAr = "كانديدا البيكانس هو أكثر الفطريات الانتهازية شيوعاً تسبب داء المبيضات (القلاع والتهابات المهبل).",
         ),
         MedicalTermEntity(
             id = 2096,
@@ -847,6 +1028,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ˌæspɜːˈdʒɪləs fjuːˈmɪɡætəs/",
+            exampleEn = "The aspergillus fumigatus is the mold causing invasive aspergillosis in immunocompromised patients.",
+            exampleFr = "L'aspergillus fumigatus est moisissure causant l'aspergillose invasive chez les patients immunodéprimés.",
+            exampleAr = "الرشاشية الدخانية هو عفن يسبب داء الرشاشيات الغازي في مرضى ضعاف المناعة.",
         ),
         MedicalTermEntity(
             id = 2097,
@@ -859,6 +1043,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ˌkrɪptoʊˈkɒkəs niˌɒfɔːrˈmænz/",
+            exampleEn = "The cryptococcus neoformans is the encapsulated yeast causing cryptococcal meningitis in HIV patients.",
+            exampleFr = "La cryptococcus neoformans est levure encapsulée causant la méningite cryptococcique chez les patients VIH.",
+            exampleAr = "المستخفية الحديثة هو خميرة محاطة بكبسولة تسبب التهاب السحايا بالمستخفية في مرضى HIV.",
         ),
         MedicalTermEntity(
             id = 2098,
@@ -871,6 +1058,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/dɜːrˈmætoʊˌfaɪt/",
+            exampleEn = "The dermatophyte is the group of fungi infecting keratinized tissues causing ringworm, athlete's foot, and nail infections.",
+            exampleFr = "La dermatophyte est groupe de champignons infectant les tissus kératinisés causant la teigne, le pied d'athlète.",
+            exampleAr = "الفطر الجلدي هو مجموعة من الفطريات تُصيب الأنسجة الكيراتينية تسبب السعفة وقدم الرياضي والتهابات الأظافر.",
         ),
         MedicalTermEntity(
             id = 2099,
@@ -883,6 +1073,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ˈtɪniə/",
+            exampleEn = "The tinea is the dermatophyte infection of the skin, hair, or nails named by body location.",
+            exampleFr = "La teigne (Tinea) est infection à dermatophytes de la peau, des cheveux ou des ongles nommée selon la localisation.",
+            exampleAr = "السعفة (التينيا) هو عدوى فطرية جلدية تُصيب الجلد والشعر والأظافر وتُسمَّى حسب موقعها في الجسم.",
         ),
         MedicalTermEntity(
             id = 2100,
@@ -895,6 +1088,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ˌæntiˈfʌŋɡəl/",
+            exampleEn = "The antifungal is the drug used to treat fungal infections; targets ergosterol in fungal cell membranes.",
+            exampleFr = "L'antifongique est médicament utilisé pour traiter les infections fongiques; cible l'ergostérol dans les membranes fongiques.",
+            exampleAr = "مضاد الفطريات هو دواء يُستخدَم لعلاج الالتهابات الفطرية؛ يستهدف الإرغوستيرول في أغشية الخلايا الفطرية.",
         ),
         MedicalTermEntity(
             id = 2101,
@@ -907,6 +1103,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/ɜːrˈɡɒstərɒl/",
+            exampleEn = "The ergosterol is the primary sterol in fungal cell membranes; the main target of antifungal drugs.",
+            exampleFr = "L'ergostérol est le stérol principal dans les membranes cellulaires fongiques; cible principale des antifongiques.",
+            exampleAr = "الإرغوستيرول هو الستيرول الأساسي في أغشية الخلايا الفطرية؛ الهدف الرئيسي لمضادات الفطريات.",
         ),
         MedicalTermEntity(
             id = 2102,
@@ -919,6 +1118,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/daɪˈmɔːrfɪk ˈfʌŋɡəs/",
+            exampleEn = "The dimorphic fungus is the fungus existing as mold at environmental temperature and yeast at body temperature.",
+            exampleFr = "Le champignon dimorphe est champignon existant sous forme de moisissure à température ambiante et levure à température corporelle.",
+            exampleAr = "الفطر ثنائي الشكل هو فطر موجود على شكل عفن في درجة حرارة البيئة وخميرة في درجة حرارة الجسم.",
         ),
         MedicalTermEntity(
             id = 2103,
@@ -931,6 +1133,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Mycologie",
             ipaPhonetic = "/maɪˈkoʊsɪs/",
+            exampleEn = "The mycosis is the infection caused by a fungus; can be superficial, subcutaneous, or systemic.",
+            exampleFr = "La mycose est infection causée par un champignon; peut être superficielle, sous-cutanée ou systémique.",
+            exampleAr = "الداء الفطري هو عدوى تسببها الفطريات؛ قد تكون سطحية أو تحت الجلد أو جهازية.",
         ),
         MedicalTermEntity(
             id = 2104,
@@ -943,6 +1148,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˌpærəsɪˈtɒlədʒi/",
+            exampleEn = "The parasitology is the study of parasites, their hosts, and the relationship between them.",
+            exampleFr = "La parasitologie est l'étude des parasites, de leurs hôtes et de la relation entre eux.",
+            exampleAr = "علم الطفيليات هو دراسة الطفيليات ومضيفيها والعلاقة بينها.",
         ),
         MedicalTermEntity(
             id = 2105,
@@ -955,6 +1163,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˈpærəsaɪt/",
+            exampleEn = "The parasite is the organism living on or in a host organism obtaining nutrients at the host's expense.",
+            exampleFr = "La parasite est organisme vivant sur ou dans un organisme hôte obtenant ses nutriments aux dépens de l'hôte.",
+            exampleAr = "الطفيلي هو كائن يعيش على المضيف أو بداخله يكتسب المغذيات على حسابه.",
         ),
         MedicalTermEntity(
             id = 2106,
@@ -979,6 +1190,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˈhɛlmɪnθ/",
+            exampleEn = "The helminth is the parasitic worm; includes nematodes, trematodes, and cestodes.",
+            exampleFr = "L'helminthe est ver parasite; inclut les nématodes, trématodes et cestodes.",
+            exampleAr = "الديدان الطفيلية هو ديدان طفيلية؛ تشمل الخيطيات والمثقوبات والشريطيات.",
         ),
         MedicalTermEntity(
             id = 2108,
@@ -991,6 +1205,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/plæzˈmoʊdiəm/",
+            exampleEn = "The plasmodium is the protozoan parasite causing malaria; transmitted by female Anopheles mosquitoes.",
+            exampleFr = "La plasmodium est parasite protozoaire causant le paludisme; transmis par les moustiques femelles Anophèles.",
+            exampleAr = "المتصورة (البلازموديوم) هو الطفيلي الأولي المسبب للملاريا؛ ينتقل عبر بعوض الأنوفيليس الإناث.",
         ),
         MedicalTermEntity(
             id = 2109,
@@ -1003,6 +1220,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/məˈlɛəriə/",
+            exampleEn = "The malaria is the life-threatening disease caused by Plasmodium parasites characterized by cyclic fever.",
+            exampleFr = "Le paludisme (Malaria) est maladie potentiellement mortelle causée par des parasites Plasmodium caractérisée par fièvre cyclique.",
+            exampleAr = "الملاريا هو مرض مهدِّد للحياة تسببه طفيليات البلازموديوم يتميز بحمى دورية.",
         ),
         MedicalTermEntity(
             id = 2110,
@@ -1015,6 +1235,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˌɛntəˈmiːbə ˌhɪstəˈlɪtɪkə/",
+            exampleEn = "The entamoeba histolytica is the protozoan causing amoebiasis including amoebic dysentery and liver abscess.",
+            exampleFr = "L'entamoeba histolytica est protozoaire causant l'amibiase incluant dysenterie amibienne et abcès du foie.",
+            exampleAr = "المتحولة الحالة للنسيج هو أولي يسبب داء الأميبا بما فيه الزحار الأميبي وخراج الكبد.",
         ),
         MedicalTermEntity(
             id = 2111,
@@ -1027,6 +1250,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˈdʒɪərdiə ˈlæmbliə/",
+            exampleEn = "The giardia lamblia is the protozoan causing giardiasis with abdominal pain and chronic diarrhea.",
+            exampleFr = "La giardia lamblia est protozoaire causant la giardiase avec douleurs abdominales et diarrhée chronique.",
+            exampleAr = "الجيارديا اللامبلية هو أولي يسبب داء الجيارديا مع ألم بطني وإسهال مزمن.",
         ),
         MedicalTermEntity(
             id = 2112,
@@ -1039,6 +1265,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˌtɒksoʊˈplæzmə ˈɡɒndiˌaɪ/",
+            exampleEn = "The toxoplasma gondii is the obligate intracellular protozoan; causes toxoplasmosis; dangerous in pregnancy.",
+            exampleFr = "La toxoplasma gondii est protozoaire intracellulaire obligatoire; cause la toxoplasmose; dangereux pendant la grossesse.",
+            exampleAr = "المقوسة القندية هو أولي داخل الخلية إلزامي؛ يسبب داء المقوسات؛ خطير أثناء الحمل.",
         ),
         MedicalTermEntity(
             id = 2113,
@@ -1051,6 +1280,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˈniːmətəʊd/",
+            exampleEn = "The nematode (roundworm) is the cylindrical unsegmented worm; examples include Ascaris, hookworm, Trichinella.",
         ),
         MedicalTermEntity(
             id = 2114,
@@ -1063,6 +1293,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˈsiːstəʊd/",
+            exampleEn = "The cestode (tapeworm) is the ribbon-like segmented flatworm parasitizing the intestines (e.g., Taenia solium).",
         ),
         MedicalTermEntity(
             id = 2115,
@@ -1075,6 +1306,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˈtrɛmətəʊd/",
+            exampleEn = "The trematode (fluke) is the leaf-shaped flatworm parasite (e.g., Schistosoma causing schistosomiasis).",
         ),
         MedicalTermEntity(
             id = 2116,
@@ -1087,6 +1319,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˌʃɪstoʊsoʊˈmaɪəsɪs/",
+            exampleEn = "The schistosomiasis (bilharziasis) is the parasitic disease caused by Schistosoma blood flukes; major cause of morbidity in tropical regions.",
+            exampleFr = "La schistosomiase (Bilharziose) est maladie parasitaire causée par les douves sanguines Schistosoma; cause de morbidité en régions tropicales.",
+            exampleAr = "داء البلهارسيا هو مرض طفيلي تسببه الديدان الدموية من جنس المنشقة؛ سبب رئيسي للمرض في المناطق الاستوائية.",
         ),
         MedicalTermEntity(
             id = 2117,
@@ -1099,6 +1334,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˌɛktoʊˈpærəsaɪt/",
+            exampleEn = "The ectoparasite is the parasite living on the external surface of a host (e.g., lice, fleas, ticks, mites).",
         ),
         MedicalTermEntity(
             id = 2118,
@@ -1111,6 +1347,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˌɛndoʊˈpærəsaɪt/",
+            exampleEn = "The endoparasite is the parasite living inside the body of a host.",
+            exampleFr = "L'endoparasite est parasite vivant à l'intérieur du corps d'un hôte.",
+            exampleAr = "الطفيلي الداخلي هو طفيلي يعيش داخل جسم المضيف.",
         ),
         MedicalTermEntity(
             id = 2119,
@@ -1123,6 +1362,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˌæntibaɪˈɒtɪk/",
+            exampleEn = "The antibiotic is the substance produced by or derived from microorganisms that kills or inhibits bacteria.",
+            exampleFr = "L'antibiotique est substance produite par ou dérivée de microorganismes qui tue ou inhibe les bactéries.",
+            exampleAr = "المضاد الحيوي هو مادة منتَجة من كائنات دقيقة أو مشتقة منها تقتل البكتيريا أو تُثبِّطها.",
         ),
         MedicalTermEntity(
             id = 2120,
@@ -1135,6 +1377,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/bækˌtɪəriˈsaɪdəl/",
+            exampleEn = "The bactericidal is the antibiotic that kills bacteria directly (e.g., penicillin, aminoglycosides).",
         ),
         MedicalTermEntity(
             id = 2121,
@@ -1147,6 +1390,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/bækˌtɪəriəˈstætɪk/",
+            exampleEn = "The bacteriostatic is the antibiotic that inhibits bacterial growth without killing (e.g., tetracycline, macrolides).",
         ),
         MedicalTermEntity(
             id = 2122,
@@ -1159,6 +1403,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˌæntibaɪˈɒtɪk rɪˈzɪstəns/",
+            exampleEn = "The antibiotic resistance is the ability of bacteria to survive in the presence of an antibiotic that would normally kill them.",
+            exampleFr = "La résistance aux antibiotiques est la capacité des bactéries à survivre en présence d'un antibiotique qui les tuerait normalement.",
+            exampleAr = "مقاومة المضادات الحيوية هو قدرة البكتيريا على البقاء في وجود مضاد حيوي من شأنه عادةً قتلها.",
         ),
         MedicalTermEntity(
             id = 2123,
@@ -1171,6 +1418,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˈbeɪtə ˈlæktæm/",
+            exampleEn = "The beta-lactam is the largest class of antibiotics containing a beta-lactam ring; includes penicillins and cephalosporins.",
+            exampleFr = "La bêta-lactamine est la plus grande classe d'antibiotiques contenant un noyau bêta-lactame; inclut pénicillines et céphalosporines.",
+            exampleAr = "البيتا-لاكتام هو أكبر فئة من المضادات الحيوية تحتوي على حلقة بيتا-لاكتام؛ تشمل البنسلينات والسيفالوسبورينات.",
         ),
         MedicalTermEntity(
             id = 2124,
@@ -1183,6 +1433,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˌpɛnɪˈsɪlɪn/",
+            exampleEn = "The penicillin is the first antibiotic discovered by Alexander Fleming; inhibits cell wall synthesis.",
+            exampleFr = "La pénicilline est le premier antibiotique découvert par Alexander Fleming; inhibe la synthèse de la paroi cellulaire.",
+            exampleAr = "البنسلين هو أول مضاد حيوي اكتشفه ألكسندر فليمنغ؛ يُثبِّط تركيب جدار الخلية.",
         ),
         MedicalTermEntity(
             id = 2125,
@@ -1195,6 +1448,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˈbeɪtə ˈlæktəmeɪz/",
+            exampleEn = "The beta-lactamase is the enzyme produced by resistant bacteria that breaks the beta-lactam ring inactivating the antibiotic.",
+            exampleFr = "La bêta-lactamase est enzyme produite par des bactéries résistantes brisant le noyau bêta-lactame inactivant l'antibiotique.",
+            exampleAr = "البيتا-لاكتاماز هو إنزيم تُنتِجه البكتيريا المقاومة يكسر حلقة بيتا-لاكتام مُعطِّلاً المضاد الحيوي.",
         ),
         MedicalTermEntity(
             id = 2126,
@@ -1207,6 +1463,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˌvæŋkəˈmaɪsɪn/",
+            exampleEn = "The vancomycin is the glycopeptide antibiotic used against Gram-positive bacteria; last resort for MRSA.",
+            exampleFr = "La vancomycine est antibiotique glycopeptidique utilisé contre les bactéries Gram-positives; dernier recours pour SARM.",
+            exampleAr = "الفانكومايسين هو مضاد حيوي غليكوببتيدي يُستخدَم ضد البكتيريا موجبة الغرام؛ الملاذ الأخير لعلاج MRSA.",
         ),
         MedicalTermEntity(
             id = 2127,
@@ -1219,6 +1478,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˌæntiˈmaɪkrəbiəl ˈstjuːədʃɪp/",
+            exampleEn = "The antimicrobial stewardship is the coordinated program promoting appropriate use of antimicrobials to combat resistance.",
+            exampleFr = "Le bon usage des antibiotiques est programme coordonné promouvant l'utilisation appropriée des antimicrobiens pour lutter contre la résistance.",
+            exampleAr = "الرقابة على المضادات الميكروبية هو برنامج منسق يُعزِّز الاستخدام المناسب للمضادات الميكروبية لمكافحة المقاومة.",
         ),
         MedicalTermEntity(
             id = 2128,
@@ -1231,6 +1493,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/brɔːd ˈspɛktrəm/",
+            exampleEn = "The broad-spectrum antibiotic is the antibiotic effective against a wide range of both Gram-positive and Gram-negative bacteria.",
+            exampleFr = "L'antibiotique à large spectre est antibiotique efficace contre un large éventail de bactéries Gram-positives et Gram-négatives.",
+            exampleAr = "المضاد الحيوي واسع الطيف هو مضاد حيوي فعال ضد مجموعة واسعة من البكتيريا موجبة وسالبة الغرام.",
         ),
         MedicalTermEntity(
             id = 2129,
@@ -1243,6 +1508,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˈnæroʊ ˈspɛktrəm/",
+            exampleEn = "The narrow-spectrum antibiotic is the antibiotic effective against a limited range of bacteria.",
+            exampleFr = "L'antibiotique à spectre étroit est antibiotique efficace contre un éventail limité de bactéries.",
+            exampleAr = "المضاد الحيوي محدود الطيف هو مضاد حيوي فعال ضد نطاق محدود من البكتيريا.",
         ),
         MedicalTermEntity(
             id = 2130,
@@ -1255,6 +1523,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˌsuːpərɪnˈfɛkʃən/",
+            exampleEn = "The superinfection is the secondary infection developing during antibiotic treatment due to disruption of normal flora.",
+            exampleFr = "Le surinfection est infection secondaire se développant pendant le traitement antibiotique due à la perturbation de la flore normale.",
+            exampleAr = "التعفن الثانوي هو عدوى ثانوية تتطور أثناء العلاج بالمضادات الحيوية بسبب اضطراب الفلورا الطبيعية.",
         ),
         MedicalTermEntity(
             id = 2131,
@@ -1267,6 +1538,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/ˌæntibaɪˈoʊɡræm/",
+            exampleEn = "The antibiogram is the laboratory test showing the susceptibility of bacteria to various antibiotics.",
+            exampleFr = "L'antibiogramme est test de laboratoire montrant la sensibilité des bactéries à divers antibiotiques.",
+            exampleAr = "مخطط حساسية المضادات الحيوية هو اختبار مختبري يُظهِر حساسية البكتيريا لمضادات حيوية مختلفة.",
         ),
         MedicalTermEntity(
             id = 2132,
@@ -1279,6 +1553,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Antibiotiques et Résistance",
             ipaPhonetic = "/dɪsk dɪˈfjuːʒən/",
+            exampleEn = "The disk diffusion test (kirby-bauer) is the standard method testing antibiotic susceptibility using antibiotic-impregnated disks on agar.",
+            exampleFr = "La test de diffusion sur disque (Kirby-Bauer) est méthode standard testant la sensibilité aux antibiotiques par disques imprégnés d'antibiotique sur gélose.",
+            exampleAr = "اختبار انتشار القرص هو طريقة معيارية لاختبار حساسية المضادات الحيوية باستخدام أقراص مُشبَّعة بالمضاد على الأجار.",
         ),
         MedicalTermEntity(
             id = 2133,
@@ -1291,6 +1568,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ɪˈmjuːn rɪˈspɒns/",
+            exampleEn = "The immune response is the body's defense reaction against pathogens including innate and adaptive immunity.",
+            exampleFr = "La réponse immunitaire est la réaction de défense de l'organisme contre les agents pathogènes incluant immunité innée et adaptative.",
+            exampleAr = "الاستجابة المناعية هو رد فعل دفاعي الجسم ضد مسببات الأمراض يشمل المناعة الفطرية والتكيفية.",
         ),
         MedicalTermEntity(
             id = 2134,
@@ -1303,6 +1583,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ɪˈneɪt ɪˈmjuːnɪti/",
+            exampleEn = "The innate immunity is the non-specific first line of defense present from birth; includes skin, phagocytes, complement.",
+            exampleFr = "L'immunité innée est la première ligne de défense non spécifique présente dès la naissance; inclut peau, phagocytes, complément.",
+            exampleAr = "المناعة الفطرية هو خط الدفاع الأول غير النوعي الموجود منذ الولادة؛ يشمل الجلد والخلايا البالعة والمتمم.",
         ),
         MedicalTermEntity(
             id = 2135,
@@ -1315,6 +1598,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˈædæptɪv ɪˈmjuːnɪti/",
+            exampleEn = "The adaptive immunity is the specific immune response that develops after exposure to an antigen; involves B and T cells.",
+            exampleFr = "L'immunité adaptative est la réponse immunitaire spécifique qui se développe après exposition à un antigène; implique cellules B et T.",
+            exampleAr = "المناعة التكيفية هو الاستجابة المناعية النوعية التي تتطور بعد التعرض لمستضد؛ تتضمن الخلايا البائية والتائية.",
         ),
         MedicalTermEntity(
             id = 2136,
@@ -1327,6 +1613,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˈæntɪdʒən/",
+            exampleEn = "The antigen is the molecule (usually protein or polysaccharide) recognized by the immune system triggering a response.",
+            exampleFr = "L'antigène est molécule (généralement protéine ou polysaccharide) reconnue par le système immunitaire déclenchant une réponse.",
+            exampleAr = "المستضد هو جزيء (عادةً بروتين أو سكاريد متعدد) يتعرف عليه الجهاز المناعي مُحفِّزاً استجابة.",
         ),
         MedicalTermEntity(
             id = 2137,
@@ -1339,6 +1628,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˈæntɪbɒdi/",
+            exampleEn = "The antibody (immunoglobulin) is the Y-shaped protein produced by B cells that binds specifically to an antigen.",
+            exampleFr = "L'anticorps (Immunoglobuline) est protéine en forme de Y produite par les cellules B qui se lie spécifiquement à un antigène.",
+            exampleAr = "الجسم المضاد (الغلوبيولين المناعي) هو بروتين على شكل حرف Y تُنتِجه الخلايا البائية يرتبط بمستضد محدد.",
         ),
         MedicalTermEntity(
             id = 2138,
@@ -1351,6 +1643,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/biː sɛl/",
+            exampleEn = "The b cell (b lymphocyte) is the lymphocyte that matures in bone marrow and produces antibodies.",
+            exampleFr = "La lymphocyte B est lymphocyte qui mûrit dans la moelle osseuse et produit des anticorps.",
+            exampleAr = "الخلية البائية هو خلية ليمفاوية تنضج في نخاع العظام وتُنتِج الأجسام المضادة.",
         ),
         MedicalTermEntity(
             id = 2139,
@@ -1363,6 +1658,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/tiː sɛl/",
+            exampleEn = "The t cell (t lymphocyte) is the lymphocyte maturing in the thymus; includes CD4+ helper T cells and CD8+ cytotoxic T cells.",
+            exampleFr = "La lymphocyte T est lymphocyte mûrissant dans le thymus; inclut les cellules T auxiliaires CD4+ et cytotoxiques CD8+.",
+            exampleAr = "الخلية التائية هو خلية ليمفاوية تنضج في الغدة الصعترية؛ تشمل الخلايا التائية المساعدة CD4+ والقاتلة CD8+.",
         ),
         MedicalTermEntity(
             id = 2140,
@@ -1375,6 +1673,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˈkɒmplɪmənt ˈsɪstəm/",
+            exampleEn = "The complement system is the cascade of proteins in blood that enhances antibody activity and destroys pathogens.",
+            exampleFr = "La système du complément est cascade de protéines dans le sang amplifiant l'activité des anticorps et détruisant les pathogènes.",
+            exampleAr = "جهاز المتمم هو سلسلة من البروتينات في الدم تُعزِّز نشاط الأجسام المضادة وتُدمِّر مسببات الأمراض.",
         ),
         MedicalTermEntity(
             id = 2141,
@@ -1387,6 +1688,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˌɒpsənaɪˈzeɪʃən/",
+            exampleEn = "The opsonization is the coating of a pathogen with antibodies or complement to enhance phagocytosis.",
+            exampleFr = "L'opsonisation est le revêtement d'un pathogène avec des anticorps ou du complément pour améliorer la phagocytose.",
+            exampleAr = "التبصير هو تغطية العامل الممرض بالأجسام المضادة أو المتمم لتعزيز الابتلاع الخلوي.",
         ),
         MedicalTermEntity(
             id = 2142,
@@ -1399,6 +1703,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˈvæksiːn/",
+            exampleEn = "The vaccine is the biological preparation stimulating immunity against a specific pathogen without causing disease.",
+            exampleFr = "Le vaccin est préparation biologique stimulant l'immunité contre un pathogène spécifique sans causer de maladie.",
+            exampleAr = "اللقاح هو تحضير بيولوجي يُحفِّز المناعة ضد عامل ممرض محدد دون إحداث مرض.",
         ),
         MedicalTermEntity(
             id = 2143,
@@ -1423,6 +1730,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˌɪmjʊnoʊˈkɒmprəmaɪzd/",
+            exampleEn = "Immunocompromised refers to having a weakened immune system due to disease, medication, or treatment.",
+            exampleFr = "L'immunodéprimé est ayant un système immunitaire affaibli en raison d'une maladie, d'un médicament ou d'un traitement.",
+            exampleAr = "ضعيف المناعة هو امتلاك جهاز مناعي ضعيف بسبب مرض أو دواء أو علاج.",
         ),
         MedicalTermEntity(
             id = 2145,
@@ -1435,6 +1745,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˌɪntəˈfɪərɒn/",
+            exampleEn = "The interferon is the signaling protein released by cells in response to viral infection inhibiting viral replication.",
+            exampleFr = "L'interféron est protéine de signalisation libérée par les cellules en réponse à une infection virale inhibant la réplication.",
+            exampleAr = "الإنترفيرون هو بروتين إشارة تُطلِقه الخلايا استجابةً للعدوى الفيروسية يُثبِّط تكاثر الفيروس.",
         ),
         MedicalTermEntity(
             id = 2146,
@@ -1447,6 +1760,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˈsaɪtəˌkaɪn/",
+            exampleEn = "The cytokine is the small signaling protein secreted by immune cells regulating immunity and inflammation.",
+            exampleFr = "La cytokine est petite protéine de signalisation sécrétée par les cellules immunitaires régulant l'immunité et l'inflammation.",
+            exampleAr = "السيتوكين هو بروتين إشارة صغير تُفرِزه الخلايا المناعية يُنظِّم المناعة والالتهاب.",
         ),
         MedicalTermEntity(
             id = 2147,
@@ -1459,6 +1775,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/ˌɪnfləˈmeɪʃən/",
+            exampleEn = "The inflammation is the protective biological response to infection or injury characterized by redness, heat, swelling, pain.",
+            exampleFr = "L'inflammation est réponse biologique protectrice à l'infection ou blessure caractérisée par rougeur, chaleur, gonflement, douleur.",
+            exampleAr = "الالتهاب هو استجابة بيولوجية وقائية للعدوى أو الإصابة تتميز بالاحمرار والحرارة والتورم والألم.",
         ),
         MedicalTermEntity(
             id = 2148,
@@ -1471,6 +1790,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈkʌltʃər ænd sɛnsɪˈtɪvɪti/",
+            exampleEn = "The culture and sensitivity (c&s) is the laboratory test growing bacteria from a specimen and testing antibiotic susceptibility.",
+            exampleFr = "La culture et antibiogramme est test de laboratoire cultivant des bactéries d'un échantillon et testant la sensibilité aux antibiotiques.",
+            exampleAr = "الزراعة وحساسية المضادات هو اختبار مختبري يُنمي البكتيريا من عينة ويختبر حساسيتها للمضادات الحيوية.",
         ),
         MedicalTermEntity(
             id = 2149,
@@ -1483,6 +1805,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈspɛsɪmɪn/",
+            exampleEn = "The specimen is the sample of material (blood, urine, sputum) collected for microbiological analysis.",
+            exampleFr = "Le prélèvement (Spécimen) est échantillon de matériau (sang, urine, crachat) collecté pour analyse microbiologique.",
+            exampleAr = "العينة هو عينة من مادة (دم أو بول أو بلغم) تُجمَع للتحليل الميكروبيولوجي.",
         ),
         MedicalTermEntity(
             id = 2150,
@@ -1495,6 +1820,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈspjuːtəm ˈkʌltʃər/",
+            exampleEn = "The sputum culture is the test culturing microorganisms from expectorated sputum to diagnose respiratory infections.",
+            exampleFr = "La culture de crachat est test cultivant les microorganismes du crachat expetoré pour diagnostiquer les infections respiratoires.",
+            exampleAr = "مزرعة البلغم هو اختبار يزرع الكائنات الدقيقة من البلغم المُقاء لتشخيص التهابات الجهاز التنفسي.",
         ),
         MedicalTermEntity(
             id = 2151,
@@ -1507,6 +1835,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈjʊərɪn ˈkʌltʃər/",
+            exampleEn = "The urine culture (ecbu) is the test culturing bacteria from urine to diagnose urinary tract infections.",
+            exampleFr = "L'examen cytobactériologique des urines (ECBU) est test cultivant des bactéries dans l'urine pour diagnostiquer les infections urinaires.",
+            exampleAr = "مزرعة البول هو اختبار يزرع البكتيريا من البول لتشخيص التهابات المسالك البولية.",
         ),
         MedicalTermEntity(
             id = 2152,
@@ -1519,6 +1850,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˌpɒlɪməreɪz tʃeɪn riˈækʃən/",
+            exampleEn = "The pcr (polymerase chain reaction) is the molecular technique amplifying specific DNA sequences to identify pathogens.",
+            exampleFr = "La PCR (Réaction en chaîne par polymérase) est technique moléculaire amplifiant des séquences d'ADN spécifiques pour identifier les agents pathogènes.",
+            exampleAr = "تفاعل البوليميراز المتسلسل هو تقنية جزيئية تُضخِّم تسلسلات DNA محددة لتعريف مسببات الأمراض.",
         ),
         MedicalTermEntity(
             id = 2153,
@@ -1543,6 +1877,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ɪˈlaɪzə/",
+            exampleEn = "The elisa (enzyme-linked immunosorbent assay) is the plate-based assay technique detecting and quantifying antigens or antibodies.",
+            exampleFr = "L'ELISA est technique de dosage sur plaque détectant et quantifiant les antigènes ou anticorps.",
+            exampleAr = "مقايسة الامتصاص المناعي المرتبط بالإنزيم هو تقنية مقايسة على لوحة للكشف عن المستضدات أو الأجسام المضادة وتحديد كميتها.",
         ),
         MedicalTermEntity(
             id = 2155,
@@ -1555,6 +1892,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈwɛstərn blɒt/",
+            exampleEn = "The western blot (hiv) is the confirmatory test for HIV detecting specific antibodies against viral proteins.",
+            exampleFr = "La western blot (VIH) est test de confirmation du VIH détectant des anticorps spécifiques contre les protéines virales.",
+            exampleAr = "التحليل التهجيني الغربي لـ HIV هو اختبار تأكيدي لـ HIV يكشف أجساماً مضادة محددة ضد البروتينات الفيروسية.",
         ),
         MedicalTermEntity(
             id = 2156,
@@ -1567,6 +1907,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˌziːl ˈniːlsən/",
+            exampleEn = "The acid-fast stain (ziehl-neelsen) is the staining technique identifying acid-fast bacteria like Mycobacterium tuberculosis.",
+            exampleFr = "Le coloration de Ziehl-Neelsen est technique de coloration identifiant les bactéries acido-résistantes comme Mycobacterium tuberculosis.",
+            exampleAr = "الصبغة الصامدة للحمض هو تقنية صبغ تُعرِّف البكتيريا الصامدة للحمض كالمتفطرة السلية.",
         ),
         MedicalTermEntity(
             id = 2157,
@@ -1579,6 +1922,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈɪndiə ɪŋk/",
+            exampleEn = "The india ink preparation is the technique using India ink to visualize the capsule of Cryptococcus neoformans.",
+            exampleFr = "Le préparation à l'encre de Chine est technique utilisant l'encre de Chine pour visualiser la capsule de Cryptococcus neoformans.",
+            exampleAr = "تحضير الحبر الهندي هو تقنية تستخدم الحبر الهندي لتصوير كبسولة المستخفية الحديثة.",
         ),
         MedicalTermEntity(
             id = 2158,
@@ -1603,6 +1949,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈræpɪd ˈæntɪdʒən tɛst/",
+            exampleEn = "The rapid antigen test is the quick diagnostic test detecting specific antigens of a pathogen (e.g., rapid strep test).",
+            exampleFr = "La test antigénique rapide est test diagnostique rapide détectant des antigènes spécifiques d'un pathogène.",
         ),
         MedicalTermEntity(
             id = 2160,
@@ -1615,6 +1963,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/wɛt maʊnt ˌprɛpəˈreɪʃən/",
+            exampleEn = "The wet mount preparation is the microscopy technique examining living microorganisms in liquid without staining.",
+            exampleFr = "Le préparation à l'état frais est technique de microscopie examinant des microorganismes vivants dans du liquide sans coloration.",
+            exampleAr = "التحضير بالمستحضر الطازج هو تقنية مجهرية تفحص الكائنات الدقيقة الحية في السائل دون صبغ.",
         ),
         MedicalTermEntity(
             id = 2161,
@@ -1627,6 +1978,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˌnɒzəˈkoʊmiəl ɪnˈfɛkʃən/",
+            exampleEn = "The nosocomial infection (hai) is the infection acquired in a healthcare setting not present at the time of admission.",
+            exampleFr = "L'infection nosocomiale (IAS) est infection acquise dans un établissement de soins absente au moment de l'admission.",
+            exampleAr = "عدوى المستشفيات هو عدوى مكتسبة في بيئة الرعاية الصحية لم تكن موجودة عند الدخول.",
         ),
         MedicalTermEntity(
             id = 2162,
@@ -1639,6 +1993,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˌæntiˈvaɪrəl drʌɡ/",
+            exampleEn = "The antiviral drug is the medication specifically inhibiting viral replication without harming host cells.",
+            exampleFr = "Le médicament antiviral est médicament inhibant spécifiquement la réplication virale sans nuire aux cellules hôtes.",
+            exampleAr = "الدواء المضاد للفيروسات هو دواء يُثبِّط تكاثر الفيروس تحديداً دون الإضرار بخلايا المضيف.",
         ),
         MedicalTermEntity(
             id = 2163,
@@ -1651,6 +2008,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˈvaɪrəl ˈʃɛdɪŋ/",
+            exampleEn = "The viral shedding is the release of virus from an infected host into the environment.",
+            exampleFr = "L'excrétion virale est la libération de virus d'un hôte infecté dans l'environnement.",
+            exampleAr = "إطراح الفيروس هو إطلاق الفيروس من المضيف المصاب إلى البيئة المحيطة.",
         ),
         MedicalTermEntity(
             id = 2164,
@@ -1663,6 +2023,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˈvaɪrəl loʊd/",
+            exampleEn = "The viral load is the quantity of virus in a given volume of blood or body fluid.",
+            exampleFr = "La charge virale est la quantité de virus dans un volume donné de sang ou de fluide corporel.",
+            exampleAr = "الحمل الفيروسي هو كمية الفيروس في حجم معين من الدم أو سائل الجسم.",
         ),
         MedicalTermEntity(
             id = 2165,
@@ -1675,6 +2038,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˌsɪəroʊkənˈvɜːrʃən/",
+            exampleEn = "The seroconversion is the development of detectable antibodies in the blood after infection or vaccination.",
+            exampleFr = "Le séroconversion est le développement d'anticorps détectables dans le sang après infection ou vaccination.",
+            exampleAr = "التحول المصلي هو ظهور أجسام مضادة قابلة للكشف في الدم بعد العدوى أو التطعيم.",
         ),
         MedicalTermEntity(
             id = 2166,
@@ -1687,6 +2053,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˈleɪtənt ɪnˈfɛkʃən/",
+            exampleEn = "The latent infection is the persistent infection where the virus remains dormant in host cells without active replication.",
+            exampleFr = "L'infection latente est infection persistante où le virus reste dormant dans les cellules hôtes sans réplication active.",
+            exampleAr = "العدوى الكامنة هو عدوى مستمرة يبقى فيها الفيروس خاملاً في خلايا المضيف دون تكاثر نشط.",
         ),
         MedicalTermEntity(
             id = 2167,
@@ -1699,6 +2068,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˌriːæktɪˈveɪʃən/",
+            exampleEn = "The reactivation is the resumption of viral replication from a latent state triggered by immunosuppression or stress.",
+            exampleFr = "Le réactivation est la reprise de la réplication virale d'un état latent déclenchée par immunosuppression ou stress.",
+            exampleAr = "إعادة التنشيط هو استئناف تكاثر الفيروس من حالة الكمون بتحريض من الضغط أو كبت المناعة.",
         ),
         MedicalTermEntity(
             id = 2168,
@@ -1723,6 +2095,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˌæntɪˈdʒɛnɪk ʃɪft/",
+            exampleEn = "The antigenic shift is the major sudden change in influenza surface proteins leading to pandemic potential.",
+            exampleFr = "La saut antigénique est changement majeur soudain des protéines de surface du virus grippal menant au potentiel pandémique.",
+            exampleAr = "القفز المستضدي هو تغيير رئيسي مفاجئ في البروتينات السطحية للإنفلونزا يُؤدي إلى إمكانية التحول لجائحة.",
         ),
         MedicalTermEntity(
             id = 2170,
@@ -1747,6 +2122,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ɒŋˈkɒdʒɛnɪk ˈvaɪrəs/",
+            exampleEn = "The oncogenic virus is the virus capable of transforming normal cells into cancerous cells (e.g., HPV, EBV, HBV).",
         ),
         MedicalTermEntity(
             id = 2172,
@@ -1759,6 +2135,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ˌstɛrɪlaɪˈzeɪʃən/",
+            exampleEn = "The sterilization is the complete elimination of all microorganisms including spores from a material or surface.",
+            exampleFr = "Le stérilisation est l'élimination complète de tous les microorganismes incluant les spores d'un matériau ou surface.",
+            exampleAr = "التعقيم هو الإزالة الكاملة لجميع الكائنات الدقيقة بما فيها الأبواغ من مادة أو سطح.",
         ),
         MedicalTermEntity(
             id = 2173,
@@ -1771,6 +2150,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ˌdɪsɪnˈfɛkʃən/",
+            exampleEn = "The disinfection is the elimination of most pathogenic microorganisms from inanimate objects but not spores.",
+            exampleFr = "Le désinfection est l'élimination de la plupart des microorganismes pathogènes des objets inanimés mais pas des spores.",
+            exampleAr = "التطهير هو إزالة معظم الكائنات الدقيقة الممرضة من الأشياء غير الحية لكن ليس الأبواغ.",
         ),
         MedicalTermEntity(
             id = 2174,
@@ -1783,6 +2165,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ˌæntiˈsɛptɪk/",
+            exampleEn = "The antiseptic is the chemical agent applied to living tissue to prevent infection.",
+            exampleFr = "L'antiseptique est agent chimique appliqué sur les tissus vivants pour prévenir l'infection.",
+            exampleAr = "المطهر (المعقم) هو عامل كيميائي يُطبَّق على الأنسجة الحية لمنع العدوى.",
         ),
         MedicalTermEntity(
             id = 2175,
@@ -1795,6 +2180,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ˈɔːtəˌkleɪv/",
+            exampleEn = "The autoclave is the device using pressurized steam (121°C, 15 psi, 15 min) for sterilization.",
+            exampleFr = "L'autoclave est appareil utilisant la vapeur sous pression (121°C, 1 atm, 15 min) pour la stérilisation.",
+            exampleAr = "الفرن البخاري (الأوتوكلاف) هو جهاز يستخدم البخار تحت الضغط (121°م، 15 رطل/بوصة، 15 دقيقة) للتعقيم.",
         ),
         MedicalTermEntity(
             id = 2176,
@@ -1807,6 +2195,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ˌpæstʃərɪˈzeɪʃən/",
+            exampleEn = "The pasteurization is the heat treatment killing most pathogens in food and beverages without sterilization.",
+            exampleFr = "Le pasteurisation est traitement thermique tuant la plupart des pathogènes dans les aliments sans stérilisation.",
+            exampleAr = "البسترة هو معالجة حرارية تقتل معظم مسببات الأمراض في الغذاء والمشروبات دون تعقيم كامل.",
         ),
         MedicalTermEntity(
             id = 2177,
@@ -1867,6 +2258,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/hænd ˈhaɪdʒiːn/",
+            exampleEn = "The hand hygiene is the most important measure preventing healthcare-associated infections; includes handwashing and sanitizing.",
+            exampleFr = "L'hygiène des mains est la mesure la plus importante prévenant les infections associées aux soins; inclut lavage et désinfection.",
+            exampleAr = "نظافة اليدين هو أهم إجراء لمنع العدوى المرتبطة بالرعاية الصحية؛ يشمل غسل اليدين وتطهيرهما.",
         ),
         MedicalTermEntity(
             id = 2182,
@@ -1879,6 +2273,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/ˈsɛpsɪs/",
+            exampleEn = "The sepsis is the life-threatening organ dysfunction caused by a dysregulated host response to infection.",
+            exampleFr = "Le sepsis est dysfonction organique potentiellement mortelle causée par une réponse hôte dérégulée à l'infection.",
+            exampleAr = "الإنتان هو خلل وظيفي للأعضاء مهدِّد للحياة تسببه استجابة مضيف غير منظمة للعدوى.",
         ),
         MedicalTermEntity(
             id = 2183,
@@ -1927,6 +2324,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/tjʊˌbɜːrkjʊˈloʊsɪs/",
+            exampleEn = "The tuberculosis (tb) is the chronic infectious disease caused by M. tuberculosis primarily affecting the lungs.",
+            exampleFr = "La tuberculose (TB) est maladie infectieuse chronique causée par M. tuberculosis affectant principalement les poumons.",
+            exampleAr = "السل هو مرض معدٍ مزمن تسببه المتفطرة السلية يؤثر أساساً في الرئتين.",
         ),
         MedicalTermEntity(
             id = 2187,
@@ -1939,6 +2339,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/eɪdz/",
+            exampleEn = "The aids (acquired immunodeficiency syndrome) is the advanced stage of HIV infection with CD4 count <200 cells/μL and opportunistic infections.",
+            exampleFr = "La SIDA (Syndrome d'Immunodéficience Acquise) est le stade avancé de l'infection VIH avec CD4 <200 cellules/μL et infections opportunistes.",
+            exampleAr = "الإيدز (متلازمة نقص المناعة المكتسبة) هو المرحلة المتقدمة من عدوى HIV مع عدد CD4 <200 خلية/ميكرولتر وعدوى انتهازية.",
         ),
         MedicalTermEntity(
             id = 2188,
@@ -1975,6 +2378,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/ˈsɛkʃuəli trænsˈmɪtɪd ɪnˈfɛkʃən/",
+            exampleEn = "The sexually transmitted infection (sti) is the infection transmitted through sexual contact (e.g., HIV, syphilis, gonorrhea, chlamydia).",
         ),
         MedicalTermEntity(
             id = 2191,
@@ -1987,6 +2391,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/ˌɒpəˈtjuːnɪstɪk ɪnˈfɛkʃən/",
+            exampleEn = "The opportunistic infection is the infection caused by organisms that rarely cause disease in healthy hosts but affect immunocompromised patients.",
+            exampleFr = "L'infection opportuniste est infection causée par des organismes causant rarement des maladies chez des hôtes sains mais affectant immunodéprimés.",
+            exampleAr = "العدوى الانتهازية هو عدوى تسببها كائنات نادراً ما تحدث مرضاً في المضيفين الأصحاء لكنها تؤثر في ضعاف المناعة.",
         ),
         MedicalTermEntity(
             id = 2192,
@@ -1999,6 +2406,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/ˈpriːɒn/",
+            exampleEn = "The prion is the infectious protein that causes fatal neurodegenerative diseases (e.g., mad cow disease, CJD).",
         ),
         MedicalTermEntity(
             id = 2193,
@@ -2011,6 +2419,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/kləˈmɪdiə/",
+            exampleEn = "The chlamydia is the obligate intracellular bacterium causing the most common STI; can cause pelvic inflammatory disease.",
+            exampleFr = "La chlamydia est bactérie intracellulaire obligatoire causant l'IST la plus courante; peut causer MIP.",
+            exampleAr = "الكلاميديا هو بكتيريا داخل الخلية إلزامية تسبب أكثر الأمراض المنقولة جنسياً شيوعاً.",
         ),
         MedicalTermEntity(
             id = 2194,
@@ -2035,6 +2446,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/ˈspaɪrəˌkiːt/",
+            exampleEn = "The spirochete is the spiral-shaped bacterium; includes Treponema (syphilis), Borrelia (Lyme disease), Leptospira.",
+            exampleFr = "La spirochète est bactérie de forme spiralée; inclut Treponema (syphilis), Borrelia (Lyme), Leptospira.",
+            exampleAr = "الحلزونية هو بكتيريا حلزونية الشكل؛ تشمل اللولبية (الزهري) والبوريليا (مرض لايم) واللبتوسبيرا.",
         ),
         MedicalTermEntity(
             id = 2196,
@@ -2047,6 +2461,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/ˈmaɪkoʊˌplæzmə/",
+            exampleEn = "The mycoplasma is the smallest self-replicating bacteria lacking a cell wall; causes atypical pneumonia.",
+            exampleFr = "La mycoplasme est les plus petites bactéries autoréplicantes sans paroi cellulaire; cause pneumonie atypique.",
+            exampleAr = "المفطورة هو أصغر البكتيريا التي تتكاثر ذاتياً وتفتقر إلى جدار خلوي؛ تسبب الالتهاب الرئوي غير النمطي.",
         ),
         MedicalTermEntity(
             id = 2197,
@@ -2059,6 +2476,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/ˌliːdʒɪəˈnɛlə njʊˈmɒfɪlə/",
+            exampleEn = "The legionella pneumophila is the Gram-negative bacterium causing Legionnaires' disease transmitted through contaminated water systems.",
+            exampleFr = "La legionella pneumophila est bactérie Gram-négative causant la maladie des légionnaires transmise par systèmes d'eau contaminés.",
+            exampleAr = "الليجيونيلا الرئوية هو بكتيريا سالبة الغرام تسبب داء الفيلق تنتقل عبر أنظمة المياه الملوثة.",
         ),
         MedicalTermEntity(
             id = 2198,
@@ -2071,6 +2491,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/lɪˈstɪəriə ˌmɒnoʊˌsaɪtəˈdʒiːniːz/",
+            exampleEn = "The listeria monocytogenes is the Gram-positive bacterium causing listeriosis; dangerous for pregnant women and newborns.",
+            exampleFr = "La listeria monocytogenes est bactérie Gram-positive causant la listériose; dangereuse pour les femmes enceintes et nouveau-nés.",
+            exampleAr = "الليستيريا أحادية النواة هو بكتيريا موجبة الغرام تسبب داء الليستيريا؛ خطيرة للنساء الحوامل والمواليد.",
         ),
         MedicalTermEntity(
             id = 2199,
@@ -2083,6 +2506,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/ˌbɔːrdɪˈtɛlə pɜːrˈtʌsɪs/",
+            exampleEn = "The bordetella pertussis is the Gram-negative coccobacillus causing whooping cough (pertussis) characterized by paroxysmal cough.",
+            exampleFr = "La bordetella pertussis est coccobacille Gram-négatif causant la coqueluche caractérisée par une toux paroxystique.",
+            exampleAr = "البورديتيلة الشاهية هو مكورة عصوية سالبة الغرام تسبب السعال الديكي الذي يتميز بنوبات سعال انتيابية.",
         ),
         MedicalTermEntity(
             id = 2200,
@@ -2095,6 +2521,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/ˌkɒrɪnɪbækˈtɪəriəm dɪfˈθɪəriˌeɪ/",
+            exampleEn = "The corynebacterium diphtheriae is the causative agent of diphtheria producing an exotoxin affecting the heart and nerves.",
+            exampleFr = "La corynebacterium diphtheriae est l'agent causal de la diphtérie produisant une exotoxine affectant le cœur et les nerfs.",
+            exampleAr = "عصية الدفتيريا هو العامل المسبب للدفتيريا ينتج ذيفاناً خارجياً يؤثر في القلب والأعصاب.",
         ),
         MedicalTermEntity(
             id = 2201,
@@ -2107,6 +2536,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/ˌklɒstrɪdiəm ˈtɛtənaɪ/",
+            exampleEn = "The clostridium tetani is the causative agent of tetanus producing a neurotoxin causing muscle spasms and rigidity.",
+            exampleFr = "La clostridium tetani est l'agent causal du tétanos produisant une neurotoxine causant spasmes musculaires et rigidité.",
+            exampleAr = "المطثية الكزازية هو العامل المسبب للكزاز ينتج سُمَّاً عصبياً يسبب تشنجات العضلات والتيبس.",
         ),
         MedicalTermEntity(
             id = 2202,
@@ -2119,6 +2551,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/ˈmaɪkroʊbaɪoʊm/",
+            exampleEn = "The microbiome is the complete genetic material of all microorganisms living in a particular environment.",
+            exampleFr = "La microbiome est le matériel génétique complet de tous les microorganismes vivant dans un environnement particulier.",
+            exampleAr = "الميكروبيوم هو المادة الوراثية الكاملة لجميع الكائنات الدقيقة العائشة في بيئة معينة.",
         ),
         MedicalTermEntity(
             id = 2203,
@@ -2131,6 +2566,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/ɡʌt ˌmaɪkroʊbaɪˈoʊtə/",
+            exampleEn = "The gut microbiota is the diverse community of microorganisms inhabiting the gastrointestinal tract.",
+            exampleFr = "La microbiote intestinal est la communauté diversifiée de microorganismes habitant le tractus gastro-intestinal.",
+            exampleAr = "الميكروبيوتا المعوية هو المجتمع المتنوع من الكائنات الدقيقة الذي يسكن الجهاز الهضمي.",
         ),
         MedicalTermEntity(
             id = 2204,
@@ -2143,6 +2581,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/dɪsˈbaɪoʊsɪs/",
+            exampleEn = "The dysbiosis is the imbalance in the microbial community associated with disease states.",
+            exampleFr = "La dysbiose est un déséquilibre dans la communauté microbienne associé à des états pathologiques.",
+            exampleAr = "خلل التوازن الميكروبي هو اختلال في مجتمع الكائنات الدقيقة مرتبط بحالات مرضية.",
         ),
         MedicalTermEntity(
             id = 2205,
@@ -2191,6 +2632,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/ˈkwɔːrəm ˈsɛnsɪŋ/",
+            exampleEn = "The quorum sensing is the mechanism by which bacteria communicate and coordinate behavior based on population density.",
+            exampleFr = "Le détection du quorum est mécanisme par lequel les bactéries communiquent et coordonnent leur comportement selon la densité.",
+            exampleAr = "الاستشعار الجماعي هو آلية تتواصل بها البكتيريا وتنسق سلوكها بناءً على كثافة المجتمع.",
         ),
         MedicalTermEntity(
             id = 2209,
@@ -2203,6 +2647,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/sɪmˈbaɪoʊsɪs/",
+            exampleEn = "The symbiosis is the close ecological relationship between two different organisms.",
+            exampleFr = "La symbiose est relation écologique étroite entre deux organismes différents.",
+            exampleAr = "التكافل هو علاقة بيئية وثيقة بين كائنَين مختلفَين.",
         ),
         MedicalTermEntity(
             id = 2210,
@@ -2215,6 +2662,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/ˈmjuːtʃuəlɪzəm/",
+            exampleEn = "The mutualism is the symbiotic relationship where both organisms benefit.",
+            exampleFr = "Le mutualisme est relation symbiotique où les deux organismes bénéficient.",
+            exampleAr = "التبادلية هو علاقة تكاملية يستفيد منها كلا الكائنَين.",
         ),
         MedicalTermEntity(
             id = 2211,
@@ -2227,6 +2677,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/ˌkɒlənaɪˈzeɪʃən rɪˈzɪstəns/",
+            exampleEn = "The colonization resistance is the ability of normal flora to prevent colonization by pathogenic microorganisms.",
+            exampleFr = "La résistance à la colonisation est capacité de la flore normale à prévenir la colonisation par des microorganismes pathogènes.",
+            exampleAr = "مقاومة الاستعمار هو قدرة الفلورا الطبيعية على منع استعمار الكائنات الدقيقة الممرضة.",
         ),
         MedicalTermEntity(
             id = 2212,
@@ -2239,6 +2692,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌɛksoʊˈtɒksɪn/",
+            exampleEn = "The exotoxin is the toxin secreted by bacteria into the surrounding environment; often proteins (e.g., cholera toxin).",
         ),
         MedicalTermEntity(
             id = 2213,
@@ -2251,6 +2705,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌɛndoʊˈtɒksɪn/",
+            exampleEn = "The endotoxin is the toxin that is an integral part of the Gram-negative bacterial cell wall (LPS); released upon cell death.",
+            exampleFr = "L'endotoxine est toxine faisant partie intégrante de la paroi des bactéries Gram-négatives (LPS); libérée à la mort cellulaire.",
+            exampleAr = "الذيفان الداخلي هو ذيفان جزء لا يتجزأ من جدار الخلية البكتيرية سالبة الغرام (LPS)؛ يُطلَق عند موت الخلية.",
         ),
         MedicalTermEntity(
             id = 2214,
@@ -2263,6 +2720,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈtɒksɪn/",
+            exampleEn = "The toxin is the poisonous substance produced by a biological source that can cause disease.",
+            exampleFr = "La toxine est substance toxique produite par une source biologique pouvant causer une maladie.",
+            exampleAr = "السُّم (الذيفان) هو مادة سامة تُنتِجها مصادر بيولوجية يمكنها إحداث مرض.",
         ),
         MedicalTermEntity(
             id = 2215,
@@ -2275,6 +2735,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/zoʊˈɒnəsɪs/",
+            exampleEn = "The zoonosis is the infectious disease transmitted from animals to humans (e.g., rabies, brucellosis, plague).",
         ),
         MedicalTermEntity(
             id = 2216,
@@ -2287,6 +2748,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈfoʊmaɪt/",
+            exampleEn = "The fomite is the inanimate object contaminated with pathogenic microorganisms capable of transmitting disease.",
+            exampleFr = "La fomite est objet inanimé contaminé par des microorganismes pathogènes capable de transmettre une maladie.",
+            exampleAr = "الوسيط الجامد هو جسم غير حي ملوث بكائنات دقيقة ممرضة قادر على نقل المرض.",
         ),
         MedicalTermEntity(
             id = 2217,
@@ -2335,6 +2799,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkæriər steɪt/",
+            exampleEn = "The carrier state is the condition where an individual harbors a pathogen without showing symptoms but can transmit it.",
+            exampleFr = "L'état porteur est condition où un individu héberge un pathogène sans symptômes mais peut le transmettre.",
+            exampleAr = "حالة الحامل هو حالة يحمل فيها الفرد عاملاً ممرضاً دون إظهار أعراض لكنه قادر على نقله.",
         ),
         MedicalTermEntity(
             id = 2221,
@@ -2347,6 +2814,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈtaɪtər/",
+            exampleEn = "The titer is the concentration of antibodies or a pathogen in a biological sample.",
+            exampleFr = "La titre est la concentration d'anticorps ou d'un agent pathogène dans un échantillon biologique.",
+            exampleAr = "العيار هو تركيز الأجسام المضادة أو العامل الممرض في عينة بيولوجية.",
         ),
         MedicalTermEntity(
             id = 2222,
@@ -2359,6 +2829,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌsɛnsɪˈtɪvɪti/",
+            exampleEn = "The sensitivity (diagnostic) is the ability of a diagnostic test to correctly identify those with the disease (true positive rate).",
+            exampleFr = "La sensibilité (diagnostique) est capacité d'un test diagnostique à identifier correctement ceux ayant la maladie (taux vrais positifs).",
+            exampleAr = "الحساسية التشخيصية هو قدرة الاختبار التشخيصي على التعرف الصحيح على المصابين بالمرض (معدل الإيجابية الحقيقية).",
         ),
         MedicalTermEntity(
             id = 2223,
@@ -2371,6 +2844,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌspɛsɪˈfɪsɪti/",
+            exampleEn = "The specificity (diagnostic) is the ability of a test to correctly identify those without the disease (true negative rate).",
+            exampleFr = "La spécificité (diagnostique) est capacité d'un test à identifier correctement ceux sans la maladie (taux vrais négatifs).",
+            exampleAr = "النوعية التشخيصية هو قدرة الاختبار على التعرف الصحيح على غير المصابين بالمرض (معدل السلبية الحقيقية).",
         ),
         MedicalTermEntity(
             id = 2224,
@@ -2383,6 +2859,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌsuːpərˈæntɪdʒən/",
+            exampleEn = "The superantigen is the toxin activating large numbers of T cells causing massive cytokine release and toxic shock.",
+            exampleFr = "La superantigène est toxine activant un grand nombre de cellules T causant libération massive de cytokines et choc toxique.",
+            exampleAr = "المستضد الفائق هو ذيفان يُنشِّط أعداداً كبيرة من الخلايا التائية مسبباً إطلاقاً هائلاً للسيتوكينات والصدمة السمية.",
         ),
         MedicalTermEntity(
             id = 2225,
@@ -2395,6 +2874,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/maɪˈkroʊbiəl dʒəˈnɛtɪks/",
+            exampleEn = "The microbial genetics is the study of genetic mechanisms in microorganisms including gene transfer and mutation.",
+            exampleFr = "La génétique microbienne est l'étude des mécanismes génétiques des microorganismes incluant transfert génique et mutation.",
+            exampleAr = "الوراثة الميكروبية هو دراسة الآليات الجينية في الكائنات الدقيقة بما فيها نقل الجينات والطفرة.",
         ),
         MedicalTermEntity(
             id = 2226,
@@ -2455,6 +2937,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/mjuːˈteɪʃən/",
+            exampleEn = "The mutation (bacterial) is the permanent heritable change in bacterial DNA sequence conferring new properties.",
+            exampleFr = "Le mutation (bactérienne) est changement héréditaire permanent dans la séquence d'ADN bactérien conférant de nouvelles propriétés.",
+            exampleAr = "الطفرة البكتيرية هو تغيير وراثي دائم في تسلسل DNA البكتيري يمنح خصائص جديدة.",
         ),
         MedicalTermEntity(
             id = 2231,
@@ -2467,6 +2952,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪˈmɜːrdʒɪŋ ɪnˈfɛkʃəs dɪˈziːz/",
+            exampleEn = "The emerging infectious disease is the disease newly appearing in a population or rapidly increasing in incidence or geographic range.",
+            exampleFr = "La maladie infectieuse émergente est maladie apparaissant nouvellement dans une population ou augmentant rapidement en incidence.",
+            exampleAr = "المرض المعدي الناشئ هو مرض يظهر حديثاً في مجتمع أو يتزايد بسرعة في انتشاره.",
         ),
         MedicalTermEntity(
             id = 2232,
@@ -2479,6 +2967,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/riː ɪˈmɜːrdʒɪŋ/",
+            exampleEn = "The re-emerging disease is the previously controlled disease that is again becoming a public health problem.",
+            exampleFr = "La maladie ré-émergente est maladie auparavant contrôlée qui redevient un problème de santé publique.",
+            exampleAr = "المرض المُعاد ظهوره هو مرض كان تحت السيطرة سابقاً أصبح مرة أخرى مشكلة صحة عامة.",
         ),
         MedicalTermEntity(
             id = 2233,
@@ -2491,6 +2982,7 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪˌrædɪˈkeɪʃən/",
+            exampleEn = "The eradication (disease) is the permanent reduction to zero of the worldwide incidence of a disease (e.g., smallpox).",
         ),
         MedicalTermEntity(
             id = 2234,
@@ -2503,6 +2995,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌæntiˈmaɪkrəbiəl rɪˈzɪstəns/",
+            exampleEn = "The antimicrobial resistance (amr) is the ability of microorganisms to resist the effects of antimicrobial drugs; a global health threat.",
+            exampleFr = "La résistance aux antimicrobiens (RAM) est capacité des microorganismes à résister aux effets des médicaments antimicrobiens; menace mondiale.",
+            exampleAr = "مقاومة مضادات الميكروبات هو قدرة الكائنات الدقيقة على مقاومة تأثيرات أدوية مضادات الميكروبات؛ تهديد صحي عالمي.",
         ),
         MedicalTermEntity(
             id = 2235,
@@ -2515,6 +3010,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪˌnɒkjʊˈleɪʃən/",
+            exampleEn = "The inoculation is the introduction of a substance (microorganism or vaccine) into a host or culture medium.",
+            exampleFr = "L'inoculation est introduction d'une substance (microorganisme ou vaccin) dans un hôte ou milieu de culture.",
+            exampleAr = "التلقيح (التطعيم) هو إدخال مادة (كائن دقيق أو لقاح) إلى مضيف أو وسيط زراعة.",
         ),
         MedicalTermEntity(
             id = 2236,
@@ -2551,6 +3049,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/əˌɡluːtɪˈneɪʃən/",
+            exampleEn = "The agglutination is the clumping of particles (bacteria, RBCs) by antibodies or lectins.",
+            exampleFr = "L'agglutination est l'agrégation de particules (bactéries, GR) par des anticorps ou des lectines.",
+            exampleAr = "التراص هو تجمع الجسيمات (البكتيريا وكريات الدم الحمراء) بواسطة الأجسام المضادة أو الليكتينات.",
         ),
         MedicalTermEntity(
             id = 2239,
@@ -2563,6 +3064,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/hɪˈmɒlɪsɪs/",
+            exampleEn = "The hemolysis is the destruction of red blood cells; used to classify Streptococcus on blood agar (alpha, beta, gamma).",
+            exampleFr = "L'hémolyse est la destruction des globules rouges; utilisée pour classifier les streptocoques sur gélose au sang.",
+            exampleAr = "الانحلال الدموي هو تدمير كريات الدم الحمراء؛ يُستخدَم لتصنيف العقديات على أجار الدم (ألفا وبيتا وغاما).",
         ),
         MedicalTermEntity(
             id = 2240,
@@ -2575,6 +3079,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/sɪˈlɛktɪv ˈmiːdiəm/",
+            exampleEn = "The selective medium is the culture medium allowing growth of specific microorganisms while inhibiting others.",
+            exampleFr = "Le milieu sélectif est milieu de culture permettant la croissance de microorganismes spécifiques tout en inhibant d'autres.",
+            exampleAr = "الوسيط الانتقائي هو وسيط زراعة يسمح بنمو كائنات دقيقة محددة مع تثبيط الأخريات.",
         ),
         MedicalTermEntity(
             id = 2241,
@@ -2587,6 +3094,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdɪfəˈrɛnʃəl ˈmiːdiəm/",
+            exampleEn = "The differential medium is the culture medium distinguishing between different microorganisms based on visible characteristics.",
+            exampleFr = "Le milieu différentiel est milieu de culture distinguant différents microorganismes selon des caractéristiques visibles.",
+            exampleAr = "الوسيط التمييزي هو وسيط زراعة يُميِّز بين الكائنات الدقيقة المختلفة بناءً على خصائص مرئية.",
         ),
         MedicalTermEntity(
             id = 2242,
@@ -2599,6 +3109,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/məˈkɒŋki ˈeɪɡər/",
+            exampleEn = "The macconkey agar is the selective and differential medium isolating Gram-negative rods and differentiating lactose fermenters.",
+            exampleFr = "La gélose MacConkey est milieu sélectif et différentiel isolant les bacilles Gram-négatifs et différenciant fermenteurs lactose.",
+            exampleAr = "أجار ماك كونكي هو وسيط انتقائي وتمييزي يعزل العصيات سالبة الغرام ويُميِّز بين مُخمِّري اللاكتوز.",
         ),
         MedicalTermEntity(
             id = 2243,
@@ -2611,6 +3124,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/blʌd ˈeɪɡər/",
+            exampleEn = "The blood agar is the general purpose medium enriched with blood for fastidious organisms; shows hemolysis patterns.",
+            exampleFr = "La gélose au sang est milieu polyvalent enrichi en sang pour organismes exigeants; montre les schémas d'hémolyse.",
+            exampleAr = "أجار الدم هو وسيط لأغراض عامة مُخصَّب بالدم للكائنات الصعبة؛ يُظهِر أنماط الانحلال الدموي.",
         ),
         MedicalTermEntity(
             id = 2244,
@@ -2623,6 +3139,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌspɔːrjʊˈleɪʃən/",
+            exampleEn = "The sporulation is the process of forming spores; used by some bacteria to survive adverse conditions.",
+            exampleFr = "Le sporulation est le processus de formation de spores; utilisé par certaines bactéries pour survivre aux conditions défavorables.",
+            exampleAr = "التبوغ هو عملية تكوين الأبواغ؛ تستخدمها بعض البكتيريا للبقاء في الظروف السلبية.",
         ),
         MedicalTermEntity(
             id = 2245,
@@ -2635,6 +3154,9 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪnˈrɪtʃmənt ˈmiːdiəm/",
+            exampleEn = "The enrichment medium is the liquid medium enhancing growth of a specific organism by providing optimal nutrients.",
+            exampleFr = "Le milieu d'enrichissement est milieu liquide améliorant la croissance d'un organisme spécifique par des nutriments optimaux.",
+            exampleAr = "الوسيط التغذوي هو وسيط سائل يُعزِّز نمو كائن محدد بتوفير مغذيات مثلى.",
         ),
         MedicalTermEntity(
             id = 2246,

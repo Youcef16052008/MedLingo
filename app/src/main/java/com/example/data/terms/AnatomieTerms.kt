@@ -547,6 +547,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/ˈpʌlmənɛri ˈɑːrtəri/",
+            exampleEn = "The pulmonary artery is the artery carrying deoxygenated blood from the heart to the lungs.",
+            exampleFr = "L'artère pulmonaire est artère transportant le sang désoxygéné du cœur vers les poumons.",
+            exampleAr = "الشريان الرئوي هو الشريان الذي ينقل الدم غير المؤكسج من القلب إلى الرئتين.",
         ),
         MedicalTermEntity(
             id = 32,
@@ -559,6 +562,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/kəˈrɒtɪd ˈɑːrtəri/",
+            exampleEn = "The carotid artery is the major artery supplying blood to the head and neck.",
+            exampleFr = "L'artère carotide est artère principale alimentant la tête et le cou en sang.",
+            exampleAr = "الشريان السباتي هو الشريان الرئيسي الذي يزود الرأس والعنق بالدم.",
         ),
         MedicalTermEntity(
             id = 33,
@@ -571,6 +577,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/sʌbˈkleɪviən ˈɑːrtəri/",
+            exampleEn = "The subclavian artery is the artery supplying blood to the upper limb.",
+            exampleFr = "L'artère sous-clavière est artère alimentant le membre supérieur en sang.",
+            exampleAr = "الشريان تحت الترقوة هو الشريان الذي يزود الطرف العلوي بالدم.",
         ),
         MedicalTermEntity(
             id = 34,
@@ -583,6 +592,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/ˈbreɪkiəl ˈɑːrtəri/",
+            exampleEn = "The brachial artery is the major artery of the upper arm.",
+            exampleFr = "L'artère brachiale (humérale) est artère principale du bras.",
+            exampleAr = "الشريان العضدي هو الشريان الرئيسي في الذراع.",
         ),
         MedicalTermEntity(
             id = 35,
@@ -595,6 +607,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/ˈreɪdiəl ˈɑːrtəri/",
+            exampleEn = "The radial artery is the artery of the forearm used to take the pulse at the wrist.",
+            exampleFr = "L'artère radiale est artère de l'avant-bras utilisée pour prendre le pouls au poignet.",
+            exampleAr = "الشريان الكعبري هو شريان الساعد المستخدم لقياس النبض عند الرسغ.",
         ),
         MedicalTermEntity(
             id = 36,
@@ -607,6 +622,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/pɒpˈlɪtiəl ˈɑːrtəri/",
+            exampleEn = "The popliteal artery is the artery behind the knee.",
+            exampleFr = "L'artère poplitée est artère derrière le genou.",
+            exampleAr = "الشريان المأبضي هو الشريان خلف الركبة.",
         ),
         MedicalTermEntity(
             id = 37,
@@ -619,6 +637,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/ˈpɔːrtəl veɪn/",
+            exampleEn = "The portal vein is the vein carrying blood from the digestive organs to the liver.",
+            exampleFr = "La veine porte est veine transportant le sang des organes digestifs vers le foie.",
+            exampleAr = "الوريد البابي هو الوريد الذي ينقل الدم من الأعضاء الهضمية إلى الكبد.",
         ),
         MedicalTermEntity(
             id = 38,
@@ -631,6 +652,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Angiologie",
             ipaPhonetic = "/səˈfiːnəs veɪn/",
+            exampleEn = "The saphenous vein is the longest vein in the body, running along the leg.",
+            exampleFr = "La veine saphène est la veine la plus longue du corps, s'étendant le long de la jambe.",
+            exampleAr = "الوريد الصافن هو أطول وريد في الجسم، يمتد على طول الساق.",
         ),
         MedicalTermEntity(
             id = 39,
@@ -1170,6 +1194,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/sɪˈnoʊviəl ˈmɛmbreɪn/",
+            exampleEn = "The synovial membrane is the inner membrane of the joint capsule secreting synovial fluid.",
+            exampleFr = "La membrane synoviale est membrane interne de la capsule articulaire sécrétant le liquide synovial.",
+            exampleAr = "الغشاء الزليلي هو الغشاء الداخلي للمحفظة المفصلية الذي يفرز السائل الزليلي.",
         ),
         MedicalTermEntity(
             id = 70,
@@ -1182,6 +1209,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/dʒɔɪnt ˈkæpsjuːl/",
+            exampleEn = "The joint capsule is the fibrous envelope surrounding a synovial joint.",
+            exampleFr = "La capsule articulaire est enveloppe fibreuse entourant une articulation synoviale.",
+            exampleAr = "المحفظة المفصلية هو الغلاف الليفي المحيط بالمفصل الزليلي.",
         ),
         MedicalTermEntity(
             id = 71,
@@ -1194,6 +1224,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/ˈplæntər ˈflɛkʃən/",
+            exampleEn = "Plantar flexion refers to bending the foot downward at the ankle.",
+            exampleFr = "Le flexion plantaire est flexion du pied vers le bas au niveau de la cheville.",
+            exampleAr = "العطف الأخمصي هو ثني القدم للأسفل عند الكاحل.",
         ),
         MedicalTermEntity(
             id = 72,
@@ -1206,6 +1239,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/ɪnˈvɜːrʒən/",
+            exampleEn = "Inversion refers to turning the sole of the foot medially (inward).",
+            exampleFr = "L'inversion est tourner la plante du pied vers l'intérieur.",
+            exampleAr = "الانقلاب للداخل هو تحويل أخمص القدم نحو الداخل.",
         ),
         MedicalTermEntity(
             id = 73,
@@ -1218,6 +1254,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/ɪˈvɜːrʒən/",
+            exampleEn = "Eversion refers to turning the sole of the foot laterally (outward).",
+            exampleFr = "L'éversion est tourner la plante du pied vers l'extérieur.",
+            exampleAr = "الانقلاب للخارج هو تحويل أخمص القدم نحو الخارج.",
         ),
         MedicalTermEntity(
             id = 74,
@@ -1775,6 +1814,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/əˈnætəmi/",
+            exampleEn = "Anatomy is the science of body structures and the relationships among them.",
+            exampleFr = "L'anatomie est science des structures du corps et de leurs relations.",
+            exampleAr = "علم التشريح هو علم دراسة بنية الجسم والعلاقات بين أجزائه.",
         ),
         MedicalTermEntity(
             id = 107,
@@ -1787,6 +1829,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈsædʒɪtəl pleɪn/",
+            exampleEn = "The sagittal plane is the vertical plane that divides the body into right and left parts.",
+            exampleFr = "La plan sagittal est plan vertical divisant le corps en parties droite et gauche.",
+            exampleAr = "المستوى السهمي هو مستوى عمودي يقسم الجسم إلى جزأين أيمن وأيسر.",
         ),
         MedicalTermEntity(
             id = 108,
@@ -1799,6 +1844,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈkɒrənəl pleɪn/",
+            exampleEn = "The coronal plane is the vertical plane that divides the body into anterior and posterior parts.",
+            exampleFr = "La plan coronal (frontal) est plan vertical divisant le corps en parties antérieure et postérieure.",
+            exampleAr = "المستوى الإكليلي هو مستوى عمودي يقسم الجسم إلى جزء أمامي وجزء خلفي.",
         ),
         MedicalTermEntity(
             id = 109,
@@ -1811,6 +1859,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/trænsˈvɜːrs pleɪn/",
+            exampleEn = "The transverse plane is the horizontal plane dividing the body into superior and inferior parts.",
+            exampleFr = "La plan transversal (axial) est plan horizontal divisant le corps en parties supérieure et inférieure.",
+            exampleAr = "المستوى المستعرض هو مستوى أفقي يقسم الجسم إلى جزء علوي وجزء سفلي.",
         ),
         MedicalTermEntity(
             id = 110,
@@ -1823,6 +1874,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈmiːdiən pleɪn/",
+            exampleEn = "The median plane is the sagittal plane that passes through the midline of the body.",
+            exampleFr = "La plan médian est plan sagittal passant par la ligne médiane du corps.",
+            exampleAr = "المستوى الناصف هو مستوى سهمي يمر عبر الخط الأوسط للجسم.",
         ),
         MedicalTermEntity(
             id = 111,
@@ -1835,6 +1889,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ænˈtɪəriər/",
+            exampleEn = "Anterior (Ventral) refers to situated at or toward the front of the body.",
+            exampleFr = "L'antérieur (Ventral) est situé à l'avant du corps.",
+            exampleAr = "أمامي (بطني) هو يقع في الجهة الأمامية من الجسم.",
         ),
         MedicalTermEntity(
             id = 112,
@@ -1847,6 +1904,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/pɒˈstɪəriər/",
+            exampleEn = "Posterior (Dorsal) refers to situated at or toward the back of the body.",
+            exampleFr = "La postérieur (Dorsal) est situé à l'arrière du corps.",
+            exampleAr = "خلفي (ظهري) هو يقع في الجهة الخلفية من الجسم.",
         ),
         MedicalTermEntity(
             id = 113,
@@ -1859,6 +1919,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/suːˈpɪəriər/",
+            exampleEn = "Superior (Cranial) refers to situated above or toward the head.",
+            exampleFr = "La supérieur (Crânial) est situé au-dessus ou vers la tête.",
+            exampleAr = "علوي (قحفي) هو يقع أعلى أو باتجاه الرأس.",
         ),
         MedicalTermEntity(
             id = 114,
@@ -1871,6 +1934,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ɪnˈfɪəriər/",
+            exampleEn = "Inferior (Caudal) refers to situated below or toward the feet.",
+            exampleFr = "L'inférieur (Caudal) est situé en dessous ou vers les pieds.",
+            exampleAr = "سفلي (ذنبي) هو يقع أسفل أو باتجاه القدمين.",
         ),
         MedicalTermEntity(
             id = 115,
@@ -1883,6 +1949,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈmiːdiəl/",
+            exampleEn = "Medial refers to situated closer to the midline of the body.",
+            exampleFr = "Le médial est situé plus proche de la ligne médiane.",
+            exampleAr = "إنسي هو يقع أقرب إلى الخط الأوسط للجسم.",
         ),
         MedicalTermEntity(
             id = 116,
@@ -1895,6 +1964,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈlætərəl/",
+            exampleEn = "Lateral refers to situated farther from the midline of the body.",
+            exampleFr = "Le latéral est situé plus loin de la ligne médiane.",
+            exampleAr = "وحشي هو يقع أبعد عن الخط الأوسط للجسم.",
         ),
         MedicalTermEntity(
             id = 117,
@@ -1907,6 +1979,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈprɒksɪməl/",
+            exampleEn = "Proximal refers to situated closer to the point of attachment or origin.",
+            exampleFr = "Le proximal est situé plus proche du point d'attache.",
+            exampleAr = "داني (قريب) هو يقع أقرب إلى نقطة الارتباط أو الأصل.",
         ),
         MedicalTermEntity(
             id = 118,
@@ -1919,6 +1994,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈdɪstəl/",
+            exampleEn = "Distal refers to situated farther from the point of attachment or origin.",
+            exampleFr = "Le distal est situé plus loin du point d'attache.",
+            exampleAr = "قاصي (بعيد) هو يقع أبعد عن نقطة الارتباط أو الأصل.",
         ),
         MedicalTermEntity(
             id = 119,
@@ -1931,6 +2009,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˌsuːpərˈfɪʃəl/",
+            exampleEn = "Superficial refers to situated closer to the surface of the body.",
+            exampleFr = "La superficiel est situé plus près de la surface du corps.",
+            exampleAr = "سطحي هو يقع أقرب إلى سطح الجسم.",
         ),
         MedicalTermEntity(
             id = 120,
@@ -1943,6 +2024,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/diːp/",
+            exampleEn = "Deep refers to situated farther from the surface of the body.",
+            exampleFr = "La profond est situé plus loin de la surface du corps.",
+            exampleAr = "عميق هو يقع أبعد عن سطح الجسم.",
         ),
         MedicalTermEntity(
             id = 121,
@@ -1955,6 +2039,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/proʊn/",
+            exampleEn = "Prone refers to lying face down.",
+            exampleFr = "La décubitus ventral (Pronation) est couché face vers le bas.",
+            exampleAr = "الانبطاح هو الاستلقاء على الوجه.",
         ),
         MedicalTermEntity(
             id = 122,
@@ -2015,6 +2102,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/sɪˈfælɪk/",
+            exampleEn = "Cephalic refers to pertaining to the head.",
+            exampleFr = "La céphalique est relatif à la tête.",
         ),
         MedicalTermEntity(
             id = 127,
@@ -2027,6 +2116,7 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈsɜːrvɪkəl/",
+            exampleEn = "Cervical refers to pertaining to the neck.",
         ),
         MedicalTermEntity(
             id = 128,
@@ -2039,6 +2129,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/θɔːˈræsɪk/",
+            exampleEn = "Thoracic refers to pertaining to the chest.",
+            exampleFr = "La thoracique est relatif au thorax.",
         ),
         MedicalTermEntity(
             id = 129,
@@ -2051,6 +2143,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/æbˈdɒmɪnəl/",
+            exampleEn = "Abdominal refers to pertaining to the abdomen.",
+            exampleFr = "L'abdominal est relatif à l'abdomen.",
         ),
         MedicalTermEntity(
             id = 130,
@@ -2063,6 +2157,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈpɛlvɪk/",
+            exampleEn = "Pelvic refers to pertaining to the pelvis.",
+            exampleFr = "La pelvien est relatif au bassin.",
         ),
         MedicalTermEntity(
             id = 131,
@@ -2075,6 +2171,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈlʌmbɑːr/",
+            exampleEn = "Lumbar refers to pertaining to the lower back.",
+            exampleFr = "La lombaire est relatif au bas du dos.",
+            exampleAr = "قَطَني هو متعلق بأسفل الظهر.",
         ),
         MedicalTermEntity(
             id = 132,
@@ -2087,6 +2186,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈɪŋɡwɪnəl/",
+            exampleEn = "Inguinal refers to pertaining to the groin.",
+            exampleFr = "L'inguinal est relatif à l'aine.",
+            exampleAr = "أربي (مغبني) هو متعلق بمنطقة المغبن.",
         ),
         MedicalTermEntity(
             id = 133,
@@ -2796,6 +2898,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ˈmʌsəl ˈfaɪbər/",
+            exampleEn = "The muscle fiber is the single muscle cell.",
+            exampleFr = "La fibre musculaire est une cellule musculaire unique.",
+            exampleAr = "الليف العضلي هو خلية عضلية واحدة.",
         ),
         MedicalTermEntity(
             id = 174,
@@ -2808,6 +2913,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ˌriːlækˈseɪʃən/",
+            exampleEn = "The relaxation is the lengthening of a muscle after contraction.",
+            exampleFr = "Le relâchement est allongement d'un muscle après la contraction.",
+            exampleAr = "الاسترخاء هو استطالة العضلة بعد التقلص.",
         ),
         MedicalTermEntity(
             id = 175,
@@ -2820,6 +2928,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ˈsɪnərdʒɪst/",
+            exampleEn = "The synergist is the muscle that assists the agonist in performing a movement.",
+            exampleFr = "La synergiste est muscle qui assiste l'agoniste dans l'exécution d'un mouvement.",
+            exampleAr = "العضلة المساعدة هو عضلة تساعد العضلة المحركة في أداء حركة ما.",
         ),
         MedicalTermEntity(
             id = 176,
@@ -2832,6 +2943,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ˌtɛmpəˈreɪlɪs/",
+            exampleEn = "The temporalis is the fan-shaped muscle of mastication on the lateral skull.",
+            exampleFr = "Le temporal est muscle de mastication en forme d'éventail sur le crâne latéral.",
+            exampleAr = "العضلة الصدغية هو عضلة مضغ مروحية الشكل على جانب الجمجمة.",
         ),
         MedicalTermEntity(
             id = 177,
@@ -2844,6 +2958,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ɔːrˌbɪkjʊˈlɛrɪs ˈɔːrɪs/",
+            exampleEn = "The orbicularis oris is the muscle surrounding the mouth responsible for lip movements.",
+            exampleFr = "L'orbiculaire de la bouche est muscle entourant la bouche responsable des mouvements des lèvres.",
+            exampleAr = "العضلة الدويرية الفموية هو العضلة المحيطة بالفم المسؤولة عن حركات الشفاه.",
         ),
         MedicalTermEntity(
             id = 178,
@@ -2856,6 +2973,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ɪnˈtɜːrnəl əˈbliːk/",
+            exampleEn = "The internal oblique is the lateral abdominal muscle deep to the external oblique.",
+            exampleFr = "L'oblique interne est muscle abdominal latéral profond par rapport à l'oblique externe.",
+            exampleAr = "العضلة المائلة الباطنة هو العضلة البطنية الجانبية العميقة تحت المائلة الظاهرة.",
         ),
         MedicalTermEntity(
             id = 179,
@@ -2868,6 +2988,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/trænsˈvɜːrsəs æbˈdɒmɪnɪs/",
+            exampleEn = "The transversus abdominis is the deepest layer of abdominal muscles.",
+            exampleFr = "La transverse de l'abdomen est la couche la plus profonde des muscles abdominaux.",
+            exampleAr = "العضلة البطنية المستعرضة هو الطبقة الأعمق من عضلات البطن.",
         ),
         MedicalTermEntity(
             id = 180,
@@ -2880,6 +3003,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ˌbreɪkiˈælɪs/",
+            exampleEn = "The brachialis is the muscle of the anterior arm deep to the biceps, powerful flexor of the elbow.",
+            exampleFr = "Le brachial antérieur est muscle de la face antérieure du bras profond au biceps, puissant fléchisseur du coude.",
+            exampleAr = "العضلة العضدية هو عضلة في الوجه الأمامي للذراع تحت العضلة ذات الرأسين، ثانية قوية للمرفق.",
         ),
         MedicalTermEntity(
             id = 181,
@@ -2892,6 +3018,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/ˈɡluːtiəs ˈmiːdiəs/",
+            exampleEn = "The gluteus medius is the muscle of the hip responsible for abduction of the thigh.",
+            exampleFr = "La moyen fessier est muscle de la hanche responsable de l'abduction de la cuisse.",
+            exampleAr = "العضلة الألوية الوسطى هو عضلة الورك المسؤولة عن تبعيد الفخذ.",
         ),
         MedicalTermEntity(
             id = 182,
@@ -2904,6 +3033,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/əˈdʌktər ˈmʌsəlz/",
+            exampleEn = "The adductor muscles is the group of muscles on the medial thigh that adduct the leg.",
+            exampleFr = "La muscles adducteurs est groupe de muscles de la face interne de la cuisse qui rapprochent la jambe.",
+            exampleAr = "العضلات المقربة هو مجموعة عضلات في الوجه الداخلي للفخذ تقرب الساق.",
         ),
         MedicalTermEntity(
             id = 183,
@@ -2916,6 +3048,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Myologie",
             ipaPhonetic = "/əˈkɪliːz ˈtɛndən/",
+            exampleEn = "The achilles tendon is the thick tendon connecting the calf muscles to the calcaneus.",
+            exampleFr = "Le tendon d'Achille (Tendon calcanéen) est tendon épais reliant les muscles du mollet au calcanéum.",
+            exampleAr = "وتر أخيل (الوتر العقبي) هو الوتر السميك الذي يربط عضلات الساق بعظم العقب.",
         ),
         MedicalTermEntity(
             id = 184,
@@ -3543,6 +3678,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Neurologie",
             ipaPhonetic = "/nɜːrv/",
+            exampleEn = "The nerve is the bundle of fibers transmitting impulses between the brain/spinal cord and body.",
+            exampleFr = "La nerf est faisceau de fibres transmettant des impulsions entre le cerveau/moelle et le corps.",
+            exampleAr = "عصب هو حزمة من الألياف تنقل النبضات بين الدماغ/الحبل الشوكي والجسم.",
         ),
         MedicalTermEntity(
             id = 220,
@@ -3555,6 +3693,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Neurologie",
             ipaPhonetic = "/ˈbreɪkiəl ˈplɛksəs/",
+            exampleEn = "The brachial plexus is the network of nerves supplying the upper limb.",
+            exampleFr = "La plexus brachial est réseau de nerfs alimentant le membre supérieur.",
+            exampleAr = "الضفيرة العضدية هو شبكة من الأعصاب تزود الطرف العلوي.",
         ),
         MedicalTermEntity(
             id = 221,
@@ -3567,6 +3708,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Neurologie",
             ipaPhonetic = "/ˈlʌmbɑːr ˈplɛksəs/",
+            exampleEn = "The lumbar plexus is the network of nerves in the lower back supplying the lower limb.",
+            exampleFr = "La plexus lombaire est réseau de nerfs dans le bas du dos alimentant le membre inférieur.",
+            exampleAr = "الضفيرة القطنية هو شبكة أعصاب في أسفل الظهر تزود الطرف السفلي.",
         ),
         MedicalTermEntity(
             id = 222,
@@ -3930,6 +4074,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Organes",
             ipaPhonetic = "/spliːn/",
+            exampleEn = "The spleen is the organ filtering blood and recycling old red blood cells.",
+            exampleFr = "La rate est organe filtrant le sang et recyclant les vieux globules rouges.",
+            exampleAr = "الطحال هو عضو يرشح الدم ويعيد تدوير كريات الدم الحمراء القديمة.",
         ),
         MedicalTermEntity(
             id = 243,
@@ -3942,6 +4089,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Organes",
             ipaPhonetic = "/ˈθaɪrɔɪd ɡlænd/",
+            exampleEn = "The thyroid gland is the butterfly-shaped endocrine gland in the neck regulating metabolism.",
+            exampleFr = "La glande thyroïde est glande endocrine en forme de papillon dans le cou régulant le métabolisme.",
+            exampleAr = "الغدة الدرقية هو غدة صماء على شكل فراشة في العنق تنظم الأيض.",
         ),
         MedicalTermEntity(
             id = 244,
@@ -3954,6 +4104,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Organes",
             ipaPhonetic = "/əˈdriːnəl ɡlænd/",
+            exampleEn = "The adrenal gland is the endocrine gland located on top of each kidney.",
+            exampleFr = "La glande surrénale est glande endocrine située au-dessus de chaque rein.",
+            exampleAr = "الغدة الكظرية هو غدة صماء تقع فوق كل كلية.",
         ),
         MedicalTermEntity(
             id = 245,
@@ -4777,6 +4930,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈskɛlɪtən/",
+            exampleEn = "The skeleton is the internal framework of bones supporting the body.",
+            exampleFr = "La squelette est charpente interne d'os soutenant le corps.",
+            exampleAr = "الهيكل العظمي هو الإطار الداخلي من العظام الذي يدعم الجسم.",
         ),
         MedicalTermEntity(
             id = 291,
@@ -4789,6 +4945,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/boʊn/",
+            exampleEn = "The bone is the rigid organ that constitutes part of the skeleton.",
+            exampleFr = "L'os est organe rigide constituant le squelette.",
+            exampleAr = "عظم هو عضو صلب يشكل جزءاً من الهيكل العظمي.",
         ),
         MedicalTermEntity(
             id = 292,
@@ -4801,6 +4960,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ɛnˈdɒstiəm/",
+            exampleEn = "The endosteum is the thin membrane lining the inner surface of bone.",
+            exampleFr = "L'endoste est fine membrane tapissant la surface interne de l'os.",
+            exampleAr = "بطانة العظم هو غشاء رقيق يبطن السطح الداخلي للعظم.",
         ),
         MedicalTermEntity(
             id = 293,
@@ -4849,6 +5011,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/mɛˈtæfɪsɪs/",
+            exampleEn = "The metaphysis is the region between the diaphysis and epiphysis.",
+            exampleFr = "La métaphyse est région entre la diaphyse et l'épiphyse.",
+            exampleAr = "الكردوس هو المنطقة الواقعة بين جسم العظم والمشاشة.",
         ),
         MedicalTermEntity(
             id = 297,
@@ -4873,6 +5038,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˌɒsɪfɪˈkeɪʃən/",
+            exampleEn = "The ossification is the process of bone formation.",
+            exampleFr = "L'ossification est processus de formation osseuse.",
+            exampleAr = "التعظم هو عملية تكوين العظم.",
         ),
         MedicalTermEntity(
             id = 299,
@@ -4885,6 +5053,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/fəˈreɪmən/",
+            exampleEn = "The foramen is the opening or hole in a bone.",
+            exampleFr = "La foramen (Trou) est ouverture ou trou dans un os.",
+            exampleAr = "الثقبة هو فتحة أو ثقب في العظم.",
         ),
         MedicalTermEntity(
             id = 300,
@@ -4897,6 +5068,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈprɒsɛs/",
+            exampleEn = "The process is the projection or outgrowth of bone.",
+            exampleFr = "La processus (Apophyse) est saillie ou excroissance osseuse.",
+            exampleAr = "النتوء هو بروز أو نتوء عظمي.",
         ),
         MedicalTermEntity(
             id = 301,
@@ -4909,6 +5083,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈfɒsə/",
+            exampleEn = "The fossa is the shallow depression in a bone.",
+            exampleFr = "La fosse est dépression peu profonde dans un os.",
+            exampleAr = "الحفرة هو انخفاض ضحل في العظم.",
         ),
         MedicalTermEntity(
             id = 302,
@@ -4921,6 +5098,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɒndaɪl/",
+            exampleEn = "The condyle is the rounded projection at the end of a bone for articulation.",
+            exampleFr = "La condyle est saillie arrondie à l'extrémité d'un os pour l'articulation.",
+            exampleAr = "اللقمة هو بروز مستدير في نهاية العظم للتمفصل.",
         ),
         MedicalTermEntity(
             id = 303,
@@ -4933,6 +5113,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈtjuːbərkəl/",
+            exampleEn = "The tubercle is the small rounded projection on a bone.",
+            exampleFr = "La tubercule est petite saillie arrondie sur un os.",
+            exampleAr = "الحديبة هو بروز صغير مستدير على العظم.",
         ),
         MedicalTermEntity(
             id = 304,
@@ -4945,6 +5128,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˌtjuːbəˈrɒsɪti/",
+            exampleEn = "The tuberosity is the large rounded elevation on a bone.",
+            exampleFr = "La tubérosité est grande élévation arrondie sur un os.",
+            exampleAr = "الحدبة هو ارتفاع كبير مستدير على العظم.",
         ),
         MedicalTermEntity(
             id = 305,
@@ -4957,6 +5143,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/troʊˈkæntər/",
+            exampleEn = "The trochanter is the large projection on the femur for muscle attachment.",
+            exampleFr = "La trochanter est grande saillie sur le fémur pour l'insertion musculaire.",
+            exampleAr = "المدور هو بروز كبير على عظم الفخذ لارتباط العضلات.",
         ),
         MedicalTermEntity(
             id = 306,
@@ -4981,6 +5170,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈlækrɪməl boʊn/",
+            exampleEn = "The lacrimal bone is the smallest bone of the face, located in the orbit.",
+            exampleFr = "L'os lacrymal est le plus petit os de la face, situé dans l'orbite.",
+            exampleAr = "العظم الدمعي هو أصغر عظم في الوجه، يقع في المحجر.",
         ),
         MedicalTermEntity(
             id = 308,
@@ -4993,6 +5185,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈpælətaɪn boʊn/",
+            exampleEn = "The palatine bone is the bone forming part of the hard palate and nasal cavity.",
+            exampleFr = "L'os palatin est os formant une partie du palais dur et de la cavité nasale.",
+            exampleAr = "العظم الحنكي هو عظم يشكل جزءاً من الحنك الصلب والتجويف الأنفي.",
         ),
         MedicalTermEntity(
             id = 309,
@@ -5005,6 +5200,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈvoʊmər/",
+            exampleEn = "The vomer is the bone forming the inferior part of the nasal septum.",
+            exampleFr = "La vomer est os formant la partie inférieure de la cloison nasale.",
+            exampleAr = "الميكعة هو عظم يشكل الجزء السفلي من الحاجز الأنفي.",
         ),
         MedicalTermEntity(
             id = 310,
@@ -5017,6 +5215,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈhaɪɔɪd boʊn/",
+            exampleEn = "The hyoid bone is the U-shaped bone in the neck, not articulated with any other bone.",
+            exampleFr = "L'os hyoïde est os en forme de U dans le cou, non articulé avec un autre os.",
+            exampleAr = "العظم اللامي هو عظم على شكل حرف U في العنق، غير متمفصل مع أي عظم آخر.",
         ),
         MedicalTermEntity(
             id = 311,
@@ -5029,6 +5230,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˌfɒntəˈnɛl/",
+            exampleEn = "The fontanelle is the soft spot on an infant skull where sutures have not yet fused.",
+            exampleFr = "La fontanelle est zone molle sur le crâne du nourrisson où les sutures ne sont pas encore fusionnées.",
+            exampleAr = "اليافوخ هو منطقة لينة على جمجمة الرضيع حيث لم تلتحم الدروز بعد.",
         ),
         MedicalTermEntity(
             id = 312,
@@ -5041,6 +5245,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/fəˈreɪmən ˈmæɡnəm/",
+            exampleEn = "The foramen magnum is the large opening at the base of the skull through which the spinal cord passes.",
+            exampleFr = "La foramen magnum (Trou occipital) est grande ouverture à la base du crâne par laquelle passe la moelle épinière.",
+            exampleAr = "الثقبة العظمى هو الفتحة الكبيرة في قاعدة الجمجمة التي يمر من خلالها الحبل الشوكي.",
         ),
         MedicalTermEntity(
             id = 313,
@@ -5053,6 +5260,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈɔːrbɪt/",
+            exampleEn = "The orbit is the bony cavity containing the eye.",
+            exampleFr = "L'orbite est cavité osseuse contenant l'œil.",
+            exampleAr = "المحجر (الحجاج) هو التجويف العظمي الذي يحتوي على العين.",
         ),
         MedicalTermEntity(
             id = 314,
@@ -5065,6 +5275,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈsɛlə ˈtɜːrsɪkə/",
+            exampleEn = "The sella turcica is the saddle-shaped depression in the sphenoid bone housing the pituitary gland.",
+            exampleFr = "La selle turcique est dépression en forme de selle dans le sphénoïde abritant l'hypophyse.",
+            exampleAr = "السرج التركي هو انخفاض على شكل سرج في العظم الوتدي يحتضن الغدة النخامية.",
         ),
         MedicalTermEntity(
             id = 315,
@@ -5089,6 +5302,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈspaɪnəs ˈprɒsɛs/",
+            exampleEn = "The spinous process is the posterior projection of a vertebra.",
+            exampleFr = "La processus épineux est saillie postérieure d'une vertèbre.",
+            exampleAr = "النتوء الشوكي هو البروز الخلفي للفقرة.",
         ),
         MedicalTermEntity(
             id = 317,
@@ -5113,6 +5329,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈvɜːrtɪbrəl ˈbɒdi/",
+            exampleEn = "The vertebral body is the thick anterior part of a vertebra.",
+            exampleFr = "La corps vertébral est partie antérieure épaisse d'une vertèbre.",
+            exampleAr = "جسم الفقرة هو الجزء الأمامي السميك من الفقرة.",
         ),
         MedicalTermEntity(
             id = 319,
@@ -5125,6 +5344,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈspaɪnəl kəˈnæl/",
+            exampleEn = "The spinal canal is the cavity within the vertebral column containing the spinal cord.",
+            exampleFr = "Le canal rachidien est cavité au sein de la colonne vertébrale contenant la moelle épinière.",
+            exampleAr = "القناة الشوكية هو التجويف داخل العمود الفقري الذي يحتوي على الحبل الشوكي.",
         ),
         MedicalTermEntity(
             id = 320,
@@ -5137,6 +5359,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/məˈnjuːbriəm/",
+            exampleEn = "The manubrium is the upper part of the sternum.",
+            exampleFr = "La manubrium est partie supérieure du sternum.",
+            exampleAr = "يد القص هو الجزء العلوي من عظم القص.",
         ),
         MedicalTermEntity(
             id = 321,
@@ -5149,6 +5374,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈzɪfɔɪd ˈprɒsɛs/",
+            exampleEn = "The xiphoid process is the small cartilaginous extension at the lower end of the sternum.",
+            exampleFr = "La processus xiphoïde (Appendice xiphoïde) est petite extension cartilagineuse à l'extrémité inférieure du sternum.",
+            exampleAr = "النتوء الخنجري هو الامتداد الغضروفي الصغير في الطرف السفلي من القص.",
         ),
         MedicalTermEntity(
             id = 322,
@@ -5161,6 +5389,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/truː rɪbz/",
+            exampleEn = "The true ribs (1-7) is the first seven pairs of ribs directly attached to the sternum.",
+            exampleFr = "La vraies côtes (1-7) est les sept premières paires de côtes attachées directement au sternum.",
+            exampleAr = "الأضلاع الحقيقية هو الأزواج السبعة الأولى من الأضلاع المرتبطة مباشرة بالقص.",
         ),
         MedicalTermEntity(
             id = 323,
@@ -5197,6 +5428,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/oʊˈlɛkrənɒn/",
+            exampleEn = "The olecranon is the bony projection of the ulna at the elbow.",
+            exampleFr = "L'olécrâne est saillie osseuse de l'ulna au niveau du coude.",
+            exampleAr = "الناتئ المرفقي هو البروز العظمي للزند عند المرفق.",
         ),
         MedicalTermEntity(
             id = 326,
@@ -5209,6 +5443,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈskæfɔɪd/",
+            exampleEn = "The scaphoid is the carpal bone on the thumb side of the wrist.",
+            exampleFr = "La scaphoïde est os du carpe du côté du pouce.",
+            exampleAr = "العظم الزورقي هو عظم رسغي في جهة الإبهام.",
         ),
         MedicalTermEntity(
             id = 327,
@@ -5221,6 +5458,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈluːneɪt/",
+            exampleEn = "The lunate is the crescent-shaped carpal bone.",
+            exampleFr = "La lunatum (Semi-lunaire) est os du carpe en forme de croissant.",
+            exampleAr = "العظم الهلالي هو عظم رسغي على شكل هلال.",
         ),
         MedicalTermEntity(
             id = 328,
@@ -5233,6 +5473,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/əˈkroʊmiən/",
+            exampleEn = "The acromion is the lateral extension of the scapular spine.",
+            exampleFr = "L'acromion est extension latérale de l'épine de la scapula.",
+            exampleAr = "الأخرم هو الامتداد الوحشي لشوكة لوح الكتف.",
         ),
         MedicalTermEntity(
             id = 329,
@@ -5245,6 +5488,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɒrəkɔɪd/",
+            exampleEn = "The coracoid process is the hook-shaped projection on the scapula.",
+            exampleFr = "La processus coracoïde est saillie en forme de crochet sur la scapula.",
+            exampleAr = "النتوء الغرابي هو نتوء على شكل خطاف على لوح الكتف.",
         ),
         MedicalTermEntity(
             id = 330,
@@ -5257,6 +5503,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈɡliːnɔɪd/",
+            exampleEn = "The glenoid cavity is the shallow socket of the scapula for the head of the humerus.",
+            exampleFr = "La cavité glénoïde est cavité peu profonde de la scapula pour la tête de l'humérus.",
+            exampleAr = "الجوف الحقاني هو التجويف الضحل في لوح الكتف لرأس عظم العضد.",
         ),
         MedicalTermEntity(
             id = 331,
@@ -5269,6 +5518,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˌæsɪˈtæbjʊləm/",
+            exampleEn = "The acetabulum is the cup-shaped socket of the pelvis receiving the femoral head.",
+            exampleFr = "L'acétabulum (Cotyle) est cavité en forme de coupe du bassin recevant la tête fémorale.",
+            exampleAr = "الجوف الحقي هو التجويف الكأسي في الحوض الذي يستقبل رأس عظم الفخذ.",
         ),
         MedicalTermEntity(
             id = 332,
@@ -5281,6 +5533,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈteɪləs/",
+            exampleEn = "The talus is the tarsal bone articulating with the tibia and fibula.",
+            exampleFr = "La talus (Astragale) est os du tarse s'articulant avec le tibia et la fibula.",
+            exampleAr = "عظم الكاحل هو عظم رسغ القدم المتمفصل مع الظنبوب والشظية.",
         ),
         MedicalTermEntity(
             id = 333,
@@ -5293,6 +5548,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈmiːdiəl məˈliːələs/",
+            exampleEn = "The medial malleolus is the bony prominence on the medial side of the ankle (tibia).",
+            exampleFr = "La malléole interne (médiale) est saillie osseuse sur la face interne de la cheville (tibia).",
+            exampleAr = "الكعب الإنسي هو البروز العظمي على الجانب الداخلي من الكاحل (الظنبوب).",
         ),
         MedicalTermEntity(
             id = 334,
@@ -5305,6 +5563,9 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈlætərəl məˈliːələs/",
+            exampleEn = "The lateral malleolus is the bony prominence on the lateral side of the ankle (fibula).",
+            exampleFr = "La malléole externe (latérale) est saillie osseuse sur la face externe de la cheville (fibula).",
+            exampleAr = "الكعب الوحشي هو البروز العظمي على الجانب الخارجي من الكاحل (الشظية).",
         ),
         MedicalTermEntity(
             id = 335,

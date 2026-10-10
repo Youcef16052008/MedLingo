@@ -19,6 +19,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/pəˈθɒlədʒi/",
+            exampleEn = "Pathology is the scientific study of the structural and functional changes in cells, tissues, and organs that underlie disease.",
+            exampleFr = "L'anatomie Pathologique est l'étude scientifique des modifications structurelles et fonctionnelles des cellules, tissus et organes sous-jacentes à la maladie.",
+            exampleAr = "علم الأمراض التشريحي هو الدراسة العلمية للتغيرات البنيوية والوظيفية في الخلايا والأنسجة والأعضاء الكامنة تحت المرض.",
         ),
         MedicalTermEntity(
             id = 2729,
@@ -43,6 +46,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˈɔːtɒpsi/",
+            exampleEn = "The autopsy (necropsy) is the post-mortem examination of a body to determine the cause of death or study disease.",
+            exampleFr = "L'autopsie (Nécropsie) est examen post-mortem d'un corps pour déterminer la cause du décès ou étudier une maladie.",
+            exampleAr = "تشريح الجثة هو الفحص الذي يُجرى بعد الوفاة على الجسم لتحديد سبب الموت أو دراسة المرض.",
         ),
         MedicalTermEntity(
             id = 2731,
@@ -55,6 +61,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˈbaɪɒpsi/",
+            exampleEn = "The biopsy is the removal and examination of tissue from a living body for diagnostic purposes.",
+            exampleFr = "La biopsie est le prélèvement et l'examen de tissu d'un corps vivant à des fins diagnostiques.",
+            exampleAr = "خزعة النسيج هو إزالة وفحص نسيج من جسم حي لأغراض التشخيص.",
         ),
         MedicalTermEntity(
             id = 2732,
@@ -67,6 +76,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˌsaɪtoʊpəˈθɒlədʒi/",
+            exampleEn = "The cytopathology is the study of individual cells to diagnose disease; includes smears and fine needle aspiration.",
+            exampleFr = "La cytopathologie est l'étude des cellules individuelles pour diagnostiquer une maladie; inclut frottis et aspiration.",
+            exampleAr = "علم الخلايا المرضية هو دراسة الخلايا الفردية لتشخيص الأمراض؛ تشمل المسحات والشفط بإبرة دقيقة.",
         ),
         MedicalTermEntity(
             id = 2733,
@@ -79,6 +91,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ɡroʊs pəˈθɒlədʒi/",
+            exampleEn = "The gross pathology is the study of disease changes visible to the naked eye without microscopy.",
+            exampleFr = "La macroscopie (Anatomie pathologique macroscopique) est l'étude des modifications pathologiques visibles à l'œil nu sans microscopie.",
+            exampleAr = "علم الأمراض العيني هو دراسة التغيرات المرضية المرئية للعين المجردة دون مجهر.",
         ),
         MedicalTermEntity(
             id = 2734,
@@ -91,6 +106,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˌiːtiˈɒlədʒi/",
+            exampleEn = "The etiology is the study of the causes or origins of disease.",
+            exampleFr = "L'étiologie est l'étude des causes ou origines de la maladie.",
+            exampleAr = "المسببية هو دراسة أسباب أو منشأ الأمراض.",
         ),
         MedicalTermEntity(
             id = 2735,
@@ -103,6 +121,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˌpæθoʊˈdʒɛnɪsɪs/",
+            exampleEn = "The pathogenesis is the mechanism by which an etiological factor causes disease; the sequence of events.",
+            exampleFr = "La pathogenèse est le mécanisme par lequel un facteur étiologique cause une maladie; la séquence des événements.",
+            exampleAr = "المرضية (الإمراضية) هو الآلية التي يُحدِث بها العامل المُسبِّب للمرض؛ تسلسل الأحداث المرضية.",
         ),
         MedicalTermEntity(
             id = 2736,
@@ -115,6 +136,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/mɔːrˈfɒlədʒi/",
+            exampleEn = "The morphology is the structural changes in cells and tissues characteristic of a disease.",
+            exampleFr = "La morphologie est les modifications structurelles des cellules et tissus caractéristiques d'une maladie.",
+            exampleAr = "المورفولوجيا (علم الشكل) هو التغيرات البنيوية في الخلايا والأنسجة المميزة لمرض معين.",
         ),
         MedicalTermEntity(
             id = 2737,
@@ -139,6 +163,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˈfroʊzən ˈsɛkʃən/",
+            exampleEn = "The frozen section is the rapid histological technique where tissue is frozen and sectioned for intraoperative diagnosis.",
+            exampleFr = "La coupe extemporanée (Section congelée) est technique histologique rapide où le tissu est congelé et coupé pour un diagnostic peropératoire.",
+            exampleAr = "القطع المجمد هو تقنية نسيجية سريعة يُجمَّد فيها النسيج ويُقطَّع للتشخيص أثناء العملية.",
         ),
         MedicalTermEntity(
             id = 2739,
@@ -151,6 +178,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/faɪn ˈniːdəl ˌæspɪˈreɪʃən/",
+            exampleEn = "The fine needle aspiration (fna) is the diagnostic procedure using a thin needle to extract cells from a mass or lesion.",
+            exampleFr = "Le cytoponction (ponction à l'aiguille fine) est procédure diagnostique utilisant une fine aiguille pour extraire des cellules d'une masse ou lésion.",
+            exampleAr = "الشفط بالإبرة الدقيقة هو إجراء تشخيصي يستخدم إبرة رفيعة لاستخراج خلايا من كتلة أو آفة.",
         ),
         MedicalTermEntity(
             id = 2740,
@@ -163,6 +193,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˌhɛməˈtɒksɪlɪn ænd ˈiːəsɪn/",
+            exampleEn = "The hematoxylin and eosin (h&e) is the most widely used histological staining technique; nuclei appear blue, cytoplasm pink.",
+            exampleFr = "L'hématoxyline-éosine (HE) est la technique de coloration histologique la plus utilisée; noyaux en bleu, cytoplasme en rose.",
+            exampleAr = "صبغة الهيماتوكسيلين والإيوزين هو تقنية الصبغ النسيجية الأكثر استخداماً؛ تظهر النوى باللون الأزرق والسيتوبلازم بالوردي.",
         ),
         MedicalTermEntity(
             id = 2741,
@@ -175,6 +208,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/pæθəˈlɒdʒɪkəl rɪˈpɔːrt/",
+            exampleEn = "The pathological report is the formal document issued by a pathologist describing findings from tissue or cell examination.",
+            exampleFr = "La compte rendu anatomopathologique est document officiel émis par un pathologiste décrivant les résultats de l'examen tissulaire.",
+            exampleAr = "التقرير التشريحي المرضي هو وثيقة رسمية يُصدِرها الطبيب الشرعي يصف فيها نتائج فحص الأنسجة أو الخلايا.",
         ),
         MedicalTermEntity(
             id = 2742,
@@ -247,6 +283,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/koʊˈæɡjʊlətɪv nɪˈkroʊsɪs/",
+            exampleEn = "The coagulative necrosis is the most common form of necrosis; tissue architecture preserved but cells dead; seen in ischemia.",
+            exampleFr = "La nécrose de coagulation est la forme la plus courante de nécrose; architecture tissulaire préservée mais cellules mortes; vue dans l'ischémie.",
+            exampleAr = "النخر التخثري هو أكثر أشكال النخر شيوعاً؛ يُحفَظ هيكل الأنسجة لكن الخلايا ميتة؛ يُرى في نقص التروية.",
         ),
         MedicalTermEntity(
             id = 2748,
@@ -307,6 +346,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˈsɛljʊlər ˈswɛlɪŋ/",
+            exampleEn = "The cellular swelling is the earliest reversible change in injured cells due to Na+/K+ ATPase failure causing water influx.",
+            exampleFr = "Le gonflement cellulaire (Dégénérescence hydropique) est la modification réversible la plus précoce dans les cellules lésées due à la défaillance Na+/K+ ATPase.",
+            exampleAr = "التورم الخلوي هو أول تغيير عكوس في الخلايا المصابة بسبب فشل مضخة Na+/K+ مما يسبب دخول الماء.",
         ),
         MedicalTermEntity(
             id = 2753,
@@ -367,6 +409,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ɔːˈtɒfədʒi/",
+            exampleEn = "The autophagy is the cellular degradation pathway where cells digest their own components; a survival mechanism.",
+            exampleFr = "L'autophagie est voie de dégradation cellulaire où les cellules digèrent leurs propres composants; mécanisme de survie.",
+            exampleAr = "الالتهام الذاتي هو مسار تدهور خلوي تهضم فيه الخلايا مكوناتها الخاصة؛ آلية بقاء.",
         ),
         MedicalTermEntity(
             id = 2758,
@@ -415,6 +460,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ɪnˈfɑːrkʃən/",
+            exampleEn = "The infarction is the area of necrosis resulting from ischemia due to vascular obstruction.",
+            exampleFr = "L'infarctus est zone de nécrose résultant d'une ischémie due à une obstruction vasculaire.",
+            exampleAr = "الاحتشاء هو منطقة نخر ناتجة عن نقص التروية بسبب انسداد وعائي.",
         ),
         MedicalTermEntity(
             id = 2762,
@@ -427,6 +475,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌɪnfləˈmeɪʃən/",
+            exampleEn = "The inflammation is the protective response to injury involving vascular, cellular, and molecular events.",
+            exampleFr = "L'inflammation est réponse protectrice à une blessure impliquant des événements vasculaires, cellulaires et moléculaires.",
+            exampleAr = "الالتهاب هو استجابة وقائية للإصابة تتضمن أحداثاً وعائية وخلوية وجزيئية.",
         ),
         MedicalTermEntity(
             id = 2763,
@@ -439,6 +490,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/əˈkjuːt ˌɪnfləˈmeɪʃən/",
+            exampleEn = "The acute inflammation is the rapid-onset, short-duration inflammatory response characterized by exudation and neutrophil infiltration.",
+            exampleFr = "L'inflammation aiguë est réponse inflammatoire à début rapide et courte durée caractérisée par exsudation et infiltration neutrophile.",
+            exampleAr = "الالتهاب الحاد هو استجابة التهابية سريعة البدء وقصيرة المدة تتميز بالإفراز وتسرب العدلات.",
         ),
         MedicalTermEntity(
             id = 2764,
@@ -475,6 +529,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈtrænsʌdeɪt/",
+            exampleEn = "The transudate is the protein-poor fluid that accumulates due to increased hydrostatic pressure or decreased oncotic pressure.",
+            exampleFr = "Le transsudat est liquide pauvre en protéines qui s'accumule due à une pression hydrostatique accrue ou oncotique réduite.",
+            exampleAr = "الإفراز غير الالتهابي هو سائل فقير بالبروتينات يتراكم بسبب زيادة الضغط الهيدروستاتيكي أو نقص الضغط الأورموزي.",
         ),
         MedicalTermEntity(
             id = 2767,
@@ -487,6 +544,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌveɪzoʊdaɪˈleɪʃən/",
+            exampleEn = "Vasodilation refers to widening of blood vessels; the first vascular response in acute inflammation; causes redness and heat.",
+            exampleFr = "Le vasodilatation est élargissement des vaisseaux sanguins; première réponse vasculaire dans l'inflammation aiguë.",
+            exampleAr = "توسع الأوعية هو اتساع الأوعية الدموية؛ أول استجابة وعائية في الالتهاب الحاد؛ يسبب الاحمرار والحرارة.",
         ),
         MedicalTermEntity(
             id = 2768,
@@ -499,6 +559,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈvæskjʊlər ˌpɜːrmɪˈæbɪlɪti/",
+            exampleEn = "The vascular permeability is the property of blood vessels that allows substances to pass through their walls; increased in inflammation.",
+            exampleFr = "La perméabilité vasculaire est propriété des vaisseaux permettant aux substances de traverser leurs parois; augmentée dans l'inflammation.",
+            exampleAr = "النفاذية الوعائية هو خاصية الأوعية الدموية التي تسمح للمواد بالعبور عبر جدرانها؛ تزيد في الالتهاب.",
         ),
         MedicalTermEntity(
             id = 2769,
@@ -511,6 +574,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌkɛmoʊˈtæksɪs/",
+            exampleEn = "The chemotaxis is the migration of leukocytes toward a chemical gradient (chemoattractant) at the site of injury.",
+            exampleFr = "Le chimiotactisme est la migration des leucocytes vers un gradient chimique (chimioattractant) au site de lésion.",
+            exampleAr = "التجاذب الكيميائي هو هجرة الكريات البيضاء نحو تدرج كيميائي (مادة جاذبة) في موضع الإصابة.",
         ),
         MedicalTermEntity(
             id = 2770,
@@ -523,6 +589,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌmɑːrdʒɪˈneɪʃən/",
+            exampleEn = "The margination is the accumulation of leukocytes along the periphery of blood vessels; the first step of leukocyte emigration.",
+            exampleFr = "Le margination est accumulation des leucocytes le long de la périphérie des vaisseaux sanguins; première étape d'émigration.",
+            exampleAr = "التهميش هو تجمع الكريات البيضاء على حواف الأوعية الدموية؛ الخطوة الأولى من هجرة الكريات البيضاء.",
         ),
         MedicalTermEntity(
             id = 2771,
@@ -535,6 +604,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌdaɪəˈpiːdɪsɪs/",
+            exampleEn = "The diapedesis is the movement of leukocytes through the walls of blood vessels into surrounding tissue.",
+            exampleFr = "La diapédèse est le mouvement des leucocytes à travers les parois des vaisseaux sanguins vers les tissus environnants.",
+            exampleAr = "النضح الكروي هو حركة الكريات البيضاء عبر جدران الأوعية الدموية إلى الأنسجة المحيطة.",
         ),
         MedicalTermEntity(
             id = 2772,
@@ -547,6 +619,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌfæɡoʊsaɪˈtoʊsɪs/",
+            exampleEn = "The phagocytosis is the engulfment and destruction of pathogens and debris by phagocytes (neutrophils, macrophages).",
+            exampleFr = "La phagocytose est l'engloutissement et la destruction des agents pathogènes et débris par les phagocytes.",
+            exampleAr = "الابتلاع الخلوي هو ابتلاع وتدمير مسببات الأمراض والحطام بواسطة الخلايا البالعة (العدلات والبلاعم).",
         ),
         MedicalTermEntity(
             id = 2773,
@@ -559,6 +634,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈnjuːtrəfɪl/",
+            exampleEn = "The neutrophil is the predominant leukocyte in acute inflammation; first to arrive at the site of injury.",
+            exampleFr = "La neutrophile (Polynucléaire neutrophile) est le leucocyte prédominant dans l'inflammation aiguë; premier à arriver au site de lésion.",
+            exampleAr = "العدلة هو الكريات البيضاء السائدة في الالتهاب الحاد؛ أول من يصل إلى موضع الإصابة.",
         ),
         MedicalTermEntity(
             id = 2774,
@@ -571,6 +649,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈhɪstəmiːn/",
+            exampleEn = "The histamine is the vasoactive amine stored in mast cells; causes vasodilation and increased vascular permeability.",
+            exampleFr = "L'histamine est amine vasoactive stockée dans les mastocytes; cause vasodilatation et perméabilité vasculaire accrue.",
+            exampleAr = "الهيستامين هو أمين وعائي النشاط مخزَّن في الخلايا البدينة؛ يسبب توسع الأوعية وزيادة النفاذية الوعائية.",
         ),
         MedicalTermEntity(
             id = 2775,
@@ -595,6 +676,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈkɒmplɪmənt/",
+            exampleEn = "The complement system (in inflammation) is the group of plasma proteins activated in inflammation contributing to vasodilation and opsonization.",
+            exampleFr = "La système du complément (dans l'inflammation) est groupe de protéines plasmatiques activées dans l'inflammation contribuant à la vasodilatation et opsonisation.",
+            exampleAr = "المتمم (في الالتهاب) هو مجموعة من بروتينات البلازما المُنشَّطة في الالتهاب تُسهم في توسع الأوعية والتبصير.",
         ),
         MedicalTermEntity(
             id = 2777,
@@ -607,6 +691,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈæbsɛs/",
+            exampleEn = "The abscess is the localized collection of pus in tissue; formed by neutrophils, necrotic debris, and edema fluid.",
+            exampleFr = "L'abcès est collection localisée de pus dans un tissu; formé par neutrophiles, débris nécrotiques et liquide œdémateux.",
+            exampleAr = "الخراج هو تجمع موضعي للصديد في الأنسجة؛ يتشكل من العدلات والحطام النخري وسائل الوذمة.",
         ),
         MedicalTermEntity(
             id = 2778,
@@ -643,6 +730,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈsɪəriəs/",
+            exampleEn = "The serous inflammation is the mild inflammatory exudate of protein-poor watery fluid; seen in viral infections and blisters.",
+            exampleFr = "L'inflammation séreuse est exsudat inflammatoire léger de liquide aqueux pauvre en protéines; vu dans infections virales et cloques.",
+            exampleAr = "الالتهاب المصلي هو إفراز التهابي خفيف من سائل مائي فقير بالبروتينات؛ يُرى في العدوى الفيروسية والبثور.",
         ),
         MedicalTermEntity(
             id = 2781,
@@ -679,6 +769,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌɡrænjʊˈloʊmə/",
+            exampleEn = "The granuloma is the localized aggregate of activated macrophages (epithelioid cells) forming a nodule; seen in TB, sarcoidosis.",
+            exampleFr = "La granulome est agrégat localisé de macrophages activés formant un nodule; vu dans TB, sarcoïdose.",
+            exampleAr = "الحبيبوم هو تجمع موضعي من البلاعم المُنشَّطة يُشكِّل عقيدة؛ يُرى في السل والساركويد.",
         ),
         MedicalTermEntity(
             id = 2784,
@@ -691,6 +784,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ɪˌpɪθiːˈlɔɪd sɛl/",
+            exampleEn = "The epithelioid cell is the activated macrophage with abundant pale cytoplasm resembling epithelial cells; component of granuloma.",
+            exampleFr = "La cellule épithélioïde est macrophage activé avec cytoplasme pâle abondant ressemblant aux cellules épithéliales; composant du granulome.",
+            exampleAr = "الخلية الظهارية الشكل هو بلاعمة مُنشَّطة ذات سيتوبلازم وفير شاحب يشبه الخلايا الظهارية؛ مكوِّن الحبيبوم.",
         ),
         MedicalTermEntity(
             id = 2785,
@@ -703,6 +799,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈdʒaɪənt sɛl/",
+            exampleEn = "The giant cell (langhans type) is the multinucleated cell formed by fusion of macrophages; nuclei arranged in horseshoe pattern in TB.",
+            exampleFr = "La cellule géante (type Langhans) est cellule multinucléée formée par fusion de macrophages; noyaux en fer à cheval dans la TB.",
+            exampleAr = "الخلية العملاقة (نوع لانغهانز) هو خلية متعددة النوى تتشكل باندماج البلاعم؛ النوى مرتبة على شكل حدوة حصان في السل.",
         ),
         MedicalTermEntity(
             id = 2786,
@@ -715,6 +814,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈmækrəˌfeɪdʒ/",
+            exampleEn = "The macrophage is the large phagocytic cell derived from monocytes; the central cell in chronic inflammation.",
+            exampleFr = "Le macrophage est grande cellule phagocytaire dérivée des monocytes; cellule centrale dans l'inflammation chronique.",
+            exampleAr = "البلاعمة هو خلية بلعمية كبيرة مشتقة من الوحيدات؛ الخلية المحورية في الالتهاب المزمن.",
         ),
         MedicalTermEntity(
             id = 2787,
@@ -751,6 +853,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈkiːlɔɪd/",
+            exampleEn = "The keloid is the abnormal, raised scar extending beyond the original wound margins; due to excess collagen.",
+            exampleFr = "La chéloïde est cicatrice anormale et surélevée s'étendant au-delà des bords de la plaie originale; due à excès collagène.",
+            exampleAr = "الجدرة هو ندبة غير طبيعية مرتفعة تمتد خارج حدود الجرح الأصلي؛ بسبب زيادة الكولاجين.",
         ),
         MedicalTermEntity(
             id = 2790,
@@ -787,6 +892,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌrɛdʒɪˈneɪʃən/",
+            exampleEn = "The regeneration is the replacement of damaged cells with cells of the same type restoring original tissue architecture.",
+            exampleFr = "Le régénération est remplacement des cellules endommagées par des cellules du même type restaurant l'architecture originale.",
+            exampleAr = "التجديد هو استبدال الخلايا التالفة بخلايا من نفس النوع مما يستعيد البنية الأصلية للأنسجة.",
         ),
         MedicalTermEntity(
             id = 2793,
@@ -799,6 +907,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈpraɪməri ɪnˈtɛnʃən/",
+            exampleEn = "Primary intention (wound healing) refers to healing of a clean surgical wound where edges are opposed; minimal granulation tissue formed.",
+            exampleFr = "Le cicatrisation par première intention est cicatrisation d'une plaie chirurgicale propre où les bords sont rapprochés; peu de tissu de granulation.",
+            exampleAr = "الالتئام بالنية الأولى هو التئام جرح جراحي نظيف تكون فيه الحواف متقاربة؛ يتشكل نسيج حبيبات ضئيل.",
         ),
         MedicalTermEntity(
             id = 2794,
@@ -811,6 +922,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈsɛkəndəri ɪnˈtɛnʃən/",
+            exampleEn = "Secondary intention (wound healing) refers to healing of large or infected wounds with a wide defect; extensive granulation and scar formation.",
+            exampleFr = "Le cicatrisation par deuxième intention est cicatrisation de plaies larges ou infectées; formation extensive de tissu de granulation et cicatrice.",
+            exampleAr = "الالتئام بالنية الثانية هو التئام الجروح الكبيرة أو المصابة ذات العيب الواسع؛ تشكُّل مكثف للحبيبات والندبة.",
         ),
         MedicalTermEntity(
             id = 2795,
@@ -823,6 +937,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈlɪmfəˌsaɪt/",
+            exampleEn = "The lymphocyte is the predominant cell type in chronic inflammation; includes B and T lymphocytes.",
+            exampleFr = "La lymphocyte est type cellulaire prédominant dans l'inflammation chronique; inclut lymphocytes B et T.",
+            exampleAr = "الخلية الليمفاوية هو النوع الخلوي السائد في الالتهاب المزمن؛ يشمل الخلايا الليمفاوية البائية والتائية.",
         ),
         MedicalTermEntity(
             id = 2796,
@@ -835,6 +952,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈplæzmə sɛl/",
+            exampleEn = "The plasma cell is the differentiated B lymphocyte that secretes antibodies; prominent in chronic inflammatory reactions.",
+            exampleFr = "La plasmocyte est lymphocyte B différencié qui sécrète des anticorps; proéminent dans les réactions inflammatoires chroniques.",
+            exampleAr = "الخلية البلازمية هو خلية ليمفاوية بائية متمايزة تُفرِز الأجسام المضادة؛ بارزة في ردود الفعل الالتهابية المزمنة.",
         ),
         MedicalTermEntity(
             id = 2797,
@@ -847,6 +967,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/mæst sɛl/",
+            exampleEn = "The mast cell is the tissue cell releasing histamine and other mediators on activation; key in allergic reactions.",
+            exampleFr = "La mastocyte est cellule tissulaire libérant histamine et autres médiateurs à l'activation; clé dans les réactions allergiques.",
+            exampleAr = "الخلية البدينة هو خلية نسيجية تُطلِق الهيستامين ووسيطات أخرى عند التنشيط؛ محورية في ردود الفعل التحسسية.",
         ),
         MedicalTermEntity(
             id = 2798,
@@ -859,6 +982,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌiːəˈsɪnəfɪl/",
+            exampleEn = "The eosinophil is the granular leukocyte increased in parasitic infections and allergic reactions.",
+            exampleFr = "L'éosinophile est leucocyte granulaire augmenté dans les infections parasitaires et réactions allergiques.",
+            exampleAr = "الحمضة (اليوزينية) هو كريات بيضاء حبيبية تزداد في العدوى الطفيلية وردود الفعل التحسسية.",
         ),
         MedicalTermEntity(
             id = 2799,
@@ -871,6 +997,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈsaɪtəˌkaɪnz/",
+            exampleEn = "Cytokines (in inflammation) refers to signaling proteins mediating and regulating inflammation; includes TNF, IL-1, IL-6, IL-8.",
+            exampleFr = "La cytokines (dans l'inflammation) est protéines de signalisation médiant et régulant l'inflammation; inclut TNF, IL-1, IL-6, IL-8.",
+            exampleAr = "السيتوكينات الالتهابية هو بروتينات إشارية تُوسِّط وتُنظِّم الالتهاب؛ تشمل TNF وIL-1 وIL-6 وIL-8.",
         ),
         MedicalTermEntity(
             id = 2800,
@@ -895,6 +1024,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈkɒlədʒɪn/",
+            exampleEn = "The collagen is the most abundant structural protein in the body; essential for wound healing and scar formation.",
+            exampleFr = "La collagène est la protéine structurelle la plus abondante du corps; essentielle à la cicatrisation et formation de cicatrice.",
+            exampleAr = "الكولاجين هو أكثر البروتينات البنيوية وفرة في الجسم؛ ضروري لالتئام الجروح وتشكُّل الندبات.",
         ),
         MedicalTermEntity(
             id = 2802,
@@ -907,6 +1039,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˌhaɪpɜːˈriːmiə/",
+            exampleEn = "The hyperemia is the increase in blood volume in a tissue; active (arteriolar dilation) or passive (venous congestion).",
+            exampleFr = "L'hyperhémie est augmentation du volume sanguin dans un tissu; active (dilatation artériolaire) ou passive (congestion veineuse).",
+            exampleAr = "الاحتقان هو زيادة حجم الدم في نسيج ما؛ فاعلة (توسع الشرينات) أو سلبية (احتقان وريدي).",
         ),
         MedicalTermEntity(
             id = 2803,
@@ -955,6 +1090,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈθrɒmbəs/",
+            exampleEn = "The thrombus is the solid mass of blood constituents formed within the vascular system during life.",
+            exampleFr = "La thrombus est masse solide de constituants sanguins formée dans le système vasculaire pendant la vie.",
+            exampleAr = "الخثرة هو كتلة صلبة من مكونات الدم تتشكل داخل الجهاز الوعائي أثناء الحياة.",
         ),
         MedicalTermEntity(
             id = 2807,
@@ -967,6 +1105,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈɛmbəlɪzəm/",
+            exampleEn = "The embolism is the occlusion of a blood vessel by material (embolus) carried in the bloodstream from another site.",
+            exampleFr = "L'embolie est obstruction d'un vaisseau par du matériel (embole) transporté dans la circulation depuis un autre site.",
+            exampleAr = "الصمة هو انسداد وعاء دموي بمادة (صمة) تُحمَل في مجرى الدم من موضع آخر.",
         ),
         MedicalTermEntity(
             id = 2808,
@@ -991,6 +1132,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈhɛmərɪdʒ/",
+            exampleEn = "The hemorrhage is the escape of blood from blood vessels; can be internal or external.",
+            exampleFr = "L'hémorragie est la sortie du sang des vaisseaux sanguins; peut être interne ou externe.",
+            exampleAr = "النزيف هو خروج الدم من الأوعية الدموية؛ قد يكون داخلياً أو خارجياً.",
         ),
         MedicalTermEntity(
             id = 2810,
@@ -1003,6 +1147,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ʃɒk/",
+            exampleEn = "The shock is the state of inadequate tissue perfusion causing cellular hypoxia; classified as cardiogenic, hypovolemic, or distributive.",
+            exampleFr = "La choc est état de perfusion tissulaire inadéquate causant hypoxie cellulaire; classifié cardiogénique, hypovolémique.",
+            exampleAr = "الصدمة هو حالة من عدم كفاية ترويه الأنسجة مسببةً نقص أكسجين خلوياً؛ يُصنَّف قلبياً أو نقص الحجم.",
         ),
         MedicalTermEntity(
             id = 2811,
@@ -1027,6 +1174,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/dɪˌsɛmɪneɪtɪd ˌɪntrəˈvæskjʊlər koʊˌæɡjʊˈleɪʃən/",
+            exampleEn = "The disseminated intravascular coagulation (dic) is the life-threatening disorder with simultaneous clotting and bleeding; consumes clotting factors.",
+            exampleFr = "La CIVD (Coagulation intravasculaire disséminée) est trouble potentiellement mortel avec coagulation et saignement simultanés; consomme les facteurs de coagulation.",
+            exampleAr = "التخثر المنتشر داخل الأوعية هو اضطراب مهدِّد للحياة يتزامن فيه التخثر والنزيف؛ يستهلك عوامل التخثر.",
         ),
         MedicalTermEntity(
             id = 2813,
@@ -1039,6 +1189,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˌhɛməˈtoʊmə/",
+            exampleEn = "The hematoma is the localized collection of blood outside blood vessels; caused by injury or spontaneous bleeding.",
+            exampleFr = "L'hématome est collection localisée de sang hors des vaisseaux; causée par blessure ou saignement spontané.",
+            exampleAr = "الورم الدموي هو تجمع موضعي للدم خارج الأوعية الدموية؛ يسببه إصابة أو نزيف تلقائي.",
         ),
         MedicalTermEntity(
             id = 2814,
@@ -1051,6 +1204,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈænjʊrɪzəm/",
+            exampleEn = "The aneurysm is the abnormal focal dilation of a blood vessel wall; can rupture causing catastrophic hemorrhage.",
+            exampleFr = "L'anévrisme est dilatation focale anormale de la paroi d'un vaisseau; peut se rompre causant hémorragie catastrophique.",
+            exampleAr = "تمدد الأوعية الدموية هو توسع بؤري غير طبيعي في جدار الوعاء الدموي؛ قد ينفجر مسبباً نزيفاً كارثياً.",
         ),
         MedicalTermEntity(
             id = 2815,
@@ -1063,6 +1219,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˌæθɛroʊskləˈroʊsɪs/",
+            exampleEn = "The atherosclerosis is the chronic disease with intimal plaques (atheromas) in arteries causing narrowing and occlusion.",
+            exampleFr = "L'athérosclérose est maladie chronique avec plaques intimales (athéromes) dans les artères causant sténose et occlusion.",
+            exampleAr = "تصلب الشرايين هو مرض مزمن تتشكل فيه لويحات (رواسب) في بطانة الشرايين مسببةً تضيُّقاً وانسداداً.",
         ),
         MedicalTermEntity(
             id = 2816,
@@ -1075,6 +1234,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈæθərəʊmə/",
+            exampleEn = "The atheroma (atheromatous plaque) is the lipid-laden plaque within arterial intima; core of necrotic lipid with fibrous cap.",
+            exampleFr = "L'athérome (Plaque athéromateuse) est plaque chargée en lipides dans l'intima artérielle; noyau lipidique nécrotique avec capuchon fibreux.",
+            exampleAr = "الرسوب الشرياني (اللويحة الأثيرومية) هو لويحة محملة بالدهون داخل بطانة الشريان؛ نواة دهنية نخرية مع غطاء ليفي.",
         ),
         MedicalTermEntity(
             id = 2817,
@@ -1099,6 +1261,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˌlɪmfɪˈdiːmə/",
+            exampleEn = "Lymphedema refers to swelling caused by lymphatic obstruction; can be primary (congenital) or secondary (post-surgery).",
+            exampleFr = "La lymphœdème est gonflement causé par obstruction lymphatique; peut être primaire (congénital) ou secondaire (post-chirurgie).",
+            exampleAr = "الوذمة اللمفاوية هو تورم ناجم عن انسداد الأوعية اللمفاوية؛ قد يكون أولياً (خلقياً) أو ثانوياً (ما بعد الجراحة).",
         ),
         MedicalTermEntity(
             id = 2819,
@@ -1147,6 +1312,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌniːoʊˈpleɪʒə/",
+            exampleEn = "The neoplasia is the abnormal proliferation of cells that is uncoordinated and persists after the initiating stimulus ceases.",
+            exampleFr = "La néoplasie est prolifération cellulaire anormale non coordonnée qui persiste après cessation du stimulus initiateur.",
+            exampleAr = "التشكُّل الورمي هو تكاثر غير طبيعي وغير منسق للخلايا يستمر بعد زوال المحفز المُبادِر.",
         ),
         MedicalTermEntity(
             id = 2823,
@@ -1159,6 +1327,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˈtjuːmər/",
+            exampleEn = "The tumor (neoplasm) is the abnormal mass of tissue resulting from neoplastic cell growth; can be benign or malignant.",
+            exampleFr = "La tumeur (Néoplasme) est masse tissulaire anormale résultant de la croissance de cellules néoplasiques; peut être bénigne ou maligne.",
+            exampleAr = "الورم هو كتلة نسيجية غير طبيعية ناتجة عن نمو الخلايا الورمية؛ قد تكون حميدة أو خبيثة.",
         ),
         MedicalTermEntity(
             id = 2824,
@@ -1171,6 +1342,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/bɪˈnaɪn ˈtjuːmər/",
+            exampleEn = "The benign tumor is the non-invasive, slow-growing tumor that does not metastasize; usually well-differentiated.",
+            exampleFr = "La tumeur bénigne est tumeur non invasive à croissance lente qui ne métastase pas; généralement bien différenciée.",
+            exampleAr = "الورم الحميد هو ورم غير غازٍ بطيء النمو لا يُحدِث نقائل؛ عادةً متمايز جيداً.",
         ),
         MedicalTermEntity(
             id = 2825,
@@ -1183,6 +1357,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/məˈlɪɡnənt ˈtjuːmər/",
+            exampleEn = "The malignant tumor (cancer) is the tumor characterized by uncontrolled growth, invasion of surrounding tissues, and ability to metastasize.",
+            exampleFr = "La tumeur maligne (Cancer) est tumeur caractérisée par croissance incontrôlée, invasion des tissus environnants et capacité à métastaser.",
+            exampleAr = "الورم الخبيث (السرطان) هو ورم يتميز بنمو غير منضبط وغزو الأنسجة المحيطة والقدرة على الانتشار.",
         ),
         MedicalTermEntity(
             id = 2826,
@@ -1195,6 +1372,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌkɑːrsɪˈnoʊmə/",
+            exampleEn = "The carcinoma is the malignant tumor derived from epithelial cells; the most common type of cancer.",
+            exampleFr = "La carcinome est tumeur maligne dérivée de cellules épithéliales; le type de cancer le plus courant.",
+            exampleAr = "السرطانة هو ورم خبيث مشتق من الخلايا الظهارية؛ أكثر أنواع السرطان شيوعاً.",
         ),
         MedicalTermEntity(
             id = 2827,
@@ -1207,6 +1387,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/sɑːrˈkoʊmə/",
+            exampleEn = "The sarcoma is the malignant tumor derived from mesenchymal tissue (bone, muscle, fat, cartilage).",
+            exampleFr = "La sarcome est tumeur maligne dérivée de tissu mésenchymateux (os, muscle, graisse, cartilage).",
+            exampleAr = "الساركومة هو ورم خبيث مشتق من النسيج اللحمي (العظم والعضل والدهون والغضروف).",
         ),
         MedicalTermEntity(
             id = 2828,
@@ -1219,6 +1402,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌædɪˈnoʊmə/",
+            exampleEn = "The adenoma is the benign epithelial tumor forming glandular structures or derived from glandular epithelium.",
+            exampleFr = "L'adénome est tumeur épithéliale bénigne formant des structures glandulaires ou dérivée d'épithélium glandulaire.",
+            exampleAr = "الغدَّانة هو ورم ظهاري حميد يُشكِّل بنيات غدية أو مشتق من الظهارة الغدية.",
         ),
         MedicalTermEntity(
             id = 2829,
@@ -1231,6 +1417,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌædɪnoʊˌkɑːrsɪˈnoʊmə/",
+            exampleEn = "The adenocarcinoma is the malignant tumor derived from glandular epithelium; common in colon, breast, lung, prostate.",
+            exampleFr = "L'adénocarcinome est tumeur maligne dérivée d'épithélium glandulaire; fréquente dans côlon, sein, poumon, prostate.",
+            exampleAr = "السرطانة الغدية هو ورم خبيث مشتق من الظهارة الغدية؛ شائع في القولون والثدي والرئة والبروستاتا.",
         ),
         MedicalTermEntity(
             id = 2830,
@@ -1243,6 +1432,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/lɪmˈfoʊmə/",
+            exampleEn = "The lymphoma is the malignant tumor of lymphoid tissue; classified as Hodgkin or Non-Hodgkin lymphoma.",
+            exampleFr = "La lymphome est tumeur maligne du tissu lymphoïde; classifiée en lymphome de Hodgkin ou non hodgkinien.",
+            exampleAr = "الليمفوما (ورم الغدد اللمفاوية) هو ورم خبيث في الأنسجة اللمفاوية؛ يُصنَّف إلى هودجكين وغير هودجكين.",
         ),
         MedicalTermEntity(
             id = 2831,
@@ -1255,6 +1447,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/luːˈkiːmiə/",
+            exampleEn = "The leukemia is the malignant clonal proliferation of hematopoietic cells in bone marrow; classified as acute or chronic.",
+            exampleFr = "La leucémie est prolifération clonale maligne de cellules hématopoïétiques dans la moelle; classifiée en aiguë ou chronique.",
+            exampleAr = "اللوكيميا (ابيضاض الدم) هو تكاثر استنساخي خبيث للخلايا المكونة للدم في النخاع؛ يُصنَّف إلى حاد أو مزمن.",
         ),
         MedicalTermEntity(
             id = 2832,
@@ -1267,6 +1462,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/mɪˈtæstəsɪs/",
+            exampleEn = "The metastasis is the spread of cancer from the primary site to distant organs via blood, lymphatics, or body cavities.",
+            exampleFr = "La métastase est la propagation du cancer du site primaire vers des organes distants par sang, lymphatiques ou cavités.",
+            exampleAr = "النقيلة هو انتشار السرطان من الموقع الأولي إلى أعضاء بعيدة عبر الدم أو الأوعية اللمفاوية أو التجاويف.",
         ),
         MedicalTermEntity(
             id = 2833,
@@ -1279,6 +1477,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌdɪfərɛnʃɪˈeɪʃən/",
+            exampleEn = "The differentiation is the extent to which tumor cells resemble their normal counterparts; well, moderately, or poorly differentiated.",
+            exampleFr = "Le différenciation est l'étendue à laquelle les cellules tumorales ressemblent à leurs homologues normaux.",
+            exampleAr = "التمايز هو مدى مشابهة خلايا الورم لنظيراتها الطبيعية؛ جيد التمايز أو متوسطه أو ضعيفه.",
         ),
         MedicalTermEntity(
             id = 2834,
@@ -1327,6 +1528,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ɪnˈveɪʒən/",
+            exampleEn = "The invasion is the ability of malignant cells to penetrate basement membranes and enter surrounding stroma.",
+            exampleFr = "L'invasion est la capacité des cellules malignes à pénétrer les membranes basales et à entrer dans le stroma environnant.",
+            exampleAr = "الغزو هو قدرة الخلايا الخبيثة على اختراق الأغشية القاعدية والدخول في الأسدة المحيطة.",
         ),
         MedicalTermEntity(
             id = 2838,
@@ -1339,6 +1543,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ɡreɪdɪŋ/",
+            exampleEn = "The grading (tumor) is the pathological assessment of tumor aggressiveness based on cellular differentiation.",
+            exampleFr = "La grade tumoral est évaluation pathologique de l'agressivité tumorale basée sur la différenciation cellulaire.",
+            exampleAr = "درجة الورم هو التقييم التشريحي المرضي لعدوانية الورم بناءً على التمايز الخلوي.",
         ),
         MedicalTermEntity(
             id = 2839,
@@ -1387,6 +1594,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌkɑːrsɪnəˈdʒɛnɪsɪs/",
+            exampleEn = "The carcinogenesis is the process by which normal cells transform into cancer cells; involves multiple genetic alterations.",
+            exampleFr = "La cancérogenèse est le processus par lequel des cellules normales se transforment en cellules cancéreuses.",
+            exampleAr = "التسرطن هو العملية التي تتحول بها الخلايا الطبيعية إلى خلايا سرطانية؛ تتضمن طفرات وراثية متعددة.",
         ),
         MedicalTermEntity(
             id = 2843,
@@ -1399,6 +1609,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈɒŋkəˌdʒiːn/",
+            exampleEn = "The oncogene is the mutated proto-oncogene promoting uncontrolled cell growth; acts as a gas pedal for cell division.",
+            exampleFr = "L'oncogène est proto-oncogène muté favorisant la croissance cellulaire incontrôlée; agit comme accélérateur de la division.",
+            exampleAr = "الجين الورمي هو جين أولي ورمي متحوِّر يعزز النمو الخلوي غير المنضبط؛ يعمل كمسرِّع انقسام الخلايا.",
         ),
         MedicalTermEntity(
             id = 2844,
@@ -1411,6 +1624,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈproʊtoʊˌɒŋkəˌdʒiːn/",
+            exampleEn = "The proto-oncogene is the normal gene that regulates cell growth; can become an oncogene through mutation or amplification.",
+            exampleFr = "La proto-oncogène est gène normal régulant la croissance cellulaire; peut devenir un oncogène par mutation ou amplification.",
+            exampleAr = "الجين الأولي الورمي هو جين طبيعي يُنظِّم نمو الخلايا؛ يمكن أن يتحول إلى جين ورمي بالطفرة أو التضخيم.",
         ),
         MedicalTermEntity(
             id = 2845,
@@ -1423,6 +1639,7 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər dʒiːn/",
+            exampleEn = "The tumor suppressor gene is the gene that inhibits cell growth; loss of function leads to cancer; e.g., TP53, RB, BRCA1.",
         ),
         MedicalTermEntity(
             id = 2846,
@@ -1435,6 +1652,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/tiːˈpiː ˈfɪfti θriː/",
+            exampleEn = "The tp53 (p53) is the most commonly mutated gene in human cancers; \"guardian of the genome\"; triggers apoptosis on DNA damage.",
+            exampleFr = "La TP53 (p53) est le gène le plus fréquemment muté dans les cancers humains; «gardien du génome».",
+            exampleAr = "الجين TP53 (p53) هو الجين الأكثر تحوراً في سرطانات الإنسان؛ «حارس الجينوم»؛ يُطلِق موت الخلية المبرمج عند تلف DNA.",
         ),
         MedicalTermEntity(
             id = 2847,
@@ -1459,6 +1679,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ɪˌnɪʃɪˈeɪʃən/",
+            exampleEn = "The initiation (carcinogenesis) is the first irreversible step where a carcinogen causes a permanent mutation in a normal cell.",
+            exampleFr = "L'initiation (cancérogenèse) est première étape irréversible où un carcinogène cause une mutation permanente dans une cellule normale.",
+            exampleAr = "البدء التسرطني هو الخطوة الأولى التي لا يمكن التراجع عنها يُحدِث فيها المُسرطِن طفرة دائمة في خلية طبيعية.",
         ),
         MedicalTermEntity(
             id = 2849,
@@ -1471,6 +1694,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/prəˈmoʊʃən/",
+            exampleEn = "The promotion (carcinogenesis) is the second step in carcinogenesis where initiated cells are stimulated to proliferate.",
+            exampleFr = "Le promotion (cancérogenèse) est deuxième étape de la cancérogenèse où les cellules initiées sont stimulées à proliférer.",
+            exampleAr = "الترقية التسرطنية هو الخطوة الثانية في التسرطن تُنشَّط فيها الخلايا المُبدَّأة للتكاثر.",
         ),
         MedicalTermEntity(
             id = 2850,
@@ -1483,6 +1709,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/prəˈɡrɛʃən/",
+            exampleEn = "The progression (carcinogenesis) is the acquisition of increasing malignant properties by tumor cells; leads to invasion and metastasis.",
+            exampleFr = "Le progression (cancérogenèse) est l'acquisition de propriétés malignes croissantes par les cellules tumorales; mène à invasion et métastase.",
+            exampleAr = "التقدم التسرطني هو اكتساب خلايا الورم خصائص خبيثة متزايدة؛ يؤدي إلى الغزو والانتشار.",
         ),
         MedicalTermEntity(
             id = 2851,
@@ -1495,6 +1724,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/mjuːˈteɪʃən/",
+            exampleEn = "The mutation is the permanent change in the DNA sequence; the driving force of carcinogenesis.",
+            exampleFr = "Le mutation est un changement permanent dans la séquence ADN; la force motrice de la cancérogenèse.",
+            exampleAr = "الطفرة هو تغيير دائم في تسلسل DNA؛ القوة الدافعة للتسرطن.",
         ),
         MedicalTermEntity(
             id = 2852,
@@ -1519,6 +1751,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/tɛˈlɒmɪreɪz/",
+            exampleEn = "The telomerase (in cancer) is the enzyme reactivated in cancer cells maintaining telomere length enabling limitless replication.",
+            exampleFr = "La télomérase (dans le cancer) est enzyme réactivée dans les cellules cancéreuses maintenant la longueur des télomères permettant réplication illimitée.",
+            exampleAr = "التيلوميراز (في السرطان) هو إنزيم يُعاد تنشيطه في الخلايا السرطانية يحافظ على طول التيلوميرات مما يُتيح تكاثراً لا محدوداً.",
         ),
         MedicalTermEntity(
             id = 2854,
@@ -1591,6 +1826,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌɪmjʊnəˈlɒdʒɪkəl ɪˈskeɪp/",
+            exampleEn = "The immunological escape (tumor) is the ability of tumors to evade immune surveillance; a hallmark of cancer.",
+            exampleFr = "L'échappement immunitaire (Tumeur) est la capacité des tumeurs à échapper à la surveillance immunitaire; caractéristique du cancer.",
+            exampleAr = "التهرب المناعي للورم هو قدرة الأورام على التهرب من المراقبة المناعية؛ سمة أساسية من سمات السرطان.",
         ),
         MedicalTermEntity(
             id = 2860,
@@ -1615,6 +1853,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈtjuːmər ˈmaɪkroʊɪnˌvaɪrənmənt/",
+            exampleEn = "The tumor microenvironment is the cellular and molecular environment surrounding a tumor including immune cells, fibroblasts, and vessels.",
+            exampleFr = "Le microenvironnement tumoral est l'environnement cellulaire et moléculaire entourant une tumeur incluant cellules immunitaires, fibroblastes.",
+            exampleAr = "البيئة الدقيقة للورم هو البيئة الخلوية والجزيئية المحيطة بالورم بما فيها الخلايا المناعية والخلايا الليفية والأوعية.",
         ),
         MedicalTermEntity(
             id = 2862,
@@ -1639,6 +1880,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌmaɪəˈkɑːrdiəm/",
+            exampleEn = "The coagulative necrosis (myocardium) is the histological finding in myocardial infarction; ghost outlines of myocytes visible at 4–12 hours.",
+            exampleFr = "La nécrose de coagulation (myocarde) est constatation histologique dans l'IDM; contours fantômes des myocytes visibles à 4–12 heures.",
+            exampleAr = "النخر التخثري (عضلة القلب) هو النتيجة النسيجية لاحتشاء القلب؛ تظهر مخططات شبحية لخلايا القلب عند 4–12 ساعة.",
         ),
         MedicalTermEntity(
             id = 2864,
@@ -1687,6 +1931,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌvɛdʒɪˈteɪʃən/",
+            exampleEn = "The vegetation (cardiac) is the mass of fibrin, platelets, and organisms on heart valves in infective endocarditis.",
+            exampleFr = "Le végétation (cardiaque) est masse de fibrine, plaquettes et organismes sur les valves cardiaques dans l'endocardite infectieuse.",
+            exampleAr = "النباتات القلبية هو كتلة من الفيبرين والصفائح الدموية والكائنات على صمامات القلب في التهاب الشغاف المعدي.",
         ),
         MedicalTermEntity(
             id = 2868,
@@ -1699,6 +1946,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/eɪˈɔːrtɪk stɪˈnoʊsɪs/",
+            exampleEn = "Aortic stenosis refers to narrowing of the aortic valve orifice obstructing left ventricular outflow; causes concentric LV hypertrophy.",
+            exampleFr = "La sténose aortique est rétrécissement de l'orifice valvulaire aortique obstruant le flux ventriculaire gauche.",
+            exampleAr = "تضيق الأبهر هو تضيُّق فتحة الصمام الأبهري يُعيق تدفق البطين الأيسر؛ يسبب تضخماً متحداً للبطين الأيسر.",
         ),
         MedicalTermEntity(
             id = 2869,
@@ -1771,6 +2021,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ɑːrˌtɪriəloʊskləˈroʊsɪs/",
+            exampleEn = "Arteriolosclerosis refers to hardening and thickening of arteriolar walls; associated with hypertension and diabetes.",
+            exampleFr = "L'artériolosclérose est durcissement et épaississement des parois artériolaires; associé à l'hypertension et au diabète.",
+            exampleAr = "تصلب الشرينات هو تصلب وسماكة جدران الشرينات؛ مرتبط بارتفاع ضغط الدم والسكري.",
         ),
         MedicalTermEntity(
             id = 2875,
@@ -1783,6 +2036,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/foʊm sɛl/",
+            exampleEn = "The foam cell is the lipid-laden macrophage in the intima of arteries; key component of early atherosclerotic plaque (fatty streak).",
+            exampleFr = "La cellule spumeuse est macrophage chargé en lipides dans l'intima des artères; composant clé de la plaque précoce.",
+            exampleAr = "الخلية الرغوية هو بلاعمة محملة بالدهون في بطانة الشرايين؛ مكوِّن أساسي في اللويحة الأثيرومية المبكرة.",
         ),
         MedicalTermEntity(
             id = 2876,
@@ -1795,6 +2051,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˈfæti striːk/",
+            exampleEn = "The fatty streak is the earliest lesion of atherosclerosis; yellow intimal streaks containing lipid-laden macrophages.",
+            exampleFr = "La strie lipidique est la lésion la plus précoce de l'athérosclérose; stries intimales jaunes contenant des macrophages lipidiques.",
+            exampleAr = "الخط الدهني هو أولى آفات تصلب الشرايين؛ خطوط صفراء في البطانة تحتوي بلاعم محملة بالدهون.",
         ),
         MedicalTermEntity(
             id = 2877,
@@ -1915,6 +2174,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌmɛzəθiːlɪˈoʊmə/",
+            exampleEn = "The mesothelioma is the malignant tumor of the pleura; strongly associated with asbestos exposure; very poor prognosis.",
+            exampleFr = "La mésothéliome est tumeur maligne de la plèvre; fortement associée à l'exposition à l'amiante; très mauvais pronostic.",
+            exampleAr = "ورم البطانة المتوسطة هو ورم خبيث في الغشاء الجنبي؛ مرتبط بالتعرض للأسبستوس؛ إنذار سيئ للغاية.",
         ),
         MedicalTermEntity(
             id = 2887,
@@ -1987,6 +2249,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˈpɛptɪk ˈʌlsər/",
+            exampleEn = "The peptic ulcer (pathological) is the defect in the gastric or duodenal mucosa reaching the muscularis mucosae; caused by H. pylori and NSAIDs.",
+            exampleFr = "L'ulcère gastroduodénal (pathologique) est défaut de la muqueuse gastrique ou duodénale atteignant la muscularis muqueuse; H. pylori et AINS.",
+            exampleAr = "قرحة المعدة والاثني عشر (مرضي) هو عيب في الغشاء المخاطي للمعدة أو الاثني عشر يصل إلى الطبقة العضلية؛ تسببه الملوية البوابية.",
         ),
         MedicalTermEntity(
             id = 2893,
@@ -2011,6 +2276,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˈkoʊlɒn ˌædɪnoʊˌkɑːrsɪˈnoʊmə/",
+            exampleEn = "The colon adenocarcinoma is the most common gastrointestinal cancer; arises from adenomatous polyps; associated with APC mutation.",
+            exampleFr = "L'adénocarcinome du côlon est le cancer gastro-intestinal le plus courant; naît de polypes adénomateux; associé à mutation APC.",
+            exampleAr = "السرطانة الغدية للقولون هو أكثر سرطانات الجهاز الهضمي شيوعاً؛ ينشأ من الأورام الحميدة الغدية؛ مرتبط بطفرة APC.",
         ),
         MedicalTermEntity(
             id = 2895,
@@ -2023,6 +2291,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌædɪˈnoʊmətəs ˈpɒlɪp/",
+            exampleEn = "The adenomatous polyp is the pre-malignant glandular polyp in the colon; risk of malignancy increases with size and villous component.",
+            exampleFr = "La polype adénomateux est polype glandulaire pré-malin dans le côlon; risque de malignité augmente avec taille et composante villeuse.",
+            exampleAr = "الورم الغدي الحميد هو ورم غدي ما قبل خبيث في القولون؛ يزيد خطر الخباثة مع الحجم والمكوِّن الزغبي.",
         ),
         MedicalTermEntity(
             id = 2896,
@@ -2131,6 +2402,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˈmɪnɪməl tʃeɪndʒ dɪˈziːz/",
+            exampleEn = "The minimal change disease is the most common cause of nephrotic syndrome in children; normal glomeruli on light microscopy.",
+            exampleFr = "La néphrose lipoïdique (maladie à lésions minimes) est la cause la plus fréquente du syndrome néphrotique chez l'enfant; glomérules normaux en microscopie optique.",
+            exampleAr = "مرض الآفات الشحمية هو أكثر أسباب المتلازمة الكلائية شيوعاً عند الأطفال؛ كبيبات طبيعية في المجهر الضوئي.",
         ),
         MedicalTermEntity(
             id = 2905,
@@ -2155,6 +2429,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˈriːnəl sɛl ˌkɑːrsɪˈnoʊmə/",
+            exampleEn = "The renal cell carcinoma (rcc) is the most common malignant kidney tumor in adults; associated with VHL gene mutation and smoking.",
+            exampleFr = "La carcinome à cellules rénales (CCR) est la tumeur maligne rénale la plus fréquente chez l'adulte; associée à mutation VHL et tabac.",
+            exampleAr = "السرطانة الكلوية الخلوية هو أكثر أورام الكلية الخبيثة شيوعاً عند البالغين؛ مرتبط بطفرة جين VHL والتدخين.",
         ),
         MedicalTermEntity(
             id = 2907,
@@ -2167,6 +2444,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/wɪlmz ˈtjuːmər/",
+            exampleEn = "The wilms' tumor (nephroblastoma) is the most common renal tumor in children (peak 3–4 years); associated with WT1 gene mutation.",
+            exampleFr = "La tumeur de Wilms (Néphrobastome) est la tumeur rénale la plus fréquente chez l'enfant (pic 3–4 ans); associée à mutation WT1.",
+            exampleAr = "ورم ويلمز (الحشوة الكلوية) هو أكثر أورام الكلية شيوعاً عند الأطفال (ذروته 3–4 سنوات)؛ مرتبط بطفرة جين WT1.",
         ),
         MedicalTermEntity(
             id = 2908,
@@ -2227,6 +2507,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌɡlaɪoʊblæˈstoʊmə ˌmʌltɪˈfɔːrm/",
+            exampleEn = "The glioblastoma multiforme (gbm) is the most common and aggressive primary brain tumor in adults; WHO Grade IV; poor prognosis.",
+            exampleFr = "La glioblastome multiforme (GBM) est la tumeur cérébrale primaire la plus fréquente et agressive chez l'adulte; Grade IV OMS; mauvais pronostic.",
+            exampleAr = "الورم الدبقي متعدد الأشكال هو أكثر الأورام الدماغية الأولية شيوعاً وعدوانيةً عند البالغين؛ الدرجة الرابعة (WHO)؛ إنذار سيئ.",
         ),
         MedicalTermEntity(
             id = 2913,
@@ -2239,6 +2522,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌmɛnɪndʒiˈoʊmə/",
+            exampleEn = "The meningioma is the benign tumor arising from arachnoid cells; usually slow-growing; more common in women.",
+            exampleFr = "La méningiome est tumeur bénigne provenant des cellules arachnoïdiennes; croissance lente; plus fréquente chez la femme.",
+            exampleAr = "ورم السحايا هو ورم حميد ينشأ من الخلايا العنكبوتية؛ عادةً بطيء النمو؛ أكثر شيوعاً عند النساء.",
         ),
         MedicalTermEntity(
             id = 2914,
@@ -2275,6 +2561,7 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌsʌbəˈræknɔɪd ˈhɛmərɪdʒ/",
+            exampleEn = "Subarachnoid hemorrhage refers to bleeding into the subarachnoid space; most common cause is ruptured berry aneurysm; thunderclap headache.",
         ),
         MedicalTermEntity(
             id = 2917,
@@ -2323,6 +2610,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌɛpɪˈdjʊərəl hɛˈmætoʊmə/",
+            exampleEn = "Epidural hematoma refers to bleeding between skull and dura mater; from rupture of middle meningeal artery; lens-shaped on CT.",
+            exampleFr = "L'hématome épidural est saignement entre crâne et dure-mère; rupture de l'artère méningée moyenne; lenticulaire au TDM.",
+            exampleAr = "الورم الدموي فوق الجافية هو نزيف بين الجمجمة والأم الجافية؛ من تمزق الشريان السحائي الأوسط؛ يظهر عدسياً في الأشعة.",
         ),
         MedicalTermEntity(
             id = 2921,
@@ -2359,6 +2649,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ˌɪmjʊnoʊˈflʊərəsəns/",
+            exampleEn = "The immunofluorescence is the technique using fluorescent antibodies to detect antigens in tissue; used in renal and skin biopsies.",
+            exampleFr = "L'immunofluorescence est technique utilisant des anticorps fluorescents pour détecter des antigènes; utilisée en biopsie rénale et cutanée.",
+            exampleAr = "التألق المناعي هو تقنية تستخدم أجساماً مضادة فلورية للكشف عن المستضدات؛ تُستخدَم في خزعات الكلية والجلد.",
         ),
         MedicalTermEntity(
             id = 2924,
@@ -2383,6 +2676,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ˈkɒŋɡoʊ rɛd steɪn/",
+            exampleEn = "The congo red stain is the stain for amyloid detection; shows apple-green birefringence under polarized light.",
+            exampleFr = "Le coloration au rouge Congo est coloration pour la détection de l'amyloïde; montre biréfringence vert pomme en lumière polarisée.",
+            exampleAr = "صبغة أحمر الكونغو هو صبغة للكشف عن الأميلويد؛ تُظهِر ثنائية الانعكاس بلون التفاح الأخضر تحت الضوء المستقطب.",
         ),
         MedicalTermEntity(
             id = 2926,
@@ -2395,6 +2691,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/piːˈeɪˈɛs steɪn/",
+            exampleEn = "The pas stain (periodic acid-schiff) is the stain highlighting glycogen, mucin, and basement membranes in magenta/pink; detects fungi.",
+            exampleFr = "Le coloration PAS (Acide périodique-Schiff) est coloration mettant en évidence glycogène, mucine et membranes basales en magenta; détecte les champignons.",
+            exampleAr = "صبغة PAS هو صبغة تُبرِز الغليكوجين والمذاب والأغشية القاعدية بالأرجواني؛ تكشف الفطريات.",
         ),
         MedicalTermEntity(
             id = 2927,
@@ -2407,6 +2706,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ˈmæsɒn ˈtraɪkroʊm steɪn/",
+            exampleEn = "The masson trichrome stain is the stain differentiating muscle (red) from collagen/fibrous tissue (blue); used to assess fibrosis.",
+            exampleFr = "La trichrome de Masson est coloration différenciant le muscle (rouge) du collagène/fibrose (bleu); pour évaluer la fibrose.",
+            exampleAr = "صبغة ماسون ثلاثية اللون هو صبغة تُميِّز العضل (أحمر) عن الكولاجين/الأنسجة الليفية (أزرق)؛ تُستخدَم لتقييم التليف.",
         ),
         MedicalTermEntity(
             id = 2928,
@@ -2431,6 +2733,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/floʊ saɪˈtɒmɪtri/",
+            exampleEn = "The flow cytometry is the technique measuring physical and chemical characteristics of cells in a fluid stream; used for leukemia typing.",
+            exampleFr = "La cytométrie en flux est technique mesurant les caractéristiques physiques et chimiques des cellules en flux; utilisé pour typer les leucémies.",
+            exampleAr = "قياس التدفق الخلوي هو تقنية تقيس الخصائص الجسدية والكيميائية للخلايا في تدفق سائل؛ تُستخدَم لتصنيف اللوكيميا.",
         ),
         MedicalTermEntity(
             id = 2930,
@@ -2443,6 +2748,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/fɪʃ/",
+            exampleEn = "The fish (fluorescence in situ hybridization) is the molecular technique detecting specific DNA/RNA sequences in cells using fluorescent probes.",
+            exampleFr = "La FISH (Hybridation in situ en fluorescence) est technique moléculaire détectant des séquences ADN/ARN spécifiques dans les cellules par sondes fluorescentes.",
+            exampleAr = "التهجين الموضعي الفلوري هو تقنية جزيئية تكشف تسلسلات DNA/RNA المحددة في الخلايا بمسابر فلورية.",
         ),
         MedicalTermEntity(
             id = 2931,

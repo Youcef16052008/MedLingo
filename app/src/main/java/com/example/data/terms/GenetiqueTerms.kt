@@ -19,6 +19,7 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌɔːtəˈsoʊməl ˈdɒmɪnənt/",
+            exampleEn = "The autosomal dominant is the inheritance pattern where a single copy of the mutant allele causes disease (e.g., Huntington).",
         ),
         MedicalTermEntity(
             id = 1537,
@@ -31,6 +32,7 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌɔːtəˈsoʊməl rɪˈsɛsɪv/",
+            exampleEn = "The autosomal recessive is the inheritance pattern requiring two copies of the mutant allele to cause disease (e.g., cystic fibrosis).",
         ),
         MedicalTermEntity(
             id = 1538,
@@ -55,6 +57,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈkæriər/",
+            exampleEn = "The carrier is the individual carrying one copy of a mutant recessive allele without showing symptoms.",
+            exampleFr = "La porteur est individu portant une copie d'un allèle récessif muté sans montrer de symptômes.",
+            exampleAr = "الحامل للجين هو فرد يحمل نسخة واحدة من أليل متنحٍ طافر دون ظهور الأعراض عليه.",
         ),
         MedicalTermEntity(
             id = 1540,
@@ -67,6 +72,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/daʊn ˈsɪndroʊm/",
+            exampleEn = "The down syndrome (trisomy 21) is the chromosomal disorder caused by an extra copy of chromosome 21.",
+            exampleFr = "La syndrome de Down (Trisomie 21) est trouble chromosomique causé par une copie supplémentaire du chromosome 21.",
+            exampleAr = "متلازمة داون (تثلث الصبغي 21) هو اضطراب كروموسومي تسببه نسخة زائدة من الكروموسوم 21.",
         ),
         MedicalTermEntity(
             id = 1541,
@@ -79,6 +87,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈtɜːrnər/",
+            exampleEn = "The turner syndrome (45,x) is the chromosomal disorder in females with only one X chromosome (45,X).",
+            exampleFr = "La syndrome de Turner (45,X) est trouble chromosomique chez les femmes avec un seul chromosome X (45,X).",
+            exampleAr = "متلازمة تيرنر هو اضطراب كروموسومي عند الإناث بكروموسوم X واحد فقط (45,X).",
         ),
         MedicalTermEntity(
             id = 1542,
@@ -91,6 +102,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈklaɪnfɛltər/",
+            exampleEn = "The klinefelter syndrome (47,xxy) is the chromosomal disorder in males with an extra X chromosome (47,XXY).",
+            exampleFr = "La syndrome de Klinefelter (47,XXY) est trouble chromosomique chez les mâles avec un chromosome X supplémentaire (47,XXY).",
+            exampleAr = "متلازمة كلاينفلتر هو اضطراب كروموسومي عند الذكور بكروموسوم X إضافي (47,XXY).",
         ),
         MedicalTermEntity(
             id = 1543,
@@ -103,6 +117,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈsɪstɪk faɪˈbroʊsɪs/",
+            exampleEn = "The cystic fibrosis is the autosomal recessive disease caused by CFTR gene mutations affecting mucus secretion.",
+            exampleFr = "La mucoviscidose (Fibrose kystique) est maladie autosomique récessive causée par des mutations du gène CFTR affectant la sécrétion de mucus.",
+            exampleAr = "التليف الكيسي هو مرض جسمي متنحٍ تسببه طفرات في جين CFTR تؤثر على إفراز المخاط.",
         ),
         MedicalTermEntity(
             id = 1544,
@@ -115,6 +132,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈsɪkəl sɛl/",
+            exampleEn = "The sickle cell disease is the autosomal recessive disease caused by a missense mutation in the β-globin gene (HbS).",
+            exampleFr = "La drépanocytose est maladie autosomique récessive causée par une mutation faux-sens dans le gène β-globine (HbS).",
+            exampleAr = "مرض فقر الدم المنجلي هو مرض جسمي متنحٍ تسببه طفرة خاطئة في جين بيتا-غلوبين (HbS).",
         ),
         MedicalTermEntity(
             id = 1545,
@@ -127,6 +147,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌfiːnɪlˌkiːtəˈnjʊəriə/",
+            exampleEn = "The phenylketonuria (pku) is the autosomal recessive metabolic disorder due to PAH gene mutation causing phenylalanine accumulation.",
+            exampleFr = "La phénylcétonurie (PCU) est trouble métabolique autosomique récessif dû à une mutation du gène PAH causant l'accumulation de phénylalanine.",
+            exampleAr = "بيلة الفينيل كيتون هو اضطراب استقلابي جسمي متنحٍ بسبب طفرة جين PAH يسبب تراكم الفينيل ألانين.",
         ),
         MedicalTermEntity(
             id = 1546,
@@ -139,6 +162,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌhiːməˈfɪliə/",
+            exampleEn = "The hemophilia is the X-linked recessive bleeding disorder due to clotting factor deficiency (F8 or F9 gene).",
+            exampleFr = "L'hémophilie est trouble hémorragique récessif lié à l'X dû à un déficit en facteur de coagulation (gène F8 ou F9).",
+            exampleAr = "الناعور (الهيموفيليا) هو اضطراب نزيف متنحٍ مرتبط بالكروموسوم X بسبب نقص عامل التخثر (جين F8 أو F9).",
         ),
         MedicalTermEntity(
             id = 1547,
@@ -151,6 +177,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈhʌntɪŋtən/",
+            exampleEn = "The huntington disease is the autosomal dominant neurodegenerative disease caused by CAG trinucleotide repeat expansion in HTT gene.",
+            exampleFr = "La maladie de Huntington est maladie neurodégénérative autosomique dominante causée par expansion de répétitions CAG dans le gène HTT.",
+            exampleAr = "مرض هانتنغتون هو مرض عصبي تنكسي جسمي سائد بسبب توسع تكرار ثلاثي النيوكليوتيد CAG في جين HTT.",
         ),
         MedicalTermEntity(
             id = 1548,
@@ -175,6 +204,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈɒŋkoʊdʒiːn/",
+            exampleEn = "The oncogene is the mutated gene promoting uncontrolled cell growth and cancer development.",
+            exampleFr = "L'oncogène est gène muté favorisant la croissance cellulaire incontrôlée et le développement du cancer.",
+            exampleAr = "الجين الورمي هو جين طافر يُعزِّز نمو الخلايا غير المنضبط وتطور السرطان.",
         ),
         MedicalTermEntity(
             id = 1550,
@@ -187,6 +219,7 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər/",
+            exampleEn = "The tumor suppressor gene is the gene that inhibits cell division and tumor formation (e.g., TP53, Rb).",
         ),
         MedicalTermEntity(
             id = 1551,
@@ -199,6 +232,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈpɛdɪɡriː/",
+            exampleEn = "The pedigree is the diagram showing the genetic relationships and inheritance pattern within a family.",
+            exampleFr = "L'arbre généalogique (pédigrée) est diagramme montrant les relations génétiques et le schéma d'hérédité au sein d'une famille.",
+            exampleAr = "الشجرة العائلية هو مخطط يُظهِر العلاقات الجينية ونمط الوراثة داخل عائلة.",
         ),
         MedicalTermEntity(
             id = 1552,
@@ -211,6 +247,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈproʊbænd/",
+            exampleEn = "The proband is the first affected individual in a family brought to medical attention.",
+            exampleFr = "La proposant (Cas index) est le premier individu affecté dans une famille amené à l'attention médicale.",
+            exampleAr = "الحالة الأولى هو أول فرد مصاب في العائلة يُلفِت الانتباه الطبي.",
         ),
         MedicalTermEntity(
             id = 1553,
@@ -223,6 +262,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈdʒɛnɪtɪk ˈkaʊnsəlɪŋ/",
+            exampleEn = "The genetic counseling is the service providing information and support to individuals or families affected by genetic conditions.",
+            exampleFr = "Le conseil génétique est service fournissant information et soutien aux individus ou familles affectés par des conditions génétiques.",
+            exampleAr = "الإرشاد الوراثي هو خدمة تُقدِّم المعلومات والدعم للأفراد أو الأسر المتأثرة بالحالات الوراثية.",
         ),
         MedicalTermEntity(
             id = 1554,
@@ -235,6 +277,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˌpɒpjʊˈleɪʃən dʒəˈnɛtɪks/",
+            exampleEn = "The population genetics is the study of allele frequency distribution and change in populations.",
+            exampleFr = "La génétique des populations est l'étude de la distribution et du changement de la fréquence des allèles dans les populations.",
+            exampleAr = "وراثة المجتمعات هو دراسة توزيع تردد الأليلات وتغييره في المجتمعات.",
         ),
         MedicalTermEntity(
             id = 1555,
@@ -247,6 +292,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˈhɑːrdi ˈwaɪnbɜːrɡ/",
+            exampleEn = "The hardy-weinberg equilibrium is the principle that allele frequencies remain constant in a population under specific conditions.",
+            exampleFr = "L'équilibre de Hardy-Weinberg est principe selon lequel les fréquences alléliques restent constantes dans une population dans des conditions spécifiques.",
+            exampleAr = "توازن هاردي-واينبرغ هو المبدأ القائل بأن تردد الأليلات يبقى ثابتاً في مجتمع في ظروف محددة.",
         ),
         MedicalTermEntity(
             id = 1556,
@@ -259,6 +307,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/əˈliːl ˈfriːkwənsi/",
+            exampleEn = "The allele frequency is the proportion of a specific allele among all alleles of a gene in a population.",
+            exampleFr = "La fréquence allélique est la proportion d'un allèle spécifique parmi tous les allèles d'un gène dans une population.",
+            exampleAr = "تردد الأليل هو نسبة أليل محدد بين جميع أليلات جين في مجتمع.",
         ),
         MedicalTermEntity(
             id = 1557,
@@ -283,6 +334,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˈnætʃərəl sɪˈlɛkʃən/",
+            exampleEn = "The natural selection is the differential survival and reproduction of individuals based on their traits.",
+            exampleFr = "Le sélection naturelle est la survie et la reproduction différentielles des individus basées sur leurs caractères.",
+            exampleAr = "الانتقاء الطبيعي هو البقاء والتكاثر التفاضلي للأفراد بناءً على صفاتهم.",
         ),
         MedicalTermEntity(
             id = 1559,
@@ -295,6 +349,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/dʒiːn floʊ/",
+            exampleEn = "The gene flow is the transfer of alleles between populations through migration.",
+            exampleFr = "La flux génique est le transfert d'allèles entre populations par migration.",
+            exampleAr = "تدفق الجينات هو انتقال الأليلات بين المجتمعات عن طريق الهجرة.",
         ),
         MedicalTermEntity(
             id = 1560,
@@ -307,6 +364,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˈfaʊndər/",
+            exampleEn = "The founder effect is the loss of genetic diversity when a new population is established by a small number of individuals.",
+            exampleFr = "L'effet fondateur est la perte de diversité génétique quand une nouvelle population est établie par un petit nombre d'individus.",
+            exampleAr = "تأثير المؤسس هو فقدان التنوع الجيني عند تأسيس مجتمع جديد من عدد صغير من الأفراد.",
         ),
         MedicalTermEntity(
             id = 1561,
@@ -319,6 +379,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˈbɒtlˌnɛk/",
+            exampleEn = "The bottleneck effect is the drastic reduction in population size reducing genetic diversity.",
+            exampleFr = "L'effet goulot d'étranglement est une réduction drastique de la taille de la population réduisant la diversité génétique.",
+            exampleAr = "تأثير عنق الزجاجة هو انخفاض حاد في حجم المجتمع يُقلِّل من التنوع الجيني.",
         ),
         MedicalTermEntity(
             id = 1562,
@@ -343,6 +406,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˌhɛtəroʊzaɪˈɡɒsɪti/",
+            exampleEn = "The heterozygosity is the measure of genetic diversity reflecting the proportion of heterozygous individuals in a population.",
+            exampleFr = "L'hétérozygotie est mesure de la diversité génétique reflétant la proportion d'individus hétérozygotes dans une population.",
+            exampleAr = "النسبة غير المتماثلة هو مقياس للتنوع الجيني يعكس نسبة الأفراد غير المتماثلين في مجتمع.",
         ),
         MedicalTermEntity(
             id = 1564,
@@ -355,6 +421,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ˌɛpɪdʒəˈnɛtɪks/",
+            exampleEn = "The epigenetics is the study of heritable changes in gene expression that do not involve changes in DNA sequence.",
+            exampleFr = "L'épigénétique est l'étude des changements héréditaires dans l'expression génique n'impliquant pas de changements de séquence ADN.",
+            exampleAr = "علم الوراثة فوق الجينية هو دراسة التغيرات الوراثية في التعبير الجيني التي لا تنطوي على تغيير في تسلسل DNA.",
         ),
         MedicalTermEntity(
             id = 1565,
@@ -367,6 +436,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ˌmɛθɪˈleɪʃən/",
+            exampleEn = "The dna methylation is the addition of a methyl group (-CH₃) to cytosine typically silencing gene expression.",
+            exampleFr = "Le méthylation de l'ADN est l'ajout d'un groupe méthyle (-CH₃) à la cytosine silençant généralement l'expression génique.",
+            exampleAr = "مثيلة DNA هو إضافة مجموعة ميثيل (-CH₃) إلى السيتوزين مما يُسكِّت التعبير الجيني عادةً.",
         ),
         MedicalTermEntity(
             id = 1566,
@@ -391,6 +463,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/əˌsɛtɪˈleɪʃən/",
+            exampleEn = "The acetylation is the addition of an acetyl group to histone proteins generally activating gene transcription.",
+            exampleFr = "L'acétylation est l'ajout d'un groupe acétyle aux protéines histones activant généralement la transcription génique.",
+            exampleAr = "الأسيتيل هو إضافة مجموعة أسيتيل إلى بروتينات الهيستون مما ينشط النسخ الجيني عادةً.",
         ),
         MedicalTermEntity(
             id = 1568,
@@ -403,6 +478,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ˌriːˈmɒdəlɪŋ/",
+            exampleEn = "The chromatin remodeling is the dynamic modification of chromatin architecture to allow or block gene transcription.",
+            exampleFr = "Le remodelage de la chromatine est modification dynamique de l'architecture de la chromatine pour permettre ou bloquer la transcription.",
+            exampleAr = "إعادة تشكيل الكروماتين هو التعديل الديناميكي لهندسة الكروماتين للسماح أو لمنع النسخ الجيني.",
         ),
         MedicalTermEntity(
             id = 1569,
@@ -415,6 +493,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ɪmˈprɪntɪŋ/",
+            exampleEn = "The genomic imprinting is the epigenetic phenomenon where genes are expressed depending on whether inherited from mother or father.",
+            exampleFr = "L'empreinte génomique est phénomène épigénétique où les gènes sont exprimés selon qu'ils sont hérités de la mère ou du père.",
+            exampleAr = "البصمة الجينومية هو ظاهرة فوق جينية تُعبَّر فيها الجينات اعتماداً على ما إذا كانت موروثة من الأم أو الأب.",
         ),
         MedicalTermEntity(
             id = 1570,
@@ -427,6 +508,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ɪˌnæktɪˈveɪʃən/",
+            exampleEn = "The x-inactivation (lyonization) is the random silencing of one X chromosome in female somatic cells forming a Barr body.",
+            exampleFr = "L'inactivation du chromosome X (Lyonisation) est l'inactivation aléatoire d'un chromosome X dans les cellules somatiques féminines formant un corpuscule de Barr.",
+            exampleAr = "إسكات الكروموسوم X هو الإسكات العشوائي لأحد كروموسومي X في الخلايا الجسدية للإناث مكوِّناً جسيم بار.",
         ),
         MedicalTermEntity(
             id = 1571,
@@ -439,6 +523,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/bɑːr ˈbɒdi/",
+            exampleEn = "The barr body is the condensed inactive X chromosome visible in female somatic cells.",
+            exampleFr = "La corpuscule de Barr est le chromosome X inactivé condensé visible dans les cellules somatiques féminines.",
+            exampleAr = "جسيم بار هو الكروموسوم X الخامل المضغوط الظاهر في الخلايا الجسدية للإناث.",
         ),
         MedicalTermEntity(
             id = 1572,
@@ -451,6 +538,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/siː piː dʒiː ˈaɪlənd/",
+            exampleEn = "The cpg island is the region of DNA with a high frequency of CG dinucleotides often found near gene promoters.",
+            exampleFr = "L'îlot CpG est région d'ADN avec une fréquence élevée de dinucléotides CG souvent trouvée près des promoteurs.",
+            exampleAr = "جزيرة CpG هو منطقة DNA بتردد عالٍ من ثنائيات النيوكليوتيد CG توجد غالباً بالقرب من مُحرِّضات الجينات.",
         ),
         MedicalTermEntity(
             id = 1573,
@@ -463,6 +553,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/dʒəˈnɛtɪk ˌɛndʒɪˈnɪərɪŋ/",
+            exampleEn = "The genetic engineering is the direct manipulation of an organism's genome using biotechnology.",
+            exampleFr = "La génie génétique est la manipulation directe du génome d'un organisme en utilisant la biotechnologie.",
+            exampleAr = "الهندسة الوراثية هو التلاعب المباشر بجينوم كائن حي باستخدام التكنولوجيا الحيوية.",
         ),
         MedicalTermEntity(
             id = 1574,
@@ -475,6 +568,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/rɪˈstrɪkʃən ˈɛnzaɪm/",
+            exampleEn = "The restriction enzyme (endonuclease) is the enzyme cutting DNA at specific recognition sequences (restriction sites).",
+            exampleFr = "L'enzyme de restriction (Endonucléase) est enzyme coupant l'ADN à des séquences de reconnaissance spécifiques (sites de restriction).",
+            exampleAr = "إنزيم القطع (الإندونوكلياز) هو إنزيم يقطع DNA عند تسلسلات تعرف محددة (مواقع القطع).",
         ),
         MedicalTermEntity(
             id = 1575,
@@ -487,6 +583,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/rɪˈkɒmbɪnənt/",
+            exampleEn = "Recombinant DNA refers to DNA formed by joining DNA segments from different organisms.",
+            exampleFr = "L'ADN recombinant est ADN formé en joignant des segments d'ADN provenant d'organismes différents.",
+            exampleAr = "الـ DNA المؤشب هو DNA يتكون من ربط شرائح DNA من كائنات مختلفة.",
         ),
         MedicalTermEntity(
             id = 1576,
@@ -499,6 +598,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ˈkloʊnɪŋ ˈvɛktər/",
+            exampleEn = "The cloning vector is the DNA molecule (plasmid or virus) used to carry foreign DNA into a host cell.",
+            exampleFr = "La vecteur de clonage est molécule d'ADN (plasmide ou virus) utilisée pour introduire de l'ADN étranger dans une cellule hôte.",
+            exampleAr = "ناقل الاستنساخ هو جزيء DNA (بلازميد أو فيروس) يُستخدم لنقل DNA أجنبي إلى خلية مضيف.",
         ),
         MedicalTermEntity(
             id = 1577,
@@ -511,6 +613,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ˈplæzmɪd/",
+            exampleEn = "The plasmid is the small circular DNA molecule in bacteria used as a cloning vector in genetic engineering.",
+            exampleFr = "La plasmide est petite molécule d'ADN circulaire chez les bactéries utilisée comme vecteur de clonage.",
+            exampleAr = "البلازميد هو جزيء DNA حلقي صغير في البكتيريا يُستخدم كناقل استنساخ في الهندسة الوراثية.",
         ),
         MedicalTermEntity(
             id = 1578,
@@ -523,6 +628,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ˌpɒlɪməreɪz tʃeɪn riˈækʃən/",
+            exampleEn = "The pcr (polymerase chain reaction) is the technique amplifying specific DNA sequences through repeated cycles of denaturation, annealing, and extension.",
+            exampleFr = "La PCR (Réaction en chaîne par polymérase) est technique amplifiant des séquences d'ADN spécifiques par des cycles répétés de dénaturation, hybridation et extension.",
+            exampleAr = "تفاعل البوليميراز المتسلسل هو تقنية تُضخِّم تسلسلات DNA محددة عبر دورات متكررة من التمسخ والتهجين والامتداد.",
         ),
         MedicalTermEntity(
             id = 1579,
@@ -535,6 +643,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ˈsiːkwənsɪŋ/",
+            exampleEn = "The dna sequencing is the process of determining the order of nucleotide bases in a DNA molecule.",
+            exampleFr = "Le séquençage de l'ADN est le processus de détermination de l'ordre des bases nucléotidiques dans une molécule d'ADN.",
+            exampleAr = "تسلسل DNA هو عملية تحديد ترتيب القواعد النيوكليوتيدية في جزيء DNA.",
         ),
         MedicalTermEntity(
             id = 1580,
@@ -547,6 +658,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ɪˌlɛktroʊfəˈriːsɪs/",
+            exampleEn = "The gel electrophoresis is the laboratory technique separating DNA fragments by size using an electric field through a gel.",
+            exampleFr = "L'électrophorèse sur gel est technique de laboratoire séparant les fragments d'ADN par taille en utilisant un champ électrique.",
+            exampleAr = "الرحلان الكهربائي الهلامي هو تقنية مختبرية تفصل شظايا DNA حسب الحجم باستخدام مجال كهربائي عبر هلام.",
         ),
         MedicalTermEntity(
             id = 1581,
@@ -559,6 +673,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/dʒiːn ˈθɛrəpi/",
+            exampleEn = "The gene therapy is the treatment inserting, altering or replacing genes to treat or prevent disease.",
+            exampleFr = "La thérapie génique est traitement insérant, modifiant ou remplaçant des gènes pour traiter ou prévenir une maladie.",
+            exampleAr = "العلاج الجيني هو علاج يُدرِج أو يُعدِّل أو يستبدل الجينات لعلاج أو الوقاية من مرض.",
         ),
         MedicalTermEntity(
             id = 1582,
@@ -571,6 +688,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ˈkrɪspər kæs naɪn/",
+            exampleEn = "The crispr-cas9 is the revolutionary gene editing tool using RNA-guided Cas9 nuclease to cut specific DNA sequences.",
+            exampleFr = "La CRISPR-Cas9 est outil d'édition génique révolutionnaire utilisant la nucléase Cas9 guidée par ARN pour couper l'ADN.",
+            exampleAr = "كريسبر-كاس9 هو أداة ثورية لتحرير الجينات تستخدم نوكلياز Cas9 الموجَّه بالـ RNA لقطع تسلسلات DNA محددة.",
         ),
         MedicalTermEntity(
             id = 1583,
@@ -583,6 +703,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/trænsˈdʒɛnɪk/",
+            exampleEn = "The transgenic organism is the organism whose genome contains one or more genes introduced from another species.",
+            exampleFr = "L'organisme transgénique est organisme dont le génome contient un ou plusieurs gènes introduits d'une autre espèce.",
+            exampleAr = "الكائن الحي المُحوَّل وراثياً هو كائن حي يحتوي جينومه على جين أو أكثر مُدرَج من نوع آخر.",
         ),
         MedicalTermEntity(
             id = 1584,
@@ -595,6 +718,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ˈsʌðərn ˈblɒtɪŋ/",
+            exampleEn = "The southern blotting is the technique to detect specific DNA sequences by gel electrophoresis and hybridization with a probe.",
+            exampleFr = "Le buvardage de Southern est technique pour détecter des séquences d'ADN spécifiques par électrophorèse sur gel et hybridation.",
+            exampleAr = "بصمة ساذرن هو تقنية للكشف عن تسلسلات DNA محددة بالرحلان الكهربائي والتهجين مع مسبار.",
         ),
         MedicalTermEntity(
             id = 1585,
@@ -607,6 +733,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Biotechnologie et Génie Génétique",
             ipaPhonetic = "/ˈnɔːrðərn/",
+            exampleEn = "The northern blotting is the technique detecting specific RNA sequences by gel electrophoresis and probe hybridization.",
+            exampleFr = "Le buvardage de Northern est technique détectant des séquences d'ARN spécifiques par électrophorèse sur gel et hybridation.",
+            exampleAr = "بصمة نورذرن هو تقنية للكشف عن تسلسلات RNA محددة بالرحلان الكهربائي والتهجين مع مسبار.",
         ),
         MedicalTermEntity(
             id = 1586,
@@ -619,6 +748,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/dʒɪˈnoʊmɪks/",
+            exampleEn = "The genomics is the study of an organism's complete genome including structure, function, and evolution.",
+            exampleFr = "La génomique est l'étude du génome complet d'un organisme incluant la structure, la fonction et l'évolution.",
+            exampleAr = "علم الجينومات هو دراسة الجينوم الكامل للكائن الحي شاملةً البنية والوظيفة والتطور.",
         ),
         MedicalTermEntity(
             id = 1587,
@@ -631,6 +763,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˈhjuːmən ˈdʒiːnoʊm/",
+            exampleEn = "The human genome project is the international project completing the mapping and sequencing of human DNA (1990–2003).",
+            exampleFr = "La projet Génome Humain est projet international ayant complété la cartographie et le séquençage de l'ADN humain (1990–2003).",
+            exampleAr = "مشروع الجينوم البشري هو مشروع دولي أكمل رسم خرائط وتسلسل الـ DNA البشري (1990–2003).",
         ),
         MedicalTermEntity(
             id = 1588,
@@ -643,6 +778,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/snɪp/",
+            exampleEn = "The snp (single nucleotide polymorphism) is the variation in a single nucleotide position in the genome among individuals.",
+            exampleFr = "La SNP (Polymorphisme nucléotidique simple) est variation dans une seule position nucléotidique dans le génome entre individus.",
+            exampleAr = "التعدد الشكلي للنيوكليوتيد الواحد هو تباين في موضع نيوكليوتيد واحد في الجينوم بين الأفراد.",
         ),
         MedicalTermEntity(
             id = 1589,
@@ -655,6 +793,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/proʊtiˈɒmɪks/",
+            exampleEn = "The proteomics is the large-scale study of all proteins in a cell or organism (the proteome).",
+            exampleFr = "La protéomique est l'étude à grande échelle de toutes les protéines dans une cellule ou un organisme (le protéome).",
+            exampleAr = "علم البروتينوم هو الدراسة الشاملة لجميع البروتينات في خلية أو كائن حي (البروتينوم).",
         ),
         MedicalTermEntity(
             id = 1590,
@@ -667,6 +808,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/trænskrɪpˈtɒmɪks/",
+            exampleEn = "The transcriptomics is the study of the complete set of RNA transcripts produced by the genome.",
+            exampleFr = "La transcriptomique est l'étude de l'ensemble complet des transcrits ARN produits par le génome.",
+            exampleAr = "علم الترانسكريبتوم هو دراسة المجموعة الكاملة من نسخ RNA التي ينتجها الجينوم.",
         ),
         MedicalTermEntity(
             id = 1591,
@@ -679,6 +823,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˌbaɪoʊɪnfəˈmætɪks/",
+            exampleEn = "The bioinformatics is the use of computational tools and methods to analyze biological data (DNA sequences, proteins).",
+            exampleFr = "La bioinformatique est l'utilisation d'outils et méthodes informatiques pour analyser des données biologiques (séquences ADN, protéines).",
+            exampleAr = "المعلوماتية الحيوية هو استخدام الأدوات والأساليب الحسابية لتحليل البيانات البيولوجية (تسلسلات DNA والبروتينات).",
         ),
         MedicalTermEntity(
             id = 1592,
@@ -691,6 +838,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˈmaɪkroʊəˌreɪ/",
+            exampleEn = "The dna microarray (gene chip) is the technology measuring the expression of thousands of genes simultaneously.",
+            exampleFr = "La micropuce ADN est technologie mesurant l'expression de milliers de gènes simultanément.",
+            exampleAr = "الرقاقة الجينية هو تقنية تقيس التعبير عن آلاف الجينات في وقت واحد.",
         ),
         MedicalTermEntity(
             id = 1593,
@@ -703,6 +853,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/həʊl ˈdʒiːnoʊm/",
+            exampleEn = "The whole genome sequencing is the determination of the complete DNA sequence of an organism's genome.",
+            exampleFr = "Le séquençage du génome entier (WGS) est la détermination de la séquence complète d'ADN du génome d'un organisme.",
+            exampleAr = "التسلسل الكامل للجينوم هو تحديد التسلسل الكامل لـ DNA لجينوم الكائن الحي.",
         ),
         MedicalTermEntity(
             id = 1594,
@@ -727,6 +880,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˌdʒiːnoʊm waɪd/",
+            exampleEn = "The gwas (genome-wide association study) is the study examining the entire genome for SNPs associated with a particular disease or trait.",
+            exampleFr = "L'étude d'association pangénomique (GWAS) est étude examinant le génome entier pour des SNPs associés à une maladie ou un caractère particulier.",
+            exampleAr = "دراسة الارتباط على مستوى الجينوم هو دراسة تفحص الجينوم بأكمله بحثاً عن SNPs مرتبطة بمرض أو صفة معينة.",
         ),
         MedicalTermEntity(
             id = 1596,
@@ -739,6 +895,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˈɛksoʊm/",
+            exampleEn = "Exome sequencing refers to sequencing only the protein-coding regions (exons) of the genome.",
+            exampleFr = "Le séquençage de l'exome est séquençage uniquement des régions codant les protéines (exons) du génome.",
+            exampleAr = "تسلسل الإكسوم هو تسلسل المناطق المُشفِّرة للبروتين فقط (الإكسونات) من الجينوم.",
         ),
         MedicalTermEntity(
             id = 1597,
@@ -751,6 +910,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/kəmˈpærətɪv/",
+            exampleEn = "The comparative genomics is the study of similarities and differences in genomes of different species.",
+            exampleFr = "La génomique comparative est l'étude des similitudes et différences dans les génomes de différentes espèces.",
+            exampleAr = "الجينومات المقارنة هو دراسة أوجه التشابه والاختلاف في جينومات الأنواع المختلفة.",
         ),
         MedicalTermEntity(
             id = 1598,
@@ -763,6 +925,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌriːˌkɒmbɪˈneɪʃən/",
+            exampleEn = "The recombination is the process by which new combinations of alleles are produced through crossing over or other mechanisms.",
+            exampleFr = "Le recombinaison est le processus par lequel de nouvelles combinaisons d'allèles sont produites par enjambement ou d'autres mécanismes.",
+            exampleAr = "إعادة التركيب هو العملية التي تُنتَج بها تركيبات جديدة من الأليلات عن طريق العبور الجيني أو آليات أخرى.",
         ),
         MedicalTermEntity(
             id = 1599,
@@ -775,6 +940,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈlɪŋkɪdʒ/",
+            exampleEn = "The linkage is the tendency of genes located on the same chromosome to be inherited together.",
+            exampleFr = "Le liaison génétique est la tendance des gènes situés sur le même chromosome à être hérités ensemble.",
+            exampleAr = "الترابط الجيني هو ميل الجينات الموجودة على نفس الكروموسوم إلى الوراثة معاً.",
         ),
         MedicalTermEntity(
             id = 1600,
@@ -787,6 +955,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈdʒɛnɪtɪk ˈmæpɪŋ/",
+            exampleEn = "Genetic mapping refers to determining the relative positions of genes on a chromosome.",
+            exampleFr = "La cartographie génétique est détermination des positions relatives des gènes sur un chromosome.",
+            exampleAr = "رسم الخرائط الجينية هو تحديد المواضع النسبية للجينات على الكروموسوم.",
         ),
         MedicalTermEntity(
             id = 1601,
@@ -799,6 +970,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/proʊb/",
+            exampleEn = "The probe is the labeled DNA or RNA sequence used to detect complementary sequences through hybridization.",
+            exampleFr = "La sonde est séquence d'ADN ou d'ARN marquée utilisée pour détecter des séquences complémentaires par hybridation.",
+            exampleAr = "المسبار هو تسلسل DNA أو RNA مُعلَّم يُستخدَم للكشف عن التسلسلات المتكاملة عبر التهجين.",
         ),
         MedicalTermEntity(
             id = 1602,
@@ -811,6 +985,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌflʊəˈrɛsəns ɪn ˈsɪtjuː/",
+            exampleEn = "The fish (fluorescence in situ hybridization) is the technique using fluorescent probes to detect specific DNA sequences on chromosomes.",
+            exampleFr = "La FISH (Hybridation in situ fluorescente) est technique utilisant des sondes fluorescentes pour détecter des séquences d'ADN spécifiques sur les chromosomes.",
+            exampleAr = "التهجين الموضعي الفلوري هو تقنية تستخدم مسبارات فلورية للكشف عن تسلسلات DNA محددة على الكروموسومات.",
         ),
         MedicalTermEntity(
             id = 1603,
@@ -823,6 +1000,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈnaʊtaʊt/",
+            exampleEn = "The knockout gene is the gene that has been made inoperative to study its function in an organism.",
+            exampleFr = "La gène knockout est gène rendu inopérant pour étudier sa fonction dans un organisme.",
+            exampleAr = "الجين المُعطَّل هو جين جُعِل غير فعال لدراسة وظيفته في كائن حي.",
         ),
         MedicalTermEntity(
             id = 1604,
@@ -835,6 +1015,7 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/rɪˈpɔːrtər/",
+            exampleEn = "The reporter gene is the gene whose expression can be easily detected and measured (e.g., GFP, luciferase).",
         ),
         MedicalTermEntity(
             id = 1605,
@@ -871,6 +1052,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈfɪŋɡərˌprɪntɪŋ/",
+            exampleEn = "The dna fingerprinting is the technique identifying individuals by analyzing unique patterns in their DNA.",
+            exampleFr = "L'empreinte génétique (ADN) est technique identifiant des individus en analysant des motifs uniques dans leur ADN.",
+            exampleAr = "البصمة الوراثية هو تقنية تُعرِّف الأفراد بتحليل الأنماط الفريدة في DNA الخاص بهم.",
         ),
         MedicalTermEntity(
             id = 1608,
@@ -883,6 +1067,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌpriːˈneɪtəl/",
+            exampleEn = "Prenatal genetic testing refers to testing of fetal DNA for genetic disorders before birth (amniocentesis, CVS).",
+            exampleFr = "La test génétique prénatal est test de l'ADN fœtal pour des troubles génétiques avant la naissance (amniocentèse, CVS).",
+            exampleAr = "الفحص الجيني قبل الولادة هو فحص DNA الجنيني للاضطرابات الجينية قبل الولادة (بزل السلى، فحص الزغابة المشيمية).",
         ),
         MedicalTermEntity(
             id = 1609,
@@ -895,6 +1082,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌfɑːrməkoʊdʒɪˈnoʊmɪks/",
+            exampleEn = "The pharmacogenomics is the study of how genes affect individual response to drugs enabling personalized medicine.",
+            exampleFr = "La pharmacogénomique est l'étude de la façon dont les gènes affectent la réponse individuelle aux médicaments pour une médecine personnalisée.",
+            exampleAr = "علم الصيدلة الجينومي هو دراسة كيفية تأثير الجينات على الاستجابة الفردية للأدوية لتمكين الطب الشخصي.",
         ),
         MedicalTermEntity(
             id = 1610,
@@ -907,6 +1097,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/stɛm sɛl/",
+            exampleEn = "The stem cell is the undifferentiated cell capable of self-renewal and differentiation into specialized cell types.",
+            exampleFr = "La cellule souche est cellule indifférenciée capable d'auto-renouvellement et de différenciation en types cellulaires spécialisés.",
+            exampleAr = "الخلية الجذعية هو خلية غير متمايزة قادرة على التجدد الذاتي والتمايز إلى أنواع خلايا متخصصة.",
         ),
         MedicalTermEntity(
             id = 1611,
@@ -1063,6 +1256,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/dʒəˈnɛtɪks/",
+            exampleEn = "Genetics is the science studying heredity and the variation of inherited characteristics.",
+            exampleFr = "La génétique est science étudiant l'hérédité et la variation des caractères héréditaires.",
+            exampleAr = "علم الوراثة هو العلم الذي يدرس الوراثة وتنوع الصفات الموروثة.",
         ),
         MedicalTermEntity(
             id = 1620,
@@ -1075,6 +1271,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/həˈrɛdɪti/",
+            exampleEn = "The heredity is the passing of traits from parents to offspring through genes.",
+            exampleFr = "L'hérédité est transmission des caractères des parents à la descendance par les gènes.",
+            exampleAr = "الوراثة هو انتقال الصفات من الآباء إلى الأبناء عبر الجينات.",
         ),
         MedicalTermEntity(
             id = 1621,
@@ -1087,6 +1286,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/dʒiːn/",
+            exampleEn = "The gene is the segment of DNA encoding a functional product (protein or RNA).",
+            exampleFr = "La gène est segment d'ADN codant un produit fonctionnel (protéine ou ARN).",
+            exampleAr = "الجين هو جزء من DNA يُشفِّر منتجاً وظيفياً (بروتين أو RNA).",
         ),
         MedicalTermEntity(
             id = 1622,
@@ -1099,6 +1301,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˈdʒiːnoʊm/",
+            exampleEn = "The genome is the complete set of genetic information of an organism.",
+            exampleFr = "La génome est l'ensemble complet des informations génétiques d'un organisme.",
+            exampleAr = "الجينوم هو المجموعة الكاملة من المعلومات الجينية لكائن حي.",
         ),
         MedicalTermEntity(
             id = 1623,
@@ -1123,6 +1328,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˈloʊkəs/",
+            exampleEn = "The locus is the specific position of a gene on a chromosome.",
+            exampleFr = "La locus est position spécifique d'un gène sur un chromosome.",
+            exampleAr = "الموقع الجيني هو الموقع المحدد للجين على الكروموسوم.",
         ),
         MedicalTermEntity(
             id = 1625,
@@ -1135,6 +1343,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˈdʒiːnoʊtaɪp/",
+            exampleEn = "The genotype is the genetic makeup of an organism (its allele combinations).",
+            exampleFr = "La génotype est constitution génétique d'un organisme (ses combinaisons d'allèles).",
+            exampleAr = "الطراز الجيني هو التركيب الجيني للكائن الحي (تركيباته الأليلية).",
         ),
         MedicalTermEntity(
             id = 1626,
@@ -1147,6 +1358,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˈfiːnoʊtaɪp/",
+            exampleEn = "The phenotype is the observable characteristics of an organism resulting from genotype and environment.",
+            exampleFr = "La phénotype est caractères observables d'un organisme résultant du génotype et de l'environnement.",
+            exampleAr = "الطراز الظاهري هو الصفات الظاهرة للكائن الحي الناتجة عن الطراز الجيني والبيئة.",
         ),
         MedicalTermEntity(
             id = 1627,
@@ -1159,6 +1373,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˈdɒmɪnənt/",
+            exampleEn = "The dominant allele is the allele that is expressed in the phenotype even when only one copy is present.",
+            exampleFr = "L'allèle dominant est allèle exprimé dans le phénotype même quand une seule copie est présente.",
+            exampleAr = "الأليل السائد هو أليل يظهر في الطراز الظاهري حتى عند وجود نسخة واحدة منه.",
         ),
         MedicalTermEntity(
             id = 1628,
@@ -1171,6 +1388,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/rɪˈsɛsɪv/",
+            exampleEn = "The recessive allele is the allele expressed in the phenotype only when two copies are present (homozygous).",
+            exampleFr = "L'allèle récessif est allèle exprimé dans le phénotype seulement quand deux copies sont présentes (homozygote).",
+            exampleAr = "الأليل المتنحي هو أليل يظهر في الطراز الظاهري فقط عند وجود نسختين منه (متماثل).",
         ),
         MedicalTermEntity(
             id = 1629,
@@ -1183,6 +1403,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˌhoʊmoʊˈzaɪɡəs/",
+            exampleEn = "Homozygous refers to having two identical alleles for a particular gene (AA or aa).",
+            exampleFr = "L'homozygote est ayant deux allèles identiques pour un gène particulier (AA ou aa).",
+            exampleAr = "متماثل الزيجوت هو امتلاك نسختين متطابقتين من الأليل لجين معين (AA أو aa).",
         ),
         MedicalTermEntity(
             id = 1630,
@@ -1195,6 +1418,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˌhɛtəroʊˈzaɪɡəs/",
+            exampleEn = "Heterozygous refers to having two different alleles for a particular gene (Aa).",
+            exampleFr = "L'hétérozygote est ayant deux allèles différents pour un gène particulier (Aa).",
+            exampleAr = "مختلف الزيجوت هو امتلاك نسختين مختلفتين من الأليل لجين معين (Aa).",
         ),
         MedicalTermEntity(
             id = 1631,
@@ -1207,6 +1433,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/treɪt/",
+            exampleEn = "The trait is the specific characteristic or feature of an organism that can be inherited.",
+            exampleFr = "La caractère est caractéristique spécifique d'un organisme pouvant être héritée.",
+            exampleAr = "الصفة الوراثية هو خاصية محددة للكائن الحي يمكن توارثها.",
         ),
         MedicalTermEntity(
             id = 1632,
@@ -1231,6 +1460,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/həˈrɛdɪtəri/",
+            exampleEn = "The hereditary disease is the disease caused by abnormal genes passed from parents to offspring.",
+            exampleFr = "La maladie héréditaire est maladie causée par des gènes anormaux transmis des parents à la descendance.",
+            exampleAr = "مرض وراثي هو مرض تسببه جينات غير طبيعية تنتقل من الآباء إلى الأبناء.",
         ),
         MedicalTermEntity(
             id = 1634,
@@ -1243,6 +1475,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˌdiːɒksɪˌraɪboʊnjuːˌkliːɪk ˈæsɪd/",
+            exampleEn = "The dna (deoxyribonucleic acid) is the double-stranded molecule carrying genetic information in nucleotide sequences.",
+            exampleFr = "L'ADN (Acide désoxyribonucléique) est molécule double brin portant l'information génétique en séquences nucléotidiques.",
+            exampleAr = "الحمض النووي الريبوزي المنقوص الأكسجين هو الجزيء ثنائي الشريط الحامل للمعلومات الجينية في تسلسلات نيوكليوتيدية.",
         ),
         MedicalTermEntity(
             id = 1635,
@@ -1255,6 +1490,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˌraɪboʊnjuːˌkliːɪk ˈæsɪd/",
+            exampleEn = "The rna (ribonucleic acid) is the single-stranded nucleic acid involved in gene expression (mRNA, tRNA, rRNA).",
+            exampleFr = "L'ARN (Acide ribonucléique) est acide nucléique simple brin impliqué dans l'expression génique (ARNm, ARNt, ARNr).",
+            exampleAr = "الحمض النووي الريبوزي هو حمض نووي أحادي الشريط يشارك في التعبير الجيني (mRNA، tRNA، rRNA).",
         ),
         MedicalTermEntity(
             id = 1636,
@@ -1267,6 +1505,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈnjuːkliəˌtaɪd/",
+            exampleEn = "The nucleotide is the monomer of DNA/RNA composed of a phosphate group, sugar, and nitrogenous base.",
+            exampleFr = "La nucléotide est monomère d'ADN/ARN composé d'un groupe phosphate, d'un sucre et d'une base azotée.",
+            exampleAr = "النيوكليوتيد هو وحدة بناء DNA/RNA مكونة من مجموعة فوسفات وسكر وقاعدة نيتروجينية.",
         ),
         MedicalTermEntity(
             id = 1637,
@@ -1279,6 +1520,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/naɪˈtrɒdʒɪnəs beɪs/",
+            exampleEn = "The nitrogenous base is the nitrogen-containing ring compound forming part of a nucleotide (purines and pyrimidines).",
+            exampleFr = "La base azotée est composé cyclique azoté formant une partie d'un nucléotide (purines et pyrimidines).",
+            exampleAr = "القاعدة النيتروجينية هو مركب حلقي محتوٍ على نيتروجين يشكل جزءاً من النيوكليوتيد (بيورينات وبيريميدينات).",
         ),
         MedicalTermEntity(
             id = 1638,
@@ -1291,6 +1535,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈpjʊərɪn/",
+            exampleEn = "The purine is the double-ring nitrogenous base; Adenine (A) and Guanine (G).",
+            exampleFr = "La purine est base azotée à double anneau; Adénine (A) et Guanine (G).",
+            exampleAr = "البيورين هو قاعدة نيتروجينية ذات حلقتين؛ الأدينين (A) والغوانين (G).",
         ),
         MedicalTermEntity(
             id = 1639,
@@ -1303,6 +1550,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/pɪˈrɪmɪdiːn/",
+            exampleEn = "The pyrimidine is the single-ring nitrogenous base; Cytosine (C), Thymine (T), Uracil (U).",
+            exampleFr = "La pyrimidine est base azotée à anneau simple; Cytosine (C), Thymine (T), Uracile (U).",
+            exampleAr = "البيريميدين هو قاعدة نيتروجينية أحادية الحلقة؛ السيتوزين (C)، الثيمين (T)، الأوراسيل (U).",
         ),
         MedicalTermEntity(
             id = 1640,
@@ -1315,6 +1565,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈædənɪn/",
+            exampleEn = "The adenine (a) is the purine base pairing with Thymine in DNA and Uracil in RNA (A-T or A-U).",
+            exampleFr = "L'adénine (A) est base purique s'appariant avec la Thymine dans l'ADN et l'Uracile dans l'ARN.",
+            exampleAr = "الأدينين هو قاعدة بيورينية تتزاوج مع الثيمين في DNA والأوراسيل في RNA.",
         ),
         MedicalTermEntity(
             id = 1641,
@@ -1327,6 +1580,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈɡwɑːniːn/",
+            exampleEn = "The guanine (g) is the purine base pairing with Cytosine in both DNA and RNA (G-C, 3 hydrogen bonds).",
+            exampleFr = "La guanine (G) est base purique s'appariant avec la Cytosine dans l'ADN et l'ARN (G-C, 3 liaisons hydrogène).",
+            exampleAr = "الغوانين هو قاعدة بيورينية تتزاوج مع السيتوزين في DNA وRNA (G-C، 3 روابط هيدروجينية).",
         ),
         MedicalTermEntity(
             id = 1642,
@@ -1339,6 +1595,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈsaɪtəsiːn/",
+            exampleEn = "The cytosine (c) is the pyrimidine base pairing with Guanine (G-C).",
+            exampleFr = "La cytosine (C) est base pyrimidique s'appariant avec la Guanine (G-C).",
+            exampleAr = "السيتوزين هو قاعدة بيريميدينية تتزاوج مع الغوانين (G-C).",
         ),
         MedicalTermEntity(
             id = 1643,
@@ -1351,6 +1610,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈθaɪmiːn/",
+            exampleEn = "The thymine (t) is the pyrimidine base found only in DNA pairing with Adenine (A-T, 2 hydrogen bonds).",
+            exampleFr = "La thymine (T) est base pyrimidique trouvée uniquement dans l'ADN s'appariant avec l'Adénine (A-T).",
+            exampleAr = "الثيمين هو قاعدة بيريميدينية توجد في DNA فقط وتتزاوج مع الأدينين (A-T).",
         ),
         MedicalTermEntity(
             id = 1644,
@@ -1363,6 +1625,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈjʊərəsɪl/",
+            exampleEn = "The uracil (u) is the pyrimidine base found only in RNA replacing Thymine, pairing with Adenine.",
+            exampleFr = "L'uracile (U) est base pyrimidique trouvée uniquement dans l'ARN remplaçant la Thymine, s'appariant avec l'Adénine.",
+            exampleAr = "الأوراسيل هو قاعدة بيريميدينية توجد في RNA فقط بديلاً عن الثيمين، تتزاوج مع الأدينين.",
         ),
         MedicalTermEntity(
             id = 1645,
@@ -1399,6 +1664,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈdʌbəl ˈhiːlɪks/",
+            exampleEn = "The double helix is the three-dimensional structure of DNA consisting of two antiparallel strands wound around each other.",
+            exampleFr = "La double hélice est structure tridimensionnelle de l'ADN constituée de deux brins antiparallèles enroulés l'un autour de l'autre.",
+            exampleAr = "الحلزون المزدوج هو البنية ثلاثية الأبعاد لـ DNA المكونة من شريطين متوازيين متعاكسين ملتفين حول بعضهما.",
         ),
         MedicalTermEntity(
             id = 1648,
@@ -1411,6 +1679,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˌæntiˈpærəlɛl/",
+            exampleEn = "The antiparallel is the orientation of the two DNA strands running in opposite directions (5'→3' and 3'→5').",
+            exampleFr = "L'antiparallèle est orientation des deux brins d'ADN allant dans des directions opposées (5'→3' et 3'→5').",
+            exampleAr = "مضاد التوازي هو اتجاه شريطي DNA في اتجاهين متعاكسين (5'→3' و3'→5').",
         ),
         MedicalTermEntity(
             id = 1649,
@@ -1423,6 +1694,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/diːˌɒksɪˈraɪboʊs/",
+            exampleEn = "The deoxyribose is the five-carbon sugar in DNA lacking an oxygen atom at the 2' position.",
+            exampleFr = "La désoxyribose est le sucre à cinq carbones dans l'ADN manquant d'un atome d'oxygène en position 2'.",
+            exampleAr = "الديوكسيريبوز هو السكر الخماسي في DNA الذي يفتقر إلى ذرة أكسجين في الموضع 2'.",
         ),
         MedicalTermEntity(
             id = 1650,
@@ -1435,6 +1709,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈraɪboʊs/",
+            exampleEn = "The ribose is the five-carbon sugar in RNA with a hydroxyl group at the 2' position.",
+            exampleFr = "La ribose est le sucre à cinq carbones dans l'ARN avec un groupe hydroxyle en position 2'.",
+            exampleAr = "الريبوز هو السكر الخماسي في RNA بمجموعة هيدروكسيل في الموضع 2'.",
         ),
         MedicalTermEntity(
             id = 1651,
@@ -1447,6 +1724,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˌfɒsfoʊdaɪˈɛstər/",
+            exampleEn = "The phosphodiester bond is the covalent bond linking nucleotides in DNA/RNA through the phosphate group.",
+            exampleFr = "Le liaison phosphodiester est liaison covalente reliant les nucléotides dans l'ADN/ARN via le groupe phosphate.",
+            exampleAr = "الرابطة الفوسفوديإستر هو الرابطة التساهمية التي تربط النيوكليوتيدات في DNA/RNA عبر مجموعة الفوسفات.",
         ),
         MedicalTermEntity(
             id = 1652,
@@ -1459,6 +1739,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈkroʊmətɪn/",
+            exampleEn = "The chromatin is the complex of DNA and proteins (histones) found in the cell nucleus.",
+            exampleFr = "La chromatine est complexe d'ADN et de protéines (histones) trouvé dans le noyau cellulaire.",
+            exampleAr = "الكروماتين هو مركب DNA والبروتينات (الهيستونات) الموجود في نواة الخلية.",
         ),
         MedicalTermEntity(
             id = 1653,
@@ -1471,6 +1754,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈhɪstoʊn/",
+            exampleEn = "The histone is the positively charged protein around which DNA winds to form nucleosomes.",
+            exampleFr = "L'histone est protéine chargée positivement autour de laquelle l'ADN s'enroule pour former des nucléosomes.",
+            exampleAr = "الهيستون هو بروتين موجب الشحنة يلتف حوله DNA لتكوين النيوكليوسومات.",
         ),
         MedicalTermEntity(
             id = 1654,
@@ -1495,6 +1781,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈkroʊməsoʊm/",
+            exampleEn = "The chromosome is the condensed structure of DNA and proteins carrying genetic information; humans have 46.",
+            exampleFr = "La chromosome est structure condensée d'ADN et de protéines portant l'information génétique; les humains en ont 46.",
+            exampleAr = "الكروموسوم هو بنية مضغوطة من DNA والبروتينات تحمل المعلومات الجينية؛ للإنسان 46 كروموسوماً.",
         ),
         MedicalTermEntity(
             id = 1656,
@@ -1507,6 +1796,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈkæriəˌtaɪp/",
+            exampleEn = "The karyotype is the complete set of chromosomes of an organism arranged by size and shape.",
+            exampleFr = "La caryotype est l'ensemble complet des chromosomes d'un organisme arrangés par taille et forme.",
+            exampleAr = "النمط النووي هو المجموعة الكاملة من كروموسومات الكائن الحي مرتبة حسب الحجم والشكل.",
         ),
         MedicalTermEntity(
             id = 1657,
@@ -1519,6 +1811,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌrɛplɪˈkeɪʃən/",
+            exampleEn = "The dna replication is the process of copying DNA before cell division.",
+            exampleFr = "Le réplication de l'ADN est le processus de copie de l'ADN avant la division cellulaire.",
+            exampleAr = "تضاعف DNA هو عملية نسخ DNA قبل انقسام الخلية.",
         ),
         MedicalTermEntity(
             id = 1658,
@@ -1543,6 +1838,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈɒrɪdʒɪn/",
+            exampleEn = "The origin of replication is the specific DNA sequence where replication begins.",
+            exampleFr = "L'origine de réplication est la séquence d'ADN spécifique où commence la réplication.",
+            exampleAr = "نقطة بداية التضاعف هو التسلسل المحدد من DNA حيث يبدأ التضاعف.",
         ),
         MedicalTermEntity(
             id = 1660,
@@ -1555,6 +1853,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈfɔːrk/",
+            exampleEn = "The replication fork is the Y-shaped region where the DNA helix is unwound during replication.",
+            exampleFr = "La fourche de réplication est la région en forme de Y où l'hélice d'ADN est déroulée lors de la réplication.",
+            exampleAr = "شوكة التضاعف هو المنطقة على شكل Y حيث تُفك لولبية DNA أثناء التضاعف.",
         ),
         MedicalTermEntity(
             id = 1661,
@@ -1567,6 +1868,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈhɛlɪkeɪz/",
+            exampleEn = "The helicase is the enzyme that unwinds and separates the two DNA strands at the replication fork.",
+            exampleFr = "L'hélicase est enzyme qui déroule et sépare les deux brins d'ADN à la fourche de réplication.",
+            exampleAr = "الهيليكاز هو إنزيم يفك لولبية ويفصل شريطي DNA عند شوكة التضاعف.",
         ),
         MedicalTermEntity(
             id = 1662,
@@ -1579,6 +1883,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/pɒˈlɪməreɪz/",
+            exampleEn = "The dna polymerase is the enzyme synthesizing new DNA strands by adding nucleotides in 5'→3' direction.",
+            exampleFr = "L'ADN polymérase est enzyme synthétisant de nouveaux brins d'ADN en ajoutant des nucléotides dans le sens 5'→3'.",
+            exampleAr = "بوليميراز DNA هو الإنزيم الذي يُصنِّع شرائط DNA الجديدة بإضافة نيوكليوتيدات في اتجاه 5'→3'.",
         ),
         MedicalTermEntity(
             id = 1663,
@@ -1591,6 +1898,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈpraɪmeɪz/",
+            exampleEn = "The primase is the enzyme synthesizing RNA primers needed for DNA polymerase to begin synthesis.",
+            exampleFr = "La primase est enzyme synthétisant les amorces ARN nécessaires pour que l'ADN polymérase commence la synthèse.",
+            exampleAr = "البريماز هو إنزيم يُصنِّع بادئات RNA اللازمة لبدء بوليميراز DNA للتركيب.",
         ),
         MedicalTermEntity(
             id = 1664,
@@ -1603,6 +1913,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈpraɪmər/",
+            exampleEn = "The rna primer is the short RNA sequence providing a 3'-OH end for DNA polymerase to extend.",
+            exampleFr = "L'amorce ARN est courte séquence ARN fournissant une extrémité 3'-OH pour que l'ADN polymérase s'étende.",
+            exampleAr = "بادئ RNA هو تسلسل قصير من RNA يوفر نهاية 3'-OH لبوليميراز DNA لإطالته.",
         ),
         MedicalTermEntity(
             id = 1665,
@@ -1615,6 +1928,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈliːdɪŋ/",
+            exampleEn = "The leading strand is the DNA strand synthesized continuously in the 5'→3' direction toward the replication fork.",
+            exampleFr = "Le brin directeur est brin d'ADN synthétisé continuellement dans le sens 5'→3' vers la fourche de réplication.",
+            exampleAr = "الشريط الرائد هو شريط DNA المُصنَّع باستمرار في اتجاه 5'→3' نحو شوكة التضاعف.",
         ),
         MedicalTermEntity(
             id = 1666,
@@ -1627,6 +1943,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈlæɡɪŋ/",
+            exampleEn = "The lagging strand is the DNA strand synthesized discontinuously in Okazaki fragments away from the fork.",
+            exampleFr = "Le brin retardataire est brin d'ADN synthétisé de façon discontinue en fragments d'Okazaki s'éloignant de la fourche.",
+            exampleAr = "الشريط المتأخر هو شريط DNA المُصنَّع بشكل متقطع في شظايا أوكازاكي بعيداً عن الشوكة.",
         ),
         MedicalTermEntity(
             id = 1667,
@@ -1651,6 +1970,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈlaɪɡeɪz/",
+            exampleEn = "The dna ligase is the enzyme joining DNA fragments by forming phosphodiester bonds.",
+            exampleFr = "L'ADN ligase est enzyme joignant des fragments d'ADN en formant des liaisons phosphodiester.",
+            exampleAr = "ليغاز DNA هو إنزيم يربط شظايا DNA بتكوين روابط فوسفوديإستر.",
         ),
         MedicalTermEntity(
             id = 1669,
@@ -1663,6 +1985,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌtoʊpoʊˈaɪsəməreɪz/",
+            exampleEn = "The topoisomerase is the enzyme relieving DNA supercoiling during replication by cutting and rejoining DNA.",
+            exampleFr = "La topo-isomérase est enzyme soulageant le surenroulement de l'ADN lors de la réplication en coupant et rejoignant l'ADN.",
+            exampleAr = "التوبويزوميراز هو إنزيم يخفف من التملولب الزائد لـ DNA أثناء التضاعف بقطعه وإعادة ربطه.",
         ),
         MedicalTermEntity(
             id = 1670,
@@ -1687,6 +2012,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/tɛˈlɒməreɪz/",
+            exampleEn = "The telomerase is the enzyme adding telomeric sequences to chromosome ends preventing shortening.",
+            exampleFr = "La télomérase est enzyme ajoutant des séquences télomérique aux extrémités des chromosomes empêchant leur raccourcissement.",
+            exampleAr = "التيلوميراز هو إنزيم يضيف تسلسلات تيلومير إلى أطراف الكروموسومات يمنع تقصيرها.",
         ),
         MedicalTermEntity(
             id = 1672,
@@ -1699,6 +2027,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈpruːfrɛdɪŋ/",
+            exampleEn = "The proofreading is the ability of DNA polymerase to detect and correct replication errors.",
+            exampleFr = "Le correction d'épreuves (correction des erreurs) est capacité de l'ADN polymérase à détecter et corriger les erreurs de réplication.",
+            exampleAr = "التصحيح الذاتي هو قدرة بوليميراز DNA على الكشف عن أخطاء التضاعف وتصحيحها.",
         ),
         MedicalTermEntity(
             id = 1673,
@@ -1711,6 +2042,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˌtrænskˈrɪpʃən/",
+            exampleEn = "The transcription is the synthesis of RNA from a DNA template by RNA polymerase.",
+            exampleFr = "Le transcription est la synthèse d'ARN à partir d'une matrice d'ADN par l'ARN polymérase.",
+            exampleAr = "النسخ هو تصنيع RNA من نموذج DNA بواسطة RNA بوليميراز.",
         ),
         MedicalTermEntity(
             id = 1674,
@@ -1723,6 +2057,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/pɒˈlɪməreɪz/",
+            exampleEn = "The rna polymerase is the enzyme catalyzing the synthesis of RNA using DNA as a template.",
+            exampleFr = "L'ARN polymérase est enzyme catalysant la synthèse d'ARN en utilisant l'ADN comme matrice.",
+            exampleAr = "بوليميراز RNA هو الإنزيم الذي يُحفِّز تصنيع RNA باستخدام DNA كنموذج.",
         ),
         MedicalTermEntity(
             id = 1675,
@@ -1735,6 +2072,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/prəˈmoʊtər/",
+            exampleEn = "The promoter is the DNA sequence where RNA polymerase binds to initiate transcription.",
+            exampleFr = "La promoteur est séquence d'ADN où l'ARN polymérase se lie pour initier la transcription.",
+            exampleAr = "المُحرِّض هو تسلسل DNA حيث يرتبط RNA بوليميراز لبدء النسخ.",
         ),
         MedicalTermEntity(
             id = 1676,
@@ -1747,6 +2087,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈtɜːrmɪneɪtər/",
+            exampleEn = "The terminator is the DNA sequence signaling the end of transcription.",
+            exampleFr = "La terminateur est séquence d'ADN signalant la fin de la transcription.",
+            exampleAr = "المُنهي هو تسلسل DNA يُشير إلى نهاية النسخ.",
         ),
         MedicalTermEntity(
             id = 1677,
@@ -1759,6 +2102,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈtɛmplɪt/",
+            exampleEn = "The template strand is the DNA strand used as a template during transcription (read 3'→5').",
+            exampleFr = "Le brin matrice est le brin d'ADN utilisé comme matrice lors de la transcription (lu 3'→5').",
+            exampleAr = "الشريط النموذجي هو شريط DNA المستخدم كنموذج أثناء النسخ (يُقرأ من 3'→5').",
         ),
         MedicalTermEntity(
             id = 1678,
@@ -1771,6 +2117,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈkoʊdɪŋ/",
+            exampleEn = "The coding strand (sense strand) is the non-template DNA strand with the same sequence as the mRNA (5'→3').",
+            exampleFr = "Le brin codant (brin sens) est le brin d'ADN non matrice ayant la même séquence que l'ARNm (5'→3').",
+            exampleAr = "الشريط المُشفِّر هو شريط DNA غير النموذجي الذي يحمل نفس تسلسل mRNA (5'→3').",
         ),
         MedicalTermEntity(
             id = 1679,
@@ -1783,6 +2132,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈmɛsɪndʒər/",
+            exampleEn = "The mrna (messenger rna) is the RNA molecule carrying genetic information from DNA to the ribosome for translation.",
+            exampleFr = "L'ARNm (ARN messager) est molécule d'ARN portant l'information génétique de l'ADN au ribosome pour la traduction.",
+            exampleAr = "الRNA الرسول هو جزيء RNA الذي ينقل المعلومات الجينية من DNA إلى الريبوسوم للترجمة.",
         ),
         MedicalTermEntity(
             id = 1680,
@@ -1795,6 +2147,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/priː ˈmɛsɪndʒər/",
+            exampleEn = "The pre-mrna is the primary transcript before processing (contains introns and exons).",
+            exampleFr = "La pré-ARNm est le transcrit primaire avant traitement (contient des introns et des exons).",
+            exampleAr = "الـ mRNA السابق للمعالجة هو النسخة الأولية قبل المعالجة (تحتوي على الإنترونات والإكسونات).",
         ),
         MedicalTermEntity(
             id = 1681,
@@ -1807,6 +2162,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈɛksɒn/",
+            exampleEn = "The exon is the coding sequence in pre-mRNA that is retained in the mature mRNA after splicing.",
+            exampleFr = "L'exon est séquence codante dans le pré-ARNm conservée dans l'ARNm mature après épissage.",
+            exampleAr = "الإكسون هو تسلسل مُشفِّر في pré-mRNA يُحتفظ به في mRNA الناضج بعد القطع والربط.",
         ),
         MedicalTermEntity(
             id = 1682,
@@ -1819,6 +2177,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈɪntrɒn/",
+            exampleEn = "The intron is the non-coding sequence in pre-mRNA removed during splicing.",
+            exampleFr = "L'intron est séquence non codante dans le pré-ARNm retirée lors de l'épissage.",
+            exampleAr = "الإنترون هو تسلسل غير مُشفِّر في pré-mRNA يُزال أثناء القطع والربط.",
         ),
         MedicalTermEntity(
             id = 1683,
@@ -1831,6 +2192,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈsplaɪsɪŋ/",
+            exampleEn = "The rna splicing is the removal of introns and joining of exons in pre-mRNA to form mature mRNA.",
+            exampleFr = "L'épissage de l'ARN est l'élimination des introns et la jonction des exons dans le pré-ARNm pour former l'ARNm mature.",
+            exampleAr = "القطع والربط للـ RNA هو إزالة الإنترونات وربط الإكسونات في pré-mRNA لتكوين mRNA الناضج.",
         ),
         MedicalTermEntity(
             id = 1684,
@@ -1843,6 +2207,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈsplaɪsiəsoʊm/",
+            exampleEn = "The spliceosome is the large ribonucleoprotein complex that catalyzes RNA splicing.",
+            exampleFr = "La spliceosome est grand complexe ribonucléoprotéique catalysant l'épissage de l'ARN.",
+            exampleAr = "الجسم الرابط هو مركب ريبونيوكليوبروتيني كبير يُحفِّز القطع والربط للـ RNA.",
         ),
         MedicalTermEntity(
             id = 1685,
@@ -1855,6 +2222,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/fɑɪv praɪm kæp/",
+            exampleEn = "The 5' cap is the modified guanine nucleotide added to the 5' end of mRNA protecting it from degradation.",
+            exampleFr = "La coiffe 5' (5'cap) est nucléotide de guanine modifié ajouté à l'extrémité 5' de l'ARNm le protégeant de la dégradation.",
+            exampleAr = "الغطاء 5' هو نيوكليوتيد غوانين معدَّل يُضاف إلى نهاية 5' للـ mRNA ليحميه من التحلل.",
         ),
         MedicalTermEntity(
             id = 1686,
@@ -1867,6 +2237,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈpɒli eɪ teɪl/",
+            exampleEn = "The poly-a tail is the string of adenine nucleotides added to the 3' end of mRNA increasing its stability.",
+            exampleFr = "La queue poly-A est suite de nucléotides d'adénine ajoutée à l'extrémité 3' de l'ARNm augmentant sa stabilité.",
+            exampleAr = "الذيل البولي-أدينيني هو سلسلة من نيوكليوتيدات الأدينين تُضاف إلى نهاية 3' للـ mRNA مما يزيد من ثباته.",
         ),
         MedicalTermEntity(
             id = 1687,
@@ -1879,6 +2252,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈfæktər/",
+            exampleEn = "The transcription factor is the protein that regulates the transcription of genes by binding to specific DNA sequences.",
+            exampleFr = "La facteur de transcription est protéine régulant la transcription des gènes en se liant à des séquences d'ADN spécifiques.",
+            exampleAr = "عامل النسخ هو بروتين يُنظِّم نسخ الجينات بالارتباط بتسلسلات محددة من DNA.",
         ),
         MedicalTermEntity(
             id = 1688,
@@ -1891,6 +2267,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ɪnˈhɑːnsər/",
+            exampleEn = "The enhancer is the DNA regulatory sequence that increases gene transcription when bound by activators.",
+            exampleFr = "L'amplificateur (Enhancer) est séquence régulatrice d'ADN augmentant la transcription génique quand liée par des activateurs.",
+            exampleAr = "المُعزِّز هو تسلسل DNA تنظيمي يزيد من نسخ الجينات عند ارتباطه بعوامل التنشيط.",
         ),
         MedicalTermEntity(
             id = 1689,
@@ -1903,6 +2282,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Transcription",
             ipaPhonetic = "/ˈsaɪlənsər/",
+            exampleEn = "The silencer is the DNA regulatory sequence that decreases or inhibits gene transcription.",
+            exampleFr = "La silencieux (Silencer) est séquence régulatrice d'ADN diminuant ou inhibant la transcription génique.",
+            exampleAr = "الكاتم هو تسلسل DNA تنظيمي يُقلِّل أو يُثبِّط نسخ الجينات.",
         ),
         MedicalTermEntity(
             id = 1690,
@@ -1915,6 +2297,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/trænsˈleɪʃən/",
+            exampleEn = "The translation is the synthesis of a protein from an mRNA template at the ribosome.",
+            exampleFr = "Le traduction est la synthèse d'une protéine à partir d'une matrice ARNm au niveau du ribosome.",
+            exampleAr = "الترجمة هو تصنيع البروتين من نموذج mRNA عند الريبوسوم.",
         ),
         MedicalTermEntity(
             id = 1691,
@@ -1927,6 +2312,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˈraɪbəsoʊm/",
+            exampleEn = "The ribosome is the cellular organelle composed of rRNA and proteins catalyzing protein synthesis.",
+            exampleFr = "La ribosome est organite cellulaire composé d'ARNr et de protéines catalysant la synthèse des protéines.",
+            exampleAr = "الريبوسوم هو عضية خلوية مكونة من rRNA والبروتينات تُحفِّز تصنيع البروتين.",
         ),
         MedicalTermEntity(
             id = 1692,
@@ -1939,6 +2327,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˈtrænsfɜːr/",
+            exampleEn = "The trna (transfer rna) is the RNA molecule carrying amino acids to the ribosome during translation.",
+            exampleFr = "L'ARNt (ARN de transfert) est molécule d'ARN transportant les acides aminés au ribosome lors de la traduction.",
+            exampleAr = "الـ RNA الناقل هو جزيء RNA الذي ينقل الأحماض الأمينية إلى الريبوسوم أثناء الترجمة.",
         ),
         MedicalTermEntity(
             id = 1693,
@@ -1951,6 +2342,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˌraɪbəˈsoʊməl/",
+            exampleEn = "The rrna (ribosomal rna) is the RNA component of ribosomes providing structural and catalytic functions.",
+            exampleFr = "L'ARNr (ARN ribosomique) est composant ARN des ribosomes fournissant des fonctions structurales et catalytiques.",
+            exampleAr = "الـ RNA الريبوسومي هو المكوِّن RNA للريبوسومات يوفر وظائف بنيوية وحفزية.",
         ),
         MedicalTermEntity(
             id = 1694,
@@ -1963,6 +2357,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˈkoʊdɒn/",
+            exampleEn = "The codon is the sequence of three nucleotides in mRNA encoding a specific amino acid.",
+            exampleFr = "Le codon est séquence de trois nucléotides dans l'ARNm codant un acide aminé spécifique.",
+            exampleAr = "الكودون (الرامزة) هو تسلسل من ثلاثة نيوكليوتيدات في mRNA يُشفِّر حمضاً أمينياً محدداً.",
         ),
         MedicalTermEntity(
             id = 1695,
@@ -1975,6 +2372,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˈæntiˌkoʊdɒn/",
+            exampleEn = "The anticodon is the three-nucleotide sequence on tRNA complementary to a mRNA codon.",
+            exampleFr = "L'anticodon est séquence de trois nucléotides sur l'ARNt complémentaire d'un codon de l'ARNm.",
+            exampleAr = "الكودون المضاد هو تسلسل ثلاثي النيوكليوتيدات على tRNA مكمِّل لكودون mRNA.",
         ),
         MedicalTermEntity(
             id = 1696,
@@ -1987,6 +2387,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/dʒəˈnɛtɪk koʊd/",
+            exampleEn = "The genetic code is the set of rules by which codons specify amino acids during protein synthesis.",
+            exampleFr = "La code génétique est l'ensemble des règles selon lesquelles les codons spécifient les acides aminés lors de la synthèse.",
+            exampleAr = "الشفرة الوراثية هو مجموعة القواعد التي تُحدِّد بموجبها الكودونات الأحماض الأمينية أثناء التصنيع.",
         ),
         MedicalTermEntity(
             id = 1697,
@@ -1999,6 +2402,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/stɑːrt ˈkoʊdɒn/",
+            exampleEn = "The start codon is the codon AUG signaling the beginning of translation and encoding methionine.",
+            exampleFr = "Le codon d'initiation (AUG) est le codon AUG signalant le début de la traduction et codant la méthionine.",
+            exampleAr = "كودون البداية هو الكودون AUG الذي يُشير إلى بداية الترجمة ويُشفِّر الميثيونين.",
         ),
         MedicalTermEntity(
             id = 1698,
@@ -2023,6 +2429,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/əˌmiːnoʊˈæsɪl sɪnˈθɛtɪz/",
+            exampleEn = "The aminoacyl-trna synthetase is the enzyme charging tRNA with its specific amino acid.",
+            exampleFr = "L'aminoacyl-ARNt synthétase est enzyme chargeant l'ARNt avec son acide aminé spécifique.",
+            exampleAr = "أمينوأسيل-tRNA سينثيتاز هو إنزيم يُحمِّل tRNA بحمضه الأميني المحدد.",
         ),
         MedicalTermEntity(
             id = 1700,
@@ -2035,6 +2444,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˌpɒlɪˈpɛptaɪd/",
+            exampleEn = "The polypeptide is the chain of amino acids linked by peptide bonds; the primary structure of a protein.",
+            exampleFr = "La polypeptide est chaîne d'acides aminés liés par des liaisons peptidiques; la structure primaire d'une protéine.",
+            exampleAr = "البولي ببتيد هو سلسلة من الأحماض الأمينية مرتبطة بروابط ببتيدية؛ البنية الأولية للبروتين.",
         ),
         MedicalTermEntity(
             id = 1701,
@@ -2047,6 +2459,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/dɪˈdʒɛnərɪt/",
+            exampleEn = "The degenerate code is the property of the genetic code where multiple codons encode the same amino acid.",
+            exampleFr = "La code dégénéré est propriété du code génétique selon laquelle plusieurs codons codent le même acide aminé.",
+            exampleAr = "الشفرة المتكررة هو خاصية الشفرة الوراثية بحيث تُشفِّر كودونات متعددة نفس الحمض الأميني.",
         ),
         MedicalTermEntity(
             id = 1702,
@@ -2059,6 +2474,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˌjuːnɪˈvɜːrsəl/",
+            exampleEn = "The universal code is the genetic code is the same in nearly all living organisms.",
+            exampleFr = "La code universel est le code génétique est le même dans presque tous les organismes vivants.",
+            exampleAr = "الشفرة الكونية هو الشفرة الوراثية هي نفسها في جميع الكائنات الحية تقريباً.",
         ),
         MedicalTermEntity(
             id = 1703,
@@ -2095,6 +2513,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/mjuːˈteɪʃən/",
+            exampleEn = "The mutation is the permanent change in the DNA sequence of a gene.",
+            exampleFr = "Le mutation est un changement permanent dans la séquence d'ADN d'un gène.",
+            exampleAr = "الطفرة هو تغيير دائم في تسلسل DNA للجين.",
         ),
         MedicalTermEntity(
             id = 1706,
@@ -2107,6 +2528,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/pɔɪnt mjuːˈteɪʃən/",
+            exampleEn = "The point mutation is the change in a single nucleotide base in the DNA sequence.",
+            exampleFr = "Le mutation ponctuelle est changement d'une seule base nucléotidique dans la séquence d'ADN.",
+            exampleAr = "الطفرة النقطية هو تغيير في قاعدة نيوكليوتيدية واحدة في تسلسل DNA.",
         ),
         MedicalTermEntity(
             id = 1707,
@@ -2119,6 +2543,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˌsʌbstɪˈtjuːʃən/",
+            exampleEn = "The substitution is the mutation replacing one nucleotide with another (transition or transversion).",
+            exampleFr = "Le substitution est mutation remplaçant un nucléotide par un autre (transition ou transversion).",
+            exampleAr = "الاستبدال هو طفرة تستبدل نيوكليوتيداً بآخر (انتقال أو تحول).",
         ),
         MedicalTermEntity(
             id = 1708,
@@ -2131,6 +2558,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ɪnˈsɜːrʃən/",
+            exampleEn = "The insertion is the mutation adding one or more nucleotides into the DNA sequence.",
+            exampleFr = "L'insertion est mutation ajoutant un ou plusieurs nucléotides dans la séquence d'ADN.",
+            exampleAr = "الإدراج هو طفرة تُضيف نيوكليوتيداً أو أكثر إلى تسلسل DNA.",
         ),
         MedicalTermEntity(
             id = 1709,
@@ -2143,6 +2573,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/dɪˈliːʃən/",
+            exampleEn = "The deletion is the mutation removing one or more nucleotides from the DNA sequence.",
+            exampleFr = "Le délétion est mutation retirant un ou plusieurs nucléotides de la séquence d'ADN.",
+            exampleAr = "الحذف هو طفرة تحذف نيوكليوتيداً أو أكثر من تسلسل DNA.",
         ),
         MedicalTermEntity(
             id = 1710,
@@ -2155,6 +2588,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈmɪssɛns/",
+            exampleEn = "The missense mutation is the point mutation changing one amino acid to another in the protein.",
+            exampleFr = "Le mutation faux-sens est mutation ponctuelle changeant un acide aminé pour un autre dans la protéine.",
+            exampleAr = "الطفرة الخاطئة المعنى هو طفرة نقطية تُغيِّر حمضاً أمينياً إلى آخر في البروتين.",
         ),
         MedicalTermEntity(
             id = 1711,
@@ -2167,6 +2603,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈnɒnsɛns/",
+            exampleEn = "The nonsense mutation is the point mutation creating a premature stop codon terminating translation early.",
+            exampleFr = "Le mutation non-sens est mutation ponctuelle créant un codon stop prématuré terminant la traduction prématurément.",
+            exampleAr = "الطفرة العديمة المعنى هو طفرة نقطية تُنشئ كودون إيقاف مبكراً يُنهي الترجمة قبل الأوان.",
         ),
         MedicalTermEntity(
             id = 1712,
@@ -2179,6 +2618,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈsaɪlənt/",
+            exampleEn = "The silent mutation is the point mutation changing a codon but not the amino acid (due to code degeneracy).",
+            exampleFr = "Le mutation silencieuse est mutation ponctuelle changeant un codon mais pas l'acide aminé (en raison de la dégénérescence).",
+            exampleAr = "الطفرة الصامتة هو طفرة نقطية تُغيِّر الكودون لكن ليس الحمض الأميني (بسبب تكرار الشفرة).",
         ),
         MedicalTermEntity(
             id = 1713,
@@ -2203,6 +2645,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/spɒnˈteɪniəs/",
+            exampleEn = "The spontaneous mutation is the mutation occurring naturally without exposure to a known mutagen.",
+            exampleFr = "Le mutation spontanée est mutation survenant naturellement sans exposition à un mutagène connu.",
+            exampleAr = "الطفرة التلقائية هو طفرة تحدث بشكل طبيعي دون التعرض لمُطفِّر معروف.",
         ),
         MedicalTermEntity(
             id = 1715,
@@ -2215,6 +2660,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ɪnˈdjuːst/",
+            exampleEn = "The induced mutation is the mutation caused by exposure to a mutagen.",
+            exampleFr = "Le mutation induite est mutation causée par l'exposition à un mutagène.",
+            exampleAr = "الطفرة المستحثة هو طفرة تحدث بسبب التعرض لمُطفِّر.",
         ),
         MedicalTermEntity(
             id = 1716,
@@ -2239,6 +2687,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ɪkˈsɪʒən/",
+            exampleEn = "The base excision repair (ber) is the DNA repair pathway removing damaged bases and replacing them.",
+            exampleFr = "Le réparation par excision de base (BER) est voie de réparation de l'ADN retirant les bases endommagées et les remplaçant.",
+            exampleAr = "إصلاح استئصال القاعدة هو مسار إصلاح DNA يُزيل القواعد التالفة ويستبدلها.",
         ),
         MedicalTermEntity(
             id = 1718,
@@ -2251,6 +2702,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈnjuːkliəˌtaɪd/",
+            exampleEn = "The nucleotide excision repair (ner) is the DNA repair mechanism removing bulky DNA lesions like those caused by UV light.",
+            exampleFr = "Le réparation par excision de nucléotides (NER) est mécanisme de réparation de l'ADN éliminant les lésions volumineuses comme celles causées par UV.",
+            exampleAr = "إصلاح استئصال النيوكليوتيد هو آلية إصلاح DNA تُزيل الإصابات الضخمة كتلك الناجمة عن الأشعة فوق البنفسجية.",
         ),
         MedicalTermEntity(
             id = 1719,
@@ -2263,6 +2717,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈmɪsmætʃ/",
+            exampleEn = "The mismatch repair (mmr) is the DNA repair system correcting base mismatches made during replication.",
+            exampleFr = "Le réparation des mésappariements (MMR) est système de réparation de l'ADN corrigeant les mésappariements de bases lors de la réplication.",
+            exampleAr = "إصلاح عدم التطابق هو نظام إصلاح DNA يُصحِّح عدم تطابق القواعد الناتج أثناء التضاعف.",
         ),
         MedicalTermEntity(
             id = 1720,
@@ -2335,6 +2792,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˈpʌnɪt/",
+            exampleEn = "The punnett square is the diagram predicting the possible genotypes and phenotypes of offspring.",
+            exampleFr = "La carré de Punnett est diagramme prédisant les génotypes et phénotypes possibles de la descendance.",
+            exampleAr = "مربع بانيت هو مخطط يتنبأ بالطرز الجينية والظاهرية المحتملة للنسل.",
         ),
         MedicalTermEntity(
             id = 1726,
@@ -2347,6 +2807,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/tɛst krɒs/",
+            exampleEn = "Test cross refers to crossing an organism of unknown genotype with a homozygous recessive individual.",
+            exampleFr = "Le croisement test est croisement d'un organisme de génotype inconnu avec un individu homozygote récessif.",
+            exampleAr = "التهجين الاختباري هو تهجين كائن مجهول الطراز الجيني مع فرد متماثل متنحٍ.",
         ),
         MedicalTermEntity(
             id = 1727,
@@ -2359,6 +2822,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ɪnˈkɒmplɪt ˈdɒmɪnəns/",
+            exampleEn = "The incomplete dominance is the pattern where the heterozygous phenotype is intermediate between the two homozygous phenotypes.",
+            exampleFr = "La dominance incomplète est schéma où le phénotype hétérozygote est intermédiaire entre les deux phénotypes homozygotes.",
+            exampleAr = "السيادة غير التامة هو نمط يكون فيه الطراز الظاهري غير المتماثل وسيطاً بين الطرزين المتماثلين.",
         ),
         MedicalTermEntity(
             id = 1728,
@@ -2371,6 +2837,7 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/koʊˈdɒmɪnəns/",
+            exampleEn = "The codominance is the pattern where both alleles are fully expressed in the heterozygote (e.g., AB blood type).",
         ),
         MedicalTermEntity(
             id = 1729,
@@ -2383,6 +2850,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ɪˈpɪstəsɪs/",
+            exampleEn = "The epistasis is the interaction where one gene masks or modifies the expression of another gene.",
+            exampleFr = "L'épistasie est interaction où un gène masque ou modifie l'expression d'un autre gène.",
+            exampleAr = "التفوق الجيني هو تفاعل يُخفي فيه جين أو يُعدِّل التعبير عن جين آخر.",
         ),
         MedicalTermEntity(
             id = 1730,
@@ -2395,6 +2865,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/pliˈɒtrəpi/",
+            exampleEn = "The pleiotropy is the phenomenon where a single gene affects multiple phenotypic traits.",
+            exampleFr = "La pléiotropie est phénomène où un seul gène affecte plusieurs caractères phénotypiques.",
+            exampleAr = "التأثير المتعدد للجين هو الظاهرة التي يؤثر فيها جين واحد على صفات ظاهرية متعددة.",
         ),
         MedicalTermEntity(
             id = 1731,
@@ -2419,6 +2892,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˈpɛnɪtrəns/",
+            exampleEn = "The penetrance is the proportion of individuals with a given genotype who exhibit the expected phenotype.",
+            exampleFr = "La pénétrance est la proportion d'individus avec un génotype donné exhibant le phénotype attendu.",
+            exampleAr = "النفاذية هو نسبة الأفراد ذوي طراز جيني معين الذين يُظهِرون الطراز الظاهري المتوقع.",
         ),
         MedicalTermEntity(
             id = 1733,
@@ -2431,6 +2907,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ɪkˈsprɛsɪvɪti/",
+            exampleEn = "The expressivity is the degree to which a genotype is expressed in the phenotype.",
+            exampleFr = "L'expressivité est le degré auquel un génotype est exprimé dans le phénotype.",
+            exampleAr = "القدرة التعبيرية هو درجة تعبير الطراز الجيني عن نفسه في الطراز الظاهري.",
         ),
         MedicalTermEntity(
             id = 1734,
@@ -2443,6 +2922,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ɪkˈsprɛʃən/",
+            exampleEn = "The gene expression is the process by which genetic information is used to synthesize functional gene products.",
+            exampleFr = "L'expression génique est le processus par lequel l'information génétique est utilisée pour synthétiser des produits géniques.",
+            exampleAr = "التعبير الجيني هو العملية التي تُستخدَم فيها المعلومات الجينية لتصنيع منتجات جينية وظيفية.",
         ),
         MedicalTermEntity(
             id = 1735,
@@ -2455,6 +2937,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˌrɛɡjʊˈleɪʃən/",
+            exampleEn = "The gene regulation is the control of the timing and amount of gene expression.",
+            exampleFr = "Le régulation génique est le contrôle du moment et de la quantité d'expression génique.",
+            exampleAr = "التنظيم الجيني هو التحكم في توقيت وكمية التعبير الجيني.",
         ),
         MedicalTermEntity(
             id = 1736,
@@ -2467,6 +2952,7 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈɒpərɒn/",
+            exampleEn = "The operon is the cluster of genes under the control of a single promoter (e.g., lac operon in bacteria).",
         ),
         MedicalTermEntity(
             id = 1737,
@@ -2479,6 +2965,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/rɪˈprɛsər/",
+            exampleEn = "The repressor protein is the regulatory protein that binds to an operator and blocks transcription.",
+            exampleFr = "La protéine répresseur est protéine régulatrice qui se lie à un opérateur et bloque la transcription.",
+            exampleAr = "البروتين الكابت هو بروتين تنظيمي يرتبط بالعامل المُشغِّل ويوقف النسخ.",
         ),
         MedicalTermEntity(
             id = 1738,
@@ -2491,6 +2980,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈæktɪveɪtər/",
+            exampleEn = "The activator protein is the regulatory protein that enhances gene transcription by binding to the promoter or enhancer.",
+            exampleFr = "La protéine activatrice est protéine régulatrice améliorant la transcription génique en se liant au promoteur ou à l'amplificateur.",
+            exampleAr = "البروتين المُنشِّط هو بروتين تنظيمي يُعزِّز نسخ الجينات بالارتباط بالمُحرِّض أو المُعزِّز.",
         ),
         MedicalTermEntity(
             id = 1739,
@@ -2503,6 +2995,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈɒpəreɪtər/",
+            exampleEn = "The operator is the DNA sequence between the promoter and genes where the repressor binds to block transcription.",
+            exampleFr = "L'opérateur est séquence d'ADN entre le promoteur et les gènes où le répresseur se lie pour bloquer la transcription.",
+            exampleAr = "المُشغِّل هو تسلسل DNA بين المُحرِّض والجينات حيث يرتبط الكابت لمنع النسخ.",
         ),
         MedicalTermEntity(
             id = 1740,
@@ -2527,6 +3022,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/rɪˈvɜːrs/",
+            exampleEn = "The reverse transcription is the synthesis of DNA from an RNA template using reverse transcriptase (retroviruses).",
+            exampleFr = "Le transcription inverse est la synthèse d'ADN à partir d'une matrice ARN par la transcriptase inverse (rétrovirus).",
+            exampleAr = "النسخ العكسي هو تصنيع DNA من نموذج RNA باستخدام الترانسكريبتاز العكسي (الفيروسات القهقرية).",
         ),
         MedicalTermEntity(
             id = 1742,
@@ -2539,6 +3037,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/trænsˈkrɪpteɪz/",
+            exampleEn = "The reverse transcriptase is the enzyme found in retroviruses that synthesizes DNA from an RNA template.",
+            exampleFr = "La transcriptase inverse est enzyme trouvée dans les rétrovirus synthétisant l'ADN à partir d'une matrice ARN.",
+            exampleAr = "الترانسكريبتاز العكسي هو إنزيم يوجد في الفيروسات القهقرية يُصنِّع DNA من نموذج RNA.",
         ),
         MedicalTermEntity(
             id = 1743,
@@ -2551,6 +3052,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/nɒn ˈkoʊdɪŋ/",
+            exampleEn = "Non-coding RNA refers to RNA molecules that are not translated into proteins but have regulatory functions.",
+            exampleFr = "L'ARN non codant est molécules d'ARN qui ne sont pas traduites en protéines mais ont des fonctions régulatrices.",
+            exampleAr = "الـ RNA غير المُشفِّر هو جزيئات RNA لا تُترجَم إلى بروتينات لكن لها وظائف تنظيمية.",
         ),
         MedicalTermEntity(
             id = 1744,
@@ -2587,6 +3091,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˌɪntəˈfɪərəns/",
+            exampleEn = "The rna interference (rnai) is the biological process in which RNA molecules inhibit gene expression by neutralizing mRNA.",
+            exampleFr = "L'interférence ARN (ARNi) est processus biologique dans lequel les molécules d'ARN inhibent l'expression génique en neutralisant l'ARNm.",
+            exampleAr = "تدخل RNA هو عملية بيولوجية تُثبِّط فيها جزيئات RNA التعبير الجيني بتحييد mRNA.",
         ),
         MedicalTermEntity(
             id = 1747,
@@ -2599,6 +3106,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈsaɪlənsɪŋ/",
+            exampleEn = "The gene silencing is the regulation of gene expression to prevent the production of a gene product.",
+            exampleFr = "Le silençage génique est la régulation de l'expression génique pour empêcher la production d'un produit génique.",
+            exampleAr = "إسكات الجين هو تنظيم التعبير الجيني لمنع إنتاج منتج الجين.",
         ),
         MedicalTermEntity(
             id = 1748,
@@ -2611,6 +3121,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˌsaɪtoʊdʒəˈnɛtɪks/",
+            exampleEn = "The cytogenetics is the study of chromosomes and their role in heredity.",
+            exampleFr = "La cytogénétique est l'étude des chromosomes et leur rôle dans l'hérédité.",
+            exampleAr = "علم الوراثة الخلوية هو دراسة الكروموسومات ودورها في الوراثة.",
         ),
         MedicalTermEntity(
             id = 1749,
@@ -2635,6 +3148,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/maɪˈoʊsɪs/",
+            exampleEn = "The meiosis is the type of cell division producing four genetically distinct haploid gametes.",
+            exampleFr = "La méiose est type de division cellulaire produisant quatre gamètes haploïdes génétiquement distincts.",
+            exampleAr = "الانقسام الاختزالي هو نوع من انقسام الخلية يُنتج أربعة أمشاج أحادية الصيغة الصبغية متمايزة وراثياً.",
         ),
         MedicalTermEntity(
             id = 1751,
@@ -2647,6 +3163,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈproʊfeɪz/",
+            exampleEn = "The prophase is the first stage of mitosis/meiosis where chromosomes condense and become visible.",
+            exampleFr = "La prophase est la première étape de la mitose/méiose où les chromosomes se condensent et deviennent visibles.",
+            exampleAr = "طور التهيؤ هو المرحلة الأولى من الانقسام حيث تتكاثف الكروموسومات وتصبح مرئية.",
         ),
         MedicalTermEntity(
             id = 1752,
@@ -2659,6 +3178,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈmɛtəfeɪz/",
+            exampleEn = "The metaphase is the stage where chromosomes align at the cell equator (metaphase plate).",
+            exampleFr = "La métaphase est l'étape où les chromosomes s'alignent à l'équateur de la cellule (plaque métaphasique).",
+            exampleAr = "طور التوسط هو المرحلة التي تتوازى فيها الكروموسومات على خط استواء الخلية.",
         ),
         MedicalTermEntity(
             id = 1753,
@@ -2671,6 +3193,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈænəfeɪz/",
+            exampleEn = "The anaphase is the stage where sister chromatids or homologous chromosomes separate to opposite poles.",
+            exampleFr = "L'anaphase est l'étape où les chromatides sœurs ou chromosomes homologues se séparent vers les pôles opposés.",
+            exampleAr = "طور الانفصال هو المرحلة التي تنفصل فيها الكروماتيدات الشقيقة أو الكروموسومات المتماثلة إلى القطبين.",
         ),
         MedicalTermEntity(
             id = 1754,
@@ -2683,6 +3208,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈtɛləfeɪz/",
+            exampleEn = "The telophase is the final stage of mitosis/meiosis where nuclear envelopes reform around each set of chromosomes.",
+            exampleFr = "La télophase est l'étape finale de la mitose/méiose où les enveloppes nucléaires se reforment autour de chaque ensemble.",
+            exampleAr = "طور الانتهاء هو المرحلة الأخيرة من الانقسام حيث تعود الأغلفة النووية للتشكل حول كل مجموعة كروموسومات.",
         ),
         MedicalTermEntity(
             id = 1755,
@@ -2707,6 +3235,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈsɛntrəmɪər/",
+            exampleEn = "The centromere is the region of a chromosome where sister chromatids are joined and spindle fibers attach.",
+            exampleFr = "La centromère est la région d'un chromosome où les chromatides sœurs sont jointes et où les fibres du fuseau s'attachent.",
+            exampleAr = "السنتروميير هو منطقة الكروموسوم حيث ترتبط الكروماتيدات الشقيقة وتتصل خيوط مغزل الانقسام.",
         ),
         MedicalTermEntity(
             id = 1757,
@@ -2743,6 +3274,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈkrɒsɪŋ ˈoʊvər/",
+            exampleEn = "The crossing over (recombination) is the exchange of genetic material between homologous chromosomes during meiosis I.",
+            exampleFr = "L'enjambement (Recombinaison) est l'échange de matériel génétique entre chromosomes homologues lors de la méiose I.",
+            exampleAr = "العبور الجيني هو تبادل المادة الوراثية بين الكروموسومات المتماثلة أثناء الانقسام الاختزالي I.",
         ),
         MedicalTermEntity(
             id = 1760,
@@ -2755,6 +3289,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/kaɪˈæzmə/",
+            exampleEn = "The chiasma is the X-shaped structure formed during crossing over in meiosis.",
+            exampleFr = "La chiasma est la structure en X formée lors de l'enjambement dans la méiose.",
+            exampleAr = "الكياسما هو البنية على شكل X التي تتكون أثناء العبور الجيني في الانقسام الاختزالي.",
         ),
         MedicalTermEntity(
             id = 1761,
@@ -2767,6 +3304,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˌnɒndɪsˈdʒʌŋkʃən/",
+            exampleEn = "The nondisjunction is the failure of chromosomes to separate properly during cell division leading to abnormal chromosome numbers.",
+            exampleFr = "Le non-disjonction est échec de la séparation correcte des chromosomes lors de la division cellulaire menant à des nombres anormaux.",
+            exampleAr = "عدم الانفصال هو فشل انفصال الكروموسومات بشكل صحيح أثناء انقسام الخلية مما يؤدي إلى أعداد غير طبيعية.",
         ),
         MedicalTermEntity(
             id = 1762,
@@ -2779,6 +3319,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ænjuˈplɔɪdi/",
+            exampleEn = "The aneuploidy is the abnormal number of chromosomes in a cell (monosomy or trisomy).",
+            exampleFr = "L'aneuploïdie est nombre anormal de chromosomes dans une cellule (monosomie ou trisomie).",
+            exampleAr = "الأنيوبلويدية هو عدد غير طبيعي من الكروموسومات في الخلية (أحادية الصبغي أو ثلاثية الصبغي).",
         ),
         MedicalTermEntity(
             id = 1763,
@@ -2791,6 +3334,7 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈtrɪsəmi/",
+            exampleEn = "The trisomy is the presence of three copies of a particular chromosome instead of two (e.g., trisomy 21).",
         ),
         MedicalTermEntity(
             id = 1764,
@@ -2803,6 +3347,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈmɒnəsəmi/",
+            exampleEn = "The monosomy is the presence of only one copy of a particular chromosome instead of two.",
+            exampleFr = "La monosomie est présence d'une seule copie d'un chromosome particulier au lieu de deux.",
+            exampleAr = "أحادية الصبغي هو وجود نسخة واحدة فقط من كروموسوم معين بدلاً من نسختين.",
         ),
         MedicalTermEntity(
             id = 1765,
@@ -2815,6 +3362,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/pɒliˈplɔɪdi/",
+            exampleEn = "The polyploidy is the presence of more than two complete sets of chromosomes.",
+            exampleFr = "La polyploïdie est présence de plus de deux ensembles complets de chromosomes.",
+            exampleAr = "تعدد الصيغة الصبغية هو وجود أكثر من مجموعتين كاملتين من الكروموسومات.",
         ),
         MedicalTermEntity(
             id = 1766,
@@ -2827,6 +3377,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˌtrænsləˈkeɪʃən/",
+            exampleEn = "The translocation is the chromosomal rearrangement where a segment breaks off and attaches to another chromosome.",
+            exampleFr = "Le translocation est réarrangement chromosomique où un segment se détache et s'attache à un autre chromosome.",
+            exampleAr = "الانتقال الكروموسومي هو إعادة ترتيب كروموسومي ينفصل فيه جزء ويتصل بكروموسوم آخر.",
         ),
         MedicalTermEntity(
             id = 1767,
@@ -2838,7 +3391,10 @@ object GenetiqueTerms {
             definitionAr = "إعادة ترتيب كروموسومي تُعكس فيه اتجاه جزء من الكروموسوم",
             module = "Génétique",
             chapter = "Cytogénétique",
-            ipaPhonetic = "/ɪnˈvɜːrʒən/"
+            ipaPhonetic = "/ɪnˈvɜːrʒən/",
+            exampleEn = "The inversion is the chromosomal rearrangement where a segment is reversed in orientation.",
+            exampleFr = "L'inversion est réarrangement chromosomique où un segment est inversé d'orientation.",
+            exampleAr = "الانقلاب الكروموسومي هو إعادة ترتيب كروموسومي تُعكس فيه اتجاه جزء من الكروموسوم.",
         )
     )
 }

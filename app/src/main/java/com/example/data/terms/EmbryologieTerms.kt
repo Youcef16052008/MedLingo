@@ -127,6 +127,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌɛmbriˈɒlədʒi/",
+            exampleEn = "Embryology is the science studying the development of an organism from fertilization to birth.",
+            exampleFr = "L'embryologie est science étudiant le développement d'un organisme de la fécondation à la naissance.",
+            exampleAr = "علم الأجنة هو العلم الذي يدرس تطور الكائن الحي من الإخصاب حتى الولادة.",
         ),
         MedicalTermEntity(
             id = 3181,
@@ -139,6 +142,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌɡæmɪtoʊˈdʒɛnɪsɪs/",
+            exampleEn = "The gametogenesis is the process of formation and maturation of male and female gametes.",
+            exampleFr = "La gamétogenèse est processus de formation et de maturation des gamètes mâles et femelles.",
+            exampleAr = "تكوين الأمشاج هو عملية تكوين ونضج الأمشاج الذكرية والأنثوية.",
         ),
         MedicalTermEntity(
             id = 3182,
@@ -151,6 +157,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈɡæmiːt/",
+            exampleEn = "The gamete is the mature haploid reproductive cell (sperm or ovum) capable of fertilization.",
+            exampleFr = "La gamète est cellule reproductrice haploïde mature (spermatozoïde ou ovule) capable de fécondation.",
+            exampleAr = "المشيج هو خلية تناسلية ناضجة أحادية المجموعة (حيوان منوي أو بيضة) قادرة على الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3183,
@@ -163,6 +172,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmətəˈdʒɛnɪsɪs/",
+            exampleEn = "The spermatogenesis is the process of sperm cell development from spermatogonia to mature spermatozoa.",
+            exampleFr = "La spermatogenèse est processus de développement des spermatozoïdes des spermatogonies aux spermatozoïdes matures.",
+            exampleAr = "تكوين الحيوانات المنوية هو عملية تطور خلايا الحيوانات المنوية من الأرومات المنوية إلى حيوانات منوية ناضجة.",
         ),
         MedicalTermEntity(
             id = 3184,
@@ -175,6 +187,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌoʊəˈdʒɛnɪsɪs/",
+            exampleEn = "The oogenesis is the process of female gamete (ovum) formation from oogonia to mature oocyte.",
+            exampleFr = "L'ovogenèse (Ovogénèse) est processus de formation du gamète femelle (ovule) des ovogonies à l'ovocyte mature.",
+            exampleAr = "تكوين البويضات هو عملية تكوين المشيج الأنثوي (البويضة) من الأرومات البيضية إلى البويضة الناضجة.",
         ),
         MedicalTermEntity(
             id = 3185,
@@ -187,6 +202,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmətəˈɡoʊniəm/",
+            exampleEn = "The spermatogonium is the diploid stem cell in the testis that gives rise to spermatocytes.",
+            exampleFr = "La spermatogonie est cellule souche diploïde du testicule donnant naissance aux spermatocytes.",
+            exampleAr = "الأرومة المنوية هو الخلية الجذعية ثنائية المجموعة في الخصية التي تنشأ منها الخلايا المنوية الأولية.",
         ),
         MedicalTermEntity(
             id = 3186,
@@ -199,6 +217,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈspɜːrmətəˌsaɪt/",
+            exampleEn = "The primary spermatocyte is the diploid cell derived from spermatogonium that undergoes meiosis I.",
+            exampleFr = "La spermatocyte I (primaire) est cellule diploïde dérivée de la spermatogonie qui subit la méiose I.",
+            exampleAr = "الخلية المنوية الأولية هو خلية ثنائية المجموعة مشتقة من الأرومة المنوية تخضع للانقسام الاختزالي الأول.",
         ),
         MedicalTermEntity(
             id = 3187,
@@ -211,6 +232,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈspɜːrmətəˌsaɪt/",
+            exampleEn = "The secondary spermatocyte is the haploid cell produced after meiosis I that undergoes meiosis II.",
+            exampleFr = "La spermatocyte II (secondaire) est cellule haploïde produite après la méiose I qui subit la méiose II.",
+            exampleAr = "الخلية المنوية الثانوية هو خلية أحادية المجموعة تنتج بعد الانقسام الاختزالي الأول وتخضع للانقسام الاختزالي الثاني.",
         ),
         MedicalTermEntity(
             id = 3188,
@@ -223,6 +247,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈspɜːrmətɪd/",
+            exampleEn = "The spermatid is the haploid cell resulting from meiosis II that matures into a spermatozoon.",
+            exampleFr = "La spermatide est cellule haploïde résultant de la méiose II qui mature en spermatozoïde.",
+            exampleAr = "الخلية المنوية الناشئة هو خلية أحادية المجموعة ناتجة عن الانقسام الاختزالي الثاني تنضج لتصبح حيواناً منوياً.",
         ),
         MedicalTermEntity(
             id = 3189,
@@ -235,6 +262,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmətəˈzoʊɒn/",
+            exampleEn = "The spermatozoon (sperm) is the mature male gamete with head, midpiece, and tail capable of fertilizing an ovum.",
+            exampleFr = "La spermatozoïde est gamète mâle mature avec tête, pièce intermédiaire et flagelle capable de féconder un ovule.",
+            exampleAr = "الحيوان المنوي هو المشيج الذكري الناضج المكون من رأس وقطعة وسطى وذيل قادر على إخصاب البويضة.",
         ),
         MedicalTermEntity(
             id = 3190,
@@ -247,6 +277,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈækrəsoʊm/",
+            exampleEn = "The acrosome is the cap-like structure at the head of the sperm containing hydrolytic enzymes for egg penetration.",
+            exampleFr = "L'acrosome est structure en forme de capuchon à la tête du spermatozoïde contenant des enzymes hydrolytiques.",
+            exampleAr = "الأكروسوم (قبيعة الرأس) هو بنية قبعية على رأس الحيوان المنوي تحتوي على إنزيمات تحللية لاختراق البويضة.",
         ),
         MedicalTermEntity(
             id = 3191,
@@ -259,6 +292,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌspɜːrmiəˈdʒɛnɪsɪs/",
+            exampleEn = "The spermiogenesis is the transformation of a spermatid into a mature spermatozoon.",
+            exampleFr = "La spermiogenèse est transformation d'une spermatide en spermatozoïde mature.",
+            exampleAr = "نضج الحيوان المنوي هو تحول الخلية المنوية الناشئة إلى حيوان منوي ناضج.",
         ),
         MedicalTermEntity(
             id = 3192,
@@ -271,6 +307,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌoʊəˈɡoʊniəm/",
+            exampleEn = "The oogonium is the diploid stem cell in the ovary that gives rise to primary oocytes.",
+            exampleFr = "L'ovogonie est cellule souche diploïde de l'ovaire donnant naissance aux ovocytes primaires.",
+            exampleAr = "الأرومة البيضية هو الخلية الجذعية ثنائية المجموعة في المبيض التي تنشأ منها البيضات الأولية.",
         ),
         MedicalTermEntity(
             id = 3193,
@@ -283,6 +322,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈoʊəˌsaɪt/",
+            exampleEn = "The primary oocyte is the diploid cell derived from oogonium arrested in prophase I of meiosis until puberty.",
+            exampleFr = "L'ovocyte I (primaire) est cellule diploïde dérivée de l'ovogonie bloquée en prophase I de la méiose jusqu'à la puberté.",
+            exampleAr = "البيضة الأولية هو خلية ثنائية المجموعة مشتقة من الأرومة البيضية متوقفة في طور التمهيد الأول من الانقسام الاختزالي.",
         ),
         MedicalTermEntity(
             id = 3194,
@@ -295,6 +337,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈoʊəˌsaɪt/",
+            exampleEn = "The secondary oocyte is the haploid cell produced after meiosis I arrested at metaphase II until fertilization.",
+            exampleFr = "L'ovocyte II (secondaire) est cellule haploïde produite après la méiose I bloquée en métaphase II jusqu'à la fécondation.",
+            exampleAr = "البيضة الثانوية هو خلية أحادية المجموعة تنتج بعد الانقسام الاختزالي الأول متوقفة عند الطور الاستوائي الثاني حتى الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3195,
@@ -307,6 +352,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈpoʊlər ˈbɒdi/",
+            exampleEn = "The polar body is the small non-functional cell produced during oogenesis containing discarded chromosomes.",
+            exampleFr = "La globule polaire est petite cellule non fonctionnelle produite lors de l'ovogenèse contenant les chromosomes éliminés.",
+            exampleAr = "الجسيم القطبي هو خلية صغيرة غير وظيفية تُنتج أثناء تكوين البويضة تحتوي على الكروموسومات المستبعدة.",
         ),
         MedicalTermEntity(
             id = 3196,
@@ -319,6 +367,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈoʊvəm/",
+            exampleEn = "The ovum (egg) is the mature female gamete (haploid) ready to be fertilized by a spermatozoon.",
+            exampleFr = "L'ovule est le gamète femelle mature (haploïde) prêt à être fécondé par un spermatozoïde.",
+            exampleAr = "البويضة هو المشيج الأنثوي الناضج (أحادي المجموعة) الجاهز للإخصاب بالحيوان المنوي.",
         ),
         MedicalTermEntity(
             id = 3197,
@@ -331,6 +382,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈzoʊnə pəˈluːsɪdə/",
+            exampleEn = "The zona pellucida is the glycoprotein layer surrounding the oocyte involved in sperm binding and prevention of polyspermy.",
+            exampleFr = "La zone pellucide est couche glycoprotéique entourant l'ovocyte impliquée dans la fixation des spermatozoïdes.",
+            exampleAr = "المنطقة الشفافة هو طبقة بروتين سكري تحيط بالبيضة وتشارك في ارتباط الحيوان المنوي ومنع تعدد الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3198,
@@ -343,6 +397,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈfɒlɪkəl/",
+            exampleEn = "The follicle (ovarian) is the functional unit of the ovary containing an oocyte surrounded by granulosa cells.",
+            exampleFr = "La follicule ovarien est unité fonctionnelle de l'ovaire contenant un ovocyte entouré de cellules de la granulosa.",
+            exampleAr = "الجريب المبيضي هو الوحدة الوظيفية للمبيض المحتوية على بيضة محاطة بخلايا الحبيبات.",
         ),
         MedicalTermEntity(
             id = 3199,
@@ -355,6 +412,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/praɪˈmɔːrdiəl/",
+            exampleEn = "The primordial follicle is the earliest stage of ovarian follicle consisting of a primary oocyte surrounded by a single layer of flat cells.",
+            exampleFr = "La follicule primordial est le stade le plus précoce du follicule ovarien constitué d'un ovocyte primaire entouré d'une couche unique de cellules plates.",
+            exampleAr = "الجريب الأولي هو أقدم مرحلة للجريب المبيضي يتكون من بيضة أولية محاطة بطبقة واحدة من الخلايا المسطحة.",
         ),
         MedicalTermEntity(
             id = 3200,
@@ -367,6 +427,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈɡrɑːfiən/",
+            exampleEn = "The graafian follicle (mature follicle) is the fully mature ovarian follicle containing a secondary oocyte ready for ovulation.",
+            exampleFr = "La follicule de De Graaf (Follicule mûr) est le follicule ovarien pleinement mature contenant un ovocyte secondaire prêt pour l'ovulation.",
+            exampleAr = "الجريب الناضج (جريب غراف) هو الجريب المبيضي الناضج تماماً المحتوي على بيضة ثانوية جاهزة للإباضة.",
         ),
         MedicalTermEntity(
             id = 3201,
@@ -379,6 +442,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌɒvjʊˈleɪʃən/",
+            exampleEn = "The ovulation is the release of the secondary oocyte from the mature Graafian follicle into the uterine tube.",
+            exampleFr = "L'ovulation est libération de l'ovocyte secondaire du follicule de De Graaf mature dans la trompe utérine.",
+            exampleAr = "الإباضة هو إطلاق البيضة الثانوية من الجريب الناضج إلى قناة الرحم.",
         ),
         MedicalTermEntity(
             id = 3202,
@@ -391,6 +457,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈkɔːrpəs ˈluːtiəm/",
+            exampleEn = "The corpus luteum is the temporary endocrine gland formed from the ruptured follicle secreting progesterone and estrogen.",
+            exampleFr = "La corps jaune est la glande endocrine temporaire formée du follicule rompu sécrétant progestérone et estrogène.",
+            exampleAr = "الجسم الأصفر هو الغدة الصماء المؤقتة المتكونة من الجريب المنبثق التي تفرز البروجسترون والإستروجين.",
         ),
         MedicalTermEntity(
             id = 3203,
@@ -403,6 +472,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˈkɔːrpəs ˈælbɪkænz/",
+            exampleEn = "The corpus albicans is the white fibrous scar tissue formed after the degeneration of the corpus luteum.",
+            exampleFr = "La corps blanc (Corpus albicans) est le tissu cicatriciel fibreux blanc formé après la dégénérescence du corps jaune.",
+            exampleAr = "الجسم الأبيض هو نسيج ندبي ليفي أبيض يتكون بعد تدهور الجسم الأصفر.",
         ),
         MedicalTermEntity(
             id = 3204,
@@ -415,6 +487,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Gamétogenèse",
             ipaPhonetic = "/ˌkæpæsɪˈteɪʃən/",
+            exampleEn = "The capacitation is the process by which sperm acquire the ability to fertilize an oocyte in the female reproductive tract.",
+            exampleFr = "Le capacitation est processus par lequel les spermatozoïdes acquièrent la capacité de féconder un ovocyte dans le tractus génital féminin.",
+            exampleAr = "التقدير (الاستعداد للإخصاب) هو العملية التي تكتسب فيها الحيوانات المنوية القدرة على إخصاب البيضة في الجهاز التناسلي الأنثوي.",
         ),
         MedicalTermEntity(
             id = 3205,
@@ -427,6 +502,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ˌfɜːrtɪlaɪˈzeɪʃən/",
+            exampleEn = "The fertilization is the union of a spermatozoon and an oocyte to form a diploid zygote.",
+            exampleFr = "Le fécondation est union d'un spermatozoïde et d'un ovocyte pour former un zygote diploïde.",
+            exampleAr = "الإخصاب هو اتحاد الحيوان المنوي مع البيضة لتكوين اللاقحة ثنائية المجموعة.",
         ),
         MedicalTermEntity(
             id = 3206,
@@ -439,6 +517,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈzaɪɡoʊt/",
+            exampleEn = "The zygote is the diploid cell formed by the fusion of male and female gametes at fertilization.",
+            exampleFr = "La zygote est cellule diploïde formée par la fusion des gamètes mâle et femelle lors de la fécondation.",
+            exampleAr = "اللاقحة هو الخلية ثنائية المجموعة المتكونة باندماج المشيجين الذكري والأنثوي عند الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3207,
@@ -451,6 +532,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ˌækrəˈsoʊməl/",
+            exampleEn = "The acrosomal reaction is the release of hydrolytic enzymes from the acrosome allowing sperm to penetrate the zona pellucida.",
+            exampleFr = "Le réaction acrosomiale est libération d'enzymes hydrolytiques de l'acrosome permettant au spermatozoïde de pénétrer la zone pellucide.",
+            exampleAr = "التفاعل الأكروسومي هو إطلاق الإنزيمات التحللية من الأكروسوم مما يسمح للحيوان المنوي باختراق المنطقة الشفافة.",
         ),
         MedicalTermEntity(
             id = 3208,
@@ -463,6 +547,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈkɔːrtɪkəl/",
+            exampleEn = "The cortical reaction is the release of cortical granule contents preventing polyspermy after sperm penetration.",
+            exampleFr = "Le réaction corticale est libération du contenu des granules corticaux prévenant la polyspermie après pénétration du spermatozoïde.",
+            exampleAr = "التفاعل القشري هو إطلاق محتوى الحبيبات القشرية لمنع تعدد الإخصاب بعد اختراق الحيوان المنوي.",
         ),
         MedicalTermEntity(
             id = 3209,
@@ -475,6 +562,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ˌpɒliˈspɜːrmi/",
+            exampleEn = "The polyspermy is the fertilization of an oocyte by more than one spermatozoon; usually lethal to the embryo.",
+            exampleFr = "La polyspermie est fécondation d'un ovocyte par plus d'un spermatozoïde; généralement létale pour l'embryon.",
+            exampleAr = "تعدد الإخصاب هو إخصاب البيضة بأكثر من حيوان منوي واحد؛ عادةً مميت للجنين.",
         ),
         MedicalTermEntity(
             id = 3210,
@@ -487,6 +577,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/proʊˈnjuːkliəs/",
+            exampleEn = "The pronucleus is the haploid nucleus of the sperm or egg before fusion at fertilization.",
+            exampleFr = "La pronoyau (Pronucléus) est noyau haploïde du spermatozoïde ou de l'ovule avant la fusion lors de la fécondation.",
+            exampleAr = "النواة الأولية هو النواة الأحادية المجموعة للحيوان المنوي أو البيضة قبل الاندماج عند الإخصاب.",
         ),
         MedicalTermEntity(
             id = 3211,
@@ -499,6 +592,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ˈsɪnɡəmi/",
+            exampleEn = "The syngamy is the fusion of the male and female pronuclei forming the diploid nucleus of the zygote.",
+            exampleFr = "La syngamie est fusion des pronoyaux mâle et femelle formant le noyau diploïde du zygote.",
+            exampleAr = "الاندماج النووي هو اندماج النواتين الأوليتين الذكرية والأنثوية مكوناً النواة ثنائية المجموعة للاقحة.",
         ),
         MedicalTermEntity(
             id = 3212,
@@ -511,6 +607,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/jʊˈtɛrɪn/",
+            exampleEn = "The uterine (fallopian) tube is the canal transporting the oocyte from the ovary to the uterus; site of normal fertilization.",
+            exampleFr = "La trompe utérine (de Fallope) est canal transportant l'ovocyte de l'ovaire à l'utérus; site de la fécondation normale.",
+            exampleAr = "قناة الرحم (قناة فالوب) هو القناة التي تنقل البيضة من المبيض إلى الرحم؛ موضع الإخصاب الطبيعي.",
         ),
         MedicalTermEntity(
             id = 3213,
@@ -559,6 +658,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈmɒrʊlə/",
+            exampleEn = "The morula is the solid ball of 16 blastomeres resembling a mulberry formed after cleavage.",
+            exampleFr = "La morula est masse solide de 16 blastomères ressemblant à une mûre formée après la segmentation.",
+            exampleAr = "التوتة (الأريمة المصمتة) هو كرة مصمتة من 16 أريمة تشبه التوت تتكون بعد التفتت.",
         ),
         MedicalTermEntity(
             id = 3217,
@@ -571,6 +673,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/kəmˈpækʃən/",
+            exampleEn = "The compaction is the process by which blastomeres maximize contact forming tight junctions at the morula stage.",
+            exampleFr = "Le compaction est processus par lequel les blastomères maximisent leurs contacts en formant des jonctions serrées au stade morula.",
+            exampleAr = "الانضغاط هو العملية التي تعظم فيها الأريمات تلامسها مكونةً وصلات محكمة في مرحلة التوتة.",
         ),
         MedicalTermEntity(
             id = 3218,
@@ -583,6 +688,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈblæstəsɪst/",
+            exampleEn = "The blastocyst is the fluid-filled structure formed after compaction with an inner cell mass and trophoblast.",
+            exampleFr = "La blastocyste est structure remplie de liquide formée après la compaction avec une masse cellulaire interne et un trophoblaste.",
+            exampleAr = "الكيسة الأريمية هو بنية مملوءة بالسائل تتكون بعد الانضغاط تتضمن كتلة خلوية داخلية وأرومة تغذية.",
         ),
         MedicalTermEntity(
             id = 3219,
@@ -595,6 +703,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈɪnər sɛl mæs/",
+            exampleEn = "The inner cell mass (icm) is the cluster of cells inside the blastocyst that develops into the embryo proper.",
+            exampleFr = "La masse cellulaire interne (Embryoblaste) est groupe de cellules à l'intérieur du blastocyste qui se développe en embryon proprement dit.",
+            exampleAr = "الكتلة الخلوية الداخلية (الأريمة الجنينية) هو مجموعة الخلايا داخل الكيسة الأريمية التي تتطور لتصبح الجنين نفسه.",
         ),
         MedicalTermEntity(
             id = 3220,
@@ -607,6 +718,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈtrɒfəblæst/",
+            exampleEn = "The trophoblast is the outer layer of cells of the blastocyst that forms the placenta and extraembryonic membranes.",
+            exampleFr = "La trophoblaste est couche externe de cellules du blastocyste formant le placenta et les membranes extra-embryonnaires.",
+            exampleAr = "أرومة التغذية هو الطبقة الخارجية من خلايا الكيسة الأريمية التي تشكل المشيمة والأغشية خارج الجنينية.",
         ),
         MedicalTermEntity(
             id = 3221,
@@ -619,6 +733,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈblæstəsiːl/",
+            exampleEn = "The blastocoel is the fluid-filled cavity inside the blastocyst.",
+            exampleFr = "La blastocoele est la cavité remplie de liquide à l'intérieur du blastocyste.",
+            exampleAr = "تجويف الكيسة الأريمية هو التجويف المملوء بالسائل داخل الكيسة الأريمية.",
         ),
         MedicalTermEntity(
             id = 3222,
@@ -631,6 +748,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/toʊˈtɪpətənt/",
+            exampleEn = "The totipotent is the ability of a single cell to develop into a complete organism and all its tissues.",
+            exampleFr = "La totipotent est capacité d'une cellule unique à se développer en un organisme complet et tous ses tissus.",
+            exampleAr = "كلي القدرة هو قدرة خلية واحدة على التطور لتصبح كائناً حياً كاملاً وجميع أنسجته.",
         ),
         MedicalTermEntity(
             id = 3223,
@@ -643,6 +763,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/plʊˈrɪpətənt/",
+            exampleEn = "The pluripotent is the ability of a cell to develop into many but not all cell types of the body.",
+            exampleFr = "La pluripotent est capacité d'une cellule à se développer en de nombreux types cellulaires mais pas tous.",
+            exampleAr = "متعدد القدرة هو قدرة الخلية على التطور لتصبح أنواع عديدة من خلايا الجسم لكن ليس جميعها.",
         ),
         MedicalTermEntity(
             id = 3224,
@@ -667,6 +790,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈzoʊnə ˈhætʃɪŋ/",
+            exampleEn = "The zona hatching is the process by which the blastocyst escapes from the zona pellucida before implantation.",
+            exampleFr = "L'éclosion de la zone pellucide est processus par lequel le blastocyste s'échappe de la zone pellucide avant l'implantation.",
+            exampleAr = "خروج الجنين من المنطقة الشفافة هو العملية التي تفلت فيها الكيسة الأريمية من المنطقة الشفافة قبل الانغراس.",
         ),
         MedicalTermEntity(
             id = 3226,
@@ -679,6 +805,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˌɪmplænˈteɪʃən/",
+            exampleEn = "The implantation is the embedding of the blastocyst into the endometrium of the uterus.",
+            exampleFr = "L'implantation (Nidation) est enfouissement du blastocyste dans l'endomètre de l'utérus.",
+            exampleAr = "الانغراس هو انغراس الكيسة الأريمية في بطانة الرحم.",
         ),
         MedicalTermEntity(
             id = 3227,
@@ -691,6 +820,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˌɛndoʊˈmiːtriəm/",
+            exampleEn = "The endometrium is the inner mucous membrane lining the uterus where implantation occurs.",
+            exampleFr = "L'endomètre est la muqueuse interne tapissant l'utérus où se produit l'implantation.",
+            exampleAr = "بطانة الرحم (الغشاء المخاطي) هو الغشاء المخاطي الداخلي المبطن للرحم حيث يحدث الانغراس.",
         ),
         MedicalTermEntity(
             id = 3228,
@@ -703,6 +835,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/dɪˈsɪdjuːə/",
+            exampleEn = "The decidua is the modified endometrium during pregnancy that is shed at parturition.",
+            exampleFr = "La décidue est l'endomètre modifié pendant la grossesse qui est expulsé lors de l'accouchement.",
+            exampleAr = "الساقطة (الغشاء الساقط) هو بطانة الرحم المعدلة أثناء الحمل التي تُلقى عند الولادة.",
         ),
         MedicalTermEntity(
             id = 3229,
@@ -715,6 +850,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/sɪnˌsɪʃioʊˈtrɒfəblæst/",
+            exampleEn = "The syncytiotrophoblast is the outer invasive multinucleated layer of the trophoblast that erodes the endometrium.",
+            exampleFr = "La syncytiotrophoblaste est la couche externe invasive multinucléée du trophoblaste qui érode l'endomètre.",
+            exampleAr = "الأرومة التغذية المخلوية هو الطبقة الخارجية الغازية متعددة النوى من أرومة التغذية التي تتآكل في بطانة الرحم.",
         ),
         MedicalTermEntity(
             id = 3230,
@@ -727,6 +865,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˌsaɪtoʊˈtrɒfəblæst/",
+            exampleEn = "The cytotrophoblast is the inner mononucleated layer of the trophoblast that gives rise to the syncytiotrophoblast.",
+            exampleFr = "La cytotrophoblaste est la couche interne mononucléée du trophoblaste donnant naissance au syncytiotrophoblaste.",
+            exampleAr = "الأرومة التغذية الخلوية هو الطبقة الداخلية أحادية النواة من أرومة التغذية التي تنشأ منها الأرومة المخلوية.",
         ),
         MedicalTermEntity(
             id = 3231,
@@ -739,6 +880,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/baɪˈlæmɪnər/",
+            exampleEn = "The bilaminar disc (bilaminar embryo) is the two-layered embryonic disc consisting of epiblast and hypoblast.",
+            exampleFr = "La disque embryonnaire bilaminaire est le disque embryonnaire à deux couches composé d'épiblaste et d'hypoblaste.",
+            exampleAr = "القرص الجنيني ثنائي الطبقات هو القرص الجنيني ثنائي الطبقات المكون من الطبقة الظاهرة والطبقة الباطنة.",
         ),
         MedicalTermEntity(
             id = 3232,
@@ -751,6 +895,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈɛpɪblæst/",
+            exampleEn = "The epiblast is the upper layer of the bilaminar disc giving rise to all three germ layers during gastrulation.",
+            exampleFr = "L'épiblaste est la couche supérieure du disque bilaminaire donnant naissance aux trois feuillets germinatifs lors de la gastrulation.",
+            exampleAr = "الطبقة الظاهرة هو الطبقة العليا من القرص ثنائي الطبقات التي تنشأ منها الطبقات الجرثومية الثلاث أثناء المعيدة.",
         ),
         MedicalTermEntity(
             id = 3233,
@@ -763,6 +910,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈhaɪpəblæst/",
+            exampleEn = "The hypoblast is the lower layer of the bilaminar disc contributing to extraembryonic structures.",
+            exampleFr = "L'hypoblaste est la couche inférieure du disque bilaminaire contribuant aux structures extra-embryonnaires.",
+            exampleAr = "الطبقة الباطنة هو الطبقة السفلى من القرص ثنائي الطبقات التي تسهم في التراكيب خارج الجنينية.",
         ),
         MedicalTermEntity(
             id = 3234,
@@ -775,6 +925,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˌɡæstrʊˈleɪʃən/",
+            exampleEn = "The gastrulation is the process converting the bilaminar disc into a trilaminar disc with three germ layers.",
+            exampleFr = "Le gastrulation est processus convertissant le disque bilaminaire en disque trilaminaire avec trois feuillets germinatifs.",
+            exampleAr = "المعيدة (تشكل المعدة البدائية) هو العملية التي تحول القرص ثنائي الطبقات إلى قرص ثلاثي الطبقات بثلاث طبقات جرثومية.",
         ),
         MedicalTermEntity(
             id = 3235,
@@ -787,6 +940,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈprɪmɪtɪv striːk/",
+            exampleEn = "The primitive streak is the thickening on the epiblast marking the beginning of gastrulation and establishing the body axis.",
+            exampleFr = "La ligne primitive est épaississement de l'épiblaste marquant le début de la gastrulation et établissant l'axe du corps.",
+            exampleAr = "الخط البدائي هو سُماكة على الطبقة الظاهرة تميز بداية المعيدة وتحدد محور الجسم.",
         ),
         MedicalTermEntity(
             id = 3236,
@@ -799,6 +955,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈprɪmɪtɪv noʊd/",
+            exampleEn = "The primitive node (hensen's node) is the cranial end of the primitive streak acting as an organizer for embryonic patterning.",
+            exampleFr = "La nœud primitif (de Hensen) est l'extrémité crâniale de la ligne primitive agissant comme organisateur du patron embryonnaire.",
+            exampleAr = "العقدة البدائية هو النهاية القحفية للخط البدائي التي تعمل كمنظم لنمط الجنين.",
         ),
         MedicalTermEntity(
             id = 3237,
@@ -811,6 +970,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈɛktəˌdɜːrm/",
+            exampleEn = "The ectoderm is the outer germ layer giving rise to skin, nervous system, and sensory organs.",
+            exampleFr = "L'ectoderme est le feuillet germinatif externe donnant naissance à la peau, au système nerveux et aux organes sensoriels.",
+            exampleAr = "الأديم الظاهر هو الطبقة الجرثومية الخارجية التي تنشأ منها الجلد والجهاز العصبي وأعضاء الحواس.",
         ),
         MedicalTermEntity(
             id = 3238,
@@ -823,6 +985,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈmiːzəˌdɜːrm/",
+            exampleEn = "The mesoderm is the middle germ layer giving rise to muscles, bones, cardiovascular and urogenital systems.",
+            exampleFr = "La mésoderme est le feuillet germinatif moyen donnant naissance aux muscles, os, systèmes cardiovasculaire et urogénital.",
+            exampleAr = "الأديم المتوسط هو الطبقة الجرثومية الوسطى التي تنشأ منها العضلات والعظام والجهازان القلبي الوعائي والبولي التناسلي.",
         ),
         MedicalTermEntity(
             id = 3239,
@@ -835,6 +1000,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈɛndəˌdɜːrm/",
+            exampleEn = "The endoderm is the inner germ layer lining the gut tube and giving rise to digestive and respiratory tracts.",
+            exampleFr = "L'endoderme est le feuillet germinatif interne tapissant le tube intestinal donnant naissance aux tractus digestif et respiratoire.",
+            exampleAr = "الأديم الباطن هو الطبقة الجرثومية الداخلية المبطنة للأنبوب الهضمي التي تنشأ منها الأجهزة الهضمية والتنفسية.",
         ),
         MedicalTermEntity(
             id = 3240,
@@ -847,6 +1015,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ˈnoʊtəkɔːrd/",
+            exampleEn = "The notochord is the rod-like mesodermal structure defining the embryonic axis and inducing neural plate formation.",
+            exampleFr = "La notochorde est structure mésodermique en bâtonnet définissant l'axe embryonnaire et induisant la formation de la plaque neurale.",
+            exampleAr = "الوتر الظهري هو بنية مستطيلة من الأديم المتوسط تحدد محور الجنين وتحث على تكوين الصفيحة العصبية.",
         ),
         MedicalTermEntity(
             id = 3241,
@@ -859,6 +1030,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Implantation et Gastrulation",
             ipaPhonetic = "/ɪnˈdʌkʃən/",
+            exampleEn = "The induction (embryonic) is the ability of one group of cells to influence the developmental fate of neighboring cells.",
+            exampleFr = "L'induction embryonnaire est capacité d'un groupe de cellules à influencer le destin développemental des cellules voisines.",
+            exampleAr = "الحث الجنيني هو قدرة مجموعة خلايا على التأثير في المصير التطوري للخلايا المجاورة.",
         ),
         MedicalTermEntity(
             id = 3242,
@@ -871,6 +1045,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˌnjʊərʊˈleɪʃən/",
+            exampleEn = "The neurulation is the process forming the neural tube from the neural plate; the precursor of the CNS.",
+            exampleFr = "Le neurulation est processus formant le tube neural à partir de la plaque neurale; précurseur du SNC.",
+            exampleAr = "تشكل الأنبوب العصبي هو العملية التي تشكل الأنبوب العصبي من الصفيحة العصبية؛ سليفة الجهاز العصبي المركزي.",
         ),
         MedicalTermEntity(
             id = 3243,
@@ -883,6 +1060,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl pleɪt/",
+            exampleEn = "The neural plate is the thickened area of ectoderm induced by the notochord that forms the neural tube.",
+            exampleFr = "La plaque neurale est zone épaissie d'ectoderme induite par la notochorde qui forme le tube neural.",
+            exampleAr = "الصفيحة العصبية هو منطقة سميكة من الأديم الظاهر يحثها الوتر الظهري وتشكل الأنبوب العصبي.",
         ),
         MedicalTermEntity(
             id = 3244,
@@ -907,6 +1087,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl tjuːb/",
+            exampleEn = "The neural tube is the hollow tube formed by fusion of neural folds that gives rise to the brain and spinal cord.",
+            exampleFr = "La tube neural est tube creux formé par la fusion des replis neuraux donnant naissance au cerveau et à la moelle épinière.",
+            exampleAr = "الأنبوب العصبي هو الأنبوب المجوف المتكون من اندماج الطيات العصبية الذي ينشأ منه الدماغ والحبل الشوكي.",
         ),
         MedicalTermEntity(
             id = 3246,
@@ -931,6 +1114,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəpɔːr/",
+            exampleEn = "The neuropore is the openings at the cranial and caudal ends of the neural tube that close during neurulation.",
+            exampleFr = "La neuropore est les ouvertures aux extrémités crâniale et caudale du tube neural qui se ferment lors de la neurulation.",
+            exampleAr = "الثقبة العصبية هو الفتحات في نهايتي الأنبوب العصبي القحفية والذيلية التي تنغلق أثناء تشكل الأنبوب.",
         ),
         MedicalTermEntity(
             id = 3248,
@@ -943,6 +1129,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈsoʊmaɪt/",
+            exampleEn = "The somite is the block of paraxial mesoderm giving rise to vertebrae, muscles, and dermis.",
+            exampleFr = "La somite est un bloc de mésoderme paraxial donnant naissance aux vertèbres, muscles et derme.",
+            exampleAr = "الجسيدة هو قطعة من الأديم المتوسط المحوري تنشأ منها الفقرات والعضلات والأدمة.",
         ),
         MedicalTermEntity(
             id = 3249,
@@ -955,6 +1144,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈsklɛrətoʊm/",
+            exampleEn = "The sclerotome is the ventromedial portion of the somite giving rise to vertebrae and ribs.",
+            exampleFr = "La sclérotome est la portion ventromédiale du somite donnant naissance aux vertèbres et aux côtes.",
+            exampleAr = "الأدمة العظمية هو الجزء البطني الوسطي من الجسيدة الذي تنشأ منه الفقرات والأضلاع.",
         ),
         MedicalTermEntity(
             id = 3250,
@@ -967,6 +1159,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈmaɪətoʊm/",
+            exampleEn = "The myotome is the portion of the somite giving rise to skeletal muscles of the body wall and limbs.",
+            exampleFr = "La myotome est la portion du somite donnant naissance aux muscles squelettiques de la paroi corporelle et des membres.",
+            exampleAr = "الأدمة العضلية هو الجزء من الجسيدة الذي تنشأ منه العضلات الهيكلية لجدار الجسم والأطراف.",
         ),
         MedicalTermEntity(
             id = 3251,
@@ -979,6 +1174,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈdɜːrmətəʊm/",
+            exampleEn = "The dermatome is the portion of the somite giving rise to the dermis of the skin.",
+            exampleFr = "La dermatome est la portion du somite donnant naissance au derme de la peau.",
+            exampleAr = "الأدمة الجلدية هو الجزء من الجسيدة الذي تنشأ منه الأدمة (طبقة الجلد الداخلية).",
         ),
         MedicalTermEntity(
             id = 3252,
@@ -991,6 +1189,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈlætərəl pleɪt ˈmiːzəˌdɜːrm/",
+            exampleEn = "The lateral plate mesoderm is the portion of the mesoderm giving rise to the cardiovascular system and body cavities.",
+            exampleFr = "La mésoderme de la plaque latérale est la portion du mésoderme donnant naissance au système cardiovasculaire et aux cavités corporelles.",
+            exampleAr = "الأديم المتوسط للصفيحة الجانبية هو الجزء من الأديم المتوسط الذي تنشأ منه الجهاز القلبي الوعائي وتجاويف الجسم.",
         ),
         MedicalTermEntity(
             id = 3253,
@@ -1003,6 +1204,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˌɪntərˈmiːdiət/",
+            exampleEn = "The intermediate mesoderm is the portion of the mesoderm giving rise to the kidneys, gonads, and reproductive ducts.",
+            exampleFr = "La mésoderme intermédiaire est la portion du mésoderme donnant naissance aux reins, gonades et conduits reproducteurs.",
+            exampleAr = "الأديم المتوسط الوسيط هو الجزء من الأديم المتوسط الذي تنشأ منه الكلى والغدد التناسلية والقنوات التناسلية.",
         ),
         MedicalTermEntity(
             id = 3254,
@@ -1015,6 +1219,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈsiːləm/",
+            exampleEn = "The coelom is the body cavity that forms within the lateral plate mesoderm giving rise to pericardial, pleural, and peritoneal cavities.",
+            exampleAr = "التجويف الجنيني (السيلوم) هو التجويف الجسدي المتشكل في الأديم المتوسط الجانبي الذي ينشأ منه التجويفان التاموري والجنبي والصفاقي.",
         ),
         MedicalTermEntity(
             id = 3255,
@@ -1027,6 +1233,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/pləˈsɛntə/",
+            exampleEn = "The placenta is the organ connecting the developing fetus to the uterine wall for nutrient and gas exchange.",
+            exampleFr = "La placenta est l'organe reliant le fœtus en développement à la paroi utérine pour l'échange de nutriments et de gaz.",
+            exampleAr = "المشيمة هو العضو الرابط بين الجنين النامي وجدار الرحم لتبادل المغذيات والغازات.",
         ),
         MedicalTermEntity(
             id = 3256,
@@ -1051,6 +1260,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˈkɔːriɒn/",
+            exampleEn = "The chorion is the outermost extraembryonic membrane surrounding the embryo and forming the fetal part of the placenta.",
+            exampleFr = "Le chorion est la membrane extra-embryonnaire la plus externe entourant l'embryon et formant la partie fœtale du placenta.",
+            exampleAr = "الغشاء المشيمي هو الغشاء خارج الجنيني الأكثر خارجيةً المحيط بالجنين والمكوِّن للجزء الجنيني من المشيمة.",
         ),
         MedicalTermEntity(
             id = 3258,
@@ -1063,6 +1275,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˈæmniɒn/",
+            exampleEn = "The amnion is the innermost membrane surrounding the embryo and containing amniotic fluid.",
+            exampleFr = "L'amnios est la membrane la plus interne entourant l'embryon et contenant le liquide amniotique.",
+            exampleAr = "السلى (غشاء السلى) هو الغشاء الأكثر داخليةً المحيط بالجنين والمحتوي على السائل الأمنيوسي.",
         ),
         MedicalTermEntity(
             id = 3259,
@@ -1075,6 +1290,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌæmniˈɒtɪk ˈfluːɪd/",
+            exampleEn = "The amniotic fluid is the fluid filling the amniotic cavity protecting the embryo and allowing fetal movement.",
+            exampleFr = "La liquide amniotique est le liquide remplissant la cavité amniotique protégeant l'embryon et permettant les mouvements fœtaux.",
+            exampleAr = "السائل الأمنيوسي هو السائل الملئ للتجويف الأمنيوسي الذي يحمي الجنين ويسمح بحركاته.",
         ),
         MedicalTermEntity(
             id = 3260,
@@ -1087,6 +1305,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/joʊk sæk/",
+            exampleEn = "The yolk sac is the extraembryonic membrane that produces early blood cells and primordial germ cells.",
+            exampleFr = "La vésicule vitelline (Sac vitellin) est membrane extra-embryonnaire qui produit les premières cellules sanguines et les cellules germinales primordiales.",
+            exampleAr = "الكيس المحي هو غشاء خارج جنيني ينتج أولى خلايا الدم وخلايا الجراثيم البدائية.",
         ),
         MedicalTermEntity(
             id = 3261,
@@ -1099,6 +1320,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/əˈlæntoʊɪs/",
+            exampleEn = "The allantois is the small extraembryonic membrane contributing to umbilical cord blood vessels and urinary bladder.",
+            exampleFr = "L'allantoïde est petite membrane extra-embryonnaire contribuant aux vaisseaux du cordon ombilical et à la vessie.",
+            exampleAr = "النسيج البولي (الجسيدة البولية) هو غشاء صغير خارج جنيني يسهم في أوعية الحبل السري والمثانة البولية.",
         ),
         MedicalTermEntity(
             id = 3262,
@@ -1111,6 +1335,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ʌmˈbɪlɪkəl kɔːrd/",
+            exampleEn = "The umbilical cord is the connecting structure between the fetus and placenta containing two arteries and one vein.",
+            exampleFr = "Le cordon ombilical est la structure reliant le fœtus au placenta contenant deux artères et une veine.",
+            exampleAr = "الحبل السري هو البنية الرابطة بين الجنين والمشيمة المحتوية على شريانين ووريد واحد.",
         ),
         MedicalTermEntity(
             id = 3263,
@@ -1123,6 +1350,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌɡoʊnədoʊˈtrɒpɪn/",
+            exampleEn = "The human chorionic gonadotropin (hcg) is the hormone produced by the syncytiotrophoblast maintaining the corpus luteum in early pregnancy.",
+            exampleFr = "La gonadotrophine chorionique humaine (hCG) est hormone produite par le syncytiotrophoblaste maintenant le corps jaune au début de la grossesse.",
+            exampleAr = "الغونادوتروبين المشيمي البشري هو هرمون تنتجه الأرومة التغذية المخلوية يحافظ على الجسم الأصفر في بداية الحمل.",
         ),
         MedicalTermEntity(
             id = 3264,
@@ -1135,6 +1365,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌɪntərˈvɪləs/",
+            exampleEn = "The intervillous space is the maternal blood-filled space surrounding chorionic villi where gas and nutrient exchange occurs.",
+            exampleFr = "L'espace intervilleux est espace rempli de sang maternel entourant les villosités choriales où se font les échanges.",
+            exampleAr = "الفراغ البيني الزغابي هو الفراغ المملوء بالدم الأموي المحيط بالزغابات المشيمية حيث يتم تبادل الغازات والمغذيات.",
         ),
         MedicalTermEntity(
             id = 3265,
@@ -1147,6 +1380,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/pləˈsɛntəl ˈbæriər/",
+            exampleEn = "The placental barrier is the layers separating maternal and fetal blood allowing selective transfer of substances.",
+            exampleFr = "La barrière placentaire est les couches séparant le sang maternel et fœtal permettant le transfert sélectif de substances.",
+            exampleAr = "الحاجز المشيمي هو الطبقات الفاصلة بين دم الأم والجنين التي تسمح بالنقل الانتقائي للمواد.",
         ),
         MedicalTermEntity(
             id = 3266,
@@ -1195,6 +1431,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˌproʊsɛnˈsɛfəlɒn/",
+            exampleEn = "The prosencephalon (forebrain) is the anterior primary brain vesicle giving rise to the telencephalon and diencephalon.",
+            exampleFr = "La prosencéphale (Cerveau antérieur) est la vésicule cérébrale primaire antérieure donnant naissance au télencéphale et au diencéphale.",
+            exampleAr = "المخ الأمامي هو الحويصلة الدماغية الأولية الأمامية التي ينشأ منها المخ النهائي والمخ البيني.",
         ),
         MedicalTermEntity(
             id = 3270,
@@ -1207,6 +1446,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˌmɛsɛnˈsɛfəlɒn/",
+            exampleEn = "The mesencephalon (midbrain) is the middle primary brain vesicle that remains as the midbrain in the adult brain.",
+            exampleFr = "La mésencéphale (Cerveau moyen) est la vésicule cérébrale primaire moyenne qui demeure comme mésencéphale dans le cerveau adulte.",
+            exampleAr = "الدماغ المتوسط هو الحويصلة الدماغية الأولية الوسطى التي تبقى كدماغ متوسط في الدماغ البالغ.",
         ),
         MedicalTermEntity(
             id = 3271,
@@ -1219,6 +1461,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˌrɒmbɛnˈsɛfəlɒn/",
+            exampleEn = "The rhombencephalon (hindbrain) is the posterior primary vesicle giving rise to the metencephalon (pons, cerebellum) and myelencephalon (medulla).",
+            exampleFr = "La rhombencéphale (Cerveau postérieur) est la vésicule primaire postérieure donnant naissance au métencéphale (pont, cervelet) et myélencéphale (bulbe).",
+            exampleAr = "المخ المعيني هو الحويصلة الأولية الخلفية التي ينشأ منها المخ الجسري والمخيخ والنخاع المستطيل.",
         ),
         MedicalTermEntity(
             id = 3272,
@@ -1231,6 +1476,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/tɛˈlɛnsɛfəlɒn/",
+            exampleEn = "The telencephalon is the most anterior secondary vesicle giving rise to the cerebral hemispheres, basal ganglia, and olfactory bulbs.",
+            exampleFr = "La télencéphale est la vésicule secondaire la plus antérieure donnant naissance aux hémisphères cérébraux, ganglions de la base et bulbes olfactifs.",
+            exampleAr = "المخ النهائي هو الحويصلة الثانوية الأكثر أمامية التي ينشأ منها نصفا الكرة المخية والعقد القاعدية والبصلتان الشميتان.",
         ),
         MedicalTermEntity(
             id = 3273,
@@ -1243,6 +1491,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˌdaɪɛnˈsɛfəlɒn/",
+            exampleEn = "The diencephalon is the posterior part of the forebrain giving rise to the thalamus, hypothalamus, retina, and pineal gland.",
+            exampleFr = "La diencéphale est la partie postérieure du cerveau antérieur donnant naissance au thalamus, hypothalamus, rétine et glande pinéale.",
+            exampleAr = "المخ البيني هو الجزء الخلفي من المخ الأمامي الذي ينشأ منه المهاد وتحت المهاد والشبكية والغدة الصنوبرية.",
         ),
         MedicalTermEntity(
             id = 3274,
@@ -1267,6 +1518,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈspaɪnə ˈbɪfɪdə/",
+            exampleEn = "The spina bifida is the neural tube defect with incomplete closure of the vertebral arch over the spinal cord.",
+            exampleFr = "La spina bifida est défaut du tube neural avec fermeture incomplète de l'arc vertébral sur la moelle épinière.",
+            exampleAr = "الظهر المشقوق هو عيب في الأنبوب العصبي مع عدم اكتمال انغلاق القوس الفقري فوق الحبل الشوكي.",
         ),
         MedicalTermEntity(
             id = 3276,
@@ -1279,6 +1533,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˌænɛnˈsɛfəli/",
+            exampleEn = "The anencephaly is the severe neural tube defect with absence of major parts of the brain due to failed cranial neuropore closure.",
+            exampleFr = "L'anencéphalie est défaut grave du tube neural avec absence de parties majeures du cerveau dû à l'échec de la fermeture du neuropore crânial.",
+            exampleAr = "اللادماغية هو عيب خطير في الأنبوب العصبي مع غياب أجزاء رئيسية من الدماغ بسبب فشل انغلاق الثقبة العصبية القحفية.",
         ),
         MedicalTermEntity(
             id = 3277,
@@ -1291,6 +1548,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈfoʊlɪk ˈæsɪd/",
+            exampleEn = "The folic acid is the B-vitamin essential for neural tube closure; deficiency causes NTDs.",
+            exampleFr = "L'acide folique est vitamine B essentielle pour la fermeture du tube neural; la carence cause des DTN.",
+            exampleAr = "حمض الفوليك هو فيتامين B ضروري لانغلاق الأنبوب العصبي؛ نقصه يسبب عيوب الأنبوب العصبي.",
         ),
         MedicalTermEntity(
             id = 3278,
@@ -1303,6 +1563,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈplækəʊd/",
+            exampleEn = "The placode is the thickened region of ectoderm giving rise to sensory organs including lens, otic, and nasal placodes.",
+            exampleFr = "La placode est région épaissie de l'ectoderme donnant naissance aux organes sensoriels.",
+            exampleAr = "الصفيحة الخارجية هو منطقة سميكة من الأديم الظاهر تنشأ منها الأعضاء الحسية كصفائح العدسة والأذن والأنف.",
         ),
         MedicalTermEntity(
             id = 3279,
@@ -1315,6 +1578,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈɒptɪk kʌp/",
+            exampleEn = "The optic cup is the double-layered structure derived from the diencephalon giving rise to the retina.",
+            exampleFr = "La coupe optique est structure à double couche dérivée du diencéphale donnant naissance à la rétine.",
+            exampleAr = "الكأس البصري هو بنية مزدوجة الطبقة مشتقة من المخ البيني تنشأ منها شبكية العين.",
         ),
         MedicalTermEntity(
             id = 3280,
@@ -1327,6 +1593,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˌkɑːrdiəˈdʒɛnɪk ˈɛəriə/",
+            exampleEn = "The cardiogenic area is the region of splanchnic mesoderm where the heart begins to develop.",
+            exampleFr = "L'aire cardiogène est la région du mésoderme splanchnique où le cœur commence à se développer.",
+            exampleAr = "المنطقة القلبية المولدة هو منطقة من الأديم المتوسط الحشوي حيث يبدأ القلب في التطور.",
         ),
         MedicalTermEntity(
             id = 3281,
@@ -1339,6 +1608,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/hɑːrt tjuːb/",
+            exampleEn = "The heart tube is the primitive tubular heart formed by fusion of bilateral endocardial tubes.",
+            exampleFr = "La tube cardiaque est le cœur tubulaire primitif formé par la fusion des tubes endocardiques bilatéraux.",
+            exampleAr = "الأنبوب القلبي هو القلب الأنبوبي البدائي المتكون من اندماج الأنابيب الشغافية الثنائية.",
         ),
         MedicalTermEntity(
             id = 3282,
@@ -1351,6 +1623,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈluːpɪŋ/",
+            exampleEn = "The cardiac looping is the rightward bending of the primitive heart tube that establishes cardiac asymmetry.",
+            exampleFr = "L'inflexion cardiaque est la courbure vers la droite du tube cardiaque primitif établissant l'asymétrie cardiaque.",
+            exampleAr = "الانعطاف القلبي هو الانحناء للجهة اليمنى للأنبوب القلبي البدائي الذي يحدد عدم التماثل القلبي.",
         ),
         MedicalTermEntity(
             id = 3283,
@@ -1363,6 +1638,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/fɒˈreɪmən ˈoʊvɑːleɪ/",
+            exampleEn = "The foramen ovale is the opening in the interatrial septum allowing blood to bypass the lungs in the fetus.",
+            exampleFr = "La foramen ovale est une ouverture dans le septum interatrial permettant au sang de contourner les poumons chez le fœtus.",
+            exampleAr = "الثقبة البيضية هو فتحة في الحاجز البيني الأذيني تسمح للدم بتجاوز الرئتين عند الجنين.",
         ),
         MedicalTermEntity(
             id = 3284,
@@ -1375,6 +1653,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈdʌktəs ɑːrˈtɪəriˌoʊsəs/",
+            exampleEn = "The ductus arteriosus is the fetal vascular connection between the pulmonary artery and aorta allowing blood to bypass the lungs.",
+            exampleFr = "Le canal artériel est connexion vasculaire fœtale entre l'artère pulmonaire et l'aorte permettant au sang de contourner les poumons.",
+            exampleAr = "القناة الشريانية هو اتصال وعائي جنيني بين الشريان الرئوي والأبهر يسمح للدم بتجاوز الرئتين.",
         ),
         MedicalTermEntity(
             id = 3285,
@@ -1387,6 +1668,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈdʌktəs vɪˈnoʊsəs/",
+            exampleEn = "The ductus venosus is the fetal shunt allowing oxygenated blood from the umbilical vein to bypass the liver.",
+            exampleFr = "Le canal veineux est un shunt fœtal permettant au sang oxygéné de la veine ombilicale de contourner le foie.",
+            exampleAr = "القناة الوريدية هو مجازة جنينية تسمح للدم المؤكسج من الوريد السري بتجاوز الكبد.",
         ),
         MedicalTermEntity(
             id = 3286,
@@ -1399,6 +1683,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/vɛnˈtrɪkjʊlər ˈsɛptəl dɪˈfɛkt/",
+            exampleEn = "The ventricular septal defect (vsd) is the most common congenital heart defect with an opening in the ventricular septum.",
+            exampleFr = "Le communication interventriculaire (CIV) est le défaut cardiaque congénital le plus fréquent avec une ouverture dans le septum ventriculaire.",
+            exampleAr = "العيب في الحاجز البطيني هو أكثر عيوب القلب الخلقية شيوعاً مع وجود فتحة في الحاجز البطيني.",
         ),
         MedicalTermEntity(
             id = 3287,
@@ -1411,6 +1698,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈeɪtriəl ˈsɛptəl/",
+            exampleEn = "The atrial septal defect (asd) is the congenital heart defect with persistence of an abnormal opening in the atrial septum.",
+            exampleFr = "Le communication interauriculaire (CIA) est défaut cardiaque congénital avec persistance d'une ouverture anormale dans le septum auriculaire.",
+            exampleAr = "العيب في الحاجز الأذيني هو عيب قلبي خلقي مع استمرار فتحة غير طبيعية في الحاجز الأذيني.",
         ),
         MedicalTermEntity(
             id = 3288,
@@ -1435,6 +1725,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˌvæskjʊloʊˈdʒɛnɪsɪs/",
+            exampleEn = "The vasculogenesis is the formation of new blood vessels from angioblasts de novo in the embryo.",
+            exampleFr = "La vasculogenèse est la formation de nouveaux vaisseaux sanguins à partir d'angioblastes de novo dans l'embryon.",
+            exampleAr = "تكوين الأوعية البدائي هو تكوين أوعية دموية جديدة من الخلايا الوعائية البدائية في الجنين.",
         ),
         MedicalTermEntity(
             id = 3290,
@@ -1447,6 +1740,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˌændʒiəˈdʒɛnɪsɪs/",
+            exampleEn = "The angiogenesis is the formation of new blood vessels by sprouting from pre-existing vessels.",
+            exampleFr = "L'angiogenèse est la formation de nouveaux vaisseaux sanguins par bourgeonnement à partir de vaisseaux pré-existants.",
+            exampleAr = "تكوين الأوعية هو تكوين أوعية دموية جديدة بالتبرعم من أوعية موجودة مسبقاً.",
         ),
         MedicalTermEntity(
             id = 3291,
@@ -1459,6 +1755,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˌhiːmətəˌpɔɪˈiːsɪs/",
+            exampleEn = "The hematopoiesis is the formation of blood cellular components; first occurs in the yolk sac then in the liver and bone marrow.",
+            exampleFr = "L'hématopoïèse est la formation des composants cellulaires du sang; commence dans le sac vitellin puis dans le foie et la moelle osseuse.",
+            exampleAr = "تكون الدم هو تكوين مكونات خلايا الدم؛ يبدأ في الكيس المحي ثم في الكبد ونخاع العظم.",
         ),
         MedicalTermEntity(
             id = 3292,
@@ -1471,6 +1770,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˌɔːrɡənəˈdʒɛnɪsɪs/",
+            exampleEn = "The organogenesis is the process of organ formation from differentiated germ layers during embryonic development.",
+            exampleFr = "L'organogenèse est le processus de formation des organes à partir des feuillets germinatifs différenciés.",
+            exampleAr = "تكوين الأعضاء هو عملية تكوين الأعضاء من الطبقات الجرثومية المتمايزة أثناء التطور الجنيني.",
         ),
         MedicalTermEntity(
             id = 3293,
@@ -1519,6 +1821,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˈθaɪrɔɪd ɡlænd/",
+            exampleEn = "The thyroid gland development is the thyroid arises from endoderm at the base of the tongue (foramen cecum) and descends to its final position.",
+            exampleFr = "Le développement de la glande thyroïde est la thyroïde émerge de l'endoderme à la base de la langue (foramen caecum) et descend à sa position finale.",
+            exampleAr = "تطور الغدة الدرقية هو تنشأ الغدة الدرقية من الأديم الباطن في قاعدة اللسان وتهبط إلى موضعها النهائي.",
         ),
         MedicalTermEntity(
             id = 3297,
@@ -1531,6 +1836,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/lʌŋ bʌd/",
+            exampleEn = "The lung bud is the endodermal outgrowth from the tracheal tube giving rise to the right and left lungs.",
+            exampleFr = "Le bourgeon pulmonaire est excroissance endodermique du tube trachéal donnant naissance aux poumons droit et gauche.",
+            exampleAr = "برعم الرئة هو نمو أديمي باطني من الأنبوب الرغامي ينشأ منه الرئتان اليمنى واليسرى.",
         ),
         MedicalTermEntity(
             id = 3298,
@@ -1543,6 +1851,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/hɪˈpætɪk daɪˈvɜːrtɪkjʊləm/",
+            exampleEn = "The hepatic diverticulum is the endodermal outgrowth from the duodenum giving rise to the liver and gallbladder.",
+            exampleFr = "La diverticule hépatique est l'excroissance endodermique du duodénum donnant naissance au foie et à la vésicule biliaire.",
+            exampleAr = "الزائدة الكبدية هو النمو الأديمي الباطني من الاثني عشر الذي ينشأ منه الكبد والمرارة.",
         ),
         MedicalTermEntity(
             id = 3299,
@@ -1555,6 +1866,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˌmɛtəˈnɛfrɒs/",
+            exampleEn = "The metanephros is the permanent kidney developing from the metanephric mesoderm and ureteric bud.",
+            exampleFr = "La métanéphros est le rein permanent se développant à partir du mésoderme métanéphrique et du bourgeon urétéral.",
+            exampleAr = "الكلية الثالثة (النهائية) هو الكلية الدائمة التي تتطور من الأديم المتوسط الكلوي النهائي وبرعم الحالب.",
         ),
         MedicalTermEntity(
             id = 3300,
@@ -1567,6 +1881,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/jʊˈrɛtərɪk bʌd/",
+            exampleEn = "The ureteric bud is the outgrowth of the mesonephric duct inducing metanephric mesoderm to form the kidney.",
+            exampleFr = "Le bourgeon urétéral est une excroissance du canal mésonéphrique induisant le mésoderme métanéphrique à former le rein.",
+            exampleAr = "برعم الحالب هو نمو من القناة الكلوية الوسطى يحث الأديم المتوسط الكلوي النهائي على تكوين الكلية.",
         ),
         MedicalTermEntity(
             id = 3301,
@@ -1579,6 +1896,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/proʊˈnɛfrɒs/",
+            exampleEn = "The pronephros is the rudimentary non-functional first kidney appearing in week 4 that regresses quickly.",
+            exampleFr = "La pronéphros est le premier rein rudimentaire non fonctionnel apparaissant à la semaine 4 qui régresse rapidement.",
+            exampleAr = "الكلية الأولى (البدائية) هو الكلية الأولى الأولية غير الوظيفية التي تظهر في الأسبوع الرابع وتتراجع بسرعة.",
         ),
         MedicalTermEntity(
             id = 3302,
@@ -1591,6 +1911,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˌmɛsoʊˈnɛfrɒs/",
+            exampleEn = "The mesonephros is the second intermediate kidney that functions transiently; its duct persists in males as vas deferens.",
+            exampleFr = "La mésonéphros est le deuxième rein intermédiaire fonctionnant transitoirement; son canal persiste chez le mâle comme canal déférent.",
+            exampleAr = "الكلية الوسطى هو الكلية الثانية الوسيطة التي تعمل مؤقتاً؛ تبقى قناتها عند الذكور كالقناة الدافقة.",
         ),
         MedicalTermEntity(
             id = 3303,
@@ -1603,6 +1926,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˈɡoʊnədəl/",
+            exampleEn = "The gonadal development is the differentiation of the indifferent gonad into either testis or ovary under genetic control.",
+            exampleFr = "Le développement des gonades est la différenciation de la gonade indifférente en testicule ou en ovaire sous contrôle génétique.",
+            exampleAr = "تطور الغدد التناسلية هو تمايز الغدة التناسلية المتعادلة إلى خصية أو مبيض تحت السيطرة الجينية.",
         ),
         MedicalTermEntity(
             id = 3304,
@@ -1627,6 +1953,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˈmjʊlɪərɪən dʌkt/",
+            exampleEn = "The müllerian duct (paramesonephric duct) is the embryonic duct in females giving rise to uterine tubes, uterus, and upper vagina.",
+            exampleFr = "Le canal de Müller (Paramésonéphrique) est le canal embryonnaire féminin donnant naissance aux trompes utérines, à l'utérus et au vagin supérieur.",
+            exampleAr = "قناة مولر هو القناة الجنينية الأنثوية التي تنشأ منها قناتا الرحم والرحم والجزء العلوي من المهبل.",
         ),
         MedicalTermEntity(
             id = 3306,
@@ -1639,6 +1968,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˈwɒlfiən dʌkt/",
+            exampleEn = "The wolffian duct (mesonephric duct) is the embryonic duct in males giving rise to epididymis, vas deferens, and seminal vesicles.",
+            exampleFr = "Le canal de Wolff (Mésonéphrique) est le canal embryonnaire masculin donnant naissance à l'épididyme, au canal déférent et aux vésicules séminales.",
+            exampleAr = "قناة وولف هو القناة الجنينية الذكرية التي تنشأ منها البربخ والقناة الدافقة والحويصلات المنوية.",
         ),
         MedicalTermEntity(
             id = 3307,
@@ -1651,6 +1983,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˌɡuːbərˈnækjʊləm/",
+            exampleEn = "The gubernaculum is the fibromuscular cord guiding the descent of the testis or ovary.",
+            exampleFr = "La gubernaculum est le cordon fibromusculaire guidant la descente du testicule ou de l'ovaire.",
+            exampleAr = "الرابط المبيضي / الخصوي هو الحبل الليفي العضلي الذي يوجه نزول الخصية أو المبيض.",
         ),
         MedicalTermEntity(
             id = 3308,
@@ -1675,6 +2010,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/lɪm bʌd/",
+            exampleEn = "The limb bud is the outgrowth of lateral plate mesoderm covered by ectoderm that gives rise to the limbs.",
+            exampleFr = "Le bourgeon du membre est l'excroissance du mésoderme de la plaque latérale recouverte d'ectoderme donnant naissance aux membres.",
+            exampleAr = "برعم الطرف هو نمو من أديم متوسط الصفيحة الجانبية مغطى بالأديم الظاهر ينشأ منه الطرف.",
         ),
         MedicalTermEntity(
             id = 3310,
@@ -1687,6 +2025,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ˌeɪpiˈkəl ˌɛktəˈdɜːrməl rɪdʒ/",
+            exampleEn = "The apical ectodermal ridge (aer) is the thickened ectodermal structure at the tip of the limb bud essential for limb outgrowth.",
+            exampleFr = "La crête ectodermique apicale (CEA) est structure ectodermique épaissie à l'apex du bourgeon du membre essentielle pour la croissance du membre.",
+            exampleAr = "الحافة الأديمية الظاهرة القمية هو بنية أديمية ظاهرة سميكة في قمة برعم الطرف ضرورية لنمو الطرف.",
         ),
         MedicalTermEntity(
             id = 3311,
@@ -1699,6 +2040,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/zoʊn ɒv ˈpoʊlərɪzɪŋ ækˈtɪvɪti/",
+            exampleEn = "The zone of polarizing activity (zpa) is the region of the limb bud mesoderm controlling anterior-posterior patterning of the digits.",
+            exampleFr = "La zone d'activité polarisante (ZAP) est une région du mésoderme du bourgeon du membre contrôlant le patron antéro-postérieur des doigts.",
+            exampleAr = "منطقة النشاط الاستقطابي هو منطقة من أديم برعم الطرف المتوسط تتحكم في النمط الأمامي الخلفي للأصابع.",
         ),
         MedicalTermEntity(
             id = 3312,
@@ -1711,6 +2055,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/klɛft lɪp/",
+            exampleEn = "The cleft lip is the congenital malformation due to failure of fusion of the maxillary and medial nasal processes.",
+            exampleFr = "La fente labiale est malformation congénitale due à un défaut de fusion des processus maxillaires et nasaux médiaux.",
+            exampleAr = "الشفة المشقوقة هو تشوه خلقي بسبب فشل اندماج الناتئين الفكي والأنفي الإنسي.",
         ),
         MedicalTermEntity(
             id = 3313,
@@ -1723,6 +2070,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/klɛft ˈpælɪt/",
+            exampleEn = "The cleft palate is the congenital malformation due to failure of fusion of the palatal shelves.",
+            exampleFr = "La fente palatine est malformation congénitale due à un défaut de fusion des lames palatines.",
+            exampleAr = "الحنك المشقوق هو تشوه خلقي بسبب فشل اندماج الصفائح الحنكية.",
         ),
         MedicalTermEntity(
             id = 3314,
@@ -1735,6 +2085,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/kənˈdʒɛnɪtəl ˌmælfɔːrˈmeɪʃən/",
+            exampleEn = "The congenital malformation is the structural defect present at birth resulting from abnormal embryonic development.",
+            exampleFr = "Le malformation congénitale est défaut structurel présent à la naissance résultant d'un développement embryonnaire anormal.",
+            exampleAr = "التشوه الخلقي هو عيب بنيوي موجود عند الولادة ناتج عن تطور جنيني غير طبيعي.",
         ),
         MedicalTermEntity(
             id = 3315,
@@ -1759,6 +2112,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˌtɛrəˈtɒlədʒi/",
+            exampleEn = "The teratology is the study of congenital abnormalities and their causes.",
+            exampleFr = "La tératologie est l'étude des anomalies congénitales et de leurs causes.",
+            exampleAr = "علم التشوهات هو دراسة الشذوذات الخلقية وأسبابها.",
         ),
         MedicalTermEntity(
             id = 3317,
@@ -1771,6 +2127,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈkrɪtɪkəl ˈpɪəriəd/",
+            exampleEn = "The critical period is the time during embryonic development when an organ is most susceptible to teratogenic effects (weeks 3-8).",
+            exampleFr = "La période critique est la période du développement embryonnaire où un organe est le plus sensible aux effets tératogènes (semaines 3-8).",
+            exampleAr = "الفترة الحرجة هو الفترة أثناء التطور الجنيني حيث يكون العضو أكثر عرضةً للتأثيرات المشوهة (الأسابيع 3-8).",
         ),
         MedicalTermEntity(
             id = 3318,
@@ -1783,6 +2142,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/θəˈlɪdəmaɪd/",
+            exampleEn = "The thalidomide is the drug causing phocomelia (limb reduction defects) when taken in early pregnancy.",
+            exampleFr = "La thalidomide est médicament causant la phocomélie (défauts de réduction des membres) pris en début de grossesse.",
+            exampleAr = "الثاليدومايد هو دواء يسبب قصر الأطراف عند تناوله في بداية الحمل.",
         ),
         MedicalTermEntity(
             id = 3319,
@@ -1795,6 +2157,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ruːˈbɛlə/",
+            exampleEn = "The rubella (german measles) is the viral teratogen causing congenital heart defects, cataracts, and deafness if contracted in first trimester.",
+            exampleFr = "La rubéole (Rougeole allemande) est tératogène viral causant des malformations cardiaques, des cataractes et la surdité si contracté au premier trimestre.",
+            exampleAr = "الحصبة الألمانية هو مُشوِّه فيروسي يسبب عيوب القلب والسادّ والصمم إذا أُصيبت الأم في الثلث الأول من الحمل.",
         ),
         MedicalTermEntity(
             id = 3320,
@@ -1807,6 +2172,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/daʊn ˈsɪndroʊm/",
+            exampleEn = "The down syndrome (trisomy 21) is the chromosomal anomaly with three copies of chromosome 21 causing intellectual disability and characteristic features.",
+            exampleFr = "La syndrome de Down (Trisomie 21) est anomalie chromosomique avec trois copies du chromosome 21 causant une déficience intellectuelle.",
+            exampleAr = "متلازمة داون (ثلاثية الكروموسوم 21) هو شذوذ كروموسومي بثلاث نسخ من الكروموسوم 21 يسبب الإعاقة الذهنية والمظاهر المميزة.",
         ),
         MedicalTermEntity(
             id = 3321,
@@ -1819,6 +2187,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈtɜːrnər ˈsɪndroʊm/",
+            exampleEn = "The turner syndrome (45,x) is the chromosomal monosomy in females (45,X) causing short stature and gonadal dysgenesis.",
+            exampleFr = "La syndrome de Turner (45,X) est monosomie chromosomique chez la femelle (45,X) causant une petite taille et une dysgénésie gonadique.",
+            exampleAr = "متلازمة تيرنر هو أحادية الصبغي عند الإناث (45,X) تسبب قِصَر القامة وخلل تكوين الغدد التناسلية.",
         ),
         MedicalTermEntity(
             id = 3322,
@@ -1831,6 +2202,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈklaɪnfɛltər/",
+            exampleEn = "The klinefelter syndrome (47,xxy) is the chromosomal anomaly in males (47,XXY) causing hypogonadism and infertility.",
+            exampleFr = "La syndrome de Klinefelter (47,XXY) est anomalie chromosomique chez le mâle (47,XXY) causant l'hypogonadisme et l'infertilité.",
+            exampleAr = "متلازمة كلاينفلتر هو شذوذ كروموسومي عند الذكور (47,XXY) يسبب قصور الغدد التناسلية والعقم.",
         ),
         MedicalTermEntity(
             id = 3323,
@@ -1843,6 +2217,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/nɒn dɪsˈdʒʌŋkʃən/",
+            exampleEn = "The non-disjunction is the failure of chromosomes or chromatids to separate during meiosis causing aneuploidy.",
+            exampleFr = "Le non-disjonction est l'échec des chromosomes ou chromatides à se séparer lors de la méiose causant l'aneuploïdie.",
+            exampleAr = "عدم الانفصال هو فشل الكروموسومات أو الكروماتيدات في الانفصال أثناء الانقسام الاختزالي مما يسبب اختلال عدد الصبغيات.",
         ),
         MedicalTermEntity(
             id = 3324,
@@ -1855,6 +2232,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˌɡæstroʊˈskɪsɪs/",
+            exampleEn = "The gastroschisis is the congenital abdominal wall defect with herniation of abdominal organs through a paraumbilical defect.",
+            exampleFr = "Le gastroschisis est défaut de la paroi abdominale avec hernie des organes abdominaux à travers un défaut paraombilical.",
+            exampleAr = "الفتق السري الجانبي هو عيب خلقي في جدار البطن مع انتفاخ الأعضاء البطنية عبر خلل في جانب السرة.",
         ),
         MedicalTermEntity(
             id = 3325,
@@ -1867,6 +2247,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ɒmˈfæloʊsiːl/",
+            exampleEn = "The omphalocele is the congenital abdominal wall defect with herniation of abdominal organs into the umbilical cord.",
+            exampleFr = "L'omphalocèle est défaut de la paroi abdominale avec hernie des organes abdominaux dans le cordon ombilical.",
+            exampleAr = "القيلة السرية هو عيب خلقي في جدار البطن مع انتفاخ الأعضاء البطنية داخل الحبل السري.",
         ),
         MedicalTermEntity(
             id = 3326,
@@ -1879,6 +2262,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈhɜːrʃsprʌŋ/",
+            exampleEn = "The hirschsprung disease is the congenital absence of enteric ganglia (aganglionic megacolon) due to failed neural crest cell migration.",
+            exampleFr = "La maladie de Hirschsprung est absence congénitale des ganglions entériques (mégacôlon aganglionnaire) due à un échec de migration des cellules de la crête neurale.",
+            exampleAr = "مرض هيرشسبرونغ هو غياب خلقي للعقد المعوية بسبب فشل هجرة خلايا القمة العصبية.",
         ),
         MedicalTermEntity(
             id = 3327,
@@ -1891,6 +2277,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˌhaɪpəˈspeɪdiəs/",
+            exampleEn = "The hypospadias is the urogenital malformation in males with the urethral opening on the ventral surface of the penis.",
+            exampleFr = "L'hypospadias est malformation urogénitale chez le mâle avec ouverture urétrale sur la surface ventrale du pénis.",
+            exampleAr = "الإحليل تحتي الموضع هو تشوه بولي تناسلي عند الذكور مع فتحة الإحليل على السطح البطني للقضيب.",
         ),
         MedicalTermEntity(
             id = 3328,
@@ -1903,6 +2292,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈhɔːrsʃuː ˈkɪdni/",
+            exampleEn = "The horseshoe kidney is the congenital renal anomaly where the lower poles of both kidneys fuse across the midline.",
+            exampleFr = "Le rein en fer à cheval est anomalie rénale congénitale où les pôles inférieurs des deux reins fusionnent à travers la ligne médiane.",
+            exampleAr = "الكلية الحدوة هو شذوذ كلوي خلقي تندمج فيه القطبان السفليان للكليتين عبر خط المنتصف.",
         ),
         MedicalTermEntity(
             id = 3329,
@@ -1915,6 +2307,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈmɛkəlz daɪˈvɜːrtɪkjʊləm/",
+            exampleEn = "The meckel's diverticulum is the most common congenital anomaly of the GI tract; a remnant of the vitello-intestinal duct.",
+            exampleFr = "La diverticule de Meckel est l'anomalie congénitale la plus fréquente du tractus GI; vestige du canal omphalo-mésentérique.",
+            exampleAr = "رتج ميكل هو أكثر الشذوذات الخلقية شيوعاً في الجهاز الهضمي؛ بقايا القناة السرية المعوية.",
         ),
         MedicalTermEntity(
             id = 3330,
@@ -1951,6 +2346,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈɛmbriɒ/",
+            exampleEn = "The embryo is the developing organism from fertilization through the 8th week of development.",
+            exampleFr = "L'embryon est l'organisme en développement de la fécondation jusqu'à la 8ème semaine.",
+            exampleAr = "الجنين (المضغة) هو الكائن الحي النامي من الإخصاب حتى نهاية الأسبوع الثامن من التطور.",
         ),
         MedicalTermEntity(
             id = 3333,
@@ -1963,6 +2361,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈfiːtəs/",
+            exampleEn = "The fetus is the developing organism from the 9th week of development to birth.",
+            exampleFr = "La fœtus est l'organisme en développement de la 9ème semaine jusqu'à la naissance.",
+            exampleAr = "الجنين هو الكائن الحي النامي من الأسبوع التاسع حتى الولادة.",
         ),
         MedicalTermEntity(
             id = 3334,
@@ -1975,6 +2376,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˌdʒɛsˈteɪʃənəl eɪdʒ/",
+            exampleEn = "The gestational age is the age of the embryo/fetus calculated from the first day of the last menstrual period (LMP).",
+            exampleFr = "La âge gestationnel est l'âge de l'embryon/fœtus calculé à partir du premier jour des dernières règles (DDR).",
+            exampleAr = "العمر الجستاشوني هو عمر الجنين المحسوب من اليوم الأول لآخر دورة شهرية.",
         ),
         MedicalTermEntity(
             id = 3335,
@@ -1987,6 +2391,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˌfɜːrtɪlaɪˈzeɪʃən eɪdʒ/",
+            exampleEn = "The fertilization age is the true age of the embryo calculated from the day of fertilization (2 weeks less than gestational age).",
+            exampleFr = "La âge de fécondation est l'âge réel de l'embryon calculé à partir du jour de la fécondation (2 semaines de moins que l'âge gestationnel).",
+            exampleAr = "عمر الإخصاب هو العمر الحقيقي للجنين المحسوب من يوم الإخصاب (أقل من العمر الجستاشوني بأسبوعين).",
         ),
         MedicalTermEntity(
             id = 3336,
@@ -1999,6 +2406,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˌpɑːrtjʊˈrɪʃən/",
+            exampleEn = "The parturition (childbirth) is the process of giving birth marking the end of pregnancy.",
+            exampleFr = "Le parturition (Accouchement) est le processus d'accouchement marquant la fin de la grossesse.",
+            exampleAr = "الوضع (الولادة) هو عملية الوضع والولادة التي تعلن نهاية الحمل.",
         ),
         MedicalTermEntity(
             id = 3337,
@@ -2035,6 +2445,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˌvaɪəˈbɪlɪti/",
+            exampleEn = "The viability is the ability of the fetus to survive outside the uterus; generally possible after 22-24 weeks.",
+            exampleFr = "La viabilité est la capacité du fœtus à survivre en dehors de l'utérus; généralement possible après 22-24 semaines.",
+            exampleAr = "قابلية الحياة هو قدرة الجنين على البقاء خارج الرحم؛ ممكنة عموماً بعد 22-24 أسبوعاً.",
         ),
         MedicalTermEntity(
             id = 3340,
@@ -2047,6 +2460,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈstɪlbɜːrθ/",
+            exampleEn = "The stillbirth is the delivery of a dead baby after 20 weeks of gestation.",
+            exampleFr = "La mortinatalité (Mort-né) est l'accouchement d'un bébé mort après 20 semaines de gestation.",
+            exampleAr = "الولادة الميتة هو ولادة جنين ميت بعد 20 أسبوعاً من الحمل.",
         ),
         MedicalTermEntity(
             id = 3341,
@@ -2059,6 +2475,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/əˈbɔːrʃən/",
+            exampleEn = "The abortion (miscarriage) is the termination of pregnancy before 20 weeks whether spontaneous or induced.",
+            exampleFr = "L'avortement (Fausse couche) est l'interruption de grossesse avant 20 semaines qu'elle soit spontanée ou induite.",
+            exampleAr = "الإجهاض هو إنهاء الحمل قبل 20 أسبوعاً سواء بشكل تلقائي أو مستحث.",
         ),
         MedicalTermEntity(
             id = 3342,
@@ -2083,6 +2502,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˈmɔːrfədʒɛn/",
+            exampleEn = "The morphogen is the signaling molecule forming a concentration gradient that specifies cell fate in a dose-dependent manner.",
+            exampleFr = "La morphogène est une molécule de signalisation formant un gradient de concentration qui spécifie le destin cellulaire.",
+            exampleAr = "المورفوجين هو جزيء إشارة يشكل تدرجاً تركيزياً يحدد مصير الخلية بطريقة تعتمد على الجرعة.",
         ),
         MedicalTermEntity(
             id = 3344,
@@ -2095,6 +2517,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˌmɔːrfəˈdʒɛnɪsɪs/",
+            exampleEn = "The morphogenesis is the developmental process generating the shape and form of the organism and its organs.",
+            exampleFr = "La morphogenèse est le processus développemental générant la forme et la structure de l'organisme et de ses organes.",
+            exampleAr = "التشكل (تطور الشكل) هو العملية التطورية التي تولد شكل الكائن وهيئة أعضائه.",
         ),
         MedicalTermEntity(
             id = 3345,
@@ -2119,6 +2544,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˈsɒnɪk ˈhɛdʒhɒɡ/",
+            exampleEn = "The sonic hedgehog (shh) is the key morphogen secreted by the notochord and ZPA controlling neural tube and limb patterning.",
+            exampleFr = "La sonic Hedgehog (Shh) est un morphogène clé sécrété par la notochorde et la ZPA contrôlant le patron du tube neural et des membres.",
+            exampleAr = "بروتين الشيح الصوتي هو مورفوجين رئيسي تفرزه الوترة الظهرية ومنطقة ZPA يتحكم في نمط الأنبوب العصبي والأطراف.",
         ),
         MedicalTermEntity(
             id = 3347,
@@ -2131,6 +2559,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/wɪnt/",
+            exampleEn = "The wnt signaling pathway is the conserved signaling pathway regulating cell fate, polarity, and proliferation during embryogenesis.",
+            exampleFr = "La voie de signalisation Wnt est voie de signalisation conservée régulant le destin, la polarité et la prolifération cellulaire.",
+            exampleAr = "مسار إشارة Wnt هو مسار إشارة محفوظ ينظم مصير الخلية وقطبيتها وتكاثرها أثناء تكوين الجنين.",
         ),
         MedicalTermEntity(
             id = 3348,
@@ -2143,6 +2574,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˈfaɪbroʊblæst ɡroʊθ ˈfæktər/",
+            exampleEn = "The fgf (fibroblast growth factor) is the family of signaling molecules essential for limb development, angiogenesis, and wound healing.",
+            exampleFr = "La FGF (Facteur de croissance des fibroblastes) est une famille de molécules de signalisation essentielles pour le développement des membres et l'angiogenèse.",
+            exampleAr = "عامل نمو الأرومة الليفية هو عائلة من جزيئات الإشارة ضرورية لتطور الأطراف وتكوين الأوعية والتئام الجروح.",
         ),
         MedicalTermEntity(
             id = 3349,
@@ -2155,6 +2589,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/boʊn ˌmɔːrfəˈdʒɛnɪk ˈproʊtiːn/",
+            exampleEn = "The bmp (bone morphogenetic protein) is the growth factor family regulating dorso-ventral patterning, bone formation, and apoptosis.",
+            exampleFr = "La BMP (Protéine morphogénétique osseuse) est une famille de facteurs de croissance régulant le patron dorso-ventral, la formation osseuse et l'apoptose.",
+            exampleAr = "بروتين التشكل العظمي هو عائلة عوامل النمو التي تنظم النمط الظهري البطني وتكوين العظام والموت المبرمج.",
         ),
         MedicalTermEntity(
             id = 3350,
@@ -2167,6 +2604,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˈlætərəl ɪnˈhɪbɪʃən/",
+            exampleEn = "The lateral inhibition is the mechanism where a differentiating cell inhibits its neighbors from adopting the same fate.",
+            exampleFr = "L'inhibition latérale est un mécanisme où une cellule en différenciation inhibe ses voisines d'adopter le même destin.",
+            exampleAr = "التثبيط الجانبي هو آلية تثبط فيها الخلية المتمايزة جاراتها من اتخاذ نفس المصير.",
         ),
         MedicalTermEntity(
             id = 3351,
@@ -2191,6 +2631,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ɪmˈprɪntɪŋ/",
+            exampleEn = "The imprinting (genomic) is the epigenetic process where expression of genes depends on the parent of origin.",
+            exampleFr = "L'empreinte génomique est un processus épigénétique où l'expression des gènes dépend du parent d'origine.",
+            exampleAr = "البصمة الجينومية هو عملية فوق جينية يعتمد فيها التعبير عن الجينات على الوالد المصدر.",
         ),
         MedicalTermEntity(
             id = 3353,
@@ -2203,6 +2646,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/stɛm sɛl/",
+            exampleEn = "The stem cell is the undifferentiated cell capable of self-renewal and differentiation into specialized cells.",
+            exampleFr = "La cellule souche est cellule indifférenciée capable d'auto-renouvellement et de différenciation en cellules spécialisées.",
+            exampleAr = "الخلية الجذعية هو خلية غير متمايزة قادرة على التجديد الذاتي والتمايز إلى خلايا متخصصة.",
         ),
         MedicalTermEntity(
             id = 3354,
@@ -2227,6 +2673,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌpriːˈneɪtəl ˌdaɪəɡˈnoʊsɪs/",
+            exampleEn = "The prenatal diagnosis is the detection of fetal disorders before birth using various techniques.",
+            exampleFr = "La diagnostic prénatal est la détection des troubles fœtaux avant la naissance en utilisant diverses techniques.",
+            exampleAr = "التشخيص قبل الولادة هو الكشف عن اضطرابات الجنين قبل الولادة باستخدام تقنيات متعددة.",
         ),
         MedicalTermEntity(
             id = 3356,
@@ -2239,6 +2688,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌæmniəsɛnˈtiːsɪs/",
+            exampleEn = "The amniocentesis is the procedure sampling amniotic fluid for fetal chromosome and genetic analysis.",
+            exampleFr = "L'amniocentèse est une procédure prélevant du liquide amniotique pour l'analyse chromosomique et génétique fœtale.",
+            exampleAr = "بزل السلى هو إجراء لأخذ عينة من السائل الأمنيوسي لتحليل كروموسومات الجنين وجيناته.",
         ),
         MedicalTermEntity(
             id = 3357,
@@ -2251,6 +2703,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/kɒˈrɪɒnɪk ˈvɪləs ˈsæmplɪŋ/",
+            exampleEn = "The chorionic villus sampling (cvs) is the procedure sampling chorionic villi for early fetal genetic analysis (10-12 weeks).",
+            exampleFr = "Le prélèvement de villosités choriales (PVC) est une procédure prélevant des villosités choriales pour l'analyse génétique fœtale précoce (10-12 semaines).",
+            exampleAr = "أخذ عينة من الزغابات المشيمية هو إجراء لأخذ عينة من الزغابات المشيمية للتحليل الجيني المبكر للجنين (10-12 أسبوعاً).",
         ),
         MedicalTermEntity(
             id = 3358,
@@ -2263,6 +2718,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈʌltrəˌsaʊnd/",
+            exampleEn = "Ultrasound (Sonography) refers to imaging technique using sound waves to visualize the fetus and placenta.",
+            exampleFr = "L'échographie est technique d'imagerie utilisant des ondes sonores pour visualiser le fœtus et le placenta.",
+            exampleAr = "الموجات فوق الصوتية هو تقنية تصوير تستخدم موجات صوتية لرؤية الجنين والمشيمة.",
         ),
         MedicalTermEntity(
             id = 3359,
@@ -2275,6 +2733,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/kraʊn rʌmp lɛŋθ/",
+            exampleEn = "The crown-rump length (crl) is the measurement from the top of the embryo to the base of its spine used to estimate gestational age.",
+            exampleFr = "La longueur crânio-caudale (LCC) est la mesure du sommet de l'embryon à la base de sa colonne vertébrale pour estimer l'âge gestationnel.",
+            exampleAr = "طول القمة إلى العجز هو القياس من قمة الجنين إلى قاعدة عموده الفقري لتقدير العمر الجنيني.",
         ),
         MedicalTermEntity(
             id = 3360,
@@ -2287,6 +2748,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈæpɡɑːr skɔːr/",
+            exampleEn = "The apgar score is the neonatal assessment at 1 and 5 minutes scoring Appearance, Pulse, Grimace, Activity, Respiration.",
+            exampleFr = "La score d'APGAR est évaluation néonatale à 1 et 5 minutes notant l'Apparence, le Pouls, la Grimace, l'Activité et la Respiration.",
+            exampleAr = "مقياس أبغار هو تقييم لحديث الولادة عند الدقيقة الأولى والخامسة يقيّم المظهر والنبض والاستجابة والنشاط والتنفس.",
         ),
         MedicalTermEntity(
             id = 3361,
@@ -2299,6 +2763,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌniːəˈneɪtəl/",
+            exampleEn = "The neonatal period is the first 28 days of life following birth.",
+            exampleFr = "La période néonatale est les 28 premiers jours de vie suivant la naissance.",
+            exampleAr = "فترة حديث الولادة هو الأيام الثمانية والعشرون الأولى من الحياة بعد الولادة.",
         ),
         MedicalTermEntity(
             id = 3362,
@@ -2323,6 +2790,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˌɪntrəˈjuːtərɪn ɡroʊθ rɪˈstrɪkʃən/",
+            exampleEn = "The intrauterine growth restriction (iugr) is the condition where the fetus fails to reach its growth potential due to placental insufficiency or other causes.",
+            exampleFr = "La retard de croissance intra-utérin (RCIU) est condition où le fœtus n'atteint pas son potentiel de croissance dû à une insuffisance placentaire.",
+            exampleAr = "تقييد النمو داخل الرحم هو حالة يفشل فيها الجنين في تحقيق إمكانية نموه بسبب قصور المشيمة أو أسباب أخرى.",
         ),
         MedicalTermEntity(
             id = 3364,
@@ -2335,6 +2805,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/priːɪˈklæmpsɪə/",
+            exampleEn = "The pre-eclampsia is the pregnancy complication characterized by hypertension and proteinuria after 20 weeks gestation.",
+            exampleFr = "La pré-éclampsie est complication de la grossesse caractérisée par une hypertension et une protéinurie après 20 semaines.",
+            exampleAr = "ما قبل تسمم الحمل هو مضاعفة الحمل المتميزة بارتفاع ضغط الدم وبروتينية البول بعد 20 أسبوعاً من الحمل.",
         ),
         MedicalTermEntity(
             id = 3365,
@@ -2347,6 +2820,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈlætərəl ˈsɪmɪtri/",
+            exampleEn = "The lateral symmetry is the bilateral symmetry of the body with right and left mirror-image halves.",
+            exampleFr = "La symétrie latérale est la symétrie bilatérale du corps avec des moitiés droite et gauche en miroir.",
+            exampleAr = "التماثل الجانبي هو التماثل الثنائي للجسم مع نصفين أيمن وأيسر متطابقين.",
         ),
         MedicalTermEntity(
             id = 3366,
@@ -2359,6 +2835,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈsaɪtəs ɪnˈvɜːrsəs/",
+            exampleEn = "The situs inversus is the condition where the position of the major organs is mirrored from their normal positions.",
+            exampleFr = "La situs inversus est condition où la position des organes majeurs est inversée par rapport à leur position normale.",
+            exampleAr = "انعكاس الأحشاء هو حالة تكون فيها مواضع الأعضاء الرئيسية معكوسة عن مواضعها الطبيعية.",
         ),
         MedicalTermEntity(
             id = 3367,
@@ -2371,6 +2850,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌɛmbriəˈdʒɛnɪsɪs/",
+            exampleEn = "The embryogenesis is the early development of an embryo from fertilization through the embryonic period.",
+            exampleFr = "L'embryogenèse est le développement précoce d'un embryon de la fécondation à travers la période embryonnaire.",
+            exampleAr = "تكوين الجنين هو التطور المبكر للجنين من الإخصاب عبر الفترة الجنينية.",
         ),
         MedicalTermEntity(
             id = 3368,
@@ -2383,6 +2865,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈɔːrɡənaɪzər/",
+            exampleEn = "The organizer (spemann-mangold) is the group of cells capable of inducing the formation of the neural plate and organizing the embryonic axis.",
+            exampleFr = "L'organisateur (de Spemann-Mangold) est groupe de cellules capable d'induire la formation de la plaque neurale et d'organiser l'axe embryonnaire.",
+            exampleAr = "المنظم (سبيمان-مانغولد) هو مجموعة خلايا قادرة على حث تكوين الصفيحة العصبية وتنظيم المحور الجنيني.",
         ),
         MedicalTermEntity(
             id = 3369,
@@ -2419,6 +2904,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈdɔːrsəl/",
+            exampleEn = "Dorsal refers to pertaining to the back or posterior surface of the embryo.",
+            exampleFr = "Le dorsal est relatif au dos ou à la surface postérieure de l'embryon.",
+            exampleAr = "ظهري هو يختص بالظهر أو السطح الخلفي للجنين.",
         ),
         MedicalTermEntity(
             id = 3372,
@@ -2431,6 +2919,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈvɛntrəl/",
+            exampleEn = "Ventral refers to pertaining to the belly or anterior surface of the embryo.",
+            exampleFr = "Le ventral est relatif au ventre ou à la surface antérieure de l'embryon.",
+            exampleAr = "بطني هو يختص بالبطن أو السطح الأمامي للجنين.",
         ),
         MedicalTermEntity(
             id = 3373,
@@ -2467,6 +2958,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdɪfərɛnʃiˈeɪʃən/",
+            exampleEn = "The differentiation is the process by which less specialized cells develop into more specialized cell types.",
+            exampleFr = "Le différenciation est le processus par lequel des cellules moins spécialisées se développent en types cellulaires plus spécialisés.",
+            exampleAr = "التمايز هو العملية التي تتطور فيها خلايا أقل تخصصاً إلى أنواع خلايا أكثر تخصصاً.",
         ),
         MedicalTermEntity(
             id = 3376,
@@ -2479,6 +2973,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/maɪˈɡreɪʃən/",
+            exampleEn = "The migration (cell) is the movement of cells from their site of origin to their final position in the embryo.",
+            exampleFr = "Le migration cellulaire est le mouvement des cellules de leur site d'origine à leur position finale dans l'embryon.",
+            exampleAr = "الهجرة الخلوية هو حركة الخلايا من موقع نشأتها إلى موضعها النهائي في الجنين.",
         ),
         MedicalTermEntity(
             id = 3377,
@@ -2491,6 +2988,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/sɛl ədˈhiːʒən ˈmɒlɪkjuːl/",
+            exampleEn = "The cell adhesion molecule (cam) is the surface protein mediating cell-cell and cell-matrix interactions essential for embryonic morphogenesis.",
+            exampleFr = "La molécule d'adhésion cellulaire (CAM) est protéine de surface médiant les interactions cellule-cellule et cellule-matrice essentielles à la morphogenèse.",
+            exampleAr = "جزيء التصاق الخلية هو بروتين سطحي يتوسط تفاعلات الخلية مع الخلية والخلية مع المصفوفة وهو ضروري للتشكل الجنيني.",
         ),
         MedicalTermEntity(
             id = 3378,
@@ -2503,6 +3003,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌɛpɪˈθiːliəl ˈmɛzɛŋkaɪməl/",
+            exampleEn = "The epithelial-mesenchymal transition (emt) is the process where epithelial cells lose polarity and gain migratory properties; key in gastrulation and neural crest.",
+            exampleFr = "Le transition épithélio-mésenchymateuse (TEM) est processus où des cellules épithéliales perdent leur polarité et acquièrent des propriétés migratoires.",
+            exampleAr = "تحول الظهارة إلى وسيطة هو عملية تفقد فيها خلايا الطهارة تقطبها وتكتسب خصائص الهجرة؛ رئيسية في المعيدة وخلايا القمة العصبية.",
         ),
         MedicalTermEntity(
             id = 3379,
@@ -2515,6 +3018,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌɛkstrəˈsɛljʊlər ˈmeɪtrɪks/",
+            exampleEn = "The extracellular matrix (ecm) is the network of proteins (collagen, fibronectin, laminin) providing structural support and signaling cues.",
+            exampleFr = "La matrice extracellulaire (MEC) est le réseau de protéines (collagène, fibronectine, laminine) fournissant support structurel et signaux.",
+            exampleAr = "المصفوفة خارج الخلوية هو شبكة من البروتينات (كولاجين، فيبرونكتين، لامينين) توفر الدعم البنيوي وإشارات التنظيم.",
         ),
         MedicalTermEntity(
             id = 3380,
@@ -2599,6 +3105,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈfiːtəl ˈælkəhɒl ˈsɪndroʊm/",
+            exampleEn = "The fetal alcohol syndrome is the spectrum of disorders caused by alcohol exposure during pregnancy causing intellectual disability and facial anomalies.",
+            exampleFr = "La syndrome d'alcoolisation fœtale est spectre de troubles causés par l'exposition à l'alcool pendant la grossesse.",
+            exampleAr = "متلازمة الكحول الجنينية هو طيف من الاضطرابات تسببها التعرض للكحول أثناء الحمل مؤدياً إلى إعاقة ذهنية وشذوذات وجهية.",
         ),
         MedicalTermEntity(
             id = 3387,
@@ -2611,6 +3120,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈsɜːrfæktənt/",
+            exampleEn = "The surfactant is the phospholipid mixture produced by type II pneumocytes reducing alveolar surface tension; produced after 28 weeks.",
+            exampleFr = "La surfactant est un mélange de phospholipides produit par les pneumocytes de type II réduisant la tension de surface alvéolaire.",
+            exampleAr = "المادة الخافضة للتوتر السطحي (الفاعل السطحي) هو خليط فوسفوليبيدي تنتجه الخلايا الرئوية من النوع الثاني يقلل التوتر السطحي السنخي؛ يُنتج بعد 28 أسبوعاً.",
         ),
         MedicalTermEntity(
             id = 3388,
@@ -2623,6 +3135,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/rɛˈspɪrətɔːri dɪˈstrɛs ˈsɪndroʊm/",
+            exampleEn = "The respiratory distress syndrome (rds) is the neonatal condition due to insufficient surfactant production causing collapsed alveoli.",
+            exampleFr = "La syndrome de détresse respiratoire (SDR) est affection néonatale due à une production insuffisante de surfactant causant le collapsus des alvéoles.",
+            exampleAr = "متلازمة ضائقة الجهاز التنفسي هو حالة حديث الولادة بسبب إنتاج غير كافٍ للمادة الفاعلة السطحية مما يسبب انهيار الحويصلات الهوائية.",
         ),
         MedicalTermEntity(
             id = 3389,
@@ -2647,6 +3162,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪˈsɒfəˌdʒiːəl əˈtriːziə/",
+            exampleEn = "The esophageal atresia is the congenital malformation with failure of the esophagus to form a continuous passage to the stomach.",
+            exampleFr = "L'atrésie de l'œsophage est malformation congénitale avec défaut de formation d'un passage continu de l'œsophage à l'estomac.",
+            exampleAr = "رتق المريء هو تشوه خلقي مع فشل تكوين مجرى مستمر في المريء إلى المعدة.",
         ),
         MedicalTermEntity(
             id = 3391,
@@ -2659,6 +3177,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌtreɪkioʊˌɪˈsɒfəˌdʒiːəl ˈfɪstjʊlə/",
+            exampleEn = "The tracheoesophageal fistula (tef) is the abnormal connection between the trachea and esophagus; often associated with esophageal atresia.",
+            exampleFr = "La fistule trachéo-œsophagienne (FTO) est une connexion anormale entre la trachée et l'œsophage; souvent associée à l'atrésie œsophagienne.",
+            exampleAr = "الناسور الرغامي المريئي هو اتصال غير طبيعي بين الرغامى والمريء؛ غالباً مرتبط برتق المريء.",
         ),
         MedicalTermEntity(
             id = 3392,
@@ -2707,6 +3228,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˌdɜːrmoʊˈmaɪətoʊm/",
+            exampleEn = "The dermomyotome is the dorsolateral part of the somite giving rise to both the dermis (dermatome) and muscles (myotome).",
+            exampleFr = "La dermomyotome est la partie dorsolatérale du somite donnant naissance au derme et aux muscles.",
+            exampleAr = "الأدموعضلية هو الجزء الظهري الجانبي من الجسيدة الذي ينشأ منه الجلد الأدمي والعضلات.",
         ),
         MedicalTermEntity(
             id = 3396,
@@ -2719,6 +3243,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/pærˈæksɪəl/",
+            exampleEn = "The paraxial mesoderm is the mesoderm flanking the notochord that segments into somites.",
+            exampleFr = "La mésoderme paraxial est le mésoderme flanquant la notochorde qui se segmente en somites.",
+            exampleAr = "الأديم المتوسط المحوري هو الأديم المتوسط المجاور للوتر الظهري الذي يتجزأ إلى جسيدات.",
         ),
         MedicalTermEntity(
             id = 3397,
@@ -2731,6 +3258,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˈprɪmɪtɪv ɡʌt/",
+            exampleEn = "The primitive gut (archenteron) is the cavity formed from endoderm during gastrulation that gives rise to the digestive tract.",
+            exampleFr = "La tube intestinal primitif (Archentéron) est la cavité formée à partir de l'endoderme lors de la gastrulation qui donne naissance au tractus digestif.",
+            exampleAr = "الأنبوب الهضمي البدائي هو التجويف المتكون من الأديم الباطن أثناء المعيدة الذي ينشأ منه الجهاز الهضمي.",
         ),
         MedicalTermEntity(
             id = 3398,
@@ -2743,6 +3273,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˈfærɪŋks/",
+            exampleEn = "The pharynx development is the development of the pharynx from the cranial end of the foregut and pharyngeal apparatus.",
+            exampleFr = "Le développement du pharynx est le développement du pharynx à partir de l'extrémité crâniale de l'intestin antérieur.",
+            exampleAr = "تطور البلعوم هو تطور البلعوم من النهاية القحفية للمعي الأمامي والجهاز البلعومي.",
         ),
         MedicalTermEntity(
             id = 3399,
@@ -2779,6 +3312,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/trænsˈpoʊzɪʃən/",
+            exampleEn = "The transposition of great vessels is the congenital heart defect where the aorta arises from the right ventricle and pulmonary artery from the left.",
+            exampleFr = "Le transposition des gros vaisseaux est malformation cardiaque congénitale où l'aorte naît du ventricule droit et l'artère pulmonaire du gauche.",
+            exampleAr = "تبادل موضع الأوعية الكبيرة هو عيب قلبي خلقي ينشأ فيه الأبهر من البطين الأيمن والشريان الرئوي من البطين الأيسر.",
         ),
         MedicalTermEntity(
             id = 3402,
@@ -2791,6 +3327,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˌpɒliˈdæktɪli/",
+            exampleEn = "The polydactyly is the congenital anomaly with more than the normal number of fingers or toes.",
+            exampleFr = "La polydactylie est anomalie congénitale avec un nombre de doigts ou d'orteils supérieur à la normale.",
+            exampleAr = "تعدد الأصابع هو شذوذ خلقي بعدد أصابع في اليدين أو القدمين يزيد عن الطبيعي.",
         ),
         MedicalTermEntity(
             id = 3403,
@@ -2815,6 +3354,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˈkɔːdəl rɪˈɡrɛʃən ˈsɪndroʊm/",
+            exampleEn = "The caudal regression syndrome is the congenital malformation with absence of varying degrees of the sacrum and lumbar vertebrae; associated with maternal diabetes.",
+            exampleFr = "La syndrome de régression caudale est malformation congénitale avec absence à degrés variables du sacrum et des vertèbres lombaires; associée au diabète maternel.",
+            exampleAr = "متلازمة التراجع الذيلي هو تشوه خلقي مع غياب بدرجات متفاوتة للعجز والفقرات القطنية؛ مرتبط بداء السكري الأمومي.",
         ),
         MedicalTermEntity(
             id = 3405,
@@ -2827,6 +3369,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/diˈdʒɔːrdʒ/",
+            exampleEn = "The digeorge syndrome (22q11 deletion) is the congenital immunodeficiency caused by failure of 3rd and 4th pharyngeal pouch development with thymus aplasia.",
+            exampleFr = "La syndrome de DiGeorge (délétion 22q11) est immunodéficience congénitale causée par un défaut de développement des 3ème et 4ème poches pharyngées.",
+            exampleAr = "متلازمة دي جورج هو نقص مناعي خلقي بسبب فشل تطور الجيبين البلعوميين الثالث والرابع مع نقص تنسج الغدة الزعترية.",
         ),
         MedicalTermEntity(
             id = 3406,
@@ -2839,6 +3384,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/piˈɛr rɒˈbæ̃/",
+            exampleEn = "The pierre robin sequence is the congenital condition with micrognathia, cleft palate, and glossoptosis causing airway obstruction.",
+            exampleFr = "La séquence de Pierre Robin est condition congénitale avec micrognathie, fente palatine et glossoptose causant une obstruction des voies aériennes.",
+            exampleAr = "متتالية بيير روبان هو حالة خلقية مع صغر الفك السفلي وشق الحنك وهبوط اللسان مسببةً انسداد مجرى الهواء.",
         ),
         MedicalTermEntity(
             id = 3407,
@@ -2851,6 +3399,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˌrɛtɪˈnoʊɪk ˈæsɪd/",
+            exampleEn = "The retinoic acid is the vitamin A derivative acting as a morphogen; excess causes severe teratogenic effects.",
+            exampleFr = "L'acide rétinoïque est un dérivé de la vitamine A agissant comme morphogène; l'excès cause de graves effets tératogènes.",
+            exampleAr = "حمض الريتينويك هو مشتق فيتامين A يعمل كمورفوجين؛ الزيادة منه تسبب تأثيرات مشوِّهة شديدة.",
         ),
         MedicalTermEntity(
             id = 3408,
@@ -2863,6 +3414,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/væˈproʊɪk ˈæsɪd/",
+            exampleEn = "The valproic acid is the antiepileptic drug that is teratogenic causing neural tube defects and spina bifida.",
+            exampleFr = "L'acide valproïque est médicament antiépileptique tératogène causant des défauts du tube neural et le spina bifida.",
+            exampleAr = "حمض الفالبرويك هو دواء مضاد للصرع مُشوِّه يسبب عيوب الأنبوب العصبي والظهر المشقوق.",
         ),
         MedicalTermEntity(
             id = 3409,

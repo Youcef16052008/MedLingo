@@ -145,6 +145,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˌbaɪoʊˈfɪzɪks/",
+            exampleEn = "Biophysics is the application of physical principles and methods to biological systems.",
+            exampleFr = "La biophysique est application des principes et méthodes physiques aux systèmes biologiques.",
+            exampleAr = "الفيزياء الحيوية هو تطبيق المبادئ والطرق الفيزيائية على الأنظمة الحيوية.",
         ),
         MedicalTermEntity(
             id = 1315,
@@ -157,6 +160,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/mæs/",
+            exampleEn = "The mass is the quantity of matter in a body measured in kilograms (kg).",
+            exampleFr = "La masse est quantité de matière dans un corps mesurée en kilogrammes (kg).",
+            exampleAr = "الكتلة هو كمية المادة في جسم تُقاس بالكيلوغرام.",
         ),
         MedicalTermEntity(
             id = 1316,
@@ -169,6 +175,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/lɛŋθ/",
+            exampleEn = "The length is the measurement of distance measured in meters (m).",
+            exampleFr = "La longueur est mesure de la distance mesurée en mètres (m).",
+            exampleAr = "الطول هو قياس المسافة يُقاس بالمتر.",
         ),
         MedicalTermEntity(
             id = 1317,
@@ -181,6 +190,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/taɪm/",
+            exampleEn = "The time is the duration of an event measured in seconds (s).",
+            exampleFr = "La temps est durée d'un événement mesurée en secondes (s).",
+            exampleAr = "الزمن هو مدة حدث تُقاس بالثانية.",
         ),
         MedicalTermEntity(
             id = 1318,
@@ -193,6 +205,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈtɛmpərətʃər/",
+            exampleEn = "The temperature is the measure of the average kinetic energy of particles in Kelvin (K) or Celsius (°C).",
+            exampleFr = "La température est mesure de l'énergie cinétique moyenne des particules en Kelvin (K) ou Celsius (°C).",
+            exampleAr = "درجة الحرارة هو مقياس لمتوسط الطاقة الحركية للجسيمات بالكلفن أو الدرجة المئوية.",
         ),
         MedicalTermEntity(
             id = 1319,
@@ -205,6 +220,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/fɔːrs/",
+            exampleEn = "The force is the interaction that changes the motion of an object measured in Newtons (N).",
+            exampleFr = "La force est interaction modifiant le mouvement d'un objet mesurée en Newtons (N).",
+            exampleAr = "القوة هو تفاعل يغير حركة جسم يُقاس بالنيوتن.",
         ),
         MedicalTermEntity(
             id = 1320,
@@ -217,6 +235,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈɛnərdʒi/",
+            exampleEn = "The energy is the capacity to do work measured in Joules (J).",
+            exampleFr = "L'énergie est capacité à effectuer un travail mesurée en Joules (J).",
+            exampleAr = "الطاقة هو القدرة على إنجاز شغل تُقاس بالجول.",
         ),
         MedicalTermEntity(
             id = 1321,
@@ -229,6 +250,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈpaʊər/",
+            exampleEn = "The power is the rate of energy transfer measured in Watts (W).",
+            exampleFr = "La puissance est taux de transfert d'énergie mesuré en Watts (W).",
+            exampleAr = "الاستطاعة (القدرة) هو معدل نقل الطاقة يُقاس بالواط.",
         ),
         MedicalTermEntity(
             id = 1322,
@@ -253,6 +277,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/vəˈlɒsɪti/",
+            exampleEn = "The velocity is the rate of change of position measured in m/s.",
+            exampleFr = "La vitesse est taux de changement de position mesuré en m/s.",
+            exampleAr = "السرعة هو معدل تغير الموضع يُقاس بالمتر في الثانية.",
         ),
         MedicalTermEntity(
             id = 1324,
@@ -265,6 +292,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/əkˌsɛləˈreɪʃən/",
+            exampleEn = "The acceleration is the rate of change of velocity measured in m/s².",
+            exampleFr = "L'accélération est taux de changement de la vitesse mesuré en m/s².",
+            exampleAr = "التسارع هو معدل تغير السرعة يُقاس بالمتر في الثانية المربعة.",
         ),
         MedicalTermEntity(
             id = 1325,
@@ -289,6 +319,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/vɪˈskɒsɪti/",
+            exampleEn = "The viscosity is the fluid's resistance to flow measured in Pascal-seconds (Pa·s).",
+            exampleFr = "La viscosité est résistance d'un fluide à l'écoulement mesurée en Pascal-secondes (Pa·s).",
+            exampleAr = "اللزوجة هو مقاومة المائع للتدفق تُقاس بالباسكال في الثانية.",
         ),
         MedicalTermEntity(
             id = 1327,
@@ -301,6 +334,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈsɜːrfɪs ˈtɛnʃən/",
+            exampleEn = "The surface tension is the elastic tendency of a liquid surface to minimize its area (N/m).",
+            exampleFr = "Le tension superficielle est tendance élastique de la surface d'un liquide à minimiser sa surface (N/m).",
+            exampleAr = "التوتر السطحي هو الميل المرن لسطح السائل لتقليل مساحته (نيوتن/متر).",
         ),
         MedicalTermEntity(
             id = 1328,
@@ -313,6 +349,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˌkɒnsənˈtreɪʃən/",
+            exampleEn = "The concentration is the amount of substance per unit volume (mol/L).",
+            exampleFr = "Le concentration est quantité de substance par unité de volume (mol/L).",
+            exampleAr = "التركيز هو كمية المادة لكل وحدة حجم (مول/لتر).",
         ),
         MedicalTermEntity(
             id = 1329,
@@ -325,6 +364,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈfluːɪd/",
+            exampleEn = "The fluid is the substance that flows and takes the shape of its container (liquid or gas).",
+            exampleFr = "La fluide est substance qui s'écoule et prend la forme de son contenant (liquide ou gaz).",
+            exampleAr = "المائع هو مادة تتدفق وتأخذ شكل الوعاء الذي يحتويها (سائل أو غاز).",
         ),
         MedicalTermEntity(
             id = 1330,
@@ -337,6 +379,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌhaɪdrəˈstætɪks/",
+            exampleEn = "The hydrostatics is the study of fluids at rest and the pressures they exert.",
+            exampleFr = "L'hydrostatique est étude des fluides au repos et des pressions qu'ils exercent.",
+            exampleAr = "السكونيات المائية هو دراسة السوائل في حالة السكون والضغوط التي تمارسها.",
         ),
         MedicalTermEntity(
             id = 1331,
@@ -349,6 +394,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌhaɪdroʊdaɪˈnæmɪks/",
+            exampleEn = "The hydrodynamics is the study of fluids in motion.",
+            exampleFr = "L'hydrodynamique est étude des fluides en mouvement.",
+            exampleAr = "الديناميكا المائية هو دراسة السوائل في حالة الحركة.",
         ),
         MedicalTermEntity(
             id = 1332,
@@ -361,6 +409,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌhaɪdrəˈstætɪk ˈprɛʃər/",
+            exampleEn = "The hydrostatic pressure is the pressure exerted by a fluid at rest due to gravity (P = ρgh).",
+            exampleFr = "Le pression hydrostatique est pression exercée par un fluide au repos due à la gravité (P = ρgh).",
+            exampleAr = "الضغط الهيدروستاتي هو الضغط الذي يمارسه مائع ساكن بسبب الجاذبية (P = ρgh).",
         ),
         MedicalTermEntity(
             id = 1333,
@@ -385,6 +436,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌɑːrkɪˈmiːdiːz/",
+            exampleEn = "The archimedes' principle is the body immersed in fluid experiences an upward buoyant force equal to the weight of displaced fluid.",
+            exampleFr = "La principe d'Archimède est un corps immergé dans un fluide subit une force ascendante égale au poids du fluide déplacé.",
+            exampleAr = "مبدأ أرخميدس هو الجسم المغمور في مائع يتعرض لقوة دفع صاعدة تساوي وزن المائع المزاح.",
         ),
         MedicalTermEntity(
             id = 1335,
@@ -397,6 +451,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈbɔɪənsi/",
+            exampleEn = "The buoyancy is the upward force exerted by a fluid on an immersed object.",
+            exampleFr = "La poussée d'Archimède (Flottabilité) est force ascendante exercée par un fluide sur un objet immergé.",
+            exampleAr = "قوة الطفو هو القوة الصاعدة التي يمارسها المائع على جسم مغمور.",
         ),
         MedicalTermEntity(
             id = 1336,
@@ -433,6 +490,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/floʊ reɪt/",
+            exampleEn = "The flow rate is the volume of fluid passing through a cross-section per unit time (L/min).",
+            exampleFr = "La débit est volume de fluide traversant une section par unité de temps (L/min).",
+            exampleAr = "معدل التدفق هو حجم المائع الذي يمر عبر مقطع في وحدة الزمن (لتر/دقيقة).",
         ),
         MedicalTermEntity(
             id = 1340,
@@ -457,6 +517,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈvæskjʊlər rɪˈzɪstəns/",
+            exampleEn = "The vascular resistance is the resistance to blood flow in the cardiovascular system.",
+            exampleFr = "La résistance vasculaire est résistance au flux sanguin dans le système cardiovasculaire.",
+            exampleAr = "المقاومة الوعائية هو مقاومة تدفق الدم في الجهاز القلبي الوعائي.",
         ),
         MedicalTermEntity(
             id = 1342,
@@ -469,6 +532,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/hɪˈmætəkrɪt/",
+            exampleEn = "The hematocrit effect is the influence of red blood cell concentration on blood viscosity.",
+            exampleFr = "L'effet de l'hématocrite est influence de la concentration des globules rouges sur la viscosité sanguine.",
+            exampleAr = "تأثير الهيماتوكريت هو تأثير تركيز كريات الدم الحمراء على لزوجة الدم.",
         ),
         MedicalTermEntity(
             id = 1343,
@@ -481,6 +547,7 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/njuːˈtoʊniən/",
+            exampleEn = "The newtonian fluid is the fluid with constant viscosity regardless of shear rate (e.g., water).",
         ),
         MedicalTermEntity(
             id = 1344,
@@ -493,6 +560,7 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/nɒn njuːˈtoʊniən/",
+            exampleEn = "The non-newtonian fluid is the fluid whose viscosity changes with shear rate (e.g., blood).",
         ),
         MedicalTermEntity(
             id = 1345,
@@ -505,6 +573,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌsfɪɡmoʊməˈnɒmɪtər/",
+            exampleEn = "The sphygmomanometer is the device used to measure arterial blood pressure.",
+            exampleFr = "La sphygmomanomètre (Tensiomètre) est appareil utilisé pour mesurer la pression artérielle.",
+            exampleAr = "جهاز قياس ضغط الدم هو جهاز يُستخدم لقياس ضغط الدم الشرياني.",
         ),
         MedicalTermEntity(
             id = 1346,
@@ -517,6 +588,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈstɛθəskoʊp/",
+            exampleEn = "The stethoscope is the acoustic medical device for listening to internal body sounds.",
+            exampleFr = "La stéthoscope est appareil médical acoustique pour écouter les sons internes du corps.",
+            exampleAr = "السماعة الطبية هو جهاز طبي صوتي للاستماع إلى أصوات الجسم الداخلية.",
         ),
         MedicalTermEntity(
             id = 1347,
@@ -529,6 +603,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌθɜːrmoʊdaɪˈnæmɪks/",
+            exampleEn = "The thermodynamics is the study of energy transformations and heat transfer.",
+            exampleFr = "La thermodynamique est étude des transformations d'énergie et du transfert de chaleur.",
+            exampleAr = "الديناميكا الحرارية هو دراسة تحولات الطاقة وانتقال الحرارة.",
         ),
         MedicalTermEntity(
             id = 1348,
@@ -565,6 +642,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˈɛntrəpi/",
+            exampleEn = "The entropy is the measure of disorder or randomness in a system.",
+            exampleFr = "L'entropie est mesure du désordre ou de l'aléatoire dans un système.",
+            exampleAr = "الإنتروبيا (العشوائية) هو مقياس لدرجة الفوضى أو العشوائية في نظام.",
         ),
         MedicalTermEntity(
             id = 1351,
@@ -577,6 +657,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˈɛnθəlpi/",
+            exampleEn = "The enthalpy is the total heat content of a system at constant pressure (H).",
+            exampleFr = "L'enthalpie est contenu thermique total d'un système à pression constante (H).",
+            exampleAr = "المحتوى الحراري هو المحتوى الحراري الكلي لنظام عند ضغط ثابت.",
         ),
         MedicalTermEntity(
             id = 1352,
@@ -589,6 +672,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ɡɪbz friː ˈɛnərdʒi/",
+            exampleEn = "The free energy (gibbs) is the energy available to do useful work in a system (ΔG = ΔH - TΔS).",
+            exampleFr = "L'énergie libre (de Gibbs) est énergie disponible pour effectuer un travail utile (ΔG = ΔH - TΔS).",
+            exampleAr = "الطاقة الحرة (غيبس) هو الطاقة المتاحة لإنجاز شغل مفيد في نظام (ΔG = ΔH - TΔS).",
         ),
         MedicalTermEntity(
             id = 1353,
@@ -601,6 +687,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌɛksoʊˈθɜːrmɪk/",
+            exampleEn = "The exothermic reaction is the reaction that releases heat to the surroundings (ΔH < 0).",
+            exampleFr = "Le réaction exothermique est réaction libérant de la chaleur vers l'environnement (ΔH < 0).",
+            exampleAr = "تفاعل طارد للحرارة هو تفاعل يطلق حرارة إلى المحيط (ΔH < 0).",
         ),
         MedicalTermEntity(
             id = 1354,
@@ -613,6 +702,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌɛndoʊˈθɜːrmɪk/",
+            exampleEn = "The endothermic reaction is the reaction that absorbs heat from the surroundings (ΔH > 0).",
+            exampleFr = "Le réaction endothermique est réaction absorbant de la chaleur de l'environnement (ΔH > 0).",
+            exampleAr = "تفاعل ماص للحرارة هو تفاعل يمتص حرارة من المحيط (ΔH > 0).",
         ),
         MedicalTermEntity(
             id = 1355,
@@ -625,6 +717,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌɛksɜːrˈɡɒnɪk/",
+            exampleEn = "The exergonic reaction is the spontaneous reaction releasing free energy (ΔG < 0).",
+            exampleFr = "Le réaction exergonique est réaction spontanée libérant de l'énergie libre (ΔG < 0).",
+            exampleAr = "تفاعل طارد للطاقة هو تفاعل تلقائي يطلق طاقة حرة (ΔG < 0).",
         ),
         MedicalTermEntity(
             id = 1356,
@@ -637,6 +732,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌɛndɜːrˈɡɒnɪk/",
+            exampleEn = "The endergonic reaction is the non-spontaneous reaction requiring input of free energy (ΔG > 0).",
+            exampleFr = "Le réaction endergonique est réaction non spontanée nécessitant un apport d'énergie libre (ΔG > 0).",
+            exampleAr = "تفاعل ماص للطاقة هو تفاعل غير تلقائي يتطلب إمداداً بالطاقة الحرة (ΔG > 0).",
         ),
         MedicalTermEntity(
             id = 1357,
@@ -661,6 +759,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/spəˈsɪfɪk hiːt/",
+            exampleEn = "The specific heat capacity is the amount of heat needed to raise 1 kg of a substance by 1°C.",
+            exampleFr = "La capacité thermique massique est quantité de chaleur nécessaire pour élever 1 kg d'une substance de 1°C.",
+            exampleAr = "السعة الحرارية النوعية هو كمية الحرارة اللازمة لرفع حرارة 1 كغ من مادة بمقدار 1 درجة مئوية.",
         ),
         MedicalTermEntity(
             id = 1359,
@@ -673,6 +774,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌkæləˈrɪmɪtri/",
+            exampleEn = "The calorimetry is the science of measuring heat changes in chemical or physical processes.",
+            exampleFr = "La calorimétrie est science de la mesure des changements de chaleur dans les processus chimiques ou physiques.",
+            exampleAr = "قياس الحرارة هو علم قياس التغيرات الحرارية في العمليات الكيميائية أو الفيزيائية.",
         ),
         MedicalTermEntity(
             id = 1360,
@@ -685,6 +789,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˈbeɪsəl ˌmɛtəˈbɒlɪk/",
+            exampleEn = "The basal metabolic rate (bmr) is the minimum energy expenditure at rest to maintain vital functions.",
+            exampleFr = "Le métabolisme de base (MB) est dépense énergétique minimale au repos pour maintenir les fonctions vitales.",
+            exampleAr = "معدل الأيض الأساسي هو أدنى إنفاق للطاقة في حالة الراحة للحفاظ على الوظائف الحيوية.",
         ),
         MedicalTermEntity(
             id = 1361,
@@ -733,6 +840,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ɪˌvæpəˈreɪʃən/",
+            exampleEn = "The evaporation is the process of liquid turning to vapor causing cooling.",
+            exampleFr = "L'évaporation est processus de transformation du liquide en vapeur causant un refroidissement.",
+            exampleAr = "التبخر هو عملية تحول السائل إلى بخار مسببة التبريد.",
         ),
         MedicalTermEntity(
             id = 1365,
@@ -745,6 +855,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌθɜːrmoʊˌrɛɡjʊˈleɪʃən/",
+            exampleEn = "The thermoregulation is the body's ability to maintain internal temperature within a normal range.",
+            exampleFr = "Le thermorégulation est capacité du corps à maintenir la température interne dans une plage normale.",
+            exampleAr = "تنظيم الحرارة هو قدرة الجسم على الحفاظ على درجة الحرارة الداخلية ضمن نطاق طبيعي.",
         ),
         MedicalTermEntity(
             id = 1366,
@@ -781,6 +894,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˈfiːvər/",
+            exampleEn = "The fever (pyrexia) is the regulated rise in body temperature above 38°C as an immune response.",
+            exampleFr = "La fièvre (Pyrexie) est élévation régulée de la température corporelle au-dessus de 38°C comme réponse immunitaire.",
+            exampleAr = "الحمى هو ارتفاع منظم في حرارة الجسم فوق 38 درجة مئوية كاستجابة مناعية.",
         ),
         MedicalTermEntity(
             id = 1369,
@@ -793,6 +909,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/dɪˈfjuːʒən/",
+            exampleEn = "The diffusion is the net movement of molecules from high to low concentration.",
+            exampleFr = "Le diffusion est mouvement net de molécules de haute vers basse concentration.",
+            exampleAr = "الانتشار هو الحركة الصافية للجزيئات من التركيز العالي إلى المنخفض.",
         ),
         MedicalTermEntity(
             id = 1370,
@@ -805,6 +924,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/fɪks lɔː/",
+            exampleEn = "The fick's law of diffusion is the rate of diffusion is proportional to concentration gradient and membrane area.",
+            exampleFr = "La loi de Fick est le taux de diffusion est proportionnel au gradient de concentration et à la surface de la membrane.",
+            exampleAr = "قانون فيك للانتشار هو معدل الانتشار يتناسب مع تدرج التركيز ومساحة الغشاء.",
         ),
         MedicalTermEntity(
             id = 1371,
@@ -817,6 +939,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ɒzˈmoʊsɪs/",
+            exampleEn = "The osmosis is the movement of water across a semipermeable membrane from low to high solute concentration.",
+            exampleFr = "L'osmose est mouvement de l'eau à travers une membrane semi-perméable de basse vers haute concentration de soluté.",
+            exampleAr = "التناضح هو حركة الماء عبر غشاء نصف نفوذ من تركيز منخفض إلى مرتفع للمذاب.",
         ),
         MedicalTermEntity(
             id = 1372,
@@ -829,6 +954,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ɒzˈmɒtɪk/",
+            exampleEn = "The osmotic pressure is the pressure required to prevent osmotic flow of water across a membrane.",
+            exampleFr = "Le pression osmotique est pression nécessaire pour empêcher le flux osmotique de l'eau à travers une membrane.",
+            exampleAr = "الضغط الأسموزي هو الضغط اللازم لمنع التدفق الأسموزي للماء عبر غشاء.",
         ),
         MedicalTermEntity(
             id = 1373,
@@ -841,6 +969,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ˌɒzmoʊˈlærɪti/",
+            exampleEn = "The osmolarity is the total concentration of solute particles per liter of solution (mOsm/L).",
+            exampleFr = "L'osmolarité est concentration totale de particules de soluté par litre de solution (mOsm/L).",
+            exampleAr = "الأسمولارية هو التركيز الكلي لجسيمات المذاب لكل لتر من المحلول.",
         ),
         MedicalTermEntity(
             id = 1374,
@@ -853,6 +984,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ˌɒzmoʊˈlælɪti/",
+            exampleEn = "The osmolality is the total concentration of solute particles per kilogram of solvent (mOsm/kg).",
+            exampleFr = "L'osmolalité est concentration totale de particules de soluté par kilogramme de solvant (mOsm/kg).",
+            exampleAr = "الأسمولالية هو التركيز الكلي لجسيمات المذاب لكل كيلوغرام من المذيب.",
         ),
         MedicalTermEntity(
             id = 1375,
@@ -865,6 +999,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/toʊˈnɪsɪti/",
+            exampleEn = "The tonicity is the relative concentration of solutes affecting cell volume.",
+            exampleFr = "La tonicité est concentration relative des solutés affectant le volume cellulaire.",
+            exampleAr = "التوترية هو التركيز النسبي للمذابات الذي يؤثر على حجم الخلية.",
         ),
         MedicalTermEntity(
             id = 1376,
@@ -877,6 +1014,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ˌsɛmɪˈpɜːrmɪəbəl/",
+            exampleEn = "The semipermeable membrane is the membrane allowing passage of some molecules but not others.",
+            exampleFr = "La membrane semi-perméable est membrane permettant le passage de certaines molécules mais pas d'autres.",
+            exampleAr = "غشاء نصف نفوذ هو غشاء يسمح بمرور بعض الجزيئات دون غيرها.",
         ),
         MedicalTermEntity(
             id = 1377,
@@ -889,6 +1029,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/daɪˈælɪsɪs/",
+            exampleEn = "The dialysis is the separation of molecules by diffusion through a semipermeable membrane.",
+            exampleFr = "La dialyse est séparation de molécules par diffusion à travers une membrane semi-perméable.",
+            exampleAr = "الديلزة (غسيل الكلى) هو فصل الجزيئات بالانتشار عبر غشاء نصف نفوذ.",
         ),
         MedicalTermEntity(
             id = 1378,
@@ -901,6 +1044,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ˌhiːmoʊdaɪˈælɪsɪs/",
+            exampleEn = "The hemodialysis is the medical procedure of filtering blood through an artificial kidney machine.",
+            exampleFr = "L'hémodialyse est procédure médicale de filtration du sang par un rein artificiel.",
+            exampleAr = "الديلزة الدموية هو الإجراء الطبي لترشيح الدم عبر جهاز الكلى الاصطناعية.",
         ),
         MedicalTermEntity(
             id = 1379,
@@ -913,6 +1059,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ɒŋˈkɒtɪk/",
+            exampleEn = "The oncotic pressure is the osmotic pressure exerted by plasma proteins (mainly albumin) keeping fluid in blood vessels.",
+            exampleFr = "Le pression oncotique est pression osmotique exercée par les protéines plasmatiques (surtout albumine) retenant le liquide dans les vaisseaux.",
+            exampleAr = "الضغط الجرمي هو الضغط الأسموزي الذي تمارسه بروتينات البلازما (خاصة الألبومين) للحفاظ على السوائل في الأوعية الدموية.",
         ),
         MedicalTermEntity(
             id = 1380,
@@ -925,6 +1074,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ˈstɑːrlɪŋ/",
+            exampleEn = "The starling forces is the balance of hydrostatic and oncotic pressures governing fluid exchange across capillaries.",
+            exampleFr = "La forces de Starling est équilibre des pressions hydrostatique et oncotique régissant les échanges liquidiens à travers les capillaires.",
+            exampleAr = "قوى ستارلينغ هو التوازن بين الضغوط الهيدروستاتية والجرمية التي تحكم تبادل السوائل عبر الشعيرات الدموية.",
         ),
         MedicalTermEntity(
             id = 1381,
@@ -949,6 +1101,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/krɪˈneɪʃən/",
+            exampleEn = "The crenation is the shrinking of a red blood cell in a hypertonic solution.",
+            exampleFr = "Le crénation est rétrécissement d'un globule rouge dans une solution hypertonique.",
+            exampleAr = "التسنن (التجعد) هو تجعد كرية الدم الحمراء في محلول مفرط التوتر.",
         ),
         MedicalTermEntity(
             id = 1383,
@@ -961,6 +1116,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/hɪˈmɒlɪsɪs/",
+            exampleEn = "The hemolysis is the bursting of a red blood cell in a hypotonic solution.",
+            exampleFr = "L'hémolyse est éclatement d'un globule rouge dans une solution hypotonique.",
+            exampleAr = "انحلال الدم هو انفجار كرية الدم الحمراء في محلول ناقص التوتر.",
         ),
         MedicalTermEntity(
             id = 1384,
@@ -973,6 +1131,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ˈdɒnən/",
+            exampleEn = "The donnan equilibrium is the unequal distribution of ions across a membrane due to non-diffusible charged molecules.",
+            exampleFr = "L'équilibre de Donnan est distribution inégale des ions à travers une membrane due à des molécules chargées non diffusibles.",
+            exampleAr = "توازن دونان هو التوزيع غير المتكافئ للأيونات عبر غشاء بسبب جزيئات مشحونة غير قابلة للانتشار.",
         ),
         MedicalTermEntity(
             id = 1385,
@@ -985,6 +1146,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ˈɡoʊldmən/",
+            exampleEn = "The goldman equation is the equation calculating membrane potential considering permeability of multiple ions.",
+            exampleFr = "L'équation de Goldman est équation calculant le potentiel de membrane en considérant la perméabilité de plusieurs ions.",
+            exampleAr = "معادلة غولدمان هو معادلة تحسب جهد الغشاء مع الأخذ بعين الاعتبار نفاذية عدة أيونات.",
         ),
         MedicalTermEntity(
             id = 1386,
@@ -1009,6 +1173,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈweɪvlɛŋθ/",
+            exampleEn = "The wavelength is the distance between two consecutive peaks of a wave (λ), measured in nm or m.",
+            exampleFr = "La longueur d'onde est distance entre deux crêtes consécutives d'une onde (λ), mesurée en nm ou m.",
+            exampleAr = "الطول الموجي هو المسافة بين قمتين متتاليتين لموجة (λ)، تُقاس بالنانومتر أو المتر.",
         ),
         MedicalTermEntity(
             id = 1388,
@@ -1021,6 +1188,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈfriːkwənsi/",
+            exampleEn = "The frequency is the number of wave cycles per second measured in Hertz (Hz).",
+            exampleFr = "La fréquence est nombre de cycles d'onde par seconde mesuré en Hertz (Hz).",
+            exampleAr = "التردد هو عدد دورات الموجة في الثانية يُقاس بالهرتز.",
         ),
         MedicalTermEntity(
             id = 1389,
@@ -1033,6 +1203,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈæmplɪtjuːd/",
+            exampleEn = "The amplitude is the maximum displacement of a wave from its equilibrium position.",
+            exampleFr = "L'amplitude est déplacement maximal d'une onde par rapport à sa position d'équilibre.",
+            exampleAr = "السعة هو أقصى إزاحة للموجة عن موضع توازنها.",
         ),
         MedicalTermEntity(
             id = 1390,
@@ -1045,6 +1218,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/rɪˈflɛkʃən/",
+            exampleEn = "The reflection is the bouncing of light off a surface.",
+            exampleFr = "Le réflexion est rebond de la lumière sur une surface.",
+            exampleAr = "الانعكاس هو ارتداد الضوء عن سطح.",
         ),
         MedicalTermEntity(
             id = 1391,
@@ -1057,6 +1233,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/rɪˈfrækʃən/",
+            exampleEn = "The refraction is the bending of light as it passes from one medium to another.",
+            exampleFr = "Le réfraction est déviation de la lumière lorsqu'elle passe d'un milieu à un autre.",
+            exampleAr = "الانكسار هو انحناء الضوء عند انتقاله من وسط إلى آخر.",
         ),
         MedicalTermEntity(
             id = 1392,
@@ -1069,6 +1248,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/rɪˈfræktɪv ˈɪndɛks/",
+            exampleEn = "The refractive index is the measure of how much light slows down in a medium (n = c/v).",
+            exampleFr = "L'indice de réfraction est mesure de la diminution de la vitesse de la lumière dans un milieu (n = c/v).",
+            exampleAr = "معامل الانكسار هو مقياس مقدار تباطؤ الضوء في وسط (n = c/v).",
         ),
         MedicalTermEntity(
             id = 1393,
@@ -1081,6 +1263,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/snɛlz lɔː/",
+            exampleEn = "The snell's law is the law relating incident and refracted angles to refractive indices (n₁sinθ₁ = n₂sinθ₂).",
+            exampleFr = "La loi de Snell-Descartes est loi reliant les angles d'incidence et de réfraction aux indices de réfraction.",
+            exampleAr = "قانون سنيل هو القانون الذي يربط زوايا السقوط والانكسار بمعاملات الانكسار.",
         ),
         MedicalTermEntity(
             id = 1394,
@@ -1105,6 +1290,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/lɛnz/",
+            exampleEn = "The lens is the transparent optical element that refracts light to converge or diverge rays.",
+            exampleFr = "La lentille est élément optique transparent réfractant la lumière pour converger ou diverger les rayons.",
+            exampleAr = "العدسة هو عنصر بصري شفاف يكسر الضوء ليجمع أو يبعثر الأشعة.",
         ),
         MedicalTermEntity(
             id = 1396,
@@ -1117,6 +1305,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/kənˈvɜːrdʒɪŋ/",
+            exampleEn = "The converging lens (convex) is the lens thicker at the center that focuses parallel light rays to a focal point.",
+            exampleFr = "La lentille convergente (Convexe) est lentille plus épaisse au centre focalisant les rayons parallèles en un point focal.",
+            exampleAr = "عدسة محدبة (مجمعة) هو عدسة أسمك في الوسط تركز الأشعة المتوازية في نقطة بؤرية.",
         ),
         MedicalTermEntity(
             id = 1397,
@@ -1129,6 +1320,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/daɪˈvɜːrdʒɪŋ/",
+            exampleEn = "The diverging lens (concave) is the lens thinner at the center that spreads light rays apart.",
+            exampleFr = "La lentille divergente (Concave) est lentille plus mince au centre dispersant les rayons lumineux.",
+            exampleAr = "عدسة مقعرة (مبعثرة) هو عدسة أرق في الوسط تبعثر الأشعة الضوئية.",
         ),
         MedicalTermEntity(
             id = 1398,
@@ -1141,6 +1335,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈfoʊkəl lɛŋθ/",
+            exampleEn = "The focal length is the distance from the center of a lens to its focal point.",
+            exampleFr = "La distance focale est distance du centre d'une lentille à son point focal.",
+            exampleAr = "البُعد البؤري هو المسافة من مركز العدسة إلى نقطتها البؤرية.",
         ),
         MedicalTermEntity(
             id = 1399,
@@ -1153,6 +1350,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/daɪˈɒptər/",
+            exampleEn = "The diopter is the unit of optical power of a lens (D = 1/f in meters).",
+            exampleFr = "La dioptrie est unité de puissance optique d'une lentille (D = 1/f en mètres).",
+            exampleAr = "الديوبتر هو وحدة القدرة البصرية للعدسة (D = 1/f بالأمتار).",
         ),
         MedicalTermEntity(
             id = 1400,
@@ -1165,6 +1365,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/əˌkɒməˈdeɪʃən/",
+            exampleEn = "The accommodation is the ability of the eye lens to change shape to focus on objects at different distances.",
+            exampleFr = "L'accommodation est capacité du cristallin à changer de forme pour focaliser des objets à différentes distances.",
+            exampleAr = "المطابقة (التكيف البصري) هو قدرة عدسة العين على تغيير شكلها للتركيز على أجسام على مسافات مختلفة.",
         ),
         MedicalTermEntity(
             id = 1401,
@@ -1177,6 +1380,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/maɪˈoʊpiə/",
+            exampleEn = "The myopia (nearsightedness) is the refractive error where distant objects appear blurry; corrected by concave lens.",
+            exampleFr = "La myopie est erreur de réfraction où les objets éloignés apparaissent flous; corrigée par lentille concave.",
+            exampleAr = "قصر النظر هو عيب انكساري حيث تبدو الأجسام البعيدة ضبابية؛ يُصحح بعدسة مقعرة.",
         ),
         MedicalTermEntity(
             id = 1402,
@@ -1189,6 +1395,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˌhaɪpəˈroʊpiə/",
+            exampleEn = "The hyperopia (farsightedness) is the refractive error where near objects appear blurry; corrected by convex lens.",
+            exampleFr = "L'hypermétropie est erreur de réfraction où les objets proches apparaissent flous; corrigée par lentille convexe.",
+            exampleAr = "طول النظر هو عيب انكساري حيث تبدو الأجسام القريبة ضبابية؛ يُصحح بعدسة محدبة.",
         ),
         MedicalTermEntity(
             id = 1403,
@@ -1201,6 +1410,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/əˈstɪɡmətɪzəm/",
+            exampleEn = "The astigmatism is the refractive error due to irregular curvature of the cornea or lens.",
+            exampleFr = "L'astigmatisme est erreur de réfraction due à une courbure irrégulière de la cornée ou du cristallin.",
+            exampleAr = "اللابؤرية (الأستيغماتيزم) هو عيب انكساري ناتج عن انحناء غير منتظم للقرنية أو العدسة.",
         ),
         MedicalTermEntity(
             id = 1404,
@@ -1225,6 +1437,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈkɔːrniə/",
+            exampleEn = "The cornea is the transparent front part of the eye providing most of the refractive power.",
+            exampleFr = "La cornée est partie transparente antérieure de l'œil fournissant la majorité de la puissance réfractive.",
+            exampleAr = "القرنية هو الجزء الشفاف الأمامي من العين الذي يوفر معظم القدرة الانكسارية.",
         ),
         MedicalTermEntity(
             id = 1406,
@@ -1237,6 +1452,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈrɛtɪnə/",
+            exampleEn = "The retina is the light-sensitive layer at the back of the eye containing photoreceptors.",
+            exampleFr = "La rétine est couche photosensible au fond de l'œil contenant les photorécepteurs.",
+            exampleAr = "الشبكية هو الطبقة الحساسة للضوء في مؤخرة العين التي تحتوي على المستقبلات الضوئية.",
         ),
         MedicalTermEntity(
             id = 1407,
@@ -1249,6 +1467,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/rɒd sɛl/",
+            exampleEn = "The rod cell is the photoreceptor responsible for dim-light and peripheral vision.",
+            exampleFr = "La bâtonnet est photorécepteur responsable de la vision en faible luminosité et périphérique.",
+            exampleAr = "الخلية العصوية هو مستقبل ضوئي مسؤول عن الرؤية في الضوء الخافت والرؤية المحيطية.",
         ),
         MedicalTermEntity(
             id = 1408,
@@ -1261,6 +1482,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/koʊn sɛl/",
+            exampleEn = "The cone cell is the photoreceptor responsible for color vision and high acuity.",
+            exampleFr = "La cône est photorécepteur responsable de la vision des couleurs et de la haute acuité.",
+            exampleAr = "الخلية المخروطية هو مستقبل ضوئي مسؤول عن رؤية الألوان والحدة البصرية العالية.",
         ),
         MedicalTermEntity(
             id = 1409,
@@ -1273,6 +1497,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈvɪʒuəl əˈkjuːɪti/",
+            exampleEn = "The visual acuity is the sharpness of vision measured by the smallest detail that can be resolved.",
+            exampleFr = "L'acuité visuelle est netteté de la vision mesurée par le plus petit détail pouvant être résolu.",
+            exampleAr = "حدة البصر هو وضوح الرؤية المقاس بأصغر تفصيل يمكن تمييزه.",
         ),
         MedicalTermEntity(
             id = 1410,
@@ -1285,6 +1512,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ɒfˈθælməskoʊp/",
+            exampleEn = "The ophthalmoscope is the instrument for examining the interior of the eye (retina, optic disc).",
+            exampleFr = "L'ophtalmoscope est instrument pour examiner l'intérieur de l'œil (rétine, disque optique).",
+            exampleAr = "منظار قاع العين هو أداة لفحص باطن العين (الشبكية، القرص البصري).",
         ),
         MedicalTermEntity(
             id = 1411,
@@ -1297,6 +1527,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈfaɪbər ˈɒptɪks/",
+            exampleEn = "The fiber optics is the technology of transmitting light through thin glass fibers; used in endoscopes.",
+            exampleFr = "La fibre optique est technologie de transmission de la lumière par de fines fibres de verre; utilisée dans les endoscopes.",
+            exampleAr = "الألياف البصرية هو تقنية نقل الضوء عبر ألياف زجاجية رقيقة؛ تُستخدم في المناظير.",
         ),
         MedicalTermEntity(
             id = 1412,
@@ -1309,6 +1542,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈɛndəskoʊp/",
+            exampleEn = "The endoscope is the medical instrument using fiber optics to view internal organs.",
+            exampleFr = "L'endoscope est instrument médical utilisant la fibre optique pour visualiser les organes internes.",
+            exampleAr = "المنظار الداخلي هو أداة طبية تستخدم الألياف البصرية لرؤية الأعضاء الداخلية.",
         ),
         MedicalTermEntity(
             id = 1413,
@@ -1333,6 +1569,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈmaɪkrəskoʊp/",
+            exampleEn = "The microscope is the optical instrument for magnifying small objects invisible to the naked eye.",
+            exampleFr = "La microscope est instrument optique pour grossir les petits objets invisibles à l'œil nu.",
+            exampleAr = "المجهر هو أداة بصرية لتكبير الأجسام الصغيرة غير المرئية بالعين المجردة.",
         ),
         MedicalTermEntity(
             id = 1415,
@@ -1345,6 +1584,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˌmæɡnɪfɪˈkeɪʃən/",
+            exampleEn = "The magnification is the ratio of image size to object size.",
+            exampleFr = "Le grossissement est rapport de la taille de l'image à la taille de l'objet.",
+            exampleAr = "التكبير هو نسبة حجم الصورة إلى حجم الجسم.",
         ),
         MedicalTermEntity(
             id = 1416,
@@ -1357,6 +1599,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˌrɛzəˈluːʃən/",
+            exampleEn = "The resolution (resolving power) is the ability to distinguish two closely spaced objects as separate.",
+            exampleFr = "Le résolution (Pouvoir de résolution) est capacité à distinguer deux objets rapprochés comme séparés.",
+            exampleAr = "القدرة على التمييز (التحليل) هو القدرة على التمييز بين جسمين متقاربين ككيانين منفصلين.",
         ),
         MedicalTermEntity(
             id = 1417,
@@ -1369,6 +1614,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/saʊnd/",
+            exampleEn = "The sound is the mechanical wave that propagates through a medium via vibrations.",
+            exampleFr = "Le son est onde mécanique se propageant à travers un milieu par vibrations.",
+            exampleAr = "الصوت هو موجة ميكانيكية تنتشر عبر وسط بواسطة الاهتزازات.",
         ),
         MedicalTermEntity(
             id = 1418,
@@ -1381,6 +1629,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/saʊnd weɪv/",
+            exampleEn = "The sound wave is the longitudinal pressure wave that transmits sound energy.",
+            exampleFr = "L'onde sonore est onde de pression longitudinale transmettant l'énergie sonore.",
+            exampleAr = "الموجة الصوتية هو موجة ضغط طولية تنقل الطاقة الصوتية.",
         ),
         MedicalTermEntity(
             id = 1419,
@@ -1405,6 +1656,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈlaʊdnəs/",
+            exampleEn = "The loudness is the perception of sound intensity related to amplitude.",
+            exampleFr = "L'intensité sonore (Volume) est perception de l'intensité sonore liée à l'amplitude.",
+            exampleAr = "شدة الصوت هو إدراك شدة الصوت المرتبطة بالسعة.",
         ),
         MedicalTermEntity(
             id = 1421,
@@ -1417,6 +1671,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈdɛsɪbɛl/",
+            exampleEn = "The decibel (db) is the logarithmic unit measuring sound intensity level.",
+            exampleFr = "La décibel (dB) est unité logarithmique mesurant le niveau d'intensité sonore.",
+            exampleAr = "الديسيبل هو الوحدة اللوغاريتمية لقياس مستوى شدة الصوت.",
         ),
         MedicalTermEntity(
             id = 1422,
@@ -1429,6 +1686,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈɔːdɪbəl reɪndʒ/",
+            exampleEn = "The audible range is the range of sound frequencies detectable by the human ear (20 Hz - 20,000 Hz).",
+            exampleFr = "La domaine audible est gamme de fréquences sonores détectables par l'oreille humaine (20 Hz - 20 000 Hz).",
+            exampleAr = "المدى المسموع هو مدى الترددات الصوتية التي يمكن للأذن البشرية اكتشافها (20 - 20000 هرتز).",
         ),
         MedicalTermEntity(
             id = 1423,
@@ -1465,6 +1725,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈdɒplər ɪˈfɛkt/",
+            exampleEn = "The doppler effect is the change in frequency of a wave relative to a moving observer or source.",
+            exampleFr = "L'effet Doppler est changement de fréquence d'une onde par rapport à un observateur ou une source en mouvement.",
+            exampleAr = "تأثير دوبلر هو تغير تردد الموجة بالنسبة لمراقب أو مصدر متحرك.",
         ),
         MedicalTermEntity(
             id = 1426,
@@ -1501,6 +1764,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈrɛzənəns/",
+            exampleEn = "The resonance is the amplification of vibration when a system is driven at its natural frequency.",
+            exampleFr = "La résonance est amplification de la vibration quand un système est excité à sa fréquence naturelle.",
+            exampleAr = "الرنين هو تضخيم الاهتزاز عندما يُحرَّك نظام عند تردده الطبيعي.",
         ),
         MedicalTermEntity(
             id = 1429,
@@ -1513,6 +1779,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/əˈkuːstɪk ɪmˈpiːdəns/",
+            exampleEn = "The acoustic impedance is the resistance of a medium to the passage of sound waves (Z = ρv).",
+            exampleFr = "L'impédance acoustique est résistance d'un milieu au passage des ondes sonores (Z = ρv).",
+            exampleAr = "الممانعة الصوتية هو مقاومة الوسط لمرور الموجات الصوتية (Z = ρv).",
         ),
         MedicalTermEntity(
             id = 1430,
@@ -1525,6 +1794,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˌɔːdiˈɒmɪtri/",
+            exampleEn = "The audiometry is the measurement of hearing acuity at different frequencies and intensities.",
+            exampleFr = "L'audiométrie est mesure de l'acuité auditive à différentes fréquences et intensités.",
+            exampleAr = "قياس السمع هو قياس حدة السمع عند ترددات وشدات مختلفة.",
         ),
         MedicalTermEntity(
             id = 1431,
@@ -1537,6 +1809,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈɔːdioʊɡræm/",
+            exampleEn = "The audiogram is the graph showing hearing sensitivity at different frequencies.",
+            exampleFr = "L'audiogramme est graphique montrant la sensibilité auditive à différentes fréquences.",
+            exampleAr = "مخطط السمع هو رسم بياني يُظهر الحساسية السمعية عند ترددات مختلفة.",
         ),
         MedicalTermEntity(
             id = 1432,
@@ -1549,6 +1824,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/kənˈdʌktɪv/",
+            exampleEn = "Conductive hearing loss refers to hearing loss due to problems in the outer or middle ear.",
+            exampleFr = "La surdité de transmission est perte auditive due à des problèmes de l'oreille externe ou moyenne.",
+            exampleAr = "فقدان السمع التوصيلي هو فقدان السمع بسبب مشاكل في الأذن الخارجية أو الوسطى.",
         ),
         MedicalTermEntity(
             id = 1433,
@@ -1561,6 +1839,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˌsɛnsəriˈnjʊərəl/",
+            exampleEn = "Sensorineural hearing loss refers to hearing loss due to damage to the inner ear or auditory nerve.",
+            exampleFr = "La surdité de perception (neurosensorielle) est perte auditive due à des dommages de l'oreille interne ou du nerf auditif.",
+            exampleAr = "فقدان السمع الحسي العصبي هو فقدان السمع بسبب تلف الأذن الداخلية أو العصب السمعي.",
         ),
         MedicalTermEntity(
             id = 1434,
@@ -1573,6 +1854,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˌreɪdioʊækˈtɪvɪti/",
+            exampleEn = "The radioactivity is the spontaneous emission of radiation from unstable atomic nuclei.",
+            exampleFr = "La radioactivité est émission spontanée de rayonnement par des noyaux atomiques instables.",
+            exampleAr = "النشاط الإشعاعي هو الانبعاث التلقائي للإشعاع من نوى ذرية غير مستقرة.",
         ),
         MedicalTermEntity(
             id = 1435,
@@ -1585,6 +1869,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˌreɪdioʊˈaɪsətoʊp/",
+            exampleEn = "The radioisotope (radionuclide) is the unstable isotope that undergoes radioactive decay.",
+            exampleFr = "La radioisotope (Radionucléide) est isotope instable subissant une désintégration radioactive.",
+            exampleAr = "النظير المشع هو نظير غير مستقر يخضع للتفكك الإشعاعي.",
         ),
         MedicalTermEntity(
             id = 1436,
@@ -1597,6 +1884,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈælfə ˈpɑːrtɪkəl/",
+            exampleEn = "The alpha particle (α) is the helium nucleus (2 protons + 2 neutrons) emitted during alpha decay.",
+            exampleFr = "La particule alpha (α) est noyau d'hélium (2 protons + 2 neutrons) émis lors de la désintégration alpha.",
+            exampleAr = "جسيم ألفا هو نواة هيليوم (2 بروتون + 2 نيوترون) تُنبعث أثناء تفكك ألفا.",
         ),
         MedicalTermEntity(
             id = 1437,
@@ -1609,6 +1899,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈbeɪtə ˈpɑːrtɪkəl/",
+            exampleEn = "The beta particle (β) is the electron (β⁻) or positron (β⁺) emitted during beta decay.",
+            exampleFr = "La particule bêta (β) est électron (β⁻) ou positron (β⁺) émis lors de la désintégration bêta.",
+            exampleAr = "جسيم بيتا هو إلكترون (β⁻) أو بوزيترون (β⁺) يُنبعث أثناء تفكك بيتا.",
         ),
         MedicalTermEntity(
             id = 1438,
@@ -1633,6 +1926,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/hæf laɪf/",
+            exampleEn = "The half-life is the time for half of a radioactive substance to decay.",
+            exampleFr = "La demi-vie est temps nécessaire pour que la moitié d'une substance radioactive se désintègre.",
+            exampleAr = "عمر النصف هو الزمن اللازم لتفكك نصف مادة مشعة.",
         ),
         MedicalTermEntity(
             id = 1440,
@@ -1645,6 +1941,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˌreɪdioʊˈæktɪv dɪˈkeɪ/",
+            exampleEn = "The radioactive decay is the process by which an unstable nucleus loses energy by emitting radiation.",
+            exampleFr = "Le désintégration radioactive est processus par lequel un noyau instable perd de l'énergie en émettant un rayonnement.",
+            exampleAr = "التفكك الإشعاعي هو العملية التي تفقد بها نواة غير مستقرة طاقتها بإصدار إشعاع.",
         ),
         MedicalTermEntity(
             id = 1441,
@@ -1657,6 +1956,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/dɪˈkeɪ ˈkɒnstənt/",
+            exampleEn = "The decay constant (λ) is the probability of decay of a radioactive atom per unit time.",
+            exampleFr = "La constante de désintégration (λ) est probabilité de désintégration d'un atome radioactif par unité de temps.",
+            exampleAr = "ثابت التفكك هو احتمال تفكك ذرة مشعة في وحدة الزمن.",
         ),
         MedicalTermEntity(
             id = 1442,
@@ -1669,6 +1971,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ækˈtɪvɪti/",
+            exampleEn = "The activity is the number of radioactive disintegrations per second measured in Becquerels (Bq).",
+            exampleFr = "L'activité est nombre de désintégrations radioactives par seconde mesuré en Becquerels (Bq).",
+            exampleAr = "النشاط هو عدد التفككات الإشعاعية في الثانية يُقاس بالبيكريل.",
         ),
         MedicalTermEntity(
             id = 1443,
@@ -1681,6 +1986,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈbɛkərɛl/",
+            exampleEn = "The becquerel (bq) is the SI unit of radioactivity equal to one disintegration per second.",
+            exampleFr = "La becquerel (Bq) est unité SI de radioactivité égale à une désintégration par seconde.",
+            exampleAr = "البيكريل هو وحدة النظام الدولي للنشاط الإشعاعي تساوي تفككاً واحداً في الثانية.",
         ),
         MedicalTermEntity(
             id = 1444,
@@ -1693,6 +2001,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈkjʊri/",
+            exampleEn = "The curie (ci) is the older unit of radioactivity (1 Ci = 3.7 × 10¹⁰ Bq).",
+            exampleFr = "La curie (Ci) est ancienne unité de radioactivité (1 Ci = 3,7 × 10¹⁰ Bq).",
+            exampleAr = "الكوري هو وحدة قديمة للنشاط الإشعاعي (1 كوري = 3.7 × 10¹⁰ بيكريل).",
         ),
         MedicalTermEntity(
             id = 1445,
@@ -1729,6 +2040,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/əbˈzɔːrbd doʊs/",
+            exampleEn = "The absorbed dose is the energy deposited by radiation per unit mass of tissue measured in Gray (Gy).",
+            exampleFr = "La dose absorbée est énergie déposée par le rayonnement par unité de masse de tissu mesurée en Gray (Gy).",
+            exampleAr = "الجرعة الممتصة هو الطاقة المترسبة بالإشعاع لكل وحدة كتلة من النسيج تُقاس بالغراي.",
         ),
         MedicalTermEntity(
             id = 1448,
@@ -1741,6 +2055,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ɡreɪ/",
+            exampleEn = "The gray (gy) is the SI unit of absorbed radiation dose (1 Gy = 1 J/kg).",
+            exampleFr = "La gray (Gy) est unité SI de dose de rayonnement absorbé (1 Gy = 1 J/kg).",
+            exampleAr = "الغراي هو وحدة النظام الدولي للجرعة الإشعاعية الممتصة (1 غراي = 1 جول/كغ).",
         ),
         MedicalTermEntity(
             id = 1449,
@@ -1753,6 +2070,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ɪˈkwɪvələnt doʊs/",
+            exampleEn = "The equivalent dose is the absorbed dose weighted by a quality factor reflecting biological damage measured in Sieverts (Sv).",
+            exampleFr = "La dose équivalente est dose absorbée pondérée par un facteur de qualité reflétant les dommages biologiques mesurée en Sieverts (Sv).",
+            exampleAr = "الجرعة المكافئة هو الجرعة الممتصة الموزونة بعامل جودة يعكس الضرر البيولوجي تُقاس بالسيفرت.",
         ),
         MedicalTermEntity(
             id = 1450,
@@ -1765,6 +2085,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈsiːvərt/",
+            exampleEn = "The sievert (sv) is the SI unit of equivalent radiation dose measuring biological effect.",
+            exampleFr = "La sievert (Sv) est unité SI de dose équivalente de rayonnement mesurant l'effet biologique.",
+            exampleAr = "السيفرت هو وحدة النظام الدولي للجرعة الإشعاعية المكافئة التي تقيس التأثير البيولوجي.",
         ),
         MedicalTermEntity(
             id = 1451,
@@ -1777,6 +2100,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ɪˈfɛktɪv doʊs/",
+            exampleEn = "The effective dose is the sum of weighted equivalent doses to all irradiated organs.",
+            exampleFr = "La dose efficace est somme des doses équivalentes pondérées à tous les organes irradiés.",
+            exampleAr = "الجرعة الفعالة هو مجموع الجرعات المكافئة الموزونة لجميع الأعضاء المُشعّعة.",
         ),
         MedicalTermEntity(
             id = 1452,
@@ -1789,6 +2115,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˌreɪdiˈeɪʃən prəˈtɛkʃən/",
+            exampleEn = "The radiation protection is the discipline of protecting people from harmful effects of radiation.",
+            exampleFr = "Le radioprotection est discipline de protection des personnes contre les effets nocifs du rayonnement.",
+            exampleAr = "الوقاية من الإشعاع هو فرع حماية الأشخاص من الآثار الضارة للإشعاع.",
         ),
         MedicalTermEntity(
             id = 1453,
@@ -1813,6 +2142,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/doʊˈsɪmɪtər/",
+            exampleEn = "The dosimeter is the device measuring cumulative radiation exposure.",
+            exampleFr = "La dosimètre est appareil mesurant l'exposition cumulative au rayonnement.",
+            exampleAr = "مقياس الجرعات هو جهاز يقيس التعرض التراكمي للإشعاع.",
         ),
         MedicalTermEntity(
             id = 1455,
@@ -1825,6 +2157,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈɡaɪɡər ˈkaʊntər/",
+            exampleEn = "The geiger counter is the device detecting and measuring ionizing radiation.",
+            exampleFr = "La compteur Geiger est appareil détectant et mesurant les rayonnements ionisants.",
+            exampleAr = "عداد غايغر هو جهاز لكشف وقياس الإشعاعات المؤينة.",
         ),
         MedicalTermEntity(
             id = 1456,
@@ -1837,6 +2172,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/stoʊˈkæstɪk/",
+            exampleEn = "The stochastic effect is the random radiation effect (cancer) whose probability increases with dose but severity does not.",
+            exampleFr = "L'effet stochastique est effet aléatoire du rayonnement (cancer) dont la probabilité augmente avec la dose mais pas la sévérité.",
+            exampleAr = "التأثير العشوائي هو تأثير إشعاعي عشوائي (سرطان) تزداد احتماليته مع الجرعة لكن شدته لا تتغير.",
         ),
         MedicalTermEntity(
             id = 1457,
@@ -1849,6 +2187,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/dɪˌtɜːrmɪˈnɪstɪk/",
+            exampleEn = "The deterministic effect is the radiation effect that occurs above a threshold dose with severity increasing with dose.",
+            exampleFr = "L'effet déterministe est effet du rayonnement survenant au-dessus d'une dose seuil avec sévérité croissante.",
+            exampleAr = "التأثير الحتمي هو تأثير إشعاعي يحدث فوق جرعة عتبة مع ازدياد الشدة بزيادة الجرعة.",
         ),
         MedicalTermEntity(
             id = 1458,
@@ -1873,6 +2214,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈɛks reɪ tjuːb/",
+            exampleEn = "The x-ray tube is the device that produces X-rays by accelerating electrons onto a metal target.",
+            exampleFr = "La tube à rayons X est appareil produisant des rayons X en accélérant des électrons sur une cible métallique.",
+            exampleAr = "أنبوب الأشعة السينية هو جهاز ينتج الأشعة السينية بتسريع الإلكترونات نحو هدف معدني.",
         ),
         MedicalTermEntity(
             id = 1460,
@@ -1885,6 +2229,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˌreɪdiˈɒɡrəfi/",
+            exampleEn = "The radiography is the technique of producing images using X-rays.",
+            exampleFr = "La radiographie est technique de production d'images par rayons X.",
+            exampleAr = "التصوير الشعاعي هو تقنية إنتاج الصور باستخدام الأشعة السينية.",
         ),
         MedicalTermEntity(
             id = 1461,
@@ -1909,6 +2256,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/siː tiː skæn/",
+            exampleEn = "The ct scan (computed tomography) is the imaging technique using rotating X-rays to create cross-sectional images.",
+            exampleFr = "La scanner (Tomodensitométrie) est technique d'imagerie utilisant des rayons X rotatifs pour créer des images en coupe.",
+            exampleAr = "التصوير المقطعي المحوسب هو تقنية تصوير تستخدم أشعة سينية دوارة لإنشاء صور مقطعية.",
         ),
         MedicalTermEntity(
             id = 1463,
@@ -1921,6 +2271,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈhaʊnzfiːld/",
+            exampleEn = "The hounsfield unit (hu) is the quantitative scale for describing radiodensity in CT imaging.",
+            exampleFr = "L'unité Hounsfield (UH) est échelle quantitative décrivant la radiodensité en imagerie TDM.",
+            exampleAr = "وحدة هاونزفيلد هو مقياس كمي لوصف كثافة الإشعاع في التصوير المقطعي.",
         ),
         MedicalTermEntity(
             id = 1464,
@@ -1933,6 +2286,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈkɒntrɑːst ˈmiːdiəm/",
+            exampleEn = "The contrast medium is the substance administered to enhance visibility of structures in medical imaging.",
+            exampleFr = "La produit de contraste est substance administrée pour améliorer la visibilité des structures en imagerie médicale.",
+            exampleAr = "مادة التباين هو مادة تُعطى لتعزيز رؤية البنى في التصوير الطبي.",
         ),
         MedicalTermEntity(
             id = 1465,
@@ -1945,6 +2301,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ɛm ɑːr aɪ/",
+            exampleEn = "The mri (magnetic resonance imaging) is the imaging technique using magnetic fields and radio waves to visualize soft tissues.",
+            exampleFr = "L'IRM (Imagerie par Résonance Magnétique) est technique d'imagerie utilisant des champs magnétiques et des ondes radio pour visualiser les tissus mous.",
+            exampleAr = "التصوير بالرنين المغناطيسي هو تقنية تصوير تستخدم المجالات المغناطيسية وموجات الراديو لتصوير الأنسجة الرخوة.",
         ),
         MedicalTermEntity(
             id = 1466,
@@ -1957,6 +2316,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈnjuːkliər/",
+            exampleEn = "The nuclear magnetic resonance (nmr) is the physical phenomenon underlying MRI based on hydrogen nuclei absorbing radio waves in a magnetic field.",
+            exampleFr = "La résonance Magnétique Nucléaire (RMN) est phénomène physique à la base de l'IRM basé sur l'absorption d'ondes radio par les noyaux d'hydrogène dans un champ magnétique.",
+            exampleAr = "الرنين المغناطيسي النووي هو الظاهرة الفيزيائية التي يقوم عليها التصوير بالرنين المغناطيسي.",
         ),
         MedicalTermEntity(
             id = 1467,
@@ -1969,6 +2331,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/pɛt skæn/",
+            exampleEn = "The pet scan (positron emission tomography) is the imaging technique using radioactive tracers to visualize metabolic activity.",
+            exampleFr = "La TEP (Tomographie par Émission de Positons) est technique d'imagerie utilisant des traceurs radioactifs pour visualiser l'activité métabolique.",
+            exampleAr = "التصوير المقطعي بالإصدار البوزيتروني هو تقنية تصوير تستخدم متتبعات مشعة لتصور النشاط الأيضي.",
         ),
         MedicalTermEntity(
             id = 1468,
@@ -1981,6 +2346,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/spɛkt/",
+            exampleEn = "The spect (single photon emission ct) is the nuclear imaging technique using gamma-ray emitting tracers.",
+            exampleFr = "La TEMP (Tomographie d'Émission Monophotonique) est technique d'imagerie nucléaire utilisant des traceurs émettant des rayons gamma.",
+            exampleAr = "التصوير المقطعي بإصدار الفوتون الواحد هو تقنية تصوير نووي تستخدم متتبعات باعثة لأشعة غاما.",
         ),
         MedicalTermEntity(
             id = 1469,
@@ -1993,6 +2361,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/sɪnˈtɪɡrəfi/",
+            exampleEn = "The scintigraphy is the diagnostic technique using radioactive tracers to produce images of organs.",
+            exampleFr = "La scintigraphie est technique diagnostique utilisant des traceurs radioactifs pour produire des images d'organes.",
+            exampleAr = "التصوير الومضاني هو تقنية تشخيصية تستخدم متتبعات مشعة لإنتاج صور للأعضاء.",
         ),
         MedicalTermEntity(
             id = 1470,
@@ -2005,6 +2376,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˌreɪdiˈɒlədʒi/",
+            exampleEn = "The radiology is the medical specialty using imaging technologies for diagnosis and treatment.",
+            exampleFr = "La radiologie est spécialité médicale utilisant les technologies d'imagerie pour le diagnostic et le traitement.",
+            exampleAr = "الأشعة (علم الإشعاع) هو التخصص الطبي الذي يستخدم تقنيات التصوير للتشخيص والعلاج.",
         ),
         MedicalTermEntity(
             id = 1471,
@@ -2029,6 +2403,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˌreɪdioʊˈθɛrəpi/",
+            exampleEn = "The radiotherapy is the use of ionizing radiation to treat cancer by destroying tumor cells.",
+            exampleFr = "La radiothérapie est utilisation de rayonnements ionisants pour traiter le cancer en détruisant les cellules tumorales.",
+            exampleAr = "العلاج الإشعاعي هو استخدام الإشعاعات المؤينة لعلاج السرطان بتدمير الخلايا الورمية.",
         ),
         MedicalTermEntity(
             id = 1473,
@@ -2053,6 +2430,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈnjuːkliər ˈmɛdɪsɪn/",
+            exampleEn = "The nuclear medicine is the medical specialty using radioactive substances for diagnosis and therapy.",
+            exampleFr = "La médecine nucléaire est spécialité médicale utilisant des substances radioactives pour le diagnostic et la thérapie.",
+            exampleAr = "الطب النووي هو تخصص طبي يستخدم مواد مشعة للتشخيص والعلاج.",
         ),
         MedicalTermEntity(
             id = 1475,
@@ -2065,6 +2445,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ɪˈlɛktrɪk tʃɑːrdʒ/",
+            exampleEn = "The electric charge is the fundamental property of matter measured in Coulombs (C).",
+            exampleFr = "La charge électrique est propriété fondamentale de la matière mesurée en Coulombs (C).",
+            exampleAr = "الشحنة الكهربائية هو خاصية أساسية للمادة تُقاس بالكولوم.",
         ),
         MedicalTermEntity(
             id = 1476,
@@ -2077,6 +2460,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ɪˈlɛktrɪk ˈkʌrənt/",
+            exampleEn = "The electric current is the flow of electric charge measured in Amperes (A).",
+            exampleFr = "La courant électrique est flux de charge électrique mesuré en Ampères (A).",
+            exampleAr = "التيار الكهربائي هو تدفق الشحنة الكهربائية يُقاس بالأمبير.",
         ),
         MedicalTermEntity(
             id = 1477,
@@ -2089,6 +2475,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ˈvoʊltɪdʒ/",
+            exampleEn = "The voltage (potential difference) is the electrical potential difference between two points measured in Volts (V).",
+            exampleFr = "Le tension (Différence de potentiel) est différence de potentiel électrique entre deux points mesurée en Volts (V).",
+            exampleAr = "الجهد الكهربائي (فرق الكمون) هو فرق الجهد الكهربائي بين نقطتين يُقاس بالفولت.",
         ),
         MedicalTermEntity(
             id = 1478,
@@ -2101,6 +2490,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/rɪˈzɪstəns/",
+            exampleEn = "The resistance is the opposition to current flow measured in Ohms (Ω).",
+            exampleFr = "La résistance est opposition au flux de courant mesurée en Ohms (Ω).",
+            exampleAr = "المقاومة هو معارضة تدفق التيار تُقاس بالأوم.",
         ),
         MedicalTermEntity(
             id = 1479,
@@ -2113,6 +2505,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/oʊmz lɔː/",
+            exampleEn = "The ohm's law is the relationship V = IR between voltage, current, and resistance.",
+            exampleFr = "La loi d'Ohm est relation V = IR entre tension, courant et résistance.",
+            exampleAr = "قانون أوم هو العلاقة V = IR بين الجهد والتيار والمقاومة.",
         ),
         MedicalTermEntity(
             id = 1480,
@@ -2125,6 +2520,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/kəˈpæsɪtəns/",
+            exampleEn = "The capacitance is the ability to store electric charge measured in Farads (F).",
+            exampleFr = "La capacité (Capacitance) est capacité de stocker la charge électrique mesurée en Farads (F).",
+            exampleAr = "السعة الكهربائية هو القدرة على تخزين الشحنة الكهربائية تُقاس بالفاراد.",
         ),
         MedicalTermEntity(
             id = 1481,
@@ -2137,6 +2535,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ˈmɛmbreɪn pəˈtɛnʃəl/",
+            exampleEn = "The membrane potential is the electrical potential difference across a cell membrane (about -70 mV at rest).",
+            exampleFr = "La potentiel de membrane est différence de potentiel électrique à travers une membrane cellulaire (environ -70 mV au repos).",
+            exampleAr = "جهد الغشاء (كمون الغشاء) هو فرق الجهد الكهربائي عبر غشاء الخلية (حوالي -70 ميلي فولت في الراحة).",
         ),
         MedicalTermEntity(
             id = 1482,
@@ -2149,6 +2550,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/diːˌpoʊlərɪˈzeɪʃən/",
+            exampleEn = "The depolarization is the shift of membrane potential toward positive values (less negative).",
+            exampleFr = "Le dépolarisation est déplacement du potentiel de membrane vers des valeurs positives (moins négatif).",
+            exampleAr = "زوال الاستقطاب هو تحول جهد الغشاء نحو القيم الموجبة (أقل سلبية).",
         ),
         MedicalTermEntity(
             id = 1483,
@@ -2161,6 +2565,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/riːˌpoʊlərɪˈzeɪʃən/",
+            exampleEn = "The repolarization is the return of membrane potential to its resting negative value.",
+            exampleFr = "Le repolarisation est retour du potentiel de membrane à sa valeur négative de repos.",
+            exampleAr = "عودة الاستقطاب هو عودة جهد الغشاء إلى قيمته السلبية في حالة الراحة.",
         ),
         MedicalTermEntity(
             id = 1484,
@@ -2173,6 +2580,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ˌhaɪpərˌpoʊlərɪˈzeɪʃən/",
+            exampleEn = "The hyperpolarization is the shift of membrane potential to more negative values than resting.",
+            exampleFr = "L'hyperpolarisation est déplacement du potentiel de membrane vers des valeurs plus négatives que le repos.",
+            exampleAr = "فرط الاستقطاب هو تحول جهد الغشاء إلى قيم أكثر سلبية من حالة الراحة.",
         ),
         MedicalTermEntity(
             id = 1485,
@@ -2185,6 +2595,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ˈækʃən pəˈtɛnʃəl/",
+            exampleEn = "The action potential is the rapid temporary reversal of membrane potential along a nerve or muscle fiber.",
+            exampleFr = "La potentiel d'action est inversion rapide et temporaire du potentiel de membrane le long d'une fibre nerveuse ou musculaire.",
+            exampleAr = "جهد الفعل هو انعكاس سريع ومؤقت لجهد الغشاء على طول ليف عصبي أو عضلي.",
         ),
         MedicalTermEntity(
             id = 1486,
@@ -2197,6 +2610,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ɪˌlɛktroʊˈkɑːrdioʊɡræm/",
+            exampleEn = "The electrocardiogram (ecg/ekg) is the recording of the electrical activity of the heart over time.",
+            exampleFr = "L'électrocardiogramme (ECG) est enregistrement de l'activité électrique du cœur au cours du temps.",
+            exampleAr = "تخطيط كهربية القلب هو تسجيل النشاط الكهربائي للقلب عبر الزمن.",
         ),
         MedicalTermEntity(
             id = 1487,
@@ -2209,6 +2625,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ɪˌlɛktroʊɪnˈsɛfəloʊɡræm/",
+            exampleEn = "The electroencephalogram (eeg) is the recording of the electrical activity of the brain using scalp electrodes.",
+            exampleFr = "L'électroencéphalogramme (EEG) est enregistrement de l'activité électrique du cerveau par des électrodes sur le cuir chevelu.",
+            exampleAr = "تخطيط كهربية الدماغ هو تسجيل النشاط الكهربائي للدماغ باستخدام أقطاب كهربائية على فروة الرأس.",
         ),
         MedicalTermEntity(
             id = 1488,
@@ -2221,6 +2640,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ɪˌlɛktroʊˈmaɪoʊɡræm/",
+            exampleEn = "The electromyogram (emg) is the recording of the electrical activity of skeletal muscles.",
+            exampleFr = "L'électromyogramme (EMG) est enregistrement de l'activité électrique des muscles squelettiques.",
+            exampleAr = "تخطيط كهربية العضل هو تسجيل النشاط الكهربائي للعضلات الهيكلية.",
         ),
         MedicalTermEntity(
             id = 1489,
@@ -2233,6 +2655,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ɪˈlɛktroʊd/",
+            exampleEn = "The electrode is the conductor used to make contact with a non-metallic part of a circuit (body tissue).",
+            exampleFr = "L'électrode est conducteur utilisé pour établir un contact avec une partie non métallique d'un circuit (tissu corporel).",
+            exampleAr = "القطب الكهربائي هو موصل يُستخدم لإجراء تماس مع جزء غير معدني من دارة (نسيج الجسم).",
         ),
         MedicalTermEntity(
             id = 1490,
@@ -2245,6 +2670,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/diːˈfɪbrɪleɪtər/",
+            exampleEn = "The defibrillator is the device delivering an electric shock to restore normal heart rhythm.",
+            exampleFr = "La défibrillateur est appareil délivrant un choc électrique pour restaurer le rythme cardiaque normal.",
+            exampleAr = "مزيل الرجفان هو جهاز يوصل صدمة كهربائية لاستعادة نظم القلب الطبيعي.",
         ),
         MedicalTermEntity(
             id = 1491,
@@ -2257,6 +2685,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ˈpeɪsˌmeɪkər/",
+            exampleEn = "The pacemaker is the implanted device generating electrical impulses to regulate heartbeat.",
+            exampleFr = "La stimulateur cardiaque (Pacemaker) est appareil implanté générant des impulsions électriques pour réguler les battements cardiaques.",
+            exampleAr = "منظم ضربات القلب هو جهاز مزروع يولد نبضات كهربائية لتنظيم ضربات القلب.",
         ),
         MedicalTermEntity(
             id = 1492,
@@ -2269,6 +2700,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ɪmˈpiːdəns/",
+            exampleEn = "The impedance is the total opposition to alternating current in a circuit (Ω).",
+            exampleFr = "L'impédance est opposition totale au courant alternatif dans un circuit (Ω).",
+            exampleAr = "الممانعة هو المعارضة الكلية للتيار المتناوب في دارة (أوم).",
         ),
         MedicalTermEntity(
             id = 1493,
@@ -2281,6 +2715,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Électricité",
             ipaPhonetic = "/ˌbaɪoʊɪmˈpiːdəns/",
+            exampleEn = "The bioimpedance is the measurement of electrical impedance of body tissues for body composition analysis.",
+            exampleFr = "La bioimpédance est mesure de l'impédance électrique des tissus corporels pour l'analyse de la composition corporelle.",
+            exampleAr = "الممانعة الحيوية هو قياس الممانعة الكهربائية لأنسجة الجسم لتحليل تركيب الجسم.",
         ),
         MedicalTermEntity(
             id = 1494,
@@ -2293,6 +2730,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ɪˌlɛktroʊmæɡˈnɛtɪk/",
+            exampleEn = "The electromagnetic wave is the wave consisting of oscillating electric and magnetic fields propagating at the speed of light.",
+            exampleFr = "L'onde électromagnétique est onde constituée de champs électrique et magnétique oscillants se propageant à la vitesse de la lumière.",
+            exampleAr = "الموجة الكهرومغناطيسية هو موجة تتكون من حقول كهربائية ومغناطيسية متذبذبة تنتشر بسرعة الضوء.",
         ),
         MedicalTermEntity(
             id = 1495,
@@ -2305,6 +2745,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ɪˌlɛktroʊmæɡˈnɛtɪk ˈspɛktrəm/",
+            exampleEn = "The electromagnetic spectrum is the complete range of electromagnetic radiation from radio waves to gamma rays.",
+            exampleFr = "La spectre électromagnétique est gamme complète de rayonnement électromagnétique des ondes radio aux rayons gamma.",
+            exampleAr = "الطيف الكهرومغناطيسي هو النطاق الكامل للإشعاع الكهرومغناطيسي من موجات الراديو إلى أشعة غاما.",
         ),
         MedicalTermEntity(
             id = 1496,
@@ -2317,6 +2760,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˈreɪdioʊ weɪvz/",
+            exampleEn = "The radio waves is the longest wavelength electromagnetic radiation used in MRI and communication.",
+            exampleFr = "L'ondes radio est rayonnement électromagnétique de plus grande longueur d'onde utilisé en IRM et communication.",
+            exampleAr = "موجات الراديو هو إشعاع كهرومغناطيسي بأطول طول موجي يُستخدم في الرنين المغناطيسي والاتصالات.",
         ),
         MedicalTermEntity(
             id = 1497,
@@ -2353,6 +2799,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˈvɪzɪbəl laɪt/",
+            exampleEn = "The visible light is the portion of the electromagnetic spectrum visible to the human eye (380-750 nm).",
+            exampleFr = "La lumière visible est portion du spectre électromagnétique visible par l'œil humain (380-750 nm).",
+            exampleAr = "الضوء المرئي هو الجزء من الطيف الكهرومغناطيسي المرئي للعين البشرية (380-750 نانومتر).",
         ),
         MedicalTermEntity(
             id = 1500,
@@ -2377,6 +2826,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˈfoʊtɒn/",
+            exampleEn = "The photon is the quantum (packet) of electromagnetic energy.",
+            exampleFr = "Le photon est quantum (paquet) d'énergie électromagnétique.",
+            exampleAr = "الفوتون هو كمية (حزمة) من الطاقة الكهرومغناطيسية.",
         ),
         MedicalTermEntity(
             id = 1502,
@@ -2389,6 +2841,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌfoʊtoʊɪˈlɛktrɪk/",
+            exampleEn = "The photoelectric effect is the emission of electrons from a material when hit by photons of sufficient energy.",
+            exampleFr = "L'effet photoélectrique est émission d'électrons d'un matériau frappé par des photons d'énergie suffisante.",
+            exampleAr = "التأثير الكهروضوئي هو انبعاث الإلكترونات من مادة عند اصطدامها بفوتونات ذات طاقة كافية.",
         ),
         MedicalTermEntity(
             id = 1503,
@@ -2401,6 +2856,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˈkɒmptən/",
+            exampleEn = "The compton scattering is the scattering of a photon by a charged particle resulting in decreased photon energy.",
+            exampleFr = "Le diffusion Compton est diffusion d'un photon par une particule chargée entraînant une diminution de l'énergie du photon.",
+            exampleAr = "تشتت كومبتون هو تشتت الفوتون بواسطة جسيم مشحون مما يؤدي إلى انخفاض طاقة الفوتون.",
         ),
         MedicalTermEntity(
             id = 1504,
@@ -2413,6 +2871,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/pɛər prəˈdʌkʃən/",
+            exampleEn = "The pair production is the creation of an electron-positron pair from a high-energy photon near a nucleus.",
+            exampleFr = "Le production de paires est création d'une paire électron-positron à partir d'un photon de haute énergie près d'un noyau.",
+            exampleAr = "إنتاج الأزواج هو تكوين زوج إلكترون-بوزيترون من فوتون عالي الطاقة بالقرب من نواة.",
         ),
         MedicalTermEntity(
             id = 1505,
@@ -2425,6 +2886,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/əˌtɛnjuˈeɪʃən/",
+            exampleEn = "The attenuation is the reduction in intensity of radiation as it passes through matter.",
+            exampleFr = "L'atténuation est réduction de l'intensité du rayonnement lorsqu'il traverse la matière.",
+            exampleAr = "التوهين هو انخفاض شدة الإشعاع عند مروره عبر المادة.",
         ),
         MedicalTermEntity(
             id = 1506,
@@ -2437,6 +2901,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/bɪər ˈlæmbərt/",
+            exampleEn = "The beer-lambert law is the law relating light absorption to concentration and path length of a solution.",
+            exampleFr = "La loi de Beer-Lambert est loi reliant l'absorption de la lumière à la concentration et à la longueur du trajet dans une solution.",
+            exampleAr = "قانون بير-لامبرت هو القانون الذي يربط امتصاص الضوء بالتركيز وطول المسار في محلول.",
         ),
         MedicalTermEntity(
             id = 1507,
@@ -2449,6 +2916,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌspɛktroʊfoʊˈtɒmɪtri/",
+            exampleEn = "The spectrophotometry is the technique measuring light absorption at specific wavelengths to determine concentration.",
+            exampleFr = "La spectrophotométrie est technique mesurant l'absorption de la lumière à des longueurs d'onde spécifiques pour déterminer la concentration.",
+            exampleAr = "قياس الطيف الضوئي هو تقنية قياس امتصاص الضوء عند أطوال موجية محددة لتحديد التركيز.",
         ),
         MedicalTermEntity(
             id = 1508,
@@ -2461,6 +2931,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/əbˈzɔːrbəns/",
+            exampleEn = "The absorbance is the measure of the amount of light absorbed by a solution.",
+            exampleFr = "L'absorbance est mesure de la quantité de lumière absorbée par une solution.",
+            exampleAr = "الامتصاصية هو مقياس لكمية الضوء الممتص بواسطة محلول.",
         ),
         MedicalTermEntity(
             id = 1509,
@@ -2473,6 +2946,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/trænzˈmɪtəns/",
+            exampleEn = "The transmittance is the fraction of incident light that passes through a solution.",
+            exampleFr = "La transmittance est fraction de la lumière incidente traversant une solution.",
+            exampleAr = "النفاذية هو النسبة من الضوء الساقط التي تمر عبر محلول.",
         ),
         MedicalTermEntity(
             id = 1510,
@@ -2485,6 +2961,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/pʌls ɒkˈsɪmɪtri/",
+            exampleEn = "The pulse oximetry is the non-invasive method measuring blood oxygen saturation (SpO2) using light absorption.",
+            exampleFr = "L'oxymétrie de pouls est méthode non invasive mesurant la saturation en oxygène du sang (SpO2) par absorption de la lumière.",
+            exampleAr = "قياس التأكسج النبضي هو طريقة غير اجتياحية لقياس تشبع الدم بالأكسجين (SpO2) باستخدام امتصاص الضوء.",
         ),
         MedicalTermEntity(
             id = 1511,
@@ -2497,6 +2976,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˌbaɪoʊmɪˈkænɪks/",
+            exampleEn = "The biomechanics is the application of mechanical principles to biological systems and body movement.",
+            exampleFr = "La biomécanique est application des principes mécaniques aux systèmes biologiques et au mouvement corporel.",
+            exampleAr = "الميكانيكا الحيوية هو تطبيق المبادئ الميكانيكية على الأنظمة الحيوية وحركة الجسم.",
         ),
         MedicalTermEntity(
             id = 1512,
@@ -2509,6 +2991,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˈliːvər/",
+            exampleEn = "The lever is the rigid bar that rotates around a fixed point (fulcrum) to amplify force or motion.",
+            exampleFr = "La levier est barre rigide tournant autour d'un point fixe (pivot) pour amplifier la force ou le mouvement.",
+            exampleAr = "الرافعة هو قضيب صلب يدور حول نقطة ثابتة (نقطة الارتكاز) لتضخيم القوة أو الحركة.",
         ),
         MedicalTermEntity(
             id = 1513,
@@ -2521,6 +3006,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˈfʊlkrəm/",
+            exampleEn = "The fulcrum is the fixed point around which a lever rotates.",
+            exampleFr = "Le pivot (Point d'appui) est point fixe autour duquel un levier tourne.",
+            exampleAr = "نقطة الارتكاز هو النقطة الثابتة التي تدور حولها الرافعة.",
         ),
         MedicalTermEntity(
             id = 1514,
@@ -2533,6 +3021,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/tɔːrk/",
+            exampleEn = "The torque (moment) is the rotational force causing an object to turn around an axis (τ = F × d).",
+            exampleFr = "La couple (Moment de force) est force de rotation causant la rotation d'un objet autour d'un axe (τ = F × d).",
+            exampleAr = "العزم (عزم القوة) هو القوة الدورانية التي تسبب دوران جسم حول محور (τ = F × d).",
         ),
         MedicalTermEntity(
             id = 1515,
@@ -2545,6 +3036,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˈsɛntər əv ˈɡrævɪti/",
+            exampleEn = "The center of gravity is the point where the total weight of a body is concentrated.",
+            exampleFr = "La centre de gravité est point où le poids total d'un corps est concentré.",
+            exampleAr = "مركز الثقل هو النقطة التي يتركز فيها الوزن الكلي للجسم.",
         ),
         MedicalTermEntity(
             id = 1516,
@@ -2557,6 +3051,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˌɛlæˈstɪsɪti/",
+            exampleEn = "The elasticity is the ability of a material to return to its original shape after deformation.",
+            exampleFr = "L'élasticité est capacité d'un matériau à retrouver sa forme originale après déformation.",
+            exampleAr = "المرونة هو قدرة المادة على العودة إلى شكلها الأصلي بعد التشوه.",
         ),
         MedicalTermEntity(
             id = 1517,
@@ -2569,6 +3066,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/jʌŋz ˈmɒdjʊləs/",
+            exampleEn = "The young's modulus is the measure of the stiffness of a material (stress/strain ratio).",
+            exampleFr = "La module de Young est mesure de la rigidité d'un matériau (rapport contrainte/déformation).",
+            exampleAr = "معامل يونغ هو مقياس صلابة المادة (نسبة الإجهاد إلى الانفعال).",
         ),
         MedicalTermEntity(
             id = 1518,
@@ -2581,6 +3081,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/strɛs/",
+            exampleEn = "The stress (mechanical) is the force applied per unit area of a material (Pa).",
+            exampleFr = "La contrainte (mécanique) est force appliquée par unité de surface d'un matériau (Pa).",
+            exampleAr = "الإجهاد (الميكانيكي) هو القوة المطبقة لكل وحدة مساحة من المادة (باسكال).",
         ),
         MedicalTermEntity(
             id = 1519,
@@ -2593,6 +3096,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/streɪn/",
+            exampleEn = "The strain is the relative change in shape or size of a material under stress.",
+            exampleFr = "Le déformation est changement relatif de forme ou de taille d'un matériau sous contrainte.",
+            exampleAr = "الانفعال هو التغير النسبي في شكل أو حجم المادة تحت الإجهاد.",
         ),
         MedicalTermEntity(
             id = 1520,
@@ -2605,6 +3111,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/hʊks lɔː/",
+            exampleEn = "The hooke's law is the law stating stress is proportional to strain within the elastic limit (F = kx).",
+            exampleFr = "La loi de Hooke est loi stipulant que la contrainte est proportionnelle à la déformation dans la limite élastique.",
+            exampleAr = "قانون هوك هو القانون الذي ينص على أن الإجهاد يتناسب مع الانفعال ضمن حد المرونة.",
         ),
         MedicalTermEntity(
             id = 1521,
@@ -2617,6 +3126,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˈfrɪkʃən/",
+            exampleEn = "The friction is the force resisting relative motion between surfaces in contact.",
+            exampleFr = "Le frottement est force résistant au mouvement relatif entre les surfaces en contact.",
+            exampleAr = "الاحتكاك هو القوة التي تقاوم الحركة النسبية بين السطوح المتلامسة.",
         ),
         MedicalTermEntity(
             id = 1522,
@@ -2641,6 +3153,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/kɪˈnɛtɪk ˈɛnərdʒi/",
+            exampleEn = "The kinetic energy is the energy of motion (KE = ½mv²).",
+            exampleFr = "L'énergie cinétique est énergie du mouvement (EC = ½mv²).",
+            exampleAr = "الطاقة الحركية هو طاقة الحركة (KE = ½mv²).",
         ),
         MedicalTermEntity(
             id = 1524,
@@ -2665,6 +3180,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˈnjuːtənz lɔːz/",
+            exampleEn = "The newton's laws of motion is the three fundamental laws governing the motion of objects.",
+            exampleFr = "Le lois de Newton est les trois lois fondamentales régissant le mouvement des objets.",
+            exampleAr = "قوانين نيوتن للحركة هو القوانين الأساسية الثلاثة التي تحكم حركة الأجسام.",
         ),
         MedicalTermEntity(
             id = 1526,
@@ -2677,6 +3195,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/ˈɡrævɪti/",
+            exampleEn = "The gravity is the force of attraction between masses (g = 9.81 m/s² on Earth).",
+            exampleFr = "La gravité (Pesanteur) est force d'attraction entre les masses (g = 9,81 m/s² sur Terre).",
+            exampleAr = "الجاذبية هو قوة الجذب بين الكتل (g = 9.81 م/ث² على الأرض).",
         ),
         MedicalTermEntity(
             id = 1527,
@@ -2689,6 +3210,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/sɛnˈtrɪpɪtəl/",
+            exampleEn = "The centripetal force is the force directed toward the center of a circular path keeping an object in circular motion.",
+            exampleFr = "La force centripète est force dirigée vers le centre d'un chemin circulaire maintenant un objet en mouvement circulaire.",
+            exampleAr = "القوة الجاذبة المركزية هو القوة الموجهة نحو مركز مسار دائري تبقي الجسم في حركة دائرية.",
         ),
         MedicalTermEntity(
             id = 1528,
@@ -2701,6 +3225,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ˈætəm/",
+            exampleEn = "The atom is the smallest unit of an element consisting of protons, neutrons, and electrons.",
+            exampleFr = "L'atome est plus petite unité d'un élément constituée de protons, neutrons et électrons.",
+            exampleAr = "الذرة هو أصغر وحدة من العنصر تتكون من بروتونات ونيوترونات وإلكترونات.",
         ),
         MedicalTermEntity(
             id = 1529,
@@ -2713,6 +3240,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ˈproʊtɒn/",
+            exampleEn = "The proton is the positively charged subatomic particle in the nucleus.",
+            exampleFr = "Le proton est particule subatomique chargée positivement dans le noyau.",
+            exampleAr = "البروتون هو جسيم دون ذري موجب الشحنة في النواة.",
         ),
         MedicalTermEntity(
             id = 1530,
@@ -2725,6 +3255,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ˈnjuːtrɒn/",
+            exampleEn = "The neutron is the uncharged subatomic particle in the nucleus.",
+            exampleFr = "Le neutron est particule subatomique non chargée dans le noyau.",
+            exampleAr = "النيوترون هو جسيم دون ذري عديم الشحنة في النواة.",
         ),
         MedicalTermEntity(
             id = 1531,
@@ -2737,6 +3270,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ɪˈlɛktrɒn/",
+            exampleEn = "The electron is the negatively charged subatomic particle orbiting the nucleus.",
+            exampleFr = "L'électron est particule subatomique chargée négativement en orbite autour du noyau.",
+            exampleAr = "الإلكترون هو جسيم دون ذري سالب الشحنة يدور حول النواة.",
         ),
         MedicalTermEntity(
             id = 1532,
@@ -2749,6 +3285,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/əˈtɒmɪk ˈnʌmbər/",
+            exampleEn = "The atomic number (z) is the number of protons in an atom defining the element.",
+            exampleFr = "La numéro atomique (Z) est nombre de protons dans un atome définissant l'élément.",
+            exampleAr = "العدد الذري هو عدد البروتونات في الذرة الذي يحدد العنصر.",
         ),
         MedicalTermEntity(
             id = 1533,
@@ -2761,6 +3300,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/mæs ˈnʌmbər/",
+            exampleEn = "The mass number (a) is the total number of protons and neutrons in an atomic nucleus.",
+            exampleFr = "La nombre de masse (A) est nombre total de protons et de neutrons dans un noyau atomique.",
+            exampleAr = "العدد الكتلي هو العدد الكلي للبروتونات والنيوترونات في نواة ذرية.",
         ),
         MedicalTermEntity(
             id = 1534,
@@ -2785,6 +3327,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ˈnjuːkliər ˈfɪʃən/",
+            exampleEn = "The nuclear fission is the splitting of a heavy nucleus into lighter nuclei releasing enormous energy.",
+            exampleFr = "Le fission nucléaire est division d'un noyau lourd en noyaux plus légers libérant une énergie énorme.",
+            exampleAr = "الانشطار النووي هو انقسام نواة ثقيلة إلى نوى أخف مع تحرر طاقة هائلة.",
         )
 
     )

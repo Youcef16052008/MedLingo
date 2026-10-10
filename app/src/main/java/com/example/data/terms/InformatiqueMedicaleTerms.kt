@@ -145,6 +145,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌbaɪoʊstəˈtɪstɪks/",
+            exampleEn = "The biostatistics is the application of statistics to biological and medical data.",
+            exampleFr = "La biostatistique est application de la statistique aux données biologiques et médicales.",
+            exampleAr = "الإحصاء الحيوي هو تطبيق الإحصاء على البيانات البيولوجية والطبية.",
         ),
         MedicalTermEntity(
             id = 1797,
@@ -157,6 +160,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/stəˈtɪstɪks/",
+            exampleEn = "The statistics is the science of collecting, organizing, analyzing, and interpreting data.",
+            exampleFr = "La statistique est science de la collecte, organisation, analyse et interprétation des données.",
+            exampleAr = "الإحصاء هو علم جمع وتنظيم وتحليل وتفسير البيانات.",
         ),
         MedicalTermEntity(
             id = 1798,
@@ -217,6 +223,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈdeɪtəsɛt/",
+            exampleEn = "The dataset is the structured collection of related data organized for analysis.",
+            exampleFr = "Le jeu de données est collection structurée de données connexes organisées pour l'analyse.",
+            exampleAr = "مجموعة البيانات هو مجموعة منظمة من البيانات المترابطة مرتبة للتحليل.",
         ),
         MedicalTermEntity(
             id = 1803,
@@ -229,6 +238,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌɒbzɜːrˈveɪʃən/",
+            exampleEn = "The observation is the single recorded measurement or data point.",
+            exampleFr = "L'observation est mesure unique enregistrée ou point de données.",
+            exampleAr = "الملاحظة (المشاهدة) هو قياس مسجل واحد أو نقطة بيانات.",
         ),
         MedicalTermEntity(
             id = 1804,
@@ -241,6 +253,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈfriːkwənsi/",
+            exampleEn = "The frequency is the number of times a particular value occurs in a dataset.",
+            exampleFr = "La fréquence est nombre de fois qu'une valeur particulière apparaît dans un jeu de données.",
+            exampleAr = "التكرار هو عدد مرات ظهور قيمة معينة في مجموعة البيانات.",
         ),
         MedicalTermEntity(
             id = 1805,
@@ -253,6 +268,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈrɛlətɪv/",
+            exampleEn = "The relative frequency is the proportion of observations with a particular value (frequency/total).",
+            exampleFr = "La fréquence relative est proportion d'observations avec une valeur particulière (fréquence/total).",
+            exampleAr = "التكرار النسبي هو نسبة الملاحظات ذات قيمة معينة (التكرار/المجموع).",
         ),
         MedicalTermEntity(
             id = 1806,
@@ -265,6 +283,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈkjuːmjʊlətɪv/",
+            exampleEn = "The cumulative frequency is the running total of frequencies up to a given value.",
+            exampleFr = "La fréquence cumulée est total cumulé des fréquences jusqu'à une valeur donnée.",
+            exampleAr = "التكرار التراكمي هو المجموع التراكمي للتكرارات حتى قيمة معينة.",
         ),
         MedicalTermEntity(
             id = 1807,
@@ -277,6 +298,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/pərˈsɛntɪdʒ/",
+            exampleEn = "The percentage is the proportion expressed as a fraction of 100.",
+            exampleFr = "Le pourcentage est proportion exprimée comme fraction de 100.",
+            exampleAr = "النسبة المئوية هو نسبة معبر عنها ككسر من 100.",
         ),
         MedicalTermEntity(
             id = 1808,
@@ -301,6 +325,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/reɪt/",
+            exampleEn = "The rate is the measure of frequency of an event in a defined population over time.",
+            exampleFr = "La taux est mesure de la fréquence d'un événement dans une population définie au cours du temps.",
+            exampleAr = "المعدل هو مقياس لتكرار حدث في مجتمع محدد عبر الزمن.",
         ),
         MedicalTermEntity(
             id = 1810,
@@ -313,6 +340,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/prəˈpɔːrʃən/",
+            exampleEn = "The proportion is the type of ratio where the numerator is included in the denominator (part/whole).",
+            exampleFr = "Le proportion est type de rapport où le numérateur est inclus dans le dénominateur (partie/tout).",
+            exampleAr = "التناسب هو نوع من النسبة حيث يكون البسط مشمولاً في المقام (جزء/كل).",
         ),
         MedicalTermEntity(
             id = 1811,
@@ -325,6 +355,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈvɛəriəbəl/",
+            exampleEn = "The variable is the characteristic or attribute that can take different values.",
+            exampleFr = "La variable est caractéristique ou attribut pouvant prendre différentes valeurs.",
+            exampleAr = "المتغير هو خاصية أو سمة يمكن أن تأخذ قيماً مختلفة.",
         ),
         MedicalTermEntity(
             id = 1812,
@@ -337,6 +370,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt/",
+            exampleEn = "The independent variable is the variable manipulated or controlled by the researcher (cause).",
+            exampleFr = "La variable indépendante est variable manipulée ou contrôlée par le chercheur (cause).",
+            exampleAr = "المتغير المستقل هو المتغير الذي يتحكم به الباحث أو يعالجه (السبب).",
         ),
         MedicalTermEntity(
             id = 1813,
@@ -349,6 +385,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/dɪˈpɛndənt/",
+            exampleEn = "The dependent variable is the variable measured or observed as the outcome (effect).",
+            exampleFr = "La variable dépendante est variable mesurée ou observée comme résultat (effet).",
+            exampleAr = "المتغير التابع هو المتغير المقاس أو الملاحظ كنتيجة (الأثر).",
         ),
         MedicalTermEntity(
             id = 1814,
@@ -361,6 +400,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/kənˈfaʊndɪŋ/",
+            exampleEn = "The confounding variable is the extraneous variable that correlates with both independent and dependent variables.",
+            exampleFr = "La variable de confusion (confondante) est variable étrangère corrélée à la fois avec les variables indépendante et dépendante.",
+            exampleAr = "المتغير المربك هو متغير خارجي يرتبط بكلا المتغيرين المستقل والتابع.",
         ),
         MedicalTermEntity(
             id = 1815,
@@ -373,6 +415,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈkwɒlɪtətɪv/",
+            exampleEn = "The qualitative variable (categorical) is the variable describing qualities or categories without numerical order.",
+            exampleFr = "La variable qualitative (Catégorielle) est variable décrivant des qualités ou catégories sans ordre numérique.",
+            exampleAr = "المتغير النوعي هو متغير يصف صفات أو فئات بدون ترتيب رقمي.",
         ),
         MedicalTermEntity(
             id = 1816,
@@ -385,6 +430,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈkwɒntɪtətɪv/",
+            exampleEn = "The quantitative variable (numerical) is the variable expressed as a number that can be measured.",
+            exampleFr = "La variable quantitative (Numérique) est variable exprimée sous forme de nombre pouvant être mesuré.",
+            exampleAr = "المتغير الكمي هو متغير معبر عنه كرقم يمكن قياسه.",
         ),
         MedicalTermEntity(
             id = 1817,
@@ -397,6 +445,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈnɒmɪnəl/",
+            exampleEn = "The nominal variable is the categorical variable with no natural order (e.g., blood type, sex).",
         ),
         MedicalTermEntity(
             id = 1818,
@@ -409,6 +458,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈɔːrdɪnəl/",
+            exampleEn = "The ordinal variable is the categorical variable with a meaningful order but unequal intervals (e.g., pain scale).",
         ),
         MedicalTermEntity(
             id = 1819,
@@ -421,6 +471,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/dɪˈskriːt/",
+            exampleEn = "The discrete variable is the quantitative variable taking only specific countable values (e.g., number of children).",
         ),
         MedicalTermEntity(
             id = 1820,
@@ -433,6 +484,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/kənˈtɪnjuəs/",
+            exampleEn = "The continuous variable is the quantitative variable taking any value within a range (e.g., height, weight, temperature).",
         ),
         MedicalTermEntity(
             id = 1821,
@@ -445,6 +497,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈɪntərvəl skeɪl/",
+            exampleEn = "The interval scale is the scale with equal intervals but no true zero point (e.g., temperature in °C).",
         ),
         MedicalTermEntity(
             id = 1822,
@@ -457,6 +510,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈreɪʃioʊ skeɪl/",
+            exampleEn = "The ratio scale is the scale with equal intervals and a true zero point (e.g., weight, height, age).",
         ),
         MedicalTermEntity(
             id = 1823,
@@ -469,6 +523,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈbaɪnəri/",
+            exampleEn = "The binary variable (dichotomous) is the variable with only two possible values (e.g., yes/no, male/female, alive/dead).",
         ),
         MedicalTermEntity(
             id = 1824,
@@ -481,6 +536,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˌpɒpjʊˈleɪʃən/",
+            exampleEn = "The population is the entire group of individuals or items of interest for a study.",
+            exampleFr = "Le population est ensemble du groupe d'individus ou d'éléments d'intérêt pour une étude.",
+            exampleAr = "المجتمع (الإحصائي) هو المجموعة الكاملة من الأفراد أو العناصر محل الاهتمام في دراسة.",
         ),
         MedicalTermEntity(
             id = 1825,
@@ -493,6 +551,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsæmpəl/",
+            exampleEn = "The sample is the subset of the population selected for study.",
+            exampleFr = "L'échantillon est sous-ensemble de la population sélectionné pour l'étude.",
+            exampleAr = "العينة هو مجموعة فرعية من المجتمع مختارة للدراسة.",
         ),
         MedicalTermEntity(
             id = 1826,
@@ -505,6 +566,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsæmpəl saɪz/",
+            exampleEn = "The sample size (n) is the number of observations or individuals in a sample.",
+            exampleFr = "La taille de l'échantillon (n) est nombre d'observations ou d'individus dans un échantillon.",
+            exampleAr = "حجم العينة هو عدد الملاحظات أو الأفراد في العينة.",
         ),
         MedicalTermEntity(
             id = 1827,
@@ -517,6 +581,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsæmplɪŋ/",
+            exampleEn = "The sampling is the process of selecting a subset from a population for study.",
+            exampleFr = "L'échantillonnage est processus de sélection d'un sous-ensemble d'une population pour l'étude.",
+            exampleAr = "أخذ العينات هو عملية اختيار مجموعة فرعية من المجتمع للدراسة.",
         ),
         MedicalTermEntity(
             id = 1828,
@@ -529,6 +596,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈrændəm/",
+            exampleEn = "The random sampling is the method where every member of the population has an equal chance of selection.",
+            exampleFr = "L'échantillonnage aléatoire est méthode où chaque membre de la population a une chance égale d'être sélectionné.",
+            exampleAr = "العينة العشوائية هو طريقة يكون فيها لكل فرد من المجتمع فرصة متساوية للاختيار.",
         ),
         MedicalTermEntity(
             id = 1829,
@@ -553,6 +623,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈstrætɪfaɪd/",
+            exampleEn = "Stratified sampling refers to dividing the population into subgroups (strata) and sampling from each.",
+            exampleFr = "L'échantillonnage stratifié est division de la population en sous-groupes (strates) et échantillonnage de chacun.",
+            exampleAr = "العينة الطبقية هو تقسيم المجتمع إلى مجموعات فرعية (طبقات) وأخذ عينة من كل منها.",
         ),
         MedicalTermEntity(
             id = 1831,
@@ -565,6 +638,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˌsɪstəˈmætɪk/",
+            exampleEn = "Systematic sampling refers to selecting every kth individual from a list after a random start.",
+            exampleFr = "L'échantillonnage systématique est sélection de chaque kème individu d'une liste après un départ aléatoire.",
+            exampleAr = "العينة المنتظمة هو اختيار كل فرد رقمه k من قائمة بعد بداية عشوائية.",
         ),
         MedicalTermEntity(
             id = 1832,
@@ -589,6 +665,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/kənˈviːniəns/",
+            exampleEn = "The convenience sampling is the non-random method selecting individuals who are easily accessible.",
+            exampleFr = "L'échantillonnage de convenance est méthode non aléatoire sélectionnant les individus facilement accessibles.",
+            exampleAr = "عينة الملاءمة هو طريقة غير عشوائية لاختيار الأفراد الذين يسهل الوصول إليهم.",
         ),
         MedicalTermEntity(
             id = 1834,
@@ -601,6 +680,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsæmplɪŋ ˈɛrər/",
+            exampleEn = "The sampling error is the difference between a sample statistic and the true population parameter.",
+            exampleFr = "L'erreur d'échantillonnage est différence entre une statistique d'échantillon et le vrai paramètre de la population.",
+            exampleAr = "خطأ العينة هو الفرق بين إحصائية العينة والمعلمة الحقيقية للمجتمع.",
         ),
         MedicalTermEntity(
             id = 1835,
@@ -613,6 +695,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsæmplɪŋ baɪəs/",
+            exampleEn = "The sampling bias is the systematic error arising from a non-representative sample.",
+            exampleFr = "Le biais d'échantillonnage est erreur systématique provenant d'un échantillon non représentatif.",
+            exampleAr = "تحيز العينة هو خطأ منهجي ناتج عن عينة غير ممثلة.",
         ),
         MedicalTermEntity(
             id = 1836,
@@ -625,6 +710,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/pəˈræmɪtər/",
+            exampleEn = "The parameter is the numerical characteristic describing a population (e.g., population mean μ).",
         ),
         MedicalTermEntity(
             id = 1837,
@@ -637,6 +723,7 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/stəˈtɪstɪk/",
+            exampleEn = "The statistic is the numerical characteristic computed from a sample (e.g., sample mean x̄).",
         ),
         MedicalTermEntity(
             id = 1838,
@@ -649,6 +736,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˌrɛprɪˌzɛntəˈtɪvnəs/",
+            exampleEn = "The representativeness is the degree to which a sample accurately reflects the population.",
+            exampleFr = "La représentativité est degré auquel un échantillon reflète fidèlement la population.",
+            exampleAr = "التمثيلية هو درجة دقة تمثيل العينة للمجتمع.",
         ),
         MedicalTermEntity(
             id = 1839,
@@ -661,6 +751,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/ˈsɛntrəl ˈtɛndənsi/",
+            exampleEn = "The central tendency is the single value representing the center or typical value of a dataset.",
+            exampleFr = "La tendance centrale est valeur unique représentant le centre ou la valeur typique d'un jeu de données.",
+            exampleAr = "النزعة المركزية هو قيمة واحدة تمثل مركز أو القيمة النموذجية لمجموعة بيانات.",
         ),
         MedicalTermEntity(
             id = 1840,
@@ -673,6 +766,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/miːn/",
+            exampleEn = "The mean (arithmetic mean) is the sum of all values divided by the number of values (x̄ = Σx/n).",
+            exampleFr = "La moyenne (Moyenne arithmétique) est somme de toutes les valeurs divisée par le nombre de valeurs (x̄ = Σx/n).",
+            exampleAr = "المتوسط (الوسط الحسابي) هو مجموع جميع القيم مقسوماً على عددها (x̄ = Σx/n).",
         ),
         MedicalTermEntity(
             id = 1841,
@@ -685,6 +781,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/ˈweɪtɪd miːn/",
+            exampleEn = "The weighted mean is the mean where each value is multiplied by a weight reflecting its importance.",
+            exampleFr = "La moyenne pondérée est moyenne où chaque valeur est multipliée par un poids reflétant son importance.",
+            exampleAr = "المتوسط المرجح هو متوسط حيث تُضرب كل قيمة بوزن يعكس أهميتها.",
         ),
         MedicalTermEntity(
             id = 1842,
@@ -697,6 +796,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/ˌdʒiːəˈmɛtrɪk/",
+            exampleEn = "The geometric mean is the nth root of the product of n values; used for rates and ratios.",
+            exampleFr = "La moyenne géométrique est racine nième du produit de n valeurs; utilisée pour les taux et les rapports.",
+            exampleAr = "المتوسط الهندسي هو الجذر النوني لحاصل ضرب n قيمة؛ يُستخدم للمعدلات والنسب.",
         ),
         MedicalTermEntity(
             id = 1843,
@@ -709,6 +811,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/ˈmiːdiən/",
+            exampleEn = "The median is the middle value when data is arranged in order; divides data into two equal halves.",
+            exampleFr = "La médiane est valeur du milieu quand les données sont ordonnées; divise les données en deux moitiés égales.",
+            exampleAr = "الوسيط هو القيمة الوسطى عند ترتيب البيانات؛ تقسم البيانات إلى نصفين متساويين.",
         ),
         MedicalTermEntity(
             id = 1844,
@@ -721,6 +826,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/moʊd/",
+            exampleEn = "The mode is the most frequently occurring value in a dataset.",
+            exampleFr = "La mode est valeur la plus fréquemment observée dans un jeu de données.",
+            exampleAr = "المنوال هو القيمة الأكثر تكراراً في مجموعة بيانات.",
         ),
         MedicalTermEntity(
             id = 1845,
@@ -733,6 +841,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/ˌjuːnɪˈmoʊdəl/",
+            exampleEn = "The unimodal is the distribution with one mode (one peak).",
+            exampleFr = "L'unimodal est distribution avec un seul mode (un seul pic).",
+            exampleAr = "أحادي المنوال هو توزيع بمنوال واحد (قمة واحدة).",
         ),
         MedicalTermEntity(
             id = 1846,
@@ -745,6 +856,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/baɪˈmoʊdəl/",
+            exampleEn = "The bimodal is the distribution with two modes (two peaks).",
+            exampleFr = "Le bimodal est distribution avec deux modes (deux pics).",
+            exampleAr = "ثنائي المنوال هو توزيع بمنوالين (قمتان).",
         ),
         MedicalTermEntity(
             id = 1847,
@@ -757,6 +871,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/ˌmʌltɪˈmoʊdəl/",
+            exampleEn = "The multimodal is the distribution with more than two modes.",
+            exampleFr = "Le multimodal est distribution avec plus de deux modes.",
+            exampleAr = "متعدد المنوال هو توزيع بأكثر من منوالين.",
         ),
         MedicalTermEntity(
             id = 1848,
@@ -769,6 +886,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tendance Centrale",
             ipaPhonetic = "/ˈaʊtlaɪər/",
+            exampleEn = "The outlier is the observation significantly different from other values in the dataset.",
+            exampleFr = "La valeur aberrante est observation significativement différente des autres valeurs du jeu de données.",
+            exampleAr = "القيمة الشاذة هو ملاحظة مختلفة بشكل ملحوظ عن القيم الأخرى في مجموعة البيانات.",
         ),
         MedicalTermEntity(
             id = 1849,
@@ -781,6 +901,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/dɪˈspɜːrʒən/",
+            exampleEn = "The dispersion (variability) is the extent to which data values are spread out from the center.",
+            exampleFr = "Le dispersion (Variabilité) est étendue dans laquelle les valeurs des données sont dispersées par rapport au centre.",
+            exampleAr = "التشتت (التباينية) هو مدى انتشار قيم البيانات عن المركز.",
         ),
         MedicalTermEntity(
             id = 1850,
@@ -793,6 +916,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/reɪndʒ/",
+            exampleEn = "The range is the difference between the maximum and minimum values in a dataset.",
+            exampleFr = "L'étendue est différence entre les valeurs maximale et minimale d'un jeu de données.",
+            exampleAr = "المدى هو الفرق بين القيمة الأعلى والقيمة الأدنى في مجموعة البيانات.",
         ),
         MedicalTermEntity(
             id = 1851,
@@ -805,6 +931,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˌɪntəˈkwɔːrtaɪl/",
+            exampleEn = "The interquartile range (iqr) is the range of the middle 50% of data (Q3 - Q1).",
+            exampleFr = "L'écart interquartile (EIQ) est étendue des 50% centraux des données (Q3 - Q1).",
+            exampleAr = "المدى الربيعي هو مدى الـ 50% الوسطى من البيانات (ر3 - ر1).",
         ),
         MedicalTermEntity(
             id = 1852,
@@ -829,6 +958,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/pərˈsɛntaɪl/",
+            exampleEn = "The percentile is the value below which a given percentage of data falls.",
+            exampleFr = "La percentile (Centile) est valeur en dessous de laquelle un pourcentage donné de données se situe.",
+            exampleAr = "المئين هو القيمة التي تقع نسبة مئوية معينة من البيانات تحتها.",
         ),
         MedicalTermEntity(
             id = 1854,
@@ -841,6 +973,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˌdiːviˈeɪʃən/",
+            exampleEn = "The deviation is the difference between an observed value and the mean (xi - x̄).",
+            exampleFr = "L'écart (Déviation) est différence entre une valeur observée et la moyenne (xi - x̄).",
+            exampleAr = "الانحراف هو الفرق بين قيمة ملاحظة والمتوسط (xi - x̄).",
         ),
         MedicalTermEntity(
             id = 1855,
@@ -853,6 +988,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈvɛəriəns/",
+            exampleEn = "The variance is the average of the squared deviations from the mean (σ² or s²).",
+            exampleFr = "La variance est moyenne des écarts au carré par rapport à la moyenne (σ² ou s²).",
+            exampleAr = "التباين هو متوسط مربعات الانحرافات عن المتوسط (σ² أو s²).",
         ),
         MedicalTermEntity(
             id = 1856,
@@ -865,6 +1003,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈstændərd ˌdiːviˈeɪʃən/",
+            exampleEn = "The standard deviation (sd) is the square root of the variance measuring spread around the mean (σ or s).",
+            exampleFr = "L'écart-type est racine carrée de la variance mesurant la dispersion autour de la moyenne (σ ou s).",
+            exampleAr = "الانحراف المعياري هو الجذر التربيعي للتباين يقيس الانتشار حول المتوسط (σ أو s).",
         ),
         MedicalTermEntity(
             id = 1857,
@@ -877,6 +1018,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˌkoʊɪˈfɪʃənt əv ˌvɛəriˈeɪʃən/",
+            exampleEn = "The coefficient of variation (cv) is the ratio of standard deviation to the mean expressed as percentage (CV = SD/mean × 100).",
+            exampleFr = "La coefficient de variation (CV) est rapport de l'écart-type à la moyenne exprimé en pourcentage (CV = ET/moyenne × 100).",
+            exampleAr = "معامل الاختلاف هو نسبة الانحراف المعياري إلى المتوسط معبراً عنها بالنسبة المئوية.",
         ),
         MedicalTermEntity(
             id = 1858,
@@ -889,6 +1033,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈstændərd ˈɛrər/",
+            exampleEn = "The standard error (se) is the standard deviation of the sampling distribution of a statistic (SE = SD/√n).",
+            exampleFr = "L'erreur standard (ES) est écart-type de la distribution d'échantillonnage d'une statistique (ES = ET/√n).",
+            exampleAr = "الخطأ المعياري هو الانحراف المعياري لتوزيع العينات لإحصائية ما (SE = SD/√n).",
         ),
         MedicalTermEntity(
             id = 1859,
@@ -901,6 +1048,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈskjuːnəs/",
+            exampleEn = "The skewness is the measure of asymmetry in the distribution of data.",
+            exampleFr = "L'asymétrie est mesure d'asymétrie dans la distribution des données.",
+            exampleAr = "الالتواء هو مقياس لعدم التماثل في توزيع البيانات.",
         ),
         MedicalTermEntity(
             id = 1860,
@@ -913,6 +1063,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈpɒzɪtɪv skjuː/",
+            exampleEn = "The positive skew (right skew) is the distribution with a longer tail on the right side (mean > median > mode).",
+            exampleFr = "L'asymétrie positive (à droite) est distribution avec une queue plus longue à droite (moyenne > médiane > mode).",
+            exampleAr = "التواء موجب (يميني) هو توزيع بذيل أطول على الجانب الأيمن (المتوسط > الوسيط > المنوال).",
         ),
         MedicalTermEntity(
             id = 1861,
@@ -925,6 +1078,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈnɛɡətɪv skjuː/",
+            exampleEn = "The negative skew (left skew) is the distribution with a longer tail on the left side (mean < median < mode).",
+            exampleFr = "L'asymétrie négative (à gauche) est distribution avec une queue plus longue à gauche (moyenne < médiane < mode).",
+            exampleAr = "التواء سالب (يساري) هو توزيع بذيل أطول على الجانب الأيسر (المتوسط < الوسيط < المنوال).",
         ),
         MedicalTermEntity(
             id = 1862,
@@ -937,6 +1093,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/kɜːrˈtoʊsɪs/",
+            exampleEn = "The kurtosis is the measure of the peakedness or flatness of a distribution.",
+            exampleFr = "Le kurtosis (Aplatissement) est mesure du caractère pointu ou plat d'une distribution.",
+            exampleAr = "التفلطح هو مقياس لحدة القمة أو تسطح التوزيع.",
         ),
         MedicalTermEntity(
             id = 1863,
@@ -949,6 +1108,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˌprɒbəˈbɪlɪti/",
+            exampleEn = "The probability is the likelihood of an event occurring expressed as a number between 0 and 1.",
+            exampleFr = "La probabilité est vraisemblance de survenue d'un événement exprimée comme nombre entre 0 et 1.",
+            exampleAr = "الاحتمال هو احتمالية وقوع حدث معبر عنها كرقم بين 0 و1.",
         ),
         MedicalTermEntity(
             id = 1864,
@@ -961,6 +1123,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ɪˈvɛnt/",
+            exampleEn = "The event is the outcome or set of outcomes of an experiment.",
+            exampleFr = "L'événement est résultat ou ensemble de résultats d'une expérience.",
+            exampleAr = "الحدث هو نتيجة أو مجموعة نتائج لتجربة.",
         ),
         MedicalTermEntity(
             id = 1865,
@@ -997,6 +1162,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/kənˈdɪʃənəl/",
+            exampleEn = "The conditional probability is the probability of an event given that another event has occurred P(A|B).",
+            exampleFr = "La probabilité conditionnelle est probabilité d'un événement sachant qu'un autre événement s'est produit P(A|B).",
+            exampleAr = "الاحتمال الشرطي هو احتمال حدث بشرط أن حدثاً آخر قد وقع P(A|B).",
         ),
         MedicalTermEntity(
             id = 1868,
@@ -1009,6 +1177,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/beɪz ˈθɪərəm/",
+            exampleEn = "The bayes' theorem is the formula for calculating conditional probability using prior knowledge.",
+            exampleFr = "La théorème de Bayes est formule pour calculer la probabilité conditionnelle à l'aide de connaissances antérieures.",
+            exampleAr = "نظرية بايز هو صيغة لحساب الاحتمال الشرطي باستخدام معرفة مسبقة.",
         ),
         MedicalTermEntity(
             id = 1869,
@@ -1021,6 +1192,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˌprɒbəˈbɪlɪti/",
+            exampleEn = "The probability distribution is the function describing the likelihood of each possible outcome of a random variable.",
+            exampleFr = "Le distribution de probabilité est fonction décrivant la vraisemblance de chaque résultat possible d'une variable aléatoire.",
+            exampleAr = "التوزيع الاحتمالي هو دالة تصف احتمالية كل نتيجة ممكنة لمتغير عشوائي.",
         ),
         MedicalTermEntity(
             id = 1870,
@@ -1033,6 +1207,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˈnɔːrməl/",
+            exampleEn = "The normal distribution (gaussian) is the symmetric bell-shaped probability distribution defined by mean and standard deviation.",
+            exampleFr = "Le distribution normale (Gaussienne) est distribution de probabilité symétrique en forme de cloche définie par la moyenne et l'écart-type.",
+            exampleAr = "التوزيع الطبيعي (الغاوسي) هو توزيع احتمالي متماثل على شكل جرس محدد بالمتوسط والانحراف المعياري.",
         ),
         MedicalTermEntity(
             id = 1871,
@@ -1045,6 +1222,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/bɛl kɜːrv/",
+            exampleEn = "The bell curve is the characteristic shape of the normal distribution graph.",
+            exampleFr = "La courbe en cloche est forme caractéristique du graphique de la distribution normale.",
+            exampleAr = "منحنى الجرس هو الشكل المميز لرسم التوزيع الطبيعي.",
         ),
         MedicalTermEntity(
             id = 1872,
@@ -1057,6 +1237,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˈstændərd ˈnɔːrməl/",
+            exampleEn = "The standard normal distribution is the normal distribution with mean = 0 and standard deviation = 1.",
+            exampleFr = "Le distribution normale centrée réduite est distribution normale avec moyenne = 0 et écart-type = 1.",
+            exampleAr = "التوزيع الطبيعي المعياري هو توزيع طبيعي بمتوسط = 0 وانحراف معياري = 1.",
         ),
         MedicalTermEntity(
             id = 1873,
@@ -1069,6 +1252,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ziː skɔːr/",
+            exampleEn = "The z-score (standard score) is the number of standard deviations a value is from the mean (Z = (x-μ)/σ).",
+            exampleFr = "La score Z (Cote Z) est nombre d'écarts-types qu'une valeur est de la moyenne (Z = (x-μ)/σ).",
+            exampleAr = "درجة Z المعيارية هو عدد الانحرافات المعيارية التي تبعدها قيمة عن المتوسط (Z = (x-μ)/σ).",
         ),
         MedicalTermEntity(
             id = 1874,
@@ -1093,6 +1279,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/baɪˈnoʊmiəl/",
+            exampleEn = "The binomial distribution is the probability distribution of the number of successes in a fixed number of independent trials.",
+            exampleFr = "Le distribution binomiale est distribution de probabilité du nombre de succès dans un nombre fixe d'essais indépendants.",
+            exampleAr = "التوزيع ذو الحدين هو توزيع احتمالي لعدد النجاحات في عدد ثابت من التجارب المستقلة.",
         ),
         MedicalTermEntity(
             id = 1876,
@@ -1105,6 +1294,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˈpwɑːsɒn/",
+            exampleEn = "The poisson distribution is the distribution describing the number of rare events in a fixed interval of time or space.",
+            exampleFr = "Le distribution de Poisson est distribution décrivant le nombre d'événements rares dans un intervalle fixe de temps ou d'espace.",
+            exampleAr = "توزيع بواسون هو توزيع يصف عدد الأحداث النادرة في فترة زمنية أو مكانية ثابتة.",
         ),
         MedicalTermEntity(
             id = 1877,
@@ -1117,6 +1309,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/kaɪ skwɛər/",
+            exampleEn = "The chi-square distribution (χ²) is the distribution used for testing independence and goodness of fit.",
+            exampleFr = "Le distribution du Chi-deux (χ²) est distribution utilisée pour tester l'indépendance et l'adéquation.",
+            exampleAr = "توزيع كاي تربيع (χ²) هو توزيع يُستخدم لاختبار الاستقلالية وجودة التوافق.",
         ),
         MedicalTermEntity(
             id = 1878,
@@ -1129,6 +1324,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˈstjuːdənts tiː/",
+            exampleEn = "The student's t-distribution is the distribution used for small sample inference when population SD is unknown.",
+            exampleFr = "Le distribution t de Student est distribution utilisée pour l'inférence sur petits échantillons quand l'écart-type est inconnu.",
+            exampleAr = "توزيع ت لستيودنت هو توزيع يُستخدم للاستدلال في العينات الصغيرة عندما يكون الانحراف المعياري للمجتمع مجهولاً.",
         ),
         MedicalTermEntity(
             id = 1879,
@@ -1141,6 +1339,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ɛf dɪstrɪˈbjuːʃən/",
+            exampleEn = "The f-distribution is the distribution used in ANOVA to compare variances between groups.",
+            exampleFr = "Le distribution F (Fisher) est distribution utilisée en ANOVA pour comparer les variances entre groupes.",
+            exampleAr = "توزيع F (فيشر) هو توزيع يُستخدم في تحليل التباين لمقارنة التباينات بين المجموعات.",
         ),
         MedicalTermEntity(
             id = 1880,
@@ -1153,6 +1354,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/dɪˈɡriːz əv ˈfriːdəm/",
+            exampleEn = "The degrees of freedom (df) is the number of independent values that can vary in a statistical calculation.",
+            exampleFr = "La degrés de liberté (dl) est nombre de valeurs indépendantes pouvant varier dans un calcul statistique.",
+            exampleAr = "درجات الحرية هو عدد القيم المستقلة التي يمكن أن تتغير في حساب إحصائي.",
         ),
         MedicalTermEntity(
             id = 1881,
@@ -1165,6 +1369,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Estimation et IC",
             ipaPhonetic = "/ˌɛstɪˈmeɪʃən/",
+            exampleEn = "The estimation is the process of using sample data to approximate a population parameter.",
+            exampleFr = "L'estimation est processus d'utilisation des données d'échantillon pour approcher un paramètre de population.",
+            exampleAr = "التقدير هو عملية استخدام بيانات العينة لتقريب معلمة المجتمع.",
         ),
         MedicalTermEntity(
             id = 1882,
@@ -1177,6 +1384,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Estimation et IC",
             ipaPhonetic = "/pɔɪnt ˈɛstɪmət/",
+            exampleEn = "The point estimate is the single value used to estimate a population parameter.",
+            exampleFr = "L'estimation ponctuelle est valeur unique utilisée pour estimer un paramètre de population.",
+            exampleAr = "التقدير النقطي هو قيمة واحدة تُستخدم لتقدير معلمة المجتمع.",
         ),
         MedicalTermEntity(
             id = 1883,
@@ -1189,6 +1399,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Estimation et IC",
             ipaPhonetic = "/ˈɪntərvəl ˈɛstɪmət/",
+            exampleEn = "The interval estimate is the range of values used to estimate a population parameter.",
+            exampleFr = "L'estimation par intervalle est plage de valeurs utilisée pour estimer un paramètre de population.",
+            exampleAr = "التقدير بالفترة هو مدى من القيم يُستخدم لتقدير معلمة المجتمع.",
         ),
         MedicalTermEntity(
             id = 1884,
@@ -1201,6 +1414,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Estimation et IC",
             ipaPhonetic = "/ˈkɒnfɪdəns ˈɪntərvəl/",
+            exampleEn = "The confidence interval (ci) is the range of values within which the true population parameter is expected to lie with a given probability.",
+            exampleFr = "L'intervalle de confiance (IC) est plage de valeurs dans laquelle le vrai paramètre de population devrait se trouver avec une probabilité donnée.",
+            exampleAr = "فترة الثقة هو مدى من القيم يُتوقع أن تقع فيه المعلمة الحقيقية للمجتمع باحتمالية معينة.",
         ),
         MedicalTermEntity(
             id = 1885,
@@ -1213,6 +1429,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Estimation et IC",
             ipaPhonetic = "/ˈkɒnfɪdəns ˈlɛvəl/",
+            exampleEn = "The confidence level is the probability that the confidence interval contains the true parameter (usually 95%).",
+            exampleFr = "Le niveau de confiance est probabilité que l'intervalle de confiance contienne le vrai paramètre (habituellement 95%).",
+            exampleAr = "مستوى الثقة هو احتمالية أن تحتوي فترة الثقة على المعلمة الحقيقية (عادة 95%).",
         ),
         MedicalTermEntity(
             id = 1886,
@@ -1225,6 +1444,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Estimation et IC",
             ipaPhonetic = "/ˈmɑːrdʒɪn əv ˈɛrər/",
+            exampleEn = "The margin of error is the amount added and subtracted from the point estimate to create a confidence interval.",
+            exampleFr = "La marge d'erreur est montant ajouté et soustrait de l'estimation ponctuelle pour créer un intervalle de confiance.",
+            exampleAr = "هامش الخطأ هو المقدار المضاف والمطروح من التقدير النقطي لإنشاء فترة الثقة.",
         ),
         MedicalTermEntity(
             id = 1887,
@@ -1237,6 +1459,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/haɪˈpɒθɪsɪs/",
+            exampleEn = "The hypothesis is the tentative statement about a population parameter to be tested.",
+            exampleFr = "L'hypothèse est énoncé provisoire sur un paramètre de population à tester.",
+            exampleAr = "الفرضية هو عبارة مبدئية عن معلمة مجتمع يتم اختبارها.",
         ),
         MedicalTermEntity(
             id = 1888,
@@ -1249,6 +1474,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/nʌl haɪˈpɒθɪsɪs/",
+            exampleEn = "The null hypothesis (h₀) is the default hypothesis stating no effect or no difference.",
+            exampleFr = "L'hypothèse nulle (H₀) est hypothèse par défaut énonçant l'absence d'effet ou de différence.",
+            exampleAr = "الفرضية الصفرية هو الفرضية الافتراضية التي تنص على عدم وجود تأثير أو فرق.",
         ),
         MedicalTermEntity(
             id = 1889,
@@ -1261,6 +1489,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/ɔːlˈtɜːrnətɪv/",
+            exampleEn = "The alternative hypothesis (h₁ or hₐ) is the hypothesis stating there is an effect or a difference.",
+            exampleFr = "L'hypothèse alternative (H₁ ou Hₐ) est hypothèse énonçant qu'il existe un effet ou une différence.",
+            exampleAr = "الفرضية البديلة هو الفرضية التي تنص على وجود تأثير أو فرق.",
         ),
         MedicalTermEntity(
             id = 1890,
@@ -1273,6 +1504,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/sɪɡˈnɪfɪkəns ˈlɛvəl/",
+            exampleEn = "The significance level (α) is the probability of rejecting a true null hypothesis (usually 0.05 or 5%).",
+            exampleFr = "Le niveau de signification (α) est probabilité de rejeter une hypothèse nulle vraie (habituellement 0,05 ou 5%).",
+            exampleAr = "مستوى الدلالة هو احتمال رفض فرضية صفرية صحيحة (عادة 0.05 أو 5%).",
         ),
         MedicalTermEntity(
             id = 1891,
@@ -1285,6 +1519,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/piː ˈvæljuː/",
+            exampleEn = "The p-value is the probability of obtaining results at least as extreme as observed, assuming H₀ is true.",
+            exampleFr = "La valeur p est probabilité d'obtenir des résultats au moins aussi extrêmes que ceux observés, en supposant H₀ vraie.",
+            exampleAr = "القيمة الاحتمالية p هو احتمال الحصول على نتائج بنفس القدر من التطرف أو أكثر، بافتراض صحة الفرضية الصفرية.",
         ),
         MedicalTermEntity(
             id = 1892,
@@ -1297,6 +1534,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/stəˈtɪstɪkəl sɪɡˈnɪfɪkəns/",
+            exampleEn = "The statistical significance is the result is unlikely due to chance alone (p < α).",
+            exampleFr = "Le signification statistique est le résultat est peu probable par le seul hasard (p < α).",
+            exampleAr = "الدلالة الإحصائية هو النتيجة من غير المرجح أن تكون بسبب الصدفة وحدها (p < α).",
         ),
         MedicalTermEntity(
             id = 1893,
@@ -1309,6 +1549,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/taɪp wʌn ˈɛrər/",
+            exampleEn = "Type I error (α error) refers to rejecting a true null hypothesis (false positive).",
+            exampleFr = "L'erreur de type I (erreur α) est rejet d'une hypothèse nulle vraie (faux positif).",
+            exampleAr = "خطأ النوع الأول هو رفض فرضية صفرية صحيحة (إيجابي كاذب).",
         ),
         MedicalTermEntity(
             id = 1894,
@@ -1321,6 +1564,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/taɪp tuː ˈɛrər/",
+            exampleEn = "Type II error (β error) refers to failing to reject a false null hypothesis (false negative).",
+            exampleFr = "L'erreur de type II (erreur β) est échec du rejet d'une hypothèse nulle fausse (faux négatif).",
+            exampleAr = "خطأ النوع الثاني هو الإخفاق في رفض فرضية صفرية خاطئة (سلبي كاذب).",
         ),
         MedicalTermEntity(
             id = 1895,
@@ -1333,6 +1579,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/ˈpaʊər/",
+            exampleEn = "The statistical power (1 - β) is the probability of correctly rejecting a false null hypothesis.",
+            exampleFr = "La puissance statistique (1 - β) est probabilité de rejeter correctement une hypothèse nulle fausse.",
+            exampleAr = "القوة الإحصائية هو احتمال رفض فرضية صفرية خاطئة بشكل صحيح.",
         ),
         MedicalTermEntity(
             id = 1896,
@@ -1345,6 +1594,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/wʌn teɪld/",
+            exampleEn = "The one-tailed test is the test examining an effect in only one direction.",
+            exampleFr = "La test unilatéral est test examinant un effet dans une seule direction.",
+            exampleAr = "اختبار أحادي الطرف هو اختبار يفحص التأثير في اتجاه واحد فقط.",
         ),
         MedicalTermEntity(
             id = 1897,
@@ -1357,6 +1609,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/tuː teɪld/",
+            exampleEn = "The two-tailed test is the test examining an effect in both directions.",
+            exampleFr = "La test bilatéral est test examinant un effet dans les deux directions.",
+            exampleAr = "اختبار ثنائي الطرف هو اختبار يفحص التأثير في كلا الاتجاهين.",
         ),
         MedicalTermEntity(
             id = 1898,
@@ -1369,6 +1624,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/tɛst stəˈtɪstɪk/",
+            exampleEn = "The test statistic is the calculated value used to decide whether to reject the null hypothesis.",
+            exampleFr = "La statistique de test est valeur calculée utilisée pour décider du rejet ou non de l'hypothèse nulle.",
+            exampleAr = "إحصائية الاختبار هو قيمة محسوبة تُستخدم لتحديد رفض أو قبول الفرضية الصفرية.",
         ),
         MedicalTermEntity(
             id = 1899,
@@ -1381,6 +1639,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/ˈkrɪtɪkəl ˈvæljuː/",
+            exampleEn = "The critical value is the boundary value determining the rejection region for H₀.",
+            exampleFr = "La valeur critique est valeur limite déterminant la région de rejet de H₀.",
+            exampleAr = "القيمة الحرجة هو القيمة الحدية التي تحدد منطقة رفض الفرضية الصفرية.",
         ),
         MedicalTermEntity(
             id = 1900,
@@ -1393,6 +1654,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests d'Hypothèses",
             ipaPhonetic = "/rɪˈdʒɛkʃən ˈriːdʒən/",
+            exampleEn = "The rejection region is the area in the sampling distribution leading to rejection of H₀.",
+            exampleFr = "Le région de rejet est zone dans la distribution d'échantillonnage menant au rejet de H₀.",
+            exampleAr = "منطقة الرفض هو المنطقة في توزيع العينات التي تؤدي إلى رفض الفرضية الصفرية.",
         ),
         MedicalTermEntity(
             id = 1901,
@@ -1405,6 +1669,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/ziː tɛst/",
+            exampleEn = "The z-test is the test comparing a sample mean to a known population mean when σ is known and n is large.",
+            exampleFr = "La test Z est test comparant une moyenne d'échantillon à une moyenne de population connue quand σ est connu et n est grand.",
+            exampleAr = "اختبار Z هو اختبار يقارن متوسط العينة بمتوسط المجتمع المعروف عندما يكون σ معروفاً و n كبيراً.",
         ),
         MedicalTermEntity(
             id = 1902,
@@ -1417,6 +1684,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/tiː tɛst/",
+            exampleEn = "The t-test (student's t-test) is the test comparing means when sample size is small and population SD is unknown.",
+            exampleFr = "La test t (Test t de Student) est test comparant des moyennes quand la taille d'échantillon est petite et l'écart-type est inconnu.",
+            exampleAr = "اختبار t (اختبار ستيودنت) هو اختبار يقارن المتوسطات عندما يكون حجم العينة صغيراً والانحراف المعياري للمجتمع مجهولاً.",
         ),
         MedicalTermEntity(
             id = 1903,
@@ -1429,6 +1699,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt/",
+            exampleEn = "The independent samples t-test is the t-test comparing means of two separate groups.",
+            exampleFr = "La test t pour échantillons indépendants est test t comparant les moyennes de deux groupes distincts.",
+            exampleAr = "اختبار t للعينات المستقلة هو اختبار t يقارن متوسطات مجموعتين منفصلتين.",
         ),
         MedicalTermEntity(
             id = 1904,
@@ -1441,6 +1714,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/pɛərd/",
+            exampleEn = "The paired samples t-test is the t-test comparing means from the same group measured at two different times.",
+            exampleFr = "La test t pour échantillons appariés est test t comparant les moyennes du même groupe mesuré à deux moments différents.",
+            exampleAr = "اختبار t للعينات المزدوجة هو اختبار t يقارن متوسطات نفس المجموعة المقاسة في وقتين مختلفين.",
         ),
         MedicalTermEntity(
             id = 1905,
@@ -1453,6 +1729,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/kaɪ skwɛər tɛst/",
+            exampleEn = "The chi-square test (χ²) is the test for association between two categorical variables.",
+            exampleFr = "La test du Chi-deux (χ²) est test d'association entre deux variables catégorielles.",
+            exampleAr = "اختبار كاي تربيع (χ²) هو اختبار للعلاقة بين متغيرين فئويين.",
         ),
         MedicalTermEntity(
             id = 1906,
@@ -1465,6 +1744,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/əˈnoʊvə/",
+            exampleEn = "The anova (analysis of variance) is the test comparing means of three or more groups simultaneously.",
+            exampleFr = "L'ANOVA (Analyse de la Variance) est test comparant les moyennes de trois groupes ou plus simultanément.",
+            exampleAr = "تحليل التباين هو اختبار يقارن متوسطات ثلاث مجموعات أو أكثر في آن واحد.",
         ),
         MedicalTermEntity(
             id = 1907,
@@ -1477,6 +1759,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/wʌn weɪ/",
+            exampleEn = "One-way ANOVA refers to ANOVA comparing means across groups defined by one factor.",
+            exampleFr = "L'ANOVA à un facteur est ANOVA comparant les moyennes entre groupes définis par un seul facteur.",
+            exampleAr = "تحليل التباين أحادي الاتجاه هو تحليل التباين الذي يقارن المتوسطات عبر مجموعات محددة بعامل واحد.",
         ),
         MedicalTermEntity(
             id = 1908,
@@ -1489,6 +1774,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/tuː weɪ/",
+            exampleEn = "Two-way ANOVA refers to ANOVA comparing means across groups defined by two factors.",
+            exampleFr = "L'ANOVA à deux facteurs est ANOVA comparant les moyennes entre groupes définis par deux facteurs.",
+            exampleAr = "تحليل التباين ثنائي الاتجاه هو تحليل التباين الذي يقارن المتوسطات عبر مجموعات محددة بعاملين.",
         ),
         MedicalTermEntity(
             id = 1909,
@@ -1501,6 +1789,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/poʊst hɒk/",
+            exampleEn = "The post-hoc test is the test performed after ANOVA to determine which specific groups differ.",
+            exampleFr = "La test post-hoc est test effectué après l'ANOVA pour déterminer quels groupes spécifiques diffèrent.",
+            exampleAr = "اختبار ما بعد التحليل هو اختبار يُجرى بعد تحليل التباين لتحديد المجموعات التي تختلف تحديداً.",
         ),
         MedicalTermEntity(
             id = 1910,
@@ -1513,6 +1804,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/ˈfɪʃərz/",
+            exampleEn = "The fisher's exact test is the test of association for small sample sizes in 2×2 contingency tables.",
+            exampleFr = "La test exact de Fisher est test d'association pour les petits échantillons dans les tableaux de contingence 2×2.",
+            exampleAr = "اختبار فيشر الدقيق هو اختبار للعلاقة في العينات الصغيرة في جداول الطوارئ 2×2.",
         ),
         MedicalTermEntity(
             id = 1911,
@@ -1525,6 +1819,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/mæn ˈwɪtni/",
+            exampleEn = "The mann-whitney u test is the non-parametric test comparing two independent groups (alternative to independent t-test).",
+            exampleFr = "La test U de Mann-Whitney est test non paramétrique comparant deux groupes indépendants (alternative au test t indépendant).",
+            exampleAr = "اختبار مان-ويتني هو اختبار لا معلمي يقارن مجموعتين مستقلتين (بديل لاختبار t للعينات المستقلة).",
         ),
         MedicalTermEntity(
             id = 1912,
@@ -1537,6 +1834,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/ˈwɪlkɒksən/",
+            exampleEn = "The wilcoxon signed-rank test is the non-parametric test comparing two paired groups (alternative to paired t-test).",
+            exampleFr = "La test des rangs signés de Wilcoxon est test non paramétrique comparant deux groupes appariés (alternative au test t apparié).",
+            exampleAr = "اختبار ويلكوكسن للرتب المؤشرة هو اختبار لا معلمي يقارن مجموعتين مزدوجتين (بديل لاختبار t للعينات المزدوجة).",
         ),
         MedicalTermEntity(
             id = 1913,
@@ -1549,6 +1849,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/ˈkrʌskəl ˈwɒlɪs/",
+            exampleEn = "The kruskal-wallis test is the non-parametric test comparing three or more independent groups (alternative to ANOVA).",
+            exampleFr = "La test de Kruskal-Wallis est test non paramétrique comparant trois groupes indépendants ou plus (alternative à l'ANOVA).",
+            exampleAr = "اختبار كروسكال-واليس هو اختبار لا معلمي يقارن ثلاث مجموعات مستقلة أو أكثر (بديل لتحليل التباين).",
         ),
         MedicalTermEntity(
             id = 1914,
@@ -1561,6 +1864,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/ˌpærəˈmɛtrɪk/",
+            exampleEn = "The parametric test is the statistical test assuming data follows a specific distribution (usually normal).",
+            exampleFr = "La test paramétrique est test statistique supposant que les données suivent une distribution spécifique (habituellement normale).",
+            exampleAr = "اختبار معلمي هو اختبار إحصائي يفترض أن البيانات تتبع توزيعاً محدداً (عادة طبيعي).",
         ),
         MedicalTermEntity(
             id = 1915,
@@ -1573,6 +1879,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/nɒn ˌpærəˈmɛtrɪk/",
+            exampleEn = "The non-parametric test is the statistical test that does not assume a specific data distribution.",
+            exampleFr = "La test non paramétrique est test statistique ne supposant pas une distribution spécifique des données.",
+            exampleAr = "اختبار لا معلمي هو اختبار إحصائي لا يفترض توزيعاً محدداً للبيانات.",
         ),
         MedicalTermEntity(
             id = 1916,
@@ -1585,6 +1894,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/kənˈtɪndʒənsi/",
+            exampleEn = "The contingency table is the table showing the frequency distribution of two categorical variables.",
+            exampleFr = "Le tableau de contingence est tableau montrant la distribution de fréquence de deux variables catégorielles.",
+            exampleAr = "جدول الطوارئ هو جدول يُظهر توزيع التكرار لمتغيرين فئويين.",
         ),
         MedicalTermEntity(
             id = 1917,
@@ -1597,6 +1909,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/ɪkˈspɛktɪd/",
+            exampleEn = "The expected frequency is the frequency expected under the null hypothesis in a contingency table.",
+            exampleFr = "La fréquence attendue (théorique) est fréquence attendue sous l'hypothèse nulle dans un tableau de contingence.",
+            exampleAr = "التكرار المتوقع هو التكرار المتوقع تحت الفرضية الصفرية في جدول الطوارئ.",
         ),
         MedicalTermEntity(
             id = 1918,
@@ -1609,6 +1924,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Tests Statistiques",
             ipaPhonetic = "/əbˈzɜːrvd/",
+            exampleEn = "The observed frequency is the actual count recorded in a contingency table from collected data.",
+            exampleFr = "La fréquence observée est compte réel enregistré dans un tableau de contingence à partir des données collectées.",
+            exampleAr = "التكرار الملاحظ هو العدد الفعلي المسجل في جدول الطوارئ من البيانات المجمعة.",
         ),
         MedicalTermEntity(
             id = 1919,
@@ -1621,6 +1939,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˌkɒrəˈleɪʃən/",
+            exampleEn = "The correlation is the statistical measure of the strength and direction of the relationship between two variables.",
+            exampleFr = "Le corrélation est mesure statistique de la force et de la direction de la relation entre deux variables.",
+            exampleAr = "الارتباط هو مقياس إحصائي لقوة واتجاه العلاقة بين متغيرين.",
         ),
         MedicalTermEntity(
             id = 1920,
@@ -1633,6 +1954,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˌkɒrəˈleɪʃən ˌkoʊɪˈfɪʃənt/",
+            exampleEn = "The correlation coefficient (r) is the value between -1 and +1 measuring the linear relationship between two variables.",
+            exampleFr = "La coefficient de corrélation (r) est valeur entre -1 et +1 mesurant la relation linéaire entre deux variables.",
+            exampleAr = "معامل الارتباط هو قيمة بين -1 و+1 تقيس العلاقة الخطية بين متغيرين.",
         ),
         MedicalTermEntity(
             id = 1921,
@@ -1645,6 +1969,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈpɪərsən/",
+            exampleEn = "The pearson correlation is the parametric measure of linear correlation between two continuous variables.",
+            exampleFr = "Le corrélation de Pearson est mesure paramétrique de la corrélation linéaire entre deux variables continues.",
+            exampleAr = "ارتباط بيرسون هو مقياس معلمي للارتباط الخطي بين متغيرين مستمرين.",
         ),
         MedicalTermEntity(
             id = 1922,
@@ -1657,6 +1984,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈspɪərmən/",
+            exampleEn = "The spearman rank correlation is the non-parametric measure of correlation between ranked variables.",
+            exampleFr = "Le corrélation de Spearman est mesure non paramétrique de corrélation entre variables classées.",
+            exampleAr = "ارتباط سبيرمان هو مقياس لا معلمي للارتباط بين متغيرات مرتبة.",
         ),
         MedicalTermEntity(
             id = 1923,
@@ -1705,6 +2035,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/dɪˌtɜːrmɪˈneɪʃən/",
+            exampleEn = "The coefficient of determination (r²) is the proportion of variance in the dependent variable explained by the independent variable.",
+            exampleFr = "La coefficient de détermination (R²) est proportion de la variance de la variable dépendante expliquée par la variable indépendante.",
+            exampleAr = "معامل التحديد هو نسبة التباين في المتغير التابع المفسرة بالمتغير المستقل.",
         ),
         MedicalTermEntity(
             id = 1927,
@@ -1717,6 +2050,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/rɪˈɡrɛʃən/",
+            exampleEn = "The regression is the method for modeling the relationship between a dependent and independent variable.",
+            exampleFr = "Le régression est méthode de modélisation de la relation entre une variable dépendante et indépendante.",
+            exampleAr = "الانحدار هو طريقة لنمذجة العلاقة بين المتغير التابع والمستقل.",
         ),
         MedicalTermEntity(
             id = 1928,
@@ -1729,6 +2065,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈlɪniər/",
+            exampleEn = "Linear regression refers to modeling the relationship between two variables using a straight line (y = a + bx).",
+            exampleFr = "Le régression linéaire est modélisation de la relation entre deux variables par une droite (y = a + bx).",
+            exampleAr = "الانحدار الخطي هو نمذجة العلاقة بين متغيرين باستخدام خط مستقيم (y = a + bx).",
         ),
         MedicalTermEntity(
             id = 1929,
@@ -1741,6 +2080,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/rɪˈɡrɛʃən laɪn/",
+            exampleEn = "The regression line is the best-fit straight line through a scatter plot minimizing sum of squared residuals.",
+            exampleFr = "La droite de régression est droite de meilleur ajustement à travers un nuage de points minimisant la somme des résidus au carré.",
+            exampleAr = "خط الانحدار هو خط التوافق الأفضل عبر مخطط الانتشار الذي يقلل مجموع مربعات البواقي.",
         ),
         MedicalTermEntity(
             id = 1930,
@@ -1753,6 +2095,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/sloʊp/",
+            exampleEn = "The slope is the rate of change of y per unit change in x in a regression line (b).",
+            exampleFr = "La pente est taux de changement de y par unité de changement de x dans une droite de régression (b).",
+            exampleAr = "الميل هو معدل تغير y لكل وحدة تغير في x في خط الانحدار (b).",
         ),
         MedicalTermEntity(
             id = 1931,
@@ -1765,6 +2110,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈɪntərsɛpt/",
+            exampleEn = "The intercept is the value of y when x = 0 in a regression line (a).",
+            exampleFr = "L'ordonnée à l'origine est valeur de y quand x = 0 dans une droite de régression (a).",
+            exampleAr = "المقطع (التقاطع) هو قيمة y عندما x = 0 في خط الانحدار (a).",
         ),
         MedicalTermEntity(
             id = 1932,
@@ -1777,6 +2125,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/rɪˈzɪdjuəl/",
+            exampleEn = "The residual is the difference between the observed and predicted value (y - ŷ).",
+            exampleFr = "La résidu est différence entre la valeur observée et prédite (y - ŷ).",
+            exampleAr = "الباقي هو الفرق بين القيمة الملاحظة والمتوقعة (y - ŷ).",
         ),
         MedicalTermEntity(
             id = 1933,
@@ -1813,6 +2164,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈskætər plɒt/",
+            exampleEn = "The scatter plot is the graph displaying the relationship between two continuous variables using points.",
+            exampleFr = "Le nuage de points (Diagramme de dispersion) est graphique affichant la relation entre deux variables continues par des points.",
+            exampleAr = "مخطط الانتشار هو رسم بياني يعرض العلاقة بين متغيرين مستمرين باستخدام النقاط.",
         ),
         MedicalTermEntity(
             id = 1936,
@@ -1825,6 +2179,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/ˈhɪstəɡræm/",
+            exampleEn = "The histogram is the bar chart showing the frequency distribution of continuous data.",
+            exampleFr = "L'histogramme est diagramme en barres montrant la distribution de fréquence de données continues.",
+            exampleAr = "المدرج التكراري هو مخطط أعمدة يعرض توزيع تكرار البيانات المستمرة.",
         ),
         MedicalTermEntity(
             id = 1937,
@@ -1837,6 +2194,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/bɑːr tʃɑːrt/",
+            exampleEn = "The bar chart is the chart using rectangular bars to represent categorical data frequencies.",
+            exampleFr = "La diagramme en barres est graphique utilisant des barres rectangulaires pour représenter les fréquences de données catégorielles.",
+            exampleAr = "مخطط الأعمدة هو مخطط يستخدم أعمدة مستطيلة لتمثيل تكرارات البيانات الفئوية.",
         ),
         MedicalTermEntity(
             id = 1938,
@@ -1849,6 +2209,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/paɪ tʃɑːrt/",
+            exampleEn = "The pie chart is the circular chart divided into sectors representing proportions.",
+            exampleFr = "La diagramme circulaire (Camembert) est graphique circulaire divisé en secteurs représentant des proportions.",
+            exampleAr = "المخطط الدائري هو مخطط دائري مقسم إلى قطاعات تمثل النسب.",
         ),
         MedicalTermEntity(
             id = 1939,
@@ -1861,6 +2224,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/laɪn ɡrɑːf/",
+            exampleEn = "The line graph is the graph showing data trends over time using connected points.",
+            exampleFr = "La graphique linéaire (Courbe) est graphique montrant les tendances des données au fil du temps par des points connectés.",
+            exampleAr = "الرسم البياني الخطي هو رسم بياني يعرض اتجاهات البيانات عبر الزمن باستخدام نقاط متصلة.",
         ),
         MedicalTermEntity(
             id = 1940,
@@ -1873,6 +2239,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/bɒks plɒt/",
+            exampleEn = "The box plot (box-and-whisker) is the graph displaying median, quartiles, and outliers of a dataset.",
+            exampleFr = "La boîte à moustaches est graphique affichant la médiane, les quartiles et les valeurs aberrantes d'un jeu de données.",
+            exampleAr = "مخطط الصندوق هو رسم بياني يعرض الوسيط والأرباع والقيم الشاذة لمجموعة بيانات.",
         ),
         MedicalTermEntity(
             id = 1941,
@@ -1885,6 +2254,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/stɛm ænd liːf/",
+            exampleEn = "The stem-and-leaf plot is the display organizing numerical data by splitting each value into a stem and leaf.",
+            exampleFr = "La diagramme tige-feuilles est affichage organisant les données numériques en divisant chaque valeur en tige et feuille.",
+            exampleAr = "مخطط الجذع والأوراق هو عرض ينظم البيانات الرقمية بتقسيم كل قيمة إلى جذع وورقة.",
         ),
         MedicalTermEntity(
             id = 1942,
@@ -1897,6 +2269,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/ˈfriːkwənsi ˈpɒlɪɡɒn/",
+            exampleEn = "The frequency polygon is the line graph connecting the midpoints of histogram bars.",
+            exampleFr = "La polygone de fréquences est graphique linéaire connectant les points médians des barres d'un histogramme.",
+            exampleAr = "مضلع التكرار هو رسم بياني خطي يصل نقاط منتصف أعمدة المدرج التكراري.",
         ),
         MedicalTermEntity(
             id = 1943,
@@ -1909,6 +2284,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/ˈoʊdʒaɪv/",
+            exampleEn = "The ogive (cumulative frequency curve) is the graph showing cumulative frequencies plotted against upper class boundaries.",
+            exampleFr = "L'ogive (Courbe de fréquences cumulées) est graphique montrant les fréquences cumulées tracées par rapport aux limites supérieures de classe.",
+            exampleAr = "المنحنى التراكمي هو رسم بياني يعرض التكرارات التراكمية مقابل الحدود العليا للفئات.",
         ),
         MedicalTermEntity(
             id = 1944,
@@ -1921,6 +2299,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/ˈfriːkwənsi ˈteɪbəl/",
+            exampleEn = "The frequency table is the table organizing data by listing values and their frequencies.",
+            exampleFr = "Le tableau de fréquences est tableau organisant les données en listant les valeurs et leurs fréquences.",
+            exampleAr = "جدول التكرار هو جدول ينظم البيانات بإدراج القيم وتكراراتها.",
         ),
         MedicalTermEntity(
             id = 1945,
@@ -1933,6 +2314,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/klɑːs ˈɪntərvəl/",
+            exampleEn = "The class interval is the range of values grouped together in a frequency distribution.",
+            exampleFr = "L'intervalle de classe est plage de valeurs regroupées dans une distribution de fréquence.",
+            exampleAr = "فترة الفئة هو مدى من القيم المجمعة معاً في توزيع تكراري.",
         ),
         MedicalTermEntity(
             id = 1946,
@@ -1945,6 +2329,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Représentations Graphiques",
             ipaPhonetic = "/klɑːs wɪdθ/",
+            exampleEn = "The class width is the difference between upper and lower boundaries of a class interval.",
+            exampleFr = "L'amplitude de classe est différence entre les limites supérieure et inférieure d'un intervalle de classe.",
+            exampleAr = "عرض الفئة هو الفرق بين الحد الأعلى والأدنى لفترة الفئة.",
         ),
         MedicalTermEntity(
             id = 1947,
@@ -1957,6 +2344,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˌɛpɪˌdiːmiˈɒlədʒi/",
+            exampleEn = "Epidemiology is the study of distribution and determinants of diseases in populations.",
+            exampleFr = "L'épidémiologie est étude de la distribution et des déterminants des maladies dans les populations.",
+            exampleAr = "علم الوبائيات هو دراسة توزيع ومحددات الأمراض في المجتمعات.",
         ),
         MedicalTermEntity(
             id = 1948,
@@ -1969,6 +2359,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈprɛvələns/",
+            exampleEn = "The prevalence is the proportion of a population having a disease at a specific time.",
+            exampleFr = "La prévalence est proportion d'une population ayant une maladie à un moment spécifique.",
+            exampleAr = "الانتشار هو نسبة المجتمع المصاب بمرض في وقت محدد.",
         ),
         MedicalTermEntity(
             id = 1949,
@@ -1981,6 +2374,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈɪnsɪdəns/",
+            exampleEn = "The incidence is the number of new cases of disease occurring in a population over a time period.",
+            exampleFr = "L'incidence est nombre de nouveaux cas de maladie survenant dans une population sur une période.",
+            exampleAr = "الوقوع (الحدوث) هو عدد الحالات الجديدة لمرض تحدث في مجتمع خلال فترة زمنية.",
         ),
         MedicalTermEntity(
             id = 1950,
@@ -1993,6 +2389,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈɪnsɪdəns reɪt/",
+            exampleEn = "The incidence rate is the number of new cases per unit of person-time at risk.",
+            exampleFr = "La taux d'incidence est nombre de nouveaux cas par unité de personne-temps à risque.",
+            exampleAr = "معدل الوقوع هو عدد الحالات الجديدة لكل وحدة شخص-زمن معرض للخطر.",
         ),
         MedicalTermEntity(
             id = 1951,
@@ -2005,6 +2404,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/mɔːrˈtælɪti reɪt/",
+            exampleEn = "The mortality rate is the number of deaths in a population per unit of time.",
+            exampleFr = "La taux de mortalité est nombre de décès dans une population par unité de temps.",
+            exampleAr = "معدل الوفيات هو عدد الوفيات في مجتمع لكل وحدة زمنية.",
         ),
         MedicalTermEntity(
             id = 1952,
@@ -2017,6 +2419,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/mɔːrˈbɪdɪti reɪt/",
+            exampleEn = "The morbidity rate is the frequency of disease in a population.",
+            exampleFr = "La taux de morbidité est fréquence de la maladie dans une population.",
+            exampleAr = "معدل الاعتلال هو تكرار المرض في مجتمع.",
         ),
         MedicalTermEntity(
             id = 1953,
@@ -2029,6 +2434,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/keɪs fəˈtælɪti/",
+            exampleEn = "The case fatality rate is the proportion of persons with a disease who die from it.",
+            exampleFr = "La taux de létalité est proportion de personnes atteintes d'une maladie qui en meurent.",
+            exampleAr = "معدل الإماتة هو نسبة الأشخاص المصابين بمرض الذين يموتون بسببه.",
         ),
         MedicalTermEntity(
             id = 1954,
@@ -2041,6 +2449,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈrɛlətɪv rɪsk/",
+            exampleEn = "The relative risk (rr) is the ratio of disease risk in exposed group to risk in unexposed group.",
+            exampleFr = "La risque relatif (RR) est rapport du risque de maladie dans le groupe exposé au risque dans le groupe non exposé.",
+            exampleAr = "الخطر النسبي هو نسبة خطر المرض في المجموعة المعرضة إلى الخطر في المجموعة غير المعرضة.",
         ),
         MedicalTermEntity(
             id = 1955,
@@ -2053,6 +2464,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ɒdz ˈreɪʃioʊ/",
+            exampleEn = "The odds ratio (or) is the ratio of odds of exposure in cases versus controls.",
+            exampleFr = "La rapport de cotes (OR) est rapport des chances d'exposition chez les cas par rapport aux témoins.",
+            exampleAr = "نسبة الأرجحية هو نسبة احتمالات التعرض في الحالات مقابل الشواهد.",
         ),
         MedicalTermEntity(
             id = 1956,
@@ -2065,6 +2479,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈæbsəluːt rɪsk/",
+            exampleEn = "The absolute risk is the probability of developing a disease over a specified time period.",
+            exampleFr = "La risque absolu est probabilité de développer une maladie sur une période spécifiée.",
+            exampleAr = "الخطر المطلق هو احتمالية الإصابة بمرض خلال فترة زمنية محددة.",
         ),
         MedicalTermEntity(
             id = 1957,
@@ -2077,6 +2494,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/əˈtrɪbjʊtəbəl rɪsk/",
+            exampleEn = "The attributable risk is the difference in risk between exposed and unexposed groups.",
+            exampleFr = "La risque attribuable est différence de risque entre les groupes exposé et non exposé.",
+            exampleAr = "الخطر المعزو هو الفرق في الخطر بين المجموعة المعرضة وغير المعرضة.",
         ),
         MedicalTermEntity(
             id = 1958,
@@ -2089,6 +2509,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈnʌmbər ˈniːdɪd/",
+            exampleEn = "The number needed to treat (nnt) is the number of patients who need treatment for one to benefit.",
+            exampleFr = "La nombre de sujets à traiter (NST) est nombre de patients devant être traités pour qu'un seul en bénéficie.",
+            exampleAr = "العدد اللازم للعلاج هو عدد المرضى الذين يحتاجون للعلاج ليستفيد واحد منهم.",
         ),
         MedicalTermEntity(
             id = 1959,
@@ -2101,6 +2524,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˌsɛnsɪˈtɪvɪti/",
+            exampleEn = "The sensitivity is the ability of a test to correctly identify those with the disease (true positive rate).",
+            exampleFr = "La sensibilité est capacité d'un test à identifier correctement les malades (taux de vrais positifs).",
+            exampleAr = "الحساسية هو قدرة الاختبار على التعرف بشكل صحيح على المصابين بالمرض (معدل الإيجابيات الحقيقية).",
         ),
         MedicalTermEntity(
             id = 1960,
@@ -2113,6 +2539,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˌspɛsɪˈfɪsɪti/",
+            exampleEn = "The specificity is the ability of a test to correctly identify those without the disease (true negative rate).",
+            exampleFr = "La spécificité est capacité d'un test à identifier correctement les non-malades (taux de vrais négatifs).",
+            exampleAr = "النوعية هو قدرة الاختبار على التعرف بشكل صحيح على غير المصابين بالمرض (معدل السلبيات الحقيقية).",
         ),
         MedicalTermEntity(
             id = 1961,
@@ -2125,6 +2554,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈpɒzɪtɪv prɪˈdɪktɪv/",
+            exampleEn = "The positive predictive value (ppv) is the probability that a person with a positive test truly has the disease.",
+            exampleFr = "La valeur prédictive positive (VPP) est probabilité qu'une personne avec un test positif ait vraiment la maladie.",
+            exampleAr = "القيمة التنبؤية الإيجابية هو احتمال أن الشخص ذو الاختبار الإيجابي مصاب فعلاً بالمرض.",
         ),
         MedicalTermEntity(
             id = 1962,
@@ -2137,6 +2569,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈnɛɡətɪv prɪˈdɪktɪv/",
+            exampleEn = "The negative predictive value (npv) is the probability that a person with a negative test truly does not have the disease.",
+            exampleFr = "La valeur prédictive négative (VPN) est probabilité qu'une personne avec un test négatif n'ait vraiment pas la maladie.",
+            exampleAr = "القيمة التنبؤية السلبية هو احتمال أن الشخص ذو الاختبار السلبي غير مصاب فعلاً بالمرض.",
         ),
         MedicalTermEntity(
             id = 1963,
@@ -2149,6 +2584,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/fɔːls ˈpɒzɪtɪv/",
+            exampleEn = "The false positive is the test result incorrectly indicating the presence of disease.",
+            exampleFr = "La faux positif est résultat de test indiquant incorrectement la présence de maladie.",
+            exampleAr = "إيجابي كاذب هو نتيجة اختبار تشير خطأً إلى وجود المرض.",
         ),
         MedicalTermEntity(
             id = 1964,
@@ -2161,6 +2599,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/fɔːls ˈnɛɡətɪv/",
+            exampleEn = "The false negative is the test result incorrectly indicating the absence of disease.",
+            exampleFr = "La faux négatif est résultat de test indiquant incorrectement l'absence de maladie.",
+            exampleAr = "سلبي كاذب هو نتيجة اختبار تشير خطأً إلى غياب المرض.",
         ),
         MedicalTermEntity(
             id = 1965,
@@ -2173,6 +2614,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/truː ˈpɒzɪtɪv/",
+            exampleEn = "The true positive is the test result correctly identifying the presence of disease.",
+            exampleFr = "La vrai positif est résultat de test identifiant correctement la présence de maladie.",
+            exampleAr = "إيجابي حقيقي هو نتيجة اختبار تحدد بشكل صحيح وجود المرض.",
         ),
         MedicalTermEntity(
             id = 1966,
@@ -2185,6 +2629,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/truː ˈnɛɡətɪv/",
+            exampleEn = "The true negative is the test result correctly identifying the absence of disease.",
+            exampleFr = "La vrai négatif est résultat de test identifiant correctement l'absence de maladie.",
+            exampleAr = "سلبي حقيقي هو نتيجة اختبار تحدد بشكل صحيح غياب المرض.",
         ),
         MedicalTermEntity(
             id = 1967,
@@ -2197,6 +2644,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ɑːr oʊ siː kɜːrv/",
+            exampleEn = "The roc curve is the graph plotting sensitivity versus 1-specificity to evaluate diagnostic test performance.",
+            exampleFr = "La courbe ROC est graphique traçant la sensibilité versus 1-spécificité pour évaluer la performance d'un test diagnostique.",
+            exampleAr = "منحنى ROC هو رسم بياني يرسم الحساسية مقابل 1-النوعية لتقييم أداء الاختبار التشخيصي.",
         ),
         MedicalTermEntity(
             id = 1968,
@@ -2209,6 +2659,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Épidémiologie",
             ipaPhonetic = "/ˈɛəriə ˈʌndər/",
+            exampleEn = "The area under the curve (auc) is the measure of overall diagnostic test accuracy (0.5 = useless, 1.0 = perfect).",
+            exampleFr = "L'aire sous la courbe (ASC) est mesure de la précision globale d'un test diagnostique (0,5 = inutile, 1,0 = parfait).",
+            exampleAr = "المساحة تحت المنحنى هو مقياس لدقة الاختبار التشخيصي الإجمالية (0.5 = عديم الفائدة، 1.0 = مثالي).",
         ),
         MedicalTermEntity(
             id = 1969,
@@ -2221,6 +2674,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ˈstʌdi dɪˈzaɪn/",
+            exampleEn = "The study design is the overall strategy for conducting a research study.",
+            exampleFr = "La plan d'étude est stratégie globale pour mener une étude de recherche.",
+            exampleAr = "تصميم الدراسة هو الاستراتيجية العامة لإجراء دراسة بحثية.",
         ),
         MedicalTermEntity(
             id = 1970,
@@ -2233,6 +2689,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ˌɒbzɜːrˈveɪʃənəl/",
+            exampleEn = "The observational study is the study where the researcher observes without manipulating variables.",
+            exampleFr = "L'étude observationnelle est étude où le chercheur observe sans manipuler les variables.",
+            exampleAr = "الدراسة الملاحظية هو دراسة يلاحظ فيها الباحث دون التحكم في المتغيرات.",
         ),
         MedicalTermEntity(
             id = 1971,
@@ -2245,6 +2704,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ɪkˌspɛrɪˈmɛntəl/",
+            exampleEn = "The experimental study is the study where the researcher manipulates variables and measures the effect.",
+            exampleFr = "L'étude expérimentale est étude où le chercheur manipule les variables et mesure l'effet.",
+            exampleAr = "الدراسة التجريبية هو دراسة يتحكم فيها الباحث في المتغيرات ويقيس التأثير.",
         ),
         MedicalTermEntity(
             id = 1972,
@@ -2257,6 +2719,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ˈrændəmaɪzd kənˈtroʊld/",
+            exampleEn = "The randomized controlled trial (rct) is the gold standard experimental study randomly assigning participants to treatment or control groups.",
+            exampleFr = "L'essai contrôlé randomisé (ECR) est étude expérimentale de référence assignant aléatoirement les participants aux groupes traitement ou contrôle.",
+            exampleAr = "التجربة المعشاة المضبوطة هو المعيار الذهبي للدراسة التجريبية التي توزع المشاركين عشوائياً على مجموعات العلاج أو الضابطة.",
         ),
         MedicalTermEntity(
             id = 1973,
@@ -2269,6 +2734,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ˈkoʊhɔːrt/",
+            exampleEn = "The cohort study is the longitudinal study following a group over time to observe outcomes.",
+            exampleFr = "L'étude de cohorte est étude longitudinale suivant un groupe au fil du temps pour observer les résultats.",
+            exampleAr = "دراسة الفوج هو دراسة طولية تتابع مجموعة عبر الزمن لملاحظة النتائج.",
         ),
         MedicalTermEntity(
             id = 1974,
@@ -2281,6 +2749,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/keɪs kənˈtroʊl/",
+            exampleEn = "The case-control study is the retrospective study comparing those with a disease (cases) to those without (controls).",
+            exampleFr = "L'étude cas-témoins est étude rétrospective comparant les malades (cas) aux non-malades (témoins).",
+            exampleAr = "دراسة الحالات والشواهد هو دراسة بأثر رجعي تقارن المصابين بمرض (الحالات) بغير المصابين (الشواهد).",
         ),
         MedicalTermEntity(
             id = 1975,
@@ -2293,6 +2764,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/krɒs ˈsɛkʃənəl/",
+            exampleEn = "The cross-sectional study is the study examining a population at a single point in time (snapshot).",
+            exampleFr = "L'étude transversale est étude examinant une population à un moment donné (instantané).",
+            exampleAr = "الدراسة المقطعية هو دراسة تفحص مجتمعاً في لحظة زمنية واحدة (لقطة).",
         ),
         MedicalTermEntity(
             id = 1976,
@@ -2305,6 +2779,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/prəˈspɛktɪv/",
+            exampleEn = "The prospective study is the study following participants forward in time from exposure to outcome.",
+            exampleFr = "L'étude prospective est étude suivant les participants dans le temps de l'exposition au résultat.",
+            exampleAr = "دراسة استشرافية هو دراسة تتابع المشاركين للأمام في الزمن من التعرض إلى النتيجة.",
         ),
         MedicalTermEntity(
             id = 1977,
@@ -2317,6 +2794,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ˌrɛtrəˈspɛktɪv/",
+            exampleEn = "The retrospective study is the study looking back in time from outcome to exposure.",
+            exampleFr = "L'étude rétrospective est étude regardant en arrière dans le temps du résultat à l'exposition.",
+            exampleAr = "دراسة بأثر رجعي هو دراسة تنظر إلى الخلف في الزمن من النتيجة إلى التعرض.",
         ),
         MedicalTermEntity(
             id = 1978,
@@ -2329,6 +2809,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/keɪs rɪˈpɔːrt/",
+            exampleEn = "The case report is the detailed report of an individual patient's clinical presentation.",
+            exampleFr = "La rapport de cas est rapport détaillé de la présentation clinique d'un patient individuel.",
+            exampleAr = "تقرير حالة هو تقرير مفصل عن العرض السريري لمريض فردي.",
         ),
         MedicalTermEntity(
             id = 1979,
@@ -2341,6 +2824,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/keɪs ˈsɪəriːz/",
+            exampleEn = "The case series is the descriptive study reporting on a group of patients with similar conditions.",
+            exampleFr = "La série de cas est étude descriptive rapportant sur un groupe de patients avec des conditions similaires.",
+            exampleAr = "سلسلة حالات هو دراسة وصفية تقدم تقريراً عن مجموعة مرضى بحالات مشابهة.",
         ),
         MedicalTermEntity(
             id = 1980,
@@ -2353,6 +2839,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ˈmɛtə əˈnæləsɪs/",
+            exampleEn = "The meta-analysis is the statistical method combining results from multiple studies to obtain an overall effect.",
+            exampleFr = "La méta-analyse est méthode statistique combinant les résultats de plusieurs études pour obtenir un effet global.",
+            exampleAr = "التحليل التلوي هو طريقة إحصائية تجمع نتائج دراسات متعددة للحصول على تأثير إجمالي.",
         ),
         MedicalTermEntity(
             id = 1981,
@@ -2365,6 +2854,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Types d'Études",
             ipaPhonetic = "/ˌsɪstəˈmætɪk rɪˈvjuː/",
+            exampleEn = "The systematic review is the comprehensive review of all relevant studies on a specific question using rigorous methods.",
+            exampleFr = "La revue systématique est revue exhaustive de toutes les études pertinentes sur une question spécifique avec des méthodes rigoureuses.",
+            exampleAr = "المراجعة المنهجية هو مراجعة شاملة لجميع الدراسات ذات الصلة بسؤال محدد باستخدام طرق صارمة.",
         ),
         MedicalTermEntity(
             id = 1982,
@@ -2377,6 +2869,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/baɪəs/",
+            exampleEn = "The bias is the systematic error leading to incorrect conclusions.",
+            exampleFr = "Le biais est erreur systématique menant à des conclusions incorrectes.",
+            exampleAr = "التحيز هو خطأ منهجي يؤدي إلى استنتاجات غير صحيحة.",
         ),
         MedicalTermEntity(
             id = 1983,
@@ -2437,6 +2932,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/pləˈsiːboʊ ɪˈfɛkt/",
+            exampleEn = "The placebo effect is the improvement in symptoms due to belief in treatment rather than the treatment itself.",
+            exampleFr = "L'effet placebo est amélioration des symptômes due à la croyance au traitement plutôt qu'au traitement lui-même.",
+            exampleAr = "تأثير الدواء الوهمي هو تحسن في الأعراض بسبب الاعتقاد بالعلاج وليس العلاج نفسه.",
         ),
         MedicalTermEntity(
             id = 1988,
@@ -2449,6 +2947,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/pləˈsiːboʊ/",
+            exampleEn = "The placebo is the inactive substance given to the control group resembling the active treatment.",
+            exampleFr = "La placebo est substance inactive donnée au groupe contrôle ressemblant au traitement actif.",
+            exampleAr = "الدواء الوهمي هو مادة غير فعالة تُعطى للمجموعة الضابطة تشبه العلاج الفعال.",
         ),
         MedicalTermEntity(
             id = 1989,
@@ -2461,6 +2962,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˈblaɪndɪŋ/",
+            exampleEn = "Blinding (Masking) refers to concealing group assignment from participants and/or researchers to reduce bias.",
+            exampleFr = "L'aveugle (Insu) est dissimulation de l'affectation de groupe aux participants et/ou chercheurs pour réduire le biais.",
+            exampleAr = "التعمية هو إخفاء توزيع المجموعات عن المشاركين و/أو الباحثين لتقليل التحيز.",
         ),
         MedicalTermEntity(
             id = 1990,
@@ -2473,6 +2977,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˈsɪŋɡəl blaɪnd/",
+            exampleEn = "The single-blind study is the study where participants do not know their group assignment.",
+            exampleFr = "L'étude en simple aveugle est étude où les participants ne connaissent pas leur affectation de groupe.",
+            exampleAr = "دراسة أحادية التعمية هو دراسة لا يعرف فيها المشاركون إلى أي مجموعة ينتمون.",
         ),
         MedicalTermEntity(
             id = 1991,
@@ -2485,6 +2992,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˈdʌbəl blaɪnd/",
+            exampleEn = "The double-blind study is the study where neither participants nor researchers know the group assignments.",
+            exampleFr = "L'étude en double aveugle est étude où ni les participants ni les chercheurs ne connaissent les affectations de groupe.",
+            exampleAr = "دراسة مزدوجة التعمية هو دراسة لا يعرف فيها المشاركون ولا الباحثون توزيع المجموعات.",
         ),
         MedicalTermEntity(
             id = 1992,
@@ -2497,6 +3007,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˌrændəmaɪˈzeɪʃən/",
+            exampleEn = "The randomization is the random assignment of participants to groups to eliminate selection bias.",
+            exampleFr = "Le randomisation est affectation aléatoire des participants aux groupes pour éliminer le biais de sélection.",
+            exampleAr = "التعشية (العشوائية) هو التوزيع العشوائي للمشاركين على المجموعات للقضاء على تحيز الاختيار.",
         ),
         MedicalTermEntity(
             id = 1993,
@@ -2509,6 +3022,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/kənˈtroʊl ɡruːp/",
+            exampleEn = "The control group is the group that does not receive the experimental treatment for comparison.",
+            exampleFr = "La groupe contrôle (Groupe témoin) est groupe ne recevant pas le traitement expérimental pour comparaison.",
+            exampleAr = "المجموعة الضابطة هو مجموعة لا تتلقى العلاج التجريبي للمقارنة.",
         ),
         MedicalTermEntity(
             id = 1994,
@@ -2521,6 +3037,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˈtriːtmənt ɡruːp/",
+            exampleEn = "The treatment group (experimental) is the group receiving the intervention being studied.",
+            exampleFr = "La groupe traitement (Expérimental) est groupe recevant l'intervention étudiée.",
+            exampleAr = "مجموعة العلاج (التجريبية) هو المجموعة التي تتلقى التدخل المدروس.",
         ),
         MedicalTermEntity(
             id = 1995,
@@ -2533,6 +3052,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ɪnˈtɜːrnəl vəˈlɪdɪti/",
+            exampleEn = "The internal validity is the degree to which results can be attributed to the intervention rather than other factors.",
+            exampleFr = "La validité interne est degré auquel les résultats peuvent être attribués à l'intervention plutôt qu'à d'autres facteurs.",
+            exampleAr = "الصلاحية الداخلية هو درجة إمكانية عزو النتائج إلى التدخل بدلاً من عوامل أخرى.",
         ),
         MedicalTermEntity(
             id = 1996,
@@ -2545,6 +3067,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ɪkˈstɜːrnəl vəˈlɪdɪti/",
+            exampleEn = "The external validity is the degree to which study results can be generalized to other populations.",
+            exampleFr = "La validité externe est degré auquel les résultats peuvent être généralisés à d'autres populations.",
+            exampleAr = "الصلاحية الخارجية هو درجة إمكانية تعميم نتائج الدراسة على مجتمعات أخرى.",
         ),
         MedicalTermEntity(
             id = 1997,
@@ -2557,6 +3082,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/rɪˌlaɪəˈbɪlɪti/",
+            exampleEn = "The reliability is the consistency or reproducibility of a measurement or test.",
+            exampleFr = "La fiabilité (Fidélité) est constance ou reproductibilité d'une mesure ou d'un test.",
+            exampleAr = "الموثوقية هو اتساق أو قابلية إعادة إنتاج القياس أو الاختبار.",
         ),
         MedicalTermEntity(
             id = 1998,
@@ -2569,6 +3097,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/vəˈlɪdɪti/",
+            exampleEn = "The validity is the degree to which a measurement truly measures what it intends to measure.",
+            exampleFr = "La validité est degré auquel une mesure mesure réellement ce qu'elle entend mesurer.",
+            exampleAr = "الصلاحية (الصدق) هو درجة قياس المقياس فعلاً لما يُراد قياسه.",
         ),
         MedicalTermEntity(
             id = 1999,
@@ -2581,6 +3112,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ɪnˈfɔːrmd kənˈsɛnt/",
+            exampleEn = "The informed consent is the process of obtaining voluntary permission from participants after explaining the study.",
+            exampleFr = "Le consentement éclairé est processus d'obtention de la permission volontaire des participants après explication de l'étude.",
+            exampleAr = "الموافقة المستنيرة هو عملية الحصول على إذن طوعي من المشاركين بعد شرح الدراسة.",
         ),
         MedicalTermEntity(
             id = 2000,
@@ -2593,6 +3127,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/dɪˈmɒɡrəfi/",
+            exampleEn = "The demography is the statistical study of human populations (size, growth, density, distribution).",
+            exampleFr = "La démographie est étude statistique des populations humaines (taille, croissance, densité, distribution).",
+            exampleAr = "الديموغرافيا (علم السكان) هو الدراسة الإحصائية للسكان البشريين (الحجم، النمو، الكثافة، التوزيع).",
         ),
         MedicalTermEntity(
             id = 2001,
@@ -2605,6 +3142,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/bɜːrθ reɪt/",
+            exampleEn = "The birth rate (natality rate) is the number of live births per 1000 population per year.",
+            exampleFr = "La taux de natalité est nombre de naissances vivantes pour 1000 habitants par an.",
+            exampleAr = "معدل المواليد هو عدد المواليد الأحياء لكل 1000 نسمة في السنة.",
         ),
         MedicalTermEntity(
             id = 2002,
@@ -2617,6 +3157,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/dɛθ reɪt/",
+            exampleEn = "The death rate (crude mortality rate) is the number of deaths per 1000 population per year.",
+            exampleFr = "La taux brut de mortalité est nombre de décès pour 1000 habitants par an.",
+            exampleAr = "معدل الوفيات الخام هو عدد الوفيات لكل 1000 نسمة في السنة.",
         ),
         MedicalTermEntity(
             id = 2003,
@@ -2629,6 +3172,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˈɪnfənt mɔːrˈtælɪti/",
+            exampleEn = "The infant mortality rate is the number of deaths of infants under 1 year per 1000 live births.",
+            exampleFr = "La taux de mortalité infantile est nombre de décès de nourrissons de moins d'un an pour 1000 naissances vivantes.",
+            exampleAr = "معدل وفيات الرضع هو عدد وفيات الرضع تحت سنة واحدة لكل 1000 مولود حي.",
         ),
         MedicalTermEntity(
             id = 2004,
@@ -2641,6 +3187,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/laɪf ɪkˈspɛktənsi/",
+            exampleEn = "The life expectancy is the average number of years a person is expected to live from birth.",
+            exampleFr = "L'espérance de vie est nombre moyen d'années qu'une personne est censée vivre à partir de la naissance.",
+            exampleAr = "متوسط العمر المتوقع هو متوسط عدد السنوات المتوقع أن يعيشها الشخص من الولادة.",
         ),
         MedicalTermEntity(
             id = 2005,
@@ -2653,6 +3202,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/fɜːrˈtɪlɪti reɪt/",
+            exampleEn = "The fertility rate is the average number of children born to a woman during her reproductive years.",
+            exampleFr = "La taux de fécondité est nombre moyen d'enfants nés par femme pendant ses années de reproduction.",
+            exampleAr = "معدل الخصوبة هو متوسط عدد الأطفال المولودين لامرأة خلال سنوات إنجابها.",
         ),
         MedicalTermEntity(
             id = 2006,
@@ -2665,6 +3217,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˌpɒpjʊˈleɪʃən ˈpɪrəmɪd/",
+            exampleEn = "The population pyramid is the graphic showing the age and sex distribution of a population.",
+            exampleFr = "La pyramide des âges est graphique montrant la distribution par âge et sexe d'une population.",
+            exampleAr = "هرم السكان هو رسم بياني يُظهر توزيع السكان حسب العمر والجنس.",
         ),
         MedicalTermEntity(
             id = 2007,
@@ -2677,6 +3232,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ɛnˈdɛmɪk/",
+            exampleEn = "The endemic is the disease constantly present in a particular region or population.",
+            exampleFr = "L'endémique est maladie constamment présente dans une région ou population particulière.",
+            exampleAr = "متوطن هو مرض موجود باستمرار في منطقة أو مجتمع معين.",
         ),
         MedicalTermEntity(
             id = 2008,
@@ -2689,6 +3247,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˌɛpɪˈdɛmɪk/",
+            exampleEn = "The epidemic is the sudden increase in cases of disease above normal levels in a community.",
+            exampleFr = "L'épidémie est augmentation soudaine des cas de maladie au-dessus des niveaux normaux dans une communauté.",
+            exampleAr = "وباء هو زيادة مفاجئة في حالات المرض فوق المستويات الطبيعية في مجتمع.",
         ),
         MedicalTermEntity(
             id = 2009,
@@ -2701,6 +3262,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/pænˈdɛmɪk/",
+            exampleEn = "The pandemic is the epidemic spread over multiple countries or continents affecting many people.",
+            exampleFr = "La pandémie est épidémie répandue sur plusieurs pays ou continents affectant de nombreuses personnes.",
+            exampleAr = "جائحة هو وباء منتشر عبر عدة دول أو قارات يصيب أعداداً كبيرة من الناس.",
         ),
         MedicalTermEntity(
             id = 2010,
@@ -2713,6 +3277,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˈskriːnɪŋ/",
+            exampleEn = "The screening is the systematic testing of apparently healthy people to detect disease early.",
+            exampleFr = "Le dépistage est test systématique de personnes apparemment en bonne santé pour détecter précocement les maladies.",
+            exampleAr = "التحري (الفحص المبكر) هو الفحص المنهجي للأشخاص الأصحاء ظاهرياً لاكتشاف المرض مبكراً.",
         ),
         MedicalTermEntity(
             id = 2011,
@@ -2725,6 +3292,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/rɪsk ˈfæktər/",
+            exampleEn = "The risk factor is the characteristic or exposure increasing the probability of developing a disease.",
+            exampleFr = "La facteur de risque est caractéristique ou exposition augmentant la probabilité de développer une maladie.",
+            exampleAr = "عامل الخطر هو خاصية أو تعرض يزيد من احتمالية الإصابة بمرض.",
         ),
         MedicalTermEntity(
             id = 2012,
@@ -2737,6 +3307,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/kənˈfaʊndɪŋ/",
+            exampleEn = "The confounding is the distortion of the association between exposure and outcome by a third variable.",
+            exampleFr = "Le confusion (Facteur de confusion) est distorsion de l'association entre exposition et résultat par une troisième variable.",
+            exampleAr = "الإرباك هو تشويه العلاقة بين التعرض والنتيجة بسبب متغير ثالث.",
         ),
         MedicalTermEntity(
             id = 2013,
@@ -2773,6 +3346,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˈkæplən ˈmaɪər/",
+            exampleEn = "The kaplan-meier curve is the graph estimating the probability of survival over time.",
+            exampleFr = "La courbe de Kaplan-Meier est graphique estimant la probabilité de survie au fil du temps.",
+            exampleAr = "منحنى كابلان-ماير هو رسم بياني يقدر احتمالية البقاء عبر الزمن.",
         ),
         MedicalTermEntity(
             id = 2016,
@@ -2785,6 +3361,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˈhæzərd ˈreɪʃioʊ/",
+            exampleEn = "The hazard ratio (hr) is the ratio of hazard rates comparing two groups in survival analysis.",
+            exampleFr = "La rapport de risques instantanés (HR) est rapport des taux de risque comparant deux groupes dans l'analyse de survie.",
+            exampleAr = "نسبة الخطورة هو نسبة معدلات الخطورة التي تقارن مجموعتين في تحليل البقاء.",
         ),
         MedicalTermEntity(
             id = 2017,
@@ -2797,6 +3376,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˈɛvɪdəns beɪst/",
+            exampleEn = "The evidence-based medicine (ebm) is the practice of medicine integrating best research evidence with clinical expertise.",
+            exampleFr = "La médecine fondée sur les preuves (EBM) est pratique de la médecine intégrant les meilleures preuves de recherche avec l'expertise clinique.",
+            exampleAr = "الطب المبني على الأدلة هو ممارسة الطب التي تدمج أفضل الأدلة البحثية مع الخبرة السريرية.",
         ),
         MedicalTermEntity(
             id = 2018,
@@ -2809,6 +3391,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˈlɛvəl əv ˈɛvɪdəns/",
+            exampleEn = "The level of evidence is the hierarchical system ranking the strength of research evidence (I = strongest).",
+            exampleFr = "Le niveau de preuve est système hiérarchique classant la force des preuves de recherche (I = plus fort).",
+            exampleAr = "مستوى الدليل هو نظام تسلسلي يصنف قوة الأدلة البحثية (I = الأقوى).",
         ),
         MedicalTermEntity(
             id = 2019,
@@ -2821,6 +3406,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ˈklɪnɪkəl sɪɡˈnɪfɪkəns/",
+            exampleEn = "The clinical significance is the practical importance of a result for patient care, distinct from statistical significance.",
+            exampleFr = "Le signification clinique est importance pratique d'un résultat pour les soins des patients, distincte de la signification statistique.",
+            exampleAr = "الدلالة السريرية هو الأهمية العملية لنتيجة في رعاية المرضى، مختلفة عن الدلالة الإحصائية.",
         ),
         MedicalTermEntity(
             id = 2020,

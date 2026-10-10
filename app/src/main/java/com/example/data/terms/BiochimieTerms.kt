@@ -346,6 +346,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˌbaɪoʊˈkɛmɪstri/",
+            exampleEn = "Biochemistry is the study of chemical processes within and relating to living organisms.",
+            exampleFr = "La biochimie est étude des processus chimiques au sein des organismes vivants.",
+            exampleAr = "الكيمياء الحيوية هو دراسة العمليات الكيميائية داخل الكائنات الحية وما يتعلق بها.",
         ),
         MedicalTermEntity(
             id = 663,
@@ -358,6 +361,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈmɒlɪkjuːl/",
+            exampleEn = "The molecule is the group of atoms bonded together forming the smallest unit of a compound.",
+            exampleFr = "La molécule est groupe d'atomes liés formant la plus petite unité d'un composé.",
+            exampleAr = "الجزيء هو مجموعة ذرات مترابطة تشكل أصغر وحدة من المركب.",
         ),
         MedicalTermEntity(
             id = 664,
@@ -370,6 +376,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈætəm/",
+            exampleEn = "The atom is the smallest unit of an element retaining its chemical properties.",
+            exampleFr = "L'atome est plus petite unité d'un élément conservant ses propriétés chimiques.",
+            exampleAr = "الذرة هو أصغر وحدة من العنصر تحتفظ بخصائصه الكيميائية.",
         ),
         MedicalTermEntity(
             id = 665,
@@ -382,6 +391,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈkɛmɪkəl bɒnd/",
+            exampleEn = "The chemical bond is the force holding atoms together in a molecule.",
+            exampleFr = "Le liaison chimique est force maintenant les atomes ensemble dans une molécule.",
+            exampleAr = "الرابطة الكيميائية هو قوة تربط الذرات معاً في الجزيء.",
         ),
         MedicalTermEntity(
             id = 666,
@@ -394,6 +406,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/koʊˈveɪlənt bɒnd/",
+            exampleEn = "The covalent bond is the bond formed by sharing electron pairs between atoms.",
+            exampleFr = "Le liaison covalente est liaison formée par partage de paires d'électrons entre atomes.",
+            exampleAr = "الرابطة التساهمية هو رابطة تتكون من مشاركة أزواج الإلكترونات بين الذرات.",
         ),
         MedicalTermEntity(
             id = 667,
@@ -406,6 +421,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/aɪˈɒnɪk bɒnd/",
+            exampleEn = "The ionic bond is the bond formed by the transfer of electrons from one atom to another.",
+            exampleFr = "Le liaison ionique est liaison formée par le transfert d'électrons d'un atome à un autre.",
+            exampleAr = "الرابطة الأيونية هو رابطة تتكون من انتقال الإلكترونات من ذرة إلى أخرى.",
         ),
         MedicalTermEntity(
             id = 668,
@@ -418,6 +436,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈhaɪdrədʒən bɒnd/",
+            exampleEn = "The hydrogen bond is the weak bond between a hydrogen atom and an electronegative atom.",
+            exampleFr = "Le liaison hydrogène est liaison faible entre un atome d'hydrogène et un atome électronégatif.",
+            exampleAr = "الرابطة الهيدروجينية هو رابطة ضعيفة بين ذرة هيدروجين وذرة كهرسلبية.",
         ),
         MedicalTermEntity(
             id = 669,
@@ -442,6 +463,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˌhaɪdrəˈfɪlɪk/",
+            exampleEn = "Hydrophilic refers to having an affinity for water; water-loving.",
+            exampleFr = "L'hydrophile est ayant une affinité pour l'eau.",
+            exampleAr = "محب للماء هو له ألفة للماء؛ محب للماء.",
         ),
         MedicalTermEntity(
             id = 671,
@@ -454,6 +478,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˌhaɪdrəˈfoʊbɪk/",
+            exampleEn = "Hydrophobic refers to repelling water; water-fearing.",
+            exampleFr = "L'hydrophobe est repoussant l'eau.",
+            exampleAr = "كاره للماء هو يطرد الماء؛ كاره للماء.",
         ),
         MedicalTermEntity(
             id = 672,
@@ -466,6 +493,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˌæmfɪˈpæθɪk/",
+            exampleEn = "Amphipathic refers to having both hydrophilic and hydrophobic regions.",
+            exampleFr = "L'amphipathique est possédant des régions hydrophiles et hydrophobes.",
+            exampleAr = "مزدوج الألفة هو له مناطق محبة للماء وأخرى كارهة للماء.",
         ),
         MedicalTermEntity(
             id = 673,
@@ -478,6 +508,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈsɒljuːt/",
+            exampleEn = "The solute is the substance dissolved in a solvent to form a solution.",
+            exampleFr = "La soluté est substance dissoute dans un solvant pour former une solution.",
+            exampleAr = "المذاب هو مادة مذابة في مذيب لتكوين محلول.",
         ),
         MedicalTermEntity(
             id = 674,
@@ -490,6 +523,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈsɒlvənt/",
+            exampleEn = "The solvent is the liquid in which a solute is dissolved.",
+            exampleFr = "La solvant est liquide dans lequel un soluté est dissous.",
+            exampleAr = "المذيب هو سائل يُذاب فيه المذاب.",
         ),
         MedicalTermEntity(
             id = 675,
@@ -502,6 +538,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈæsɪd/",
+            exampleEn = "The acid is the substance that donates hydrogen ions (H+) in solution.",
+            exampleFr = "L'acide est substance qui donne des ions hydrogène (H+) en solution.",
+            exampleAr = "الحمض هو مادة تمنح أيونات الهيدروجين في المحلول.",
         ),
         MedicalTermEntity(
             id = 676,
@@ -514,6 +553,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/beɪs/",
+            exampleEn = "The base (alkali) is the substance that accepts hydrogen ions or donates hydroxide ions (OH-).",
+            exampleFr = "La base (Alcali) est substance qui accepte des ions hydrogène ou donne des ions hydroxyde.",
+            exampleAr = "القاعدة (القلوي) هو مادة تستقبل أيونات الهيدروجين أو تمنح أيونات الهيدروكسيد.",
         ),
         MedicalTermEntity(
             id = 677,
@@ -526,6 +568,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈbʌfər/",
+            exampleEn = "The buffer is the solution that resists changes in pH when acid or base is added.",
+            exampleFr = "Le tampon est solution résistant aux changements de pH lors de l'ajout d'acide ou de base.",
+            exampleAr = "المحلول الدارئ هو محلول يقاوم التغيرات في الأس الهيدروجيني عند إضافة حمض أو قاعدة.",
         ),
         MedicalTermEntity(
             id = 678,
@@ -538,6 +583,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ɪˈlɛktrəlaɪt/",
+            exampleEn = "The electrolyte is the substance that dissociates into ions in solution conducting electricity.",
+            exampleFr = "L'électrolyte est substance se dissociant en ions en solution conduisant l'électricité.",
+            exampleAr = "الشاردة (الإلكتروليت) هو مادة تتفكك إلى أيونات في المحلول وتوصل الكهرباء.",
         ),
         MedicalTermEntity(
             id = 679,
@@ -550,6 +598,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈaɪɒn/",
+            exampleEn = "The ion is the atom or molecule with a net electric charge.",
+            exampleFr = "L'ion est atome ou molécule avec une charge électrique nette.",
+            exampleAr = "الأيون (الشاردة) هو ذرة أو جزيء يحمل شحنة كهربائية صافية.",
         ),
         MedicalTermEntity(
             id = 680,
@@ -562,6 +613,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈkætaɪɒn/",
+            exampleEn = "The cation is the positively charged ion.",
+            exampleFr = "Le cation est ion chargé positivement.",
+            exampleAr = "الكاتيون (أيون موجب) هو أيون موجب الشحنة.",
         ),
         MedicalTermEntity(
             id = 681,
@@ -574,6 +628,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈænaɪɒn/",
+            exampleEn = "The anion is the negatively charged ion.",
+            exampleFr = "L'anion est ion chargé négativement.",
+            exampleAr = "الأنيون (أيون سالب) هو أيون سالب الشحنة.",
         ),
         MedicalTermEntity(
             id = 682,
@@ -586,6 +643,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/ˈmoʊlər ˌkɒnsənˈtreɪʃən/",
+            exampleEn = "The molar concentration is the number of moles of solute per liter of solution.",
+            exampleFr = "Le concentration molaire est nombre de moles de soluté par litre de solution.",
+            exampleAr = "التركيز المولاري هو عدد مولات المذاب في لتر واحد من المحلول.",
         ),
         MedicalTermEntity(
             id = 683,
@@ -598,6 +658,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/dɪˌsoʊsiˈeɪʃən/",
+            exampleEn = "The dissociation is the separation of a molecule into ions or smaller molecules.",
+            exampleFr = "Le dissociation est séparation d'une molécule en ions ou en molécules plus petites.",
+            exampleAr = "التفكك هو انفصال الجزيء إلى أيونات أو جزيئات أصغر.",
         ),
         MedicalTermEntity(
             id = 684,
@@ -610,6 +673,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌkɑːrboʊˈhaɪdreɪt/",
+            exampleEn = "The carbohydrate is the organic compound composed of carbon, hydrogen, and oxygen (Cn(H2O)n).",
+            exampleFr = "La glucide est composé organique composé de carbone, hydrogène et oxygène.",
+            exampleAr = "السكريات (الكربوهيدرات) هو مركب عضوي يتكون من الكربون والهيدروجين والأكسجين.",
         ),
         MedicalTermEntity(
             id = 685,
@@ -622,6 +688,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌmɒnoʊˈsækəraɪd/",
+            exampleEn = "The monosaccharide is the simplest form of sugar that cannot be hydrolyzed further.",
+            exampleFr = "La monosaccharide (Ose) est forme la plus simple de sucre qui ne peut être hydrolysée davantage.",
+            exampleAr = "السكر الأحادي هو أبسط أشكال السكر لا يمكن تحليله أكثر.",
         ),
         MedicalTermEntity(
             id = 686,
@@ -634,6 +703,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈfrʌktoʊs/",
+            exampleEn = "The fructose is the ketose monosaccharide found in fruits and honey.",
+            exampleFr = "La fructose est monosaccharide cétose trouvé dans les fruits et le miel.",
+            exampleAr = "الفركتوز (سكر الفاكهة) هو سكر كيتوزي أحادي يوجد في الفواكه والعسل.",
         ),
         MedicalTermEntity(
             id = 687,
@@ -646,6 +718,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ɡəˈlæktoʊs/",
+            exampleEn = "The galactose is the aldose sugar derived from lactose hydrolysis.",
+            exampleFr = "La galactose est sucre aldose dérivé de l'hydrolyse du lactose.",
+            exampleAr = "الغالاكتوز هو سكر ألدوزي ناتج عن تحلل اللاكتوز.",
         ),
         MedicalTermEntity(
             id = 688,
@@ -658,6 +733,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈraɪboʊs/",
+            exampleEn = "The ribose is the five-carbon sugar component of RNA and ATP.",
+            exampleFr = "La ribose est sucre à cinq carbones composant de l'ARN et de l'ATP.",
+            exampleAr = "الريبوز هو سكر خماسي الكربون مكون من الحمض النووي الريبي والأدينوسين ثلاثي الفوسفات.",
         ),
         MedicalTermEntity(
             id = 689,
@@ -670,6 +748,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/diːˈɒksɪraɪboʊs/",
+            exampleEn = "The deoxyribose is the five-carbon sugar component of DNA lacking one oxygen.",
+            exampleFr = "La désoxyribose est sucre à cinq carbones composant de l'ADN manquant un oxygène.",
+            exampleAr = "الديوكسي ريبوز هو سكر خماسي الكربون مكون من الحمض النووي الريبي منقوص الأكسجين يفتقد ذرة أكسجين.",
         ),
         MedicalTermEntity(
             id = 690,
@@ -682,6 +763,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈældoʊs/",
+            exampleEn = "The aldose is the monosaccharide containing an aldehyde functional group.",
+            exampleFr = "L'aldose est monosaccharide contenant un groupe fonctionnel aldéhyde.",
+            exampleAr = "الألدوز هو سكر أحادي يحتوي على مجموعة ألدهيد وظيفية.",
         ),
         MedicalTermEntity(
             id = 691,
@@ -694,6 +778,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈkiːtoʊs/",
+            exampleEn = "The ketose is the monosaccharide containing a ketone functional group.",
+            exampleFr = "La cétose est monosaccharide contenant un groupe fonctionnel cétone.",
+            exampleAr = "الكيتوز هو سكر أحادي يحتوي على مجموعة كيتون وظيفية.",
         ),
         MedicalTermEntity(
             id = 692,
@@ -706,6 +793,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/daɪˈsækəraɪd/",
+            exampleEn = "The disaccharide is the sugar formed by joining two monosaccharides by a glycosidic bond.",
+            exampleFr = "La disaccharide (Dioside) est sucre formé par la liaison de deux monosaccharides par une liaison glycosidique.",
+            exampleAr = "السكر الثنائي هو سكر يتكون من ارتباط سكرين أحاديين برابطة غليكوسيدية.",
         ),
         MedicalTermEntity(
             id = 693,
@@ -754,6 +844,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌpɒliˈsækəraɪd/",
+            exampleEn = "The polysaccharide is the complex carbohydrate formed by many monosaccharides linked together.",
+            exampleFr = "La polysaccharide (Polyoside) est glucide complexe formé de nombreux monosaccharides liés ensemble.",
+            exampleAr = "السكر المتعدد (عديد السكاريد) هو كربوهيدرات معقدة تتكون من العديد من السكريات الأحادية المرتبطة معاً.",
         ),
         MedicalTermEntity(
             id = 697,
@@ -766,6 +859,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/stɑːrtʃ/",
+            exampleEn = "The starch is the storage form of glucose in plants.",
+            exampleFr = "L'amidon est forme de stockage du glucose chez les plantes.",
+            exampleAr = "النشا هو الشكل التخزيني للغلوكوز في النباتات.",
         ),
         MedicalTermEntity(
             id = 698,
@@ -778,6 +874,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈsɛljʊloʊs/",
+            exampleEn = "The cellulose is the structural polysaccharide in plant cell walls; indigestible dietary fiber.",
+            exampleFr = "La cellulose est polysaccharide structural des parois cellulaires végétales; fibre alimentaire indigestible.",
+            exampleAr = "السيلولوز هو عديد سكاريد بنائي في جدران الخلايا النباتية؛ ألياف غذائية غير قابلة للهضم.",
         ),
         MedicalTermEntity(
             id = 699,
@@ -790,6 +889,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌɡlaɪkəˈsɪdɪk bɒnd/",
+            exampleEn = "The glycosidic bond is the covalent bond linking two monosaccharides.",
+            exampleFr = "Le liaison glycosidique (osidique) est liaison covalente reliant deux monosaccharides.",
+            exampleAr = "الرابطة الغليكوسيدية هو رابطة تساهمية تربط سكرين أحاديين.",
         ),
         MedicalTermEntity(
             id = 700,
@@ -850,6 +952,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/rɪˈdjuːsɪŋ ˈʃʊɡər/",
+            exampleEn = "The reducing sugar is the sugar that can donate electrons and reduce other compounds.",
+            exampleFr = "La sucre réducteur est sucre pouvant donner des électrons et réduire d'autres composés.",
+            exampleAr = "السكر المرجع هو سكر يمكنه منح إلكترونات وإرجاع مركبات أخرى.",
         ),
         MedicalTermEntity(
             id = 705,
@@ -862,6 +967,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌɡlaɪkoʊˈproʊtiːn/",
+            exampleEn = "The glycoprotein is the protein with attached carbohydrate chains.",
+            exampleFr = "La glycoprotéine est protéine avec des chaînes glucidiques attachées.",
+            exampleAr = "البروتين السكري هو بروتين مرتبط بسلاسل سكرية.",
         ),
         MedicalTermEntity(
             id = 706,
@@ -874,6 +982,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌɡlaɪkoʊˈlɪpɪd/",
+            exampleEn = "The glycolipid is the lipid with attached carbohydrate chains found in cell membranes.",
+            exampleFr = "La glycolipide est lipide avec des chaînes glucidiques trouvé dans les membranes cellulaires.",
+            exampleAr = "الدهن السكري هو دهن مرتبط بسلاسل سكرية يوجد في أغشية الخلايا.",
         ),
         MedicalTermEntity(
             id = 707,
@@ -886,6 +997,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈlɪpɪd/",
+            exampleEn = "The lipid is the hydrophobic organic molecule including fats, oils, and steroids.",
+            exampleFr = "La lipide est molécule organique hydrophobe incluant graisses, huiles et stéroïdes.",
+            exampleAr = "الدهن (الليبيد) هو جزيء عضوي كاره للماء يشمل الدهون والزيوت والستيرويدات.",
         ),
         MedicalTermEntity(
             id = 708,
@@ -898,6 +1012,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈsætʃəreɪtɪd/",
+            exampleEn = "The saturated fatty acid is the fatty acid with no double bonds between carbon atoms.",
+            exampleFr = "L'acide gras saturé est acide gras sans double liaison entre les atomes de carbone.",
+            exampleAr = "حمض دهني مشبع هو حمض دهني بدون روابط مزدوجة بين ذرات الكربون.",
         ),
         MedicalTermEntity(
             id = 709,
@@ -910,6 +1027,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ʌnˈsætʃəreɪtɪd/",
+            exampleEn = "The unsaturated fatty acid is the fatty acid with one or more double bonds between carbon atoms.",
+            exampleFr = "L'acide gras insaturé est acide gras avec une ou plusieurs doubles liaisons entre les carbones.",
+            exampleAr = "حمض دهني غير مشبع هو حمض دهني مع رابطة مزدوجة واحدة أو أكثر بين ذرات الكربون.",
         ),
         MedicalTermEntity(
             id = 710,
@@ -922,6 +1042,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˌmɒnoʊʌnˈsætʃəreɪtɪd/",
+            exampleEn = "The monounsaturated fatty acid is the fatty acid with one double bond.",
+            exampleFr = "L'acide gras monoinsaturé est acide gras avec une seule double liaison.",
+            exampleAr = "حمض دهني أحادي عدم الإشباع هو حمض دهني برابطة مزدوجة واحدة.",
         ),
         MedicalTermEntity(
             id = 711,
@@ -934,6 +1057,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˌpɒliʌnˈsætʃəreɪtɪd/",
+            exampleEn = "The polyunsaturated fatty acid is the fatty acid with multiple double bonds.",
+            exampleFr = "L'acide gras polyinsaturé est acide gras avec plusieurs doubles liaisons.",
+            exampleAr = "حمض دهني متعدد عدم الإشباع هو حمض دهني بروابط مزدوجة متعددة.",
         ),
         MedicalTermEntity(
             id = 712,
@@ -946,6 +1072,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/oʊˈmeɪɡə θriː/",
+            exampleEn = "The omega-3 fatty acid is the polyunsaturated fatty acid with the first double bond at the 3rd carbon.",
+            exampleFr = "L'acide gras oméga-3 est acide gras polyinsaturé avec la première double liaison au 3e carbone.",
+            exampleAr = "حمض دهني أوميغا-3 هو حمض دهني متعدد عدم الإشباع بأول رابطة مزدوجة عند الكربون الثالث.",
         ),
         MedicalTermEntity(
             id = 713,
@@ -958,6 +1087,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/oʊˈmeɪɡə sɪks/",
+            exampleEn = "The omega-6 fatty acid is the polyunsaturated fatty acid with the first double bond at the 6th carbon.",
+            exampleFr = "L'acide gras oméga-6 est acide gras polyinsaturé avec la première double liaison au 6e carbone.",
+            exampleAr = "حمض دهني أوميغا-6 هو حمض دهني متعدد عدم الإشباع بأول رابطة مزدوجة عند الكربون السادس.",
         ),
         MedicalTermEntity(
             id = 714,
@@ -970,6 +1102,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ɪˈsɛnʃəl/",
+            exampleEn = "The essential fatty acid is the fatty acid that cannot be synthesized by the body and must be obtained from diet.",
+            exampleFr = "L'acide gras essentiel est acide gras que le corps ne peut pas synthétiser et doit être obtenu par l'alimentation.",
+            exampleAr = "حمض دهني أساسي هو حمض دهني لا يستطيع الجسم تصنيعه ويجب الحصول عليه من الغذاء.",
         ),
         MedicalTermEntity(
             id = 715,
@@ -982,6 +1117,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈɡlɪsərɒl/",
+            exampleEn = "The glycerol is the three-carbon alcohol forming the backbone of triglycerides.",
+            exampleFr = "La glycérol est alcool à trois carbones formant le squelette des triglycérides.",
+            exampleAr = "الغليسرول هو كحول ثلاثي الكربون يشكل الهيكل الأساسي لثلاثيات الغليسريد.",
         ),
         MedicalTermEntity(
             id = 716,
@@ -994,6 +1132,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˌfɒsfoʊˈlɪpɪd/",
+            exampleEn = "The phospholipid is the lipid with a phosphate group forming the main component of cell membranes.",
+            exampleFr = "La phospholipide est lipide avec un groupe phosphate formant le composant principal des membranes cellulaires.",
+            exampleAr = "الفوسفوليبيد هو دهن مع مجموعة فوسفات يشكل المكون الرئيسي لأغشية الخلايا.",
         ),
         MedicalTermEntity(
             id = 717,
@@ -1006,6 +1147,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈsfɪŋɡoʊˌlɪpɪd/",
+            exampleEn = "The sphingolipid is the lipid based on sphingosine found in nerve cell membranes.",
+            exampleFr = "La sphingolipide est lipide basé sur la sphingosine trouvé dans les membranes des cellules nerveuses.",
+            exampleAr = "الشحميات السفينغولية هو دهن قائم على السفينغوزين يوجد في أغشية الخلايا العصبية.",
         ),
         MedicalTermEntity(
             id = 718,
@@ -1018,6 +1162,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈstɛrɔɪd/",
+            exampleEn = "The steroid is the lipid with four fused carbon rings; includes hormones and cholesterol.",
+            exampleFr = "La stéroïde est lipide avec quatre anneaux carbonés fusionnés; inclut hormones et cholestérol.",
+            exampleAr = "الستيرويد هو دهن بأربع حلقات كربونية ملتحمة؛ يشمل الهرمونات والكوليسترول.",
         ),
         MedicalTermEntity(
             id = 719,
@@ -1030,6 +1177,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˌlɪpoʊˈproʊtiːn/",
+            exampleEn = "The lipoprotein is the complex of lipids and proteins that transports lipids in the blood.",
+            exampleFr = "La lipoprotéine est complexe de lipides et de protéines transportant les lipides dans le sang.",
+            exampleAr = "البروتين الدهني هو معقد من الدهون والبروتينات ينقل الدهون في الدم.",
         ),
         MedicalTermEntity(
             id = 720,
@@ -1066,6 +1216,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈɛstər bɒnd/",
+            exampleEn = "The ester bond is the chemical bond between an acid and an alcohol with release of water.",
+            exampleFr = "Le liaison ester est liaison chimique entre un acide et un alcool avec libération d'eau.",
+            exampleAr = "الرابطة الإسترية هو رابطة كيميائية بين حمض وكحول مع تحرر الماء.",
         ),
         MedicalTermEntity(
             id = 723,
@@ -1078,6 +1231,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/səˌpɒnɪfɪˈkeɪʃən/",
+            exampleEn = "The saponification is the hydrolysis of an ester by a base producing glycerol and soap.",
+            exampleFr = "Le saponification est hydrolyse d'un ester par une base produisant du glycérol et du savon.",
+            exampleAr = "التصبن هو تحلل الإستر بقاعدة لإنتاج الغليسرول والصابون.",
         ),
         MedicalTermEntity(
             id = 724,
@@ -1090,6 +1246,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/aɪˈkɒsənɔɪd/",
+            exampleEn = "Eicosanoid refers to signaling molecules derived from fatty acids (prostaglandins, thromboxanes).",
+            exampleFr = "L'éicosanoïde est molécules de signalisation dérivées des acides gras.",
+            exampleAr = "الإيكوزانويد هو جزيئات إشارية مشتقة من الأحماض الدهنية (البروستاغلاندينات والثرومبوكسانات).",
         ),
         MedicalTermEntity(
             id = 725,
@@ -1102,6 +1261,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˌprɒstəˈɡlændɪn/",
+            exampleEn = "The prostaglandin is the lipid compound with hormone-like effects involved in inflammation and pain.",
+            exampleFr = "La prostaglandine est composé lipidique à effets hormonaux impliqué dans l'inflammation et la douleur.",
+            exampleAr = "البروستاغلاندين هو مركب دهني بتأثيرات شبيهة بالهرمونات يشارك في الالتهاب والألم.",
         ),
         MedicalTermEntity(
             id = 726,
@@ -1114,6 +1276,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/wæks/",
+            exampleEn = "The wax is the ester of a long-chain fatty acid and a long-chain alcohol.",
+            exampleFr = "La cire est ester d'un acide gras à longue chaîne et d'un alcool à longue chaîne.",
+            exampleAr = "الشمع هو إستر حمض دهني طويل السلسلة مع كحول طويل السلسلة.",
         ),
         MedicalTermEntity(
             id = 727,
@@ -1126,6 +1291,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈlɪpɪd pəˌrɒksɪˈdeɪʃən/",
+            exampleEn = "The lipid peroxidation is the oxidative degradation of lipids by free radicals.",
+            exampleFr = "Le peroxydation lipidique est dégradation oxydative des lipides par les radicaux libres.",
+            exampleAr = "بيروكسدة الدهون هو التحلل التأكسدي للدهون بواسطة الجذور الحرة.",
         ),
         MedicalTermEntity(
             id = 728,
@@ -1150,6 +1318,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈbeɪtə ˌɒksɪˈdeɪʃən/",
+            exampleEn = "The beta-oxidation is the metabolic process of breaking down fatty acids to generate acetyl-CoA.",
+            exampleFr = "Le bêta-oxydation est processus métabolique de dégradation des acides gras en acétyl-CoA.",
+            exampleAr = "الأكسدة البيتاوية هو العملية الأيضية لتحلل الأحماض الدهنية لتوليد أسيتيل-مساعد الإنزيم أ.",
         ),
         MedicalTermEntity(
             id = 730,
@@ -1162,6 +1333,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/əˈmiːnoʊ ˈæsɪd/",
+            exampleEn = "The amino acid is the organic molecule with an amino group and a carboxyl group; building block of proteins.",
+            exampleFr = "L'acide aminé est molécule organique avec un groupe amine et un groupe carboxyle; brique des protéines.",
+            exampleAr = "الحمض الأميني هو جزيء عضوي بمجموعة أمينية ومجموعة كربوكسيل؛ وحدة بناء البروتينات.",
         ),
         MedicalTermEntity(
             id = 731,
@@ -1174,6 +1348,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ɪˈsɛnʃəl əˈmiːnoʊ/",
+            exampleEn = "The essential amino acid is the amino acid that cannot be synthesized and must come from diet.",
+            exampleFr = "L'acide aminé essentiel est acide aminé que le corps ne peut pas synthétiser et doit provenir de l'alimentation.",
+            exampleAr = "حمض أميني أساسي هو حمض أميني لا يستطيع الجسم تصنيعه ويجب الحصول عليه من الغذاء.",
         ),
         MedicalTermEntity(
             id = 732,
@@ -1186,6 +1363,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/nɒn ɪˈsɛnʃəl/",
+            exampleEn = "The non-essential amino acid is the amino acid that can be synthesized by the body.",
+            exampleFr = "L'acide aminé non essentiel est acide aminé pouvant être synthétisé par le corps.",
+            exampleAr = "حمض أميني غير أساسي هو حمض أميني يستطيع الجسم تصنيعه.",
         ),
         MedicalTermEntity(
             id = 733,
@@ -1198,6 +1378,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/daɪˈpɛptaɪd/",
+            exampleEn = "The dipeptide is the molecule consisting of two amino acids joined by a peptide bond.",
+            exampleFr = "La dipeptide est molécule constituée de deux acides aminés liés par une liaison peptidique.",
+            exampleAr = "ثنائي الببتيد هو جزيء يتكون من حمضين أمينيين مرتبطين برابطة ببتيدية.",
         ),
         MedicalTermEntity(
             id = 734,
@@ -1210,6 +1393,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˌpɒliˈpɛptaɪd/",
+            exampleEn = "The polypeptide is the chain of many amino acids linked by peptide bonds.",
+            exampleFr = "La polypeptide est chaîne de nombreux acides aminés liés par des liaisons peptidiques.",
+            exampleAr = "عديد الببتيد هو سلسلة من أحماض أمينية عديدة مرتبطة بروابط ببتيدية.",
         ),
         MedicalTermEntity(
             id = 735,
@@ -1222,6 +1408,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈproʊtiːn/",
+            exampleEn = "The protein is the macromolecule composed of one or more polypeptide chains with specific functions.",
+            exampleFr = "La protéine est macromolécule composée d'une ou plusieurs chaînes polypeptidiques avec des fonctions spécifiques.",
+            exampleAr = "البروتين هو جزيء ضخم يتكون من سلسلة أو أكثر من عديدات الببتيد بوظائف محددة.",
         ),
         MedicalTermEntity(
             id = 736,
@@ -1234,6 +1423,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈpraɪmɛri ˈstrʌktʃər/",
+            exampleEn = "The primary structure is the linear sequence of amino acids in a polypeptide chain.",
+            exampleFr = "La structure primaire est séquence linéaire des acides aminés dans une chaîne polypeptidique.",
+            exampleAr = "البنية الأولية هو التسلسل الخطي للأحماض الأمينية في سلسلة عديد الببتيد.",
         ),
         MedicalTermEntity(
             id = 737,
@@ -1258,6 +1450,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈælfə ˈhiːlɪks/",
+            exampleEn = "The alpha helix is the coiled secondary structure of proteins stabilized by hydrogen bonds.",
+            exampleFr = "L'hélice alpha est structure secondaire enroulée des protéines stabilisée par des liaisons hydrogène.",
+            exampleAr = "اللولب ألفا هو بنية ثانوية لولبية للبروتينات مثبتة بروابط هيدروجينية.",
         ),
         MedicalTermEntity(
             id = 739,
@@ -1270,6 +1465,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈbeɪtə ʃiːt/",
+            exampleEn = "The beta sheet is the flat secondary structure formed by hydrogen bonds between parallel chains.",
+            exampleFr = "La feuillet bêta est structure secondaire plate formée par des liaisons hydrogène entre chaînes parallèles.",
+            exampleAr = "الصفيحة بيتا هو بنية ثانوية مسطحة تتكون من روابط هيدروجينية بين سلاسل متوازية.",
         ),
         MedicalTermEntity(
             id = 740,
@@ -1282,6 +1480,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈtɜːrʃɛri/",
+            exampleEn = "The tertiary structure is the overall 3D shape of a single polypeptide chain.",
+            exampleFr = "La structure tertiaire est forme 3D globale d'une seule chaîne polypeptidique.",
+            exampleAr = "البنية الثالثية هو الشكل ثلاثي الأبعاد الكلي لسلسلة عديد ببتيد واحدة.",
         ),
         MedicalTermEntity(
             id = 741,
@@ -1294,6 +1495,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/kwɒˈtɜːrnɛri/",
+            exampleEn = "The quaternary structure is the arrangement of multiple polypeptide subunits in a protein complex.",
+            exampleFr = "La structure quaternaire est arrangement de plusieurs sous-unités polypeptidiques dans un complexe protéique.",
+            exampleAr = "البنية الرباعية هو ترتيب عدة وحدات فرعية ببتيدية في معقد بروتيني.",
         ),
         MedicalTermEntity(
             id = 742,
@@ -1306,6 +1510,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/diːˌneɪtʃəˈreɪʃən/",
+            exampleEn = "The denaturation is the loss of protein structure and function due to heat, pH, or chemicals.",
+            exampleFr = "Le dénaturation est perte de la structure et de la fonction d'une protéine par chaleur, pH ou agents chimiques.",
+            exampleAr = "التمسخ (التغيير الطبيعي) هو فقدان البروتين لبنيته ووظيفته بسبب الحرارة أو الأس الهيدروجيني أو المواد الكيميائية.",
         ),
         MedicalTermEntity(
             id = 743,
@@ -1318,6 +1525,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/daɪˈsʌlfaɪd bɒnd/",
+            exampleEn = "The disulfide bond is the covalent bond between two cysteine residues stabilizing protein structure.",
+            exampleFr = "La pont disulfure est liaison covalente entre deux résidus cystéine stabilisant la structure protéique.",
+            exampleAr = "الرابطة ثنائية الكبريت هو رابطة تساهمية بين بقايا سيستين اثنتين تثبت بنية البروتين.",
         ),
         MedicalTermEntity(
             id = 744,
@@ -1330,6 +1540,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈɡlɒbjʊlər/",
+            exampleEn = "The globular protein is the spherical compact protein that is water-soluble (e.g., hemoglobin, enzymes).",
+            exampleAr = "البروتين الكروي هو بروتين كروي مدمج قابل للذوبان في الماء (مثل الهيموغلوبين والإنزيمات).",
         ),
         MedicalTermEntity(
             id = 745,
@@ -1342,6 +1554,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈfaɪbrəs/",
+            exampleEn = "The fibrous protein is the elongated structural protein insoluble in water (e.g., collagen, keratin).",
+            exampleAr = "البروتين الليفي هو بروتين بنائي ممتد غير قابل للذوبان في الماء (مثل الكولاجين والكيراتين).",
         ),
         MedicalTermEntity(
             id = 746,
@@ -1354,6 +1568,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈkɒlədʒən/",
+            exampleEn = "The collagen is the most abundant protein in the body; main component of connective tissue.",
+            exampleFr = "La collagène est protéine la plus abondante du corps; composant principal du tissu conjonctif.",
+            exampleAr = "الكولاجين هو البروتين الأكثر وفرة في الجسم؛ المكون الرئيسي للنسيج الضام.",
         ),
         MedicalTermEntity(
             id = 747,
@@ -1366,6 +1583,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈkɛrətɪn/",
+            exampleEn = "The keratin is the structural protein found in hair, nails, and outer skin layer.",
+            exampleFr = "La kératine est protéine structurale trouvée dans les cheveux, ongles et couche externe de la peau.",
+            exampleAr = "الكيراتين هو بروتين بنائي يوجد في الشعر والأظافر والطبقة الخارجية للجلد.",
         ),
         MedicalTermEntity(
             id = 748,
@@ -1378,6 +1598,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ælˈbjuːmɪn/",
+            exampleEn = "The albumin is the most abundant plasma protein maintaining osmotic pressure.",
+            exampleFr = "L'albumine est protéine plasmatique la plus abondante maintenant la pression osmotique.",
+            exampleAr = "الألبومين هو البروتين البلازمي الأكثر وفرة الذي يحافظ على الضغط الأسموزي.",
         ),
         MedicalTermEntity(
             id = 749,
@@ -1390,6 +1613,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈɡlɒbjʊlɪn/",
+            exampleEn = "The globulin is the group of plasma proteins including antibodies and transport proteins.",
+            exampleFr = "La globuline est groupe de protéines plasmatiques incluant anticorps et protéines de transport.",
+            exampleAr = "الغلوبولين هو مجموعة من البروتينات البلازمية تشمل الأجسام المضادة وبروتينات النقل.",
         ),
         MedicalTermEntity(
             id = 750,
@@ -1402,6 +1628,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈʃæpəroʊn/",
+            exampleEn = "The chaperone protein is the protein assisting other proteins in folding correctly.",
+            exampleFr = "La protéine chaperon est protéine assistant d'autres protéines à se replier correctement.",
+            exampleAr = "البروتين المرافق هو بروتين يساعد البروتينات الأخرى في الطي بشكل صحيح.",
         ),
         MedicalTermEntity(
             id = 751,
@@ -1414,6 +1643,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈɛnzaɪm/",
+            exampleEn = "The enzyme is the biological catalyst that accelerates chemical reactions without being consumed.",
+            exampleFr = "L'enzyme est catalyseur biologique accélérant les réactions chimiques sans être consommé.",
+            exampleAr = "الإنزيم (الخميرة) هو محفز حيوي يسرع التفاعلات الكيميائية دون أن يُستهلك.",
         ),
         MedicalTermEntity(
             id = 752,
@@ -1426,6 +1658,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈsʌbstreɪt/",
+            exampleEn = "The substrate is the molecule upon which an enzyme acts.",
+            exampleFr = "Le substrat est molécule sur laquelle agit un enzyme.",
+            exampleAr = "الركيزة (المادة المتفاعلة) هو الجزيء الذي يعمل عليه الإنزيم.",
         ),
         MedicalTermEntity(
             id = 753,
@@ -1438,6 +1673,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈæktɪv saɪt/",
+            exampleEn = "The active site is the region of an enzyme where the substrate binds and the reaction occurs.",
+            exampleFr = "La site actif est région de l'enzyme où le substrat se lie et la réaction se produit.",
+            exampleAr = "الموقع الفعال هو منطقة الإنزيم حيث ترتبط الركيزة ويحدث التفاعل.",
         ),
         MedicalTermEntity(
             id = 754,
@@ -1450,6 +1688,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈɛnzaɪm ˈsʌbstreɪt/",
+            exampleEn = "The enzyme-substrate complex is the temporary complex formed when substrate binds to the active site.",
+            exampleFr = "La complexe enzyme-substrat est complexe temporaire formé quand le substrat se lie au site actif.",
+            exampleAr = "معقد الإنزيم-الركيزة هو المعقد المؤقت الذي يتكون عند ارتباط الركيزة بالموقع الفعال.",
         ),
         MedicalTermEntity(
             id = 755,
@@ -1462,6 +1703,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/lɒk ænd kiː/",
+            exampleEn = "The lock and key model is the model where the substrate fits exactly into the active site like a key in a lock.",
+            exampleFr = "La modèle clé-serrure est modèle où le substrat s'adapte exactement au site actif comme une clé dans une serrure.",
+            exampleAr = "نموذج القفل والمفتاح هو نموذج حيث تتناسب الركيزة تماماً مع الموقع الفعال كالمفتاح في القفل.",
         ),
         MedicalTermEntity(
             id = 756,
@@ -1474,6 +1718,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ɪnˈdjuːst fɪt/",
+            exampleEn = "The induced fit model is the model where the active site changes shape to fit the substrate.",
+            exampleFr = "La modèle de l'ajustement induit est modèle où le site actif change de forme pour s'adapter au substrat.",
+            exampleAr = "نموذج التكيف المُحَثّ هو نموذج حيث يتغير شكل الموقع الفعال ليتناسب مع الركيزة.",
         ),
         MedicalTermEntity(
             id = 757,
@@ -1486,6 +1733,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈkoʊfæktər/",
+            exampleEn = "The cofactor is the non-protein molecule required for enzyme activity (metal ions).",
+            exampleFr = "La cofacteur est molécule non protéique nécessaire à l'activité enzymatique (ions métalliques).",
+            exampleAr = "العامل المساعد هو جزيء غير بروتيني ضروري لنشاط الإنزيم (أيونات معدنية).",
         ),
         MedicalTermEntity(
             id = 758,
@@ -1498,6 +1748,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/koʊˈɛnzaɪm/",
+            exampleEn = "The coenzyme is the organic cofactor required for enzyme function (often vitamins).",
+            exampleFr = "La coenzyme est cofacteur organique nécessaire au fonctionnement enzymatique (souvent des vitamines).",
+            exampleAr = "المرافق الإنزيمي هو عامل مساعد عضوي ضروري لوظيفة الإنزيم (غالباً فيتامينات).",
         ),
         MedicalTermEntity(
             id = 759,
@@ -1510,6 +1763,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌæpoʊˈɛnzaɪm/",
+            exampleEn = "The apoenzyme is the protein part of an enzyme without its cofactor.",
+            exampleFr = "L'apoenzyme est partie protéique d'un enzyme sans son cofacteur.",
+            exampleAr = "الإنزيم البدئي هو الجزء البروتيني من الإنزيم بدون عامله المساعد.",
         ),
         MedicalTermEntity(
             id = 760,
@@ -1522,6 +1778,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌhoʊloʊˈɛnzaɪm/",
+            exampleEn = "The holoenzyme is the complete active enzyme with its cofactor (apoenzyme + cofactor).",
+            exampleFr = "L'holoenzyme est enzyme actif complet avec son cofacteur (apoenzyme + cofacteur).",
+            exampleAr = "الإنزيم الكامل هو الإنزيم الكامل النشط مع عامله المساعد (إنزيم بدئي + عامل مساعد).",
         ),
         MedicalTermEntity(
             id = 761,
@@ -1570,6 +1829,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/viː mæks/",
+            exampleEn = "The vmax is the maximum velocity of an enzyme reaction at saturating substrate concentration.",
+            exampleFr = "La vmax est vitesse maximale d'une réaction enzymatique à concentration saturante de substrat.",
+            exampleAr = "السرعة القصوى هو السرعة القصوى لتفاعل إنزيمي عند تركيز الركيزة المُشبع.",
         ),
         MedicalTermEntity(
             id = 765,
@@ -1582,6 +1844,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/keɪ ɛm/",
+            exampleEn = "The km (michaelis constant) is the substrate concentration at which reaction velocity is half of Vmax.",
+            exampleFr = "La km (Constante de Michaelis) est concentration du substrat à laquelle la vitesse de réaction est la moitié de Vmax.",
+            exampleAr = "ثابت ميكائيليس هو تركيز الركيزة الذي تكون عنده سرعة التفاعل نصف السرعة القصوى.",
         ),
         MedicalTermEntity(
             id = 766,
@@ -1606,6 +1871,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈzaɪmədʒən/",
+            exampleEn = "The zymogen (proenzyme) is the inactive enzyme precursor requiring activation (e.g., pepsinogen → pepsin).",
+            exampleFr = "La zymogène (Proenzyme) est précurseur enzymatique inactif nécessitant une activation.",
         ),
         MedicalTermEntity(
             id = 768,
@@ -1618,6 +1885,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌæktɪˈveɪʃən ˈɛnərdʒi/",
+            exampleEn = "The activation energy is the minimum energy required to start a chemical reaction.",
+            exampleFr = "L'énergie d'activation est énergie minimale nécessaire pour démarrer une réaction chimique.",
+            exampleAr = "طاقة التنشيط هو الطاقة الدنيا اللازمة لبدء تفاعل كيميائي.",
         ),
         MedicalTermEntity(
             id = 769,
@@ -1630,6 +1900,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/njuːˈkliːɪk ˈæsɪd/",
+            exampleEn = "The nucleic acid is the macromolecule (DNA or RNA) composed of nucleotides carrying genetic information.",
+            exampleFr = "L'acide nucléique est macromolécule (ADN ou ARN) composée de nucléotides portant l'information génétique.",
+            exampleAr = "الحمض النووي هو جزيء ضخم (DNA أو RNA) مكون من نيوكليوتيدات يحمل المعلومات الوراثية.",
         ),
         MedicalTermEntity(
             id = 770,
@@ -1642,6 +1915,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/diː ɛn eɪ/",
+            exampleEn = "The dna (deoxyribonucleic acid) is the double-stranded molecule carrying the genetic blueprint of an organism.",
+            exampleFr = "L'ADN (Acide désoxyribonucléique) est molécule double brin portant le plan génétique d'un organisme.",
+            exampleAr = "الحمض النووي الريبي منقوص الأكسجين هو الجزيء مزدوج الشريط الذي يحمل المخطط الوراثي للكائن الحي.",
         ),
         MedicalTermEntity(
             id = 771,
@@ -1654,6 +1930,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ɑːr ɛn eɪ/",
+            exampleEn = "The rna (ribonucleic acid) is the single-stranded molecule involved in protein synthesis and gene regulation.",
+            exampleFr = "L'ARN (Acide ribonucléique) est molécule simple brin impliquée dans la synthèse protéique et la régulation des gènes.",
+            exampleAr = "الحمض النووي الريبي هو جزيء أحادي الشريط يشارك في تصنيع البروتينات وتنظيم الجينات.",
         ),
         MedicalTermEntity(
             id = 772,
@@ -1666,6 +1945,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈnjuːkliəˌsaɪd/",
+            exampleEn = "The nucleoside is the nucleotide without the phosphate group (base + sugar only).",
+            exampleFr = "La nucléoside est nucléotide sans le groupe phosphate (base + sucre uniquement).",
+            exampleAr = "النيوكليوزيد هو نيوكليوتيد بدون مجموعة الفوسفات (قاعدة + سكر فقط).",
         ),
         MedicalTermEntity(
             id = 773,
@@ -1678,6 +1960,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/naɪˈtrɒdʒɪnəs beɪs/",
+            exampleEn = "The nitrogenous base is the nitrogen-containing molecule forming part of a nucleotide.",
+            exampleFr = "La base azotée est molécule contenant de l'azote faisant partie d'un nucléotide.",
+            exampleAr = "القاعدة النيتروجينية هو جزيء يحتوي على النيتروجين يشكل جزءاً من النيوكليوتيد.",
         ),
         MedicalTermEntity(
             id = 774,
@@ -1690,6 +1975,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈpjʊəriːn/",
+            exampleEn = "The purine is the double-ringed nitrogenous base (adenine and guanine).",
+            exampleFr = "La purine est base azotée à double anneau (adénine et guanine).",
+            exampleAr = "البيورين هو قاعدة نيتروجينية ذات حلقتين (الأدينين والغوانين).",
         ),
         MedicalTermEntity(
             id = 775,
@@ -1702,6 +1990,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/pɪˈrɪmɪdiːn/",
+            exampleEn = "The pyrimidine is the single-ringed nitrogenous base (cytosine, thymine, uracil).",
+            exampleFr = "La pyrimidine est base azotée à anneau unique (cytosine, thymine, uracile).",
+            exampleAr = "البيريميدين هو قاعدة نيتروجينية ذات حلقة واحدة (السيتوزين والثايمين واليوراسيل).",
         ),
         MedicalTermEntity(
             id = 776,
@@ -1714,6 +2005,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈædɪniːn/",
+            exampleEn = "The adenine (a) is the purine base that pairs with thymine in DNA and uracil in RNA.",
+            exampleFr = "L'adénine (A) est base purique s'appariant avec la thymine dans l'ADN et l'uracile dans l'ARN.",
+            exampleAr = "الأدينين هو قاعدة بيورينية تتزاوج مع الثايمين في DNA واليوراسيل في RNA.",
         ),
         MedicalTermEntity(
             id = 777,
@@ -1726,6 +2020,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈɡwɑːniːn/",
+            exampleEn = "The guanine (g) is the purine base that pairs with cytosine.",
+            exampleFr = "La guanine (G) est base purique s'appariant avec la cytosine.",
+            exampleAr = "الغوانين هو قاعدة بيورينية تتزاوج مع السيتوزين.",
         ),
         MedicalTermEntity(
             id = 778,
@@ -1738,6 +2035,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈsaɪtəsiːn/",
+            exampleEn = "The cytosine (c) is the pyrimidine base that pairs with guanine.",
+            exampleFr = "La cytosine (C) est base pyrimidique s'appariant avec la guanine.",
+            exampleAr = "السيتوزين هو قاعدة بيريميدينية تتزاوج مع الغوانين.",
         ),
         MedicalTermEntity(
             id = 779,
@@ -1750,6 +2050,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈθaɪmiːn/",
+            exampleEn = "The thymine (t) is the pyrimidine base found only in DNA that pairs with adenine.",
+            exampleFr = "La thymine (T) est base pyrimidique trouvée uniquement dans l'ADN s'appariant avec l'adénine.",
+            exampleAr = "الثايمين هو قاعدة بيريميدينية توجد فقط في DNA وتتزاوج مع الأدينين.",
         ),
         MedicalTermEntity(
             id = 780,
@@ -1762,6 +2065,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈjʊərəsɪl/",
+            exampleEn = "The uracil (u) is the pyrimidine base found only in RNA replacing thymine.",
+            exampleFr = "L'uracile (U) est base pyrimidique trouvée uniquement dans l'ARN remplaçant la thymine.",
+            exampleAr = "اليوراسيل هو قاعدة بيريميدينية توجد فقط في RNA وتحل محل الثايمين.",
         ),
         MedicalTermEntity(
             id = 781,
@@ -1774,6 +2080,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˌkɒmplɪˈmɛntəri/",
+            exampleEn = "The complementary base pairing is the specific pairing of A-T (or A-U) and G-C in nucleic acids.",
+            exampleFr = "L'appariement des bases complémentaires est appariement spécifique A-T (ou A-U) et G-C dans les acides nucléiques.",
+            exampleAr = "تزاوج القواعد المتكاملة هو التزاوج المحدد لـ A-T (أو A-U) و G-C في الأحماض النووية.",
         ),
         MedicalTermEntity(
             id = 782,
@@ -1786,6 +2095,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈdʌbəl ˈhiːlɪks/",
+            exampleEn = "The double helix is the twisted ladder structure of DNA.",
+            exampleFr = "La double hélice est structure en échelle torsadée de l'ADN.",
+            exampleAr = "اللولب المزدوج هو البنية السلمية الملتوية للحمض النووي.",
         ),
         MedicalTermEntity(
             id = 783,
@@ -1798,6 +2110,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˌfɒsfoʊdaɪˈɛstər/",
+            exampleEn = "The phosphodiester bond is the bond linking nucleotides together in a nucleic acid strand.",
+            exampleFr = "Le liaison phosphodiester est liaison reliant les nucléotides dans un brin d'acide nucléique.",
+            exampleAr = "الرابطة الفوسفودايسترية هو الرابطة التي تربط النيوكليوتيدات معاً في شريط الحمض النووي.",
         ),
         MedicalTermEntity(
             id = 784,
@@ -1810,6 +2125,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˌrɛplɪˈkeɪʃən/",
+            exampleEn = "The replication is the process of DNA duplication before cell division.",
+            exampleFr = "Le réplication est processus de duplication de l'ADN avant la division cellulaire.",
+            exampleAr = "التضاعف (النسخ المتماثل) هو عملية تضاعف الحمض النووي قبل انقسام الخلية.",
         ),
         MedicalTermEntity(
             id = 785,
@@ -1822,6 +2140,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/trænˈskrɪpʃən/",
+            exampleEn = "The transcription is the synthesis of mRNA from a DNA template.",
+            exampleFr = "Le transcription est synthèse d'ARNm à partir d'une matrice d'ADN.",
+            exampleAr = "النسخ هو تصنيع الحمض النووي الريبي الرسول من قالب DNA.",
         ),
         MedicalTermEntity(
             id = 786,
@@ -1834,6 +2155,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/trænsˈleɪʃən/",
+            exampleEn = "The translation is the synthesis of protein from mRNA at the ribosome.",
+            exampleFr = "Le traduction est synthèse d'une protéine à partir de l'ARNm au niveau du ribosome.",
+            exampleAr = "الترجمة هو تصنيع البروتين من الحمض النووي الريبي الرسول عند الريبوسوم.",
         ),
         MedicalTermEntity(
             id = 787,
@@ -1846,6 +2170,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈkoʊdɒn/",
+            exampleEn = "The codon is the sequence of three nucleotides coding for a specific amino acid.",
+            exampleFr = "Le codon est séquence de trois nucléotides codant pour un acide aminé spécifique.",
+            exampleAr = "الكودون (الشيفرة الثلاثية) هو تسلسل من ثلاثة نيوكليوتيدات يشفر حمضاً أمينياً محدداً.",
         ),
         MedicalTermEntity(
             id = 788,
@@ -1858,6 +2185,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˌæntɪˈkoʊdɒn/",
+            exampleEn = "The anticodon is the three-nucleotide sequence on tRNA complementary to a codon on mRNA.",
+            exampleFr = "L'anticodon est séquence de trois nucléotides sur l'ARNt complémentaire d'un codon de l'ARNm.",
+            exampleAr = "الكودون المضاد هو تسلسل من ثلاثة نيوكليوتيدات على tRNA مكمل للكودون على mRNA.",
         ),
         MedicalTermEntity(
             id = 789,
@@ -1870,6 +2200,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈmɛsɪndʒər/",
+            exampleEn = "mRNA (Messenger RNA) refers to RNA carrying the genetic code from DNA to the ribosome for protein synthesis.",
+            exampleFr = "L'ARNm (ARN messager) est ARN portant le code génétique de l'ADN au ribosome pour la synthèse protéique.",
+            exampleAr = "الحمض النووي الريبي الرسول هو RNA الذي ينقل الشيفرة الوراثية من DNA إلى الريبوسوم لتصنيع البروتين.",
         ),
         MedicalTermEntity(
             id = 790,
@@ -1882,6 +2215,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/ˈtrænsfɜːr/",
+            exampleEn = "tRNA (Transfer RNA) refers to RNA that carries amino acids to the ribosome during translation.",
+            exampleFr = "L'ARNt (ARN de transfert) est ARN transportant les acides aminés au ribosome lors de la traduction.",
+            exampleAr = "الحمض النووي الريبي الناقل هو RNA الذي ينقل الأحماض الأمينية إلى الريبوسوم أثناء الترجمة.",
         ),
         MedicalTermEntity(
             id = 791,
@@ -1894,6 +2230,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/raɪˈboʊsəməl/",
+            exampleEn = "rRNA (Ribosomal RNA) refers to RNA component of ribosomes essential for protein synthesis.",
+            exampleFr = "L'ARNr (ARN ribosomal) est composant ARN des ribosomes essentiel à la synthèse protéique.",
+            exampleAr = "الحمض النووي الريبي الريبوسومي هو مكون RNA من الريبوسومات ضروري لتصنيع البروتين.",
         ),
         MedicalTermEntity(
             id = 792,
@@ -1906,6 +2245,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/dʒiːn/",
+            exampleEn = "The gene is the segment of DNA encoding a functional protein or RNA molecule.",
+            exampleFr = "La gène est segment d'ADN codant une protéine fonctionnelle ou une molécule d'ARN.",
+            exampleAr = "الجين (المورثة) هو قطعة من DNA تشفر بروتيناً وظيفياً أو جزيء RNA.",
         ),
         MedicalTermEntity(
             id = 793,
@@ -1918,6 +2260,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/dʒəˈnɛtɪk koʊd/",
+            exampleEn = "The genetic code is the set of rules by which codons are translated into amino acids.",
+            exampleFr = "La code génétique est ensemble de règles par lesquelles les codons sont traduits en acides aminés.",
+            exampleAr = "الشيفرة الوراثية هو مجموعة القواعد التي تُترجم بها الكودونات إلى أحماض أمينية.",
         ),
         MedicalTermEntity(
             id = 794,
@@ -1930,6 +2275,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Nucléiques",
             ipaPhonetic = "/mjuːˈteɪʃən/",
+            exampleEn = "The mutation is the permanent change in the nucleotide sequence of DNA.",
+            exampleFr = "Le mutation est changement permanent dans la séquence nucléotidique de l'ADN.",
+            exampleAr = "الطفرة هو تغير دائم في تسلسل النيوكليوتيدات في DNA.",
         ),
         MedicalTermEntity(
             id = 795,
@@ -1942,6 +2290,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈvaɪtəmɪn/",
+            exampleEn = "The vitamin is the organic compound required in small amounts for normal metabolism.",
+            exampleFr = "La vitamine est composé organique requis en petites quantités pour un métabolisme normal.",
+            exampleAr = "الفيتامين هو مركب عضوي مطلوب بكميات صغيرة لأيض طبيعي.",
         ),
         MedicalTermEntity(
             id = 796,
@@ -1954,6 +2305,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈwɔːtər ˈsɒljʊbəl/",
+            exampleEn = "The water-soluble vitamin is the vitamin that dissolves in water and is not stored (B vitamins, C).",
+            exampleFr = "La vitamine hydrosoluble est vitamine se dissolvant dans l'eau et non stockée (vitamines B, C).",
+            exampleAr = "فيتامين ذواب في الماء هو فيتامين يذوب في الماء ولا يُخزن (فيتامينات B وC).",
         ),
         MedicalTermEntity(
             id = 797,
@@ -1966,6 +2320,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/fæt ˈsɒljʊbəl/",
+            exampleEn = "The fat-soluble vitamin is the vitamin that dissolves in fat and can be stored (A, D, E, K).",
+            exampleFr = "La vitamine liposoluble est vitamine se dissolvant dans les graisses et pouvant être stockée (A, D, E, K).",
+            exampleAr = "فيتامين ذواب في الدهون هو فيتامين يذوب في الدهون ويمكن تخزينه (A وD وE وK).",
         ),
         MedicalTermEntity(
             id = 798,
@@ -1978,6 +2335,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈrɛtɪnɒl/",
+            exampleEn = "The vitamin a (retinol) is the fat-soluble vitamin essential for vision, immune function, and skin health.",
+            exampleFr = "La vitamine A (Rétinol) est vitamine liposoluble essentielle pour la vision, l'immunité et la santé de la peau.",
+            exampleAr = "فيتامين أ (الريتينول) هو فيتامين ذواب في الدهون ضروري للرؤية والمناعة وصحة الجلد.",
         ),
         MedicalTermEntity(
             id = 799,
@@ -1990,6 +2350,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈθaɪəmiːn/",
+            exampleEn = "The vitamin b1 (thiamine) is the water-soluble vitamin essential for carbohydrate metabolism and nerve function.",
+            exampleFr = "La vitamine B1 (Thiamine) est vitamine hydrosoluble essentielle au métabolisme glucidique et à la fonction nerveuse.",
+            exampleAr = "فيتامين ب1 (الثيامين) هو فيتامين ذواب في الماء ضروري لأيض الكربوهيدرات ووظيفة الأعصاب.",
         ),
         MedicalTermEntity(
             id = 800,
@@ -2002,6 +2365,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈraɪboʊˌfleɪvɪn/",
+            exampleEn = "The vitamin b2 (riboflavin) is the coenzyme (FAD/FMN) involved in energy metabolism and electron transport.",
+            exampleFr = "La vitamine B2 (Riboflavine) est coenzyme (FAD/FMN) impliqué dans le métabolisme énergétique et le transport d'électrons.",
+            exampleAr = "فيتامين ب2 (الريبوفلافين) هو مرافق إنزيمي (FAD/FMN) يشارك في استقلاب الطاقة ونقل الإلكترونات.",
         ),
         MedicalTermEntity(
             id = 801,
@@ -2014,6 +2380,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈnaɪəsɪn/",
+            exampleEn = "The vitamin b3 (niacin) is the coenzyme (NAD+/NADP+) essential for redox reactions in metabolism.",
+            exampleFr = "La vitamine B3 (Niacine) est coenzyme (NAD+/NADP+) essentiel aux réactions redox du métabolisme.",
+            exampleAr = "فيتامين ب3 (النياسين) هو مرافق إنزيمي (NAD+/NADP+) ضروري لتفاعلات الأكسدة والإرجاع في الأيض.",
         ),
         MedicalTermEntity(
             id = 802,
@@ -2026,6 +2395,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˌpæntəˈθɛnɪk/",
+            exampleEn = "The vitamin b5 (pantothenic acid) is the component of coenzyme A essential for fatty acid metabolism.",
+            exampleFr = "La vitamine B5 (Acide pantothénique) est composant du coenzyme A essentiel au métabolisme des acides gras.",
+            exampleAr = "فيتامين ب5 (حمض البانتوثينيك) هو مكون من مرافق الإنزيم أ ضروري لأيض الأحماض الدهنية.",
         ),
         MedicalTermEntity(
             id = 803,
@@ -2038,6 +2410,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˌpɪrɪˈdɒksiːn/",
+            exampleEn = "The vitamin b6 (pyridoxine) is the coenzyme in amino acid metabolism and neurotransmitter synthesis.",
+            exampleFr = "La vitamine B6 (Pyridoxine) est coenzyme dans le métabolisme des acides aminés et la synthèse des neurotransmetteurs.",
+            exampleAr = "فيتامين ب6 (البيريدوكسين) هو مرافق إنزيمي في أيض الأحماض الأمينية وتصنيع النواقل العصبية.",
         ),
         MedicalTermEntity(
             id = 804,
@@ -2074,6 +2449,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/əˈskɔːrbɪk/",
+            exampleEn = "The vitamin c (ascorbic acid) is the antioxidant essential for collagen synthesis and immune function.",
+            exampleFr = "La vitamine C (Acide ascorbique) est antioxydant essentiel à la synthèse du collagène et à la fonction immunitaire.",
+            exampleAr = "فيتامين ج (حمض الأسكوربيك) هو مضاد أكسدة ضروري لتصنيع الكولاجين ووظيفة المناعة.",
         ),
         MedicalTermEntity(
             id = 807,
@@ -2086,6 +2464,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/kælˈsɪfərɒl/",
+            exampleEn = "The vitamin d (calciferol) is the fat-soluble vitamin essential for calcium absorption and bone health.",
+            exampleFr = "La vitamine D (Calciférol) est vitamine liposoluble essentielle à l'absorption du calcium et à la santé osseuse.",
+            exampleAr = "فيتامين د (الكالسيفيرول) هو فيتامين ذواب في الدهون ضروري لامتصاص الكالسيوم وصحة العظام.",
         ),
         MedicalTermEntity(
             id = 808,
@@ -2098,6 +2479,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/təˈkɒfərɒl/",
+            exampleEn = "The vitamin e (tocopherol) is the fat-soluble antioxidant protecting cell membranes from oxidative damage.",
+            exampleFr = "La vitamine E (Tocophérol) est antioxydant liposoluble protégeant les membranes cellulaires des dommages oxydatifs.",
+            exampleAr = "فيتامين هـ (التوكوفيرول) هو مضاد أكسدة ذواب في الدهون يحمي أغشية الخلايا من الأضرار التأكسدية.",
         ),
         MedicalTermEntity(
             id = 809,
@@ -2110,6 +2494,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈvaɪtəmɪn keɪ/",
+            exampleEn = "The vitamin k is the fat-soluble vitamin essential for blood clotting factor synthesis.",
+            exampleFr = "La vitamine K est vitamine liposoluble essentielle à la synthèse des facteurs de coagulation.",
+            exampleAr = "فيتامين ك هو فيتامين ذواب في الدهون ضروري لتصنيع عوامل التخثر.",
         ),
         MedicalTermEntity(
             id = 810,
@@ -2122,6 +2509,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˌæntɪˈɒksɪdənt/",
+            exampleEn = "The antioxidant is the substance that prevents oxidative damage to cells by neutralizing free radicals.",
+            exampleFr = "L'antioxydant est substance prévenant les dommages oxydatifs aux cellules en neutralisant les radicaux libres.",
+            exampleAr = "مضاد الأكسدة هو مادة تمنع الأضرار التأكسدية للخلايا عن طريق تحييد الجذور الحرة.",
         ),
         MedicalTermEntity(
             id = 811,
@@ -2134,6 +2524,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/friː ˈrædɪkəl/",
+            exampleEn = "The free radical is the unstable molecule with an unpaired electron that damages cells.",
+            exampleFr = "Le radical libre est molécule instable avec un électron non apparié endommageant les cellules.",
+            exampleAr = "الجذر الحر هو جزيء غير مستقر بإلكترون غير مزدوج يلحق الضرر بالخلايا.",
         ),
         MedicalTermEntity(
             id = 812,
@@ -2146,6 +2539,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/treɪs ˈɛlɪmənt/",
+            exampleEn = "The trace element is the mineral required in very small amounts (iron, zinc, copper, iodine).",
+            exampleFr = "L'oligoélément est minéral requis en très petites quantités (fer, zinc, cuivre, iode).",
+            exampleAr = "العنصر النزر هو معدن مطلوب بكميات صغيرة جداً (الحديد والزنك والنحاس واليود).",
         ),
                 MedicalTermEntity(
             id = 814,
@@ -2158,6 +2554,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/paɪˈruːveɪt/",
+            exampleEn = "The pyruvate is the end product of glycolysis; enters the Krebs cycle or fermentation.",
+            exampleFr = "La pyruvate est produit final de la glycolyse; entre dans le cycle de Krebs ou la fermentation.",
+            exampleAr = "البيروفات هو الناتج النهائي لتحلل السكر؛ يدخل دورة كريبس أو التخمر.",
         ),
         MedicalTermEntity(
             id = 815,
@@ -2170,6 +2569,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/əˈsiːtaɪl koʊ eɪ/",
+            exampleEn = "The acetyl-coa is the key metabolic intermediate linking glycolysis, fatty acid oxidation, and the Krebs cycle.",
+            exampleFr = "L'acétyl-CoA est intermédiaire métabolique clé reliant glycolyse, oxydation des acides gras et cycle de Krebs.",
+            exampleAr = "أسيتيل مساعد الإنزيم أ هو وسيط أيضي رئيسي يربط بين تحلل السكر وأكسدة الأحماض الدهنية ودورة كريبس.",
         ),
                 MedicalTermEntity(
             id = 817,
@@ -2182,6 +2584,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ɪˈlɛktrɒn trænspɔːrt/",
+            exampleEn = "The electron transport chain (etc) is the series of protein complexes in the inner mitochondrial membrane producing ATP.",
+            exampleFr = "La chaîne de transport des électrons est série de complexes protéiques dans la membrane mitochondriale interne produisant de l'ATP.",
+            exampleAr = "سلسلة نقل الإلكترونات هو سلسلة من المعقدات البروتينية في الغشاء الداخلي للميتوكوندريا تنتج ATP.",
         ),
         MedicalTermEntity(
             id = 818,
@@ -2194,6 +2599,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ɛn eɪ diː/",
+            exampleEn = "The nad+ / nadh is the coenzyme acting as an electron carrier in metabolic reactions.",
+            exampleFr = "La NAD+ / NADH est coenzyme agissant comme transporteur d'électrons dans les réactions métaboliques.",
+            exampleAr = "ثنائي نيوكليوتيد النيكوتيناميد والأدينين هو مرافق إنزيمي يعمل كناقل إلكترونات في التفاعلات الأيضية.",
         ),
         MedicalTermEntity(
             id = 819,
@@ -2206,6 +2614,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ɛf eɪ diː/",
+            exampleEn = "The fad / fadh2 is the coenzyme acting as an electron carrier derived from vitamin B2.",
+            exampleFr = "La FAD / FADH2 est coenzyme agissant comme transporteur d'électrons dérivé de la vitamine B2.",
+            exampleAr = "ثنائي نيوكليوتيد الفلافين والأدينين هو مرافق إنزيمي يعمل كناقل إلكترونات مشتق من فيتامين ب2.",
         ),
         MedicalTermEntity(
             id = 820,
@@ -2218,6 +2629,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌɡlaɪkoʊˈdʒɛnɪsɪs/",
+            exampleEn = "The glycogenesis is the synthesis of glycogen from glucose for storage.",
+            exampleFr = "La glycogénogenèse est synthèse du glycogène à partir du glucose pour le stockage.",
+            exampleAr = "تصنيع الغليكوجين هو تصنيع الغليكوجين من الغلوكوز للتخزين.",
         ),
         MedicalTermEntity(
             id = 821,
@@ -2230,6 +2644,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌɡlaɪkoʊdʒəˈnɒlɪsɪs/",
+            exampleEn = "The glycogenolysis is the breakdown of glycogen into glucose.",
+            exampleFr = "La glycogénolyse est dégradation du glycogène en glucose.",
+            exampleAr = "تحلل الغليكوجين هو تحلل الغليكوجين إلى غلوكوز.",
         ),
         MedicalTermEntity(
             id = 822,
@@ -2242,6 +2659,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˈpɛntoʊs ˈfɒsfeɪt/",
+            exampleEn = "The pentose phosphate pathway is the metabolic pathway producing NADPH and ribose-5-phosphate.",
+            exampleFr = "La voie des pentoses phosphates est voie métabolique produisant du NADPH et du ribose-5-phosphate.",
+            exampleAr = "مسار فوسفات البنتوز هو مسار أيضي ينتج NADPH وريبوز-5-فوسفات.",
         ),
         MedicalTermEntity(
             id = 823,
@@ -2254,6 +2674,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌlɪpoʊˈdʒɛnɪsɪs/",
+            exampleEn = "The lipogenesis is the synthesis of fatty acids from acetyl-CoA.",
+            exampleFr = "La lipogenèse est synthèse des acides gras à partir de l'acétyl-CoA.",
+            exampleAr = "تصنيع الدهون هو تصنيع الأحماض الدهنية من أسيتيل-CoA.",
         ),
         MedicalTermEntity(
             id = 824,
@@ -2266,6 +2689,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/lɪˈpɒlɪsɪs/",
+            exampleEn = "The lipolysis is the breakdown of triglycerides into glycerol and fatty acids.",
+            exampleFr = "La lipolyse est dégradation des triglycérides en glycérol et acides gras.",
+            exampleAr = "تحلل الدهون هو تحلل ثلاثيات الغليسريد إلى غليسرول وأحماض دهنية.",
         ),
         MedicalTermEntity(
             id = 825,
@@ -2278,6 +2704,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌkiːtoʊˈdʒɛnɪsɪs/",
+            exampleEn = "The ketogenesis is the production of ketone bodies from fatty acids in the liver.",
+            exampleFr = "La cétogenèse est production de corps cétoniques à partir des acides gras dans le foie.",
+            exampleAr = "تكوين الأجسام الكيتونية هو إنتاج الأجسام الكيتونية من الأحماض الدهنية في الكبد.",
         ),
         MedicalTermEntity(
             id = 826,
@@ -2290,6 +2719,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌtrænsæmɪˈneɪʃən/",
+            exampleEn = "The transamination is the transfer of an amino group from an amino acid to a keto acid.",
+            exampleFr = "Le transamination est transfert d'un groupe amine d'un acide aminé à un céto-acide.",
+            exampleAr = "نقل الأمين هو نقل مجموعة أمينية من حمض أميني إلى حمض كيتوني.",
         ),
         MedicalTermEntity(
             id = 827,
@@ -2302,6 +2734,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/diːˌæmɪˈneɪʃən/",
+            exampleEn = "The deamination is the removal of an amino group from an amino acid producing ammonia.",
+            exampleFr = "Le désamination est retrait d'un groupe amine d'un acide aminé produisant de l'ammoniac.",
+            exampleAr = "نزع الأمين هو إزالة مجموعة أمينية من حمض أميني مع إنتاج الأمونيا.",
         ),
         MedicalTermEntity(
             id = 828,
@@ -2314,6 +2749,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/jʊˈriːə ˈsaɪkəl/",
+            exampleEn = "The urea cycle is the liver metabolic pathway converting toxic ammonia into urea for excretion.",
+            exampleFr = "La cycle de l'urée est voie métabolique hépatique convertissant l'ammoniac toxique en urée pour l'excrétion.",
+            exampleAr = "دورة اليوريا هو مسار أيضي كبدي يحول الأمونيا السامة إلى يوريا للإطراح.",
         ),
         MedicalTermEntity(
             id = 829,
@@ -2326,6 +2764,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌɒksɪˈdeɪʃən/",
+            exampleEn = "The oxidation is the loss of electrons or hydrogen from a molecule.",
+            exampleFr = "L'oxydation est perte d'électrons ou d'hydrogène d'une molécule.",
+            exampleAr = "الأكسدة هو فقدان الإلكترونات أو الهيدروجين من الجزيء.",
         ),
         MedicalTermEntity(
             id = 830,
@@ -2338,6 +2779,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/rɪˈdʌkʃən/",
+            exampleEn = "The reduction is the gain of electrons or hydrogen by a molecule.",
+            exampleFr = "Le réduction est gain d'électrons ou d'hydrogène par une molécule.",
+            exampleAr = "الإرجاع هو اكتساب الإلكترونات أو الهيدروجين من قبل الجزيء.",
         ),
         MedicalTermEntity(
             id = 831,
@@ -2350,6 +2794,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˈriːdɒks/",
+            exampleEn = "The redox reaction is the reaction involving simultaneous oxidation and reduction.",
+            exampleFr = "Le réaction d'oxydo-réduction est réaction impliquant une oxydation et une réduction simultanées.",
+            exampleAr = "تفاعل أكسدة-إرجاع هو تفاعل يتضمن أكسدة وإرجاع متزامنين.",
         ),
         MedicalTermEntity(
             id = 832,
@@ -2362,6 +2809,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˈsʌbstreɪt ˈlɛvəl/",
+            exampleEn = "Substrate-level phosphorylation refers to ATP production by direct transfer of a phosphate group from substrate to ADP.",
+            exampleFr = "Le phosphorylation au niveau du substrat est production d'ATP par transfert direct d'un groupe phosphate du substrat à l'ADP.",
+            exampleAr = "الفسفرة على مستوى الركيزة هو إنتاج ATP بنقل مباشر لمجموعة فوسفات من الركيزة إلى ADP.",
         ),
         MedicalTermEntity(
             id = 833,
@@ -2374,6 +2824,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌkɛmɪɒzˈmoʊsɪs/",
+            exampleEn = "Chemiosmosis refers to ATP synthesis driven by the flow of protons across a membrane through ATP synthase.",
+            exampleFr = "La chimiosmose est synthèse d'ATP entraînée par le flux de protons à travers une membrane via l'ATP synthase.",
+            exampleAr = "التناضح الكيميائي هو تصنيع ATP المدفوع بتدفق البروتونات عبر غشاء من خلال إنزيم ATP سينثاز.",
         ),
         MedicalTermEntity(
             id = 834,
@@ -2386,6 +2839,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/eɪ tiː piː ˈsɪnθeɪz/",
+            exampleEn = "The atp synthase is the enzyme complex that synthesizes ATP from ADP and phosphate using proton gradient.",
+            exampleFr = "L'ATP synthase est complexe enzymatique synthétisant l'ATP à partir d'ADP et de phosphate utilisant le gradient de protons.",
+            exampleAr = "إنزيم تصنيع الـATP هو المعقد الإنزيمي الذي يصنع ATP من ADP والفوسفات باستخدام تدرج البروتونات.",
         ),
         MedicalTermEntity(
             id = 835,
@@ -2398,6 +2854,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/ˈsɪɡnəl trænzˈdʌkʃən/",
+            exampleEn = "The signal transduction is the process by which extracellular signals are converted to intracellular responses.",
+            exampleFr = "Le transduction du signal est processus par lequel les signaux extracellulaires sont convertis en réponses intracellulaires.",
+            exampleAr = "نقل الإشارة هو العملية التي تُحوّل بها الإشارات خارج الخلية إلى استجابات داخل الخلية.",
         ),
         MedicalTermEntity(
             id = 836,
@@ -2410,6 +2869,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/ˈsɛkənd ˈmɛsɪndʒər/",
+            exampleEn = "The second messenger is the intracellular signaling molecule activated by a receptor (cAMP, Ca2+, IP3).",
+            exampleFr = "La second messager est molécule de signalisation intracellulaire activée par un récepteur (AMPc, Ca2+, IP3).",
+            exampleAr = "الرسول الثاني هو جزيء إشاري داخل الخلية يُنشّط بواسطة مستقبل (cAMP، Ca2+، IP3).",
         ),
         MedicalTermEntity(
             id = 837,
@@ -2422,6 +2884,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/ˈsaɪklɪk eɪ ɛm piː/",
+            exampleEn = "The cyclic amp (camp) is the key second messenger derived from ATP by adenylate cyclase.",
+            exampleFr = "L'AMP cyclique (AMPc) est second messager clé dérivé de l'ATP par l'adénylate cyclase.",
+            exampleAr = "الأدينوسين أحادي الفوسفات الحلقي هو رسول ثانٍ رئيسي مشتق من ATP بواسطة إنزيم محلقة الأدينيلات.",
         ),
         MedicalTermEntity(
             id = 838,
@@ -2434,6 +2899,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/dʒiː ˈproʊtiːn/",
+            exampleEn = "The g protein is the membrane protein that activates intracellular signaling cascades when bound to GTP.",
+            exampleFr = "La protéine G est protéine membranaire activant des cascades de signalisation intracellulaire liée au GTP.",
+            exampleAr = "البروتين G هو بروتين غشائي يُنشّط سلاسل الإشارات داخل الخلية عند ارتباطه بـ GTP.",
         ),
         MedicalTermEntity(
             id = 839,
@@ -2446,6 +2914,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/ˈproʊtiːn ˈkaɪneɪz/",
+            exampleEn = "The protein kinase is the enzyme that phosphorylates proteins regulating their activity.",
+            exampleFr = "La protéine kinase est enzyme phosphorylant les protéines régulant leur activité.",
+            exampleAr = "كيناز البروتين هو إنزيم يفسفر البروتينات منظماً نشاطها.",
         ),
         MedicalTermEntity(
             id = 840,
@@ -2458,6 +2929,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/ˌfɒsfɒrɪˈleɪʃən/",
+            exampleEn = "The phosphorylation is the addition of a phosphate group to a molecule activating or deactivating it.",
+            exampleFr = "Le phosphorylation est ajout d'un groupe phosphate à une molécule l'activant ou la désactivant.",
+            exampleAr = "الفسفرة هو إضافة مجموعة فوسفات إلى جزيء مما يُنشّطه أو يُعطّله.",
         ),
         MedicalTermEntity(
             id = 841,
@@ -2470,6 +2944,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/diːˌfɒsfɒrɪˈleɪʃən/",
+            exampleEn = "The dephosphorylation is the removal of a phosphate group from a molecule by a phosphatase.",
+            exampleFr = "Le déphosphorylation est retrait d'un groupe phosphate d'une molécule par une phosphatase.",
+            exampleAr = "نزع الفسفرة هو إزالة مجموعة فوسفات من جزيء بواسطة إنزيم الفوسفاتاز.",
         ),
         MedicalTermEntity(
             id = 842,
@@ -2482,6 +2959,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/rɪˈsɛptər/",
+            exampleEn = "The receptor is the protein that binds a specific ligand to initiate a cellular response.",
+            exampleFr = "La récepteur est protéine liant un ligand spécifique pour initier une réponse cellulaire.",
+            exampleAr = "المستقبل هو بروتين يرتبط بربيطة محددة لبدء استجابة خلوية.",
         ),
         MedicalTermEntity(
             id = 843,
@@ -2494,6 +2974,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Hormonale",
             ipaPhonetic = "/ˈlɪɡənd/",
+            exampleEn = "The ligand is the molecule that binds to a receptor triggering a response.",
+            exampleFr = "La ligand est molécule se liant à un récepteur déclenchant une réponse.",
+            exampleAr = "الربيطة هو جزيء يرتبط بمستقبل مُحدثاً استجابة.",
         ),
         MedicalTermEntity(
             id = 844,
@@ -2542,6 +3025,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌdaɪəˈbiːtiːz ˈmɛlɪtəs/",
+            exampleEn = "The diabetes mellitus is the metabolic disease of chronic hyperglycemia due to insulin deficiency or resistance.",
+            exampleFr = "La diabète sucré est maladie métabolique d'hyperglycémie chronique due à un déficit ou résistance à l'insuline.",
+            exampleAr = "داء السكري هو مرض استقلابي بفرط سكر الدم المزمن بسبب نقص الأنسولين أو مقاومته.",
         ),
         MedicalTermEntity(
             id = 848,
@@ -2554,6 +3040,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈɡlaɪkeɪtɪd/",
+            exampleEn = "The glycated hemoglobin (hba1c) is the measure of average blood glucose over 2-3 months (normal <5.7%).",
+            exampleFr = "L'hémoglobine glyquée (HbA1c) est mesure de la glycémie moyenne sur 2-3 mois (normal <5,7%).",
+            exampleAr = "الهيموغلوبين السكري هو مقياس لمتوسط سكر الدم خلال 2-3 أشهر (الطبيعي أقل من 5.7%).",
         ),
         MedicalTermEntity(
             id = 849,
@@ -2566,6 +3055,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌbɪlɪˈruːbɪn/",
+            exampleEn = "The bilirubin is the yellow pigment from hemoglobin breakdown; elevated in jaundice.",
+            exampleFr = "La bilirubine est pigment jaune de la dégradation de l'hémoglobine; élevé dans l'ictère.",
+            exampleAr = "البيليروبين هو صبغة صفراء من تحلل الهيموغلوبين؛ ترتفع في اليرقان.",
         ),
         MedicalTermEntity(
             id = 850,
@@ -2578,6 +3070,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈdʒɔːndɪs/",
+            exampleEn = "Jaundice (Icterus) refers to yellowing of skin and eyes due to elevated bilirubin.",
+            exampleFr = "L'ictère (Jaunisse) est jaunissement de la peau et des yeux dû à une bilirubine élevée.",
+            exampleAr = "اليرقان هو اصفرار الجلد والعينين بسبب ارتفاع البيليروبين.",
         ),
         MedicalTermEntity(
             id = 851,
@@ -2602,6 +3097,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈæləniːn/",
+            exampleEn = "The alt (alanine aminotransferase) is the liver enzyme elevated in hepatocellular damage.",
+            exampleFr = "L'ALAT (Alanine aminotransférase) est enzyme hépatique élevée lors de dommages hépatocellulaires.",
+            exampleAr = "ناقلة أمين الألانين هو إنزيم كبدي يرتفع عند تلف الخلايا الكبدية.",
         ),
         MedicalTermEntity(
             id = 853,
@@ -2614,6 +3112,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈæspɑːrteɪt/",
+            exampleEn = "The ast (aspartate aminotransferase) is the enzyme found in liver, heart, and muscle; elevated in tissue damage.",
+            exampleFr = "L'ASAT (Aspartate aminotransférase) est enzyme trouvée dans le foie, le cœur et les muscles; élevée lors de dommages tissulaires.",
+            exampleAr = "ناقلة أمين الأسبارتات هو إنزيم يوجد في الكبد والقلب والعضلات؛ يرتفع عند تلف الأنسجة.",
         ),
         MedicalTermEntity(
             id = 854,
@@ -2626,6 +3127,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈkriːətiːn ˈkaɪneɪz/",
+            exampleEn = "The creatine kinase (ck) is the enzyme elevated in muscle damage; used to diagnose myocardial infarction.",
+            exampleFr = "La créatine kinase (CK) est enzyme élevée lors de dommages musculaires; utilisée pour diagnostiquer l'infarctus.",
+            exampleAr = "كيناز الكرياتين هو إنزيم يرتفع عند تلف العضلات؛ يُستخدم لتشخيص احتشاء عضلة القلب.",
         ),
         MedicalTermEntity(
             id = 855,
@@ -2638,6 +3142,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ɪˌlɛktroʊfəˈriːsɪs/",
+            exampleEn = "The electrophoresis is the technique separating molecules based on size and charge in an electric field.",
+            exampleFr = "L'électrophorèse est technique séparant les molécules selon leur taille et leur charge dans un champ électrique.",
+            exampleAr = "الرحلان الكهربائي هو تقنية فصل الجزيئات بناءً على الحجم والشحنة في حقل كهربائي.",
         ),
         MedicalTermEntity(
             id = 856,
@@ -2650,6 +3157,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌkroʊmətˈɒɡrəfi/",
+            exampleEn = "The chromatography is the technique for separating mixtures based on differential interactions with a stationary phase.",
+            exampleFr = "La chromatographie est technique de séparation des mélanges basée sur des interactions différentielles avec une phase stationnaire.",
+            exampleAr = "الكروماتوغرافيا (الاستشراب) هو تقنية لفصل المخاليط بناءً على تفاعلات تفاضلية مع طور ثابت.",
         ),
         MedicalTermEntity(
             id = 857,
@@ -2662,6 +3172,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˌfɒsfoʊˈlɪpɪd ˈbaɪleɪər/",
+            exampleEn = "The phospholipid bilayer is the double layer of phospholipids forming the basis of cell membranes.",
+            exampleFr = "La bicouche phospholipidique est double couche de phospholipides formant la base des membranes cellulaires.",
+            exampleAr = "الطبقة الثنائية الفوسفوليبيدية هو الطبقة المزدوجة من الفوسفوليبيدات التي تشكل أساس أغشية الخلايا.",
         ),
         MedicalTermEntity(
             id = 858,
@@ -2674,6 +3187,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌɡlaɪkoʊˈkælɪks/",
+            exampleEn = "The glycocalyx is the carbohydrate-rich layer on the outer surface of cell membranes.",
+            exampleFr = "La glycocalyx est couche riche en glucides sur la surface externe des membranes cellulaires.",
+            exampleAr = "الغلاف السكري هو الطبقة الغنية بالسكريات على السطح الخارجي لأغشية الخلايا.",
         ),
         MedicalTermEntity(
             id = 859,
@@ -2686,6 +3202,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌproʊtioʊˈɡlaɪkæn/",
+            exampleEn = "The proteoglycan is the protein with many GAG chains found in extracellular matrix.",
+            exampleFr = "La protéoglycane est protéine avec de nombreuses chaînes GAG trouvée dans la matrice extracellulaire.",
+            exampleAr = "البروتيوغليكان هو بروتين مع سلاسل GAG عديدة يوجد في المطرس خارج الخلوي.",
         ),
         MedicalTermEntity(
             id = 860,
@@ -2698,6 +3217,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/hiːm/",
+            exampleEn = "The heme is the iron-containing prosthetic group in hemoglobin and cytochromes.",
+            exampleFr = "L'hème est groupe prosthétique contenant du fer dans l'hémoglobine et les cytochromes.",
+            exampleAr = "الهيم هو المجموعة الاصطناعية المحتوية على الحديد في الهيموغلوبين والسيتوكرومات.",
         ),
         MedicalTermEntity(
             id = 861,
@@ -2710,6 +3232,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈpɔːrfɪrɪn/",
+            exampleEn = "The porphyrin is the cyclic compound forming the basis of heme; precursor in hemoglobin synthesis.",
+            exampleFr = "La porphyrine est composé cyclique formant la base de l'hème; précurseur dans la synthèse de l'hémoglobine.",
+            exampleAr = "البورفيرين هو مركب حلقي يشكل أساس الهيم؛ طليعة في تصنيع الهيموغلوبين.",
         ),
         MedicalTermEntity(
             id = 862,
@@ -2722,6 +3247,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌæləˈstɛrɪk/",
+            exampleEn = "The allosteric enzyme is the enzyme with regulatory sites distinct from the active site.",
+            exampleFr = "L'enzyme allostérique est enzyme avec des sites de régulation distincts du site actif.",
+            exampleAr = "إنزيم تفارغي هو إنزيم له مواقع تنظيمية مختلفة عن الموقع الفعال.",
         ),
         MedicalTermEntity(
             id = 863,
@@ -2734,6 +3262,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈfiːdbæk ɪnˈhɪbɪʃən/",
+            exampleEn = "The feedback inhibition is the inhibition of an enzyme by the end product of a metabolic pathway.",
+            exampleFr = "L'inhibition par rétroaction est inhibition d'un enzyme par le produit final d'une voie métabolique.",
+            exampleAr = "التثبيط بالتغذية الراجعة هو تثبيط الإنزيم بواسطة الناتج النهائي لمسار أيضي.",
         ),
         MedicalTermEntity(
             id = 864,
@@ -2746,6 +3277,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˈkɔːri ˈsaɪkəl/",
+            exampleEn = "The cori cycle is the metabolic cycle of lactate from muscle to liver for gluconeogenesis.",
+            exampleFr = "La cycle de Cori est cycle métabolique du lactate du muscle au foie pour la néoglucogenèse.",
+            exampleAr = "دورة كوري هو الدورة الأيضية للاكتات من العضلات إلى الكبد لاستحداث السكر.",
         ),
         MedicalTermEntity(
             id = 865,
@@ -2758,6 +3292,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˈlæktɪk ˈæsɪd/",
+            exampleEn = "The lactic acid (lactate) is the product of anaerobic glycolysis in muscles during intense exercise.",
+            exampleFr = "L'acide lactique (Lactate) est produit de la glycolyse anaérobie dans les muscles lors d'un exercice intense.",
+            exampleAr = "حمض اللبن (اللاكتات) هو ناتج تحلل السكر اللاهوائي في العضلات أثناء التمرين الشديد.",
         ),
         MedicalTermEntity(
             id = 866,
@@ -2770,6 +3307,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/ˌfɜːrmɛnˈteɪʃən/",
+            exampleEn = "The fermentation is the anaerobic conversion of pyruvate to ethanol or lactate.",
+            exampleFr = "Le fermentation est conversion anaérobie du pyruvate en éthanol ou en lactate.",
+            exampleAr = "التخمر هو التحويل اللاهوائي للبيروفات إلى إيثانول أو لاكتات.",
         ),
         MedicalTermEntity(
             id = 867,
@@ -2782,6 +3322,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/koʊˈɛnzaɪm eɪ/",
+            exampleEn = "The coenzyme a (coa) is the coenzyme essential for fatty acid metabolism derived from pantothenic acid.",
+            exampleFr = "La coenzyme A (CoA) est coenzyme essentiel au métabolisme des acides gras dérivé de l'acide pantothénique.",
+            exampleAr = "مرافق الإنزيم أ هو مرافق إنزيمي ضروري لأيض الأحماض الدهنية مشتق من حمض البانتوثينيك.",
         ),
         MedicalTermEntity(
             id = 868,
@@ -2794,6 +3337,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈbaɪətɪn/",
+            exampleEn = "The biotin (vitamin b7) is the coenzyme for carboxylation reactions.",
+            exampleFr = "La biotine (Vitamine B7) est coenzyme pour les réactions de carboxylation.",
+            exampleAr = "البيوتين (فيتامين ب7) هو مرافق إنزيمي لتفاعلات الكربكسلة.",
         ),
         MedicalTermEntity(
             id = 869,
@@ -2806,6 +3352,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈɒksɪdeɪz/",
+            exampleEn = "The oxidase is the enzyme catalyzing oxidation reactions using oxygen.",
+            exampleFr = "L'oxydase est enzyme catalysant les réactions d'oxydation utilisant l'oxygène.",
+            exampleAr = "الأكسيداز هو إنزيم يحفز تفاعلات الأكسدة باستخدام الأكسجين.",
         ),
         MedicalTermEntity(
             id = 870,
@@ -2818,6 +3367,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/diːˌhaɪˈdrɒdʒɪneɪz/",
+            exampleEn = "The dehydrogenase is the enzyme catalyzing the removal of hydrogen from a substrate.",
+            exampleFr = "La déshydrogénase est enzyme catalysant le retrait d'hydrogène d'un substrat.",
+            exampleAr = "نازعة الهيدروجين هو إنزيم يحفز إزالة الهيدروجين من الركيزة.",
         ),
         MedicalTermEntity(
             id = 871,
@@ -2830,6 +3382,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈtrænsfəreɪz/",
+            exampleEn = "The transferase is the enzyme catalyzing the transfer of a functional group between molecules.",
+            exampleFr = "La transférase est enzyme catalysant le transfert d'un groupe fonctionnel entre molécules.",
+            exampleAr = "الناقلة هو إنزيم يحفز نقل مجموعة وظيفية بين الجزيئات.",
         ),
         MedicalTermEntity(
             id = 872,
@@ -2842,6 +3397,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈhaɪdrəleɪz/",
+            exampleEn = "The hydrolase is the enzyme catalyzing hydrolysis reactions using water.",
+            exampleFr = "L'hydrolase est enzyme catalysant les réactions d'hydrolyse utilisant l'eau.",
+            exampleAr = "الحلمأة هو إنزيم يحفز تفاعلات التحلل المائي باستخدام الماء.",
         ),
         MedicalTermEntity(
             id = 873,
@@ -2854,6 +3412,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈlaɪeɪz/",
+            exampleEn = "The lyase is the enzyme catalyzing the breaking of bonds without water or oxidation.",
+            exampleFr = "La lyase est enzyme catalysant la rupture de liaisons sans eau ni oxydation.",
+            exampleAr = "الإنزيم المفكك هو إنزيم يحفز كسر الروابط بدون ماء أو أكسدة.",
         ),
         MedicalTermEntity(
             id = 874,
@@ -2866,6 +3427,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/aɪˈsɒməreɪz/",
+            exampleEn = "The isomerase is the enzyme catalyzing the rearrangement of atoms within a molecule.",
+            exampleFr = "L'isomérase est enzyme catalysant le réarrangement des atomes dans une molécule.",
+            exampleAr = "إنزيم التماكب هو إنزيم يحفز إعادة ترتيب الذرات داخل الجزيء.",
         ),
         MedicalTermEntity(
             id = 875,
@@ -2878,6 +3442,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˈlaɪɡeɪz/",
+            exampleEn = "The ligase is the enzyme catalyzing the joining of two molecules using ATP.",
+            exampleFr = "La ligase est enzyme catalysant la jonction de deux molécules utilisant l'ATP.",
+            exampleAr = "الإنزيم الرابط هو إنزيم يحفز ربط جزيئتين باستخدام ATP.",
         ),
         MedicalTermEntity(
             id = 876,
@@ -2890,6 +3457,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌmɛtəˈbɒlɪk ˈsɪndroʊm/",
+            exampleEn = "The metabolic syndrome is the cluster of conditions increasing risk of heart disease, stroke, and diabetes.",
+            exampleFr = "La syndrome métabolique est ensemble de conditions augmentant le risque de maladie cardiaque, d'AVC et de diabète.",
+            exampleAr = "المتلازمة الأيضية هو مجموعة من الحالات تزيد خطر أمراض القلب والسكتة الدماغية والسكري.",
         ),
         MedicalTermEntity(
             id = 877,
@@ -2902,6 +3472,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈkɛmɪstri/",
+            exampleEn = "The chemistry is the science studying the composition, structure, properties, and reactions of matter.",
+            exampleFr = "La chimie est science étudiant la composition, la structure, les propriétés et les réactions de la matière.",
+            exampleAr = "الكيمياء هو العلم الذي يدرس تركيب المادة وبنيتها وخصائصها وتفاعلاتها.",
         ),
         MedicalTermEntity(
             id = 878,
@@ -2914,6 +3487,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈmætər/",
+            exampleEn = "Matter refers to anything that has mass and occupies space.",
+            exampleFr = "La matière est tout ce qui a une masse et occupe un espace.",
+            exampleAr = "المادة هو كل ما له كتلة ويشغل حيزاً.",
         ),
         MedicalTermEntity(
             id = 879,
@@ -2926,6 +3502,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈɛlɪmənt/",
+            exampleEn = "The element is the pure substance composed of only one type of atom.",
+            exampleFr = "L'élément est substance pure composée d'un seul type d'atome.",
+            exampleAr = "العنصر هو مادة نقية مكونة من نوع واحد فقط من الذرات.",
         ),
         MedicalTermEntity(
             id = 880,
@@ -2938,6 +3517,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈproʊtɒn/",
+            exampleEn = "The proton is the positively charged subatomic particle in the nucleus (mass ≈ 1 amu).",
+            exampleFr = "Le proton est particule subatomique chargée positivement dans le noyau (masse ≈ 1 uma).",
+            exampleAr = "البروتون هو جسيم دون ذري موجب الشحنة في النواة (الكتلة ≈ 1 وحدة كتل ذرية).",
         ),
         MedicalTermEntity(
             id = 881,
@@ -2950,6 +3532,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈnjuːtrɒn/",
+            exampleEn = "The neutron is the uncharged subatomic particle in the nucleus (mass ≈ 1 amu).",
+            exampleFr = "Le neutron est particule subatomique non chargée dans le noyau (masse ≈ 1 uma).",
+            exampleAr = "النيوترون هو جسيم دون ذري عديم الشحنة في النواة (الكتلة ≈ 1 وحدة كتل ذرية).",
         ),
         MedicalTermEntity(
             id = 882,
@@ -2962,6 +3547,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ɪˈlɛktrɒn/",
+            exampleEn = "The electron is the negatively charged subatomic particle orbiting the nucleus (mass ≈ 1/1836 amu).",
+            exampleFr = "L'électron est particule subatomique chargée négativement orbitant autour du noyau (masse ≈ 1/1836 uma).",
+            exampleAr = "الإلكترون هو جسيم دون ذري سالب الشحنة يدور حول النواة (الكتلة ≈ 1/1836 وحدة كتل ذرية).",
         ),
         MedicalTermEntity(
             id = 883,
@@ -2974,6 +3562,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/əˈtɒmɪk ˈnʌmbər/",
+            exampleEn = "The atomic number (z) is the number of protons in an atom's nucleus defining the element.",
+            exampleFr = "La numéro atomique (Z) est nombre de protons dans le noyau d'un atome définissant l'élément.",
+            exampleAr = "العدد الذري هو عدد البروتونات في نواة الذرة الذي يحدد العنصر.",
         ),
         MedicalTermEntity(
             id = 884,
@@ -2986,6 +3577,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/mæs ˈnʌmbər/",
+            exampleEn = "The mass number (a) is the total number of protons and neutrons in an atomic nucleus.",
+            exampleFr = "La nombre de masse (A) est nombre total de protons et de neutrons dans un noyau atomique.",
+            exampleAr = "العدد الكتلي هو العدد الكلي للبروتونات والنيوترونات في النواة الذرية.",
         ),
         MedicalTermEntity(
             id = 885,
@@ -3010,6 +3604,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/əˈtɒmɪk mæs/",
+            exampleEn = "The atomic mass (atomic weight) is the weighted average mass of an element's isotopes in atomic mass units (amu).",
+            exampleFr = "La masse atomique (Poids atomique) est masse moyenne pondérée des isotopes d'un élément en unités de masse atomique (uma).",
+            exampleAr = "الكتلة الذرية هو المتوسط المرجح لكتل نظائر العنصر بوحدات الكتلة الذرية.",
         ),
         MedicalTermEntity(
             id = 887,
@@ -3022,6 +3619,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ɪˈlɛktrɒn ʃɛl/",
+            exampleEn = "The electron shell (energy level) is the region around the nucleus where electrons of similar energy are found (K, L, M, N).",
+            exampleFr = "La couche électronique (Niveau d'énergie) est région autour du noyau où se trouvent les électrons de même énergie (K, L, M, N).",
+            exampleAr = "الطبقة الإلكترونية (مستوى الطاقة) هو منطقة حول النواة حيث توجد إلكترونات بطاقة متشابهة (K، L، M، N).",
         ),
         MedicalTermEntity(
             id = 888,
@@ -3034,6 +3634,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈɔːrbɪtəl/",
+            exampleEn = "The orbital is the region in space where there is a high probability of finding an electron (s, p, d, f).",
+            exampleFr = "L'orbitale est région de l'espace où il y a une forte probabilité de trouver un électron (s, p, d, f).",
+            exampleAr = "المدار هو منطقة في الفضاء يوجد فيها احتمال عالٍ لإيجاد إلكترون (s، p، d، f).",
         ),
         MedicalTermEntity(
             id = 889,
@@ -3046,6 +3649,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ɪˈlɛktrɒn ˌkɒnfɪɡjʊˈreɪʃən/",
+            exampleEn = "The electron configuration is the arrangement of electrons in an atom's orbitals.",
+            exampleFr = "Le configuration électronique est arrangement des électrons dans les orbitales d'un atome.",
+            exampleAr = "التوزيع الإلكتروني هو ترتيب الإلكترونات في مدارات الذرة.",
         ),
         MedicalTermEntity(
             id = 890,
@@ -3058,6 +3664,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈvæləns/",
+            exampleEn = "The valence electron is the electron in the outermost shell that participates in chemical bonding.",
+            exampleFr = "L'électron de valence est électron de la couche la plus externe participant aux liaisons chimiques.",
+            exampleAr = "إلكترون التكافؤ هو إلكترون في الطبقة الخارجية يشارك في الترابط الكيميائي.",
         ),
         MedicalTermEntity(
             id = 891,
@@ -3070,6 +3679,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˌpɪəriˈɒdɪk ˈteɪbəl/",
+            exampleEn = "The periodic table is the tabular arrangement of elements ordered by increasing atomic number.",
+            exampleFr = "Le tableau périodique est arrangement tabulaire des éléments ordonnés par numéro atomique croissant.",
+            exampleAr = "الجدول الدوري هو ترتيب جدولي للعناصر مرتبة حسب العدد الذري المتزايد.",
         ),
         MedicalTermEntity(
             id = 892,
@@ -3082,6 +3694,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈpɪəriəd/",
+            exampleEn = "The period is the horizontal row in the periodic table representing elements with the same number of electron shells.",
+            exampleFr = "La période est ligne horizontale dans le tableau périodique représentant les éléments avec le même nombre de couches.",
+            exampleAr = "الدورة هو صف أفقي في الجدول الدوري يمثل عناصر بنفس عدد الطبقات الإلكترونية.",
         ),
         MedicalTermEntity(
             id = 893,
@@ -3094,6 +3709,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ɡruːp/",
+            exampleEn = "The group (family) is the vertical column in the periodic table with elements of similar properties.",
+            exampleFr = "La groupe (Famille) est colonne verticale dans le tableau périodique avec des éléments de propriétés similaires.",
+            exampleAr = "المجموعة هو عمود رأسي في الجدول الدوري يضم عناصر بخصائص متشابهة.",
         ),
         MedicalTermEntity(
             id = 894,
@@ -3106,6 +3724,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ɪˌlɛktroʊˌnɛɡəˈtɪvɪti/",
+            exampleEn = "The electronegativity is the tendency of an atom to attract shared electrons in a chemical bond.",
+            exampleFr = "L'électronégativité est tendance d'un atome à attirer les électrons partagés dans une liaison chimique.",
+            exampleAr = "الكهرسلبية هو ميل الذرة لجذب الإلكترونات المشتركة في الرابطة الكيميائية.",
         ),
         MedicalTermEntity(
             id = 895,
@@ -3118,6 +3739,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˌaɪənaɪˈzeɪʃən ˈɛnərdʒi/",
+            exampleEn = "The ionization energy is the energy required to remove an electron from a gaseous atom.",
+            exampleFr = "L'énergie d'ionisation est énergie nécessaire pour arracher un électron d'un atome gazeux.",
+            exampleAr = "طاقة التأين هو الطاقة اللازمة لنزع إلكترون من ذرة غازية.",
         ),
         MedicalTermEntity(
             id = 896,
@@ -3130,6 +3754,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ɪˈlɛktrɒn əˈfɪnɪti/",
+            exampleEn = "The electron affinity is the energy change when an atom gains an electron.",
+            exampleFr = "L'affinité électronique est changement d'énergie quand un atome gagne un électron.",
+            exampleAr = "الألفة الإلكترونية هو تغير الطاقة عندما تكتسب الذرة إلكتروناً.",
         ),
         MedicalTermEntity(
             id = 897,
@@ -3154,6 +3781,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈkwɒntəm ˈnʌmbər/",
+            exampleEn = "The quantum number is the set of numbers (n, l, ml, ms) describing the state of an electron in an atom.",
+            exampleFr = "La nombre quantique est ensemble de nombres (n, l, ml, ms) décrivant l'état d'un électron dans un atome.",
+            exampleAr = "العدد الكمومي هو مجموعة أرقام (n، l، ml، ms) تصف حالة إلكترون في ذرة.",
         ),
         MedicalTermEntity(
             id = 899,
@@ -3166,6 +3796,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈpoʊlər koʊˈveɪlənt/",
+            exampleEn = "The polar covalent bond is the covalent bond with unequal electron sharing due to different electronegativities.",
+            exampleFr = "Le liaison covalente polaire est liaison covalente avec partage inégal d'électrons dû à des électronégativités différentes.",
+            exampleAr = "الرابطة التساهمية القطبية هو رابطة تساهمية بمشاركة غير متساوية للإلكترونات بسبب اختلاف الكهرسلبية.",
         ),
         MedicalTermEntity(
             id = 900,
@@ -3178,6 +3811,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/nɒn ˈpoʊlər/",
+            exampleEn = "The non-polar covalent bond is the covalent bond with equal electron sharing between atoms of similar electronegativity.",
+            exampleFr = "Le liaison covalente non polaire (apolaire) est liaison covalente avec partage égal d'électrons entre atomes d'électronégativité similaire.",
+            exampleAr = "الرابطة التساهمية غير القطبية هو رابطة تساهمية بمشاركة متساوية للإلكترونات بين ذرات بكهرسلبية متشابهة.",
         ),
         MedicalTermEntity(
             id = 901,
@@ -3190,6 +3826,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈsɪŋɡəl bɒnd/",
+            exampleEn = "The single bond is the covalent bond involving one shared pair of electrons (σ bond).",
+            exampleFr = "Le liaison simple est liaison covalente impliquant une paire d'électrons partagée (liaison σ).",
+            exampleAr = "الرابطة الأحادية هو رابطة تساهمية بزوج إلكترونات مشترك واحد (رابطة σ).",
         ),
         MedicalTermEntity(
             id = 902,
@@ -3202,6 +3841,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈdʌbəl bɒnd/",
+            exampleEn = "The double bond is the covalent bond involving two shared pairs of electrons (1σ + 1π).",
+            exampleFr = "Le liaison double est liaison covalente impliquant deux paires d'électrons partagées (1σ + 1π).",
+            exampleAr = "الرابطة المزدوجة هو رابطة تساهمية بزوجين من الإلكترونات المشتركة (1σ + 1π).",
         ),
         MedicalTermEntity(
             id = 903,
@@ -3214,6 +3856,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈtrɪpəl bɒnd/",
+            exampleEn = "The triple bond is the covalent bond involving three shared pairs of electrons (1σ + 2π).",
+            exampleFr = "Le liaison triple est liaison covalente impliquant trois paires d'électrons partagées (1σ + 2π).",
+            exampleAr = "الرابطة الثلاثية هو رابطة تساهمية بثلاثة أزواج من الإلكترونات المشتركة (1σ + 2π).",
         ),
         MedicalTermEntity(
             id = 904,
@@ -3226,6 +3871,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈsɪɡmə bɒnd/",
+            exampleEn = "The sigma bond (σ) is the bond formed by head-on overlap of orbitals along the internuclear axis.",
+            exampleFr = "Le liaison sigma (σ) est liaison formée par recouvrement frontal d'orbitales le long de l'axe internucléaire.",
+            exampleAr = "الرابطة سيغما هو رابطة تتكون من تداخل مباشر للمدارات على طول المحور بين النواتين.",
         ),
         MedicalTermEntity(
             id = 905,
@@ -3238,6 +3886,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/paɪ bɒnd/",
+            exampleEn = "The pi bond (π) is the bond formed by lateral overlap of p orbitals above and below the internuclear axis.",
+            exampleFr = "Le liaison pi (π) est liaison formée par recouvrement latéral d'orbitales p au-dessus et en dessous de l'axe internucléaire.",
+            exampleAr = "الرابطة باي هو رابطة تتكون من تداخل جانبي لمدارات p فوق وتحت المحور بين النواتين.",
         ),
         MedicalTermEntity(
             id = 906,
@@ -3250,6 +3901,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/koʊˈɔːrdɪnət/",
+            exampleEn = "The coordinate bond (dative bond) is the covalent bond where both shared electrons come from one atom (donor).",
+            exampleFr = "Le liaison de coordination (Liaison dative) est liaison covalente où les deux électrons partagés proviennent d'un seul atome (donneur).",
+            exampleAr = "الرابطة التناسقية هو رابطة تساهمية حيث يأتي كلا الإلكترونين المشتركين من ذرة واحدة (مانحة).",
         ),
         MedicalTermEntity(
             id = 907,
@@ -3262,6 +3916,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/məˈtælɪk/",
+            exampleEn = "The metallic bond is the bond formed by sharing delocalized electrons among metal atoms (electron sea model).",
+            exampleFr = "Le liaison métallique est liaison formée par le partage d'électrons délocalisés entre atomes métalliques (modèle de la mer d'électrons).",
+            exampleAr = "الرابطة الفلزية هو رابطة تتكون من مشاركة إلكترونات غير متموضعة بين ذرات الفلزات (نموذج بحر الإلكترونات).",
         ),
         MedicalTermEntity(
             id = 908,
@@ -3274,6 +3931,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈluːɪs ˈstrʌktʃər/",
+            exampleEn = "The lewis structure is the diagram showing bonding and lone pairs of electrons in a molecule.",
+            exampleFr = "La structure de Lewis est diagramme montrant les liaisons et les paires libres d'électrons dans une molécule.",
+            exampleAr = "بنية لويس هو مخطط يُظهر الروابط وأزواج الإلكترونات الحرة في الجزيء.",
         ),
         MedicalTermEntity(
             id = 909,
@@ -3286,6 +3946,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/loʊn pɛər/",
+            exampleEn = "The lone pair is the pair of valence electrons not involved in bonding.",
+            exampleFr = "La paire libre (Doublet non liant) est paire d'électrons de valence non impliquée dans une liaison.",
+            exampleAr = "زوج الإلكترونات الحر هو زوج من إلكترونات التكافؤ غير مشارك في الترابط.",
         ),
         MedicalTermEntity(
             id = 910,
@@ -3298,6 +3961,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ɒkˈtɛt ruːl/",
+            exampleEn = "The octet rule is the tendency of atoms to gain, lose, or share electrons to have eight valence electrons.",
+            exampleFr = "La règle de l'octet est tendance des atomes à gagner, perdre ou partager des électrons pour avoir huit électrons de valence.",
+            exampleAr = "قاعدة الثمانية هو ميل الذرات لاكتساب أو فقدان أو مشاركة إلكترونات للحصول على ثمانية إلكترونات تكافؤ.",
         ),
         MedicalTermEntity(
             id = 911,
@@ -3310,6 +3976,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈvɛspər/",
+            exampleEn = "The vsepr theory is the model predicting molecular geometry based on electron pair repulsion.",
+            exampleFr = "La théorie VSEPR est modèle prédisant la géométrie moléculaire basé sur la répulsion des paires d'électrons.",
+            exampleAr = "نظرية تنافر أزواج الإلكترونات هو نموذج يتنبأ بالشكل الهندسي للجزيء بناءً على تنافر أزواج الإلكترونات.",
         ),
         MedicalTermEntity(
             id = 912,
@@ -3322,6 +3991,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˌhaɪbrɪdaɪˈzeɪʃən/",
+            exampleEn = "The hybridization is the mixing of atomic orbitals to form new hybrid orbitals (sp, sp², sp³).",
+            exampleFr = "L'hybridation est mélange d'orbitales atomiques pour former de nouvelles orbitales hybrides (sp, sp², sp³).",
+            exampleAr = "التهجين هو خلط المدارات الذرية لتكوين مدارات هجينة جديدة (sp، sp²، sp³).",
         ),
         MedicalTermEntity(
             id = 913,
@@ -3334,6 +4006,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈdaɪpoʊl ˈmoʊmənt/",
+            exampleEn = "The dipole moment is the measure of the polarity of a bond or molecule (μ = q × d).",
+            exampleFr = "Le moment dipolaire est mesure de la polarité d'une liaison ou d'une molécule (μ = q × d).",
+            exampleAr = "العزم ثنائي القطب هو مقياس لقطبية الرابطة أو الجزيء (μ = q × d).",
         ),
         MedicalTermEntity(
             id = 914,
@@ -3346,6 +4021,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/məˈlɛkjʊlər dʒiˈɒmɪtri/",
+            exampleEn = "The molecular geometry is the three-dimensional arrangement of atoms in a molecule.",
+            exampleFr = "La géométrie moléculaire est arrangement tridimensionnel des atomes dans une molécule.",
+            exampleAr = "الشكل الهندسي للجزيء هو الترتيب ثلاثي الأبعاد للذرات في الجزيء.",
         ),
         MedicalTermEntity(
             id = 915,
@@ -3358,6 +4036,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˈkɛmɪkəl riˈækʃən/",
+            exampleEn = "The chemical reaction is the process in which substances are transformed into new substances with different properties.",
+            exampleFr = "Le réaction chimique est processus dans lequel des substances sont transformées en nouvelles substances avec des propriétés différentes.",
+            exampleAr = "التفاعل الكيميائي هو عملية تتحول فيها المواد إلى مواد جديدة بخصائص مختلفة.",
         ),
         MedicalTermEntity(
             id = 916,
@@ -3370,6 +4051,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/riˈæktənt/",
+            exampleEn = "The reactant is the substance that undergoes change in a chemical reaction (left side of equation).",
+            exampleFr = "Le réactif est substance subissant un changement dans une réaction chimique (côté gauche de l'équation).",
+            exampleAr = "المتفاعل هو مادة تخضع للتغيير في التفاعل الكيميائي (الطرف الأيسر من المعادلة).",
         ),
         MedicalTermEntity(
             id = 917,
@@ -3382,6 +4066,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˈprɒdʌkt/",
+            exampleEn = "The product is the substance formed as a result of a chemical reaction (right side of equation).",
+            exampleFr = "La produit est substance formée résultant d'une réaction chimique (côté droit de l'équation).",
+            exampleAr = "الناتج هو مادة تتكون نتيجة التفاعل الكيميائي (الطرف الأيمن من المعادلة).",
         ),
         MedicalTermEntity(
             id = 918,
@@ -3394,6 +4081,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˈkɛmɪkəl ɪˈkweɪʒən/",
+            exampleEn = "The chemical equation is the symbolic representation of a chemical reaction using chemical formulas.",
+            exampleFr = "L'équation chimique est représentation symbolique d'une réaction chimique utilisant des formules chimiques.",
+            exampleAr = "المعادلة الكيميائية هو تمثيل رمزي لتفاعل كيميائي باستخدام الصيغ الكيميائية.",
         ),
         MedicalTermEntity(
             id = 919,
@@ -3406,6 +4096,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˈbælənst/",
+            exampleEn = "The balanced equation is the chemical equation with equal numbers of each atom on both sides.",
+            exampleFr = "L'équation équilibrée est équation chimique avec un nombre égal de chaque atome des deux côtés.",
+            exampleAr = "المعادلة الموزونة هو معادلة كيميائية بعدد متساوٍ من كل ذرة على كلا الطرفين.",
         ),
         MedicalTermEntity(
             id = 920,
@@ -3418,6 +4111,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˌstɔɪkiˈɒmɪtri/",
+            exampleEn = "The stoichiometry is the quantitative study of reactants and products in chemical reactions.",
+            exampleFr = "La stœchiométrie est étude quantitative des réactifs et des produits dans les réactions chimiques.",
+            exampleAr = "الكيمياء الحسابية (قياس التفاعل) هو الدراسة الكمية للمتفاعلات والنواتج في التفاعلات الكيميائية.",
         ),
         MedicalTermEntity(
             id = 921,
@@ -3430,6 +4126,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/moʊl/",
+            exampleEn = "The mole (mol) is the SI unit of amount of substance equal to 6.022 × 10²³ particles (Avogadro's number).",
+            exampleFr = "La mole (mol) est unité SI de quantité de matière égale à 6,022 × 10²³ particules (nombre d'Avogadro).",
+            exampleAr = "المول هو وحدة النظام الدولي لكمية المادة تساوي 6.022 × 10²³ جسيم (عدد أفوغادرو).",
         ),
         MedicalTermEntity(
             id = 922,
@@ -3442,6 +4141,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˈmoʊlər mæs/",
+            exampleEn = "The molar mass is the mass of one mole of a substance expressed in g/mol.",
+            exampleFr = "La masse molaire est masse d'une mole d'une substance exprimée en g/mol.",
+            exampleAr = "الكتلة المولارية هو كتلة مول واحد من مادة معبراً عنها بالغرام/مول.",
         ),
         MedicalTermEntity(
             id = 923,
@@ -3466,6 +4168,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˈlɪmɪtɪŋ riˈeɪdʒənt/",
+            exampleEn = "The limiting reagent is the reactant completely consumed first determining the maximum amount of product.",
+            exampleFr = "Le réactif limitant est réactif complètement consommé en premier déterminant la quantité maximale de produit.",
+            exampleAr = "المتفاعل المحدد هو المتفاعل الذي يُستهلك أولاً بالكامل ويحدد الكمية القصوى للناتج.",
         ),
         MedicalTermEntity(
             id = 925,
@@ -3478,6 +4183,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ɪkˈsɛs/",
+            exampleEn = "The excess reagent is the reactant remaining after the limiting reagent is consumed.",
+            exampleFr = "Le réactif en excès est réactif restant après la consommation du réactif limitant.",
+            exampleAr = "المتفاعل الفائض هو المتفاعل المتبقي بعد استهلاك المتفاعل المحدد.",
         ),
         MedicalTermEntity(
             id = 926,
@@ -3490,6 +4198,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/jiːld/",
+            exampleEn = "The yield is the amount of product obtained in a chemical reaction.",
+            exampleFr = "Le rendement est quantité de produit obtenue dans une réaction chimique.",
+            exampleAr = "المردود هو كمية الناتج المحصل عليها في تفاعل كيميائي.",
         ),
         MedicalTermEntity(
             id = 927,
@@ -3502,6 +4213,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˌɒksɪˈdeɪʃən steɪt/",
+            exampleEn = "The oxidation state (number) is the hypothetical charge an atom would have if all bonds were ionic.",
+            exampleFr = "La degré (nombre) d'oxydation est charge hypothétique qu'un atome aurait si toutes les liaisons étaient ioniques.",
+            exampleAr = "حالة (عدد) الأكسدة هو الشحنة الافتراضية التي ستكون للذرة لو كانت جميع الروابط أيونية.",
         ),
         MedicalTermEntity(
             id = 928,
@@ -3514,6 +4228,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/prɪˌsɪpɪˈteɪʃən/",
+            exampleEn = "The precipitation reaction is the reaction producing an insoluble solid (precipitate) from mixing two solutions.",
+            exampleFr = "Le réaction de précipitation est réaction produisant un solide insoluble (précipité) par mélange de deux solutions.",
+            exampleAr = "تفاعل الترسيب هو تفاعل ينتج مادة صلبة غير ذائبة (راسب) من خلط محلولين.",
         ),
         MedicalTermEntity(
             id = 929,
@@ -3526,6 +4243,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˌnjuːtrəlaɪˈzeɪʃən/",
+            exampleEn = "The neutralization reaction is the reaction between an acid and a base producing salt and water.",
+            exampleFr = "Le réaction de neutralisation est réaction entre un acide et une base produisant du sel et de l'eau.",
+            exampleAr = "تفاعل التعادل هو تفاعل بين حمض وقاعدة ينتج ملحاً وماء.",
         ),
         MedicalTermEntity(
             id = 930,
@@ -3538,6 +4258,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/kəmˈbʌstʃən/",
+            exampleEn = "The combustion reaction is the rapid exothermic reaction of a substance with oxygen producing heat and light.",
+            exampleFr = "Le réaction de combustion est réaction exothermique rapide d'une substance avec l'oxygène produisant chaleur et lumière.",
+            exampleAr = "تفاعل الاحتراق هو تفاعل طارد للحرارة سريع لمادة مع الأكسجين ينتج حرارة وضوء.",
         ),
         MedicalTermEntity(
             id = 931,
@@ -3550,6 +4273,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/haɪˈdrɒlɪsɪs/",
+            exampleEn = "The hydrolysis is the reaction where water breaks a chemical bond in a molecule.",
+            exampleFr = "L'hydrolyse est réaction où l'eau rompt une liaison chimique dans une molécule.",
+            exampleAr = "التحلل المائي هو تفاعل يكسر فيه الماء رابطة كيميائية في جزيء.",
         ),
         MedicalTermEntity(
             id = 932,
@@ -3562,6 +4288,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˌkɒndɛnˈseɪʃən/",
+            exampleEn = "The condensation reaction is the reaction joining two molecules with removal of a small molecule (usually water).",
+            exampleFr = "Le réaction de condensation est réaction joignant deux molécules avec élimination d'une petite molécule (habituellement l'eau).",
+            exampleAr = "تفاعل التكثيف هو تفاعل يربط جزيئين مع إزالة جزيء صغير (عادة الماء).",
         ),
         MedicalTermEntity(
             id = 933,
@@ -3574,6 +4303,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˈkætəlɪst/",
+            exampleEn = "The catalyst is the substance that increases the rate of a reaction without being consumed.",
+            exampleFr = "La catalyseur est substance augmentant la vitesse d'une réaction sans être consommée.",
+            exampleAr = "المحفز (العامل الحفاز) هو مادة تزيد سرعة التفاعل دون أن تُستهلك.",
         ),
         MedicalTermEntity(
             id = 934,
@@ -3586,6 +4318,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/səˈluːʃən/",
+            exampleEn = "The solution is the homogeneous mixture of a solute dissolved in a solvent.",
+            exampleFr = "Le solution est mélange homogène d'un soluté dissous dans un solvant.",
+            exampleAr = "المحلول هو خليط متجانس من مذاب ذائب في مذيب.",
         ),
         MedicalTermEntity(
             id = 935,
@@ -3598,6 +4333,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ˌsɒljʊˈbɪlɪti/",
+            exampleEn = "The solubility is the maximum amount of solute that can dissolve in a given amount of solvent at a specific temperature.",
+            exampleFr = "La solubilité est quantité maximale de soluté pouvant se dissoudre dans une quantité donnée de solvant à une température spécifique.",
+            exampleAr = "الذوبانية (قابلية الذوبان) هو الكمية القصوى من المذاب التي يمكن إذابتها في كمية معينة من المذيب عند درجة حرارة محددة.",
         ),
         MedicalTermEntity(
             id = 936,
@@ -3610,6 +4348,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ˈsætʃəreɪtɪd/",
+            exampleEn = "The saturated solution is the solution containing the maximum amount of dissolved solute at a given temperature.",
+            exampleFr = "Le solution saturée est solution contenant la quantité maximale de soluté dissous à une température donnée.",
+            exampleAr = "محلول مشبع هو محلول يحتوي على الحد الأقصى من المذاب عند درجة حرارة معينة.",
         ),
         MedicalTermEntity(
             id = 937,
@@ -3622,6 +4363,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ʌnˈsætʃəreɪtɪd/",
+            exampleEn = "The unsaturated solution is the solution that can dissolve more solute at a given temperature.",
+            exampleFr = "Le solution insaturée est solution pouvant dissoudre plus de soluté à une température donnée.",
+            exampleAr = "محلول غير مشبع هو محلول يمكنه إذابة مزيد من المذاب عند درجة حرارة معينة.",
         ),
         MedicalTermEntity(
             id = 938,
@@ -3634,6 +4378,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ˌsuːpərˈsætʃəreɪtɪd/",
+            exampleEn = "The supersaturated solution is the solution containing more dissolved solute than the maximum solubility allows.",
+            exampleFr = "Le solution sursaturée est solution contenant plus de soluté dissous que la solubilité maximale ne le permet.",
+            exampleAr = "محلول فوق الإشباع هو محلول يحتوي على مذاب أكثر مما تسمح به الذوبانية القصوى.",
         ),
         MedicalTermEntity(
             id = 939,
@@ -3670,6 +4417,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/daɪˈluːʃən/",
+            exampleEn = "The dilution is the process of reducing concentration by adding more solvent (C₁V₁ = C₂V₂).",
+            exampleFr = "Le dilution est processus de réduction de la concentration par ajout de solvant (C₁V₁ = C₂V₂).",
+            exampleAr = "التخفيف هو عملية تقليل التركيز بإضافة مزيد من المذيب (C₁V₁ = C₂V₂).",
         ),
         MedicalTermEntity(
             id = 942,
@@ -3682,6 +4432,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ˈkɒlɔɪd/",
+            exampleEn = "The colloid is the mixture with particles larger than in a solution but smaller than in a suspension.",
+            exampleFr = "La colloïde est mélange avec des particules plus grandes que dans une solution mais plus petites que dans une suspension.",
+            exampleAr = "الغروي هو خليط بجسيمات أكبر من المحلول لكن أصغر من المعلق.",
         ),
         MedicalTermEntity(
             id = 943,
@@ -3694,6 +4447,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/səˈspɛnʃən/",
+            exampleEn = "The suspension is the heterogeneous mixture where particles settle out over time.",
+            exampleFr = "Le suspension est mélange hétérogène où les particules se déposent avec le temps.",
+            exampleAr = "المعلق هو خليط غير متجانس تترسب فيه الجسيمات مع مرور الوقت.",
         ),
         MedicalTermEntity(
             id = 944,
@@ -3706,6 +4462,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/nɒn ɪˈlɛktrəlaɪt/",
+            exampleEn = "The non-electrolyte is the substance that does not dissociate into ions when dissolved.",
+            exampleFr = "La non-électrolyte est substance ne se dissociant pas en ions une fois dissoute.",
+            exampleAr = "اللاإلكتروليت هو مادة لا تتفكك إلى أيونات عند ذوبانها.",
         ),
         MedicalTermEntity(
             id = 945,
@@ -3718,6 +4477,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/beɪs/",
+            exampleEn = "The base is the substance that accepts protons (H⁺) or donates electron pairs.",
+            exampleFr = "La base est substance acceptant des protons (H⁺) ou donnant des paires d'électrons.",
+            exampleAr = "القاعدة هو مادة تستقبل بروتونات (H⁺) أو تمنح أزواج إلكترونات.",
         ),
         MedicalTermEntity(
             id = 946,
@@ -3730,6 +4492,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈbrɛnstɪd ˈlaʊri/",
+            exampleEn = "The brønsted-lowry acid is the proton (H⁺) donor in a chemical reaction.",
+            exampleFr = "L'acide de Brønsted-Lowry est donneur de proton (H⁺) dans une réaction chimique.",
+            exampleAr = "حمض برونستد-لوري هو مانح للبروتون (H⁺) في تفاعل كيميائي.",
         ),
         MedicalTermEntity(
             id = 947,
@@ -3742,6 +4507,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈbrɛnstɪd ˈlaʊri/",
+            exampleEn = "The brønsted-lowry base is the proton (H⁺) acceptor in a chemical reaction.",
+            exampleFr = "La base de Brønsted-Lowry est accepteur de proton (H⁺) dans une réaction chimique.",
+            exampleAr = "قاعدة برونستد-لوري هو مستقبل للبروتون (H⁺) في تفاعل كيميائي.",
         ),
         MedicalTermEntity(
             id = 948,
@@ -3754,6 +4522,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈluːɪs/",
+            exampleEn = "The lewis acid is the electron pair acceptor.",
+            exampleFr = "L'acide de Lewis est accepteur de paire d'électrons.",
+            exampleAr = "حمض لويس هو مستقبل لزوج إلكترونات.",
         ),
         MedicalTermEntity(
             id = 949,
@@ -3766,6 +4537,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈluːɪs/",
+            exampleEn = "The lewis base is the electron pair donor.",
+            exampleFr = "La base de Lewis est donneur de paire d'électrons.",
+            exampleAr = "قاعدة لويس هو مانح لزوج إلكترونات.",
         ),
         MedicalTermEntity(
             id = 950,
@@ -3778,6 +4552,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/strɒŋ ˈæsɪd/",
+            exampleEn = "The strong acid is the acid that completely dissociates in water (e.g., HCl, H₂SO₄, HNO₃).",
         ),
         MedicalTermEntity(
             id = 951,
@@ -3790,6 +4565,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/wiːk ˈæsɪd/",
+            exampleEn = "The weak acid is the acid that partially dissociates in water (e.g., CH₃COOH, H₂CO₃).",
         ),
         MedicalTermEntity(
             id = 952,
@@ -3826,6 +4602,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈkɒndʒʊɡeɪt/",
+            exampleEn = "The conjugate acid is the species formed when a base accepts a proton.",
+            exampleFr = "L'acide conjugué est espèce formée quand une base accepte un proton.",
+            exampleAr = "الحمض المرافق هو النوع الكيميائي المتكون عندما تستقبل القاعدة بروتوناً.",
         ),
         MedicalTermEntity(
             id = 955,
@@ -3838,6 +4617,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈkɒndʒʊɡeɪt/",
+            exampleEn = "The conjugate base is the species formed when an acid donates a proton.",
+            exampleFr = "La base conjuguée est espèce formée quand un acide donne un proton.",
+            exampleAr = "القاعدة المرافقة هو النوع الكيميائي المتكون عندما يمنح الحمض بروتوناً.",
         ),
         MedicalTermEntity(
             id = 956,
@@ -3850,6 +4632,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈbʌfər/",
+            exampleEn = "The buffer solution is the solution resisting pH changes composed of a weak acid and its conjugate base.",
+            exampleFr = "Le solution tampon est solution résistant aux changements de pH composée d'un acide faible et de sa base conjuguée.",
+            exampleAr = "المحلول الدارئ هو محلول يقاوم تغيرات الأس الهيدروجيني مكون من حمض ضعيف وقاعدته المرافقة.",
         ),
         MedicalTermEntity(
             id = 957,
@@ -3874,6 +4659,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/taɪˈtreɪʃən/",
+            exampleEn = "The titration is the technique for determining the concentration of a solution by reacting it with a standard solution.",
+            exampleFr = "Le titrage est technique pour déterminer la concentration d'une solution en la faisant réagir avec une solution étalon.",
+            exampleAr = "المعايرة هو تقنية لتحديد تركيز محلول بإجراء تفاعل مع محلول معياري.",
         ),
         MedicalTermEntity(
             id = 959,
@@ -3886,6 +4674,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ɪˈkwɪvələns pɔɪnt/",
+            exampleEn = "The equivalence point is the point in a titration where stoichiometrically equivalent amounts of acid and base have reacted.",
+            exampleFr = "La point d'équivalence est point dans un titrage où des quantités stœchiométriquement équivalentes d'acide et de base ont réagi.",
+            exampleAr = "نقطة التكافؤ هو النقطة في المعايرة حيث تفاعلت كميات متكافئة كيميائياً من الحمض والقاعدة.",
         ),
         MedicalTermEntity(
             id = 960,
@@ -3898,6 +4689,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈɪndɪkeɪtər/",
+            exampleEn = "The indicator is the substance that changes color at a specific pH range used to detect the endpoint of a titration.",
+            exampleFr = "L'indicateur est substance changeant de couleur dans un intervalle de pH spécifique utilisée pour détecter le point final d'un titrage.",
+            exampleAr = "الكاشف هو مادة تتغير لونها عند مدى معين من pH وتستخدم لتحديد نقطة نهاية المعايرة.",
         ),
         MedicalTermEntity(
             id = 961,
@@ -3910,6 +4704,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/æmˈfɒtərɪk/",
+            exampleEn = "The amphoteric substance is the substance that can act as both an acid and a base (e.g., water, amino acids).",
         ),
         MedicalTermEntity(
             id = 962,
@@ -3922,6 +4717,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/ˌθɜːrmoʊˈkɛmɪstri/",
+            exampleEn = "The thermochemistry is the study of heat changes in chemical reactions.",
+            exampleFr = "La thermochimie est étude des changements de chaleur dans les réactions chimiques.",
+            exampleAr = "الكيمياء الحرارية هو دراسة التغيرات الحرارية في التفاعلات الكيميائية.",
         ),
         MedicalTermEntity(
             id = 963,
@@ -3934,6 +4732,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/ˈɛnθəlpi/",
+            exampleEn = "The enthalpy (h) is the total heat content of a system at constant pressure.",
+            exampleFr = "L'enthalpie (H) est contenu thermique total d'un système à pression constante.",
+            exampleAr = "المحتوى الحراري هو المحتوى الحراري الكلي لنظام عند ضغط ثابت.",
         ),
         MedicalTermEntity(
             id = 964,
@@ -3946,6 +4747,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/ˌɛksoʊˈθɜːrmɪk/",
+            exampleEn = "The exothermic reaction is the reaction that releases heat to the surroundings (ΔH < 0).",
+            exampleFr = "Le réaction exothermique est réaction libérant de la chaleur vers l'environnement (ΔH < 0).",
+            exampleAr = "تفاعل طارد للحرارة هو تفاعل يطلق حرارة إلى المحيط (ΔH < 0).",
         ),
         MedicalTermEntity(
             id = 965,
@@ -3958,6 +4762,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/ˌɛndoʊˈθɜːrmɪk/",
+            exampleEn = "The endothermic reaction is the reaction that absorbs heat from the surroundings (ΔH > 0).",
+            exampleFr = "Le réaction endothermique est réaction absorbant de la chaleur de l'environnement (ΔH > 0).",
+            exampleAr = "تفاعل ماص للحرارة هو تفاعل يمتص حرارة من المحيط (ΔH > 0).",
         ),
         MedicalTermEntity(
             id = 966,
@@ -3970,6 +4777,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/hɛsɪz lɔː/",
+            exampleEn = "The hess's law is the total enthalpy change is the same regardless of the reaction pathway.",
+            exampleFr = "La loi de Hess est le changement total d'enthalpie est le même quel que soit le chemin réactionnel.",
+            exampleAr = "قانون هس هو التغير الكلي في المحتوى الحراري يبقى نفسه بغض النظر عن مسار التفاعل.",
         ),
         MedicalTermEntity(
             id = 967,
@@ -3982,6 +4792,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/ˌæktɪˈveɪʃən ˈɛnərdʒi/",
+            exampleEn = "The activation energy (ea) is the minimum energy required for reactants to undergo a chemical reaction.",
+            exampleFr = "L'énergie d'activation (Ea) est énergie minimale nécessaire pour que les réactifs subissent une réaction chimique.",
+            exampleAr = "طاقة التنشيط هو الطاقة الأدنى اللازمة للمتفاعلات لإجراء تفاعل كيميائي.",
         ),
         MedicalTermEntity(
             id = 968,
@@ -3994,6 +4807,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/riˈækʃən reɪt/",
+            exampleEn = "The reaction rate is the change in concentration of reactants or products per unit time.",
+            exampleFr = "La vitesse de réaction est changement de concentration des réactifs ou des produits par unité de temps.",
+            exampleAr = "سرعة التفاعل هو تغير تركيز المتفاعلات أو النواتج لكل وحدة زمنية.",
         ),
         MedicalTermEntity(
             id = 969,
@@ -4006,6 +4822,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/reɪt lɔː/",
+            exampleEn = "The rate law is the equation relating the reaction rate to the concentrations of reactants.",
+            exampleFr = "La loi de vitesse est équation reliant la vitesse de réaction aux concentrations des réactifs.",
+            exampleAr = "قانون السرعة هو معادلة تربط سرعة التفاعل بتركيزات المتفاعلات.",
         ),
         MedicalTermEntity(
             id = 970,
@@ -4018,6 +4837,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Thermochimie et Cinétique",
             ipaPhonetic = "/ˈɔːrdər/",
+            exampleEn = "The order of reaction is the power to which the concentration of a reactant is raised in the rate law.",
+            exampleFr = "L'ordre de réaction est puissance à laquelle la concentration d'un réactif est élevée dans la loi de vitesse.",
+            exampleAr = "رتبة التفاعل هو الأس الذي يُرفع إليه تركيز المتفاعل في قانون السرعة.",
         ),
         MedicalTermEntity(
             id = 971,
@@ -4030,6 +4852,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/ˈkɛmɪkəl ˌiːkwɪˈlɪbriəm/",
+            exampleEn = "The chemical equilibrium is the state where the rates of forward and reverse reactions are equal.",
+            exampleFr = "L'équilibre chimique est état où les vitesses des réactions directe et inverse sont égales.",
+            exampleAr = "التوازن الكيميائي هو حالة تتساوى فيها سرعتا التفاعل الطردي والعكسي.",
         ),
         MedicalTermEntity(
             id = 972,
@@ -4042,6 +4867,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/ˌiːkwɪˈlɪbriəm ˈkɒnstənt/",
+            exampleEn = "The equilibrium constant (k) is the ratio of product concentrations to reactant concentrations at equilibrium.",
+            exampleFr = "La constante d'équilibre (K) est rapport des concentrations des produits aux concentrations des réactifs à l'équilibre.",
+            exampleAr = "ثابت التوازن هو نسبة تركيزات النواتج إلى تركيزات المتفاعلات عند التوازن.",
         ),
         MedicalTermEntity(
             id = 973,
@@ -4066,6 +4894,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/keɪ eɪ/",
+            exampleEn = "The ka (acid dissociation constant) is the equilibrium constant for the dissociation of a weak acid in water.",
+            exampleFr = "La ka (Constante de dissociation acide) est constante d'équilibre pour la dissociation d'un acide faible dans l'eau.",
+            exampleAr = "ثابت تفكك الحمض هو ثابت التوازن لتفكك حمض ضعيف في الماء.",
         ),
         MedicalTermEntity(
             id = 975,
@@ -4078,6 +4909,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/keɪ biː/",
+            exampleEn = "The kb (base dissociation constant) is the equilibrium constant for the dissociation of a weak base in water.",
+            exampleFr = "La kb (Constante de dissociation basique) est constante d'équilibre pour la dissociation d'une base faible dans l'eau.",
+            exampleAr = "ثابت تفكك القاعدة هو ثابت التوازن لتفكك قاعدة ضعيفة في الماء.",
         ),
         MedicalTermEntity(
             id = 976,
@@ -4102,6 +4936,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/keɪ ɛs piː/",
+            exampleEn = "The ksp (solubility product) is the equilibrium constant for a sparingly soluble salt dissolving in water.",
+            exampleFr = "La kps (Produit de solubilité) est constante d'équilibre pour un sel peu soluble se dissolvant dans l'eau.",
+            exampleAr = "حاصل ضرب الذوبان هو ثابت التوازن لملح قليل الذوبان يذوب في الماء.",
         ),
         MedicalTermEntity(
             id = 978,
@@ -4114,6 +4951,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/rɪˈvɜːrsɪbəl/",
+            exampleEn = "The reversible reaction is the reaction that can proceed in both forward and reverse directions.",
+            exampleFr = "Le réaction réversible est réaction pouvant se produire dans les deux directions, directe et inverse.",
+            exampleAr = "تفاعل عكوس هو تفاعل يمكن أن يسير في الاتجاهين الطردي والعكسي.",
         ),
         MedicalTermEntity(
             id = 979,
@@ -4126,6 +4966,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ɔːrˈɡænɪk ˈkɛmɪstri/",
+            exampleEn = "The organic chemistry is the study of carbon-containing compounds and their reactions.",
+            exampleFr = "La chimie organique est étude des composés contenant du carbone et de leurs réactions.",
+            exampleAr = "الكيمياء العضوية هو دراسة المركبات المحتوية على الكربون وتفاعلاتها.",
         ),
         MedicalTermEntity(
             id = 980,
@@ -4138,6 +4981,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈkɑːrbən/",
+            exampleEn = "The carbon is the element (Z=6) forming the backbone of all organic molecules with 4 bonds.",
+            exampleFr = "La carbone est élément (Z=6) formant le squelette de toutes les molécules organiques avec 4 liaisons.",
+            exampleAr = "الكربون هو العنصر (Z=6) الذي يشكل الهيكل الأساسي لجميع الجزيئات العضوية بأربع روابط.",
         ),
         MedicalTermEntity(
             id = 981,
@@ -4150,6 +4996,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈhaɪdrəkɑːrbən/",
+            exampleEn = "The hydrocarbon is the organic compound composed only of carbon and hydrogen atoms.",
+            exampleFr = "L'hydrocarbure est composé organique composé uniquement d'atomes de carbone et d'hydrogène.",
+            exampleAr = "الهيدروكربون هو مركب عضوي مكون فقط من ذرات الكربون والهيدروجين.",
         ),
         MedicalTermEntity(
             id = 982,
@@ -4162,6 +5011,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈfʌŋkʃənəl ɡruːp/",
+            exampleEn = "The functional group is the specific group of atoms determining the chemical properties of an organic molecule.",
+            exampleFr = "La groupe fonctionnel est groupe spécifique d'atomes déterminant les propriétés chimiques d'une molécule organique.",
+            exampleAr = "المجموعة الوظيفية هو مجموعة محددة من الذرات تحدد الخصائص الكيميائية لجزيء عضوي.",
         ),
         MedicalTermEntity(
             id = 983,
@@ -4174,6 +5026,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈstrʌktʃərəl ˈfɔːrmjʊlə/",
+            exampleEn = "The structural formula is the formula showing the arrangement and bonding of atoms in a molecule.",
+            exampleFr = "La formule développée est formule montrant l'arrangement et les liaisons des atomes dans une molécule.",
+            exampleAr = "الصيغة البنائية هو صيغة تُظهر ترتيب الذرات وروابطها في الجزيء.",
         ),
         MedicalTermEntity(
             id = 984,
@@ -4186,6 +5041,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/məˈlɛkjʊlər/",
+            exampleEn = "The molecular formula is the formula showing the actual number and types of atoms in a molecule (e.g., C₆H₁₂O₆).",
         ),
         MedicalTermEntity(
             id = 985,
@@ -4198,6 +5054,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ɪmˈpɪrɪkəl/",
+            exampleEn = "The empirical formula is the simplest whole-number ratio of atoms in a compound (e.g., CH₂O for glucose).",
         ),
         MedicalTermEntity(
             id = 986,
@@ -4210,6 +5067,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/həˈmɒləɡəs/",
+            exampleEn = "The homologous series is the family of organic compounds with the same general formula differing by CH₂.",
+            exampleFr = "La série homologue est famille de composés organiques avec la même formule générale différant par CH₂.",
+            exampleAr = "السلسلة المتشابهة هو عائلة من المركبات العضوية بنفس الصيغة العامة تختلف بـ CH₂.",
         ),
         MedicalTermEntity(
             id = 987,
@@ -4222,6 +5082,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈsætʃəreɪtɪd/",
+            exampleEn = "The saturated compound is the organic compound with only single bonds between carbon atoms.",
+            exampleFr = "La composé saturé est composé organique avec uniquement des liaisons simples entre les atomes de carbone.",
+            exampleAr = "مركب مشبع هو مركب عضوي بروابط أحادية فقط بين ذرات الكربون.",
         ),
         MedicalTermEntity(
             id = 988,
@@ -4234,6 +5097,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ʌnˈsætʃəreɪtɪd/",
+            exampleEn = "The unsaturated compound is the organic compound containing double or triple bonds between carbon atoms.",
+            exampleFr = "La composé insaturé est composé organique contenant des liaisons doubles ou triples entre les atomes de carbone.",
+            exampleAr = "مركب غير مشبع هو مركب عضوي يحتوي على روابط مزدوجة أو ثلاثية بين ذرات الكربون.",
         ),
         MedicalTermEntity(
             id = 989,
@@ -4246,6 +5112,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˈælkeɪn/",
+            exampleEn = "The alkane is the saturated hydrocarbon with only single C-C bonds (CₙH₂ₙ₊₂).",
+            exampleFr = "L'alcane est hydrocarbure saturé avec uniquement des liaisons simples C-C (CₙH₂ₙ₊₂).",
+            exampleAr = "الألكان هو هيدروكربون مشبع بروابط C-C أحادية فقط (CₙH₂ₙ₊₂).",
         ),
         MedicalTermEntity(
             id = 990,
@@ -4258,6 +5127,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˈmɛθeɪn/",
+            exampleEn = "The methane (ch₄) is the simplest alkane with one carbon atom.",
+            exampleFr = "La méthane (CH₄) est l'alcane le plus simple avec un atome de carbone.",
+            exampleAr = "الميثان هو أبسط ألكان بذرة كربون واحدة.",
         ),
         MedicalTermEntity(
             id = 991,
@@ -4270,6 +5142,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˈɛθeɪn/",
+            exampleEn = "The ethane (c₂h₆) is the alkane with two carbon atoms.",
+            exampleFr = "L'éthane (C₂H₆) est alcane avec deux atomes de carbone.",
+            exampleAr = "الإيثان هو ألكان بذرتي كربون.",
         ),
         MedicalTermEntity(
             id = 992,
@@ -4282,6 +5157,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˈælkiːn/",
+            exampleEn = "The alkene is the unsaturated hydrocarbon with at least one C=C double bond (CₙH₂ₙ).",
+            exampleFr = "L'alcène est hydrocarbure insaturé avec au moins une double liaison C=C (CₙH₂ₙ).",
+            exampleAr = "الألكين هو هيدروكربون غير مشبع برابطة مزدوجة C=C واحدة على الأقل (CₙH₂ₙ).",
         ),
         MedicalTermEntity(
             id = 993,
@@ -4294,6 +5172,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˈɛθɪliːn/",
+            exampleEn = "The ethylene (ethene, c₂h₄) is the simplest alkene with one double bond.",
+            exampleFr = "L'éthylène (Éthène, C₂H₄) est l'alcène le plus simple avec une double liaison.",
+            exampleAr = "الإيثيلين هو أبسط ألكين برابطة مزدوجة واحدة.",
         ),
         MedicalTermEntity(
             id = 994,
@@ -4306,6 +5187,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˈælkaɪn/",
+            exampleEn = "The alkyne is the unsaturated hydrocarbon with at least one C≡C triple bond (CₙH₂ₙ₋₂).",
+            exampleFr = "L'alcyne est hydrocarbure insaturé avec au moins une triple liaison C≡C (CₙH₂ₙ₋₂).",
+            exampleAr = "الألكاين هو هيدروكربون غير مشبع برابطة ثلاثية C≡C واحدة على الأقل (CₙH₂ₙ₋₂).",
         ),
         MedicalTermEntity(
             id = 995,
@@ -4318,6 +5202,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/əˈsɛtɪliːn/",
+            exampleEn = "The acetylene (ethyne, c₂h₂) is the simplest alkyne with one triple bond.",
+            exampleFr = "L'acétylène (Éthyne, C₂H₂) est l'alcyne le plus simple avec une triple liaison.",
+            exampleAr = "الأسيتيلين هو أبسط ألكاين برابطة ثلاثية واحدة.",
         ),
         MedicalTermEntity(
             id = 996,
@@ -4330,6 +5217,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˌsaɪkloʊˈælkeɪn/",
+            exampleEn = "The cycloalkane is the saturated hydrocarbon with a ring structure (CₙH₂ₙ).",
+            exampleFr = "La cycloalcane est hydrocarbure saturé avec une structure en anneau (CₙH₂ₙ).",
+            exampleAr = "الألكان الحلقي هو هيدروكربون مشبع ببنية حلقية (CₙH₂ₙ).",
         ),
         MedicalTermEntity(
             id = 997,
@@ -4342,6 +5232,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˌærəˈmætɪk/",
+            exampleEn = "The aromatic compound is the compound containing a benzene ring or similar conjugated ring system.",
+            exampleFr = "La composé aromatique est composé contenant un cycle benzénique ou un système cyclique conjugué similaire.",
+            exampleAr = "المركب الأروماتي (العطري) هو مركب يحتوي على حلقة بنزين أو نظام حلقي مترافق مشابه.",
         ),
         MedicalTermEntity(
             id = 998,
@@ -4354,6 +5247,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˈbɛnziːn/",
+            exampleEn = "The benzene (c₆h₆) is the six-carbon ring with alternating double bonds and delocalized electrons.",
+            exampleFr = "La benzène (C₆H₆) est cycle à six carbones avec des doubles liaisons alternées et des électrons délocalisés.",
+            exampleAr = "البنزين هو حلقة بست ذرات كربون بروابط مزدوجة متناوبة وإلكترونات غير متموضعة.",
         ),
         MedicalTermEntity(
             id = 999,
@@ -4378,6 +5274,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/ˌælɪˈfætɪk/",
+            exampleEn = "The aliphatic compound is the non-aromatic organic compound with open-chain or cyclic structure.",
+            exampleFr = "La composé aliphatique est composé organique non aromatique avec structure en chaîne ouverte ou cyclique.",
+            exampleAr = "المركب الأليفاتي هو مركب عضوي غير أروماتي ببنية سلسلة مفتوحة أو حلقية.",
         ),
         MedicalTermEntity(
             id = 1001,
@@ -4390,6 +5289,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/haɪˈdrɒksɪl/",
+            exampleEn = "The hydroxyl group (-oh) is the functional group of alcohols and phenols (-OH).",
+            exampleFr = "La groupe hydroxyle (-OH) est groupe fonctionnel des alcools et phénols (-OH).",
+            exampleAr = "مجموعة الهيدروكسيل هو المجموعة الوظيفية للكحولات والفينولات (-OH).",
         ),
         MedicalTermEntity(
             id = 1002,
@@ -4402,6 +5304,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈælkəhɒl/",
+            exampleEn = "The alcohol is the organic compound containing a hydroxyl group bonded to a saturated carbon (R-OH).",
+            exampleFr = "L'alcool est composé organique contenant un groupe hydroxyle lié à un carbone saturé (R-OH).",
+            exampleAr = "الكحول هو مركب عضوي يحتوي على مجموعة هيدروكسيل مرتبطة بكربون مشبع (R-OH).",
         ),
         MedicalTermEntity(
             id = 1003,
@@ -4414,6 +5319,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈmɛθənɒl/",
+            exampleEn = "The methanol (ch₃oh) is the simplest alcohol; toxic if ingested causing blindness and death.",
+            exampleFr = "La méthanol (CH₃OH) est l'alcool le plus simple; toxique en cas d'ingestion causant cécité et mort.",
+            exampleAr = "الميثانول هو أبسط كحول؛ سام عند الابتلاع يسبب العمى والوفاة.",
         ),
         MedicalTermEntity(
             id = 1004,
@@ -4426,6 +5334,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈɛθənɒl/",
+            exampleEn = "The ethanol (c₂h₅oh) is the alcohol found in alcoholic beverages; used as a medical disinfectant.",
+            exampleFr = "L'éthanol (C₂H₅OH) est alcool trouvé dans les boissons alcoolisées; utilisé comme désinfectant médical.",
+            exampleAr = "الإيثانول هو الكحول الموجود في المشروبات الكحولية؛ يُستخدم كمطهر طبي.",
         ),
         MedicalTermEntity(
             id = 1005,
@@ -4438,6 +5349,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈfiːnɒl/",
+            exampleEn = "The phenol is the aromatic compound with a hydroxyl group directly attached to a benzene ring (C₆H₅OH).",
+            exampleFr = "La phénol est composé aromatique avec un groupe hydroxyle directement attaché à un cycle benzénique (C₆H₅OH).",
+            exampleAr = "الفينول هو مركب أروماتي بمجموعة هيدروكسيل مرتبطة مباشرة بحلقة بنزين (C₆H₅OH).",
         ),
         MedicalTermEntity(
             id = 1006,
@@ -4450,6 +5364,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈkɑːrbənɪl/",
+            exampleEn = "The carbonyl group (c=o) is the functional group consisting of a carbon atom double-bonded to oxygen.",
+            exampleFr = "La groupe carbonyle (C=O) est groupe fonctionnel consistant en un atome de carbone doublement lié à l'oxygène.",
+            exampleAr = "مجموعة الكربونيل هو مجموعة وظيفية تتكون من ذرة كربون مرتبطة برابطة مزدوجة مع الأكسجين.",
         ),
         MedicalTermEntity(
             id = 1007,
@@ -4462,6 +5379,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈældɪhaɪd/",
+            exampleEn = "The aldehyde (-cho) is the organic compound with a carbonyl group at the end of a carbon chain (R-CHO).",
+            exampleFr = "L'aldéhyde (-CHO) est composé organique avec un groupe carbonyle en bout de chaîne carbonée (R-CHO).",
+            exampleAr = "الألدهيد هو مركب عضوي بمجموعة كربونيل في نهاية سلسلة الكربون (R-CHO).",
         ),
         MedicalTermEntity(
             id = 1008,
@@ -4474,6 +5394,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈkiːtoʊn/",
+            exampleEn = "The ketone (-co-) is the organic compound with a carbonyl group between two carbon atoms (R-CO-R').",
+            exampleFr = "La cétone (-CO-) est composé organique avec un groupe carbonyle entre deux atomes de carbone (R-CO-R').",
+            exampleAr = "الكيتون هو مركب عضوي بمجموعة كربونيل بين ذرتي كربون (R-CO-R').",
         ),
         MedicalTermEntity(
             id = 1009,
@@ -4486,6 +5409,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/kɑːrˈbɒksɪl/",
+            exampleEn = "The carboxyl group (-cooh) is the functional group of carboxylic acids containing both C=O and O-H.",
+            exampleFr = "La groupe carboxyle (-COOH) est groupe fonctionnel des acides carboxyliques contenant à la fois C=O et O-H.",
+            exampleAr = "مجموعة الكربوكسيل هو المجموعة الوظيفية للأحماض الكربوكسيلية المحتوية على C=O و O-H.",
         ),
         MedicalTermEntity(
             id = 1010,
@@ -4498,6 +5424,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˌkɑːrbɒkˈsɪlɪk/",
+            exampleEn = "The carboxylic acid is the organic acid containing the -COOH group (e.g., acetic acid, citric acid).",
         ),
         MedicalTermEntity(
             id = 1011,
@@ -4510,6 +5437,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/əˈmiːnoʊ/",
+            exampleEn = "The amino group (-nh₂) is the functional group of amines consisting of nitrogen bonded to hydrogen atoms.",
+            exampleFr = "La groupe amine (-NH₂) est groupe fonctionnel des amines consistant en azote lié à des atomes d'hydrogène.",
+            exampleAr = "مجموعة الأمين هو المجموعة الوظيفية للأمينات المكونة من نيتروجين مرتبط بذرات هيدروجين.",
         ),
         MedicalTermEntity(
             id = 1012,
@@ -4522,6 +5452,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/əˈmiːn/",
+            exampleEn = "The amine is the organic compound derived from ammonia by replacing H atoms with alkyl groups (R-NH₂).",
+            exampleFr = "L'amine est composé organique dérivé de l'ammoniac par remplacement d'atomes H par des groupes alkyles (R-NH₂).",
+            exampleAr = "الأمين هو مركب عضوي مشتق من الأمونيا باستبدال ذرات H بمجموعات ألكيل (R-NH₂).",
         ),
         MedicalTermEntity(
             id = 1013,
@@ -4534,6 +5467,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈɛstər/",
+            exampleEn = "The ester (-coo-) is the organic compound formed by reaction of a carboxylic acid with an alcohol (R-COO-R').",
+            exampleFr = "L'ester (-COO-) est composé organique formé par réaction d'un acide carboxylique avec un alcool (R-COO-R').",
+            exampleAr = "الإستر هو مركب عضوي يتكون من تفاعل حمض كربوكسيلي مع كحول (R-COO-R').",
         ),
         MedicalTermEntity(
             id = 1014,
@@ -4546,6 +5482,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈiːθər/",
+            exampleEn = "The ether (-o-) is the organic compound with an oxygen atom linking two carbon groups (R-O-R').",
+            exampleFr = "L'éther (-O-) est composé organique avec un atome d'oxygène reliant deux groupes carbonés (R-O-R').",
+            exampleAr = "الإيثر هو مركب عضوي بذرة أكسجين تربط مجموعتي كربون (R-O-R').",
         ),
         MedicalTermEntity(
             id = 1015,
@@ -4558,6 +5497,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈæmaɪd/",
+            exampleEn = "The amide (-conh₂) is the organic compound with a carbonyl group bonded to a nitrogen atom (R-CO-NH₂).",
+            exampleFr = "L'amide (-CONH₂) est composé organique avec un groupe carbonyle lié à un atome d'azote (R-CO-NH₂).",
+            exampleAr = "الأميد هو مركب عضوي بمجموعة كربونيل مرتبطة بذرة نيتروجين (R-CO-NH₂).",
         ),
         MedicalTermEntity(
             id = 1016,
@@ -4570,6 +5512,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈθaɪɒl/",
+            exampleEn = "The thiol (-sh) is the organic compound containing a sulfhydryl group (R-SH).",
+            exampleFr = "La thiol (-SH) est composé organique contenant un groupe sulfhydryle (R-SH).",
+            exampleAr = "الثيول هو مركب عضوي يحتوي على مجموعة السلفهيدريل (R-SH).",
         ),
         MedicalTermEntity(
             id = 1017,
@@ -4582,6 +5527,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/sʌlfˈhaɪdrɪl/",
+            exampleEn = "The sulfhydryl group (-sh) is the functional group found in the amino acid cysteine important for disulfide bonds.",
+            exampleFr = "La groupe sulfhydryle (-SH) est groupe fonctionnel trouvé dans l'acide aminé cystéine important pour les ponts disulfure.",
+            exampleAr = "مجموعة السلفهيدريل هو مجموعة وظيفية توجد في الحمض الأميني سيستين مهمة للروابط ثنائية الكبريت.",
         ),
         MedicalTermEntity(
             id = 1018,
@@ -4594,6 +5542,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈfɒsfeɪt/",
+            exampleEn = "The phosphate group (-po₄) is the functional group essential in ATP, DNA, and cell membrane phospholipids.",
+            exampleFr = "La groupe phosphate (-PO₄) est groupe fonctionnel essentiel dans l'ATP, l'ADN et les phospholipides membranaires.",
+            exampleAr = "مجموعة الفوسفات هو مجموعة وظيفية ضرورية في ATP و DNA والفوسفوليبيدات الغشائية.",
         ),
         MedicalTermEntity(
             id = 1019,
@@ -4606,6 +5557,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈhælaɪd/",
+            exampleEn = "The halide (r-x) is the organic compound with a halogen atom (F, Cl, Br, I) bonded to carbon.",
+            exampleFr = "L'halogénoalcane (R-X) est composé organique avec un atome d'halogène (F, Cl, Br, I) lié au carbone.",
+            exampleAr = "هاليد الألكيل هو مركب عضوي بذرة هالوجين (F، Cl، Br، I) مرتبطة بالكربون.",
         ),
         MedicalTermEntity(
             id = 1020,
@@ -4618,6 +5572,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ænˈhaɪdraɪd/",
+            exampleEn = "The anhydride is the compound formed by removing water from two acid molecules.",
+            exampleFr = "L'anhydride est composé formé par élimination d'eau de deux molécules d'acide.",
+            exampleAr = "الأنهيدريد هو مركب يتكون بإزالة الماء من جزيئتي حمض.",
         ),
         MedicalTermEntity(
             id = 1021,
@@ -4666,6 +5623,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/sɪs/",
+            exampleEn = "The cis isomer is the isomer with similar groups on the same side of a double bond or ring.",
+            exampleFr = "L'isomère cis est isomère avec des groupes similaires du même côté d'une double liaison ou d'un cycle.",
+            exampleAr = "المتشكل سيس هو متشكل بمجموعات متشابهة على نفس الجانب من رابطة مزدوجة أو حلقة.",
         ),
         MedicalTermEntity(
             id = 1025,
@@ -4678,6 +5638,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/trænz/",
+            exampleEn = "The trans isomer is the isomer with similar groups on opposite sides of a double bond or ring.",
+            exampleFr = "L'isomère trans est isomère avec des groupes similaires de côtés opposés d'une double liaison ou d'un cycle.",
+            exampleAr = "المتشكل ترانس هو متشكل بمجموعات متشابهة على جانبين متقابلين من رابطة مزدوجة أو حلقة.",
         ),
         MedicalTermEntity(
             id = 1026,
@@ -4690,6 +5653,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ɪˈnæntiəmər/",
+            exampleEn = "The enantiomer is the pair of stereoisomers that are non-superimposable mirror images of each other.",
+            exampleFr = "L'énantiomère est paire de stéréo-isomères qui sont des images miroir non superposables l'une de l'autre.",
+            exampleAr = "المتشكل المرآتي هو زوج من المتشكلات الفراغية التي هي صور مرآتية غير قابلة للتطابق لبعضها البعض.",
         ),
         MedicalTermEntity(
             id = 1027,
@@ -4702,6 +5668,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈkaɪrəl/",
+            exampleEn = "The chiral center (asymmetric carbon) is the carbon atom bonded to four different substituents producing optical isomers.",
+            exampleFr = "La centre chiral (Carbone asymétrique) est atome de carbone lié à quatre substituants différents produisant des isomères optiques.",
+            exampleAr = "المركز اللاتناظري هو ذرة كربون مرتبطة بأربع مستبدلات مختلفة تنتج متشكلات ضوئية.",
         ),
         MedicalTermEntity(
             id = 1028,
@@ -4714,6 +5683,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/kaɪˈrælɪti/",
+            exampleEn = "The chirality is the property of a molecule being non-superimposable on its mirror image.",
+            exampleFr = "La chiralité est propriété d'une molécule d'être non superposable à son image miroir.",
+            exampleAr = "اللاتناظر هو خاصية الجزيء بأنه غير قابل للتطابق مع صورته المرآتية.",
         ),
         MedicalTermEntity(
             id = 1029,
@@ -4738,6 +5710,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈɒptɪkəl ækˈtɪvɪti/",
+            exampleEn = "The optical activity is the ability of a chiral compound to rotate plane-polarized light.",
+            exampleFr = "L'activité optique est capacité d'un composé chiral à faire tourner la lumière polarisée plan.",
+            exampleAr = "النشاط الضوئي هو قدرة مركب لاتناظري على تدوير الضوء المستقطب المستوي.",
         ),
         MedicalTermEntity(
             id = 1031,
@@ -4750,6 +5725,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌdɛkstroʊˈroʊtətɔːri/",
+            exampleEn = "Dextrorotatory (D or +) refers to rotating plane-polarized light to the right (clockwise).",
+            exampleFr = "La dextrogyre (D ou +) est faisant tourner la lumière polarisée vers la droite (sens horaire).",
+            exampleAr = "يميني الدوران هو يدير الضوء المستقطب إلى اليمين (باتجاه عقارب الساعة).",
         ),
         MedicalTermEntity(
             id = 1032,
@@ -4762,6 +5740,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌliːvoʊˈroʊtətɔːri/",
+            exampleEn = "Levorotatory (L or -) refers to rotating plane-polarized light to the left (counterclockwise).",
+            exampleFr = "La lévogyre (L ou -) est faisant tourner la lumière polarisée vers la gauche (sens antihoraire).",
+            exampleAr = "يساري الدوران هو يدير الضوء المستقطب إلى اليسار (عكس عقارب الساعة).",
         ),
         MedicalTermEntity(
             id = 1033,
@@ -4774,6 +5755,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ɑːr ɛs/",
+            exampleEn = "The r/s configuration is the system for assigning absolute configuration to chiral centers (Cahn-Ingold-Prelog rules).",
+            exampleFr = "Le configuration R/S est système pour attribuer la configuration absolue aux centres chiraux (règles de Cahn-Ingold-Prelog).",
+            exampleAr = "التكوين R/S هو نظام لتعيين التكوين المطلق للمراكز اللاتناظرية (قواعد كاهن-إنغولد-بريلوغ).",
         ),
         MedicalTermEntity(
             id = 1034,
@@ -4810,6 +5794,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/əˈdɪʃən/",
+            exampleEn = "The addition reaction is the reaction where atoms are added to a double or triple bond.",
+            exampleFr = "Le réaction d'addition est réaction où des atomes sont ajoutés à une double ou triple liaison.",
+            exampleAr = "تفاعل الإضافة هو تفاعل تُضاف فيه ذرات إلى رابطة مزدوجة أو ثلاثية.",
         ),
         MedicalTermEntity(
             id = 1037,
@@ -4822,6 +5809,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ɪˌlɪmɪˈneɪʃən/",
+            exampleEn = "The elimination reaction is the reaction where atoms are removed to form a double or triple bond.",
+            exampleFr = "Le réaction d'élimination est réaction où des atomes sont retirés pour former une double ou triple liaison.",
+            exampleAr = "تفاعل الحذف هو تفاعل تُزال فيه ذرات لتكوين رابطة مزدوجة أو ثلاثية.",
         ),
         MedicalTermEntity(
             id = 1038,
@@ -4834,6 +5824,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌsʌbstɪˈtjuːʃən/",
+            exampleEn = "The substitution reaction is the reaction where one atom or group replaces another in a molecule.",
+            exampleFr = "Le réaction de substitution est réaction où un atome ou groupe remplace un autre dans une molécule.",
+            exampleAr = "تفاعل الاستبدال هو تفاعل تحل فيه ذرة أو مجموعة محل أخرى في الجزيء.",
         ),
         MedicalTermEntity(
             id = 1039,
@@ -4846,6 +5839,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌnjuːkliəˈfɪlɪk/",
+            exampleEn = "The nucleophilic substitution (sn) is the substitution where a nucleophile replaces a leaving group.",
+            exampleFr = "Le substitution nucléophile (SN) est substitution où un nucléophile remplace un groupe partant.",
+            exampleAr = "الاستبدال النوكليوفيلي هو استبدال يحل فيه محب نوى محل مجموعة مغادرة.",
         ),
         MedicalTermEntity(
             id = 1040,
@@ -4858,6 +5854,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ɪˌlɛktroʊˈfɪlɪk/",
+            exampleEn = "The electrophilic addition is the addition reaction initiated by an electrophile attacking an electron-rich double bond.",
+            exampleFr = "L'addition électrophile est réaction d'addition initiée par un électrophile attaquant une double liaison riche en électrons.",
+            exampleAr = "الإضافة الإلكتروفيلية هو تفاعل إضافة يبدأ بهجوم محب إلكترونات على رابطة مزدوجة غنية بالإلكترونات.",
         ),
         MedicalTermEntity(
             id = 1041,
@@ -4870,6 +5869,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˈnjuːkliəfaɪl/",
+            exampleEn = "The nucleophile is the electron-rich species that donates an electron pair to an electrophile.",
+            exampleFr = "La nucléophile est espèce riche en électrons donnant une paire d'électrons à un électrophile.",
+            exampleAr = "المحب للنواة هو نوع كيميائي غني بالإلكترونات يمنح زوج إلكترونات لمحب إلكترونات.",
         ),
         MedicalTermEntity(
             id = 1042,
@@ -4882,6 +5884,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ɪˈlɛktroʊfaɪl/",
+            exampleEn = "The electrophile is the electron-poor species that accepts an electron pair from a nucleophile.",
+            exampleFr = "L'électrophile est espèce pauvre en électrons acceptant une paire d'électrons d'un nucléophile.",
+            exampleAr = "المحب للإلكترونات هو نوع كيميائي فقير بالإلكترونات يستقبل زوج إلكترونات من محب نوى.",
         ),
         MedicalTermEntity(
             id = 1043,
@@ -4894,6 +5899,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌɒksɪˈdeɪʃən/",
+            exampleEn = "Oxidation (organic) refers to increasing bonds to oxygen or decreasing bonds to hydrogen in organic molecules.",
+            exampleFr = "L'oxydation (organique) est augmentation des liaisons à l'oxygène ou diminution des liaisons à l'hydrogène dans les molécules organiques.",
+            exampleAr = "الأكسدة (العضوية) هو زيادة الروابط مع الأكسجين أو نقصان الروابط مع الهيدروجين في الجزيئات العضوية.",
         ),
         MedicalTermEntity(
             id = 1044,
@@ -4906,6 +5914,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/rɪˈdʌkʃən/",
+            exampleEn = "Reduction (organic) refers to increasing bonds to hydrogen or decreasing bonds to oxygen in organic molecules.",
+            exampleFr = "Le réduction (organique) est augmentation des liaisons à l'hydrogène ou diminution des liaisons à l'oxygène dans les molécules organiques.",
+            exampleAr = "الإرجاع (العضوي) هو زيادة الروابط مع الهيدروجين أو نقصان الروابط مع الأكسجين في الجزيئات العضوية.",
         ),
         MedicalTermEntity(
             id = 1045,
@@ -4918,6 +5929,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ɛˌstɛrɪfɪˈkeɪʃən/",
+            exampleEn = "The esterification is the reaction of a carboxylic acid with an alcohol to form an ester and water.",
+            exampleFr = "L'estérification est réaction d'un acide carboxylique avec un alcool pour former un ester et de l'eau.",
+            exampleAr = "الأسترة هو تفاعل حمض كربوكسيلي مع كحول لتكوين إستر وماء.",
         ),
         MedicalTermEntity(
             id = 1046,
@@ -4930,6 +5944,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/pəˌlɪməraɪˈzeɪʃən/",
+            exampleEn = "The polymerization is the reaction joining many small monomers into a large polymer chain.",
+            exampleFr = "Le polymérisation est réaction joignant de nombreux petits monomères en une grande chaîne polymère.",
+            exampleAr = "البلمرة هو تفاعل يربط العديد من الوحدات الصغيرة (المونومرات) في سلسلة بوليمر كبيرة.",
         ),
         MedicalTermEntity(
             id = 1047,
@@ -4942,6 +5959,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌdiːhaɪˈdreɪʃən/",
+            exampleEn = "The dehydration reaction is the reaction removing water from a molecule (e.g., alcohol → alkene).",
         ),
         MedicalTermEntity(
             id = 1048,
@@ -4954,6 +5972,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌhaɪdrədʒəˈneɪʃən/",
+            exampleEn = "The hydrogenation is the addition of hydrogen (H₂) to a double bond using a catalyst.",
+            exampleFr = "L'hydrogénation est addition d'hydrogène (H₂) à une double liaison en utilisant un catalyseur.",
+            exampleAr = "الهدرجة هو إضافة الهيدروجين (H₂) إلى رابطة مزدوجة باستخدام محفز.",
         ),
         MedicalTermEntity(
             id = 1049,
@@ -4966,6 +5987,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌhæləˈdʒɪneɪʃən/",
+            exampleEn = "The halogenation is the addition or substitution of a halogen atom to an organic molecule.",
+            exampleFr = "L'halogénation est addition ou substitution d'un atome d'halogène à une molécule organique.",
+            exampleAr = "الهلجنة هو إضافة أو استبدال ذرة هالوجين في جزيء عضوي.",
         ),
         MedicalTermEntity(
             id = 1050,
@@ -4978,6 +6002,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Composés Médicaux",
             ipaPhonetic = "/ˈɡluːkoʊs/",
+            exampleEn = "The glucose (c₆h₁₂o₆) is the primary energy source for cells; a six-carbon aldose monosaccharide.",
+            exampleFr = "La glucose (C₆H₁₂O₆) est source principale d'énergie des cellules; un monosaccharide aldose à six carbones.",
+            exampleAr = "الغلوكوز هو المصدر الأساسي لطاقة الخلايا؛ سكر أحادي ألدوزي بست ذرات كربون.",
         ),
         MedicalTermEntity(
             id = 1051,
@@ -4990,6 +6017,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Composés Médicaux",
             ipaPhonetic = "/eɪ tiː piː/",
+            exampleEn = "The atp (adenosine triphosphate) is the primary energy currency of the cell containing high-energy phosphate bonds.",
+            exampleFr = "L'ATP (Adénosine triphosphate) est monnaie énergétique principale de la cellule contenant des liaisons phosphate de haute énergie.",
+            exampleAr = "أدينوسين ثلاثي الفوسفات هو العملة الطاقية الرئيسية للخلية المحتوية على روابط فوسفات عالية الطاقة.",
         ),
         MedicalTermEntity(
             id = 1052,
@@ -5002,6 +6032,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Composés Médicaux",
             ipaPhonetic = "/jʊˈriːə/",
+            exampleEn = "The urea (co(nh₂)₂) is the main nitrogenous waste product of protein metabolism excreted by the kidneys.",
+            exampleFr = "L'urée (CO(NH₂)₂) est principal déchet azoté du métabolisme des protéines excrété par les reins.",
+            exampleAr = "اليوريا هو الفضلة النيتروجينية الرئيسية لأيض البروتينات التي تطرحها الكلى.",
         ),
         MedicalTermEntity(
             id = 1053,
@@ -5014,6 +6047,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ɪˌlɛktroʊˈkɛmɪstri/",
+            exampleEn = "The electrochemistry is the study of chemical reactions that produce or are caused by electrical energy.",
+            exampleFr = "L'électrochimie est étude des réactions chimiques produisant ou causées par l'énergie électrique.",
+            exampleAr = "الكيمياء الكهربائية هو دراسة التفاعلات الكيميائية التي تنتج أو تحدث بفعل الطاقة الكهربائية.",
         ),
         MedicalTermEntity(
             id = 1054,
@@ -5026,6 +6062,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ɪˈlɛktroʊd/",
+            exampleEn = "The electrode is the conductor through which electric current enters or leaves an electrolyte.",
+            exampleFr = "L'électrode est conducteur par lequel le courant électrique entre ou quitte un électrolyte.",
+            exampleAr = "القطب الكهربائي هو موصل يدخل أو يخرج من خلاله التيار الكهربائي في الإلكتروليت.",
         ),
         MedicalTermEntity(
             id = 1055,
@@ -5038,6 +6077,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ˈænoʊd/",
+            exampleEn = "The anode is the electrode where oxidation occurs.",
+            exampleFr = "L'anode est électrode où se produit l'oxydation.",
+            exampleAr = "المصعد (الأنود) هو القطب الذي تحدث عنده الأكسدة.",
         ),
         MedicalTermEntity(
             id = 1056,
@@ -5050,6 +6092,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ˈkæθoʊd/",
+            exampleEn = "The cathode is the electrode where reduction occurs.",
+            exampleFr = "La cathode est électrode où se produit la réduction.",
+            exampleAr = "المهبط (الكاثود) هو القطب الذي يحدث عنده الإرجاع.",
         ),
         MedicalTermEntity(
             id = 1057,
@@ -5062,6 +6107,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ɡælˈvænɪk/",
+            exampleEn = "The galvanic cell (voltaic cell) is the electrochemical cell converting chemical energy into electrical energy.",
+            exampleFr = "La pile galvanique (Pile voltaïque) est cellule électrochimique convertissant l'énergie chimique en énergie électrique.",
+            exampleAr = "الخلية الغلفانية هو خلية كهروكيميائية تحول الطاقة الكيميائية إلى طاقة كهربائية.",
         ),
         MedicalTermEntity(
             id = 1058,
@@ -5074,6 +6122,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ɪˌlɛktroʊˈlɪtɪk/",
+            exampleEn = "The electrolytic cell is the electrochemical cell using electrical energy to drive a non-spontaneous chemical reaction.",
+            exampleFr = "La cellule électrolytique est cellule électrochimique utilisant l'énergie électrique pour conduire une réaction non spontanée.",
+            exampleAr = "خلية التحليل الكهربائي هو خلية كهروكيميائية تستخدم الطاقة الكهربائية لإجراء تفاعل غير تلقائي.",
         ),
         MedicalTermEntity(
             id = 1059,
@@ -5086,6 +6137,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ˈstændərd ɪˈlɛktroʊd/",
+            exampleEn = "The standard electrode potential (e°) is the potential of an electrode measured against the standard hydrogen electrode under standard conditions.",
+            exampleFr = "La potentiel standard d'électrode (E°) est potentiel d'une électrode mesuré par rapport à l'électrode standard d'hydrogène dans des conditions standard.",
+            exampleAr = "الجهد المعياري للقطب هو جهد القطب المقاس مقارنة بقطب الهيدروجين المعياري تحت الظروف القياسية.",
         ),
         MedicalTermEntity(
             id = 1060,
@@ -5098,6 +6152,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Électrochimie",
             ipaPhonetic = "/ɪˌlɛkˈtrɒlɪsɪs/",
+            exampleEn = "The electrolysis is the decomposition of a substance by passing electric current through it.",
+            exampleFr = "L'électrolyse est décomposition d'une substance par passage de courant électrique.",
+            exampleAr = "التحليل الكهربائي هو تحلل مادة بتمرير تيار كهربائي خلالها.",
         ),
         MedicalTermEntity(
             id = 1061,
@@ -5110,6 +6167,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈpɒlɪmər/",
+            exampleEn = "The polymer is the large molecule composed of repeating structural units (monomers).",
+            exampleFr = "La polymère est grande molécule composée d'unités structurales répétitives (monomères).",
+            exampleAr = "البوليمر هو جزيء كبير مكون من وحدات بنائية متكررة (مونومرات).",
         ),
         MedicalTermEntity(
             id = 1062,
@@ -5122,6 +6182,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈmɒnəmər/",
+            exampleEn = "The monomer is the small molecule that can join with others to form a polymer.",
+            exampleFr = "La monomère est petite molécule pouvant se joindre à d'autres pour former un polymère.",
+            exampleAr = "المونومر هو جزيء صغير يمكنه الارتباط بجزيئات أخرى لتكوين بوليمر.",
         ),
         MedicalTermEntity(
             id = 1063,
@@ -5134,6 +6197,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˌkɒndɛnˈseɪʃən/",
+            exampleEn = "The condensation polymer is the polymer formed by condensation reactions releasing small molecules like water.",
+            exampleFr = "La polymère de condensation est polymère formé par des réactions de condensation libérant de petites molécules comme l'eau.",
+            exampleAr = "بوليمر التكثيف هو بوليمر يتكون من تفاعلات تكثيف تحرر جزيئات صغيرة مثل الماء.",
         ),
         MedicalTermEntity(
             id = 1064,
@@ -5146,6 +6212,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/əˈdɪʃən/",
+            exampleEn = "The addition polymer is the polymer formed by addition reactions of unsaturated monomers without loss of atoms.",
+            exampleFr = "La polymère d'addition est polymère formé par des réactions d'addition de monomères insaturés sans perte d'atomes.",
+            exampleAr = "بوليمر الإضافة هو بوليمر يتكون من تفاعلات إضافة لمونومرات غير مشبعة بدون فقدان ذرات.",
         ),
         MedicalTermEntity(
             id = 1065,
@@ -5158,6 +6227,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˈrɛzənəns/",
+            exampleEn = "The resonance is the delocalization of electrons in a molecule represented by multiple Lewis structures.",
+            exampleFr = "La résonance (Mésomérie) est délocalisation des électrons dans une molécule représentée par de multiples structures de Lewis.",
+            exampleAr = "الرنين (الميزوميري) هو عدم تموضع الإلكترونات في جزيء ممثل بعدة بنى لويس.",
         ),
         MedicalTermEntity(
             id = 1066,
@@ -5170,6 +6242,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ɪnˈdʌktɪv/",
+            exampleEn = "The inductive effect is the electron-withdrawing or donating effect transmitted through sigma bonds.",
+            exampleFr = "L'effet inductif est effet attracteur ou donneur d'électrons transmis à travers les liaisons sigma.",
+            exampleAr = "التأثير الحثي هو التأثير الساحب أو المانح للإلكترونات المنتقل عبر الروابط سيغما.",
         ),
         MedicalTermEntity(
             id = 1067,
@@ -5182,6 +6257,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Liaisons Chimiques",
             ipaPhonetic = "/ˌmɛzoʊˈmɛrɪk/",
+            exampleEn = "The mesomeric effect is the electron-donating or withdrawing effect transmitted through pi bonds by resonance.",
+            exampleFr = "L'effet mésomère est effet donneur ou attracteur d'électrons transmis à travers les liaisons pi par résonance.",
+            exampleAr = "التأثير الميزوميري هو التأثير المانح أو الساحب للإلكترونات المنتقل عبر روابط باي بالرنين.",
         ),
         MedicalTermEntity(
             id = 1068,
@@ -5194,6 +6272,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ɔːrˈɡænɪk ˈsɒlvənt/",
+            exampleEn = "The organic solvent is the carbon-based liquid used to dissolve other substances (e.g., ethanol, acetone, ether).",
         ),
         MedicalTermEntity(
             id = 1069,
@@ -5206,6 +6285,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈæsɪl/",
+            exampleEn = "The acyl group is the functional group derived from a carboxylic acid by removal of -OH (R-C=O).",
+            exampleFr = "La groupe acyle est groupe fonctionnel dérivé d'un acide carboxylique par retrait de -OH (R-C=O).",
+            exampleAr = "مجموعة الأسيل هو مجموعة وظيفية مشتقة من حمض كربوكسيلي بإزالة -OH (R-C=O).",
         ),
         MedicalTermEntity(
             id = 1070,
@@ -5218,6 +6300,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈælkɪl/",
+            exampleEn = "The alkyl group is the hydrocarbon group derived from an alkane by removing one hydrogen (CₙH₂ₙ₊₁-).",
+            exampleFr = "La groupe alkyle est groupe hydrocarbure dérivé d'un alcane par retrait d'un hydrogène (CₙH₂ₙ₊₁-).",
+            exampleAr = "مجموعة الألكيل هو مجموعة هيدروكربونية مشتقة من ألكان بإزالة هيدروجين واحد (CₙH₂ₙ₊₁-).",
         ),
         MedicalTermEntity(
             id = 1071,
@@ -5230,6 +6315,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈærɪl/",
+            exampleEn = "The aryl group is the group derived from an aromatic compound by removing one hydrogen (e.g., phenyl C₆H₅-).",
         ),
         MedicalTermEntity(
             id = 1072,
@@ -5242,6 +6328,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈiːnɒl/",
+            exampleEn = "The enol is the organic compound with a hydroxyl group attached to a carbon-carbon double bond.",
+            exampleFr = "L'énol est composé organique avec un groupe hydroxyle attaché à une double liaison carbone-carbone.",
+            exampleAr = "الإينول هو مركب عضوي بمجموعة هيدروكسيل مرتبطة برابطة مزدوجة كربون-كربون.",
         ),
         MedicalTermEntity(
             id = 1073,
@@ -5254,6 +6343,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie Organique",
             ipaPhonetic = "/ˈkiːtoʊ ˈiːnɒl/",
+            exampleEn = "The keto-enol tautomerism is the equilibrium between a ketone (keto) form and an enol form.",
+            exampleFr = "La tautomérie céto-énolique est équilibre entre une forme cétone (céto) et une forme énol.",
+            exampleAr = "توتومرية الكيتو-إينول هو التوازن بين شكل الكيتون (الكيتو) وشكل الإينول.",
         ),
         MedicalTermEntity(
             id = 1074,
@@ -5266,6 +6358,7 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˌɪnɔːrˈɡænɪk/",
+            exampleEn = "The inorganic compound is the compound not based on carbon-hydrogen bonds (e.g., salts, metals, minerals).",
         ),
         MedicalTermEntity(
             id = 1075,
@@ -5278,6 +6371,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/sɔːlt/",
+            exampleEn = "The salt is the ionic compound formed from the neutralization of an acid and a base.",
+            exampleFr = "La sel est composé ionique formé par la neutralisation d'un acide et d'une base.",
+            exampleAr = "الملح هو مركب أيوني يتكون من تعادل حمض وقاعدة.",
         ),
         MedicalTermEntity(
             id = 1076,
@@ -5290,6 +6386,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈkrɪstəl/",
+            exampleEn = "The crystal is the solid material with atoms arranged in a highly ordered repeating pattern.",
+            exampleFr = "Le cristal est matériau solide avec des atomes arrangés dans un motif répétitif très ordonné.",
+            exampleAr = "البلورة هو مادة صلبة بذرات مرتبة في نمط متكرر عالي الانتظام.",
         ),
         MedicalTermEntity(
             id = 1077,

@@ -199,6 +199,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/sɛl/",
+            exampleEn = "The cell is the basic structural and functional unit of all living organisms.",
+            exampleFr = "La cellule est unité structurale et fonctionnelle de base de tous les organismes vivants.",
+            exampleAr = "الخلية هو الوحدة البنائية والوظيفية الأساسية لجميع الكائنات الحية.",
         ),
         MedicalTermEntity(
             id = 2947,
@@ -211,6 +214,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈnjuːkliəs/",
+            exampleEn = "The nucleus is the membrane-bound organelle containing the cell's genetic material (DNA).",
+            exampleFr = "La noyau est organite délimité par une membrane contenant le matériel génétique de la cellule (ADN).",
+            exampleAr = "النواة هو العضية المحاطة بغشاء والتي تحتوي على المادة الوراثية للخلية (DNA).",
         ),
         MedicalTermEntity(
             id = 2948,
@@ -223,6 +229,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈsaɪtəplæzəm/",
+            exampleEn = "The cytoplasm is the fluid-filled space inside the cell membrane excluding the nucleus.",
+            exampleFr = "La cytoplasme est espace rempli de liquide à l'intérieur de la membrane cellulaire excluant le noyau.",
+            exampleAr = "الهيولى (السيتوبلازم) هو الفضاء المملوء بالسائل داخل غشاء الخلية باستثناء النواة.",
         ),
         MedicalTermEntity(
             id = 2949,
@@ -235,6 +244,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/sɛl ˈmɛmbreɪn/",
+            exampleEn = "The cell membrane is the phospholipid bilayer surrounding the cell controlling what enters and exits.",
+            exampleFr = "La membrane cellulaire est bicouche phospholipidique entourant la cellule contrôlant les entrées et sorties.",
+            exampleAr = "الغشاء الخلوي هو طبقة مزدوجة من الفوسفوليبيدات تحيط بالخلية وتتحكم في ما يدخل ويخرج منها.",
         ),
         MedicalTermEntity(
             id = 2950,
@@ -247,6 +259,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈnjuːkliər ˈmɛmbreɪn/",
+            exampleEn = "The nuclear membrane is the double membrane enclosing the nucleus with nuclear pores for transport.",
+            exampleFr = "La membrane nucléaire est double membrane enfermant le noyau avec des pores nucléaires pour le transport.",
+            exampleAr = "الغشاء النووي هو غشاء مزدوج يحيط بالنواة مع مسام نووية للنقل.",
         ),
         MedicalTermEntity(
             id = 2951,
@@ -259,6 +274,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/njuːˈkliːələs/",
+            exampleEn = "The nucleolus is the dense region inside the nucleus responsible for ribosome RNA synthesis.",
+            exampleFr = "La nucléole est région dense à l'intérieur du noyau responsable de la synthèse de l'ARN ribosomique.",
+            exampleAr = "النوية هو منطقة كثيفة داخل النواة مسؤولة عن تصنيع RNA الريبوسومي.",
         ),
         MedicalTermEntity(
             id = 2952,
@@ -271,6 +289,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌmaɪtəˈkɒndriə/",
+            exampleEn = "The mitochondria is the organelle producing ATP through cellular respiration; the \"powerhouse\" of the cell.",
+            exampleFr = "La mitochondrie est organite produisant l'ATP par la respiration cellulaire; la \"centrale énergétique\" de la cellule.",
+            exampleAr = "الميتوكوندريا هو العضية التي تنتج ATP عبر التنفس الخلوي؛ \"محطة الطاقة\" للخلية.",
         ),
         MedicalTermEntity(
             id = 2953,
@@ -283,6 +304,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌɛndoʊˈplæzmɪk rɪˈtɪkjʊləm/",
+            exampleEn = "The endoplasmic reticulum is the network of membranes involved in protein and lipid synthesis and transport.",
+            exampleFr = "La réticulum endoplasmique est réseau de membranes impliqué dans la synthèse et le transport de protéines et de lipides.",
+            exampleAr = "الشبكة الإندوبلازمية هو شبكة من الأغشية تشارك في تصنيع البروتينات والدهون ونقلها.",
         ),
         MedicalTermEntity(
             id = 2954,
@@ -295,6 +319,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/rʌf iː ɑːr/",
+            exampleEn = "Rough ER refers to ER studded with ribosomes involved in protein synthesis and secretion.",
+            exampleFr = "La réticulum endoplasmique rugueux est rE hérissé de ribosomes impliqué dans la synthèse et la sécrétion de protéines.",
+            exampleAr = "الشبكة الإندوبلازمية الخشنة هو الشبكة الإندوبلازمية المغطاة بالريبوسومات المتورطة في تصنيع البروتينات وإفرازها.",
         ),
         MedicalTermEntity(
             id = 2955,
@@ -307,6 +334,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/smuːð iː ɑːr/",
+            exampleEn = "Smooth ER refers to ER without ribosomes involved in lipid synthesis, detoxification, and calcium storage.",
+            exampleFr = "La réticulum endoplasmique lisse est rE sans ribosomes impliqué dans la synthèse des lipides, la détoxification et le stockage du calcium.",
+            exampleAr = "الشبكة الإندوبلازمية الملساء هو الشبكة الإندوبلازمية بدون ريبوسومات المتورطة في تصنيع الدهون وإزالة السمية وتخزين الكالسيوم.",
         ),
         MedicalTermEntity(
             id = 2956,
@@ -319,6 +349,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈraɪbəsoʊm/",
+            exampleEn = "The ribosome is the molecular machine synthesizing proteins by translating mRNA; composed of rRNA and proteins.",
+            exampleFr = "La ribosome est machine moléculaire synthétisant des protéines par traduction de l'ARNm; composée d'ARNr et de protéines.",
+            exampleAr = "الريبوسوم هو آلة جزيئية تصنع البروتينات عبر ترجمة mRNA؛ مكونة من rRNA وبروتينات.",
         ),
         MedicalTermEntity(
             id = 2957,
@@ -331,6 +364,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈlaɪsəsoʊm/",
+            exampleEn = "The lysosome is the membrane-bound organelle containing hydrolytic enzymes for intracellular digestion.",
+            exampleFr = "La lysosome est organite délimité par une membrane contenant des enzymes hydrolytiques pour la digestion intracellulaire.",
+            exampleAr = "الجسيم الحال هو عضية محاطة بغشاء تحتوي على إنزيمات هيدروليتية للهضم داخل الخلية.",
         ),
         MedicalTermEntity(
             id = 2958,
@@ -343,6 +379,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/pəˈrɒksɪsoʊm/",
+            exampleEn = "The peroxisome is the organelle containing oxidative enzymes that break down fatty acids and detoxify harmful substances.",
+            exampleFr = "La peroxysome est organite contenant des enzymes oxydatives dégradant les acides gras et détoxifiant les substances nocives.",
+            exampleAr = "البيروكسيسوم هو عضية تحتوي على إنزيمات مؤكسدة تحلل الأحماض الدهنية وتزيل السمية من المواد الضارة.",
         ),
         MedicalTermEntity(
             id = 2959,
@@ -355,6 +394,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈsɛntrəsoʊm/",
+            exampleEn = "The centrosome is the main microtubule-organizing center of the cell, containing two centrioles.",
+            exampleFr = "La centrosome est principal centre organisateur des microtubules de la cellule, contenant deux centrioles.",
+            exampleAr = "المركزوم هو المركز الرئيسي لتنظيم الأنيبيبات الدقيقة في الخلية، يحتوي على مريكزين.",
         ),
         MedicalTermEntity(
             id = 2960,
@@ -367,6 +409,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈsɛntriˌoʊl/",
+            exampleEn = "The centriole is the cylindrical structure involved in forming the spindle during cell division.",
+            exampleFr = "La centriole est structure cylindrique impliquée dans la formation du fuseau lors de la division cellulaire.",
+            exampleAr = "المريكز هو بنية أسطوانية تشارك في تكوين المغزل أثناء انقسام الخلية.",
         ),
         MedicalTermEntity(
             id = 2961,
@@ -379,6 +424,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈvækjuːoʊl/",
+            exampleEn = "The vacuole is the membrane-bound sac storing water, food, or waste products in cells.",
+            exampleFr = "La vacuole est sac délimité par une membrane stockant eau, nourriture ou déchets dans les cellules.",
+            exampleAr = "الفجوة هو كيس محاط بغشاء يخزن الماء أو الغذاء أو الفضلات داخل الخلايا.",
         ),
         MedicalTermEntity(
             id = 2962,
@@ -391,6 +439,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌsaɪtəˈskɛlɪtən/",
+            exampleEn = "The cytoskeleton is the network of protein filaments providing structural support and enabling cell movement.",
+            exampleFr = "La cytosquelette est réseau de filaments protéiques fournissant un soutien structurel et permettant le mouvement cellulaire.",
+            exampleAr = "الهيكل الخلوي هو شبكة من الخيوط البروتينية توفر الدعم البنيوي وتمكن حركة الخلية.",
         ),
         MedicalTermEntity(
             id = 2963,
@@ -403,6 +454,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈmaɪkrəˌfɪləmənt/",
+            exampleEn = "The microfilament is the thinnest cytoskeletal fiber made of actin protein involved in cell motility and shape.",
+            exampleFr = "Le microfilament est fibre cytosquelettique la plus fine composée d'actine impliquée dans la motilité et la forme cellulaire.",
+            exampleAr = "الخيط الدقيق (الميكروفيلامنت) هو أرفع ألياف الهيكل الخلوي مصنوعة من بروتين الأكتين وتشارك في حركية الخلية وشكلها.",
         ),
         MedicalTermEntity(
             id = 2964,
@@ -439,6 +493,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈkroʊmətɪn/",
+            exampleEn = "The chromatin is the complex of DNA and histone proteins forming chromosomes inside the nucleus.",
+            exampleFr = "La chromatine est complexe d'ADN et de protéines histones formant les chromosomes dans le noyau.",
+            exampleAr = "الكروماتين هو مركب من DNA وبروتينات الهيستون يشكل الكروموسومات داخل النواة.",
         ),
         MedicalTermEntity(
             id = 2967,
@@ -451,6 +508,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈkroʊməsoʊm/",
+            exampleEn = "The chromosome is the thread-like structure of DNA and proteins carrying genetic information; humans have 46.",
+            exampleFr = "La chromosome est structure filamenteuse d'ADN et de protéines portant l'information génétique; l'humain en a 46.",
+            exampleAr = "الصبغي (الكروموسوم) هو بنية خيطية من DNA وبروتينات تحمل المعلومات الوراثية؛ يمتلك الإنسان 46 منها.",
         ),
         MedicalTermEntity(
             id = 2968,
@@ -463,6 +523,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈnjuːkliər pɔːr/",
+            exampleEn = "The nuclear pore is the channel in the nuclear membrane allowing selective transport of molecules between nucleus and cytoplasm.",
+            exampleFr = "La pore nucléaire est canal dans la membrane nucléaire permettant le transport sélectif de molécules entre noyau et cytoplasme.",
+            exampleAr = "المسام النووية هو قناة في الغشاء النووي تسمح بالنقل الانتقائي للجزيئات بين النواة والسيتوبلازم.",
         ),
         MedicalTermEntity(
             id = 2969,
@@ -475,6 +538,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˈsaɪtəsɒl/",
+            exampleEn = "The cytosol is the liquid component of the cytoplasm in which organelles are suspended.",
+            exampleFr = "La cytosol est composant liquide du cytoplasme dans lequel les organites sont en suspension.",
+            exampleAr = "السيتوسول هو المكون السائل للسيتوبلازم الذي تعوم فيه العضيات.",
         ),
         MedicalTermEntity(
             id = 2970,
@@ -487,6 +553,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˌɛpɪˈθiːliəl sɛl/",
+            exampleEn = "The epithelial cell is the cell lining body surfaces, cavities, and glands; the most common cell type in cytology specimens.",
+            exampleFr = "La cellule épithéliale est cellule tapissant les surfaces corporelles, cavités et glandes; le type cellulaire le plus courant en cytologie.",
+            exampleAr = "الخلية الظهارية هو خلية تبطن أسطح الجسم والتجاويف والغدد؛ أكثر أنواع الخلايا شيوعاً في عينات الخلوية.",
         ),
         MedicalTermEntity(
             id = 2971,
@@ -499,6 +568,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈskweɪməs sɛl/",
+            exampleEn = "The squamous cell is the flat, scale-like epithelial cell found in the skin and lining of certain organs.",
+            exampleFr = "La cellule squameuse est cellule épithéliale plate en forme d'écaille trouvée dans la peau et la muqueuse de certains organes.",
+            exampleAr = "الخلية الحرشفية هو خلية ظهارية مسطحة تشبه القشور توجد في الجلد وبطانة بعض الأعضاء.",
         ),
         MedicalTermEntity(
             id = 2972,
@@ -511,6 +583,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈkɒljʊmnər sɛl/",
+            exampleEn = "The columnar cell is the tall, column-shaped epithelial cell found in the intestine and respiratory tract.",
+            exampleFr = "La cellule cylindrique est cellule épithéliale haute en forme de colonne trouvée dans l'intestin et les voies respiratoires.",
+            exampleAr = "الخلية الأسطوانية هو خلية ظهارية طويلة على شكل عمود توجد في الأمعاء والجهاز التنفسي.",
         ),
         MedicalTermEntity(
             id = 2973,
@@ -523,6 +598,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/kjuːˈbɔɪdəl sɛl/",
+            exampleEn = "The cuboidal cell is the cube-shaped epithelial cell found in glands and kidney tubules.",
+            exampleFr = "La cellule cubique est cellule épithéliale en forme de cube trouvée dans les glandes et les tubules rénaux.",
+            exampleAr = "الخلية المكعبية هو خلية ظهارية مكعبية الشكل توجد في الغدد وأنابيب الكلى.",
         ),
         MedicalTermEntity(
             id = 2974,
@@ -535,6 +613,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈɡɒblɪt sɛl/",
+            exampleEn = "The goblet cell is the unicellular gland secreting mucus found in the respiratory and gastrointestinal tracts.",
+            exampleFr = "La cellule caliciforme est glande unicellulaire sécrétant du mucus trouvée dans les voies respiratoires et gastro-intestinales.",
+            exampleAr = "الخلية الكأسية هو غدة وحيدة الخلية تفرز المخاط توجد في الجهازين التنفسي والهضمي.",
         ),
         MedicalTermEntity(
             id = 2975,
@@ -547,6 +628,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ɪˈrɪθrəsaɪt/",
+            exampleEn = "The erythrocyte is the biconcave, anucleate blood cell transporting oxygen via hemoglobin.",
+            exampleFr = "L'érythrocyte est cellule sanguine biconcave et anucléée transportant l'oxygène via l'hémoglobine.",
+            exampleAr = "كرية الدم الحمراء هو خلية دموية ثنائية التقعر وعديمة النواة تنقل الأكسجين عبر الهيموغلوبين.",
         ),
         MedicalTermEntity(
             id = 2976,
@@ -559,6 +643,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈluːkəsaɪt/",
+            exampleEn = "The leukocyte is the nucleated blood cell involved in immune defense; the five types include neutrophils, lymphocytes, monocytes, eosinophils, and basophils.",
+            exampleAr = "كرية الدم البيضاء هو خلية دموية ذات نواة تشارك في الدفاع المناعي؛ الأنواع الخمسة تشمل العدلات واللمفاويات والوحيدات والحمضات والقاعدات.",
         ),
         MedicalTermEntity(
             id = 2977,
@@ -571,6 +657,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈθrɒmbəsaɪt/",
+            exampleEn = "The thrombocyte (platelet) is the small, anucleate blood cell derived from megakaryocytes; essential for blood clotting.",
+            exampleFr = "La thrombocyte (Plaquette) est petite cellule sanguine anucléée dérivée des mégacaryocytes; essentielle pour la coagulation.",
+            exampleAr = "الصفيحة الدموية هو خلية دموية صغيرة عديمة النواة مشتقة من الكبير النوي؛ ضرورية لتخثر الدم.",
         ),
         MedicalTermEntity(
             id = 2978,
@@ -583,6 +672,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈnjuːtrəfɪl/",
+            exampleEn = "The neutrophil is the most abundant leukocyte; the first line of defense against bacterial infection through phagocytosis.",
+            exampleFr = "La neutrophile est leucocyte le plus abondant; première ligne de défense contre l'infection bactérienne par phagocytose.",
+            exampleAr = "العدلة هو أكثر الكريات البيضاء وفرة؛ الخط الدفاعي الأول ضد العدوى البكتيرية عبر البلعمة.",
         ),
         MedicalTermEntity(
             id = 2979,
@@ -595,6 +687,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˌiːəˈsɪnəfɪl/",
+            exampleEn = "The eosinophil is the leukocyte with red-staining granules involved in allergic reactions and parasite defense.",
+            exampleFr = "L'éosinophile est leucocyte à granules colorés en rouge impliqué dans les réactions allergiques et la défense antiparasitaire.",
+            exampleAr = "الحمضة هو كرية بيضاء بحبيبات تصطبغ باللون الأحمر تشارك في ردود الفعل التحسسية ومقاومة الطفيليات.",
         ),
         MedicalTermEntity(
             id = 2980,
@@ -607,6 +702,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈbeɪsəfɪl/",
+            exampleEn = "The basophil is the rarest leukocyte with blue-staining granules releasing histamine in allergic responses.",
+            exampleFr = "La basophile est leucocyte le plus rare à granules bleus libérant de l'histamine lors des réponses allergiques.",
+            exampleAr = "القاعدة هو أندر الكريات البيضاء بحبيبات تصطبغ بالأزرق تطلق الهيستامين في الاستجابات التحسسية.",
         ),
         MedicalTermEntity(
             id = 2981,
@@ -619,6 +717,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈlɪmfəsaɪt/",
+            exampleEn = "The lymphocyte is the leukocyte with a large nucleus critical for adaptive immunity; includes B cells, T cells, and NK cells.",
+            exampleFr = "La lymphocyte est leucocyte à grand noyau essentiel pour l'immunité adaptative; comprend les cellules B, T et NK.",
+            exampleAr = "اللمفاوية هو كرية بيضاء بنواة كبيرة حيوية للمناعة المتكيفة؛ تشمل الخلايا B وT والخلايا القاتلة الطبيعية.",
         ),
         MedicalTermEntity(
             id = 2982,
@@ -631,6 +732,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈmɒnəsaɪt/",
+            exampleEn = "The monocyte is the largest leukocyte that differentiates into macrophages upon entering tissues.",
+            exampleFr = "La monocyte est plus grand leucocyte qui se différencie en macrophages en pénétrant dans les tissus.",
+            exampleAr = "الوحيدة هو أكبر الكريات البيضاء تتمايز إلى بلاعم عند دخولها الأنسجة.",
         ),
         MedicalTermEntity(
             id = 2983,
@@ -643,6 +747,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈmækrəfeɪdʒ/",
+            exampleEn = "The macrophage is the large phagocytic cell derived from monocytes that engulfs pathogens and dead cells.",
+            exampleFr = "Le macrophage est grande cellule phagocytaire dérivée des monocytes qui engloutit les agents pathogènes et les cellules mortes.",
+            exampleAr = "البلعم الكبير هو خلية بلعمية كبيرة مشتقة من الوحيدات تبتلع مسببات الأمراض والخلايا الميتة.",
         ),
         MedicalTermEntity(
             id = 2984,
@@ -655,6 +762,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈplæzmə sɛl/",
+            exampleEn = "The plasma cell is the differentiated B lymphocyte secreting large amounts of antibodies.",
+            exampleFr = "La plasmocyte est lymphocyte B différencié sécrétant de grandes quantités d'anticorps.",
+            exampleAr = "الخلية البلازمية هو لمفاوية B متمايزة تفرز كميات كبيرة من الأجسام المضادة.",
         ),
         MedicalTermEntity(
             id = 2985,
@@ -667,6 +777,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/mæst sɛl/",
+            exampleEn = "The mast cell is the tissue cell containing granules rich in histamine and heparin involved in allergic and inflammatory reactions.",
+            exampleFr = "La mastocyte est cellule tissulaire contenant des granules riches en histamine et héparine impliquée dans les réactions allergiques et inflammatoires.",
+            exampleAr = "الخلية البدينة هو خلية نسيجية تحتوي على حبيبات غنية بالهيستامين والهيبارين تشارك في التفاعلات التحسسية والالتهابية.",
         ),
         MedicalTermEntity(
             id = 2986,
@@ -679,6 +792,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈfaɪbrəblæst/",
+            exampleEn = "The fibroblast is the connective tissue cell producing collagen, elastin, and extracellular matrix components.",
+            exampleFr = "La fibroblaste est cellule du tissu conjonctif produisant du collagène, de l'élastine et des composants de la matrice extracellulaire.",
+            exampleAr = "الأرومة الليفية هو خلية نسيج ضام تنتج الكولاجين والإيلاستين ومكونات المصفوفة خارج الخلية.",
         ),
         MedicalTermEntity(
             id = 2987,
@@ -691,6 +807,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈɒstiəsaɪt/",
+            exampleEn = "The osteocyte is the mature bone cell trapped in the bone matrix maintaining bone tissue.",
+            exampleFr = "L'ostéocyte est cellule osseuse mature piégée dans la matrice osseuse maintenant le tissu osseux.",
+            exampleAr = "الخلية العظمية هو خلية عظمية ناضجة محبوسة في المصفوفة العظمية تحافظ على النسيج العظمي.",
         ),
         MedicalTermEntity(
             id = 2988,
@@ -703,6 +822,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈkɒndrəsaɪt/",
+            exampleEn = "The chondrocyte is the only cell type found in cartilage responsible for producing and maintaining cartilage matrix.",
+            exampleFr = "La chondrocyte est seul type cellulaire trouvé dans le cartilage responsable de la production et du maintien de la matrice cartilagineuse.",
+            exampleAr = "الخلية الغضروفية هو النوع الوحيد من الخلايا في الغضروف المسؤولة عن إنتاج وصيانة مصفوفة الغضروف.",
         ),
         MedicalTermEntity(
             id = 2989,
@@ -715,6 +837,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈnjʊərɒn/",
+            exampleEn = "The neuron is the specialized cell transmitting electrical impulses throughout the nervous system.",
+            exampleFr = "La neurone est cellule spécialisée transmettant des impulsions électriques dans tout le système nerveux.",
+            exampleAr = "الخلية العصبية هو خلية متخصصة تنقل النبضات الكهربائية عبر الجهاز العصبي.",
         ),
         MedicalTermEntity(
             id = 2990,
@@ -727,6 +852,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/hɪˈpætəsaɪt/",
+            exampleEn = "The hepatocyte is the main functional cell of the liver performing metabolism, detoxification, and protein synthesis.",
+            exampleFr = "L'hépatocyte est cellule fonctionnelle principale du foie assurant métabolisme, détoxification et synthèse de protéines.",
+            exampleAr = "الخلية الكبدية هو الخلية الوظيفية الرئيسية للكبد تؤدي عمليات الأيض وإزالة السمية وتصنيع البروتينات.",
         ),
         MedicalTermEntity(
             id = 2991,
@@ -739,6 +867,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈædɪpəsaɪt/",
+            exampleEn = "The adipocyte is the fat-storing cell found in adipose tissue; releases energy through lipolysis.",
+            exampleFr = "L'adipocyte est cellule stockant les graisses dans le tissu adipeux; libère de l'énergie par lipolyse.",
+            exampleAr = "الخلية الشحمية هو خلية تخزن الدهون توجد في النسيج الشحمي؛ تطلق الطاقة عبر تحلل الدهون.",
         ),
         MedicalTermEntity(
             id = 2992,
@@ -751,6 +882,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈmaɪəsaɪt/",
+            exampleEn = "The myocyte is the muscle cell capable of contraction; includes skeletal, cardiac, and smooth types.",
+            exampleFr = "La myocyte est cellule musculaire capable de contraction; inclut les types squelettique, cardiaque et lisse.",
+            exampleAr = "الخلية العضلية هو خلية عضلية قادرة على الانقباض؛ تشمل الأنواع الهيكلية والقلبية والملساء.",
         ),
         MedicalTermEntity(
             id = 2993,
@@ -763,6 +897,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/stɛm sɛl/",
+            exampleEn = "The stem cell is the undifferentiated cell capable of self-renewal and differentiation into specialized cell types.",
+            exampleFr = "La cellule souche est cellule indifférenciée capable d'auto-renouvellement et de différenciation en types cellulaires spécialisés.",
+            exampleAr = "الخلية الجذعية هو خلية غير متمايزة قادرة على التجدد الذاتي والتمايز إلى أنواع خلايا متخصصة.",
         ),
         MedicalTermEntity(
             id = 2994,
@@ -775,6 +912,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˌmɛɡəˈkæriəsaɪt/",
+            exampleEn = "The megakaryocyte is the large bone marrow cell with a multilobed nucleus that fragments to produce platelets.",
+            exampleFr = "La mégacaryocyte est grande cellule de la moelle osseuse à noyau multilobé se fragmentant pour produire des plaquettes.",
+            exampleAr = "الخلية كبيرة النواة هو خلية كبيرة في نخاع العظم بنواة متعددة الفصوص تتشظى لإنتاج الصفيحات الدموية.",
         ),
         MedicalTermEntity(
             id = 2995,
@@ -787,6 +927,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈnætʃərəl ˈkɪlər sɛl/",
+            exampleEn = "The natural killer cell is the lymphocyte of innate immunity that destroys tumor cells and virus-infected cells without prior sensitization.",
+            exampleFr = "La cellule tueuse naturelle (NK) est lymphocyte de l'immunité innée détruisant les cellules tumorales et infectées par virus sans sensibilisation préalable.",
+            exampleAr = "الخلية القاتلة الطبيعية هو لمفاوية من المناعة الفطرية تدمر الخلايا السرطانية والمصابة بالفيروسات دون تحسس مسبق.",
         ),
         MedicalTermEntity(
             id = 2996,
@@ -799,6 +942,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/dɛnˈdrɪtɪk sɛl/",
+            exampleEn = "The dendritic cell is the antigen-presenting cell that activates T lymphocytes initiating adaptive immune responses.",
+            exampleFr = "La cellule dendritique est cellule présentatrice d'antigènes activant les lymphocytes T initiant les réponses immunitaires adaptatives.",
+            exampleAr = "الخلية الشجيرية هو خلية عارضة للمستضدات تنشط اللمفاويات T لبدء الاستجابات المناعية التكيفية.",
         ),
         MedicalTermEntity(
             id = 2997,
@@ -811,6 +957,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/pəˈraɪɪtəl sɛl/",
+            exampleEn = "The parietal cell is the gastric cell secreting hydrochloric acid (HCl) and intrinsic factor.",
+            exampleFr = "La cellule pariétale est cellule gastrique sécrétant l'acide chlorhydrique (HCl) et le facteur intrinsèque.",
+            exampleAr = "الخلية الجدارية هو خلية معدية تفرز حمض الهيدروكلوريك (HCl) والعامل الجوهري.",
         ),
         MedicalTermEntity(
             id = 2998,
@@ -823,6 +972,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/tʃiːf sɛl/",
+            exampleEn = "The chief cell is the gastric cell secreting pepsinogen (inactive precursor of pepsin).",
+            exampleFr = "La cellule principale est cellule gastrique sécrétant le pepsinogène (précurseur inactif de la pepsine).",
+            exampleAr = "الخلية الرئيسية هو خلية معدية تفرز البيبسينوجين (السليف غير النشط للبيبسين).",
         ),
         MedicalTermEntity(
             id = 2999,
@@ -835,6 +987,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈɡliːəl sɛl/",
+            exampleEn = "The glial cell is the non-neuronal cell in the nervous system providing support, nutrition, and protection to neurons.",
+            exampleFr = "La cellule gliale est cellule non neuronale du système nerveux fournissant soutien, nutrition et protection aux neurones.",
+            exampleAr = "الخلية الدبقية هو خلية غير عصبية في الجهاز العصبي توفر الدعم والتغذية والحماية للخلايا العصبية.",
         ),
         MedicalTermEntity(
             id = 3000,
@@ -847,6 +1002,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/sɛl ˈsaɪkəl/",
+            exampleEn = "The cell cycle is the ordered sequence of events a cell undergoes from its formation to its division into two daughter cells.",
+            exampleFr = "La cycle cellulaire est séquence ordonnée d'événements qu'une cellule subit de sa formation à sa division en deux cellules filles.",
+            exampleAr = "دورة الخلية هو التسلسل المنظم للأحداث التي تخضع لها الخلية من تكوينها حتى انقسامها إلى خليتين بنتيتين.",
         ),
         MedicalTermEntity(
             id = 3001,
@@ -859,6 +1017,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈɪntərfeɪz/",
+            exampleEn = "The interphase is the longest phase of the cell cycle consisting of G1, S, and G2 phases where the cell grows and replicates DNA.",
+            exampleFr = "L'interphase est phase la plus longue du cycle cellulaire comprenant G1, S et G2 où la cellule croît et réplique son ADN.",
+            exampleAr = "الطور البيني هو أطول مرحلة في دورة الخلية تتكون من أطوار G1 وS وG2 حيث تنمو الخلية وتضاعف DNA.",
         ),
         MedicalTermEntity(
             id = 3002,
@@ -871,6 +1032,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/dʒiː wʌn feɪz/",
+            exampleEn = "The g1 phase is the first growth phase where the cell increases in size and synthesizes proteins.",
+            exampleFr = "La phase G1 est première phase de croissance où la cellule augmente en taille et synthétise des protéines.",
+            exampleAr = "طور G1 (ما قبل التضاعف) هو مرحلة النمو الأولى حيث تزداد الخلية في الحجم وتصنع البروتينات.",
         ),
         MedicalTermEntity(
             id = 3003,
@@ -883,6 +1047,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ɛs feɪz/",
+            exampleEn = "The s phase is the synthesis phase where DNA replication occurs, duplicating the entire genome.",
+            exampleFr = "La phase S (Synthèse) est phase de synthèse où la réplication de l'ADN se produit, dupliquant l'ensemble du génome.",
+            exampleAr = "طور S (التضاعف) هو مرحلة التضاعف حيث يحدث تضاعف DNA، مما يضاعف الجينوم بالكامل.",
         ),
         MedicalTermEntity(
             id = 3004,
@@ -895,6 +1062,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/dʒiː tuː feɪz/",
+            exampleEn = "The g2 phase is the second growth phase where the cell prepares for mitosis by synthesizing more proteins.",
+            exampleFr = "La phase G2 est deuxième phase de croissance où la cellule se prépare à la mitose en synthétisant plus de protéines.",
+            exampleAr = "طور G2 (ما بعد التضاعف) هو مرحلة النمو الثانية حيث تستعد الخلية للانقسام الخيطي عبر تصنيع المزيد من البروتينات.",
         ),
         MedicalTermEntity(
             id = 3005,
@@ -907,6 +1077,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/maɪˈtoʊsɪs/",
+            exampleEn = "The mitosis is the type of cell division producing two genetically identical daughter cells; consists of prophase, metaphase, anaphase, and telophase.",
+            exampleFr = "La mitose est type de division cellulaire produisant deux cellules filles génétiquement identiques; comprend prophase, métaphase, anaphase et télophase.",
+            exampleAr = "الانقسام الخيطي (الميتوز) هو نوع من انقسام الخلايا ينتج خليتين بنتيتين متطابقتين وراثياً؛ يتكون من الطور التمهيدي والاستوائي والانفصالي والنهائي.",
         ),
         MedicalTermEntity(
             id = 3006,
@@ -919,6 +1092,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/maɪˈoʊsɪs/",
+            exampleEn = "The meiosis is the type of cell division producing four haploid gametes (sperm or egg cells) from a diploid cell.",
+            exampleFr = "La méiose est type de division cellulaire produisant quatre gamètes haploïdes à partir d'une cellule diploïde.",
+            exampleAr = "الانقسام الاختزالي (الميوز) هو نوع من انقسام الخلايا ينتج أربعة أمشاج أحادية المجموعة (حيوانات منوية أو بويضات) من خلية ثنائية المجموعة.",
         ),
         MedicalTermEntity(
             id = 3007,
@@ -931,6 +1107,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈproʊfeɪz/",
+            exampleEn = "The prophase is the first stage of mitosis when chromosomes condense and become visible, and the spindle forms.",
+            exampleFr = "La prophase est première étape de la mitose où les chromosomes se condensent et deviennent visibles, et le fuseau se forme.",
+            exampleAr = "الطور التمهيدي هو المرحلة الأولى من الميتوز عند تكثف الكروموسومات وظهورها وتكوين المغزل.",
         ),
         MedicalTermEntity(
             id = 3008,
@@ -943,6 +1122,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈmɛtəfeɪz/",
+            exampleEn = "The metaphase is the mitosis stage when chromosomes align along the equatorial plate; used in karyotyping.",
+            exampleFr = "La métaphase est étape de la mitose où les chromosomes s'alignent le long de la plaque équatoriale; utilisée en caryotypage.",
+            exampleAr = "الطور الاستوائي هو مرحلة الميتوز عند انتظام الكروموسومات على الصفيحة الاستوائية؛ تُستخدم في رسم النمط النووي.",
         ),
         MedicalTermEntity(
             id = 3009,
@@ -955,6 +1137,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈænəfeɪz/",
+            exampleEn = "The anaphase is the mitosis stage when sister chromatids are pulled apart to opposite poles by spindle fibers.",
+            exampleFr = "L'anaphase est étape de la mitose où les chromatides sœurs sont séparées vers les pôles opposés par les fibres du fuseau.",
+            exampleAr = "الطور الانفصالي هو مرحلة الميتوز عند سحب الكروماتيدات الشقيقة إلى القطبين المتقابلين بواسطة خيوط المغزل.",
         ),
         MedicalTermEntity(
             id = 3010,
@@ -967,6 +1152,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈtɛləfeɪz/",
+            exampleEn = "The telophase is the final stage of mitosis when nuclear envelopes reform around chromosomes at each pole.",
+            exampleFr = "La télophase est étape finale de la mitose où les enveloppes nucléaires se reforment autour des chromosomes à chaque pôle.",
+            exampleAr = "الطور النهائي هو المرحلة الأخيرة من الميتوز عند إعادة تشكل الأغشية النووية حول الكروموسومات في كل قطب.",
         ),
         MedicalTermEntity(
             id = 3011,
@@ -979,6 +1167,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˌsaɪtəkɪˈniːsɪs/",
+            exampleEn = "The cytokinesis is the physical division of the cytoplasm following mitosis producing two separate daughter cells.",
+            exampleFr = "La cytokinèse est division physique du cytoplasme suivant la mitose produisant deux cellules filles séparées.",
+            exampleAr = "انقسام السيتوبلازم هو الانقسام الجسدي للسيتوبلازم بعد الميتوز منتجاً خليتين بنتيتين منفصلتين.",
         ),
         MedicalTermEntity(
             id = 3012,
@@ -1003,6 +1194,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈsɛntrəmɪər/",
+            exampleEn = "The centromere is the region of a chromosome where sister chromatids are joined and spindle fibers attach.",
+            exampleFr = "La centromère est région d'un chromosome où les chromatides sœurs sont réunies et où les fibres du fuseau s'attachent.",
+            exampleAr = "القسيم المركزي هو المنطقة من الكروموسوم حيث ترتبط الكروماتيدات الشقيقة وترتبط خيوط المغزل.",
         ),
         MedicalTermEntity(
             id = 3014,
@@ -1015,6 +1209,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈtɛləmɪər/",
+            exampleEn = "The telomere is the protective repetitive DNA sequence at the ends of chromosomes preventing degradation.",
+            exampleFr = "La télomère est séquence d'ADN répétitive protectrice aux extrémités des chromosomes prévenant leur dégradation.",
+            exampleAr = "التيلومير هو تسلسل DNA المتكرر الواقي عند أطراف الكروموسومات يمنع تحللها.",
         ),
         MedicalTermEntity(
             id = 3015,
@@ -1027,6 +1224,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈkæriəˌtaɪp/",
+            exampleEn = "The karyotype is the complete set of chromosomes in a cell arranged and displayed in a standardized format.",
+            exampleFr = "La caryotype est l'ensemble complet des chromosomes d'une cellule arrangés et présentés selon un format standardisé.",
+            exampleAr = "النمط النووي هو المجموعة الكاملة من كروموسومات الخلية مرتبة ومعروضة بتنسيق معياري.",
         ),
         MedicalTermEntity(
             id = 3016,
@@ -1039,6 +1239,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈdɪplɔɪd/",
+            exampleEn = "The diploid (2n) is the cell containing two complete sets of chromosomes (2n = 46 in humans).",
+            exampleFr = "La diploïde (2n) est cellule contenant deux ensembles complets de chromosomes (2n = 46 chez l'humain).",
+            exampleAr = "ثنائي المجموعة الصبغية هو خلية تحتوي على مجموعتين كاملتين من الكروموسومات (2n = 46 في الإنسان).",
         ),
         MedicalTermEntity(
             id = 3017,
@@ -1051,6 +1254,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈhæplɔɪd/",
+            exampleEn = "The haploid (n) is the cell containing one set of chromosomes (n = 23 in humans); found in gametes.",
+            exampleFr = "L'haploïde (n) est cellule contenant un seul ensemble de chromosomes (n = 23 chez l'humain); trouvée dans les gamètes.",
+            exampleAr = "أحادي المجموعة الصبغية هو خلية تحتوي على مجموعة واحدة من الكروموسومات (n = 23 في الإنسان)؛ توجد في الأمشاج.",
         ),
         MedicalTermEntity(
             id = 3018,
@@ -1075,6 +1281,7 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/æˈnjuːplɔɪdi/",
+            exampleEn = "The aneuploidy is the abnormal number of chromosomes in a cell (e.g., trisomy 21 in Down syndrome).",
         ),
         MedicalTermEntity(
             id = 3020,
@@ -1087,6 +1294,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/pɒliˈplɔɪdi/",
+            exampleEn = "The polyploidy is the presence of more than two complete sets of chromosomes in a cell.",
+            exampleFr = "La polyploïdie est présence de plus de deux ensembles complets de chromosomes dans une cellule.",
+            exampleAr = "تعدد الصيغة الصبغية هو وجود أكثر من مجموعتين كاملتين من الكروموسومات في خلية.",
         ),
         MedicalTermEntity(
             id = 3021,
@@ -1099,6 +1309,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/maɪˈtɒtɪk ˈɪndɛks/",
+            exampleEn = "The mitotic index is the ratio of dividing cells to total cells in a tissue; elevated in rapidly proliferating or malignant tissue.",
+            exampleFr = "L'index mitotique est rapport des cellules en division aux cellules totales dans un tissu; élevé dans les tissus à prolifération rapide ou maligne.",
+            exampleAr = "مؤشر الانقسام الخيطي هو نسبة الخلايا المنقسمة إلى مجموع الخلايا في نسيج؛ مرتفعة في الأنسجة سريعة التكاثر أو الخبيثة.",
         ),
         MedicalTermEntity(
             id = 3022,
@@ -1111,6 +1324,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/saɪˈtɒlədʒi/",
+            exampleEn = "Cytology is the branch of biology studying the structure, function, and pathology of individual cells.",
+            exampleFr = "La cytologie est branche de la biologie étudiant la structure, la fonction et la pathologie des cellules individuelles.",
+            exampleAr = "علم الخلية (السيتولوجيا) هو فرع علم الأحياء الذي يدرس بنية الخلايا الفردية ووظيفتها وأمراضها.",
         ),
         MedicalTermEntity(
             id = 3023,
@@ -1123,6 +1339,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/faɪn ˈniːdəl ˌæspɪˈreɪʃən/",
+            exampleEn = "The fine needle aspiration (fna) is the minimally invasive technique using a thin needle to extract cells from a mass or lesion for cytological analysis.",
+            exampleFr = "Le cytoponction à l'aiguille fine (FNAC) est technique peu invasive utilisant une aiguille fine pour extraire des cellules d'une masse ou lésion pour analyse cytologique.",
+            exampleAr = "خزعة بالإبرة الدقيقة هو تقنية طفيفة التوغل تستخدم إبرة رفيعة لاستخراج خلايا من كتلة أو آفة للتحليل الخلوي.",
         ),
         MedicalTermEntity(
             id = 3024,
@@ -1135,6 +1354,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/smɪər/",
+            exampleEn = "The smear is the thin layer of biological material spread on a glass slide for microscopic examination.",
+            exampleFr = "Le frottis est fine couche de matériel biologique étalée sur une lame de verre pour examen microscopique.",
+            exampleAr = "اللطاخة هو طبقة رقيقة من المادة البيولوجية منشورة على شريحة زجاجية للفحص المجهري.",
         ),
         MedicalTermEntity(
             id = 3025,
@@ -1147,6 +1369,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/pæp smɪər/",
+            exampleEn = "The pap smear (papanicolaou test) is the cervical cancer screening test collecting cells from the cervix to detect dysplasia or malignancy.",
+            exampleFr = "Le frottis cervico-vaginal (Test de Papanicolaou) est test de dépistage du cancer du col de l'utérus collectant des cellules du col pour détecter une dysplasie ou malignité.",
+            exampleAr = "فحص عنق الرحم (اختبار باباnikولاو) هو اختبار فحص سرطان عنق الرحم يجمع خلايا من العنق للكشف عن خلل التنسج أو الخباثة.",
         ),
         MedicalTermEntity(
             id = 3026,
@@ -1159,6 +1384,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˈlɪkwɪd beɪst saɪˈtɒlədʒi/",
+            exampleEn = "The liquid-based cytology (lbc) is the cervical sample preparation method suspending cells in liquid fixative improving cell preservation and quality.",
+            exampleFr = "La cytologie en milieu liquide (CML) est méthode de préparation d'échantillons cervicaux suspendant les cellules dans un fixateur liquide améliorant leur conservation.",
+            exampleAr = "الخلوية على أساس سائل هو طريقة تحضير عينات عنق الرحم تعلق الخلايا في سائل مثبت لتحسين صونها وجودتها.",
         ),
         MedicalTermEntity(
             id = 3027,
@@ -1171,6 +1399,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˈbaɪɒpsi/",
+            exampleEn = "The biopsy is the removal of tissue or cells from a living body for diagnostic examination.",
+            exampleFr = "La biopsie est prélèvement de tissu ou de cellules d'un corps vivant à des fins d'examen diagnostique.",
+            exampleAr = "الخزعة هو إزالة نسيج أو خلايا من جسم حي لفحصها تشخيصياً.",
         ),
         MedicalTermEntity(
             id = 3028,
@@ -1183,6 +1414,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˌsɛntrɪfjʊˈɡeɪʃən/",
+            exampleEn = "The centrifugation is the technique using centrifugal force to separate cellular components by density.",
+            exampleFr = "Le centrifugation est technique utilisant la force centrifuge pour séparer les composants cellulaires par densité.",
+            exampleAr = "الطرد المركزي هو تقنية تستخدم القوة الطاردة المركزية لفصل المكونات الخلوية حسب الكثافة.",
         ),
         MedicalTermEntity(
             id = 3029,
@@ -1195,6 +1429,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˈsaɪtəspɪn/",
+            exampleEn = "The cytospin is the centrifugation method depositing cells from liquid specimens onto a glass slide in a monolayer.",
+            exampleFr = "Le cytospin (Cytocentrifugation) est méthode de centrifugation déposant des cellules de spécimens liquides sur une lame en monocouche.",
+            exampleAr = "الطرد المركزي الخلوي هو طريقة طرد مركزي تُرسب الخلايا من العينات السائلة على شريحة زجاجية بطبقة واحدة.",
         ),
         MedicalTermEntity(
             id = 3030,
@@ -1207,6 +1444,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/sɛl ˈkʌltʃər/",
+            exampleEn = "The cell culture is the process of growing cells in controlled laboratory conditions outside their natural environment.",
+            exampleFr = "La culture cellulaire est processus de croissance de cellules dans des conditions de laboratoire contrôlées hors de leur environnement naturel.",
+            exampleAr = "زراعة الخلايا هو عملية تنمية الخلايا في ظروف مختبرية خاضعة للسيطرة خارج بيئتها الطبيعية.",
         ),
         MedicalTermEntity(
             id = 3031,
@@ -1219,6 +1459,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/floʊ saɪˈtɒmɪtri/",
+            exampleEn = "The flow cytometry is the laser-based technique analyzing physical and chemical characteristics of individual cells in suspension.",
+            exampleFr = "La cytométrie en flux est technique basée sur laser analysant les caractéristiques physiques et chimiques de cellules individuelles en suspension.",
+            exampleAr = "قياس التدفق الخلوي هو تقنية تستند إلى الليزر لتحليل الخصائص الفيزيائية والكيميائية للخلايا الفردية المعلقة.",
         ),
         MedicalTermEntity(
             id = 3032,
@@ -1231,6 +1474,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˌɪmjʊnoʊˌhɪstəˈkɛmɪstri/",
+            exampleEn = "The immunohistochemistry (ihc) is the technique using antibodies to detect specific antigens in tissue sections.",
+            exampleFr = "L'immunohistochimie (IHC) est technique utilisant des anticorps pour détecter des antigènes spécifiques dans des coupes tissulaires.",
+            exampleAr = "الكيمياء النسيجية المناعية هو تقنية تستخدم الأجسام المضادة للكشف عن مستضدات محددة في مقاطع الأنسجة.",
         ),
         MedicalTermEntity(
             id = 3033,
@@ -1243,6 +1489,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˌɪmjʊnoʊˌsaɪtəˈkɛmɪstri/",
+            exampleEn = "The immunocytochemistry (icc) is the technique using antibodies to detect specific antigens in cells on cytological preparations.",
+            exampleFr = "L'immunocytochimie (ICC) est technique utilisant des anticorps pour détecter des antigènes spécifiques dans des cellules sur préparations cytologiques.",
+            exampleAr = "الكيمياء الخلوية المناعية هو تقنية تستخدم الأجسام المضادة للكشف عن مستضدات محددة في الخلايا على التحضيرات الخلوية.",
         ),
         MedicalTermEntity(
             id = 3034,
@@ -1255,6 +1504,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ɪn ˈsɪtjuː ˌhaɪbrɪdaɪˈzeɪʃən/",
+            exampleEn = "The in situ hybridization (ish) is the technique using labeled probes to detect specific DNA or RNA sequences within cells.",
+            exampleFr = "L'hybridation in situ est technique utilisant des sondes marquées pour détecter des séquences spécifiques d'ADN ou d'ARN dans les cellules.",
+            exampleAr = "التهجين في الموضع هو تقنية تستخدم مجسات مُعلَّمة للكشف عن تسلسلات محددة من DNA أو RNA داخل الخلايا.",
         ),
         MedicalTermEntity(
             id = 3035,
@@ -1267,6 +1519,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/fɪʃ/",
+            exampleEn = "The fish (fluorescence in situ hybridization) is the molecular cytogenetics technique using fluorescent probes to detect chromosomal abnormalities.",
+            exampleFr = "La FISH (Hybridation fluorescente in situ) est technique de cytogénétique moléculaire utilisant des sondes fluorescentes pour détecter des anomalies chromosomiques.",
+            exampleAr = "التهجين الفلوري في الموضع هو تقنية خلوية جينية جزيئية تستخدم مجسات فلورية للكشف عن الشذوذات الصبغية.",
         ),
         MedicalTermEntity(
             id = 3036,
@@ -1279,6 +1534,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ɪˈlɛktrɒn maɪˈkrɒskəpi/",
+            exampleEn = "The electron microscopy is the high-resolution imaging technique using electrons to visualize ultrastructural cell details.",
+            exampleFr = "La microscopie électronique est technique d'imagerie à haute résolution utilisant des électrons pour visualiser les détails ultrastructuraux des cellules.",
+            exampleAr = "المجهر الإلكتروني هو تقنية تصوير عالية الدقة تستخدم الإلكترونات لتصور التفاصيل البنيوية الدقيقة للخلايا.",
         ),
         MedicalTermEntity(
             id = 3037,
@@ -1291,6 +1549,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/laɪt maɪˈkrɒskəpi/",
+            exampleEn = "The light microscopy is the technique using visible light and lenses to magnify cells and tissues for observation.",
+            exampleFr = "La microscopie optique est technique utilisant la lumière visible et des lentilles pour agrandir cellules et tissus pour observation.",
+            exampleAr = "المجهر الضوئي هو تقنية تستخدم الضوء المرئي والعدسات لتكبير الخلايا والأنسجة للمراقبة.",
         ),
         MedicalTermEntity(
             id = 3038,
@@ -1303,6 +1564,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˈkɒnfoʊkəl maɪˈkrɒskəpi/",
+            exampleEn = "The confocal microscopy is the fluorescence microscopy technique creating sharp three-dimensional images of cells by excluding out-of-focus light.",
+            exampleFr = "La microscopie confocale est technique de microscopie de fluorescence créant des images tridimensionnelles nettes des cellules.",
+            exampleAr = "المجهر المقطعي هو تقنية مجهرية فلورية تُنشئ صوراً ثلاثية الأبعاد واضحة للخلايا بإقصاء الضوء خارج البؤرة.",
         ),
         MedicalTermEntity(
             id = 3039,
@@ -1315,6 +1579,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˈwɛstərn blɒt/",
+            exampleEn = "The western blot is the technique detecting specific proteins separated by gel electrophoresis using antibodies.",
+            exampleFr = "La western blot (Immunoempreinte) est technique détectant des protéines spécifiques séparées par électrophorèse en gel à l'aide d'anticorps.",
+            exampleAr = "الترحيل الكهربائي الغربي هو تقنية للكشف عن بروتينات محددة مفصولة بالرحلان الكهربائي الجيلاتيني باستخدام أجسام مضادة.",
         ),
         MedicalTermEntity(
             id = 3040,
@@ -1327,6 +1594,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ɪˈlaɪzə/",
+            exampleEn = "The elisa is the plate-based assay technique detecting and quantifying proteins or antigens using enzyme-linked antibodies.",
+            exampleFr = "L'ELISA (Dosage immuno-enzymatique) est technique de dosage sur plaque détectant et quantifiant protéines ou antigènes grâce à des anticorps liés à des enzymes.",
+            exampleAr = "إيليزا هو تقنية قياس تعتمد على اللوحة للكشف عن البروتينات أو المستضدات وقياسها كمياً باستخدام أجسام مضادة مرتبطة بإنزيمات.",
         ),
         MedicalTermEntity(
             id = 3041,
@@ -1339,6 +1609,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/piː siː ɑːr/",
+            exampleEn = "The pcr (polymerase chain reaction) is the molecular technique amplifying specific DNA sequences to detectable levels for analysis.",
+            exampleFr = "La PCR (Réaction en chaîne par polymérase) est technique moléculaire amplifiant des séquences d'ADN spécifiques à des niveaux détectables pour analyse.",
+            exampleAr = "تفاعل البوليميراز التسلسلي هو تقنية جزيئية تُضاعف تسلسلات DNA محددة إلى مستويات قابلة للكشف للتحليل.",
         ),
         MedicalTermEntity(
             id = 3042,
@@ -1351,6 +1624,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ˌɔːtəˌreɪdiˈɒɡrəfi/",
+            exampleEn = "The autoradiography is the technique detecting radioactively labeled molecules by exposing photographic film.",
+            exampleFr = "L'autoradiographie est technique détectant des molécules marquées radioactivement en exposant un film photographique.",
+            exampleAr = "التصوير الإشعاعي الذاتي هو تقنية للكشف عن الجزيئات المشعة بتعريض فيلم تصويري لها.",
         ),
         MedicalTermEntity(
             id = 3043,
@@ -1363,6 +1639,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/sɛl ˈsɔːrtɪŋ/",
+            exampleEn = "The cell sorting (facs) is the flow cytometry technique physically separating cells based on their fluorescent properties.",
+            exampleFr = "La tri cellulaire (FACS) est technique de cytométrie en flux séparant physiquement les cellules selon leurs propriétés fluorescentes.",
+            exampleAr = "فرز الخلايا هو تقنية قياس التدفق الخلوي تفصل الخلايا فيزيائياً بناءً على خصائصها الفلورية.",
         ),
         MedicalTermEntity(
             id = 3044,
@@ -1375,6 +1654,7 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ɛkˈsfoʊliətɪv saɪˈtɒlədʒi/",
+            exampleEn = "The exfoliative cytology is the study of cells shed naturally from body surfaces (e.g., sputum, urine, cervical smears).",
         ),
         MedicalTermEntity(
             id = 3045,
@@ -1387,6 +1667,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˌhiːmətɒkˈsɪlɪn ˈiːəsɪn/",
+            exampleEn = "The hematoxylin & eosin (h&e) is the most widely used histological stain; hematoxylin stains nuclei blue and eosin stains cytoplasm pink.",
+            exampleFr = "L'hématoxyline & Éosine (H&E) est coloration histologique la plus utilisée; l'hématoxyline colore les noyaux en bleu et l'éosine le cytoplasme en rose.",
+            exampleAr = "هيماتوكسيلين وإيوزين هو أكثر التلوينات النسيجية استخداماً؛ يلون الهيماتوكسيلين النوى بالأزرق والإيوزين السيتوبلازم بالوردي.",
         ),
         MedicalTermEntity(
             id = 3046,
@@ -1399,6 +1682,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˌpæpəˈniːkəlaʊ steɪn/",
+            exampleEn = "The papanicolaou stain (pap) is the polychromatic stain used in gynecological cytology using hematoxylin, OG6, and EA stains.",
+            exampleFr = "Le coloration de Papanicolaou (PAP) est coloration polychromatique utilisée en cytologie gynécologique utilisant hématoxyline, OG6 et colorants EA.",
+            exampleAr = "تلوين باباnikولاو هو تلوين متعدد الألوان يُستخدم في الخلوية النسائية باستخدام الهيماتوكسيلين وOG6 وأصباغ EA.",
         ),
         MedicalTermEntity(
             id = 3047,
@@ -1411,6 +1697,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈɡiːmzə steɪn/",
+            exampleEn = "The giemsa stain is the Romanowsky-type stain used for blood smears, bone marrow, and detecting parasites like malaria.",
+            exampleFr = "Le coloration de Giemsa est coloration de type Romanowsky utilisée pour frottis sanguins, moelle osseuse et détection de parasites comme le paludisme.",
+            exampleAr = "تلوين غيمزا هو تلوين من نوع رومانوفسكي يُستخدم للطاخات الدموية ونخاع العظم وكشف الطفيليات كالملاريا.",
         ),
         MedicalTermEntity(
             id = 3048,
@@ -1423,6 +1712,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/raɪt steɪn/",
+            exampleEn = "The wright stain is the Romanowsky stain used for peripheral blood smears to differentiate blood cell types.",
+            exampleFr = "Le coloration de Wright est coloration de Romanowsky utilisée pour les frottis sanguins périphériques pour différencier les types de cellules sanguines.",
+            exampleAr = "تلوين رايت هو تلوين رومانوفسكي يُستخدم لطاخات الدم المحيطي للتمييز بين أنواع خلايا الدم.",
         ),
         MedicalTermEntity(
             id = 3049,
@@ -1435,6 +1727,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ɡræm steɪn/",
+            exampleEn = "The gram stain is the differential bacterial staining technique classifying bacteria as Gram-positive (purple) or Gram-negative (pink).",
+            exampleFr = "Le coloration de Gram est technique de coloration bactérienne différentielle classifiant les bactéries en Gram-positif (violet) ou Gram-négatif (rose).",
+            exampleAr = "تلوين غرام هو تقنية تلوين بكتيري تفريقية تُصنف البكتيريا إلى موجبة الغرام (بنفسجية) أو سالبة الغرام (وردية).",
         ),
         MedicalTermEntity(
             id = 3050,
@@ -1447,6 +1742,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ziːl ˈniːlsən/",
+            exampleEn = "The ziehl-neelsen stain is the acid-fast stain used to detect Mycobacterium tuberculosis appearing as red rods on blue background.",
+            exampleFr = "Le coloration de Ziehl-Neelsen est coloration acido-résistante utilisée pour détecter Mycobacterium tuberculosis apparaissant comme des bâtonnets rouges.",
+            exampleAr = "تلوين زيل-نيلسن هو تلوين مقاوم للحمض يُستخدم للكشف عن المتفطرة السلية كعصيات حمراء على خلفية زرقاء.",
         ),
         MedicalTermEntity(
             id = 3051,
@@ -1459,6 +1757,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/piː eɪ ɛs steɪn/",
+            exampleEn = "The pas stain (periodic acid-schiff) is the stain detecting polysaccharides and glycoproteins as magenta; used for fungal detection and glycogen.",
+            exampleFr = "Le coloration PAS (Acide périodique-Schiff) est coloration détectant les polysaccharides et glycoprotéines en magenta; utilisée pour la détection fongique et le glycogène.",
+            exampleAr = "تلوين PAS هو تلوين يكشف عن السكاريد المتعددة والبروتينات السكرية بلون أرجواني؛ يُستخدم لكشف الفطريات والغليكوجين.",
         ),
         MedicalTermEntity(
             id = 3052,
@@ -1471,6 +1772,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈmæsənz ˈtraɪkroʊm/",
+            exampleEn = "The masson's trichrome is the three-color stain differentiating collagen (blue/green), muscle (red), and nuclei (black) in tissues.",
+            exampleFr = "La trichrome de Masson est coloration à trois couleurs différenciant collagène (bleu/vert), muscle (rouge) et noyaux (noir) dans les tissus.",
+            exampleAr = "تريكروم ماسون هو تلوين ثلاثي الألوان يميز بين الكولاجين (أزرق/أخضر) والعضلات (أحمر) والنوى (أسود) في الأنسجة.",
         ),
         MedicalTermEntity(
             id = 3053,
@@ -1483,6 +1787,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/meɪ ˈɡruːnwɔːld ˈɡiːmzə/",
+            exampleEn = "The may-grünwald-giemsa (mgg) is the Romanowsky stain combination widely used in hematology and cytology for cell morphology.",
+            exampleFr = "La may-Grünwald-Giemsa (MGG) est combinaison de colorations de Romanowsky largement utilisée en hématologie et cytologie pour la morphologie cellulaire.",
+            exampleAr = "تلوين ماي-غرونوالد-غيمزا هو مزيج من تلوينات رومانوفسكي يُستخدم على نطاق واسع في علم الدم والخلوية لدراسة شكل الخلايا.",
         ),
         MedicalTermEntity(
             id = 3054,
@@ -1495,6 +1802,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈælsiən bluː/",
+            exampleEn = "The alcian blue is the cationic dye staining acid mucopolysaccharides (mucins) blue; used to identify goblet cells.",
+            exampleFr = "Le bleu Alcian est colorant cationique colorant les mucopolysaccharides acides (mucines) en bleu; utilisé pour identifier les cellules caliciformes.",
+            exampleAr = "الأزرق الألشياني هو صبغة موجبة تلون ميوكوبوليساكاريدات الحمضية (الميوسينات) بالأزرق؛ تُستخدم لتحديد الخلايا الكأسية.",
         ),
         MedicalTermEntity(
             id = 3055,
@@ -1507,6 +1817,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈsɪlvər steɪn/",
+            exampleEn = "The silver stain is the staining technique using silver salts to detect reticular fibers, melanin, and certain microorganisms.",
+            exampleFr = "Le coloration argentique est technique de coloration utilisant des sels d'argent pour détecter les fibres réticulaires, la mélanine et certains microorganismes.",
+            exampleAr = "التلوين الفضي هو تقنية تلوين تستخدم أملاح الفضة للكشف عن الألياف الشبكية والميلانين وبعض الكائنات الدقيقة.",
         ),
         MedicalTermEntity(
             id = 3056,
@@ -1519,6 +1832,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ɔɪl rɛd oʊ/",
+            exampleEn = "The oil red o is the fat-soluble dye staining lipids and triglycerides red in fresh or frozen tissue sections.",
+            exampleFr = "La rouge Oil O est colorant liposoluble colorant les lipides et triglycérides en rouge dans les coupes fraîches ou congelées.",
+            exampleAr = "الأحمر الزيتي O هو صبغة قابلة للذوبان في الدهون تلون الدهون والدهون الثلاثية بالأحمر في مقاطع الأنسجة الطازجة أو المجمدة.",
         ),
         MedicalTermEntity(
             id = 3057,
@@ -1531,6 +1847,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/tɒˈljuːɪdiːn bluː/",
+            exampleEn = "The toluidine blue is the metachromatic dye staining nuclei blue and mast cell granules purple/red.",
+            exampleFr = "Le bleu de Toluidine est colorant métachromatique colorant les noyaux en bleu et les granules des mastocytes en violet/rouge.",
+            exampleAr = "الأزرق التولويديني هو صبغة متلونة بالتحول تلون النوى بالأزرق وحبيبات الخلايا البدينة بالبنفسجي/الأحمر.",
         ),
         MedicalTermEntity(
             id = 3058,
@@ -1543,6 +1862,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˌhiːmətɒkˈsɪlɪn/",
+            exampleEn = "The hematoxylin is the basic dye binding to nuclear DNA and RNA staining nuclei dark blue or purple (basophilic).",
+            exampleFr = "L'hématoxyline est colorant basique se liant à l'ADN et ARN nucléaire colorant les noyaux en bleu foncé ou violet (basophile).",
+            exampleAr = "الهيماتوكسيلين هو صبغة قاعدية ترتبط بـ DNA و RNA النووي وتلون النوى بالأزرق الداكن أو البنفسجي (قاعدية الميل).",
         ),
         MedicalTermEntity(
             id = 3059,
@@ -1555,6 +1877,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈiːəsɪn/",
+            exampleEn = "The eosin is the acidic dye staining cytoplasm, collagen, and red blood cells pink (eosinophilic/acidophilic).",
+            exampleFr = "L'éosine est colorant acide colorant le cytoplasme, le collagène et les globules rouges en rose (éosinophile/acidophile).",
+            exampleAr = "الإيوزين هو صبغة حمضية تلون السيتوبلازم والكولاجين وكريات الدم الحمراء بالوردي (ميالة للإيوزين/للحمض).",
         ),
         MedicalTermEntity(
             id = 3060,
@@ -1567,6 +1892,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈkɒŋɡoʊ rɛd/",
+            exampleEn = "The congo red is the dye used to detect amyloid deposits in tissues; shows apple-green birefringence under polarized light.",
+            exampleFr = "La rouge Congo est colorant utilisé pour détecter les dépôts d'amyloïde dans les tissus; montre une biréfringence vert pomme en lumière polarisée.",
+            exampleAr = "الأحمر الكونغوي هو صبغة تُستخدم للكشف عن رواسب النشواني في الأنسجة؛ تُظهر انكسار مزدوج أخضر التفاح تحت الضوء المستقطب.",
         ),
         MedicalTermEntity(
             id = 3061,
@@ -1579,6 +1907,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈkrɪstəl ˈvaɪərɪt/",
+            exampleEn = "The crystal violet is the primary dye in Gram staining that imparts a purple color to Gram-positive bacteria.",
+            exampleFr = "La violet de cristal est colorant principal dans la coloration de Gram conférant une couleur violette aux bactéries Gram-positif.",
+            exampleAr = "البنفسجي الكريستالي هو الصبغة الأساسية في تلوين غرام التي تمنح لوناً بنفسجياً للبكتيريا موجبة الغرام.",
         ),
         MedicalTermEntity(
             id = 3062,
@@ -1591,6 +1922,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/flɔːˈrɛsənt daɪ/",
+            exampleEn = "The fluorescent dye is the dye that absorbs light at one wavelength and emits it at another; used in fluorescence microscopy.",
+            exampleFr = "La colorant fluorescent est colorant absorbant la lumière à une longueur d'onde et l'émettant à une autre; utilisé en microscopie de fluorescence.",
+            exampleAr = "الصبغة الفلورية هو صبغة تمتص الضوء عند طول موجي وتبثه عند آخر؛ تُستخدم في المجهر الفلوري.",
         ),
         MedicalTermEntity(
             id = 3063,
@@ -1603,6 +1937,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˌrɒmənˈɒfski steɪn/",
+            exampleEn = "The romanowsky stain is the group of stains combining azure B and eosin Y for blood and bone marrow smears.",
+            exampleFr = "Le coloration de Romanowsky est groupe de colorations combinant azure B et éosine Y pour frottis sanguins et de moelle osseuse.",
+            exampleAr = "تلوين رومانوفسكي هو مجموعة تلوينات تجمع بين الأزور B والإيوزين Y للطاخات الدموية وطاخات نخاع العظم.",
         ),
         MedicalTermEntity(
             id = 3064,
@@ -1615,6 +1952,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Colorations & Teintures",
             ipaPhonetic = "/ˈsuːdæn steɪn/",
+            exampleEn = "The sudan stain is the lipophilic dye (Sudan III, Sudan IV, Sudan Black) staining lipid droplets in cells.",
+            exampleFr = "Le coloration au Soudan est colorant lipophile (Soudan III, IV, Noir) colorant les gouttelettes lipidiques dans les cellules.",
+            exampleAr = "تلوين سودان هو صبغة محبة للدهون (سودان III وIV والأسود) تلون قطيرات الدهون في الخلايا.",
         ),
         MedicalTermEntity(
             id = 3065,
@@ -1663,6 +2003,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌhaɪpərˈpleɪziə/",
+            exampleEn = "The hyperplasia is the increase in the number of cells in a tissue or organ in response to a stimulus.",
+            exampleFr = "L'hyperplasie est augmentation du nombre de cellules dans un tissu ou organe en réponse à un stimulus.",
+            exampleAr = "فرط التنسج هو زيادة في عدد الخلايا في نسيج أو عضو استجابةً لمحفز.",
         ),
         MedicalTermEntity(
             id = 3069,
@@ -1675,6 +2018,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/haɪˈpɜːrtrəfi/",
+            exampleEn = "The hypertrophy is the increase in the size of individual cells without an increase in cell number.",
+            exampleFr = "L'hypertrophie est augmentation de la taille des cellules individuelles sans augmentation du nombre cellulaire.",
+            exampleAr = "تضخم الخلايا هو زيادة في حجم الخلايا الفردية دون زيادة في عدد الخلايا.",
         ),
         MedicalTermEntity(
             id = 3070,
@@ -1687,6 +2033,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˈætrəfi/",
+            exampleEn = "The atrophy is the decrease in cell size or number leading to shrinkage of a tissue or organ.",
+            exampleFr = "L'atrophie est diminution de la taille ou du nombre cellulaire entraînant le rétrécissement d'un tissu ou organe.",
+            exampleAr = "الضمور هو تناقص حجم الخلايا أو عددها يؤدي إلى تقلص نسيج أو عضو.",
         ),
         MedicalTermEntity(
             id = 3071,
@@ -1711,6 +2060,7 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌmɛtəˈpleɪziə/",
+            exampleEn = "The metaplasia is the reversible replacement of one mature cell type by another (e.g., columnar to squamous in smokers).",
         ),
         MedicalTermEntity(
             id = 3073,
@@ -1735,6 +2085,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌkɑːrsɪˈnoʊmə/",
+            exampleEn = "The carcinoma is the malignant tumor arising from epithelial cells; the most common type of cancer.",
+            exampleFr = "La carcinome est tumeur maligne provenant de cellules épithéliales; le type de cancer le plus courant.",
+            exampleAr = "السرطانة هو ورم خبيث ينشأ من الخلايا الظهارية؛ أكثر أنواع السرطان شيوعاً.",
         ),
         MedicalTermEntity(
             id = 3075,
@@ -1747,6 +2100,7 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌædinoʊˌkɑːrsɪˈnoʊmə/",
+            exampleEn = "The adenocarcinoma is the malignant tumor derived from glandular epithelial cells (e.g., colon, lung, breast cancer).",
         ),
         MedicalTermEntity(
             id = 3076,
@@ -1759,6 +2113,7 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˈskweɪməs sɛl kɑːrsɪˈnoʊmə/",
+            exampleEn = "The squamous cell carcinoma is the malignant tumor arising from squamous epithelial cells (e.g., skin, cervix, lungs).",
         ),
         MedicalTermEntity(
             id = 3077,
@@ -1771,6 +2126,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/sɑːrˈkoʊmə/",
+            exampleEn = "The sarcoma is the malignant tumor arising from mesenchymal cells (bone, muscle, fat, connective tissue).",
+            exampleFr = "La sarcome est tumeur maligne provenant de cellules mésenchymateuses (os, muscle, graisse, tissu conjonctif).",
+            exampleAr = "الساركوما هو ورم خبيث ينشأ من الخلايا اللحمية (العظم والعضلة والدهن والنسيج الضام).",
         ),
         MedicalTermEntity(
             id = 3078,
@@ -1783,6 +2141,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/lɪmˈfoʊmə/",
+            exampleEn = "The lymphoma is the malignant tumor of lymphocytes; classified as Hodgkin or non-Hodgkin lymphoma.",
+            exampleFr = "La lymphome est tumeur maligne des lymphocytes; classée en lymphome de Hodgkin ou non hodgkinien.",
+            exampleAr = "الورم اللمفاوي هو ورم خبيث من اللمفاويات؛ يُصنف إلى لمفوما هودجكين وغير هودجكين.",
         ),
         MedicalTermEntity(
             id = 3079,
@@ -1795,6 +2156,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/luːˈkiːmiə/",
+            exampleEn = "The leukemia is the malignant proliferation of white blood cells in the bone marrow and peripheral blood.",
+            exampleFr = "La leucémie est prolifération maligne de globules blancs dans la moelle osseuse et le sang périphérique.",
+            exampleAr = "سرطان الدم (اللوكيميا) هو تكاثر خبيث لكريات الدم البيضاء في نخاع العظم والدم المحيطي.",
         ),
         MedicalTermEntity(
             id = 3080,
@@ -1807,6 +2171,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌmɛləˈnoʊmə/",
+            exampleEn = "The melanoma is the malignant tumor arising from melanocytes; the most dangerous form of skin cancer.",
+            exampleFr = "La mélanome est tumeur maligne provenant des mélanocytes; forme la plus dangereuse de cancer de la peau.",
+            exampleAr = "الورم الميلاني هو ورم خبيث ينشأ من الخلايا الميلانية؛ أخطر أشكال سرطان الجلد.",
         ),
         MedicalTermEntity(
             id = 3081,
@@ -1819,6 +2186,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/bɪˈnaɪn ˈtjuːmər/",
+            exampleEn = "The benign tumor is the non-invasive, non-metastatic tumor that does not spread to other tissues.",
+            exampleFr = "La tumeur bénigne est tumeur non invasive et non métastatique ne se répandant pas aux autres tissus.",
+            exampleAr = "الورم الحميد هو ورم غير توغلي وغير نقيلي لا ينتشر إلى الأنسجة الأخرى.",
         ),
         MedicalTermEntity(
             id = 3082,
@@ -1831,6 +2201,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/məˈlɪɡnənt ˈtjuːmər/",
+            exampleEn = "The malignant tumor is the invasive tumor capable of metastasizing to distant sites; also called cancer.",
+            exampleFr = "La tumeur maligne est tumeur invasive capable de se métastaser vers des sites distants; également appelée cancer.",
+            exampleAr = "الورم الخبيث هو ورم توغلي قادر على النقيلة إلى مواقع بعيدة؛ يُسمى أيضاً سرطاناً.",
         ),
         MedicalTermEntity(
             id = 3083,
@@ -1843,6 +2216,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/mɪˈtæstəsɪs/",
+            exampleEn = "The metastasis is the spread of cancer cells from the primary tumor to distant organs via blood or lymph.",
+            exampleFr = "La métastase est propagation des cellules cancéreuses de la tumeur primitive vers des organes distants via le sang ou la lymphe.",
+            exampleAr = "النقيلة (الانتشار السرطاني) هو انتشار الخلايا السرطانية من الورم الأولي إلى أعضاء بعيدة عبر الدم أو الليمف.",
         ),
         MedicalTermEntity(
             id = 3084,
@@ -1855,6 +2231,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/kɑːrsɪˈnoʊmə ɪn ˈsɪtjuː/",
+            exampleEn = "The carcinoma in situ (cis) is the pre-invasive malignancy where abnormal cells remain within the epithelium without invading the basement membrane.",
+            exampleFr = "La carcinome in situ est malignité pré-invasive où des cellules anormales restent dans l'épithélium sans envahir la membrane basale.",
+            exampleAr = "السرطانة الموضعية هو خباثة ما قبل التوغل حيث تبقى الخلايا الشاذة داخل الظهارة دون اجتياح الغشاء القاعدي.",
         ),
         MedicalTermEntity(
             id = 3085,
@@ -1867,6 +2246,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌɪnfləˈmeɪʃən/",
+            exampleEn = "The inflammation is the body's protective response to injury or infection characterized by redness, swelling, heat, and pain.",
+            exampleFr = "L'inflammation est réponse protectrice du corps à une blessure ou infection caractérisée par rougeur, gonflement, chaleur et douleur.",
+            exampleAr = "الالتهاب هو الاستجابة الوقائية للجسم للإصابة أو العدوى تتسم بالاحمرار والتورم والحرارة والألم.",
         ),
         MedicalTermEntity(
             id = 3086,
@@ -1879,6 +2261,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/faɪˈbroʊsɪs/",
+            exampleEn = "The fibrosis is the excessive accumulation of fibrous connective tissue (collagen) in an organ following injury.",
+            exampleFr = "La fibrose est accumulation excessive de tissu conjonctif fibreux (collagène) dans un organe suite à une blessure.",
+            exampleAr = "التليف هو التراكم المفرط للنسيج الضام الليفي (الكولاجين) في عضو بعد الإصابة.",
         ),
         MedicalTermEntity(
             id = 3087,
@@ -1891,6 +2276,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌɡrænjʊˈloʊmə/",
+            exampleEn = "The granuloma is the compact collection of macrophages forming in response to persistent infection or foreign material.",
+            exampleFr = "La granulome est collection compacte de macrophages se formant en réponse à une infection persistante ou un corps étranger.",
+            exampleAr = "الورم الحبيبي هو تجمع مدمج من البلاعم يتشكل استجابةً لعدوى مستمرة أو مادة غريبة.",
         ),
         MedicalTermEntity(
             id = 3088,
@@ -1903,6 +2291,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˈæbsɛs/",
+            exampleEn = "The abscess is the localized collection of pus (dead leukocytes, bacteria, and tissue debris) within a tissue.",
+            exampleFr = "L'abcès est collection localisée de pus (leucocytes morts, bactéries et débris tissulaires) au sein d'un tissu.",
+            exampleAr = "الخراج هو تجمع موضعي من القيح (كريات بيضاء ميتة وبكتيريا وحطام نسيجي) داخل نسيج.",
         ),
         MedicalTermEntity(
             id = 3089,
@@ -1915,6 +2306,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/θrɒmˈboʊsɪs/",
+            exampleEn = "The thrombosis is the formation of a blood clot (thrombus) inside a blood vessel obstructing blood flow.",
+            exampleFr = "La thrombose est formation d'un caillot sanguin (thrombus) à l'intérieur d'un vaisseau sanguin obstruant le flux.",
+            exampleAr = "التخثر هو تشكل جلطة دموية (خثرة) داخل وعاء دموي تعيق تدفق الدم.",
         ),
         MedicalTermEntity(
             id = 3090,
@@ -1927,6 +2321,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˈɛmbəlɪzəm/",
+            exampleEn = "The embolism is the blocking of a blood vessel by an embolus (a clot or other material that has traveled from elsewhere).",
+            exampleFr = "L'embolie est obstruction d'un vaisseau sanguin par un embole (caillot ou autre matériau ayant voyagé d'ailleurs).",
+            exampleAr = "الانصمام هو انسداد وعاء دموي بانصمامة (جلطة أو مادة أخرى انتقلت من مكان آخر).",
         ),
         MedicalTermEntity(
             id = 3091,
@@ -1951,6 +2348,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌkælsɪfɪˈkeɪʃən/",
+            exampleEn = "The calcification is the pathological deposition of calcium salts in soft tissues, cells, or blood vessels.",
+            exampleFr = "Le calcification est dépôt pathologique de sels de calcium dans les tissus mous, cellules ou vaisseaux sanguins.",
+            exampleAr = "التكلس هو الترسب المرضي لأملاح الكالسيوم في الأنسجة الرخوة أو الخلايا أو الأوعية الدموية.",
         ),
         MedicalTermEntity(
             id = 3093,
@@ -2023,6 +2423,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˈnjuːkliər saɪtəˈplæzmɪk ˈreɪʃioʊ/",
+            exampleEn = "The n/c ratio (nuclear-cytoplasmic ratio) is the ratio of nuclear size to cytoplasmic volume; elevated in malignant cells.",
+            exampleFr = "La rapport N/C (Nucléo-cytoplasmique) est rapport de la taille du noyau au volume cytoplasmique; élevé dans les cellules malignes.",
+            exampleAr = "النسبة النووية/السيتوبلازمية هو نسبة حجم النواة إلى حجم السيتوبلازم؛ مرتفعة في الخلايا الخبيثة.",
         ),
         MedicalTermEntity(
             id = 3099,
@@ -2035,6 +2438,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/maɪˈtɒtɪk ˈfɪɡər/",
+            exampleEn = "The mitotic figure is the cell undergoing active mitosis visible under the microscope; elevated numbers suggest malignancy.",
+            exampleFr = "La figure mitotique est cellule subissant une mitose active visible au microscope; un nombre élevé suggère la malignité.",
+            exampleAr = "صورة الانقسام الخيطي هو خلية في طور الانقسام الخيطي النشط مرئية تحت المجهر؛ أعداد مرتفعة تشير للخباثة.",
         ),
         MedicalTermEntity(
             id = 3100,
@@ -2047,6 +2453,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/eɪˈtɪpɪkəl maɪˈtoʊsɪs/",
+            exampleEn = "The atypical mitosis is the abnormal form of cell division with irregular spindle formation; strongly associated with malignancy.",
+            exampleFr = "La mitose atypique est forme anormale de division cellulaire avec formation irrégulière du fuseau; fortement associée à la malignité.",
+            exampleAr = "الانقسام غير النمطي هو شكل غير طبيعي من انقسام الخلايا بتكوين مغزل غير منتظم؛ مرتبط بقوة بالخباثة.",
         ),
         MedicalTermEntity(
             id = 3101,
@@ -2059,6 +2468,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˈkɔɪləsaɪt/",
+            exampleEn = "The koilocyte is the squamous cell with perinuclear clearing (halo) and nuclear atypia; pathognomonic of HPV infection.",
+            exampleFr = "La koïlocyte est cellule squameuse avec éclaircissement périnucléaire (halo) et atypie nucléaire; pathognomonique de l'infection HPV.",
+            exampleAr = "الخلية الكوليوسيتية هو خلية حرشفية بتوضح محيطي للنواة (هالة) ولانمطية نووية؛ دليل مرضي مميز لعدوى HPV.",
         ),
         MedicalTermEntity(
             id = 3102,
@@ -2071,6 +2483,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkɛrətɪnaɪˈzeɪʃən/",
+            exampleEn = "The keratinization is the process of cells accumulating keratin protein; normal in skin but abnormal in cervical squamous cells.",
+            exampleFr = "Le kératinisation est processus d'accumulation de protéine kératine dans les cellules; normal dans la peau mais anormal dans les cellules squameuses cervicales.",
+            exampleAr = "التقرن هو عملية تراكم بروتين الكيراتين في الخلايا؛ طبيعية في الجلد لكن غير طبيعية في الخلايا الحرشفية العنقية.",
         ),
         MedicalTermEntity(
             id = 3103,
@@ -2095,6 +2510,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkæriˈɒlɪsɪs/",
+            exampleEn = "The karyolysis is the dissolution and fading of the cell nucleus; a sign of advanced cell death.",
+            exampleFr = "La caryolyse est dissolution et effacement du noyau cellulaire; signe de mort cellulaire avancée.",
+            exampleAr = "ذوبان النواة هو ذوبان واختفاء نواة الخلية؛ علامة على موت خلوي متقدم.",
         ),
         MedicalTermEntity(
             id = 3105,
@@ -2119,6 +2537,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌvækjuːəlaɪˈzeɪʃən/",
+            exampleEn = "The vacuolization is the formation of vacuoles in the cytoplasm or nucleus; can indicate cell injury or secretory activity.",
+            exampleFr = "Le vacuolisation est formation de vacuoles dans le cytoplasme ou le noyau; peut indiquer une lésion cellulaire ou une activité sécrétoire.",
+            exampleAr = "التفجر الفجوي هو تشكل فجوات في السيتوبلازم أو النواة؛ قد يدل على إصابة خلوية أو نشاط إفرازي.",
         ),
         MedicalTermEntity(
             id = 3107,
@@ -2155,6 +2576,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˈsɪɡnɪt rɪŋ sɛl/",
+            exampleEn = "The signet ring cell is the cell with a large mucin vacuole pushing the nucleus to the periphery; typical of mucinous adenocarcinoma.",
+            exampleFr = "La cellule en bague à chaton est cellule avec une grande vacuole de mucine poussant le noyau à la périphérie; typique de l'adénocarcinome mucineux.",
+            exampleAr = "الخلية الخاتمية هو خلية بفجوة ميوسين كبيرة تدفع النواة إلى المحيط؛ نموذجية للسرطانة الغدية المخاطية.",
         ),
         MedicalTermEntity(
             id = 3110,
@@ -2167,6 +2591,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˈdʒaɪənt sɛl/",
+            exampleEn = "The giant cell is the abnormally large cell with one or multiple nuclei; formed by fusion of macrophages in granulomas.",
+            exampleFr = "La cellule géante est cellule anormalement grande avec un ou plusieurs noyaux; formée par fusion de macrophages dans les granulomes.",
+            exampleAr = "الخلية العملاقة هو خلية كبيرة بشكل غير طبيعي بنواة واحدة أو متعددة؛ تتشكل من اندماج البلاعم في الأورام الحبيبية.",
         ),
         MedicalTermEntity(
             id = 3111,
@@ -2179,6 +2606,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/riːd ˈstɜːrnbɜːrɡ sɛl/",
+            exampleEn = "The reed-sternberg cell is the pathognomonic large binucleated cell with prominent \"owl-eye\" nucleoli; characteristic of Hodgkin lymphoma.",
+            exampleFr = "La cellule de Reed-Sternberg est cellule binucléée pathognomonique avec nucleoles proéminents en \"œil de hibou\"; caractéristique du lymphome de Hodgkin.",
+            exampleAr = "خلية ريد-ستيرنبرغ هو خلية مزدوجة النواة مميزة مرضياً بأنويلات بارزة تشبه \"عين البوم\"؛ نموذجية للمفوما هودجكين.",
         ),
         MedicalTermEntity(
             id = 3112,
@@ -2191,6 +2621,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/sæˈmoʊmə ˈbɒdi/",
+            exampleEn = "The psammoma body is the laminated calcified concentric structure found in papillary thyroid carcinoma and meningioma.",
+            exampleFr = "La corps psammomateux est structure calcifiée lamellaire concentrique trouvée dans le carcinome papillaire thyroïdien et le méningiome.",
+            exampleAr = "الجسم الرملي هو بنية متكلسة صفائحية متحدة المركز توجد في سرطانة الغدة الدرقية الحليمية والورم السحائي.",
         ),
         MedicalTermEntity(
             id = 3113,
@@ -2203,6 +2636,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/foʊm sɛl/",
+            exampleEn = "The foam cell is the lipid-laden macrophage with a foamy appearance; seen in atherosclerosis and xanthoma.",
+            exampleFr = "La cellule spumeuse est macrophage chargé de lipides à aspect spumeux; observé dans l'athérosclérose et le xanthome.",
+            exampleAr = "الخلية الرغوية هو بلعمة محملة بالدهون ذات مظهر رغوي؛ تُرى في تصلب الشرايين والأورام الصفراء.",
         ),
         MedicalTermEntity(
             id = 3114,
@@ -2251,6 +2687,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌækənˈθoʊsɪs/",
+            exampleEn = "Acanthosis refers to thickening of the stratum spinosum (prickle cell layer) of the epidermis.",
+            exampleFr = "L'acanthose est épaississement du stratum spinosum (couche de cellules épineuses) de l'épiderme.",
+            exampleAr = "الشوكانية هو سماكة طبقة الأشواك (الطبقة الشوكية) في البشرة.",
         ),
         MedicalTermEntity(
             id = 3118,
@@ -2275,6 +2714,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/saɪˈtɒlɪsɪs/",
+            exampleEn = "The cytolysis is the dissolution or destruction of a cell by disruption of the cell membrane.",
+            exampleFr = "La cytolyse est dissolution ou destruction d'une cellule par rupture de la membrane cellulaire.",
+            exampleAr = "التحلل الخلوي هو تفكك أو تدمير الخلية عن طريق تمزق الغشاء الخلوي.",
         ),
         MedicalTermEntity(
             id = 3120,
@@ -2287,6 +2729,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/diː ɛn eɪ/",
+            exampleEn = "The dna (deoxyribonucleic acid) is the double-stranded helical molecule carrying genetic information in the form of nucleotide sequences.",
+            exampleFr = "L'ADN (Acide désoxyribonucléique) est molécule hélicoïdale double brin portant l'information génétique sous forme de séquences nucléotidiques.",
+            exampleAr = "الحمض النووي الريبوزي منقوص الأكسجين هو الجزيء الحلزوني المزدوج الخيط الحامل للمعلومات الوراثية في شكل تسلسلات نيوكليوتيدية.",
         ),
         MedicalTermEntity(
             id = 3121,
@@ -2299,6 +2744,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ɑːr ɛn eɪ/",
+            exampleEn = "The rna (ribonucleic acid) is the single-stranded nucleic acid molecule involved in protein synthesis; types include mRNA, tRNA, and rRNA.",
+            exampleFr = "L'ARN (Acide ribonucléique) est molécule d'acide nucléique simple brin impliquée dans la synthèse des protéines; les types incluent ARNm, ARNt et ARNr.",
+            exampleAr = "الحمض النووي الريبوزي هو جزيء حمض نووي أحادي الخيط يشارك في تصنيع البروتينات؛ تشمل أنواعه mRNA وtRNA وrRNA.",
         ),
         MedicalTermEntity(
             id = 3122,
@@ -2311,6 +2759,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/dʒiːn/",
+            exampleEn = "The gene is the segment of DNA encoding the information to produce a specific protein or RNA molecule.",
+            exampleFr = "La gène est segment d'ADN encodant l'information pour produire une protéine ou molécule d'ARN spécifique.",
+            exampleAr = "الجين هو قطعة من DNA تشفر المعلومات لإنتاج بروتين محدد أو جزيء RNA.",
         ),
         MedicalTermEntity(
             id = 3123,
@@ -2323,6 +2774,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈdʒiːnoʊm/",
+            exampleEn = "The genome is the complete genetic material of an organism; the human genome contains approximately 3 billion base pairs.",
+            exampleFr = "La génome est l'ensemble du matériel génétique d'un organisme; le génome humain contient environ 3 milliards de paires de bases.",
+            exampleAr = "الجينوم هو المادة الوراثية الكاملة لكائن حي؛ يحتوي الجينوم البشري على نحو 3 مليار زوج قاعدي.",
         ),
         MedicalTermEntity(
             id = 3124,
@@ -2335,6 +2789,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/mjuːˈteɪʃən/",
+            exampleEn = "The mutation is the permanent change in the DNA sequence of a cell that can be inherited or acquired.",
+            exampleFr = "Le mutation est changement permanent dans la séquence d'ADN d'une cellule pouvant être héréditaire ou acquis.",
+            exampleAr = "الطفرة هو تغيير دائم في تسلسل DNA الخلية يمكن أن يكون موروثاً أو مكتسباً.",
         ),
         MedicalTermEntity(
             id = 3125,
@@ -2347,6 +2804,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈɒŋkəˌdʒiːn/",
+            exampleEn = "The oncogene is the mutated gene that promotes uncontrolled cell growth and division leading to cancer.",
+            exampleFr = "L'oncogène est gène muté favorisant une croissance et division cellulaire non contrôlées menant au cancer.",
+            exampleAr = "الجين الورمي هو جين متحور يعزز نمو وانقسام الخلايا غير المنضبط مما يؤدي إلى السرطان.",
         ),
         MedicalTermEntity(
             id = 3126,
@@ -2359,6 +2819,7 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər dʒiːn/",
+            exampleEn = "The tumor suppressor gene is the gene that regulates cell division and prevents tumor formation; loss causes cancer (e.g., TP53, RB1).",
         ),
         MedicalTermEntity(
             id = 3127,
@@ -2371,6 +2832,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/trænskˈrɪpʃən/",
+            exampleEn = "The transcription is the process of copying DNA information into mRNA in the nucleus.",
+            exampleFr = "Le transcription est processus de copie de l'information ADN en ARNm dans le noyau.",
+            exampleAr = "النسخ هو عملية نسخ معلومات DNA إلى mRNA في النواة.",
         ),
         MedicalTermEntity(
             id = 3128,
@@ -2383,6 +2847,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/trænsˈleɪʃən/",
+            exampleEn = "The translation is the process of synthesizing a protein from the mRNA template at ribosomes.",
+            exampleFr = "Le traduction est processus de synthèse d'une protéine à partir du modèle ARNm au niveau des ribosomes.",
+            exampleAr = "الترجمة هو عملية تصنيع بروتين من قالب mRNA عند الريبوسومات.",
         ),
         MedicalTermEntity(
             id = 3129,
@@ -2395,6 +2862,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/diː ɛn eɪ ˌrɛplɪˈkeɪʃən/",
+            exampleEn = "The dna replication is the process by which a cell copies its DNA before cell division following the semiconservative model.",
+            exampleFr = "Le réplication de l'ADN est processus par lequel une cellule copie son ADN avant la division cellulaire selon le modèle semi-conservatif.",
+            exampleAr = "تضاعف DNA هو العملية التي تنسخ فيها الخلية DNA قبل انقسامها وفق نموذج نصف المحافظة.",
         ),
         MedicalTermEntity(
             id = 3130,
@@ -2407,6 +2877,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˌɛpɪdʒɪˈnɛtɪks/",
+            exampleEn = "The epigenetics is the study of heritable changes in gene expression that do not involve changes to the DNA sequence itself.",
+            exampleFr = "L'épigénétique est étude des changements héritables d'expression génique n'impliquant pas de changements dans la séquence d'ADN elle-même.",
+            exampleAr = "علم فوق الجينيات هو دراسة التغيرات الوراثية في التعبير الجيني التي لا تتضمن تغييرات في تسلسل DNA نفسه.",
         ),
         MedicalTermEntity(
             id = 3131,
@@ -2419,6 +2892,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˌmɛθɪˈleɪʃən/",
+            exampleEn = "The methylation is the addition of a methyl group to DNA or histones regulating gene expression; a key epigenetic mechanism.",
+            exampleFr = "Le méthylation est addition d'un groupe méthyle à l'ADN ou aux histones régulant l'expression génique; mécanisme épigénétique clé.",
+            exampleAr = "المثيلة هو إضافة مجموعة ميثيل إلى DNA أو الهيستونات لتنظيم التعبير الجيني؛ آلية جينية فوق جينية رئيسية.",
         ),
         MedicalTermEntity(
             id = 3132,
@@ -2431,6 +2907,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈhɪstoʊn/",
+            exampleEn = "The histone is the protein around which DNA winds to form nucleosomes; plays a key role in gene regulation.",
+            exampleFr = "L'histone est protéine autour de laquelle l'ADN s'enroule pour former des nucléosomes; joue un rôle clé dans la régulation génique.",
+            exampleAr = "الهيستون هو بروتين تتفتل حوله DNA لتشكل النيوكليوسومات؛ يلعب دوراً رئيسياً في تنظيم الجينات.",
         ),
         MedicalTermEntity(
             id = 3133,
@@ -2455,6 +2934,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈdʒiːnəˌtaɪp/",
+            exampleEn = "The genotype is the genetic constitution of an organism; the set of alleles for one or more traits.",
+            exampleFr = "La génotype est constitution génétique d'un organisme; l'ensemble des allèles pour un ou plusieurs caractères.",
+            exampleAr = "النمط الجيني هو التركيب الجيني لكائن حي؛ مجموعة الأليلات لصفة واحدة أو أكثر.",
         ),
         MedicalTermEntity(
             id = 3135,
@@ -2467,6 +2949,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈfiːnəˌtaɪp/",
+            exampleEn = "The phenotype is the observable physical and biochemical characteristics of an organism resulting from its genotype and environment.",
+            exampleFr = "La phénotype est caractéristiques physiques et biochimiques observables d'un organisme résultant de son génotype et de l'environnement.",
+            exampleAr = "النمط الظاهري هو الخصائص الجسدية والكيميائية الحيوية الظاهرة لكائن حي الناتجة عن نمطه الجيني والبيئة.",
         ),
         MedicalTermEntity(
             id = 3136,
@@ -2479,6 +2964,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˌkɑːrsɪnoʊˈdʒɛnɪsɪs/",
+            exampleEn = "The carcinogenesis is the multi-step process by which normal cells transform into cancer cells through genetic mutations.",
+            exampleFr = "La carcinogenèse est processus en plusieurs étapes par lequel des cellules normales se transforment en cellules cancéreuses par mutations génétiques.",
+            exampleAr = "التسرطن (الحدوث السرطاني) هو العملية متعددة الخطوات التي تتحول فيها الخلايا الطبيعية إلى خلايا سرطانية عبر الطفرات الجينية.",
         ),
         MedicalTermEntity(
             id = 3137,
@@ -2491,6 +2979,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈproʊtiːn/",
+            exampleEn = "The protein is the large biomolecule made of amino acids performing structural, enzymatic, and regulatory functions.",
+            exampleFr = "La protéine est grande biomolécule composée d'acides aminés remplissant des fonctions structurales, enzymatiques et régulatrices.",
+            exampleAr = "البروتين هو جزيء حيوي كبير مصنوع من الأحماض الأمينية يؤدي وظائف بنيوية وإنزيمية وتنظيمية.",
         ),
         MedicalTermEntity(
             id = 3138,
@@ -2503,6 +2994,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈɛnzaɪm/",
+            exampleEn = "The enzyme is the biological catalyst (usually a protein) accelerating chemical reactions without being consumed.",
+            exampleFr = "L'enzyme est catalyseur biologique (généralement une protéine) accélérant les réactions chimiques sans être consommé.",
+            exampleAr = "الإنزيم هو محفز بيولوجي (عادةً بروتين) يسرع التفاعلات الكيميائية دون أن يُستهلك.",
         ),
         MedicalTermEntity(
             id = 3139,
@@ -2515,6 +3009,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/rɪˈsɛptər/",
+            exampleEn = "The receptor is the protein on a cell membrane or inside a cell that binds to a specific ligand triggering a response.",
+            exampleFr = "La récepteur est protéine sur la membrane cellulaire ou à l'intérieur d'une cellule se liant à un ligand spécifique déclenchant une réponse.",
+            exampleAr = "المستقبل هو بروتين على غشاء خلوي أو داخل خلية يرتبط بربيطة محددة ليُفجر استجابة.",
         ),
         MedicalTermEntity(
             id = 3140,
@@ -2527,6 +3024,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌfæɡəsaɪˈtoʊsɪs/",
+            exampleEn = "The phagocytosis is the form of endocytosis where large particles (bacteria, dead cells) are engulfed by the cell.",
+            exampleFr = "La phagocytose est forme d'endocytose où de grandes particules (bactéries, cellules mortes) sont englouties par la cellule.",
+            exampleAr = "البلعمة هو شكل من الالتقام الخلوي تبتلع فيه الخلية جسيمات كبيرة (بكتيريا وخلايا ميتة).",
         ),
         MedicalTermEntity(
             id = 3141,
@@ -2539,6 +3039,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌɛndəsaɪˈtoʊsɪs/",
+            exampleEn = "The endocytosis is the process of a cell ingesting external material by engulfing it with the cell membrane.",
+            exampleFr = "L'endocytose est processus par lequel une cellule ingère du matériel externe en l'entourant avec la membrane cellulaire.",
+            exampleAr = "الالتقام الخلوي هو عملية ابتلاع الخلية للمواد الخارجية عن طريق تغليفها بالغشاء الخلوي.",
         ),
         MedicalTermEntity(
             id = 3142,
@@ -2551,6 +3054,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌɛksoʊsaɪˈtoʊsɪs/",
+            exampleEn = "The exocytosis is the process of releasing cellular contents to the outside by fusion of vesicles with the cell membrane.",
+            exampleFr = "L'exocytose est processus de libération du contenu cellulaire vers l'extérieur par fusion de vésicules avec la membrane cellulaire.",
+            exampleAr = "الإخراج الخلوي هو عملية إطلاق محتويات الخلية إلى الخارج عن طريق اندماج الحويصلات بالغشاء الخلوي.",
         ),
         MedicalTermEntity(
             id = 3143,
@@ -2563,6 +3069,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌpɪnəsaɪˈtoʊsɪs/",
+            exampleEn = "The pinocytosis is the form of endocytosis ingesting small droplets of extracellular fluid and dissolved molecules.",
+            exampleFr = "La pinocytose est forme d'endocytose ingérant de petites gouttelettes de liquide extracellulaire et de molécules dissoutes.",
+            exampleAr = "شرب الخلية هو شكل من الالتقام الخلوي يبتلع قطيرات صغيرة من السائل خارج الخلية والجزيئات الذائبة.",
         ),
         MedicalTermEntity(
             id = 3144,
@@ -2575,6 +3084,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ɔːˈtɒfədʒi/",
+            exampleEn = "The autophagy is the cellular process of degrading and recycling damaged organelles and proteins through lysosomes.",
+            exampleFr = "L'autophagie est processus cellulaire de dégradation et recyclage des organites et protéines endommagés via les lysosomes.",
+            exampleAr = "الأكل الذاتي (الأوتوفاجي) هو العملية الخلوية لتحلل وإعادة تدوير العضيات والبروتينات التالفة عبر الجسيمات الحالة.",
         ),
         MedicalTermEntity(
             id = 3145,
@@ -2587,6 +3099,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/sɛl ˌdɪfərɛnʃiˈeɪʃən/",
+            exampleEn = "The cell differentiation is the process by which a less specialized cell becomes a more specialized cell type.",
+            exampleFr = "Le différenciation cellulaire est processus par lequel une cellule moins spécialisée devient un type cellulaire plus spécialisé.",
+            exampleAr = "التمايز الخلوي هو العملية التي تتحول فيها خلية أقل تخصصاً إلى نوع خلايا أكثر تخصصاً.",
         ),
         MedicalTermEntity(
             id = 3146,
@@ -2599,6 +3114,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/sɛl prəˌlɪfəˈreɪʃən/",
+            exampleEn = "The cell proliferation is the growth and division of cells resulting in an increase in cell number.",
+            exampleFr = "Le prolifération cellulaire est croissance et division des cellules entraînant une augmentation du nombre cellulaire.",
+            exampleAr = "التكاثر الخلوي هو نمو وانقسام الخلايا مما يؤدي إلى زيادة عدد الخلايا.",
         ),
         MedicalTermEntity(
             id = 3147,
@@ -2611,6 +3129,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/sɛl maɪˈɡreɪʃən/",
+            exampleEn = "The cell migration is the directed movement of cells from one location to another; essential in wound healing and metastasis.",
+            exampleFr = "Le migration cellulaire est mouvement dirigé des cellules d'un endroit à un autre; essentiel pour la cicatrisation et la métastase.",
+            exampleAr = "الهجرة الخلوية هو الحركة الموجهة للخلايا من موقع إلى آخر؛ ضرورية في التئام الجروح والنقيلة.",
         ),
         MedicalTermEntity(
             id = 3148,
@@ -2623,6 +3144,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/sɛl ədˈhiːʒən/",
+            exampleEn = "The cell adhesion is the binding of a cell to other cells or the extracellular matrix via adhesion molecules.",
+            exampleFr = "L'adhésion cellulaire est liaison d'une cellule à d'autres cellules ou à la matrice extracellulaire via des molécules d'adhésion.",
+            exampleAr = "الالتصاق الخلوي هو ارتباط الخلية بخلايا أخرى أو بالمصفوفة خارج الخلية عبر جزيئات الالتصاق.",
         ),
         MedicalTermEntity(
             id = 3149,
@@ -2635,6 +3159,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˈsɪɡnəl trænsˈdʌkʃən/",
+            exampleEn = "The signal transduction is the process by which a cell converts an extracellular signal into an intracellular response.",
+            exampleFr = "Le transduction du signal est processus par lequel une cellule convertit un signal extracellulaire en réponse intracellulaire.",
+            exampleAr = "نقل الإشارة هو العملية التي تحوّل فيها الخلية إشارة خارجية إلى استجابة داخلية.",
         ),
         MedicalTermEntity(
             id = 3150,
@@ -2647,6 +3174,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌændʒiəˈdʒɛnɪsɪs/",
+            exampleEn = "The angiogenesis is the formation of new blood vessels from pre-existing ones; essential for tumor growth and wound healing.",
+            exampleFr = "L'angiogenèse est formation de nouveaux vaisseaux sanguins à partir de vaisseaux préexistants; essentielle pour la croissance tumorale.",
+            exampleAr = "تكوين الأوعية الدموية هو تكوين أوعية دموية جديدة من أوعية موجودة مسبقاً؛ ضروري لنمو الورم والتئام الجروح.",
         ),
         MedicalTermEntity(
             id = 3151,
@@ -2659,6 +3189,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌɒŋkəˈdʒɛnɪsɪs/",
+            exampleEn = "The oncogenesis is the process by which normal cells are transformed into cancer cells through multiple genetic events.",
+            exampleFr = "L'oncogenèse est processus par lequel des cellules normales sont transformées en cellules cancéreuses par de multiples événements génétiques.",
+            exampleAr = "التشكل الورمي هو العملية التي تتحول فيها الخلايا الطبيعية إلى خلايا سرطانية عبر أحداث جينية متعددة.",
         ),
         MedicalTermEntity(
             id = 3152,
@@ -2671,6 +3204,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/sɪˈnɛsəns/",
+            exampleEn = "The cellular senescence is the state of permanent cell cycle arrest where cells remain metabolically active but cannot divide.",
+            exampleFr = "La sénescence cellulaire est état d'arrêt permanent du cycle cellulaire où les cellules restent métaboliquement actives mais ne peuvent se diviser.",
+            exampleAr = "الشيخوخة الخلوية هو حالة توقف دائم لدورة الخلية تبقى فيها الخلايا نشطة أيضياً لكن لا تستطيع الانقسام.",
         ),
         MedicalTermEntity(
             id = 3153,
@@ -2683,6 +3219,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/dɪˈfjuːʒən/",
+            exampleEn = "The diffusion is the passive movement of molecules from high to low concentration across a membrane.",
+            exampleFr = "Le diffusion est mouvement passif de molécules d'une concentration haute vers une concentration basse à travers une membrane.",
+            exampleAr = "الانتشار هو الحركة السلبية للجزيئات من التركيز العالي إلى المنخفض عبر غشاء.",
         ),
         MedicalTermEntity(
             id = 3154,
@@ -2695,6 +3234,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ɒzˈmoʊsɪs/",
+            exampleEn = "The osmosis is the passive diffusion of water molecules across a selectively permeable membrane from low to high solute concentration.",
+            exampleFr = "L'osmose est diffusion passive de molécules d'eau à travers une membrane semi-perméable vers la concentration en soluté élevée.",
+            exampleAr = "التناضح هو الانتشار السلبي لجزيئات الماء عبر غشاء نفاذ انتقائي من التركيز المنخفض إلى المرتفع للمذاب.",
         ),
         MedicalTermEntity(
             id = 3155,
@@ -2719,6 +3261,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌæpəpˈtɒtɪk ˈpɑːθweɪ/",
+            exampleEn = "The apoptotic pathway is the signaling cascade leading to programmed cell death; includes intrinsic (mitochondrial) and extrinsic pathways.",
+            exampleFr = "La voie apoptotique est cascade de signalisation menant à la mort cellulaire programmée; inclut les voies intrinsèque et extrinsèque.",
+            exampleAr = "مسار الموت المبرمج هو التسلسل الإشاراتي المؤدي إلى الموت الخلوي المبرمج؛ يشمل المسارات الجوهرية والخارجية.",
         ),
         MedicalTermEntity(
             id = 3157,
@@ -2731,6 +3276,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ɪnˈflæmətɔːri rɪˈspɒns/",
+            exampleEn = "The inflammatory response is the body's immediate reaction to tissue damage or infection involving vascular and cellular changes.",
+            exampleFr = "La réponse inflammatoire est réaction immédiate du corps aux lésions tissulaires ou infections impliquant des changements vasculaires et cellulaires.",
+            exampleAr = "الاستجابة الالتهابية هو الاستجابة الفورية للجسم لتلف الأنسجة أو العدوى تتضمن تغيرات وعائية وخلوية.",
         ),
         MedicalTermEntity(
             id = 3158,
@@ -2743,6 +3291,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˌfæɡəˈsɪtɪk ˈpɑːθweɪ/",
+            exampleEn = "The phagocytic pathway is the process by which phagocytes recognize, engulf, and destroy pathogens or cellular debris.",
+            exampleFr = "La voie phagocytaire est processus par lequel les phagocytes reconnaissent, englobent et détruisent les agents pathogènes ou débris cellulaires.",
+            exampleAr = "مسار البلعمة هو العملية التي تتعرف فيها البلاعم على مسببات الأمراض وتبتلعها وتدمرها أو الحطام الخلوي.",
         ),
         MedicalTermEntity(
             id = 3159,
@@ -2755,6 +3306,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ɪˈmjuːn rɪˈspɒns/",
+            exampleEn = "The immune response is the reaction of the immune system to foreign antigens; includes innate and adaptive components.",
+            exampleFr = "La réponse immunitaire est réaction du système immunitaire aux antigènes étrangers; comprend les composantes innée et adaptative.",
+            exampleAr = "الاستجابة المناعية هو تفاعل الجهاز المناعي مع المستضدات الغريبة؛ يشمل المكونات الفطرية والتكيفية.",
         ),
         MedicalTermEntity(
             id = 3160,
@@ -2767,6 +3321,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˈnɛɡətɪv fɔːr məˈlɪɡnənsi/",
+            exampleEn = "The negative for malignancy is the cytological report indicating no evidence of cancer cells in the examined specimen.",
+            exampleFr = "Le négatif pour malignité est rapport cytologique indiquant l'absence de cellules cancéreuses dans l'échantillon examiné.",
+            exampleAr = "سلبي للخباثة هو تقرير خلوي يُشير إلى عدم وجود دليل على خلايا سرطانية في العينة المفحوصة.",
         ),
         MedicalTermEntity(
             id = 3161,
@@ -2779,6 +3336,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˈpɒzɪtɪv fɔːr məˈlɪɡnənsi/",
+            exampleEn = "The positive for malignancy is the cytological report confirming the presence of malignant cells in the specimen.",
+            exampleFr = "Le positif pour malignité est rapport cytologique confirmant la présence de cellules malignes dans l'échantillon.",
+            exampleAr = "إيجابي للخباثة هو تقرير خلوي يُؤكد وجود خلايا خبيثة في العينة.",
         ),
         MedicalTermEntity(
             id = 3162,
@@ -2803,6 +3363,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/səˈspɪʃəs fɔːr məˈlɪɡnənsi/",
+            exampleEn = "The suspicious for malignancy is the cytological category indicating high probability of malignancy but insufficient features for definitive diagnosis.",
+            exampleFr = "La suspect de malignité est catégorie cytologique indiquant une forte probabilité de malignité mais avec des caractéristiques insuffisantes pour un diagnostic définitif.",
+            exampleAr = "مشتبه بالخباثة هو فئة خلوية تشير إلى احتمال عالٍ للخباثة مع سمات غير كافية للتشخيص القاطع.",
         ),
         MedicalTermEntity(
             id = 3164,
@@ -2815,6 +3378,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ʌnˌsætɪsˈfæktəri ˈspɛsɪmɪn/",
+            exampleEn = "The unsatisfactory specimen is the cytological sample with insufficient cells or poor preparation quality precluding interpretation.",
+            exampleFr = "Le prélèvement non satisfaisant est échantillon cytologique avec des cellules insuffisantes ou une qualité de préparation médiocre empêchant son interprétation.",
+            exampleAr = "عينة غير مُرضية هو عينة خلوية بخلايا غير كافية أو جودة تحضير رديئة تمنع التفسير.",
         ),
         MedicalTermEntity(
             id = 3165,
@@ -2827,6 +3393,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˈædɪkwɪt ˈsɑːmpəl/",
+            exampleEn = "The adequate sample is the cytological specimen with sufficient cellularity and preservation for reliable diagnosis.",
+            exampleFr = "L'échantillon adéquat est spécimen cytologique avec une cellularité et une préservation suffisantes pour un diagnostic fiable.",
+            exampleAr = "عينة كافية هو عينة خلوية بخلوية وصون كافيين لتشخيص موثوق.",
         ),
         MedicalTermEntity(
             id = 3166,
@@ -2839,6 +3408,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ɪnˈflæmətɔːri ˈbækɡraʊnd/",
+            exampleEn = "The inflammatory background is the cytological finding with abundant inflammatory cells (neutrophils, lymphocytes) in the background of a smear.",
+            exampleFr = "La fond inflammatoire est résultat cytologique avec de nombreuses cellules inflammatoires (neutrophiles, lymphocytes) en arrière-plan d'un frottis.",
+            exampleAr = "الخلفية الالتهابية هو نتيجة خلوية بخلايا التهابية وفيرة (عدلات ولمفاويات) في خلفية اللطاخة.",
         ),
         MedicalTermEntity(
             id = 3167,
@@ -2875,6 +3447,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/wɛl ˈdɪfərɛnʃieɪtɪd/",
+            exampleEn = "The well-differentiated is the tumor grade where cells resemble normal tissue closely; generally better prognosis.",
+            exampleFr = "La bien différencié est grade tumoral où les cellules ressemblent étroitement au tissu normal; généralement meilleur pronostic.",
+            exampleAr = "متمايز جيداً هو درجة ورمية تشبه فيها الخلايا النسيج الطبيعي عن كثب؛ تنبؤ أفضل بوجه عام.",
         ),
         MedicalTermEntity(
             id = 3170,
@@ -2887,6 +3462,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˈmɒdərɪtli ˈdɪfərɛnʃieɪtɪd/",
+            exampleEn = "The moderately differentiated is the intermediate tumor grade between well and poorly differentiated; intermediate prognosis.",
+            exampleFr = "Le moyennement différencié est grade tumoral intermédiaire entre bien et peu différencié; pronostic intermédiaire.",
+            exampleAr = "متمايز بشكل معتدل هو درجة ورمية وسيطة بين التمايز الجيد والضعيف؛ تنبؤ متوسط.",
         ),
         MedicalTermEntity(
             id = 3171,
@@ -2899,6 +3477,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˈpʊərli ˈdɪfərɛnʃieɪtɪd/",
+            exampleEn = "The poorly differentiated is the tumor grade where cells barely resemble normal tissue; generally worse prognosis.",
+            exampleFr = "Le peu différencié est grade tumoral où les cellules ressemblent peu au tissu normal; généralement moins bon pronostic.",
+            exampleAr = "ضعيف التمايز هو درجة ورمية تشبه فيها الخلايا النسيج الطبيعي بالكاد؛ تنبؤ أسوأ بوجه عام.",
         ),
         MedicalTermEntity(
             id = 3172,
@@ -2911,6 +3492,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˌʌndɪˈfərɛnʃieɪtɪd/",
+            exampleEn = "The undifferentiated is the tumor grade where cells show no resemblance to normal tissue; poorest prognosis; also called anaplastic.",
+            exampleFr = "L'indifférencié est grade tumoral où les cellules ne ressemblent pas au tissu normal; pronostic le plus sombre; appelé aussi anaplasique.",
+            exampleAr = "غير متمايز هو درجة ورمية لا تشبه فيها الخلايا النسيج الطبيعي إطلاقاً؛ أسوأ تنبؤ؛ يُسمى أيضاً لا تمايزياً.",
         ),
         MedicalTermEntity(
             id = 3173,
@@ -2923,6 +3507,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˌsaɪtəˈlɒdʒɪkəl daɪəɡˈnoʊsɪs/",
+            exampleEn = "The cytological diagnosis is the medical conclusion derived from microscopic examination of cells from body fluids or tissues.",
+            exampleFr = "La diagnostic cytologique est conclusion médicale dérivée de l'examen microscopique de cellules provenant de liquides corporels ou tissus.",
+            exampleAr = "التشخيص الخلوي هو استنتاج طبي مستخلص من الفحص المجهري لخلايا من سوائل الجسم أو الأنسجة.",
         ),
         MedicalTermEntity(
             id = 3174,
@@ -2935,6 +3522,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˌhɛməˈrædʒɪk ˈbækɡraʊnd/",
+            exampleEn = "The hemorrhagic background is the cytological finding with abundant red blood cells in the background of a smear indicating bleeding.",
+            exampleFr = "La fond hémorragique est résultat cytologique avec de nombreux globules rouges en arrière-plan d'un frottis indiquant un saignement.",
+            exampleAr = "الخلفية النزفية هو نتيجة خلوية بكريات دم حمراء وفيرة في خلفية اللطاخة تدل على نزف.",
         ),
         MedicalTermEntity(
             id = 3175,
@@ -2971,6 +3561,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/bɪˈθɛzdə ˈsɪstɪm/",
+            exampleEn = "The bethesda system is the standardized reporting system for cervical cytology (Pap smears) used worldwide since 1988.",
+            exampleFr = "La système Bethesda est système de rapport standardisé pour la cytologie cervicale (frottis PAP) utilisé mondialement depuis 1988.",
+            exampleAr = "نظام بيثيزدا هو نظام التقرير الموحد للخلوية العنقية (لطاخات باب) المستخدم عالمياً منذ عام 1988.",
         ),
         MedicalTermEntity(
             id = 3178,
@@ -2995,6 +3588,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/ˌsaɪtoʊpəˈθɒlədʒɪst/",
+            exampleEn = "The cytopathologist is the physician specialized in diagnosing diseases by examining cells under the microscope.",
+            exampleFr = "La cytopathologiste est médecin spécialisé dans le diagnostic des maladies par examen de cellules au microscope.",
+            exampleAr = "عالم الخلوية المرضية هو طبيب متخصص في تشخيص الأمراض عن طريق فحص الخلايا تحت المجهر.",
         )
     )
 }

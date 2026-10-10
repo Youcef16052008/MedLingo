@@ -165,6 +165,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/hɪˈstɒlədʒi/",
+            exampleEn = "Histology is the study of the microscopic structure of tissues.",
+            exampleFr = "L'histologie est étude de la structure microscopique des tissus.",
+            exampleAr = "علم الأنسجة هو دراسة البنية المجهرية للأنسجة.",
         ),
         MedicalTermEntity(
             id = 1087,
@@ -177,6 +180,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈtɪʃuː/",
+            exampleEn = "The tissue is the group of similar cells performing a common function.",
+            exampleFr = "La tissu est groupe de cellules similaires remplissant une fonction commune.",
+            exampleAr = "النسيج هو مجموعة من الخلايا المتشابهة التي تؤدي وظيفة مشتركة.",
         ),
         MedicalTermEntity(
             id = 1088,
@@ -189,6 +195,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/sɛl/",
+            exampleEn = "The cell is the basic structural and functional unit of all living organisms.",
+            exampleFr = "La cellule est unité structurelle et fonctionnelle de base de tous les organismes vivants.",
+            exampleAr = "الخلية هو الوحدة البنائية والوظيفية الأساسية لجميع الكائنات الحية.",
         ),
         MedicalTermEntity(
             id = 1089,
@@ -201,6 +210,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈɔːrɡən/",
+            exampleEn = "The organ is the structure composed of two or more tissue types performing a specific function.",
+            exampleFr = "L'organe est structure composée de deux ou plusieurs types de tissus remplissant une fonction spécifique.",
+            exampleAr = "العضو هو بنية مكونة من نوعين أو أكثر من الأنسجة تؤدي وظيفة محددة.",
         ),
         MedicalTermEntity(
             id = 1090,
@@ -213,6 +225,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌɛkstrəˈsɛljʊlər ˈmeɪtrɪks/",
+            exampleEn = "The extracellular matrix (ecm) is the non-cellular component of tissues providing structural and biochemical support.",
+            exampleFr = "La matrice extracellulaire (MEC) est composant non cellulaire des tissus fournissant un soutien structural et biochimique.",
+            exampleAr = "المطرس خارج الخلوي هو المكون غير الخلوي للأنسجة الذي يوفر الدعم البنيوي والكيميائي الحيوي.",
         ),
         MedicalTermEntity(
             id = 1091,
@@ -225,6 +240,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌɪntərˈsɛljʊlər ˈdʒʌŋkʃən/",
+            exampleEn = "The intercellular junction is the specialized connection between adjacent cells.",
+            exampleFr = "Le jonction intercellulaire est connexion spécialisée entre les cellules adjacentes.",
+            exampleAr = "الوصلة بين الخلايا هو اتصال متخصص بين الخلايا المتجاورة.",
         ),
         MedicalTermEntity(
             id = 1092,
@@ -237,6 +255,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ædˈhɪərənz/",
+            exampleEn = "The adherens junction (zonula adherens) is the junction linking actin filaments between adjacent cells providing mechanical attachment.",
+            exampleFr = "Le jonction d'adhérence (Zonula adherens) est jonction reliant les filaments d'actine entre cellules adjacentes assurant un attachement mécanique.",
+            exampleAr = "وصلة الالتصاق هو وصلة تربط خيوط الأكتين بين الخلايا المتجاورة توفر ارتباطاً ميكانيكياً.",
         ),
         MedicalTermEntity(
             id = 1093,
@@ -249,6 +270,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈdɛzməsoʊm/",
+            exampleEn = "The desmosome (macula adherens) is the spot-like junction anchoring intermediate filaments between cells resisting shearing forces.",
+            exampleFr = "La desmosome (Macula adherens) est jonction ponctiforme ancrant les filaments intermédiaires entre les cellules résistant au cisaillement.",
+            exampleAr = "الجسيم الرابط هو وصلة نقطية تثبت الخيوط المتوسطة بين الخلايا وتقاوم قوى القص.",
         ),
         MedicalTermEntity(
             id = 1094,
@@ -261,6 +285,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ɡæp ˈdʒʌŋkʃən/",
+            exampleEn = "The gap junction (nexus) is the channel-forming junction allowing direct communication between adjacent cells.",
+            exampleFr = "Le jonction communicante (Gap junction) est jonction formant des canaux permettant la communication directe entre cellules adjacentes.",
+            exampleAr = "الوصلة الفجوية هو وصلة مكونة من قنوات تسمح بالاتصال المباشر بين الخلايا المتجاورة.",
         ),
         MedicalTermEntity(
             id = 1095,
@@ -273,6 +300,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌhɛmɪˈdɛzməsoʊm/",
+            exampleEn = "The hemidesmosome is the junction anchoring epithelial cells to the underlying basement membrane.",
+            exampleFr = "L'hémidesmosome est jonction ancrant les cellules épithéliales à la membrane basale sous-jacente.",
+            exampleAr = "نصف الجسيم الرابط هو وصلة تثبت الخلايا الظهارية بالغشاء القاعدي التحتي.",
         ),
         MedicalTermEntity(
             id = 1096,
@@ -285,6 +315,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈbeɪsəl ˈlæmɪnə/",
+            exampleEn = "The basal lamina is the part of the basement membrane produced by epithelial cells (lamina lucida + lamina densa).",
+            exampleFr = "La lame basale est partie de la membrane basale produite par les cellules épithéliales (lamina lucida + lamina densa).",
+            exampleAr = "الصفيحة القاعدية هو جزء الغشاء القاعدي الذي تنتجه الخلايا الظهارية (الصفيحة الشفافة + الصفيحة الكثيفة).",
         ),
         MedicalTermEntity(
             id = 1097,
@@ -297,6 +330,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/fɪkˈseɪʃən/",
+            exampleEn = "The fixation is the process of preserving tissue structure by chemical or physical methods.",
+            exampleFr = "Le fixation est processus de préservation de la structure tissulaire par des méthodes chimiques ou physiques.",
+            exampleAr = "التثبيت هو عملية حفظ بنية النسيج بطرق كيميائية أو فيزيائية.",
         ),
         MedicalTermEntity(
             id = 1098,
@@ -309,6 +345,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈfɔːrməlɪn/",
+            exampleEn = "The formalin is the most common fixative (10% buffered formaldehyde) preserving tissue architecture.",
+            exampleFr = "La formol (Formaldéhyde) est fixateur le plus courant (formaldéhyde tamponné à 10%) préservant l'architecture tissulaire.",
+            exampleAr = "الفورمالين هو المثبت الأكثر شيوعاً (فورمالدهيد مخفف 10%) يحفظ البنية النسيجية.",
         ),
         MedicalTermEntity(
             id = 1099,
@@ -321,6 +360,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ɪmˈbɛdɪŋ/",
+            exampleEn = "The embedding is the process of infiltrating tissue with a supporting medium (usually paraffin wax) for sectioning.",
+            exampleFr = "L'inclusion (Enrobage) est processus d'infiltration du tissu avec un milieu de support (habituellement paraffine) pour la coupe.",
+            exampleAr = "التضمين (الطمر) هو عملية تشريب النسيج بوسط داعم (عادة شمع البارافين) للتقطيع.",
         ),
         MedicalTermEntity(
             id = 1100,
@@ -333,6 +375,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈsɛkʃənɪŋ/",
+            exampleEn = "Sectioning refers to cutting thin slices of tissue (3-10 μm) using a microtome.",
+            exampleFr = "La coupe est découpe de tranches fines de tissu (3-10 μm) à l'aide d'un microtome.",
+            exampleAr = "التقطيع هو تقطيع شرائح رقيقة من النسيج (3-10 ميكرومتر) باستخدام المقطاع.",
         ),
         MedicalTermEntity(
             id = 1101,
@@ -345,6 +390,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈmaɪkrətoʊm/",
+            exampleEn = "The microtome is the instrument that cuts tissue into very thin sections for microscopic examination.",
+            exampleFr = "La microtome est instrument qui coupe les tissus en sections très fines pour l'examen microscopique.",
+            exampleAr = "المقطاع (الميكروتوم) هو أداة تقطع النسيج إلى مقاطع رقيقة جداً للفحص المجهري.",
         ),
         MedicalTermEntity(
             id = 1102,
@@ -357,6 +405,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈsteɪnɪŋ/",
+            exampleEn = "The staining is the process of applying dyes to tissue sections to enhance contrast and visualization.",
+            exampleFr = "Le coloration est processus d'application de colorants sur les coupes tissulaires pour améliorer le contraste et la visualisation.",
+            exampleAr = "التلوين هو عملية تطبيق الأصباغ على مقاطع الأنسجة لتعزيز التباين والرؤية.",
         ),
         MedicalTermEntity(
             id = 1103,
@@ -381,6 +432,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌbeɪsəˈfɪlɪk/",
+            exampleEn = "Basophilic refers to having affinity for basic (blue) dyes like hematoxylin (e.g., nuclei, ribosomes).",
         ),
         MedicalTermEntity(
             id = 1105,
@@ -393,6 +445,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌiːəsɪnəˈfɪlɪk/",
+            exampleEn = "Eosinophilic (Acidophilic) refers to having affinity for acidic (pink/red) dyes like eosin (e.g., cytoplasm, collagen).",
         ),
         MedicalTermEntity(
             id = 1106,
@@ -405,6 +458,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/pæs steɪn/",
+            exampleEn = "The pas stain (periodic acid-schiff) is the stain detecting glycogen, glycoproteins, and mucins (magenta/purple).",
+            exampleFr = "Le coloration PAS (Acide periodique-Schiff) est coloration détectant le glycogène, les glycoprotéines et les mucines (magenta/violet).",
+            exampleAr = "صبغة PAS هو صبغة تكشف الغليكوجين والبروتينات السكرية والميوسينات (أرجواني).",
         ),
         MedicalTermEntity(
             id = 1107,
@@ -417,6 +473,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈmæsənz ˈtraɪkroʊm/",
+            exampleEn = "The masson's trichrome is the stain differentiating collagen (blue/green) from muscle (red) and nuclei (black).",
+            exampleFr = "La trichrome de Masson est coloration différenciant le collagène (bleu/vert) du muscle (rouge) et des noyaux (noir).",
+            exampleAr = "صبغة ماسون ثلاثية الألوان هو صبغة تميز الكولاجين (أزرق/أخضر) عن العضلات (أحمر) والنوى (أسود).",
         ),
         MedicalTermEntity(
             id = 1108,
@@ -429,6 +488,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈsɪlvər steɪn/",
+            exampleEn = "The silver stain is the stain highlighting reticular fibers and basement membranes (black).",
+            exampleFr = "Le coloration à l'argent est coloration mettant en évidence les fibres réticulaires et les membranes basales (noir).",
+            exampleAr = "صبغة الفضة هو صبغة تبرز الألياف الشبكية والأغشية القاعدية (أسود).",
         ),
         MedicalTermEntity(
             id = 1109,
@@ -441,6 +503,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌɪmjʊnoʊˌhɪstoʊˈkɛmɪstri/",
+            exampleEn = "The immunohistochemistry (ihc) is the technique using antibodies to detect specific proteins in tissue sections.",
+            exampleFr = "L'immunohistochimie (IHC) est technique utilisant des anticorps pour détecter des protéines spécifiques dans les coupes tissulaires.",
+            exampleAr = "الكيمياء المناعية النسيجية هو تقنية تستخدم الأجسام المضادة للكشف عن بروتينات محددة في مقاطع الأنسجة.",
         ),
         MedicalTermEntity(
             id = 1110,
@@ -453,6 +518,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/laɪt ˈmaɪkrəskoʊp/",
+            exampleEn = "The light microscope is the microscope using visible light to magnify specimens up to 1000×.",
+            exampleFr = "La microscope optique (photonique) est microscope utilisant la lumière visible pour grossir les spécimens jusqu'à 1000×.",
+            exampleAr = "المجهر الضوئي هو مجهر يستخدم الضوء المرئي لتكبير العينات حتى 1000 مرة.",
         ),
         MedicalTermEntity(
             id = 1111,
@@ -465,6 +533,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ɪˈlɛktrɒn ˈmaɪkrəskoʊp/",
+            exampleEn = "The electron microscope is the microscope using electron beams to achieve very high magnification and resolution.",
+            exampleFr = "La microscope électronique est microscope utilisant des faisceaux d'électrons pour atteindre de très forts grossissements et résolution.",
+            exampleAr = "المجهر الإلكتروني هو مجهر يستخدم حزم الإلكترونات لتحقيق تكبير ودقة عاليين جداً.",
         ),
         MedicalTermEntity(
             id = 1112,
@@ -477,6 +548,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/trænzˈmɪʃən/",
+            exampleEn = "The transmission electron microscope (tem) is the electron microscope producing detailed 2D images of internal cell structures.",
+            exampleFr = "La microscope électronique à transmission (MET) est microscope électronique produisant des images 2D détaillées des structures intracellulaires.",
+            exampleAr = "المجهر الإلكتروني النافذ هو مجهر إلكتروني ينتج صوراً ثنائية الأبعاد مفصلة للبنى داخل الخلوية.",
         ),
         MedicalTermEntity(
             id = 1113,
@@ -489,6 +563,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈskænɪŋ/",
+            exampleEn = "The scanning electron microscope (sem) is the electron microscope producing 3D images of surface structures.",
+            exampleFr = "La microscope électronique à balayage (MEB) est microscope électronique produisant des images 3D des structures de surface.",
+            exampleAr = "المجهر الإلكتروني الماسح هو مجهر إلكتروني ينتج صوراً ثلاثية الأبعاد للبنى السطحية.",
         ),
         MedicalTermEntity(
             id = 1114,
@@ -501,6 +578,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈbaɪɒpsi/",
+            exampleEn = "The biopsy is the removal of a tissue sample from a living body for microscopic examination.",
+            exampleFr = "La biopsie est prélèvement d'un échantillon de tissu d'un corps vivant pour examen microscopique.",
+            exampleAr = "الخزعة هو أخذ عينة نسيجية من جسم حي للفحص المجهري.",
         ),
         MedicalTermEntity(
             id = 1115,
@@ -513,6 +593,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌhɪstoʊpəˈθɒlədʒi/",
+            exampleEn = "The histopathology is the microscopic study of diseased tissue for diagnosis.",
+            exampleFr = "L'histopathologie (Anatomie pathologique) est étude microscopique des tissus malades pour le diagnostic.",
+            exampleAr = "علم الأنسجة المرضية هو الدراسة المجهرية للأنسجة المريضة للتشخيص.",
         ),
         MedicalTermEntity(
             id = 1116,
@@ -525,6 +608,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˈɑːrtɪfækt/",
+            exampleEn = "The artifact is the structural alteration caused by tissue processing not present in living tissue.",
+            exampleFr = "L'artéfact est altération structurelle causée par le traitement tissulaire absente dans le tissu vivant.",
+            exampleAr = "الخلل الاصطناعي هو تغيير بنيوي ناتج عن معالجة النسيج غير موجود في النسيج الحي.",
         ),
         MedicalTermEntity(
             id = 1117,
@@ -537,6 +623,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌɛpɪˈθiːliəl/",
+            exampleEn = "The epithelial tissue (epithelium) is the tissue covering body surfaces, lining cavities, and forming glands.",
+            exampleFr = "La tissu épithélial (Épithélium) est tissu recouvrant les surfaces corporelles, tapissant les cavités et formant les glandes.",
+            exampleAr = "النسيج الظهاري هو نسيج يغطي أسطح الجسم ويبطن التجاويف ويشكل الغدد.",
         ),
         MedicalTermEntity(
             id = 1118,
@@ -573,6 +662,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈskweɪməs/",
+            exampleEn = "The squamous cell is the flat scale-like cell wider than it is tall.",
+            exampleFr = "La cellule pavimenteuse (squameuse) est cellule plate en forme d'écaille plus large que haute.",
+            exampleAr = "خلية حرشفية هو خلية مسطحة شبيهة بالحراشف أعرض من ارتفاعها.",
         ),
         MedicalTermEntity(
             id = 1121,
@@ -585,6 +677,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/kjuːˈbɔɪdəl/",
+            exampleEn = "The cuboidal cell is the cube-shaped cell with equal height and width.",
+            exampleFr = "La cellule cubique (cuboïde) est cellule en forme de cube avec hauteur et largeur égales.",
+            exampleAr = "خلية مكعبة هو خلية مكعبة الشكل بارتفاع وعرض متساويين.",
         ),
         MedicalTermEntity(
             id = 1122,
@@ -597,6 +692,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/kəˈlʌmnər/",
+            exampleEn = "The columnar cell is the tall column-shaped cell that is taller than it is wide.",
+            exampleFr = "La cellule cylindrique (prismatique) est cellule en forme de colonne plus haute que large.",
+            exampleAr = "خلية عمودية هو خلية على شكل عمود أطول من عرضها.",
         ),
         MedicalTermEntity(
             id = 1123,
@@ -609,6 +707,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl ˈskweɪməs/",
+            exampleEn = "The simple squamous epithelium is the single layer of flat cells allowing diffusion and filtration (e.g., alveoli, endothelium).",
         ),
         MedicalTermEntity(
             id = 1124,
@@ -621,6 +720,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl kjuːˈbɔɪdəl/",
+            exampleEn = "The simple cuboidal epithelium is the single layer of cube-shaped cells for secretion and absorption (e.g., kidney tubules, thyroid).",
         ),
         MedicalTermEntity(
             id = 1125,
@@ -633,6 +733,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl kəˈlʌmnər/",
+            exampleEn = "The simple columnar epithelium is the single layer of tall cells for absorption and secretion (e.g., stomach, intestines).",
         ),
         MedicalTermEntity(
             id = 1126,
@@ -693,6 +794,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/trænˈzɪʃənəl/",
+            exampleEn = "The transitional epithelium (urothelium) is the stratified epithelium that stretches and changes shape (e.g., urinary bladder, ureters).",
         ),
         MedicalTermEntity(
             id = 1131,
@@ -705,6 +807,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌɛndoʊˈθiːliəm/",
+            exampleEn = "The endothelium is the simple squamous epithelium lining the interior of blood and lymphatic vessels.",
+            exampleFr = "L'endothélium est épithélium pavimenteux simple tapissant l'intérieur des vaisseaux sanguins et lymphatiques.",
+            exampleAr = "البطانة الوعائية هو الظهارة الحرشفية البسيطة التي تبطن الأوعية الدموية واللمفاوية من الداخل.",
         ),
         MedicalTermEntity(
             id = 1132,
@@ -717,6 +822,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌmɛzoʊˈθiːliəm/",
+            exampleEn = "The mesothelium is the simple squamous epithelium lining serous cavities (pleura, peritoneum, pericardium).",
+            exampleFr = "La mésothélium est épithélium pavimenteux simple tapissant les cavités séreuses (plèvre, péritoine, péricarde).",
+            exampleAr = "الظهارة المتوسطة هو الظهارة الحرشفية البسيطة التي تبطن التجاويف المصلية (الجنبة، الصفاق، التأمور).",
         ),
         MedicalTermEntity(
             id = 1133,
@@ -729,6 +837,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈeɪpɪkəl/",
+            exampleEn = "The apical surface is the free upper surface of an epithelial cell facing the lumen or exterior.",
+            exampleFr = "La surface apicale est surface libre supérieure d'une cellule épithéliale faisant face à la lumière ou l'extérieur.",
+            exampleAr = "السطح القمي هو السطح العلوي الحر للخلية الظهارية المواجه للتجويف أو الخارج.",
         ),
         MedicalTermEntity(
             id = 1134,
@@ -741,6 +852,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈbeɪsəl/",
+            exampleEn = "The basal surface is the bottom surface of an epithelial cell attached to the basement membrane.",
+            exampleFr = "La surface basale est surface inférieure d'une cellule épithéliale attachée à la membrane basale.",
+            exampleAr = "السطح القاعدي هو السطح السفلي للخلية الظهارية المرتبط بالغشاء القاعدي.",
         ),
         MedicalTermEntity(
             id = 1135,
@@ -765,6 +879,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/brʌʃ ˈbɔːrdər/",
+            exampleEn = "The brush border is the dense layer of microvilli on absorptive cells (e.g., small intestine, proximal tubule).",
         ),
         MedicalTermEntity(
             id = 1137,
@@ -801,6 +916,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈɡɒblɪt sɛl/",
+            exampleEn = "The goblet cell is the unicellular gland secreting mucus found in respiratory and digestive epithelia.",
+            exampleFr = "La cellule caliciforme est glande unicellulaire sécrétant du mucus trouvée dans les épithéliums respiratoire et digestif.",
+            exampleAr = "الخلية الكأسية هو غدة وحيدة الخلية تفرز المخاط توجد في الظهارات التنفسية والهضمية.",
         ),
         MedicalTermEntity(
             id = 1140,
@@ -813,6 +931,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ɡlænd/",
+            exampleEn = "The gland is the organ or cell producing and secreting substances for use in the body.",
+            exampleFr = "La glande est organe ou cellule produisant et sécrétant des substances pour usage dans le corps.",
+            exampleAr = "الغدة هو عضو أو خلية تنتج وتفرز مواداً لاستخدامها في الجسم.",
         ),
         MedicalTermEntity(
             id = 1141,
@@ -825,6 +946,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈɛksoʊkrɪn/",
+            exampleEn = "The exocrine gland is the gland secreting its products through ducts onto a surface (e.g., sweat, salivary).",
         ),
         MedicalTermEntity(
             id = 1142,
@@ -837,6 +959,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈɛndoʊkrɪn/",
+            exampleEn = "The endocrine gland is the ductless gland secreting hormones directly into the bloodstream.",
+            exampleFr = "La glande endocrine est glande sans canal sécrétant des hormones directement dans le flux sanguin.",
+            exampleAr = "الغدة الصماء هو غدة بدون قناة تفرز الهرمونات مباشرة في مجرى الدم.",
         ),
         MedicalTermEntity(
             id = 1143,
@@ -885,6 +1010,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈsɪərəs/",
+            exampleEn = "The serous gland is the gland producing a thin watery protein-rich secretion (e.g., parotid gland).",
         ),
         MedicalTermEntity(
             id = 1147,
@@ -897,6 +1023,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈmjuːkəs/",
+            exampleEn = "The mucous gland is the gland producing a thick viscous mucus secretion (e.g., sublingual gland).",
         ),
         MedicalTermEntity(
             id = 1148,
@@ -909,6 +1036,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/mɪkst/",
+            exampleEn = "The mixed gland (seromucous) is the gland containing both serous and mucous secretory cells (e.g., submandibular gland).",
         ),
         MedicalTermEntity(
             id = 1149,
@@ -921,6 +1049,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈæsɪnəs/",
+            exampleEn = "The acinus (pl. acini) is the round secretory unit of an exocrine gland.",
+            exampleFr = "L'acinus (pl. Acini) est unité sécrétoire arrondie d'une glande exocrine.",
+            exampleAr = "العنيبة (ج: عنيبات) هو الوحدة الإفرازية المستديرة لغدة خارجية الإفراز.",
         ),
         MedicalTermEntity(
             id = 1150,
@@ -933,6 +1064,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈtjuːbjʊlər/",
+            exampleEn = "The tubular gland is the exocrine gland with a tube-shaped secretory portion.",
+            exampleFr = "La glande tubulaire est glande exocrine avec une portion sécrétoire en forme de tube.",
+            exampleAr = "الغدة الأنبوبية هو غدة خارجية الإفراز بجزء إفرازي أنبوبي الشكل.",
         ),
         MedicalTermEntity(
             id = 1151,
@@ -945,6 +1079,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈsɪərəs ˈdɛmɪluːn/",
+            exampleEn = "The serous demilune is the cap of serous cells surrounding a mucous acinus in mixed glands.",
+            exampleFr = "La demi-lune séreuse (Croissant de Gianuzzi) est coiffe de cellules séreuses entourant un acinus muqueux dans les glandes mixtes.",
+            exampleAr = "الهلال المصلي هو غطاء من الخلايا المصلية يحيط بعنيبة مخاطية في الغدد المختلطة.",
         ),
         MedicalTermEntity(
             id = 1152,
@@ -957,6 +1094,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˌmaɪoʊˌɛpɪˈθiːliəl/",
+            exampleEn = "The myoepithelial cell is the contractile cell surrounding glandular acini that aids secretion by squeezing.",
+            exampleFr = "La cellule myoépithéliale est cellule contractile entourant les acini glandulaires aidant la sécrétion par compression.",
+            exampleAr = "الخلية العضلية الظهارية هو خلية انقباضية تحيط بعنيبات الغدد وتساعد في الإفراز بالضغط.",
         ),
         MedicalTermEntity(
             id = 1153,
@@ -969,6 +1109,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/kəˈnɛktɪv ˈtɪʃuː/",
+            exampleEn = "The connective tissue is the tissue providing support, binding, and protection composed of cells, fibers, and ground substance.",
+            exampleFr = "La tissu conjonctif est tissu fournissant soutien, liaison et protection composé de cellules, fibres et substance fondamentale.",
+            exampleAr = "النسيج الضام هو نسيج يوفر الدعم والربط والحماية يتكون من خلايا وألياف ومادة أساسية.",
         ),
         MedicalTermEntity(
             id = 1154,
@@ -981,6 +1124,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ɡraʊnd ˈsʌbstəns/",
+            exampleEn = "The ground substance is the amorphous gel-like material filling spaces between cells and fibers in connective tissue.",
+            exampleFr = "La substance fondamentale est matériau gélatineux amorphe remplissant les espaces entre les cellules et les fibres du tissu conjonctif.",
+            exampleAr = "المادة الأساسية (الأرضية) هو المادة الهلامية غير المتبلورة التي تملأ الفراغات بين الخلايا والألياف في النسيج الضام.",
         ),
         MedicalTermEntity(
             id = 1155,
@@ -993,6 +1139,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ˈkɒlədʒən ˈfaɪbər/",
+            exampleEn = "The collagen fiber is the most abundant fiber providing tensile strength (white fibers).",
+            exampleFr = "La fibre de collagène est fibre la plus abondante fournissant la résistance à la traction (fibres blanches).",
+            exampleAr = "الليف الكولاجيني هو الليف الأكثر وفرة الذي يوفر مقاومة الشد (الألياف البيضاء).",
         ),
         MedicalTermEntity(
             id = 1156,
@@ -1005,6 +1154,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ɪˈlæstɪk ˈfaɪbər/",
+            exampleEn = "The elastic fiber is the fiber composed of elastin allowing tissues to stretch and recoil (yellow fibers).",
+            exampleFr = "La fibre élastique est fibre composée d'élastine permettant aux tissus de s'étirer et de se rétracter (fibres jaunes).",
+            exampleAr = "الليف المرن هو ليف مكون من الإيلاستين يسمح للأنسجة بالتمدد والارتداد (الألياف الصفراء).",
         ),
         MedicalTermEntity(
             id = 1157,
@@ -1017,6 +1169,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/rɪˈtɪkjʊlər ˈfaɪbər/",
+            exampleEn = "The reticular fiber is the thin branching fiber of type III collagen forming supportive networks (e.g., lymph nodes, spleen).",
         ),
         MedicalTermEntity(
             id = 1158,
@@ -1029,6 +1182,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ˈmækrəfeɪdʒ/",
+            exampleEn = "The macrophage is the large phagocytic cell derived from monocytes that engulfs pathogens and debris.",
+            exampleFr = "Le macrophage est grande cellule phagocytaire dérivée des monocytes engloutissant pathogènes et débris.",
+            exampleAr = "البلعمية الكبيرة هو خلية بالعة كبيرة مشتقة من الوحيدات تبتلع العوامل الممرضة والحطام.",
         ),
         MedicalTermEntity(
             id = 1159,
@@ -1041,6 +1197,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/mæst sɛl/",
+            exampleEn = "The mast cell is the connective tissue cell containing granules of histamine and heparin involved in allergic reactions.",
+            exampleFr = "La mastocyte (Labrocyte) est cellule du tissu conjonctif contenant des granules d'histamine et d'héparine impliquée dans les réactions allergiques.",
+            exampleAr = "الخلية البدينة هو خلية في النسيج الضام تحتوي على حبيبات الهيستامين والهيبارين تشارك في التفاعلات التحسسية.",
         ),
         MedicalTermEntity(
             id = 1160,
@@ -1053,6 +1212,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ˈplæzmə sɛl/",
+            exampleEn = "The plasma cell is the differentiated B lymphocyte that produces and secretes antibodies.",
+            exampleFr = "La plasmocyte est lymphocyte B différencié produisant et sécrétant des anticorps.",
+            exampleAr = "الخلية البلازمية هو خلية لمفاوية بائية متمايزة تنتج وتفرز الأجسام المضادة.",
         ),
         MedicalTermEntity(
             id = 1161,
@@ -1065,6 +1227,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ˈædɪpoʊsaɪt/",
+            exampleEn = "The adipocyte (fat cell) is the cell specialized for storing lipids (triglycerides).",
+            exampleFr = "L'adipocyte (Cellule adipeuse) est cellule spécialisée dans le stockage des lipides (triglycérides).",
+            exampleAr = "الخلية الدهنية هو خلية متخصصة في تخزين الدهون (ثلاثيات الغليسريد).",
         ),
         MedicalTermEntity(
             id = 1162,
@@ -1077,6 +1242,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ˈmɛzɪŋkaɪm/",
+            exampleEn = "The mesenchyme is the embryonic connective tissue from which all adult connective tissues derive.",
+            exampleFr = "La mésenchyme est tissu conjonctif embryonnaire dont dérivent tous les tissus conjonctifs adultes.",
+            exampleAr = "اللحمة المتوسطة هو النسيج الضام الجنيني الذي تُشتق منه جميع الأنسجة الضامة البالغة.",
         ),
         MedicalTermEntity(
             id = 1163,
@@ -1089,6 +1257,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/luːs/",
+            exampleEn = "The loose connective tissue (areolar) is the soft pliable tissue with all fiber types supporting epithelia and organs.",
+            exampleFr = "La tissu conjonctif lâche (Aréolaire) est tissu souple et flexible avec tous les types de fibres soutenant les épithéliums et les organes.",
+            exampleAr = "النسيج الضام الرخو هو نسيج رخو مرن بجميع أنواع الألياف يدعم الظهارات والأعضاء.",
         ),
         MedicalTermEntity(
             id = 1164,
@@ -1173,6 +1344,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ˈmjuːkəs/",
+            exampleEn = "The mucous connective tissue is the jelly-like embryonic connective tissue found in the umbilical cord (Wharton's jelly).",
+            exampleFr = "La tissu conjonctif muqueux est tissu conjonctif embryonnaire gélatineux trouvé dans le cordon ombilical (gelée de Wharton).",
+            exampleAr = "النسيج الضام المخاطي هو نسيج ضام جنيني هلامي يوجد في الحبل السري (هلام وارتون).",
         ),
         MedicalTermEntity(
             id = 1171,
@@ -1185,6 +1359,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˈkɑːrtɪlɪdʒ/",
+            exampleEn = "The cartilage is the firm flexible connective tissue lacking blood vessels (avascular).",
+            exampleFr = "Le cartilage est tissu conjonctif ferme et flexible dépourvu de vaisseaux sanguins (avasculaire).",
+            exampleAr = "الغضروف هو نسيج ضام صلب مرن يفتقر إلى الأوعية الدموية (لاوعائي).",
         ),
         MedicalTermEntity(
             id = 1172,
@@ -1197,6 +1374,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˈkɒndroʊsaɪt/",
+            exampleEn = "The chondrocyte is the mature cartilage cell residing in a lacuna maintaining the cartilage matrix.",
+            exampleFr = "La chondrocyte est cellule cartilagineuse mature résidant dans une lacune et maintenant la matrice cartilagineuse.",
+            exampleAr = "الخلية الغضروفية هو الخلية الغضروفية الناضجة التي تقطن في ثغرة وتحافظ على المطرس الغضروفي.",
         ),
         MedicalTermEntity(
             id = 1173,
@@ -1209,6 +1389,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˈkɒndroʊblæst/",
+            exampleEn = "The chondroblast is the immature cartilage cell that produces cartilage matrix.",
+            exampleFr = "La chondroblaste est cellule cartilagineuse immature produisant la matrice cartilagineuse.",
+            exampleAr = "أرومة غضروفية هو خلية غضروفية غير ناضجة تنتج المطرس الغضروفي.",
         ),
         MedicalTermEntity(
             id = 1174,
@@ -1221,6 +1404,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ləˈkjuːnə/",
+            exampleEn = "The lacuna (pl. lacunae) is the small space or cavity within the matrix housing a chondrocyte or osteocyte.",
+            exampleFr = "La lacune est petit espace ou cavité dans la matrice abritant un chondrocyte ou un ostéocyte.",
+            exampleAr = "الثغرة (الفجوة) هو فراغ صغير أو تجويف داخل المطرس يأوي خلية غضروفية أو عظمية.",
         ),
         MedicalTermEntity(
             id = 1175,
@@ -1233,6 +1419,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌpɛrɪˈkɒndriəm/",
+            exampleEn = "The perichondrium is the dense connective tissue membrane covering cartilage providing nutrients and new cells.",
+            exampleFr = "La périchondre est membrane de tissu conjonctif dense recouvrant le cartilage fournissant nutriments et nouvelles cellules.",
+            exampleAr = "سمحاق الغضروف هو غشاء من النسيج الضام الكثيف يغطي الغضروف ويوفر المغذيات والخلايا الجديدة.",
         ),
         MedicalTermEntity(
             id = 1176,
@@ -1245,6 +1434,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˈhaɪəlɪn/",
+            exampleEn = "The hyaline cartilage is the most common cartilage type with a glassy homogeneous matrix (e.g., trachea, nose, joint surfaces).",
         ),
         MedicalTermEntity(
             id = 1177,
@@ -1281,6 +1471,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/aɪˈsɒdʒɪnəs/",
+            exampleEn = "The isogenous group (cell nest) is the cluster of chondrocytes in a lacuna derived from a single parent cell by interstitial growth.",
+            exampleFr = "La groupe isogénique (Nid cellulaire) est amas de chondrocytes dans une lacune dérivés d'une seule cellule mère par croissance interstitielle.",
+            exampleAr = "المجموعة متماثلة المنشأ هو مجموعة من الخلايا الغضروفية في ثغرة مشتقة من خلية أم واحدة بالنمو البيني.",
         ),
         MedicalTermEntity(
             id = 1180,
@@ -1317,6 +1510,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/boʊn ˈtɪʃuː/",
+            exampleEn = "The bone tissue (osseous tissue) is the hard mineralized connective tissue forming the skeleton.",
+            exampleFr = "La tissu osseux est tissu conjonctif dur minéralisé formant le squelette.",
+            exampleAr = "النسيج العظمي هو نسيج ضام صلب متمعدن يشكل الهيكل العظمي.",
         ),
         MedicalTermEntity(
             id = 1183,
@@ -1329,6 +1525,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈɒstioʊblæst/",
+            exampleEn = "The osteoblast is the bone-forming cell that secretes osteoid (unmineralized bone matrix).",
+            exampleFr = "L'ostéoblaste est cellule formatrice d'os sécrétant l'ostéoïde (matrice osseuse non minéralisée).",
+            exampleAr = "أرومة عظمية (بانية العظم) هو خلية بانية للعظم تفرز العظمانيّ (المطرس العظمي غير المتمعدن).",
         ),
         MedicalTermEntity(
             id = 1184,
@@ -1341,6 +1540,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈɒstioʊsaɪt/",
+            exampleEn = "The osteocyte is the mature bone cell trapped in a lacuna maintaining bone matrix.",
+            exampleFr = "L'ostéocyte est cellule osseuse mature piégée dans une lacune maintenant la matrice osseuse.",
+            exampleAr = "الخلية العظمية هو خلية عظمية ناضجة محتجزة في ثغرة تحافظ على المطرس العظمي.",
         ),
         MedicalTermEntity(
             id = 1185,
@@ -1353,6 +1555,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈɒstioʊklæst/",
+            exampleEn = "The osteoclast is the large multinucleated cell that resorbs (breaks down) bone tissue.",
+            exampleFr = "L'ostéoclaste est grande cellule multinucléée qui résorbe (dégrade) le tissu osseux.",
+            exampleAr = "ناقضة العظم (الخلية الهادمة) هو خلية كبيرة متعددة النوى تمتص (تحلل) النسيج العظمي.",
         ),
         MedicalTermEntity(
             id = 1186,
@@ -1365,6 +1570,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈɒstioʊɪd/",
+            exampleEn = "The osteoid is the unmineralized organic component of bone matrix secreted by osteoblasts.",
+            exampleFr = "L'ostéoïde est composant organique non minéralisé de la matrice osseuse sécrété par les ostéoblastes.",
+            exampleAr = "العظمانيّ هو المكون العضوي غير المتمعدن من المطرس العظمي المُفرز بواسطة بانيات العظم.",
         ),
         MedicalTermEntity(
             id = 1187,
@@ -1377,6 +1585,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈɒstiɒn/",
+            exampleEn = "The osteon (haversian system) is the structural unit of compact bone consisting of concentric lamellae around a central canal.",
+            exampleFr = "L'ostéon (Système de Havers) est unité structurelle de l'os compact constituée de lamelles concentriques autour d'un canal central.",
+            exampleAr = "الوحدة العظمية (نظام هافرس) هو الوحدة البنائية للعظم الكثيف المكونة من صفائح متحدة المركز حول قناة مركزية.",
         ),
         MedicalTermEntity(
             id = 1188,
@@ -1389,6 +1600,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/həˈvɜːrʒən kəˈnæl/",
+            exampleEn = "The haversian canal is the central canal of an osteon containing blood vessels and nerves.",
+            exampleFr = "Le canal de Havers est canal central d'un ostéon contenant les vaisseaux sanguins et les nerfs.",
+            exampleAr = "قناة هافرس هو القناة المركزية للوحدة العظمية التي تحتوي على أوعية دموية وأعصاب.",
         ),
         MedicalTermEntity(
             id = 1189,
@@ -1401,6 +1615,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈvɒlkmənz/",
+            exampleEn = "The volkmann's canal is the transverse canal connecting adjacent Haversian canals.",
+            exampleFr = "Le canal de Volkmann est canal transversal reliant les canaux de Havers adjacents.",
+            exampleAr = "قناة فولكمان هو قناة مستعرضة تربط قنوات هافرس المتجاورة.",
         ),
         MedicalTermEntity(
             id = 1190,
@@ -1413,6 +1630,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ləˈmɛlə/",
+            exampleEn = "The lamella (pl. lamellae) is the thin layer of mineralized bone matrix arranged concentrically in an osteon.",
+            exampleFr = "La lamelle est fine couche de matrice osseuse minéralisée arrangée de manière concentrique dans un ostéon.",
+            exampleAr = "الصفيحة هو طبقة رقيقة من المطرس العظمي المتمعدن مرتبة بشكل متحد المركز في الوحدة العظمية.",
         ),
         MedicalTermEntity(
             id = 1191,
@@ -1425,6 +1645,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌkænəˈlɪkjʊləs/",
+            exampleEn = "The canaliculus (pl. canaliculi) is the tiny channel connecting osteocyte lacunae allowing nutrient exchange.",
+            exampleFr = "La canalicule est petit canal reliant les lacunes des ostéocytes permettant l'échange de nutriments.",
+            exampleAr = "القنية هو قناة صغيرة تربط ثغرات الخلايا العظمية وتسمح بتبادل المغذيات.",
         ),
         MedicalTermEntity(
             id = 1192,
@@ -1437,6 +1660,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌpɛriˈɒstiəm/",
+            exampleEn = "The periosteum is the dense membrane covering the outer surface of bone containing osteoblasts.",
+            exampleFr = "La périoste est membrane dense recouvrant la surface externe de l'os contenant des ostéoblastes.",
+            exampleAr = "السمحاق هو الغشاء الكثيف الذي يغطي السطح الخارجي للعظم ويحتوي على بانيات العظم.",
         ),
         MedicalTermEntity(
             id = 1193,
@@ -1449,6 +1675,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ɛnˈdɒstiəm/",
+            exampleEn = "The endosteum is the thin membrane lining the inner surface of bone (medullary cavity).",
+            exampleFr = "L'endoste est fine membrane tapissant la surface interne de l'os (cavité médullaire).",
+            exampleAr = "بطانة العظم هو الغشاء الرقيق الذي يبطن السطح الداخلي للعظم (التجويف النخاعي).",
         ),
         MedicalTermEntity(
             id = 1194,
@@ -1509,6 +1738,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ɪˌpɪˈfɪziəl pleɪt/",
+            exampleEn = "The epiphyseal plate (growth plate) is the hyaline cartilage plate between epiphysis and diaphysis responsible for longitudinal bone growth.",
+            exampleFr = "Le cartilage de croissance (Plaque épiphysaire) est plaque de cartilage hyalin entre l'épiphyse et la diaphyse responsable de la croissance osseuse longitudinale.",
+            exampleAr = "صفيحة النمو هو صفيحة الغضروف الزجاجي بين المشاشة وجسم العظم المسؤولة عن النمو الطولي للعظم.",
         ),
         MedicalTermEntity(
             id = 1199,
@@ -1521,6 +1753,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈhaʊʃɪps ləˈkjuːnə/",
+            exampleEn = "The howship's lacuna (resorption pit) is the pit or groove on bone surface created by osteoclast resorption.",
+            exampleFr = "La lacune de Howship est fosse ou sillon sur la surface osseuse créé par la résorption ostéoclastique.",
+            exampleAr = "ثغرة هاوشيب هو حفرة أو أخدود على سطح العظم ناتج عن الامتصاص بواسطة ناقضات العظم.",
         ),
         MedicalTermEntity(
             id = 1200,
@@ -1533,6 +1768,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈmʌsəl ˈtɪʃuː/",
+            exampleEn = "The muscle tissue is the tissue composed of contractile cells capable of producing movement.",
+            exampleFr = "La tissu musculaire est tissu composé de cellules contractiles capables de produire du mouvement.",
+            exampleAr = "النسيج العضلي هو نسيج مكون من خلايا انقباضية قادرة على إنتاج الحركة.",
         ),
         MedicalTermEntity(
             id = 1201,
@@ -1581,6 +1819,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈmʌsəl ˈfaɪbər/",
+            exampleEn = "The muscle fiber (myofiber) is the single skeletal muscle cell that is a long multinucleated syncytium.",
+            exampleFr = "La fibre musculaire (Myofibre) est cellule musculaire squelettique unique qui est un long syncytium multinucléé.",
+            exampleAr = "الليف العضلي هو خلية عضلية هيكلية واحدة وهي مدمج خلوي طويل متعدد النوى.",
         ),
         MedicalTermEntity(
             id = 1205,
@@ -1593,6 +1834,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˌmaɪoʊˈfaɪbrɪl/",
+            exampleEn = "The myofibril is the contractile thread within a muscle fiber composed of sarcomeres.",
+            exampleFr = "La myofibrille est filament contractile au sein d'une fibre musculaire composé de sarcomères.",
+            exampleAr = "اللييف العضلي هو خيط انقباضي داخل الليف العضلي مكون من قسيمات عضلية.",
         ),
         MedicalTermEntity(
             id = 1206,
@@ -1605,6 +1849,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈsɑːrkəmɪər/",
+            exampleEn = "The sarcomere is the basic contractile unit of striated muscle between two Z-lines.",
+            exampleFr = "La sarcomère est unité contractile de base du muscle strié entre deux lignes Z.",
+            exampleAr = "القسيم العضلي هو الوحدة الانقباضية الأساسية للعضلة المخططة بين خطي Z.",
         ),
         MedicalTermEntity(
             id = 1207,
@@ -1617,6 +1864,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/eɪ bænd/",
+            exampleEn = "A band is the dark band of the sarcomere containing thick (myosin) filaments.",
+            exampleFr = "La bande A est bande sombre du sarcomère contenant les filaments épais (myosine).",
+            exampleAr = "النطاق A (الداكن) هو النطاق الداكن في القسيم العضلي الذي يحتوي على الخيوط السميكة (الميوسين).",
         ),
         MedicalTermEntity(
             id = 1208,
@@ -1629,6 +1879,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/aɪ bænd/",
+            exampleEn = "The i band is the light band of the sarcomere containing only thin (actin) filaments.",
+            exampleFr = "La bande I est bande claire du sarcomère contenant uniquement les filaments fins (actine).",
+            exampleAr = "النطاق I (الفاتح) هو النطاق الفاتح في القسيم العضلي الذي يحتوي على الخيوط الرفيعة (الأكتين) فقط.",
         ),
         MedicalTermEntity(
             id = 1209,
@@ -1641,6 +1894,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/eɪtʃ zoʊn/",
+            exampleEn = "The h zone is the central lighter region of the A band containing only thick filaments.",
+            exampleFr = "La zone H est région centrale plus claire de la bande A contenant uniquement les filaments épais.",
+            exampleAr = "المنطقة H هو المنطقة المركزية الأفتح من النطاق A التي تحتوي على الخيوط السميكة فقط.",
         ),
         MedicalTermEntity(
             id = 1210,
@@ -1653,6 +1909,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ziː laɪn/",
+            exampleEn = "The z line (z disc) is the boundary of a sarcomere where thin filaments are anchored.",
+            exampleFr = "La ligne Z (Disque Z) est limite d'un sarcomère où les filaments fins sont ancrés.",
+            exampleAr = "خط Z هو حدود القسيم العضلي حيث تُثبت الخيوط الرفيعة.",
         ),
         MedicalTermEntity(
             id = 1211,
@@ -1665,6 +1924,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ɛm laɪn/",
+            exampleEn = "The m line is the central line of the sarcomere connecting thick filaments.",
+            exampleFr = "La ligne M est ligne centrale du sarcomère connectant les filaments épais.",
+            exampleAr = "خط M هو الخط المركزي للقسيم العضلي الذي يربط الخيوط السميكة.",
         ),
         MedicalTermEntity(
             id = 1212,
@@ -1677,6 +1939,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ɪnˈtɜːrkəˌleɪtɪd dɪsk/",
+            exampleEn = "The intercalated disc is the specialized junction between cardiac muscle cells containing desmosomes and gap junctions.",
+            exampleFr = "La disque intercalaire est jonction spécialisée entre les cellules musculaires cardiaques contenant des desmosomes et des jonctions communicantes.",
+            exampleAr = "القرص المقحم هو الوصلة المتخصصة بين خلايا العضلة القلبية تحتوي على جسيمات رابطة ووصلات فجوية.",
         ),
         MedicalTermEntity(
             id = 1213,
@@ -1689,6 +1954,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˌɛndoʊˈmɪziəm/",
+            exampleEn = "The endomysium is the thin connective tissue layer surrounding each individual muscle fiber.",
+            exampleFr = "L'endomysium est fine couche de tissu conjonctif entourant chaque fibre musculaire individuelle.",
+            exampleAr = "بطانة الليف العضلي هو طبقة رقيقة من النسيج الضام تحيط بكل ليف عضلي على حدة.",
         ),
         MedicalTermEntity(
             id = 1214,
@@ -1701,6 +1969,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˌpɛrɪˈmɪziəm/",
+            exampleEn = "The perimysium is the connective tissue layer surrounding a bundle (fascicle) of muscle fibers.",
+            exampleFr = "La périmysium est couche de tissu conjonctif entourant un faisceau (fascicule) de fibres musculaires.",
+            exampleAr = "غلاف الحزمة العضلية هو طبقة النسيج الضام المحيطة بحزمة من الألياف العضلية.",
         ),
         MedicalTermEntity(
             id = 1215,
@@ -1713,6 +1984,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˌɛpɪˈmɪziəm/",
+            exampleEn = "The epimysium is the dense connective tissue layer surrounding the entire muscle.",
+            exampleFr = "L'épimysium est couche de tissu conjonctif dense entourant le muscle entier.",
+            exampleAr = "غلاف العضلة هو طبقة النسيج الضام الكثيف المحيطة بالعضلة بأكملها.",
         ),
         MedicalTermEntity(
             id = 1216,
@@ -1725,6 +1999,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈfæsɪkəl/",
+            exampleEn = "The fascicle is the bundle of muscle fibers wrapped by perimysium.",
+            exampleFr = "La fascicule est faisceau de fibres musculaires enveloppé par le périmysium.",
+            exampleAr = "الحزمة هو حزمة من الألياف العضلية ملفوفة بغلاف الحزمة العضلية.",
         ),
         MedicalTermEntity(
             id = 1217,
@@ -1737,6 +2014,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈsɑːrkoʊplæzəm/",
+            exampleEn = "The sarcoplasm is the cytoplasm of a muscle cell containing myofibrils and organelles.",
+            exampleFr = "La sarcoplasme est cytoplasme d'une cellule musculaire contenant les myofibrilles et les organites.",
+            exampleAr = "الهيولى العضلية هو سيتوبلازم الخلية العضلية المحتوي على اللييفات العضلية والعضيات.",
         ),
         MedicalTermEntity(
             id = 1218,
@@ -1749,6 +2029,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˌsɑːrkoʊˈlɛmə/",
+            exampleEn = "The sarcolemma is the cell membrane of a muscle fiber.",
+            exampleFr = "La sarcolemme est membrane cellulaire d'une fibre musculaire.",
+            exampleAr = "غشاء الليف العضلي هو الغشاء الخلوي للليف العضلي.",
         ),
         MedicalTermEntity(
             id = 1219,
@@ -1761,6 +2044,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/tiː ˈtjuːbjuːl/",
+            exampleEn = "The t-tubule (transverse tubule) is the invagination of the sarcolemma conducting action potentials into the muscle fiber.",
+            exampleFr = "La tubule T (Tubule transverse) est invagination du sarcolemme conduisant les potentiels d'action dans la fibre musculaire.",
+            exampleAr = "النُبيب المستعرض هو انغماد في غشاء الليف العضلي ينقل جهود الفعل إلى داخل الليف العضلي.",
         ),
         MedicalTermEntity(
             id = 1220,
@@ -1773,6 +2059,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈtraɪæd/",
+            exampleEn = "The triad is the functional unit of one T-tubule flanked by two terminal cisternae of sarcoplasmic reticulum.",
+            exampleFr = "La triade est unité fonctionnelle d'un tubule T flanqué de deux citernes terminales du réticulum sarcoplasmique.",
+            exampleAr = "الثالوث هو الوحدة الوظيفية من نُبيب مستعرض واحد محاط بصهريجين نهائيين من الشبكة الهيولية العضلية.",
         ),
         MedicalTermEntity(
             id = 1221,
@@ -1785,6 +2074,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈmʌsəl ˈspɪndəl/",
+            exampleEn = "The muscle spindle is the sensory receptor within skeletal muscle detecting changes in muscle length (stretch).",
+            exampleFr = "Le fuseau neuromusculaire est récepteur sensoriel dans le muscle squelettique détectant les changements de longueur musculaire (étirement).",
+            exampleAr = "المغزل العضلي هو مستقبل حسي داخل العضلة الهيكلية يكشف تغيرات طول العضلة (التمدد).",
         ),
         MedicalTermEntity(
             id = 1222,
@@ -1797,6 +2089,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈnɜːrvəs ˈtɪʃuː/",
+            exampleEn = "The nervous tissue is the tissue composed of neurons and glial cells transmitting electrical signals.",
+            exampleFr = "La tissu nerveux est tissu composé de neurones et de cellules gliales transmettant des signaux électriques.",
+            exampleAr = "النسيج العصبي هو نسيج مكون من العصبونات والخلايا الدبقية ينقل إشارات كهربائية.",
         ),
         MedicalTermEntity(
             id = 1223,
@@ -1809,6 +2104,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈnjʊərɒn/",
+            exampleEn = "The neuron (nerve cell) is the functional unit of the nervous system that generates and transmits nerve impulses.",
+            exampleFr = "La neurone (Cellule nerveuse) est unité fonctionnelle du système nerveux générant et transmettant les influx nerveux.",
+            exampleAr = "العصبون (الخلية العصبية) هو الوحدة الوظيفية للجهاز العصبي التي تولد وتنقل النبضات العصبية.",
         ),
         MedicalTermEntity(
             id = 1224,
@@ -1821,6 +2119,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/sɛl ˈbɒdi/",
+            exampleEn = "The cell body (soma/perikaryon) is the part of the neuron containing the nucleus and most organelles.",
+            exampleFr = "La corps cellulaire (Soma/Péricaryon) est partie du neurone contenant le noyau et la plupart des organites.",
+            exampleAr = "جسم الخلية هو الجزء من العصبون الذي يحتوي على النواة ومعظم العضيات.",
         ),
         MedicalTermEntity(
             id = 1225,
@@ -1833,6 +2134,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈæksɒn/",
+            exampleEn = "The axon is the single long process conducting impulses away from the cell body.",
+            exampleFr = "L'axone est prolongement unique et long conduisant les impulsions loin du corps cellulaire.",
+            exampleAr = "المحور العصبي هو استطالة واحدة طويلة تنقل النبضات بعيداً عن جسم الخلية.",
         ),
         MedicalTermEntity(
             id = 1226,
@@ -1857,6 +2161,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈæksɒn ˈhɪlɒk/",
+            exampleEn = "The axon hillock is the region of the cell body where the axon originates and action potentials are initiated.",
+            exampleFr = "La cône d'émergence (Colline axonale) est région du corps cellulaire où l'axone prend naissance et où les potentiels d'action sont initiés.",
+            exampleAr = "التل المحوري هو منطقة جسم الخلية حيث ينشأ المحور العصبي وتبدأ جهود الفعل.",
         ),
         MedicalTermEntity(
             id = 1228,
@@ -1893,6 +2200,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˌɒlɪɡoʊˈdɛndroʊsaɪt/",
+            exampleEn = "The oligodendrocyte is the glial cell forming myelin sheaths around axons in the CNS.",
+            exampleFr = "L'oligodendrocyte est cellule gliale formant les gaines de myéline autour des axones dans le SNC.",
+            exampleAr = "الخلية قليلة التغصن هو خلية دبقية تشكل أغماد الميالين حول المحاور العصبية في الجهاز العصبي المركزي.",
         ),
         MedicalTermEntity(
             id = 1231,
@@ -1905,6 +2215,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ʃwɒn sɛl/",
+            exampleEn = "The schwann cell (neurilemma cell) is the glial cell forming myelin sheaths around axons in the PNS.",
+            exampleFr = "La cellule de Schwann (Neurilemme) est cellule gliale formant les gaines de myéline autour des axones dans le SNP.",
+            exampleAr = "خلية شوان هو خلية دبقية تشكل أغماد الميالين حول المحاور العصبية في الجهاز العصبي المحيطي.",
         ),
         MedicalTermEntity(
             id = 1232,
@@ -1929,6 +2242,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ɪˈpɛndɪməl/",
+            exampleEn = "The ependymal cell is the ciliated glial cell lining the ventricles and central canal producing and circulating CSF.",
+            exampleFr = "La cellule épendymaire est cellule gliale ciliée tapissant les ventricules et le canal central produisant et faisant circuler le LCR.",
+            exampleAr = "الخلية البطانية العصبية هو خلية دبقية مهدبة تبطن البطينات والقناة المركزية تنتج وتدور السائل الدماغي الشوكي.",
         ),
         MedicalTermEntity(
             id = 1234,
@@ -1941,6 +2257,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈsætəlaɪt/",
+            exampleEn = "The satellite cell (nervous) is the glial cell surrounding neuron cell bodies in peripheral ganglia.",
+            exampleFr = "La cellule satellite (Nerveuse) est cellule gliale entourant les corps cellulaires des neurones dans les ganglions périphériques.",
+            exampleAr = "الخلية التابعة (العصبية) هو خلية دبقية تحيط بأجسام العصبونات في العقد المحيطية.",
         ),
         MedicalTermEntity(
             id = 1235,
@@ -1953,6 +2272,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈmaɪəlɪn ʃiːθ/",
+            exampleEn = "The myelin sheath is the insulating lipid-rich layer around axons that speeds up nerve impulse conduction.",
+            exampleFr = "La gaine de myéline est couche isolante riche en lipides autour des axones accélérant la conduction de l'influx nerveux.",
+            exampleAr = "غمد الميالين هو الطبقة العازلة الغنية بالدهون حول المحاور العصبية التي تسرع توصيل النبضة العصبية.",
         ),
         MedicalTermEntity(
             id = 1236,
@@ -1965,6 +2287,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/noʊd əv ˈrɒnvieɪ/",
+            exampleEn = "The node of ranvier is the gap in the myelin sheath where the axon is exposed allowing saltatory conduction.",
+            exampleFr = "La nœud de Ranvier est espace dans la gaine de myéline où l'axone est exposé permettant la conduction saltatoire.",
+            exampleAr = "عقدة رانفييه هو فجوة في غمد الميالين حيث يكون المحور مكشوفاً مما يسمح بالتوصيل القفزي.",
         ),
         MedicalTermEntity(
             id = 1237,
@@ -1977,6 +2302,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈsɪnæps/",
+            exampleEn = "The synapse is the junction between two neurons or a neuron and effector cell for signal transmission.",
+            exampleFr = "La synapse est jonction entre deux neurones ou un neurone et une cellule effectrice pour la transmission du signal.",
+            exampleAr = "المشبك العصبي هو الوصلة بين عصبونين أو بين عصبون وخلية مستجيبة لنقل الإشارة.",
         ),
         MedicalTermEntity(
             id = 1238,
@@ -1989,6 +2317,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈɡæŋɡliən/",
+            exampleEn = "The ganglion (pl. ganglia) is the cluster of nerve cell bodies located outside the CNS.",
+            exampleFr = "Le ganglion est amas de corps cellulaires nerveux situés en dehors du SNC.",
+            exampleAr = "العقدة العصبية هو تجمع أجسام الخلايا العصبية الموجودة خارج الجهاز العصبي المركزي.",
         ),
         MedicalTermEntity(
             id = 1239,
@@ -2001,6 +2332,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/nɜːrv/",
+            exampleEn = "The nerve is the bundle of nerve fibers (axons) wrapped in connective tissue layers in the PNS.",
+            exampleFr = "La nerf est faisceau de fibres nerveuses (axones) enveloppé de couches de tissu conjonctif dans le SNP.",
+            exampleAr = "العصب هو حزمة من الألياف العصبية (المحاور) ملفوفة بطبقات من النسيج الضام في الجهاز العصبي المحيطي.",
         ),
         MedicalTermEntity(
             id = 1240,
@@ -2013,6 +2347,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˌɛndoʊˈnjʊəriəm/",
+            exampleEn = "The endoneurium is the delicate connective tissue surrounding each individual nerve fiber.",
+            exampleFr = "L'endonèvre est tissu conjonctif délicat entourant chaque fibre nerveuse individuelle.",
+            exampleAr = "بطانة الليف العصبي هو النسيج الضام الرقيق المحيط بكل ليف عصبي على حدة.",
         ),
         MedicalTermEntity(
             id = 1241,
@@ -2025,6 +2362,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˌpɛrɪˈnjʊəriəm/",
+            exampleEn = "The perineurium is the connective tissue wrapping around a fascicle of nerve fibers.",
+            exampleFr = "La périnèvre est tissu conjonctif enveloppant un fascicule de fibres nerveuses.",
+            exampleAr = "غلاف الحزمة العصبية هو النسيج الضام الملتف حول حزمة من الألياف العصبية.",
         ),
         MedicalTermEntity(
             id = 1242,
@@ -2037,6 +2377,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˌɛpɪˈnjʊəriəm/",
+            exampleEn = "The epineurium is the outermost connective tissue layer surrounding the entire nerve.",
+            exampleFr = "L'épinèvre est couche de tissu conjonctif la plus externe entourant le nerf entier.",
+            exampleAr = "غلاف العصب هو الطبقة الخارجية من النسيج الضام المحيطة بالعصب بأكمله.",
         ),
         MedicalTermEntity(
             id = 1243,
@@ -2049,6 +2392,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/blʌd/",
+            exampleEn = "The blood is the specialized liquid connective tissue circulating through the cardiovascular system.",
+            exampleFr = "La sang est tissu conjonctif liquide spécialisé circulant dans le système cardiovasculaire.",
+            exampleAr = "الدم هو نسيج ضام سائل متخصص يدور في الجهاز القلبي الوعائي.",
         ),
         MedicalTermEntity(
             id = 1244,
@@ -2073,6 +2419,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ɪˈrɪθroʊsaɪt/",
+            exampleEn = "The erythrocyte (red blood cell) is the anucleate biconcave disc containing hemoglobin for oxygen transport.",
+            exampleFr = "L'érythrocyte (Globule rouge) est disque biconcave anucléé contenant l'hémoglobine pour le transport de l'oxygène.",
+            exampleAr = "كرية الدم الحمراء هو قرص مقعر الوجهين بدون نواة يحتوي على الهيموغلوبين لنقل الأكسجين.",
         ),
         MedicalTermEntity(
             id = 1246,
@@ -2085,6 +2434,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/rɪˈtɪkjʊloʊsaɪt/",
+            exampleEn = "The reticulocyte is the immature red blood cell still containing residual RNA.",
+            exampleFr = "La réticulocyte est globule rouge immature contenant encore de l'ARN résiduel.",
+            exampleAr = "الخلية الشبكية هو كرية دم حمراء غير ناضجة تحتوي على بقايا RNA.",
         ),
         MedicalTermEntity(
             id = 1247,
@@ -2097,6 +2449,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˈnjuːtrəfɪl/",
+            exampleEn = "The neutrophil is the most abundant WBC with multilobed nucleus; first responder to bacterial infection.",
+            exampleFr = "La neutrophile est gB le plus abondant avec noyau multilobé; premier intervenant contre l'infection bactérienne.",
+            exampleAr = "العدلة (الخلية المتعادلة) هو أكثر كريات الدم البيضاء وفرة بنواة متعددة الفصوص؛ أول المستجيبين للعدوى البكتيرية.",
         ),
         MedicalTermEntity(
             id = 1248,
@@ -2109,6 +2464,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˌiːəˈsɪnəfɪl/",
+            exampleEn = "The eosinophil is the WBC with bilobed nucleus and eosinophilic granules; combats parasites and allergies.",
+            exampleFr = "L'éosinophile est gB avec noyau bilobé et granules éosinophiles; combat les parasites et les allergies.",
+            exampleAr = "الخلية الحمضية هو كرية دم بيضاء بنواة ثنائية الفصوص وحبيبات حمضية؛ تحارب الطفيليات والحساسية.",
         ),
                 MedicalTermEntity(
             id = 1250,
@@ -2121,6 +2479,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˈlɪmfəsaɪt/",
+            exampleEn = "The lymphocyte is the WBC with a large round nucleus responsible for adaptive immunity (B cells and T cells).",
+            exampleFr = "La lymphocyte est gB avec un grand noyau rond responsable de l'immunité adaptative (cellules B et T).",
+            exampleAr = "الخلية اللمفاوية هو كرية دم بيضاء بنواة مستديرة كبيرة مسؤولة عن المناعة التكيفية (خلايا B وT).",
         ),
         MedicalTermEntity(
             id = 1251,
@@ -2133,6 +2494,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˈmɒnoʊsaɪt/",
+            exampleEn = "The monocyte is the largest WBC with a kidney-shaped nucleus; precursor to macrophages.",
+            exampleFr = "La monocyte est plus grand GB avec un noyau en forme de rein; précurseur des macrophages.",
+            exampleAr = "الخلية الوحيدة هو أكبر كريات الدم البيضاء بنواة على شكل كلية؛ طليعة البلاعم الكبيرة.",
         ),
         MedicalTermEntity(
             id = 1252,
@@ -2145,6 +2509,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˈpleɪtlɪt/",
+            exampleEn = "The platelet (thrombocyte) is the anucleate cell fragment from megakaryocytes essential for blood clotting.",
+            exampleFr = "La plaquette (Thrombocyte) est fragment cellulaire anucléé des mégacaryocytes essentiel à la coagulation sanguine.",
+            exampleAr = "الصفيحة الدموية هو جزء خلوي بدون نواة من الخلايا النواءية ضروري لتخثر الدم.",
         ),
         MedicalTermEntity(
             id = 1253,
@@ -2157,6 +2524,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˌmɛɡəˈkæriəsaɪt/",
+            exampleEn = "The megakaryocyte is the large bone marrow cell that produces platelets by fragmentation of its cytoplasm.",
+            exampleFr = "La mégacaryocyte est grande cellule de la moelle osseuse produisant les plaquettes par fragmentation de son cytoplasme.",
+            exampleAr = "الخلية النواءية هو خلية كبيرة في نخاع العظم تنتج الصفيحات بتجزئة سيتوبلازمها.",
         ),
         MedicalTermEntity(
             id = 1254,
@@ -2169,6 +2539,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˌhiːmətəˈpɔɪiːsɪs/",
+            exampleEn = "The hematopoiesis is the process of blood cell formation occurring in the bone marrow.",
+            exampleFr = "L'hématopoïèse est processus de formation des cellules sanguines se produisant dans la moelle osseuse.",
+            exampleAr = "تكون الدم هو عملية تكوين خلايا الدم التي تحدث في نخاع العظم.",
         ),
         MedicalTermEntity(
             id = 1255,
@@ -2181,6 +2554,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˌhiːmətəˈpɔɪɛtɪk/",
+            exampleEn = "The hematopoietic stem cell is the pluripotent stem cell in bone marrow giving rise to all blood cell types.",
+            exampleFr = "La cellule souche hématopoïétique est cellule souche pluripotente de la moelle osseuse donnant naissance à tous les types de cellules sanguines.",
+            exampleAr = "الخلية الجذعية المكونة للدم هو خلية جذعية متعددة القدرات في نخاع العظم تنشأ منها جميع أنواع خلايا الدم.",
         ),
         MedicalTermEntity(
             id = 1256,
@@ -2193,6 +2569,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/blʌd smɪər/",
+            exampleEn = "The blood smear is the thin layer of blood spread on a slide for microscopic examination.",
+            exampleFr = "Le frottis sanguin est fine couche de sang étalée sur une lame pour examen microscopique.",
+            exampleAr = "اللطاخة الدموية هو طبقة رقيقة من الدم ممدودة على شريحة للفحص المجهري.",
         ),
         MedicalTermEntity(
             id = 1257,
@@ -2205,6 +2584,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/raɪt steɪn/",
+            exampleEn = "The wright stain is the differential stain used for blood smears identifying different WBC types.",
+            exampleFr = "Le coloration de Wright est coloration différentielle utilisée pour les frottis sanguins identifiant les différents types de GB.",
+            exampleAr = "صبغة رايت هو صبغة تفريقية تُستخدم للطاخات الدموية لتحديد أنواع كريات الدم البيضاء المختلفة.",
         ),
         MedicalTermEntity(
             id = 1258,
@@ -2217,6 +2599,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˈɡrænjʊloʊsaɪt/",
+            exampleEn = "The granulocyte is the WBC containing visible cytoplasmic granules (neutrophil, eosinophil, basophil).",
+            exampleFr = "La granulocyte est gB contenant des granules cytoplasmiques visibles (neutrophile, éosinophile, basophile).",
+            exampleAr = "الخلية المحببة هو كرية دم بيضاء تحتوي على حبيبات سيتوبلازمية مرئية (عدلة، حمضية، قاعدية).",
         ),
         MedicalTermEntity(
             id = 1259,
@@ -2229,6 +2614,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/eɪˈɡrænjʊloʊsaɪt/",
+            exampleEn = "The agranulocyte is the WBC lacking visible cytoplasmic granules (lymphocyte, monocyte).",
+            exampleFr = "L'agranulocyte est gB dépourvu de granules cytoplasmiques visibles (lymphocyte, monocyte).",
+            exampleAr = "الخلية غير المحببة هو كرية دم بيضاء تفتقر إلى حبيبات سيتوبلازمية مرئية (لمفاوية، وحيدة).",
         ),
         MedicalTermEntity(
             id = 1260,
@@ -2241,6 +2629,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/skɪn/",
+            exampleEn = "The skin (integument) is the largest organ of the body composed of epidermis, dermis, and hypodermis.",
+            exampleFr = "Le peau (Tégument) est plus grand organe du corps composé de l'épiderme, du derme et de l'hypoderme.",
+            exampleAr = "الجلد هو أكبر عضو في الجسم يتكون من البشرة والأدمة وتحت الأدمة.",
         ),
         MedicalTermEntity(
             id = 1261,
@@ -2253,6 +2644,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˌɛpɪˈdɜːrmɪs/",
+            exampleEn = "The epidermis is the outermost layer of skin composed of keratinized stratified squamous epithelium.",
+            exampleFr = "L'épiderme est couche la plus externe de la peau composée d'épithélium pavimenteux stratifié kératinisé.",
+            exampleAr = "البشرة هو الطبقة الأخارجية من الجلد مكونة من ظهارة حرشفية طبقية متقرنة.",
         ),
         MedicalTermEntity(
             id = 1262,
@@ -2265,6 +2659,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈdɜːrmɪs/",
+            exampleEn = "The dermis is the layer of skin beneath the epidermis composed of connective tissue containing vessels and nerves.",
+            exampleFr = "La derme est couche de peau sous l'épiderme composée de tissu conjonctif contenant vaisseaux et nerfs.",
+            exampleAr = "الأدمة هو طبقة الجلد تحت البشرة مكونة من نسيج ضام يحتوي على أوعية وأعصاب.",
         ),
         MedicalTermEntity(
             id = 1263,
@@ -2277,6 +2674,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˌhaɪpoʊˈdɜːrmɪs/",
+            exampleEn = "The hypodermis (subcutaneous layer) is the deepest layer of skin composed mainly of adipose tissue.",
+            exampleFr = "L'hypoderme (Tissu sous-cutané) est couche la plus profonde de la peau composée principalement de tissu adipeux.",
+            exampleAr = "تحت الأدمة هو الطبقة الأعمق من الجلد مكونة أساساً من النسيج الدهني.",
         ),
         MedicalTermEntity(
             id = 1264,
@@ -2289,6 +2689,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈstreɪtəm bəˈseɪli/",
+            exampleEn = "The stratum basale (basal layer) is the deepest epidermal layer containing stem cells and melanocytes.",
+            exampleFr = "La couche basale est couche épidermique la plus profonde contenant les cellules souches et les mélanocytes.",
+            exampleAr = "الطبقة القاعدية هو أعمق طبقة بشرية تحتوي على الخلايا الجذعية والخلايا الميلانينية.",
         ),
         MedicalTermEntity(
             id = 1265,
@@ -2301,6 +2704,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈstreɪtəm spɪˈnoʊsəm/",
+            exampleEn = "The stratum spinosum (prickle cell layer) is the epidermal layer with cells connected by desmosomes giving a spiny appearance.",
+            exampleFr = "La couche épineuse est couche épidermique avec des cellules connectées par des desmosomes donnant un aspect épineux.",
+            exampleAr = "الطبقة الشوكية هو الطبقة البشرية بخلايا متصلة بجسيمات رابطة تعطي مظهراً شوكياً.",
         ),
         MedicalTermEntity(
             id = 1266,
@@ -2313,6 +2719,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈstreɪtəm ˌɡrænjʊˈloʊsəm/",
+            exampleEn = "The stratum granulosum (granular layer) is the epidermal layer where keratinization begins with keratohyalin granules.",
+            exampleFr = "La couche granuleuse est couche épidermique où la kératinisation commence avec les granules de kératohyaline.",
+            exampleAr = "الطبقة الحبيبية هو الطبقة البشرية حيث يبدأ التقرن مع حبيبات الكيراتوهيالين.",
         ),
         MedicalTermEntity(
             id = 1267,
@@ -2325,6 +2734,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈstreɪtəm ˈluːsɪdəm/",
+            exampleEn = "The stratum lucidum (clear layer) is the thin translucent layer found only in thick skin (palms and soles).",
+            exampleFr = "La couche claire est couche mince translucide trouvée uniquement dans la peau épaisse (paumes et plantes).",
+            exampleAr = "الطبقة الشفافة هو طبقة رقيقة شفافة توجد فقط في الجلد السميك (الراحتان والأخمصان).",
         ),
         MedicalTermEntity(
             id = 1268,
@@ -2337,6 +2749,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈstreɪtəm ˈkɔːrniəm/",
+            exampleEn = "The stratum corneum (horny layer) is the outermost epidermal layer of dead keratinized cells providing a waterproof barrier.",
+            exampleFr = "La couche cornée est couche épidermique la plus externe de cellules kératinisées mortes formant une barrière imperméable.",
+            exampleAr = "الطبقة المتقرنة هو الطبقة البشرية الأخارجية من خلايا متقرنة ميتة توفر حاجزاً مقاوماً للماء.",
         ),
         MedicalTermEntity(
             id = 1269,
@@ -2349,6 +2764,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/kəˈrætɪnoʊsaɪt/",
+            exampleEn = "The keratinocyte is the most abundant epidermal cell producing keratin (90% of epidermis).",
+            exampleFr = "La kératinocyte est cellule épidermique la plus abondante produisant la kératine (90% de l'épiderme).",
+            exampleAr = "الخلية الكيراتينية هو الخلية الأكثر وفرة في البشرة تنتج الكيراتين (90% من البشرة).",
         ),
         MedicalTermEntity(
             id = 1270,
@@ -2361,6 +2779,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈmɛlənoʊsaɪt/",
+            exampleEn = "The melanocyte is the cell producing melanin pigment that protects against UV radiation.",
+            exampleFr = "La mélanocyte est cellule produisant le pigment mélanine protégeant contre les rayons UV.",
+            exampleAr = "الخلية الميلانينية هو خلية تنتج صبغة الميلانين التي تحمي من الأشعة فوق البنفسجية.",
         ),
         MedicalTermEntity(
             id = 1271,
@@ -2373,6 +2794,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈmɛlənɪn/",
+            exampleEn = "The melanin is the brown-black pigment produced by melanocytes determining skin color.",
+            exampleFr = "La mélanine est pigment brun-noir produit par les mélanocytes déterminant la couleur de la peau.",
+            exampleAr = "الميلانين هو الصبغة البنية السوداء المنتجة بواسطة الخلايا الميلانينية التي تحدد لون البشرة.",
         ),
         MedicalTermEntity(
             id = 1272,
@@ -2385,6 +2809,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈlæŋɡərhænz/",
+            exampleEn = "The langerhans cell is the antigen-presenting dendritic immune cell in the epidermis.",
+            exampleFr = "La cellule de Langerhans est cellule immunitaire dendritique présentatrice d'antigène dans l'épiderme.",
+            exampleAr = "خلية لانغرهانس هو خلية مناعية شجيرية عارضة للمستضدات في البشرة.",
         ),
         MedicalTermEntity(
             id = 1273,
@@ -2397,6 +2824,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈmɜːrkəl/",
+            exampleEn = "The merkel cell is the mechanoreceptor cell in the basal epidermis detecting light touch.",
+            exampleFr = "La cellule de Merkel est cellule mécanoréceptrice dans l'épiderme basal détectant le toucher léger.",
+            exampleAr = "خلية ميركل هو خلية مستقبلة ميكانيكية في البشرة القاعدية تكشف اللمس الخفيف.",
         ),
         MedicalTermEntity(
             id = 1274,
@@ -2409,6 +2839,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/sɪˈbeɪʃəs ɡlænd/",
+            exampleEn = "The sebaceous gland is the holocrine gland associated with hair follicles secreting sebum.",
+            exampleFr = "La glande sébacée est glande holocrine associée aux follicules pileux sécrétant le sébum.",
+            exampleAr = "الغدة الدهنية هو غدة شاملة الإفراز مرتبطة ببصيلات الشعر تفرز الزهم.",
         ),
         MedicalTermEntity(
             id = 1275,
@@ -2421,6 +2854,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/swɛt ɡlænd/",
+            exampleEn = "The sweat gland (sudoriferous) is the coiled tubular gland producing sweat for thermoregulation.",
+            exampleFr = "La glande sudoripare est glande tubulaire enroulée produisant la sueur pour la thermorégulation.",
+            exampleAr = "الغدة العرقية هو غدة أنبوبية ملتفة تنتج العرق لتنظيم الحرارة.",
         ),
         MedicalTermEntity(
             id = 1276,
@@ -2433,6 +2869,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/hɛər ˈfɒlɪkəl/",
+            exampleEn = "The hair follicle is the invagination of the epidermis from which hair grows.",
+            exampleFr = "La follicule pileux est invagination de l'épiderme à partir de laquelle le poil pousse.",
+            exampleAr = "بصيلة الشعر (الجريب الشعري) هو انغماد في البشرة تنمو منه الشعرة.",
         ),
         MedicalTermEntity(
             id = 1277,
@@ -2445,6 +2884,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/əˈrɛktər ˈpaɪlaɪ/",
+            exampleEn = "The arrector pili muscle is the smooth muscle attached to the hair follicle causing hair to stand erect (goosebumps).",
+            exampleFr = "La muscle arrecteur du poil est muscle lisse attaché au follicule pileux faisant se dresser le poil (chair de poule).",
+            exampleAr = "العضلة الناصبة للشعر هو عضلة ملساء مرتبطة ببصيلة الشعر تسبب انتصاب الشعر (قشعريرة).",
         ),
         MedicalTermEntity(
             id = 1278,
@@ -2457,6 +2899,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/ˈpæpɪlɛri/",
+            exampleEn = "The papillary dermis is the upper layer of the dermis with finger-like projections (dermal papillae) into the epidermis.",
+            exampleFr = "La derme papillaire est couche supérieure du derme avec des projections digitiformes (papilles dermiques) dans l'épiderme.",
+            exampleAr = "الأدمة الحليمية هو الطبقة العلوية من الأدمة ببروزات إصبعية (حليمات أدمية) في البشرة.",
         ),
         MedicalTermEntity(
             id = 1279,
@@ -2469,6 +2914,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Histologie de la Peau",
             ipaPhonetic = "/rɪˈtɪkjʊlər/",
+            exampleEn = "The reticular dermis is the deeper layer of the dermis with thick irregular collagen bundles.",
+            exampleFr = "La derme réticulaire est couche plus profonde du derme avec d'épais faisceaux de collagène irréguliers.",
+            exampleAr = "الأدمة الشبكية هو الطبقة الأعمق من الأدمة بحزم كولاجين غير منتظمة سميكة.",
         ),
         MedicalTermEntity(
             id = 1280,
@@ -2481,6 +2929,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌɔːrɡəˈnɛl/",
+            exampleEn = "The organelle is the membrane-bound structure within a cell performing a specific function.",
+            exampleFr = "L'organite est structure liée par une membrane au sein d'une cellule remplissant une fonction spécifique.",
+            exampleAr = "العضية هو بنية محاطة بغشاء داخل الخلية تؤدي وظيفة محددة.",
         ),
         MedicalTermEntity(
             id = 1281,
@@ -2493,6 +2944,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˈnjuːkliəs/",
+            exampleEn = "The nucleus is the membrane-bound organelle containing the cell's genetic material (DNA).",
+            exampleFr = "La noyau est organite limité par une membrane contenant le matériel génétique de la cellule (ADN).",
+            exampleAr = "النواة هو العضية المحاطة بغشاء التي تحتوي على المادة الوراثية للخلية (DNA).",
         ),
         MedicalTermEntity(
             id = 1282,
@@ -2505,6 +2959,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/njuːˈkliːələs/",
+            exampleEn = "The nucleolus is the dense body within the nucleus involved in ribosomal RNA synthesis.",
+            exampleFr = "La nucléole est corps dense au sein du noyau impliqué dans la synthèse de l'ARN ribosomal.",
+            exampleAr = "النوية هو جسم كثيف داخل النواة يشارك في تصنيع الحمض النووي الريبي الريبوسومي.",
         ),
         MedicalTermEntity(
             id = 1283,
@@ -2517,6 +2974,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˈkroʊmətɪn/",
+            exampleEn = "The chromatin is the dispersed form of DNA and histone proteins in non-dividing cells.",
+            exampleFr = "La chromatine est forme dispersée de l'ADN et des protéines histones dans les cellules en interphase.",
+            exampleAr = "الكروماتين هو الشكل المبعثر من DNA والبروتينات الهستونية في الخلايا غير المنقسمة.",
         ),
         MedicalTermEntity(
             id = 1284,
@@ -2553,6 +3013,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/rʌf ˌɛndəˈplæzmɪk/",
+            exampleEn = "Rough endoplasmic reticulum (RER) refers to ER studded with ribosomes synthesizing proteins for secretion or membrane insertion.",
+            exampleFr = "La réticulum endoplasmique rugueux (RER) est rE parsemé de ribosomes synthétisant des protéines pour la sécrétion ou l'insertion membranaire.",
+            exampleAr = "الشبكة الإندوبلازمية الخشنة هو الشبكة الإندوبلازمية المرصعة بالريبوسومات التي تصنع بروتينات للإفراز أو الإدراج في الغشاء.",
         ),
         MedicalTermEntity(
             id = 1287,
@@ -2565,6 +3028,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/smuːð/",
+            exampleEn = "Smooth endoplasmic reticulum (SER) refers to ER lacking ribosomes involved in lipid synthesis and detoxification.",
+            exampleFr = "La réticulum endoplasmique lisse (REL) est rE dépourvu de ribosomes impliqué dans la synthèse lipidique et la détoxification.",
+            exampleAr = "الشبكة الإندوبلازمية الملساء هو الشبكة الإندوبلازمية الخالية من الريبوسومات المشاركة في تصنيع الدهون وإزالة السموم.",
         ),
         MedicalTermEntity(
             id = 1288,
@@ -2577,6 +3043,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˈɡɒldʒi/",
+            exampleEn = "The golgi apparatus is the organelle modifying, packaging, and sorting proteins and lipids for secretion.",
+            exampleFr = "L'appareil de Golgi est organite modifiant, emballant et triant les protéines et lipides pour la sécrétion.",
+            exampleAr = "جهاز غولجي هو عضية تعدل وتغلف وتفرز البروتينات والدهون للإفراز.",
         ),
         MedicalTermEntity(
             id = 1289,
@@ -2589,6 +3058,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˈlaɪsəsoʊm/",
+            exampleEn = "The lysosome is the membrane-bound organelle containing hydrolytic enzymes for intracellular digestion.",
+            exampleFr = "La lysosome est organite limité par une membrane contenant des enzymes hydrolytiques pour la digestion intracellulaire.",
+            exampleAr = "الجسيم الحال هو عضية محاطة بغشاء تحتوي على إنزيمات حلمائية للهضم داخل الخلوي.",
         ),
         MedicalTermEntity(
             id = 1290,
@@ -2601,6 +3073,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌmaɪtəˈkɒndriə/",
+            exampleEn = "The mitochondria is the double-membrane organelle producing ATP through oxidative phosphorylation.",
+            exampleFr = "La mitochondrie est organite à double membrane produisant l'ATP par phosphorylation oxydative.",
+            exampleAr = "الميتوكوندريا هو العضية ذات الغشاء المزدوج التي تنتج ATP عبر الفسفرة التأكسدية.",
         ),
         MedicalTermEntity(
             id = 1291,
@@ -2613,6 +3088,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/pəˈrɒksɪsoʊm/",
+            exampleEn = "The peroxisome is the organelle containing oxidative enzymes that neutralize toxic substances using hydrogen peroxide.",
+            exampleFr = "La peroxysome est organite contenant des enzymes oxydatives neutralisant les substances toxiques par le peroxyde d'hydrogène.",
+            exampleAr = "الجسيم البيروكسيدي هو عضية تحتوي على إنزيمات تأكسدية تعادل المواد السامة باستخدام بيروكسيد الهيدروجين.",
         ),
         MedicalTermEntity(
             id = 1292,
@@ -2625,6 +3103,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌsaɪtəˈskɛlɪtən/",
+            exampleEn = "The cytoskeleton is the internal network of protein filaments maintaining cell shape and enabling movement.",
+            exampleFr = "La cytosquelette est réseau interne de filaments protéiques maintenant la forme cellulaire et permettant le mouvement.",
+            exampleAr = "الهيكل الخلوي هو الشبكة الداخلية من الخيوط البروتينية التي تحافظ على شكل الخلية وتمكنها من الحركة.",
         ),
         MedicalTermEntity(
             id = 1293,
@@ -2637,6 +3118,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌmaɪkroʊˈfɪləmənt/",
+            exampleEn = "The microfilament (actin filament) is the thinnest cytoskeletal element (7 nm) involved in cell movement and shape.",
+            exampleFr = "Le microfilament (Filament d'actine) est élément cytosquelettique le plus fin (7 nm) impliqué dans le mouvement et la forme cellulaire.",
+            exampleAr = "الخييط الدقيق (خيط الأكتين) هو أرق عنصر في الهيكل الخلوي (7 نانومتر) يشارك في حركة الخلية وشكلها.",
         ),
         MedicalTermEntity(
             id = 1294,
@@ -2649,6 +3133,7 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌɪntərˈmiːdiət/",
+            exampleEn = "The intermediate filament is the rope-like cytoskeletal element (10 nm) providing mechanical strength (e.g., keratin, vimentin, desmin).",
         ),
         MedicalTermEntity(
             id = 1295,
@@ -2661,6 +3146,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌmaɪkroʊˈtjuːbjuːl/",
+            exampleEn = "The microtubule is the hollow cylindrical cytoskeletal element (25 nm) of tubulin involved in transport and cell division.",
+            exampleFr = "La microtubule est élément cytosquelettique cylindrique creux (25 nm) de tubuline impliqué dans le transport et la division cellulaire.",
+            exampleAr = "الأنيبيب الدقيق هو عنصر أسطواني مجوف في الهيكل الخلوي (25 نانومتر) من التوبولين يشارك في النقل والانقسام الخلوي.",
         ),
         MedicalTermEntity(
             id = 1296,
@@ -2673,6 +3161,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/sɛl ˈsaɪkəl/",
+            exampleEn = "The cell cycle is the ordered sequence of events from one cell division to the next (G1, S, G2, M).",
+            exampleFr = "La cycle cellulaire est séquence ordonnée d'événements d'une division cellulaire à la suivante (G1, S, G2, M).",
+            exampleAr = "الدورة الخلوية هو التسلسل المنظم للأحداث من انقسام خلوي إلى آخر (G1، S، G2، M).",
         ),
         MedicalTermEntity(
             id = 1297,
@@ -2685,6 +3176,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˈɪntərfeɪz/",
+            exampleEn = "The interphase is the period between cell divisions where the cell grows and replicates DNA (G1 + S + G2).",
+            exampleFr = "L'interphase est période entre les divisions cellulaires où la cellule croît et réplique l'ADN (G1 + S + G2).",
+            exampleAr = "الطور البيني هو الفترة بين الانقسامات الخلوية حيث تنمو الخلية وتضاعف DNA (G1 + S + G2).",
         ),
         MedicalTermEntity(
             id = 1298,
@@ -2709,6 +3203,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/maɪˈoʊsɪs/",
+            exampleEn = "The meiosis is the type of cell division producing four haploid gametes with half the chromosome number.",
+            exampleFr = "La méiose est type de division cellulaire produisant quatre gamètes haploïdes avec la moitié du nombre de chromosomes.",
+            exampleAr = "الانقسام المنصف (الميوزي) هو نوع من الانقسام الخلوي ينتج أربع أعراس أحادية الصيغة الصبغية بنصف عدد الكروموسومات.",
         ),
         MedicalTermEntity(
             id = 1300,
@@ -2721,6 +3218,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˈproʊfeɪz/",
+            exampleEn = "The prophase is the first phase of mitosis where chromosomes condense and the spindle begins to form.",
+            exampleFr = "La prophase est première phase de la mitose où les chromosomes se condensent et le fuseau commence à se former.",
+            exampleAr = "الطور التمهيدي هو المرحلة الأولى من الانقسام المتساوي حيث تتكثف الكروموسومات ويبدأ تشكل المغزل.",
         ),
         MedicalTermEntity(
             id = 1301,
@@ -2733,6 +3233,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˈmɛtəfeɪz/",
+            exampleEn = "The metaphase is the phase where chromosomes align at the cell's equatorial plate.",
+            exampleFr = "La métaphase est phase où les chromosomes s'alignent à la plaque équatoriale de la cellule.",
+            exampleAr = "الطور الاستوائي هو المرحلة التي تصطف فيها الكروموسومات عند الصفيحة الاستوائية للخلية.",
         ),
         MedicalTermEntity(
             id = 1302,
@@ -2745,6 +3248,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˈænəfeɪz/",
+            exampleEn = "The anaphase is the phase where sister chromatids separate and move to opposite poles.",
+            exampleFr = "L'anaphase est phase où les chromatides sœurs se séparent et migrent vers les pôles opposés.",
+            exampleAr = "الطور الانفصالي هو المرحلة التي تنفصل فيها الكروماتيدات الشقيقة وتتحرك نحو القطبين المتقابلين.",
         ),
         MedicalTermEntity(
             id = 1303,
@@ -2757,6 +3263,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˈtɛləfeɪz/",
+            exampleEn = "The telophase is the final phase where nuclear envelopes reform and chromosomes decondense.",
+            exampleFr = "La télophase est phase finale où les enveloppes nucléaires se reforment et les chromosomes se décondensent.",
+            exampleAr = "الطور النهائي هو المرحلة الأخيرة حيث تتشكل الأغلفة النووية مجدداً وتتفكك الكروموسومات.",
         ),
         MedicalTermEntity(
             id = 1304,
@@ -2769,6 +3278,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˌsaɪtoʊkɪˈniːsɪs/",
+            exampleEn = "The cytokinesis is the division of the cytoplasm resulting in two separate daughter cells.",
+            exampleFr = "La cytocinèse est division du cytoplasme résultant en deux cellules filles séparées.",
+            exampleAr = "انقسام السيتوبلازم هو انقسام السيتوبلازم الذي ينتج عنه خليتان بنتان منفصلتان.",
         ),
         MedicalTermEntity(
             id = 1305,

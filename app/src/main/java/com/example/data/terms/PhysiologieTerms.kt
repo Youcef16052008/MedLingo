@@ -203,6 +203,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/sɛl/",
+            exampleEn = "The cell is the basic structural and functional unit of all living organisms.",
+            exampleFr = "La cellule est unité structurelle et fonctionnelle de base de tous les organismes vivants.",
+            exampleAr = "الخلية هو الوحدة البنائية والوظيفية الأساسية لجميع الكائنات الحية.",
         ),
         MedicalTermEntity(
             id = 424,
@@ -215,6 +218,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/sɛl ˈmɛmbreɪn/",
+            exampleEn = "The cell membrane is the semipermeable phospholipid bilayer surrounding the cell.",
+            exampleFr = "La membrane cellulaire est bicouche phospholipidique semi-perméable entourant la cellule.",
+            exampleAr = "الغشاء الخلوي هو طبقة فوسفوليبيدية مزدوجة نصف نفوذة تحيط بالخلية.",
         ),
         MedicalTermEntity(
             id = 425,
@@ -227,6 +233,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈsaɪtəplæzəm/",
+            exampleEn = "The cytoplasm is the gel-like substance inside the cell between the membrane and nucleus.",
+            exampleFr = "La cytoplasme est substance gélatineuse à l'intérieur de la cellule entre la membrane et le noyau.",
+            exampleAr = "السيتوبلازم هو المادة الهلامية داخل الخلية بين الغشاء والنواة.",
         ),
         MedicalTermEntity(
             id = 426,
@@ -239,6 +248,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈnjuːkliəs/",
+            exampleEn = "The nucleus is the organelle containing genetic material (DNA) and controlling cell activities.",
+            exampleFr = "La noyau est organite contenant le matériel génétique (ADN) et contrôlant les activités cellulaires.",
+            exampleAr = "النواة هو العضية التي تحتوي على المادة الوراثية (الحمض النووي) وتتحكم في أنشطة الخلية.",
         ),
         MedicalTermEntity(
             id = 427,
@@ -251,6 +263,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌmaɪtəˈkɒndriə/",
+            exampleEn = "The mitochondria is the organelle responsible for cellular respiration and ATP production.",
+            exampleFr = "La mitochondrie est organite responsable de la respiration cellulaire et de la production d'ATP.",
+            exampleAr = "الميتوكوندريا هو العضية المسؤولة عن التنفس الخلوي وإنتاج الطاقة (ATP).",
         ),
         MedicalTermEntity(
             id = 428,
@@ -263,6 +278,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌɛndəˈplæzmɪk rɪˈtɪkjʊləm/",
+            exampleEn = "The endoplasmic reticulum is the network of membranes involved in protein and lipid synthesis.",
+            exampleFr = "La réticulum endoplasmique est réseau de membranes impliqué dans la synthèse des protéines et des lipides.",
+            exampleAr = "الشبكة الإندوبلازمية هو شبكة من الأغشية تشارك في تصنيع البروتينات والدهون.",
         ),
         MedicalTermEntity(
             id = 429,
@@ -275,6 +293,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈɡɒldʒi ˌæpəˈreɪtəs/",
+            exampleEn = "The golgi apparatus is the organelle that modifies, packages, and distributes proteins.",
+            exampleFr = "L'appareil de Golgi est organite qui modifie, emballe et distribue les protéines.",
+            exampleAr = "جهاز غولجي هو العضية التي تعدل وتغلف وتوزع البروتينات.",
         ),
         MedicalTermEntity(
             id = 430,
@@ -287,6 +308,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈlaɪsəsoʊm/",
+            exampleEn = "The lysosome is the organelle containing digestive enzymes for breaking down waste.",
+            exampleFr = "La lysosome est organite contenant des enzymes digestives pour dégrader les déchets.",
+            exampleAr = "الجسيم الحال هو العضية التي تحتوي على إنزيمات هاضمة لتحليل النفايات.",
         ),
         MedicalTermEntity(
             id = 431,
@@ -299,6 +323,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈraɪbəsoʊm/",
+            exampleEn = "The ribosome is the cellular structure responsible for protein synthesis.",
+            exampleFr = "La ribosome est structure cellulaire responsable de la synthèse des protéines.",
+            exampleAr = "الريبوسوم هو البنية الخلوية المسؤولة عن تصنيع البروتينات.",
         ),
         MedicalTermEntity(
             id = 432,
@@ -311,6 +338,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/pəˈrɒksɪsoʊm/",
+            exampleEn = "The peroxisome is the organelle that breaks down fatty acids and detoxifies harmful substances.",
+            exampleFr = "La peroxysome est organite qui dégrade les acides gras et détoxifie les substances nocives.",
+            exampleAr = "البيروكسيسوم هو عضية تحلل الأحماض الدهنية وتزيل سمية المواد الضارة.",
         ),
         MedicalTermEntity(
             id = 433,
@@ -323,6 +353,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌsaɪtəˈskɛlɪtən/",
+            exampleEn = "The cytoskeleton is the network of protein filaments maintaining cell shape and enabling movement.",
+            exampleFr = "La cytosquelette est réseau de filaments protéiques maintenant la forme cellulaire et permettant le mouvement.",
+            exampleAr = "الهيكل الخلوي هو شبكة من الخيوط البروتينية تحافظ على شكل الخلية وتمكنها من الحركة.",
         ),
         MedicalTermEntity(
             id = 434,
@@ -335,6 +368,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈsɛntrəsoʊm/",
+            exampleEn = "The centrosome is the organelle that organizes microtubules during cell division.",
+            exampleFr = "La centrosome est organite qui organise les microtubules pendant la division cellulaire.",
+            exampleAr = "الجسيم المركزي هو عضية تنظم الأنيبيبات الدقيقة أثناء انقسام الخلية.",
         ),
         MedicalTermEntity(
             id = 435,
@@ -347,6 +383,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/dɪˈfjuːʒən/",
+            exampleEn = "The diffusion is the passive movement of molecules from high to low concentration.",
+            exampleFr = "Le diffusion est mouvement passif des molécules de haute vers basse concentration.",
+            exampleAr = "الانتشار هو الحركة السلبية للجزيئات من التركيز العالي إلى التركيز المنخفض.",
         ),
         MedicalTermEntity(
             id = 436,
@@ -359,6 +398,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ɒzˈmoʊsɪs/",
+            exampleEn = "The osmosis is the diffusion of water across a semipermeable membrane.",
+            exampleFr = "L'osmose est diffusion de l'eau à travers une membrane semi-perméable.",
+            exampleAr = "التناضح (الأسموزية) هو انتشار الماء عبر غشاء نصف نفوذ.",
         ),
         MedicalTermEntity(
             id = 437,
@@ -407,6 +449,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈsoʊdiəm pəˈtæsiəm pʌmp/",
+            exampleEn = "The sodium-potassium pump is the active transport mechanism that pumps 3 Na+ out and 2 K+ into the cell.",
+            exampleFr = "La pompe sodium-potassium est mécanisme de transport actif pompant 3 Na+ hors et 2 K+ dans la cellule.",
+            exampleAr = "مضخة الصوديوم والبوتاسيوم هو آلية نقل فعال تضخ 3 أيونات صوديوم للخارج و2 أيون بوتاسيوم للداخل.",
         ),
         MedicalTermEntity(
             id = 441,
@@ -419,6 +464,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌɛndoʊsaɪˈtoʊsɪs/",
+            exampleEn = "The endocytosis is the process by which cells engulf substances from outside.",
+            exampleFr = "L'endocytose est processus par lequel les cellules englobent des substances de l'extérieur.",
+            exampleAr = "الإدخال الخلوي هو العملية التي تبتلع بها الخلايا مواداً من الخارج.",
         ),
         MedicalTermEntity(
             id = 442,
@@ -431,6 +479,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌɛksoʊsaɪˈtoʊsɪs/",
+            exampleEn = "The exocytosis is the process by which cells release substances to the outside.",
+            exampleFr = "L'exocytose est processus par lequel les cellules libèrent des substances vers l'extérieur.",
+            exampleAr = "الإخراج الخلوي هو العملية التي تطلق بها الخلايا مواداً إلى الخارج.",
         ),
         MedicalTermEntity(
             id = 443,
@@ -443,6 +494,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌfæɡoʊsaɪˈtoʊsɪs/",
+            exampleEn = "The phagocytosis is the engulfment and digestion of particles by a cell (cell eating).",
+            exampleFr = "La phagocytose est englobement et digestion de particules par une cellule.",
+            exampleAr = "البلعمة هو ابتلاع وهضم الجسيمات بواسطة الخلية (أكل الخلية).",
         ),
         MedicalTermEntity(
             id = 444,
@@ -455,6 +509,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌpɪnoʊsaɪˈtoʊsɪs/",
+            exampleEn = "The pinocytosis is the ingestion of liquid by a cell (cell drinking).",
+            exampleFr = "La pinocytose est ingestion de liquide par une cellule (boisson cellulaire).",
+            exampleAr = "الاحتساء الخلوي هو ابتلاع السوائل بواسطة الخلية (شرب الخلية).",
         ),
         MedicalTermEntity(
             id = 445,
@@ -467,6 +524,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ɒzˈmɒtɪk ˈprɛʃər/",
+            exampleEn = "The osmotic pressure is the pressure required to prevent osmotic flow across a membrane.",
+            exampleFr = "Le pression osmotique est pression nécessaire pour empêcher le flux osmotique à travers une membrane.",
+            exampleAr = "الضغط الأسموزي هو الضغط اللازم لمنع التدفق الأسموزي عبر الغشاء.",
         ),
         MedicalTermEntity(
             id = 446,
@@ -479,6 +539,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌaɪsəˈtɒnɪk/",
+            exampleEn = "Isotonic refers to having the same osmotic pressure as another solution.",
+            exampleFr = "L'isotonique est ayant la même pression osmotique qu'une autre solution.",
+            exampleAr = "متساوي التوتر هو له نفس الضغط الأسموزي لمحلول آخر.",
         ),
         MedicalTermEntity(
             id = 447,
@@ -491,6 +554,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌhaɪpərˈtɒnɪk/",
+            exampleEn = "Hypertonic refers to having a higher osmotic pressure than another solution.",
+            exampleFr = "L'hypertonique est ayant une pression osmotique plus élevée qu'une autre solution.",
+            exampleAr = "مفرط التوتر هو له ضغط أسموزي أعلى من محلول آخر.",
         ),
         MedicalTermEntity(
             id = 448,
@@ -503,6 +569,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌhaɪpəˈtɒnɪk/",
+            exampleEn = "Hypotonic refers to having a lower osmotic pressure than another solution.",
+            exampleFr = "L'hypotonique est ayant une pression osmotique plus basse qu'une autre solution.",
+            exampleAr = "ناقص التوتر هو له ضغط أسموزي أقل من محلول آخر.",
         ),
         MedicalTermEntity(
             id = 449,
@@ -515,6 +584,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌkɒnsənˈtreɪʃən ˈɡreɪdiənt/",
+            exampleEn = "The concentration gradient is the difference in concentration of a substance between two areas.",
+            exampleFr = "La gradient de concentration est différence de concentration d'une substance entre deux zones.",
+            exampleAr = "تدرج التركيز هو الفرق في تركيز مادة بين منطقتين.",
         ),
         MedicalTermEntity(
             id = 450,
@@ -527,6 +599,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌiːkwɪˈlɪbriəm/",
+            exampleEn = "The equilibrium is the state where concentrations are equal on both sides of a membrane.",
+            exampleFr = "L'équilibre est état où les concentrations sont égales des deux côtés d'une membrane.",
+            exampleAr = "التوازن هو حالة تتساوى فيها التركيزات على جانبي الغشاء.",
         ),
         MedicalTermEntity(
             id = 451,
@@ -539,6 +614,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈaɪɒn ˈtʃænəl/",
+            exampleEn = "The ion channel is the membrane protein that allows specific ions to pass through.",
+            exampleFr = "Le canal ionique est protéine membranaire permettant le passage d'ions spécifiques.",
+            exampleAr = "القناة الأيونية هو بروتين غشائي يسمح بمرور أيونات محددة.",
         ),
         MedicalTermEntity(
             id = 452,
@@ -551,6 +629,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/rɪˈsɛptər/",
+            exampleEn = "The receptor is the protein that binds specific molecules to trigger a cellular response.",
+            exampleFr = "La récepteur est protéine qui lie des molécules spécifiques pour déclencher une réponse cellulaire.",
+            exampleAr = "المستقبل هو بروتين يرتبط بجزيئات محددة لتحفيز استجابة خلوية.",
         ),
         MedicalTermEntity(
             id = 453,
@@ -563,6 +644,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/məˈtæbəlɪzəm/",
+            exampleEn = "The metabolism is the sum of all chemical reactions occurring in the body.",
+            exampleFr = "Le métabolisme est ensemble de toutes les réactions chimiques se produisant dans le corps.",
+            exampleAr = "الاستقلاب (الأيض) هو مجموع جميع التفاعلات الكيميائية التي تحدث في الجسم.",
         ),
         MedicalTermEntity(
             id = 454,
@@ -599,6 +683,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌeɪ tiː ˈpiː/",
+            exampleEn = "The atp (adenosine triphosphate) is the primary energy currency of the cell.",
+            exampleFr = "L'ATP (Adénosine triphosphate) est monnaie énergétique principale de la cellule.",
+            exampleAr = "أدينوسين ثلاثي الفوسفات هو العملة الطاقية الرئيسية للخلية.",
         ),
         MedicalTermEntity(
             id = 457,
@@ -611,6 +698,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ɡlaɪˈkɒlɪsɪs/",
+            exampleEn = "The glycolysis is the breakdown of glucose into pyruvate yielding 2 ATP.",
+            exampleFr = "La glycolyse est dégradation du glucose en pyruvate produisant 2 ATP.",
+            exampleAr = "تحلل الغلوكوز هو تحلل الغلوكوز إلى بيروفات مع إنتاج 2 ATP.",
         ),
         MedicalTermEntity(
             id = 458,
@@ -623,6 +713,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/krɛbz ˈsaɪkəl/",
+            exampleEn = "The krebs cycle is the series of reactions in the mitochondria producing CO2, NADH, and FADH2.",
+            exampleFr = "La cycle de Krebs est série de réactions dans la mitochondrie produisant CO2, NADH et FADH2.",
+            exampleAr = "دورة كريبس هو سلسلة تفاعلات في الميتوكوندريا تنتج ثاني أكسيد الكربون وNADH وFADH2.",
         ),
         MedicalTermEntity(
             id = 459,
@@ -635,6 +728,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈɒksɪdeɪtɪv ˌfɒsfɒrɪˈleɪʃən/",
+            exampleEn = "The oxidative phosphorylation is the process of ATP synthesis using the electron transport chain.",
+            exampleFr = "Le phosphorylation oxydative est processus de synthèse d'ATP utilisant la chaîne de transport d'électrons.",
+            exampleAr = "الفسفرة التأكسدية هو عملية تصنيع ATP باستخدام سلسلة نقل الإلكترونات.",
         ),
         MedicalTermEntity(
             id = 460,
@@ -671,6 +767,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈɛnzaɪm/",
+            exampleEn = "The enzyme is the biological catalyst that speeds up chemical reactions.",
+            exampleFr = "L'enzyme est catalyseur biologique qui accélère les réactions chimiques.",
+            exampleAr = "الإنزيم هو محفز بيولوجي يسرع التفاعلات الكيميائية.",
         ),
         MedicalTermEntity(
             id = 463,
@@ -683,6 +782,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/blʌd/",
+            exampleEn = "The blood is the connective tissue fluid that transports oxygen, nutrients, and waste.",
+            exampleFr = "La sang est tissu conjonctif fluide transportant oxygène, nutriments et déchets.",
+            exampleAr = "الدم هو نسيج ضام سائل ينقل الأكسجين والمغذيات والفضلات.",
         ),
         MedicalTermEntity(
             id = 464,
@@ -695,6 +797,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈplæzmə/",
+            exampleEn = "The plasma is the liquid component of blood (55%) containing proteins and electrolytes.",
+            exampleFr = "La plasma est composant liquide du sang (55%) contenant protéines et électrolytes.",
+            exampleAr = "البلازما هو المكون السائل من الدم (55%) يحتوي على بروتينات وشوارد.",
         ),
         MedicalTermEntity(
             id = 465,
@@ -707,6 +812,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/rɛd blʌd sɛl/",
+            exampleEn = "The red blood cell (erythrocyte) is the blood cell containing hemoglobin that carries oxygen.",
+            exampleFr = "La globule rouge (Érythrocyte) est cellule sanguine contenant de l'hémoglobine qui transporte l'oxygène.",
+            exampleAr = "كرية الدم الحمراء هو خلية دموية تحتوي على الهيموغلوبين وتنقل الأكسجين.",
         ),
         MedicalTermEntity(
             id = 466,
@@ -719,6 +827,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/waɪt blʌd sɛl/",
+            exampleEn = "The white blood cell (leukocyte) is the blood cell that defends the body against infection.",
+            exampleFr = "La globule blanc (Leucocyte) est cellule sanguine qui défend le corps contre les infections.",
+            exampleAr = "كرية الدم البيضاء هو خلية دموية تدافع عن الجسم ضد العدوى.",
         ),
         MedicalTermEntity(
             id = 467,
@@ -731,6 +842,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈpleɪtlɪt/",
+            exampleEn = "The platelet (thrombocyte) is the cell fragment essential for blood clotting.",
+            exampleFr = "La plaquette (Thrombocyte) est fragment cellulaire essentiel à la coagulation sanguine.",
+            exampleAr = "الصفيحة الدموية هو جزء خلوي ضروري لتخثر الدم.",
         ),
         MedicalTermEntity(
             id = 468,
@@ -743,6 +857,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈhiːməɡloʊbɪn/",
+            exampleEn = "The hemoglobin is the oxygen-carrying protein in red blood cells.",
+            exampleFr = "L'hémoglobine est protéine transporteuse d'oxygène dans les globules rouges.",
+            exampleAr = "الهيموغلوبين هو البروتين الناقل للأكسجين في كريات الدم الحمراء.",
         ),
         MedicalTermEntity(
             id = 469,
@@ -755,6 +872,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/hɪˈmætəkrɪt/",
+            exampleEn = "The hematocrit is the percentage of blood volume occupied by red blood cells.",
+            exampleFr = "L'hématocrite est pourcentage du volume sanguin occupé par les globules rouges.",
+            exampleAr = "الهيماتوكريت هو النسبة المئوية لحجم الدم المشغول بكريات الدم الحمراء.",
         ),
         MedicalTermEntity(
             id = 470,
@@ -767,6 +887,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ɪˌrɪθroʊpɔɪˈiːsɪs/",
+            exampleEn = "The erythropoiesis is the process of red blood cell production in the bone marrow.",
+            exampleFr = "L'érythropoïèse est processus de production des globules rouges dans la moelle osseuse.",
+            exampleAr = "تكون الكريات الحمراء هو عملية إنتاج كريات الدم الحمراء في نخاع العظم.",
         ),
         MedicalTermEntity(
             id = 471,
@@ -779,6 +902,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ɪˌrɪθroʊˈpɔɪətɪn/",
+            exampleEn = "The erythropoietin (epo) is the hormone produced by the kidneys stimulating red blood cell production.",
+            exampleFr = "L'érythropoïétine (EPO) est hormone produite par les reins stimulant la production de globules rouges.",
+            exampleAr = "الإريثروبويتين هو هرمون تنتجه الكلى يحفز إنتاج كريات الدم الحمراء.",
         ),
         MedicalTermEntity(
             id = 472,
@@ -791,6 +917,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˌhiːmoʊˈsteɪsɪs/",
+            exampleEn = "The hemostasis is the process of stopping bleeding through vessel spasm, platelet plug, and coagulation.",
+            exampleFr = "L'hémostase est processus d'arrêt du saignement par spasme vasculaire, clou plaquettaire et coagulation.",
+            exampleAr = "الإرقاء هو عملية إيقاف النزيف عبر تشنج الوعاء وسدادة الصفائح والتخثر.",
         ),
         MedicalTermEntity(
             id = 473,
@@ -803,6 +932,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/koʊˌæɡjʊˈleɪʃən/",
+            exampleEn = "The coagulation is the process of blood clot formation through a cascade of clotting factors.",
+            exampleFr = "Le coagulation est processus de formation d'un caillot sanguin par une cascade de facteurs de coagulation.",
+            exampleAr = "التخثر هو عملية تكوين الخثرة الدموية عبر سلسلة من عوامل التخثر.",
         ),
         MedicalTermEntity(
             id = 474,
@@ -815,6 +947,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/faɪˈbrɪnədʒən/",
+            exampleEn = "The fibrinogen is the plasma protein converted to fibrin during clotting.",
+            exampleFr = "La fibrinogène est protéine plasmatique convertie en fibrine lors de la coagulation.",
+            exampleAr = "الفيبرينوجين هو بروتين بلازمي يتحول إلى فيبرين أثناء التخثر.",
         ),
         MedicalTermEntity(
             id = 475,
@@ -827,6 +962,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈfaɪbrɪn/",
+            exampleEn = "The fibrin is the insoluble protein forming the mesh of a blood clot.",
+            exampleFr = "La fibrine est protéine insoluble formant le maillage d'un caillot sanguin.",
+            exampleAr = "الفيبرين هو بروتين غير قابل للذوبان يشكل شبكة الخثرة الدموية.",
         ),
         MedicalTermEntity(
             id = 476,
@@ -839,6 +977,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈθrɒmbəs/",
+            exampleEn = "The thrombus is the blood clot formed inside a blood vessel.",
+            exampleFr = "La thrombus est caillot sanguin formé à l'intérieur d'un vaisseau sanguin.",
+            exampleAr = "الخثرة هو خثرة دموية تتكون داخل وعاء دموي.",
         ),
         MedicalTermEntity(
             id = 477,
@@ -851,6 +992,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈɛmbələs/",
+            exampleEn = "The embolus is the detached clot or substance traveling through the bloodstream.",
+            exampleFr = "L'embole est caillot détaché ou substance voyageant dans le flux sanguin.",
+            exampleAr = "الصمة هو خثرة منفصلة أو مادة تنتقل عبر مجرى الدم.",
         ),
         MedicalTermEntity(
             id = 478,
@@ -863,6 +1007,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/blʌd ɡruːp/",
+            exampleEn = "The blood group (blood type) is the classification of blood based on antigens on the surface of red blood cells.",
+            exampleFr = "La groupe sanguin est classification du sang basée sur les antigènes à la surface des globules rouges.",
+            exampleAr = "فصيلة الدم (الزمرة الدموية) هو تصنيف الدم بناءً على المستضدات على سطح كريات الدم الحمراء.",
         ),
         MedicalTermEntity(
             id = 479,
@@ -875,6 +1022,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈæntɪdʒən/",
+            exampleEn = "The antigen is the molecule that triggers an immune response.",
+            exampleFr = "L'antigène est molécule qui déclenche une réponse immunitaire.",
+            exampleAr = "المستضد هو جزيء يحفز استجابة مناعية.",
         ),
         MedicalTermEntity(
             id = 480,
@@ -887,6 +1037,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˈæntɪbɒdi/",
+            exampleEn = "The antibody is the protein produced by immune cells that binds to specific antigens.",
+            exampleFr = "L'anticorps est protéine produite par les cellules immunitaires qui se lie à des antigènes spécifiques.",
+            exampleAr = "الجسم المضاد هو بروتين تنتجه الخلايا المناعية يرتبط بمستضدات محددة.",
         ),
         MedicalTermEntity(
             id = 481,
@@ -899,6 +1052,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ɑːr eɪtʃ ˈfæktər/",
+            exampleEn = "The rh factor is the antigen on red blood cells determining Rh+ or Rh- blood type.",
+            exampleFr = "La facteur Rhésus est antigène sur les globules rouges déterminant le type Rh+ ou Rh-.",
+            exampleAr = "عامل الريزوس هو مستضد على كريات الدم الحمراء يحدد فصيلة الدم موجب أو سالب.",
         ),
         MedicalTermEntity(
             id = 482,
@@ -911,6 +1067,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/əˈniːmiə/",
+            exampleEn = "The anemia is the condition of insufficient red blood cells or hemoglobin.",
+            exampleFr = "L'anémie est condition d'insuffisance de globules rouges ou d'hémoglobine.",
+            exampleAr = "فقر الدم هو حالة نقص كريات الدم الحمراء أو الهيموغلوبين.",
         ),
         MedicalTermEntity(
             id = 483,
@@ -923,6 +1082,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˌluːkoʊsaɪˈtoʊsɪs/",
+            exampleEn = "The leukocytosis is the abnormally high white blood cell count.",
+            exampleFr = "La leucocytose est nombre anormalement élevé de globules blancs.",
+            exampleAr = "كثرة الكريات البيضاء هو ارتفاع غير طبيعي في عدد كريات الدم البيضاء.",
         ),
         MedicalTermEntity(
             id = 484,
@@ -935,6 +1097,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˌluːkoʊˈpiːniə/",
+            exampleEn = "The leukopenia is the abnormally low white blood cell count.",
+            exampleFr = "La leucopénie est nombre anormalement bas de globules blancs.",
+            exampleAr = "قلة الكريات البيضاء هو انخفاض غير طبيعي في عدد كريات الدم البيضاء.",
         ),
         MedicalTermEntity(
             id = 485,
@@ -947,6 +1112,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie du Sang",
             ipaPhonetic = "/ˌsɛdɪmɛnˈteɪʃən reɪt/",
+            exampleEn = "The sedimentation rate (esr) is the rate at which red blood cells settle in a tube indicating inflammation.",
+            exampleFr = "La vitesse de sédimentation (VS) est vitesse à laquelle les globules rouges sédimentent dans un tube indiquant une inflammation.",
+            exampleAr = "سرعة التثفل هو السرعة التي تترسب بها كريات الدم الحمراء في أنبوب مشيرة إلى وجود التهاب.",
         ),
         MedicalTermEntity(
             id = 486,
@@ -971,6 +1139,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈsɪstəli/",
+            exampleEn = "The systole is the contraction phase of the heart pumping blood out.",
+            exampleFr = "La systole est phase de contraction du cœur éjectant le sang.",
+            exampleAr = "الانقباض هو مرحلة انقباض القلب التي تضخ الدم للخارج.",
         ),
         MedicalTermEntity(
             id = 488,
@@ -983,6 +1154,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/daɪˈæstəli/",
+            exampleEn = "The diastole is the relaxation phase of the heart filling with blood.",
+            exampleFr = "La diastole est phase de relaxation du cœur se remplissant de sang.",
+            exampleAr = "الانبساط هو مرحلة انبساط القلب التي يمتلئ فيها بالدم.",
         ),
         MedicalTermEntity(
             id = 489,
@@ -995,6 +1169,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/stroʊk ˈvɒljuːm/",
+            exampleEn = "The stroke volume is the volume of blood ejected by each ventricle per beat (about 70 mL).",
+            exampleFr = "La volume d'éjection systolique (VES) est volume de sang éjecté par chaque ventricule par battement (environ 70 mL).",
+            exampleAr = "حجم الضربة هو حجم الدم المقذوف من كل بطين في كل نبضة (حوالي 70 مل).",
         ),
         MedicalTermEntity(
             id = 490,
@@ -1007,6 +1184,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈaʊtpʊt/",
+            exampleEn = "The cardiac output is the volume of blood pumped by the heart per minute (CO = HR × SV).",
+            exampleFr = "La débit cardiaque est volume de sang pompé par le cœur par minute (DC = FC × VES).",
+            exampleAr = "النتاج القلبي هو حجم الدم الذي يضخه القلب في الدقيقة (النتاج = معدل الضربات × حجم الضربة).",
         ),
         MedicalTermEntity(
             id = 491,
@@ -1031,6 +1211,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/blʌd ˈprɛʃər/",
+            exampleEn = "The blood pressure is the force exerted by blood on the walls of arteries.",
+            exampleFr = "Le pression artérielle est force exercée par le sang sur les parois des artères.",
+            exampleAr = "ضغط الدم هو القوة التي يمارسها الدم على جدران الشرايين.",
         ),
         MedicalTermEntity(
             id = 493,
@@ -1079,6 +1262,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/pəˈrɪfərəl rɪˈzɪstəns/",
+            exampleEn = "The peripheral resistance is the resistance to blood flow in the peripheral blood vessels.",
+            exampleFr = "La résistance périphérique est résistance au flux sanguin dans les vaisseaux périphériques.",
+            exampleAr = "المقاومة المحيطية هو مقاومة تدفق الدم في الأوعية الدموية المحيطية.",
         ),
         MedicalTermEntity(
             id = 497,
@@ -1091,6 +1277,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌveɪzoʊkənˈstrɪkʃən/",
+            exampleEn = "The vasoconstriction is the narrowing of blood vessels increasing blood pressure.",
+            exampleFr = "Le vasoconstriction est rétrécissement des vaisseaux sanguins augmentant la pression artérielle.",
+            exampleAr = "تضيق الأوعية هو تضيق الأوعية الدموية مما يزيد ضغط الدم.",
         ),
         MedicalTermEntity(
             id = 498,
@@ -1103,6 +1292,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌveɪzoʊdaɪˈleɪʃən/",
+            exampleEn = "The vasodilation is the widening of blood vessels decreasing blood pressure.",
+            exampleFr = "Le vasodilatation est élargissement des vaisseaux sanguins diminuant la pression artérielle.",
+            exampleAr = "توسع الأوعية هو توسع الأوعية الدموية مما يخفض ضغط الدم.",
         ),
         MedicalTermEntity(
             id = 499,
@@ -1115,6 +1307,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ɪˌlɛktroʊˈkɑːrdioʊɡræm/",
+            exampleEn = "The electrocardiogram (ecg) is the recording of the electrical activity of the heart.",
+            exampleFr = "L'électrocardiogramme (ECG) est enregistrement de l'activité électrique du cœur.",
+            exampleAr = "تخطيط كهربية القلب هو تسجيل النشاط الكهربائي للقلب.",
         ),
         MedicalTermEntity(
             id = 500,
@@ -1127,6 +1322,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/piː weɪv/",
+            exampleEn = "The p wave is the ECG wave representing atrial depolarization.",
+            exampleFr = "L'onde P est onde ECG représentant la dépolarisation auriculaire.",
+            exampleAr = "الموجة P هو موجة تخطيط القلب التي تمثل زوال استقطاب الأذينين.",
         ),
         MedicalTermEntity(
             id = 501,
@@ -1139,6 +1337,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/kjuː ɑːr ɛs ˈkɒmplɛks/",
+            exampleEn = "The qrs complex is the ECG deflection representing ventricular depolarization.",
+            exampleFr = "La complexe QRS est déflexion ECG représentant la dépolarisation ventriculaire.",
+            exampleAr = "مركب QRS هو انحراف تخطيط القلب الذي يمثل زوال استقطاب البطينين.",
         ),
         MedicalTermEntity(
             id = 502,
@@ -1151,6 +1352,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/tiː weɪv/",
+            exampleEn = "The t wave is the ECG wave representing ventricular repolarization.",
+            exampleFr = "L'onde T est onde ECG représentant la repolarisation ventriculaire.",
+            exampleAr = "الموجة T هو موجة تخطيط القلب التي تمثل عودة استقطاب البطينين.",
         ),
         MedicalTermEntity(
             id = 503,
@@ -1163,6 +1367,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌsaɪnoʊˈeɪtriəl noʊd/",
+            exampleEn = "The sinoatrial node (sa node) is the natural pacemaker of the heart located in the right atrium.",
+            exampleFr = "La nœud sinusal (nœud SA) est stimulateur naturel du cœur situé dans l'oreillette droite.",
+            exampleAr = "العقدة الجيبية الأذينية هو منظم ضربات القلب الطبيعي الموجود في الأذين الأيمن.",
         ),
         MedicalTermEntity(
             id = 504,
@@ -1175,6 +1382,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌeɪtrioʊvɛnˈtrɪkjʊlər noʊd/",
+            exampleEn = "The atrioventricular node (av node) is the node that delays the electrical impulse between the atria and ventricles.",
+            exampleFr = "La nœud auriculo-ventriculaire (nœud AV) est nœud qui retarde l'impulsion électrique entre les oreillettes et les ventricules.",
+            exampleAr = "العقدة الأذينية البطينية هو عقدة تؤخر النبضة الكهربائية بين الأذينين والبطينين.",
         ),
         MedicalTermEntity(
             id = 505,
@@ -1187,6 +1397,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈbʌndəl əv hɪs/",
+            exampleEn = "The bundle of his is the bundle of conducting fibers transmitting impulses from AV node to ventricles.",
+            exampleFr = "Le faisceau de His est faisceau de fibres conductrices transmettant les impulsions du nœud AV aux ventricules.",
+            exampleAr = "حزمة هيس هو حزمة من الألياف الناقلة تنقل النبضات من العقدة الأذينية البطينية إلى البطينين.",
         ),
         MedicalTermEntity(
             id = 506,
@@ -1211,6 +1424,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/diːˌpoʊlərɪˈzeɪʃən/",
+            exampleEn = "The depolarization is the change in membrane potential from negative to positive initiating contraction.",
+            exampleFr = "Le dépolarisation est changement du potentiel de membrane de négatif à positif initiant la contraction.",
+            exampleAr = "زوال الاستقطاب هو تغير جهد الغشاء من سالب إلى موجب مما يبدأ الانقباض.",
         ),
         MedicalTermEntity(
             id = 508,
@@ -1223,6 +1439,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/riːˌpoʊlərɪˈzeɪʃən/",
+            exampleEn = "The repolarization is the return of membrane potential to resting state after depolarization.",
+            exampleFr = "Le repolarisation est retour du potentiel de membrane à l'état de repos après dépolarisation.",
+            exampleAr = "عودة الاستقطاب هو عودة جهد الغشاء إلى حالة الراحة بعد زوال الاستقطاب.",
         ),
         MedicalTermEntity(
             id = 509,
@@ -1235,6 +1454,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌtækɪˈkɑːrdiə/",
+            exampleEn = "The tachycardia is the abnormally fast heart rate exceeding 100 beats per minute.",
+            exampleFr = "La tachycardie est fréquence cardiaque anormalement rapide dépassant 100 battements par minute.",
+            exampleAr = "تسرع القلب هو تسارع غير طبيعي في ضربات القلب يتجاوز 100 نبضة في الدقيقة.",
         ),
         MedicalTermEntity(
             id = 510,
@@ -1247,6 +1469,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌbrædɪˈkɑːrdiə/",
+            exampleEn = "The bradycardia is the abnormally slow heart rate below 60 beats per minute.",
+            exampleFr = "La bradycardie est fréquence cardiaque anormalement lente en dessous de 60 battements par minute.",
+            exampleAr = "بطء القلب هو بطء غير طبيعي في ضربات القلب أقل من 60 نبضة في الدقيقة.",
         ),
         MedicalTermEntity(
             id = 511,
@@ -1271,6 +1496,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈpriːloʊd/",
+            exampleEn = "The preload is the degree of ventricular stretching before contraction (end-diastolic volume).",
+            exampleFr = "La précharge est degré d'étirement ventriculaire avant la contraction (volume télédiastolique).",
+            exampleAr = "الحمل المسبق هو درجة تمدد البطين قبل الانقباض (الحجم الانبساطي النهائي).",
         ),
         MedicalTermEntity(
             id = 513,
@@ -1283,6 +1511,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈæftərloʊd/",
+            exampleEn = "The afterload is the resistance the heart must overcome to eject blood.",
+            exampleFr = "La postcharge est résistance que le cœur doit surmonter pour éjecter le sang.",
+            exampleAr = "الحمل اللاحق هو المقاومة التي يجب على القلب التغلب عليها لقذف الدم.",
         ),
                 MedicalTermEntity(
             id = 515,
@@ -1295,6 +1526,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌbæroʊrɪˈsɛptər/",
+            exampleEn = "The baroreceptor is the sensory receptor detecting changes in blood pressure.",
+            exampleFr = "La barorécepteur est récepteur sensoriel détectant les changements de pression artérielle.",
+            exampleAr = "مستقبل الضغط هو مستقبل حسي يكشف التغيرات في ضغط الدم.",
         ),
         MedicalTermEntity(
             id = 516,
@@ -1307,6 +1541,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈmɜːrmər/",
+            exampleEn = "The cardiac murmur is the abnormal heart sound caused by turbulent blood flow through valves.",
+            exampleFr = "La souffle cardiaque est son cardiaque anormal causé par un flux sanguin turbulent à travers les valves.",
+            exampleAr = "النفخة القلبية هو صوت قلبي غير طبيعي ناتج عن تدفق دم مضطرب عبر الصمامات.",
         ),
         MedicalTermEntity(
             id = 517,
@@ -1319,6 +1556,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌvɛntɪˈleɪʃən/",
+            exampleEn = "The ventilation is the process of air movement into and out of the lungs.",
+            exampleFr = "Le ventilation est processus de mouvement de l'air dans et hors des poumons.",
+            exampleAr = "التهوية هو عملية حركة الهواء إلى داخل الرئتين وخارجهما.",
         ),
         MedicalTermEntity(
             id = 518,
@@ -1331,6 +1571,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌɪnspɪˈreɪʃən/",
+            exampleEn = "The inspiration (inhalation) is the active process of drawing air into the lungs.",
+            exampleFr = "L'inspiration est processus actif d'aspiration de l'air dans les poumons.",
+            exampleAr = "الشهيق هو العملية الفعالة لسحب الهواء إلى الرئتين.",
         ),
         MedicalTermEntity(
             id = 519,
@@ -1343,6 +1586,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌɛkspɪˈreɪʃən/",
+            exampleEn = "The expiration (exhalation) is the passive process of releasing air from the lungs.",
+            exampleFr = "L'expiration est processus passif de libération de l'air des poumons.",
+            exampleAr = "الزفير هو العملية السلبية لإخراج الهواء من الرئتين.",
         ),
         MedicalTermEntity(
             id = 520,
@@ -1355,6 +1601,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈtaɪdəl ˈvɒljuːm/",
+            exampleEn = "The tidal volume is the volume of air inhaled or exhaled during normal breathing (about 500 mL).",
+            exampleFr = "La volume courant est volume d'air inspiré ou expiré pendant la respiration normale (environ 500 mL).",
+            exampleAr = "الحجم الجاري هو حجم الهواء المستنشق أو المزفور أثناء التنفس الطبيعي (حوالي 500 مل).",
         ),
         MedicalTermEntity(
             id = 521,
@@ -1367,6 +1616,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈvaɪtəl kəˈpæsɪti/",
+            exampleEn = "The vital capacity is the maximum volume of air that can be exhaled after maximum inhalation.",
+            exampleFr = "La capacité vitale est volume maximum d'air pouvant être expiré après une inspiration maximale.",
+            exampleAr = "السعة الحيوية هو الحجم الأقصى من الهواء الذي يمكن زفيره بعد شهيق أقصى.",
         ),
         MedicalTermEntity(
             id = 522,
@@ -1379,6 +1631,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/rɪˈzɪdjuəl ˈvɒljuːm/",
+            exampleEn = "The residual volume is the volume of air remaining in the lungs after maximal expiration (about 1200 mL).",
+            exampleFr = "La volume résiduel est volume d'air restant dans les poumons après expiration maximale (environ 1200 mL).",
+            exampleAr = "الحجم المتبقي هو حجم الهواء المتبقي في الرئتين بعد زفير أقصى (حوالي 1200 مل).",
         ),
         MedicalTermEntity(
             id = 523,
@@ -1391,6 +1646,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈtoʊtəl lʌŋ kəˈpæsɪti/",
+            exampleEn = "The total lung capacity is the total volume of air the lungs can hold (about 6000 mL).",
+            exampleFr = "La capacité pulmonaire totale est volume total d'air que les poumons peuvent contenir (environ 6000 mL).",
+            exampleAr = "السعة الرئوية الكلية هو الحجم الكلي للهواء الذي يمكن أن تحمله الرئتان (حوالي 6000 مل).",
         ),
         MedicalTermEntity(
             id = 524,
@@ -1403,6 +1661,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈfʌŋkʃənəl rɪˈzɪdjuəl/",
+            exampleEn = "The functional residual capacity is the volume of air remaining after normal expiration.",
+            exampleFr = "La capacité résiduelle fonctionnelle est volume d'air restant après une expiration normale.",
+            exampleAr = "السعة الوظيفية المتبقية هو حجم الهواء المتبقي بعد زفير طبيعي.",
         ),
         MedicalTermEntity(
             id = 525,
@@ -1415,6 +1676,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/dɛd speɪs/",
+            exampleEn = "The dead space is the volume of airways where no gas exchange occurs (about 150 mL).",
+            exampleFr = "L'espace mort est volume des voies aériennes où aucun échange gazeux ne se produit (environ 150 mL).",
+            exampleAr = "المسافة الميتة هو حجم المسالك الهوائية حيث لا يحدث تبادل غازي (حوالي 150 مل).",
         ),
         MedicalTermEntity(
             id = 526,
@@ -1427,6 +1691,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ɡæs ɪksˈtʃeɪndʒ/",
+            exampleEn = "The gas exchange is the transfer of oxygen and carbon dioxide between alveoli and blood.",
+            exampleFr = "L'échanges gazeux est transfert d'oxygène et de dioxyde de carbone entre alvéoles et sang.",
+            exampleAr = "تبادل الغازات هو نقل الأكسجين وثاني أكسيد الكربون بين الأسناخ والدم.",
         ),
         MedicalTermEntity(
             id = 527,
@@ -1439,6 +1706,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈpɑːrʃəl ˈprɛʃər/",
+            exampleEn = "The partial pressure is the pressure exerted by a single gas in a mixture of gases.",
+            exampleFr = "Le pression partielle est pression exercée par un seul gaz dans un mélange de gaz.",
+            exampleAr = "الضغط الجزئي هو الضغط الذي يمارسه غاز واحد في خليط من الغازات.",
         ),
         MedicalTermEntity(
             id = 528,
@@ -1475,6 +1745,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/haɪˈpɒksiə/",
+            exampleEn = "The hypoxia is the condition of insufficient oxygen supply to tissues.",
+            exampleFr = "L'hypoxie est condition d'apport insuffisant en oxygène aux tissus.",
+            exampleAr = "نقص الأكسجة هو حالة نقص إمداد الأنسجة بالأكسجين.",
         ),
         MedicalTermEntity(
             id = 531,
@@ -1487,6 +1760,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌhaɪpərˈkæpniə/",
+            exampleEn = "The hypercapnia is the excess of carbon dioxide in the blood.",
+            exampleFr = "L'hypercapnie est excès de dioxyde de carbone dans le sang.",
+            exampleAr = "فرط ثاني أكسيد الكربون هو زيادة ثاني أكسيد الكربون في الدم.",
         ),
         MedicalTermEntity(
             id = 532,
@@ -1499,6 +1775,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌhaɪpoʊˈkæpniə/",
+            exampleEn = "The hypocapnia is the deficiency of carbon dioxide in the blood.",
+            exampleFr = "L'hypocapnie est déficience en dioxyde de carbone dans le sang.",
+            exampleAr = "نقص ثاني أكسيد الكربون هو نقص ثاني أكسيد الكربون في الدم.",
         ),
         MedicalTermEntity(
             id = 533,
@@ -1511,6 +1790,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/sɜːrˈfæktənt/",
+            exampleEn = "The surfactant is the substance reducing surface tension in alveoli preventing collapse.",
+            exampleFr = "La surfactant est substance réduisant la tension superficielle dans les alvéoles empêchant leur collapsus.",
+            exampleAr = "المادة الفاعلة بالسطح هو مادة تقلل التوتر السطحي في الأسناخ وتمنع انخماصها.",
         ),
         MedicalTermEntity(
             id = 534,
@@ -1523,6 +1805,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/kəmˈplaɪəns/",
+            exampleEn = "The compliance is the ability of the lungs to stretch during breathing.",
+            exampleFr = "La compliance (Distensibilité) est capacité des poumons à s'étirer pendant la respiration.",
+            exampleAr = "المطاوعة هو قدرة الرئتين على التمدد أثناء التنفس.",
         ),
         MedicalTermEntity(
             id = 535,
@@ -1535,6 +1820,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/spaɪˈrɒmɪtri/",
+            exampleEn = "The spirometry is the test measuring lung volumes and airflow.",
+            exampleFr = "La spirométrie est test mesurant les volumes pulmonaires et le débit d'air.",
+            exampleAr = "قياس التنفس هو اختبار يقيس أحجام الرئة وتدفق الهواء.",
         ),
         MedicalTermEntity(
             id = 536,
@@ -1559,6 +1847,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌkiːmoʊrɪˈsɛptər/",
+            exampleEn = "The chemoreceptor is the receptor detecting changes in blood O2, CO2, and pH levels.",
+            exampleFr = "La chémorécepteur est récepteur détectant les changements des niveaux d'O2, CO2 et pH sanguins.",
+            exampleAr = "المستقبل الكيميائي هو مستقبل يكشف التغيرات في مستويات الأكسجين وثاني أكسيد الكربون ودرجة الحموضة في الدم.",
         ),
         MedicalTermEntity(
             id = 538,
@@ -1595,6 +1886,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌsaɪəˈnoʊsɪs/",
+            exampleEn = "The cyanosis is the bluish discoloration of skin due to low blood oxygen.",
+            exampleFr = "La cyanose est coloration bleutée de la peau due à un faible taux d'oxygène sanguin.",
+            exampleAr = "الزرقة هو تلون مزرق للجلد بسبب انخفاض أكسجين الدم.",
         ),
         MedicalTermEntity(
             id = 541,
@@ -1607,6 +1901,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈnjʊərɒn/",
+            exampleEn = "The neuron is the functional unit of the nervous system that transmits electrical impulses.",
+            exampleFr = "La neurone est unité fonctionnelle du système nerveux transmettant les impulsions électriques.",
+            exampleAr = "العصبون (الخلية العصبية) هو الوحدة الوظيفية للجهاز العصبي التي تنقل النبضات الكهربائية.",
         ),
         MedicalTermEntity(
             id = 542,
@@ -1619,6 +1916,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈæksɒn/",
+            exampleEn = "The axon is the long projection of a neuron conducting impulses away from the cell body.",
+            exampleFr = "L'axone est prolongement long du neurone conduisant les impulsions loin du corps cellulaire.",
+            exampleAr = "المحور العصبي هو الاستطالة الطويلة للعصبون التي تنقل النبضات بعيداً عن جسم الخلية.",
         ),
         MedicalTermEntity(
             id = 543,
@@ -1631,6 +1931,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈdɛndraɪt/",
+            exampleEn = "The dendrite is the branching projection of a neuron receiving signals from other neurons.",
+            exampleFr = "La dendrite est prolongement ramifié du neurone recevant les signaux d'autres neurones.",
+            exampleAr = "التغصن هو التفرع العصبي الذي يستقبل الإشارات من العصبونات الأخرى.",
         ),
         MedicalTermEntity(
             id = 544,
@@ -1643,6 +1946,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈsɪnæps/",
+            exampleEn = "The synapse is the junction between two neurons where signal transmission occurs.",
+            exampleFr = "La synapse est jonction entre deux neurones où se produit la transmission du signal.",
+            exampleAr = "المشبك العصبي هو الوصلة بين عصبونين حيث يحدث نقل الإشارة.",
         ),
         MedicalTermEntity(
             id = 545,
@@ -1655,6 +1961,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˌnjʊəroʊtrænsˈmɪtər/",
+            exampleEn = "The neurotransmitter is the chemical messenger released at a synapse to transmit a signal.",
+            exampleFr = "La neurotransmetteur est messager chimique libéré au niveau d'une synapse pour transmettre un signal.",
+            exampleAr = "الناقل العصبي هو رسول كيميائي يُطلق عند المشبك لنقل إشارة.",
         ),
         MedicalTermEntity(
             id = 546,
@@ -1667,6 +1976,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈrɛstɪŋ ˈmɛmbreɪn/",
+            exampleEn = "The resting membrane potential is the electrical potential difference across the cell membrane at rest (about -70 mV).",
+            exampleFr = "La potentiel de repos membranaire est différence de potentiel électrique à travers la membrane au repos (environ -70 mV).",
+            exampleAr = "جهد الراحة الغشائي هو فرق الجهد الكهربائي عبر الغشاء في حالة الراحة (حوالي -70 ميلي فولت).",
         ),
         MedicalTermEntity(
             id = 547,
@@ -1679,6 +1991,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈθrɛʃoʊld/",
+            exampleEn = "The threshold is the minimum stimulus intensity required to generate an action potential.",
+            exampleFr = "Le seuil est intensité minimale de stimulus nécessaire pour générer un potentiel d'action.",
+            exampleAr = "العتبة هو الشدة الأدنى للمنبه اللازمة لتوليد جهد الفعل.",
         ),
         MedicalTermEntity(
             id = 548,
@@ -1691,6 +2006,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ɔːl ɔːr nʌn/",
+            exampleEn = "The all-or-none principle is the principle that a neuron fires fully or not at all.",
+            exampleFr = "La loi du tout ou rien est principe selon lequel un neurone décharge complètement ou pas du tout.",
+            exampleAr = "مبدأ الكل أو لا شيء هو المبدأ القائل بأن العصبون يستجيب بالكامل أو لا يستجيب على الإطلاق.",
         ),
         MedicalTermEntity(
             id = 549,
@@ -1703,6 +2021,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmaɪəlɪn ʃiːθ/",
+            exampleEn = "The myelin sheath is the insulating layer around axons that speeds up nerve conduction.",
+            exampleFr = "La gaine de myéline est couche isolante autour des axones accélérant la conduction nerveuse.",
+            exampleAr = "غمد الميالين هو الطبقة العازلة حول المحاور العصبية التي تسرع التوصيل العصبي.",
         ),
         MedicalTermEntity(
             id = 550,
@@ -1727,6 +2048,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈsæltətɔːri kənˈdʌkʃən/",
+            exampleEn = "The saltatory conduction is the rapid transmission of impulses jumping between nodes of Ranvier.",
+            exampleFr = "Le conduction saltatoire est transmission rapide d'impulsions sautant entre les nœuds de Ranvier.",
+            exampleAr = "التوصيل القفزي هو النقل السريع للنبضات بالقفز بين عقد رانفييه.",
         ),
         MedicalTermEntity(
             id = 552,
@@ -1739,6 +2063,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/rɪˈfræktəri ˈpɪəriəd/",
+            exampleEn = "The refractory period is the brief period after an action potential during which the neuron cannot fire again.",
+            exampleFr = "La période réfractaire est brève période après un potentiel d'action pendant laquelle le neurone ne peut pas décharger à nouveau.",
+            exampleAr = "فترة العصيان هو الفترة القصيرة بعد جهد الفعل التي لا يستطيع خلالها العصبون الاستجابة مرة أخرى.",
         ),
         MedicalTermEntity(
             id = 553,
@@ -1751,6 +2078,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/əˌsiːtaɪlˈkoʊliːn/",
+            exampleEn = "The acetylcholine (ach) is the neurotransmitter involved in muscle contraction and parasympathetic function.",
+            exampleFr = "L'acétylcholine (ACh) est neurotransmetteur impliqué dans la contraction musculaire et la fonction parasympathique.",
+            exampleAr = "الأسيتيل كولين هو ناقل عصبي يشارك في تقلص العضلات ووظيفة الجهاز نظير الودي.",
         ),
         MedicalTermEntity(
             id = 554,
@@ -1763,6 +2093,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˌnɔːrɛpɪˈnɛfrɪn/",
+            exampleEn = "The norepinephrine (noradrenaline) is the neurotransmitter and hormone involved in fight-or-flight response.",
+            exampleFr = "La noradrénaline est neurotransmetteur et hormone impliqué dans la réponse de combat ou fuite.",
+            exampleAr = "النورأدرينالين هو ناقل عصبي وهرمون يشارك في استجابة الكر والفر.",
         ),
         MedicalTermEntity(
             id = 555,
@@ -1775,6 +2108,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈdoʊpəmiːn/",
+            exampleEn = "The dopamine is the neurotransmitter involved in reward, motivation, and motor control.",
+            exampleFr = "La dopamine est neurotransmetteur impliqué dans la récompense, la motivation et le contrôle moteur.",
+            exampleAr = "الدوبامين هو ناقل عصبي يشارك في المكافأة والتحفيز والتحكم الحركي.",
         ),
         MedicalTermEntity(
             id = 556,
@@ -1787,6 +2123,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˌsɛrəˈtoʊnɪn/",
+            exampleEn = "The serotonin is the neurotransmitter regulating mood, sleep, and appetite.",
+            exampleFr = "La sérotonine est neurotransmetteur régulant l'humeur, le sommeil et l'appétit.",
+            exampleAr = "السيروتونين هو ناقل عصبي ينظم المزاج والنوم والشهية.",
         ),
         MedicalTermEntity(
             id = 557,
@@ -1799,6 +2138,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈɡæbə/",
+            exampleEn = "The gaba (gamma-aminobutyric acid) is the main inhibitory neurotransmitter in the brain.",
+            exampleFr = "La GABA (Acide gamma-aminobutyrique) est principal neurotransmetteur inhibiteur du cerveau.",
+            exampleAr = "حمض غاما أمينوبيوتيريك هو الناقل العصبي المثبط الرئيسي في الدماغ.",
         ),
         MedicalTermEntity(
             id = 558,
@@ -1811,6 +2153,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈɡluːtəmeɪt/",
+            exampleEn = "The glutamate is the main excitatory neurotransmitter in the brain.",
+            exampleFr = "La glutamate est principal neurotransmetteur excitateur du cerveau.",
+            exampleAr = "الغلوتامات هو الناقل العصبي المنبه الرئيسي في الدماغ.",
         ),
         MedicalTermEntity(
             id = 559,
@@ -1823,6 +2168,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmoʊtər ˈnjʊərɒn/",
+            exampleEn = "The motor neuron is the neuron that carries signals from the CNS to muscles.",
+            exampleFr = "La neurone moteur est neurone transportant les signaux du SNC vers les muscles.",
+            exampleAr = "العصبون المحرك هو عصبون ينقل الإشارات من الجهاز العصبي المركزي إلى العضلات.",
         ),
         MedicalTermEntity(
             id = 560,
@@ -1835,6 +2183,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈsɛnsəri ˈnjʊərɒn/",
+            exampleEn = "The sensory neuron is the neuron that carries signals from receptors to the CNS.",
+            exampleFr = "La neurone sensitif est neurone transportant les signaux des récepteurs vers le SNC.",
+            exampleAr = "العصبون الحسي هو عصبون ينقل الإشارات من المستقبلات إلى الجهاز العصبي المركزي.",
         ),
         MedicalTermEntity(
             id = 561,
@@ -1847,6 +2198,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˌɪntərˈnjʊərɒn/",
+            exampleEn = "The interneuron is the neuron connecting sensory and motor neurons within the CNS.",
+            exampleFr = "L'interneurone est neurone reliant les neurones sensitifs et moteurs dans le SNC.",
+            exampleAr = "العصبون البيني هو عصبون يربط بين العصبونات الحسية والمحركة داخل الجهاز العصبي المركزي.",
         ),
         MedicalTermEntity(
             id = 562,
@@ -1859,6 +2213,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈriːflɛks ɑːrk/",
+            exampleEn = "The reflex arc is the neural pathway involved in a reflex action.",
+            exampleFr = "L'arc réflexe est voie neuronale impliquée dans une action réflexe.",
+            exampleAr = "القوس الانعكاسية هو المسار العصبي المشارك في الفعل المنعكس.",
         ),
         MedicalTermEntity(
             id = 563,
@@ -1871,6 +2228,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˌnjʊəroʊˈmʌskjʊlər ˈdʒʌŋkʃən/",
+            exampleEn = "The neuromuscular junction is the synapse between a motor neuron and a skeletal muscle fiber.",
+            exampleFr = "Le jonction neuromusculaire est synapse entre un neurone moteur et une fibre musculaire squelettique.",
+            exampleAr = "الوصل العصبي العضلي هو المشبك بين العصبون المحرك والليف العضلي الهيكلي.",
         ),
         MedicalTermEntity(
             id = 564,
@@ -1883,6 +2243,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmoʊtər ɛnd pleɪt/",
+            exampleEn = "The motor end plate is the region of muscle membrane receiving the nerve signal.",
+            exampleFr = "La plaque motrice est région de la membrane musculaire recevant le signal nerveux.",
+            exampleAr = "الصفيحة المحركة النهائية هو منطقة الغشاء العضلي التي تستقبل الإشارة العصبية.",
         ),
         MedicalTermEntity(
             id = 565,
@@ -1895,6 +2258,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ɪkˈsaɪtətɔːri/",
+            exampleEn = "The excitatory postsynaptic potential (epsp) is the depolarization of the postsynaptic membrane making the neuron more likely to fire.",
+            exampleFr = "La potentiel postsynaptique excitateur (PPSE) est dépolarisation de la membrane postsynaptique rendant le neurone plus susceptible de décharger.",
+            exampleAr = "الكمون التالي للمشبك المنبه هو زوال استقطاب الغشاء بعد المشبكي مما يجعل العصبون أكثر عرضة للاستجابة.",
         ),
         MedicalTermEntity(
             id = 566,
@@ -1907,6 +2273,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ɪnˈhɪbɪtɔːri/",
+            exampleEn = "The inhibitory postsynaptic potential (ipsp) is the hyperpolarization of the postsynaptic membrane making the neuron less likely to fire.",
+            exampleFr = "La potentiel postsynaptique inhibiteur (PPSI) est hyperpolarisation de la membrane postsynaptique rendant le neurone moins susceptible de décharger.",
+            exampleAr = "الكمون التالي للمشبك المثبط هو فرط استقطاب الغشاء بعد المشبكي مما يجعل العصبون أقل عرضة للاستجابة.",
         ),
         MedicalTermEntity(
             id = 567,
@@ -1919,6 +2288,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmʌsəl kənˈtrækʃən/",
+            exampleEn = "The muscle contraction is the process by which muscle fibers generate tension and shorten.",
+            exampleFr = "Le contraction musculaire est processus par lequel les fibres musculaires génèrent une tension et se raccourcissent.",
+            exampleAr = "التقلص العضلي هو العملية التي تولد بها الألياف العضلية شداً وتتقصر.",
         ),
         MedicalTermEntity(
             id = 568,
@@ -1931,6 +2303,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈslaɪdɪŋ ˈfɪləmənt/",
+            exampleEn = "The sliding filament theory is the theory explaining muscle contraction by actin sliding over myosin.",
+            exampleFr = "La théorie des filaments glissants est théorie expliquant la contraction musculaire par le glissement de l'actine sur la myosine.",
+            exampleAr = "نظرية الخيوط المنزلقة هو النظرية التي تفسر التقلص العضلي بانزلاق الأكتين فوق الميوسين.",
         ),
         MedicalTermEntity(
             id = 569,
@@ -1943,6 +2318,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈæktɪn/",
+            exampleEn = "The actin is the thin protein filament in muscle fibers involved in contraction.",
+            exampleFr = "L'actine est filament protéique fin dans les fibres musculaires impliqué dans la contraction.",
+            exampleAr = "الأكتين هو الخيط البروتيني الرفيع في الألياف العضلية المشارك في التقلص.",
         ),
         MedicalTermEntity(
             id = 570,
@@ -1955,6 +2333,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmaɪəsɪn/",
+            exampleEn = "The myosin is the thick protein filament in muscle fibers that pulls actin during contraction.",
+            exampleFr = "La myosine est filament protéique épais dans les fibres musculaires qui tire l'actine lors de la contraction.",
+            exampleAr = "الميوسين هو الخيط البروتيني السميك في الألياف العضلية الذي يسحب الأكتين أثناء التقلص.",
         ),
         MedicalTermEntity(
             id = 571,
@@ -1967,6 +2348,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈsɑːrkəmɪər/",
+            exampleEn = "The sarcomere is the basic contractile unit of skeletal muscle between two Z-lines.",
+            exampleFr = "La sarcomère est unité contractile de base du muscle squelettique entre deux lignes Z.",
+            exampleAr = "القسيم العضلي هو الوحدة الانقباضية الأساسية للعضلة الهيكلية بين خطي Z.",
         ),
         MedicalTermEntity(
             id = 572,
@@ -1979,6 +2363,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈtroʊpənɪn/",
+            exampleEn = "The troponin is the regulatory protein in muscle that controls muscle contraction via calcium binding.",
+            exampleFr = "La troponine est protéine régulatrice dans le muscle contrôlant la contraction via la liaison du calcium.",
+            exampleAr = "التروبونين هو بروتين تنظيمي في العضلة يتحكم في التقلص عبر ارتباط الكالسيوم.",
         ),
         MedicalTermEntity(
             id = 573,
@@ -1991,6 +2378,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˌtroʊpoʊˈmaɪəsɪn/",
+            exampleEn = "The tropomyosin is the protein blocking myosin binding sites on actin until calcium is released.",
+            exampleFr = "La tropomyosine est protéine bloquant les sites de liaison de la myosine sur l'actine jusqu'à la libération du calcium.",
+            exampleAr = "التروبوميوسين هو بروتين يحجب مواقع ارتباط الميوسين على الأكتين حتى يُطلق الكالسيوم.",
         ),
         MedicalTermEntity(
             id = 574,
@@ -2003,6 +2393,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˌsɑːrkoʊˈplæzmɪk/",
+            exampleEn = "The sarcoplasmic reticulum is the specialized endoplasmic reticulum in muscle cells storing calcium ions.",
+            exampleFr = "La réticulum sarcoplasmique est réticulum endoplasmique spécialisé dans les cellules musculaires stockant les ions calcium.",
+            exampleAr = "الشبكة الهيولية العضلية هو شبكة إندوبلازمية متخصصة في الخلايا العضلية تخزن أيونات الكالسيوم.",
         ),
         MedicalTermEntity(
             id = 575,
@@ -2015,6 +2408,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈtɛtənəs/",
+            exampleEn = "The tetanus (tetanic contraction) is the sustained contraction from rapid repeated stimulation.",
+            exampleFr = "La tétanos (Contraction tétanique) est contraction soutenue résultant d'une stimulation répétée rapide.",
+            exampleAr = "التيبس (التقلص الكزازي) هو تقلص مستمر ناتج عن تنبيه متكرر سريع.",
         ),
         MedicalTermEntity(
             id = 576,
@@ -2027,6 +2423,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmʌsəl twɪtʃ/",
+            exampleEn = "The muscle twitch is the single brief contraction of a muscle in response to one stimulus.",
+            exampleFr = "La secousse musculaire est contraction brève unique d'un muscle en réponse à un stimulus.",
+            exampleAr = "الارتعاش العضلي هو تقلص عضلي قصير واحد استجابة لمنبه واحد.",
         ),
         MedicalTermEntity(
             id = 577,
@@ -2039,6 +2438,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmoʊtər ˈjuːnɪt/",
+            exampleEn = "The motor unit is the motor neuron and all the muscle fibers it innervates.",
+            exampleFr = "L'unité motrice est un neurone moteur et toutes les fibres musculaires qu'il innerve.",
+            exampleAr = "الوحدة المحركة هو عصبون محرك وجميع الألياف العضلية التي يعصبها.",
         ),
         MedicalTermEntity(
             id = 578,
@@ -2051,6 +2453,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmʌsəl toʊn/",
+            exampleEn = "The muscle tone is the continuous partial contraction of muscles maintaining posture.",
+            exampleFr = "La tonus musculaire est contraction partielle continue des muscles maintenant la posture.",
+            exampleAr = "المقوية العضلية هو التقلص الجزئي المستمر للعضلات الذي يحافظ على الوضعية.",
         ),
         MedicalTermEntity(
             id = 579,
@@ -2063,6 +2468,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/ˈmʌsəl fəˈtiːɡ/",
+            exampleEn = "The muscle fatigue is the decline in muscle force due to prolonged or intense activity.",
+            exampleFr = "La fatigue musculaire est diminution de la force musculaire due à une activité prolongée ou intense.",
+            exampleAr = "الإعياء العضلي هو انخفاض قوة العضلة بسبب النشاط المطول أو الشديد.",
         ),
         MedicalTermEntity(
             id = 580,
@@ -2075,6 +2483,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˈnɛfrɒn/",
+            exampleEn = "The nephron is the functional unit of the kidney responsible for urine formation.",
+            exampleFr = "Le néphron est unité fonctionnelle du rein responsable de la formation de l'urine.",
+            exampleAr = "النفرون (الوحدة الكلوية) هو الوحدة الوظيفية للكلية المسؤولة عن تكوين البول.",
         ),
         MedicalTermEntity(
             id = 581,
@@ -2087,6 +2498,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ɡlɒˈmɛrjʊləs/",
+            exampleEn = "The glomerulus is the cluster of capillaries in the kidney where blood filtration begins.",
+            exampleFr = "La glomérule est amas de capillaires dans le rein où commence la filtration du sang.",
+            exampleAr = "الكبيبة هو مجموعة من الشعيرات الدموية في الكلية حيث تبدأ ترشيح الدم.",
         ),
         MedicalTermEntity(
             id = 582,
@@ -2099,6 +2513,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˈbaʊmənz ˈkæpsjuːl/",
+            exampleEn = "The bowman's capsule is the cup-shaped structure surrounding the glomerulus collecting filtrate.",
+            exampleFr = "La capsule de Bowman est structure en forme de coupe entourant le glomérule collectant le filtrat.",
+            exampleAr = "محفظة بومان هو البنية الكأسية المحيطة بالكبيبة التي تجمع الرشاحة.",
         ),
         MedicalTermEntity(
             id = 583,
@@ -2111,6 +2528,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ɡlɒˈmɛrjʊlər fɪlˈtreɪʃən/",
+            exampleEn = "The glomerular filtration is the process of filtering blood plasma through the glomerulus.",
+            exampleFr = "Le filtration glomérulaire est processus de filtration du plasma sanguin à travers le glomérule.",
+            exampleAr = "الترشيح الكبيبي هو عملية ترشيح بلازما الدم عبر الكبيبة.",
         ),
         MedicalTermEntity(
             id = 584,
@@ -2123,6 +2543,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˈtjuːbjʊlər ˌriːəbˈzɔːrpʃən/",
+            exampleEn = "The tubular reabsorption is the process of reclaiming useful substances from the filtrate back into the blood.",
+            exampleFr = "Le réabsorption tubulaire est processus de récupération des substances utiles du filtrat vers le sang.",
+            exampleAr = "إعادة الامتصاص الأنبوبي هو عملية استعادة المواد المفيدة من الرشاحة إلى الدم.",
         ),
         MedicalTermEntity(
             id = 585,
@@ -2135,6 +2558,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˈtjuːbjʊlər sɪˈkriːʃən/",
+            exampleEn = "The tubular secretion is the process of adding substances from blood into the tubular fluid.",
+            exampleFr = "Le sécrétion tubulaire est processus d'ajout de substances du sang dans le liquide tubulaire.",
+            exampleAr = "الإفراز الأنبوبي هو عملية إضافة مواد من الدم إلى السائل الأنبوبي.",
         ),
         MedicalTermEntity(
             id = 586,
@@ -2147,6 +2573,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˈprɒksɪməl kənˈvɒljuːtɪd/",
+            exampleEn = "The proximal convoluted tubule is the first part of the renal tubule where most reabsorption occurs.",
+            exampleFr = "La tube contourné proximal est première partie du tubule rénal où se produit la majorité de la réabsorption.",
+            exampleAr = "النبيب الملتوي القريب هو الجزء الأول من النبيب الكلوي حيث يحدث معظم إعادة الامتصاص.",
         ),
         MedicalTermEntity(
             id = 587,
@@ -2159,6 +2588,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/luːp əv ˈhɛnli/",
+            exampleEn = "The loop of henle is the U-shaped portion of the nephron creating a concentration gradient.",
+            exampleFr = "L'anse de Henlé est portion en forme de U du néphron créant un gradient de concentration.",
+            exampleAr = "عروة هنلي هو الجزء على شكل حرف U من النفرون الذي يخلق تدرجاً في التركيز.",
         ),
         MedicalTermEntity(
             id = 588,
@@ -2171,6 +2603,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˈdɪstəl kənˈvɒljuːtɪd/",
+            exampleEn = "The distal convoluted tubule is the part of the nephron involved in fine-tuning of urine composition.",
+            exampleFr = "La tube contourné distal est partie du néphron impliquée dans l'ajustement fin de la composition urinaire.",
+            exampleAr = "النبيب الملتوي البعيد هو الجزء من النفرون المشارك في الضبط الدقيق لتركيب البول.",
         ),
         MedicalTermEntity(
             id = 589,
@@ -2183,6 +2618,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/kəˈlɛktɪŋ dʌkt/",
+            exampleEn = "The collecting duct is the final segment of the nephron where urine concentration is finalized.",
+            exampleFr = "Le canal collecteur est segment final du néphron où la concentration urinaire est finalisée.",
+            exampleAr = "القناة الجامعة هو الجزء الأخير من النفرون حيث يُنهى تركيز البول.",
         ),
         MedicalTermEntity(
             id = 590,
@@ -2195,6 +2633,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˌæntidaɪjʊˈrɛtɪk/",
+            exampleEn = "The antidiuretic hormone (adh) is the hormone increasing water reabsorption in the collecting duct.",
+            exampleFr = "L'hormone antidiurétique (ADH) est hormone augmentant la réabsorption d'eau dans le canal collecteur.",
+            exampleAr = "الهرمون المضاد لإدرار البول هو هرمون يزيد إعادة امتصاص الماء في القناة الجامعة.",
         ),
         MedicalTermEntity(
             id = 591,
@@ -2207,6 +2648,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ælˈdɒstəroʊn/",
+            exampleEn = "The aldosterone is the hormone promoting sodium reabsorption and potassium secretion.",
+            exampleFr = "L'aldostérone est hormone favorisant la réabsorption du sodium et la sécrétion du potassium.",
+            exampleAr = "الألدوستيرون هو هرمون يعزز إعادة امتصاص الصوديوم وإفراز البوتاسيوم.",
         ),
         MedicalTermEntity(
             id = 592,
@@ -2219,6 +2663,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˈriːnɪn/",
+            exampleEn = "The renin is the enzyme released by the kidneys activating the renin-angiotensin system.",
+            exampleFr = "La rénine est enzyme libérée par les reins activant le système rénine-angiotensine.",
+            exampleAr = "الرينين هو إنزيم تفرزه الكلى ينشط جهاز الرينين-أنجيوتنسين.",
         ),
         MedicalTermEntity(
             id = 593,
@@ -2231,6 +2678,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˌændʒioʊˈtɛnsɪn/",
+            exampleEn = "The angiotensin ii is the powerful vasoconstrictor that also stimulates aldosterone secretion.",
+            exampleFr = "L'angiotensine II est puissant vasoconstricteur qui stimule également la sécrétion d'aldostérone.",
+            exampleAr = "أنجيوتنسين 2 هو مضيق أوعية قوي يحفز أيضاً إفراز الألدوستيرون.",
         ),
         MedicalTermEntity(
             id = 594,
@@ -2243,6 +2693,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˌdaɪjʊˈriːsɪs/",
+            exampleEn = "The diuresis is the increased production of urine.",
+            exampleFr = "La diurèse est production accrue d'urine.",
+            exampleAr = "إدرار البول هو زيادة إنتاج البول.",
         ),
         MedicalTermEntity(
             id = 595,
@@ -2255,6 +2708,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/kriˈætɪniːn/",
+            exampleEn = "The creatinine is the waste product of muscle metabolism used to assess kidney function.",
+            exampleFr = "La créatinine est déchet du métabolisme musculaire utilisé pour évaluer la fonction rénale.",
+            exampleAr = "الكرياتينين هو فضلات استقلاب العضلات تستخدم لتقييم وظائف الكلى.",
         ),
         MedicalTermEntity(
             id = 596,
@@ -2267,6 +2723,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/jʊˈriːə/",
+            exampleEn = "The urea is the waste product of protein metabolism excreted in urine.",
+            exampleFr = "L'urée est déchet du métabolisme des protéines excrété dans l'urine.",
+            exampleAr = "اليوريا هو فضلات استقلاب البروتينات تُطرح في البول.",
         ),
         MedicalTermEntity(
             id = 597,
@@ -2279,6 +2738,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Rénale",
             ipaPhonetic = "/ˌmɪktʃəˈrɪʃən/",
+            exampleEn = "The micturition (urination) is the process of emptying the urinary bladder.",
+            exampleFr = "Le miction est processus de vidange de la vessie.",
+            exampleAr = "التبول هو عملية إفراغ المثانة البولية.",
         ),
         MedicalTermEntity(
             id = 598,
@@ -2291,6 +2753,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈhɔːrmoʊn/",
+            exampleEn = "The hormone is the chemical messenger secreted into blood regulating target organ function.",
+            exampleFr = "L'hormone est messager chimique sécrété dans le sang régulant la fonction d'un organe cible.",
+            exampleAr = "الهرمون هو رسول كيميائي يُفرز في الدم ينظم وظيفة العضو المستهدف.",
         ),
         MedicalTermEntity(
             id = 599,
@@ -2303,6 +2768,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈɛndəkrɪn ɡlænd/",
+            exampleEn = "The endocrine gland is the ductless gland that secretes hormones directly into the blood.",
+            exampleFr = "La glande endocrine est glande sans canal sécrétant des hormones directement dans le sang.",
+            exampleAr = "الغدة الصماء هو غدة بدون قناة تفرز الهرمونات مباشرة في الدم.",
         ),
         MedicalTermEntity(
             id = 600,
@@ -2315,6 +2783,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈɛksoʊkrɪn ɡlænd/",
+            exampleEn = "The exocrine gland is the gland that secretes substances through ducts.",
+            exampleFr = "La glande exocrine est glande qui sécrète des substances par des canaux.",
+            exampleAr = "الغدة خارجية الإفراز هو غدة تفرز مواد عبر قنوات.",
         ),
         MedicalTermEntity(
             id = 601,
@@ -2327,6 +2798,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/pɪˈtjuːɪtəri ɡlænd/",
+            exampleEn = "The pituitary gland (hypophysis) is the master endocrine gland at the base of the brain.",
+            exampleFr = "L'hypophyse est glande endocrine maîtresse à la base du cerveau.",
+            exampleAr = "الغدة النخامية هو الغدة الصماء الرئيسية في قاعدة الدماغ.",
         ),
         MedicalTermEntity(
             id = 602,
@@ -2339,6 +2813,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˌhaɪpoʊˈθæləməs/",
+            exampleEn = "The hypothalamus is the brain region linking the nervous and endocrine systems.",
+            exampleFr = "L'hypothalamus est région cérébrale reliant les systèmes nerveux et endocrinien.",
+            exampleAr = "الوطاء (تحت المهاد) هو منطقة الدماغ التي تربط الجهاز العصبي بجهاز الغدد الصماء.",
         ),
         MedicalTermEntity(
             id = 603,
@@ -2351,6 +2828,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ɡroʊθ ˈhɔːrmoʊn/",
+            exampleEn = "The growth hormone (gh) is the hormone stimulating growth of bones and tissues.",
+            exampleFr = "L'hormone de croissance (GH) est hormone stimulant la croissance des os et des tissus.",
+            exampleAr = "هرمون النمو هو هرمون يحفز نمو العظام والأنسجة.",
         ),
         MedicalTermEntity(
             id = 604,
@@ -2363,6 +2843,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈθaɪrɔɪd ˈstɪmjʊleɪtɪŋ/",
+            exampleEn = "The thyroid-stimulating hormone (tsh) is the pituitary hormone stimulating the thyroid gland.",
+            exampleFr = "La thyréostimuline (TSH) est hormone hypophysaire stimulant la glande thyroïde.",
+            exampleAr = "الهرمون المحفز للغدة الدرقية هو هرمون نخامي يحفز الغدة الدرقية.",
         ),
         MedicalTermEntity(
             id = 605,
@@ -2375,6 +2858,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/θaɪˈrɒksiːn/",
+            exampleEn = "The thyroxine (t4) is the main thyroid hormone regulating metabolism.",
+            exampleFr = "La thyroxine (T4) est principale hormone thyroïdienne régulant le métabolisme.",
+            exampleAr = "الثيروكسين هو الهرمون الدرقي الرئيسي الذي ينظم الأيض.",
         ),
         MedicalTermEntity(
             id = 606,
@@ -2387,6 +2873,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˌtraɪaɪˌoʊdoʊˈθaɪrəniːn/",
+            exampleEn = "The triiodothyronine (t3) is the more active form of thyroid hormone.",
+            exampleFr = "La triiodothyronine (T3) est forme plus active de l'hormone thyroïdienne.",
+            exampleAr = "ثلاثي يودوثيرونين هو الشكل الأكثر نشاطاً من الهرمون الدرقي.",
         ),
         MedicalTermEntity(
             id = 607,
@@ -2399,6 +2888,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈɪnsjʊlɪn/",
+            exampleEn = "The insulin is the pancreatic hormone that lowers blood glucose by promoting cellular uptake.",
+            exampleFr = "L'insuline est hormone pancréatique qui abaisse la glycémie en favorisant l'absorption cellulaire.",
+            exampleAr = "الأنسولين هو هرمون بنكرياسي يخفض سكر الدم عن طريق تعزيز امتصاص الخلايا.",
         ),
         MedicalTermEntity(
             id = 608,
@@ -2411,6 +2903,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈɡluːkəɡɒn/",
+            exampleEn = "The glucagon is the pancreatic hormone that raises blood glucose by stimulating glycogenolysis.",
+            exampleFr = "Le glucagon est hormone pancréatique qui élève la glycémie en stimulant la glycogénolyse.",
+            exampleAr = "الغلوكاغون هو هرمون بنكرياسي يرفع سكر الدم عن طريق تحفيز تحلل الغليكوجين.",
         ),
         MedicalTermEntity(
             id = 609,
@@ -2423,6 +2918,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈkɔːrtɪsɒl/",
+            exampleEn = "The cortisol is the glucocorticoid hormone from the adrenal cortex involved in stress response.",
+            exampleFr = "La cortisol est hormone glucocorticoïde du cortex surrénalien impliquée dans la réponse au stress.",
+            exampleAr = "الكورتيزول هو هرمون سكري قشري من قشرة الكظر يشارك في استجابة الإجهاد.",
         ),
         MedicalTermEntity(
             id = 610,
@@ -2435,6 +2933,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˌɛpɪˈnɛfrɪn/",
+            exampleEn = "The epinephrine (adrenaline) is the hormone from the adrenal medulla involved in fight-or-flight response.",
+            exampleFr = "L'adrénaline (Épinéphrine) est hormone de la médullosurrénale impliquée dans la réponse de combat ou fuite.",
+            exampleAr = "الأدرينالين (الإبينفرين) هو هرمون من لب الكظر يشارك في استجابة الكر والفر.",
         ),
         MedicalTermEntity(
             id = 611,
@@ -2447,6 +2948,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˌpærəˈθaɪrɔɪd/",
+            exampleEn = "The parathyroid hormone (pth) is the hormone increasing blood calcium levels.",
+            exampleFr = "La parathormone (PTH) est hormone augmentant les niveaux de calcium sanguin.",
+            exampleAr = "هرمون الغدة جار الدرقية هو هرمون يزيد مستويات الكالسيوم في الدم.",
         ),
         MedicalTermEntity(
             id = 612,
@@ -2459,6 +2963,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˌkælsɪˈtoʊnɪn/",
+            exampleEn = "The calcitonin is the thyroid hormone that decreases blood calcium levels.",
+            exampleFr = "La calcitonine est hormone thyroïdienne qui diminue les niveaux de calcium sanguin.",
+            exampleAr = "الكالسيتونين هو هرمون درقي يخفض مستويات الكالسيوم في الدم.",
         ),
         MedicalTermEntity(
             id = 613,
@@ -2471,6 +2978,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈnɛɡətɪv ˈfiːdbæk/",
+            exampleEn = "The negative feedback is the regulatory mechanism where the output reduces the stimulus.",
+            exampleFr = "La rétrocontrôle négatif est mécanisme de régulation où la sortie réduit le stimulus.",
+            exampleAr = "التغذية الراجعة السلبية هو آلية تنظيمية حيث يقلل الناتج من المنبه.",
         ),
         MedicalTermEntity(
             id = 614,
@@ -2483,6 +2993,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈpɒzɪtɪv ˈfiːdbæk/",
+            exampleEn = "The positive feedback is the regulatory mechanism where the output amplifies the stimulus.",
+            exampleFr = "La rétrocontrôle positif est mécanisme de régulation où la sortie amplifie le stimulus.",
+            exampleAr = "التغذية الراجعة الإيجابية هو آلية تنظيمية حيث يضخم الناتج المنبه.",
         ),
         MedicalTermEntity(
             id = 615,
@@ -2495,6 +3008,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/tɛˈstɒstəroʊn/",
+            exampleEn = "The testosterone is the primary male sex hormone produced by the testes.",
+            exampleFr = "La testostérone est hormone sexuelle masculine principale produite par les testicules.",
+            exampleAr = "التستوستيرون هو الهرمون الجنسي الذكري الرئيسي المنتج من الخصيتين.",
         ),
         MedicalTermEntity(
             id = 616,
@@ -2507,6 +3023,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˈɛstrədʒən/",
+            exampleEn = "The estrogen is the primary female sex hormone produced by the ovaries.",
+            exampleFr = "La œstrogène est hormone sexuelle féminine principale produite par les ovaires.",
+            exampleAr = "الإستروجين هو الهرمون الجنسي الأنثوي الرئيسي المنتج من المبيضين.",
         ),
         MedicalTermEntity(
             id = 617,
@@ -2519,6 +3038,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/proʊˈdʒɛstəroʊn/",
+            exampleEn = "The progesterone is the hormone preparing the uterus for pregnancy.",
+            exampleFr = "La progestérone est hormone préparant l'utérus à la grossesse.",
+            exampleAr = "البروجسترون هو هرمون يهيئ الرحم للحمل.",
         ),
         MedicalTermEntity(
             id = 618,
@@ -2531,6 +3053,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/proʊˈlæktɪn/",
+            exampleEn = "The prolactin is the pituitary hormone stimulating milk production.",
+            exampleFr = "La prolactine est hormone hypophysaire stimulant la production de lait.",
+            exampleAr = "البرولاكتين هو هرمون نخامي يحفز إنتاج الحليب.",
         ),
         MedicalTermEntity(
             id = 619,
@@ -2543,6 +3068,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˌɒksɪˈtoʊsɪn/",
+            exampleEn = "The oxytocin is the hormone stimulating uterine contractions and milk ejection.",
+            exampleFr = "L'ocytocine est hormone stimulant les contractions utérines et l'éjection du lait.",
+            exampleAr = "الأوكسيتوسين هو هرمون يحفز تقلصات الرحم وإدرار الحليب.",
         ),
         MedicalTermEntity(
             id = 620,
@@ -2555,6 +3083,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Endocrinienne",
             ipaPhonetic = "/ˌmɛləˈtoʊnɪn/",
+            exampleEn = "The melatonin is the hormone from the pineal gland regulating the sleep-wake cycle.",
+            exampleFr = "La mélatonine est hormone de la glande pinéale régulant le cycle veille-sommeil.",
+            exampleAr = "الميلاتونين هو هرمون من الغدة الصنوبرية ينظم دورة النوم والاستيقاظ.",
         ),
         MedicalTermEntity(
             id = 621,
@@ -2567,6 +3098,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/daɪˈdʒɛstʃən/",
+            exampleEn = "The digestion is the breakdown of food into absorbable nutrients.",
+            exampleFr = "Le digestion est dégradation des aliments en nutriments absorbables.",
+            exampleAr = "الهضم هو تحليل الطعام إلى مغذيات قابلة للامتصاص.",
         ),
         MedicalTermEntity(
             id = 622,
@@ -2579,6 +3113,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/əbˈzɔːrpʃən/",
+            exampleEn = "The absorption is the transfer of digested nutrients from the gut into the bloodstream.",
+            exampleFr = "L'absorption est transfert des nutriments digérés de l'intestin vers le flux sanguin.",
+            exampleAr = "الامتصاص هو نقل المغذيات المهضومة من الأمعاء إلى مجرى الدم.",
         ),
         MedicalTermEntity(
             id = 623,
@@ -2603,6 +3140,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/səˈlaɪvə/",
+            exampleEn = "The saliva is the secretion of salivary glands containing amylase and lubricating the food.",
+            exampleFr = "La salive est sécrétion des glandes salivaires contenant de l'amylase et lubrifiant les aliments.",
+            exampleAr = "اللعاب هو إفراز الغدد اللعابية الذي يحتوي على الأميلاز ويزلق الطعام.",
         ),
         MedicalTermEntity(
             id = 625,
@@ -2615,6 +3155,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈɡæstrɪk dʒuːs/",
+            exampleEn = "The gastric juice is the acidic secretion of the stomach containing HCl and pepsin.",
+            exampleFr = "La suc gastrique est sécrétion acide de l'estomac contenant HCl et pepsine.",
+            exampleAr = "العصارة المعدية هو الإفراز الحمضي للمعدة الذي يحتوي على حمض الهيدروكلوريك والبيبسين.",
         ),
         MedicalTermEntity(
             id = 626,
@@ -2627,6 +3170,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌhaɪdrəˈklɔːrɪk ˈæsɪd/",
+            exampleEn = "The hydrochloric acid (hcl) is the strong acid in gastric juice that activates pepsin and kills bacteria.",
+            exampleFr = "L'acide chlorhydrique (HCl) est acide fort du suc gastrique activant la pepsine et tuant les bactéries.",
+            exampleAr = "حمض الهيدروكلوريك هو الحمض القوي في العصارة المعدية الذي ينشط البيبسين ويقتل البكتيريا.",
         ),
         MedicalTermEntity(
             id = 627,
@@ -2639,6 +3185,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈpɛpsɪn/",
+            exampleEn = "The pepsin is the gastric enzyme that breaks down proteins.",
+            exampleFr = "La pepsine est enzyme gastrique qui dégrade les protéines.",
+            exampleAr = "البيبسين هو إنزيم معدي يحلل البروتينات.",
         ),
         MedicalTermEntity(
             id = 628,
@@ -2651,6 +3200,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/baɪl/",
+            exampleEn = "The bile is the liver secretion stored in the gallbladder that emulsifies fats.",
+            exampleFr = "La bile est sécrétion hépatique stockée dans la vésicule biliaire qui émulsionne les graisses.",
+            exampleAr = "الصفراء (العصارة الصفراوية) هو إفراز كبدي يُخزن في المرارة ويستحلب الدهون.",
         ),
         MedicalTermEntity(
             id = 629,
@@ -2663,6 +3215,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌpæŋkriˈætɪk dʒuːs/",
+            exampleEn = "The pancreatic juice is the alkaline secretion containing enzymes for digesting proteins, fats, and carbohydrates.",
+            exampleFr = "La suc pancréatique est sécrétion alcaline contenant des enzymes pour digérer protéines, graisses et glucides.",
+            exampleAr = "العصارة البنكرياسية هو إفراز قلوي يحتوي على إنزيمات لهضم البروتينات والدهون والكربوهيدرات.",
         ),
         MedicalTermEntity(
             id = 630,
@@ -2675,6 +3230,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈæmɪleɪz/",
+            exampleEn = "The amylase is the enzyme that breaks down starch into simple sugars.",
+            exampleFr = "L'amylase est enzyme qui dégrade l'amidon en sucres simples.",
+            exampleAr = "الأميلاز هو إنزيم يحلل النشا إلى سكريات بسيطة.",
         ),
         MedicalTermEntity(
             id = 631,
@@ -2687,6 +3245,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈlaɪpeɪz/",
+            exampleEn = "The lipase is the enzyme that breaks down fats into fatty acids and glycerol.",
+            exampleFr = "La lipase est enzyme qui dégrade les graisses en acides gras et glycérol.",
+            exampleAr = "الليباز هو إنزيم يحلل الدهون إلى أحماض دهنية وغليسرول.",
         ),
         MedicalTermEntity(
             id = 632,
@@ -2699,6 +3260,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈtrɪpsɪn/",
+            exampleEn = "The trypsin is the pancreatic enzyme that breaks down proteins in the small intestine.",
+            exampleFr = "La trypsine est enzyme pancréatique qui dégrade les protéines dans l'intestin grêle.",
+            exampleAr = "التربسين هو إنزيم بنكرياسي يحلل البروتينات في الأمعاء الدقيقة.",
         ),
         MedicalTermEntity(
             id = 633,
@@ -2735,6 +3299,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈɡæstrɪn/",
+            exampleEn = "The gastrin is the hormone stimulating gastric acid secretion.",
+            exampleFr = "La gastrine est hormone stimulant la sécrétion d'acide gastrique.",
+            exampleAr = "الغاسترين هو هرمون يحفز إفراز حمض المعدة.",
         ),
         MedicalTermEntity(
             id = 636,
@@ -2747,6 +3314,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/sɪˈkriːtɪn/",
+            exampleEn = "The secretin is the hormone stimulating bicarbonate secretion from the pancreas.",
+            exampleFr = "La sécrétine est hormone stimulant la sécrétion de bicarbonate par le pancréas.",
+            exampleAr = "السكرتين هو هرمون يحفز إفراز البيكربونات من البنكرياس.",
         ),
         MedicalTermEntity(
             id = 637,
@@ -2759,6 +3329,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌkoʊlɪˌsɪstəˈkaɪnɪn/",
+            exampleEn = "The cholecystokinin (cck) is the hormone stimulating gallbladder contraction and pancreatic enzyme secretion.",
+            exampleFr = "La cholécystokinine (CCK) est hormone stimulant la contraction de la vésicule biliaire et la sécrétion d'enzymes pancréatiques.",
+            exampleAr = "الكوليسيستوكينين هو هرمون يحفز تقلص المرارة وإفراز إنزيمات البنكرياس.",
         ),
         MedicalTermEntity(
             id = 638,
@@ -2771,6 +3344,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌdɛfɪˈkeɪʃən/",
+            exampleEn = "The defecation is the elimination of feces from the body.",
+            exampleFr = "Le défécation est élimination des selles du corps.",
+            exampleAr = "التغوط هو طرح البراز من الجسم.",
         ),
         MedicalTermEntity(
             id = 639,
@@ -2783,6 +3359,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/kaɪm/",
+            exampleEn = "The chyme is the semi-liquid mass of partially digested food leaving the stomach.",
+            exampleFr = "La chyme est masse semi-liquide d'aliments partiellement digérés quittant l'estomac.",
+            exampleAr = "الكيموس هو الكتلة شبه السائلة من الطعام المهضوم جزئياً التي تغادر المعدة.",
         ),
         MedicalTermEntity(
             id = 640,
@@ -2795,6 +3374,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Homéostasie",
             ipaPhonetic = "/piː eɪtʃ/",
+            exampleEn = "The ph is the measure of hydrogen ion concentration indicating acidity or alkalinity.",
+            exampleFr = "La pH est mesure de la concentration en ions hydrogène indiquant l'acidité ou l'alcalinité.",
+            exampleAr = "الأس الهيدروجيني هو مقياس تركيز أيونات الهيدروجين الذي يشير إلى الحموضة أو القلوية.",
         ),
         MedicalTermEntity(
             id = 641,
@@ -2807,6 +3389,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Homéostasie",
             ipaPhonetic = "/ˌæsɪˈdoʊsɪs/",
+            exampleEn = "The acidosis is the condition where blood pH falls below 7.35.",
+            exampleFr = "L'acidose est condition où le pH sanguin tombe en dessous de 7,35.",
+            exampleAr = "الحماض هو حالة ينخفض فيها الرقم الهيدروجيني للدم تحت 7.35.",
         ),
         MedicalTermEntity(
             id = 642,
@@ -2819,6 +3404,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Homéostasie",
             ipaPhonetic = "/ˌælkəˈloʊsɪs/",
+            exampleEn = "The alkalosis is the condition where blood pH rises above 7.45.",
+            exampleFr = "L'alcalose est condition où le pH sanguin s'élève au-dessus de 7,45.",
+            exampleAr = "القلاء هو حالة يرتفع فيها الرقم الهيدروجيني للدم فوق 7.45.",
         ),
         MedicalTermEntity(
             id = 643,
@@ -2831,6 +3419,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Homéostasie",
             ipaPhonetic = "/ˈbʌfər ˈsɪstəm/",
+            exampleEn = "The buffer system is the chemical system that resists changes in pH.",
+            exampleFr = "La système tampon est système chimique qui résiste aux changements de pH.",
+            exampleAr = "النظام الدارئ هو نظام كيميائي يقاوم التغيرات في الأس الهيدروجيني.",
         )
 
     )
