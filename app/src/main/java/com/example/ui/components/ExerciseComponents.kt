@@ -172,7 +172,7 @@ fun McqQuestionView(
 @Composable
 fun MatchingExerciseView(
     exercise: ExerciseEntity,
-    onComplete: () -> Unit,
+    onComplete: (errors: Int) -> Unit,
     currentLanguage: Language,
     modifier: Modifier = Modifier
 ) {
@@ -193,6 +193,9 @@ fun MatchingExerciseView(
     var selectedSecond by remember(exercise) { mutableStateOf<String?>(null) }
     val matchedPairs = remember(exercise) { mutableStateMapOf<String, String>() }
     var errorFlash by remember(exercise) { mutableStateOf(false) }
+    // P0-1 : les erreurs de pairing doivent être signalées au ViewModel, sinon
+    // l'exercice est toujours compté correct (réponse = correctAnswer transmise telle quelle).
+    var errorCount by remember(exercise) { mutableStateOf(0) }
     LaunchedEffect(errorFlash) {
         if (errorFlash) {
             kotlinx.coroutines.delay(900)
@@ -207,10 +210,11 @@ fun MatchingExerciseView(
             // Réussite = toutes les paires appariées, même après une erreur
             // corrigée : un faux départ ne doit plus faire échouer l'exercice.
             if (matchedPairs.size == pairs.size) {
-                onComplete()
+                onComplete(errorCount)
             }
         } else {
             errorFlash = true
+            errorCount += 1
         }
         selectedFirst = null
         selectedSecond = null

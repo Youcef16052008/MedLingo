@@ -50,6 +50,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.domain.exercise.MatchScoring
 import com.example.domain.learning.LearningLevel
 import com.example.localization.Language
 import com.example.localization.Strings
@@ -593,11 +594,15 @@ private fun LevelExerciseSessionView(
                 "matching" -> {
                     MatchingExerciseView(
                         exercise = currentExercise,
-                        onComplete = {
+                        onComplete = { errors ->
+                            // P0-1 : pénalité sur les erreurs de pairing. Sans
+                            // elle, un appariement truffé de fautes était
+                            // validé comme une réponse parfaite.
+                            val points = MatchScoring.pointsFor(currentExercise.points, errors)
                             onSelectOption(
                                 currentExercise.correctAnswer,
                                 currentExercise.correctAnswer,
-                                currentExercise.points
+                                points
                             )
                         },
                         currentLanguage = currentLanguage
