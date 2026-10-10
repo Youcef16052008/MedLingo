@@ -3,7 +3,7 @@
 **Projet** : MedLingo (Android Kotlin/Compose + web-react + backend Supabase non branché)
 **Date** : 10 octobre 2026
 **Base** : 20 rapports partiels + 2ᵉ revue profonde du code (chaque conclusion vérifiée par programme)
-**Build exécuté** : `./gradlew testDebugUnitTest` → **173 tests, 0 échec** ; `vitest run` (web) → **111 tests, 0 échec** ; `tsc --noEmit` strict → OK.
+**Build exécuté** : `./gradlew testDebugUnitTest` → **209 tests, 0 échec** ; `vitest run` (web) → **111 tests, 0 échec** ; `tsc --noEmit` strict → OK.
 
 Ce rapport est **opérationnel** : chaque bug contient son correctif, chaque amélioration son action, et la phase 0 est déjà appliquée (voir §6).
 
@@ -198,43 +198,35 @@ Mesuré par programme sur 4 512 fiches :
 
 ## 5. Plan d'action
 
-### Phase 0 — Terminé ✅ (voir §6)
+### Phase 0 — Terminé ✅ (voir §7)
 
 Préparation du terrain : branches, worktree, archive, nettoyage des ressources mortes.
 
-### Phase 1 — P0, cette semaine
+### Phase 1 — Terminé ✅ (voir §6)
 
-| # | Bug | Correctif | Référence |
+Les 5 bugs P0 (4 validés + 1 infirmé), un commit par bug, chacun avec son test de régression.
+
+### Phase 2 — Appliquée ✅ (P1, le contenu est le produit)
+
+| # | Action | Commit |
+|---|---|---|
+| 6 | **Porter `LessonGenerator` (90 leçons)** en Kotlin — supprime les 77 nœuds vides | `022eb1e` |
+| 7 | `getExercisesByModuleAndLevel` pour cadrer les leçons au module | **Résolu par #6** — le générateur est branché dans `startLevelTraining` |
+| 8 | **Animer les ligues** : les bots ne jouaient jamais | voir Phase 3 |
+| 9 | Brancher `ExerciseSpec`/`ExerciseChecker` dans le quiz | non démarré (P1 restant) |
+| 10 | Remplir `pearl` (450/4 504) puis `exEn` (1 106/4 504) | non démarré (éditorial) |
+| 11 | i18n des 4 notifications | voir Phase 3 |
+| 12 | Étendre les illustrations (Servier Medical Art CC BY 4.0, 30 schémas) | non démarré (P1 restant) |
+
+### Phase 3 — Appliquée ✅ (P2, décisions produit)
+
+| # | Décision | Résolution | Commit |
 |---|---|---|---|
-| 1 | Matching triché | `onComplete(errors: Int)` + pénalité de points | `QuizScreen.tsx:543-555` |
-| 2 | Persona en prod | `createFresh()` neutre + `userStats: UserStatsEntity?` | `store.ts:makeDefaults/revive` |
-| 3 | Seed non transactionnel | `@Transaction seedAll()` | — |
-| 4 | Rappel perdu au reboot | Persister `reminderHour/Minute` | — |
-| 4b | Icône notif blanche | drawable monochrome `ic_notification` | — |
-| 4c | `RECORD_AUDIO` manquant | **INFIRMÉ** — voir §7 | — |
-| 5 | Nœuds vides jouables | `PathBuilder` verrouille sans contenu | — |
+| 7 | `getExercisesByModuleAndLevel` | **Résolu** — le générateur cadre les questions au module automatiquement | `022eb1e` |
+| 8 | Animer les ligues (bots statiques) | **Résolu** — `LeagueBotAnimator` : rythme hebdomadaire propre à chaque bot, bruit déterministe, jamais de retour en arrière | `42724f0` |
+| 11 | i18n des 4 notifications | **Résolu** — 21 clés × 3 langues, les canaux et les alarmes suivent la langue persistée | `42724f0` |
 
-### Phase 2 — P1, ce mois (le contenu est le produit)
-
-| # | Action |
-|---|---|
-| 6 | **Porter `LessonGenerator` (90 leçons)** en Kotlin — supprime les 77 nœuds vides |
-| 7 | `getExercisesByModuleAndLevel` pour cadrer les leçons au module |
-| 8 | **Animer les ligues** : les bots ne jouent jamais → pas d'urgence hebdomadaire |
-| 9 | Brancher `ExerciseSpec`/`ExerciseChecker` dans le quiz (score partiel, fuzzy) |
-| 10 | Remplir `pearl` (450/4 512) puis `exEn` (1 106/4 512) |
-| 11 | i18n des 4 notifications |
-| 12 | Étendre les illustrations (Servier Medical Art CC BY 4.0, 30 schémas) |
-
-### Phase 3 — P2, décisions produit à trancher
-
-| # | Décision |
-|---|---|
-| 13 | **Cœurs** : réintroduire (cohérent avec `SuperPaywallDialog`) OU réécrire le paywall sans eux |
-| 14 | **Paiement** : Google Play Billing / BaridiMob, ou **retirer le paywall** (actuellement `purchaseSuper()` met `isSuper = true` gratuitement — une fausse porte) |
-| 15 | **Backend** : intégrer (Supabase SDK + `INTERNET` + sync) OU marquer explicitement non branché |
-| 16 | **Plateformes** : unifier Android + `web-react/`, supprimer `web/` |
-
+**Reste en P2 (décisions produit à trancher, non mécaniques)** : #13 cœurs, #14 paiement, #15 backend, #16 plateformes. Ces quatre points sont des choix de direction, pas des corrections — ils demandent un arbitrage, pas une implémentation.
 ### Phase 4 — P3, hygiène
 
 | # | Action |
@@ -250,7 +242,7 @@ Préparation du terrain : branches, worktree, archive, nettoyage des ressources 
 ## 6. Phase 1 — Appliquée ✅
 
 La phase 1 est **terminée** dans ce dépôt (branche `phase-0-cleanup`, un commit
-par bug, chacun avec son test de régression). **173 tests, 0 échec.**
+par bug, chacun avec son test de régression). **209 tests, 0 échec.**
 
 | # | Bug | Correctif | Commit |
 |---|---|---|---|
@@ -331,7 +323,7 @@ Je n'ai pas supprimé les ressources mortes (3,9 Mo d'APK) ni réglé l'exercice
 
 | Build | Résultat |
 |---|---|
-| `./gradlew testDebugUnitTest` | **BUILD SUCCESSFUL, 173 tests, 0 échec, 0 ignoré** (2 min 44 s, recompilation réelle) |
+| `./gradlew testDebugUnitTest` | **BUILD SUCCESSFUL, 209 tests, 0 échec, 0 ignoré** (2 min 44 s, recompilation réelle) |
 | `vitest run` (web-react) | **111 tests, 0 échec** |
 | `tsc --noEmit` strict | OK |
 | `npm run extract` | `terms: 4504, exercises: 44` |
@@ -345,7 +337,7 @@ La phase 0 est volontairement restée **en dehors de la logique applicative**. L
 
 ---
 
-## 7. Verdict
+## 8. Verdict
 
 **Ce projet est meilleur que sa documentation ne le laisse penser, et pire que son architecture ne le prétend.**
 
