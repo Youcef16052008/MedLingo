@@ -3,7 +3,7 @@
 **Projet** : MedLingo (Android Kotlin/Compose + web-react + backend Supabase non branché)
 **Date** : 10 octobre 2026
 **Base** : 20 rapports partiels + 2ᵉ revue profonde du code (chaque conclusion vérifiée par programme)
-**Build exécuté** : `./gradlew testDebugUnitTest` → **164 tests, 0 échec** ; `vitest run` (web) → **111 tests, 0 échec** ; `tsc --noEmit` strict → OK.
+**Build exécuté** : `./gradlew testDebugUnitTest` → **173 tests, 0 échec** ; `vitest run` (web) → **111 tests, 0 échec** ; `tsc --noEmit` strict → OK.
 
 Ce rapport est **opérationnel** : chaque bug contient son correctif, chaque amélioration son action, et la phase 0 est déjà appliquée (voir §6).
 
@@ -211,7 +211,7 @@ Préparation du terrain : branches, worktree, archive, nettoyage des ressources 
 | 3 | Seed non transactionnel | `@Transaction seedAll()` | — |
 | 4 | Rappel perdu au reboot | Persister `reminderHour/Minute` | — |
 | 4b | Icône notif blanche | drawable monochrome `ic_notification` | — |
-| 4c | `RECORD_AUDIO` manquant | Permission + demande runtime | — |
+| 4c | `RECORD_AUDIO` manquant | **INFIRMÉ** — voir §7 | — |
 | 5 | Nœuds vides jouables | `PathBuilder` verrouille sans contenu | — |
 
 ### Phase 2 — P1, ce mois (le contenu est le produit)
@@ -247,7 +247,44 @@ Préparation du terrain : branches, worktree, archive, nettoyage des ressources 
 
 ---
 
-## 6. Phase 0 — Appliquée
+## 6. Phase 1 — Appliquée ✅
+
+La phase 1 est **terminée** dans ce dépôt (branche `phase-0-cleanup`, un commit
+par bug, chacun avec son test de régression). **173 tests, 0 échec.**
+
+| # | Bug | Correctif | Commit |
+|---|---|---|---|
+| 1 | Matching triché | `onComplete(errors: Int)` + `MatchScoring` (0 erreur → points entiers, ≥1 erreur → moitié) | `b0e5595` |
+| 2 | Persona en prod | `createFresh()` neutre (seed, `UiState`, 7 fallbacks) + `createDefault()` déprécié | `bceec2d` |
+| 3 | Seed non transactionnel | `@Transaction seedAll()` — Room annule tout en cas d'échec | `f6297fb` |
+| 4 | Rappel perdu au reboot | `KEY_REMINDER_HOUR/MINUTE` persistés, relus au reboot + restaurés dans `UiState` | `fd6ef3b` |
+| 4b | Icône notif blanche | `drawable/ic_notification.xml` monochrome (contour d'horloge), les 4 notifications | `fd6ef3b` |
+| 4c | `RECORD_AUDIO` manquant | **INFIRMÉ** — voir ci-dessous | — |
+| 5 | Nœuds vides jouables | `PathBuilder.moduleHasContent` — un module sans exercice est entièrement verrouillé | `ebe318f` |
+
+### 6.1 B12 (`RECORD_AUDIO`) — infirmé après vérification
+
+Le rapport affirmait que `AudioPronunciationStudio` était câblé pour
+l'enregistrement sans déclarer la permission. **C'est faux.** Vérification :
+
+```
+grep -rn "MediaRecorder\|AudioRecord\|RECORD_AUDIO\|startRecording" app/src/
+→ (aucun résultat)
+```
+
+`AudioPronunciationStudio.kt` est purement un lecteur **TTS** (Android
+`TextToSpeech`) : il affiche terme + IPA + traductions, et commande le TTS
+manager. Il n'enregistre jamais. `TtsManager.kt` n'utilise que
+`android.speech.tts.TextToSpeech` — pas de `SpeechRecognizer` non plus.
+
+**Ajouter `RECORD_AUDIO` au manifest aurait déclaré une permission dangereuse
+pour une fonctionnalité inexistante** (play store review + confiance
+utilisateur). Ne pas l'ajouter était la bonne décision. Le rapport initial
+avait lu le nom « AudioPronunciationStudio » et inféré un enregistrement.
+
+---
+
+## 7. Phase 0 — Appliquée
 
 La phase 0 est **réalisée** dans ce dépôt (branche `phase-0-cleanup`, worktree dédié). Voici ce qui a été fait.
 
@@ -294,7 +331,7 @@ Je n'ai pas supprimé les ressources mortes (3,9 Mo d'APK) ni réglé l'exercice
 
 | Build | Résultat |
 |---|---|
-| `./gradlew testDebugUnitTest` | **BUILD SUCCESSFUL, 164 tests, 0 échec, 0 ignoré** (2 min 44 s, recompilation réelle) |
+| `./gradlew testDebugUnitTest` | **BUILD SUCCESSFUL, 173 tests, 0 échec, 0 ignoré** (2 min 44 s, recompilation réelle) |
 | `vitest run` (web-react) | **111 tests, 0 échec** |
 | `tsc --noEmit` strict | OK |
 | `npm run extract` | `terms: 4504, exercises: 44` |

@@ -2,13 +2,13 @@
 
 **Périmètre** : 6 342 fichiers, ~19 000 lignes de Kotlin/TS/SQL analysées sur 20 rapports. Chaque conclusion ci-dessous a été **vérifiée deux fois** : une fois à la lecture, une fois par programme (grep/script/parseur) lors de la seconde revue.
 
-**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **164 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
+**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **173 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
 
 ---
 
 ## 0. Ce qu'est réellement MedLingo
 
-Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 164 tests sont verts.**
+Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 173 tests sont verts.**
 
 Trois plateformes coexistent (Android, `web-react` typé/testé, `web/` vanilla JS obsolète) et **trois économies de jeu différentes** (l'Android et web-react ont supprimé les cœurs ; `web/` les a encore ; le backend SQL les promeut).
 
@@ -23,7 +23,7 @@ Trois plateformes coexistent (Android, `web-react` typé/testé, `web/` vanilla 
 | B3 | **Le seed n'est pas transactionnel** | `grep -c "@Transaction"` dans `MedicalDao.kt` = **0** ; `initializeDatabaseIfEmpty` enchaîne 5 insertions + 15 upserts sans transaction |
 | B4 | **L'heure de rappel est perdue au reboot** | `BootReceiver.kt` appelle `scheduleDailyReminder(context, 20, 0)` — hardcodé, ne lit jamais `reminderHour/reminderMinute` |
 | B5 | **10 modules sur 15 n'ont aucun exercice** | `grep module = ...` : Anatomie 25, Physiologie 12, Anatomie Patho 5, Terminologie 1, Sémiologie 1 = **44 exercices au total, 5 modules couverts** |
-| B12 | **Permission micro absente** | Le manifest ne déclare que `VIBRATE`, `POST_NOTIFICATIONS`, `RECEIVE_BOOT_COMPLETED` — aucun `RECORD_AUDIO` alors que l'`AudioPronunciationStudio` est câblé |
+| B12 | ~~Permission micro absente~~ **INFIRMÉ** | Vérification : `AudioPronunciationStudio` est un lecteur TTS, `grep -rn "MediaRecorder\|AudioRecord" app/src/` = **0 résultat**. Aucun enregistrement n'existe — la permission n'a rien à faire au manifest. Voir `RAPPORT_REMEDIATION.md` §6.1 |
 | B18 | **`HomeScreen.kt` (1 076 lignes) est mort** | `grep -rln HomeScreen app/src` ne retourne **que lui-même** — aucun appelant. `LanguageSelector` n'est utilisé que par `HomeScreen` (mort) et `StatsProfileScreen` (vivant) → la langue est bien accessible, mais via le profil uniquement |
 | B19 | **La barre de téléchargement est factice** | `downloadModule` fait `delay(120)` × 10 dans une boucle avec `downloadingModuleId` — simulation pure, alors que tout le contenu est déjà dans l'APK |
 
@@ -134,13 +134,13 @@ J'ai aussi **sous-estimé** deux choses : la solidité des migrations Room 8→9
 
 **Ce projet est meilleur que sa documentation ne le laisse penser, et pire que son architecture ne le prétend.**
 
-La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 164 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
+La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 173 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
 
 La faiblesse est ailleurs : **44 exercices pour 90 leçons**, des **mensonges involontaires** (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, paywall gratuit), et **trois versions du même produit** qui divergent.
 
 **La priorité n'est pas d'ajouter des fonctionnalités. C'est de combler le contenu, de corriger les 5 bugs P0, et d'aligner la documentation sur le code.** Une fois cela fait, MedLingo sera un bon produit — pas un Duolingo, mais quelque chose de plus adapté à son public : un outil d'anglais médical offline, trilingue et universitaire, ce que Duolingo ne sera jamais.
 
-**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 164 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
+**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 173 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
 
 ---
 
