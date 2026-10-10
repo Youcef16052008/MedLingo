@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import androidx.room.Update
 import com.example.data.local.entity.DownloadedModuleEntity
 import com.example.data.local.entity.ExerciseEntity
@@ -162,6 +163,59 @@ interface MedicalDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertLessonScore(score: LessonScoreEntity)
+
+    // === P0-3 (rapport final, bug B3) : seed transactionnel ===
+    //
+    // Avant, `initializeDatabaseIfEmpty` enchaînait ~30 écritures DAO sans
+    // transaction. Un process killed à mi-chemin (low-memory, crash) laissait
+    // une base partiellement remplie ; or la garde `isDatabaseEmpty` n'était
+    // plus vraie au relancement → l'app démarrait sur une base incomplète
+    // **pour toujours** (des modules marqués téléchargés, mais sans termes ni
+    // exercices).
+    //
+    // Room annule toute la transaction si une seule écriture échoue.
+    @Transaction
+    suspend fun seedAll(
+        terms: List<MedicalTermEntity>,
+        bookmarkedKeys: List<BookmarkedKey>,
+        exercises: List<ExerciseEntity>,
+        modules: List<DownloadedModuleEntity>,
+        stats: UserStatsEntity,
+        progress: List<FlashcardProgressEntity>,
+        gemsTransaction: GemsTransactionEntity?,
+        statsWithGems: UserStatsEntity?,
+        cohort: LeagueCohortEntity?,
+        deactivateOtherCohortsFor: String?,
+        leagueMembers: List<LeagueMemberEntity>,
+        statsWithCohort: UserStatsEntity?
+    ) {
+        // 1. Termes (REPLACE : le seed peut mettre à jour le contenu)
+        insertTerms(terms)
+        // 2. Restaurer les bookmarks de l'utilisateur (le REPLACE les efface)
+        bookmarkedKeys.forEach { key -> restoreBookmark(key.termEn, key.module) }
+        // 3. Exercices (déjà migrés en ExerciseSpec JSONB par le repository)
+        insertExercises(exercises)
+        // 4. Modules marqués téléchargés
+        modules.forEach { upsertDownloadedModule(it) }
+        // 5. Stats initiales (état neutre — P0-2)
+        upsertUserStats(stats)
+        // 6. Progression flashcard initiale
+        progress.forEach { upsertFlashcardProgress(it) }
+        // 7. Bonus de bienvenue (ledger append-only anti-triche) + solde
+        if (gemsTransaction != null && statsWithGems != null) {
+            insertGemsTransaction(gemsTransaction)
+            upsertUserStats(statsWithGems)
+        }
+        // 8. Cohorte de ligue + bots
+        if (cohort != null) {
+            if (deactivateOtherCohortsFor != null) {
+                deactivateOtherCohorts(deactivateOtherCohortsFor)
+            }
+            upsertLeagueCohort(cohort)
+            upsertLeagueMembers(leagueMembers)
+            if (statsWithCohort != null) upsertUserStats(statsWithCohort)
+        }
+    }
 }
 
 data class BookmarkedKey(val termEn: String, val module: String)

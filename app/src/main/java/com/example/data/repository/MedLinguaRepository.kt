@@ -71,10 +71,21 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun initializeDatabaseIfEmpty() = withContext(Dispatchers.IO) {
+        // P0-3 (rapport final, bug B3) : tout le seed est maintenant exécuté
+        // dans UNE transaction Room (`dao.seedAll`). Avant, ~30 écritures
+        // indépendantes laissaient une base partiellement remplie si le process
+        // était tué à mi-chemin — et la garde `isDatabaseEmpty` n'était plus
+        // vraie au relancement, donc l'app démarrait sur une base cassée à vie.
+        //
+        // Toute la préparation (lecture des bookmarks, migration ExerciseSpec,
+        // génération de la cohorte) reste en dehors de la transaction : c'est
+        // du calcul pur, non écriture. Seul le résultat est écrit atomiquement.
+
+        val stats = dao.getUserStatsOnce()
+        if (stats == null) {
+
         // Preserve user bookmarks across the REPLACE seed (seed data may update content)
         val bookmarkedKeys = dao.getBookmarkedKeys()
-        dao.insertTerms(InitialData.terms)
-        bookmarkedKeys.forEach { key -> dao.restoreBookmark(key.termEn, key.module) }
 
         // Phase 2: Migrate exercises to ExerciseSpec JSONB
         val migratedExercises = try {
@@ -82,93 +93,87 @@ val currentClock: Clock get() = clock
         } catch (e: Exception) {
             InitialData.exercises
         }
-        dao.insertExercises(migratedExercises)
 
         val now = clock.now()
 
-        InitialData.modulesList.forEach { mod ->
-            dao.upsertDownloadedModule(
-                DownloadedModuleEntity(
-                    moduleId = mod.id,
-                    moduleName = mod.titleFr,
-                    downloadedTimestamp = now,
-                    sizeMb = mod.estimatedSizeMb,
-                    termsCount = InitialData.termsOfModule(mod.titleFr).size,
-                    exercisesCount = InitialData.exercises.count {
-                        it.module.equals(mod.titleFr, ignoreCase = true)
-                    },
-                    isDownloaded = true
-                )
+        val modules = InitialData.modulesList.map { mod ->
+            DownloadedModuleEntity(
+                moduleId = mod.id,
+                moduleName = mod.titleFr,
+                downloadedTimestamp = now,
+                sizeMb = mod.estimatedSizeMb,
+                termsCount = InitialData.termsOfModule(mod.titleFr).size,
+                exercisesCount = InitialData.exercises.count {
+                    it.module.equals(mod.titleFr, ignoreCase = true)
+                },
+                isDownloaded = true
             )
         }
 
-        val stats = dao.getUserStatsOnce()
-        if (stats == null) {
-            val initialProgress = InitialData.terms.take(8).mapIndexed { index, term ->
-                FlashcardProgressEntity(
-                    termId = term.id,
-                    repetitions = if (index % 2 == 0) 1 else 0,
-                    easeFactor = 2.5,
-                    intervalDays = 1,
-                    nextReviewTimestamp = now - 1000L,
-                    lastReviewedTimestamp = now - 86400000L,
-                    lastQuality = 3
-                )
-            }
-            initialProgress.forEach { dao.upsertFlashcardProgress(it) }
+        // P0-2 : état neutre pour un nouvel utilisateur. L'ancien seed injectait
+        // une persona de démo (12 jours de série, 156 termes, niveau 1 à 85 %,
+        // 2 850 points) qui s'affichait avant le premier exercice — et dont
+        // `level2Score = 75 >= 70` pouvait empêcher le niveau 3 de se
+        // débloquer. Plus aucune progression fabriquée.
+        val freshStats = UserStatsEntity.createFresh(clock).copy(
+            // La série doit partir du jour courant pour que la première étude la
+            // compte bien à 1 (et non à 0).
+            lastStudy = ProgressionManager.todayKey(now),
+            weeklyXpReset = LeagueManager.getWeekStartTimestamp(clock)
+        )
 
-            safeUpsertUserStats(
-                // P0-2 (rapport final, bug B2) : état neutre pour un nouvel
-                // utilisateur. L'ancien seed injectait une persona de démo
-                // (12 jours de série, 156 termes, niveau 1 à 85 %, 2 850 points)
-                // qui s'affichait avant le premier exercice — et dont
-                // `level2Score = 75 >= 70` pouvait empêcher le niveau 3 de se
-                // débloquer. Plus aucune progression fabriquée.
-                UserStatsEntity.createFresh(clock).copy(
-                    // La série doit partir du jour courant pour que la première
-                    // étude la compte bien à 1 (et non à 0).
-                    lastStudy = ProgressionManager.todayKey(now),
-                    weeklyXpReset = LeagueManager.getWeekStartTimestamp(clock)
-                )
+        val initialProgress = InitialData.terms.take(8).mapIndexed { index, term ->
+            FlashcardProgressEntity(
+                termId = term.id,
+                repetitions = if (index % 2 == 0) 1 else 0,
+                easeFactor = 2.5,
+                intervalDays = 1,
+                nextReviewTimestamp = now - 1000L,
+                lastReviewedTimestamp = now - 86400000L,
+                lastQuality = 3
             )
+        }
 
-            // Init gems ledger with starting bonus.
-            // P0-2 : le bonus de bienvenue est réel (il alimente le ledger
-            // append-only anti-triche), on le garde — mais il doit maintenant
-            // correspondre au solde de `createFresh` (0), sinon le ledger et la
-            // table divergent.
-            val welcomeBonus = 100
-            dao.insertGemsTransaction(
-                GemsTransactionEntity(
-                    type = "EARN",
-                    amount = welcomeBonus,
-                    reason = "welcome_bonus",
-                    timestamp = now,
-                    balanceAfter = welcomeBonus,
-                    metadata = "Initial gems"
-                )
-            )
-            safeUpsertUserStats(
-                dao.getUserStatsOnce()!!.copy(gems = welcomeBonus)
-            )
+        // Bonus de bienvenue : réel (il alimente le ledger append-only
+        // anti-triche), donc crédité explicitement dans la transaction.
+        val welcomeBonus = 100
+        val gemsTransaction = GemsTransactionEntity(
+            type = "EARN",
+            amount = welcomeBonus,
+            reason = "welcome_bonus",
+            timestamp = now,
+            balanceAfter = welcomeBonus,
+            metadata = "Initial gems"
+        )
+        val statsWithGems = freshStats.copy(gems = welcomeBonus)
 
-            // Init league cohort — only one cohort may be active at a time
-            val cohort = LeagueManager.createNewCohort("BRONZE", clock)
-            dao.deactivateOtherCohorts(cohort.cohortId)
-            dao.upsertLeagueCohort(cohort)
-            val bots = LeagueManager.generateBotsForCohort(
-                cohortId = cohort.cohortId,
-                currentUserName = "Dr. Youcef",
-                currentUserXp = 0,
-                // P0-2 : la série du joueur part de 0, comme son état.
-                currentUserStreak = 0,
-                clock = clock
-            )
-            dao.upsertLeagueMembers(bots)
+        // Init league cohort — only one cohort may be active at a time
+        val cohort = LeagueManager.createNewCohort("BRONZE", clock)
+        val bots = LeagueManager.generateBotsForCohort(
+            cohortId = cohort.cohortId,
+            currentUserName = "Dr. Youcef",
+            currentUserXp = 0,
+            // P0-2 : la série du joueur part de 0, comme son état.
+            currentUserStreak = 0,
+            clock = clock
+        )
+        val statsWithCohort = statsWithGems.copy(leagueCohortId = cohort.cohortId)
 
-            // Update user with cohort id
-            val updatedStats = dao.getUserStatsOnce()?.copy(leagueCohortId = cohort.cohortId)
-            if (updatedStats != null) safeUpsertUserStats(updatedStats)
+        // Écriture atomique : Room annule tout en cas d'échec.
+        dao.seedAll(
+            terms = InitialData.terms,
+            bookmarkedKeys = bookmarkedKeys,
+            exercises = migratedExercises,
+            modules = modules,
+            stats = freshStats,
+            progress = initialProgress,
+            gemsTransaction = gemsTransaction,
+            statsWithGems = statsWithGems,
+            cohort = cohort,
+            deactivateOtherCohortsFor = cohort.cohortId,
+            leagueMembers = bots,
+            statsWithCohort = statsWithCohort
+        )
 
         } else {
             // Migration check: ensure new fields have defaults if old DB
