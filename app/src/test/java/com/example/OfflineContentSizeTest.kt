@@ -83,7 +83,7 @@ class OfflineContentSizeTest {
     @Test
     fun `the whole local content stays a believable order of magnitude`() {
         val totalMb = InitialData.modulesList.sumOf { it.estimatedSizeMb }
-        // 4512 terms + 44 exercises: a few MB, not the ~200 MB the old literals implied
+        // 4504 terms + 44 exercises: a few MB, not the ~200 MB the old literals implied
         assertTrue("implausible total: $totalMb MB", totalMb in 0.5..20.0)
     }
 }

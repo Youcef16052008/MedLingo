@@ -140,11 +140,17 @@ exercises = extractBlocks(exercisesContent, "ExerciseEntity").map((b) => {
 // Échoue bruyamment plutôt que de publier un jeu de données mal indexé.
 const dupIds = terms.map((t) => t.id).filter((v, i, a) => a.indexOf(v) !== i);
 if (dupIds.length) throw new Error(`ids de termes dupliqués dans les seeds Kotlin : ${[...new Set(dupIds)].join(", ")}`);
+
+// Les doublons de traduction retirés laissent des trous volontaires dans l'espace des ids
+// (on ne renumérote pas : l'état SM-2 et les liens profonds de l'app Android indexent `term.id`).
+// La liste est exhaustive et explicite pour qu'aucun trou accidentel ne passe inaperçu.
+const RETIRED_DUPLICATE_IDS = new Set([514, 813, 816, 1249, 1338, 3840, 4136, 4209]);
 if (terms.length) {
   const max = terms[terms.length - 1].id;
   const gaps = [];
   for (let i = 1; i <= max; i++) if (!terms.some((t) => t.id === i)) gaps.push(i);
-  if (gaps.length) throw new Error(`trou dans l'espace des ids de termes : ${gaps.slice(0, 20).join(", ")}`);
+  const unexpected = gaps.filter((g) => !RETIRED_DUPLICATE_IDS.has(g));
+  if (unexpected.length) throw new Error(`trou inattendu dans l'espace des ids de termes : ${unexpected.slice(0, 20).join(", ")}`);
 }
 
 mkdirSync(OUT, { recursive: true });

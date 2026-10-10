@@ -24,7 +24,8 @@ import com.example.data.terms.TerminologieMedicaleTerms
  * Les termes sont organisés dans `data/terms/` — un fichier par module,
  * consolidé depuis les anciens fichiers fragmentés de `data/initial/`.
  *
- * Total : 4 512 termes répartis sur 15 modules (ids 1..4512, uniques globalement).
+ * Total : 4 504 termes répartis sur 15 modules (ids 1..4512, uniques globalement ;
+ * 8 traductions doublon retirées en phase 0, ids non réutilisés).
  */
 object InitialData {
 

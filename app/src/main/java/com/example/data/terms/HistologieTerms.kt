@@ -2110,19 +2110,7 @@ MedicalTermEntity(
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/ˌiːəˈsɪnəfɪl/",
         ),
-        MedicalTermEntity(
-            id = 1249,
-            termEn = "Basophil",
-            termFr = "Basophile",
-            termAr = "الخلية القاعدية",
-            definitionEn = "The rarest WBC with large basophilic granules containing histamine and heparin",
-            definitionFr = "GB le plus rare avec de grandes granules basophiles contenant histamine et héparine",
-            definitionAr = "أندر كريات الدم البيضاء بحبيبات قاعدية كبيرة تحتوي على هيستامين وهيبارين",
-            module = "Histologie",
-            chapter = "Tissu Sanguin",
-            ipaPhonetic = "/ˈbeɪsəfɪl/",
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 1250,
             termEn = "Lymphocyte",
             termFr = "Lymphocyte",

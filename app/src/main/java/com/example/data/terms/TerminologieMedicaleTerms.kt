@@ -5333,19 +5333,7 @@ object TerminologieMedicaleTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/həˈrɛdɪtəri/",
         ),
-        MedicalTermEntity(
-            id = 3840,
-            termEn = "Congenital disorder",
-            termFr = "Malformation congénitale",
-            termAr = "التشوه الخلقي",
-            definitionEn = "A condition present from birth caused by genetic or environmental factors",
-            definitionFr = "Une condition présente dès la naissance causée par des facteurs génétiques ou environnementaux",
-            definitionAr = "حالة موجودة منذ الولادة ناتجة عن عوامل جينية أو بيئية",
-            module = "Terminologie Médicale",
-            chapter = "Génétique Médicale",
-            ipaPhonetic = "/kənˈdʒɛnɪtəl/",
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 3841,
             termEn = "Homeostasis",
             termFr = "Homéostasie",

@@ -1284,19 +1284,7 @@ MedicalTermEntity(
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈæftərloʊd/",
         ),
-        MedicalTermEntity(
-            id = 514,
-            termEn = "Frank-Starling law",
-            termFr = "Loi de Frank-Starling",
-            termAr = "قانون فرانك-ستارلينغ",
-            definitionEn = "The principle that greater ventricular filling leads to greater contraction force",
-            definitionFr = "Principe selon lequel un remplissage ventriculaire plus grand entraîne une force de contraction plus grande",
-            definitionAr = "المبدأ القائل بأن زيادة امتلاء البطين تؤدي إلى زيادة قوة الانقباض",
-            module = "Physiologie",
-            chapter = "Physiologie Cardiovasculaire",
-            ipaPhonetic = "/fræŋk ˈstɑːrlɪŋ lɔː/",
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 515,
             termEn = "Baroreceptor",
             termFr = "Barorécepteur",

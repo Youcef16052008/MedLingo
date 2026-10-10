@@ -4505,23 +4505,7 @@ object AnglaisMedicalTerms {
             exampleAr = "أشعر بألم حاد عندما أستنشق الهواء.",
             ipaPhonetic = "/ʃɑːrp peɪn/"
         ),
-        MedicalTermEntity(
-            id = 4136,
-            termEn = "Dull ache",
-            termFr = "Douleur sourde",
-            termAr = "ألم خفيف مستمر",
-            definitionEn = "A steady, moderate pain that persists",
-            definitionFr = "Douleur modérée et constante qui persiste",
-            definitionAr = "ألم متوسط الثبات يستمر",
-            module = "Anglais Médical",
-            chapter = "Describing Pain & Location",
-            example = "I have a dull ache in my lower back.",
-            exampleEn = "I have a dull ache in my lower back.",
-            exampleFr = "J'ai une douleur sourde dans le bas du dos.",
-            exampleAr = "أشعر بألم خفيف مستمر في أسفل الظهر.",
-            ipaPhonetic = "/dʌl eɪk/"
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 4137,
             termEn = "Burning pain",
             termFr = "Douleur brûlante",
@@ -5673,23 +5657,7 @@ object AnglaisMedicalTerms {
             exampleAr = "التهاب السحايا البكتيري حالة طارئة.",
             ipaPhonetic = "/ˌmɛnɪnˈdʒaɪtɪs/"
         ),
-        MedicalTermEntity(
-            id = 4209,
-            termEn = "Vertigo",
-            termFr = "Vertige",
-            termAr = "الدوار الحقيقي",
-            definitionEn = "A sensation of spinning or dizziness",
-            definitionFr = "Sensation de rotation ou d'étourdissement",
-            definitionAr = "إحساس بالدوران أو الدوار",
-            module = "Anglais Médical",
-            chapter = "Neurology & The Brain",
-            example = "She felt the room spinning due to vertigo.",
-            exampleEn = "She felt the room spinning due to vertigo.",
-            exampleFr = "Elle avait l'impression que la pièce tournait à cause du vertige.",
-            exampleAr = "شعرت بأن الغرفة تدور بسبب الدوار.",
-            ipaPhonetic = "/ˈvɜːrtɪɡoʊ/"
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 4210,
             termEn = "Neuropathy",
             termFr = "Neuropathie",

@@ -1,6 +1,6 @@
 # MedLingo DZ — version web (React + Vite)
 
-Port React/TypeScript de l'application MedLingo DZ : 4 512 flashcards SM‑2 et
+Port React/TypeScript de l'application MedLingo DZ : 4 504 flashcards SM‑2 et
 44 exercices (6 types de questions) pour l'anglais médical, en français,
 anglais et arabe (RTL), utilisable directement dans un navigateur.
 
@@ -38,7 +38,7 @@ npm run extract
 Le script lit `app/src/main/java/com/example/data/initial/*.kt`, parse les
 constructeurs `MedicalTermEntity(...)` et `ExerciseEntity(...)`, et écrit :
 
-- `public/data/terms.json` — 4 512 termes, 15 modules
+- `public/data/terms.json` — 4 504 termes, 15 modules
 - `public/data/exercises.json` — 44 exercices
 
 `src/data/load.ts` les charge à l'amorçage, puis les indexe par module.
@@ -141,7 +141,7 @@ APP_URL=http://localhost:4173 npm run audit
 `e2e/full_audit.py` va plus loin que le parcours : il inventorie **chaque
 bouton de chaque écran** et le clique (en restaurant l'état entre deux clics),
 vérifie les actifs (favicon SVG + PNG, `apple-touch-icon`, manifest, JSON, SW),
-l'intégration des données (15 modules, 4 512 termes, recherche fr/en/ar), puis
+l'intégration des données (15 modules, 4 504 termes, recherche fr/en/ar), puis
 des cas limites : route inconnue, lien profond, retour/avant du navigateur,
 fiche de terme, session jamais interrompue par des cœurs (barrière supprimée),
 validation d'un `fill_blank` au clavier, progression de module et persistance

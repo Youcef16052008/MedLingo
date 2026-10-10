@@ -422,19 +422,7 @@ MedicalTermEntity(
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈtɜːrbjʊlənt floʊ/",
         ),
-        MedicalTermEntity(
-            id = 1338,
-            termEn = "Reynolds number",
-            termFr = "Nombre de Reynolds",
-            termAr = "عدد رينولدز",
-            definitionEn = "A dimensionless number predicting flow type: laminar (Re<2000) or turbulent (Re>4000)",
-            definitionFr = "Nombre adimensionnel prédisant le type d'écoulement: laminaire (Re<2000) ou turbulent (Re>4000)",
-            definitionAr = "عدد بدون أبعاد يتنبأ بنوع التدفق: صفائحي (Re<2000) أو مضطرب (Re>4000)",
-            module = "Biophysique",
-            chapter = "Mécanique des Fluides",
-            ipaPhonetic = "/ˈrɛnəldz ˈnʌmbər/",
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 1339,
             termEn = "Flow rate",
             termFr = "Débit",

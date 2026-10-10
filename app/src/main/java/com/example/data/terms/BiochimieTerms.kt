@@ -2147,19 +2147,7 @@ MedicalTermEntity(
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/treɪs ˈɛlɪmənt/",
         ),
-        MedicalTermEntity(
-            id = 813,
-            termEn = "Glycolysis",
-            termFr = "Glycolyse",
-            termAr = "تحلل السكر",
-            definitionEn = "The metabolic pathway breaking down glucose to pyruvate yielding 2 ATP (cytoplasm)",
-            definitionFr = "Voie métabolique dégradant le glucose en pyruvate produisant 2 ATP (cytoplasme)",
-            definitionAr = "المسار الأيضي الذي يحلل الغلوكوز إلى بيروفات مع إنتاج 2 ATP (الهيولى)",
-            module = "Biochimie",
-            chapter = "Métabolisme Intermédiaire",
-            ipaPhonetic = "/ɡlaɪˈkɒlɪsɪs/",
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 814,
             termEn = "Pyruvate",
             termFr = "Pyruvate",
@@ -2183,19 +2171,7 @@ MedicalTermEntity(
             chapter = "Métabolisme Intermédiaire",
             ipaPhonetic = "/əˈsiːtaɪl koʊ eɪ/",
         ),
-        MedicalTermEntity(
-            id = 816,
-            termEn = "Krebs cycle (Citric acid cycle)",
-            termFr = "Cycle de Krebs (Cycle de l'acide citrique)",
-            termAr = "دورة كريبس (دورة حمض الستريك)",
-            definitionEn = "A series of reactions in the mitochondria oxidizing acetyl-CoA to CO2",
-            definitionFr = "Série de réactions dans la mitochondrie oxydant l'acétyl-CoA en CO2",
-            definitionAr = "سلسلة تفاعلات في الميتوكوندريا تؤكسد أسيتيل-CoA إلى ثاني أكسيد الكربون",
-            module = "Biochimie",
-            chapter = "Métabolisme Intermédiaire",
-            ipaPhonetic = "/krɛbz ˈsaɪkəl/",
-        ),
-        MedicalTermEntity(
+                MedicalTermEntity(
             id = 817,
             termEn = "Electron transport chain (ETC)",
             termFr = "Chaîne de transport des électrons",
