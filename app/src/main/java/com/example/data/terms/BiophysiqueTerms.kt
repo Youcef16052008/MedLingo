@@ -370,6 +370,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1330,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrostatics",
             termFr = "Hydrostatique",
             termAr = "السكونيات المائية",
@@ -385,6 +386,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1331,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrodynamics",
             termFr = "Hydrodynamique",
             termAr = "الديناميكا المائية",
@@ -400,6 +402,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1332,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrostatic pressure",
             termFr = "Pression hydrostatique",
             termAr = "الضغط الهيدروستاتي",
@@ -594,6 +597,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1347,
+            etymology = "Greek: θερμός (thermós) — 'Heat / Temperature'",
             termEn = "Thermodynamics",
             termFr = "Thermodynamique",
             termAr = "الديناميكا الحرارية",
@@ -609,6 +613,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1348,
+            etymology = "Greek: θερμός (thermós) — 'Heat / Temperature'",
             termEn = "First law of thermodynamics",
             termFr = "Premier principe de la thermodynamique",
             termAr = "القانون الأول للديناميكا الحرارية",
@@ -621,6 +626,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1349,
+            etymology = "Greek: θερμός (thermós) — 'Heat / Temperature'",
             termEn = "Second law of thermodynamics",
             termFr = "Deuxième principe de la thermodynamique",
             termAr = "القانون الثاني للديناميكا الحرارية",
@@ -819,6 +825,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1363,
+            etymology = "Greek: θερμός (thermós) — 'Heat / Temperature'",
             termEn = "Radiation (thermal)",
             termFr = "Rayonnement (thermique)",
             termAr = "الإشعاع الحراري",
@@ -846,6 +853,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1365,
+            etymology = "Greek: θερμός (thermós) — 'Heat / Temperature'",
             termEn = "Thermoregulation",
             termFr = "Thermorégulation",
             termAr = "تنظيم الحرارة",
@@ -1080,6 +1088,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1381,
+            etymology = "Greek: οἴδημα (oídēma) — 'Edema / Swelling'",
             termEn = "Edema",
             termFr = "Œdème",
             termAr = "الوذمة",
@@ -1503,6 +1512,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1410,
+            etymology = "Greek: ὀφθαλμός (ophthalmós) — 'Eye'",
             termEn = "Ophthalmoscope",
             termFr = "Ophtalmoscope",
             termAr = "منظار قاع العين",
@@ -1560,6 +1570,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1414,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microscope",
             termFr = "Microscope",
             termAr = "المجهر",
@@ -1845,6 +1856,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1434,
+            etymology = "Latin: radius — 'Radiation / Ray'",
             termEn = "Radioactivity",
             termFr = "Radioactivité",
             termAr = "النشاط الإشعاعي",
@@ -1860,6 +1872,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1435,
+            etymology = "Latin: radius — 'Radiation / Ray'",
             termEn = "Radioisotope (Radionuclide)",
             termFr = "Radioisotope (Radionucléide)",
             termAr = "النظير المشع",
@@ -1932,6 +1945,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1440,
+            etymology = "Latin: radius — 'Radiation / Ray'",
             termEn = "Radioactive decay",
             termFr = "Désintégration radioactive",
             termAr = "التفكك الإشعاعي",
@@ -2235,6 +2249,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1461,
+            etymology = "Greek: σκοπεῖν (skopeîn) — 'Visual examination'",
             termEn = "Fluoroscopy",
             termFr = "Fluoroscopie",
             termAr = "التنظير التألقي",
@@ -2436,6 +2451,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1475,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electric charge",
             termFr = "Charge électrique",
             termAr = "الشحنة الكهربائية",
@@ -2451,6 +2467,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1476,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electric current",
             termFr = "Courant électrique",
             termAr = "التيار الكهربائي",
@@ -2601,6 +2618,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1486,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrocardiogram (ECG/EKG)",
             termFr = "Électrocardiogramme (ECG)",
             termAr = "تخطيط كهربية القلب",
@@ -2616,6 +2634,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1487,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electroencephalogram (EEG)",
             termFr = "Électroencéphalogramme (EEG)",
             termAr = "تخطيط كهربية الدماغ",
@@ -2631,6 +2650,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1488,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electromyogram (EMG)",
             termFr = "Électromyogramme (EMG)",
             termAr = "تخطيط كهربية العضل",
@@ -2646,6 +2666,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1489,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrode",
             termFr = "Électrode",
             termAr = "القطب الكهربائي",
@@ -2721,6 +2742,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1494,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electromagnetic wave",
             termFr = "Onde électromagnétique",
             termAr = "الموجة الكهرومغناطيسية",
@@ -2736,6 +2758,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1495,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electromagnetic spectrum",
             termFr = "Spectre électromagnétique",
             termAr = "الطيف الكهرومغناطيسي",
@@ -2751,6 +2774,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1496,
+            etymology = "Latin: radius — 'Radiation / Ray'",
             termEn = "Radio waves",
             termFr = "Ondes radio",
             termAr = "موجات الراديو",
@@ -2766,6 +2790,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1497,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microwave",
             termFr = "Micro-onde",
             termAr = "الميكروويف",
@@ -3261,6 +3286,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1531,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electron",
             termFr = "Électron",
             termAr = "الإلكترون",

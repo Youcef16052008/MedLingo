@@ -156,6 +156,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1086,
+            etymology = "Greek: ἱστός (histós) ('Tissue') + λόγος (lógos) ('Study / Science of')",
             termEn = "Histology",
             termFr = "Histologie",
             termAr = "علم الأنسجة",
@@ -381,6 +382,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1101,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microtome",
             termFr = "Microtome",
             termAr = "المقطاع (الميكروتوم)",
@@ -449,6 +451,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1106,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "PAS stain (Periodic Acid-Schiff)",
             termFr = "Coloration PAS (Acide periodique-Schiff)",
             termAr = "صبغة PAS",
@@ -494,6 +497,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1109,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunohistochemistry (IHC)",
             termFr = "Immunohistochimie (IHC)",
             termAr = "الكيمياء المناعية النسيجية",
@@ -509,6 +513,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1110,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Light microscope",
             termFr = "Microscope optique (photonique)",
             termAr = "المجهر الضوئي",
@@ -524,6 +529,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1111,
+            etymology = "Greek: ἤλεκτρον (ēlektron) ('Electricity / Current') + μικρός (mikrós) ('Small / Tiny')",
             termEn = "Electron microscope",
             termFr = "Microscope électronique",
             termAr = "المجهر الإلكتروني",
@@ -539,6 +545,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1112,
+            etymology = "Greek: ἤλεκτρον (ēlektron) ('Electricity / Current') + μικρός (mikrós) ('Small / Tiny')",
             termEn = "Transmission electron microscope (TEM)",
             termFr = "Microscope électronique à transmission (MET)",
             termAr = "المجهر الإلكتروني النافذ",
@@ -554,6 +561,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1113,
+            etymology = "Greek: ἤλεκτρον (ēlektron) ('Electricity / Current') + μικρός (mikrós) ('Small / Tiny')",
             termEn = "Scanning electron microscope (SEM)",
             termFr = "Microscope électronique à balayage (MEB)",
             termAr = "المجهر الإلكتروني الماسح",
@@ -584,6 +592,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1115,
+            etymology = "Greek: ἱστός (histós) ('Tissue') + λόγος (lógos) ('Study / Science of')",
             termEn = "Histopathology",
             termFr = "Histopathologie (Anatomie pathologique)",
             termAr = "علم الأنسجة المرضية",
@@ -858,6 +867,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1135,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microvilli",
             termFr = "Microvillosités",
             termAr = "الزغيبات الدقيقة",
@@ -1173,6 +1183,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1158,
+            etymology = "Greek: μακρός (makrós) — 'Large / Long'",
             termEn = "Macrophage",
             termFr = "Macrophage",
             termAr = "البلعمية الكبيرة",
@@ -1365,6 +1376,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1172,
+            etymology = "Greek: χόνδρος (khóndros) — 'Cartilage'",
             termEn = "Chondrocyte",
             termFr = "Chondrocyte",
             termAr = "الخلية الغضروفية",
@@ -1380,6 +1392,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1173,
+            etymology = "Greek: χόνδρος (khóndros) — 'Cartilage'",
             termEn = "Chondroblast",
             termFr = "Chondroblaste",
             termAr = "أرومة غضروفية",
@@ -1450,6 +1463,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1178,
+            etymology = "Latin: fibra — 'Fiber / Fibrous tissue'",
             termEn = "Fibrocartilage",
             termFr = "Fibrocartilage",
             termAr = "الغضروف الليفي",
@@ -1516,6 +1530,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1183,
+            etymology = "Greek: ὀστέον (ostéon) — 'Bone'",
             termEn = "Osteoblast",
             termFr = "Ostéoblaste",
             termAr = "أرومة عظمية (بانية العظم)",
@@ -1531,6 +1546,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1184,
+            etymology = "Greek: ὀστέον (ostéon) — 'Bone'",
             termEn = "Osteocyte",
             termFr = "Ostéocyte",
             termAr = "الخلية العظمية",
@@ -1546,6 +1562,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1185,
+            etymology = "Greek: ὀστέον (ostéon) — 'Bone'",
             termEn = "Osteoclast",
             termFr = "Ostéoclaste",
             termAr = "ناقضة العظم (الخلية الهادمة)",
@@ -1561,6 +1578,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1186,
+            etymology = "Greek: ὀστέον (ostéon) — 'Bone'",
             termEn = "Osteoid",
             termFr = "Ostéoïde",
             termAr = "العظمانيّ",
@@ -1576,6 +1594,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1187,
+            etymology = "Greek: ὀστέον (ostéon) — 'Bone'",
             termEn = "Osteon (Haversian system)",
             termFr = "Ostéon (Système de Havers)",
             termAr = "الوحدة العظمية (نظام هافرس)",
@@ -1651,6 +1670,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1192,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "Periosteum",
             termFr = "Périoste",
             termAr = "السمحاق",
@@ -1786,6 +1806,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1202,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac muscle",
             termFr = "Muscle cardiaque",
             termAr = "العضلة القلبية",
@@ -1840,6 +1861,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1206,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcomere",
             termFr = "Sarcomère",
             termAr = "القسيم العضلي",
@@ -2005,6 +2027,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1217,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcoplasm",
             termFr = "Sarcoplasme",
             termAr = "الهيولى العضلية",
@@ -2020,6 +2043,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1218,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcolemma",
             termFr = "Sarcolemme",
             termAr = "غشاء الليف العضلي",
@@ -2095,6 +2119,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1223,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuron (Nerve cell)",
             termFr = "Neurone (Cellule nerveuse)",
             termAr = "العصبون (الخلية العصبية)",
@@ -2179,6 +2204,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1229,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuroglia (Glial cells)",
             termFr = "Névroglie (Cellules gliales)",
             termAr = "الخلايا الدبقية",
@@ -2221,6 +2247,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1232,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microglia",
             termFr = "Microglie",
             termAr = "الخلايا الدبقية الصغيرة",
@@ -2410,6 +2437,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1245,
+            etymology = "Greek: ἐρυθρός (erythrós) — 'Red'",
             termEn = "Erythrocyte (Red blood cell)",
             termFr = "Érythrocyte (Globule rouge)",
             termAr = "كرية الدم الحمراء",
@@ -2470,6 +2498,7 @@ MedicalTermEntity(
         ),
                 MedicalTermEntity(
             id = 1250,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphocyte",
             termFr = "Lymphocyte",
             termAr = "الخلية اللمفاوية",
@@ -2500,6 +2529,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1252,
+            etymology = "Greek: θρόμβος (thrombos) — 'Blood clot / Thrombus'",
             termEn = "Platelet (Thrombocyte)",
             termFr = "Plaquette (Thrombocyte)",
             termAr = "الصفيحة الدموية",
@@ -2695,6 +2725,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1265,
+            etymology = "Latin: spina — 'Spine / Spinal column'",
             termEn = "Stratum spinosum (Prickle cell layer)",
             termFr = "Couche épineuse",
             termAr = "الطبقة الشوكية",
@@ -2770,6 +2801,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1270,
+            etymology = "Greek: μέλας (mélas) — 'Black / Dark'",
             termEn = "Melanocyte",
             termFr = "Mélanocyte",
             termAr = "الخلية الميلانينية",
@@ -2785,6 +2817,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1271,
+            etymology = "Greek: μέλας (mélas) — 'Black / Dark'",
             termEn = "Melanin",
             termFr = "Mélanine",
             termAr = "الميلانين",
@@ -2965,6 +2998,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1283,
+            etymology = "Greek: χρῶμα (khrōma) — 'Color'",
             termEn = "Chromatin",
             termFr = "Chromatine",
             termAr = "الكروماتين",
@@ -3109,6 +3143,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1293,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microfilament (Actin filament)",
             termFr = "Microfilament (Filament d'actine)",
             termAr = "الخييط الدقيق (خيط الأكتين)",
@@ -3137,6 +3172,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1295,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microtubule",
             termFr = "Microtubule",
             termAr = "الأنيبيب الدقيق",
@@ -3182,6 +3218,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1298,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Mitosis",
             termFr = "Mitose",
             termAr = "الانقسام المتساوي (الميتوزي)",
@@ -3194,6 +3231,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1299,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Meiosis",
             termFr = "Méiose",
             termAr = "الانقسام المنصف (الميوزي)",
@@ -3284,6 +3322,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1305,
+            etymology = "Greek: πτῶσις (ptōsis) — 'Falling / Prolapse'",
             termEn = "Apoptosis",
             termFr = "Apoptose (Mort cellulaire programmée)",
             termAr = "الموت الخلوي المبرمج",
@@ -3296,6 +3335,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1306,
+            etymology = "Greek: νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Necrosis",
             termFr = "Nécrose",
             termAr = "النخر (التنخر)",

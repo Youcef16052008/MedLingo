@@ -10,6 +10,7 @@ object PharmacologieTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 2262,
+            etymology = "Greek: φάρμακον (phármakon) ('Drug / Medicine') + λόγος (lógos) ('Study / Science of')",
             termEn = "Pharmacology",
             termFr = "Pharmacologie",
             termAr = "علم الأدوية",
@@ -37,6 +38,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2264,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacokinetics",
             termFr = "Pharmacocinétique",
             termAr = "الحرائك الدوائية",
@@ -49,6 +51,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2265,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacodynamics",
             termFr = "Pharmacodynamie",
             termAr = "الديناميكا الدوائية",
@@ -151,6 +154,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2272,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacognosy",
             termFr = "Pharmacognosie",
             termAr = "علم العقاقير",
@@ -211,6 +215,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2276,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmaceutical",
             termFr = "Pharmaceutique",
             termAr = "دوائي (صيدلاني)",
@@ -286,6 +291,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2281,
+            etymology = "Greek: πρωτεῖος (prōteîos) — 'Protein'",
             termEn = "Protein binding",
             termFr = "Liaison protéique",
             termAr = "الارتباط بالبروتين",
@@ -449,6 +455,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2292,
+            etymology = "Greek: ἧπαρ (hêpar) — 'Liver'",
             termEn = "Hepatic metabolism",
             termFr = "Métabolisme hépatique",
             termAr = "الاستقلاب الكبدي",
@@ -491,6 +498,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2295,
+            etymology = "Greek: ἔντερον (énteron) — 'Intestine'",
             termEn = "Enterohepatic circulation",
             termFr = "Circulation entérohépatique",
             termAr = "الدورة المعوية الكبدية",
@@ -620,6 +628,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2304,
+            etymology = "Greek: τοξικόν (toxikón) — 'Toxic / Poison'",
             termEn = "TD50 (Toxic Dose 50)",
             termFr = "DT50 (Dose Toxique 50)",
             termAr = "الجرعة السمية 50",
@@ -665,6 +674,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2307,
+            etymology = "Greek: ταχύς (tachýs) — 'Fast / Rapid'",
             termEn = "Tachyphylaxis",
             termFr = "Tachyphylaxie",
             termAr = "التحمل السريع",
@@ -740,6 +750,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2312,
+            etymology = "Latin: ad (sur) + renes (reins) — 'Adrenal glands'",
             termEn = "Adrenergic drug",
             termFr = "Médicament adrénergique",
             termAr = "الدواء الأدرينالي",
@@ -845,6 +856,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2319,
+            etymology = "Latin: ad (sur) + renes (reins) — 'Adrenal glands'",
             termEn = "Adrenaline (Epinephrine)",
             termFr = "Adrénaline (Épinéphrine)",
             termAr = "الأدرينالين",
@@ -935,6 +947,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2325,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuromuscular blocking agent",
             termFr = "Agent bloquant neuromusculaire",
             termAr = "عامل الحصار العصبي العضلي",
@@ -979,6 +992,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2328,
+            etymology = "Greek: ἀγγεῖον (angeîon) — 'Blood vessel'",
             termEn = "Angiotensin receptor blocker (ARB)",
             termFr = "Antagoniste des récepteurs de l'angiotensine (ARA)",
             termAr = "حاصرات مستقبلات الأنجيوتنسين",
@@ -1177,6 +1191,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2342,
+            etymology = "Greek: θρόμβος (thrombos) — 'Blood clot / Thrombus'",
             termEn = "Thrombolytic (fibrinolytic)",
             termFr = "Thrombolytique (fibrinolytique)",
             termAr = "حال الخثرة",
@@ -1274,6 +1289,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2349,
+            etymology = "Greek: μορφή (morphē) — 'Form / Shape / Structure'",
             termEn = "Morphine",
             termFr = "Morphine",
             termAr = "المورفين",
@@ -1513,6 +1529,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2366,
+            etymology = "Greek: κεφαλή (kephalḗ) — 'Head'",
             termEn = "Cephalosporin",
             termFr = "Céphalosporine",
             termAr = "السيفالوسبورين",
@@ -1528,6 +1545,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2367,
+            etymology = "Greek: μακρός (makrós) — 'Large / Long'",
             termEn = "Macrolide",
             termFr = "Macrolide",
             termAr = "الماكروليد",
@@ -1651,6 +1669,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2376,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Antituberculosis drug",
             termFr = "Médicament antituberculeux",
             termAr = "دواء مضاد للسل",
@@ -2020,6 +2039,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2402,
+            etymology = "Greek: βρόγχος (brógkhos) — 'Bronchi'",
             termEn = "Bronchodilator",
             termFr = "Bronchodilatateur",
             termAr = "موسع القصبات الهوائية",
@@ -2393,6 +2413,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2428,
+            etymology = "Greek: γλυκύς (glykýs) — 'Sugar / Glucose'",
             termEn = "Glucocorticoid",
             termFr = "Glucocorticoïde",
             termAr = "الغلوكوكورتيكوئيد",
@@ -2575,6 +2596,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2441,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunotherapy (cancer)",
             termFr = "Immunothérapie (cancer)",
             termAr = "العلاج المناعي للسرطان",
@@ -2761,6 +2783,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2454,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacogenomics",
             termFr = "Pharmacogénomique",
             termAr = "علم الجينوم الدوائي",
@@ -2866,6 +2889,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2461,
+            etymology = "Greek: νεφρός (nephrós) — 'Kidney'",
             termEn = "Nephrotoxicity",
             termFr = "Néphrotoxicité",
             termAr = "السمية الكلوية",
@@ -3008,6 +3032,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2472,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacovigilance",
             termFr = "Pharmacovigilance",
             termAr = "مراقبة سلامة الأدوية",

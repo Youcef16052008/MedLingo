@@ -379,6 +379,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3878,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiologist",
             termFr = "Cardiologue",
             termAr = "طبيب قلب",
@@ -411,6 +412,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3880,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neurologist",
             termFr = "Neurologue",
             termAr = "طبيب أعصاب",
@@ -427,6 +429,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3881,
+            etymology = "Greek: ὀρθός (orthós) — 'Straight / Correct'",
             termEn = "Orthopedist",
             termFr = "Orthopédiste",
             termAr = "طبيب عظام",
@@ -443,6 +446,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3882,
+            etymology = "Greek: ψυχή (psykhḗ) — 'Mind / Soul / Mental'",
             termEn = "Psychiatrist",
             termFr = "Psychiatre",
             termAr = "طبيب نفسي",
@@ -603,6 +607,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3892,
+            etymology = "Greek: ῥέω (rhéō) — 'Flow / Discharge'",
             termEn = "Diarrhea",
             termFr = "Diarrhée",
             termAr = "إسهال",
@@ -1067,6 +1072,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3921,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Hypertension",
             termFr = "Hypertension",
             termAr = "ارتفاع ضغط الدم",
@@ -1115,6 +1121,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3924,
+            etymology = "Greek: ἄλλος + ἔργον (allos + ergon) — 'Allergy / Hypersensitivity'",
             termEn = "Allergy",
             termFr = "Allergie",
             termAr = "الحساسية",
@@ -1131,6 +1138,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3925,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Anemia",
             termFr = "Anémie",
             termAr = "فقر الدم",
@@ -1147,6 +1155,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3926,
+            etymology = "Greek: ἄρθρον (árthron) ('Joint') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Arthritis",
             termFr = "Arthrite",
             termAr = "التهاب المفاصل",
@@ -1163,6 +1172,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3927,
+            etymology = "Greek: ὀστέον (ostéon) ('Bone') + -ōsis ('condition / process')",
             termEn = "Osteoporosis",
             termFr = "Ostéoporose",
             termAr = "هشاشة العظام",
@@ -1243,6 +1253,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3932,
+            etymology = "Greek: πνεύμων (pneúmōn) — 'Lung / Air'",
             termEn = "Pneumonia",
             termFr = "Pneumonie",
             termAr = "التهاب الرئة",
@@ -1259,6 +1270,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3933,
+            etymology = "Greek: βρόγχος (brógkhos) ('Bronchi') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Bronchitis",
             termFr = "Bronchite",
             termAr = "التهاب القصبات",
@@ -1275,6 +1287,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3934,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Tuberculosis (TB)",
             termFr = "Tuberculose",
             termAr = "السل",
@@ -1323,6 +1336,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3937,
+            etymology = "Greek: γαστήρ (gastḗr) ('Stomach') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Gastritis",
             termFr = "Gastrite",
             termAr = "التهاب المعدة",
@@ -1355,6 +1369,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3939,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Appendicitis",
             termFr = "Appendicite",
             termAr = "التهاب الزائدة الدودية",
@@ -1371,6 +1386,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3940,
+            etymology = "Greek: ἧπαρ (hêpar) ('Liver') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Hepatitis",
             termFr = "Hépatite",
             termAr = "التهاب الكبد",
@@ -1595,6 +1611,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3954,
+            etymology = "Greek: θυρεοειδής (thyreoeides) — 'Thyroid'",
             termEn = "Thyroid disease",
             termFr = "Maladie thyroïdienne",
             termAr = "أمراض الغدة الدرقية",
@@ -2315,6 +2332,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 3999,
+            etymology = "Greek: θυρεοειδής (thyreoeides) — 'Thyroid'",
             termEn = "Thyroid",
             termFr = "Thyroïde",
             termAr = "الغدة الدرقية",
@@ -2363,6 +2381,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4002,
+            etymology = "Greek: προστάτης (prostátēs) — 'Prostate'",
             termEn = "Prostate",
             termFr = "Prostate",
             termAr = "البروستاتا",
@@ -2395,6 +2414,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4004,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacy (Drugstore)",
             termFr = "Pharmacie",
             termAr = "صيدلية",
@@ -2411,6 +2431,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4005,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacist",
             termFr = "Pharmacien(ne)",
             termAr = "صيدلاني",
@@ -3035,6 +3056,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4044,
+            etymology = "Greek: σκοπεῖν (skopeîn) — 'Visual examination'",
             termEn = "Endoscopy",
             termFr = "Endoscopie",
             termAr = "تنظير",
@@ -3323,6 +3345,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4062,
+            etymology = "Greek: γλυκύς (glykýs) — 'Sugar / Glucose'",
             termEn = "Blood glucose level",
             termFr = "Glycémie",
             termAr = "مستوى سكر الدم",
@@ -3355,6 +3378,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4064,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "CPR (Cardiopulmonary resuscitation)",
             termFr = "RCP (Réanimation)",
             termAr = "الإنعاش القلبي الرئوي",
@@ -3659,6 +3683,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4083,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "Menstruation (Period)",
             termFr = "Menstruation (Règles)",
             termAr = "الدورة الشهرية",
@@ -3803,6 +3828,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4092,
+            etymology = "Greek: φόβος (phóbos) — 'Excessive fear / Aversion'",
             termEn = "Phobia",
             termFr = "Phobie",
             termAr = "الرهاب / الخوف المرضي",
@@ -4235,6 +4261,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4119,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immune system",
             termFr = "Système immunitaire",
             termAr = "الجهاز المناعي",
@@ -4699,6 +4726,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4149,
+            etymology = "Greek: ἄλλος + ἔργον (allos + ergon) — 'Allergy / Hypersensitivity'",
             termEn = "I am allergic to...",
             termFr = "Je suis allergique à...",
             termAr = "أنا لدي حساسية من...",
@@ -4843,6 +4871,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4158,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Farsighted (Hyperopia)",
             termFr = "Hypermétropie",
             termAr = "بُعد النظر",
@@ -4923,6 +4952,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4163,
+            etymology = "Greek: ἄλλος + ἔργον (allos + ergon) — 'Allergy / Hypersensitivity'",
             termEn = "Do you have any allergies?",
             termFr = "Avez-vous des allergies?",
             termAr = "هل لديك أي حساسية؟",
@@ -5083,6 +5113,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4173,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "I have a family history of...",
             termFr = "J'ai des antécédents familiaux de...",
             termAr = "لدي تاريخ عائلي مع...",
@@ -5227,6 +5258,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4182,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Cellulitis",
             termFr = "Cellulite (infectieuse)",
             termAr = "التهاب النسيج الخلوي",
@@ -5387,6 +5419,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4192,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Tendinitis",
             termFr = "Tendinite",
             termAr = "التهاب الوتر",
@@ -5435,6 +5468,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4195,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Scoliosis",
             termFr = "Scoliose",
             termAr = "الجنف (انحناء العمود الفقري)",
@@ -5627,6 +5661,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4207,
+            etymology = "Greek: σκληρός (sklēros) ('Hard / Hardening') + -ōsis ('condition / process')",
             termEn = "Multiple sclerosis (MS)",
             termFr = "Sclérose en plaques (SEP)",
             termAr = "التصلب المتعدد",
@@ -5643,6 +5678,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4208,
+            etymology = "Greek: μῆνιγξ (mēnigx) ('Meninges') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Meningitis",
             termFr = "Méningite",
             termAr = "التهاب السحايا",
@@ -5659,6 +5695,7 @@ object AnglaisMedicalTerms {
         ),
                 MedicalTermEntity(
             id = 4210,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuropathy",
             termFr = "Neuropathie",
             termAr = "اعتلال الأعصاب",
@@ -5819,6 +5856,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4220,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Atherosclerosis",
             termFr = "Athérosclérose",
             termAr = "تصلب الشرايين",
@@ -5835,6 +5873,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4221,
+            etymology = "Greek: θρόμβος (thrombos) — 'Blood clot / Thrombus'",
             termEn = "Blood clot (Thrombus)",
             termFr = "Caillot sanguin",
             termAr = "جلطة دموية",
@@ -5851,6 +5890,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4222,
+            etymology = "Greek: θρόμβος (thrombos) ('Blood clot / Thrombus') + -ōsis ('condition / process')",
             termEn = "DVT (Deep vein thrombosis)",
             termFr = "TVP (Thrombose veineuse profonde)",
             termAr = "تجلط الوريد العميق",
@@ -5867,6 +5907,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4223,
+            etymology = "Greek: ἔμβολος (émbolos) — 'Embolism / Obstruction'",
             termEn = "Pulmonary embolism",
             termFr = "Embolie pulmonaire",
             termAr = "الانصمام الرئوي",
@@ -5899,6 +5940,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4225,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac arrest",
             termFr = "Arrêt cardiaque",
             termAr = "السكتة القلبية",
@@ -6155,6 +6197,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4241,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Colitis",
             termFr = "Colite",
             termAr = "التهاب القولون",
@@ -6251,6 +6294,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4247,
+            etymology = "Greek: σκοπεῖν (skopeîn) — 'Visual examination'",
             termEn = "Colonoscopy",
             termFr = "Coloscopie",
             termAr = "تنظير القولون",
@@ -6267,6 +6311,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4248,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Liver cirrhosis",
             termFr = "Cirrhose du foie",
             termAr = "تليف الكبد",
@@ -6283,6 +6328,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4249,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Hypoglycemia",
             termFr = "Hypoglycémie",
             termAr = "انخفاض سكر الدم",
@@ -6299,6 +6345,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4250,
+            etymology = "Greek: ὑπέρ (hypér) ('Above / Excess') + αἷμα (haîma) ('Condition of blood')",
             termEn = "Hyperglycemia",
             termFr = "Hyperglycémie",
             termAr = "ارتفاع سكر الدم",
@@ -6363,6 +6410,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4254,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Hyperthyroidism",
             termFr = "Hyperthyroïdie",
             termAr = "فرط نشاط الغدة الدرقية",
@@ -6411,6 +6459,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4257,
+            etymology = "Latin: ad (sur) + renes (reins) — 'Adrenal glands'",
             termEn = "Adrenal fatigue",
             termFr = "Fatigue surrénalienne",
             termAr = "إرهاق الغدة الكظرية",
@@ -6475,6 +6524,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4261,
+            etymology = "Latin: fibra ('Fiber / Fibrous tissue') + -ōsis ('condition / process')",
             termEn = "Pulmonary fibrosis",
             termFr = "Fibrose pulmonaire",
             termAr = "التليف الرئوي",
@@ -6507,6 +6557,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4263,
+            etymology = "Greek: πλευρά (pleurá) — 'Pleura / Side'",
             termEn = "Pleurisy",
             termFr = "Pleurésie",
             termAr = "التهاب غشاء الجنب",
@@ -6523,6 +6574,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4264,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Hyperventilation",
             termFr = "Hyperventilation",
             termAr = "فرط التنفس",
@@ -6651,6 +6703,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4272,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Hematuria",
             termFr = "Hématurie",
             termAr = "دم في البول",
@@ -6667,6 +6720,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4273,
+            etymology = "Greek: προστάτης (prostátēs) — 'Prostate'",
             termEn = "Prostate enlargement",
             termFr = "Hypertrophie de la prostate",
             termAr = "تضخم البروستاتا",
@@ -6779,6 +6833,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4280,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Conjunctivitis (Pink eye)",
             termFr = "Conjonctivite",
             termAr = "التهاب الملتحمة",
@@ -7131,6 +7186,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4302,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Tonsillitis",
             termFr = "Amygdalite",
             termAr = "التهاب اللوزتين",
@@ -7323,6 +7379,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4314,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymph node",
             termFr = "Ganglion lymphatique",
             termAr = "العقدة اللمفاوية",
@@ -7339,6 +7396,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4315,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Swollen lymph nodes",
             termFr = "Ganglions gonflés",
             termAr = "تضخم الغدد الليمفاوية",
@@ -7403,6 +7461,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4319,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Leukemia",
             termFr = "Leucémie",
             termAr = "ابيضاض الدم (سرطان الدم)",
@@ -7419,6 +7478,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4320,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunotherapy",
             termFr = "Immunothérapie",
             termAr = "العلاج المناعي",
@@ -7755,6 +7815,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4341,
+            etymology = "Greek: θυρεοειδής (thyreoeides) — 'Thyroid'",
             termEn = "Thyroid function test",
             termFr = "Bilan thyroïdien",
             termAr = "اختبار وظائف الغدة الدرقية",
@@ -8187,6 +8248,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4368,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Herd immunity",
             termFr = "Immunité collective",
             termAr = "المناعة الجماعية",
@@ -8395,6 +8457,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4381,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Zoonosis",
             termFr = "Zoonose",
             termAr = "الأمراض الحيوانية المنشأ",
@@ -8619,6 +8682,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4395,
+            etymology = "Greek: ὑστέρα (hystéra) ('Uterus / Womb') + ἐκτομή (ektomḗ) ('Surgical removal / Excision')",
             termEn = "Hysterectomy",
             termFr = "Hystérectomie",
             termAr = "استئصال الرحم",
@@ -8699,6 +8763,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4400,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Sinusitis",
             termFr = "Sinusite",
             termAr = "التهاب الجيوب الأنفية",
@@ -8731,6 +8796,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4402,
+            etymology = "Greek: λάρυγξ (lárynx) ('Larynx') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Laryngitis",
             termFr = "Laryngite",
             termAr = "التهاب الحنجرة",
@@ -8779,6 +8845,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4405,
+            etymology = "Greek: ἀδήν (adḗn) — 'Gland'",
             termEn = "Adenoids",
             termFr = "Végétations adénoïdes",
             termAr = "اللحمية الأنفية",
@@ -8795,6 +8862,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4406,
+            etymology = "Greek: φάρυγξ (phárynx) ('Pharynx / Throat') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Pharyngitis",
             termFr = "Pharyngite",
             termAr = "التهاب البلعوم",
@@ -8923,6 +8991,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4414,
+            etymology = "Greek: ψυχή (psykhḗ) ('Mind / Soul / Mental') + -ōsis ('condition / process')",
             termEn = "Psychosis",
             termFr = "Psychose",
             termAr = "الذهان",
@@ -9035,6 +9104,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4421,
+            etymology = "Greek: φιλία (philía) — 'Affinity / Tendency toward'",
             termEn = "Hemophilia",
             termFr = "Hémophilie",
             termAr = "الهيموفيليا (ناعور)",
@@ -9163,6 +9233,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4429,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphoma",
             termFr = "Lymphome",
             termAr = "سرطان الغدد الليمفاوية",
@@ -9179,6 +9250,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4430,
+            etymology = "Greek: σηπτικός (sēptikós) ('Infection / Putrefaction') + αἷμα (haîma) ('Condition of blood')",
             termEn = "Septicemia (Blood poisoning)",
             termFr = "Septicémie",
             termAr = "تسمم الدم",
@@ -9195,6 +9267,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4431,
+            etymology = "Greek: μῆνιγξ (mēnigx) — 'Meninges'",
             termEn = "Meningococcal disease",
             termFr = "Méningococcie",
             termAr = "المرض المكوري السحائي",
@@ -9419,6 +9492,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4445,
+            etymology = "Latin: radius — 'Radiation / Ray'",
             termEn = "Radiologist",
             termFr = "Radiologue",
             termAr = "طبيب الأشعة",
@@ -9483,6 +9557,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4449,
+            etymology = "Greek: ἀγγεῖον (angeîon) — 'Blood vessel'",
             termEn = "Angiography",
             termFr = "Angiographie",
             termAr = "تصوير الأوعية الدموية",
@@ -9531,6 +9606,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4452,
+            etymology = "Greek: σκοπεῖν (skopeîn) — 'Visual examination'",
             termEn = "Fluoroscopy",
             termFr = "Fluoroscopie",
             termAr = "التنظير الفلوري",
@@ -9723,6 +9799,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4464,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Dx — Diagnosis",
             termFr = "Dx — Diagnostic",
             termAr = "التشخيص",
@@ -9755,6 +9832,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4466,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Hx — History",
             termFr = "ATCD — Antécédents",
             termAr = "التاريخ المرضي",
@@ -10075,6 +10153,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4486,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunity",
             termFr = "Immunité",
             termAr = "المناعة",
@@ -10347,6 +10426,7 @@ object AnglaisMedicalTerms {
         ),
         MedicalTermEntity(
             id = 4503,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunization",
             termFr = "Vaccination (immunisation)",
             termAr = "التطعيم",

@@ -445,6 +445,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2963,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microfilament",
             termFr = "Microfilament",
             termAr = "الخيط الدقيق (الميكروفيلامنت)",
@@ -460,6 +461,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2964,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microtubule",
             termFr = "Microtubule",
             termAr = "الأنيبيب الدقيق",
@@ -484,6 +486,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2966,
+            etymology = "Greek: χρῶμα (khrōma) — 'Color'",
             termEn = "Chromatin",
             termFr = "Chromatine",
             termAr = "الكروماتين",
@@ -619,6 +622,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2975,
+            etymology = "Greek: ἐρυθρός (erythrós) — 'Red'",
             termEn = "Erythrocyte",
             termFr = "Érythrocyte",
             termAr = "كرية الدم الحمراء",
@@ -648,6 +652,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2977,
+            etymology = "Greek: θρόμβος (thrombos) — 'Blood clot / Thrombus'",
             termEn = "Thrombocyte (Platelet)",
             termFr = "Thrombocyte (Plaquette)",
             termAr = "الصفيحة الدموية",
@@ -708,6 +713,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2981,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphocyte",
             termFr = "Lymphocyte",
             termAr = "اللمفاوية",
@@ -738,6 +744,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2983,
+            etymology = "Greek: μακρός (makrós) — 'Large / Long'",
             termEn = "Macrophage",
             termFr = "Macrophage",
             termAr = "البلعم الكبير",
@@ -783,6 +790,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2986,
+            etymology = "Latin: fibra — 'Fiber / Fibrous tissue'",
             termEn = "Fibroblast",
             termFr = "Fibroblaste",
             termAr = "الأرومة الليفية",
@@ -798,6 +806,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2987,
+            etymology = "Greek: ὀστέον (ostéon) — 'Bone'",
             termEn = "Osteocyte",
             termFr = "Ostéocyte",
             termAr = "الخلية العظمية",
@@ -813,6 +822,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2988,
+            etymology = "Greek: χόνδρος (khóndros) — 'Cartilage'",
             termEn = "Chondrocyte",
             termFr = "Chondrocyte",
             termAr = "الخلية الغضروفية",
@@ -828,6 +838,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2989,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuron",
             termFr = "Neurone",
             termAr = "الخلية العصبية",
@@ -843,6 +854,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2990,
+            etymology = "Greek: ἧπαρ (hêpar) — 'Liver'",
             termEn = "Hepatocyte",
             termFr = "Hépatocyte",
             termAr = "الخلية الكبدية",
@@ -1068,6 +1080,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3005,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Mitosis",
             termFr = "Mitose",
             termAr = "الانقسام الخيطي (الميتوز)",
@@ -1083,6 +1096,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3006,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Meiosis",
             termFr = "Méiose",
             termAr = "الانقسام الاختزالي (الميوز)",
@@ -1173,6 +1187,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3012,
+            etymology = "Greek: χρῶμα (khrōma) — 'Color'",
             termEn = "Chromatid",
             termFr = "Chromatide",
             termAr = "الكروماتيدة",
@@ -1315,6 +1330,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3022,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Cytology",
             termFr = "Cytologie",
             termAr = "علم الخلية (السيتولوجيا)",
@@ -1375,6 +1391,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3026,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Liquid-based cytology (LBC)",
             termFr = "Cytologie en milieu liquide (CML)",
             termAr = "الخلوية على أساس سائل",
@@ -1465,6 +1482,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3032,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunohistochemistry (IHC)",
             termFr = "Immunohistochimie (IHC)",
             termAr = "الكيمياء النسيجية المناعية",
@@ -1480,6 +1498,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3033,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunocytochemistry (ICC)",
             termFr = "Immunocytochimie (ICC)",
             termAr = "الكيمياء الخلوية المناعية",
@@ -1525,6 +1544,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3036,
+            etymology = "Greek: ἤλεκτρον (ēlektron) ('Electricity / Current') + μικρός (mikrós) ('Small / Tiny') + σκοπεῖν (skopeîn) ('Visual examination')",
             termEn = "Electron microscopy",
             termFr = "Microscopie électronique",
             termAr = "المجهر الإلكتروني",
@@ -1540,6 +1560,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3037,
+            etymology = "Greek: μικρός (mikrós) ('Small / Tiny') + σκοπεῖν (skopeîn) ('Visual examination')",
             termEn = "Light microscopy",
             termFr = "Microscopie optique",
             termAr = "المجهر الضوئي",
@@ -1555,6 +1576,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3038,
+            etymology = "Greek: μικρός (mikrós) ('Small / Tiny') + σκοπεῖν (skopeîn) ('Visual examination')",
             termEn = "Confocal microscopy",
             termFr = "Microscopie confocale",
             termAr = "المجهر المقطعي",
@@ -1645,6 +1667,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3044,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Exfoliative cytology",
             termFr = "Cytologie exfoliative",
             termAr = "الخلوية التقشرية",
@@ -1748,6 +1771,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3051,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "PAS stain (Periodic acid-Schiff)",
             termFr = "Coloration PAS (Acide périodique-Schiff)",
             termAr = "تلوين PAS",
@@ -1958,6 +1982,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3065,
+            etymology = "Greek: πτῶσις (ptōsis) — 'Falling / Prolapse'",
             termEn = "Apoptosis",
             termFr = "Apoptose",
             termAr = "الموت الخلوي المبرمج",
@@ -1970,6 +1995,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3066,
+            etymology = "Greek: νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Necrosis",
             termFr = "Nécrose",
             termAr = "النخر",
@@ -1982,6 +2008,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3067,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Neoplasia",
             termFr = "Néoplasie",
             termAr = "الورم (التوليف الورمي)",
@@ -1994,6 +2021,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3068,
+            etymology = "Greek: ὑπέρ (hypér) ('Above / Excess') + πλάσις (plásis) ('Cell development / Formation')",
             termEn = "Hyperplasia",
             termFr = "Hyperplasie",
             termAr = "فرط التنسج",
@@ -2009,6 +2037,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3069,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Hypertrophy",
             termFr = "Hypertrophie",
             termAr = "تضخم الخلايا",
@@ -2039,6 +2068,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3071,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Dysplasia",
             termFr = "Dysplasie",
             termAr = "خلل التنسج",
@@ -2051,6 +2081,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3072,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Metaplasia",
             termFr = "Métaplasie",
             termAr = "الحؤول (تبدل النسيج)",
@@ -2064,6 +2095,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3073,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Anaplasia",
             termFr = "Anaplasie",
             termAr = "اللاتمايز",
@@ -2076,6 +2108,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3074,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Carcinoma",
             termFr = "Carcinome",
             termAr = "السرطانة",
@@ -2091,6 +2124,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3075,
+            etymology = "Greek: ἀδήν (adḗn) — 'Gland'",
             termEn = "Adenocarcinoma",
             termFr = "Adénocarcinome",
             termAr = "السرطانة الغدية",
@@ -2104,6 +2138,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3076,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Squamous cell carcinoma",
             termFr = "Carcinome épidermoïde (spinocellulaire)",
             termAr = "سرطانة الخلايا الحرشفية",
@@ -2117,6 +2152,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3077,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcoma",
             termFr = "Sarcome",
             termAr = "الساركوما",
@@ -2132,6 +2168,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3078,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphoma",
             termFr = "Lymphome",
             termAr = "الورم اللمفاوي",
@@ -2147,6 +2184,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3079,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Leukemia",
             termFr = "Leucémie",
             termAr = "سرطان الدم (اللوكيميا)",
@@ -2162,6 +2200,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3080,
+            etymology = "Greek: μέλας (mélas) — 'Black / Dark'",
             termEn = "Melanoma",
             termFr = "Mélanome",
             termAr = "الورم الميلاني",
@@ -2222,6 +2261,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3084,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Carcinoma in situ (CIS)",
             termFr = "Carcinome in situ",
             termAr = "السرطانة الموضعية",
@@ -2252,6 +2292,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3086,
+            etymology = "Latin: fibra ('Fiber / Fibrous tissue') + -ōsis ('condition / process')",
             termEn = "Fibrosis",
             termFr = "Fibrose",
             termAr = "التليف",
@@ -2297,6 +2338,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3089,
+            etymology = "Greek: θρόμβος (thrombos) ('Blood clot / Thrombus') + -ōsis ('condition / process')",
             termEn = "Thrombosis",
             termFr = "Thrombose",
             termAr = "التخثر",
@@ -2312,6 +2354,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3090,
+            etymology = "Greek: ἔμβολος (émbolos) — 'Embolism / Obstruction'",
             termEn = "Embolism",
             termFr = "Embolie",
             termAr = "الانصمام",
@@ -2327,6 +2370,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3091,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Ischemia",
             termFr = "Ischémie",
             termAr = "نقص التروية",
@@ -2354,6 +2398,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3093,
+            etymology = "Greek: οἴδημα (oídēma) — 'Edema / Swelling'",
             termEn = "Edema",
             termFr = "Œdème",
             termAr = "الوذمة",
@@ -2444,6 +2489,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3100,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Atypical mitosis",
             termFr = "Mitose atypique",
             termAr = "الانقسام غير النمطي",
@@ -2516,6 +2562,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3105,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Pyknosis",
             termFr = "Pycnose",
             termAr = "تكثف النواة (البيكنوز)",
@@ -2543,6 +2590,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3107,
+            etymology = "Greek: μέγας (mégas) — 'Enlargement / Hypertrophy'",
             termEn = "Cytomegaly",
             termFr = "Cytomégalie",
             termAr = "تضخم الخلية",
@@ -2555,6 +2603,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3108,
+            etymology = "Greek: μέγας (mégas) — 'Enlargement / Hypertrophy'",
             termEn = "Karyomegaly",
             termFr = "Caryomégalie",
             termAr = "تضخم النواة",
@@ -2642,6 +2691,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3114,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microinvasion",
             termFr = "Microinvasion",
             termAr = "الاجتياح الدقيق",
@@ -2654,6 +2704,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3115,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Parakeratosis",
             termFr = "Parakératose",
             termAr = "شبه التقرن",
@@ -2666,6 +2717,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3116,
+            etymology = "Greek: ὑπέρ (hypér) ('Above / Excess') + -ōsis ('condition / process')",
             termEn = "Hyperkeratosis",
             termFr = "Hyperkératose",
             termAr = "فرط التقرن",
@@ -2678,6 +2730,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3117,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Acanthosis",
             termFr = "Acanthose",
             termAr = "الشوكانية",
@@ -2898,6 +2951,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3132,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Histone",
             termFr = "Histone",
             termAr = "الهيستون",
@@ -2955,6 +3009,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3136,
+            etymology = "Greek: καρκίνος (karkínos) ('Cancer / Carcinoma') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Carcinogenesis",
             termFr = "Carcinogenèse",
             termAr = "التسرطن (الحدوث السرطاني)",
@@ -3165,6 +3220,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3150,
+            etymology = "Greek: ἀγγεῖον (angeîon) ('Blood vessel') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Angiogenesis",
             termFr = "Angiogenèse",
             termAr = "تكوين الأوعية الدموية",
@@ -3180,6 +3236,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3151,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Oncogenesis",
             termFr = "Oncogenèse",
             termAr = "التشكل الورمي",
@@ -3297,6 +3354,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3159,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immune response",
             termFr = "Réponse immunitaire",
             termAr = "الاستجابة المناعية",
@@ -3414,6 +3472,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3167,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Low-grade dysplasia (LGSIL)",
             termFr = "Dysplasie de bas grade (LGSIL)",
             termAr = "خلل التنسج منخفض الدرجة",
@@ -3426,6 +3485,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3168,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "High-grade dysplasia (HGSIL)",
             termFr = "Dysplasie de haut grade (HGSIL)",
             termAr = "خلل التنسج مرتفع الدرجة",
@@ -3498,6 +3558,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3173,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Cytological diagnosis",
             termFr = "Diagnostic cytologique",
             termAr = "التشخيص الخلوي",

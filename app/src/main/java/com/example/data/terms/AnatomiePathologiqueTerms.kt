@@ -10,6 +10,7 @@ object AnatomiePathologiqueTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 2728,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + λόγος (lógos) ('Study / Science of')",
             termEn = "Pathology",
             termFr = "Anatomie Pathologique",
             termAr = "علم الأمراض التشريحي",
@@ -25,6 +26,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2729,
+            etymology = "Greek: ἱστός (histós) ('Tissue') + λόγος (lógos) ('Study / Science of')",
             termEn = "Histopathology",
             termFr = "Histopathologie",
             termAr = "علم الأنسجة المرضية",
@@ -37,6 +39,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2730,
+            etymology = "Greek: νεκρός (nekrós) — 'Death / Dead tissue'",
             termEn = "Autopsy (Necropsy)",
             termFr = "Autopsie (Nécropsie)",
             termAr = "تشريح الجثة",
@@ -67,6 +70,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2732,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Cytopathology",
             termFr = "Cytopathologie",
             termAr = "علم الخلايا المرضية",
@@ -82,6 +86,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2733,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + λόγος (lógos) ('Study / Science of')",
             termEn = "Gross pathology",
             termFr = "Macroscopie (Anatomie pathologique macroscopique)",
             termAr = "علم الأمراض العيني",
@@ -97,6 +102,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2734,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Etiology",
             termFr = "Étiologie",
             termAr = "المسببية",
@@ -112,6 +118,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2735,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Pathogenesis",
             termFr = "Pathogenèse",
             termAr = "المرضية (الإمراضية)",
@@ -127,6 +134,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2736,
+            etymology = "Greek: μορφή (morphē) ('Form / Shape / Structure') + λόγος (lógos) ('Study / Science of')",
             termEn = "Morphology",
             termFr = "Morphologie",
             termAr = "المورفولوجيا (علم الشكل)",
@@ -199,6 +207,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2741,
+            etymology = "Greek: πάθος (páthos) — 'Disease / Suffering'",
             termEn = "Pathological report",
             termFr = "Compte rendu anatomopathologique",
             termAr = "التقرير التشريحي المرضي",
@@ -250,6 +259,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2745,
+            etymology = "Greek: νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Necrosis",
             termFr = "Nécrose",
             termAr = "النخر",
@@ -262,6 +272,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2746,
+            etymology = "Greek: πτῶσις (ptōsis) — 'Falling / Prolapse'",
             termEn = "Apoptosis",
             termFr = "Apoptose",
             termAr = "الموت الخلوي المبرمج",
@@ -274,6 +285,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2747,
+            etymology = "Latin: coagulare ('Coagulation / Clotting') + νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Coagulative necrosis",
             termFr = "Nécrose de coagulation",
             termAr = "النخر التخثري",
@@ -289,6 +301,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2748,
+            etymology = "Greek: νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Liquefactive necrosis",
             termFr = "Nécrose de liquéfaction",
             termAr = "النخر التميعي",
@@ -301,6 +314,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2749,
+            etymology = "Greek: νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Caseous necrosis",
             termFr = "Nécrose caséeuse",
             termAr = "النخر الجبني",
@@ -313,6 +327,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2750,
+            etymology = "Greek: νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Fat necrosis",
             termFr = "Nécrose graisseuse (stéatonécrose)",
             termAr = "نخر الدهون",
@@ -325,6 +340,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2751,
+            etymology = "Greek: νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Gangrenous necrosis",
             termFr = "Nécrose gangreneuse (Gangrène)",
             termAr = "الغنغرينا",
@@ -352,6 +368,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2753,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Fatty change (Steatosis)",
             termFr = "Stéatose (Dégénérescence graisseuse)",
             termAr = "التنكس الدهني (داء الكبد الدهني)",
@@ -388,6 +405,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2756,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Pyknosis",
             termFr = "Pycnose",
             termAr = "التكثف النووي",
@@ -415,6 +433,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2758,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Ischemia",
             termFr = "Ischémie",
             termAr = "نقص التروية",
@@ -496,6 +515,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2764,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardinal signs of inflammation",
             termFr = "Signes cardinaux de l'inflammation",
             termAr = "العلامات الأساسية للالتهاب",
@@ -805,6 +825,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2786,
+            etymology = "Greek: μακρός (makrós) — 'Large / Long'",
             termEn = "Macrophage",
             termFr = "Macrophage",
             termAr = "البلاعمة",
@@ -820,6 +841,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2787,
+            etymology = "Latin: fibra ('Fiber / Fibrous tissue') + -ōsis ('condition / process')",
             termEn = "Fibrosis",
             termFr = "Fibrose",
             termAr = "التليف",
@@ -928,6 +950,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2795,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphocyte",
             termFr = "Lymphocyte",
             termAr = "الخلية الليمفاوية",
@@ -1003,6 +1026,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2800,
+            etymology = "Greek: ἀγγεῖον (angeîon) ('Blood vessel') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Angiogenesis",
             termFr = "Angiogenèse",
             termAr = "تشكُّل الأوعية الجديدة",
@@ -1045,6 +1069,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2803,
+            etymology = "Greek: ὑπέρ (hypér) ('Above / Excess') + αἷμα (haîma) ('Condition of blood')",
             termEn = "Congestion (passive hyperemia)",
             termFr = "Congestion (Hyperhémie passive)",
             termAr = "الاحتقان السلبي",
@@ -1057,6 +1082,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2804,
+            etymology = "Greek: θρόμβος (thrombos) ('Blood clot / Thrombus') + -ōsis ('condition / process')",
             termEn = "Thrombosis",
             termFr = "Thrombose",
             termAr = "التخثر الوريدي/الشرياني",
@@ -1081,6 +1107,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2806,
+            etymology = "Greek: θρόμβος (thrombos) — 'Blood clot / Thrombus'",
             termEn = "Thrombus",
             termFr = "Thrombus",
             termAr = "الخثرة",
@@ -1096,6 +1123,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2807,
+            etymology = "Greek: ἔμβολος (émbolos) — 'Embolism / Obstruction'",
             termEn = "Embolism",
             termFr = "Embolie",
             termAr = "الصمة",
@@ -1111,6 +1139,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2808,
+            etymology = "Greek: ἔμβολος (émbolos) — 'Embolism / Obstruction'",
             termEn = "Pulmonary embolism",
             termFr = "Embolie pulmonaire",
             termAr = "الصمة الرئوية",
@@ -1153,6 +1182,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2811,
+            etymology = "Greek: οἴδημα (oídēma) ('Edema / Swelling') + πάθος (páthos) ('Disease / Suffering')",
             termEn = "Edema (pathological)",
             termFr = "Œdème (pathologique)",
             termAr = "الوذمة (المرضية)",
@@ -1165,6 +1195,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2812,
+            etymology = "Latin: coagulare — 'Coagulation / Clotting'",
             termEn = "Disseminated intravascular coagulation (DIC)",
             termFr = "CIVD (Coagulation intravasculaire disséminée)",
             termAr = "التخثر المنتشر داخل الأوعية",
@@ -1210,6 +1241,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2815,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Atherosclerosis",
             termFr = "Athérosclérose",
             termAr = "تصلب الشرايين",
@@ -1240,6 +1272,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2817,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Ischemia (circulatory)",
             termFr = "Ischémie (circulatoire)",
             termAr = "نقص التروية (الدورانية)",
@@ -1252,6 +1285,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2818,
+            etymology = "Latin: lympha ('Lymph / Lymphatic system') + οἴδημα (oídēma) ('Edema / Swelling')",
             termEn = "Lymphedema",
             termFr = "Lymphœdème",
             termAr = "الوذمة اللمفاوية",
@@ -1279,6 +1313,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2820,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac tamponade",
             termFr = "Tamponnade cardiaque",
             termAr = "انضغاط القلب",
@@ -1291,6 +1326,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2821,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Petechiae, purpura, ecchymosis",
             termFr = "Pétéchies, purpura, ecchymose",
             termAr = "النمشات والفرفرية والكدمات",
@@ -1303,6 +1339,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2822,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Neoplasia",
             termFr = "Néoplasie",
             termAr = "التشكُّل الورمي",
@@ -1363,6 +1400,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2826,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Carcinoma",
             termFr = "Carcinome",
             termAr = "السرطانة",
@@ -1378,6 +1416,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2827,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcoma",
             termFr = "Sarcome",
             termAr = "الساركومة",
@@ -1393,6 +1432,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2828,
+            etymology = "Greek: ἀδήν (adḗn) — 'Gland'",
             termEn = "Adenoma",
             termFr = "Adénome",
             termAr = "الغدَّانة",
@@ -1408,6 +1448,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2829,
+            etymology = "Greek: ἀδήν (adḗn) — 'Gland'",
             termEn = "Adenocarcinoma",
             termFr = "Adénocarcinome",
             termAr = "السرطانة الغدية",
@@ -1423,6 +1464,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2830,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphoma",
             termFr = "Lymphome",
             termAr = "الليمفوما (ورم الغدد اللمفاوية)",
@@ -1438,6 +1480,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2831,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Leukemia",
             termFr = "Leucémie",
             termAr = "اللوكيميا (ابيضاض الدم)",
@@ -1483,6 +1526,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2834,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Anaplasia",
             termFr = "Anaplasie",
             termAr = "الترددية (فقدان التمايز)",
@@ -1495,6 +1539,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2835,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Dysplasia",
             termFr = "Dysplasie",
             termAr = "خلل التنسج",
@@ -1507,6 +1552,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2836,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Carcinoma in situ (CIS)",
             termFr = "Carcinome in situ (CIS)",
             termAr = "السرطانة في موضعها",
@@ -1585,6 +1631,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2842,
+            etymology = "Greek: καρκίνος (karkínos) ('Cancer / Carcinoma') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Carcinogenesis",
             termFr = "Cancérogenèse",
             termAr = "التسرطن",
@@ -1658,6 +1705,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2847,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Carcinogen",
             termFr = "Carcinogène",
             termAr = "المُسرطِن",
@@ -1670,6 +1718,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2848,
+            etymology = "Greek: καρκίνος (karkínos) ('Cancer / Carcinoma') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Initiation (carcinogenesis)",
             termFr = "Initiation (cancérogenèse)",
             termAr = "البدء التسرطني",
@@ -1685,6 +1734,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2849,
+            etymology = "Greek: καρκίνος (karkínos) ('Cancer / Carcinoma') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Promotion (carcinogenesis)",
             termFr = "Promotion (cancérogenèse)",
             termAr = "الترقية التسرطنية",
@@ -1700,6 +1750,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2850,
+            etymology = "Greek: καρκίνος (karkínos) ('Cancer / Carcinoma') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Progression (carcinogenesis)",
             termFr = "Progression (cancérogenèse)",
             termAr = "التقدم التسرطني",
@@ -1769,6 +1820,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2855,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Chemical carcinogens",
             termFr = "Carcinogènes chimiques",
             termAr = "المُسرطِنات الكيميائية",
@@ -1781,6 +1833,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2856,
+            etymology = "Greek: καρκίνος (karkínos) ('Cancer / Carcinoma') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Radiation carcinogenesis",
             termFr = "Cancérogenèse par radiation",
             termAr = "التسرطن الإشعاعي",
@@ -1793,6 +1846,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2857,
+            etymology = "Greek: καρκίνος (karkínos) ('Cancer / Carcinoma') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Viral carcinogenesis",
             termFr = "Cancérogenèse virale",
             termAr = "التسرطن الفيروسي",
@@ -1817,6 +1871,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2859,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunological escape (Tumor)",
             termFr = "Échappement immunitaire (Tumeur)",
             termAr = "التهرب المناعي للورم",
@@ -1832,6 +1887,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2860,
+            etymology = "Greek: ἀγγεῖον (angeîon) ('Blood vessel') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Angiogenesis (tumor)",
             termFr = "Angiogenèse (tumorale)",
             termAr = "تكوين الأوعية الورمية",
@@ -1844,6 +1900,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2861,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Tumor microenvironment",
             termFr = "Microenvironnement tumoral",
             termAr = "البيئة الدقيقة للورم",
@@ -1871,6 +1928,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2863,
+            etymology = "Latin: coagulare ('Coagulation / Clotting') + νεκρός (nekrós) ('Death / Dead tissue') + -ōsis ('condition / process')",
             termEn = "Coagulative necrosis (myocardium)",
             termFr = "Nécrose de coagulation (myocarde)",
             termAr = "النخر التخثري (عضلة القلب)",
@@ -1886,6 +1944,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2864,
+            etymology = "Greek: καρδία (kardía) ('Heart') + ὑπέρ (hypér) ('Above / Excess')",
             termEn = "Cardiac hypertrophy",
             termFr = "Hypertrophie cardiaque",
             termAr = "تضخم عضلة القلب",
@@ -1898,6 +1957,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2865,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Pericarditis",
             termFr = "Péricardite",
             termAr = "التهاب التامور",
@@ -1910,6 +1970,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2866,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Endocarditis",
             termFr = "Endocardite",
             termAr = "التهاب الشغاف",
@@ -1922,6 +1983,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2867,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Vegetation (cardiac)",
             termFr = "Végétation (cardiaque)",
             termAr = "النباتات القلبية",
@@ -1937,6 +1999,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2868,
+            etymology = "Greek: στενός (stenós) ('Narrow / Stenosis') + -ōsis ('condition / process')",
             termEn = "Aortic stenosis",
             termFr = "Sténose aortique",
             termAr = "تضيق الأبهر",
@@ -1952,6 +2015,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2869,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiomyopathy",
             termFr = "Cardiomyopathie",
             termAr = "اعتلال عضلة القلب",
@@ -1988,6 +2052,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2872,
+            etymology = "Greek: πάθος (páthos) — 'Disease / Suffering'",
             termEn = "Heart failure (pathological)",
             termFr = "Insuffisance cardiaque (pathologique)",
             termAr = "قصور القلب (مرضي)",
@@ -2012,6 +2077,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2874,
+            etymology = "Greek: ἀρτηρία (artēría) ('Artery') + -ōsis ('condition / process')",
             termEn = "Arteriolosclerosis",
             termFr = "Artériolosclérose",
             termAr = "تصلب الشرينات",
@@ -2057,6 +2123,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2877,
+            etymology = "Greek: πνεύμων (pneúmōn) ('Lung / Air') + πάθος (páthos) ('Disease / Suffering')",
             termEn = "Pneumonia (pathological)",
             termFr = "Pneumonie (pathologique)",
             termAr = "الالتهاب الرئوي (مرضي)",
@@ -2069,6 +2136,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2878,
+            etymology = "Greek: πνεύμων (pneúmōn) — 'Lung / Air'",
             termEn = "Lobar pneumonia (stages)",
             termFr = "Pneumonie lobaire (stades)",
             termAr = "الالتهاب الرئوي الفصي (مراحله)",
@@ -2093,6 +2161,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2880,
+            etymology = "Latin: fibra ('Fiber / Fibrous tissue') + -ōsis ('condition / process')",
             termEn = "Pulmonary fibrosis",
             termFr = "Fibrose pulmonaire",
             termAr = "التليف الرئوي",
@@ -2105,6 +2174,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2881,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + -ōsis ('condition / process')",
             termEn = "Tuberculosis (pathological)",
             termFr = "Tuberculose (pathologique)",
             termAr = "السل (مرضي)",
@@ -2129,6 +2199,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2883,
+            etymology = "Greek: οἴδημα (oídēma) — 'Edema / Swelling'",
             termEn = "Pulmonary edema",
             termFr = "Œdème pulmonaire",
             termAr = "الوذمة الرئوية",
@@ -2141,6 +2212,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2884,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Lung carcinoma (types)",
             termFr = "Carcinome pulmonaire (types)",
             termAr = "سرطان الرئة (أنواعه)",
@@ -2153,6 +2225,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2885,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Small cell carcinoma (SCLC)",
             termFr = "Carcinome à petites cellules (CPC)",
             termAr = "سرطانة صغيرة الخلايا",
@@ -2180,6 +2253,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2887,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Silicosis",
             termFr = "Silicose",
             termAr = "داء السيليكا",
@@ -2216,6 +2290,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2890,
+            etymology = "Greek: βρόγχος (brógkhos) — 'Bronchi'",
             termEn = "Bronchiectasis",
             termFr = "Bronchiectasie",
             termAr = "توسع القصبات",
@@ -2228,6 +2303,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2891,
+            etymology = "Greek: πλευρά (pleurá) ('Pleura / Side') + πάθος (páthos) ('Disease / Suffering')",
             termEn = "Pleural effusion (pathological)",
             termFr = "Épanchement pleural (pathologique)",
             termAr = "الانصباب الجنبي (مرضي)",
@@ -2240,6 +2316,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2892,
+            etymology = "Greek: πάθος (páthos) — 'Disease / Suffering'",
             termEn = "Peptic ulcer (pathological)",
             termFr = "Ulcère gastroduodénal (pathologique)",
             termAr = "قرحة المعدة والاثني عشر (مرضي)",
@@ -2255,6 +2332,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2893,
+            etymology = "Greek: γαστήρ (gastḗr) ('Stomach') + πάθος (páthos) ('Disease / Suffering') + λόγος (lógos) ('Study / Science of')",
             termEn = "Helicobacter pylori (gastric pathology)",
             termFr = "Helicobacter pylori (pathologie gastrique)",
             termAr = "الملوية البوابية (أمراض المعدة)",
@@ -2267,6 +2345,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2894,
+            etymology = "Greek: ἀδήν (adḗn) ('Gland') + κόλον (kólon) ('Colon / Large intestine')",
             termEn = "Colon adenocarcinoma",
             termFr = "Adénocarcinome du côlon",
             termAr = "السرطانة الغدية للقولون",
@@ -2282,6 +2361,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2895,
+            etymology = "Greek: ἀδήν (adḗn) — 'Gland'",
             termEn = "Adenomatous polyp",
             termFr = "Polype adénomateux",
             termAr = "الورم الغدي الحميد",
@@ -2297,6 +2377,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2896,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + λόγος (lógos) ('Study / Science of')",
             termEn = "Crohn's disease (pathology)",
             termFr = "Maladie de Crohn (pathologie)",
             termAr = "مرض كرون (مرضي)",
@@ -2309,6 +2390,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2897,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + -ῖτις (-îtis) ('Inflammation') + λόγος (lógos) ('Study / Science of')",
             termEn = "Ulcerative colitis (pathology)",
             termFr = "Rectocolite hémorragique (pathologie)",
             termAr = "التهاب القولون التقرحي (مرضي)",
@@ -2321,6 +2403,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2898,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Cirrhosis",
             termFr = "Cirrhose",
             termAr = "تليف الكبد",
@@ -2333,6 +2416,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2899,
+            etymology = "Greek: ἧπαρ (hêpar) ('Liver') + καρκίνος (karkínos) ('Cancer / Carcinoma')",
             termEn = "Hepatocellular carcinoma (HCC)",
             termFr = "Carcinome hépatocellulaire (CHC)",
             termAr = "السرطانة الكبدية الخلوية",
@@ -2345,6 +2429,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2900,
+            etymology = "Greek: πάγκρεας (págkreas) ('Pancreas') + πάθος (páthos) ('Disease / Suffering') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Acute pancreatitis (pathological)",
             termFr = "Pancréatite aiguë (pathologique)",
             termAr = "التهاب البنكرياس الحاد (مرضي)",
@@ -2357,6 +2442,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2901,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Appendicitis (pathological)",
             termFr = "Appendicite (pathologique)",
             termAr = "التهاب الزائدة الدودية (مرضي)",
@@ -2369,6 +2455,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2902,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Glomerulonephritis",
             termFr = "Glomérulonéphrite",
             termAr = "التهاب الكبيبات الكلوية",
@@ -2381,6 +2468,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2903,
+            etymology = "Greek: νεφρός (nephrós) ('Kidney') + πάθος (páthos) ('Disease / Suffering')",
             termEn = "Nephrotic syndrome (pathological)",
             termFr = "Syndrome néphrotique (pathologique)",
             termAr = "المتلازمة الكلائية (مرضي)",
@@ -2408,6 +2496,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2905,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Pyelonephritis (pathological)",
             termFr = "Pyélonéphrite (pathologique)",
             termAr = "التهاب الحويضة والكلية (مرضي)",
@@ -2420,6 +2509,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2906,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Renal cell carcinoma (RCC)",
             termFr = "Carcinome à cellules rénales (CCR)",
             termAr = "السرطانة الكلوية الخلوية",
@@ -2435,6 +2525,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2907,
+            etymology = "Greek: νεφρός (nephrós) — 'Kidney'",
             termEn = "Wilms' tumor (Nephroblastoma)",
             termFr = "Tumeur de Wilms (Néphrobastome)",
             termAr = "ورم ويلمز (الحشوة الكلوية)",
@@ -2450,6 +2541,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2908,
+            etymology = "Greek: νεφρός (nephrós) — 'Kidney'",
             termEn = "Diabetic nephropathy",
             termFr = "Néphropathie diabétique",
             termAr = "اعتلال الكلية السكري",
@@ -2462,6 +2554,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2909,
+            etymology = "Greek: ὑπέρ (hypér) ('Above / Excess') + νεφρός (nephrós) ('Kidney') + -ōsis ('condition / process')",
             termEn = "Hypertensive nephrosclerosis",
             termFr = "Néphrosclérose hypertensive",
             termAr = "تصلب الكلية الارتفاعي",
@@ -2474,6 +2567,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2910,
+            etymology = "Greek: νεφρός (nephrós) — 'Kidney'",
             termEn = "Nephrolithiasis (renal calculi)",
             termFr = "Lithiase rénale (Calculs rénaux)",
             termAr = "حصيات الكلية",
@@ -2486,6 +2580,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2911,
+            etymology = "Greek: ὕδωρ (hýdōr) ('Water / Fluid') + -ōsis ('condition / process')",
             termEn = "Hydronephrosis",
             termFr = "Hydronéphrose",
             termAr = "استسقاء الكلية",
@@ -2513,6 +2608,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2913,
+            etymology = "Greek: μῆνιγξ (mēnigx) — 'Meninges'",
             termEn = "Meningioma",
             termFr = "Méningiome",
             termAr = "ورم السحايا",
@@ -2540,6 +2636,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2915,
+            etymology = "Greek: πάθος (páthos) — 'Disease / Suffering'",
             termEn = "Alzheimer's disease (pathological)",
             termFr = "Maladie d'Alzheimer (pathologique)",
             termAr = "داء ألزهايمر (مرضي)",
@@ -2577,6 +2674,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2918,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Gliosis",
             termFr = "Gliose",
             termAr = "الداء الدبقي",
@@ -2589,6 +2687,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2919,
+            etymology = "Greek: νεῦρον (neûron) ('Nerve / Nervous system') + χρῶμα (khrōma) ('Color')",
             termEn = "Neuronal chromatolysis",
             termFr = "Chromatolyse (neuronale)",
             termAr = "تحلل النواة الكروماتينية العصبية",
@@ -2628,6 +2727,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2922,
+            etymology = "Greek: ἤλεκτρον (ēlektron) ('Electricity / Current') + μικρός (mikrós) ('Small / Tiny') + σκοπεῖν (skopeîn) ('Visual examination')",
             termEn = "Electron microscopy",
             termFr = "Microscopie électronique",
             termAr = "المجهر الإلكتروني",
@@ -2640,6 +2740,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2923,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunofluorescence",
             termFr = "Immunofluorescence",
             termAr = "التألق المناعي",
@@ -2682,6 +2783,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2926,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "PAS stain (Periodic Acid-Schiff)",
             termFr = "Coloration PAS (Acide périodique-Schiff)",
             termAr = "صبغة PAS",
@@ -2712,6 +2814,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2928,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + λόγος (lógos) ('Study / Science of')",
             termEn = "Ziehl-Neelsen stain (in pathology)",
             termFr = "Coloration de Ziehl-Neelsen (en pathologie)",
             termAr = "صبغة زيل-نيلسن (في علم الأمراض)",

@@ -108,6 +108,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1543,
+            etymology = "Latin: fibra ('Fiber / Fibrous tissue') + -ōsis ('condition / process')",
             termEn = "Cystic fibrosis",
             termFr = "Mucoviscidose (Fibrose kystique)",
             termAr = "التليف الكيسي",
@@ -138,6 +139,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1545,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Phenylketonuria (PKU)",
             termFr = "Phénylcétonurie (PCU)",
             termAr = "بيلة الفينيل كيتون",
@@ -153,6 +155,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1546,
+            etymology = "Greek: φιλία (philía) — 'Affinity / Tendency toward'",
             termEn = "Hemophilia",
             termFr = "Hémophilie",
             termAr = "الناعور (الهيموفيليا)",
@@ -442,6 +445,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1566,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Histone modification",
             termFr = "Modification des histones",
             termAr = "تعديل الهيستونات",
@@ -469,6 +473,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1568,
+            etymology = "Greek: χρῶμα (khrōma) — 'Color'",
             termEn = "Chromatin remodeling",
             termFr = "Remodelage de la chromatine",
             termAr = "إعادة تشكيل الكروماتين",
@@ -649,6 +654,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1580,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Gel electrophoresis",
             termFr = "Électrophorèse sur gel",
             termAr = "الرحلان الكهربائي الهلامي",
@@ -829,6 +835,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1592,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "DNA microarray (Gene chip)",
             termFr = "Micropuce ADN",
             termAr = "الرقاقة الجينية",
@@ -1031,6 +1038,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1606,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microsatellite (STR)",
             termFr = "Microsatellite (STR)",
             termAr = "المتتالية الدقيقة",
@@ -1073,6 +1081,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1609,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacogenomics",
             termFr = "Pharmacogénomique",
             termAr = "علم الصيدلة الجينومي",
@@ -1730,6 +1739,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1652,
+            etymology = "Greek: χρῶμα (khrōma) — 'Color'",
             termEn = "Chromatin",
             termFr = "Chromatine",
             termAr = "الكروماتين",
@@ -1745,6 +1755,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1653,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Histone",
             termFr = "Histone",
             termAr = "الهيستون",
@@ -1817,6 +1828,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1658,
+            etymology = "Latin/Greek: semi / ἡμι (hēmi) — 'Half'",
             termEn = "Semi-conservative replication",
             termFr = "Réplication semi-conservative",
             termAr = "التضاعف شبه المحافظ",
@@ -2956,6 +2968,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1737,
+            etymology = "Greek: πρωτεῖος (prōteîos) — 'Protein'",
             termEn = "Repressor protein",
             termFr = "Protéine répresseur",
             termAr = "البروتين الكابت",
@@ -3058,6 +3071,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1744,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "miRNA (MicroRNA)",
             termFr = "miARN (MicroARN)",
             termAr = "الـ microRNA",
@@ -3127,6 +3141,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1749,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Mitosis",
             termFr = "Mitose",
             termAr = "الانقسام المتساوي",
@@ -3139,6 +3154,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1750,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Meiosis",
             termFr = "Méiose",
             termAr = "الانقسام الاختزالي",
@@ -3214,6 +3230,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1755,
+            etymology = "Greek: χρῶμα (khrōma) — 'Color'",
             termEn = "Chromatid",
             termFr = "Chromatide",
             termAr = "الكروماتيد",

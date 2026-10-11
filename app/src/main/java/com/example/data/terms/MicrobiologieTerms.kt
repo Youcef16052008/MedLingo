@@ -476,6 +476,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2059,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Bacteremia",
             termFr = "Bactériémie",
             termAr = "البكتيريا في الدم",
@@ -530,6 +531,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2063,
+            etymology = "Greek: πνεύμων (pneúmōn) — 'Lung / Air'",
             termEn = "Streptococcus pneumoniae",
             termFr = "Streptococcus pneumoniae",
             termAr = "العقدية الرئوية",
@@ -590,6 +592,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2067,
+            etymology = "Greek: μῆνιγξ (mēnigx) — 'Meninges'",
             termEn = "Neisseria meningitidis",
             termFr = "Neisseria meningitidis",
             termAr = "النيسيرية السحائية",
@@ -813,6 +816,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2082,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "HIV (Human Immunodeficiency Virus)",
             termFr = "VIH (Virus de l'Immunodéficience Humaine)",
             termAr = "فيروس نقص المناعة البشرية",
@@ -903,6 +907,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2088,
+            etymology = "Greek: ἧπαρ (hêpar) ('Liver') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Hepatitis B virus (HBV)",
             termFr = "Virus de l'hépatite B (VHB)",
             termAr = "فيروس التهاب الكبد B",
@@ -918,6 +923,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2089,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Mycology",
             termFr = "Mycologie",
             termAr = "علم الفطريات",
@@ -1124,6 +1130,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2103,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Mycosis",
             termFr = "Mycose",
             termAr = "الداء الفطري",
@@ -1139,6 +1146,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2104,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Parasitology",
             termFr = "Parasitologie",
             termAr = "علم الطفيليات",
@@ -1226,6 +1234,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2110,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Entamoeba histolytica",
             termFr = "Entamoeba histolytica",
             termAr = "المتحولة الحالة للنسيج",
@@ -1559,6 +1568,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2133,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immune response",
             termFr = "Réponse immunitaire",
             termAr = "الاستجابة المناعية",
@@ -1574,6 +1584,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2134,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Innate immunity",
             termFr = "Immunité innée",
             termAr = "المناعة الفطرية",
@@ -1589,6 +1600,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2135,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Adaptive immunity",
             termFr = "Immunité adaptative",
             termAr = "المناعة التكيفية",
@@ -1619,6 +1631,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2137,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Antibody (Immunoglobulin)",
             termFr = "Anticorps (Immunoglobuline)",
             termAr = "الجسم المضاد (الغلوبيولين المناعي)",
@@ -1634,6 +1647,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2138,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "B cell (B lymphocyte)",
             termFr = "Lymphocyte B",
             termAr = "الخلية البائية",
@@ -1649,6 +1663,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2139,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "T cell (T lymphocyte)",
             termFr = "Lymphocyte T",
             termAr = "الخلية التائية",
@@ -1709,6 +1724,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2143,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Herd immunity",
             termFr = "Immunité collective (grégaire)",
             termAr = "مناعة القطيع",
@@ -1721,6 +1737,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2144,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immunocompromised",
             termFr = "Immunodéprimé",
             termAr = "ضعيف المناعة",
@@ -1856,6 +1873,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2153,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Serology",
             termFr = "Sérologie",
             termAr = "علم الأمصال",
@@ -1868,6 +1886,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2154,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "ELISA (Enzyme-Linked Immunosorbent Assay)",
             termFr = "ELISA",
             termAr = "مقايسة الامتصاص المناعي المرتبط بالإنزيم",
@@ -2156,6 +2175,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2174,
+            etymology = "Greek: σηπτικός (sēptikós) — 'Infection / Putrefaction'",
             termEn = "Antiseptic",
             termFr = "Antiseptique",
             termAr = "المطهر (المعقم)",
@@ -2201,6 +2221,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2177,
+            etymology = "Greek: σηπτικός (sēptikós) — 'Infection / Putrefaction'",
             termEn = "Aseptic technique",
             termFr = "Technique aseptique",
             termAr = "تقنية التعقيم",
@@ -2279,6 +2300,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2183,
+            etymology = "Greek: σηπτικός (sēptikós) — 'Infection / Putrefaction'",
             termEn = "Septic shock",
             termFr = "Choc septique",
             termAr = "الصدمة الإنتانية",
@@ -2291,6 +2313,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2184,
+            etymology = "Greek: μῆνιγξ (mēnigx) ('Meninges') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Meningitis",
             termFr = "Méningite",
             termAr = "التهاب السحايا",
@@ -2303,6 +2326,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2185,
+            etymology = "Greek: πνεύμων (pneúmōn) — 'Lung / Air'",
             termEn = "Pneumonia",
             termFr = "Pneumonie",
             termAr = "الالتهاب الرئوي",
@@ -2315,6 +2339,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2186,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Tuberculosis (TB)",
             termFr = "Tuberculose (TB)",
             termAr = "السل",
@@ -2330,6 +2355,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2187,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "AIDS (Acquired Immunodeficiency Syndrome)",
             termFr = "SIDA (Syndrome d'Immunodéficience Acquise)",
             termAr = "الإيدز (متلازمة نقص المناعة المكتسبة)",
@@ -2357,6 +2383,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2189,
+            etymology = "Greek: γαστήρ (gastḗr) ('Stomach') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Gastroenteritis",
             termFr = "Gastroentérite",
             termAr = "التهاب المعدة والأمعاء",
@@ -2467,6 +2494,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2197,
+            etymology = "Greek: πνεύμων (pneúmōn) — 'Lung / Air'",
             termEn = "Legionella pneumophila",
             termFr = "Legionella pneumophila",
             termAr = "الليجيونيلا الرئوية",
@@ -2542,6 +2570,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2202,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microbiome",
             termFr = "Microbiome",
             termAr = "الميكروبيوم",
@@ -2557,6 +2586,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2203,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Gut microbiota",
             termFr = "Microbiote intestinal",
             termAr = "الميكروبيوتا المعوية",
@@ -2572,6 +2602,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2204,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Dysbiosis",
             termFr = "Dysbiose",
             termAr = "خلل التوازن الميكروبي",
@@ -2611,6 +2642,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2207,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Fecal microbiota transplant (FMT)",
             termFr = "Transplantation de microbiote fécal (TMF)",
             termAr = "زراعة الميكروبيوتا البرازية",
@@ -2726,6 +2758,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2215,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Zoonosis",
             termFr = "Zoonose",
             termAr = "المرض الحيواني المنشأ",
@@ -2865,6 +2898,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2225,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microbial genetics",
             termFr = "Génétique microbienne",
             termAr = "الوراثة الميكروبية",
@@ -3016,6 +3050,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2236,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Passive immunity",
             termFr = "Immunité passive",
             termAr = "المناعة السلبية",
@@ -3028,6 +3063,7 @@ object MicrobiologieTerms {
         ),
         MedicalTermEntity(
             id = 2237,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Active immunity",
             termFr = "Immunité active",
             termAr = "المناعة الفاعلة",

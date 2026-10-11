@@ -175,6 +175,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3410,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Embryology",
             termFr = "Embryologie",
             termAr = "علم الأجنة",
@@ -190,6 +191,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3411,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Gametogenesis",
             termFr = "Gamétogenèse",
             termAr = "تكوين الأمشاج",
@@ -205,6 +207,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3412,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Spermatogenesis",
             termFr = "Spermatogenèse",
             termAr = "تكوين الحيوانات المنوية",
@@ -220,6 +223,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3413,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Oogenesis",
             termFr = "Ovogenèse (Ovogénèse)",
             termAr = "تكوين البييضات",
@@ -340,6 +344,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3421,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Spermiogenesis",
             termFr = "Spermiogenèse",
             termAr = "تمايز الحيوانات المنوية",
@@ -781,6 +786,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3451,
+            etymology = "Greek: ᾠοφόρος (ōiophóros) — 'Ovary'",
             termEn = "Cumulus oophorus",
             termFr = "Cumulus oophore",
             termAr = "التراكم المحيط بالبييضة",
@@ -883,6 +889,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3458,
+            etymology = "Greek: τροφή (trophē) — 'Nutrition / Nourishment / Growth'",
             termEn = "Trophoblast",
             termFr = "Trophoblaste",
             termAr = "الأرومة الغاذية",
@@ -1093,6 +1100,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3472,
+            etymology = "Greek: γαστήρ (gastḗr) — 'Stomach'",
             termEn = "Gastrulation",
             termFr = "Gastrulation",
             termAr = "التمعد (تكوين المعدة الجنينية)",
@@ -1471,6 +1479,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3498,
+            etymology = "Greek: σκληρός (sklēros) — 'Hard / Hardening'",
             termEn = "Sclerotome",
             termFr = "Sclérotome",
             termAr = "الأديم الصخري",
@@ -1516,6 +1525,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3501,
+            etymology = "Greek: φάρυγξ (phárynx) — 'Pharynx / Throat'",
             termEn = "Pharyngeal arches",
             termFr = "Arcs pharyngiens (branchiaux)",
             termAr = "الأقواس البلعومية",
@@ -1528,6 +1538,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3502,
+            etymology = "Greek: φάρυγξ (phárynx) — 'Pharynx / Throat'",
             termEn = "Pharyngeal cleft",
             termFr = "Fente pharyngienne",
             termAr = "الشق البلعومي",
@@ -1540,6 +1551,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3503,
+            etymology = "Greek: φάρυγξ (phárynx) — 'Pharynx / Throat'",
             termEn = "Pharyngeal pouch",
             termFr = "Poche pharyngienne",
             termAr = "الجيب البلعومي",
@@ -1552,6 +1564,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3504,
+            etymology = "Greek: καρδία (kardía) ('Heart') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Cardiogenesis",
             termFr = "Cardiogenèse",
             termAr = "تكوين القلب",
@@ -1582,6 +1595,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3506,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac looping",
             termFr = "Courbure cardiaque",
             termAr = "تحدب القلب",
@@ -1612,6 +1626,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3508,
+            etymology = "Greek: ἀρτηρία (artēría) — 'Artery'",
             termEn = "Ductus arteriosus",
             termFr = "Canal artériel (Ductus arteriosus)",
             termAr = "القناة الشريانية",
@@ -1681,6 +1696,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3513,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Tetralogy of Fallot",
             termFr = "Tétralogie de Fallot",
             termAr = "رباعية فالو",
@@ -1996,6 +2012,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3535,
+            etymology = "Greek: οὐρητήρ (ourētḗr) — 'Ureter'",
             termEn = "Ureteric bud",
             termFr = "Bourgeon urétéral",
             termAr = "برعم الحالب",
@@ -2203,6 +2220,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3549,
+            etymology = "Greek: γαστήρ (gastḗr) — 'Stomach'",
             termEn = "Gastroschisis",
             termFr = "Gastroschisis",
             termAr = "الشق البطني",
@@ -2233,6 +2251,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3551,
+            etymology = "Greek: τραχεία (tracheîa) — 'Trachea'",
             termEn = "Tracheoesophageal fistula",
             termFr = "Fistule trachéo-œsophagienne",
             termAr = "الناسور الرغامي المريئي",
@@ -2377,6 +2396,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3561,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Teratology",
             termFr = "Tératologie",
             termAr = "علم التشوهات الجنينية",
@@ -2392,6 +2412,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3562,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "Critical period",
             termFr = "Période critique (sensible)",
             termAr = "الفترة الحرجة",
@@ -2422,6 +2443,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3564,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Agenesis",
             termFr = "Agénésie",
             termAr = "انعدام التشكل",
@@ -2434,6 +2456,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3565,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Aplasia",
             termFr = "Aplasie",
             termAr = "عدم التنسج",
@@ -2446,6 +2469,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3566,
+            etymology = "Greek: πλάσις (plásis) — 'Cell development / Formation'",
             termEn = "Hypoplasia",
             termFr = "Hypoplasie",
             termAr = "نقص التنسج",
@@ -2581,6 +2605,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3576,
+            etymology = "Greek: λάρυγξ (lárynx) — 'Larynx'",
             termEn = "Laryngotracheal groove",
             termFr = "Sillon laryngotrachéal",
             termAr = "الأخدود الحنجري الرغامي",
@@ -2758,6 +2783,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3589,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Organogenesis",
             termFr = "Organogenèse",
             termAr = "تشكل الأعضاء",
@@ -2932,6 +2958,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3601,
+            etymology = "Greek: μορφή (morphē) — 'Form / Shape / Structure'",
             termEn = "Morphogen",
             termFr = "Morphogène",
             termAr = "المورفوجين",
@@ -2989,6 +3016,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3605,
+            etymology = "Greek: πτῶσις (ptōsis) — 'Falling / Prolapse'",
             termEn = "Apoptosis (programmed cell death)",
             termFr = "Apoptose (mort cellulaire programmée)",
             termAr = "الموت الخلوي المبرمج",
@@ -3016,6 +3044,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3607,
+            etymology = "Latin: fibra — 'Fiber / Fibrous tissue'",
             termEn = "Fibroblast growth factor (FGF)",
             termFr = "Facteur de croissance des fibroblastes (FGF)",
             termAr = "عامل نمو الأرومات الليفية",
@@ -3031,6 +3060,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3608,
+            etymology = "Greek: μορφή (morphē) ('Form / Shape / Structure') + πρωτεῖος (prōteîos) ('Protein')",
             termEn = "BMP (Bone morphogenetic protein)",
             termFr = "BMP (Protéine morphogénétique osseuse)",
             termAr = "البروتين المُشكِّل للعظم",
@@ -3268,6 +3298,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3624,
+            etymology = "Greek: κρανίον (kraníon) — 'Skull / Cranium'",
             termEn = "Cranial-caudal axis",
             termFr = "Axe cranio-caudal",
             termAr = "المحور الرأسي الذيلي",
@@ -3325,6 +3356,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3628,
+            etymology = "Greek: κεφαλή (kephalḗ) — 'Head'",
             termEn = "Cephalic presentation",
             termFr = "Présentation céphalique",
             termAr = "وضع رأسي",
@@ -3370,6 +3402,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3631,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "-ology",
             termFr = "-logie",
             termAr = "-لوجيا",
@@ -3382,6 +3415,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3632,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "-itis",
             termFr = "-ite",
             termAr = "-التهاب",
@@ -3394,6 +3428,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3633,
+            etymology = "Greek: ἐκτομή (ektomḗ) — 'Surgical removal / Excision'",
             termEn = "-ectomy",
             termFr = "-ectomie",
             termAr = "-استئصال",
@@ -3406,6 +3441,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3634,
+            etymology = "Greek: στόμα (stóma) — 'Creation of artificial opening'",
             termEn = "-ostomy",
             termFr = "-ostomie",
             termAr = "-فغر",
@@ -3418,6 +3454,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3635,
+            etymology = "Greek: τομή (tomḗ) — 'Incision / Cutting'",
             termEn = "-otomy",
             termFr = "-otomie",
             termAr = "-بضع",
@@ -3430,6 +3467,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3636,
+            etymology = "Greek: πλαστός (plastós) — 'Surgical reconstruction / Repair'",
             termEn = "-plasty",
             termFr = "-plastie",
             termAr = "-رأب",
@@ -3442,6 +3480,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3637,
+            etymology = "Greek: σκοπεῖν (skopeîn) — 'Visual examination'",
             termEn = "-scopy",
             termFr = "-scopie",
             termAr = "-تنظير",
@@ -3478,6 +3517,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3640,
+            etymology = "Greek: ἄλγος (álgos) — 'Pain'",
             termEn = "-algia",
             termFr = "-algie",
             termAr = "-ألم",
@@ -3502,6 +3542,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3642,
+            etymology = "Greek: ῥέω (rhéō) — 'Flow / Discharge'",
             termEn = "-rrhea",
             termFr = "-rhée",
             termAr = "-سيلان",
@@ -3514,6 +3555,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3643,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "-emia",
             termFr = "-émie",
             termAr = "-دم",
@@ -3526,6 +3568,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3644,
+            etymology = "Greek: μέγας (mégas) — 'Enlargement / Hypertrophy'",
             termEn = "-megaly",
             termFr = "-mégalie",
             termAr = "-تضخم",
@@ -3538,6 +3581,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3645,
+            etymology = "Greek: φόβος (phóbos) — 'Excessive fear / Aversion'",
             termEn = "-phobia",
             termFr = "-phobie",
             termAr = "-رهاب",
@@ -3550,6 +3594,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3646,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Hyper-",
             termFr = "Hyper-",
             termAr = "فرط-",
@@ -3562,6 +3607,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3647,
+            etymology = "Latin/Greek: sub / ὑπό — 'Under / Below'",
             termEn = "Hypo-",
             termFr = "Hypo-",
             termAr = "نقص-",
@@ -3574,6 +3620,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3648,
+            etymology = "Greek: βραδύς (bradýs) — 'Slow'",
             termEn = "Brady-",
             termFr = "Brady-",
             termAr = "بطء-",
@@ -3586,6 +3633,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3649,
+            etymology = "Greek: ταχύς (tachýs) — 'Fast / Rapid'",
             termEn = "Tachy-",
             termFr = "Tachy-",
             termAr = "سرعة-",
@@ -3598,6 +3646,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3650,
+            etymology = "Greek: μακρός (makrós) — 'Large / Long'",
             termEn = "Macro-",
             termFr = "Macro-",
             termAr = "ضخم-",
@@ -3610,6 +3659,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3651,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Micro-",
             termFr = "Micro-",
             termAr = "دقيق-",
@@ -3661,6 +3711,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3655,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Physiology",
             termFr = "Physiologie",
             termAr = "علم وظائف الأعضاء",
@@ -4093,6 +4144,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3686,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac output",
             termFr = "Débit cardiaque",
             termAr = "النتاج القلبي",
@@ -4108,6 +4160,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3687,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Hypertension",
             termFr = "Hypertension",
             termAr = "ارتفاع ضغط الدم",
@@ -4171,6 +4224,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3692,
+            etymology = "Greek: τραχεία (tracheîa) — 'Trachea'",
             termEn = "Trachea",
             termFr = "Trachée",
             termAr = "القصبة الهوائية",
@@ -4186,6 +4240,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3693,
+            etymology = "Greek: βρόγχος (brógkhos) — 'Bronchi'",
             termEn = "Bronchus (pl. Bronchi)",
             termFr = "Bronche (pl. Bronches)",
             termAr = "القصبة الهوائية الأولية",
@@ -4201,6 +4256,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3694,
+            etymology = "Greek: βρόγχος (brógkhos) — 'Bronchi'",
             termEn = "Bronchiole",
             termFr = "Bronchiole",
             termAr = "القصيبة",
@@ -4231,6 +4287,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3696,
+            etymology = "Greek: πλευρά (pleurá) — 'Pleura / Side'",
             termEn = "Pleura",
             termFr = "Plèvre",
             termAr = "الغشاء الجنبي",
@@ -4306,6 +4363,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3701,
+            etymology = "Greek: πνεύμων (pneúmōn) — 'Lung / Air'",
             termEn = "Pneumonia",
             termFr = "Pneumonie",
             termAr = "التهاب الرئة",
@@ -4333,6 +4391,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3703,
+            etymology = "Greek: οἰσοφάγος (oisophágos) — 'Esophagus'",
             termEn = "Esophagus",
             termFr = "Œsophage",
             termAr = "المريء",
@@ -4378,6 +4437,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3706,
+            etymology = "Greek: κόλον (kólon) — 'Colon / Large intestine'",
             termEn = "Large intestine (Colon)",
             termFr = "Gros intestin (Côlon)",
             termAr = "الأمعاء الغليظة (القولون)",
@@ -4510,6 +4570,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3715,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuron",
             termFr = "Neurone",
             termAr = "الخلية العصبية",
@@ -4570,6 +4631,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3719,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neurotransmitter",
             termFr = "Neurotransmetteur",
             termAr = "الناقل العصبي",
@@ -4762,6 +4824,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3732,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "Periosteum",
             termFr = "Périoste",
             termAr = "السمحاق",
@@ -4801,6 +4864,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3735,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac muscle",
             termFr = "Muscle cardiaque",
             termAr = "العضلة القلبية",
@@ -4828,6 +4892,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3737,
+            etymology = "Greek: ὀστέον (ostéon) ('Bone') + -ōsis ('condition / process')",
             termEn = "Osteoporosis",
             termFr = "Ostéoporose",
             termAr = "هشاشة العظام",
@@ -4903,6 +4968,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3742,
+            etymology = "Greek: θυρεοειδής (thyreoeides) — 'Thyroid'",
             termEn = "Thyroid gland",
             termFr = "Glande thyroïde",
             termAr = "الغدة الدرقية",
@@ -4918,6 +4984,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3743,
+            etymology = "Latin: ad (sur) + renes (reins) — 'Adrenal glands'",
             termEn = "Adrenal gland",
             termFr = "Glande surrénale",
             termAr = "الغدة الكظرية",
@@ -5008,6 +5075,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3749,
+            etymology = "Greek: νεφρός (nephrós) — 'Kidney'",
             termEn = "Nephron",
             termFr = "Néphron",
             termAr = "النفرون",
@@ -5038,6 +5106,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3751,
+            etymology = "Greek: οὐρητήρ (ourētḗr) — 'Ureter'",
             termEn = "Ureter",
             termFr = "Uretère",
             termAr = "الحالب",
@@ -5140,6 +5209,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3758,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Immune system",
             termFr = "Système immunitaire",
             termAr = "الجهاز المناعي",
@@ -5170,6 +5240,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3760,
+            etymology = "Latin: immunis — 'Immunity / Immune system'",
             termEn = "Antibody (Immunoglobulin)",
             termFr = "Anticorps (Immunoglobuline)",
             termAr = "الجسم المضاد",
@@ -5185,6 +5256,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3761,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "T lymphocyte (T cell)",
             termFr = "Lymphocyte T (Cellule T)",
             termAr = "الخلية التائية",
@@ -5200,6 +5272,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3762,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "B lymphocyte (B cell)",
             termFr = "Lymphocyte B (Cellule B)",
             termAr = "الخلية البائية",
@@ -5230,6 +5303,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3764,
+            etymology = "Greek: ἄλλος + ἔργον (allos + ergon) — 'Allergy / Hypersensitivity'",
             termEn = "Allergy",
             termFr = "Allergie",
             termAr = "الحساسية (التأتب)",
@@ -5245,6 +5319,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3765,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Anemia",
             termFr = "Anémie",
             termAr = "فقر الدم",
@@ -5275,6 +5350,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3767,
+            etymology = "Latin: coagulare — 'Coagulation / Clotting'",
             termEn = "Coagulation",
             termFr = "Coagulation",
             termAr = "التخثر",
@@ -5348,6 +5424,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3772,
+            etymology = "Greek: οἴδημα (oídēma) — 'Edema / Swelling'",
             termEn = "Edema",
             termFr = "Œdème",
             termAr = "الوذمة (الاستسقاء)",
@@ -5360,6 +5437,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3773,
+            etymology = "Greek: κύανος (kýanos) ('Blue / Bluish coloration') + -ōsis ('condition / process')",
             termEn = "Cyanosis",
             termFr = "Cyanose",
             termAr = "الزرقة",
@@ -5372,6 +5450,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3774,
+            etymology = "Greek: ἴκτερος (íkteros) — 'Jaundice'",
             termEn = "Jaundice (Icterus)",
             termFr = "Jaunisse (Ictère)",
             termAr = "اليرقان",
@@ -5417,6 +5496,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3777,
+            etymology = "Greek: ῥέω (rhéō) — 'Flow / Discharge'",
             termEn = "Diarrhea",
             termFr = "Diarrhée",
             termAr = "الإسهال",
@@ -5456,6 +5536,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3780,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Differential diagnosis",
             termFr = "Diagnostic différentiel",
             termAr = "التشخيص التفريقي",
@@ -5486,6 +5567,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3782,
+            etymology = "Greek: φάρμακον (phármakon) ('Drug / Medicine') + λόγος (lógos) ('Study / Science of')",
             termEn = "Pharmacology",
             termFr = "Pharmacologie",
             termAr = "علم الأدوية",
@@ -5531,6 +5613,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3785,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacokinetics",
             termFr = "Pharmacocinétique",
             termAr = "الحركية الدوائية",
@@ -5546,6 +5629,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3786,
+            etymology = "Greek: φάρμακον (phármakon) — 'Drug / Medicine'",
             termEn = "Pharmacodynamics",
             termFr = "Pharmacodynamique",
             termAr = "الديناميكا الدوائية",
@@ -5871,6 +5955,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3808,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Oncology",
             termFr = "Oncologie",
             termAr = "علم الأورام",
@@ -5946,6 +6031,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3813,
+            etymology = "Greek: καρκίνος (karkínos) — 'Cancer / Carcinoma'",
             termEn = "Carcinoma",
             termFr = "Carcinome",
             termAr = "السرطانة",
@@ -5961,6 +6047,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3814,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcoma",
             termFr = "Sarcome",
             termAr = "الساركوما",
@@ -6135,6 +6222,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3826,
+            etymology = "Greek: σκοπεῖν (skopeîn) — 'Visual examination'",
             termEn = "Endoscopy",
             termFr = "Endoscopie",
             termAr = "التنظير الداخلي",
@@ -6147,6 +6235,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3827,
+            etymology = "Greek: λαπάρα (lapára) ('Flank / Abdominal wall') + σκοπεῖν (skopeîn) ('Visual examination')",
             termEn = "Laparoscopy",
             termFr = "Laparoscopie",
             termAr = "تنظير البطن",
@@ -6186,6 +6275,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3830,
+            etymology = "Latin: radius — 'Radiation / Ray'",
             termEn = "Radiography (X-ray)",
             termFr = "Radiographie",
             termAr = "التصوير الشعاعي",
@@ -6393,6 +6483,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3845,
+            etymology = "Greek: πάθος (páthos) ('Disease / Suffering') + λόγος (lógos) ('Study / Science of')",
             termEn = "Pathology",
             termFr = "Pathologie",
             termAr = "علم الأمراض",
@@ -6408,6 +6499,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3846,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Etiology",
             termFr = "Étiologie",
             termAr = "علم الأسباب (المسببات)",
@@ -6468,6 +6560,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3850,
+            etymology = "Greek: ἰατρός (iatrós) — 'Physician / Medical'",
             termEn = "Iatrogenic",
             termFr = "Iatrogène",
             termAr = "علاجي المنشأ",
@@ -6564,6 +6657,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3857,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Medical history",
             termFr = "Antécédents médicaux",
             termAr = "التاريخ المرضي",

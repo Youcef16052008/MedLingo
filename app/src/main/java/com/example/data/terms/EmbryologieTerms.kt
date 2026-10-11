@@ -118,6 +118,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3180,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Embryology",
             termFr = "Embryologie",
             termAr = "علم الأجنة",
@@ -133,6 +134,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3181,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Gametogenesis",
             termFr = "Gamétogenèse",
             termAr = "تكوين الأمشاج",
@@ -163,6 +165,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3183,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Spermatogenesis",
             termFr = "Spermatogenèse",
             termAr = "تكوين الحيوانات المنوية",
@@ -178,6 +181,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3184,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Oogenesis",
             termFr = "Ovogenèse (Ovogénèse)",
             termAr = "تكوين البويضات",
@@ -283,6 +287,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3191,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Spermiogenesis",
             termFr = "Spermiogenèse",
             termAr = "نضج الحيوان المنوي",
@@ -709,6 +714,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3220,
+            etymology = "Greek: τροφή (trophē) — 'Nutrition / Nourishment / Growth'",
             termEn = "Trophoblast",
             termFr = "Trophoblaste",
             termAr = "أرومة التغذية",
@@ -916,6 +922,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3234,
+            etymology = "Greek: γαστήρ (gastḗr) — 'Stomach'",
             termEn = "Gastrulation",
             termFr = "Gastrulation",
             termAr = "المعيدة (تشكل المعدة البدائية)",
@@ -1105,6 +1112,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3247,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuropore",
             termFr = "Neuropore",
             termAr = "الثقبة العصبية",
@@ -1135,6 +1143,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3249,
+            etymology = "Greek: σκληρός (sklēros) — 'Hard / Hardening'",
             termEn = "Sclerotome",
             termFr = "Sclérotome",
             termAr = "الأدمة العظمية",
@@ -1584,6 +1593,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3280,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiogenic area",
             termFr = "Aire cardiogène",
             termAr = "المنطقة القلبية المولدة",
@@ -1614,6 +1624,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3282,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac looping",
             termFr = "Inflexion cardiaque",
             termAr = "الانعطاف القلبي",
@@ -1644,6 +1655,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3284,
+            etymology = "Greek: ἀρτηρία (artēría) — 'Artery'",
             termEn = "Ductus arteriosus",
             termFr = "Canal artériel",
             termAr = "القناة الشريانية",
@@ -1704,6 +1716,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3288,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Tetralogy of Fallot",
             termFr = "Tétralogie de Fallot",
             termAr = "رباعية فالو",
@@ -1716,6 +1729,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3289,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Vasculogenesis",
             termFr = "Vasculogenèse",
             termAr = "تكوين الأوعية البدائي",
@@ -1731,6 +1745,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3290,
+            etymology = "Greek: ἀγγεῖον (angeîon) ('Blood vessel') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Angiogenesis",
             termFr = "Angiogenèse",
             termAr = "تكوين الأوعية",
@@ -1761,6 +1776,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3292,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Organogenesis",
             termFr = "Organogenèse",
             termAr = "تكوين الأعضاء",
@@ -1776,6 +1792,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3293,
+            etymology = "Greek: φάρυγξ (phárynx) — 'Pharynx / Throat'",
             termEn = "Pharyngeal arches (Branchial arches)",
             termFr = "Arcs pharyngés (branchiaux)",
             termAr = "الأقواس البلعومية",
@@ -1788,6 +1805,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3294,
+            etymology = "Greek: φάρυγξ (phárynx) — 'Pharynx / Throat'",
             termEn = "Pharyngeal clefts (grooves)",
             termFr = "Fentes pharyngées",
             termAr = "الشقوق البلعومية",
@@ -1800,6 +1818,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3295,
+            etymology = "Greek: φάρυγξ (phárynx) — 'Pharynx / Throat'",
             termEn = "Pharyngeal pouches",
             termFr = "Poches pharyngées",
             termAr = "الجيوب البلعومية",
@@ -1812,6 +1831,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3296,
+            etymology = "Greek: θυρεοειδής (thyreoeides) — 'Thyroid'",
             termEn = "Thyroid gland development",
             termFr = "Développement de la glande thyroïde",
             termAr = "تطور الغدة الدرقية",
@@ -1842,6 +1862,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3298,
+            etymology = "Greek: ἧπαρ (hêpar) — 'Liver'",
             termEn = "Hepatic diverticulum",
             termFr = "Diverticule hépatique",
             termAr = "الزائدة الكبدية",
@@ -1872,6 +1893,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3300,
+            etymology = "Greek: οὐρητήρ (ourētḗr) — 'Ureter'",
             termEn = "Ureteric bud",
             termFr = "Bourgeon urétéral",
             termAr = "برعم الحالب",
@@ -2103,6 +2125,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3316,
+            etymology = "Greek: λόγος (lógos) — 'Study / Science of'",
             termEn = "Teratology",
             termFr = "Tératologie",
             termAr = "علم التشوهات",
@@ -2118,6 +2141,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3317,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "Critical period",
             termFr = "Période critique",
             termAr = "الفترة الحرجة",
@@ -2223,6 +2247,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3324,
+            etymology = "Greek: γαστήρ (gastḗr) — 'Stomach'",
             termEn = "Gastroschisis",
             termFr = "Gastroschisis",
             termAr = "الفتق السري الجانبي",
@@ -2313,6 +2338,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3330,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "Embryonic period",
             termFr = "Période embryonnaire",
             termAr = "الفترة الجنينية",
@@ -2325,6 +2351,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3331,
+            etymology = "Greek: περί (perí) — 'Around / Surrounding'",
             termEn = "Fetal period",
             termFr = "Période fœtale",
             termAr = "الفترة الجنينية الكاملة",
@@ -2481,6 +2508,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3342,
+            etymology = "Greek: πτῶσις (ptōsis) — 'Falling / Prolapse'",
             termEn = "Apoptosis (Programmed cell death)",
             termFr = "Apoptose (Mort cellulaire programmée)",
             termAr = "الموت الخلوي المبرمج",
@@ -2493,6 +2521,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3343,
+            etymology = "Greek: μορφή (morphē) — 'Form / Shape / Structure'",
             termEn = "Morphogen",
             termFr = "Morphogène",
             termAr = "المورفوجين",
@@ -2508,6 +2537,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3344,
+            etymology = "Greek: μορφή (morphē) ('Form / Shape / Structure') + γένεσις (génesis) ('Origin / Formation')",
             termEn = "Morphogenesis",
             termFr = "Morphogenèse",
             termAr = "التشكل (تطور الشكل)",
@@ -2565,6 +2595,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3348,
+            etymology = "Latin: fibra — 'Fiber / Fibrous tissue'",
             termEn = "FGF (Fibroblast Growth Factor)",
             termFr = "FGF (Facteur de croissance des fibroblastes)",
             termAr = "عامل نمو الأرومة الليفية",
@@ -2580,6 +2611,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3349,
+            etymology = "Greek: μορφή (morphē) ('Form / Shape / Structure') + πρωτεῖος (prōteîos) ('Protein')",
             termEn = "BMP (Bone Morphogenetic Protein)",
             termFr = "BMP (Protéine morphogénétique osseuse)",
             termAr = "بروتين التشكل العظمي",
@@ -2664,6 +2696,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3355,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Prenatal diagnosis",
             termFr = "Diagnostic prénatal",
             termAr = "التشخيص قبل الولادة",
@@ -2841,6 +2874,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3367,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Embryogenesis",
             termFr = "Embryogenèse",
             termAr = "تكوين الجنين",
@@ -2871,6 +2905,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3369,
+            etymology = "Greek: κρανίον (kraníon) ('Skull / Cranium') + κεφαλή (kephalḗ) ('Head')",
             termEn = "Cranial (Cephalic)",
             termFr = "Crânial (Céphalique)",
             termAr = "قحفي (رأسي)",
@@ -3072,6 +3107,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3384,
+            etymology = "Greek: -ῖτις (-îtis) — 'Inflammation'",
             termEn = "Chorioamnionitis",
             termFr = "Chorioamniotite",
             termAr = "التهاب الغشاء المشيمي والسلوي",
@@ -3153,6 +3189,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3390,
+            etymology = "Greek: οἰσοφάγος (oisophágos) — 'Esophagus'",
             termEn = "Esophageal atresia",
             termFr = "Atrésie de l'œsophage",
             termAr = "رتق المريء",
@@ -3168,6 +3205,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3391,
+            etymology = "Greek: τραχεία (tracheîa) — 'Trachea'",
             termEn = "Tracheoesophageal fistula (TEF)",
             termFr = "Fistule trachéo-œsophagienne (FTO)",
             termAr = "الناسور الرغامي المريئي",
@@ -3207,6 +3245,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3394,
+            etymology = "Greek: ἐρυθρός (erythrós) ('Red') + -ōsis ('condition / process')",
             termEn = "Erythroblastosis fetalis",
             termFr = "Érythroblastose fœtale",
             termAr = "داء الأريمات الحمر الجنيني",
@@ -3219,6 +3258,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3395,
+            etymology = "Greek: δέρμα (dérma) — 'Skin'",
             termEn = "Dermomyotome",
             termFr = "Dermomyotome",
             termAr = "الأدموعضلية",
@@ -3291,6 +3331,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3400,
+            etymology = "Greek: ἀρτηρία (artēría) — 'Artery'",
             termEn = "Patent ductus arteriosus (PDA)",
             termFr = "Canal artériel persistant (CAP)",
             termAr = "القناة الشريانية المفتوحة",

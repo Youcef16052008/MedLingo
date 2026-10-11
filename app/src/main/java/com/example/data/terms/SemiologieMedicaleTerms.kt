@@ -10,6 +10,7 @@ object SemiologieMedicaleTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 2490,
+            etymology = "Latin/Greek: semi / ἡμι (hēmi) ('Half') + λόγος (lógos) ('Study / Science of')",
             termEn = "Semiology (Semiotics)",
             termFr = "Sémiologie",
             termAr = "علم الأعراض",
@@ -81,6 +82,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2495,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "History of present illness (HPI)",
             termFr = "Histoire de la maladie actuelle",
             termAr = "تاريخ المرض الحالي",
@@ -96,6 +98,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2496,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Medical history",
             termFr = "Antécédents médicaux",
             termAr = "التاريخ الطبي",
@@ -111,6 +114,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2497,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Family history",
             termFr = "Antécédents familiaux",
             termAr = "التاريخ العائلي",
@@ -126,6 +130,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2498,
+            etymology = "Greek: ἱστός (histós) — 'Tissue'",
             termEn = "Social history",
             termFr = "Antécédents sociaux",
             termAr = "التاريخ الاجتماعي",
@@ -309,6 +314,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2511,
+            etymology = "Greek: ταχύς (tachýs) — 'Fast / Rapid'",
             termEn = "Tachycardia",
             termFr = "Tachycardie",
             termAr = "تسارع القلب",
@@ -324,6 +330,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2512,
+            etymology = "Greek: βραδύς (bradýs) — 'Slow'",
             termEn = "Bradycardia",
             termFr = "Bradycardie",
             termAr = "بطء القلب",
@@ -354,6 +361,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2514,
+            etymology = "Greek: ὑπέρ (hypér) — 'Above / Excess'",
             termEn = "Hypertension",
             termFr = "Hypertension artérielle",
             termAr = "ارتفاع ضغط الدم",
@@ -396,6 +404,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2517,
+            etymology = "Greek: ταχύς (tachýs) — 'Fast / Rapid'",
             termEn = "Tachypnea",
             termFr = "Tachypnée",
             termAr = "تسارع التنفس",
@@ -411,6 +420,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2518,
+            etymology = "Greek: βραδύς (bradýs) — 'Slow'",
             termEn = "Bradypnea",
             termFr = "Bradypnée",
             termAr = "بطء التنفس",
@@ -441,6 +451,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2520,
+            etymology = "Greek: ἄλγος (álgos) — 'Pain'",
             termEn = "Chest pain (Precordialgia)",
             termFr = "Douleur thoracique (Précordialgie)",
             termAr = "ألم الصدر",
@@ -465,6 +476,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2522,
+            etymology = "Greek: ὀρθός (orthós) — 'Straight / Correct'",
             termEn = "Orthopnea",
             termFr = "Orthopnée",
             termAr = "التنفس الانتصابي",
@@ -507,6 +519,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2525,
+            etymology = "Greek: οἴδημα (oídēma) — 'Edema / Swelling'",
             termEn = "Edema",
             termFr = "Œdème",
             termAr = "الوذمة",
@@ -549,6 +562,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2528,
+            etymology = "Greek: κύανος (kýanos) ('Blue / Bluish coloration') + -ōsis ('condition / process')",
             termEn = "Cyanosis",
             termFr = "Cyanose",
             termAr = "الزَّرَق",
@@ -645,6 +659,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2535,
+            etymology = "Greek: οἴδημα (oídēma) — 'Edema / Swelling'",
             termEn = "Pitting edema",
             termFr = "Œdème prenant le godet",
             termAr = "الوذمة الغائرة",
@@ -798,6 +813,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2546,
+            etymology = "Greek: πλευρά (pleurá) — 'Pleura / Side'",
             termEn = "Pleural friction rub",
             termFr = "Frottement pleural",
             termAr = "الاحتكاك الجنبي",
@@ -813,6 +829,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2547,
+            etymology = "Greek: πλευρά (pleurá) — 'Pleura / Side'",
             termEn = "Pleuritic chest pain",
             termFr = "Douleur thoracique pleurale",
             termAr = "ألم الصدر الجنبي",
@@ -864,6 +881,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2551,
+            etymology = "Greek: θώραξ (thōrax) — 'Chest / Thorax'",
             termEn = "Percussion note (thoracic)",
             termFr = "Note de percussion thoracique",
             termAr = "صوت القرع الصدري",
@@ -972,6 +990,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2559,
+            etymology = "Latin: abdomen — 'Abdomen / Belly'",
             termEn = "Abdominal pain",
             termFr = "Douleur abdominale",
             termAr = "ألم البطن",
@@ -1038,6 +1057,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2564,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Heartburn (Pyrosis)",
             termFr = "Brûlure épigastrique (Pyrosis)",
             termAr = "حُرقة المعدة",
@@ -1053,6 +1073,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2565,
+            etymology = "Greek: ῥέω (rhéō) — 'Flow / Discharge'",
             termEn = "Diarrhea",
             termFr = "Diarrhée",
             termAr = "الإسهال",
@@ -1080,6 +1101,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2567,
+            etymology = "Greek: ἴκτερος (íkteros) — 'Jaundice'",
             termEn = "Jaundice (Icterus)",
             termFr = "Ictère (Jaunisse)",
             termAr = "اليرقان",
@@ -1095,6 +1117,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2568,
+            etymology = "Greek: ἧπαρ (hêpar) ('Liver') + μέγας (mégas) ('Enlargement / Hypertrophy')",
             termEn = "Hepatomegaly",
             termFr = "Hépatomégalie",
             termAr = "تضخم الكبد",
@@ -1107,6 +1130,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2569,
+            etymology = "Greek: σπλήν (splḗn) ('Spleen') + μέγας (mégas) ('Enlargement / Hypertrophy')",
             termEn = "Splenomegaly",
             termFr = "Splénomégalie",
             termAr = "تضخم الطحال",
@@ -1236,6 +1260,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2579,
+            etymology = "Greek: κεφαλή (kephalḗ) ('Head') + ἄλγος (álgos) ('Pain')",
             termEn = "Headache (Cephalalgia)",
             termFr = "Céphalée",
             termAr = "الصداع",
@@ -1302,6 +1327,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2584,
+            etymology = "Greek: πάρεσις (páresis) — 'Partial paralysis / Weakness'",
             termEn = "Paresis",
             termFr = "Parésie",
             termAr = "الشلل الجزئي",
@@ -1368,6 +1394,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2589,
+            etymology = "Greek: μῆνιγξ (mēnigx) — 'Meninges'",
             termEn = "Meningeal signs",
             termFr = "Signes méningés",
             termAr = "العلامات السحائية",
@@ -1488,6 +1515,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2598,
+            etymology = "Greek: ἄρθρον (árthron) ('Joint') + ἄλγος (álgos) ('Pain')",
             termEn = "Arthralgia",
             termFr = "Arthralgie",
             termAr = "ألم المفصل",
@@ -1500,6 +1528,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2599,
+            etymology = "Greek: ἄρθρον (árthron) ('Joint') + -ῖτις (-îtis) ('Inflammation')",
             termEn = "Arthritis",
             termFr = "Arthrite",
             termAr = "التهاب المفصل",
@@ -1554,6 +1583,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2603,
+            etymology = "Greek: ἄλγος (álgos) — 'Pain'",
             termEn = "Myalgia",
             termFr = "Myalgie",
             termAr = "ألم العضل",
@@ -1620,6 +1650,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2608,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Lordosis",
             termFr = "Lordose",
             termAr = "القعس",
@@ -1635,6 +1666,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2609,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Kyphosis",
             termFr = "Cyphose",
             termAr = "الحداب",
@@ -1650,6 +1682,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2610,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Scoliosis",
             termFr = "Scoliose",
             termAr = "الجنف",
@@ -1826,6 +1859,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2623,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Ecchymosis (Bruise)",
             termFr = "Ecchymose (Contusion)",
             termAr = "الكدمة",
@@ -1895,6 +1929,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2628,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Dysuria",
             termFr = "Dysurie",
             termAr = "عُسر التبول",
@@ -1907,6 +1942,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2629,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Hematuria",
             termFr = "Hématurie",
             termAr = "بول الدم",
@@ -1919,6 +1955,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2630,
+            etymology = "Greek: πρωτεῖος (prōteîos) ('Protein') + οὖρον (oûron) ('Condition of urine')",
             termEn = "Proteinuria",
             termFr = "Protéinurie",
             termAr = "البيلة البروتينية",
@@ -1931,6 +1968,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2631,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Oliguria",
             termFr = "Oligurie",
             termAr = "قلة البول",
@@ -1943,6 +1981,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2632,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Anuria",
             termFr = "Anurie",
             termAr = "انعدام البول",
@@ -1955,6 +1994,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2633,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Polyuria",
             termFr = "Polyurie",
             termAr = "كثرة البول",
@@ -1991,6 +2031,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2636,
+            etymology = "Latin: costa — 'Rib / Ribs'",
             termEn = "Costovertebral angle (CVA) tenderness",
             termFr = "Signe de la fosse lombaire (angle costovertébral)",
             termAr = "إيلام الزاوية الضلعية الفقرية",
@@ -2015,6 +2056,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2638,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Nocturia",
             termFr = "Nycturie",
             termAr = "التبول الليلي",
@@ -2030,6 +2072,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2639,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Uremia",
             termFr = "Urémie",
             termAr = "اليوريميا",
@@ -2057,6 +2100,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2641,
+            etymology = "Greek: οὖρον (oûron) — 'Condition of urine'",
             termEn = "Glycosuria",
             termFr = "Glycosurie",
             termAr = "السكر في البول",
@@ -2153,6 +2197,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2649,
+            etymology = "Greek: μέγας (mégas) — 'Enlargement / Hypertrophy'",
             termEn = "Acromegaly signs",
             termFr = "Signes d'acromégalie",
             termAr = "علامات ضخامة النهايات",
@@ -2201,6 +2246,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2653,
+            etymology = "Greek: ἄλγος (álgos) — 'Pain'",
             termEn = "Otalgia",
             termFr = "Otalgie",
             termAr = "ألم الأذن",
@@ -2282,6 +2328,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2659,
+            etymology = "Greek: οἴδημα (oídēma) — 'Edema / Swelling'",
             termEn = "Papilledema",
             termFr = "Œdème papillaire",
             termAr = "وذمة الحليمة البصرية",
@@ -2297,6 +2344,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2660,
+            etymology = "Greek: φόβος (phóbos) — 'Excessive fear / Aversion'",
             termEn = "Photophobia",
             termFr = "Photophobie",
             termAr = "رهاب الضوء",
@@ -2333,6 +2381,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2663,
+            etymology = "Greek: ῥέω (rhéō) — 'Flow / Discharge'",
             termEn = "Amenorrhea",
             termFr = "Aménorrhée",
             termAr = "انقطاع الطمث",
@@ -2345,6 +2394,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2664,
+            etymology = "Greek: ῥέω (rhéō) — 'Flow / Discharge'",
             termEn = "Dysmenorrhea",
             termFr = "Dysménorrhée",
             termAr = "عُسر الطمث",
@@ -2357,6 +2407,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2665,
+            etymology = "Greek: ῥήγνυμι (rhḗgnymi) — 'Hemorrhage / Excessive bleeding'",
             termEn = "Metrorrhagia",
             termFr = "Métrorragie",
             termAr = "نزيف الرحم غير الدوري",
@@ -2369,6 +2420,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2666,
+            etymology = "Greek: ῥέω (rhéō) — 'Flow / Discharge'",
             termEn = "Leukorrhea",
             termFr = "Leucorrhée",
             termAr = "الإفراز المهبلي الأبيض",
@@ -2498,6 +2550,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2675,
+            etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphadenopathy",
             termFr = "Adénopathie",
             termAr = "اعتلال العقد اللمفاوية",
@@ -2552,6 +2605,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2679,
+            etymology = "Greek: ἧπαρ (hêpar) — 'Liver'",
             termEn = "Fetor hepaticus",
             termFr = "Fœtor hépatique",
             termAr = "رائحة الكبد",
@@ -2597,6 +2651,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2682,
+            etymology = "Greek: ἀγγεῖον (angeîon) — 'Blood vessel'",
             termEn = "Spider angioma",
             termFr = "Angiome stellaire (araignée vasculaire)",
             termAr = "الوحمة العنكبوتية",
@@ -2663,6 +2718,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2687,
+            etymology = "Latin: abdomen — 'Abdomen / Belly'",
             termEn = "Guarding (abdominal)",
             termFr = "Défense abdominale",
             termAr = "التقلص الوقائي البطني",
@@ -2892,6 +2948,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2704,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Differential diagnosis (DDx)",
             termFr = "Diagnostic différentiel",
             termAr = "التشخيص التفريقي",
@@ -2907,6 +2964,7 @@ object SemiologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 2705,
+            etymology = "Greek: πάθος (páthos) — 'Disease / Suffering'",
             termEn = "Pathognomonic sign",
             termFr = "Signe pathognomonique",
             termAr = "العلامة المميزة (المرضية)",

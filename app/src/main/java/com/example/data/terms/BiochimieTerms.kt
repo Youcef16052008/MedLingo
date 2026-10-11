@@ -427,6 +427,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 668,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrogen bond",
             termFr = "Liaison hydrogène",
             termAr = "الرابطة الهيدروجينية",
@@ -454,6 +455,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 670,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrophilic",
             termFr = "Hydrophile",
             termAr = "محب للماء",
@@ -469,6 +471,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 671,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrophobic",
             termFr = "Hydrophobe",
             termAr = "كاره للماء",
@@ -574,6 +577,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 678,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrolyte",
             termFr = "Électrolyte",
             termAr = "الشاردة (الإلكتروليت)",
@@ -1531,6 +1535,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 744,
+            etymology = "Greek: πρωτεῖος (prōteîos) — 'Protein'",
             termEn = "Globular protein",
             termFr = "Protéine globulaire",
             termAr = "البروتين الكروي",
@@ -1545,6 +1550,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 745,
+            etymology = "Latin: fibra ('Fiber / Fibrous tissue') + πρωτεῖος (prōteîos) ('Protein')",
             termEn = "Fibrous protein",
             termFr = "Protéine fibreuse",
             termAr = "البروتين الليفي",
@@ -1619,6 +1625,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 750,
+            etymology = "Greek: πρωτεῖος (prōteîos) — 'Protein'",
             termEn = "Chaperone protein",
             termFr = "Protéine chaperon",
             termAr = "البروتين المرافق",
@@ -2500,6 +2507,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 810,
+            etymology = "Greek: ἀντί (antí) — 'Against / Opposite'",
             termEn = "Antioxidant",
             termFr = "Antioxydant",
             termAr = "مضاد الأكسدة",
@@ -2575,6 +2583,7 @@ MedicalTermEntity(
         ),
                 MedicalTermEntity(
             id = 817,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electron transport chain (ETC)",
             termFr = "Chaîne de transport des électrons",
             termAr = "سلسلة نقل الإلكترونات",
@@ -2620,6 +2629,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 820,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Glycogenesis",
             termFr = "Glycogénogenèse",
             termAr = "تصنيع الغليكوجين",
@@ -2665,6 +2675,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 823,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Lipogenesis",
             termFr = "Lipogenèse",
             termAr = "تصنيع الدهون",
@@ -2695,6 +2706,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 825,
+            etymology = "Greek: γένεσις (génesis) — 'Origin / Formation'",
             termEn = "Ketogenesis",
             termFr = "Cétogenèse",
             termAr = "تكوين الأجسام الكيتونية",
@@ -2815,6 +2827,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 833,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Chemiosmosis",
             termFr = "Chimiosmose",
             termAr = "التناضح الكيميائي",
@@ -2905,6 +2918,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 839,
+            etymology = "Greek: πρωτεῖος (prōteîos) — 'Protein'",
             termEn = "Protein kinase",
             termFr = "Protéine kinase",
             termAr = "كيناز البروتين",
@@ -2980,6 +2994,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 844,
+            etymology = "Greek: γλυκύς (glykýs) — 'Sugar / Glucose'",
             termEn = "Blood glucose level",
             termFr = "Glycémie",
             termAr = "مستوى سكر الدم",
@@ -2992,6 +3007,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 845,
+            etymology = "Greek: ὑπέρ (hypér) ('Above / Excess') + αἷμα (haîma) ('Condition of blood')",
             termEn = "Hyperglycemia",
             termFr = "Hyperglycémie",
             termAr = "فرط سكر الدم",
@@ -3004,6 +3020,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 846,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Hypoglycemia",
             termFr = "Hypoglycémie",
             termAr = "نقص سكر الدم",
@@ -3061,6 +3078,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 850,
+            etymology = "Greek: ἴκτερος (íkteros) — 'Jaundice'",
             termEn = "Jaundice (Icterus)",
             termFr = "Ictère (Jaunisse)",
             termAr = "اليرقان",
@@ -3133,6 +3151,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 855,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrophoresis",
             termFr = "Électrophorèse",
             termAr = "الرحلان الكهربائي",
@@ -3148,6 +3167,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 856,
+            etymology = "Greek: χρῶμα (khrōma) — 'Color'",
             termEn = "Chromatography",
             termFr = "Chromatographie",
             termAr = "الكروماتوغرافيا (الاستشراب)",
@@ -3388,6 +3408,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 872,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrolase",
             termFr = "Hydrolase",
             termAr = "الحلمأة",
@@ -3538,6 +3559,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 882,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electron",
             termFr = "Électron",
             termAr = "الإلكترون",
@@ -3610,6 +3632,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 887,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electron shell (Energy level)",
             termFr = "Couche électronique (Niveau d'énergie)",
             termAr = "الطبقة الإلكترونية (مستوى الطاقة)",
@@ -3640,6 +3663,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 889,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electron configuration",
             termFr = "Configuration électronique",
             termAr = "التوزيع الإلكتروني",
@@ -3655,6 +3679,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 890,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Valence electron",
             termFr = "Électron de valence",
             termAr = "إلكترون التكافؤ",
@@ -3715,6 +3740,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 894,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electronegativity",
             termFr = "Électronégativité",
             termAr = "الكهرسلبية",
@@ -3745,6 +3771,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 896,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electron affinity",
             termFr = "Affinité électronique",
             termAr = "الألفة الإلكترونية",
@@ -4264,6 +4291,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 931,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrolysis",
             termFr = "Hydrolyse",
             termAr = "التحلل المائي",
@@ -4453,6 +4481,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 944,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Non-electrolyte",
             termFr = "Non-électrolyte",
             termAr = "اللاإلكتروليت",
@@ -4708,6 +4737,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 962,
+            etymology = "Greek: θερμός (thermós) — 'Heat / Temperature'",
             termEn = "Thermochemistry",
             termFr = "Thermochimie",
             termAr = "الكيمياء الحرارية",
@@ -4987,6 +5017,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 981,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrocarbon",
             termFr = "Hydrocarbure",
             termAr = "الهيدروكربون",
@@ -5253,6 +5284,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 999,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Delocalized electrons",
             termFr = "Électrons délocalisés",
             termAr = "الإلكترونات غير المتموضعة",
@@ -5280,6 +5312,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1001,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydroxyl group (-OH)",
             termFr = "Groupe hydroxyle (-OH)",
             termAr = "مجموعة الهيدروكسيل",
@@ -5845,6 +5878,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1040,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrophilic addition",
             termFr = "Addition électrophile",
             termAr = "الإضافة الإلكتروفيلية",
@@ -5875,6 +5909,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1042,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrophile",
             termFr = "Électrophile",
             termAr = "المحب للإلكترونات",
@@ -5963,6 +5998,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1048,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrogenation",
             termFr = "Hydrogénation",
             termAr = "الهدرجة",
@@ -5993,6 +6029,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1050,
+            etymology = "Greek: γλυκύς (glykýs) — 'Sugar / Glucose'",
             termEn = "Glucose (C₆H₁₂O₆)",
             termFr = "Glucose (C₆H₁₂O₆)",
             termAr = "الغلوكوز",
@@ -6038,6 +6075,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1053,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrochemistry",
             termFr = "Électrochimie",
             termAr = "الكيمياء الكهربائية",
@@ -6053,6 +6091,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1054,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrode",
             termFr = "Électrode",
             termAr = "القطب الكهربائي",
@@ -6113,6 +6152,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1058,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrolytic cell",
             termFr = "Cellule électrolytique",
             termAr = "خلية التحليل الكهربائي",
@@ -6128,6 +6168,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1059,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Standard electrode potential (E°)",
             termFr = "Potentiel standard d'électrode (E°)",
             termAr = "الجهد المعياري للقطب",
@@ -6143,6 +6184,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1060,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrolysis",
             termFr = "Électrolyse",
             termAr = "التحليل الكهربائي",

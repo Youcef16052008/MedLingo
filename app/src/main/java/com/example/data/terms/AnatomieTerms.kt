@@ -469,6 +469,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 27,
+            etymology = "Latin: femur — 'Femur / Thigh'",
             termEn = "Femoral artery",
             termFr = "Artère fémorale",
             termAr = "الشريان الفخذي",
@@ -521,6 +522,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 30,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac cycle",
             termFr = "Cycle cardiaque",
             termAr = "الدورة القلبية",
@@ -711,6 +713,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 42,
+            etymology = "Latin: fibra — 'Fiber / Fibrous tissue'",
             termEn = "Fibrous joint",
             termFr = "Articulation fibreuse",
             termAr = "المفصل الليفي",
@@ -2093,6 +2096,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 126,
+            etymology = "Greek: κεφαλή (kephalḗ) — 'Head'",
             termEn = "Cephalic",
             termFr = "Céphalique",
             termAr = "رأسي",
@@ -2120,6 +2124,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 128,
+            etymology = "Greek: θώραξ (thōrax) — 'Chest / Thorax'",
             termEn = "Thoracic",
             termFr = "Thoracique",
             termAr = "صدري",
@@ -2134,6 +2139,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 129,
+            etymology = "Latin: abdomen — 'Abdomen / Belly'",
             termEn = "Abdominal",
             termFr = "Abdominal",
             termAr = "بطني",
@@ -2244,6 +2250,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 136,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac muscle",
             termFr = "Muscle cardiaque",
             termAr = "عضلة القلب",
@@ -2473,6 +2480,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 149,
+            etymology = "Latin: abdomen — 'Abdomen / Belly'",
             termEn = "Rectus abdominis",
             termFr = "Droit de l'abdomen",
             termAr = "العضلة المستقيمة للبطن",
@@ -2613,6 +2621,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 157,
+            etymology = "Latin: femur — 'Femur / Thigh'",
             termEn = "Quadriceps femoris",
             termFr = "Quadriceps fémoral",
             termAr = "العضلة الرباعية الرؤوس الفخذية",
@@ -2979,6 +2988,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 179,
+            etymology = "Latin: abdomen — 'Abdomen / Belly'",
             termEn = "Transversus abdominis",
             termFr = "Transverse de l'abdomen",
             termAr = "العضلة البطنية المستعرضة",
@@ -3143,6 +3153,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 189,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neurotransmitter",
             termFr = "Neurotransmetteur",
             termAr = "الناقل العصبي",
@@ -3598,6 +3609,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 215,
+            etymology = "Greek: κρανίον (kraníon) — 'Skull / Cranium'",
             termEn = "Cranial nerve",
             termFr = "Nerf crânien",
             termAr = "العصب القحفي",
@@ -3749,6 +3761,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 224,
+            etymology = "Greek: κρανίον (kraníon) — 'Skull / Cranium'",
             termEn = "Cranial cavity",
             termFr = "Cavité crânienne",
             termAr = "التجويف القحفي",
@@ -3783,6 +3796,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 226,
+            etymology = "Greek: θώραξ (thōrax) — 'Chest / Thorax'",
             termEn = "Thoracic cavity",
             termFr = "Cavité thoracique",
             termAr = "التجويف الصدري",
@@ -3800,6 +3814,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 227,
+            etymology = "Latin: abdomen — 'Abdomen / Belly'",
             termEn = "Abdominal cavity",
             termFr = "Cavité abdominale",
             termAr = "التجويف البطني",
@@ -4080,6 +4095,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 243,
+            etymology = "Greek: θυρεοειδής (thyreoeides) — 'Thyroid'",
             termEn = "Thyroid gland",
             termFr = "Glande thyroïde",
             termAr = "الغدة الدرقية",
@@ -4095,6 +4111,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 244,
+            etymology = "Latin: ad (sur) + renes (reins) — 'Adrenal glands'",
             termEn = "Adrenal gland",
             termFr = "Glande surrénale",
             termAr = "الغدة الكظرية",
@@ -5293,6 +5310,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 316,
+            etymology = "Latin: spina — 'Spine / Spinal column'",
             termEn = "Spinous process",
             termFr = "Processus épineux",
             termAr = "النتوء الشوكي",
@@ -5693,6 +5711,7 @@ object AnatomieTerms {
         ),
         MedicalTermEntity(
             id = 342,
+            etymology = "Greek: βρόγχος (brógkhos) — 'Bronchi'",
             termEn = "Bronchiole",
             termFr = "Bronchiole",
             termAr = "القصيبة",

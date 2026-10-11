@@ -803,6 +803,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 465,
+            etymology = "Greek: ἐρυθρός (erythrós) — 'Red'",
             termEn = "Red blood cell (Erythrocyte)",
             termFr = "Globule rouge (Érythrocyte)",
             termAr = "كرية الدم الحمراء",
@@ -833,6 +834,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 467,
+            etymology = "Greek: θρόμβος (thrombos) — 'Blood clot / Thrombus'",
             termEn = "Platelet (Thrombocyte)",
             termFr = "Plaquette (Thrombocyte)",
             termAr = "الصفيحة الدموية",
@@ -878,6 +880,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 470,
+            etymology = "Greek: ἐρυθρός (erythrós) — 'Red'",
             termEn = "Erythropoiesis",
             termFr = "Érythropoïèse",
             termAr = "تكون الكريات الحمراء",
@@ -893,6 +896,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 471,
+            etymology = "Greek: ἐρυθρός (erythrós) — 'Red'",
             termEn = "Erythropoietin (EPO)",
             termFr = "Érythropoïétine (EPO)",
             termAr = "الإريثروبويتين",
@@ -923,6 +927,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 473,
+            etymology = "Latin: coagulare — 'Coagulation / Clotting'",
             termEn = "Coagulation",
             termFr = "Coagulation",
             termAr = "التخثر",
@@ -968,6 +973,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 476,
+            etymology = "Greek: θρόμβος (thrombos) — 'Blood clot / Thrombus'",
             termEn = "Thrombus",
             termFr = "Thrombus",
             termAr = "الخثرة",
@@ -983,6 +989,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 477,
+            etymology = "Greek: ἔμβολος (émbolos) — 'Embolism / Obstruction'",
             termEn = "Embolus",
             termFr = "Embole",
             termAr = "الصمة",
@@ -1058,6 +1065,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 482,
+            etymology = "Greek: αἷμα (haîma) — 'Condition of blood'",
             termEn = "Anemia",
             termFr = "Anémie",
             termAr = "فقر الدم",
@@ -1073,6 +1081,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 483,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Leukocytosis",
             termFr = "Leucocytose",
             termAr = "كثرة الكريات البيضاء",
@@ -1088,6 +1097,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 484,
+            etymology = "Greek: πενία (penía) — 'Deficiency / Lack'",
             termEn = "Leukopenia",
             termFr = "Leucopénie",
             termAr = "قلة الكريات البيضاء",
@@ -1118,6 +1128,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 486,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac cycle",
             termFr = "Cycle cardiaque",
             termAr = "الدورة القلبية",
@@ -1175,6 +1186,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 490,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac output",
             termFr = "Débit cardiaque",
             termAr = "النتاج القلبي",
@@ -1298,6 +1310,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 499,
+            etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electrocardiogram (ECG)",
             termFr = "Électrocardiogramme (ECG)",
             termAr = "تخطيط كهربية القلب",
@@ -1445,6 +1458,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 509,
+            etymology = "Greek: ταχύς (tachýs) — 'Fast / Rapid'",
             termEn = "Tachycardia",
             termFr = "Tachycardie",
             termAr = "تسرع القلب",
@@ -1460,6 +1474,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 510,
+            etymology = "Greek: βραδύς (bradýs) — 'Slow'",
             termEn = "Bradycardia",
             termFr = "Bradycardie",
             termAr = "بطء القلب",
@@ -1532,6 +1547,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 516,
+            etymology = "Greek: καρδία (kardía) — 'Heart'",
             termEn = "Cardiac murmur",
             termFr = "Souffle cardiaque",
             termAr = "النفخة القلبية",
@@ -1877,6 +1893,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 540,
+            etymology = "Greek: κύανος (kýanos) ('Blue / Bluish coloration') + -ōsis ('condition / process')",
             termEn = "Cyanosis",
             termFr = "Cyanose",
             termAr = "الزرقة",
@@ -1892,6 +1909,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 541,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuron",
             termFr = "Neurone",
             termAr = "العصبون (الخلية العصبية)",
@@ -1952,6 +1970,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 545,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neurotransmitter",
             termFr = "Neurotransmetteur",
             termAr = "الناقل العصبي",
@@ -2159,6 +2178,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 559,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Motor neuron",
             termFr = "Neurone moteur",
             termAr = "العصبون المحرك",
@@ -2174,6 +2194,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 560,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Sensory neuron",
             termFr = "Neurone sensitif",
             termAr = "العصبون الحسي",
@@ -2219,6 +2240,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 563,
+            etymology = "Greek: νεῦρον (neûron) — 'Nerve / Nervous system'",
             termEn = "Neuromuscular junction",
             termFr = "Jonction neuromusculaire",
             termAr = "الوصل العصبي العضلي",
@@ -2339,6 +2361,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 571,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcomere",
             termFr = "Sarcomère",
             termAr = "القسيم العضلي",
@@ -2384,6 +2407,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 574,
+            etymology = "Greek: σάρξ (sárx) — 'Flesh / Connective tissue'",
             termEn = "Sarcoplasmic reticulum",
             termFr = "Réticulum sarcoplasmique",
             termAr = "الشبكة الهيولية العضلية",
@@ -2474,6 +2498,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 580,
+            etymology = "Greek: νεφρός (nephrós) — 'Kidney'",
             termEn = "Nephron",
             termFr = "Néphron",
             termAr = "النفرون (الوحدة الكلوية)",
@@ -2669,6 +2694,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 593,
+            etymology = "Greek: ἀγγεῖον (angeîon) — 'Blood vessel'",
             termEn = "Angiotensin II",
             termFr = "Angiotensine II",
             termAr = "أنجيوتنسين 2",
@@ -2834,6 +2860,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 604,
+            etymology = "Greek: θυρεοειδής (thyreoeides) — 'Thyroid'",
             termEn = "Thyroid-stimulating hormone (TSH)",
             termFr = "Thyréostimuline (TSH)",
             termAr = "الهرمون المحفز للغدة الدرقية",
@@ -2924,6 +2951,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 610,
+            etymology = "Latin: ad (sur) + renes (reins) — 'Adrenal glands'",
             termEn = "Epinephrine (Adrenaline)",
             termFr = "Adrénaline (Épinéphrine)",
             termAr = "الأدرينالين (الإبينفرين)",
@@ -3146,6 +3174,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 625,
+            etymology = "Greek: γαστήρ (gastḗr) — 'Stomach'",
             termEn = "Gastric juice",
             termFr = "Suc gastrique",
             termAr = "العصارة المعدية",
@@ -3161,6 +3190,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 626,
+            etymology = "Greek: ὕδωρ (hýdōr) — 'Water / Fluid'",
             termEn = "Hydrochloric acid (HCl)",
             termFr = "Acide chlorhydrique (HCl)",
             termAr = "حمض الهيدروكلوريك",
@@ -3206,6 +3236,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 629,
+            etymology = "Greek: πάγκρεας (págkreas) — 'Pancreas'",
             termEn = "Pancreatic juice",
             termFr = "Suc pancréatique",
             termAr = "العصارة البنكرياسية",
@@ -3278,6 +3309,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 634,
+            etymology = "Greek: μικρός (mikrós) — 'Small / Tiny'",
             termEn = "Microvilli",
             termFr = "Microvillosités",
             termAr = "الزغيبات الدقيقة",
@@ -3290,6 +3322,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 635,
+            etymology = "Greek: γαστήρ (gastḗr) — 'Stomach'",
             termEn = "Gastrin",
             termFr = "Gastrine",
             termAr = "الغاسترين",
@@ -3320,6 +3353,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 637,
+            etymology = "Greek: χολή + κύστις (kholē + kýstis) — 'Gallbladder'",
             termEn = "Cholecystokinin (CCK)",
             termFr = "Cholécystokinine (CCK)",
             termAr = "الكوليسيستوكينين",
@@ -3380,6 +3414,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 641,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Acidosis",
             termFr = "Acidose",
             termAr = "الحماض",
@@ -3395,6 +3430,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 642,
+            etymology = "Greek: -ōsis — 'condition / process'",
             termEn = "Alkalosis",
             termFr = "Alcalose",
             termAr = "القلاء",
