@@ -46,16 +46,24 @@ C'est un choix de conception, pas un retard. Voici la mesure exacte.
 
 ## 2. Ce qui est différent — par choix, pas par oubli ⚠️
 
-| Architecture Duolingo | MedLingo | Pourquoi |
-|---|---|---|
-| **Serveur central** + sync multi-appareils | **Offline-first**, base Room locale | Public cible : connexion faible, forfaits limités |
-| **Compte utilisateur** (email/Google/phone OTP) | **Aucune auth**, `userId = 1` | Pas de serveur → pas besoin de compte |
-| **Birdbrain** (difficulté adaptative ML côté serveur) | **CAT local** basé sur le niveau | L'algo ML existe dans `backend/functions/` mais n'est pas branché |
-| **Paiement** (Stripe / Google Play / App Store) | **Paiement en gemmes** (monnaie de l'app) | Pas de compte marchant Google pour l'Algérie |
-| **Leaderboards humains** | **Ligues remplies de bots** | Pas de serveur → pas d'autres joueurs réels |
-| **Cœurs** (5 vies, régénération) | **Supprimés** (migration v10) | Choix produit : pas de frustration, jeu illimité |
-| **Mascotte animée** (Duo) | **2 illustrations** statiques | Médical, pas ludique |
-| **Social** (amis, feeds, clans) | **Absent** | Offline-first |
+> **Mise à jour (Phase 7) :** la couche `data/remote/` est maintenant écrite.
+> Le backend est **branchable sans coder** (`GUIDE_BACKEND.md`, 25 min).
+> Les écarts ci-dessous restent des choix, mais ils sont **réversibles**.
+
+| Architecture Duolingo | MedLingo (défaut) | MedLingo (backend branché) | Pourquoi |
+|---|---|---|---|
+| **Serveur central** + sync multi-appareils | **Offline-first**, base Room | ✅ Sync multi-appareils | Local master, remote replica — le réseau améliore, ne rompt jamais |
+| **Compte utilisateur** (email/Google/phone OTP) | **Aucune auth**, `userId = 1` | ⚠️ Toujours `userId = 1` | L'auth reste à ta charge (Supabase Auth) |
+| **Birdbrain** (difficulté ML serveur) | **CAT local** | ✅ Edge Function `birdbrain` | L'algo V2 existe et est déployable |
+| **Paiement** (Stripe / Google Play / App Store) | **Paiement en gemmes** | ⚠️ Idem | Pas de compte marchant Google pour l'Algérie |
+| **Leaderboards humains** | **Ligues de bots** | ✅ `fetchLeaderboard()` → humains | Retombe sur les bots hors-ligne (testé) |
+| **Cœurs** (5 vies, régénération) | **Supprimés** (migration v10) | ⚠️ Idem | Choix produit : jeu illimité, pas de frustration |
+| **Mascotte animée** (Duo) | **2 illustrations** statiques | ⚠️ Idem | Médical, pas ludique |
+| **Social** (amis, feeds, clans) | **Absent** | ⚠️ Idem | Pas prévu |
+
+**Lecture :** 4 des 8 écarts deviennent identiques à Duolingo quand tu branches
+le backend. Les 4 autres sont des choix produit délibérés (cœurs, mascotte,
+social, paiement fiat) — pas des manques.
 
 ---
 
@@ -98,10 +106,13 @@ C'est la frontière entre la mécanique (faite) et le contenu éditorial (humain
 **Sur la boucle d'engagement : MedLingo est un clone fidèle et fonctionnel de
 Duolingo (17/17 mécaniques).**
 
-**Sur l'infrastructure : c'est sciemment plus simple** — offline-first,
-mono-utilisateur, pas de serveur. C'est cohérent avec le public et c'est ce qui
-rend l'app utilisable en Algérie. `backend/functions/` (Supabase, Birdbrain)
-existe dans le repo comme direction future, documenté comme non branché.
+**Sur l'infrastructure : l'écart se resserre.** Par défaut, c'est sciemment plus
+simple — offline-first, mono-utilisateur, pas de serveur. Mais la couche
+`data/remote/` est écrite et testée : en branchant le backend
+(`GUIDE_BACKEND.md`), **4 des 8 écarts disparaissent** (sync multi-appareils,
+Birdbrain, ligues humaines, session generator). Restent 4 choix produit
+délibérés — cœurs, mascotte, social, paiement fiat — qui sont des décisions,
+pas des retards.
 
 **Sur le fond : MedLingo fait quelque chose que Duolingo ne fait pas** —
 enseigner le vocabulaire médical universitaire en trois langues, hors-ligne,
