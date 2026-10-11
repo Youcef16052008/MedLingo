@@ -47,7 +47,7 @@ object AnatomieTerms {
         MedicalTermEntity(
             id = 3,
             termEn = "Ventricle",
-            termFr = "Ventricle",
+            termFr = "Ventricule",
             termAr = "البطين",
             definitionEn = "Lower chamber of the heart that pumps blood out of the heart.",
             definitionFr = "Cavité inférieure du cœur qui expulse le sang hors du cœur.",
