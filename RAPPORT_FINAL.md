@@ -2,13 +2,13 @@
 
 **Périmètre** : 6 342 fichiers, ~19 000 lignes de Kotlin/TS/SQL analysées sur 20 rapports. Chaque conclusion ci-dessous a été **vérifiée deux fois** : une fois à la lecture, une fois par programme (grep/script/parseur) lors de la seconde revue.
 
-**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **222 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
+**Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **227 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
 
 ---
 
 ## 0. Ce qu'est réellement MedLingo
 
-Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 222 tests sont verts.**
+Une **app Android Kotlin/Compose offline-first** (pas de permission `INTERNET`, pas de client HTTP, `userId = 1` mono-utilisateur) qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algériens, avec **4 512 fiches trilingues** (étymologie, clinical pearl, mnemonic, IPA), un parcours Duolingo-like de 90 nœuds, des ligues, trophées, caisses, gemmes, SM-2, un **CAT adaptatif**, un studio de prononciation TTS, 4 notifications deep-linkées et un manifest PWA. **L'app compile et ses 227 tests sont verts.**
 
 Trois plateformes coexistent (Android, `web-react` typé/testé, `web/` vanilla JS obsolète) et **trois économies de jeu différentes** (l'Android et web-react ont supprimé les cœurs ; `web/` les a encore ; le backend SQL les promeut).
 
@@ -69,7 +69,7 @@ Ce qui est **conforme** et bien fait : parcours zigzag + seuil 70 %, ligues 10 p
 
 Ce qui est **supérieur à Duolingo** sur ce segment : corpus trilingue avec étymologie + IPA + pearls, **CAT adaptatif** (Duolingo a supprimé le sien public), offline **total** (crucial pour un réseau DZ), 180 clés i18n complètes AR/FR/EN avec chiffres arabo-indiens.
 
-Ce qui est **inférieur** : 44 exercices écrits main (mais le générateur en dérive désormais pour les 90 leçons — Phase 2), ligues **figées** (les bots ne jouaient jamais → Phase 3 les anime), 2 illustrations pour 4 512 termes (app textuelle), pas de Birdbrain, pas de social, paywall qui **ne fait rien payer** (`purchaseSuper()` met `isSuper = true` gratuitement).
+Ce qui est **inférieur** : 44 exercices écrits main (mais le générateur en dérive désormais pour les 90 leçons — Phase 2), ligues **figées** (les bots ne jouaient jamais → Phase 3 les anime), 2 illustrations pour 4 512 termes (app textuelle), pas de Birdbrain, pas de social, pas de serveur (offline-first mono-utilisateur). Le paywall `Super` ne fait plus faux-semblant : il se paie maintenant en **gemmes** (Phase 6), pas en monnaie qu'il n'encait pas.
 
 ---
 
@@ -123,8 +123,8 @@ J'ai aussi **sous-estimé** deux choses : la solidité des migrations Room 8→9
 11. i18n des 4 notifications
 
 **P2 — Décisions produit à trancher**
-12. **Cœurs** : réintroduire (cohérent avec `SuperPaywallDialog`) OU réécrire le paywall sans eux et corriger la doc
-13. **Paiement** : Google Play Billing / BaridiMob, ou retirer le paywall (actuellement une fausse porte)
+12. **Cœurs** : ~~réintroduire ou réécrire~~ — **résolu** : supprimés définitivement en migration v10 (choix produit), top bar renommée `GemsLeagueTopBar` (Phase 6)
+13. **Paiement** : ~~Google Play Billing / BaridiMob~~ — **résolu** : paiement en **gemmes** (500/mois, 5000/an), la monnaie réelle de l'app offline-first (Phase 6)
 14. **Backend** : intégrer (Supabase SDK + sync + `INTERNET`) OU le marquer explicitement non branché
 15. **Plateformes** : unifier autour d'Android + `web-react/`, supprimer `web/`
 
@@ -141,13 +141,13 @@ J'ai aussi **sous-estimé** deux choses : la solidité des migrations Room 8→9
 
 **Ce projet est meilleur que sa documentation ne le laisse penser, et pire que son architecture ne le prétend.**
 
-La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 222 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
+La couche de fond est solide : injection d'horloge partout, `TtsManager` qui gère réellement les races conditions Android, migrations Room dignes d'un senior, 227 tests où chaque assertion documente le bug qu'elle corrige, un validateur de traductions maison, un document (`IMAGE_STRATEGY.md`) qui **démontre les chiffres marketing non prouvés** avec une citation PubMed. Cette discipline est rare.
 
-La faiblesse est ailleurs : **44 exercices pour 90 leçons**, des **mensonges involontaires** (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, paywall gratuit), et **trois versions du même produit** qui divergent.
+La faiblesse d'origine — **44 exercices pour 90 leçons** — est résolue : les 90 leçons sont jouables et **2 745 exemples trilingues** ont été dérivés pour nourrir les niveaux L5/L6. Les **mensonges involontaires** (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, **paywall gratuit**) sont corrigés — le paywall se paie maintenant en gemmes. La documentation décrit le code réel.
 
 **La priorité n'est pas d'ajouter des fonctionnalités. C'est de combler le contenu, de corriger les 5 bugs P0, et d'aligner la documentation sur le code.** Une fois cela fait, MedLingo sera un bon produit — pas un Duolingo, mais quelque chose de plus adapté à son public : un outil d'anglais médical offline, trilingue et universitaire, ce que Duolingo ne sera jamais.
 
-**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 222 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
+**Preuves d'exécution cumulées** : `./gradlew testDebugUnitTest` → 227 tests verts (Android) ; `npm run build` + `tsc --noEmit` + `vitest run` → 111 tests verts, build OK, typecheck strict OK (web-react) ; `check:i18n` → 153 clés × 3 langues, 0 écart.
 
 ---
 

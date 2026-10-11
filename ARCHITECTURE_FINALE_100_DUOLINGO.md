@@ -38,7 +38,7 @@ qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algérie
 | Leçons générées jouables | **90** (15 × 6) | `LessonGeneratorRealDataTest` |
 | Termes avec `exampleEn` | **3 849 (85,5 %)** | avant Phase 5 : 24,5 % |
 | Clés i18n | ~200 × 3 langues | `check:i18n` → 0 écart |
-| Tests unitaires | **222, 0 échec** | `./gradlew testDebugUnitTest` |
+| Tests unitaires | **227, 0 échec** | `./gradlew testDebugUnitTest` |
 | Images | 2 illustrations (`illustration_femur`, `illustration_neuron`) | `data/illustrations/` |
 
 ---
@@ -99,8 +99,8 @@ qui enseigne l'anglais/français/arabe médical à des étudiants PCEM1 algérie
 | Studio prononciation TTS multi-langue | ✅ | `AudioPronunciationStudio`, `TtsManager` |
 | i18n trilingue complet | ✅ | `AppLanguage.kt` (~200 clés × 3) |
 | ExerciseSpec JSONB + checkers purs | ✅ | `ExerciseSpecMigrator`, `ExerciseChecker` |
-| Paywall `Super` | ⚠️ **fausse porte** | `purchaseSuper()` met `isSuper = true` gratuitement |
-| Cœurs (hearts) | ⚠️ **partiel** | `HeartsGemsTopBar` affiche, mais plus de perte de cœur en quiz |
+| Paywall `Super` | ✅ **honnête** (Phase 6) | `purchaseSuper()` déduit **réellement** 500 gemmes/mois, 5000/an — avant c'était gratuit (`isSuper = true`, transaction `amount = 0`) |
+| Cœurs (hearts) | ❌ **supprimés** (migration v10) | Choix produit : jeu illimité, pas de frustration. Top bar renommée `GemsLeagueTopBar` (Phase 6) |
 
 ---
 

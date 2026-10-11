@@ -23,10 +23,11 @@ MedLingo était **solide sur le fond et creux sur le contenu**. La base techniqu
 | **3** | Ligues animées + i18n des 4 notifications (21 clés × 3 langues) |
 | **4** | Dette morte supprimée (`.kilo`, 8,7 Mo), architecture réécrite pour refléter le **code réel**, 10 tests de non-régression du seed |
 | **5** | **2 745 exemples trilingues** dérivés des définitions — `exampleEn` vide passe de 75,5 % à **14,5 %** |
+| **6** | Décisions produit : paywall **honnète** (paiement en gemmes, plus de fausse porte), cœurs supprimés + top bar renommée |
 
-**222 tests Android, 0 échec. 111 tests web, 0 échec.**
+**227 tests Android, 0 échec. 111 tests web, 0 échec.**
 
-**Reste** : 655 termes sans exemple (définitions atypiques), `etymology` à 92 % et `clinicalPearl` à 90 % de vide — **non dérivables** mécaniquement (voir §3 et Phase 5). Les 4 décisions produit (#13 cœurs, #14 paiement, #15 backend, #16 plateformes) demandent un arbitrage, pas une implémentation.
+**Reste** : 655 termes sans exemple (définitions atypiques), `etymology` à 92 % et `clinicalPearl` à 90 % de vide — **non dérivables** mécaniquement (voir §3 et Phase 5). Les 2 dernières décisions produit (#15 backend, #16 plateformes) demandent un arbitrage, pas une implémentation. Voir `COMPARAISON_DUOLINGO.md`.
 
 ---
 
@@ -252,7 +253,7 @@ Les 5 bugs P0 (4 validés + 1 infirmé), un commit par bug, chacun avec son test
 | 8 | Animer les ligues (bots statiques) | **Résolu** — `LeagueBotAnimator` : rythme hebdomadaire propre à chaque bot, bruit déterministe, jamais de retour en arrière | `42724f0` |
 | 11 | i18n des 4 notifications | **Résolu** — 21 clés × 3 langues, les canaux et les alarmes suivent la langue persistée | `42724f0` |
 
-**Reste en P2 (décisions produit à trancher, non mécaniques)** : #13 cœurs, #14 paiement, #15 backend, #16 plateformes. Ces quatre points sont des choix de direction, pas des corrections — ils demandent un arbitrage, pas une implémentation.
+**Reste en P2 (décisions produit à trancher, non mécaniques)** : #15 backend, #16 plateformes. Ces deux points sont des choix de direction, pas des corrections — ils demandent un arbitrage, pas une implémentation. Les #13 cœurs et #14 paiement sont tranchés (Phase 6) : les cœurs restent supprimés, le paywall se paie en gemmes.
 
 ### Phase 4 — Appliquée ✅ (P3, hygiène)
 
@@ -311,6 +312,26 @@ sont pas dérivables** — l'étymologie exige un dictionnaire étymologique
 clinique est un fait médical qui ne peut être qu'inventé. Ce contenu demande
 soit une base de données étymologique (ex. dictionnaire medical), soit une
 relecture éditoriale humaine. Voir `RAPPORT_REMEDIATION.md` §3.
+
+### Phase 6 — Appliquée ✅ (décisions produit)
+
+Les deux derniers "mensonges involontaires" du rapport, tranchés :
+
+| # | Décision | Résolution | Commit |
+|---|---|---|---|
+| 13 | **Cœurs** | **Supprimés définitivement** — la migration v10 les avait déjà retirés, mais la top bar s'appelait encore `HeartsGemsTopBar`. Renommée `GemsLeagueTopBar` : le nom reflète ce qui est affiché (série, gemmes, ligue) | — |
+| 14 | **Paiement** | **Paywall honnête** — `purchaseSuper()` déduit réellement **500 gemmes/mois, 5000/an** via le ledger, et retourne `false` si le solde est insuffisant (rien n'est écrit). Avant : `isSuper = true` gratuit + transaction `amount = 0` tandis que le paywall affichait "500 DA/mois" | — |
+
+Le paywall affiche maintenant des gemmes 💎, pas des dinars. Les champs
+`monthlyDa` / `yearlyDa` de `SuperPricing` sont supprimés — l'app étant
+offline-first, aucun paiement fiat n'existe.
+
+**Tests** : `SuperPurchaseRegressionTest` (5 tests Robolectric + Room réelle) :
+achat mensuel déduit 500 gemmes, annuel 5000, solde insuffisant échoue sans
+rien changer, le ledger enregistre un montant négatif, le pricing n'expose que
+des gemmes.
+
+**227 tests, 0 échec.**
 
 ---
 
@@ -418,7 +439,14 @@ La phase 0 est volontairement restée **en dehors de la logique applicative**. L
 
 La faiblesse d'origine — **44 exercices pour 90 leçons** — est résolue : les 90 leçons sont jouables, générées à partir des 4 504 fiches, et **2 745 exemples trilingues** viennent d'être dérivés pour nourrir les niveaux L5/L6. Les mensonges involontaires (persona affichée, fausse barre de téléchargement, fausse compatibilité backend, paywall gratuit) sont corrigés ou documentés comme tels. La documentation décrit maintenant le code réel.
 
-**Ce qui reste est du ressort de l'humain, pas du code** : 655 définitions atypiques sans exemple, `etymology` à 92 % et `clinicalPearl` à 90 % de vide (inventer serait médicalement irresponsable), et 4 décisions produit — cœurs, paiement, backend, plateformes — qui demandent un arbitrage.
+**Ce qui reste est du ressort de l'humain, pas du code** : 655 définitions atypiques sans exemple, `etymology` à 92 % et `clinicalPearl` à 90 % de vide (inventer serait médicalement irresponsable), et 2 décisions produit — backend, plateformes — qui demandent un arbitrage.
+
+**Sur la comparaison avec Duolingo** : la boucle d'engagement est un clone
+fidèle (17/17 mécaniques), mais l'infrastructure est sciemment différente —
+offline-first mono-utilisateur, pas de serveur, pas de paiement fiat, ligues de
+bots. C'est adapté au public (PCEM1 algériens, connexion faible). MedLingo
+n'est pas un Duolingo pour le médical : c'est un outil de vocabulaire médical
+trilingue qui *emprunte* la boucle de Duolingo. Voir `COMPARAISON_DUOLINGO.md`.
 
 MedLingo est maintenant un bon produit — pas un Duolingo, mais quelque chose de plus adapté à son public : un outil d'anglais médical offline, trilingue et universitaire, ce que Duolingo ne sera jamais.
 
