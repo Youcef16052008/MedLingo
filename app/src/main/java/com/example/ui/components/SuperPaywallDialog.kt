@@ -31,7 +31,7 @@ import androidx.compose.ui.window.Dialog
 import com.example.domain.gamification.GemsManager
 
 /**
- * Paywall Super MedLingo (modèle Tinder Plus) : bénéfices, prix DA / gemmes.
+ * Paywall Super MedLingo (modèle Tinder Plus) : bénéfices, prix en gemmes 💎.
  * Les cœurs ne sont plus un bénéfice — ils n'existent plus dans l'app.
  */
 @Composable
@@ -81,7 +81,7 @@ fun SuperPaywallDialog(
 
                 val pricing = GemsManager.getSuperPricing()
                 val yearlySavingPercent =
-                    ((1.0 - pricing.yearlyDa.toDouble() / (pricing.monthlyDa * 12)) * 100).toInt()
+                    ((1.0 - pricing.yearlyGems.toDouble() / (pricing.monthlyGems * 12)) * 100).toInt()
                 pricing.benefits.forEach { benefit ->
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -108,12 +108,12 @@ fun SuperPaywallDialog(
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
-                            text = "Mensuel - ${pricing.monthlyDa} DA",
+                            text = "Mensuel - ${pricing.monthlyGems} 💎",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp
                         )
                         Text(
-                            text = "${pricing.monthlyDa} DA/mois • Annulable",
+                            text = "${pricing.monthlyGems} 💎/mois • Annulable",
                             fontSize = 11.sp,
                             color = Color.White.copy(alpha = 0.8f)
                         )
@@ -128,7 +128,7 @@ fun SuperPaywallDialog(
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
-                            text = "Annuel - ${pricing.yearlyDa} DA (${pricing.yearlyDa / 12} DA/mois)",
+                            text = "Annuel - ${pricing.yearlyGems} 💎 (${pricing.yearlyGems / 12} 💎/mois)",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp
                         )

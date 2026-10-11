@@ -20,12 +20,14 @@ import androidx.compose.ui.unit.sp
 import com.example.data.local.entity.LeagueTier
 
 /**
- * HeartsGemsTopBar - Duolingo style top bar
- * Shows: Streak 🔥, Gems 💎, League tier 🏆
- * Les cœurs ❤️ ont été supprimés : plus de puce de cours.
+ * GemsLeagueTopBar - Duolingo style top bar
+ *
+ * Affiche : série (streak) 🔥, gemmes 💎, tier de ligue 🏆.
+ * Les cœurs ❤️ ont été supprimés en migration v10 (plus de puce de cours) —
+ * le nom historique "HeartsGemsTopBar" est devenu trompeur, d'où le renommage.
  */
 @Composable
-fun HeartsGemsTopBar(
+fun GemsLeagueTopBar(
     streakDays: Int,
     gems: Int,
     isSuper: Boolean,

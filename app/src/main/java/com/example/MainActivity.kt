@@ -71,7 +71,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import com.example.ui.components.AudioPronunciationStudio
 import com.example.ui.components.AppIntroOverlay
-import com.example.ui.components.HeartsGemsTopBar
+import com.example.ui.components.GemsLeagueTopBar
 import com.example.ui.components.LeagueScreen
 import com.example.ui.components.SuperPaywallDialog
 import com.example.service.NotificationHelper
@@ -202,7 +202,7 @@ fun MedLinguaAppContent(
             topBar = {
                 // Duolingo Phase 2 Top Bar - Streak, Gems, League (plus de cœurs)
                 Column {
-                    HeartsGemsTopBar(
+                    GemsLeagueTopBar(
                         streakDays = uiState.userStats.streakDays,
                         gems = uiState.userStats.gems,
                         isSuper = uiState.userStats.isSuperActive(),

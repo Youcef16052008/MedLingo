@@ -93,14 +93,15 @@ object GemsManager {
     }
 
     /**
-     * Super MedLingo pricing - Tinder Plus model
-     * 500 DA / mois = 500 gems
+     * Super MedLingo pricing — payé en gemmes 💎, la monnaie de l'app.
+     *
+     * L'app est offline-first (pas de Google Play Billing ni de BaridiMob),
+     * donc l'abonnement s'achète avec les gemmes gagnées en jouant.
+     * 500 💎 / mois, 5000 💎 / an (33 % de réduction).
      */
     fun getSuperPricing(): SuperPricing {
         return SuperPricing(
-            monthlyDa = 500,
             monthlyGems = GEMS_SUPER_MONTHLY,
-            yearlyDa = 4000, // 33% discount vs monthly: 333 DA/mois
             yearlyGems = 5000,
             benefits = listOf(
                 "Leçons illimitées 🎓",
@@ -114,9 +115,7 @@ object GemsManager {
     }
 
     data class SuperPricing(
-        val monthlyDa: Int,
         val monthlyGems: Int,
-        val yearlyDa: Int,
         val yearlyGems: Int,
         val benefits: List<String>
     )

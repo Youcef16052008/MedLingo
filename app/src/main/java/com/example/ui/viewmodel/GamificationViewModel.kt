@@ -8,8 +8,13 @@ import com.example.data.repository.MedLinguaRepository
  */
 class GamificationViewModel(private val repository: MedLinguaRepository) {
 
-    suspend fun purchaseSuper(months: Int = 1) {
-        repository.purchaseSuper(months)
+    /**
+     * Achète Super MedLingo. Retourne `false` si le solde de gemmes est
+     * insuffisant — l'appelant doit alors afficher un message à l'utilisateur
+     * (acheter plus de gemmes en jouant), et non pas fermer le paywall.
+     */
+    suspend fun purchaseSuper(months: Int = 1): Boolean {
+        return repository.purchaseSuper(months)
     }
 
     fun showGemsEarned(amount: Int): Int {

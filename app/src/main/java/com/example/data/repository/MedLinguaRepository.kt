@@ -400,24 +400,38 @@ val currentClock: Clock get() = clock
         true
     }
 
-    suspend fun purchaseSuper(months: Int = 1) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
+    /**
+     * Achète l'abonnement Super MedLingo avec des gemmes — la monnaie réelle
+     * de l'app (offline-first, pas de paiement Google/BaridiMob).
+     *
+     * Avant, cette fonction mettait `isSuper = true` **gratuitement** et
+     * enregistrait une transaction à `amount = 0` : une fausse porte. Le
+     * paywall affichait pourtant "500 DA/mois". Maintenant le prix est
+     * cohérent : 500 gemmes/mois, 5000 gemmes/an.
+     *
+     * @return `false` si le solde de gemmes est insuffisant (rien n'est écrit)
+     */
+    suspend fun purchaseSuper(months: Int = 1): Boolean = withContext(Dispatchers.IO) {
+        val pricing = GemsManager.getSuperPricing()
+        val cost = if (months >= 12) pricing.yearlyGems else pricing.monthlyGems * months
+        val current = dao.getUserStatsOnce() ?: return@withContext false
+        if (current.gems < cost) return@withContext false
+        val newBalance = current.gems - cost
         val expiresAt = clock.now() + (months * 30L * 24 * 60 * 60 * 1000)
-        val newStats = current.copy(
-            isSuper = true,
-            superExpiresAt = expiresAt
+        safeUpsertUserStats(
+            current.copy(gems = newBalance, isSuper = true, superExpiresAt = expiresAt)
         )
-        safeUpsertUserStats(newStats)
         dao.insertGemsTransaction(
             GemsTransactionEntity(
                 type = "PURCHASE",
-                amount = 0,
+                amount = -cost,
                 reason = "super_purchase",
                 timestamp = clock.now(),
-                balanceAfter = newStats.gems,
+                balanceAfter = newBalance,
                 metadata = "months:$months expires:$expiresAt"
             )
         )
+        true
     }
 
     suspend fun refreshLeagueCohortIfNeeded() = withContext(Dispatchers.IO) {
