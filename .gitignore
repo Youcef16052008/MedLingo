@@ -22,3 +22,7 @@ tmp_*
 .kilo/
 __pycache__/
 *.pyc
+
+# Secrets Supabase (backend optionnel) - JAMAIS commiter
+secrets.properties
+**/secrets.properties
