@@ -41,8 +41,22 @@ interface MedicalDao {
     @Query("SELECT termEn, module FROM medical_terms WHERE isBookmarked = 1")
     suspend fun getBookmarkedKeys(): List<BookmarkedKey>
 
+    @Query("SELECT id FROM medical_terms WHERE isBookmarked = 1")
+    suspend fun getBookmarkedIds(): List<Int>
+
     @Query("UPDATE medical_terms SET isBookmarked = 1 WHERE termEn = :termEn AND module = :module")
     suspend fun restoreBookmark(termEn: String, module: String)
+
+    /**
+     * P1-2 (revue database v2, défaut D4) : restauration par id.
+     *
+     * `restoreBookmark` identifie un terme par `(termEn, module)`, donc un seed
+     * qui renomme un terme (Heart → Cor) perd silencieusement les bookmarks.
+     * L'id, lui, est stable — et les termes déplacés suivent
+     * `TermIdMigrationPlan`.
+     */
+    @Query("UPDATE medical_terms SET isBookmarked = 1 WHERE id IN (:ids)")
+    suspend fun restoreBookmarksById(ids: List<Int>)
 
     @Update
     suspend fun updateTerm(term: MedicalTermEntity)
@@ -89,6 +103,22 @@ interface MedicalDao {
      */
     @Query("DELETE FROM exercises WHERE id < 0")
     suspend fun deleteBulkExercises()
+
+    /**
+     * P2-1 (revue database v2, défaut D6) : remplacement atomique des exercices
+     * générés.
+     *
+     * Avant, le repository enchaînait `deleteBulkExercises()` puis
+     * `insertExercises()` hors transaction : si l'insert échouait (base
+     * verrouillée, espace), la table perdait 13 512 exercices et l'erreur était
+     * seulement logguée. Ici, si l'insert échoue, le DELETE est annulé —
+     * l'état antérieur est intact.
+     */
+    @Transaction
+    suspend fun replaceBulkExercises(exercises: List<ExerciseEntity>) {
+        deleteBulkExercises()
+        insertExercises(exercises)
+    }
 
     // Downloaded Modules (Offline)
     @Query("SELECT * FROM downloaded_modules")
@@ -203,6 +233,33 @@ interface MedicalDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertLessonScore(score: LessonScoreEntity)
+
+    /**
+     * P0-1 (revue database v2, défaut D1) : reseed incrémental transactionnel.
+     *
+     * Avant, `initializeDatabaseIfEmpty` enchaînait 4 504 insertions + 1
+     * restauration de bookmarks + 15 écritures de modules **hors transaction**.
+     * Un process tué à mi-chemin laissait `getTermsCount()` au complet mais des
+     * modules et des bookmarks incomplets — or c'est exactement cette garde qui
+     * décidait de ne plus jamais reseeder. Base cassée à vie, même motif que le
+     * bug B3.
+     *
+     * Room annule tout si une seule écriture échoue : le reseed est désormais
+     * tout-ou-rien.
+     *
+     * P1-2 (défaut D4) : les bookmarks sont restaurés **par id** et non par
+     * `(termEn, module)` — un seed qui renomme un terme ne les perd plus.
+     */
+    @Transaction
+    suspend fun reseedTermsAndModules(
+        terms: List<MedicalTermEntity>,
+        bookmarkedIds: List<Int>,
+        modules: List<DownloadedModuleEntity>
+    ) {
+        insertTerms(terms)
+        if (bookmarkedIds.isNotEmpty()) restoreBookmarksById(bookmarkedIds)
+        modules.forEach { upsertDownloadedModule(it) }
+    }
 
     // === P0-3 (rapport final, bug B3) : seed transactionnel ===
     //

@@ -212,26 +212,37 @@ val currentClock: Clock get() = clock
         // insertTerms est un REPLACE idempotent, les bookmarks sont préservés
         // et les compteurs par module sont rafraîchis. Sans cela, les installs
         // existantes ne recevraient jamais les nouveaux termes.
+        //
+        // P0-1 (revue database v2, défaut D1) : ce reseed était auparavant
+        // écriture par écriture HORS transaction. Un process tué à mi-chemin
+        // laissait getTermsCount() complet mais des modules et des bookmarks
+        // incomplets — la garde ci-dessus ne reseedait alors plus jamais.
         if (dao.getTermsCount() < InitialData.terms.size) {
-            val reseededKeys = dao.getBookmarkedKeys()
-            dao.insertTerms(InitialData.terms)
-            reseededKeys.forEach { key -> dao.restoreBookmark(key.termEn, key.module) }
+            // P1-2 (revue database v2, défaut D4) : on sauve les bookmarks PAR ID
+            // avant le REPLACE. L'ancienne sauvegarde par (termEn, module) était
+            // perdue si un seed renommait un terme (Heart -> Cor) ; l'id, lui,
+            // est stable et les termes déplacés suivent TermIdMigrationPlan.
+            val bookmarkedIds = dao.getBookmarkedIds()
             val reseedNow = clock.now()
-            InitialData.modulesList.forEach { mod ->
-                dao.upsertDownloadedModule(
-                    DownloadedModuleEntity(
-                        moduleId = mod.id,
-                        moduleName = mod.titleFr,
-                        downloadedTimestamp = reseedNow,
-                        sizeMb = mod.estimatedSizeMb,
-                        termsCount = InitialData.termsOfModule(mod.titleFr).size,
-                        exercisesCount = InitialData.exercises.count {
-                            it.module.equals(mod.titleFr, ignoreCase = true)
-                        },
-                        isDownloaded = true
-                    )
+            val reseedModules = InitialData.modulesList.map { mod ->
+                DownloadedModuleEntity(
+                    moduleId = mod.id,
+                    moduleName = mod.titleFr,
+                    downloadedTimestamp = reseedNow,
+                    sizeMb = mod.estimatedSizeMb,
+                    termsCount = InitialData.termsOfModule(mod.titleFr).size,
+                    exercisesCount = InitialData.exercises.count {
+                        it.module.equals(mod.titleFr, ignoreCase = true)
+                    },
+                    isDownloaded = true
                 )
             }
+            // Transaction : tout-ou-rien, Room annule en cas d'échec.
+            dao.reseedTermsAndModules(
+                terms = InitialData.terms,
+                bookmarkedIds = bookmarkedIds,
+                modules = reseedModules
+            )
         }
     }
 
@@ -273,8 +284,10 @@ val currentClock: Clock get() = clock
         if (bulk.isEmpty()) return@withContext
 
         try {
-            dao.deleteBulkExercises()
-            dao.insertExercises(bulk)
+            // P2-1 (défaut D6) : delete + insert atomiques. Avant, un insert
+            // échoué laissait la table amputée de 13 512 exercices ; maintenant
+            // l'échec annule le DELETE et l'état antérieur est intact.
+            dao.replaceBulkExercises(bulk)
         } catch (e: Exception) {
             android.util.Log.w(
                 "MedLinguaRepo",

@@ -41,7 +41,16 @@ import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
     //
     // v10 : suppression du système de cœurs (hearts/heartsUpdatedAt/maxHearts) et
     // ajout de l'objectif quotidien, des caisses et des trophées — MIGRATION_9_10.
-    version = 10,
+    //
+    // v11 : index sur `medical_terms` — `module` (écrans de module),
+    // `(module, chapter)` (tri de getAllTerms) et `(termEn, module)`
+    // (restoreBookmark). Avant, chacune de ces requêtes scannait les 4 504
+    // lignes (défaut D2, revue database v2).
+    //
+    // v12 : suppression de la colonne legacy `example` (défaut D3). Elle
+    // dupliquait `exampleEn` (692 valeurs identiques sur 972) et n'était lue
+    // par aucun code — grep strict : 0 lecteur.
+    version = 12,
     exportSchema = true
 )
 abstract class MedLinguaDatabase : RoomDatabase() {
@@ -61,7 +70,9 @@ abstract class MedLinguaDatabase : RoomDatabase() {
                     MIGRATION_6_7,
                     MIGRATION_7_8,
                     MIGRATION_8_9,
-                    MIGRATION_9_10
+                    MIGRATION_9_10,
+                    MIGRATION_10_11,
+                    MIGRATION_11_12
                 )
                     .build()
                 INSTANCE = instance
@@ -216,7 +227,7 @@ private val MIGRATION_6_7 = object : Migration(6, 7) {
         
         // Create league_cohorts table
         database.execSQL("""
-            CREATE TABLE IF NOT EXISTS league_cohorts (
+            CREATE TABLE league_cohorts (
                 cohortId TEXT NOT NULL PRIMARY KEY,
                 weekStartTimestamp INTEGER NOT NULL,
                 weekEndTimestamp INTEGER NOT NULL,
@@ -230,7 +241,7 @@ private val MIGRATION_6_7 = object : Migration(6, 7) {
         
         // Create league_members table
         database.execSQL("""
-            CREATE TABLE IF NOT EXISTS league_members (
+            CREATE TABLE league_members (
                 id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 cohortId TEXT NOT NULL,
                 userId INTEGER NOT NULL DEFAULT 1,
@@ -248,7 +259,7 @@ private val MIGRATION_6_7 = object : Migration(6, 7) {
         
         // Create gems_transactions table
         database.execSQL("""
-            CREATE TABLE IF NOT EXISTS gems_transactions (
+            CREATE TABLE gems_transactions (
                 id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 userId INTEGER NOT NULL DEFAULT 1,
                 type TEXT NOT NULL,
@@ -379,5 +390,93 @@ internal val MIGRATION_9_10 = object : Migration(9, 10) {
             )
             """.trimIndent()
         )
+    }
+}
+
+/**
+ * v10 → v11 : index sur `medical_terms` (défaut D2, revue database v2).
+ *
+ * `getTermsByModule` (écrans de module), `getAllTerms` (`ORDER BY module, id`)
+ * et `restoreBookmark` (`WHERE termEn AND module`) filtraient une table de
+ * 4 504 lignes sans aucun index : full scan à chaque appel.
+ *
+ * Les noms reprennent ceux que Room génère (`index_<table>_<colonnes>`) pour
+ * que la validation post-migration passe. `IF NOT EXISTS` rend la migration
+ * idempotente — sans risque si l'index existait déjà.
+ */
+internal val MIGRATION_10_11 = object : Migration(10, 11) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module ON medical_terms(module)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module_chapter ON medical_terms(module, chapter)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_termEn_module ON medical_terms(termEn, module)")
+    }
+}
+
+/**
+ * v11 → v12 : suppression de la colonne legacy `example` (défaut D3).
+ *
+ * `example` dupliquait `exampleEn` (692 valeurs identiques sur 972, 71 %) et
+ * n'était lue par aucun code — toutes les lectures vont à `exampleEn` /
+ * `exampleFr` / `exampleAr`. 100 % de colonne morte.
+ *
+ * Room refuse d'altérer une table pour *retirer* une colonne : la table est
+ * reconstruite (CREATE … INSERT SELECT … DROP … RENAME), même motif que
+ * `MIGRATION_9_10`. Toutes les autres colonnes et toutes les données sont
+ * conservées ; les index v11 sont recréés sur la table renommée car DROP TABLE
+ * les emporte.
+ */
+internal val MIGRATION_11_12 = object : Migration(11, 12) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL(
+            """
+            CREATE TABLE medical_terms_new (
+                id INTEGER NOT NULL PRIMARY KEY,
+                termEn TEXT NOT NULL,
+                termFr TEXT NOT NULL,
+                termAr TEXT NOT NULL,
+                definitionEn TEXT NOT NULL,
+                definitionFr TEXT NOT NULL,
+                definitionAr TEXT NOT NULL,
+                etymology TEXT NOT NULL,
+                clinicalPearl TEXT NOT NULL,
+                mnemonic TEXT NOT NULL,
+                module TEXT NOT NULL,
+                chapter TEXT NOT NULL,
+                exampleEn TEXT NOT NULL,
+                exampleFr TEXT NOT NULL,
+                exampleAr TEXT NOT NULL,
+                imageAsset TEXT NOT NULL,
+                audioAsset TEXT NOT NULL,
+                ipaPhonetic TEXT NOT NULL,
+                isBookmarked INTEGER NOT NULL
+            )
+            """.trimIndent()
+        )
+
+        // Toutes les colonnes sauf `example` : aucune donnée n'est perdue.
+        database.execSQL(
+            """
+            INSERT INTO medical_terms_new (
+                id, termEn, termFr, termAr, definitionEn, definitionFr, definitionAr,
+                etymology, clinicalPearl, mnemonic, module, chapter,
+                exampleEn, exampleFr, exampleAr, imageAsset, audioAsset,
+                ipaPhonetic, isBookmarked
+            )
+            SELECT
+                id, termEn, termFr, termAr, definitionEn, definitionFr, definitionAr,
+                etymology, clinicalPearl, mnemonic, module, chapter,
+                exampleEn, exampleFr, exampleAr, imageAsset, audioAsset,
+                ipaPhonetic, isBookmarked
+            FROM medical_terms
+            """.trimIndent()
+        )
+
+        database.execSQL("DROP TABLE medical_terms")
+        database.execSQL("ALTER TABLE medical_terms_new RENAME TO medical_terms")
+
+        // DROP TABLE emporte ses index : on recrée ceux de la v11.
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module ON medical_terms(module)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module_chapter ON medical_terms(module, chapter)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_termEn_module ON medical_terms(termEn, module)")
     }
 }
