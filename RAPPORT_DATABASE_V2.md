@@ -246,3 +246,8 @@ est intact. Sans `@Transaction`, le `DELETE` aurait persisté et la table aurait
 
 **Les 6 défauts sont corrigés.** Chacun est couvert par un test de régression qui
 échouerait si le défaut revenait. Le plan est terminé à 100 %.
+
+**Validation** : `testDebugUnitTest --rerun-tasks` → **BUILD SUCCESSFUL —
+267 tests, 0 échec** (build from-scratch après `rm -rf app/build`). Schémas Room
+`11.json` et `12.json` exportés et vérifiés (19 colonnes, `example` absente,
+3 index présents). Commit `64f9369` sur `phase-0-cleanup`, working tree propre.
