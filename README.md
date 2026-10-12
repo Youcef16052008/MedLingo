@@ -57,6 +57,32 @@ adb shell am start -n com.aistudio.medlingua.dzmed/com.example.MainActivity
 ./gradlew :app:connectedDebugAndroidTest   # tests instrumentés (appareil requis)
 ```
 
+## Statut du backend
+
+L'application est **100 % hors-ligne** : aucune permission `INTERNET`, base Room pré-remplie, mono-utilisateur.
+
+Le dossier `backend/` (schéma Supabase, RLS, seed) **n'est pas branché** : la couche réseau
+(`MedLingoRemoteClient`) est écrite et fonctionne en mode no-op. Le brancher demande `INTERNET`
++ un fichier `secrets.properties` (voir `GUIDE_BACKEND.md`).
+
+**Le seed SQL est maintenu** : `npm run check:seed` (web) et un test Android (`SeedIntegrityTest`)
+vérifient à chaque build qu'il couvre bien l'intégralité du corpus (4 504 termes, 112 exercices).
+Ne pas le régénérer après modification des seeds crée une dérive silencieuse.
+
+## Web
+
+Un port web React/TS existe dans `web-react/` :
+
+```bash
+cd web-react
+npm i
+npm run extract      # regenere terms.json/exercises.json depuis les seeds Kotlin
+npm run test         # 127 tests
+npm run check:i18n   # 153 cles x 3 langues
+npm run check:seed   # coherence du seed SQL backend
+npm run build        # tsc strict + vite
+```
+
 ## AI Studio
 
 Ce projet a été généré avec [Google AI Studio](https://ai.studio/apps/27222750-8219-4b37-bdfb-7a04f2543115).

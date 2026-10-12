@@ -94,7 +94,7 @@
     "expEn": "All skeletal anatomical terms matched successfully according to International Anatomical Nomenclature.",
     "expFr": "Tous les termes osseux ont été appariés selon la nomenclature anatomique internationale.",
     "expAr": "تمت مطابقة جميع المصطلحات العظمية بنجاح وفق التسمية الطبية الدولية المعتمدة.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -193,7 +193,7 @@
     "expEn": "Muscle tissues are classified into skeletal (striated, voluntary), cardiac (striated, involuntary), and smooth (non-striated, involuntary).",
     "expFr": "Les tissus musculaires se subdivisent en squelettique (strié volontaire), cardiaque (strié involontaire) et lisse (non strié involontaire).",
     "expAr": "تصنف الأنسجة العضلية إلى هيكلية (مخططة إرادية)، قلبية (مخططة لاإرادية)، وملساء (غير مخططة لاإرادية).",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -218,7 +218,7 @@
     "expEn": "'Articular cartilage' is the smooth white tissue capping the ends of bones in a synovial joint.",
     "expFr": "La collocation correcte est 'Articular cartilage' (cartilage articulaire en français).",
     "expAr": "التلازم اللفظي الصحيح هو 'Articular cartilage' أي الغضروف المفصلي.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -243,7 +243,7 @@
     "expEn": "'Synovial fluid' (le liquide synovial) lubricates and cushions movable diarthrodial joints.",
     "expFr": "'Synovial fluid' (liquide synovial) lubrifie les surfaces articulaires et nourrit le cartilage.",
     "expAr": "'Synovial fluid' (السائل الزليلي) هو السائل اللزج الذي يقلل الاحتكاك داخل تجويف المفصل.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -268,7 +268,7 @@
     "expEn": "Correct clinical collocations: Vertebral column (spine), Action potential (nerve signal), Blood pressure (arterial tension), Cranial nerve (CN I-XII).",
     "expFr": "Collocations médicales exactes : Vertebral column, Action potential, Blood pressure, Cranial nerve.",
     "expAr": "تلازمات سريرية دقيقة: العمود الفقري، جهد الفعل، ضغط الدم، والعصب القحفي.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -293,7 +293,7 @@
     "expEn": "'Acute appendicitis' is a primary surgical emergency requiring timely diagnosis and appendectomy.",
     "expFr": "'Acute appendicitis' (appendicite aiguë) est une urgence chirurgicale majeure.",
     "expAr": "'Acute appendicitis' (التهاب الزائدة الدودية الحاد) حالة جراحية إسعافية شائعة.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -318,7 +318,7 @@
     "expEn": "'Cardiac muscle' is the specialized striated muscle tissue that builds the walls of the heart.",
     "expFr": "'Cardiac muscle' (muscle cardiaque / myocarde) assure la pompe sanguine involontaire.",
     "expAr": "'Cardiac muscle' (عضلة القلب) نسيج عضلي مخطط يعمل ذاتياً وبصورة لاإرادية.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -343,7 +343,7 @@
     "expEn": "Authentic neuroanatomical collocations: Myelin sheath, Synaptic cleft, Spinal cord, and Motor neuron.",
     "expFr": "Collocations neuroanatomiques : Myelin sheath (gaine de myéline), Synaptic cleft (fente synaptique), Spinal cord (moelle épinière), Motor neuron (motoneurone).",
     "expAr": "تلازمات عصبية معتمدة: غمد الميالين، الفجوة المشبكية، الحبل الشوكي، والعصبون الحركي.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -368,7 +368,7 @@
     "expEn": "'Essential hypertension' (primary hypertension) accounts for over 90% of high blood pressure cases without identifiable secondary etiology.",
     "expFr": "'Essential hypertension' désigne l'hypertension artérielle primaire sans cause secondaire identifiable.",
     "expAr": "'Essential hypertension' يطلق على ارتفاع ضغط الدم الأساسي الأولي مجهول السبب المباشر.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -393,7 +393,7 @@
     "expEn": "'Synovial joint' is the medical collocation for diarthroses possessing a synovial cavity and lubricating fluid.",
     "expFr": "'Synovial joint' (articulation synoviale) désigne les articulations mobiles à capsule et liquide synovial.",
     "expAr": "'Synovial joint' (المفصل الزليلي) هو المفصل الحركي الذي يحتوي على محفظة وغشاء وسائل زليلي.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -423,7 +423,7 @@
     "expEn": "'The femur is longer than both tibia and fibula' — comparative anatomy, standard English Subject-Verb-Object (SVO) syntax.",
     "expFr": "'The femur is longer than both tibia and fibula' (Le fémur est plus long que le tibia et la fibula).",
     "expAr": "'The femur is longer than both tibia and fibula' (عظم الفخذ أطول من عظمي الساق والشظية).",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -450,7 +450,7 @@
     "expEn": "Subject (Synovial fluid) + Verb (lubricates) + Object (the knee joint).",
     "expFr": "'Synovial fluid lubricates the knee joint' (Le liquide synovial lubrifie l'articulation du genou).",
     "expAr": "'Synovial fluid lubricates the knee joint' (يزلق السائل الزليلي مفصل الركبة).",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -475,7 +475,7 @@
     "expEn": "The biceps brachii is a powerful flexor of the forearm at the elbow joint and strong supinator.",
     "expFr": "Le muscle biceps brachial fléchit (flexes) l'articulation du coude.",
     "expAr": "تقوم العضلة ذات الرأسين العضدية بثني (flexes) مفصل المرفق.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -503,7 +503,7 @@
     "expEn": "Subject (Red bone marrow) + Verb (produces) + Object (new blood cells).",
     "expFr": "'Red bone marrow produces new blood cells' (La moelle rouge produit les cellules sanguines).",
     "expAr": "'Red bone marrow produces new blood cells' (ينتج نخاع العظم الأحمر خلايا الدم الجديدة).",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -530,7 +530,7 @@
     "expEn": "Subject (The vagus nerve) + Verb (innervates) + Object (thoracic viscera).",
     "expFr": "'The vagus nerve innervates thoracic viscera' (Le nerf vague innerve les viscères thoraciques).",
     "expAr": "'The vagus nerve innervates thoracic viscera' (يعصب العصب المبهم أحشاء القفص الصدري).",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -558,7 +558,7 @@
     "expEn": "Subject (Cardiac muscle) + Verb (pumps) + Object (blood through the vessels).",
     "expFr": "'Cardiac muscle pumps blood through the vessels' (Le muscle cardiaque pompe le sang dans les vaisseaux).",
     "expAr": "'Cardiac muscle pumps blood through the vessels' (تضخ عضلة القلب الدم عبر الأوعية الدموية).",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -583,7 +583,7 @@
     "expEn": "The patella protects the anterior knee joint and enhances quadriceps mechanical lever action.",
     "expFr": "La patelle protège (protects) la face antérieure de l'articulation du genou.",
     "expAr": "تحمي (protects) الرضفة الوجه الأمامي لمفصل الركبة وتزيد من كفاءة العضلة مربعة الرؤوس.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -611,7 +611,7 @@
     "expEn": "Subject (Myelin) + Verb (accelerates) + Object (the conduction of nerve impulses).",
     "expFr": "'Myelin accelerates the conduction of nerve impulses' (La myéline accélère la conduction de l'influx nerveux).",
     "expAr": "'Myelin accelerates the conduction of nerve impulses' (يسرع الميالين انتقال السيالات العصبية).",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -636,7 +636,7 @@
     "expEn": "'Leading to' expresses clinical consequence and causality between cartilage erosion and ensuing joint pain.",
     "expFr": "'Leading to' (conduisant à / entraînant) exprime la relation de cause à effet physiopathologique.",
     "expAr": "'Leading to' (مما يؤدي إلى) يعبر عن النتيجة والسببية الفسيولوجية المرضية.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -661,7 +661,7 @@
     "expEn": "'Whereas' highlights the physiological contrast between involuntary autonomic and voluntary somatic control.",
     "expFr": "'Whereas' (tandis que / alors que) marque le contraste physiologique entre les deux types musculaires.",
     "expAr": "'Whereas' (في حين أن / بينما) تفيد المقارنة وإظهار الفارق الفسيولوجي بين النوعين.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -692,7 +692,7 @@
     "expEn": "Subordinate causal clause ('Because the axon is myelinated') followed by the main clause ('nerve impulses travel much faster').",
     "expFr": "Proposition subordonnée de cause ('Because the axon is myelinated') suivie de la proposition principale.",
     "expAr": "جملة سببية مركبة توضح تأثير الغمد المياليني على زيادة سرعة النقل العصبي.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -717,7 +717,7 @@
     "expEn": "'Resulting in' links the diaphragmatic contraction to the mechanical expansion of the thoracic chamber.",
     "expFr": "'Resulting in' (ayant pour résultat / aboutissant à) exprime la conséquence mécanique directe.",
     "expAr": "'Resulting in' (مما ينتج عنه) يربط تقلص الحجاب الحاجز بالتوسع الميكانيكي للتجويف الصدري.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -742,7 +742,7 @@
     "expEn": "'In order to' expresses physiological teleology and purpose (preventing alveolar atelectasis).",
     "expFr": "'In order to' (afin de / dans le but de) exprime la finalité physiologique du surfactant.",
     "expAr": "'In order to' (من أجل / بهدف) يعبر عن الغاية الفسيولوجية للسطحي الرئوي.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -772,7 +772,7 @@
     "expEn": "'Synovial fluid reduces friction so that cartilage surfaces glide smoothly' links lubrication to friction-free articulation.",
     "expFr": "La phrase associe l'action du liquide synovial et le glissement aisé des cartilages.",
     "expAr": "جملة متقدمة تربط بين دور السائل الزليلي وتسهيل انزلاق الغضاريف دون احتكاك.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -797,7 +797,7 @@
     "expEn": "'Therefore' denotes logical clinical deduction from asymptomatic progression to the sobriquet 'silent killer'.",
     "expFr": "'Therefore' (par conséquent / ainsi) introduit la qualification clinique de 'tueur silencieux'.",
     "expAr": "'Therefore' (ولذلك / وبناء على ذلك) يعلل إطلاق تسمية القاتل الصامت على ارتفاع ضغط الدم.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -829,7 +829,7 @@
     "expEn": "Temporal clause ('When action potentials reach axon terminals') + Passive main clause ('neurotransmitters are released into synapses').",
     "expFr": "Description séquentielle précise du largage des neurotransmetteurs dans la fente synaptique.",
     "expAr": "وصف تسلسلي متكامل لوصول جهد الفعل وإفراز النواقل العصبية في المشابك.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -854,7 +854,7 @@
     "expEn": "The passage explicitly states that osteoporosis arises when osteoclastic bone resorption outpaces osteoblastic bone formation.",
     "expFr": "Le texte explique que l'ostéoporose survient lorsque la résorption ostéoclastique dépasse la synthèse ostéoblastique.",
     "expAr": "يوضح النص بوضوح أن هشاشة العظام تحدث عندما يتجاوز ارتشاف العظم بواسطة ناقضات العظم (osteoclasts) معدل بنائه بواسطة بانيات العظم (osteoblasts).",
-    "points": 10,
+    "points": 30,
     "ctxEn": "Bone is a dynamic living tissue undergoing continuous remodeling through the coupled activities of osteoblasts (bone-forming cells) and osteoclasts (bone-resorbing cells). In healthy adults, the rate of bone formation equals bone resorption. However, with aging or hormonal deficiency (such as postmenopausal estrogen decline), osteoclastic activity outpaces osteoblastic synthesis, resulting in osteoporosis characterized by decreased bone mineral density and increased susceptibility to fragility fractures of the femoral neck and vertebrae.",
     "ctxFr": "L'os est un tissu vivant dynamique subissant un remodelage permanent assuré par les ostéoblastes et les ostéoclastes. Avec l'âge ou la ménopause, l'activité ostéoclastique dépasse la synthèse ostéoblastique, conduisant à l'ostéoporose et aux fractures de fragilité.",
     "ctxAr": "العظم نسيج حي يخضع لإعادة تشكيل مستمرة بتوازن بين الخلايا البانية والكاسرة للعظم. مع التقدم في العمر أو نقص الإستروجين، يتفوق نشاط الخلايا الكاسرة مما يؤدي لهشاشة العظام والكسور المرضية."
@@ -879,7 +879,7 @@
     "expEn": "Because articular cartilage is avascular and aneural, it relies entirely on diffusion of nutrients from the surrounding synovial fluid.",
     "expFr": "Le cartilage articulaire étant avasculaire, il dépend de la diffusion des nutriments dissous dans le liquide synovial.",
     "expAr": "نظراً لأن الغضروف المفصلي لا يحتوي على أوعية دموية، فإنه يعتمد كلياً على انتشار المواد المغذية من السائل الزليلي.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "Synovial joints, or diarthroses, are engineered to minimize friction and resist mechanical shear during ambulation. The articulating osseous surfaces are capped by avascular, aneural articular cartilage composed mainly of type II collagen and proteoglycans. Surrounding the joint cavity is the fibrous articular capsule, lined internally by the synovial membrane. This membrane secretes synovial fluid, an ultrafiltrate of blood plasma containing hyaluronic acid and lubricin, which lubricates the articular surfaces and nourishes chondrocytes via diffusion.",
     "ctxFr": "Les diarthroses sont conçues pour minimiser les frottements. Les surfaces sont recouvertes de cartilage articulaire avasculaire nourri par diffusion à partir du liquide synovial sécrété par la membrane synoviale.",
     "ctxAr": "صُممت المفاصل الزليلية لتقليل الاحتكاك. تغطى أسطح العظام بغضروف مفصلي خالٍ من الأوعية والأعصاب يتغذى عبر الانتشار من السائل الزليلي الذي تفرزه المحفظة الزليلية."
@@ -904,7 +904,7 @@
     "expEn": "Acetylcholinesterase rapidly hydrolyzes acetylcholine into acetate and choline, ending the muscle contraction signal.",
     "expFr": "L'acétylcholinestérase hydrolyse l'acétylcholine pour permettre le relâchement du myocyte.",
     "expAr": "يقوم إنزيم أستيل كولين إستيراز (Acetylcholinesterase) بتحليل الأسيتيل كولين سريعاً لإنهاء التنبيه العضلي.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "Transmission of nerve impulses to skeletal muscle occurs at specialized synapses known as neuromuscular junctions (NMJs). When a motor action potential depolarizes the presynaptic terminal, voltage-gated calcium channels open, prompting exocytosis of acetylcholine (ACh) into the synaptic cleft. ACh rapidly binds nicotinic receptors on the folded motor end plate, triggering sodium influx and end-plate potential generation. Acetylcholinesterase rapidly hydrolyzes ACh, terminating the signal to permit subsequent muscle twitch relaxation.",
     "ctxFr": "La transmission neuromusculaire s'effectue par libération d'acétylcholine (ACh) au niveau de la fente synaptique. L'acétylcholinestérase détruit rapidement l'ACh pour permettre le relâchement musculaire.",
     "ctxAr": "يتم نقل الإشارة العصبية في الوصلة العصبية العضلية بتحرير الأسيتيل كولين، ويقوم إنزيم أستيل كولين إستيراز بإيقاف الإشارة لتمكين استرخاء الليف العضلي."
@@ -929,7 +929,7 @@
     "expEn": "Surfactant reduces alveolar surface tension, preventing atelectasis (alveolar collapse) during expiration.",
     "expFr": "Le surfactant réduit la tension superficielle et empêche l'affaissement des alvéoles à l'expiration.",
     "expAr": "يقلل السطحي الرئوي من التوتر السطحي مما يمنع انخماص الأسناخ الرئوية عند نهاية الزفير.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "The human respiratory system accomplishes gas exchange across an ultra-thin blood-air barrier in approximately 400 million alveoli. The alveolar surface consists predominantly of flat type I pneumocytes facilitating passive O2 and CO2 diffusion, alongside cuboidal type II pneumocytes. Type II cells synthesize pulmonary surfactant, a complex lipoprotein containing dipalmitoylphosphatidylcholine. By lowering alveolar surface tension, surfactant prevents end-expiratory atelectasis and equalizes pressure among alveoli of varying diameters.",
     "ctxFr": "Le système respiratoire assure les échanges gazeux au niveau de 400 millions d'alvéoles. Les pneumocytes de type II synthétisent le surfactant qui abaisse la tension superficielle et évite l'atélectasie expiratoire.",
     "ctxAr": "تحتوي الرئتان على نحو 400 مليون سنخ رئوي للتبادل الغازي. تفرز خلايا السنخ من النوع الثاني مادة السطحي الرئوي التي تمنع انخماص الأسناخ عند الزفير."
@@ -954,7 +954,7 @@
     "expEn": "Tonic resting parasympathetic outflow via the vagus nerve (cranial nerve X) slows sinoatrial pacemaker discharge to 60-70 bpm.",
     "expFr": "Le nerf vague (nerf crânien X) exerce un tonus freinateur parasympathique permanent sur le nœud sinusal.",
     "expAr": "يوفر العصب المبهم (العاشر - Vagus nerve) كبحاً نظير ودي مستمر يقلل معدل ضربات القلب أثناء الراحة إلى 60-70 نبضة/دقيقة.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "The sinoatrial (SA) node located in the superior wall of the right atrium acts as the physiological cardiac pacemaker, generating spontaneous action potentials at an intrinsic rate of 100 beats per minute. Under resting conditions, tonic parasympathetic stimulation via the vagus nerve (cranial nerve X) releases acetylcholine to slow pacemaker firing down to 60-70 bpm (vagal tone). During physical exertion or stress, sympathetic adrenergic stimulation increases sodium and calcium influx, elevating heart rate and contractile force.",
     "ctxFr": "Le nœud sinusal génère un rythme spontané de 100 bpm. Au repos, le contingent parasympathique du nerf vague (X) libère de l'acétylcholine pour ralentir la fréquence à 60-70 bpm (tonus vagal).",
     "ctxAr": "تولد العقدة الجيبية الأذينية إشارات ذاتية بمعدل 100 نبضة/دقيقة، بينما يقوم العصب المبهم (العاشر) بكبحها فسيولوجياً أثناء الراحة إلى 60-70 نبضة/دقيقة."
@@ -979,7 +979,7 @@
     "expEn": "The central nucleus pulposus is the gelatinous core that absorbs axial compressive shocks, enclosed by the fibrous annulus fibrosus.",
     "expFr": "Le nucleus pulposus (noyau gélatineux) absorbe les chocs axiaux au centre du disque intervertébral.",
     "expAr": "النواة اللبية (Nucleus pulposus) هي الكتلة الجيلاتينية المركزية التي تمتص الضغوط المحورية في القرص الفقري.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "The human vertebral column consists of 33 vertebrae during infancy, consolidating into 26 distinct functional bones in adulthood: 7 cervical, 12 thoracic, 5 lumbar, the sacrum (5 fused vertebrae), and the coccyx (4 fused segments). Intervertebral discs situated between adjacent vertebral bodies consist of a tough outer annulus fibrosus and a gelatinous central nucleus pulposus. These discs absorb vertical shocks and grant multi-directional spinal flexibility while safeguarding the enclosed spinal cord.",
     "ctxFr": "La colonne vertébrale adulte compte 26 os. Les disques intervertébraux comprennent un anneau fibreux périphérique (annulus fibrosus) et un noyau gélatineux central (nucleus pulposus) amortisseur de chocs.",
     "ctxAr": "يتكون العمود الفقري البالغ من 26 عظمة. تتكون الأقراص بين الفقرية من حلقة ليفية محيطية ونواة لبية جيلاتينية مركزية لامتصاص الصدمات وحماية النخاع الشوكي."
@@ -1004,7 +1004,7 @@
     "expEn": "A non-contact pivoting injury with an audible 'pop', immediate hemarthrosis, and a strongly positive Lachman test is diagnostic of an Anterior Cruciate Ligament (ACL) tear.",
     "expFr": "Un traumatisme en torsion avec sensation de pop audible, hémarthrose précoce et test de Lachman positif signe la rupture du ligament croisé antérieur (LCA).",
     "expAr": "حدوث التواء مفاجئ مع سماع صوت فرقعة وتجمع دموي فوري وإيجابية اختبار لاخمان يؤكد تشخيص تمزق الرباط الصليبي الأمامي (ACL).",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 21-year-old competitive soccer player is evaluated after an acute injury. While rapidly decelerating and twisting on a firmly planted right foot, he felt an audible 'pop' inside the knee, followed by intense pain and inability to continue playing. Examination 2 hours later demonstrates marked joint effusion (hemarthrosis). The Lachman test is strongly positive with an absent firm endpoint. Anterior drawer test is positive, whereas posterior drawer and collateral stress tests are normal.",
     "ctxFr": "Vignette Clinique : Footballeur de 21 ans présentant une entorse grave du genou droit avec bruit de craquement audible en torsion, hémarthrose rapide et test de Lachman nettement positif.",
     "ctxAr": "حالة سريرية: لاعب كرة قدم يبلغ 21 عاماً أصيب أثناء المباراة بحركة التوائية مفاجئة مع صوت طقطقة وتورم سريع بالركبة، وفحص لاخمان إيجابي دون نقطة توقف صلبة."
@@ -1029,7 +1029,7 @@
     "expEn": "Compression of the median nerve within the osteofibrous carpal tunnel causes paresthesias in the thumb, index, and middle fingers, thenar atrophy, and positive Phalen/Tinel signs.",
     "expFr": "La compression du nerf médian dans le canal carpien provoque des paresthésies des 3 premiers doigts et une amyotrophie thénarienne.",
     "expAr": "انضغاط العصب المتوسط (Median nerve) داخل النفق الرسغي يؤدي لخدر وتنميل الأصابع الثلاثة الأولى وضمور عضلات الرانفة.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 46-year-old office worker presents with a 6-month history of nocturnal burning pain, numbness, and tingling in the palmar surface of the thumb, index, and middle fingers of her right hand. Shaking the hand temporarily relieves the symptoms (flick sign). Physical exam shows mild atrophy of the thenar eminence. Phalen's test reproduces paresthesia within 30 seconds, and percussion over the volar wrist crease (Tinel's sign) causes tingling in the same digits.",
     "ctxFr": "Vignette Clinique : Patiente de 46 ans se plaignant d'engourdissements nocturnes des trois premiers doigts de la main droite avec signe de Phalen et de Tinel positifs et début d'amyotrophie thénarienne.",
     "ctxAr": "حالة سريرية: موظفة مكتبية تبلغ 46 عاماً تشكو من خدر وتنميل ليلي في الإبهام والسبابة والوسطى مع إيجابية علامتي فالين وتينيل وضمور خفيف في الرانفة."
@@ -1054,7 +1054,7 @@
     "expEn": "Blood pressure ≥140/90 mmHg (here 168/102 mmHg) with ECG criteria of left ventricular hypertrophy confirms Stage 2 Arterial Hypertension with target organ damage.",
     "expFr": "Une pression artérielle à 168/102 mmHg associée à des signes ECG d'hypertrophie ventriculaire gauche (HVG) définit l'hypertension artérielle de stade 2 avec retentissement.",
     "expAr": "ضغط دم مرتفع مستمر 168/102 mmHg مع علامات تخطيطية لتضخم البطين الأيسر يصنف كارتفاع ضغط الدم الشرياني من الدرجة الثانية مع تضرر الأعضاء الهدف.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 54-year-old asymptomatic executive presents for a routine executive health examination. Office blood pressure measurements across three separate visits average 168/102 mmHg bilaterally. Cardiovascular examination reveals an S4 atrial gallop rhythm. Fundoscopy demonstrates grade I arteriolar narrowing. The 12-lead ECG exhibits high voltage S waves in V1 and tall R waves in V5 (Sokolow-Lyon index >38 mm) with T-wave inversions consistent with left ventricular hypertrophy (LVH).",
     "ctxFr": "Vignette Clinique : Homme de 54 ans asymptomatique chez qui on découvre une PA moyenne de 168/102 mmHg avec galop B4 et des signes ECG évidents d'hypertrophie ventriculaire gauche.",
     "ctxAr": "حالة سريرية: رجل يبلغ 54 عاماً لا يشكو من أعراض ولديه قياسات متكررة لضغط الدم تبلغ 168/102 mmHg مع وجود صوت قلبي رابع وتضخم البطين الأيسر في التخطيط."
@@ -1079,7 +1079,7 @@
     "expEn": "Myasthenia gravis is mediated by pathogenic autoantibodies against postsynaptic nicotinic acetylcholine receptors (AChR) at the neuromuscular junction.",
     "expFr": "La myasthénie auto-immune est due à des auto-anticorps bloquants dirigés contre les récepteurs nicotiniques de l'acétylcholine (AChR).",
     "expAr": "ينتج الوهن العضلي الوبيل (Myasthenia gravis) عن أجسام مضادة ذاتية تستهدف مستقبلات الأسيتيل كولين النيكوتينية في الغشاء بعد المشبكي.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 32-year-old female presents with fluctuating bilateral eyelid drooping (ptosis) and double vision (diplopia) that worsen notably in the evening or after reading. Over the past month, she has developed difficulty chewing tough meats and mild proximal arm weakness. Physical exam confirms fatigable ptosis during 60 seconds of sustained upward gaze. Deep tendon reflexes and sensation are normal. An ice pack applied over the closed eyes for 2 minutes produces immediate resolution of the ptosis.",
     "ctxFr": "Vignette Clinique : Femme de 32 ans présentant un ptosis et une diplopie fluctuants à prédominance vespérale. Le test du glaçon est positif, en faveur d'une myasthénie auto-immune.",
     "ctxAr": "حالة سريرية: شابة تبلغ 32 عاماً تعاني من تدلي الجفون وازدواج الرؤية الذي يزداد مساءً، مع إيجابية اختبار كيس الثلج المميز لمرض الوهن العضلي الوبيل."
@@ -1104,7 +1104,7 @@
     "expEn": "Periumbilical pain migrating to the right lower quadrant with McBurney tenderness, fever, and peritoneal signs confirms acute appendicitis.",
     "expFr": "La douleur péri-ombilicale migratrice vers la fosse iliaque droite avec point de McBurney douloureux signe l'appendicite aiguë.",
     "expAr": "ألم البطن المهاجر من حول السرة إلى الحفرة الحرقفية اليمنى مع علامات التهاب الصفاق يؤكد تشخيص التهاب الزائدة الدودية الحاد (Acute Appendicitis).",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 19-year-old male student presents to the Emergency Department with acute abdominal pain of 14 hours' duration. The pain started in the epigastric and periumbilical regions before migrating to the right lower quadrant (RLQ). He reports anorexia and low-grade nausea. Temperature is 38.3°C. Examination reveals exquisite localized tenderness at McBurney's point with guarding, rebound tenderness, and a positive Rovsing sign.",
     "ctxFr": "Vignette Clinique : Étudiant de 19 ans présentant une douleur de la fosse iliaque droite migratrice depuis la région péri-ombilicale avec défense au point de McBurney et signe de Rovsing positif.",
     "ctxAr": "حالة سريرية: شاب يبلغ 19 عاماً يشكو من ألم بطني حاد بدأ حول السرة وانتقل للحفرة الحرقفية اليمنى مع حمى ودفاع بطني عند نقطة ماك بورني."
@@ -1129,7 +1129,7 @@
     "expEn": "A fracture of the distal radius metaphysis with characteristic dorsal angulation/displacement ('dinner fork deformity') after a fall on an outstretched hand is a Colles' fracture.",
     "expFr": "La fracture de Pouteau-Colles (Colles' fracture) est une fracture métaphysaire inférieure du radius avec bascule postérieure en 'dos de fourchette'.",
     "expAr": "كسر كولز (Colles' fracture) هو كسر أسفل عظم الكعبرة الناتج عن السقوط على اليد المنبسطة مسبباً تشوهاً مميزاً يشبه شوكة الطعام.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 68-year-old woman falls on her outstretched hand on a sidewalk. She presents with severe wrist pain and deformity. Inspection reveals the classic 'dinner-fork' dorsal angulation deformity of the right distal forearm and wrist with edema and point tenderness over the distal radial metaphysis. Radial pulse is strong and neurovascular status of the hand is intact.",
     "ctxFr": "Vignette Clinique : Femme de 68 ans présentant une déformation en 'dos de fourchette' du poignet droit après chute sur la main en extension, typique d'une fracture de Pouteau-Colles.",
     "ctxAr": "حالة سريرية: سيدة تبلغ 68 عاماً سقطت على يدها الممدودة وظهر لديها تشوه عظمي مميز يشبه شوكة الطعام في أسفل الساعد الأيمن متوافق مع كسر كولز."
@@ -1179,7 +1179,7 @@
     "expEn": "'Acide désoxyribonucléique' is the French name for deoxyribonucleic acid (DNA).",
     "expFr": "'Acide désoxyribonucléique' est le nom français de l'acide désoxyribonucléique (ADN).",
     "expAr": "'DNA (Deoxyribonucleic acid)' هو الاسم الإنجليزي لـ 'الأحماض الدقيقة النووية'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1229,7 +1229,7 @@
     "expEn": "'Tissu osseux' translates to 'bone tissue' (os = bone).",
     "expFr": "'Tissu osseux' se traduit par 'bone tissue' (os = os).",
     "expAr": "'Tissu osseux' يترجم إلى 'bone tissue' (Os = عظم).",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1279,7 +1279,7 @@
     "expEn": "'Loi de Laplace' is the French name for Laplace's law (law of the heart wall).",
     "expFr": "'Loi de Laplace' est le nom français de la loi de Laplace.",
     "expAr": "'Loi de Laplace' هو الاسم الفرنسي لقانون لابلاس.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1329,7 +1329,7 @@
     "expEn": "'Génotype' is the French for 'genotype' (genetic constitution).",
     "expFr": "'Génotype' est le français pour 'genotype' (constitution génétique).",
     "expAr": "'Génotype' هو الاسم الفرنسي لـ 'genotype' (التركيبة الجينية).",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1379,7 +1379,7 @@
     "expEn": "'Membrane plasmique' is the French for 'plasma membrane' (cell membrane).",
     "expFr": "'Membrane plasmique' est le français de 'plasma membrane'.",
     "expAr": "'Membrane plasmique' هو الفرنسية لـ 'plasma membrane'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1429,7 +1429,7 @@
     "expEn": "'Système d'information santé' is the French for 'health information system' (HIS).",
     "expFr": "'Système d'information santé' est le français de 'health information system' (HIS).",
     "expAr": "'Système d'information santé' هو الفرنسية لـ 'health information system'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1479,7 +1479,7 @@
     "expEn": "'Neurulation' is the French name for the process of neural tube formation.",
     "expFr": "'Neurulation' est le nom français du processus de formation du tube neural.",
     "expAr": "'Neurulation' هو الاسم الفرنسي للعملية التي تتشكل فيها الأنبوب العصبي.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1529,7 +1529,7 @@
     "expEn": "'Agents pathogènes' is the French for 'pathogens' (disease-causing agents).",
     "expFr": "'Agents pathogènes' est le français de 'pathogens'.",
     "expAr": "'Agents pathogènes' هو الفرنسية لـ 'pathogens'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1579,7 +1579,7 @@
     "expEn": "'Pommade' is the French for 'ointment' (a medicinal preparation for external use).",
     "expFr": "'Pommade' est le français de 'ointment'.",
     "expAr": "'Pommade' هو الفرنسية لـ 'ointment'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1604,7 +1604,7 @@
     "expEn": "A sign is an objective finding (observable/examinable), while a symptom is subjective (reported by the patient).",
     "expFr": "Un signe est un résultat objectif (observable), tandis qu'un symptôme est subjectif (reporté par le patient).",
     "expAr": "العرض (sign) هو نتيجة موضوعية قابلة للملاحظة، بينما الخلايا (symptom) هي ذاتية يبلغ عنها المريض.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1629,7 +1629,7 @@
     "expEn": "'Terminologie anatomic' is the French for 'anatomical terminology' (Terminologia Anatomica).",
     "expFr": "'Terminologie anatomic' est le français de 'anatomical terminology'.",
     "expAr": "'Terminologie anatomic' هو الفرنسية لـ 'anatomical terminology'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1654,7 +1654,7 @@
     "expEn": "'Articulation' (in the joint sense) is the French for 'joint'.",
     "expFr": "'Articulation' (au sens des articulations) est le français de 'joint'.",
     "expAr": "'Articulation' (au sens des articulations) هو الفرنسية لـ 'joint'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1684,7 +1684,7 @@
     "expEn": "Word order: 'The patella is the sesamoid bone located anterior to the knee.'",
     "expFr": "Ordre des mots : 'La rotule est l'os sésamoïde situé antérieurement au genou.'",
     "expAr": "ترتيب الكلمات: 'الرضفة هي عظم السمسمي الموجود في الوجه الأمامي للمفصل.'",
-    "points": 10,
+    "points": 25,
     "ctxEn": "The patella is the sesamoid bone located anterior to the knee joint.",
     "ctxFr": "La rotule est l'os sésamoïde situé à l'extrémité antérieure du genou.",
     "ctxAr": "الرضفة هى العظم السمسمي الموضع فى الشفIRST الأمامى للمفصل."
@@ -1709,7 +1709,7 @@
     "expEn": "'Neoplasie bénigne' is the French for 'benign neoplasm'.",
     "expFr": "'Neoplasie bénigne' est le français de 'benign neoplasm'.",
     "expAr": "'Neoplasie bénigne' هو الفرنسية لـ 'benign neoplasm'.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "Level 5 — Tumour pathology: distinguish benign from malignant neoplasia.",
     "ctxFr": "Niveau 5 — Pathologie tumorale : distinguer la néoplasie bénigne de la maligne.",
     "ctxAr": "المستوى 5 — أمراض الأورام: التمييز بين الأورام الحميدة والخبيثة."
@@ -1734,7 +1734,7 @@
     "expEn": "'Tumeur maligne' is the French for 'malignant neoplasm'.",
     "expFr": "'Tumeur maligne' est le français de 'malignant neoplasm'.",
     "expAr": "'Tumeur maligne' هو الفرنسية لـ 'malignant neoplasm'.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "Level 5 — Tumour pathology: recognise the malignant phenotype and its nomenclature.",
     "ctxFr": "Niveau 5 — Pathologie tumorale : reconnaître le phénotype malin et sa nomenclature.",
     "ctxAr": "المستوى 5 — أمراض الأورام: التعرف على النمط الظاهري الخبيث وتسمياته."
@@ -1759,7 +1759,7 @@
     "expEn": "'Homeostasie' is the French for 'homeostasis'.",
     "expFr": "'Homeostasie' est le français de 'homeostasis'.",
     "expAr": "'Homeostasie' هو الفرنسية لـ 'homeostasis'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1784,7 +1784,7 @@
     "expEn": "'Régulation homéostatique' is the French for 'homeostatic regulation'.",
     "expFr": "'Régulation homéostatique' est le français de 'homeostatic regulation'.",
     "expAr": "'Régulation homéostatique' هو الفرنسية لـ 'homeostatic regulation'.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1809,7 +1809,7 @@
     "expEn": "'Carcinome' is the French for 'carcinoma' (malignant tumor of epithelial tissue).",
     "expFr": "'Carcinome' est le français de 'carcinoma'.",
     "expAr": "'Carcinome' هو الفرنسية لـ 'carcinoma'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1834,7 +1834,7 @@
     "expEn": "'Hépatique' (adjectif) is the French for 'hepatic' (relating to the liver).",
     "expFr": "'Hépatique' (adjectif) est le français de 'hepatic'.",
     "expAr": "'Hépatique' (adjectif) هو الفرنسية لـ 'hepatic'.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1862,7 +1862,7 @@
     "expEn": "Word order: 'The heart pumps blood through the body.'",
     "expFr": "Ordre des mots : 'Le cœur pompe le sang dans tout le corps.'",
     "expAr": "ترتيب الكلمات: 'القلب يضخ الدم عبر الجسم.'",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1892,7 +1892,7 @@
     "expEn": "Word order: 'The deltoid muscle abducts the humerus at the shoulder.'",
     "expFr": "Ordre des mots : 'Le muscle deltoïde abducte la tête du fémur à l'épaule.'",
     "expAr": "ترتيب الكلمات: 'العضلة الدلتويدية تذبذب العظمة العضدية عند الكتف.'",
-    "points": 10,
+    "points": 25,
     "ctxEn": "The deltoid muscle abducts the humerus at the shoulder.",
     "ctxFr": "Le muscle deltoïde abducte la tête du fémur à l'épaule.",
     "ctxAr": "العضلة الدلتويدية تؤدي إلى اضطراب العظمة العضدية عند الكتف."
@@ -1917,7 +1917,7 @@
     "expEn": "The patella protects the knee joint.",
     "expFr": "La rotule protège l'articulation du genou.",
     "expAr": "الرضفة تحمي مفصل الركبة.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1942,7 +1942,7 @@
     "expEn": "The femur is the longest and strongest bone in the body.",
     "expFr": "Le fémur est le plus long et le plus solide des os du corps.",
     "expAr": "العظم الفخذي هو أطول وكبرى العظام في الجسم.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -1992,7 +1992,7 @@
     "expEn": "'Antécédent familial' is the French for 'family history' in a medical context.",
     "expFr": "'Antécédent familial' est le français de 'family history' en contexte médical.",
     "expAr": "'Antécédent familial' est le français de 'family history'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2017,7 +2017,7 @@
     "expEn": "'Je ne ressens aucun signe' in a clinical context means 'There are no signs' (no objective findings).",
     "expFr": "'Je ne ressens aucun signe' au contexte clinique signifie 'There are no signs'.",
     "expAr": "'Je ne ressens aucun signe' في السياق السريري يعني 'There are no signs'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2042,7 +2042,7 @@
     "expEn": "'Voie aérienne' is the French for 'airway' (the passage for air from the nose/mouth to the lungs).",
     "expFr": "'Voie aérienne' est le français de 'airway' (la passerelle pour l'air du nez/orais aux poumons).",
     "expAr": "'المجرى الهوائي' هو الفرنسية لـ 'airway'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2067,7 +2067,7 @@
     "expEn": "'Amtières autonomes' is the French for 'autonomic agents' (substances affecting the autonomic nervous system).",
     "expFr": "'Amtières autonomes' est le français de 'autonomic agents' (substances affectant le système nerveux autonome).",
     "expAr": "'المواد الذاتية' هو الفرنسية لـ 'autonomic agents'.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2117,7 +2117,7 @@
     "expEn": "Blood pressure ≥140/90 mmHg (here 168/102 mmHg) with ECG criteria of left ventricular hypertrophy confirms Stage 2 Arterial Hypertension with target organ damage.",
     "expFr": "Une pression artérielle ≥140/90 mmHg (ici 168/102 mmHg) avec critères ECG d'hypertrophie ventriculaire gauche confirme l'hypertension artérielle de stade 2 avec lésion des organes cibles.",
     "expAr": "ضغط الدم ≥140/90 mmHg (هنا 168/102 mmHg) مع معايير تخطيط القلب لضخامة البطين الأيسر يؤكد ارتفاع ضغط الدم الشرياني من المرحلة الثانية مع تلف الأعضاء المستهدفة.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 54-year-old asymptomatic executive presents for a routine examination. Office blood pressure averaging 168/102 mmHg. Cardiovascular exam reveals an S4 gallop. ECG shows left ventricular hypertrophy with T-wave inversions.",
     "ctxFr": "Vignette clinique: Un homme d'affaires de 54 ans asymptomatique se présente pour un examen de routine. La pression artérielle de bureau moyenne de 168/102 mmHg. L'examen cardiovasculaire révèle un S4 gallop. L'ECG montre une hypertrophie ventriculaire gauche avec inversions d'onde T.",
     "ctxAr": "حالة سريرية: رجل أعمال يبلغ من العمر 54 عاماً خالي من الأعراض يخضع لفحص روتيني. متوسط ضغط الدم 168/102 مم زئبق. يكشف الفحص العصبي عن تضخم البطين الأيسر مع انعكاس موجات T."
@@ -2142,7 +2142,7 @@
     "expEn": "The heart is the muscular pump that propels blood through the circulatory system.",
     "expFr": "Le cœur est la pompe musculaire qui propulse le sang dans le système circulatoire.",
     "expAr": "القلب هو المضخة العضلية التي تضخ الدم في الجهاز الدوراني.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2172,7 +2172,7 @@
     "expEn": "Word order: 'The right ventricle pumps deoxygenated blood to the lungs.'",
     "expFr": "Ordre des mots : 'Le ventricule droit pompe le sang désoxygéné vers les poumons.'",
     "expAr": "ترتيب الكلمات: 'البطين الأيمن يضخ الدم غير المؤكسج إلى الرئتين.'",
-    "points": 10,
+    "points": 25,
     "ctxEn": "The right ventricle pumps deoxygenated blood to the lungs for oxygenation.",
     "ctxFr": "Le ventricule droit pompe le sang désoxygéné vers les poumons pour l'oxygénation.",
     "ctxAr": "البطين الأيمن يضخ الدم غير المؤكسج إلى الرئتين للتأكسج."
@@ -2197,7 +2197,7 @@
     "expEn": "Pulmonary surfactant reduces alveolar surface tension, preventing alveolar collapse (atelectasis) at the end of expiration.",
     "expFr": "Le surfactant pulmonaire réduit la tension superficielle alvéolaire, empêchant l'affaissement des alvéoles (atelasie) à la fin de l'expiration.",
     "expAr": "يقلل المسطح الرئوي من التوتر السطحي للأسناخ، ومنع انهيار الأسناخ (التليف الرئوي) في نهاية الزفير.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "Pulmonary surfactant is a complex mixture of lipids and proteins secreted by type II pneumocytes that reduces alveolar surface tension.",
     "ctxFr": "Le surfactant pulmonaire est un mélange complexe de lipides et de protéines sécrétés par les pneumocytes de type II qui réduit la tension superficielle alvéolaire.",
     "ctxAr": "المسطح الرئوي هو مزيج معقد من الدهون والبروتينات يفرزها الخلايا النكية من النوع الثاني، مما يقلل التوتر السطحي للأسناخ."
@@ -2222,7 +2222,7 @@
     "expEn": "Acute onset dyspnoea, pleuritic chest pain, and hypoxaemia with a normal ECG and clear lungs are highly suggestive of pulmonary embolism.",
     "expFr": "L'apparition aiguë de dyspnoea, de douleur thoracique pleuritique et d'hypoxémie avec un ECG normal et des poumons clairs sont hautement suggestives d'un embolisme pulmonaire.",
     "expAr": "ظهور حاد للضيق التنفسي، والألم الصدري التعافي، ونقص التأكسج، مع تخطيط القلب الطبيعي والرئتين واضحتين، يمكن أن يشير إلى أنماط العقم.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 34-year-old female presents with sudden onset dyspnoea and right-sided pleuritic chest pain. She recently underwent surgery for a total hip replacement. She is tachycardic (HR 110 bpm) and hypoxaemic (SpO2 92% on room air). D-dimer is elevated.",
     "ctxFr": "Vignette clinique: Une femme de 34 ans présente un apparition soudaine de dyspnoea et une douleur thoracique pleuritique du côté droit. Elle a récemment subi une intervention chirurgicale pour remplacement totale de la hanche. Elle est tachycardique (FC 110 bpm) et hypoxémique (SpO2 92% à l'air ambiant). La D-dimer est élevée.",
     "ctxAr": "حالة سريرية: أنثى تبلغ من العمر 34 عاماً تعاني من ضيق التنفس المفاجئ وألم صدري شديد من جانب واحد. لقد خضعَت للتدخل الجراحي للتخلص من الورك الكاملة. إنها مت accelerating (HR 110 bpm) و hypoxaemic (SpO2 92% على هواء الغرفة."
@@ -2272,7 +2272,7 @@
     "expEn": "'Première loi de la thermodynamique' is the French for 'first law of thermodynamics' (the law of conservation of energy).",
     "expFr": "'Première loi de la thermodynamique' est le français de 'first law of thermodynamics' (loi de conservation de l'énergie).",
     "expAr": "'Première loi de la thermodynamique' هو الفرنسية لـ 'first law of thermodynamics'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2297,7 +2297,7 @@
     "expEn": "'Pression artérielle' is the French for 'blood pressure'.",
     "expFr": "'Pression artérielle' est le français de 'blood pressure'.",
     "expAr": "'Pression artérielle' هو الفرنسية لـ 'blood pressure'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2322,7 +2322,7 @@
     "expEn": "'Cardiac output' is the volume of blood pumped by the heart per minute.",
     "expFr": "'Cardiac output' هو حجم الدم المضخوم بواسطة القلب في الدقيقة.",
     "expAr": "'Cardiac output' هو حجم الدم المضخوم بواسطة القلب في الدقيقة.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2347,7 +2347,7 @@
     "expEn": "Sudden onset severe chest pain radiating to the back, hypotension, and a new aortic regurgitation murmur are classic signs of aortic dissection.",
     "expFr": "البداية المفاجئة لآلام الصدر المشتقة إلى الظهر، وانخفاض ضغط الدم، وصوت انصمام الأورطي الجديد هي علامات كلاسيكية لانصمام الأورطي.",
     "expAr": "بداية مفاجئة لآلام الصدر المشتقة إلى الظهر، وانخفاض ضغط الدم، وصوت انصمام الأورطي الجديد هي علامات كلاسيكية لانصمام الأورطي.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A 56-year-old male presents with sudden onset tearing chest pain radiating to the interscapular region. Blood pressure is 180/100 mmHg with a new diastolic murmur. The ECG shows no ischemic changes.",
     "ctxFr": "Vignette clinique: Un homme de 56 ans présente une douleur thoracique en forme de déchirement brutale irradiant vers la région interscapulaire. La pression artérielle est de 180/100 mmHg avec un nouveau souffle diastolique. L'ECG montre aucun changement ischémique.",
     "ctxAr": "حالة سريرية: رجل يبلغ من العمر 56 عاماً يعاني من ألم صادري مُحْرَق مُفاجئ ينتشر إلى المنطقة بين الكتفين. ضغط الدم هو 180/100 mmHg مع صوت جديد لل انهيار. يظهر تخطيط القلب دون أي تغييرات إقفارية."
@@ -2372,7 +2372,7 @@
     "expEn": "'Staphylocoque' is the French for 'Staphylococcus' (a Gram-positive coccus in clusters).",
     "expFr": "'Staphylocoque' est le français de 'Staphylococcus' (cocci Gram positif en amas).",
     "expAr": "'Staphylocoque' هو الفرنسية لـ 'Staphylococcus'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2397,7 +2397,7 @@
     "expEn": "'Agents pathogènes' is the French for 'pathogen' (an organism that causes disease).",
     "expFr": "'Agents pathogènes' est le français de 'pathogen' (organisme qui cause la maladie).",
     "expAr": "'Agents pathogènes' هو الفرنسية لـ 'pathogen'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2447,7 +2447,7 @@
     "expEn": "'Voie d'administration' is the French for 'route of administration' (the path by which a drug enters the body).",
     "expFr": "'Voie d'administration' est le français de 'route of administration' (le chemin par lequel un médicament entre dans le corps).",
     "expAr": "'Voie d'administration' هو الفرنسية لـ 'route of administration'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2472,7 +2472,7 @@
     "expEn": "'Acide désoxyribonucléique' is the French for 'deoxyribonucleic acid (DNA)'.",
     "expFr": "'Acide désoxyribonucléique' est le français de 'acide désoxyribonucléique (ADN)'.",
     "expAr": "'Ac Siddique désoxyribonucléique' هو الفرنسية لـ DNA (ADN).",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2497,7 +2497,7 @@
     "expEn": "Glycolysis is the metabolic pathway that converts glucose into pyruvate.",
     "expFr": "La glycolyse est la voie métabolique qui convertit le glucose en pyruvate.",
     "expAr": "الجليكوليز هو المسار الأيضي الذي يحول الجلوكوز إلى بيروفيت.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2526,7 +2526,7 @@
     "expEn": "Word order: 'The inner cell mass forms the embryo proper.'",
     "expFr": "Ordre des mots : 'La masse cellulaire interne forme l'embryon proprement dit.'",
     "expAr": "ترتيب الكلمات: 'مجموعة الخلايا الداخلية تشكل الجنين الفعلي.'",
-    "points": 10,
+    "points": 25,
     "ctxEn": "The inner cell mass (embryoblast) differentiates into the embryo proper.",
     "ctxFr": "La masse cellulaire interne (embryoblast) se différencie en embryon proprement dit.",
     "ctxAr": "مجموعة الخلايا الداخلية تشكل الجنين الفعلي."
@@ -2551,7 +2551,7 @@
     "expEn": "Gastrulation is the process during embryonic development where the three germ layers (ectoderm, mesoderm, endoderm) are formed.",
     "expFr": "La gastrulation est le processus au cours du développement embryonnaire où les trois couches germinales (éctoderme, mésoderme, endoderme) se forment.",
     "expAr": "الاستطهار هو العملية التي تحدث أثناء التطور الجنيني وينشأ خلالها الطبقتان الجرثوميتان (الطحاء، المعوي، الداخلي).",
-    "points": 10,
+    "points": 30,
     "ctxEn": "Gastrulation is a key process in embryonic development during which the single-layered blastula is rearranged to form the three primary germ layers.",
     "ctxFr": "La gastrulation est un processus clé dans le développement embryonnaire au cours duquel la blasthliste monolatérale est réorganisée pour former les trois couches germinales primaires.",
     "ctxAr": "الاستطهار هو عملية رئيسية في نمو الجنين خلالها تعيد الطبقة البدائية صياغة تشكيل الطبقتين الجرثوميتين الأساسية."
@@ -2601,7 +2601,7 @@
     "expEn": "'Mitochondrie' is the French for 'mitochondrion' (the powerhouse of the cell).",
     "expFr": "'Mitochondrie' est le français de 'mitochondrion' (la centrale énergétique de la cellule).",
     "expAr": "'الميتوكوندريا' هو الفرنسية لـ 'mitochondrion'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2626,7 +2626,7 @@
     "expEn": "Microtubules form the mitotic spindle that segregates chromosomes during cell division.",
     "expFr": "Les microtubules forment le fuseau mitotique qui sépare les chromosomes durant la division cellulaire.",
     "expAr": "تمكن المايكروتوبولز من تشكيل الصفيحة الانقسامية التي تفصل الكروموسومات خلال انقسام الخلايا.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "Microtubules are essential components of the cytoskeleton that form the mitotic spindle during mitosis.",
     "ctxFr": "Les microtubules sont des composants essentiels du cytosquelette qui forment le fuseau mitotique durant la mitose.",
     "ctxAr": "المايكروتوبولز هي مكونات أساسية للهيكل الخلوي التي تشكل صفيحة الانقسام خلال الانقسام الفتيلي."
@@ -2676,7 +2676,7 @@
     "expEn": "'Confidentialité des données de santé' is the French for 'health data confidentiality'.",
     "expFr": "'Confidentialité des données de santé' est le français de 'health data confidentiality'.",
     "expAr": "'Confidentialité des données de santé' هو الفرنسية لـ 'health data confidentiality'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2701,7 +2701,7 @@
     "expEn": "'Tissu épithélial' is the French for 'epithelial tissue' (tissue covering body surfaces).",
     "expFr": "'Tissu épithélial' est le français de 'epithelial tissue'.",
     "expAr": "'Tissu épithélial' هو الفرنسية لـ 'epithelial tissue'.",
-    "points": 10,
+    "points": 15,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2726,7 +2726,7 @@
     "expEn": "'Tissu conjonctif' is the French for 'connective tissue' (tissue binding other tissues).",
     "expFr": "'Tissu conjonctif' est le français de 'connective tissue'.",
     "expAr": "'Tissu conjonctif' هو الفرنسية لـ 'connective tissue'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2751,7 +2751,7 @@
     "expEn": "'Syncytium' is the French for 'syncytium' (a multinucleated cell formed by fusion of cells).",
     "expFr": "'Syncytium' est le français de 'syncytium' (cellule multinucléaire formée par la fusion de plusieurs cellules).",
     "expAr": "'السيانسيت' هو الفرنسية لـ 'syncytium'.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2776,7 +2776,7 @@
     "expEn": "Dysplasia is the histological finding characterized by abnormal cellular development and organization, often a precursor to cancer.",
     "expFr": "La dysplasie est la découverte histologique caractérisée par un développement et une organisation cellulaires anormaux, souvent un précurseur du cancer.",
     "expAr": "تتميز الورم الخبيث بتطور وترتيب خلايا غير طبيعي، وغالباً ما يكون ما قبله للسرطان.",
-    "points": 10,
+    "points": 30,
     "ctxEn": "Clinical Vignette: A 45-year-old female presents with an abnormal Pap smear showing atypical squamous cells of undetermined significance (ASC-US). Colposcopy reveals acetowhite epithelium with poor surface maturation and increased nuclear polarity.",
     "ctxFr": "Vignette clinique: Une femme de 45 ans présente un froissement anormal de Imagerie mammaire montrant des cellules squameuses atypiques de signification indéterminée (ASC-US). Le colposcopie révèle un épithélium à photo-edit avec maturation pauvre de la surface et une polarité nucléaire accrue.",
     "ctxAr": "حالة سريرية: أنثى تبلغ من العمر 45 عاماً تعاني من مخطط سلبي غير طبيعي يظهر خلايا وضوحات غير معتادة ذات أهمية غير محددة (ASC-US). يكشف التشخيص بالمنظار النسجي عن ظهارة مخضرة مع نضج ضعيف للسطح وزيادة في قطبية النواة."
@@ -2801,7 +2801,7 @@
     "expEn": "'Pression hydrostatique' is the French for 'hydrostatic pressure' (the pressure exerted by a fluid at equilibrium).",
     "expFr": "'Pression hydrostatique' est le français de 'hydrostatic pressure'.",
     "expAr": "'الضغط المaidu' هو الفرنسية لـ 'hydrostatic pressure'.",
-    "points": 10,
+    "points": 20,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2826,7 +2826,7 @@
     "expEn": "'Loi de Laplace' is the French for Laplace's law.",
     "expFr": "'Loi de Laplace' est le français de 'Laplace's law'.",
     "expAr": "'قانون لابلاس' هو الفرنسية لـ 'Laplace's law'.",
-    "points": 10,
+    "points": 25,
     "ctxEn": "",
     "ctxFr": "",
     "ctxAr": ""
@@ -2851,7 +2851,7 @@
     "expEn": "Boyle's law explains the relationship between pressure and volume of a gas, relevant for understanding respiratory mechanics.",
     "expFr": "La loi de Boyle explique la relation entre la pression et le volume d'un gaz, pertinente pour comprendre la mécanique respiratoire.",
     "expAr": "تفسر قانون بويل العلاقة بين الضغط والحجم لغاز، وهو ذي صلة لفهم الميكانيكا التنفسية.",
-    "points": 10,
+    "points": 35,
     "ctxEn": "Clinical Vignette: A patient with chronic obstructive pulmonary disease (COPD) experiences dyspnoea during exertion. The nurse explains that during forced expiration, the intrapleural pressure increases, causing the lungs to deflate due to pressure differences.",
     "ctxFr": "Vignette clinique: Un patient atteint de maladie pulmonaire obstructive chronique (MPOC) présente une dyspnoea lors de l'effort. L'infirmière explique que lors de l'expiration forcée, la pression intrathoracique augmente, entraînant la deflation des poumons en raison des différences de pression.",
     "ctxAr": "حالة سريرية: مريض يعاني من مرض رئوي أرجاعي مزمن (COPD) يعاني من ضيق في التنفس أثناء الجهد. تشرح الممرضة أن أثناء الزفير الإجباري، تزداد الضغط الجنبي الش-flight، مسببة انهيار الرئتين بسبب الفوارق في الضغط."

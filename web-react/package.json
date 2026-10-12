@@ -10,6 +10,7 @@
     "test": "vitest run",
     "extract": "node scripts/extract.mjs",
     "check:i18n": "node scripts/check-i18n.mjs",
+    "check:seed": "node scripts/check-seed.mjs",
     "icons": "python scripts/make_icons.py",
     "e2e": "python e2e/verify.py",
     "audit": "python e2e/full_audit.py",

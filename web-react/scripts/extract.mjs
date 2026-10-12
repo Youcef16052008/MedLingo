@@ -12,9 +12,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const TERMS_SRC = join(
   __dirname, "..", "..", "app", "src", "main", "java", "com", "example", "data", "terms"
 );
-const EXERCISES_SRC = join(
-  __dirname, "..", "..", "app", "src", "main", "java", "com", "example", "data", "initial", "LearningExercisesData.kt"
+// P1-2 : lire TOUS les fichiers de seed d'exercices, pas un seul.
+// Avant, `npm run extract` ne lisait que LearningExercisesData.kt (44 ex) et
+// ignorait MedLingoExercisesData.kt (68 ex) — exercises.json était donc
+// systématiquement tronqué à 44 à chaque extraction, créant une dérive
+// silencieuse entre Android (112 exercices) et web (44).
+const EXERCISES_SRC_DIR = join(
+  __dirname, "..", "..", "app", "src", "main", "java", "com", "example", "data", "initial"
 );
+const EXERCISES_SOURCES = [
+  "LearningExercisesData.kt",
+  "MedLingoExercisesData.kt",
+];
 const OUT = join(__dirname, "..", "public", "data");
 
 /** Parcourt un corps de constructeur en respectant les chaînes. */
@@ -112,8 +121,14 @@ for (const file of termFiles) {
 // Même ordre et mêmes ids que les seeds Kotlin : les deux apps Recognissent le même terme.
 terms.sort((a, b) => a.id - b.id);
 
-const exercisesContent = readFileSync(EXERCISES_SRC, "utf8");
-exercises = extractBlocks(exercisesContent, "ExerciseEntity").map((b) => {
+const exercisesContent = EXERCISES_SOURCES.flatMap((name) => {
+  try {
+    return extractBlocks(readFileSync(join(EXERCISES_SRC_DIR, name), "utf8"), "ExerciseEntity");
+  } catch {
+    return []; // Fichier absent de ce checkout : on ne plante pas l'extraction.
+  }
+});
+exercises = exercisesContent.map((b) => {
   const f = parseFields(b);
   return {
     id: f.id,
@@ -138,6 +153,11 @@ exercises = extractBlocks(exercisesContent, "ExerciseEntity").map((b) => {
 });
 
 // Échoue bruyamment plutôt que de publier un jeu de données mal indexé.
+const dupExIds = exercises.map((e) => e.id).filter((v, i, a) => a.indexOf(v) !== i);
+if (dupExIds.length) throw new Error(`ids d'exercices dupliqués entre les seeds Kotlin : ${[...new Set(dupExIds)].join(", ")}`);
+exercises.sort((a, b) => a.id - b.id);
+
+// Échoue bruyamment plutôt que de publier un jeu de données mal indexé.
 const dupIds = terms.map((t) => t.id).filter((v, i, a) => a.indexOf(v) !== i);
 if (dupIds.length) throw new Error(`ids de termes dupliqués dans les seeds Kotlin : ${[...new Set(dupIds)].join(", ")}`);
 
@@ -154,8 +174,8 @@ if (terms.length) {
 }
 
 mkdirSync(OUT, { recursive: true });
-writeFileSync(join(OUT, "terms.json"), JSON.stringify(terms));
-writeFileSync(join(OUT, "exercises.json"), JSON.stringify(exercises));
+writeFileSync(join(OUT, "terms.json"), JSON.stringify(terms, null, 2) + "\n");
+writeFileSync(join(OUT, "exercises.json"), JSON.stringify(exercises, null, 2) + "\n");
 
 const byModule = {};
 for (const t of terms) byModule[t.module] = (byModule[t.module] || 0) + 1;
