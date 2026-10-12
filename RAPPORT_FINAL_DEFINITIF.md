@@ -17,7 +17,7 @@ J'ai trouvé et corrigé **3 défauts concrets** (1 critique, 2 moyens) que les 
 | | |
 |---|---|
 | **Base de données** | **Non corrompue** — intégrité validée par exécution |
-| **Build Android** | `BUILD SUCCESSFUL` — **256 tests, 0 échec, 0 ignoré** (251 + 4 Compose UI + 1 seed) |
+| **Build Android** | `BUILD SUCCESSFUL` — **267 tests, 0 échec, 0 ignoré** (251 + 4 Compose UI + 1 seed + 2 atomicité DB + 7 migrations DB v2) |
 | **Build web** | `tsc --noEmit` OK — **127 tests, 0 échec** |
 | **i18n** | 153 clés × 3 langues, 0 écart |
 | **Bugs P0 précédents** | **Tous vérifiés corrigés** (B1, B2, B3, B4, B5) |
@@ -186,7 +186,7 @@ Je ne signale que ce que j'ai réellement lu et vérifié.
 | Commande | Résultat |
 |---|---|
 | `./gradlew testDebugUnitTest --rerun-tasks` | **BUILD SUCCESSFUL** (6 min 46 s) |
-| Tests Android | **256 tests, 0 failure, 0 error, 0 skipped** |
+| Tests Android | **267 tests, 0 failure, 0 error, 0 skipped** |
 | `tsc --noEmit` (web-react) | **OK** (exit 0) |
 | `vitest run` (web-react) | **127 tests, 0 échec** (13 fichiers) |
 | `check:i18n` | **153 clés × 3 langues, 0 manquante, 0 désynchronisée, 0 morte** |
@@ -205,7 +205,7 @@ Je ne signale que ce que j'ai réellement lu et vérifié.
 
 **La base de données n'est pas corrompue.** Elle est même d'une qualité rare pour un corpus trilingue de cette taille : 4 504 fiches, 0 doublon, 0 traduction copiée, intégrité validée par exécution.
 
-**Le projet tient la route.** Les 5 bugs P0 documentés sont réellement corrigés, le code est propre (0 TODO), les migrations sont dignes d'un senior, et les deux plateformes compilent avec 383 tests verts.
+**Le projet tient la route.** Les 5 bugs P0 documentés sont réellement corrigés, les 6 défauts de la 2e passe database le sont aussi (commit `64f9369`), le code est propre (0 TODO), les migrations sont dignes d'un senior, et les deux plateformes compilent avec 394 tests verts.
 
 **Le défaut le plus grave trouvé cette passe** (N1) n'était pas dans la base mais dans le **seed SQL backend** : 90 % du contenu absent d'un fichier qui prétendait le contenir. C'est exactement le genre de défaut qui n'apparaît qu'au branchement effectif — et c'est maintenant corrigé et validé.
 
@@ -249,6 +249,7 @@ Je ne signale que ce que j'ai réellement lu et vérifié.
 | **P3-1** | Supprimer les 6 `tmp_*` + `__pycache__` | ✅ **Fait** |
 | **P3-2** | Committer l'état non commité (19 fichiers) | ✅ **Fait** — commit `8f0a3c2` |
 | **P3-3** | Premier test Compose UI (`MatchingExerciseViewTest`, 4 tests) | ✅ **Fait** |
+| **P0-1 → P2-2 (v2)** | **Revue database 2e passe — 6 défauts corrigés** (voir `RAPPORT_DATABASE_V2.md`) : reseed transactionnel, 3 index, colonne `example` supprimée, bookmarks par id, bulk atomique, `CREATE TABLE` purs | ✅ **Fait** — commit `64f9369` |
 | **P3-4** | Renommer `createDefault()` → `createDemoPersona()` | ✅ **Fait** |
 
 ---
