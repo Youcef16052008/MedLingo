@@ -70,6 +70,26 @@ interface MedicalDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertExercises(exercises: List<ExerciseEntity>)
 
+    /**
+     * Compte les exercices générés en masse (ids négatifs, voir
+     * [com.example.domain.lesson.BulkExerciseGenerator.stableId]).
+     *
+     * Sert de garde au reseed : on ne régénère les 13 512 exercices que s'ils
+     * manquent, pour ne pas réécrire toute la table à chaque lancement.
+     */
+    @Query("SELECT COUNT(*) FROM exercises WHERE id < 0")
+    suspend fun getBulkExercisesCount(): Int
+
+    /**
+     * Supprime uniquement les exercices générés en masse avant une régénération.
+     *
+     * Les exercices écrits main (ids positifs) sont préservés : ils coexistent
+     * avec les exercices générés, et `lessonQuestions` les place en tête de
+     * chaque leçon.
+     */
+    @Query("DELETE FROM exercises WHERE id < 0")
+    suspend fun deleteBulkExercises()
+
     // Downloaded Modules (Offline)
     @Query("SELECT * FROM downloaded_modules")
     fun getAllDownloadedModules(): Flow<List<DownloadedModuleEntity>>

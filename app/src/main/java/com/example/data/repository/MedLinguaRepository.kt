@@ -23,6 +23,7 @@ import com.example.domain.gamification.LeagueManager
 import com.example.domain.gamification.ProgressionManager
 import com.example.domain.gamification.TrophyId
 import com.example.domain.gamification.TrophyManager
+import com.example.domain.lesson.BulkExerciseGenerator
 import com.example.domain.path.PathBuilder
 import com.example.domain.sm2.ReviewResult
 import com.example.domain.sm2.SpacedRepetitionAlgorithm
@@ -231,6 +232,54 @@ val currentClock: Clock get() = clock
                     )
                 )
             }
+        }
+    }
+
+    /**
+     * Génère et persiste les exercices en masse (3 par terme × 4 504 termes
+     * = 13 512), en plus des exercices écrits main.
+     *
+     * Pourquoi c'est ici et pas dans [initializeDatabaseIfEmpty] : la génération
+     * est un calcul pur (~2 s sur un téléphone milieu de gamme) qui n'a pas
+     * besoin d'être atomique avec le seed. La garde `getBulkExercisesCount()`
+     * évite de recommencer à chaque lancement — le coût est payé une seule fois,
+     * au premier démarrage après la mise à jour.
+     *
+     * Les exercices générés ont des ids négatifs : ils ne collisionnent jamais
+     * avec le seed main, et `deleteBulkExercises()` permet de les régénérer
+     * sans toucher aux exercices écrits main.
+     *
+     * En cas d'échec (espace, base verrouillée), on ne plante pas le démarrage :
+     * l'utilisateur garde l'app fonctionnelle avec les exercices écrits main et
+     * la génération en ligne de `LessonGenerator.lessonQuestions`.
+     */
+    suspend fun seedBulkExercisesIfMissing() = withContext(Dispatchers.IO) {
+        val expected = InitialData.terms.size * BulkExerciseGenerator.EXERCISES_PER_TERM
+        if (dao.getBulkExercisesCount() >= expected) return@withContext
+
+        val modules = InitialData.modulesList.map { mod ->
+            mod.titleFr to InitialData.termsOfModule(mod.titleFr)
+        }
+        val bulk = try {
+            BulkExerciseGenerator.generateAll(modules)
+        } catch (e: Exception) {
+            android.util.Log.w(
+                "MedLinguaRepo",
+                "Bulk exercise generation failed: ${e.message}. " +
+                    "Falling back to inline lesson generation."
+            )
+            return@withContext
+        }
+        if (bulk.isEmpty()) return@withContext
+
+        try {
+            dao.deleteBulkExercises()
+            dao.insertExercises(bulk)
+        } catch (e: Exception) {
+            android.util.Log.w(
+                "MedLinguaRepo",
+                "Bulk exercise persistence failed: ${e.message}"
+            )
         }
     }
 

@@ -42,7 +42,10 @@ describe("données extraites des seeds Kotlin", () => {
 
   it("charge le corpus complet", () => {
     expect(terms.length).toBe(4504);
-    expect(exercises.length).toBe(44);
+    // Les exercices écrits main (112) sont livrés dans exercises.json.
+    // Les 13 512 exercices générés (3 par terme) sont produits à l'exécution
+    // par `generateBulkExercises()` — testés dans `bulkExercises.test.ts`.
+    expect(exercises.length).toBe(112);
   });
 
   it("les ids sont uniques et les termes non vides", () => {

@@ -73,6 +73,11 @@ class MedLinguaApp : Application() {
             if (repository.isDatabaseEmpty()) {
                 repository.initializeDatabaseIfEmpty()
             }
+            // Exercices en masse (3 par terme × 4 504 = 13 512) : garde sur le
+            // compte, donc payé une seule fois, au premier démarrage après la
+            // mise à jour. En cas d'échec, l'app reste jouable via la génération
+            // en ligne de `LessonGenerator.lessonQuestions`.
+            repository.seedBulkExercisesIfMissing()
         }
     }
     // TTS is released in MainActivity.onDestroy (onTerminate never runs on devices)

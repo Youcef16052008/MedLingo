@@ -70,17 +70,16 @@ fun FlashcardsScreen(
     val currentIndex = uiState.activeFlashcardIndex.coerceIn(0, (terms.size - 1).coerceAtLeast(0))
     val currentTerm = terms.getOrNull(currentIndex)
 
-    val modulesList = listOf(
-        "All" to (if (lang == Language.ARABIC) "الكل 📚" else "Tous les modules 📚"),
-        "Anatomie" to "Anatomie 🦴",
-        "Biochimie" to "Biochimie 🧬",
-        "Biophysique" to "Biophysique 🧪",
-        "Histologie" to "Histologie 🔬",
-        "Physiologie" to "Physiologie ❤️",
-        "Génétique" to "Génétique 🧬",
-        "Terminologie Médicale" to "Terminologie 📙",
-        "Anglais Médical" to "Anglais Médical 🩺"
-    )
+    // Filtres module : dérivés du seed (15 modules) plutôt qu'une liste codée
+    // en dur. La version hardcodée n'exposait que 9 modules sur 15 — les
+    // flashcards de Cytologie, Informatique Médicale, Embryologie, Microbiologie,
+    // Pharmacologie et Anatomie Pathologique étaient injoignables alors que
+    // leurs fiches existent en base.
+    val modulesList: List<Pair<String, String>> = listOf(
+        "All" to (if (lang == Language.ARABIC) "الكل 📚" else "Tous les modules 📚")
+    ) + com.example.data.initial.InitialData.modulesList.map { mod ->
+        mod.titleFr to "${mod.icon} ${mod.titleFr}"
+    }
 
     Column(
         modifier = modifier

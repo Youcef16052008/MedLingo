@@ -1,10 +1,12 @@
 package com.example.data.initial
 
 import com.example.data.local.entity.ExerciseEntity
+import com.example.data.initial.MedLingoExercisesData
 
 object LearningExercisesData {
 
-    val exercises: List<ExerciseEntity> = listOf(
+    /** Liste d'origine des 44 exercices écrits manuellement. */
+    private val _exercises: List<ExerciseEntity> = listOf(
         // ==========================================
         // LEVEL 1 : VOCABULAIRE (Mots Individuels)
         // ==========================================
@@ -812,5 +814,15 @@ object LearningExercisesData {
             contextTextFr = "Vignette Clinique : Femme de 68 ans présentant une déformation en 'dos de fourchette' du poignet droit après chute sur la main en extension, typique d'une fracture de Pouteau-Colles.",
             contextTextAr = "حالة سريرية: سيدة تبلغ 68 عاماً سقطت على يدها الممدودة وظهر لديها تشوه عظمي مميز يشبه شوكة الطعام في أسفل الساعد الأيمن متوافق مع كسر كولز."
         )
+
+        // ============================= MedLingo Phase 2+ : exercices complets pour tous les modules =============================
+        // 32 nouveaux exercices (ids 45-76) couvrant les 10 modules sans exercice (Biochimie, Histologie,
+        // Biophysique, Génétique, Cytologie, Informatique Médicale, Embryologie, Microbiologie,
+        // Pharmacologie, Sémiologie) + suppléments Anatomie / Anatomie Pathologique / Physiologie /
+        // Terminologie Médicale. Détaillés dans MedLingoExercisesData.kt.
     )
+
+    /** Tous les exercices : 44 écrits manuellement + les ajouts Phase 2+. */
+    val exercises: List<ExerciseEntity> = _exercises + MedLingoExercisesData.exercises
 }
+

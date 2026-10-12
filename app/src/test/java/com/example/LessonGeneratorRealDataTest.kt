@@ -136,22 +136,23 @@ class LessonGeneratorRealDataTest {
     }
 
     @Test
-    fun `les modules sans exercices ecrits main sont desormais jouables`() {
-        // Ce sont précisément les 10 modules que P0-5 a verrouillés. La phase 2
-        // les déverrouille en les remplissant.
-        val modulesWithHandwritten = InitialData.exercises
-            .map { it.module.trim() }
-            .toSet()
-
-        var nowPlayable = 0
+    fun `tous les modules sont jouables`() {
+        // Historiquement, 10 modules n'avaient aucun exercice écrit main et
+        // étaient injouables. Désormais la phase 2 les remplit, mais la vraie
+        // garantie à tester ne dépend pas de la répartition main/générée :
+        // **chaque** module doit produire une leçon de 8 questions au niveau 1,
+        // qu'il ait des exercices écrits main ou non.
+        var playable = 0
         for (mod in InitialData.modulesList) {
-            if (mod.titleFr.trim() in modulesWithHandwritten) continue
-            val lesson = LessonGenerator.lessonQuestions(mod.id, 1, emptyList(), InitialData.termsOfModule(mod.titleFr))
-            if (lesson.isNotEmpty()) nowPlayable++
+            // Exercices écrits main de ce module (peut être vide).
+            val real = InitialData.exercises.filter { it.module.trim() == mod.titleFr.trim() }
+            val lesson = LessonGenerator.lessonQuestions(mod.id, 1, real, InitialData.termsOfModule(mod.titleFr))
+            if (lesson.isNotEmpty()) playable++
         }
-        assertTrue(
-            "aucun module sans exercice écrit main n'est jouable après la phase 2",
-            nowPlayable > 0
+        assertEquals(
+            "tous les modules ne sont pas jouables : $playable/${InitialData.modulesList.size}",
+            InitialData.modulesList.size,
+            playable
         )
     }
 }

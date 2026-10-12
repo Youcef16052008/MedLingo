@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { useT } from "../i18n/useT";
 import type { TKey } from "../i18n";
 import { update } from "../domain/store";
-import { getExercises } from "../data/load";
+import { lessonQuestions, quizExercisesForLevel } from "../domain/lessons";
 import { addXp, touchStreak, calculateGemsForLesson } from "../domain/gamification";
-import { lessonQuestions } from "../domain/lessons";
 import { lessonKey } from "../domain/path";
 import { modLabel } from "../data/modules";
 import { earnChest } from "../domain/chests";
@@ -176,7 +175,7 @@ export function QuizScreen() {
   const patch = (p: Partial<QuizState>) => setQ((prev) => ({ ...prev, ...p }));
 
   const begin = (level: number) => {
-    const pool = level ? getExercises().filter((e) => e.level === level) : getExercises();
+    const pool = quizExercisesForLevel(level);
     const list = shuffle(pool).slice(0, QUIZ_CAP);
     if (!list.length) return false;
     goalHitRef.current = false;
@@ -307,7 +306,7 @@ export function QuizScreen() {
 
   /* ---------- écran de choix de niveau ---------- */
   if (q.phase === "start") {
-    const pool = q.level ? getExercises().filter((e) => e.level === q.level) : getExercises();
+    const pool = quizExercisesForLevel(q.level);
     const count = pool.length;
     return (
       <>
