@@ -1397,3 +1397,80 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .metric-box > span:last-child {
   font-size: 11px; font-weight: 500; color: #5A6B60;
 }
+
+/* ==================== Quiz — LearningPyramidOverviewScreen.kt ==================== */
+.quiz-start { display: flex; flex-direction: column; gap: 16px; }
+
+/* --- Carte pyramide (gradient vertical #0D532C → #1B5E20 → #2E7D32) --- */
+.pyramid-hero {
+  border-radius: 20px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  background: linear-gradient(180deg, #0D532C, #1B5E20, #2E7D32);
+}
+.pyramid-title { display: block; color: #fff; font-size: 18px; font-weight: 800; }
+.pyramid-desc {
+  color: rgba(255,255,255,.9); font-size: 12px; line-height: 17px;
+  margin: 10px 0 14px;
+}
+.pyramid-strip {
+  display: flex; align-items: center; justify-content: space-between; gap: 4px;
+}
+.pyramid-tier {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.pyramid-tier-ico {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 16px; line-height: 1;
+}
+.pyramid-tier-lbl { font-size: 11px; font-weight: 700; color: #fff; }
+.pyramid-tier-score { font-size: 10px; color: rgba(255,255,255,.7); }
+
+/* --- Titre de liste --- */
+.pyramid-list-title { font-size: 16px; font-weight: 700; color: #1E2922; }
+
+/* --- LevelCard (rayon 18, bordure 1.5 de la couleur du niveau) --- */
+.level-card {
+  border-radius: 18px;
+  padding: 16px;
+  background: #fff;
+  border: 1.5px solid var(--lvl-color, #1B5E20);
+  box-shadow: 0 3px 8px rgba(15,23,42,.06);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.level-card.locked {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+  box-shadow: none;
+}
+.level-card-top { display: flex; align-items: center; gap: 10px; }
+.level-ico {
+  flex: 0 0 auto;
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center;
+  font-size: 22px; line-height: 1;
+  background: color-mix(in srgb, var(--lvl-color, #1B5E20) 12%, #fff);
+}
+.level-card.locked .level-ico { background: #E2E8F0; }
+.level-title { display: block; font-size: 15px; font-weight: 700; color: #0F172A; }
+.level-card.locked .level-title { color: #64748B; }
+.level-objective { display: block; font-size: 12px; color: #475569; }
+.level-card.locked .level-objective { color: #94A3B8; }
+.level-card-bottom {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.level-status { font-size: 12px; font-weight: 500; color: #E65100; }
+.level-status.mastered { font-size: 12px; font-weight: 700; color: #16A34A; }
+.level-status.locked { color: #94A3B8; font-weight: 500; }
+.level-start {
+  flex: 0 0 auto;
+  border: none; cursor: pointer; color: #fff;
+  border-radius: 12px; padding: 8px 14px;
+  font-size: 12px; font-weight: 700;
+}
+.level-start:disabled { background: #CBD5E1 !important; cursor: default; }
+
+/* --- Carte quiz libre (en bas) --- */
+.quiz-free { border-radius: 18px; }
