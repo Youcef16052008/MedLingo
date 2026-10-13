@@ -222,8 +222,6 @@ export function FlashScreen({ param, onQuit }: FlashProps) {
   }
 
   /* ---------- carte en cours ---------- */
-  const def = lang === "ar" ? term.defAr : lang === "en" ? term.defEn : term.defFr;
-  const ex = lang === "ar" ? term.exAr : lang === "en" ? term.exEn : term.exFr || term.exEn;
   const prev = sm2[String(term.id)] as Sched | undefined;
 
   return (
@@ -236,42 +234,87 @@ export function FlashScreen({ param, onQuit }: FlashProps) {
           className={`flashcard ${session.flipped ? "flipped" : ""}`}
           role="button"
           tabIndex={0}
-          aria-label={term.en}
+          aria-label={term.fr}
           onClick={(e) => {
-            if (e.target instanceof HTMLElement && e.target.closest("#flashSpeak")) return;
+            if (e.target instanceof HTMLElement && e.target.closest("#flashSpeak, #flashBookmark")) return;
             flip();
           }}
         >
+          {/* ============ RECTO — FrontCardSide : gradient vert, FR ============ */}
           <div className="flash-face flash-front">
-            {term.chapter && <span className="chapter-tag">{term.chapter}</span>}
-            <div className="term-en">{term.en}</div>
-            {term.ipa && <div className="ipa">{term.ipa}</div>}
-            <button
-              type="button"
-              id="flashSpeak"
-              className="speak-btn"
-              aria-label={t("speakLbl")}
-              title={t("speakLbl")}
-              onClick={(e) => {
-                e.stopPropagation();
-                speakTerm(term, lang);
-              }}
-            >
-              🔊
-            </button>
-            <span className="flip-hint">{t("tapFlip")} · ␣</span>
-          </div>
-          <div className="flash-face flash-back">
-            <span className="back-lang">FR · AR</span>
-            <div className="back-term">{term.fr}</div>
-            <div className="back-ar" dir="rtl">
-              {term.ar}
+            <div className="ff-top">
+              <span className="ff-module">🎓 {term.module} • {term.chapter}</span>
+              <button
+                type="button"
+                id="flashBookmark"
+                className="ff-bookmark"
+                aria-label={t("bookmarkLbl")}
+                title={t("bookmarkLbl")}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  update((d) => { d.sm2[String(term.id)] = d.sm2[String(term.id)] || ({ iv: 1, ef: 2.5, due: 0, rep: 0 } as Sched); });
+                }}
+              >
+                🔖
+              </button>
             </div>
-            <div className="back-def">{def}</div>
-            {ex && (
-              <div className="back-extra">
-                {t("exLbl")} : {ex}
+            <div className="ff-center">
+              <span className="ff-nomenclature">🇫🇷 Nomenclature Médicale Française</span>
+              <div className="ff-term-fr">{term.fr}</div>
+              {term.ar && (
+                <div className="ff-term-ar" dir="rtl">🇸🇦 {term.ar}</div>
+              )}
+              <span className="ff-flip-pill">👆 {t("tapFlip")}</span>
+            </div>
+          </div>
+
+          {/* ============ VERSO — BackCardSide : blanc, EN + détails ============ */}
+          <div className="flash-face flash-back">
+            <div className="fb-head">
+              <span className="fb-flag" aria-hidden="true">🇬🇧</span>
+              <div className="fb-en-col">
+                <b className="fb-term-en">{term.en}</b>
+                {term.ipa && <span className="fb-ipa">{term.ipa}</span>}
               </div>
+              <button
+                type="button"
+                id="flashSpeak"
+                className="fb-speak"
+                aria-label={t("speakLbl")}
+                title={t("speakLbl")}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  speakTerm(term, lang);
+                }}
+              >
+                🔊
+              </button>
+            </div>
+            <hr className="fb-divider" />
+            <div className="fb-cross">
+              <b className="fb-cross-ar" dir="rtl">🇸🇦 {term.ar}</b>
+              <span className="fb-cross-fr">🇫🇷 {term.fr}</span>
+            </div>
+            {term.etym && (
+              <div className="fb-box fb-etym">
+                <b>🏛️ {t("etymLbl")}</b>
+                <span>{term.etym}</span>
+              </div>
+            )}
+            {term.pearl && (
+              <div className="fb-box fb-pearl">
+                <b>🩺 {t("pearlLbl")}</b>
+                <span>{term.pearl}</span>
+              </div>
+            )}
+            {term.mnemo && (
+              <div className="fb-box fb-mnemo">
+                <b>💡 {t("mnemoLbl")}</b>
+                <span>{term.mnemo}</span>
+              </div>
+            )}
+            {term.defEn && (
+              <div className="fb-def">📖 {term.defEn}</div>
             )}
           </div>
         </div>
@@ -280,16 +323,27 @@ export function FlashScreen({ param, onQuit }: FlashProps) {
       <div className="rating-row">
         {[1, 2, 3, 4, 5].map((q) => {
           const sim = sm2Next(q, prev, Date.now());
+          const RATE_META = [
+            { emoji: "😫", color: "#D32F2F" },
+            { emoji: "😕", color: "#F57C00" },
+            { emoji: "🤔", color: "#FFA000" },
+            { emoji: "😊", color: "#689F38" },
+            { emoji: "🤩", color: "#2E7D32" },
+          ][q - 1];
           return (
             <button
               key={q}
               type="button"
               className="rating-btn"
               data-q={q}
+              style={{ "--rc": RATE_META.color } as React.CSSProperties}
               disabled={!session.flipped}
               onClick={() => rate(q)}
             >
-              {t(RATE_KEYS[q - 1])}
+              <span className="rating-emoji" aria-hidden="true">
+                {RATE_META.emoji}
+              </span>
+              <span className="rating-label">{t(RATE_KEYS[q - 1])}</span>
               <small>{fmtIv(sim.iv, lang)}</small>
             </button>
           );

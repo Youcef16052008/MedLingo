@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useT, applyDocumentLang } from "./i18n/useT";
 import { useAppState, update, getState } from "./domain/store";
 import { loadOnce, isLoaded } from "./data/load";
-import { useHashRoute, routeName } from "./lib/router";
+import { useHashRoute } from "./lib/router";
 import { rollover, weekStartKey, YOU } from "./domain/leagues";
 import { TopBar } from "./components/TopBar";
 import { TabBar } from "./components/TabBar";
@@ -115,7 +115,10 @@ function Shell() {
     );
   }
 
-  const [name, param] = routeName(route).split("/");
+  // `routeName()` ne garde que le nom (`flash`) ; le paramètre (`anat`) se
+  // lit sur le hash brut, pas sur le nom. Sinon `param` vaut toujours
+  // `undefined` et la session flashcards se construit sur un module vide.
+  const [name, param] = route.split("?")[0].split("/");
   let screen: React.ReactNode;
   switch (name) {
     case "practice":
