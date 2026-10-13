@@ -21,7 +21,7 @@
   --amber: #D97706;
   --amber-50: #FEF3C7;
 
-  --bg: #F8FAFC;
+  --bg: #F6F8F6;
   --surface: #FFFFFF;
   --surface-2: #EFF5F0;
   --line: #E2E8F0;
@@ -186,8 +186,17 @@ a { color: var(--green-600); }
 }
 .stat-chip b { font-family: var(--font-display); font-weight: 600; }
 
-.stat-chip.gems b { color: var(--teal); }
-.stat-chip.streak b { color: var(--amber); }
+/* Miroir de GemsLeagueTopBar.kt : chaque puce a sa propre teinte. */
+.stat-chip.streak { background: #FFF7ED; border-color: #FFF7ED; }
+.stat-chip.streak b { color: #EA580C; }
+.stat-chip.gems { background: #EFF6FF; border-color: #EFF6FF; }
+.stat-chip.gems b { color: #2563EB; }
+.stat-chip.league {
+  background: #FEF3C7; border-color: #FEF3C7; color: #D97706;
+  cursor: pointer; font: inherit; padding: 4px 10px;
+}
+.stat-chip.league b { color: #D97706; }
+.stat-chip.league .chip-extra { font-size: .75rem; font-weight: 700; opacity: .85; }
 .stat-chip.due { border-color: color-mix(in srgb, var(--red) 35%, var(--line)); }
 .stat-chip.due b { color: var(--red); }
 
@@ -225,10 +234,19 @@ a { color: var(--green-600); }
   letter-spacing: .01em;
   transition: color .15s;
 }
-.tabbar a .tab-ico { font-size: 1.25rem; line-height: 1; }
-.tabbar a.active { color: var(--green); }
+.tabbar a .tab-ico {
+  font-size: 24px; line-height: 1;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/* Onglet actif : icône filled + teinte MedGreenDark, comme Android
+   (selectedIconColor = MedGreenDark, NavigationBarItem selected). */
+.tabbar a.active { color: #0D532C; font-weight: 700; }
+.tabbar a.active .tab-ico {
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+}
 
-/* Badge « à réviser » sur l'onglet Fiches */
+/* Badge « à réviser » sur l'onglet Fiches — #E65100 comme Android
+   (MainActivity Badge containerColor) */
 .tab-ico { position: relative; display: block; line-height: 1; }
 .tab-badge {
   position: absolute;
@@ -238,7 +256,7 @@ a { color: var(--green-600); }
   height: 17px;
   padding: 0 4px;
   border-radius: 999px;
-  background: var(--red);
+  background: #E65100;
   color: #fff;
   font-size: .6rem;
   font-weight: 700;
@@ -256,9 +274,17 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .eyebrow {
   font-size: .74rem;
   font-weight: 700;
-  color: #BBF7D0;
-  letter-spacing: .08em;
+  color: #64748B;
+  letter-spacing: .02em;
   margin: 0 0 4px;
+}
+/* Chip d'objectif — PracticeScreen.kt : fond #FFF3C4, #B45309, 20.dp, 13.sp. */
+.goal-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 8px 12px; border-radius: 20px;
+  background: #FFF3C4; color: #B45309;
+  font-size: .81rem; font-weight: 700; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 .muted { color: var(--ink-2); }
 .tiny { font-size: .8rem; color: var(--ink-3); }
@@ -310,6 +336,9 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   gap: 12px;
   margin: 26px 0 12px;
 }
+/* Titre de section — PathScreen.kt : 22.sp ExtraBold, #1E293B. */
+.section-head h1 { font-size: 22px; font-weight: 800; color: #1E293B; }
+.section-head .tiny { color: #64748B; }
 .section-head a { font-size: .85rem; font-weight: 600; text-decoration: none; }
 
 /* ---------- home ---------- */
@@ -920,27 +949,33 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   align-items: center;
   gap: 14px;
   padding: 16px;
-  border-radius: var(--radius-lg);
+  border-radius: 16px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-bottom-width: 3px;
-  transition: transform .12s ease;
+  box-shadow: var(--shadow-card);
 }
-.practice-card:active { transform: translateY(2px); border-bottom-width: 1px; }
-.practice-card h3 { margin: 0; display: flex; align-items: center; gap: 8px; }
-.practice-ico { font-size: 1.8rem; line-height: 1; }
+.practice-card h3 { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; color: #1E293B; }
+.practice-card .tiny { color: #64748B; }
+/* Boîte d'icône — PracticeScreen.kt : carré 44.dp arrondi 12.dp teinté. */
+.practice-ico {
+  flex: 0 0 auto;
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center;
+  font-size: 22px; line-height: 1;
+}
+.practice-card.teal .practice-ico { background: #E0F2F1; }
+.practice-card.azure .practice-ico { background: #E0F2FE; }
+.practice-card.amber .practice-ico { background: #FEF3C7; }
+.practice-card.violet .practice-ico { background: #F3E8FF; }
 .practice-badge {
-  background: var(--duo-blue);
+  background: #E65100;
   color: #fff;
-  border-radius: 999px;
-  font-size: .72rem;
+  border-radius: 10px;
+  font-size: .68rem;
   font-weight: 700;
   padding: 2px 8px;
 }
-.practice-card.teal { border-top: 3px solid var(--teal); }
-.practice-card.azure { border-top: 3px solid var(--duo-blue); }
-.practice-card.amber { border-top: 3px solid var(--amber); }
-.practice-card.violet { border-top: 3px solid var(--duo-purple); }
+.practice-card:active { transform: translateY(2px); border-bottom-width: 1px; }
 
 /* ---------- ligues ---------- */
 .league-list { display: flex; flex-direction: column; gap: 8px; }
@@ -966,37 +1001,22 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .medi { display: flex; gap: 10px; align-items: flex-start; margin: 2px 0 10px; }
 .medi-avatar {
   position: relative; flex: 0 0 auto;
-  width: 48px; height: 48px; border-radius: 50%;
-  display: grid; place-items: center; font-size: 1.5rem;
-  background: color-mix(in srgb, var(--duo-green) 18%, var(--surface));
-  border: 2px solid color-mix(in srgb, var(--duo-green) 55%, transparent);
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 1.6rem;
+  background: #E8F5E9;
 }
-.medi-badge { position: absolute; right: -5px; bottom: -5px; font-size: .78rem; }
-.medi.mood-celebrating .medi-avatar {
-  background: color-mix(in srgb, var(--duo-yellow) 26%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-yellow) 70%, transparent);
-}
-.medi.mood-motivating .medi-avatar {
-  background: color-mix(in srgb, var(--duo-blue) 20%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-blue) 60%, transparent);
-}
-.medi.mood-frustrated .medi-avatar {
-  background: color-mix(in srgb, var(--duo-red) 16%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-red) 55%, transparent);
-}
+.medi-badge { position: absolute; right: -2px; bottom: -2px; font-size: .75rem; padding: 2px; }
+.medi.mood-celebrating .medi-bubble { background: color-mix(in srgb, #FFC800 12%, var(--surface)); }
+.medi.mood-motivating .medi-bubble { background: color-mix(in srgb, #1CB0F6 12%, var(--surface)); }
+.medi.mood-frustrated .medi-bubble { background: color-mix(in srgb, #FF4B4B 12%, var(--surface)); }
+.medi.mood-happy .medi-bubble { background: color-mix(in srgb, #58CC02 12%, var(--surface)); }
 .medi-bubble {
   position: relative; margin: 0;
-  background: var(--surface); border: 1px solid var(--line);
+  background: var(--surface); border: none;
   border-radius: 14px; padding: 9px 13px;
-  font-size: .9rem; line-height: 1.4; color: var(--ink-2);
+  font-size: .9rem; line-height: 1.4; color: #1E293B; font-weight: 500;
 }
-.medi-bubble::before {
-  content: ""; position: absolute; left: -6px; top: 13px;
-  width: 10px; height: 10px;
-  background: var(--surface);
-  border-left: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  transform: rotate(45deg);
-}
+.medi-bubble::before { display: none; }
 
 /* ==================== En-tête du parcours (anneau) ==================== */
 .path-head { padding: 16px; }
@@ -1004,7 +1024,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .path-goal { margin: 0 0 10px; color: var(--ink-3); }
 .goal-ring { position: relative; width: 74px; height: 74px; flex: 0 0 auto; }
 .goal-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-.goal-track { fill: none; stroke: var(--line); stroke-width: 8; }
+.goal-track { fill: none; stroke: #E0E0E0; stroke-width: 8; }
 .goal-fill {
   fill: none; stroke: var(--duo-green); stroke-width: 8; stroke-linecap: round;
   transition: stroke-dashoffset .7s ease;
@@ -1012,24 +1032,28 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .goal-ring.done .goal-fill { stroke: var(--duo-yellow); }
 .goal-ring > span { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.25rem; }
 .streak-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+/* StreakPill de PathScreen.kt : fond #FFF7ED, texte #EA580C, rayon 20.dp,
+   padding horizontal 10 / vertical 6, 12.sp bold. */
 .streak-pill {
-  background: color-mix(in srgb, var(--duo-yellow) 16%, var(--surface));
-  border: 1px solid color-mix(in srgb, var(--duo-yellow) 45%, transparent);
-  color: var(--ink); border-radius: 999px;
-  padding: 5px 11px; font-size: .82rem; font-weight: 600;
+  background: #FFF7ED;
+  color: #EA580C; border-radius: 20px;
+  padding: 6px 10px; font-size: .75rem; font-weight: 700;
+  border: none;
 }
 .freeze-btn { margin-left: auto; }
 .freeze-btn:disabled { opacity: .5; cursor: not-allowed; }
+/* Caisse — PathScreen.kt : Text plein, fond #FFF3C4, rayon 12.dp,
+   padding vertical 10 / horizontal 12, 13.sp bold, #1E293B. */
 .chest-badge {
   display: inline-flex; align-items: center; gap: 6px;
   margin-top: 12px; width: 100%; justify-content: center;
-  padding: 9px 12px; border-radius: var(--radius-md);
-  border: 2px dashed color-mix(in srgb, var(--duo-yellow) 70%, transparent);
-  background: color-mix(in srgb, var(--duo-yellow) 12%, var(--surface));
-  color: var(--ink); font-weight: 700; cursor: pointer;
-  animation: chest-blink 1.4s ease-in-out infinite;
+  padding: 10px 12px; border-radius: 12px;
+  border: none;
+  background: #FFF3C4;
+  color: #1E293B; font-weight: 700; cursor: pointer;
+  font: inherit;
 }
-@keyframes chest-blink { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+.chest-badge:hover { filter: brightness(.97); }
 
 /* ========================= Unités + nœuds ========================= */
 .path-units { display: flex; flex-direction: column; gap: 22px; }

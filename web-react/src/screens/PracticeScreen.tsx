@@ -61,7 +61,9 @@ export function PracticeScreen() {
           <p className="eyebrow">🏋️ {t("practiceSub")}</p>
           <h1>{t("practiceTitle")}</h1>
         </div>
-        <span className="stat-chip gems" title={t("goalTitle")}>
+        {/* Chip d'objectif — PracticeScreen.kt : fond #FFF3C4, #B45309,
+            rayon 20.dp, 13.sp bold. */}
+        <span className="goal-chip" title={t("goalTitle")}>
           ⭐ <b>{goal.today}</b> / {goal.goal}
         </span>
       </div>

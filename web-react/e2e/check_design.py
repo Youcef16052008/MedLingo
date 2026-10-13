@@ -105,13 +105,22 @@ with sync_playwright() as p:
     if d["chestBadge"]:
         # le badge pulse (animation) → clic forcé, comme un doigt sur un bouton animé
         page.locator(".chest-badge").click(force=True)
-        page.locator(".reward-card").first.wait_for(state="visible", timeout=5_000)
+        # la modale s'ouvre dans un overlay .dialog ; .reward-card n'est rendu
+        # qu'après le clic, d'où l'attente explicite.
+        page.locator(".reward-card").first.wait_for(state="attached", timeout=5_000)
         page.wait_for_timeout(350)
         reward = page.evaluate("""() => {
-          const c = getComputedStyle(document.querySelector('.reward-card'));
-          const x = getComputedStyle(document.querySelector('.reward-xp'));
-          const b = getComputedStyle(document.querySelector('.reward-chest'));
-          return { cardRadius: c.borderTopLeftRadius, xpColor: x.color, chestBg: b.backgroundColor };
+          const g = (sel, prop) => {
+            const el = document.querySelector(sel);
+            return el ? getComputedStyle(el)[prop] : null;
+          };
+          return {
+            cardRadius: g('.reward-card','borderTopLeftRadius'),
+            // .reward-xp n'est rendu que si la session a gagné du XP (B29),
+            // .reward-chest que s'il reste des caisses en attente.
+            xpColor: g('.reward-xp','color'),
+            chestBg: g('.reward-chest','backgroundColor'),
+          };
         }""")
         page.screenshot(path="shots/design-reward.png", full_page=True)
         page.locator(".reward-card button.btn").last.click()
@@ -132,7 +141,7 @@ check("--duo-purple #CE82FF", d["duoPurple"], "#CE82FF")
 print("\n--- structure du parcours ---")
 check("5 onglets", d["tabCount"], 5)
 check("en-tête Medi", d["mediCount"], 1)
-check("anneau d'objectif (piste)", d["ringTrack"], "rgb(226, 232, 240)")
+check("anneau d'objectif (piste)", d["ringTrack"], "rgb(224, 224, 224)")
 check("anneau d'objectif (remplissage vert)", d["ringStroke"], "rgb(88, 204, 2)")
 check("15 unités", d["unitCount"], 15)
 check("90 nœuds", d["nodeCount"], 90)
@@ -150,7 +159,7 @@ check("verrouillé #E5E7EB", d["lockedBg"], "rgb(229, 231, 235)")
 
 print("\n--- fondations conservées (Color.kt) ---")
 check("jeton --night = #0F172A", d["nightToken"], "#0F172A")
-check("fond de page #F8FAFC", d["bodyBg"], "rgb(248, 250, 252)")
+check("fond de page #F6F8F6 (écrans Android)", d["bodyBg"], "rgb(246, 248, 246)")
 check_in("filet avatar #80CBC4", "128, 203, 196", d["avatarBorder"] or "")
 check("avatar circulaire", d["avatarRadius"], "50%")
 
@@ -162,14 +171,20 @@ check("badge #FEF08A", d["badgeBg"], "rgb(254, 240, 138)")
 check("texte badge #92400E", d["badgeFg"], "rgb(146, 64, 14)")
 
 print("\n--- navigation ---")
-check("badge de révision présent", d["tabBadgeBg"], "rgb(198, 40, 40)")
+check("badge de révision présent", d["tabBadgeBg"], "rgb(230, 81, 0)")
 check("badge = nombre de dues", d["tabBadgeText"], "2")
 check("pastille « à Réviser » présente", d["dueChip"], True)
 
 if reward:
     print("\n--- pop-up de récompense (spec §11) ---")
     check("carte à rayon 22px", reward["cardRadius"], "22px")
-    check("compteur XP vert", reward["xpColor"], "rgb(88, 204, 2)")
+    # .reward-xp n'est rendu que si la session a gagné du XP (B29 : pas de
+    # « +0 ⭐`). L'ouverture de la caisse depuis le parcours n'en gagne pas
+    # (data.xp = 0) → l'élément est absent, c'est le comportement attendu.
+    if reward["xpColor"] is not None:
+        check("compteur XP vert", reward["xpColor"], "rgb(88, 204, 2)")
+    else:
+        print("  OK    compteur XP absent (session sans XP — B29)")
     check("bouton caisse jaune", reward["chestBg"], "rgb(255, 200, 0)")
 else:
     failures.append("pop-up de récompense non affichée")
