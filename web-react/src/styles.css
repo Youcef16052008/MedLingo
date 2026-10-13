@@ -511,41 +511,61 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   transition: width .4s ease;
 }
 
-/* ---------- modules grid ---------- */
-.module-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media (max-width: 380px) { .module-grid { grid-template-columns: 1fr; } }
+/* ---------- modules (FigmaModuleDetailedCard, ModulesScreen.kt) ---------- */
+.module-grid { display: flex; flex-direction: column; gap: 12px; }
 .module-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 14px;
-  border-radius: var(--radius);
+  gap: 12px;
+  padding: 16px;
+  border-radius: 20px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-bottom: 4px solid var(--line);
+  box-shadow: var(--shadow-card);
   text-decoration: none;
   color: var(--ink);
   cursor: pointer;
   text-align: start;
-  transition: transform .1s, border-color .15s;
+  transition: transform .1s;
 }
-.module-card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--mod-color, var(--green)) 45%, var(--line)); }
-.module-card:active { transform: translateY(1px); border-bottom-width: 2px; }
+.module-card:hover { transform: translateY(-1px); }
+.module-card:active { transform: translateY(1px); }
+.module-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.module-titlecol { display: flex; align-items: center; gap: 12px; }
 .module-ico {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  font-size: 22px;
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--mod-color, var(--green)) 16%, var(--surface));
-  border: 1px solid color-mix(in srgb, var(--mod-color, var(--green)) 35%, transparent);
+  flex: 0 0 auto;
+  width: 50px; height: 50px;
+  display: grid; place-items: center;
+  font-size: 26px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--mod-color, var(--green)) 12%, var(--surface));
 }
-.module-card h3 { font-size: .98rem; }
-.module-card .tiny { margin-top: -6px; }
-.module-card .progress-track { height: 7px; }
+.module-card h3 { font-size: 16px; font-weight: 700; color: #0F172A; margin: 0; }
+.module-sub { font-size: 11px; font-weight: 500; color: #64748B; }
+.module-terms {
+  flex: 0 0 auto;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 12px; font-weight: 700;
+  background: color-mix(in srgb, var(--mod-color, var(--green)) 14%, var(--surface));
+  color: var(--mod-color, var(--green));
+  white-space: nowrap;
+}
+.module-chapters {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.module-chip {
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-size: 10px; font-weight: 500; color: #334155;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+}
+.module-card .progress-track { height: 6px; border-radius: 3px; border: none; background: #F1F5F9; }
 .module-card .mod-pct {
-  font-size: .74rem;
+  font-size: 12px;
   font-weight: 700;
   color: var(--mod-color, var(--green));
   font-variant-numeric: tabular-nums;
