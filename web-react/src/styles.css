@@ -998,24 +998,89 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .practice-card:active { transform: translateY(2px); border-bottom-width: 1px; }
 
 /* ---------- ligues ---------- */
+/* ==================== Ligues — LeagueScreen.kt ==================== */
+.league-screen { display: flex; flex-direction: column; gap: 16px; }
+
+/* --- LeagueHeader : carte blanche rayon 20 + liseré de couleur de palier --- */
+.league-hero {
+  border-radius: 20px;
+  padding: 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.league-hero-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.league-hero-ico {
+  flex: 0 0 auto;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 24px; line-height: 1;
+}
+.league-hero-title { display: block; font-size: 16px; font-weight: 800; color: #0F172A; }
+.league-hero-sub { display: block; font-size: 11px; color: #64748B; }
+.league-hero-badge {
+  flex: 0 0 auto;
+  border-radius: 12px; padding: 6px 12px;
+  font-size: 12px; font-weight: 700; color: #fff;
+}
+
+/* --- Carte zones promotion / relégation (fond #F8FAFC, rayon 16) --- */
+.league-zones { border-radius: 16px; padding: 12px; background: #F8FAFC; }
+.league-zones-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin-bottom: 4px;
+}
+.league-zone-up { font-size: 11px; font-weight: 700; color: #16A34A; }
+.league-zone-down { font-size: 11px; font-weight: 700; color: #DC2626; }
+.league-zones-week { display: block; font-size: 11px; color: #64748B; }
+
+/* --- LeagueMemberRow --- */
 .league-list { display: flex; flex-direction: column; gap: 8px; }
 .league-row {
   display: grid;
-  grid-template-columns: 34px 30px 1fr auto;
+  grid-template-columns: 28px 36px 1fr auto;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #F1F5F9;
+  border-radius: 14px;
 }
-.league-row.you { border-color: var(--duo-blue); box-shadow: 0 0 0 1px var(--duo-blue); }
-.league-row.zone-green { background: color-mix(in srgb, var(--duo-green) 10%, var(--surface)); }
-.league-row.zone-red { background: color-mix(in srgb, var(--duo-red) 8%, var(--surface)); }
-.league-rank { font-weight: 700; color: var(--ink-2); text-align: center; }
-.league-avatar { font-size: 1.3rem; text-align: center; }
-.league-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.league-xp { color: var(--ink-2); font-size: .85rem; white-space: nowrap; }
+.league-row.zone-green { background: #F0FDF4; border-color: #BBF7D0; }
+.league-row.zone-red { background: #FEF2F2; border-color: #FECACA; }
+/* `isCurrentUser` prime sur la zone (StatsProfileScreen.kt : when isCurrentUser -> #ECFDF5). */
+.league-row.you { background: #ECFDF5; border-color: #10B981; box-shadow: 0 2px 6px rgba(15,23,42,.08); }
+.league-rank {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 12px; font-weight: 700; color: #334155;
+  background: #F1F5F9;
+}
+.league-row.zone-green .league-rank { background: #DCFCE7; }
+.league-row.zone-red .league-rank { background: #FEE2E2; }
+.league-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 18px; line-height: 1;
+  background: #F1F5F9;
+}
+.league-id { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.league-name {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 13px; font-weight: 700; color: #0F172A;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.league-row.you .league-name { font-weight: 800; }
+.league-you-tag {
+  font-size: 8px; font-weight: 700; color: #fff;
+  background: #10B981; border-radius: 6px; padding: 1px 4px;
+}
+.league-sub { font-size: 10px; color: #64748B; }
+.league-xp-col { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.league-xp-col > b { font-size: 14px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+.league-xp-col > b.up { color: #16A34A; }
+.league-xp-col > b.down { color: #DC2626; }
+.league-xp-col > span { font-size: 9px; font-weight: 700; }
+.league-xp-col > span.up { color: #16A34A; }
+.league-xp-col > span.down { color: #DC2626; }
 
 /* ============================ Medi (mascotte) ============================ */
 .medi { display: flex; gap: 10px; align-items: flex-start; margin: 2px 0 10px; }
