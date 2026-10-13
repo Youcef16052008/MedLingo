@@ -1,13 +1,13 @@
 import { useT } from "../i18n/useT";
 import type { TKey } from "../i18n";
 import { useAppState, resetProgress, update } from "../domain/store";
-import { getTerms } from "../data/load";
 import {
-  DAILY_GOAL_OPTIONS,
   FREEZE_COST_GEMS,
   buyFreeze,
+  goalProgress,
 } from "../domain/gamification";
 import { TROPHIES } from "../domain/trophies";
+import { GoalRing } from "../components/GoalRing";
 import { useDialog } from "../components/DialogProvider";
 import { useToast } from "../components/ToastProvider";
 import type { Lang } from "../types";
@@ -18,16 +18,30 @@ const LANGS: { id: Lang; label: string }[] = [
   { id: "ar", label: "AR" },
 ];
 
+/* Defaults du profil — MedLinguaViewModel.kt : Dr. Youcef, MED_STUDENT,
+   YEAR_1, INTERMEDIATE. Le web n'a pas l'onboarding diagnostic ; ces
+   valeurs sont les mêmes que côté Android au premier lancement. */
+const PROFILE = {
+  name: "Dr. Youcef",
+  typeIcon: "🎓",
+  typeLabel: { fr: "Étudiant en Médecine", en: "Medical Student", ar: "طالب طب" },
+  yearLabel: { fr: "1ère Année (PCEM1)", en: "1st Year (PCEM1)", ar: "السنة الأولى" },
+  levelEmoji: "📙",
+  levelLabel: { fr: "Intermédiaire", en: "Intermediate", ar: "متوسط" },
+} as const;
+
 export function ProfileScreen() {
   const { t, lang, setLang } = useT();
   const { open } = useDialog();
   const toast = useToast();
   const s = useAppState();
 
-  const total = getTerms().length;
-  const learned = Object.keys(s.sm2).length;
   const acc = s.answered ? Math.round((s.correct / s.answered) * 100) : 0;
-  const master = Object.values(s.sm2).filter((x) => x.rep >= 3).length;
+  const goal = goalProgress(s, Date.now());
+  const canBuy = s.gems >= FREEZE_COST_GEMS;
+  const wonCount = TROPHIES.filter(
+    (tr) => typeof s.trophies[tr.id] === "number" && s.trophies[tr.id] > 0
+  ).length;
 
   const askReset = async () => {
     const r = await open({
@@ -46,117 +60,107 @@ export function ProfileScreen() {
   };
 
   return (
-    <>
-      <div className="section-head" style={{ marginTop: 0 }}>
-        <h1>{t("profileTitle")}</h1>
-      </div>
-
-      <div className="stat-row">
-        <div className="stat-tile">
-          <b>{s.streak}</b>
-          <span>🔥 {t("statStreak")}</span>
-        </div>
-        <div className="stat-tile">
-          <b>{s.xp}</b>
-          <span>⭐ {t("statXp")}</span>
-        </div>
-        <div className="stat-tile">
-          <b>{acc}%</b>
-          <span>🎯 {t("statAccuracy")}</span>
-        </div>
-      </div>
-
-      <div className="card" style={{ marginTop: 14 }}>
-        <div className="setting-row">
-          <span>{t("masteredLbl")}</span>
-          <b style={{ fontFamily: "var(--font-display)" }}>
-            {learned} / {total}
-          </b>
-        </div>
-        <div className="setting-row">
-          <span>🎓 {t("masterLbl")}</span>
-          <b style={{ fontFamily: "var(--font-display)" }}>{master}</b>
-        </div>
-        <div className="setting-row">
-          <span>🃏 {t("reviewedLbl")}</span>
-          <b style={{ fontFamily: "var(--font-display)" }}>{s.flashReviewed}</b>
-        </div>
-        <div className="setting-row">
-          <span>📝 {t("answeredLbl")}</span>
-          <b style={{ fontFamily: "var(--font-display)" }}>{s.answered}</b>
-        </div>
-        <div className="setting-row">
-          <span>🏁 {t("quizTitle")}</span>
-          <b style={{ fontFamily: "var(--font-display)" }}>{s.quizDone}</b>
-        </div>
-        <div className="setting-row">
-          <span>💎 {t("statGems")}</span>
-          <b style={{ fontFamily: "var(--font-display)" }}>{s.gems}</b>
+    <div className="profile-screen">
+      {/* ===== Carte profil étudiant (gradient #1B5E20 → #2E7D32) ===== */}
+      <div className="card profile-hero">
+        <div className="profile-hero-row">
+          <span className="profile-avatar" aria-hidden="true">
+            {PROFILE.typeIcon}
+          </span>
+          <div>
+            <b className="profile-name">{PROFILE.name}</b>
+            <span className="profile-type">
+              {PROFILE.typeLabel[lang]} • {PROFILE.yearLabel[lang]}
+            </span>
+            <span className="profile-level">
+              {PROFILE.levelEmoji} {PROFILE.levelLabel[lang]}
+            </span>
+          </div>
         </div>
       </div>
 
-      <div className="section-head">
-        <h2>{t("goalTitle")}</h2>
-        <span className="tiny">
-          🔥 {s.streak} · ❄️ {s.freezeCount}
-        </span>
-      </div>
-      <div className="card">
-        <div className="goal-seg" role="group" aria-label={t("goalTitle")}>
-          {DAILY_GOAL_OPTIONS.map((g) => (
-            <button
-              key={g}
-              type="button"
-              className={s.dailyGoal === g ? "active" : undefined}
-              aria-pressed={s.dailyGoal === g}
-              onClick={() => update((d) => void (d.dailyGoal = g))}
-            >
-              {g} XP
-            </button>
-          ))}
+      {/* ===== Objectif du jour + série + congélation ===== */}
+      <div className="card profile-goal">
+        <div className="profile-goal-top">
+          <div>
+            <b className="profile-card-title">{t("goalTitle")}</b>
+            <span className="profile-goal-line">
+              {goal.today} / {goal.goal} {t("statXp")}
+            </span>
+            <span className="profile-streak-line">
+              🔥 {s.streak} {t("statStreak")} · ❄️ {s.freezeCount}
+            </span>
+          </div>
+          <GoalRing pct={goal.pct} done={goal.done} size={56} />
         </div>
-        <div className="setting-row" style={{ marginTop: 10 }}>
-          <span>❄️ {t("freezeBuy")}</span>
-          <button
-            type="button"
-            className="btn small"
-            disabled={s.gems < FREEZE_COST_GEMS}
-            onClick={() => update((d) => void buyFreeze(d))}
-          >
-            {FREEZE_COST_GEMS} 💎
-          </button>
+        <button
+          type="button"
+          className="freeze-buy"
+          disabled={!canBuy}
+          onClick={() => update((d) => void buyFreeze(d))}
+        >
+          ❄️ {t("freezeBuy")} · {FREEZE_COST_GEMS} 💎
+        </button>
+      </div>
+
+      {/* ===== Grille des 12 trophées ===== */}
+      <div className="card profile-trophies">
+        <div className="profile-trophies-head">
+          <b className="profile-card-title">{t("trophyTitle")}</b>
+          <span className="profile-trophies-count">
+            {wonCount}/{TROPHIES.length}
+          </span>
+        </div>
+        <div className="trophy-grid">
+          {TROPHIES.map((tr) => {
+            const at = s.trophies[tr.id];
+            const won = typeof at === "number" && at > 0;
+            return (
+              <div
+                key={tr.id}
+                className={`trophy ${won ? "won" : "locked"}`}
+                title={t(tr.descKey as TKey)}
+              >
+                <span className="trophy-ico" aria-hidden="true">
+                  {tr.icon}
+                </span>
+                <b>{t(tr.titleKey as TKey)}</b>
+              </div>
+            );
+          })}
         </div>
       </div>
 
-      <div className="section-head">
-        <h2>{t("trophyTitle")}</h2>
-        <span className="tiny">
-          {Object.keys(s.trophies).length}/{TROPHIES.length}
-        </span>
-      </div>
-      <div className="trophy-grid">
-        {TROPHIES.map((tr) => {
-          const at = s.trophies[tr.id];
-          const won = typeof at === "number" && at > 0;
-          const date = won
-            ? new Date(at).toLocaleDateString(lang === "ar" ? "ar-DZ" : lang)
-            : t(tr.descKey as TKey);
-          return (
-            <div key={tr.id} className={`trophy ${won ? "won" : "locked"}`} title={t(tr.descKey as TKey)}>
-              <span className="trophy-ico" aria-hidden="true">
-                {won ? tr.icon : "🔒"}
-              </span>
-              <b>{t(tr.titleKey as TKey)}</b>
-              <span className="tiny">{date}</span>
-            </div>
-          );
-        })}
+      {/* ===== Rapport d'apprentissage (MetricBox) ===== */}
+      <div className="card profile-report">
+        <b className="profile-card-title">{t("answeredLbl")}</b>
+        <div className="metric-grid">
+          <div className="metric-box">
+            <span aria-hidden="true">📝</span>
+            <b>{s.answered}</b>
+            <span>{t("answeredLbl")}</span>
+          </div>
+          <div className="metric-box">
+            <span aria-hidden="true">🏆</span>
+            <b>{s.quizDone}</b>
+            <span>{t("quizTitle")}</span>
+          </div>
+          <div className="metric-box">
+            <span aria-hidden="true">✅</span>
+            <b>{s.correct}</b>
+            <span>{t("correctLbl")}</span>
+          </div>
+          <div className="metric-box">
+            <span aria-hidden="true">🎯</span>
+            <b>{acc}%</b>
+            <span>{t("statAccuracy")}</span>
+          </div>
+        </div>
       </div>
 
-      <div className="section-head">
-        <h2>{t("langLbl")}</h2>
-      </div>
-      <div className="card">
+      {/* ===== Langue ===== */}
+      <div className="card profile-lang">
+        <b className="profile-card-title">{t("langLbl")}</b>
         <div className="lang-switch">
           {LANGS.map((l) => (
             <button
@@ -179,6 +183,6 @@ export function ProfileScreen() {
       <p className="tiny" style={{ textAlign: "center", marginTop: 24 }}>
         {t("aboutTxt")}
       </p>
-    </>
+    </div>
   );
 }

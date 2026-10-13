@@ -1191,24 +1191,28 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   background: var(--duo-green); color: #fff;
   box-shadow: 0 3px 0 var(--duo-green-dark);
 }
+/* Grille 12 trophées — StatsProfileScreen.kt : carte blanche rayon 18,
+   damier 46dp cercle (#FFF3C4 gagné / #F1F5F9 verrouillé), icône 20sp,
+   alpha 0.35 si verrouillé, libellé 9sp. */
 .trophy-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
 }
 .trophy {
-  display: flex; flex-direction: column; align-items: center; gap: 3px;
-  text-align: center; padding: 12px 6px 10px;
-  border: 1px solid var(--line); border-radius: var(--radius-md);
-  background: var(--surface); font-size: .78rem;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  text-align: center; padding: 0;
+  background: transparent; border: none; font-size: .56rem;
 }
-.trophy .trophy-ico { font-size: 1.5rem; line-height: 1; }
-.trophy b { font-size: .76rem; color: var(--ink); }
-.trophy .tiny { color: var(--ink-3); font-size: .68rem; }
-.trophy.won {
-  background: color-mix(in srgb, var(--duo-yellow) 14%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-yellow) 55%, transparent);
+.trophy .trophy-ico {
+  width: 46px; height: 46px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: #FFF3C4; font-size: 20px; line-height: 1;
 }
-.trophy.locked { opacity: .72; filter: grayscale(.85); }
-.trophy.locked b { color: var(--ink-3); }
+.trophy b { font-size: .56rem; color: #1E2922; font-weight: 700; line-height: 1.2; }
+.trophy .tiny { display: none; }
+.trophy.won { background: transparent; border-color: transparent; }
+.trophy.locked { opacity: 1; filter: none; }
+.trophy.locked .trophy-ico { background: #F1F5F9; filter: grayscale(1); opacity: .35; }
+.trophy.locked b { color: #90A4AE; font-weight: 400; }
 
 /* ==================== Hub Révision : anneau + Medi ==================== */
 .practice-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
@@ -1243,3 +1247,88 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 
 
 
+
+/* ==================== Profil — StatsProfileScreen.kt ==================== */
+.profile-screen { display: flex; flex-direction: column; gap: 16px; }
+/* Android : fond #F6F8F6, cartes blanches rayon 18-20, elevation 2-3dp. */
+.profile-screen .card { border-radius: 18px; padding: 16px; }
+
+/* --- Carte profil (gradient #1B5E20 → #2E7D32, rayon 20, padding 20) --- */
+.profile-hero {
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  background: linear-gradient(135deg, #1B5E20, #2E7D32);
+}
+.profile-hero-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px;
+}
+.profile-avatar {
+  flex: 0 0 auto;
+  width: 64px; height: 64px; border-radius: 50%;
+  background: #fff;
+  display: grid; place-items: center;
+  font-size: 34px; line-height: 1;
+}
+.profile-name { display: block; color: #fff; font-size: 20px; font-weight: 700; }
+.profile-type {
+  display: block; color: #A5F4AC; font-size: 13px; font-weight: 600;
+  margin-top: 2px;
+}
+.profile-level {
+  display: block; color: rgba(255,255,255,.9);
+  font-size: 11px; font-weight: 500;
+  margin-top: 2px;
+}
+
+/* --- Objectif du jour + série + congélation --- */
+.profile-goal-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.profile-card-title {
+  display: block;
+  font-size: 15px; font-weight: 700; color: #1E2922;
+  margin-bottom: 2px;
+}
+.profile-goal-line { display: block; font-size: 13px; color: #64748B; }
+.profile-streak-line {
+  display: block; font-size: 12px; font-weight: 700; color: #EA580C;
+  margin-top: 4px;
+}
+.freeze-buy {
+  margin-top: 10px;
+  display: inline-flex; align-items: center;
+  border: none; cursor: pointer;
+  border-radius: 20px; padding: 7px 12px;
+  font-size: 12px; font-weight: 700;
+  background: #E0F2FE; color: #0284C7;
+}
+.freeze-buy:disabled { background: #F1F5F9; color: #90A4AE; cursor: default; }
+
+/* --- Grille des 12 trophées --- */
+.profile-trophies-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.profile-trophies-count { font-size: 12px; font-weight: 700; color: #B45309; }
+.profile-screen .trophy-grid { margin-top: 2px; }
+
+/* --- Rapport d'apprentissage (MetricBox 2×2) --- */
+.metric-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-top: 12px;
+}
+.metric-box {
+  display: flex; flex-direction: column; gap: 4px;
+  border-radius: 14px;
+  background: #F6F8F6;
+  border: 1px solid #E0E5E0;
+  padding: 14px;
+}
+.metric-box > span:first-child { font-size: 20px; line-height: 1; }
+.metric-box b { font-size: 18px; font-weight: 700; color: #0D532C; }
+.metric-box > span:last-child {
+  font-size: 11px; font-weight: 500; color: #5A6B60;
+}
