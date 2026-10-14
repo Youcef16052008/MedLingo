@@ -4,7 +4,7 @@
 
 > Les definitions `definitionFr` / `definitionAr` ci-dessous ont ete produites automatiquement. Elles sont livrees pour completer le corpus, mais **aucun usage pedagogique n'est valide avant relecture** par un locuteur natif (francais et arabe), avec verification de la terminologie medicale.
 
-Pour chaque ligne : verifier la fidelite du sens, le registre, et l'usage terminologique local. Cocher une ligne = relecture faite. Les corrections se font dans `app/src/main/java/com/example/data/terms/AnglaisMedicalTerms.kt`.
+Pour chaque ligne : verifier la fidelite du sens, le registre, et l'usage terminologique local. Cocher une ligne = relecture faite. Les corrections se font dans `app/src/main/java/com/aistudio/medlingua/dzmed/data/terms/AnglaisMedicalTerms.kt`.
 
 - entrees a relire : **655**
 - chapitres : **42**

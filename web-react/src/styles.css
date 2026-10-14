@@ -6,7 +6,7 @@
 
 :root {
   /* Palette : vert chirurgical / teal clinique / rouge algérien / ambre
-     Valeurs alignées sur app/src/main/java/com/example/ui/theme/Color.kt */
+     Valeurs alignées sur app/src/main/java/com/aistudio/medlingua/dzmed/ui/theme/Color.kt */
   --green-900: #0D532C;
   --green: #1B5E20;
   --green-600: #2E7D32;

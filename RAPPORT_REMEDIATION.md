@@ -5,6 +5,13 @@
 **Base** : 20 rapports partiels + 2ᵉ revue profonde du code (chaque conclusion vérifiée par programme)
 **Build exécuté** : `./gradlew testDebugUnitTest` → **219 tests, 0 échec** ; `vitest run` (web) → **111 tests, 0 échec** ; `tsc --noEmit` strict → OK.
 
+> **Mise à jour 13 octobre 2026 — plan exécuté.** Le plan de remédiation décrit ici a été
+> **appliqué à 100 %** (P0→P3) : voir `RAPPORT_FINAL_DEFINITIF.md` §8 pour l'état d'exécution
+> action par action. La suite de tests est passée à **267 tests Android / 127 tests web**
+> (394 verts au total), et une passe de parité visuelle web ↔ Android a aligné les 10 écrans
+> web sur leurs homologues Android (`RAPPORT_PARITE_WEB_ANDROID.md`). Les comptes de tests
+> cités dans ce document datent du 10 octobre et sont historiques.
+
 Ce rapport est **opérationnel** : chaque bug contient son correctif, chaque amélioration son action, et la phase 0 est déjà appliquée (voir §6).
 
 ---

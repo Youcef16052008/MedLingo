@@ -1,5 +1,9 @@
 # PARTIE 16/20 — `web/` (PWA vanilla JS legacy) et `version old but have react and vite/`
 
+> **Note (13 octobre 2026)** : le dossier `web/` décrit dans ce rapport a depuis été
+> **supprimé** (Phase 0 du plan de remédiation, exécutée). Le port web vivant est
+> `web-react/`, documenté dans la Partie 15 et dans `web-react/README.md`.
+
 **Fichiers analysés** : `web/` complet (14 fichiers) + inventaire complet de `version old but have react and vite/` (83 fichiers) + `docs/*`.
 
 ## Observations

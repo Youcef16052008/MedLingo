@@ -1,10 +1,10 @@
 # Anglais Medical — relecture des exemples FR/AR
 
-**655 exemples** issus du dump `tmp_medecal_english.sql`, avec les traductions automatiques `exampleFr` / `exampleAr` livrées dans `app/src/main/java/com/example/data/terms/AnglaisMedicalTerms.kt`.
+**655 exemples** issus du dump `tmp_medecal_english.sql`, avec les traductions automatiques `exampleFr` / `exampleAr` livrées dans `app/src/main/java/com/aistudio/medlingua/dzmed/data/terms/AnglaisMedicalTerms.kt`.
 
 > Ces exemples ont ete produits automatiquement. **Aucun usage pedagogique n'est valide avant relecture** par un locuteur natif (francais et arabe), avec verification du sens, du registre et de la terminologie medicale.
 
-Pour chaque ligne : verifier que l'exemple traduit conserve le sens et le contexte clinique de l'exemple anglais. Cocher une ligne = relecture faite. Les corrections se font dans `app/src/main/java/com/example/data/terms/AnglaisMedicalTerms.kt`.
+Pour chaque ligne : verifier que l'exemple traduit conserve le sens et le contexte clinique de l'exemple anglais. Cocher une ligne = relecture faite. Les corrections se font dans `app/src/main/java/com/aistudio/medlingua/dzmed/data/terms/AnglaisMedicalTerms.kt`.
 
 - exemples a relire : **655**
 - chapitres : **42**

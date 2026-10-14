@@ -1,6 +1,6 @@
 # ARCHITECTURE RÉELLE — MedLingo Medical English
 
-**Date de dernière vérification :** 10 octobre 2026 (revue du code, pas du code documenté)
+**Date de dernière vérification :** 13 octobre 2026 (revue du code, pas du code documenté — section §6 mise à jour : 267 tests Android / 127 tests web, parité visuelle web ↔ Android)
 **Status :** Android offline-first, mono-utilisateur, backend **non branché**
 
 > ⚠️ **Ce document remplace `ARCHITECTURE_FINALE_100_DUOLINGO.md` (29 sept 2026).**
@@ -137,11 +137,17 @@ l'app.** C'est une direction de conception, pas une intégration.
 
 | Plateforme | Status |
 |---|---|
-| **Android (Kotlin/Compose)** | ✅ App principale, 209 tests |
-| **`web-react/`** | ✅ Port fidèle, 111 tests, `tsc --noEmit` strict |
+| **Android (Kotlin/Compose)** | ✅ App principale, **267 tests** (maj. 13/10/2026) |
+| **`web-react/`** | ✅ Port fidèle, **127 tests**, `tsc --noEmit` strict ; parité visuelle alignée sur Android (maj. 13/10/2026 — voir `RAPPORT_PARITE_WEB_ANDROID.md`) |
 | **`web/` vanilla** | ❌ Supprimé en Phase 0 (divergeait) |
 | **`backend/functions/`** | ⚠️ Code non branché (voir §4) |
 
 Les deux plateformes vivantes partagent le **même générateur de leçons**
 (`LessonGenerator` ↔ `web-react/src/domain/lessons.ts`) et la **même logique de
 parcours** (`PathBuilder` ↔ `path.ts`). C'est la garantie de non-divergence.
+
+> **Mise à jour 13 octobre 2026** : au-delà des règles (XP, SM-2, déblocage), la parité
+> **visuelle** a été réalisée — les 10 écrans web sont alignés token par token sur leurs
+> homologues Android, validée par 35 contrôles de computed styles (Playwright).
+> Bug de routage corrigé au passage (paramètre de route supprimé avant lecture →
+> session flashcards vide).

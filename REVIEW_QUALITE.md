@@ -2,6 +2,12 @@
 
 **Date :** 10 octobre 2026 · **Portée :** app Android + `web-react/` + `backend/`
 
+> **Mise à jour 13 octobre 2026.** Depuis cette revue, le plan de remédiation a été exécuté à
+> 100 % (`RAPPORT_FINAL_DEFINITIF.md` §8), la base de données a fait l'objet d'une 2ᵉ passe
+> d'audit corrigeant 6 défauts (`RAPPORT_DATABASE_V2.md`), et la parité visuelle web ↔ Android
+> a été réalisée (`RAPPORT_PARITE_WEB_ANDROID.md`). Aucun défaut majeur nouveau n'a été
+> introduit : 267 tests Android + 127 tests web verts, `check_design.py` 35/35.
+
 ---
 
 ## Verdict : **code de qualité, sans défaut majeur**

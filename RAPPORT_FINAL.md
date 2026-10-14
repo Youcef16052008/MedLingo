@@ -1,5 +1,11 @@
 # RAPPORT FINAL — MedLingo, 2ᵉ revue (passe profonde)
 
+> **Note (13 octobre 2026)** : ce rapport est le journal de la 2ᵉ revue. Il a été
+> **supplanté par `RAPPORT_FINAL_DEFINITIF.md`** (audit base de données en 2 passes,
+> plan de remédiation P0→P3 exécuté à 100 %, puis passe de parité visuelle web ↔
+> Android en §9). Voir aussi `RAPPORT_DATABASE_V2.md` et
+> `RAPPORT_PARITE_WEB_ANDROID.md`.
+
 **Périmètre** : 6 342 fichiers, ~19 000 lignes de Kotlin/TS/SQL analysées sur 20 rapports. Chaque conclusion ci-dessous a été **vérifiée deux fois** : une fois à la lecture, une fois par programme (grep/script/parseur) lors de la seconde revue.
 
 **Build exécuté** : `./gradlew testDebugUnitTest` → **BUILD SUCCESSFUL** en 1 min 21 s, **227 tests, 0 échec, 0 ignoré, 0 erreur**. Le projet compile et sa suite de tests est intégralement verte — les défauts décrits ci-dessous sont donc des défauts de comportement et de contenu, **pas des défauts de compilation**.
@@ -154,3 +160,7 @@ La faiblesse d'origine — **44 exercices pour 90 leçons** — est résolue : l
 ### Rapports produits (20 parties + ce rapport final)
 
 `RAPPORT_01_20_configuration_build.md` · `02_entree_manifest_di` · `03_couche_donnees` · `04_domain` · `05_contenu_terms_exercices` · `06_viewmodel` · `07_ui_screens` · `08_quiz_diagnostic` · `09_services` · `10_components` · `11_ressources` · `12_tests` · `13_i18n_profile_flashcards` · `14_backend_supabase` · `15_web_react` · `16_web_legacy_archive` · `17_outils_scripts` · `18_documentation` · `19_git_worktree_build` · `20_comparaison_duolingo` · **`RAPPORT_FINAL.md`** (ce document)
+
+### Rapports postérieurs (passe de remédiation)
+
+`RAPPORT_FINAL_DEFINITIF.md` (audit DB 2 passes + plan P0→P3 100 % exécuté + §9 parité visuelle) · `RAPPORT_DATABASE_V2.md` (2ᵉ passe database, 6 défauts corrigés) · `RAPPORT_PARITE_WEB_ANDROID.md` (parité design web ↔ Android, 10 écrans alignés) · `RAPPORT_REMEDIATION.md` (plan de remédiation exécuté)

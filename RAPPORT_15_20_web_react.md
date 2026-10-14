@@ -249,6 +249,18 @@ Le filet qui existe est `e2e/full_audit.py` (Playwright) : il clique chaque bout
 
 **Conclusion** : le web-react est un **port fidèle des règles**, et même **meilleur que l'original sur les deux bugs confirmés** (matching, persona). Le README documente explicitement la parité attendue, ce qui est un point fort : la divergence est traquée.
 
+> **Mise à jour 13 octobre 2026 — parité visuelle réalisée.** Cette section auditait la parité des
+> *règles* (XP, SM-2, déblocage…). La parité *visuelle* était en revanche absente : elle a été
+> exécutée depuis — les 10 écrans web ont été alignés sur leurs homologues Android token par token
+> (fonds, radii, typo, structure), validée par 35 checks de computed styles Playwright. Un bug de
+> routage (`param` supprimé avant lecture → session flashcards vide) a été corrigé au passage.
+> À noter aussi : la dérive de données §3.3 signalée par cet audit (« 44 exercices pour 90 nœuds »)
+> a été **corrigée** — `npm run extract` lit désormais les 2 fichiers de seed (112 exercices),
+> et le script pointait sur l'ancien namespace `com.example` après le renommage P2-2 (réparé,
+> vérifié : 4 504 termes + 112 exercices). Le compte de clés i18n est passé de 153 à **164**
+> (nouvelles clés des écrans alignés, 5 clés orphelines supprimées — `check:i18n` vert).
+> Voir [RAPPORT_PARITE_WEB_ANDROID.md](RAPPORT_PARITE_WEB_ANDROID.md).
+
 ---
 
 ## 6. Ce qui est remarquable

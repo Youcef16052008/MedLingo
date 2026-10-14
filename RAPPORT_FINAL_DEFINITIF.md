@@ -189,7 +189,7 @@ Je ne signale que ce que j'ai réellement lu et vérifié.
 | Tests Android | **267 tests, 0 failure, 0 error, 0 skipped** |
 | `tsc --noEmit` (web-react) | **OK** (exit 0) |
 | `vitest run` (web-react) | **127 tests, 0 échec** (13 fichiers) |
-| `check:i18n` | **153 clés × 3 langues, 0 manquante, 0 désynchronisée, 0 morte** |
+| `check:i18n` | **164 clés × 3 langues, 0 manquante, 0 désynchronisée, 0 morte** (maj. 13/10/2026) |
 | Base SQLite reconstruite + 4 504 termes | `PRAGMA integrity_check = ok` |
 | Seed SQL régénéré + validé | **4 504 rows insérées, integrity ok** |
 | Cohérence Android ↔ web | 4 504 termes identiques, 112 exercices (mêmes ids) |
@@ -271,8 +271,79 @@ Les 655 sont concentrés en Sémiologie (106), Anatomie Pathologique (99), Termi
 
 **Recommandation : relecture éditoriale humaine par lots**, module par module (Sémiologie en premier, 106 termes). Le dériveur existant (`tools_build_english.py`) attend déjà des `example_sentence` + traductions FR/AR dans `tmp_tr/examples_*.json` : c'est le format d'entrée à respecter.
 
+---
+
+## 9. Passe de parité visuelle web ↔ Android (13 octobre 2026)
+
+Nouvelle phase exécutée après ce rapport : aligner l'app web-react sur l'app Android écran par
+écran, **Android = source de vérité** pour chaque token visuel.
+
+### Méthode
+
+Extraction des computed styles de l'app web live (Playwright, viewport 390×844) sur les 7 routes,
+lecture des écrans Android de référence (`.kt`), correction de chaque écart, puis re-validation :
+`tsc --noEmit` + `vitest run` + `e2e/check_design.py` (35 vérifications).
+
+### Écrans alignés (6 commits)
+
+| Écran | Référence Android | Commit |
+|---|---|---|
+| Top bar / bottom bar / parcours / révision | `GemsLeagueTopBar.kt`, `MainActivity.kt`, `PathScreen.kt`, `PracticeScreen.kt` | `b3f0b86` |
+| Modules | `FigmaModuleDetailedCard` | `9ae513a` |
+| Profil | `StatsProfileScreen.kt` | `cdec490` |
+| Ligues | `LeagueScreen.kt` | `51af599` |
+| Quiz | `LearningPyramidOverviewScreen.kt` | `68fef70` |
+| Flashcards | `FlashcardCard3D.kt` + `RatingButtons.kt` | `81d9b52` |
+
+Corrections principales : fond `#F6F8F6` global, Material Symbols Rounded sur la bottom bar,
+puce ligue ajoutée à la top bar, carte profil gradient + GoalRing + 12 trophées 4×3 + MetricBox,
+`LeagueHeader` + zones promotion/relégation + `LeagueMemberRow` médaillée, pyramide 6 niveaux avec
+déblocage en cascade (`UNLOCK_THRESHOLD = 70`), flashcards recto/verso réalignés (hauteur 410px,
+notation SM-2 en emoji bordés).
+
+### Bug corrigé en chemin
+
+`routeName(route).split('/')` supprimait systématiquement le paramètre de route —
+`#/flash/anat` donnait `param=undefined` et la session flashcards affichait « Rien à réviser »
+dans 100 % des cas. Le paramètre se lit maintenant sur le hash brut (commit `81d9b52`).
+
+### Correctifs de maintenance trouvés en documentant (13 octobre 2026)
+
+La mise à jour de la documentation a révélé trois dérives réelles, corrigées et vérifiées :
+
+1. **`npm run extract` était cassé** depuis le renommage de namespace (P2-2) : le script pointait
+   encore sur `com/example/data/...` alors que les seeds vivent sous
+   `com/aistudio/medlingua/dzmed/data/...` — l'extraction échouait (ENOENT) sans que personne
+   ne le remarque, les JSON de `public/data/` étant simplement figés. Réparé et revérifié :
+   **4 504 termes + 112 exercices** extraits, identiques aux JSON commités (zéro dérive).
+2. **5 clés i18n orphelines** laissées par les réécritures d'écrans (`masterLbl`, `reviewedLbl`,
+   `quizSub`, `levelAll`, `profileTitle`) — `check:i18n` était rouge (exit 1). Supprimées des
+   3 langues ; `check:i18n` vert, **164 clés** (153 + nouvelles clés des écrans alignés).
+3. **README obsolète** : commande `adb` pointant sur `com.example.MainActivity` (manifeste :
+   `.MainActivity`), compte de termes « 4 512 » (réel : 4 504), « 44 exercices » (réel : 112),
+   « 153 clés » (réel : 164).
+
+### Validation
+
+| Vérification | Résultat |
+|---|---|
+| `tsc --noEmit` | 0 erreur |
+| `vitest run` | 127 tests, 0 échec |
+| `e2e/check_design.py` | 35/35 OK |
+| `check:i18n` | **164 clés × 3 langues, 0 manquante, 0 désynchronisée, 0 morte** (exit 0) |
+| `check:seed` | **4 504 termes + 112 exercices** cohérents avec le SQL backend |
+| `npm run extract` | régénère 4 504 termes + 112 exercices, identiques aux JSON commités |
+| Playwright 390×844 | fond `#F6F8F6` sur les 7 routes, 5 onglets `#0D532C`, pas d'overflow |
+
+Non portés (plateforme) : placement diagnostic, hors-ligne par module, notifications,
+sélecteur d'objectif ; écran Recherche web-only. Rapport complet :
+[RAPPORT_PARITE_WEB_ANDROID.md](RAPPORT_PARITE_WEB_ANDROID.md).
+
 ### Verdict
 
-**Le plan technique est terminé à 100 %.** Les 13 actions P0/P1/P2/P3 sont toutes faites, tranchées, ou — pour P1-3 — **analysées et déterminées non automatisables** (92 % des définitions résidantes n'ont aucun patron dérivable ; la relecture éditoriale humaine reste la seule option).
+**Le plan technique est terminé à 100 %, sur les deux plateformes.** Les 13 actions P0/P1/P2/P3
+sont toutes faites, tranchées, ou — pour P1-3 — analysées et déterminées non automatisables ;
+la passe de parité visuelle a aligné les 10 écrans web sur leurs homologues Android, validée par
+exécution (394 tests verts au total : 267 Android + 127 web, plus 35 checks de computed styles).
 
 Aucun item restant ne présente un risque technique ou ne bloque la mise en production.

@@ -98,10 +98,10 @@ Génération automatique : `FlashcardGenerator.generateAll()` → 4 504 flashcar
 
 ### 3.1 Nouveau fichier : `BulkExerciseGenerator.kt`
 
-Location : `app/src/main/java/com/example/domain/lesson/`
+Location : `app/src/main/java/com/aistudio/medlingua/dzmed/domain/lesson/`
 
 ```kotlin
-package com.example.domain.lesson
+package com.aistudio.medlingua.dzmed.domain.lesson
 
 import com.example.data.local.entity.ExerciseEntity
 import com.example.data.local.entity.FlashcardEntity

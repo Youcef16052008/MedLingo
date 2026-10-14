@@ -9,8 +9,14 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+// P2-2 : le namespace a été renommé `com.example` → `com.aistudio.medlingua.dzmed`
+// (122 fichiers .kt, 4 répertoires déplacés). Les chemins ci-dessous pointaient
+// encore sur l'ancien namespace : `npm run extract` échouait (ENOENT) depuis ce
+// renommage, sans que personne ne le remarque — les JSON de public/data étaient
+// simplement figés sur leur dernière extraction valide.
 const TERMS_SRC = join(
-  __dirname, "..", "..", "app", "src", "main", "java", "com", "example", "data", "terms"
+  __dirname, "..", "..", "app", "src", "main", "java", "com", "aistudio",
+  "medlingua", "dzmed", "data", "terms"
 );
 // P1-2 : lire TOUS les fichiers de seed d'exercices, pas un seul.
 // Avant, `npm run extract` ne lisait que LearningExercisesData.kt (44 ex) et
@@ -18,7 +24,8 @@ const TERMS_SRC = join(
 // systématiquement tronqué à 44 à chaque extraction, créant une dérive
 // silencieuse entre Android (112 exercices) et web (44).
 const EXERCISES_SRC_DIR = join(
-  __dirname, "..", "..", "app", "src", "main", "java", "com", "example", "data", "initial"
+  __dirname, "..", "..", "app", "src", "main", "java", "com", "aistudio",
+  "medlingua", "dzmed", "data", "initial"
 );
 const EXERCISES_SOURCES = [
   "LearningExercisesData.kt",

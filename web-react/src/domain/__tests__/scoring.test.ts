@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { fillScore } from "../scoring";
 
 // Miroir exact d'`ExerciseChecker.checkFill` (Android) :
-// app/src/test/java/com/example/ExerciseSpecFixesTest.kt
+// app/src/test/java/com/aistudio/medlingua/dzmed/ExerciseSpecFixesTest.kt
 describe("fillScore", () => {
   it("rejects 1-char answers (no trivial fuzzy credit)", () => {
     expect(fillScore("a", "protects")).toBe(0);

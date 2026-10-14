@@ -1,7 +1,7 @@
 # Revue base de données — MedLingua (2e passe)
 
 **Date** : 2026-10-12
-**Portée** : couche données Android complète (Room v10) — entités, DAO, migrations,
+**Portée** : couche données Android complète (Room v10 → v12 — chaîne de migrations auditée) — entités, DAO, migrations,
 repository, schéma exporté.
 **Méthode** : relecture indépendante du code + reproduction des mécanismes en SQLite
 réel (pas seulement lecture).

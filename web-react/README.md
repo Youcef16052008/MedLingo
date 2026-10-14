@@ -1,7 +1,7 @@
 # MedLingo DZ — version web (React + Vite)
 
 Port React/TypeScript de l'application MedLingo DZ : 4 504 flashcards SM‑2 et
-44 exercices (6 types de questions) pour l'anglais médical, en français,
+112 exercices (6 types de questions) pour l'anglais médical, en français,
 anglais et arabe (RTL), utilisable directement dans un navigateur.
 
 ## Démarrage
@@ -24,7 +24,7 @@ npm run dev        # http://localhost:5173
 | `npm run icons`     | régénère les 6 PNG + `icon.svg` depuis la mascotte Android      |
 | `npm run e2e`       | parcours navigateur complet (nécessite un serveur, voir plus bas)|
 | `npm run audit`     | audit bouton par bouton + actifs + cas limites (idem serveur)   |
-| `npm run design`    | contrôle des styles calculés (palette Duolingo, parcours, RTL)  |
+| `npm run design`    | parité design web ↔ Android : 35 contrôles de styles calculés (Playwright) |
 
 ## Données
 
@@ -35,11 +35,14 @@ du projet Android.
 npm run extract
 ```
 
-Le script lit `app/src/main/java/com/example/data/initial/*.kt`, parse les
-constructeurs `MedicalTermEntity(...)` et `ExerciseEntity(...)`, et écrit :
+Le script lit les seeds Kotlin (namespace `com.aistudio.medlingua.dzmed`) :
 
-- `public/data/terms.json` — 4 504 termes, 15 modules
-- `public/data/exercises.json` — 44 exercices
+- `app/src/main/java/com/aistudio/medlingua/dzmed/data/terms/*.kt` — 15 fichiers
+  de termes (`MedicalTermEntity(...)`), et écrit `public/data/terms.json`
+  (**4 504 termes**, 15 modules) ;
+- `app/src/main/java/com/aistudio/medlingua/dzmed/data/initial/` —
+  `LearningExercisesData.kt` + `MedLingoExercisesData.kt` (`ExerciseEntity(...)`),
+  et écrit `public/data/exercises.json` (**112 exercices**).
 
 `src/data/load.ts` les charge à l'amorçage, puis les indexe par module.
 Un test d'intégrité (`src/i18n/__tests__/i18n.test.ts`) bloque si les comptes
@@ -59,17 +62,16 @@ src/
   data/                   modules (15), chargement/indirection des JSON
   lib/                    router par hash, shuffle/normalisation, synthèse vocale
   components/             TopBar, TabBar, ModuleCard, SessionTop, dialog, toast, fiche terme
-  screens/                Accueil, Cours, Recherche, Flashcards, Quiz, Profil
+  screens/                Parcours, Révision, Cours, Ligues, Recherche, Flashcards, Quiz, Profil
 ```
 
 Choix structurants :
 
 - **Aucune dépendance de routing** : `src/lib/router.ts` écoute `hashchange`
-  et rend l'écran correspondant (`#/home`, `#/modules`, `#/search`,
-  `#/flash/:id`, `#/quiz`, `#/profile`).
+  et rend l'écran correspondant (`#/path`, `#/practice`, `#/modules`,
+  `#/search`, `#/leagues`, `#/flash/:id`, `#/quiz`, `#/profile`).
 - **État** : un store externe (`subscribe` + `useSyncExternalStore`) persisté
-  dans `localStorage`, clé `medlingo_web_v1` — compatible avec la version
-  vanilla `web/`.
+  dans `localStorage`, clé `medlingo_web_v1`.
 - **Horloge injectée** : `sm2Next`, `addXp`, `touchStreak` prennent
   `now` en argument. Aucune lecture de `Date.now()` dans la logique métier,
   ce qui rend les règles testables.
@@ -77,21 +79,23 @@ Choix structurants :
   des fonctions de mise à jour d'état (React 19 StrictMode double-invoque les
   updaters en développement).
 
-## Parité avec `web/` (vanilla) et Android
+## Parité avec Android
 
-La version React est un port de `web/app.js`, à laquelle elle doit rester
-identique sur les points de notation :
+La version React est un port de l'application Android (Kotlin), à laquelle elle
+reste identique sur les règles de notation et, depuis la passe de parité visuelle
+du 13 octobre 2026, sur le **design** (chaque écran web aligné sur son homologue
+`.kt` — voir `../RAPPORT_PARITE_WEB_ANDROID.md`).
 
-| Type             | Règle de validation                                    |
-| ---------------- | ------------------------------------------------------ |
-| `mcq` / `reading` / `clinical_case` | `norm(choix) === norm(answer)`          |
-| `fill_blank`     | `norm(saisie) === norm(answer)`                        |
-| `sentence_order` | concaténation **sensible à la casse** des mots cliqués |
-| `matching`       | chaque paire `l::r` doit être exacte                   |
+| Type             | Règle de validation                                    | Référence Android |
+| ---------------- | ------------------------------------------------------ | ---------------- |
+| `mcq` / `reading` / `clinical_case` | `norm(choix) === norm(answer)`          | `ExerciseChecker.kt` |
+| `fill_blank`     | `norm(saisie) === norm(answer)`                        | `ExerciseChecker.checkFill` |
+| `sentence_order` | concaténation **sensible à la casse** des mots cliqués | `ExerciseChecker.checkSentenceOrder` |
+| `matching`       | chaque paire `l::r` doit être exacte                   | `ExerciseChecker.checkMatching` |
 
 La casse de `sentence_order` est volontaire : la banque peut contenir à la fois
 `The` et `the`, ce qui rend la question résoluble uniquement dans un ordre.
-Voir `web/app.js:937` et `src/screens/QuizScreen.tsx:137`.
+Miroir côté web : `src/screens/QuizScreen.tsx` et `src/domain/scoring.ts`.
 
 ## Tests
 
