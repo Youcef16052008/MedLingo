@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useT } from "../i18n/useT";
 import type { TKey } from "../i18n";
-import { update } from "../domain/store";
-import { getExercises } from "../data/load";
+import { update, useAppState } from "../domain/store";
+import type { AppState } from "../domain/store";
+import { lessonQuestions, quizExercisesForLevel } from "../domain/lessons";
 import { addXp, touchStreak, calculateGemsForLesson } from "../domain/gamification";
-import { lessonQuestions } from "../domain/lessons";
 import { lessonKey } from "../domain/path";
 import { modLabel } from "../data/modules";
 import { earnChest } from "../domain/chests";
@@ -19,7 +19,34 @@ import { navigate } from "../lib/router";
 import type { Exercise, Lang } from "../types";
 
 export const QUIZ_CAP = 10;
-const LEVEL_KEYS: TKey[] = ["lvl1", "lvl2", "lvl3", "lvl4", "lvl5", "lvl6"];
+
+/* Miroir de LearningLevel.kt — 6 niveaux progressifs, chacun avec son icône,
+   sa couleur et son objectif. `objectiveKey` pointe vers les i18n. */
+const LEARNING_LEVELS: {
+  n: number;
+  icon: string;
+  color: string;
+  key: TKey;
+  objectiveKey: TKey;
+}[] = [
+  { n: 1, icon: "📖", color: "#1B5E20", key: "lvl1", objectiveKey: "lvl1Obj" },
+  { n: 2, icon: "🧩", color: "#00695C", key: "lvl2", objectiveKey: "lvl2Obj" },
+  { n: 3, icon: "💬", color: "#1565C0", key: "lvl3", objectiveKey: "lvl3Obj" },
+  { n: 4, icon: "📝", color: "#6A1B9A", key: "lvl4", objectiveKey: "lvl4Obj" },
+  { n: 5, icon: "📄", color: "#E65100", key: "lvl5", objectiveKey: "lvl5Obj" },
+  { n: 6, icon: "🏥", color: "#C62828", key: "lvl6", objectiveKey: "lvl6Obj" },
+];
+
+/* Miroir de UserStatsEntity.isLevelUnlocked / getScoreForLevel — UNLOCK_THRESHOLD = 70.
+   Sur le web les scores de niveau sont stockés dans `lessonBest` sous la clé
+   `quiz:N` (le quiz libre n'a pas de module ; on utilise le pseudo-module `quiz`). */
+function scoreForLevel(n: number, s: AppState): number {
+  return s.lessonBest[`quiz:${n}`] ?? 0;
+}
+function isLevelUnlocked(n: number, s: AppState): boolean {
+  if (n === 1) return true;
+  return scoreForLevel(n - 1, s) >= 70;
+}
 
 /** Cadre de session lue dans le hash : `#/quiz?module=anat&level=3`, `#/quiz?mode=exam`. */
 function frameFromHash(): { module?: string; level: number; mode?: string } {
@@ -164,6 +191,7 @@ export function QuizScreen() {
   const { t, lang } = useT();
   const { open } = useDialog();
   const toast = useToast();
+  const s = useAppState();
   const [q, setQ] = useState<QuizState>(IDLE);
   const [reward, setReward] = useState<RewardData | null>(null);
   const goalHitRef = useRef(false);
@@ -176,7 +204,7 @@ export function QuizScreen() {
   const patch = (p: Partial<QuizState>) => setQ((prev) => ({ ...prev, ...p }));
 
   const begin = (level: number) => {
-    const pool = level ? getExercises().filter((e) => e.level === level) : getExercises();
+    const pool = quizExercisesForLevel(level);
     const list = shuffle(pool).slice(0, QUIZ_CAP);
     if (!list.length) return false;
     goalHitRef.current = false;
@@ -292,6 +320,12 @@ export function QuizScreen() {
           // depuis le hub de pratique.
           draft.moduleBest.free = 100;
         }
+        // Quiz libre : on enregistre aussi le score de niveau sous `quiz:N`
+        // pour le déblocage en cascade de la pyramide (UserStatsEntity).
+        if (!q.moduleId && q.level >= 1 && q.level <= 6) {
+          const key = lessonKey("quiz", q.level);
+          draft.lessonBest[key] = Math.max(draft.lessonBest[key] ?? 0, score);
+        }
         if (gems > 0) draft.gems += gems;
         earnChest(draft, "quiz", 0);
         trophies = claimTrophies(draft, now);
@@ -305,49 +339,108 @@ export function QuizScreen() {
     }
   };
 
-  /* ---------- écran de choix de niveau ---------- */
+  /* ---------- écran de choix de niveau — LearningPyramidOverviewScreen ---------- */
   if (q.phase === "start") {
-    const pool = q.level ? getExercises().filter((e) => e.level === q.level) : getExercises();
+    const pool = quizExercisesForLevel(q.level);
     const count = pool.length;
     return (
-      <>
-        <div className="section-head" style={{ marginTop: 0 }}>
-          <div>
-            <p className="eyebrow">📝 {t("quizSub")}</p>
-            <h1>{t("quizTitle")}</h1>
+      <div className="quiz-start">
+        {/* Carte pyramide (gradient #0D532C → #1B5E20 → #2E7D32) */}
+        <div className="card pyramid-hero">
+          <b className="pyramid-title">{t("pyramidTitle")}</b>
+          <p className="pyramid-desc">{t("pyramidDesc")}</p>
+          <div className="pyramid-strip">
+            {LEARNING_LEVELS.map((lvl) => {
+              const unlocked = isLevelUnlocked(lvl.n, s);
+              const score = scoreForLevel(lvl.n, s);
+              return (
+                <div key={lvl.n} className="pyramid-tier">
+                  <span
+                    className="pyramid-tier-ico"
+                    style={{
+                      background:
+                        score >= 70 ? "#4CAF50" : unlocked ? "#FFD54F" : "rgba(255,255,255,.2)",
+                    }}
+                    aria-hidden="true"
+                  >
+                    {lvl.icon}
+                  </span>
+                  <span className="pyramid-tier-lbl">L{lvl.n}</span>
+                  <span className="pyramid-tier-score">
+                    {unlocked ? `${score}%` : "🔒"}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        <div className="chip-row">
-          <button
-            type="button"
-            className={`chip ${q.level === 0 ? "active" : ""}`}
-            onClick={() => patch({ level: 0 })}
-          >
-            {t("levelAll")}
-          </button>
-          {[1, 2, 3, 4, 5, 6].map((n) => (
-            <button
-              key={n}
-              type="button"
-              className={`chip ${q.level === n ? "active" : ""}`}
-              onClick={() => patch({ level: n })}
-            >
-              {n}. {t(LEVEL_KEYS[n - 1])}
-            </button>
-          ))}
-        </div>
+        <b className="pyramid-list-title">{t("pyramidLevelsLbl")}</b>
 
-        <div className="card">
+        {LEARNING_LEVELS.map((lvl) => {
+          const unlocked = isLevelUnlocked(lvl.n, s);
+          const score = scoreForLevel(lvl.n, s);
+          const mastered = score >= 70;
+          return (
+            <div
+              key={lvl.n}
+              className={`level-card ${unlocked ? "" : "locked"}`}
+              style={{ "--lvl-color": lvl.color } as React.CSSProperties}
+            >
+              <div className="level-card-top">
+                <span className="level-ico" aria-hidden="true">
+                  {lvl.icon}
+                </span>
+                <div>
+                  <b className="level-title">
+                    {t("quizTitle")} {lvl.n} : {t(lvl.key as TKey)}
+                  </b>
+                  <span className="level-objective">{t(lvl.objectiveKey as TKey)}</span>
+                </div>
+              </div>
+              <div className="level-card-bottom">
+                {unlocked ? (
+                  mastered ? (
+                    <span className="level-status mastered">
+                      ✓ {t("levelScoreLbl")}: {score}% ({t("levelValidatedLbl")})
+                    </span>
+                  ) : (
+                    <span className="level-status">
+                      {t("levelScoreLbl")}: {score}% ({t("levelRequiredLbl")})
+                    </span>
+                  )
+                ) : (
+                  <span className="level-status locked">🔒 {t("levelLockedInfo")}</span>
+                )}
+                <button
+                  type="button"
+                  className="level-start"
+                  style={{ background: unlocked ? lvl.color : "#CBD5E1" }}
+                  disabled={!unlocked}
+                  onClick={() => patch({ level: lvl.n })}
+                >
+                  ▶ {t("startTraining")}
+                </button>
+              </div>
+            </div>
+          );
+        })}
+
+        <div className="card quiz-free">
           <p className="muted" style={{ margin: "0 0 14px" }}>
             {count} {t("exCount")} · {Math.min(count, QUIZ_CAP)} {t("exCount")} par session · ⭐{" "}
             {t("statXp")} + 💎 {t("statGems")}
           </p>
-          <button type="button" className="btn block" disabled={!count} onClick={() => begin(q.level)}>
+          <button
+            type="button"
+            className="btn block"
+            disabled={!count}
+            onClick={() => begin(q.level)}
+          >
             {t("startQuiz")} →
           </button>
         </div>
-      </>
+      </div>
     );
   }
 

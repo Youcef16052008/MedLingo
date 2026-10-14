@@ -5,13 +5,16 @@ import { useAppState } from "../domain/store";
 import { totalDue, type Sm2Map } from "../domain/progress";
 
 /* Cinq destinations, comme la cible Duolingo :
-   Parcours / Révision / Ligues / Cours / Moi. */
+   Parcours / Révision / Ligues / Cours / Moi.
+   Noms Material Symbols identiques aux Icons.Filled/Outlined d'Android
+   (MainActivity MainDestination) : Map, FitnessCenter, EmojiEvents,
+   MenuBook, Person. */
 const TABS = [
-  { id: "path", icon: "📍", key: "navPath" },
-  { id: "practice", icon: "🏋️", key: "navPractice" },
-  { id: "leagues", icon: "🏆", key: "navLeagues" },
-  { id: "modules", icon: "📚", key: "navCourses" },
-  { id: "profile", icon: "👤", key: "navProfile" },
+  { id: "path", icon: "map", key: "navPath" },
+  { id: "practice", icon: "fitness_center", key: "navPractice" },
+  { id: "leagues", icon: "emoji_events", key: "navLeagues" },
+  { id: "modules", icon: "menu_book", key: "navCourses" },
+  { id: "profile", icon: "person", key: "navProfile" },
 ] as const;
 
 export function TabBar({ route }: { route: string }) {
@@ -30,7 +33,7 @@ export function TabBar({ route }: { route: string }) {
           className={active === tab.id ? "active" : undefined}
           aria-current={active === tab.id ? "page" : undefined}
         >
-          <span className="tab-ico" aria-hidden="true">
+          <span className="tab-ico material-symbols-rounded" aria-hidden="true">
             {tab.icon}
             {tab.id === "practice" && due > 0 && (
               <span className="tab-badge" aria-label={`${due} ${t("cardsDue")}`}>

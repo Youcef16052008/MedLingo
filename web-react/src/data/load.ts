@@ -45,3 +45,16 @@ export const termById = (id: number): Term | undefined => byId.get(id);
 export const termsOfModule = (moduleId: string): Term[] => byModule.get(moduleId) ?? [];
 
 export const isLoaded = (): boolean => terms.length > 0;
+
+/**
+ * Branche les termes directement depuis la mémoire (sans fetch).
+ *
+ * Les tests Node ne peuvent pas `fetch("/data/terms.json")` (URL relative),
+ * mais `termsOfModule` — utilisé par `generateBulkExercises` — doit être
+ * fonctionnel. On reconstruit le même index que `loadOnce`.
+ */
+export function setTestData(data: Term[]): void {
+  terms = data;
+  byId = new Map(data.map((x) => [x.id, x]));
+  byModule = new Map(MODULES.map((m) => [m.id, data.filter((x) => x.module === m.fr)]));
+}

@@ -14,6 +14,7 @@ import { getExercises, termsOfModule } from "../data/load";
 import { modById, type Module } from "../data/modules";
 import { norm, shuffleWith } from "../lib/utils";
 import { mulberry32, hashSeed } from "./leagues";
+import { generateBulkExercises } from "./bulkExercises";
 import type { Exercise, Term } from "../types";
 
 /** Questions par leçon. */
@@ -230,6 +231,23 @@ function build(
     default:
       return null;
   }
+}
+
+/**
+/** Exercices jouables au quiz : le corpus écrit main (112) + les exercices
+ * générés (13 512 = 3 par terme × 4 504 termes).
+ *
+ * Les exercices générés sont produits à la demande depuis `terms.json` ; les
+ * 112 exercices écrits main restent prioritaires (ils couvrent les types rares
+ * comme `clinical_case` manuel).
+ */
+export function quizExercises(): Exercise[] {
+  return [...getExercises(), ...generateBulkExercises()];
+}
+
+/** Même pool, filtré par niveau (L1..L6). */
+export function quizExercisesForLevel(level: number): Exercise[] {
+  return quizExercises().filter((e) => e.level === level);
 }
 
 /**

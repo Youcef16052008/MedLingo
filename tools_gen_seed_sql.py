@@ -32,7 +32,7 @@ MODULE_TO_UNIT = {
     "Anatomie Pathologique": "anapath",
 }
 
-TYPE_MAP = {"mcq": "choice", "matching": "match", "sentence_order": "wordbank", "fill_blank": "fill"}
+TYPE_MAP = {"mcq": "choice", "matching": "match", "sentence_order": "wordbank", "fill_blank": "fill", "reading": "reading", "clinical_case": "clinical_case"}
 
 
 def sql_str(value):
@@ -69,6 +69,24 @@ def build_spec(ex):
         }
     if t == "fill_blank":
         return {"kind": "fill", "prompt": ex["qEn"], "correctAnswer": ex["answer"]}
+    if t == "reading":
+        return {
+            "kind": "reading",
+            "prompt": ex["qEn"],
+            "passage": ex.get("ctxEn") or "",
+            "question": ex["qEn"],
+            "options": ex["options"],
+            "correctAnswer": ex["answer"],
+        }
+    if t == "clinical_case":
+        return {
+            "kind": "clinical_case",
+            "prompt": ex["qEn"],
+            "vignette": ex.get("ctxEn") or "",
+            "question": ex["qEn"],
+            "options": ex["options"],
+            "correctAnswer": ex["answer"],
+        }
     raise ValueError(f"unknown type {t}")
 
 

@@ -24,6 +24,16 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Material Symbols Rounded : mêmes formes que les Icons.Filled/Outlined
+       d'Android (barre de navigation). Axe FILL : 0 = outlined (repos),
+       1 = filled (onglet actif), piloté par CSS (.tabbar a.active). -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,-25..0&display=swap"
+    onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,-25..0&display=swap">
+  </noscript>
   <!-- F3 : chargement non bloquant — la feuille ne retarde plus le premier
        rendu ; le SW la met en cache (stale-while-revalidate, sw.js). -->
   <link rel="preload" as="style"

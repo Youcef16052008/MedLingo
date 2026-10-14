@@ -6,7 +6,7 @@
 
 :root {
   /* Palette : vert chirurgical / teal clinique / rouge algérien / ambre
-     Valeurs alignées sur app/src/main/java/com/example/ui/theme/Color.kt */
+     Valeurs alignées sur app/src/main/java/com/aistudio/medlingua/dzmed/ui/theme/Color.kt */
   --green-900: #0D532C;
   --green: #1B5E20;
   --green-600: #2E7D32;
@@ -21,7 +21,7 @@
   --amber: #D97706;
   --amber-50: #FEF3C7;
 
-  --bg: #F8FAFC;
+  --bg: #F6F8F6;
   --surface: #FFFFFF;
   --surface-2: #EFF5F0;
   --line: #E2E8F0;
@@ -186,8 +186,17 @@ a { color: var(--green-600); }
 }
 .stat-chip b { font-family: var(--font-display); font-weight: 600; }
 
-.stat-chip.gems b { color: var(--teal); }
-.stat-chip.streak b { color: var(--amber); }
+/* Miroir de GemsLeagueTopBar.kt : chaque puce a sa propre teinte. */
+.stat-chip.streak { background: #FFF7ED; border-color: #FFF7ED; }
+.stat-chip.streak b { color: #EA580C; }
+.stat-chip.gems { background: #EFF6FF; border-color: #EFF6FF; }
+.stat-chip.gems b { color: #2563EB; }
+.stat-chip.league {
+  background: #FEF3C7; border-color: #FEF3C7; color: #D97706;
+  cursor: pointer; font: inherit; padding: 4px 10px;
+}
+.stat-chip.league b { color: #D97706; }
+.stat-chip.league .chip-extra { font-size: .75rem; font-weight: 700; opacity: .85; }
 .stat-chip.due { border-color: color-mix(in srgb, var(--red) 35%, var(--line)); }
 .stat-chip.due b { color: var(--red); }
 
@@ -225,10 +234,19 @@ a { color: var(--green-600); }
   letter-spacing: .01em;
   transition: color .15s;
 }
-.tabbar a .tab-ico { font-size: 1.25rem; line-height: 1; }
-.tabbar a.active { color: var(--green); }
+.tabbar a .tab-ico {
+  font-size: 24px; line-height: 1;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/* Onglet actif : icône filled + teinte MedGreenDark, comme Android
+   (selectedIconColor = MedGreenDark, NavigationBarItem selected). */
+.tabbar a.active { color: #0D532C; font-weight: 700; }
+.tabbar a.active .tab-ico {
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+}
 
-/* Badge « à réviser » sur l'onglet Fiches */
+/* Badge « à réviser » sur l'onglet Fiches — #E65100 comme Android
+   (MainActivity Badge containerColor) */
 .tab-ico { position: relative; display: block; line-height: 1; }
 .tab-badge {
   position: absolute;
@@ -238,7 +256,7 @@ a { color: var(--green-600); }
   height: 17px;
   padding: 0 4px;
   border-radius: 999px;
-  background: var(--red);
+  background: #E65100;
   color: #fff;
   font-size: .6rem;
   font-weight: 700;
@@ -256,9 +274,17 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .eyebrow {
   font-size: .74rem;
   font-weight: 700;
-  color: #BBF7D0;
-  letter-spacing: .08em;
+  color: #64748B;
+  letter-spacing: .02em;
   margin: 0 0 4px;
+}
+/* Chip d'objectif — PracticeScreen.kt : fond #FFF3C4, #B45309, 20.dp, 13.sp. */
+.goal-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 8px 12px; border-radius: 20px;
+  background: #FFF3C4; color: #B45309;
+  font-size: .81rem; font-weight: 700; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 .muted { color: var(--ink-2); }
 .tiny { font-size: .8rem; color: var(--ink-3); }
@@ -310,6 +336,9 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   gap: 12px;
   margin: 26px 0 12px;
 }
+/* Titre de section — PathScreen.kt : 22.sp ExtraBold, #1E293B. */
+.section-head h1 { font-size: 22px; font-weight: 800; color: #1E293B; }
+.section-head .tiny { color: #64748B; }
 .section-head a { font-size: .85rem; font-weight: 600; text-decoration: none; }
 
 /* ---------- home ---------- */
@@ -482,41 +511,61 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   transition: width .4s ease;
 }
 
-/* ---------- modules grid ---------- */
-.module-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media (max-width: 380px) { .module-grid { grid-template-columns: 1fr; } }
+/* ---------- modules (FigmaModuleDetailedCard, ModulesScreen.kt) ---------- */
+.module-grid { display: flex; flex-direction: column; gap: 12px; }
 .module-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 14px;
-  border-radius: var(--radius);
+  gap: 12px;
+  padding: 16px;
+  border-radius: 20px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-bottom: 4px solid var(--line);
+  box-shadow: var(--shadow-card);
   text-decoration: none;
   color: var(--ink);
   cursor: pointer;
   text-align: start;
-  transition: transform .1s, border-color .15s;
+  transition: transform .1s;
 }
-.module-card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--mod-color, var(--green)) 45%, var(--line)); }
-.module-card:active { transform: translateY(1px); border-bottom-width: 2px; }
+.module-card:hover { transform: translateY(-1px); }
+.module-card:active { transform: translateY(1px); }
+.module-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.module-titlecol { display: flex; align-items: center; gap: 12px; }
 .module-ico {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  font-size: 22px;
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--mod-color, var(--green)) 16%, var(--surface));
-  border: 1px solid color-mix(in srgb, var(--mod-color, var(--green)) 35%, transparent);
+  flex: 0 0 auto;
+  width: 50px; height: 50px;
+  display: grid; place-items: center;
+  font-size: 26px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--mod-color, var(--green)) 12%, var(--surface));
 }
-.module-card h3 { font-size: .98rem; }
-.module-card .tiny { margin-top: -6px; }
-.module-card .progress-track { height: 7px; }
+.module-card h3 { font-size: 16px; font-weight: 700; color: #0F172A; margin: 0; }
+.module-sub { font-size: 11px; font-weight: 500; color: #64748B; }
+.module-terms {
+  flex: 0 0 auto;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 12px; font-weight: 700;
+  background: color-mix(in srgb, var(--mod-color, var(--green)) 14%, var(--surface));
+  color: var(--mod-color, var(--green));
+  white-space: nowrap;
+}
+.module-chapters {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.module-chip {
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-size: 10px; font-weight: 500; color: #334155;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+}
+.module-card .progress-track { height: 6px; border-radius: 3px; border: none; background: #F1F5F9; }
 .module-card .mod-pct {
-  font-size: .74rem;
+  font-size: 12px;
   font-weight: 700;
   color: var(--mod-color, var(--green));
   font-variant-numeric: tabular-nums;
@@ -538,13 +587,14 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 }
 .icon-btn:active { transform: translateY(1px); }
 
+/* ==================== Flashcard — FlashcardCard3D.kt ==================== */
 .flash-stage { perspective: 1400px; }
 .flashcard {
   position: relative;
-  height: min(58vh, 400px);
+  height: 410px;
   cursor: pointer;
   transform-style: preserve-3d;
-  transition: transform .55s cubic-bezier(.2, .7, .2, 1);
+  transition: transform .4s cubic-bezier(.2, .7, .2, 1);
 }
 .flashcard.flipped { transform: rotateY(180deg); }
 .flash-face {
@@ -552,87 +602,100 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 22px;
-  padding: 26px 22px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* --- RECTO (FrontCardSide) : gradient #0D532C → #1B5E20 → #2E7D32 --- */
+.flash-front {
+  background: linear-gradient(135deg, #0D532C, #1B5E20, #2E7D32);
+  color: #fff;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--line);
-  overflow: auto;
+  box-shadow: 0 6px 16px rgba(15,23,42,.18);
 }
-.flash-front {
-  background: var(--surface);
-  box-shadow: var(--shadow-card), inset 0 -6px 0 color-mix(in srgb, var(--green) 55%, transparent);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 10px;
+.ff-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.ff-module {
+  background: rgba(255,255,255,.18);
+  border-radius: 20px; padding: 6px 14px;
+  font-size: 12px; font-weight: 600; color: #fff;
 }
-.flash-back {
-  background: linear-gradient(160deg, var(--green-900), var(--green) 70%);
-  color: #ECFDF5;
-  transform: rotateY(180deg);
-  box-shadow: var(--shadow-card);
+.ff-bookmark {
+  flex: 0 0 auto;
+  width: 36px; height: 36px;
+  border: none; background: none; cursor: pointer;
+  font-size: 20px; line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.3));
 }
-.flash-front .term-en {
-  font-family: var(--font-display);
-  font-size: clamp(1.7rem, 6vw, 2.4rem);
-  font-weight: 600;
-  line-height: 1.1;
-  overflow-wrap: anywhere;
+.ff-center {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 10px; text-align: center;
 }
-.flash-front .ipa { color: var(--ink-3); font-size: .95rem; }
-.flash-front .chapter-tag {
-  font-size: .72rem;
-  font-weight: 700;
-  color: var(--green);
-  background: var(--green-50);
-  border: 1px solid color-mix(in srgb, var(--green) 25%, transparent);
-  padding: 4px 10px;
-  border-radius: 999px;
+.ff-nomenclature {
+  background: rgba(255,255,255,.12);
+  border-radius: 12px; padding: 4px 12px;
+  font-size: 12px; font-weight: 500; color: rgba(255,255,255,.85);
 }
-.flash-front .flip-hint { position: absolute; bottom: 14px; font-size: .78rem; color: var(--ink-3); }
-.flash-back .back-lang { font-size: .74rem; font-weight: 700; color: #A7D8AD; letter-spacing: .06em; }
-.flash-back .back-term { font-size: 1.45rem; font-weight: 700; margin: 2px 0 4px; }
-.flash-back .back-ar { font-size: 1.15rem; color: #D9F0DC; margin-bottom: 12px; }
-.flash-back .back-def { font-size: .95rem; line-height: 1.55; color: #E3F4E6; }
-.flash-back .back-extra {
+.ff-term-fr { font-size: 32px; font-weight: 800; line-height: 38px; overflow-wrap: anywhere; }
+.ff-term-ar { font-size: 20px; font-weight: 700; color: #A5F4AC; }
+.ff-flip-pill {
   margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px dashed rgba(255, 255, 255, .3);
-  font-size: .84rem;
-  color: #BFE3C4;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px; padding: 8px 18px;
+  font-size: 12px; font-weight: 500; color: #fff;
 }
-.speak-btn {
-  border: 2px solid var(--line);
-  background: var(--surface-2);
-  border-radius: 999px;
-  width: 44px;
-  height: 44px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-.speak-btn:active { transform: scale(.94); }
 
-.rating-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; margin-top: 16px; }
-.rating-btn {
-  padding: 11px 2px 9px;
-  border: 0;
-  border-radius: 11px;
-  background: var(--rc);
-  color: #fff;
-  font-weight: 700;
-  font-size: .7rem;
-  cursor: pointer;
-  box-shadow: 0 3px 0 color-mix(in srgb, var(--rc) 60%, #000);
-  transition: transform .08s;
+/* --- VERSO (BackCardSide) : blanc, bordure 2px #1B5E20 --- */
+.flash-back {
+  background: #fff;
+  border: 2px solid #1B5E20;
+  transform: rotateY(180deg);
+  padding: 18px;
+  overflow-y: auto;
+  display: flex; flex-direction: column; gap: 10px;
+  box-shadow: 0 6px 16px rgba(15,23,42,.18);
 }
-.rating-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--rc) 60%, #000); }
-.rating-btn small { display: block; font-weight: 500; font-size: .64rem; opacity: .85; }
-.rating-btn[data-q="1"] { --rc: #C62828; }
-.rating-btn[data-q="2"] { --rc: #E65100; }
-.rating-btn[data-q="3"] { --rc: #D97706; }
-.rating-btn[data-q="4"] { --rc: #00695C; }
-.rating-btn[data-q="5"] { --rc: #1B5E20; }
+.fb-head { display: flex; align-items: center; gap: 10px; }
+.fb-flag {
+  flex: 0 0 auto;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: #E8F5E9;
+  display: grid; place-items: center;
+  font-size: 20px; line-height: 1;
+}
+.fb-en-col { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.fb-term-en { font-size: 22px; font-weight: 800; color: #0D532C; overflow-wrap: anywhere; }
+.fb-ipa { font-size: 13px; font-style: italic; color: #388E3C; }
+.fb-speak {
+  flex: 0 0 auto;
+  width: 42px; height: 42px; border: none; cursor: pointer;
+  border-radius: 50%; background: #E8F5E9;
+  font-size: 20px; line-height: 1;
+}
+.fb-divider { border: none; border-top: 1px solid #E2E8F0; margin: 0; }
+.fb-cross {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px; padding: 8px 12px;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.fb-cross-ar { font-size: 15px; font-weight: 700; color: #1E2922; }
+.fb-cross-fr { font-size: 12px; font-weight: 500; color: #64748B; }
+.fb-box { border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px; }
+.fb-box > b { font-size: 11px; font-weight: 700; }
+.fb-box > span { font-size: 12px; line-height: 16px; }
+.fb-etym { background: #F0FDF4; border: 1px solid #BBF7D0; }
+.fb-etym > b { color: #166534; }
+.fb-etym > span { color: #14532D; }
+.fb-pearl { background: #EFF6FF; border: 1px solid #BFDBFE; }
+.fb-pearl > b { color: #1E40AF; }
+.fb-pearl > span { color: #1E3A8A; }
+.fb-mnemo { background: #FEF3C7; border: 1px solid #FDE68A; }
+.fb-mnemo > b { color: #92400E; }
+.fb-mnemo > span { color: #78350F; font-style: italic; }
+.fb-def { font-size: 12px; line-height: 17px; color: #334155; }
 
 /* ---------- quiz ---------- */
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
@@ -920,83 +983,139 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   align-items: center;
   gap: 14px;
   padding: 16px;
-  border-radius: var(--radius-lg);
+  border-radius: 16px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-bottom-width: 3px;
-  transition: transform .12s ease;
+  box-shadow: var(--shadow-card);
 }
-.practice-card:active { transform: translateY(2px); border-bottom-width: 1px; }
-.practice-card h3 { margin: 0; display: flex; align-items: center; gap: 8px; }
-.practice-ico { font-size: 1.8rem; line-height: 1; }
+.practice-card h3 { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; color: #1E293B; }
+.practice-card .tiny { color: #64748B; }
+/* Boîte d'icône — PracticeScreen.kt : carré 44.dp arrondi 12.dp teinté. */
+.practice-ico {
+  flex: 0 0 auto;
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center;
+  font-size: 22px; line-height: 1;
+}
+.practice-card.teal .practice-ico { background: #E0F2F1; }
+.practice-card.azure .practice-ico { background: #E0F2FE; }
+.practice-card.amber .practice-ico { background: #FEF3C7; }
+.practice-card.violet .practice-ico { background: #F3E8FF; }
 .practice-badge {
-  background: var(--duo-blue);
+  background: #E65100;
   color: #fff;
-  border-radius: 999px;
-  font-size: .72rem;
+  border-radius: 10px;
+  font-size: .68rem;
   font-weight: 700;
   padding: 2px 8px;
 }
-.practice-card.teal { border-top: 3px solid var(--teal); }
-.practice-card.azure { border-top: 3px solid var(--duo-blue); }
-.practice-card.amber { border-top: 3px solid var(--amber); }
-.practice-card.violet { border-top: 3px solid var(--duo-purple); }
+.practice-card:active { transform: translateY(2px); border-bottom-width: 1px; }
 
 /* ---------- ligues ---------- */
+/* ==================== Ligues — LeagueScreen.kt ==================== */
+.league-screen { display: flex; flex-direction: column; gap: 16px; }
+
+/* --- LeagueHeader : carte blanche rayon 20 + liseré de couleur de palier --- */
+.league-hero {
+  border-radius: 20px;
+  padding: 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.league-hero-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.league-hero-ico {
+  flex: 0 0 auto;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 24px; line-height: 1;
+}
+.league-hero-title { display: block; font-size: 16px; font-weight: 800; color: #0F172A; }
+.league-hero-sub { display: block; font-size: 11px; color: #64748B; }
+.league-hero-badge {
+  flex: 0 0 auto;
+  border-radius: 12px; padding: 6px 12px;
+  font-size: 12px; font-weight: 700; color: #fff;
+}
+
+/* --- Carte zones promotion / relégation (fond #F8FAFC, rayon 16) --- */
+.league-zones { border-radius: 16px; padding: 12px; background: #F8FAFC; }
+.league-zones-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin-bottom: 4px;
+}
+.league-zone-up { font-size: 11px; font-weight: 700; color: #16A34A; }
+.league-zone-down { font-size: 11px; font-weight: 700; color: #DC2626; }
+.league-zones-week { display: block; font-size: 11px; color: #64748B; }
+
+/* --- LeagueMemberRow --- */
 .league-list { display: flex; flex-direction: column; gap: 8px; }
 .league-row {
   display: grid;
-  grid-template-columns: 34px 30px 1fr auto;
+  grid-template-columns: 28px 36px 1fr auto;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #F1F5F9;
+  border-radius: 14px;
 }
-.league-row.you { border-color: var(--duo-blue); box-shadow: 0 0 0 1px var(--duo-blue); }
-.league-row.zone-green { background: color-mix(in srgb, var(--duo-green) 10%, var(--surface)); }
-.league-row.zone-red { background: color-mix(in srgb, var(--duo-red) 8%, var(--surface)); }
-.league-rank { font-weight: 700; color: var(--ink-2); text-align: center; }
-.league-avatar { font-size: 1.3rem; text-align: center; }
-.league-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.league-xp { color: var(--ink-2); font-size: .85rem; white-space: nowrap; }
+.league-row.zone-green { background: #F0FDF4; border-color: #BBF7D0; }
+.league-row.zone-red { background: #FEF2F2; border-color: #FECACA; }
+/* `isCurrentUser` prime sur la zone (StatsProfileScreen.kt : when isCurrentUser -> #ECFDF5). */
+.league-row.you { background: #ECFDF5; border-color: #10B981; box-shadow: 0 2px 6px rgba(15,23,42,.08); }
+.league-rank {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 12px; font-weight: 700; color: #334155;
+  background: #F1F5F9;
+}
+.league-row.zone-green .league-rank { background: #DCFCE7; }
+.league-row.zone-red .league-rank { background: #FEE2E2; }
+.league-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 18px; line-height: 1;
+  background: #F1F5F9;
+}
+.league-id { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.league-name {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 13px; font-weight: 700; color: #0F172A;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.league-row.you .league-name { font-weight: 800; }
+.league-you-tag {
+  font-size: 8px; font-weight: 700; color: #fff;
+  background: #10B981; border-radius: 6px; padding: 1px 4px;
+}
+.league-sub { font-size: 10px; color: #64748B; }
+.league-xp-col { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.league-xp-col > b { font-size: 14px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+.league-xp-col > b.up { color: #16A34A; }
+.league-xp-col > b.down { color: #DC2626; }
+.league-xp-col > span { font-size: 9px; font-weight: 700; }
+.league-xp-col > span.up { color: #16A34A; }
+.league-xp-col > span.down { color: #DC2626; }
 
 /* ============================ Medi (mascotte) ============================ */
 .medi { display: flex; gap: 10px; align-items: flex-start; margin: 2px 0 10px; }
 .medi-avatar {
   position: relative; flex: 0 0 auto;
-  width: 48px; height: 48px; border-radius: 50%;
-  display: grid; place-items: center; font-size: 1.5rem;
-  background: color-mix(in srgb, var(--duo-green) 18%, var(--surface));
-  border: 2px solid color-mix(in srgb, var(--duo-green) 55%, transparent);
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 1.6rem;
+  background: #E8F5E9;
 }
-.medi-badge { position: absolute; right: -5px; bottom: -5px; font-size: .78rem; }
-.medi.mood-celebrating .medi-avatar {
-  background: color-mix(in srgb, var(--duo-yellow) 26%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-yellow) 70%, transparent);
-}
-.medi.mood-motivating .medi-avatar {
-  background: color-mix(in srgb, var(--duo-blue) 20%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-blue) 60%, transparent);
-}
-.medi.mood-frustrated .medi-avatar {
-  background: color-mix(in srgb, var(--duo-red) 16%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-red) 55%, transparent);
-}
+.medi-badge { position: absolute; right: -2px; bottom: -2px; font-size: .75rem; padding: 2px; }
+.medi.mood-celebrating .medi-bubble { background: color-mix(in srgb, #FFC800 12%, var(--surface)); }
+.medi.mood-motivating .medi-bubble { background: color-mix(in srgb, #1CB0F6 12%, var(--surface)); }
+.medi.mood-frustrated .medi-bubble { background: color-mix(in srgb, #FF4B4B 12%, var(--surface)); }
+.medi.mood-happy .medi-bubble { background: color-mix(in srgb, #58CC02 12%, var(--surface)); }
 .medi-bubble {
   position: relative; margin: 0;
-  background: var(--surface); border: 1px solid var(--line);
+  background: var(--surface); border: none;
   border-radius: 14px; padding: 9px 13px;
-  font-size: .9rem; line-height: 1.4; color: var(--ink-2);
+  font-size: .9rem; line-height: 1.4; color: #1E293B; font-weight: 500;
 }
-.medi-bubble::before {
-  content: ""; position: absolute; left: -6px; top: 13px;
-  width: 10px; height: 10px;
-  background: var(--surface);
-  border-left: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  transform: rotate(45deg);
-}
+.medi-bubble::before { display: none; }
 
 /* ==================== En-tête du parcours (anneau) ==================== */
 .path-head { padding: 16px; }
@@ -1004,7 +1123,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .path-goal { margin: 0 0 10px; color: var(--ink-3); }
 .goal-ring { position: relative; width: 74px; height: 74px; flex: 0 0 auto; }
 .goal-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-.goal-track { fill: none; stroke: var(--line); stroke-width: 8; }
+.goal-track { fill: none; stroke: #E0E0E0; stroke-width: 8; }
 .goal-fill {
   fill: none; stroke: var(--duo-green); stroke-width: 8; stroke-linecap: round;
   transition: stroke-dashoffset .7s ease;
@@ -1012,24 +1131,28 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .goal-ring.done .goal-fill { stroke: var(--duo-yellow); }
 .goal-ring > span { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.25rem; }
 .streak-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+/* StreakPill de PathScreen.kt : fond #FFF7ED, texte #EA580C, rayon 20.dp,
+   padding horizontal 10 / vertical 6, 12.sp bold. */
 .streak-pill {
-  background: color-mix(in srgb, var(--duo-yellow) 16%, var(--surface));
-  border: 1px solid color-mix(in srgb, var(--duo-yellow) 45%, transparent);
-  color: var(--ink); border-radius: 999px;
-  padding: 5px 11px; font-size: .82rem; font-weight: 600;
+  background: #FFF7ED;
+  color: #EA580C; border-radius: 20px;
+  padding: 6px 10px; font-size: .75rem; font-weight: 700;
+  border: none;
 }
 .freeze-btn { margin-left: auto; }
 .freeze-btn:disabled { opacity: .5; cursor: not-allowed; }
+/* Caisse — PathScreen.kt : Text plein, fond #FFF3C4, rayon 12.dp,
+   padding vertical 10 / horizontal 12, 13.sp bold, #1E293B. */
 .chest-badge {
   display: inline-flex; align-items: center; gap: 6px;
   margin-top: 12px; width: 100%; justify-content: center;
-  padding: 9px 12px; border-radius: var(--radius-md);
-  border: 2px dashed color-mix(in srgb, var(--duo-yellow) 70%, transparent);
-  background: color-mix(in srgb, var(--duo-yellow) 12%, var(--surface));
-  color: var(--ink); font-weight: 700; cursor: pointer;
-  animation: chest-blink 1.4s ease-in-out infinite;
+  padding: 10px 12px; border-radius: 12px;
+  border: none;
+  background: #FFF3C4;
+  color: #1E293B; font-weight: 700; cursor: pointer;
+  font: inherit;
 }
-@keyframes chest-blink { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+.chest-badge:hover { filter: brightness(.97); }
 
 /* ========================= Unités + nœuds ========================= */
 .path-units { display: flex; flex-direction: column; gap: 22px; }
@@ -1147,24 +1270,28 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   background: var(--duo-green); color: #fff;
   box-shadow: 0 3px 0 var(--duo-green-dark);
 }
+/* Grille 12 trophées — StatsProfileScreen.kt : carte blanche rayon 18,
+   damier 46dp cercle (#FFF3C4 gagné / #F1F5F9 verrouillé), icône 20sp,
+   alpha 0.35 si verrouillé, libellé 9sp. */
 .trophy-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
 }
 .trophy {
-  display: flex; flex-direction: column; align-items: center; gap: 3px;
-  text-align: center; padding: 12px 6px 10px;
-  border: 1px solid var(--line); border-radius: var(--radius-md);
-  background: var(--surface); font-size: .78rem;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  text-align: center; padding: 0;
+  background: transparent; border: none; font-size: .56rem;
 }
-.trophy .trophy-ico { font-size: 1.5rem; line-height: 1; }
-.trophy b { font-size: .76rem; color: var(--ink); }
-.trophy .tiny { color: var(--ink-3); font-size: .68rem; }
-.trophy.won {
-  background: color-mix(in srgb, var(--duo-yellow) 14%, var(--surface));
-  border-color: color-mix(in srgb, var(--duo-yellow) 55%, transparent);
+.trophy .trophy-ico {
+  width: 46px; height: 46px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: #FFF3C4; font-size: 20px; line-height: 1;
 }
-.trophy.locked { opacity: .72; filter: grayscale(.85); }
-.trophy.locked b { color: var(--ink-3); }
+.trophy b { font-size: .56rem; color: #1E2922; font-weight: 700; line-height: 1.2; }
+.trophy .tiny { display: none; }
+.trophy.won { background: transparent; border-color: transparent; }
+.trophy.locked { opacity: 1; filter: none; }
+.trophy.locked .trophy-ico { background: #F1F5F9; filter: grayscale(1); opacity: .35; }
+.trophy.locked b { color: #90A4AE; font-weight: 400; }
 
 /* ==================== Hub Révision : anneau + Medi ==================== */
 .practice-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
@@ -1199,3 +1326,189 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 
 
 
+
+/* ==================== Profil — StatsProfileScreen.kt ==================== */
+.profile-screen { display: flex; flex-direction: column; gap: 16px; }
+/* Android : fond #F6F8F6, cartes blanches rayon 18-20, elevation 2-3dp. */
+.profile-screen .card { border-radius: 18px; padding: 16px; }
+
+/* --- Carte profil (gradient #1B5E20 → #2E7D32, rayon 20, padding 20) --- */
+.profile-hero {
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  background: linear-gradient(135deg, #1B5E20, #2E7D32);
+}
+.profile-hero-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px;
+}
+.profile-avatar {
+  flex: 0 0 auto;
+  width: 64px; height: 64px; border-radius: 50%;
+  background: #fff;
+  display: grid; place-items: center;
+  font-size: 34px; line-height: 1;
+}
+.profile-name { display: block; color: #fff; font-size: 20px; font-weight: 700; }
+.profile-type {
+  display: block; color: #A5F4AC; font-size: 13px; font-weight: 600;
+  margin-top: 2px;
+}
+.profile-level {
+  display: block; color: rgba(255,255,255,.9);
+  font-size: 11px; font-weight: 500;
+  margin-top: 2px;
+}
+
+/* --- Objectif du jour + série + congélation --- */
+.profile-goal-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.profile-card-title {
+  display: block;
+  font-size: 15px; font-weight: 700; color: #1E2922;
+  margin-bottom: 2px;
+}
+.profile-goal-line { display: block; font-size: 13px; color: #64748B; }
+.profile-streak-line {
+  display: block; font-size: 12px; font-weight: 700; color: #EA580C;
+  margin-top: 4px;
+}
+.freeze-buy {
+  margin-top: 10px;
+  display: inline-flex; align-items: center;
+  border: none; cursor: pointer;
+  border-radius: 20px; padding: 7px 12px;
+  font-size: 12px; font-weight: 700;
+  background: #E0F2FE; color: #0284C7;
+}
+.freeze-buy:disabled { background: #F1F5F9; color: #90A4AE; cursor: default; }
+
+/* --- Grille des 12 trophées --- */
+.profile-trophies-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.profile-trophies-count { font-size: 12px; font-weight: 700; color: #B45309; }
+.profile-screen .trophy-grid { margin-top: 2px; }
+
+/* --- Rapport d'apprentissage (MetricBox 2×2) --- */
+.metric-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-top: 12px;
+}
+.metric-box {
+  display: flex; flex-direction: column; gap: 4px;
+  border-radius: 14px;
+  background: #F6F8F6;
+  border: 1px solid #E0E5E0;
+  padding: 14px;
+}
+.metric-box > span:first-child { font-size: 20px; line-height: 1; }
+.metric-box b { font-size: 18px; font-weight: 700; color: #0D532C; }
+.metric-box > span:last-child {
+  font-size: 11px; font-weight: 500; color: #5A6B60;
+}
+
+/* ==================== Quiz — LearningPyramidOverviewScreen.kt ==================== */
+.quiz-start { display: flex; flex-direction: column; gap: 16px; }
+
+/* --- Carte pyramide (gradient vertical #0D532C → #1B5E20 → #2E7D32) --- */
+.pyramid-hero {
+  border-radius: 20px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  background: linear-gradient(180deg, #0D532C, #1B5E20, #2E7D32);
+}
+.pyramid-title { display: block; color: #fff; font-size: 18px; font-weight: 800; }
+.pyramid-desc {
+  color: rgba(255,255,255,.9); font-size: 12px; line-height: 17px;
+  margin: 10px 0 14px;
+}
+.pyramid-strip {
+  display: flex; align-items: center; justify-content: space-between; gap: 4px;
+}
+.pyramid-tier {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.pyramid-tier-ico {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 16px; line-height: 1;
+}
+.pyramid-tier-lbl { font-size: 11px; font-weight: 700; color: #fff; }
+.pyramid-tier-score { font-size: 10px; color: rgba(255,255,255,.7); }
+
+/* --- Titre de liste --- */
+.pyramid-list-title { font-size: 16px; font-weight: 700; color: #1E2922; }
+
+/* --- LevelCard (rayon 18, bordure 1.5 de la couleur du niveau) --- */
+.level-card {
+  border-radius: 18px;
+  padding: 16px;
+  background: #fff;
+  border: 1.5px solid var(--lvl-color, #1B5E20);
+  box-shadow: 0 3px 8px rgba(15,23,42,.06);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.level-card.locked {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+  box-shadow: none;
+}
+.level-card-top { display: flex; align-items: center; gap: 10px; }
+.level-ico {
+  flex: 0 0 auto;
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center;
+  font-size: 22px; line-height: 1;
+  background: color-mix(in srgb, var(--lvl-color, #1B5E20) 12%, #fff);
+}
+.level-card.locked .level-ico { background: #E2E8F0; }
+.level-title { display: block; font-size: 15px; font-weight: 700; color: #0F172A; }
+.level-card.locked .level-title { color: #64748B; }
+.level-objective { display: block; font-size: 12px; color: #475569; }
+.level-card.locked .level-objective { color: #94A3B8; }
+.level-card-bottom {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.level-status { font-size: 12px; font-weight: 500; color: #E65100; }
+.level-status.mastered { font-size: 12px; font-weight: 700; color: #16A34A; }
+.level-status.locked { color: #94A3B8; font-weight: 500; }
+.level-start {
+  flex: 0 0 auto;
+  border: none; cursor: pointer; color: #fff;
+  border-radius: 12px; padding: 8px 14px;
+  font-size: 12px; font-weight: 700;
+}
+.level-start:disabled { background: #CBD5E1 !important; cursor: default; }
+
+/* --- Carte quiz libre (en bas) --- */
+.quiz-free { border-radius: 18px; }
+
+/* ==================== Notation SM-2 — RatingButtons.kt ==================== */
+.rating-row {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; margin-top: 16px;
+}
+.rating-btn {
+  padding: 4px 2px 2px;
+  border: none; background: none; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  transition: transform .08s;
+}
+.rating-btn:active { transform: translateY(2px); }
+.rating-emoji {
+  width: 100%;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  padding: 8px 4px;
+  font-size: 24px; line-height: 1;
+  background: color-mix(in srgb, var(--rc) 12%, #fff);
+  border: 1.5px solid var(--rc);
+}
+.rating-label { font-size: 10px; font-weight: 700; color: var(--rc); }
+.rating-btn small { font-size: .64rem; font-weight: 500; color: var(--ink-3); }
+.rating-btn:disabled { opacity: .45; cursor: default; }

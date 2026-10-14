@@ -17,7 +17,7 @@ de répétition espacée **SM-2**, prononciation TTS et tableau de bord de progr
 - Test de placement adaptatif (CAT) avec moteur d'orientation
 - Prononciation audio (Android TTS) et support FR / EN / AR
 - Statistiques, séries d'apprentissage et suivi de précision
-- Base de données Room pré-remplie (4 512 termes médicaux sur 15 modules), 100 % hors-ligne
+- Base de données Room pré-remplie (4 504 termes médicaux sur 15 modules), 100 % hors-ligne
 - Pilote d'illustrations locales (fémur et neurone) dans le lexique et les flashcards ; stratégie et limites : [docs/IMAGE_STRATEGY.md](docs/IMAGE_STRATEGY.md)
 - Écran d'introduction à chaque ouverture, adapté au thème système (sombre ou clair)
 - Icône d'application personnalisée (icône adaptative Android 8+)
@@ -39,7 +39,7 @@ de répétition espacée **SM-2**, prononciation TTS et tableau de bord de progr
 # JDK + SDK requis (JAVA_HOME + local.properties ou ANDROID_HOME)
 ./gradlew :app:assembleDebug          # build
 adb install -r app/build/outputs/apk/debug/app-debug.apk
-adb shell am start -n com.aistudio.medlingua.dzmed/com.example.MainActivity
+adb shell am start -n com.aistudio.medlingua.dzmed/.MainActivity
 ```
 
 > **Note signature debug** : `app/build.gradle.kts` référence `debug.keystore` à la racine du projet
@@ -56,6 +56,52 @@ adb shell am start -n com.aistudio.medlingua.dzmed/com.example.MainActivity
 ./gradlew :app:testDebugUnitTest     # JUnit + Robolectric
 ./gradlew :app:connectedDebugAndroidTest   # tests instrumentés (appareil requis)
 ```
+
+## Statut du backend
+
+L'application est **100 % hors-ligne** : aucune permission `INTERNET`, base Room pré-remplie, mono-utilisateur.
+
+Le dossier `backend/` (schéma Supabase, RLS, seed) **n'est pas branché** : la couche réseau
+(`MedLingoRemoteClient`) est écrite et fonctionne en mode no-op. Le brancher demande `INTERNET`
++ un fichier `secrets.properties` (voir `GUIDE_BACKEND.md`).
+
+**Le seed SQL est maintenu** : `npm run check:seed` (web) et un test Android (`SeedIntegrityTest`)
+vérifient à chaque build qu'il couvre bien l'intégralité du corpus (4 504 termes, 112 exercices).
+Ne pas le régénérer après modification des seeds crée une dérive silencieuse.
+
+## Web
+
+Un port web React/TS existe dans `web-react/` :
+
+```bash
+cd web-react
+npm i
+npm run extract      # regenere terms.json/exercises.json depuis les seeds Kotlin
+npm run test         # 127 tests
+npm run check:i18n   # 164 cles x 3 langues, 0 morte
+npm run check:seed   # coherence du seed SQL backend
+npm run design       # 35 checks de computed styles (parité design web ↔ Android)
+npm run build        # tsc strict + vite
+```
+
+## Parité web ↔ Android
+
+Les deux plateformes partagent la **même source de vérité visuelle** : chaque écran web a été
+aligné sur son homologue Android (`.kt` = référence), token par token — couleurs exactes, rayons
+dp→px, tailles sp→px, typographie, structure des composants.
+
+- **10 écrans alignés** : top bar, bottom bar, parcours, révision, modules, profil, ligues,
+  quiz, flashcards (+ parcours des leçons)
+- **Validé par exécution** : `npm run design` (Playwright, viewport 390×844) — 35/35 vérifications
+  de computed styles OK, `tsc --noEmit` 0 erreur, `vitest run` 127 tests 0 échec
+- **Bug de routage corrigé** : le paramètre de route (`#/flash/anat`) était supprimé par
+  `routeName()` avant lecture — la session flashcards se construisait sur un module vide
+
+Détail complet et écarts résiduels documentés : [RAPPORT_PARITE_WEB_ANDROID.md](RAPPORT_PARITE_WEB_ANDROID.md).
+
+**Fonctionnalités Android non portées sur le web** (différences de plateforme, pas des écarts
+de design) : placement diagnostic initial, gestion hors-ligne par module, notifications,
+sélecteur d'objectif quotidien. L'écran Recherche est web-only.
 
 ## AI Studio
 

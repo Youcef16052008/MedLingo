@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-  namespace = "com.example"
+  namespace = "com.aistudio.medlingua.dzmed"
   compileSdk = 36
 
   defaultConfig {
@@ -123,4 +123,12 @@ dependencies {
   debugImplementation(libs.androidx.compose.ui.tooling)
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
+}
+
+// P0-3 : export du schéma Room pour valider l'historique des migrations.
+// `exportSchema = true` dans @Database exige cet argument, sinon Room ne
+// génère rien et un changement d'entité casse silencieusement les bases
+// existantes. Les JSON vont dans app/schemas/ (committés).
+ksp {
+  arg("room.schemaLocation", "${projectDir}/schemas")
 }

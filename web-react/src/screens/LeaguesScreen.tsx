@@ -12,8 +12,26 @@ import {
   zoneOf,
   YOU,
   TIER_ICONS,
+  COHORT_SIZE,
+  PROMOTION,
+  DEMOTION,
   type Tier,
 } from "../domain/leagues";
+
+/* Couleurs de palier — LeagueTier.colorHex (LeagueCohortEntity.kt).
+   Le web ne gère que bronze/silver/gold. */
+const TIER_COLORS: Record<Tier, string> = {
+  bronze: "#CD7F32",
+  silver: "#C0C0C0",
+  gold: "#FFD700",
+};
+
+/* Médailles de tête de classement — LeagueMemberRow.kt. */
+const RANK_MEDALS: Record<number, string> = {
+  1: "#FFD700",
+  2: "#C0C0C0",
+  3: "#CD7F32",
+};
 
 const TIER_KEYS: Record<Tier, "leagueTierBronze" | "leagueTierSilver" | "leagueTierGold"> = {
   bronze: "leagueTierBronze",
@@ -21,7 +39,12 @@ const TIER_KEYS: Record<Tier, "leagueTierBronze" | "leagueTierSilver" | "leagueT
   gold: "leagueTierGold",
 };
 
-/** Classement hebdomadaire de la cohorte (30 joueurs). */
+/* "Bot" ou "Actif" — LeagueMemberRow.kt ; le web n'a que des bots + vous. */
+function activityLabel(isYou: boolean): string {
+  return isYou ? "Actif" : "Bot";
+}
+
+/** Classement hebdomadaire de la cohorte (30 joueurs) — LeagueScreen.kt. */
 export function LeaguesScreen() {
   const { t, lang } = useT();
   const s = useAppState();
@@ -43,42 +66,106 @@ export function LeaguesScreen() {
   const ms = msUntilReset(now);
   const days = Math.floor(ms / 86_400_000);
   const hours = Math.floor((ms % 86_400_000) / 3_600_000);
+  const tierColor = TIER_COLORS[s.league.tier];
+  const cohortId = `${s.league.botSeed}`;
 
   return (
-    <>
-      <div className="section-head" style={{ marginTop: 0 }}>
-        <div>
-          <p className="eyebrow">🏆 {formatWeekRange(s.league.weekStart, lang)}</p>
-          <h1>{t("leagueTitle")}</h1>
+    <div className="league-screen">
+      {/* ===== En-tête de cohorte (LeagueHeader) ===== */}
+      <div
+        className="card league-hero"
+        style={{ background: `${tierColor}1A` }}
+      >
+        <div className="league-hero-left">
+          <span
+            className="league-hero-ico"
+            style={{ background: `${tierColor}33` }}
+            aria-hidden="true"
+          >
+            {TIER_ICONS[s.league.tier]}
+          </span>
+          <div>
+            <b className="league-hero-title">
+              {t("leagueTitle")} {t(TIER_KEYS[s.league.tier]).toUpperCase()}
+            </b>
+            <span className="league-hero-sub">
+              {cohortId}... • {rows.length} membres
+            </span>
+          </div>
         </div>
-        <span className="stat-chip streak" title={t("leagueReset")}>
-          {TIER_ICONS[s.league.tier]} {t(TIER_KEYS[s.league.tier])}
+        <span
+          className="league-hero-badge"
+          style={{ background: tierColor }}
+        >
+          {TIER_ICONS[s.league.tier]} {t(TIER_KEYS[s.league.tier]).toUpperCase()}
         </span>
       </div>
 
-      <p className="tiny" style={{ margin: "-4px 0 12px" }}>
-        {t("leagueReset")} : {days} j {String(hours).padStart(2, "0")} h ·{" "}
-        {t("leaguePromotion")} : 10 · {t("leagueDemotion")} : 5
-      </p>
-
-      <div className="league-list">
-        {rows.map((r) => (
-          <div
-            key={r.id}
-            className={`league-row ${r.isYou ? "you" : ""} zone-${zoneOf(r.rank)}`}
-            style={{ animationDelay: `${Math.min(r.rank, 15) * 40}ms` }}
-          >
-            <span className="league-rank">{r.rank}</span>
-            <span className="league-avatar" aria-hidden="true">
-              {r.avatar}
-            </span>
-            <span className="league-name">{r.isYou ? t("leagueYou") : r.name}</span>
-            <b className="league-xp">
-              {r.xp} {t("statXp")}
-            </b>
-          </div>
-        ))}
+      {/* ===== Zones promotion / relégation ===== */}
+      <div className="card league-zones">
+        <div className="league-zones-row">
+          <span className="league-zone-up">
+            🏆 Top {PROMOTION} → {t("leaguePromotion")}
+          </span>
+          <span className="league-zone-down">
+            📉 Bottom {DEMOTION} → {t("leagueDemotion")}
+          </span>
+        </div>
+        <span className="league-zones-week">
+          {t("leagueWeekLabel")}: {formatWeekRange(s.league.weekStart, lang)} ·{" "}
+          {t("leagueReset")}: {days} j {String(hours).padStart(2, "0")} h
+        </span>
       </div>
-    </>
+
+      {/* ===== Classement (LeagueMemberRow) ===== */}
+      <div className="league-list">
+        {rows.map((r) => {
+          const zone = zoneOf(r.rank);
+          const isPromotion = r.rank <= PROMOTION;
+          const isDemotion = r.rank > COHORT_SIZE - DEMOTION;
+          const medal = RANK_MEDALS[r.rank];
+          return (
+            <div
+              key={r.id}
+              className={
+                "league-row" +
+                (r.isYou ? " you" : "") +
+                (zone === "green" ? " zone-green" : zone === "red" ? " zone-red" : "")
+              }
+              style={{ animationDelay: `${Math.min(r.rank, 15) * 40}ms` }}
+            >
+              <span
+                className="league-rank"
+                style={medal ? { background: medal, color: "#fff" } : undefined}
+              >
+                {r.rank}
+              </span>
+              <span className="league-avatar" aria-hidden="true">
+                {r.avatar}
+              </span>
+              <span className="league-id">
+                <span className="league-name">
+                  {r.isYou ? t("leagueYou") : r.name}
+                  {r.isYou && <b className="league-you-tag">TOI</b>}
+                </span>
+                <span className="league-sub">
+                  🔥 0j • {activityLabel(r.isYou)}
+                </span>
+              </span>
+              <span className="league-xp-col">
+                <b className={isPromotion ? "up" : isDemotion ? "down" : ""}>
+                  {r.xp} XP
+                </b>
+                {isPromotion && r.rank <= PROMOTION ? (
+                  <span className="up">↑ {t("leaguePromotion")}</span>
+                ) : isDemotion ? (
+                  <span className="down">↓ {t("leagueDemotion")}</span>
+                ) : null}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }

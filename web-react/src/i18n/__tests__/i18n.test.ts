@@ -41,8 +41,11 @@ describe("données extraites des seeds Kotlin", () => {
   ) as { id: number; level: number; type: string; options: string[]; answer: string }[];
 
   it("charge le corpus complet", () => {
-    expect(terms.length).toBe(4512);
-    expect(exercises.length).toBe(44);
+    expect(terms.length).toBe(4504);
+    // Les exercices écrits main (112) sont livrés dans exercises.json.
+    // Les 13 512 exercices générés (3 par terme) sont produits à l'exécution
+    // par `generateBulkExercises()` — testés dans `bulkExercises.test.ts`.
+    expect(exercises.length).toBe(112);
   });
 
   it("les ids sont uniques et les termes non vides", () => {
@@ -51,13 +54,22 @@ describe("données extraites des seeds Kotlin", () => {
     expect(terms.every((t) => t.module.trim().length > 0)).toBe(true);
   });
 
-  it("les ids sont contigus et alignés sur les seeds Kotlin", () => {
+  it("les ids sont alignés sur les seeds Kotlin (trous retirés autorisés)", () => {
     // Le web ne renumérote plus : un id doit être le même qu côté Android, sinon
     // l'historique de révision ne survit pas d'une plateforme à l'autre.
     const sorted = terms.map((t) => t.id).sort((a, b) => a - b);
     expect(sorted[0]).toBe(1);
-    expect(sorted.at(-1)).toBe(sorted.length);
-    sorted.forEach((id, i) => expect(id).toBe(i + 1));
+    // 8 doublons de traduction ont été retirés en phase 0 sans renumérotation :
+    // le dernier id reste 4512 mais le tableau en compte 4504.
+    expect(sorted.at(-1)).toBe(4512);
+    // Aucun trou accidentel : les seuls manquants sont les 8 doublons connus.
+    const RETIRED = new Set([514, 813, 816, 1249, 1338, 3840, 4136, 4209]);
+    const present = new Set(sorted);
+    const missing = [];
+    for (let i = 1; i <= 4512; i++)
+      if (!present.has(i) && !RETIRED.has(i)) missing.push(i);
+    expect(missing, `ids manquants inattendus: ${missing.slice(0, 10)}`).toEqual([]);
+    expect(sorted.length).toBe(4512 - RETIRED.size);
   });
 
   it("chaque module de terme existe dans la liste MODULES", async () => {
