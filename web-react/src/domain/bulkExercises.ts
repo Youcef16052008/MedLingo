@@ -22,7 +22,7 @@
 import { hashSeed, mulberry32 } from "./leagues";
 import { norm, shuffleWith } from "../lib/utils";
 import { MODULES } from "../data/modules";
-import { termsOfModule } from "../data/load";
+import { onDataChanged, termsOfModule } from "../data/load";
 import type { Exercise, ExerciseType, Term } from "../types";
 
 /** Nombre d'exercices produits pour chaque terme. */
@@ -621,15 +621,67 @@ export function generateBulkModule(moduleTitle: string, terms: Term[]): Exercise
  * Génère tous les exercices de tous les modules.
  *
  * À appeler après `loadOnce()` : les termes sont lus depuis `terms.json`.
+ *
+ * **Mémoïsé** : la génération complète coûte ~8 s (classement de similarité
+ * O(n²) par module). Elle était pourtant appelée à *chaque render* de l'écran
+ * quiz — via `quizExercisesForLevel()` pour le simple compteur « N exercices »
+ * — ce qui gelait l'UI plusieurs secondes à chaque interaction. Le corpus est
+ * déterministe (mêmes seeds que Android) : on le calcule une fois et on le
+ * garde. `warmBulkCache()` le préchauffe en arrière-plan, module par module,
+ * pour que le premier quiz soit instantané.
  */
-export function generateBulkExercises(): Exercise[] {
+let bulkCache: Exercise[] | null = null;
+let warming = false;
+
+/** Vide le cache (branchement des données : `loadOnce` / `setTestData`). */
+export function resetBulkCache(): void {
+  bulkCache = null;
+  warming = false;
+}
+
+function buildAllSync(): Exercise[] {
   const out: Exercise[] = [];
   for (const mod of MODULES) {
     const terms = termsOfModule(mod.id);
     if (!terms.length) continue;
     out.push(...generateBulkModule(mod.fr, terms));
   }
+  bulkCache = out;
   return out;
+}
+
+export function generateBulkExercises(): Exercise[] {
+  if (bulkCache) return bulkCache;
+  // Précharge en cours : on n'attend pas, on complète en synchrone.
+  if (warming) {
+    warming = false;
+  }
+  return buildAllSync();
+}
+
+/**
+ * Préchauffe le cache module par module, en rendant la main entre deux
+ * modules (`setTimeout 0`) : aucun bloc de 8 s sur le thread principal, la
+ * navigation reste fluide pendant la génération. Une fois terminée,
+ * `generateBulkExercises()` (et donc le quiz) est instantané.
+ */
+export function warmBulkCache(): void {
+  if (bulkCache || warming) return;
+  warming = true;
+  const parts: Exercise[] = [];
+  let i = 0;
+  const step = () => {
+    if (i >= MODULES.length) {
+      bulkCache = parts;
+      warming = false;
+      return;
+    }
+    const mod = MODULES[i++];
+    const terms = termsOfModule(mod.id);
+    if (terms.length) parts.push(...generateBulkModule(mod.fr, terms));
+    setTimeout(step, 0);
+  };
+  step();
 }
 
 /** Types réellement produits (utile pour les tests). */
@@ -641,3 +693,7 @@ export const BULK_TYPES: ExerciseType[] = [
   "reading",
   "clinical_case",
 ];
+
+// Le corpus est dérivé des termes : tout rebranchement de données
+// (`loadOnce`, `setTestData`) doit vider le cache.
+onDataChanged(resetBulkCache);

@@ -13,6 +13,7 @@ import { MODULES } from "../../data/modules";
 import {
   generateBulkExercises,
   generateBulkModule,
+  resetBulkCache,
   EXERCISES_PER_TERM,
 } from "../bulkExercises";
 import type { Exercise, Term } from "../../types";
@@ -199,10 +200,12 @@ function pickProbe(len: number): number[] {
 }
 
 describe("bulkExercises — robustesse", () => {
-  it("la génération est déterministe", () => {
-    // On ne régénère qu'une fois : la génération complète prend ~8 s et le
-    // test compare un échantillon (et non les 13 512 exercices deux à deux).
+  it("la génération est déterministe (et survit à un reset de cache)", () => {
+    // La génération est mémoïsée : le deuxième appel sans reset rendrait la
+    // même instance et ne prouverait rien. On vide le cache entre les deux
+    // appels pour vérifier la vraie garantit : mêmes seeds → même corpus.
     const first = generateBulkExercises();
+    resetBulkCache();
     const second = generateBulkExercises();
     expect(first.length).toBe(second.length);
     const probe = pickProbe(first.length);
@@ -215,6 +218,16 @@ describe("bulkExercises — robustesse", () => {
       expect(a.answer, `ex #${i} : answer divergent`).toBe(b.answer);
       expect(a.options.join("|"), `ex #${i} : options divergentes`).toBe(b.options.join("|"));
     }
+  }, BULK_TIMEOUT);
+
+  it("le cache est mémoïsé : deuxième appel instantané et identique", () => {
+    resetBulkCache();
+    const first = generateBulkExercises(); // ~5-12 s : la vraie génération
+    const t0 = performance.now();
+    const second = generateBulkExercises();
+    const dt = performance.now() - t0;
+    expect(second).toBe(first); // même instance : aucun recalcul
+    expect(dt).toBeLessThan(50); // ms — le recalcul coûterait plusieurs secondes
   }, BULK_TIMEOUT);
 
   it("un module vide ne plante pas", () => {
