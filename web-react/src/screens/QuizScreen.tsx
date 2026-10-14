@@ -3,7 +3,7 @@ import { useT } from "../i18n/useT";
 import type { TKey } from "../i18n";
 import { update, useAppState } from "../domain/store";
 import type { AppState } from "../domain/store";
-import { lessonQuestions, quizExercisesForLevel } from "../domain/lessons";
+import { lessonQuestions, quizExercises, quizExercisesForLevel } from "../domain/lessons";
 import { addXp, touchStreak, calculateGemsForLesson } from "../domain/gamification";
 import { lessonKey } from "../domain/path";
 import { modLabel } from "../data/modules";
@@ -109,7 +109,12 @@ interface QuizState {
 
 const IDLE: QuizState = {
   phase: "start",
-  level: 0,
+  // 1 et non 0 : à l'arrivée directe sur `#/quiz` (ou via l'onglet), la carte
+  // de quiz libre affiche le pool du niveau courant — avec 0 le compteur
+  // affichait « 0 exercices » et le bouton de démarrage restait désactivé
+  // jusqu'à ce que l'utilisateur clique d'abord une carte de niveau. L1 est
+  // toujours débloqué (pas de prérequis dans la cascade).
+  level: 1,
   moduleId: "",
   list: [],
   i: 0,
@@ -204,7 +209,10 @@ export function QuizScreen() {
   const patch = (p: Partial<QuizState>) => setQ((prev) => ({ ...prev, ...p }));
 
   const begin = (level: number) => {
-    const pool = quizExercisesForLevel(level);
+    // Niveau 0 = examen mixte (`#/quiz?mode=exam`) : le pool filtré par niveau
+    // est alors vide, donc l'examen était injouable (« Leçon invalide » +
+    // rebond sur la pyramide). Avec ≤ 0 on tire dans tout le corpus.
+    const pool = level >= 1 ? quizExercisesForLevel(level) : quizExercises();
     const list = shuffle(pool).slice(0, QUIZ_CAP);
     if (!list.length) return false;
     goalHitRef.current = false;
