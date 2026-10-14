@@ -19,6 +19,9 @@ vi.mock("../../data/load", async () => {
     getExercises: () => exercises,
     termById: () => undefined,
     termsOfModule: (id: string) => terms.filter((t) => t.module === byFr(id)),
+    // Invalidation de cache : sans données dynamiques dans ce mock, un
+    // no-op suffit (les caches restent valides pour toute la durée du test).
+    onDataChanged: () => () => {},
   };
 });
 

@@ -10,11 +10,11 @@
  *
  * Tirage déterministe (seed = module:niveau) → même leçon à chaque visite.
  */
-import { getExercises, termsOfModule } from "../data/load";
+import { getExercises, onDataChanged, termsOfModule } from "../data/load";
 import { modById, type Module } from "../data/modules";
 import { norm, shuffleWith } from "../lib/utils";
 import { mulberry32, hashSeed } from "./leagues";
-import { generateBulkExercises } from "./bulkExercises";
+import { generateBulkExercises, resetBulkCache, warmBulkCache } from "./bulkExercises";
 import type { Exercise, Term } from "../types";
 
 /** Questions par leçon. */
@@ -240,21 +240,41 @@ function build(
  * Les exercices générés sont produits à la demande depuis `terms.json` ; les
  * 112 exercices écrits main restent prioritaires (ils couvrent les types rares
  * comme `clinical_case` manuel).
+ *
+ * **Mémoïsé** : `generateBulkExercises()` coûte ~8 s ; sans cache, chaque
+ * render de l'écran quiz (le compteur « N exercices » appelle
+ * `quizExercisesForLevel`) relançait la génération complète et gelait l'UI.
  */
+let quizPoolCache: Exercise[] | null = null;
+
 export function quizExercises(): Exercise[] {
-  return [...getExercises(), ...generateBulkExercises()];
+  if (!quizPoolCache) quizPoolCache = [...getExercises(), ...generateBulkExercises()];
+  return quizPoolCache;
 }
 
-/** Même pool, filtré par niveau (L1..L6). */
+/** Même pool, filtré par niveau (L1..L6). Mémoïsé par niveau. */
+const levelPoolCache = new Map<number, Exercise[]>();
+
 export function quizExercisesForLevel(level: number): Exercise[] {
-  return quizExercises().filter((e) => e.level === level);
+  let pool = levelPoolCache.get(level);
+  if (!pool) {
+    pool = quizExercises().filter((e) => e.level === level);
+    levelPoolCache.set(level, pool);
+  }
+  return pool;
 }
 
 /**
  * Les 8 questions d'une leçon (ordre conservé : difficulté croissante).
- * Déterministe pour un couple (moduleId, level) donné.
+ * Déterministe pour un couple (moduleId, level) donné — donc mémoïsé :
+ * `PathScreen` peut redemander la même leçon à chaque render.
  */
+const lessonCache = new Map<string, Exercise[]>();
+
 export function lessonQuestions(moduleId: string, level: number): Exercise[] {
+  const cacheKey = `${moduleId}:${level}`;
+  const hit = lessonCache.get(cacheKey);
+  if (hit) return hit;
   const mod = modById(moduleId);
   if (!mod || level < 1 || level > 6) return [];
 
@@ -296,7 +316,32 @@ export function lessonQuestions(moduleId: string, level: number): Exercise[] {
   }
 
   // 3. sécurité : on ne rend jamais plus de LESSON_SIZE questions
-  return out.slice(0, LESSON_SIZE);
+  const out2 = out.slice(0, LESSON_SIZE);
+  lessonCache.set(cacheKey, out2);
+  return out2;
+}
+
+/* ------------------------------------------------------------------ */
+/* Invalidation + préchauffe                                           */
+/* ------------------------------------------------------------------ */
+
+/** Vide tous les caches dérivés des données (branchement de `terms.json`). */
+export function resetLessonCaches(): void {
+  quizPoolCache = null;
+  levelPoolCache.clear();
+  lessonCache.clear();
+  resetBulkCache();
+}
+
+onDataChanged(resetLessonCaches);
+
+/**
+ * Préchauffe le corpus en arrière-plan (module par module, sans bloquer le
+ * thread principal). Appelé après `loadOnce()` : le premier quiz est alors
+ * instantané au lieu de payer ~8 s de génération au clic.
+ */
+export function warmQuizPool(): void {
+  warmBulkCache();
 }
 
 /** Score d'une leçon (0-100) à partir du nombre de bonnes réponses. */

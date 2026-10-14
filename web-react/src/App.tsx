@@ -4,6 +4,7 @@ import { useAppState, update, getState } from "./domain/store";
 import { loadOnce, isLoaded } from "./data/load";
 import { useHashRoute } from "./lib/router";
 import { rollover, weekStartKey, YOU } from "./domain/leagues";
+import { warmQuizPool } from "./domain/lessons";
 import { TopBar } from "./components/TopBar";
 import { TabBar } from "./components/TabBar";
 import { DialogProvider, useDialog } from "./components/DialogProvider";
@@ -33,6 +34,16 @@ function Shell() {
     loadOnce()
       .then(() => {
         if (!cancelled) setReady(true);
+        // Préchauffe le corpus d'exercices (13 512, ~8 s de génération) en
+        // arrière-plan, module par module : le premier quiz est instantané
+        // au lieu de geler l'UI au clic. `requestIdleCallback` quand dispo.
+        if (!cancelled) {
+          if (typeof requestIdleCallback === "function") {
+            requestIdleCallback(() => warmQuizPool(), { timeout: 4000 });
+          } else {
+            setTimeout(() => warmQuizPool(), 1200);
+          }
+        }
       })
       .catch((e: unknown) => {
         if (!cancelled)
