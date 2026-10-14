@@ -128,7 +128,7 @@ fun ModulesScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
@@ -160,7 +160,7 @@ fun ModulesScreen(
                             modifier = Modifier
                                 .size(36.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFFE8F5E9)),
+                                .background(Color(0xFFE3F5EC)),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(text = "🩺", fontSize = 18.sp)
@@ -170,12 +170,12 @@ fun ModulesScreen(
                                 text = if (lang == Language.ARABIC) "المقررات والقاموس الطبي DZ" else "Modules & Syllabus Médical",
                                 fontWeight = FontWeight.ExtraBold,
                                 fontSize = 15.sp,
-                                color = Color(0xFF0F172A)
+                                color = Color(0xFF0C1414)
                             )
                             Text(
                                 text = "PCEM1 • ${InitialData.modulesList.size} Modules Fondamentaux • ${uiState.allTerms.size} Termes",
                                 fontSize = 11.sp,
-                                color = Color(0xFF64748B),
+                                color = Color(0xFF6B7877),
                                 fontWeight = FontWeight.Medium
                             )
                         }
@@ -201,7 +201,7 @@ fun ModulesScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(14.dp))
-                        .background(Color(0xFFF1F5F9))
+                        .background(Color(0xFFF5FAF7))
                         .padding(4.dp),
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
@@ -221,14 +221,14 @@ fun ModulesScreen(
                             Icon(
                                 imageVector = Icons.Default.GridView,
                                 contentDescription = null,
-                                tint = if (selectedViewTab == 0) Color.White else Color(0xFF475569),
+                                tint = if (selectedViewTab == 0) Color.White else Color(0xFF475050),
                                 modifier = Modifier.size(16.dp)
                             )
                             Text(
                                 text = if (lang == Language.ARABIC) "دليل المقررات (${InitialData.modulesList.size})" else "Modules (${InitialData.modulesList.size})",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = if (selectedViewTab == 0) Color.White else Color(0xFF475569)
+                                color = if (selectedViewTab == 0) Color.White else Color(0xFF475050)
                             )
                         }
                     }
@@ -249,14 +249,14 @@ fun ModulesScreen(
                             Icon(
                                 imageVector = Icons.Default.MenuBook,
                                 contentDescription = null,
-                                tint = if (selectedViewTab == 1) Color.White else Color(0xFF475569),
+                                tint = if (selectedViewTab == 1) Color.White else Color(0xFF475050),
                                 modifier = Modifier.size(16.dp)
                             )
                             Text(
                                 text = if (lang == Language.ARABIC) "قاموس المصطلحات" else "Lexique (${uiState.terms.size})",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = if (selectedViewTab == 1) Color.White else Color(0xFF475569)
+                                color = if (selectedViewTab == 1) Color.White else Color(0xFF475050)
                             )
                         }
                     }
@@ -356,7 +356,7 @@ fun ModulesScreen(
                 placeholder = {
                     Text(
                         text = Strings.get("search_hint", lang),
-                        color = Color(0xFF94A3B8),
+                        color = Color(0xFF6B7877),
                         fontSize = 13.sp
                     )
                 },
@@ -373,7 +373,7 @@ fun ModulesScreen(
                             Icon(
                                 imageVector = Icons.Default.Clear,
                                 contentDescription = "Clear",
-                                tint = Color(0xFF64748B)
+                                tint = Color(0xFF6B7877)
                             )
                         }
                     }
@@ -384,7 +384,7 @@ fun ModulesScreen(
                     focusedContainerColor = Color.White,
                     unfocusedContainerColor = Color.White,
                     focusedIndicatorColor = MedGreenDark,
-                    unfocusedIndicatorColor = Color(0xFFCBD5E1)
+                    unfocusedIndicatorColor = Color(0xFFDFEAE4)
                 )
             )
 
@@ -407,7 +407,7 @@ fun ModulesScreen(
                             .background(if (isSelected) MedGreenDark else Color.White)
                             .border(
                                 1.dp,
-                                if (isSelected) MedGreenDark else Color(0xFFCBD5E1),
+                                if (isSelected) MedGreenDark else Color(0xFFDFEAE4),
                                 RoundedCornerShape(20.dp)
                             )
                             .clickable { onModuleFilterChange(moduleKey) }
@@ -416,7 +416,7 @@ fun ModulesScreen(
                     ) {
                         Text(
                             text = "$label ($countForModule)",
-                            color = if (isSelected) Color.White else Color(0xFF334155),
+                            color = if (isSelected) Color.White else Color(0xFF475050),
                             fontSize = 12.sp,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
                         )
@@ -437,10 +437,10 @@ fun ModulesScreen(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(16.dp))
-                                .background(if (isSelected) Color(0xFF1B5E20) else Color(0xFFE8F5E9))
+                                .background(if (isSelected) Color(0xFF146B43) else Color(0xFFE3F5EC))
                                 .border(
                                     1.dp,
-                                    if (isSelected) Color(0xFF1B5E20) else Color(0xFFC8E6C9),
+                                    if (isSelected) Color(0xFF146B43) else Color(0xFFC8E6C9),
                                     RoundedCornerShape(16.dp)
                                 )
                                 .clickable { onChapterFilterChange(chapterKey) }
@@ -448,7 +448,7 @@ fun ModulesScreen(
                         ) {
                             Text(
                                 text = label,
-                                color = if (isSelected) Color.White else Color(0xFF1B5E20),
+                                color = if (isSelected) Color.White else Color(0xFF146B43),
                                 fontSize = 11.sp,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
                             )
@@ -466,7 +466,7 @@ fun ModulesScreen(
                 Text(
                     text = "${uiState.terms.size} ${if (lang == Language.ARABIC) "مصطلحات مطابقة" else "termes médicaux affichés"}",
                     fontSize = 12.sp,
-                    color = Color(0xFF64748B),
+                    color = Color(0xFF6B7877),
                     fontWeight = FontWeight.SemiBold
                 )
 
@@ -502,12 +502,12 @@ fun ModulesScreen(
                             text = if (lang == Language.ARABIC) "لا توجد مصطلحات مطابقة" else "Aucun terme médical trouvé",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.sp,
-                            color = Color(0xFF1E2922)
+                            color = Color(0xFF0C1414)
                         )
                         Text(
                             text = if (lang == Language.ARABIC) "جرّب تغيير التصفية أو المقرر المحدد" else "Vérifiez vos filtres de recherche ou sélectionnez un autre module.",
                             fontSize = 12.sp,
-                            color = Color(0xFF64748B),
+                            color = Color(0xFF6B7877),
                             textAlign = TextAlign.Center
                         )
                         Button(
@@ -593,12 +593,12 @@ private fun FigmaModuleDetailedCard(
                             text = if (currentLanguage == Language.ARABIC) module.titleAr else module.titleFr,
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
-                            color = Color(0xFF0F172A)
+                            color = Color(0xFF0C1414)
                         )
                         Text(
                             text = "${module.titleEn} • ${module.chaptersCount} chapitres",
                             fontSize = 11.sp,
-                            color = Color(0xFF64748B),
+                            color = Color(0xFF6B7877),
                             fontWeight = FontWeight.Medium
                         )
                     }
@@ -632,15 +632,15 @@ private fun FigmaModuleDetailedCard(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(10.dp))
-                            .background(Color(0xFFF8FAFC))
-                            .border(1.dp, Color(0xFFE2E8F0), RoundedCornerShape(10.dp))
+                            .background(Color(0xFFF0F7F4))
+                            .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(10.dp))
                             .clickable { onChapterClick(chap) }
                             .padding(horizontal = 8.dp, vertical = 4.dp)
                     ) {
                         Text(
                             text = chap,
                             fontSize = 10.sp,
-                            color = Color(0xFF334155),
+                            color = Color(0xFF475050),
                             fontWeight = FontWeight.Medium
                         )
                     }
@@ -655,7 +655,7 @@ private fun FigmaModuleDetailedCard(
                     .height(6.dp)
                     .clip(RoundedCornerShape(3.dp)),
                 color = Color(module.colorHex),
-                trackColor = Color(0xFFF1F5F9)
+                trackColor = Color(0xFFF5FAF7)
             )
 
             // Direct Actions Row
@@ -721,7 +721,7 @@ fun MedicalTermCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
-                        .background(Color(0xFFE8F5E9))
+                        .background(Color(0xFFE3F5EC))
                         .padding(horizontal = 8.dp, vertical = 4.dp)
                 ) {
                     Text(
@@ -740,13 +740,13 @@ fun MedicalTermCard(
                         Icon(
                             imageVector = if (term.isBookmarked) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
                             contentDescription = "Bookmark",
-                            tint = if (term.isBookmarked) AmberGold else Color(0xFF94A3B8)
+                            tint = if (term.isBookmarked) AmberGold else Color(0xFF6B7877)
                         )
                     }
                     Icon(
                         imageVector = if (expanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
                         contentDescription = null,
-                        tint = Color(0xFF64748B),
+                        tint = Color(0xFF6B7877),
                         modifier = Modifier.size(20.dp)
                     )
                 }
@@ -763,7 +763,7 @@ fun MedicalTermCard(
                         text = term.termEn,
                         fontSize = 18.sp,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(0xFF0F172A)
+                        color = Color(0xFF0C1414)
                     )
                     if (term.ipaPhonetic.isNotBlank()) {
                         Text(
@@ -777,7 +777,7 @@ fun MedicalTermCard(
 
                 FilledIconButton(
                     onClick = { onSpeak(term.termEn) },
-                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFE8F5E9)),
+                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFE3F5EC)),
                     modifier = Modifier.size(38.dp).testTag("speak_btn_${term.id}")
                 ) {
                     Icon(
@@ -798,13 +798,13 @@ fun MedicalTermCard(
                 Text(
                     text = "🇫🇷 ${term.termFr}",
                     fontSize = 13.sp,
-                    color = Color(0xFF334155),
+                    color = Color(0xFF475050),
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
                     text = "🇸🇦 ${term.termAr}",
                     fontSize = 13.sp,
-                    color = Color(0xFF0D532C),
+                    color = Color(0xFF0B4A2E),
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -814,13 +814,13 @@ fun MedicalTermCard(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
-                        .background(Color(0xFFF1F5F9))
+                        .background(Color(0xFFF5FAF7))
                         .padding(horizontal = 8.dp, vertical = 4.dp)
                 ) {
                     Text(
                         text = "🏛️ ${term.etymology}",
                         fontSize = 10.sp,
-                        color = Color(0xFF475569)
+                        color = Color(0xFF475050)
                     )
                 }
             }
@@ -829,7 +829,7 @@ fun MedicalTermCard(
             Text(
                 text = if (currentLanguage == Language.ARABIC) term.definitionAr else term.definitionFr,
                 fontSize = 12.sp,
-                color = Color(0xFF334155),
+                color = Color(0xFF475050),
                 lineHeight = 17.sp
             )
 
@@ -843,7 +843,7 @@ fun MedicalTermCard(
                         .padding(top = 8.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    HorizontalDivider(color = Color(0xFFE2E8F0))
+                    HorizontalDivider(color = Color(0xFFDFEAE4))
                     TermIllustrationView(term = term, language = currentLanguage)
 
                     // 🩺 High-Yield Clinical Pearl
@@ -906,8 +906,8 @@ fun MedicalTermCard(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(12.dp))
-                                .background(Color(0xFFF8FAFC))
-                                .border(1.dp, Color(0xFFE2E8F0), RoundedCornerShape(12.dp))
+                                .background(Color(0xFFF0F7F4))
+                                .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(12.dp))
                                 .padding(12.dp)
                         ) {
                             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -915,19 +915,19 @@ fun MedicalTermCard(
                                     text = "📋 EXEMPLE D'USAGE CLINIQUE",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 10.sp,
-                                    color = Color(0xFF64748B)
+                                    color = Color(0xFF6B7877)
                                 )
                                 Text(
                                     text = "“${term.exampleEn}”",
                                     fontSize = 11.sp,
                                     fontStyle = FontStyle.Italic,
-                                    color = Color(0xFF0F172A)
+                                    color = Color(0xFF0C1414)
                                 )
                                 if (term.exampleFr.isNotBlank()) {
                                     Text(
                                         text = "🇫🇷 ${term.exampleFr}",
                                         fontSize = 11.sp,
-                                        color = Color(0xFF475569)
+                                        color = Color(0xFF475050)
                                     )
                                 }
                             }

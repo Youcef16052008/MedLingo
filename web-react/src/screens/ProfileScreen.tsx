@@ -61,7 +61,7 @@ export function ProfileScreen() {
 
   return (
     <div className="profile-screen">
-      {/* ===== Carte profil étudiant (gradient #1B5E20 → #2E7D32) ===== */}
+      {/* ===== Carte profil étudiant (gradient #146B43 → #15803D) ===== */}
       <div className="card profile-hero">
         <div className="profile-hero-row">
           <span className="profile-avatar" aria-hidden="true">

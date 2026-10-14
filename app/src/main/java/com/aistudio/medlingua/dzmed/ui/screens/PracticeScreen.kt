@@ -53,7 +53,7 @@ fun PracticeScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -68,13 +68,13 @@ fun PracticeScreen(
                     text = Strings.get("practice_sub", lang),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF64748B)
+                    color = Color(0xFF6B7877)
                 )
                 Text(
                     text = Strings.get("practice_title", lang),
                     fontSize = 24.sp,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color(0xFF1E293B)
+                    color = Color(0xFF12211C)
                 )
             }
             Text(
@@ -112,7 +112,7 @@ fun PracticeScreen(
                 title = Strings.get("practice_due", lang),
                 desc = Strings.get("practice_due_desc", lang),
                 badge = due,
-                tone = Color(0xFF00897B),
+                tone = Color(0xFF0F766E),
                 onClick = onOpenReview
             )
             PracticeCard(
@@ -183,7 +183,7 @@ private fun PracticeCard(
                         text = title,
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF1E293B)
+                        color = Color(0xFF12211C)
                     )
                     if (badge > 0) {
                         Text(
@@ -201,7 +201,7 @@ private fun PracticeCard(
                 Text(
                     text = desc,
                     fontSize = 12.sp,
-                    color = Color(0xFF64748B),
+                    color = Color(0xFF6B7877),
                     modifier = Modifier.padding(top = 4.dp)
                 )
             }

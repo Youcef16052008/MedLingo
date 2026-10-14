@@ -90,8 +90,8 @@ fun AudioPronunciationStudio(
                 .padding(horizontal = 12.dp, vertical = 8.dp)
                 .shadow(16.dp, RoundedCornerShape(24.dp)),
             shape = RoundedCornerShape(24.dp),
-            colors = CardDefaults.cardColors(containerColor = Color(0xFF0F172A)), // Clinical surgical dark slate
-            border = androidx.compose.foundation.BorderStroke(1.5.dp, Color(0xFF00897B).copy(alpha = 0.5f))
+            colors = CardDefaults.cardColors(containerColor = Color(0xFF0C1414)), // Clinical surgical dark slate
+            border = androidx.compose.foundation.BorderStroke(1.5.dp, Color(0xFF0F766E).copy(alpha = 0.5f))
         ) {
             Column(
                 modifier = Modifier
@@ -181,10 +181,10 @@ fun AudioPronunciationStudio(
                         .clip(RoundedCornerShape(16.dp))
                         .background(
                             Brush.linearGradient(
-                                colors = listOf(Color(0xFF1E293B), Color(0xFF0F172A))
+                                colors = listOf(Color(0xFF12211C), Color(0xFF0C1414))
                             )
                         )
-                        .border(1.dp, Color(0xFF334155), RoundedCornerShape(16.dp))
+                        .border(1.dp, Color(0xFF475050), RoundedCornerShape(16.dp))
                         .padding(14.dp)
                 ) {
                     Column(
@@ -221,7 +221,7 @@ fun AudioPronunciationStudio(
                         ) {
                             Text(
                                 text = "🇫🇷 ${currentTerm.termFr}",
-                                color = Color(0xFFE2E8F0),
+                                color = Color(0xFFDFEAE4),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Medium,
                                 maxLines = 1,
@@ -285,7 +285,7 @@ fun AudioPronunciationStudio(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(12.dp))
-                            .background(if (isContinuousActive) Color(0xFF00796B) else Color(0xFF1E293B))
+                            .background(if (isContinuousActive) Color(0xFF00796B) else Color(0xFF12211C))
                             .clickable { onToggleContinuous() }
                             .padding(horizontal = 10.dp, vertical = 8.dp)
                     ) {
@@ -318,7 +318,7 @@ fun AudioPronunciationStudio(
                             modifier = Modifier
                                 .size(40.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFF1E293B)),
+                                .background(Color(0xFF12211C)),
                             colors = IconButtonDefaults.iconButtonColors(contentColor = Color.White)
                         ) {
                             Icon(
@@ -335,7 +335,7 @@ fun AudioPronunciationStudio(
                                 .clip(CircleShape)
                                 .background(
                                     Brush.linearGradient(
-                                        colors = listOf(Color(0xFF00897B), Color(0xFF004D40))
+                                        colors = listOf(Color(0xFF0F766E), Color(0xFF004D40))
                                     )
                                 )
                                 .clickable { onPlayPause() },
@@ -354,7 +354,7 @@ fun AudioPronunciationStudio(
                             modifier = Modifier
                                 .size(40.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFF1E293B)),
+                                .background(Color(0xFF12211C)),
                             colors = IconButtonDefaults.iconButtonColors(contentColor = Color.White)
                         ) {
                             Icon(
@@ -385,7 +385,7 @@ private fun LanguageVoiceChip(
     Surface(
         modifier = Modifier.clickable { onClick() },
         shape = RoundedCornerShape(10.dp),
-        color = if (isSelected) Color(0xFF00695C) else Color(0xFF1E293B),
+        color = if (isSelected) Color(0xFF0F766E) else Color(0xFF12211C),
         border = if (isSelected) androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF26A69A)) else null
     ) {
         Text(
@@ -414,7 +414,7 @@ private fun SpeedSelectorPill(
     Box(
         modifier = Modifier
             .clip(RoundedCornerShape(12.dp))
-            .background(Color(0xFF1E293B))
+            .background(Color(0xFF12211C))
             .clickable { onSpeedSelected(nextSpeed) }
             .padding(horizontal = 10.dp, vertical = 8.dp)
     ) {
@@ -478,6 +478,6 @@ private fun WaveBar(height: Float, isSpeaking: Boolean) {
             .width(4.dp)
             .height(height.dp)
             .clip(RoundedCornerShape(2.dp))
-            .background(if (isSpeaking) Color(0xFF2DD4BF) else Color(0xFF475569))
+            .background(if (isSpeaking) Color(0xFF2DD4BF) else Color(0xFF475050))
     )
 }

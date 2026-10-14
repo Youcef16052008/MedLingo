@@ -33,7 +33,7 @@ fun RatingButtons(
         RatingItem(2, "😕", Strings.get("rating_hard", currentLanguage), Color(0xFFF57C00)),
         RatingItem(3, "🤔", Strings.get("rating_medium", currentLanguage), Color(0xFFFFA000)),
         RatingItem(4, "😊", Strings.get("rating_easy", currentLanguage), Color(0xFF689F38)),
-        RatingItem(5, "🤩", Strings.get("rating_perfect", currentLanguage), Color(0xFF2E7D32))
+        RatingItem(5, "🤩", Strings.get("rating_perfect", currentLanguage), Color(0xFF15803D))
     )
 
     Column(

@@ -265,9 +265,9 @@ fun MedLinguaAppContent(
                             colors = NavigationBarItemDefaults.colors(
                                 selectedIconColor = MedGreenDark,
                                 selectedTextColor = MedGreenDark,
-                                indicatorColor = Color(0xFFE8F5E9),
-                                unselectedIconColor = Color(0xFF90A4AE),
-                                unselectedTextColor = Color(0xFF90A4AE)
+                                indicatorColor = Color(0xFFE3F5EC),
+                                unselectedIconColor = Color(0xFF6B7877),
+                                unselectedTextColor = Color(0xFF6B7877)
                             ),
                             modifier = Modifier.testTag("nav_item_${destination.name.lowercase()}")
                         )

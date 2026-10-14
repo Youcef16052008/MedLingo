@@ -67,7 +67,7 @@ fun TermIllustrationView(
     Column(modifier = modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
         Box(
             modifier = Modifier.fillMaxWidth().height(height)
-                .clip(RoundedCornerShape(12.dp)).background(Color(0xFFF0F7F1)),
+                .clip(RoundedCornerShape(12.dp)).background(Color(0xFFF0F7F4)),
             contentAlignment = Alignment.Center
         ) {
             Image(
@@ -87,8 +87,8 @@ fun TermIllustrationView(
                 })
             }
         }
-        Text(caption, color = Color(0xFF334155), textAlign = TextAlign.Center)
-        Text(illustration.credit, color = Color(0xFF64748B), textAlign = TextAlign.Center)
+        Text(caption, color = Color(0xFF475050), textAlign = TextAlign.Center)
+        Text(illustration.credit, color = Color(0xFF6B7877), textAlign = TextAlign.Center)
     }
 
     if (zoomed) {
@@ -106,7 +106,7 @@ private fun IllustrationDialog(
     var scale by remember(illustration.drawable) { mutableFloatStateOf(1f) }
     var pan by remember(illustration.drawable) { mutableStateOf(Offset.Zero) }
     Dialog(onDismissRequest = onClose, properties = DialogProperties(usePlatformDefaultWidth = false)) {
-        Surface(modifier = Modifier.fillMaxSize(), color = Color(0xFF0F172A)) {
+        Surface(modifier = Modifier.fillMaxSize(), color = Color(0xFF0C1414)) {
             Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                     IconButton(onClick = onClose) {
@@ -148,7 +148,7 @@ private fun IllustrationDialog(
                 Text(caption, modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
                     color = Color.White, textAlign = TextAlign.Center)
                 Text(illustration.credit, modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
-                    color = Color(0xFFCBD5E1), textAlign = TextAlign.Center)
+                    color = Color(0xFFDFEAE4), textAlign = TextAlign.Center)
             }
         }
     }

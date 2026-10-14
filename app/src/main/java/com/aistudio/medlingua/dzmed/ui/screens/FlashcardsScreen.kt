@@ -84,7 +84,7 @@ fun FlashcardsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -101,7 +101,7 @@ fun FlashcardsScreen(
                     text = Strings.get("nav_flashcards", lang),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF1E2922)
+                    color = Color(0xFF0C1414)
                 )
                 Text(
                     text = "Spaced Repetition (SM-2) • Algérie 🇩🇿",
@@ -114,7 +114,7 @@ fun FlashcardsScreen(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFE8F5E9))
+                    .background(Color(0xFFE3F5EC))
                     .padding(horizontal = 12.dp, vertical = 6.dp)
             ) {
                 Text(
@@ -141,7 +141,7 @@ fun FlashcardsScreen(
                         .background(if (isSelected) MedGreenDark else Color.White)
                         .border(
                             1.dp,
-                            if (isSelected) MedGreenDark else Color(0xFFCBD5E1),
+                            if (isSelected) MedGreenDark else Color(0xFFDFEAE4),
                             RoundedCornerShape(18.dp)
                         )
                         .clickable { onModuleFilterChange(moduleKey) }
@@ -150,7 +150,7 @@ fun FlashcardsScreen(
                 ) {
                     Text(
                         text = label,
-                        color = if (isSelected) Color.White else Color(0xFF334155),
+                        color = if (isSelected) Color.White else Color(0xFF475050),
                         fontSize = 11.sp,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
                     )
@@ -181,7 +181,7 @@ fun FlashcardsScreen(
                             .background(if (isSelected) MedGreenDark else Color.White)
                             .border(
                                 1.dp,
-                                if (isSelected) MedGreenDark else Color(0xFFCBD5E1),
+                                if (isSelected) MedGreenDark else Color(0xFFDFEAE4),
                                 RoundedCornerShape(16.dp)
                             )
                             .clickable { onChapterFilterChange(chapterKey) }
@@ -189,7 +189,7 @@ fun FlashcardsScreen(
                     ) {
                         Text(
                             text = label,
-                            color = if (isSelected) Color.White else Color(0xFF334155),
+                            color = if (isSelected) Color.White else Color(0xFF475050),
                             fontSize = 11.sp,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
                         )
@@ -207,7 +207,7 @@ fun FlashcardsScreen(
                     .height(6.dp)
                     .clip(RoundedCornerShape(3.dp)),
                 color = MedGreenDark,
-                trackColor = Color(0xFFE0E5E0)
+                trackColor = Color(0xFFDFEAE4)
             )
         }
 
@@ -229,7 +229,7 @@ fun FlashcardsScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(14.dp))
-                            .background(Color(0xFFE8F5E9))
+                            .background(Color(0xFFE3F5EC))
                             .border(1.dp, Color(0xFFA5D6A7), RoundedCornerShape(14.dp))
                             .padding(10.dp)
                     ) {
@@ -240,13 +240,13 @@ fun FlashcardsScreen(
                             Icon(
                                 imageVector = Icons.Default.CheckCircle,
                                 contentDescription = null,
-                                tint = Color(0xFF2E7D32),
+                                tint = Color(0xFF15803D),
                                 modifier = Modifier.size(18.dp)
                             )
                             Text(
                                 text = "${Strings.get("next_review", lang)} ${result.intervalDays} ${Strings.get("days", lang)} (Facteur: ${"%.1f".format(result.easeFactor)})",
                                 fontSize = 12.sp,
-                                color = Color(0xFF1B5E20),
+                                color = Color(0xFF146B43),
                                 fontWeight = FontWeight.SemiBold
                             )
                         }
@@ -281,7 +281,7 @@ fun FlashcardsScreen(
                     Text(
                         text = Strings.get("tap_to_flip", lang),
                         fontSize = 12.sp,
-                        color = Color(0xFF78909C),
+                        color = Color(0xFF6B7877),
                         fontWeight = FontWeight.Medium
                     )
 

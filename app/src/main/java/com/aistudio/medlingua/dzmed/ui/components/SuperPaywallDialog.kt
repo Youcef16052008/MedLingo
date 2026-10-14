@@ -69,13 +69,13 @@ fun SuperPaywallDialog(
                     text = "Super MedLingo",
                     fontSize = 24.sp,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color(0xFF0F172A)
+                    color = Color(0xFF0C1414)
                 )
 
                 Text(
                     text = "Comme Tinder Plus, mais pour devenir bilingue médical",
                     fontSize = 13.sp,
-                    color = Color(0xFF64748B),
+                    color = Color(0xFF6B7877),
                     textAlign = TextAlign.Center
                 )
 
@@ -93,7 +93,7 @@ fun SuperPaywallDialog(
                             text = benefit,
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Medium,
-                            color = Color(0xFF334155)
+                            color = Color(0xFF475050)
                         )
                     }
                 }
@@ -122,7 +122,7 @@ fun SuperPaywallDialog(
 
                 Button(
                     onClick = onBuyYearly,
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0F172A)),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0C1414)),
                     shape = RoundedCornerShape(16.dp),
                     modifier = Modifier.fillMaxWidth().height(52.dp)
                 ) {

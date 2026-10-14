@@ -29,12 +29,12 @@ const LEARNING_LEVELS: {
   key: TKey;
   objectiveKey: TKey;
 }[] = [
-  { n: 1, icon: "📖", color: "#1B5E20", key: "lvl1", objectiveKey: "lvl1Obj" },
-  { n: 2, icon: "🧩", color: "#00695C", key: "lvl2", objectiveKey: "lvl2Obj" },
+  { n: 1, icon: "📖", color: "#146B43", key: "lvl1", objectiveKey: "lvl1Obj" },
+  { n: 2, icon: "🧩", color: "#0F766E", key: "lvl2", objectiveKey: "lvl2Obj" },
   { n: 3, icon: "💬", color: "#1565C0", key: "lvl3", objectiveKey: "lvl3Obj" },
   { n: 4, icon: "📝", color: "#6A1B9A", key: "lvl4", objectiveKey: "lvl4Obj" },
   { n: 5, icon: "📄", color: "#E65100", key: "lvl5", objectiveKey: "lvl5Obj" },
-  { n: 6, icon: "🏥", color: "#C62828", key: "lvl6", objectiveKey: "lvl6Obj" },
+  { n: 6, icon: "🏥", color: "#DC2626", key: "lvl6", objectiveKey: "lvl6Obj" },
 ];
 
 /* Miroir de UserStatsEntity.isLevelUnlocked / getScoreForLevel — UNLOCK_THRESHOLD = 70.
@@ -353,7 +353,7 @@ export function QuizScreen() {
     const count = pool.length;
     return (
       <div className="quiz-start">
-        {/* Carte pyramide (gradient #0D532C → #1B5E20 → #2E7D32) */}
+        {/* Carte pyramide (gradient #0B4A2E → #146B43 → #15803D) */}
         <div className="card pyramid-hero">
           <b className="pyramid-title">{t("pyramidTitle")}</b>
           <p className="pyramid-desc">{t("pyramidDesc")}</p>

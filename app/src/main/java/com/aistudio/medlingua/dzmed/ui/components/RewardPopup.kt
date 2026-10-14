@@ -131,7 +131,7 @@ fun RewardPopup(
                     text = Strings.get("reward_title", lang),
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF64748B)
+                    color = Color(0xFF6B7877)
                 )
 
                 Column(
@@ -154,7 +154,7 @@ fun RewardPopup(
                         text = "📦 ${Strings.get("reward_open_chest", lang)} ($chestCount)",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF1E293B),
+                        color = Color(0xFF12211C),
                         textAlign = TextAlign.Center,
                         modifier = Modifier
                             .fillMaxWidth()
@@ -174,7 +174,7 @@ fun RewardPopup(
                         text = label,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(0xFF1E293B),
+                        color = Color(0xFF12211C),
                         modifier = Modifier
                             .clip(RoundedCornerShape(14.dp))
                             .background(Color(0xFFF1F8E9))
@@ -211,12 +211,12 @@ private fun RewardRow(main: String, label: String, gold: Boolean) {
             text = main,
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold,
-            color = if (gold) Color(0xFFB45309) else Color(0xFF1E293B)
+            color = if (gold) Color(0xFFB45309) else Color(0xFF12211C)
         )
         Text(
             text = label,
             fontSize = 12.sp,
-            color = Color(0xFF64748B)
+            color = Color(0xFF6B7877)
         )
     }
 }
