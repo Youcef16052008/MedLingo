@@ -1,60 +1,69 @@
 /* ============================================================
    MedLingo DZ — Web PWA
-   Palette : vert chirurgical / teal clinique / rouge algérien / ambre
-   Type : Fraunces (display) + IBM Plex Sans (+ Arabic)
+   Design system : « Clinical Calm » — vert médical frais / teal clinique
+   Type : Inter (UI + display, chiffres tabulaires) + IBM Plex Sans Arabic
+   Inspiré des systèmes santé modernes (canvas menthe, cartes à filet fin,
+   hiérarchie scannable, WCAG AA). Structure des écrans = parité Android.
    ============================================================ */
 
 :root {
-  /* Palette : vert chirurgical / teal clinique / rouge algérien / ambre
-     Valeurs alignées sur app/src/main/java/com/aistudio/medlingua/dzmed/ui/theme/Color.kt */
-  --green-900: #0D532C;
-  --green: #1B5E20;
-  --green-600: #2E7D32;
-  --green-50: #E8F5E9;
-  --green-ink: #07381A;
-  --teal: #00695C;
-  --teal-50: #E0F2F1;
-  --teal-600: #00796B;
-  --teal-800: #004D40;
-  --red: #C62828;
-  --red-50: #FFEBEE;
+  /* Palette médicale : vert émeraude frais / teal clinique / ambre / rouge
+     Valeurs = nouveau design system web (structure des écrans inchangée). */
+  --green-900: #0B4A2E;
+  --green: #146B43;
+  --green-600: #15803D;
+  --green-50: #E3F5EC;
+  --green-ink: #08301B;
+  --teal: #0D9488;
+  --teal-50: #E0F5F2;
+  --teal-600: #0F766E;
+  --teal-800: #115E59;
+  --red: #DC2626;
+  --red-50: #FEF2F2;
   --amber: #D97706;
   --amber-50: #FEF3C7;
 
-  --bg: #F6F8F6;
+  /* Canvas menthe : plus chaud et clinique que le blanc pur (recherche UX
+     santé : « le canvas teinté menthe est essentiel à la chaleur clinique »). */
+  --bg: #F0F7F4;
   --surface: #FFFFFF;
-  --surface-2: #EFF5F0;
-  --line: #E2E8F0;
-  --ink: #0F172A;
-  --ink-2: #475569;
-  --ink-3: #64748B;
+  --surface-2: #F5FAF7;
+  --line: #DFEAE4;
+  --ink: #0C1414;
+  --ink-2: #475050;
+  --ink-3: #6B7877;
 
-  /* Surfaces du thème sombre Android (DarkColorScheme) */
-  --night: #0F172A;
-  --night-2: #1E293B;
-  --night-line: #3B4E41;
-  --mint: #86EFAC;
+  /* Surfaces du thème sombre (DarkColorScheme) */
+  --night: #0A1512;
+  --night-2: #12211C;
+  --night-line: #2A3D35;
+  --mint: #6EE7B7;
   --mint-50: #0F391E;
-  --mint-ink: #A5F4AC;
+  --mint-ink: #A7F3D0;
 
-  /* Échelle de rayons : 8 / 12 / 20 / 22 dp comme sur Android */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius: 16px;
-  --radius-lg: 20px;
-  --radius-xl: 22px;
+  /* Échelle de rayons : échelle moderne 12 / 16 / 20 / 24 */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius: 18px;
+  --radius-lg: 22px;
+  --radius-xl: 26px;
 
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-ui: "IBM Plex Sans", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  /* Inter : workhorse UX santé (grande hauteur d'x, chiffres tabulaires).
+     Fraunces (serif) retiré — le médical moderne 2026 = sans épuré. */
+  --font-display: "Inter", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  --font-ui: "Inter", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
 
-  --shadow-card: 0 1px 2px rgba(15, 23, 42, .05), 0 8px 24px -16px rgba(15, 23, 42, .25);
+  /* Élévation douce en couches : suggère la profondeur sans lourdeur
+     (recherche santé : « ombres subtites, pas de bordures lourdes »). */
+  --shadow-card: 0 1px 2px rgba(12, 20, 18, .04), 0 10px 28px -18px rgba(12, 20, 18, .18);
+  --shadow-pop: 0 2px 6px rgba(12, 20, 18, .06), 0 16px 40px -20px rgba(12, 20, 18, .28);
   --col: 560px;
   --nav-h: 64px;
 }
 
 html[lang="ar"] {
-  --font-ui: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, sans-serif;
-  --font-display: "IBM Plex Sans Arabic", "Fraunces", serif;
+  --font-ui: "IBM Plex Sans Arabic", "Inter", system-ui, sans-serif;
+  --font-display: "IBM Plex Sans Arabic", "Inter", system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -63,16 +72,15 @@ html[lang="ar"] {
     --teal-50: #052e2a;
     --red-50: #3b1214;
     --amber-50: #3a2708;
-    --bg: #0F172A;
-    /* Android garde background = surface en sombre, et porte l'élévation via
-       surfaceVariant — d'où deux valeurs distinctes plutôt qu'une seule. */
-    --surface: #0F172A;
-    --surface-2: #1E293B;
-    --line: #3B4E41;
-    --ink: #F8FAFC;
-    --ink-2: #94A3B8;
-    --ink-3: #7C8CA5;
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+    --bg: #0A1512;
+    --surface: #0F1D19;
+    --surface-2: #12211C;
+    --line: #2A3D35;
+    --ink: #ECFDF5;
+    --ink-2: #9DB8AC;
+    --ink-3: #7C8F87;
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px -18px rgba(0, 0, 0, .8);
+    --shadow-pop: 0 2px 6px rgba(0, 0, 0, .5), 0 16px 40px -20px rgba(0, 0, 0, .9);
   }
 }
 
@@ -83,13 +91,24 @@ body {
   font-family: var(--font-ui);
   background: var(--bg);
   color: var(--ink);
-  line-height: 1.5;
+  line-height: 1.55;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  /* Chiffres tabulaires : scores, XP, séries et dates restent alignés
+     (règle typographique santé : les nombres doivent être lisibles
+     précisément — dosages, horaires, compteurs). */
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "cv05" 1;
 }
 [hidden] { display: none !important; }
 button { font: inherit; color: inherit; }
 a { color: var(--green-600); }
+
+/* Titres : Inter 700, interlettrage resserré — hiérarchie nette et
+   scannable en 2 secondes (principe santé « scan, don't study »). */
+h1, h2, h3, b.card-title, .card > b {
+  letter-spacing: -0.015em;
+}
 
 :focus-visible {
   outline: 3px solid var(--amber);
@@ -138,7 +157,7 @@ a { color: var(--green-600); }
   height: 42px;
   flex: 0 0 auto;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0A5C36, #00796B);
+  background: linear-gradient(135deg, #0A5C36, var(--teal-600));
   border: 2px solid #80CBC4;
   color: #fff;
   font-size: 20px;
@@ -240,7 +259,7 @@ a { color: var(--green-600); }
 }
 /* Onglet actif : icône filled + teinte MedGreenDark, comme Android
    (selectedIconColor = MedGreenDark, NavigationBarItem selected). */
-.tabbar a.active { color: #0D532C; font-weight: 700; }
+.tabbar a.active { color: var(--green-900); font-weight: 700; }
 .tabbar a.active .tab-ico {
   font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
 }
@@ -274,7 +293,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .eyebrow {
   font-size: .74rem;
   font-weight: 700;
-  color: #64748B;
+  color: var(--ink-3);
   letter-spacing: .02em;
   margin: 0 0 4px;
 }
@@ -337,12 +356,12 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   margin: 26px 0 12px;
 }
 /* Titre de section — PathScreen.kt : 22.sp ExtraBold, #1E293B. */
-.section-head h1 { font-size: 22px; font-weight: 800; color: #1E293B; }
-.section-head .tiny { color: #64748B; }
+.section-head h1 { font-size: 22px; font-weight: 800; color: var(--ink); }
+.section-head .tiny { color: var(--ink-3); }
 .section-head a { font-size: .85rem; font-weight: 600; text-decoration: none; }
 
 /* ---------- home ---------- */
-/* Dégradé de la bannière clinique Android : #004D40 → #00695C → #0284C7 */
+/* Dégradé de la bannière clinique Android : var(--teal-800) → var(--teal-600) → #0284C7 */
 .hero {
   position: relative;
   overflow: hidden;
@@ -357,7 +376,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   color: #F0FDF4;
   box-shadow: var(--shadow-card);
 }
-.hero-tag { color: #E2E8F0; }
+.hero-tag { color: var(--line); }
 .hero::after {
   content: "⚕";
   position: absolute;
@@ -407,7 +426,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   background: var(--night);
   border: 1.5px solid color-mix(in srgb, var(--teal-600) 60%, transparent);
   border-radius: var(--radius-lg);
-  color: #F1F5F9;
+  color: var(--surface-2);
 }
 .sm2-card h3 {
   display: flex;
@@ -542,8 +561,8 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   border-radius: 16px;
   background: color-mix(in srgb, var(--mod-color, var(--green)) 12%, var(--surface));
 }
-.module-card h3 { font-size: 16px; font-weight: 700; color: #0F172A; margin: 0; }
-.module-sub { font-size: 11px; font-weight: 500; color: #64748B; }
+.module-card h3 { font-size: 16px; font-weight: 700; color: var(--ink); margin: 0; }
+.module-sub { font-size: 11px; font-weight: 500; color: var(--ink-3); }
 .module-terms {
   flex: 0 0 auto;
   border-radius: 12px;
@@ -559,11 +578,11 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .module-chip {
   border-radius: 10px;
   padding: 4px 8px;
-  font-size: 10px; font-weight: 500; color: #334155;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  font-size: 10px; font-weight: 500; color: var(--ink-2);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
 }
-.module-card .progress-track { height: 6px; border-radius: 3px; border: none; background: #F1F5F9; }
+.module-card .progress-track { height: 6px; border-radius: 3px; border: none; background: var(--surface-2); }
 .module-card .mod-pct {
   font-size: 12px;
   font-weight: 700;
@@ -606,9 +625,9 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   overflow: hidden;
 }
 
-/* --- RECTO (FrontCardSide) : gradient #0D532C → #1B5E20 → #2E7D32 --- */
+/* --- RECTO (FrontCardSide) : gradient var(--green-900) → var(--green) → var(--green-600) --- */
 .flash-front {
-  background: linear-gradient(135deg, #0D532C, #1B5E20, #2E7D32);
+  background: linear-gradient(135deg, var(--green-900), var(--green), var(--green-600));
   color: #fff;
   padding: 22px;
   display: flex;
@@ -647,10 +666,10 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   font-size: 12px; font-weight: 500; color: #fff;
 }
 
-/* --- VERSO (BackCardSide) : blanc, bordure 2px #1B5E20 --- */
+/* --- VERSO (BackCardSide) : blanc, bordure 2px var(--green) --- */
 .flash-back {
   background: #fff;
-  border: 2px solid #1B5E20;
+  border: 2px solid var(--green);
   transform: rotateY(180deg);
   padding: 18px;
   overflow-y: auto;
@@ -661,28 +680,28 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .fb-flag {
   flex: 0 0 auto;
   width: 38px; height: 38px; border-radius: 50%;
-  background: #E8F5E9;
+  background: var(--green-50);
   display: grid; place-items: center;
   font-size: 20px; line-height: 1;
 }
 .fb-en-col { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-.fb-term-en { font-size: 22px; font-weight: 800; color: #0D532C; overflow-wrap: anywhere; }
+.fb-term-en { font-size: 22px; font-weight: 800; color: var(--green-900); overflow-wrap: anywhere; }
 .fb-ipa { font-size: 13px; font-style: italic; color: #388E3C; }
 .fb-speak {
   flex: 0 0 auto;
   width: 42px; height: 42px; border: none; cursor: pointer;
-  border-radius: 50%; background: #E8F5E9;
+  border-radius: 50%; background: var(--green-50);
   font-size: 20px; line-height: 1;
 }
-.fb-divider { border: none; border-top: 1px solid #E2E8F0; margin: 0; }
+.fb-divider { border: none; border-top: 1px solid var(--line); margin: 0; }
 .fb-cross {
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
   border-radius: 12px; padding: 8px 12px;
   display: flex; flex-direction: column; gap: 2px;
 }
-.fb-cross-ar { font-size: 15px; font-weight: 700; color: #1E2922; }
-.fb-cross-fr { font-size: 12px; font-weight: 500; color: #64748B; }
+.fb-cross-ar { font-size: 15px; font-weight: 700; color: var(--ink); }
+.fb-cross-fr { font-size: 12px; font-weight: 500; color: var(--ink-3); }
 .fb-box { border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px; }
 .fb-box > b { font-size: 11px; font-weight: 700; }
 .fb-box > span { font-size: 12px; line-height: 16px; }
@@ -695,7 +714,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .fb-mnemo { background: #FEF3C7; border: 1px solid #FDE68A; }
 .fb-mnemo > b { color: #92400E; }
 .fb-mnemo > span { color: #78350F; font-style: italic; }
-.fb-def { font-size: 12px; line-height: 17px; color: #334155; }
+.fb-def { font-size: 12px; line-height: 17px; color: var(--ink-2); }
 
 /* ---------- quiz ---------- */
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
@@ -988,8 +1007,8 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   border: 1px solid var(--line);
   box-shadow: var(--shadow-card);
 }
-.practice-card h3 { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; color: #1E293B; }
-.practice-card .tiny { color: #64748B; }
+.practice-card h3 { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--ink); }
+.practice-card .tiny { color: var(--ink-3); }
 /* Boîte d'icône — PracticeScreen.kt : carré 44.dp arrondi 12.dp teinté. */
 .practice-ico {
   flex: 0 0 auto;
@@ -1028,23 +1047,23 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   display: grid; place-items: center;
   font-size: 24px; line-height: 1;
 }
-.league-hero-title { display: block; font-size: 16px; font-weight: 800; color: #0F172A; }
-.league-hero-sub { display: block; font-size: 11px; color: #64748B; }
+.league-hero-title { display: block; font-size: 16px; font-weight: 800; color: var(--ink); }
+.league-hero-sub { display: block; font-size: 11px; color: var(--ink-3); }
 .league-hero-badge {
   flex: 0 0 auto;
   border-radius: 12px; padding: 6px 12px;
   font-size: 12px; font-weight: 700; color: #fff;
 }
 
-/* --- Carte zones promotion / relégation (fond #F8FAFC, rayon 16) --- */
-.league-zones { border-radius: 16px; padding: 12px; background: #F8FAFC; }
+/* --- Carte zones promotion / relégation (fond var(--surface-2), rayon 16) --- */
+.league-zones { border-radius: 16px; padding: 12px; background: var(--surface-2); }
 .league-zones-row {
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
   margin-bottom: 4px;
 }
 .league-zone-up { font-size: 11px; font-weight: 700; color: #16A34A; }
 .league-zone-down { font-size: 11px; font-weight: 700; color: #DC2626; }
-.league-zones-week { display: block; font-size: 11px; color: #64748B; }
+.league-zones-week { display: block; font-size: 11px; color: var(--ink-3); }
 
 /* --- LeagueMemberRow --- */
 .league-list { display: flex; flex-direction: column; gap: 8px; }
@@ -1055,7 +1074,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   gap: 10px;
   padding: 12px;
   background: #fff;
-  border: 1px solid #F1F5F9;
+  border: 1px solid var(--surface-2);
   border-radius: 14px;
 }
 .league-row.zone-green { background: #F0FDF4; border-color: #BBF7D0; }
@@ -1065,8 +1084,8 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .league-rank {
   width: 28px; height: 28px; border-radius: 50%;
   display: grid; place-items: center;
-  font-size: 12px; font-weight: 700; color: #334155;
-  background: #F1F5F9;
+  font-size: 12px; font-weight: 700; color: var(--ink-2);
+  background: var(--surface-2);
 }
 .league-row.zone-green .league-rank { background: #DCFCE7; }
 .league-row.zone-red .league-rank { background: #FEE2E2; }
@@ -1074,12 +1093,12 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   width: 36px; height: 36px; border-radius: 50%;
   display: grid; place-items: center;
   font-size: 18px; line-height: 1;
-  background: #F1F5F9;
+  background: var(--surface-2);
 }
 .league-id { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .league-name {
   display: flex; align-items: center; gap: 4px;
-  font-size: 13px; font-weight: 700; color: #0F172A;
+  font-size: 13px; font-weight: 700; color: var(--ink);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .league-row.you .league-name { font-weight: 800; }
@@ -1087,9 +1106,9 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   font-size: 8px; font-weight: 700; color: #fff;
   background: #10B981; border-radius: 6px; padding: 1px 4px;
 }
-.league-sub { font-size: 10px; color: #64748B; }
+.league-sub { font-size: 10px; color: var(--ink-3); }
 .league-xp-col { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
-.league-xp-col > b { font-size: 14px; font-weight: 800; color: #0F172A; white-space: nowrap; }
+.league-xp-col > b { font-size: 14px; font-weight: 800; color: var(--ink); white-space: nowrap; }
 .league-xp-col > b.up { color: #16A34A; }
 .league-xp-col > b.down { color: #DC2626; }
 .league-xp-col > span { font-size: 9px; font-weight: 700; }
@@ -1102,7 +1121,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   position: relative; flex: 0 0 auto;
   width: 52px; height: 52px; border-radius: 50%;
   display: grid; place-items: center; font-size: 1.6rem;
-  background: #E8F5E9;
+  background: var(--green-50);
 }
 .medi-badge { position: absolute; right: -2px; bottom: -2px; font-size: .75rem; padding: 2px; }
 .medi.mood-celebrating .medi-bubble { background: color-mix(in srgb, #FFC800 12%, var(--surface)); }
@@ -1188,7 +1207,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   box-shadow: 0 4px 0 #D1D5DB; cursor: not-allowed;
 }
 .path-node.done { background: var(--duo-green); box-shadow: 0 4px 0 var(--duo-green-dark); }
-.path-node.done.silver { background: #94A3B8; box-shadow: 0 4px 0 #64748B; }
+.path-node.done.silver { background: #94A3B8; box-shadow: 0 4px 0 var(--ink-3); }
 .path-node.done.gold { background: var(--duo-yellow); box-shadow: 0 4px 0 #D9A400; color: #4A3A00; }
 .path-node.next { animation: node-pulse 1.6s ease-in-out infinite; }
 .path-node.next::after {
@@ -1271,7 +1290,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   box-shadow: 0 3px 0 var(--duo-green-dark);
 }
 /* Grille 12 trophées — StatsProfileScreen.kt : carte blanche rayon 18,
-   damier 46dp cercle (#FFF3C4 gagné / #F1F5F9 verrouillé), icône 20sp,
+   damier 46dp cercle (#FFF3C4 gagné / var(--surface-2) verrouillé), icône 20sp,
    alpha 0.35 si verrouillé, libellé 9sp. */
 .trophy-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
@@ -1290,7 +1309,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .trophy .tiny { display: none; }
 .trophy.won { background: transparent; border-color: transparent; }
 .trophy.locked { opacity: 1; filter: none; }
-.trophy.locked .trophy-ico { background: #F1F5F9; filter: grayscale(1); opacity: .35; }
+.trophy.locked .trophy-ico { background: var(--surface-2); filter: grayscale(1); opacity: .35; }
 .trophy.locked b { color: #90A4AE; font-weight: 400; }
 
 /* ==================== Hub Révision : anneau + Medi ==================== */
@@ -1329,16 +1348,16 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 
 /* ==================== Profil — StatsProfileScreen.kt ==================== */
 .profile-screen { display: flex; flex-direction: column; gap: 16px; }
-/* Android : fond #F6F8F6, cartes blanches rayon 18-20, elevation 2-3dp. */
+/* Android : fond var(--bg), cartes blanches rayon 18-20, elevation 2-3dp. */
 .profile-screen .card { border-radius: 18px; padding: 16px; }
 
-/* --- Carte profil (gradient #1B5E20 → #2E7D32, rayon 20, padding 20) --- */
+/* --- Carte profil (gradient var(--green) → var(--green-600), rayon 20, padding 20) --- */
 .profile-hero {
   border-radius: 20px;
   padding: 0;
   overflow: hidden;
   border: none;
-  background: linear-gradient(135deg, #1B5E20, #2E7D32);
+  background: linear-gradient(135deg, var(--green), var(--green-600));
 }
 .profile-hero-row {
   display: flex; align-items: center; gap: 16px;
@@ -1371,7 +1390,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   font-size: 15px; font-weight: 700; color: #1E2922;
   margin-bottom: 2px;
 }
-.profile-goal-line { display: block; font-size: 13px; color: #64748B; }
+.profile-goal-line { display: block; font-size: 13px; color: var(--ink-3); }
 .profile-streak-line {
   display: block; font-size: 12px; font-weight: 700; color: #EA580C;
   margin-top: 4px;
@@ -1384,7 +1403,7 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   font-size: 12px; font-weight: 700;
   background: #E0F2FE; color: #0284C7;
 }
-.freeze-buy:disabled { background: #F1F5F9; color: #90A4AE; cursor: default; }
+.freeze-buy:disabled { background: var(--surface-2); color: #90A4AE; cursor: default; }
 
 /* --- Grille des 12 trophées --- */
 .profile-trophies-head {
@@ -1402,26 +1421,26 @@ h3 { font-size: 1.05rem; font-weight: 600; }
 .metric-box {
   display: flex; flex-direction: column; gap: 4px;
   border-radius: 14px;
-  background: #F6F8F6;
+  background: var(--bg);
   border: 1px solid #E0E5E0;
   padding: 14px;
 }
 .metric-box > span:first-child { font-size: 20px; line-height: 1; }
-.metric-box b { font-size: 18px; font-weight: 700; color: #0D532C; }
+.metric-box b { font-size: 18px; font-weight: 700; color: var(--green-900); }
 .metric-box > span:last-child {
-  font-size: 11px; font-weight: 500; color: #5A6B60;
+  font-size: 11px; font-weight: 500; color: var(--ink-3);
 }
 
 /* ==================== Quiz — LearningPyramidOverviewScreen.kt ==================== */
 .quiz-start { display: flex; flex-direction: column; gap: 16px; }
 
-/* --- Carte pyramide (gradient vertical #0D532C → #1B5E20 → #2E7D32) --- */
+/* --- Carte pyramide (gradient vertical var(--green-900) → var(--green) → var(--green-600)) --- */
 .pyramid-hero {
   border-radius: 20px;
   padding: 20px;
   border: none;
   text-align: center;
-  background: linear-gradient(180deg, #0D532C, #1B5E20, #2E7D32);
+  background: linear-gradient(180deg, var(--green-900), var(--green), var(--green-600));
 }
 .pyramid-title { display: block; color: #fff; font-size: 18px; font-weight: 800; }
 .pyramid-desc {
@@ -1450,12 +1469,12 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   border-radius: 18px;
   padding: 16px;
   background: #fff;
-  border: 1.5px solid var(--lvl-color, #1B5E20);
+  border: 1.5px solid var(--lvl-color, var(--green));
   box-shadow: 0 3px 8px rgba(15,23,42,.06);
   display: flex; flex-direction: column; gap: 12px;
 }
 .level-card.locked {
-  background: #F1F5F9;
+  background: var(--surface-2);
   border-color: #CBD5E1;
   box-shadow: none;
 }
@@ -1465,12 +1484,12 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   width: 44px; height: 44px; border-radius: 12px;
   display: grid; place-items: center;
   font-size: 22px; line-height: 1;
-  background: color-mix(in srgb, var(--lvl-color, #1B5E20) 12%, #fff);
+  background: color-mix(in srgb, var(--lvl-color, var(--green)) 12%, #fff);
 }
-.level-card.locked .level-ico { background: #E2E8F0; }
-.level-title { display: block; font-size: 15px; font-weight: 700; color: #0F172A; }
-.level-card.locked .level-title { color: #64748B; }
-.level-objective { display: block; font-size: 12px; color: #475569; }
+.level-card.locked .level-ico { background: var(--line); }
+.level-title { display: block; font-size: 15px; font-weight: 700; color: var(--ink); }
+.level-card.locked .level-title { color: var(--ink-3); }
+.level-objective { display: block; font-size: 12px; color: var(--ink-2); }
 .level-card.locked .level-objective { color: #94A3B8; }
 .level-card-bottom {
   display: flex; align-items: center; justify-content: space-between; gap: 10px;

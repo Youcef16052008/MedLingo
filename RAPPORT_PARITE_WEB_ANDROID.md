@@ -4,6 +4,15 @@ Date : 13 octobre 2026
 Branche : `phase-0-cleanup`
 Android = source de vérité (`app/src/main/java/com/aistudio/medlingua/dzmed/`)
 
+> **Mise à jour 14 octobre 2026 — design system rafraîchi.** Ce rapport documente
+> la parité *structurelle* (écrans, composants, structure des cartes) réalisée
+> ce jour-là. Les **jetons visuels** ont depuis été modernisés : le web porte
+> son propre design system « Clinical Calm » (palette médicale fraîche, Inter,
+> canvas menthe, rayons modernes — voir [web-react/DESIGN.md](web-react/DESIGN.md)),
+> inspiré des systèmes santé modernes et validé WCAG AA. Les valeurs de tokens
+> citées ci-dessous (fonds, verts) sont donc historiques ; la validation
+> `check_design.py` suit désormais le nouveau système.
+
 ## Méthode
 
 1. Extraction des **computed styles** de l'app web live (Playwright, viewport

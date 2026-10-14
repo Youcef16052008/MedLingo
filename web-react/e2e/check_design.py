@@ -30,6 +30,12 @@ PROBE = """() => {
   return {
     nightToken:    (cs(':root', ['--night']) || {})['--night'],
     bodyBg:        one('body', ['backgroundColor']),
+    // Nouveau design system « Clinical Calm » :
+    fontFamily:    one('body', ['fontFamily']),
+    fontNumeric:   one('body', ['fontVariantNumeric']),
+    tealToken:     (cs(':root', ['--teal']) || {})['--teal'],
+    greenToken:    (cs(':root', ['--green-600']) || {})['--green-600'],
+    radiusMd:      (cs(':root', ['--radius-md']) || {})['--radius-md'],
     duoGreen:      (cs(':root', ['--duo-green']) || {})['--duo-green'],
     duoBlue:       (cs(':root', ['--duo-blue']) || {})['--duo-blue'],
     duoYellow:     (cs(':root', ['--duo-yellow']) || {})['--duo-yellow'],
@@ -157,16 +163,21 @@ check("fond vert #58CC02", d["nodeAvailBg"], "rgb(88, 204, 2)")
 check_in("ombre portée 0 4px 0", "0px 4px 0px", d["nodeShadow"])
 check("verrouillé #E5E7EB", d["lockedBg"], "rgb(229, 231, 235)")
 
-print("\n--- fondations conservées (Color.kt) ---")
-check("jeton --night = #0F172A", d["nightToken"], "#0F172A")
-check("fond de page #F6F8F6 (écrans Android)", d["bodyBg"], "rgb(246, 248, 246)")
+print("\n--- fondations conservées (design system « Clinical Calm ») ---")
+check("jeton --night = #0A1512", d["nightToken"], "#0A1512")
+check("fond de page menthe #F0F7F4 (canvas clinique)", d["bodyBg"], "rgb(240, 247, 244)")
+check_in("police Inter (UX santé)", "Inter", d["fontFamily"] or "")
+check("chiffres tabulaires (scores/XP alignés)", d["fontNumeric"], "tabular-nums")
+check("teal clinique #0D9488", d["tealToken"], "#0D9488")
+check("vert d'action #15803D (AA)", d["greenToken"], "#15803D")
+check("rayon md moderne 14px", d["radiusMd"], "14px")
 check_in("filet avatar #80CBC4", "128, 203, 196", d["avatarBorder"] or "")
 check("avatar circulaire", d["avatarRadius"], "50%")
 
 print("\n--- perle clinique (HomeScreen.kt 520-553) ---")
 check("fond #FFFBEB", d["pearlBg"], "rgb(255, 251, 235)")
 check("filet #FDE68A", d["pearlBorder"], "rgb(253, 230, 138)")
-check("rayon 20px = 20.dp", d["pearlRadius"], "20px")
+check("rayon 22px = var(--radius-lg) (échelle moderne)", d["pearlRadius"], "22px")
 check("badge #FEF08A", d["badgeBg"], "rgb(254, 240, 138)")
 check("texte badge #92400E", d["badgeFg"], "rgb(146, 64, 14)")
 
@@ -177,7 +188,7 @@ check("pastille « à Réviser » présente", d["dueChip"], True)
 
 if reward:
     print("\n--- pop-up de récompense (spec §11) ---")
-    check("carte à rayon 22px", reward["cardRadius"], "22px")
+    check("carte à rayon 26px", reward["cardRadius"], "26px")
     # .reward-xp n'est rendu que si la session a gagné du XP (B29 : pas de
     # « +0 ⭐`). L'ouverture de la caisse depuis le parcours n'en gagne pas
     # (data.xp = 0) → l'élément est absent, c'est le comportement attendu.

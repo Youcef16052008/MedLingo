@@ -99,6 +99,14 @@ dp→px, tailles sp→px, typographie, structure des composants.
 
 Détail complet et écarts résiduels documentés : [RAPPORT_PARITE_WEB_ANDROID.md](RAPPORT_PARITE_WEB_ANDROID.md).
 
+**Design system web — « Clinical Calm »** (octobre 2026) : au-delà de la parité
+structurelle avec Android, le web porte son propre système visuel rafraîchi —
+palette médicale (vert émeraude, teal clinique, canvas menthe `#F0F7F4`),
+typographie Inter à chiffres tabulaires, échelle de rayons moderne, élévation
+douce — inspiré des systèmes santé modernes et validé WCAG AA. Spec complète :
+[web-react/DESIGN.md](web-react/DESIGN.md), vérification : `npm run design`
+(40 contrôles de computed styles).
+
 **Fonctionnalités Android non portées sur le web** (différences de plateforme, pas des écarts
 de design) : placement diagnostic initial, gestion hors-ligne par module, notifications,
 sélecteur d'objectif quotidien. L'écran Recherche est web-only.
