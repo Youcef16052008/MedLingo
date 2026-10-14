@@ -111,7 +111,7 @@ fun PathScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -147,7 +147,7 @@ fun PathScreen(
                     text = "${goal.today} / ${goal.goal} ${Strings.get("stat_xp", lang)} · " +
                         "$due ${Strings.get("cards_due", lang)}",
                     fontSize = 12.sp,
-                    color = Color(0xFF64748B)
+                    color = Color(0xFF6B7877)
                 )
 
                 Row(
@@ -168,7 +168,7 @@ fun PathScreen(
                         text = "📦 ${Strings.get("reward_chest", lang)} ×${stats.pendingChests}",
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF1E293B),
+                        color = Color(0xFF12211C),
                         modifier = Modifier
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(12.dp))
@@ -186,12 +186,12 @@ fun PathScreen(
                 text = Strings.get("path_title", lang),
                 fontSize = 22.sp,
                 fontWeight = FontWeight.ExtraBold,
-                color = Color(0xFF1E293B)
+                color = Color(0xFF12211C)
             )
             Text(
                 text = Strings.get("path_sub", lang),
                 fontSize = 12.sp,
-                color = Color(0xFF64748B)
+                color = Color(0xFF6B7877)
             )
         }
 
@@ -231,10 +231,10 @@ private fun FreezeButton(enabled: Boolean, lang: Language, onClick: () -> Unit) 
         text = "❄️ ${Strings.get("freeze_buy", lang)} · $FREEZE_COST_GEMS 💎",
         fontSize = 12.sp,
         fontWeight = FontWeight.Bold,
-        color = if (enabled) Color(0xFF0284C7) else Color(0xFF90A4AE),
+        color = if (enabled) Color(0xFF0284C7) else Color(0xFF6B7877),
         modifier = Modifier
             .clip(RoundedCornerShape(20.dp))
-            .background(if (enabled) Color(0xFFE0F2FE) else Color(0xFFF1F5F9))
+            .background(if (enabled) Color(0xFFE0F2FE) else Color(0xFFF5FAF7))
             .clickable(enabled = enabled) { onClick() }
             .padding(horizontal = 10.dp, vertical = 6.dp)
     )
@@ -371,7 +371,7 @@ private fun LessonNode(
                 text = meta,
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Bold,
-                color = if (locked) Color(0xFF90A4AE) else Color(0xFF455A64)
+                color = if (locked) Color(0xFF6B7877) else Color(0xFF455A64)
             )
         }
     }

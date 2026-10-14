@@ -123,7 +123,7 @@ enum class KnowledgeLevel(
     val labelEn: String,
     val labelAr: String
 ) {
-    ZERO("Débutant Absolu", "🌱", "0–14 pts", 0xFF78909C, "anat", "Anatomie", "Absolute Beginner", "مبتدئ تماماً"),
+    ZERO("Débutant Absolu", "🌱", "0–14 pts", 0xFF6B7877, "anat", "Anatomie", "Absolute Beginner", "مبتدئ تماماً"),
     BEGINNER("Débutant", "📗", "15–29 pts", 0xFF4CAF50, "anat", "Anatomie", "Beginner", "مبتدئ"),
     ELEMENTARY("Élémentaire", "📘", "30–49 pts", 0xFF1976D2, "physio", "Physiologie", "Elementary", "مبتدئ متقدم"),
     INTERMEDIATE("Intermédiaire", "📙", "50–64 pts", 0xFFFF9800, "microbio", "Microbiologie", "Intermediate", "متوسط"),

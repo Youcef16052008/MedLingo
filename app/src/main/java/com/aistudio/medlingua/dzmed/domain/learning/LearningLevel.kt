@@ -22,7 +22,7 @@ enum class LearningLevel(
         objectiveFr = "Mémoriser les termes anatomiques et médicaux un par un (FR ↔ EN ↔ AR).",
         objectiveEn = "Memorize individual medical and anatomical terms (FR ↔ EN ↔ AR).",
         objectiveAr = "حفظ المصطلحات الطبية والتشريحية كلمة بكلمة باللغات الثلاث.",
-        colorHex = 0xFF1B5E20
+        colorHex = 0xFF146B43
     ),
     LEVEL_2(
         levelNumber = 2,
@@ -33,7 +33,7 @@ enum class LearningLevel(
         objectiveFr = "Maîtriser les associations fréquentes de mots médicaux (Adjectif + Nom).",
         objectiveEn = "Master high-frequency clinical collocations (Adjective + Noun pairs).",
         objectiveAr = "إتقان التركيبات والتلازمات الطبية المعتادة (صفة + اسم).",
-        colorHex = 0xFF00695C
+        colorHex = 0xFF0F766E
     ),
     LEVEL_3(
         levelNumber = 3,
@@ -77,7 +77,7 @@ enum class LearningLevel(
         objectiveFr = "Résoudre des cas médicaux complets en anglais : anamnèse, examen et décision.",
         objectiveEn = "Solve complete clinical vignettes: history, physical exam, and management.",
         objectiveAr = "حل حالات سريرية كاملة بالإنجليزية: التاريخ المرضي، الفحص، والتشخيص.",
-        colorHex = 0xFFC62828
+        colorHex = 0xFFDC2626
     );
 
     fun getTitle(lang: Language): String = when (lang) {

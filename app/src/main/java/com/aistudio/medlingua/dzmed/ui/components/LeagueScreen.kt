@@ -57,7 +57,7 @@ fun LeagueScreen(
         // Promotion/Demotion zones info
         Card(
             shape = RoundedCornerShape(16.dp),
-            colors = CardDefaults.cardColors(containerColor = Color(0xFFF8FAFC)),
+            colors = CardDefaults.cardColors(containerColor = Color(0xFFF0F7F4)),
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(
@@ -74,7 +74,7 @@ fun LeagueScreen(
                 Text(
                     text = "Semaine: ${cohort?.let { LeagueManager.formatWeekRange(it.weekStartTimestamp, locale) } ?: ""}",
                     fontSize = 11.sp,
-                    color = Color(0xFF64748B)
+                    color = Color(0xFF6B7877)
                 )
             }
         }
@@ -132,7 +132,7 @@ private fun LeagueHeader(cohort: LeagueCohortEntity, memberCount: Int?) {
                         text = "Ligue ${tier.value}",
                         fontWeight = FontWeight.ExtraBold,
                         fontSize = 16.sp,
-                        color = Color(0xFF0F172A)
+                        color = Color(0xFF0C1414)
                     )
                     Text(
                         // null while the member list is still loading: avoid flashing "0 members"
@@ -144,7 +144,7 @@ private fun LeagueHeader(cohort: LeagueCohortEntity, memberCount: Int?) {
                 }
             },
                         fontSize = 11.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF6B7877)
                     )
                 }
             }
@@ -184,7 +184,7 @@ private fun LeagueMemberRow(
         member.isCurrentUser -> Color(0xFF10B981)
         isPromotionZone -> Color(0xFFBBF7D0)
         isDemotionZone -> Color(0xFFFECACA)
-        else -> Color(0xFFF1F5F9)
+        else -> Color(0xFFF5FAF7)
     }
 
     Card(
@@ -216,7 +216,7 @@ private fun LeagueMemberRow(
                                 rank == 3 -> Color(0xFFCD7F32)
                                 isPromotionZone -> Color(0xFFDCFCE7)
                                 isDemotionZone -> Color(0xFFFEE2E2)
-                                else -> Color(0xFFF1F5F9)
+                                else -> Color(0xFFF5FAF7)
                             }
                         ),
                     contentAlignment = Alignment.Center
@@ -225,7 +225,7 @@ private fun LeagueMemberRow(
                         text = "$rank",
                         fontWeight = FontWeight.Bold,
                         fontSize = 12.sp,
-                        color = if (rank <= 3) Color.White else Color(0xFF334155)
+                        color = if (rank <= 3) Color.White else Color(0xFF475050)
                     )
                 }
 
@@ -234,7 +234,7 @@ private fun LeagueMemberRow(
                     modifier = Modifier
                         .size(36.dp)
                         .clip(CircleShape)
-                        .background(Color(0xFFF1F5F9)),
+                        .background(Color(0xFFF5FAF7)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(text = member.avatarEmoji, fontSize = 18.sp)
@@ -249,7 +249,7 @@ private fun LeagueMemberRow(
                             text = member.displayName,
                             fontWeight = if (member.isCurrentUser) FontWeight.ExtraBold else FontWeight.Bold,
                             fontSize = 13.sp,
-                            color = Color(0xFF0F172A)
+                            color = Color(0xFF0C1414)
                         )
                         if (member.isCurrentUser) {
                             Box(
@@ -265,7 +265,7 @@ private fun LeagueMemberRow(
                     Text(
                         text = "🔥 ${member.streakDays}j • ${if (member.isBot) "Bot" else "Actif"}",
                         fontSize = 10.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF6B7877)
                     )
                 }
             }
@@ -276,7 +276,7 @@ private fun LeagueMemberRow(
                     text = "${member.weeklyXp} XP",
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = 14.sp,
-                    color = if (isPromotionZone) Color(0xFF16A34A) else if (isDemotionZone) Color(0xFFDC2626) else Color(0xFF0F172A)
+                    color = if (isPromotionZone) Color(0xFF16A34A) else if (isDemotionZone) Color(0xFFDC2626) else Color(0xFF0C1414)
                 )
                 if (isPromotionZone && rank <= LeagueManager.PROMOTION_COUNT) {
                     Text(text = "↑ Promotion", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = Color(0xFF16A34A))

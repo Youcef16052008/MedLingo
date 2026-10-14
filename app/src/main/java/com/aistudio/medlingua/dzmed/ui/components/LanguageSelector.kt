@@ -34,7 +34,7 @@ fun LanguageSelector(
         modifier = modifier
             .clip(RoundedCornerShape(24.dp))
             .background(Color.White)
-            .border(1.dp, Color(0xFFE0E5E0), RoundedCornerShape(24.dp))
+            .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(24.dp))
             .padding(4.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically

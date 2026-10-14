@@ -83,15 +83,17 @@ components:
 
 ## Overview
 
-Clinical Calm — le système visuel de MedLingo DZ (web). Objectif : un outil
-d'apprentissage de l'anglais médical qui inspire la confiance clinique sans la
-froideur des logiciels hospitaliers. Recherche UX santé appliquée : canvas teinté
-menthe (pas de blanc pur — « essential to clinical warmth »), vert émeraude pour
-la santé et la progression, teal clinique pour les états informatifs, hiérarchie
-scannable en 2 secondes (« scan, don't study »).
+Clinical Calm — le système visuel de MedLingo DZ, **partagé par le web et
+l'app Android** (mêmes valeurs de tokens dans `web-react/src/styles.css` et
+`app/src/main/java/com/aistudio/medlingua/dzmed/ui/theme/Color.kt`). Objectif :
+un outil d'apprentissage de l'anglais médical qui inspire la confiance clinique
+sans la froideur des logiciels hospitaliers. Recherche UX santé appliquée :
+canvas teinté menthe (pas de blanc pur — « essential to clinical warmth »),
+vert émeraude pour la santé et la progression, teal clinique pour les états
+informatifs, hiérarchie scannable en 2 secondes (« scan, don't study »).
 
-La structure des écrans reste alignée sur l'app Android (parité composants) ;
-seuls les jetons visuels ont été rafraîchis.
+La structure des écrans reste alignée entre les deux plateformes (parité
+composants) ; les jetons visuels sont communs.
 
 ## Colors
 

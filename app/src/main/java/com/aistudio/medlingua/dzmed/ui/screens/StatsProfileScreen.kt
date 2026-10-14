@@ -84,7 +84,7 @@ fun StatsProfileScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -101,7 +101,7 @@ fun StatsProfileScreen(
                     .fillMaxWidth()
                     .background(
                         Brush.linearGradient(
-                            listOf(Color(0xFF1B5E20), Color(0xFF2E7D32))
+                            listOf(Color(0xFF146B43), Color(0xFF15803D))
                         )
                     )
                     .padding(20.dp)
@@ -129,7 +129,7 @@ fun StatsProfileScreen(
                         )
                         Text(
                             text = "${uiState.userType.label(lang)} ${uiState.medYear?.let { "• ${it.label(lang)}" } ?: ""}",
-                            color = Color(0xFFA5F4AC),
+                            color = Color(0xFFA7F3D0),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -173,12 +173,12 @@ fun StatsProfileScreen(
                             text = Strings.get("goal_title", lang),
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.sp,
-                            color = Color(0xFF1E2922)
+                            color = Color(0xFF0C1414)
                         )
                         Text(
                             text = "${goal.today} / ${goal.goal} ${Strings.get("stat_xp", lang)}",
                             fontSize = 13.sp,
-                            color = Color(0xFF64748B),
+                            color = Color(0xFF6B7877),
                             modifier = Modifier.padding(top = 2.dp)
                         )
                         Text(
@@ -202,10 +202,10 @@ fun StatsProfileScreen(
                             "${com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS} 💎",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = if (canBuy) Color(0xFF0284C7) else Color(0xFF90A4AE),
+                        color = if (canBuy) Color(0xFF0284C7) else Color(0xFF6B7877),
                         modifier = Modifier
                             .clip(RoundedCornerShape(20.dp))
-                            .background(if (canBuy) Color(0xFFE0F2FE) else Color(0xFFF1F5F9))
+                            .background(if (canBuy) Color(0xFFE0F2FE) else Color(0xFFF5FAF7))
                             .clickable(enabled = canBuy) { onBuyFreeze() }
                             .padding(horizontal = 12.dp, vertical = 7.dp)
                     )
@@ -235,7 +235,7 @@ fun StatsProfileScreen(
                         text = Strings.get("trophies_title", lang),
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = Color(0xFF1E2922)
+                        color = Color(0xFF0C1414)
                     )
                     Text(
                         text = "${uiState.trophies.size}/12",
@@ -262,7 +262,7 @@ fun StatsProfileScreen(
                                         .size(46.dp)
                                         .clip(CircleShape)
                                         .background(
-                                            if (won) Color(0xFFFFF3C4) else Color(0xFFF1F5F9)
+                                            if (won) Color(0xFFFFF3C4) else Color(0xFFF5FAF7)
                                         ),
                                     contentAlignment = Alignment.Center
                                 ) {
@@ -276,7 +276,7 @@ fun StatsProfileScreen(
                                     text = Strings.get(trophy.titleKey, lang),
                                     fontSize = 9.sp,
                                     fontWeight = if (won) FontWeight.Bold else FontWeight.Normal,
-                                    color = if (won) Color(0xFF1E2922) else Color(0xFF90A4AE),
+                                    color = if (won) Color(0xFF0C1414) else Color(0xFF6B7877),
                                     textAlign = androidx.compose.ui.text.style.TextAlign.Center
                                 )
                             }
@@ -292,11 +292,11 @@ fun StatsProfileScreen(
         // Adaptive Placement Diagnostic Card
         Card(
             shape = RoundedCornerShape(18.dp),
-            colors = CardDefaults.cardColors(containerColor = Color(0xFF0F172A)),
+            colors = CardDefaults.cardColors(containerColor = Color(0xFF0C1414)),
             elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
             modifier = Modifier
                 .fillMaxWidth()
-                .border(1.5.dp, Color(0xFF00897B).copy(alpha = 0.6f), RoundedCornerShape(18.dp))
+                .border(1.5.dp, Color(0xFF0F766E).copy(alpha = 0.6f), RoundedCornerShape(18.dp))
                 .clickable { onStartDiagnostic() }
         ) {
             Row(
@@ -349,7 +349,7 @@ fun StatsProfileScreen(
                                     .replace("{module}", uiState.diagnosticResult.startModuleName)
                             else
                                 Strings.get("cat_desc", lang),
-                            color = Color(0xFF94A3B8),
+                            color = Color(0xFF6B7877),
                             fontSize = 11.sp
                         )
                     }
@@ -357,7 +357,7 @@ fun StatsProfileScreen(
 
                 Surface(
                     shape = RoundedCornerShape(10.dp),
-                    color = Color(0xFF00897B)
+                    color = Color(0xFF0F766E)
                 ) {
                     Text(
                         text = if (uiState.diagnosticResult != null)
@@ -394,12 +394,12 @@ fun StatsProfileScreen(
                     text = Strings.get("app_language_title", lang),
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
-                    color = Color(0xFF1E2922)
+                    color = Color(0xFF0C1414)
                 )
                 Text(
                     text = Strings.get("app_language_list", lang),
                     fontSize = 12.sp,
-                    color = Color(0xFF78909C)
+                    color = Color(0xFF6B7877)
                 )
 
                 LanguageSelector(
@@ -435,7 +435,7 @@ fun StatsProfileScreen(
                             modifier = Modifier
                                 .size(40.dp)
                                 .clip(RoundedCornerShape(10.dp))
-                                .background(Color(0xFFE8F5E9)),
+                                .background(Color(0xFFE3F5EC)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
@@ -450,7 +450,7 @@ fun StatsProfileScreen(
                                 text = Strings.get("offline_mode_title", lang),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 15.sp,
-                                color = Color(0xFF1E2922)
+                                color = Color(0xFF0C1414)
                             )
                             Text(
                                 // The content is bundled in the local database from the first launch: this is the
@@ -467,14 +467,14 @@ fun StatsProfileScreen(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(12.dp))
-                            .background(Color(0xFFE8F5E9))
+                            .background(Color(0xFFE3F5EC))
                             .padding(horizontal = 8.dp, vertical = 4.dp)
                     ) {
                         Text(
                             text = Strings.get("sqlite_active", lang),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF2E7D32)
+                            color = Color(0xFF15803D)
                         )
                     }
                 }
@@ -510,12 +510,12 @@ fun StatsProfileScreen(
                                     text = module.titleFr,
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color(0xFF263238)
+                                    color = Color(0xFF0C1414)
                                 )
                                 Text(
                                     text = "~%.3f MB".format(module.estimatedSizeMb),
                                     fontSize = 10.sp,
-                                    color = Color(0xFF90A4AE)
+                                    color = Color(0xFF6B7877)
                                 )
                             }
                         }
@@ -537,13 +537,13 @@ fun StatsProfileScreen(
                                 Icon(
                                     imageVector = Icons.Default.CheckCircle,
                                     contentDescription = "Downloaded",
-                                    tint = Color(0xFF2E7D32),
+                                    tint = Color(0xFF15803D),
                                     modifier = Modifier.size(18.dp)
                                 )
                                 Text(
                                     text = Strings.get("downloaded", lang),
                                     fontSize = 11.sp,
-                                    color = Color(0xFF2E7D32),
+                                    color = Color(0xFF15803D),
                                     fontWeight = FontWeight.Bold
                                 )
                             }
@@ -590,7 +590,7 @@ fun StatsProfileScreen(
                             modifier = Modifier
                                 .size(36.dp)
                                 .clip(CircleShape)
-                                .background(Color(0xFFE8F5E9)),
+                                .background(Color(0xFFE3F5EC)),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
@@ -605,12 +605,12 @@ fun StatsProfileScreen(
                                 text = Strings.get("notifications_card_title", lang),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 15.sp,
-                                color = Color(0xFF1E2922)
+                                color = Color(0xFF0C1414)
                             )
                             Text(
                                 text = Strings.get("notifications_card_desc", lang),
                                 fontSize = 11.sp,
-                                color = Color(0xFF78909C)
+                                color = Color(0xFF6B7877)
                             )
                         }
                     }
@@ -620,14 +620,14 @@ fun StatsProfileScreen(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(12.dp))
-                                .background(Color(0xFFE8F5E9))
+                                .background(Color(0xFFE3F5EC))
                                 .padding(horizontal = 8.dp, vertical = 4.dp)
                         ) {
                             Text(
                                 text = Strings.get("active_label", lang),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(0xFF2E7D32)
+                                color = Color(0xFF15803D)
                             )
                         }
                     } else {
@@ -662,12 +662,12 @@ fun StatsProfileScreen(
                                 text = Strings.get("sm2_reminder_title", lang),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(0xFF263238)
+                                color = Color(0xFF0C1414)
                             )
                             Text(
                                 text = Strings.get("sm2_reminder_desc", lang),
                                 fontSize = 11.sp,
-                                color = Color(0xFF78909C)
+                                color = Color(0xFF6B7877)
                             )
                         }
                         Switch(
@@ -692,13 +692,13 @@ fun StatsProfileScreen(
                                 text = Strings.get("streak_reminder_title", lang),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(0xFF263238)
+                                color = Color(0xFF0C1414)
                             )
                             Text(
                                 text = Strings.get("streak_reminder_desc", lang)
                                     .replace("{n}", "${stats.streakDays}"),
                                 fontSize = 11.sp,
-                                color = Color(0xFF78909C)
+                                color = Color(0xFF6B7877)
                             )
                         }
                         Switch(
@@ -723,12 +723,12 @@ fun StatsProfileScreen(
                                 text = Strings.get("pearl_reminder_title", lang),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
-                                color = Color(0xFF263238)
+                                color = Color(0xFF0C1414)
                             )
                             Text(
                                 text = Strings.get("pearl_reminder_desc", lang),
                                 fontSize = 11.sp,
-                                color = Color(0xFF78909C)
+                                color = Color(0xFF6B7877)
                             )
                         }
                         Switch(
@@ -806,7 +806,7 @@ fun StatsProfileScreen(
                     ) {
                         Button(
                             onClick = { onSendTestNotification("review") },
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1B5E20)),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF146B43)),
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier.testTag("test_notif_review_btn")
                         ) {
@@ -827,7 +827,7 @@ fun StatsProfileScreen(
 
                         Button(
                             onClick = { onSendTestNotification("pearl") },
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00695C)),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0F766E)),
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier.testTag("test_notif_pearl_btn")
                         ) {
@@ -867,7 +867,7 @@ fun StatsProfileScreen(
                     text = Strings.get("learning_report_title", lang),
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    color = Color(0xFF1E2922)
+                    color = Color(0xFF0C1414)
                 )
 
                 Row(
@@ -920,8 +920,8 @@ private fun MetricBox(
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(14.dp))
-            .background(Color(0xFFF6F8F6))
-            .border(1.dp, Color(0xFFE0E5E0), RoundedCornerShape(14.dp))
+            .background(Color(0xFFF0F7F4))
+            .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(14.dp))
             .padding(14.dp)
     ) {
         Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {

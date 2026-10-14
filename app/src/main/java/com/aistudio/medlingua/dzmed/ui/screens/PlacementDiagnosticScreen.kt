@@ -145,7 +145,7 @@ fun PlacementDiagnosticScreen(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF8FAFC))
+            .background(Color(0xFFF0F7F4))
     ) {
         when (currentPhase) {
             0 -> {
@@ -246,23 +246,23 @@ private fun ProfilingStep(
                     modifier = Modifier
                         .size(36.dp)
                         .clip(CircleShape)
-                        .background(Color(0xFFE2E8F0))
+                        .background(Color(0xFFDFEAE4))
                 ) {
                     Icon(
                         imageVector = Icons.Default.Close,
                         contentDescription = "Fermer",
-                        tint = Color(0xFF475569),
+                        tint = Color(0xFF475050),
                         modifier = Modifier.size(20.dp)
                     )
                 }
 
                 Surface(
                     shape = RoundedCornerShape(20.dp),
-                    color = Color(0xFF00695C).copy(alpha = 0.12f)
+                    color = Color(0xFF0F766E).copy(alpha = 0.12f)
                 ) {
                     Text(
                         text = "ÉVALUATION ADAPTATIVE (CAT)",
-                        color = Color(0xFF00695C),
+                        color = Color(0xFF0F766E),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 1.sp,
@@ -279,12 +279,12 @@ private fun ProfilingStep(
                     text = "Votre Profil Médical 🎯",
                     fontSize = 26.sp,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color(0xFF0F172A)
+                    color = Color(0xFF0C1414)
                 )
                 Text(
                     text = "Pour calibrer l'algorithme et démarrer exactement au niveau correspondant à votre parcours.",
                     fontSize = 14.sp,
-                    color = Color(0xFF64748B),
+                    color = Color(0xFF6B7877),
                     lineHeight = 20.sp
                 )
             }
@@ -307,7 +307,7 @@ private fun ProfilingStep(
                         text = "Comment vous appelez-vous ?",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(0xFF1E293B)
+                        color = Color(0xFF12211C)
                     )
                     OutlinedTextField(
                         value = userName,
@@ -315,12 +315,12 @@ private fun ProfilingStep(
                         modifier = Modifier.fillMaxWidth(),
                         placeholder = { Text("Ex: Dr. Youcef, Sarah...") },
                         leadingIcon = {
-                            Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFF00897B))
+                            Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFF0F766E))
                         },
                         shape = RoundedCornerShape(12.dp),
                         colors = OutlinedTextFieldDefaults.colors(
-                            focusedBorderColor = Color(0xFF00897B),
-                            unfocusedBorderColor = Color(0xFFCBD5E1)
+                            focusedBorderColor = Color(0xFF0F766E),
+                            unfocusedBorderColor = Color(0xFFDFEAE4)
                         ),
                         singleLine = true
                     )
@@ -334,7 +334,7 @@ private fun ProfilingStep(
                 text = "Quel est votre statut ?",
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF0F172A)
+                color = Color(0xFF0C1414)
             )
 
             Column(
@@ -344,11 +344,11 @@ private fun ProfilingStep(
                 UserType.values().forEach { type ->
                     val isSelected = selectedUserType == type
                     val borderColor by animateColorAsState(
-                        if (isSelected) Color(0xFF00897B) else Color(0xFFE2E8F0),
+                        if (isSelected) Color(0xFF0F766E) else Color(0xFFDFEAE4),
                         label = "borderColor"
                     )
                     val bgColor by animateColorAsState(
-                        if (isSelected) Color(0xFF00897B).copy(alpha = 0.08f) else Color.White,
+                        if (isSelected) Color(0xFF0F766E).copy(alpha = 0.08f) else Color.White,
                         label = "bgColor"
                     )
 
@@ -373,19 +373,19 @@ private fun ProfilingStep(
                                     text = type.label(lang),
                                     fontSize = 15.sp,
                                     fontWeight = FontWeight.Bold,
-                                    color = if (isSelected) Color(0xFF00695C) else Color(0xFF1E293B)
+                                    color = if (isSelected) Color(0xFF0F766E) else Color(0xFF12211C)
                                 )
                                 Text(
                                     text = type.desc(lang),
                                     fontSize = 12.sp,
-                                    color = Color(0xFF64748B)
+                                    color = Color(0xFF6B7877)
                                 )
                             }
                             if (isSelected) {
                                 Icon(
                                     imageVector = Icons.Default.CheckCircle,
                                     contentDescription = null,
-                                    tint = Color(0xFF00897B),
+                                    tint = Color(0xFF0F766E),
                                     modifier = Modifier.size(22.dp)
                                 )
                             }
@@ -401,7 +401,7 @@ private fun ProfilingStep(
                     text = "En quelle année d'études êtes-vous ?",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF0F172A)
+                    color = Color(0xFF0C1414)
                 )
 
                 FlowRow(
@@ -416,10 +416,10 @@ private fun ProfilingStep(
                         Surface(
                             modifier = Modifier.clickable { onMedYearChange(year) },
                             shape = RoundedCornerShape(12.dp),
-                            color = if (isSelected) Color(0xFF00695C) else Color.White,
+                            color = if (isSelected) Color(0xFF0F766E) else Color.White,
                             border = androidx.compose.foundation.BorderStroke(
                                 1.dp,
-                                if (isSelected) Color(0xFF004D40) else Color(0xFFCBD5E1)
+                                if (isSelected) Color(0xFF004D40) else Color(0xFFDFEAE4)
                             )
                         ) {
                             Row(
@@ -432,7 +432,7 @@ private fun ProfilingStep(
                                     text = year.label(lang),
                                     fontSize = 12.sp,
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                    color = if (isSelected) Color.White else Color(0xFF334155)
+                                    color = if (isSelected) Color.White else Color(0xFF475050)
                                 )
                             }
                         }
@@ -450,7 +450,7 @@ private fun ProfilingStep(
                     .height(54.dp)
                     .testTag("start_adaptive_test_button"),
                 shape = RoundedCornerShape(16.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00695C))
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0F766E))
             ) {
                 Text(
                     text = "Démarrer le Test Adaptatif 🎯",
@@ -482,7 +482,7 @@ private fun AdaptiveTestStep(
 ) {
     if (question == null) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            CircularProgressIndicator(color = Color(0xFF00897B))
+            CircularProgressIndicator(color = Color(0xFF0F766E))
         }
         return
     }
@@ -510,7 +510,7 @@ private fun AdaptiveTestStep(
                 onClick = onCancel,
                 modifier = Modifier.size(32.dp)
             ) {
-                Icon(Icons.Default.ArrowBack, contentDescription = "Retour", tint = Color(0xFF64748B))
+                Icon(Icons.Default.ArrowBack, contentDescription = "Retour", tint = Color(0xFF6B7877))
             }
 
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -518,7 +518,7 @@ private fun AdaptiveTestStep(
                     text = "QUESTION $questionNumber / $totalEstimated",
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF64748B),
+                    color = Color(0xFF6B7877),
                     letterSpacing = 1.sp
                 )
                 // Difficulty Stars
@@ -530,7 +530,7 @@ private fun AdaptiveTestStep(
                         Icon(
                             imageVector = if (i <= currentDifficulty) Icons.Default.Star else Icons.Default.StarBorder,
                             contentDescription = null,
-                            tint = if (i <= currentDifficulty) Color(0xFFF59E0B) else Color(0xFFCBD5E1),
+                            tint = if (i <= currentDifficulty) Color(0xFFF59E0B) else Color(0xFFDFEAE4),
                             modifier = Modifier.size(14.dp)
                         )
                     }
@@ -545,13 +545,13 @@ private fun AdaptiveTestStep(
 
             Surface(
                 shape = RoundedCornerShape(12.dp),
-                color = Color(0xFF00695C).copy(alpha = 0.1f)
+                color = Color(0xFF0F766E).copy(alpha = 0.1f)
             ) {
                 Text(
                     text = question.module,
                     fontSize = 10.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF00695C),
+                    color = Color(0xFF0F766E),
                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                 )
             }
@@ -563,15 +563,15 @@ private fun AdaptiveTestStep(
                 .fillMaxWidth()
                 .height(6.dp)
                 .clip(RoundedCornerShape(3.dp)),
-            color = Color(0xFF00897B),
-            trackColor = Color(0xFFE2E8F0)
+            color = Color(0xFF0F766E),
+            trackColor = Color(0xFFDFEAE4)
         )
 
         // Trilingual Focus Card
         Card(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(20.dp),
-            colors = CardDefaults.cardColors(containerColor = Color(0xFF0F172A))
+            colors = CardDefaults.cardColors(containerColor = Color(0xFF0C1414))
         ) {
             Column(
                 modifier = Modifier
@@ -583,7 +583,7 @@ private fun AdaptiveTestStep(
                 Text(
                     text = "Que signifie ce terme médical ?",
                     fontSize = 12.sp,
-                    color = Color(0xFF94A3B8),
+                    color = Color(0xFF6B7877),
                     fontWeight = FontWeight.Medium
                 )
                 Text(
@@ -600,12 +600,12 @@ private fun AdaptiveTestStep(
                     Text(
                         text = "🇫🇷 ${question.termFr}",
                         fontSize = 12.sp,
-                        color = Color(0xFFE2E8F0)
+                        color = Color(0xFFDFEAE4)
                     )
                     Text(
                         text = "•",
                         fontSize = 12.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF6B7877)
                     )
                     Text(
                         text = "🇸🇦 ${question.termAr}",
@@ -630,15 +630,15 @@ private fun AdaptiveTestStep(
                 val containerColor = when {
                     isAnswered && isCorrect -> Color(0xFF10B981).copy(alpha = 0.15f)
                     isAnswered && isSelected && !isCorrect -> Color(0xFFEF4444).copy(alpha = 0.15f)
-                    isSelected -> Color(0xFF00695C).copy(alpha = 0.1f)
+                    isSelected -> Color(0xFF0F766E).copy(alpha = 0.1f)
                     else -> Color.White
                 }
 
                 val borderColor = when {
                     isAnswered && isCorrect -> Color(0xFF10B981)
                     isAnswered && isSelected && !isCorrect -> Color(0xFFEF4444)
-                    isSelected -> Color(0xFF00695C)
-                    else -> Color(0xFFE2E8F0)
+                    isSelected -> Color(0xFF0F766E)
+                    else -> Color(0xFFDFEAE4)
                 }
 
                 Card(
@@ -660,14 +660,14 @@ private fun AdaptiveTestStep(
                             modifier = Modifier
                                 .size(28.dp)
                                 .clip(CircleShape)
-                                .background(if (isSelected || (isAnswered && isCorrect)) borderColor else Color(0xFFF1F5F9)),
+                                .background(if (isSelected || (isAnswered && isCorrect)) borderColor else Color(0xFFF5FAF7)),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
                                 text = listOf("A", "B", "C", "D")[index],
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = if (isSelected || (isAnswered && isCorrect)) Color.White else Color(0xFF64748B)
+                                color = if (isSelected || (isAnswered && isCorrect)) Color.White else Color(0xFF6B7877)
                             )
                         }
 
@@ -675,7 +675,7 @@ private fun AdaptiveTestStep(
                             text = optionText,
                             fontSize = 13.sp,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                            color = Color(0xFF1E293B),
+                            color = Color(0xFF12211C),
                             modifier = Modifier.weight(1f)
                         )
                     }
@@ -712,7 +712,7 @@ private fun AdaptiveTestStep(
                         Text(
                             text = question.hint,
                             fontSize = 12.sp,
-                            color = Color(0xFF334155)
+                            color = Color(0xFF475050)
                         )
                     }
                 }
@@ -751,7 +751,7 @@ private fun DiagnosticResultStep(
                 text = "Niveau Clinique Détecté",
                 fontSize = 13.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = Color(0xFF64748B)
+                color = Color(0xFF6B7877)
             )
             Text(
                 text = result.level.label(lang),
@@ -772,19 +772,19 @@ private fun DiagnosticResultStep(
                     modifier = Modifier.fillMaxSize(),
                     strokeWidth = 10.dp,
                     color = Color(result.level.colorHex),
-                    trackColor = Color(0xFFE2E8F0)
+                    trackColor = Color(0xFFDFEAE4)
                 )
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(
                         text = "${animatedScore.toInt()}",
                         fontSize = 42.sp,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(0xFF0F172A)
+                        color = Color(0xFF0C1414)
                     )
                     Text(
                         text = "Score CAT / 100",
                         fontSize = 11.sp,
-                        color = Color(0xFF64748B),
+                        color = Color(0xFF6B7877),
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -801,7 +801,7 @@ private fun DiagnosticResultStep(
                 Text(
                     text = result.message,
                     fontSize = 14.sp,
-                    color = Color(0xFF1E293B),
+                    color = Color(0xFF12211C),
                     lineHeight = 21.sp,
                     modifier = Modifier.padding(16.dp),
                     textAlign = TextAlign.Center
@@ -844,19 +844,19 @@ private fun DiagnosticResultStep(
                             text = "Module Recommandé pour démarrer :",
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF0F172A)
+                            color = Color(0xFF0C1414)
                         )
                     }
                     Text(
                         text = "${result.startModuleName} • Programme Officiel",
                         fontSize = 18.sp,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(0xFF00695C)
+                        color = Color(0xFF0F766E)
                     )
                     Text(
                         text = "Votre cursus est configuré pour sauter les modules déjà maîtrisés et vous focaliser sur vos objectifs médicaux réels.",
                         fontSize = 12.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF6B7877)
                     )
                 }
             }
@@ -906,12 +906,12 @@ private fun StatBadge(
                 text = value,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.ExtraBold,
-                color = Color(0xFF00695C)
+                color = Color(0xFF0F766E)
             )
             Text(
                 text = label,
                 fontSize = 10.sp,
-                color = Color(0xFF64748B),
+                color = Color(0xFF6B7877),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )

@@ -87,7 +87,7 @@ fun McqQuestionView(
                 isAnswered && isCorrect -> Color(0xFF16A34A)
                 isAnswered && isSelected && !isCorrect -> Color(0xFFDC2626)
                 isSelected -> MedGreenDark
-                else -> Color(0xFFE2E8F0)
+                else -> Color(0xFFDFEAE4)
             }
 
             val letter = ('A' + index).toString()
@@ -120,14 +120,14 @@ fun McqQuestionView(
                                     isAnswered && isCorrect -> Color(0xFF16A34A)
                                     isAnswered && isSelected && !isCorrect -> Color(0xFFDC2626)
                                     isSelected -> MedGreenDark
-                                    else -> Color(0xFFF1F5F9)
+                                    else -> Color(0xFFF5FAF7)
                                 }
                             ),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = letter,
-                            color = if (isSelected || isAnswered) Color.White else Color(0xFF475569),
+                            color = if (isSelected || isAnswered) Color.White else Color(0xFF475050),
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp
                         )
@@ -137,7 +137,7 @@ fun McqQuestionView(
                         text = option,
                         fontSize = 15.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color(0xFF0F172A),
+                        color = Color(0xFF0C1414),
                         modifier = Modifier.weight(1f)
                     )
 
@@ -227,7 +227,7 @@ fun MatchingExerciseView(
         Text(
             text = Strings.get("match_pairs_instruction", currentLanguage),
             fontSize = 13.sp,
-            color = Color(0xFF475569),
+            color = Color(0xFF475050),
             fontWeight = FontWeight.Medium
         )
 
@@ -273,7 +273,7 @@ fun MatchingExerciseView(
                                 when {
                                     isMatched -> Color(0xFF16A34A)
                                     isSelected -> MedGreenDark
-                                    else -> Color(0xFFCBD5E1)
+                                    else -> Color(0xFFDFEAE4)
                                 },
                                 RoundedCornerShape(12.dp)
                             )
@@ -288,7 +288,7 @@ fun MatchingExerciseView(
                             text = item,
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 13.sp,
-                            color = if (isMatched) Color(0xFF166534) else Color(0xFF0F172A)
+                            color = if (isMatched) Color(0xFF166534) else Color(0xFF0C1414)
                         )
                     }
                 }
@@ -319,7 +319,7 @@ fun MatchingExerciseView(
                                 when {
                                     isMatched -> Color(0xFF16A34A)
                                     isSelected -> MedGreenDark
-                                    else -> Color(0xFFCBD5E1)
+                                    else -> Color(0xFFDFEAE4)
                                 },
                                 RoundedCornerShape(12.dp)
                             )
@@ -334,7 +334,7 @@ fun MatchingExerciseView(
                             text = item,
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 13.sp,
-                            color = if (isMatched) Color(0xFF166534) else Color(0xFF0F172A)
+                            color = if (isMatched) Color(0xFF166534) else Color(0xFF0C1414)
                         )
                     }
                 }
@@ -376,7 +376,7 @@ fun SentenceOrderExerciseView(
         Text(
             text = Strings.get("reorder_instruction", currentLanguage),
             fontSize = 13.sp,
-            color = Color(0xFF475569),
+            color = Color(0xFF475050),
             fontWeight = FontWeight.Medium
         )
 
@@ -385,14 +385,14 @@ fun SentenceOrderExerciseView(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(14.dp))
-                .background(Color(0xFFF8FAFC))
-                .border(1.5.dp, Color(0xFF94A3B8), RoundedCornerShape(14.dp))
+                .background(Color(0xFFF0F7F4))
+                .border(1.5.dp, Color(0xFF6B7877), RoundedCornerShape(14.dp))
                 .padding(14.dp)
         ) {
             if (selectedWords.isEmpty()) {
                 Text(
                     text = "Tap words below to build the medical sentence...",
-                    color = Color(0xFF94A3B8),
+                    color = Color(0xFF6B7877),
                     fontSize = 14.sp
                 )
             } else {
@@ -404,7 +404,7 @@ fun SentenceOrderExerciseView(
                         Box(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(8.dp))
-                                .background(Color(0xFFE8F5E9))
+                                .background(Color(0xFFE3F5EC))
                                 .border(1.dp, MedGreenDark, RoundedCornerShape(8.dp))
                                 .clickable(enabled = !isAnswered) {
                                     // Remove word and put back in pool
@@ -436,7 +436,7 @@ fun SentenceOrderExerciseView(
                     modifier = Modifier
                         .clip(RoundedCornerShape(10.dp))
                         .background(Color.White)
-                        .border(1.dp, Color(0xFFCBD5E1), RoundedCornerShape(10.dp))
+                        .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(10.dp))
                         .clickable(enabled = !isAnswered) {
                             selectedWords.add(word)
                             availablePool.removeAt(idx)
@@ -445,7 +445,7 @@ fun SentenceOrderExerciseView(
                 ) {
                     Text(
                         text = word,
-                        color = Color(0xFF1E293B),
+                        color = Color(0xFF12211C),
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 14.sp
                     )
@@ -545,17 +545,17 @@ fun ClinicalContextCard(
                 fontSize = 13.sp,
                 lineHeight = 19.sp,
                 fontWeight = FontWeight.Medium,
-                color = Color(0xFF1E293B)
+                color = Color(0xFF12211C)
             )
 
             val translation = if (currentLanguage == Language.ARABIC) contextTextAr else contextTextFr
             if (translation.isNotBlank()) {
-                HorizontalDivider(color = Color(0xFFCBD5E1), thickness = 0.5.dp)
+                HorizontalDivider(color = Color(0xFFDFEAE4), thickness = 0.5.dp)
                 Text(
                     text = translation,
                     fontSize = 12.sp,
                     lineHeight = 17.sp,
-                    color = Color(0xFF64748B)
+                    color = Color(0xFF6B7877)
                 )
             }
         }
@@ -577,8 +577,8 @@ fun ClinicalExplanationCard(
             modifier = modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(16.dp))
-                .background(Color(0xFFF8FAFC))
-                .border(1.dp, Color(0xFFCBD5E1), RoundedCornerShape(16.dp))
+                .background(Color(0xFFF0F7F4))
+                .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(16.dp))
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
@@ -602,16 +602,16 @@ fun ClinicalExplanationCard(
 
             Text(
                 text = "🇬🇧 ${exercise.explanationEn}",
-                color = Color(0xFF1E293B),
+                color = Color(0xFF12211C),
                 fontSize = 13.sp,
                 lineHeight = 18.sp
             )
 
-            HorizontalDivider(color = Color(0xFFE2E8F0), thickness = 1.dp)
+            HorizontalDivider(color = Color(0xFFDFEAE4), thickness = 1.dp)
 
             Text(
                 text = "🇫🇷 ${exercise.explanationFr}",
-                color = Color(0xFF475569),
+                color = Color(0xFF475050),
                 fontSize = 12.sp,
                 lineHeight = 17.sp
             )

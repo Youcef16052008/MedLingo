@@ -64,7 +64,7 @@ fun Medi(
             modifier = Modifier
                 .size(52.dp)
                 .clip(CircleShape)
-                .background(Color(0xFFE8F5E9)),
+                .background(Color(0xFFE3F5EC)),
             contentAlignment = Alignment.Center
         ) {
             Text(text = "🩺", fontSize = 26.sp)
@@ -88,7 +88,7 @@ fun Medi(
                 text = message ?: Strings.get(moodKey(mood), lang),
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Medium,
-                color = Color(0xFF1E293B)
+                color = Color(0xFF12211C)
             )
         }
     }

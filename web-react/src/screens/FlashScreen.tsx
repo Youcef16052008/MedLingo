@@ -328,7 +328,7 @@ export function FlashScreen({ param, onQuit }: FlashProps) {
             { emoji: "😕", color: "#F57C00" },
             { emoji: "🤔", color: "#FFA000" },
             { emoji: "😊", color: "#689F38" },
-            { emoji: "🤩", color: "#2E7D32" },
+            { emoji: "🤩", color: "#15803D" },
           ][q - 1];
           return (
             <button

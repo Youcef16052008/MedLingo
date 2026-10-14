@@ -131,9 +131,9 @@ private fun FrontCardSide(
             .background(
                 Brush.linearGradient(
                     colors = listOf(
-                        Color(0xFF0D532C),
-                        Color(0xFF1B5E20),
-                        Color(0xFF2E7D32)
+                        Color(0xFF0B4A2E),
+                        Color(0xFF146B43),
+                        Color(0xFF15803D)
                     )
                 )
             )
@@ -158,7 +158,7 @@ private fun FrontCardSide(
                     Icon(
                         imageVector = Icons.Default.School,
                         contentDescription = null,
-                        tint = Color(0xFFA5F4AC),
+                        tint = Color(0xFFA7F3D0),
                         modifier = Modifier.size(16.dp)
                     )
                     Text(
@@ -218,7 +218,7 @@ private fun FrontCardSide(
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(
                     text = "🇸🇦 ${term.termAr}",
-                    color = Color(0xFFA5F4AC),
+                    color = Color(0xFFA7F3D0),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
@@ -267,7 +267,7 @@ private fun BackCardSide(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .border(2.dp, Color(0xFF1B5E20), RoundedCornerShape(24.dp))
+            .border(2.dp, Color(0xFF146B43), RoundedCornerShape(24.dp))
             .padding(18.dp)
     ) {
         Column(
@@ -291,7 +291,7 @@ private fun BackCardSide(
                         modifier = Modifier
                             .size(38.dp)
                             .clip(CircleShape)
-                            .background(Color(0xFFE8F5E9)),
+                            .background(Color(0xFFE3F5EC)),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(text = "🇬🇧", fontSize = 20.sp)
@@ -317,7 +317,7 @@ private fun BackCardSide(
 
                 FilledIconButton(
                     onClick = { onSpeak(term.termEn) },
-                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFE8F5E9)),
+                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFE3F5EC)),
                     modifier = Modifier.size(42.dp)
                 ) {
                     Icon(
@@ -329,7 +329,7 @@ private fun BackCardSide(
                 }
             }
 
-            HorizontalDivider(color = Color(0xFFE2E8F0), thickness = 1.dp)
+            HorizontalDivider(color = Color(0xFFDFEAE4), thickness = 1.dp)
             TermIllustrationView(term = term, language = currentLanguage, height = 110.dp)
 
             // Trilingual Cross-Reference (Standard Arabic & French)
@@ -337,8 +337,8 @@ private fun BackCardSide(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFF8FAFC))
-                    .border(1.dp, Color(0xFFE2E8F0), RoundedCornerShape(12.dp))
+                    .background(Color(0xFFF0F7F4))
+                    .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(12.dp))
                     .padding(horizontal = 12.dp, vertical = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
@@ -346,13 +346,13 @@ private fun BackCardSide(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = "🇸🇦 ${term.termAr}",
-                        color = Color(0xFF1E2922),
+                        color = Color(0xFF0C1414),
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "🇫🇷 ${term.termFr}",
-                        color = Color(0xFF64748B),
+                        color = Color(0xFF6B7877),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Medium
                     )
@@ -445,7 +445,7 @@ private fun BackCardSide(
             if (term.definitionEn.isNotBlank()) {
                 Text(
                     text = "📖 ${term.definitionEn}",
-                    color = Color(0xFF334155),
+                    color = Color(0xFF475050),
                     fontSize = 12.sp,
                     lineHeight = 17.sp
                 )

@@ -127,7 +127,7 @@ private fun LearningPyramidOverviewScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -143,7 +143,7 @@ private fun LearningPyramidOverviewScreen(
                     .fillMaxWidth()
                     .background(
                         Brush.verticalGradient(
-                            listOf(Color(0xFF0D532C), Color(0xFF1B5E20), Color(0xFF2E7D32))
+                            listOf(Color(0xFF0B4A2E), Color(0xFF146B43), Color(0xFF15803D))
                         )
                     )
                     .padding(20.dp)
@@ -216,7 +216,7 @@ private fun LearningPyramidOverviewScreen(
                                 Text(
                                     text = if (isUnlocked) "$score%" else "🔒",
                                     fontSize = 10.sp,
-                                    color = if (score >= 70) Color(0xFFA5F4AC) else Color.White.copy(alpha = 0.7f)
+                                    color = if (score >= 70) Color(0xFFA7F3D0) else Color.White.copy(alpha = 0.7f)
                                 )
                             }
                         }
@@ -230,7 +230,7 @@ private fun LearningPyramidOverviewScreen(
             text = if (lang == Language.ARABIC) "مستويات التعلّم الستة :" else if (lang == Language.ENGLISH) "The 6 Progressive Levels:" else "Les 6 Niveaux Progressifs :",
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF1E2922)
+            color = Color(0xFF0C1414)
         )
 
         LearningLevel.entries.forEach { level ->
@@ -262,7 +262,7 @@ private fun LevelCard(
     Card(
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isUnlocked) Color.White else Color(0xFFF1F5F9)
+            containerColor = if (isUnlocked) Color.White else Color(0xFFF5FAF7)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = if (isUnlocked) 3.dp else 0.dp),
         modifier = Modifier
@@ -272,7 +272,7 @@ private fun LevelCard(
                 when {
                     isMastered -> Color(0xFF16A34A)
                     isUnlocked -> Color(level.colorHex)
-                    else -> Color(0xFFCBD5E1)
+                    else -> Color(0xFFDFEAE4)
                 },
                 RoundedCornerShape(18.dp)
             )
@@ -299,7 +299,7 @@ private fun LevelCard(
                             .clip(RoundedCornerShape(12.dp))
                             .background(
                                 if (isUnlocked) Color(level.colorHex).copy(alpha = 0.12f)
-                                else Color(0xFFE2E8F0)
+                                else Color(0xFFDFEAE4)
                             ),
                         contentAlignment = Alignment.Center
                     ) {
@@ -311,12 +311,12 @@ private fun LevelCard(
                             text = level.getTitle(currentLanguage),
                             fontSize = 15.sp,
                             fontWeight = FontWeight.Bold,
-                            color = if (isUnlocked) Color(0xFF0F172A) else Color(0xFF64748B)
+                            color = if (isUnlocked) Color(0xFF0C1414) else Color(0xFF6B7877)
                         )
                         Text(
                             text = level.getObjective(currentLanguage),
                             fontSize = 12.sp,
-                            color = if (isUnlocked) Color(0xFF475569) else Color(0xFF94A3B8),
+                            color = if (isUnlocked) Color(0xFF475050) else Color(0xFF6B7877),
                             maxLines = 2
                         )
                     }
@@ -391,14 +391,14 @@ private fun LevelCard(
                         Icon(
                             imageVector = Icons.Default.Lock,
                             contentDescription = null,
-                            tint = Color(0xFF94A3B8),
+                            tint = Color(0xFF6B7877),
                             modifier = Modifier.size(16.dp)
                         )
                         Text(
                             text = Strings.get("level_locked_info", currentLanguage),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Medium,
-                            color = Color(0xFF94A3B8)
+                            color = Color(0xFF6B7877)
                         )
                     }
                 }
@@ -437,7 +437,7 @@ private fun LevelExerciseSessionView(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
@@ -465,7 +465,7 @@ private fun LevelExerciseSessionView(
                         text = level.getTitle(currentLanguage),
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF1E2922)
+                        color = Color(0xFF0C1414)
                     )
                     Text(
                         text = "${Strings.get("question", currentLanguage)} ${currentIndex + 1} / ${exercises.size}",
@@ -513,7 +513,7 @@ private fun LevelExerciseSessionView(
                     .height(6.dp)
                     .clip(RoundedCornerShape(3.dp)),
                 color = Color(level.colorHex),
-                trackColor = Color(0xFFE0E5E0)
+                trackColor = Color(0xFFDFEAE4)
             )
         }
 
@@ -562,7 +562,7 @@ private fun LevelExerciseSessionView(
                         text = currentExercise.questionEn,
                         fontSize = 17.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF1E2922),
+                        color = Color(0xFF0C1414),
                         textAlign = TextAlign.Center,
                         lineHeight = 23.sp
                     )
@@ -572,7 +572,7 @@ private fun LevelExerciseSessionView(
                         Text(
                             text = translatedQuestion,
                             fontSize = 13.sp,
-                            color = Color(0xFF64748B),
+                            color = Color(0xFF6B7877),
                             textAlign = TextAlign.Center
                         )
                     }
@@ -663,7 +663,7 @@ private fun LevelExerciseSessionView(
                 Text(
                     text = Strings.get("no_exercises", currentLanguage),
                     fontSize = 15.sp,
-                    color = Color(0xFF64748B),
+                    color = Color(0xFF6B7877),
                     textAlign = TextAlign.Center
                 )
             }
@@ -688,7 +688,7 @@ private fun LevelResultsView(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFFF6F8F6))
+            .background(Color(0xFFF0F7F4))
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -710,7 +710,7 @@ private fun LevelResultsView(
                     modifier = Modifier
                         .size(80.dp)
                         .clip(CircleShape)
-                        .background(if (isPassed) Color(0xFFE8F5E9) else Color(0xFFFFEBEE)),
+                        .background(if (isPassed) Color(0xFFE3F5EC) else Color(0xFFFFEBEE)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
@@ -723,7 +723,7 @@ private fun LevelResultsView(
                     text = if (isPassed) Strings.get("congrats_level_passed", currentLanguage) else Strings.get("score_needed_retry", currentLanguage),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
-                    color = if (isPassed) MedGreenDark else Color(0xFFC62828),
+                    color = if (isPassed) MedGreenDark else Color(0xFFDC2626),
                     textAlign = TextAlign.Center
                 )
 

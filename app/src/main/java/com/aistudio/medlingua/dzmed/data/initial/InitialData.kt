@@ -75,18 +75,18 @@ object InitialData {
 
     /** Les 15 modules PCM1, dans l'ordre d'affichage. */
     val modulesList = listOf(
-        ModuleInfo("anat", "🦴", "Anatomie", "Anatomy", "علم التشريح البشري", 0xFF1B5E20, chaptersOfModule("Anatomie").size, OfflineContentSize.forModule("Anatomie"), 0f),
-        ModuleInfo("physio", "❤️", "Physiologie", "Physiology", "علم وظائف الأعضاء", 0xFF00695C, chaptersOfModule("Physiologie").size, OfflineContentSize.forModule("Physiologie"), 0f),
+        ModuleInfo("anat", "🦴", "Anatomie", "Anatomy", "علم التشريح البشري", 0xFF146B43, chaptersOfModule("Anatomie").size, OfflineContentSize.forModule("Anatomie"), 0f),
+        ModuleInfo("physio", "❤️", "Physiologie", "Physiology", "علم وظائف الأعضاء", 0xFF0F766E, chaptersOfModule("Physiologie").size, OfflineContentSize.forModule("Physiologie"), 0f),
         ModuleInfo("biochim", "🧬", "Biochimie", "Biochemistry", "الكيمياء الحيوية الطبية", 0xFF1565C0, chaptersOfModule("Biochimie").size, OfflineContentSize.forModule("Biochimie"), 0f),
         ModuleInfo("histo", "🔬", "Histologie", "Histology", "علم الأنسجة العام", 0xFF6A1B9A, chaptersOfModule("Histologie").size, OfflineContentSize.forModule("Histologie"), 0f),
         ModuleInfo("biophys", "🧪", "Biophysique", "Biophysics", "الفيزياء الحيوية الطبية", 0xFFE65100, chaptersOfModule("Biophysique").size, OfflineContentSize.forModule("Biophysique"), 0f),
         ModuleInfo("genet", "🧬", "Génétique", "Medical Genetics", "علم الوراثة الطبية", 0xFF004D40, chaptersOfModule("Génétique").size, OfflineContentSize.forModule("Génétique"), 0f),
         ModuleInfo("termino", "📙", "Terminologie Médicale", "Medical Terminology", "المصطلحات الطبية اليونانية واللاتينية", 0xFFE65100, chaptersOfModule("Terminologie Médicale").size, OfflineContentSize.forModule("Terminologie Médicale"), 0f),
-        ModuleInfo("clinical_en", "🩺", "Anglais Médical", "Clinical Medical English", "الإنجليزية الطبية السريرية", 0xFF00695C, chaptersOfModule("Anglais Médical").size, OfflineContentSize.forModule("Anglais Médical"), 0f),
+        ModuleInfo("clinical_en", "🩺", "Anglais Médical", "Clinical Medical English", "الإنجليزية الطبية السريرية", 0xFF0F766E, chaptersOfModule("Anglais Médical").size, OfflineContentSize.forModule("Anglais Médical"), 0f),
         ModuleInfo("cytol", "🧫", "Cytologie", "Cell Biology & Cytology", "علم الأحياء الخلوية", 0xFF00796B, chaptersOfModule("Cytologie").size, OfflineContentSize.forModule("Cytologie"), 0f),
         ModuleInfo("info_med", "💻", "Informatique Médicale", "Medical Informatics & Biostats", "المعلوماتية الطبية والإحصاء الحيوي", 0xFF1976D2, chaptersOfModule("Informatique Médicale").size, OfflineContentSize.forModule("Informatique Médicale"), 0f),
         ModuleInfo("embryo", "👶", "Embryologie", "Medical Embryology", "علم الأجنة البشرية", 0xFFC2185B, chaptersOfModule("Embryologie").size, OfflineContentSize.forModule("Embryologie"), 0f),
-        ModuleInfo("microbio", "🦠", "Microbiologie", "Medical Microbiology", "علم الأحياء الدقيقة الطبية", 0xFF00897B, chaptersOfModule("Microbiologie").size, OfflineContentSize.forModule("Microbiologie"), 0f),
+        ModuleInfo("microbio", "🦠", "Microbiologie", "Medical Microbiology", "علم الأحياء الدقيقة الطبية", 0xFF0F766E, chaptersOfModule("Microbiologie").size, OfflineContentSize.forModule("Microbiologie"), 0f),
         ModuleInfo("pharmaco", "💊", "Pharmacologie", "Medical Pharmacology", "علم الأدوية والعقاقير الطبية", 0xFF7B1FA2, chaptersOfModule("Pharmacologie").size, OfflineContentSize.forModule("Pharmacologie"), 0f),
         ModuleInfo("semio", "🩺", "Sémiologie Médicale", "Clinical Semiology", "علم الأعراض والتشخيص السريري", 0xFF0288D1, chaptersOfModule("Sémiologie Médicale").size, OfflineContentSize.forModule("Sémiologie Médicale"), 0f),
         ModuleInfo("anapath", "🫀", "Anatomie Pathologique", "Anatomic Pathology", "علم الأمراض التشريحي", 0xFFC2185B, chaptersOfModule("Anatomie Pathologique").size, OfflineContentSize.forModule("Anatomie Pathologique"), 0f)
