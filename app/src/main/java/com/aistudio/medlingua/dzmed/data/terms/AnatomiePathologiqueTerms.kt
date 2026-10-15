@@ -36,6 +36,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˌhɪstoʊpəˈθɒlədʒi/",
+
+            exampleEn = "The Histopathology is Microscopic examination of tissue to study manifestations of disease.",        ),
         ),
         MedicalTermEntity(
             id = 2730,
@@ -159,6 +161,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˈliːʒən/",
+
+            exampleEn = "The Lesion is Any abnormal change in structure of an organ or tissue due to injury or disease.",        ),
         ),
         MedicalTermEntity(
             id = 2738,
@@ -232,6 +236,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/sɛl ˈɪndʒəri/",
+
+            exampleEn = "The Cell injury is Damage to a cell resulting from various stressors; can be reversible or irreversible.",        ),
         ),
         MedicalTermEntity(
             id = 2743,
@@ -244,6 +250,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/rɪˈvɜːrsɪbəl ˈɪndʒəri/",
+
+            exampleEn = "The Reversible injury is Cell damage that can be corrected if the injurious stimulus is removed; characterized by swelling.",        ),
         ),
         MedicalTermEntity(
             id = 2744,
@@ -256,6 +264,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ɪˈrɪvɜːrsɪbəl ˈɪndʒəri/",
+
+            exampleEn = "The Irreversible injury is Permanent cell damage leading to cell death; hallmarks are nuclear changes and membrane damage.",        ),
         ),
         MedicalTermEntity(
             id = 2745,
@@ -269,6 +279,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/nɪˈkroʊsɪs/",
+
+            exampleEn = "The Necrosis is Uncontrolled cell death caused by external injury resulting in inflammation.",        ),
         ),
         MedicalTermEntity(
             id = 2746,
@@ -282,6 +294,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
+
+            exampleEn = "The Apoptosis is Programmed, orderly cell death without inflammation; essential for development and homeostasis.",        ),
         ),
         MedicalTermEntity(
             id = 2747,
@@ -311,6 +325,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌlɪkwɪˈfæktɪv nɪˈkroʊsɪs/",
+
+            exampleEn = "The Liquefactive necrosis is Necrosis resulting in liquid mass due to enzymatic digestion; typical in brain and abscesses.",        ),
         ),
         MedicalTermEntity(
             id = 2749,
@@ -324,6 +340,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˈkeɪsiəs nɪˈkroʊsɪs/",
+
+            exampleEn = "The Caseous necrosis is Cheese-like necrosis characteristic of tuberculosis granulomas; tissue architecture destroyed.",        ),
         ),
         MedicalTermEntity(
             id = 2750,
@@ -337,6 +355,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/fæt nɪˈkroʊsɪs/",
+
+            exampleEn = "The Fat necrosis is Death of adipose tissue; seen in acute pancreatitis and breast trauma; calcium soap deposits.",        ),
         ),
         MedicalTermEntity(
             id = 2751,
@@ -350,6 +370,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˈɡæŋɡrɪnəs nɪˈkroʊsɪs/",
+
+            exampleEn = "The Gangrenous necrosis is Coagulative necrosis modified by bacterial infection; wet gangrene has liquefactive component.",        ),
         ),
         MedicalTermEntity(
             id = 2752,
@@ -378,6 +400,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˈfæti tʃeɪndʒ/",
+
+            exampleEn = "The Fatty change (Steatosis) is Abnormal accumulation of triglycerides in cells; most commonly seen in liver and heart.",        ),
         ),
         MedicalTermEntity(
             id = 2754,
@@ -390,6 +414,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/kəˈraɪəlɪsɪs/",
+
+            exampleEn = "The Karyolysis is Dissolution of the chromatin due to DNase activity; nuclear fading in necrotic cells.",        ),
         ),
         MedicalTermEntity(
             id = 2755,
@@ -402,6 +428,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌkæriəˈrɛksɪs/",
+
+            exampleEn = "The Karyorrhexis is Fragmentation of the nucleus into small clumps of chromatin; seen in necrosis and apoptosis.",        ),
         ),
         MedicalTermEntity(
             id = 2756,
@@ -415,6 +443,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/pɪkˈnoʊsɪs/",
+
+            exampleEn = "The Pyknosis is Nuclear shrinkage and increased chromatin condensation; a sign of irreversible cell injury.",        ),
         ),
         MedicalTermEntity(
             id = 2757,
@@ -443,6 +473,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ɪˈskiːmiə/",
+
+            exampleEn = "The Ischemia is Inadequate blood supply to a tissue causing oxygen deficiency and cellular injury.",        ),
         ),
         MedicalTermEntity(
             id = 2759,
@@ -455,6 +487,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌriːpɜːrˈfjuːʒən ˈɪndʒəri/",
+
+            exampleEn = "The Reperfusion injury is Paradoxical tissue damage occurring when blood flow is restored after ischemia; mediated by free radicals.",        ),
         ),
         MedicalTermEntity(
             id = 2760,
@@ -467,6 +501,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/friː ˈrædɪkəlz/",
+
+            exampleEn = "The Free radicals is Highly reactive molecules with unpaired electrons that damage cellular components.",        ),
         ),
         MedicalTermEntity(
             id = 2761,
@@ -525,6 +561,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈkɑːrdɪnəl saɪnz/",
+
+            exampleEn = "The Cardinal signs of inflammation is Five classic signs: redness (rubor), heat (calor), swelling (tumor), pain (dolor), loss of function.",        ),
         ),
         MedicalTermEntity(
             id = 2765,
@@ -537,6 +575,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈɛksjʊdeɪt/",
+
+            exampleEn = "The Exudate is Inflammatory fluid rich in proteins and cells that escapes from blood vessels into tissue.",        ),
         ),
         MedicalTermEntity(
             id = 2766,
@@ -684,6 +724,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌprɒstəˈɡlændɪnz/",
+
+            exampleEn = "The Prostaglandins is Lipid mediators derived from arachidonic acid; cause vasodilation, fever, and pain sensitization.",        ),
         ),
         MedicalTermEntity(
             id = 2776,
@@ -726,6 +768,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈpjʊərʊlənt/",
+
+            exampleEn = "The Purulent (Suppurative) inflammation is Inflammation producing large amounts of pus; caused by pyogenic bacteria.",        ),
         ),
         MedicalTermEntity(
             id = 2779,
@@ -738,6 +782,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈfɪbrɪnəs/",
+
+            exampleEn = "The Fibrinous inflammation is Exudate rich in fibrin forming a membrane on serosal or mucosal surfaces (e.g., pericarditis).",        ),
         ),
         MedicalTermEntity(
             id = 2780,
@@ -765,6 +811,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌsjuːdoʊˈmɛmbrənəs/",
+
+            exampleEn = "The Pseudomembranous inflammation is Formation of false membranes of fibrin and necrotic tissue on mucosal surfaces (e.g., C. diff colitis).",        ),
         ),
         MedicalTermEntity(
             id = 2782,
@@ -777,6 +825,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈkrɒnɪk ˌɪnfləˈmeɪʃən/",
+
+            exampleEn = "The Chronic inflammation is Prolonged inflammation (weeks to years) with simultaneous tissue injury and repair; lymphocytes predominate.",        ),
         ),
         MedicalTermEntity(
             id = 2783,
@@ -851,6 +901,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/faɪˈbroʊsɪs/",
+
+            exampleEn = "The Fibrosis is Excessive deposition of fibrous connective tissue (collagen) replacing normal tissue after injury.",        ),
         ),
         MedicalTermEntity(
             id = 2788,
@@ -863,6 +915,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/skɑːr/",
+
+            exampleEn = "The Scar (Cicatrix) is Dense fibrous connective tissue replacing injured tissue; less functional than original tissue.",        ),
         ),
         MedicalTermEntity(
             id = 2789,
@@ -890,6 +944,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌɡrænjʊˈleɪʃən ˈtɪʃuː/",
+
+            exampleEn = "The Granulation tissue is New vascular connective tissue formed during wound healing; consists of fibroblasts, vessels, and macrophages.",        ),
         ),
         MedicalTermEntity(
             id = 2791,
@@ -902,6 +958,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌrɛzəˈluːʃən/",
+
+            exampleEn = "The Resolution is Complete restoration of normal tissue architecture after inflammation without scarring.",        ),
         ),
         MedicalTermEntity(
             id = 2792,
@@ -1036,6 +1094,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌændʒioʊˈdʒɛnɪsɪs/",
+
+            exampleEn = "The Angiogenesis is Formation of new blood vessels from pre-existing ones; essential for wound healing and tumor growth.",        ),
         ),
         MedicalTermEntity(
             id = 2801,
@@ -1079,6 +1139,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/kənˈdʒɛstʃən/",
+
+            exampleEn = "The Congestion (passive hyperemia) is Impaired venous outflow causing blood accumulation; seen in heart failure (nutmeg liver).",        ),
         ),
         MedicalTermEntity(
             id = 2804,
@@ -1092,6 +1154,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/θrɒmˈboʊsɪs/",
+
+            exampleEn = "The Thrombosis is Intravascular coagulation forming a thrombus within the vascular system.",        ),
         ),
         MedicalTermEntity(
             id = 2805,
@@ -1104,6 +1168,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈvɪrkoʊz ˈtraɪæd/",
+
+            exampleEn = "The Virchow's triad is Three factors predisposing to thrombosis: endothelial injury, stasis, and hypercoagulability.",        ),
         ),
         MedicalTermEntity(
             id = 2806,
@@ -1149,6 +1215,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈpʌlmənəri ˈɛmbəlɪzəm/",
+
+            exampleEn = "The Pulmonary embolism is Occlusion of pulmonary arteries by a blood clot; most commonly from deep vein thrombosis.",        ),
         ),
         MedicalTermEntity(
             id = 2809,
@@ -1192,6 +1260,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ɪˈdiːmə/",
+
+            exampleEn = "The Edema (pathological) is Abnormal fluid accumulation in interstitial spaces; causes include increased hydrostatic pressure and decreased oncotic pressure.",        ),
         ),
         MedicalTermEntity(
             id = 2812,
@@ -1282,6 +1352,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ɪˈskiːmiə/",
+
+            exampleEn = "The Ischemia (circulatory) is Insufficient blood supply to a tissue causing oxygen and nutrient deficit.",        ),
         ),
         MedicalTermEntity(
             id = 2818,
@@ -1310,6 +1382,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈɪnfɑːrkt/",
+
+            exampleEn = "The Infarct (types) is Red (hemorrhagic) infarct in loose tissue; white (anemic) infarct in solid organs like heart and spleen.",        ),
         ),
         MedicalTermEntity(
             id = 2820,
@@ -1323,6 +1397,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈkɑːrdɪæk tæmˈpɒneɪd/",
+
+            exampleEn = "The Cardiac tamponade is Compression of the heart by fluid accumulation in the pericardial sac limiting cardiac output.",        ),
         ),
         MedicalTermEntity(
             id = 2821,
@@ -1336,6 +1412,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/pɪˈtiːkiˌiː ˈpɜːrpjʊrə ɪˈkɪmoʊsɪs/",
+
+            exampleEn = "The Petechiae, purpura, ecchymosis is Types of hemorrhage: <2 mm (petechiae), 2–10 mm (purpura), >10 mm (ecchymosis).",        ),
         ),
         MedicalTermEntity(
             id = 2822,
@@ -1536,6 +1614,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌænəˈpleɪʒə/",
+
+            exampleEn = "The Anaplasia is Loss of differentiation of tumor cells with structural and functional abnormalities; feature of malignancy.",        ),
         ),
         MedicalTermEntity(
             id = 2835,
@@ -1549,6 +1629,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/dɪsˈpleɪʒə/",
+
+            exampleEn = "The Dysplasia is Pre-neoplastic abnormal cellular growth with loss of uniformity and architectural orientation.",        ),
         ),
         MedicalTermEntity(
             id = 2836,
@@ -1562,6 +1644,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌkɑːrsɪˈnoʊmə ɪn ˈsɪtjuː/",
+
+            exampleEn = "The Carcinoma in situ (CIS) is Severe dysplasia where the full thickness of epithelium is replaced by malignant cells without invasion.",        ),
         ),
         MedicalTermEntity(
             id = 2837,
@@ -1604,6 +1688,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˈsteɪdʒɪŋ/",
+
+            exampleEn = "The Staging (tumor) is Assessment of tumor extent using TNM system: T (tumor size), N (nodes), M (metastasis).",        ),
         ),
         MedicalTermEntity(
             id = 2840,
@@ -1616,6 +1702,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˈtjuːmər ˈmɑːrkərz/",
+
+            exampleEn = "The Tumor markers is Substances in blood or tissue indicating cancer presence; e.g., PSA, AFP, CEA, CA-125.",        ),
         ),
         MedicalTermEntity(
             id = 2841,
@@ -1628,6 +1716,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌpærəˌniːoʊˈplæstɪk/",
+
+            exampleEn = "The Paraneoplastic syndrome is Symptoms not caused by tumor mass or metastasis but by tumor-secreted substances or immune response.",        ),
         ),
         MedicalTermEntity(
             id = 2842,
@@ -1715,6 +1805,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈkɑːrsɪnədʒən/",
+
+            exampleEn = "The Carcinogen is Any agent causing cancer; classified as chemical, physical (radiation), or biological (viruses).",        ),
         ),
         MedicalTermEntity(
             id = 2848,
@@ -1790,6 +1882,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌɛpɪdʒɪˈnɛtɪks/",
+
+            exampleEn = "The Epigenetics (in cancer) is Heritable changes in gene expression without DNA sequence alteration; DNA methylation and histone modification.",        ),
         ),
         MedicalTermEntity(
             id = 2853,
@@ -1817,6 +1911,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈhɔːlmɑːrks əv ˈkænsər/",
+
+            exampleEn = "The Hallmarks of cancer is Ten acquired capabilities of cancer: self-sufficiency, evasion of apoptosis, invasion, metastasis, angiogenesis, etc.",        ),
         ),
         MedicalTermEntity(
             id = 2855,
@@ -1830,6 +1926,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈkɛmɪkəl ˈkɑːrsɪnədʒənz/",
+
+            exampleEn = "The Chemical carcinogens is Chemical substances inducing cancer; include aflatoxins, polycyclic hydrocarbons, tobacco, asbestos, benzene.",        ),
         ),
         MedicalTermEntity(
             id = 2856,
@@ -1843,6 +1941,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌreɪdiˈeɪʃən ˌkɑːrsɪnəˈdʒɛnɪsɪs/",
+
+            exampleEn = "The Radiation carcinogenesis is Cancer caused by ionizing radiation causing DNA double-strand breaks; UV radiation causes skin cancer.",        ),
         ),
         MedicalTermEntity(
             id = 2857,
@@ -1856,6 +1956,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈvaɪrəl ˌkɑːrsɪnəˈdʒɛnɪsɪs/",
+
+            exampleEn = "The Viral carcinogenesis is Cancer caused by oncogenic viruses; HPV (cervical cancer), HBV (hepatocellular), EBV (Burkitt lymphoma).",        ),
         ),
         MedicalTermEntity(
             id = 2858,
@@ -1868,6 +1970,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/həˈrɛdɪtəri ˈkænsər/",
+
+            exampleEn = "The Hereditary cancer is Cancer caused by inherited germline mutations; e.g., BRCA1/2 (breast), APC (colon), TP53 (Li-Fraumeni).",        ),
         ),
         MedicalTermEntity(
             id = 2859,
@@ -1897,6 +2001,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌændʒioʊˈdʒɛnɪsɪs/",
+
+            exampleEn = "The Angiogenesis (tumor) is Formation of new blood vessels supplying the tumor; mediated by VEGF; required for growth >2mm.",        ),
         ),
         MedicalTermEntity(
             id = 2861,
@@ -1925,6 +2031,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌmaɪəˌkɑːrdiəl ɪnˈfɑːrkʃən/",
+
+            exampleEn = "The Myocardial infarction (MI) is Death of myocardial cells due to prolonged ischemia; usually caused by coronary artery thrombosis.",        ),
         ),
         MedicalTermEntity(
             id = 2863,
@@ -1954,6 +2062,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌhɑɪpɜːˈtrəʊfi/",
+
+            exampleEn = "The Cardiac hypertrophy is Increase in size of cardiomyocytes; compensatory response to increased workload; can lead to failure.",        ),
         ),
         MedicalTermEntity(
             id = 2865,
@@ -1967,6 +2077,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌpɛrɪkɑːrˈdaɪtɪs/",
+
+            exampleEn = "The Pericarditis is Inflammation of the pericardium; can be fibrinous, serous, or constrictive.",        ),
         ),
         MedicalTermEntity(
             id = 2866,
@@ -1980,6 +2092,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌɛndoʊkɑːrˈdaɪtɪs/",
+
+            exampleEn = "The Endocarditis is Inflammation of the endocardium; infectious (vegetations on valves) or non-infectious (Libman-Sacks).",        ),
         ),
         MedicalTermEntity(
             id = 2867,
@@ -2025,6 +2139,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌkɑːrdiəʊmaɪˈɒpəθi/",
+
+            exampleEn = "The Cardiomyopathy is Primary disease of the myocardium; classified as dilated, hypertrophic, or restrictive.",        ),
         ),
         MedicalTermEntity(
             id = 2870,
@@ -2037,6 +2153,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ruːˈmætɪk hɑːrt dɪˈziːz/",
+
+            exampleEn = "The Rheumatic heart disease is Valve damage following rheumatic fever; caused by molecular mimicry of Group A Streptococcus.",        ),
         ),
         MedicalTermEntity(
             id = 2871,
@@ -2049,6 +2167,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˈæʃɒf ˈbɒdɪz/",
+
+            exampleEn = "The Aschoff bodies is Pathognomonic granulomatous lesions in rheumatic heart disease; consist of central fibrinoid necrosis.",        ),
         ),
         MedicalTermEntity(
             id = 2872,
@@ -2062,6 +2182,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/hɑːrt ˈfeɪljər/",
+
+            exampleEn = "The Heart failure (pathological) is Inability of the heart to pump sufficient blood; causes nutmeg liver (passive congestion) and pulmonary edema.",        ),
         ),
         MedicalTermEntity(
             id = 2873,
@@ -2074,6 +2196,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˈnʌtmɛɡ ˈlɪvər/",
+
+            exampleEn = "The Nutmeg liver is Gross appearance of congested liver in right heart failure; central veins are congested, surrounding areas pale.",        ),
         ),
         MedicalTermEntity(
             id = 2874,
@@ -2133,6 +2257,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/njuːˈmoʊniə/",
+
+            exampleEn = "The Pneumonia (pathological) is Inflammatory consolidation of lung tissue; lobar (entire lobe) or bronchopneumonia (patchy).",        ),
         ),
         MedicalTermEntity(
             id = 2878,
@@ -2146,6 +2272,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈloʊbər njuːˈmoʊniə/",
+
+            exampleEn = "The Lobar pneumonia (stages) is Four stages: congestion, red hepatization, grey hepatization, and resolution.",        ),
         ),
         MedicalTermEntity(
             id = 2879,
@@ -2158,6 +2286,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌɛmfɪˈsiːmə/",
+
+            exampleEn = "The Emphysema is Permanent abnormal enlargement of air spaces distal to terminal bronchioles with destruction of alveolar walls.",        ),
         ),
         MedicalTermEntity(
             id = 2880,
@@ -2171,6 +2301,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈpʌlmənəri faɪˈbroʊsɪs/",
+
+            exampleEn = "The Pulmonary fibrosis is Excessive fibrous tissue replacing normal lung parenchyma causing restrictive ventilatory defect.",        ),
         ),
         MedicalTermEntity(
             id = 2881,
@@ -2184,6 +2316,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/tjʊˌbɜːrkjʊˈloʊsɪs/",
+
+            exampleEn = "The Tuberculosis (pathological) is Primary TB: Ghon complex (peripheral lesion + hilar adenopathy); Secondary TB: apical cavitation.",        ),
         ),
         MedicalTermEntity(
             id = 2882,
@@ -2196,6 +2330,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ɡɒn ˈkɒmplɛks/",
+
+            exampleEn = "The Ghon complex is primary TB lesion: a small peripheral parenchymal focus + enlarged hilar lymph nodes.",        ),
         ),
         MedicalTermEntity(
             id = 2883,
@@ -2209,6 +2345,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈpʌlmənəri ɪˈdiːmə/",
+
+            exampleEn = "The Pulmonary edema is Fluid accumulation in the alveoli and interstitium; causes: left heart failure, ARDS, nephrotic syndrome.",        ),
         ),
         MedicalTermEntity(
             id = 2884,
@@ -2222,6 +2360,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/lʌŋ ˈkɑːrsɪnoʊmə/",
+
+            exampleEn = "The Lung carcinoma (types) is Major types: adenocarcinoma (most common), squamous cell, small cell (SCLC), and large cell carcinoma.",        ),
         ),
         MedicalTermEntity(
             id = 2885,
@@ -2235,6 +2375,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/smɔːl sɛl ˈkɑːrsɪnoʊmə/",
+
+            exampleEn = "The Small cell carcinoma (SCLC) is Highly aggressive neuroendocrine lung carcinoma; strongly associated with smoking; responds to chemotherapy.",        ),
         ),
         MedicalTermEntity(
             id = 2886,
@@ -2263,6 +2405,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌsɪlɪˈkoʊsɪs/",
+
+            exampleEn = "The Silicosis is Pneumoconiosis caused by silicon dioxide inhalation; birefringent crystals in macrophages; eggshell calcification.",        ),
         ),
         MedicalTermEntity(
             id = 2888,
@@ -2275,6 +2419,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌeɪɑːrdiːɛs/",
+
+            exampleEn = "The ARDS (Acute Respiratory Distress Syndrome) is Diffuse alveolar damage with hyaline membrane formation; diffuse bilateral infiltrates on X-ray.",        ),
         ),
         MedicalTermEntity(
             id = 2889,
@@ -2287,6 +2433,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈhaɪəlɪn ˈmɛmbreɪn dɪˈziːz/",
+
+            exampleEn = "The Hyaline membrane disease is Neonatal respiratory distress due to surfactant deficiency; pink hyaline membranes lining alveoli.",        ),
         ),
         MedicalTermEntity(
             id = 2890,
@@ -2300,6 +2448,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌbrɒŋkɪˈɛktəsɪs/",
+
+            exampleEn = "The Bronchiectasis is Permanent dilation of bronchi due to destruction of bronchial walls; characterized by purulent sputum.",        ),
         ),
         MedicalTermEntity(
             id = 2891,
@@ -2313,6 +2463,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈplʊərəl ɪˈfjuːʒən/",
+
+            exampleEn = "The Pleural effusion (pathological) is Abnormal fluid in the pleural space; classified as transudate (heart failure) or exudate (infection, cancer).",        ),
         ),
         MedicalTermEntity(
             id = 2892,
@@ -2342,6 +2494,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌhɛlɪkəˈbæktər paɪˈlɔːraɪ/",
+
+            exampleEn = "The Helicobacter pylori (gastric pathology) is Causes chronic gastritis, peptic ulcers, gastric adenocarcinoma, and MALT lymphoma.",        ),
         ),
         MedicalTermEntity(
             id = 2894,
@@ -2387,6 +2541,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/kroʊn dɪˈziːz/",
+
+            exampleEn = "The Crohn's disease (pathology) is Transmural granulomatous inflammation affecting any part of GI tract; skip lesions; cobblestone mucosa.",        ),
         ),
         MedicalTermEntity(
             id = 2897,
@@ -2400,6 +2556,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌʌlsəˈreɪtɪv koʊˈlaɪtɪs/",
+
+            exampleEn = "The Ulcerative colitis (pathology) is Continuous mucosal inflammation limited to colon and rectum; crypt abscesses; pseudopolyps.",        ),
         ),
         MedicalTermEntity(
             id = 2898,
@@ -2413,6 +2571,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/sɪˈroʊsɪs/",
+
+            exampleEn = "The Cirrhosis is End-stage liver disease with replacement of hepatic parenchyma by fibrous tissue and regenerative nodules.",        ),
         ),
         MedicalTermEntity(
             id = 2899,
@@ -2426,6 +2586,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌhɛpətoʊˈsɛljʊlər ˌkɑːrsɪˈnoʊmə/",
+
+            exampleEn = "The Hepatocellular carcinoma (HCC) is Primary liver cancer; associated with HBV, HCV, cirrhosis, and aflatoxins; elevated AFP.",        ),
         ),
         MedicalTermEntity(
             id = 2900,
@@ -2439,6 +2601,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌpæŋkrɪˈaɪtɪs/",
+
+            exampleEn = "The Acute pancreatitis (pathological) is Autodigestion of pancreas by its own enzymes; causes: gallstones and alcohol; fat necrosis, hemorrhage.",        ),
         ),
         MedicalTermEntity(
             id = 2901,
@@ -2452,6 +2616,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/əˌpɛndɪˈsaɪtɪs/",
+
+            exampleEn = "The Appendicitis (pathological) is Acute inflammation of the appendix; usually from fecalith obstruction; neutrophilic infiltration of wall.",        ),
         ),
         MedicalTermEntity(
             id = 2902,
@@ -2465,6 +2631,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌɡlɒmɛrjʊloʊnɪˈfraɪtɪs/",
+
+            exampleEn = "The Glomerulonephritis is Inflammatory disease of glomeruli; classified as nephritic (hematuria, hypertension) or nephrotic (proteinuria).",        ),
         ),
         MedicalTermEntity(
             id = 2903,
@@ -2478,6 +2646,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/nɪˈfrɒtɪk ˈsɪndroʊm/",
+
+            exampleEn = "The Nephrotic syndrome (pathological) is Massive proteinuria (>3.5 g/day), hypoalbuminemia, edema, hyperlipidemia, and lipiduria.",        ),
         ),
         MedicalTermEntity(
             id = 2904,
@@ -2506,6 +2676,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌpaɪɛloʊnɪˈfraɪtɪs/",
+
+            exampleEn = "The Pyelonephritis (pathological) is Bacterial infection of renal pelvis and parenchyma; most common cause: E. coli; neutrophilic infiltration.",        ),
         ),
         MedicalTermEntity(
             id = 2906,
@@ -2551,6 +2723,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌdaɪəˈbɛtɪk nɪˈfrɒpəθi/",
+
+            exampleEn = "The Diabetic nephropathy is Renal damage caused by diabetes; Kimmelstiel-Wilson nodules (glomerular nodular sclerosis).",        ),
         ),
         MedicalTermEntity(
             id = 2909,
@@ -2564,6 +2738,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌhaɪpɜːrˈtɛnsɪv ˌnɛfroʊskləˈroʊsɪs/",
+
+            exampleEn = "The Hypertensive nephrosclerosis is Kidney damage from hypertension; benign: arteriolar hyalinosis; malignant: fibrinoid necrosis of arterioles.",        ),
         ),
         MedicalTermEntity(
             id = 2910,
@@ -2577,6 +2753,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌnɛfroʊlɪˈθaɪəsɪs/",
+
+            exampleEn = "The Nephrolithiasis (renal calculi) is Kidney stones; most common type: calcium oxalate; can cause hydronephrosis if obstructing.",        ),
         ),
         MedicalTermEntity(
             id = 2911,
@@ -2590,6 +2768,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌhaɪdroʊnɪˈfroʊsɪs/",
+
+            exampleEn = "The Hydronephrosis is Dilation of renal pelvis and calyces due to urinary tract obstruction; leads to cortical atrophy.",        ),
         ),
         MedicalTermEntity(
             id = 2912,
@@ -2633,6 +2813,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˈsɛrɪbrəl ɪnˈfɑːrkʃən/",
+
+            exampleEn = "The Cerebral infarction is Death of brain tissue due to ischemia; results in liquefactive necrosis (unlike other organs).",        ),
         ),
         MedicalTermEntity(
             id = 2915,
@@ -2646,6 +2828,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˈæltshaɪmərz dɪˈziːz/",
+
+            exampleEn = "The Alzheimer's disease (pathological) is Characterized by senile plaques (beta-amyloid) and neurofibrillary tangles (tau protein).",        ),
         ),
         MedicalTermEntity(
             id = 2916,
@@ -2671,6 +2855,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌdiːˌmaɪɪlɪˈneɪʃən/",
+
+            exampleEn = "The Demyelination is Loss of the myelin sheath surrounding nerve fibers; seen in multiple sclerosis and Guillain-Barré.",        ),
         ),
         MedicalTermEntity(
             id = 2918,
@@ -2684,6 +2870,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ɡlaɪˈoʊsɪs/",
+
+            exampleEn = "The Gliosis is Proliferation of glial cells (astrocytes) in response to CNS injury; forms a glial scar.",        ),
         ),
         MedicalTermEntity(
             id = 2919,
@@ -2697,6 +2885,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌkroʊmætəˈlaɪsɪs/",
+
+            exampleEn = "The Neuronal chromatolysis is Dissolution of Nissl substance in neurons after axonal injury; reflects metabolic response to axon damage.",        ),
         ),
         MedicalTermEntity(
             id = 2920,
@@ -2724,6 +2914,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌsʌbˈdjʊərəl hɛˈmætoʊmə/",
+
+            exampleEn = "The Subdural hematoma is Venous bleeding between dura and arachnoid; from bridging veins; crescent-shaped on CT.",        ),
         ),
         MedicalTermEntity(
             id = 2922,
@@ -2737,6 +2929,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ɪˈlɛktrɒn maɪˈkrɒskəpi/",
+
+            exampleEn = "The Electron microscopy is Provides ultrastructural detail using electron beams; essential for glomerular pathology diagnosis.",        ),
         ),
         MedicalTermEntity(
             id = 2923,
@@ -2765,6 +2959,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ˈspɛʃəl steɪnz/",
+
+            exampleEn = "The Special stains is Histological stains beyond H&E; PAS (mucus/fungi), Masson trichrome (collagen), Congo red (amyloid).",        ),
         ),
         MedicalTermEntity(
             id = 2925,
@@ -2824,6 +3020,8 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ˌziːl ˈniːlsən/",
+
+            exampleEn = "The Ziehl-Neelsen stain (in pathology) is Acid-fast stain identifying Mycobacterium tuberculosis as red rods on blue background.",        ),
         ),
         MedicalTermEntity(
             id = 2929,

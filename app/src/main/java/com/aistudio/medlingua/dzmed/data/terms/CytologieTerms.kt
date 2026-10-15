@@ -471,6 +471,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌmaɪkrəˈtjuːbjuːl/",
+
+            exampleEn = "The Microtubule is Hollow cylindrical structures made of tubulin providing cell shape and serving as tracks for transport.",        ),
         ),
         MedicalTermEntity(
             id = 2965,
@@ -483,6 +485,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌɪntərˈmiːdiət ˈfɪləmənt/",
+
+            exampleEn = "The Intermediate filament is Cytoskeletal fibers of medium thickness providing mechanical strength to cells.",        ),
         ),
         MedicalTermEntity(
             id = 2966,
@@ -1197,6 +1201,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈkroʊmətɪd/",
+
+            exampleEn = "The Chromatid is One of two identical copies of a duplicated chromosome joined at the centromere.",        ),
         ),
         MedicalTermEntity(
             id = 3013,
@@ -1284,6 +1290,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈspɪndəl ˈfaɪbərz/",
+
+            exampleEn = "The Spindle fibers is Microtubule-based structures extending from centrioles that separate chromosomes during cell division.",        ),
         ),
         MedicalTermEntity(
             id = 3019,
@@ -1992,6 +2000,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌæpəpˈtoʊsɪs/",
+
+            exampleEn = "The Apoptosis is Programmed cell death characterized by cell shrinkage, chromatin condensation, and formation of apoptotic bodies.",        ),
         ),
         MedicalTermEntity(
             id = 3066,
@@ -2005,6 +2015,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/nɪˈkroʊsɪs/",
+
+            exampleEn = "The Necrosis is Uncontrolled cell death caused by injury or disease characterized by cell swelling and membrane rupture.",        ),
         ),
         MedicalTermEntity(
             id = 3067,
@@ -2018,6 +2030,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌniːoʊˈpleɪziə/",
+
+            exampleEn = "The Neoplasia is Abnormal and uncontrolled proliferation of cells that may be benign or malignant.",        ),
         ),
         MedicalTermEntity(
             id = 3068,
@@ -2078,6 +2092,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/dɪsˈpleɪziə/",
+
+            exampleEn = "The Dysplasia is Disordered and abnormal cell development characterized by pleomorphism, increased mitoses, and nuclear atypia.",        ),
         ),
         MedicalTermEntity(
             id = 3072,
@@ -2105,6 +2121,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌænəˈpleɪziə/",
+
+            exampleEn = "The Anaplasia is Loss of structural and functional differentiation in cells; a hallmark of malignancy.",        ),
         ),
         MedicalTermEntity(
             id = 3074,
@@ -2380,6 +2398,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪˈskiːmiə/",
+
+            exampleEn = "The Ischemia is Insufficient blood supply to a tissue or organ causing cellular hypoxia and potential necrosis.",        ),
         ),
         MedicalTermEntity(
             id = 3092,
@@ -2408,6 +2428,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪˈdiːmə/",
+
+            exampleEn = "The Edema is Abnormal accumulation of fluid in the interstitial space causing swelling.",        ),
         ),
         MedicalTermEntity(
             id = 3094,
@@ -2420,6 +2442,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪnˈfɑːrkʃən/",
+
+            exampleEn = "The Infarction is Tissue death due to obstruction of blood supply (ischemic necrosis); e.g., myocardial infarction.",        ),
         ),
         MedicalTermEntity(
             id = 3095,
@@ -2432,6 +2456,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌhaɪpəˈkroʊmətɪzəm/",
+
+            exampleEn = "The Hyperchromatism is Abnormal darkening of the cell nucleus due to increased DNA content; a sign of malignancy.",        ),
         ),
         MedicalTermEntity(
             id = 3096,
@@ -2444,6 +2470,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌpliːəˈmɔːrfɪzəm/",
+
+            exampleEn = "The Pleomorphism is Variation in the size and shape of cells or nuclei; a key feature of malignant cells.",        ),
         ),
         MedicalTermEntity(
             id = 3097,
@@ -2456,6 +2484,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˈnjuːkliər eɪˈtɪpiə/",
+
+            exampleEn = "The Nuclear atypia is Abnormal nuclear features including irregular contour, hyperchromasia, and prominent nucleoli.",        ),
         ),
         MedicalTermEntity(
             id = 3098,
@@ -2544,6 +2574,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkæriəˈrɛksɪs/",
+
+            exampleEn = "The Karyorrhexis is Fragmentation of the cell nucleus into irregular pieces; occurs in necrosis and apoptosis.",        ),
         ),
         MedicalTermEntity(
             id = 3104,
@@ -2572,6 +2604,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/pɪkˈnoʊsɪs/",
+
+            exampleEn = "The Pyknosis is Irreversible condensation and shrinkage of the nucleus; an early sign of cell death.",        ),
         ),
         MedicalTermEntity(
             id = 3106,
@@ -2600,6 +2634,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌsaɪtəˈmɛɡəli/",
+
+            exampleEn = "The Cytomegaly is Abnormal enlargement of cells well beyond normal size; seen in CMV infection and some tumors.",        ),
         ),
         MedicalTermEntity(
             id = 3108,
@@ -2613,6 +2649,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkæriəˈmɛɡəli/",
+
+            exampleEn = "The Karyomegaly is Abnormal enlargement of the cell nucleus; associated with viral infections and malignancy.",        ),
         ),
         MedicalTermEntity(
             id = 3109,
@@ -2701,6 +2739,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌmaɪkrəʊɪnˈveɪʒən/",
+
+            exampleEn = "The Microinvasion is Minimal invasion of cancer cells beyond the basement membrane measuring less than 3-5mm.",        ),
         ),
         MedicalTermEntity(
             id = 3115,
@@ -2714,6 +2754,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌpærəkɛrəˈtoʊsɪs/",
+
+            exampleEn = "The Parakeratosis is Retention of nuclei in the stratum corneum indicating abnormal keratinization; seen in dysplasia.",        ),
         ),
         MedicalTermEntity(
             id = 3116,
@@ -2727,6 +2769,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌhaɪpəkɛrəˈtoʊsɪs/",
+
+            exampleEn = "The Hyperkeratosis is Abnormal thickening of the stratum corneum (outermost skin layer) without retained nuclei.",        ),
         ),
         MedicalTermEntity(
             id = 3117,
@@ -2755,6 +2799,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌmʌltiˌnjuːkliˈeɪʃən/",
+
+            exampleEn = "The Multinucleation is Presence of multiple nuclei within a single cell; seen in giant cells, viral infections, and some tumors.",        ),
         ),
         MedicalTermEntity(
             id = 3119,
@@ -2976,6 +3022,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/əˈliːl/",
+
+            exampleEn = "The Allele is One of two or more variants of a gene occupying the same locus on homologous chromosomes.",        ),
         ),
         MedicalTermEntity(
             id = 3134,
@@ -3306,6 +3354,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˈæktɪv ˈtrænspɔːrt/",
+
+            exampleEn = "The Active transport is Movement of molecules against their concentration gradient requiring ATP energy and carrier proteins.",        ),
         ),
         MedicalTermEntity(
             id = 3156,
@@ -3409,6 +3459,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/eɪˈtɪpɪkəl sɛlz/",
+
+            exampleEn = "The Atypical cells is Cells showing abnormal features that are neither clearly benign nor malignant.",        ),
         ),
         MedicalTermEntity(
             id = 3163,
@@ -3482,6 +3534,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/loʊ ɡreɪd dɪsˈpleɪziə/",
+
+            exampleEn = "The Low-grade dysplasia (LGSIL) is Mild cervical cellular abnormalities corresponding to CIN 1; often caused by HPV infection.",        ),
         ),
         MedicalTermEntity(
             id = 3168,
@@ -3495,6 +3549,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/haɪ ɡreɪd dɪsˈpleɪziə/",
+
+            exampleEn = "The High-grade dysplasia (HGSIL) is Moderate to severe cervical cellular abnormalities corresponding to CIN 2-3; high risk of progression to cancer.",        ),
         ),
         MedicalTermEntity(
             id = 3169,
@@ -3598,6 +3654,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/sɛˈljʊlər eɪˈtɪpiə/",
+
+            exampleEn = "The Cellular atypia is Abnormal cellular features including altered size, shape, nuclear characteristics, or staining pattern.",        ),
         ),
         MedicalTermEntity(
             id = 3176,
@@ -3610,6 +3668,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/riˈæktɪv eɪˈtɪpiə/",
+
+            exampleEn = "The Reactive atypia is Cellular changes secondary to inflammation, infection, or trauma that mimic but are not malignancy.",        ),
         ),
         MedicalTermEntity(
             id = 3177,
@@ -3637,6 +3697,8 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/eɪ ɛs siː juː ɛs/",
+
+            exampleEn = "The ASC-US is Atypical squamous cells of undetermined significance; a borderline cervical cytology result requiring follow-up.",        ),
         ),
         MedicalTermEntity(
             id = 3179,

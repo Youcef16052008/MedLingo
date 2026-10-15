@@ -140,6 +140,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/ˈsoʊʃəl ˈhɪstri/",
+
+            exampleEn = "The Social history is Information about lifestyle, habits, occupation, and social factors affecting health.",        ),
         ),
         MedicalTermEntity(
             id = 2499,
@@ -167,6 +169,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/ɪnˈspɛkʃən/",
+
+            exampleEn = "The Inspection is Visual examination of a patient's body surface and movements.",        ),
         ),
         MedicalTermEntity(
             id = 2501,
@@ -179,6 +183,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/pælˈpeɪʃən/",
+
+            exampleEn = "The Palpation is Examination using the sense of touch to assess body structures and organs.",        ),
         ),
         MedicalTermEntity(
             id = 2502,
@@ -236,6 +242,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Signes Vitaux",
             ipaPhonetic = "/ˈvaɪtəl saɪnz/",
+
+            exampleEn = "The Vital signs is Basic physiological measurements: temperature, pulse, respiration rate, and blood pressure.",        ),
         ),
         MedicalTermEntity(
             id = 2506,
@@ -371,6 +379,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Signes Vitaux",
             ipaPhonetic = "/ˌhaɪpɜːrˈtɛnʃən/",
+
+            exampleEn = "The Hypertension is Persistently elevated blood pressure ≥140/90 mmHg; a major cardiovascular risk factor.",        ),
         ),
         MedicalTermEntity(
             id = 2515,
@@ -461,6 +471,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/tʃɛst peɪn/",
+
+            exampleEn = "The Chest pain (Precordialgia) is Pain felt in the chest; can originate from cardiac, pulmonary, or musculoskeletal causes.",        ),
         ),
         MedicalTermEntity(
             id = 2521,
@@ -473,6 +485,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/dɪspˈniːə/",
+
+            exampleEn = "The Dyspnea is Subjective sensation of shortness of breath or difficult breathing.",        ),
         ),
         MedicalTermEntity(
             id = 2522,
@@ -486,6 +500,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ɔːrˈθɒpniə/",
+
+            exampleEn = "The Orthopnea is Dyspnea occurring in the lying position relieved by sitting upright; sign of heart failure.",        ),
         ),
         MedicalTermEntity(
             id = 2523,
@@ -529,6 +545,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ɪˈdiːmə/",
+
+            exampleEn = "The Edema is Abnormal accumulation of fluid in interstitial tissues causing swelling.",        ),
         ),
         MedicalTermEntity(
             id = 2526,
@@ -602,6 +620,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ˈdʒuːɡjʊlər ˈviːnəs dɪˈstɛnʃən/",
+
+            exampleEn = "The Jugular venous distension (JVD) is Visible distension of the jugular veins indicating elevated central venous pressure.",        ),
         ),
         MedicalTermEntity(
             id = 2531,
@@ -629,6 +649,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ˌkæpɪleri rɪˈfɪl taɪm/",
+
+            exampleEn = "The Capillary refill time (CRT) is Time for color to return to a fingertip after pressure applied; normal <2 seconds.",        ),
         ),
         MedicalTermEntity(
             id = 2533,
@@ -641,6 +663,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/pəˈrɪfərəl ˈpʌlsɪz/",
+
+            exampleEn = "The Peripheral pulses is Palpable arterial pulsations at peripheral sites used to assess cardiovascular status.",        ),
         ),
         MedicalTermEntity(
             id = 2534,
@@ -714,6 +738,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ˌklɔːdɪˈkeɪʃən/",
+
+            exampleEn = "The Claudication is Leg pain during exercise caused by inadequate blood flow to muscles; relieves with rest.",        ),
         ),
         MedicalTermEntity(
             id = 2539,
@@ -756,6 +782,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈspjuːtəm/",
+
+            exampleEn = "The Sputum is Material coughed up from the lungs; characteristics (color, consistency) aid diagnosis.",        ),
         ),
         MedicalTermEntity(
             id = 2542,
@@ -798,6 +826,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈkrækəlz/",
+
+            exampleEn = "The Crackles (Rales) is Abnormal non-musical lung sounds; fine crackles suggest pulmonary edema or fibrosis.",        ),
         ),
         MedicalTermEntity(
             id = 2545,
@@ -810,6 +840,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈrɒŋkaɪ/",
+
+            exampleEn = "The Rhonchi is Low-pitched abnormal lung sounds caused by secretions in large airways.",        ),
         ),
         MedicalTermEntity(
             id = 2546,
@@ -839,6 +871,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/plʊˈrɪtɪk tʃɛst peɪn/",
+
+            exampleEn = "The Pleuritic chest pain is Sharp chest pain worsened by breathing or coughing; indicates pleural inflammation.",        ),
         ),
         MedicalTermEntity(
             id = 2548,
@@ -851,6 +885,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈæpniə/",
+
+            exampleEn = "The Apnea is Temporary cessation of breathing lasting more than 10 seconds.",        ),
         ),
         MedicalTermEntity(
             id = 2549,
@@ -878,6 +914,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˌhaɪpɜːrˈkæpniə/",
+
+            exampleEn = "The Hypercapnia is Excess carbon dioxide in the blood (PaCO2 >45 mmHg); causes respiratory acidosis.",        ),
         ),
         MedicalTermEntity(
             id = 2551,
@@ -921,6 +959,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈfrɛmɪtəs/",
+
+            exampleEn = "The Fremitus (vocal) is Vibration felt on the chest wall when a patient speaks; increased in consolidation, decreased in effusion.",        ),
         ),
         MedicalTermEntity(
             id = 2554,
@@ -948,6 +988,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈæksɛsəri ˈmʌsəlz/",
+
+            exampleEn = "The Use of accessory muscles is Recruitment of neck and shoulder muscles during breathing indicating respiratory distress.",        ),
         ),
         MedicalTermEntity(
             id = 2556,
@@ -960,6 +1002,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˌɪntɜːrˈkɒstəl rɪˈtrækʃən/",
+
+            exampleEn = "The Intercostal retraction is Visible indrawing of soft tissues between ribs during inspiration; indicates respiratory distress.",        ),
         ),
         MedicalTermEntity(
             id = 2557,
@@ -987,6 +1031,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈkʊsmɔːl ˈbriːðɪŋ/",
+
+            exampleEn = "The Kussmaul breathing is Deep, labored, rapid breathing seen in metabolic acidosis (e.g., diabetic ketoacidosis).",        ),
         ),
         MedicalTermEntity(
             id = 2559,
@@ -1000,6 +1046,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/æbˈdɒmɪnəl peɪn/",
+
+            exampleEn = "The Abdominal pain is Pain felt in the abdomen; characterized by location, quality, radiation, severity, and timing.",        ),
         ),
         MedicalTermEntity(
             id = 2560,
@@ -1027,6 +1075,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˈvɒmɪtɪŋ/",
+
+            exampleEn = "The Vomiting (Emesis) is Forceful expulsion of stomach contents through the mouth.",        ),
         ),
         MedicalTermEntity(
             id = 2562,
@@ -1054,6 +1104,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/dɪsˈfeɪdʒiə/",
+
+            exampleEn = "The Dysphagia is Difficulty swallowing; can be due to oropharyngeal or esophageal causes.",        ),
         ),
         MedicalTermEntity(
             id = 2564,
@@ -1098,6 +1150,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌkɒnstɪˈpeɪʃən/",
+
+            exampleEn = "The Constipation is Infrequent bowel movements (fewer than 3 per week) with hard, dry stools.",        ),
         ),
         MedicalTermEntity(
             id = 2567,
@@ -1127,6 +1181,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌhɛpətoʊˈmɛɡəli/",
+
+            exampleEn = "The Hepatomegaly is Enlargement of the liver palpable below the right costal margin.",        ),
         ),
         MedicalTermEntity(
             id = 2569,
@@ -1140,6 +1196,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌspliːnoʊˈmɛɡəli/",
+
+            exampleEn = "The Splenomegaly is Enlargement of the spleen extending below the left costal margin.",        ),
         ),
         MedicalTermEntity(
             id = 2570,
@@ -1152,6 +1210,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/əˈsaɪtiːz/",
+
+            exampleEn = "The Ascites is Abnormal accumulation of fluid in the peritoneal cavity causing abdominal distension.",        ),
         ),
         MedicalTermEntity(
             id = 2571,
@@ -1164,6 +1224,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˈmɛliːnə/",
+
+            exampleEn = "The Melena is Black, tarry stools resulting from digested blood; indicates upper GI bleeding.",        ),
         ),
         MedicalTermEntity(
             id = 2572,
@@ -1176,6 +1238,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌhɛmətəˈkiːziə/",
+
+            exampleEn = "The Hematochezia is Passage of fresh red blood per rectum; indicates lower GI bleeding.",        ),
         ),
         MedicalTermEntity(
             id = 2573,
@@ -1188,6 +1252,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/rɪˈbaʊnd ˈtɛndərnɪs/",
+
+            exampleEn = "The Rebound tenderness is Pain upon rapid release of deep pressure applied to the abdomen; indicates peritoneal irritation.",        ),
         ),
         MedicalTermEntity(
             id = 2574,
@@ -1200,6 +1266,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˈmɜːrfiz saɪn/",
+
+            exampleEn = "The Murphy's sign is Inspiratory arrest during palpation of the right hypochondrium; indicates acute cholecystitis.",        ),
         ),
         MedicalTermEntity(
             id = 2575,
@@ -1242,6 +1310,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌænəˈrɛksiə/",
+
+            exampleEn = "The Anorexia is Loss of appetite often accompanying systemic disease, cancer, or psychiatric conditions.",        ),
         ),
         MedicalTermEntity(
             id = 2578,
@@ -1270,6 +1340,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/ˈhɛdeɪk/",
+
+            exampleEn = "The Headache (Cephalalgia) is Pain in the head or upper neck; one of the most common symptoms in medicine.",        ),
         ),
         MedicalTermEntity(
             id = 2580,
@@ -1312,6 +1384,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/ˈsiːʒər/",
+
+            exampleEn = "The Seizure (Convulsion) is Abnormal, excessive electrical activity in the brain causing convulsions or altered consciousness.",        ),
         ),
         MedicalTermEntity(
             id = 2583,
@@ -1324,6 +1398,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/pəˈræləsɪs/",
+
+            exampleEn = "The Paralysis is Complete loss of muscle function in one or more muscles or muscle groups.",        ),
         ),
         MedicalTermEntity(
             id = 2584,
@@ -1337,6 +1413,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/pəˈriːsɪs/",
+
+            exampleEn = "The Paresis is Partial or incomplete muscle weakness; less severe than paralysis.",        ),
         ),
         MedicalTermEntity(
             id = 2585,
@@ -1349,6 +1427,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/əˈfeɪʒə/",
+
+            exampleEn = "The Aphasia is Impairment of language ability including speaking, comprehension, reading, and writing.",        ),
         ),
         MedicalTermEntity(
             id = 2586,
@@ -1376,6 +1456,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/əˈtæksiə/",
+
+            exampleEn = "The Ataxia is Lack of voluntary coordination of muscle movements; often cerebellar in origin.",        ),
         ),
         MedicalTermEntity(
             id = 2588,
@@ -1404,6 +1486,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/mɪˈnɪndʒiəl saɪnz/",
+
+            exampleEn = "The Meningeal signs is Clinical signs indicating meningeal irritation: nuchal rigidity, Kernig's sign, Brudzinski's sign.",        ),
         ),
         MedicalTermEntity(
             id = 2590,
@@ -1416,6 +1500,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/ˈnjuːkəl rɪˈdʒɪdɪti/",
+
+            exampleEn = "The Nuchal rigidity is Stiffness and resistance to flexion of the neck; a hallmark sign of bacterial meningitis.",        ),
         ),
         MedicalTermEntity(
             id = 2591,
@@ -1428,6 +1514,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/bəˈbɪnski saɪn/",
+
+            exampleEn = "The Babinski sign is Upward extension of the big toe when the plantar surface is stroked; indicates upper motor neuron lesion.",        ),
         ),
         MedicalTermEntity(
             id = 2592,
@@ -1470,6 +1558,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/dɪˈploʊpiə/",
+
+            exampleEn = "The Diplopia is Double vision; seeing two images of a single object; indicates cranial nerve or muscle dysfunction.",        ),
         ),
         MedicalTermEntity(
             id = 2595,
@@ -1512,6 +1602,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/diːp ˈtɛndən ˈriːflɛksɪz/",
+
+            exampleEn = "The Deep tendon reflexes (DTR) is Involuntary responses to tendon percussion; assessed as 0–4+; absent in LMN lesion, brisk in UMN.",        ),
         ),
         MedicalTermEntity(
             id = 2598,
@@ -1525,6 +1617,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ɑːrˈθrældʒiə/",
+
+            exampleEn = "The Arthralgia is Pain in a joint without objective signs of inflammation.",        ),
         ),
         MedicalTermEntity(
             id = 2599,
@@ -1538,6 +1632,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ɑːrˈθraɪtɪs/",
+
+            exampleEn = "The Arthritis is Inflammation of a joint characterized by pain, swelling, warmth, and restricted motion.",        ),
         ),
         MedicalTermEntity(
             id = 2600,
@@ -1550,6 +1646,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ˈmɔːrnɪŋ ˈstɪfnɪs/",
+
+            exampleEn = "The Morning stiffness is Joint stiffness upon waking that improves with activity; lasting >1 hour suggests inflammatory arthritis.",        ),
         ),
         MedicalTermEntity(
             id = 2601,
@@ -1593,6 +1691,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/maɪˈælʤɪə/",
+
+            exampleEn = "The Myalgia is Muscle pain or ache; can be localized or diffuse.",        ),
         ),
         MedicalTermEntity(
             id = 2604,
@@ -1620,6 +1720,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ˈtɛndərnɪs/",
+
+            exampleEn = "The Tenderness is Pain elicited by pressure applied during palpation of a body part.",        ),
         ),
         MedicalTermEntity(
             id = 2606,
@@ -1647,6 +1749,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ˈtoʊfaɪ/",
+
+            exampleEn = "The Tophi is Uric acid crystal deposits in joints and soft tissues; pathognomonic of chronic gout.",        ),
         ),
         MedicalTermEntity(
             id = 2608,
@@ -1832,6 +1936,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˌɛrɪˈθiːmə/",
+
+            exampleEn = "The Erythema is Redness of the skin caused by increased blood flow; blanchable on pressure.",        ),
         ),
         MedicalTermEntity(
             id = 2621,
@@ -1844,6 +1950,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈpɜːrpjʊrə/",
+
+            exampleEn = "The Purpura is Purple/red skin discoloration from bleeding into skin; non-blanchable on pressure.",        ),
         ),
         MedicalTermEntity(
             id = 2622,
@@ -1856,6 +1964,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/pɪˈtiːkiˌiː/",
+
+            exampleEn = "The Petechiae is Tiny pinpoint (<2 mm) purpuric hemorrhagic spots; indicates platelet disorders or vasculitis.",        ),
         ),
         MedicalTermEntity(
             id = 2623,
@@ -1869,6 +1979,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ɪˈkɪmoʊsɪs/",
+
+            exampleEn = "The Ecchymosis (Bruise) is Discoloration of skin due to subcutaneous bleeding (bruise); larger than petechiae.",        ),
         ),
         MedicalTermEntity(
             id = 2624,
@@ -1926,6 +2038,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈpælər/",
+
+            exampleEn = "The Pallor is Abnormal paleness of the skin or mucous membranes; indicates anemia, shock, or vasoconstriction.",        ),
         ),
         MedicalTermEntity(
             id = 2628,
@@ -1939,6 +2053,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/dɪsˈjʊəriə/",
+
+            exampleEn = "The Dysuria is Painful or difficult urination; often a sign of UTI.",        ),
         ),
         MedicalTermEntity(
             id = 2629,
@@ -1952,6 +2068,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌhɛməˈtjʊəriə/",
+
+            exampleEn = "The Hematuria is Presence of blood in the urine; can be gross (visible) or microscopic.",        ),
         ),
         MedicalTermEntity(
             id = 2630,
@@ -1965,6 +2083,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌproʊtiːˈnjʊəriə/",
+
+            exampleEn = "The Proteinuria is Excess protein in urine (>150 mg/day); indicates glomerular damage or tubular dysfunction.",        ),
         ),
         MedicalTermEntity(
             id = 2631,
@@ -1978,6 +2098,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌɒlɪˈɡjʊəriə/",
+
+            exampleEn = "The Oliguria is Decreased urine output <400 mL/day; indicates renal failure or severe dehydration.",        ),
         ),
         MedicalTermEntity(
             id = 2632,
@@ -1991,6 +2113,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈænjʊəriə/",
+
+            exampleEn = "The Anuria is Absence of urine production or output <50 mL/day; severe sign of renal failure or obstruction.",        ),
         ),
         MedicalTermEntity(
             id = 2633,
@@ -2004,6 +2128,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌpɒliˈjʊəriə/",
+
+            exampleEn = "The Polyuria is Excessive urine production >3 L/day; seen in diabetes mellitus, diabetes insipidus.",        ),
         ),
         MedicalTermEntity(
             id = 2634,
@@ -2016,6 +2142,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈjʊərɪnəri ˈfriːkwənsi/",
+
+            exampleEn = "The Urinary frequency is Abnormally frequent urination (more than 8 times/day) without increased volume.",        ),
         ),
         MedicalTermEntity(
             id = 2635,
@@ -2028,6 +2156,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌjʊərɪnəri ɪnˈkɒntɪnəns/",
+
+            exampleEn = "The Urinary incontinence is Involuntary loss of urine; types include stress, urge, and overflow incontinence.",        ),
         ),
         MedicalTermEntity(
             id = 2636,
@@ -2041,6 +2171,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌkɒstoʊˈvɜːrtibrəl ˈæŋɡəl/",
+
+            exampleEn = "The Costovertebral angle (CVA) tenderness is Tenderness on percussion of the costovertebral angle; indicates pyelonephritis.",        ),
         ),
         MedicalTermEntity(
             id = 2637,
@@ -2053,6 +2185,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈriːnəl ˈkɒlɪk/",
+
+            exampleEn = "The Renal colic is Severe flank pain radiating to the groin caused by kidney stone obstruction.",        ),
         ),
         MedicalTermEntity(
             id = 2638,
@@ -2097,6 +2231,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈhɛzɪtənsi/",
+
+            exampleEn = "The Hesitancy is Difficulty initiating urination; common in prostatic hypertrophy or urethral stricture.",        ),
         ),
         MedicalTermEntity(
             id = 2641,
@@ -2110,6 +2246,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌɡlaɪkəʊˈsjʊəriə/",
+
+            exampleEn = "The Glycosuria is Presence of glucose in urine; indicates diabetes mellitus or renal tubular defect.",        ),
         ),
         MedicalTermEntity(
             id = 2642,
@@ -2122,6 +2260,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/flæŋk peɪn/",
+
+            exampleEn = "The Flank pain is Pain in the lateral portion of the back between the ribs and hip; indicates renal pathology.",        ),
         ),
         MedicalTermEntity(
             id = 2643,
@@ -2134,6 +2274,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌpɒliˈdɪpsiə/",
+
+            exampleEn = "The Polydipsia is Excessive or abnormal thirst; a classic symptom of diabetes mellitus and diabetes insipidus.",        ),
         ),
         MedicalTermEntity(
             id = 2644,
@@ -2146,6 +2288,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌpɒliˈfeɪdʒiə/",
+
+            exampleEn = "The Polyphagia is Excessive hunger or increased food intake; seen in uncontrolled diabetes mellitus.",        ),
         ),
         MedicalTermEntity(
             id = 2645,
@@ -2158,6 +2302,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/weɪt lɒs/",
+
+            exampleEn = "The Weight loss (involuntary) is Unintentional decrease in body weight; associated with cancer, diabetes, hyperthyroidism, and TB.",        ),
         ),
         MedicalTermEntity(
             id = 2646,
@@ -2170,6 +2316,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˈɡɔɪtər/",
+
+            exampleEn = "The Goiter is Enlargement of the thyroid gland visible as a swelling in the neck.",        ),
         ),
         MedicalTermEntity(
             id = 2647,
@@ -2182,6 +2330,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌɛksɒfˈθælməs/",
+
+            exampleEn = "The Exophthalmos is Protrusion of the eyeballs; a sign of Graves' disease (hyperthyroidism).",        ),
         ),
         MedicalTermEntity(
             id = 2648,
@@ -2194,6 +2344,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌɡɪnɪkəʊˈmæstiə/",
+
+            exampleEn = "The Gynecomastia is Enlargement of breast tissue in males; caused by hormonal imbalance, drugs, or liver disease.",        ),
         ),
         MedicalTermEntity(
             id = 2649,
@@ -2207,6 +2359,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌækroʊˈmɛɡəli/",
+
+            exampleEn = "The Acromegaly signs is Clinical features of excess growth hormone: enlarged hands, feet, jaw, and facial features.",        ),
         ),
         MedicalTermEntity(
             id = 2650,
@@ -2219,6 +2373,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˈkʊʃɪŋɔɪd/",
+
+            exampleEn = "The Cushingoid features is Signs of excess cortisol: moon face, buffalo hump, central obesity, purple striae.",        ),
         ),
         MedicalTermEntity(
             id = 2651,
@@ -2231,6 +2387,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˈkvɒstɛks saɪn/",
+
+            exampleEn = "The Chvostek's sign is Facial muscle spasm on tapping the facial nerve; indicates hypocalcemia.",        ),
         ),
         MedicalTermEntity(
             id = 2652,
@@ -2243,6 +2401,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/truːˈsoʊz saɪn/",
+
+            exampleEn = "The Trousseau's sign is Carpal spasm provoked by inflating a blood pressure cuff above systolic pressure; indicates hypocalcemia.",        ),
         ),
         MedicalTermEntity(
             id = 2653,
@@ -2256,6 +2416,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/oʊˈtælʤɪə/",
+
+            exampleEn = "The Otalgia is Ear pain; can be primary (from the ear) or referred (from jaw, throat, or teeth).",        ),
         ),
         MedicalTermEntity(
             id = 2654,
@@ -2283,6 +2445,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/ˈhɪərɪŋ lɒs/",
+
+            exampleEn = "The Hearing loss (Hypoacusis) is Partial or complete inability to hear; classified as conductive or sensorineural.",        ),
         ),
         MedicalTermEntity(
             id = 2656,
@@ -2310,6 +2474,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/ɒdɪnoʊˈfeɪdʒiə/",
+
+            exampleEn = "The Dysphagia vs Odynophagia is Dysphagia: difficulty swallowing; Odynophagia: painful swallowing.",        ),
         ),
         MedicalTermEntity(
             id = 2658,
@@ -2354,6 +2520,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/ˌfoʊtəˈfoʊbiə/",
+
+            exampleEn = "The Photophobia is Abnormal sensitivity or intolerance to light; seen in meningitis, migraine, and uveitis.",        ),
         ),
         MedicalTermEntity(
             id = 2661,
@@ -2366,6 +2534,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/nɪˈstæɡməs/",
+
+            exampleEn = "The Nystagmus is Involuntary rhythmic oscillation of the eyes; can be horizontal, vertical, or rotatory.",        ),
         ),
         MedicalTermEntity(
             id = 2662,
@@ -2378,6 +2548,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/æˈnɒzmiə/",
+
+            exampleEn = "The Anosmia is Loss of sense of smell; associated with COVID-19, nasal pathology, and olfactory nerve damage.",        ),
         ),
         MedicalTermEntity(
             id = 2663,
@@ -2391,6 +2563,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/eɪˌmɛnəˈriːə/",
+
+            exampleEn = "The Amenorrhea is Absence of menstruation; primary (never occurred) or secondary (ceased after establishment).",        ),
         ),
         MedicalTermEntity(
             id = 2664,
@@ -2404,6 +2578,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/dɪsˌmɛnəˈriːə/",
+
+            exampleEn = "The Dysmenorrhea is Painful menstruation; primary (no pathology) or secondary (due to endometriosis, fibroids).",        ),
         ),
         MedicalTermEntity(
             id = 2665,
@@ -2417,6 +2593,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/ˌmɛtrəˈreɪdʒiə/",
+
+            exampleEn = "The Metrorrhagia is Uterine bleeding occurring between menstrual periods.",        ),
         ),
         MedicalTermEntity(
             id = 2666,
@@ -2475,6 +2653,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/ˌpriːɪˈklæmpsiə/",
+
+            exampleEn = "The Preeclampsia signs is Hypertension, proteinuria, and edema after 20 weeks gestation; can progress to eclampsia.",        ),
         ),
         MedicalTermEntity(
             id = 2670,
@@ -2502,6 +2682,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/ˈtʃædwɪks saɪn/",
+
+            exampleEn = "The Chadwick's sign is Bluish-purple discoloration of the vaginal walls and cervix; early sign of pregnancy.",        ),
         ),
         MedicalTermEntity(
             id = 2672,
@@ -2560,6 +2742,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˌlɪmfædiˈnɒpəθi/",
+
+            exampleEn = "The Lymphadenopathy is Abnormal enlargement of lymph nodes; can be local (infection) or generalized (lymphoma, HIV).",        ),
         ),
         MedicalTermEntity(
             id = 2676,
@@ -2587,6 +2771,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˌdaɪəfəˈriːsɪs/",
+
+            exampleEn = "The Diaphoresis is Excessive, abnormal sweating; associated with fever, pain, shock, and hypoglycemia.",        ),
         ),
         MedicalTermEntity(
             id = 2678,
@@ -2676,6 +2862,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˈpɑːmər ɛrɪˈθiːmə/",
+
+            exampleEn = "The Palmer erythema is Redness of the palms at thenar and hypothenar eminences; associated with liver disease and pregnancy.",        ),
         ),
         MedicalTermEntity(
             id = 2684,
@@ -2688,6 +2876,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˌljuːkəˈnɪkiə/",
+
+            exampleEn = "The Leukonychia is White discoloration of the nails; associated with hypoalbuminemia in liver disease.",        ),
         ),
         MedicalTermEntity(
             id = 2685,
@@ -2700,6 +2890,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˈkeɪpʌt mɪˈdjuːziː/",
+
+            exampleEn = "The Caput medusae is Dilated paraumbilical veins radiating from the umbilicus; sign of portal hypertension.",        ),
         ),
         MedicalTermEntity(
             id = 2686,
@@ -2728,6 +2920,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˈɡɑːrdɪŋ/",
+
+            exampleEn = "The Guarding (abdominal) is Involuntary contraction of abdominal muscles on palpation; indicates peritoneal irritation.",        ),
         ),
         MedicalTermEntity(
             id = 2688,
@@ -2740,6 +2934,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Psychiatrique",
             ipaPhonetic = "/ˌɔːriɛnˈteɪʃən/",
+
+            exampleEn = "The Orientation is Awareness of time, place, and person; assessed as oriented x3 (or disoriented).",        ),
         ),
         MedicalTermEntity(
             id = 2689,
@@ -2827,6 +3023,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Psychiatrique",
             ipaPhonetic = "/ˌædʒɪˈteɪʃən/",
+
+            exampleEn = "The Agitation is Excessive motor activity or restlessness associated with psychological tension.",        ),
         ),
         MedicalTermEntity(
             id = 2695,
@@ -2854,6 +3052,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Psychiatrique",
             ipaPhonetic = "/kɒɡˈnɪʃən/",
+
+            exampleEn = "The Cognition is Mental processes including memory, attention, language, and executive function.",        ),
         ),
         MedicalTermEntity(
             id = 2697,
@@ -2881,6 +3081,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/rɪˈfɜːrd peɪn/",
+
+            exampleEn = "The Referred pain is Pain felt at a location distant from its actual source due to shared nerve pathways.",        ),
         ),
         MedicalTermEntity(
             id = 2699,
@@ -2906,6 +3108,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌpærəkˈsɪzməl peɪn/",
+
+            exampleEn = "The Paroxysmal pain is Sudden, brief, and severe attacks of pain separated by pain-free intervals.",        ),
         ),
         MedicalTermEntity(
             id = 2701,
@@ -2918,6 +3122,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɒnstɪˈtjuːʃənəl ˈsɪmptəmz/",
+
+            exampleEn = "The Constitutional symptoms is Non-specific symptoms affecting the whole body: fever, fatigue, weight loss, night sweats.",        ),
         ),
         MedicalTermEntity(
             id = 2702,
@@ -2930,6 +3136,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/naɪt swɛts/",
+
+            exampleEn = "The Night sweats is Recurrent episodes of drenching sweating during sleep; associated with TB, lymphoma, and HIV.",        ),
         ),
         MedicalTermEntity(
             id = 2703,
@@ -2989,6 +3197,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈproʊdroʊm/",
+
+            exampleEn = "The Prodrome is Early symptoms indicating the onset of a disease before specific signs appear.",        ),
         ),
         MedicalTermEntity(
             id = 2707,
@@ -3031,6 +3241,8 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/əˈkjuːt vɜːrsəs ˈkrɒnɪk/",
+
+            exampleEn = "The Acute vs Chronic is Acute: sudden onset, short duration; Chronic: gradual onset, long duration >3 months.",        ),
         ),
         MedicalTermEntity(
             id = 2710,

@@ -45,6 +45,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ɛks lɪŋkt/",
+
+            exampleEn = "The X-linked inheritance is Inheritance of genes located on the X chromosome (e.g., hemophilia, color blindness).",        ),
         ),
         MedicalTermEntity(
             id = 1539,
@@ -195,6 +197,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌbiːɑːrˈsiːeɪ/",
+
+            exampleEn = "The BRCA1/BRCA2 is Tumor suppressor genes; mutations significantly increase breast and ovarian cancer risk.",        ),
         ),
         MedicalTermEntity(
             id = 1549,
@@ -325,6 +329,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/dʒəˈnɛtɪk drɪft/",
+
+            exampleEn = "The Genetic drift is Random changes in allele frequencies in a small population due to chance.",        ),
         ),
         MedicalTermEntity(
             id = 1558,
@@ -397,6 +403,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˌvɛəriˈeɪʃən/",
+
+            exampleEn = "The Genetic variation is Differences in DNA sequences among individuals in a population.",        ),
         ),
         MedicalTermEntity(
             id = 1563,
@@ -455,6 +463,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ˌmɒdɪfɪˈkeɪʃən/",
+
+            exampleEn = "The Histone modification is Chemical changes to histone proteins affecting chromatin structure and gene expression.",        ),
         ),
         MedicalTermEntity(
             id = 1567,
@@ -875,6 +885,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˈnɛkst ˌdʒɛnəˈreɪʃən/",
+
+            exampleEn = "The Next-generation sequencing (NGS) is High-throughput sequencing technologies allowing rapid sequencing of millions of DNA fragments.",        ),
         ),
         MedicalTermEntity(
             id = 1595,
@@ -1035,6 +1047,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈsætəlaɪt/",
+
+            exampleEn = "The Satellite DNA is Highly repetitive non-coding DNA sequences found near centromeres and telomeres.",        ),
         ),
         MedicalTermEntity(
             id = 1606,
@@ -1048,6 +1062,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈmaɪkroʊˌsætəlaɪt/",
+
+            exampleEn = "The Microsatellite (STR) is Short tandem repeat sequences used in DNA fingerprinting and forensic analysis.",        ),
         ),
         MedicalTermEntity(
             id = 1607,
@@ -1325,6 +1341,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/əˈliːl/",
+
+            exampleEn = "The Allele is Alternative forms of a gene occupying the same locus on homologous chromosomes.",        ),
         ),
         MedicalTermEntity(
             id = 1624,
@@ -1457,6 +1475,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˌvɛəriˈeɪʃən/",
+
+            exampleEn = "The Variation is Differences in characteristics between individuals of the same species.",        ),
         ),
         MedicalTermEntity(
             id = 1633,
@@ -1649,6 +1669,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/beɪs pɛər/",
+
+            exampleEn = "The Base pair is Two complementary nitrogenous bases joined by hydrogen bonds (A-T, G-C).",        ),
         ),
         MedicalTermEntity(
             id = 1646,
@@ -1661,6 +1683,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˌkɒmplɪˈmɛntəri/",
+
+            exampleEn = "The Complementary base pairing is specific pairing rules: A with T (or U) and G with C.",        ),
         ),
         MedicalTermEntity(
             id = 1647,
@@ -1780,6 +1804,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈnjuːkliəsoʊm/",
+
+            exampleEn = "The Nucleosome is basic unit of chromatin: DNA wrapped around a histone octamer.",        ),
         ),
         MedicalTermEntity(
             id = 1655,
@@ -1838,6 +1864,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌsɛmiˈkɒnsərvətɪv/",
+
+            exampleEn = "The Semi-conservative replication is Each new DNA molecule contains one original strand and one new strand.",        ),
         ),
         MedicalTermEntity(
             id = 1659,
@@ -1970,6 +1998,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌoʊkəˈzɑːki/",
+
+            exampleEn = "The Okazaki fragment is Short DNA segments synthesized on the lagging strand during replication.",        ),
         ),
         MedicalTermEntity(
             id = 1668,
@@ -2012,6 +2042,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈtɛləmɪər/",
+
+            exampleEn = "The Telomere is Repetitive DNA sequences at the ends of chromosomes protecting them from degradation.",        ),
         ),
         MedicalTermEntity(
             id = 1671,
@@ -2429,6 +2461,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/stɒp ˈkoʊdɒn/",
+
+            exampleEn = "The Stop codon is Three codons (UAA, UAG, UGA) signaling the end of translation without encoding amino acids.",        ),
         ),
         MedicalTermEntity(
             id = 1699,
@@ -2501,6 +2535,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˈpɒlisoʊm/",
+
+            exampleEn = "The Polysome (Polyribosome) is Multiple ribosomes simultaneously translating the same mRNA molecule.",        ),
         ),
         MedicalTermEntity(
             id = 1704,
@@ -2513,6 +2549,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˌpoʊst trænsˈleɪʃənəl/",
+
+            exampleEn = "The Post-translational modification is Chemical modifications of a protein after synthesis (glycosylation, phosphorylation, etc.).",        ),
         ),
         MedicalTermEntity(
             id = 1705,
@@ -2645,6 +2683,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈmjuːtədʒɛn/",
+
+            exampleEn = "The Mutagen is An agent causing mutations (physical: UV, X-rays; chemical: alkylating agents).",        ),
         ),
         MedicalTermEntity(
             id = 1714,
@@ -2687,6 +2727,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/rɪˈpɛər/",
+
+            exampleEn = "The DNA repair is Cellular mechanisms correcting damage or errors in the DNA sequence.",        ),
         ),
         MedicalTermEntity(
             id = 1717,
@@ -2744,6 +2786,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/mɛnˈdiːliən/",
+
+            exampleEn = "The Mendelian genetics is Genetics based on Gregor Mendel's principles of inheritance.",        ),
         ),
         MedicalTermEntity(
             id = 1721,
@@ -2756,6 +2800,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌsɛɡrɪˈɡeɪʃən/",
+
+            exampleEn = "The Law of segregation is Mendel's first law: allele pairs separate during gamete formation.",        ),
         ),
         MedicalTermEntity(
             id = 1722,
@@ -2768,6 +2814,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt əˈsɔːrtmənt/",
+
+            exampleEn = "The Law of independent assortment is Mendel's second law: genes on different chromosomes assort independently.",        ),
         ),
         MedicalTermEntity(
             id = 1723,
@@ -2780,6 +2828,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌmɒnoʊˈhaɪbrɪd/",
+
+            exampleEn = "The Monohybrid cross is genetic cross involving a single trait with a 3:1 phenotypic ratio in F2.",        ),
         ),
         MedicalTermEntity(
             id = 1724,
@@ -2792,6 +2842,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌdaɪˈhaɪbrɪd/",
+
+            exampleEn = "The Dihybrid cross is genetic cross involving two traits with a 9:3:3:1 phenotypic ratio in F2.",        ),
         ),
         MedicalTermEntity(
             id = 1725,
@@ -2892,6 +2944,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌpɒlɪˈdʒɛnɪk/",
+
+            exampleEn = "The Polygenic inheritance is Traits controlled by multiple genes showing a continuous range of phenotypes.",        ),
         ),
         MedicalTermEntity(
             id = 1732,
@@ -3023,6 +3077,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈsɛntrəl ˈdɒɡmə/",
+
+            exampleEn = "The Central dogma is fundamental principle: DNA → RNA → Protein (information flow in cells).",        ),
         ),
         MedicalTermEntity(
             id = 1741,
@@ -3081,6 +3137,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈmaɪkroʊ/",
+
+            exampleEn = "The miRNA (MicroRNA) is Small non-coding RNAs (~22 nucleotides) regulating gene expression post-transcriptionally.",        ),
         ),
         MedicalTermEntity(
             id = 1745,
@@ -3093,6 +3151,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/smɔːl ˌɪntəˈfɪərɪŋ/",
+
+            exampleEn = "The siRNA (Small interfering RNA) is Small RNA molecules inducing gene silencing by degrading complementary mRNA.",        ),
         ),
         MedicalTermEntity(
             id = 1746,
@@ -3151,6 +3211,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/maɪˈtoʊsɪs/",
+
+            exampleEn = "The Mitosis is Cell division producing two genetically identical daughter cells.",        ),
         ),
         MedicalTermEntity(
             id = 1750,
@@ -3240,6 +3302,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈkroʊmətɪd/",
+
+            exampleEn = "The Chromatid is One of two identical copies of a chromosome joined at the centromere after DNA replication.",        ),
         ),
         MedicalTermEntity(
             id = 1756,
@@ -3267,6 +3331,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈdɪplɔɪd/",
+
+            exampleEn = "The Diploid (2n) is cell or organism having two complete sets of chromosomes (humans: 2n = 46).",        ),
         ),
         MedicalTermEntity(
             id = 1758,
@@ -3279,6 +3345,8 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈhæplɔɪd/",
+
+            exampleEn = "The Haploid (n) is cell or organism having one complete set of chromosomes (gametes: n = 23).",        ),
         ),
         MedicalTermEntity(
             id = 1759,

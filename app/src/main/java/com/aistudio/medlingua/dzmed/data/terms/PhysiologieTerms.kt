@@ -409,6 +409,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈæktɪv ˈtrænspɔːrt/",
+
+            exampleEn = "The Active transport is Movement of molecules against concentration gradient using energy (ATP).",        ),
         ),
         MedicalTermEntity(
             id = 438,
@@ -421,6 +423,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈpæsɪv ˈtrænspɔːrt/",
+
+            exampleEn = "The Passive transport is Movement of molecules along the concentration gradient without energy.",        ),
         ),
         MedicalTermEntity(
             id = 439,
@@ -433,6 +437,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/fəˈsɪlɪteɪtɪd dɪˈfjuːʒən/",
+
+            exampleEn = "The Facilitated diffusion is Passive transport of molecules through membrane proteins.",        ),
         ),
         MedicalTermEntity(
             id = 440,
@@ -655,6 +661,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/əˈnæbəlɪzəm/",
+
+            exampleEn = "The Anabolism is Metabolic reactions that build complex molecules from simpler ones.",        ),
         ),
         MedicalTermEntity(
             id = 455,
@@ -667,6 +675,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/kəˈtæbəlɪzəm/",
+
+            exampleEn = "The Catabolism is Metabolic reactions that break down complex molecules releasing energy.",        ),
         ),
         MedicalTermEntity(
             id = 456,
@@ -739,6 +749,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/eɪˈroʊbɪk ˌrɛspɪˈreɪʃən/",
+
+            exampleEn = "The Aerobic respiration is Cellular respiration requiring oxygen to produce ATP.",        ),
         ),
         MedicalTermEntity(
             id = 461,
@@ -751,6 +763,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌænəˈroʊbɪk ˌrɛspɪˈreɪʃən/",
+
+            exampleEn = "The Anaerobic respiration is Cellular respiration without oxygen producing lactic acid or ethanol.",        ),
         ),
         MedicalTermEntity(
             id = 462,
@@ -1134,6 +1148,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈsaɪkəl/",
+
+            exampleEn = "The Cardiac cycle is One complete sequence of contraction and relaxation of the heart.",        ),
         ),
         MedicalTermEntity(
             id = 487,
@@ -1207,6 +1223,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/hɑːrt reɪt/",
+
+            exampleEn = "The Heart rate is number of heartbeats per minute (normal: 60-100 bpm).",        ),
         ),
         MedicalTermEntity(
             id = 492,
@@ -1234,6 +1252,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/sɪˈstɒlɪk ˈprɛʃər/",
+
+            exampleEn = "The Systolic pressure is maximum arterial pressure during ventricular contraction (normal: 120 mmHg).",        ),
         ),
         MedicalTermEntity(
             id = 494,
@@ -1246,6 +1266,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌdaɪəˈstɒlɪk ˈprɛʃər/",
+
+            exampleEn = "The Diastolic pressure is minimum arterial pressure during ventricular relaxation (normal: 80 mmHg).",        ),
         ),
         MedicalTermEntity(
             id = 495,
@@ -1258,6 +1280,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpoʊˈtɛnʃən/",
+
+            exampleEn = "The Hypotension is Abnormally low blood pressure below 90/60 mmHg.",        ),
         ),
         MedicalTermEntity(
             id = 496,
@@ -1421,6 +1445,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/pɜːrˈkɪndʒi ˈfaɪbərz/",
+
+            exampleEn = "The Purkinje fibers is Specialized conducting fibers in the ventricles ensuring coordinated contraction.",        ),
         ),
         MedicalTermEntity(
             id = 507,
@@ -1495,6 +1521,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/əˈrɪðmiə/",
+
+            exampleEn = "The Arrhythmia is Any irregularity in the heart's rhythm.",        ),
         ),
         MedicalTermEntity(
             id = 512,
@@ -1733,6 +1761,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌɒksihiːməˈɡloʊbɪn/",
+
+            exampleEn = "The Oxyhemoglobin is Hemoglobin bound to oxygen.",        ),
         ),
         MedicalTermEntity(
             id = 529,
@@ -1745,6 +1775,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈɒksɪdʒən ˌsætʃəˈreɪʃən/",
+
+            exampleEn = "The Oxygen saturation (SpO2) is percentage of hemoglobin saturated with oxygen (normal: 95-100%).",        ),
         ),
         MedicalTermEntity(
             id = 530,
@@ -1847,6 +1879,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈrɛspɪrətɔːri reɪt/",
+
+            exampleEn = "The Respiratory rate is number of breaths per minute (normal: 12-20).",        ),
         ),
         MedicalTermEntity(
             id = 537,
@@ -1874,6 +1908,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈdɪspniːə/",
+
+            exampleEn = "The Dyspnea is Difficulty or labored breathing.",        ),
         ),
         MedicalTermEntity(
             id = 539,
@@ -1886,6 +1922,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈæpniːə/",
+
+            exampleEn = "The Apnea is Temporary cessation of breathing.",        ),
         ),
         MedicalTermEntity(
             id = 540,
@@ -2051,6 +2089,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/noʊdz əv ˈrɒnvieɪ/",
+
+            exampleEn = "The Nodes of Ranvier is Gaps in the myelin sheath allowing saltatory conduction.",        ),
         ),
         MedicalTermEntity(
             id = 551,
@@ -3152,6 +3192,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌpɛrɪˈstælsɪs/",
+
+            exampleEn = "The Peristalsis is Wave-like muscle contractions propelling food through the digestive tract.",        ),
         ),
         MedicalTermEntity(
             id = 624,
@@ -3302,6 +3344,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈvɪlaɪ/",
+
+            exampleEn = "The Villi (sing. Villus) is Finger-like projections in the small intestine increasing surface area for absorption.",        ),
         ),
         MedicalTermEntity(
             id = 634,
@@ -3315,6 +3359,8 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌmaɪkroʊˈvɪlaɪ/",
+
+            exampleEn = "The Microvilli is Tiny projections on intestinal cells further increasing surface area (brush border).",        ),
         ),
         MedicalTermEntity(
             id = 635,

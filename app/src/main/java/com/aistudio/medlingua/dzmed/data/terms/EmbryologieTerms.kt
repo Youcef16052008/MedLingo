@@ -627,6 +627,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ɛkˈtɒpɪk/",
+
+            exampleEn = "The Ectopic pregnancy is Implantation of the blastocyst outside the uterus, most commonly in the uterine tube.",        ),
         ),
         MedicalTermEntity(
             id = 3214,
@@ -639,6 +641,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈkliːvɪdʒ/",
+
+            exampleEn = "The Cleavage is Rapid mitotic divisions of the zygote producing smaller cells called blastomeres.",        ),
         ),
         MedicalTermEntity(
             id = 3215,
@@ -651,6 +655,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈblæstəmɪər/",
+
+            exampleEn = "The Blastomere is Each of the cells produced by cleavage of the zygote.",        ),
         ),
         MedicalTermEntity(
             id = 3216,
@@ -784,6 +790,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˌɛmbriˈɒnɪk stɛm sɛl/",
+
+            exampleEn = "The Embryonic stem cell (ESC) is Pluripotent cells derived from the inner cell mass of the blastocyst.",        ),
         ),
         MedicalTermEntity(
             id = 3225,
@@ -1082,6 +1090,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl foʊld/",
+
+            exampleEn = "The Neural fold is Lateral elevations of the neural plate that fuse at the midline to form the neural tube.",        ),
         ),
         MedicalTermEntity(
             id = 3245,
@@ -1109,6 +1119,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl krɛst/",
+
+            exampleEn = "The Neural crest cells is Migratory cells derived from the dorsal neural tube giving rise to peripheral nervous system, melanocytes, and facial bones.",        ),
         ),
         MedicalTermEntity(
             id = 3247,
@@ -1257,6 +1269,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/kɒˈrɪɒnɪk ˈvɪlaɪ/",
+
+            exampleEn = "The Chorionic villi is Finger-like projections of trophoblast invading the endometrium for maternal-fetal exchange.",        ),
         ),
         MedicalTermEntity(
             id = 3257,
@@ -1404,6 +1418,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌɒlɪɡoʊhaɪˈdræmniɒs/",
+
+            exampleEn = "The Oligohydramnios is Abnormally low volume of amniotic fluid often associated with renal agenesis.",        ),
         ),
         MedicalTermEntity(
             id = 3267,
@@ -1416,6 +1432,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌpɒlihaɪˈdræmniɒs/",
+
+            exampleEn = "The Polyhydramnios is Abnormally high volume of amniotic fluid often associated with gastrointestinal anomalies.",        ),
         ),
         MedicalTermEntity(
             id = 3268,
@@ -1428,6 +1446,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈprɪməri breɪn ˈvɛsɪkəlz/",
+
+            exampleEn = "The Primary brain vesicles is three initial swellings of the cranial neural tube: prosencephalon, mesencephalon, rhombencephalon.",        ),
         ),
         MedicalTermEntity(
             id = 3269,
@@ -1515,6 +1535,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈnjʊərəl tjuːb dɪˈfɛkts/",
+
+            exampleEn = "The Neural tube defects (NTDs) is Congenital anomalies resulting from failure of neural tube closure.",        ),
         ),
         MedicalTermEntity(
             id = 3275,
@@ -1726,6 +1748,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/tɛˈtrælədʒi ɒv fæˈloʊ/",
+
+            exampleEn = "The Tetralogy of Fallot is congenital cardiac anomaly with four defects: VSD, pulmonary stenosis, overriding aorta, right ventricular hypertrophy.",        ),
         ),
         MedicalTermEntity(
             id = 3289,
@@ -1802,6 +1826,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl ɑːrtʃɪz/",
+
+            exampleEn = "The Pharyngeal arches (Branchial arches) is Paired segmental structures developing from neural crest cells giving rise to facial and neck structures.",        ),
         ),
         MedicalTermEntity(
             id = 3294,
@@ -1815,6 +1841,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl klɛfts/",
+
+            exampleEn = "The Pharyngeal clefts (grooves) is Ectodermal grooves between the pharyngeal arches; the first becomes the external acoustic meatus.",        ),
         ),
         MedicalTermEntity(
             id = 3295,
@@ -1828,6 +1856,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl paʊtʃɪz/",
+
+            exampleEn = "The Pharyngeal pouches is Endodermal outpouchings between pharyngeal arches giving rise to tonsils, thymus, parathyroid glands, and thyroid.",        ),
         ),
         MedicalTermEntity(
             id = 3296,
@@ -1963,6 +1993,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ɛs ɑːr waɪ/",
+
+            exampleEn = "The SRY gene is Sex-determining Region Y; the gene on the Y chromosome triggering testis development.",        ),
         ),
         MedicalTermEntity(
             id = 3305,
@@ -2020,6 +2052,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/krɪpˈtɔːrkɪdɪzəm/",
+
+            exampleEn = "The Cryptorchidism is Failure of one or both testes to descend into the scrotum.",        ),
         ),
         MedicalTermEntity(
             id = 3309,
@@ -2122,6 +2156,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈtɛrətədʒɛn/",
+
+            exampleEn = "The Teratogen is Any agent (drug, chemical, infection, radiation) causing congenital malformations.",        ),
         ),
         MedicalTermEntity(
             id = 3316,
@@ -2348,6 +2384,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˌɛmbriˈɒnɪk ˈpɪəriəd/",
+
+            exampleEn = "The Embryonic period is Weeks 1-8 of development during which all major organs are established.",        ),
         ),
         MedicalTermEntity(
             id = 3331,
@@ -2361,6 +2399,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈfiːtəl ˈpɪəriəd/",
+
+            exampleEn = "The Fetal period is Week 9 to birth characterized by growth and maturation of organs formed during embryonic period.",        ),
         ),
         MedicalTermEntity(
             id = 3332,
@@ -2448,6 +2488,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈsteɪdʒɪz ɒv leɪbər/",
+
+            exampleEn = "The Parturition stages is Three stages: dilation of cervix, expulsion of fetus, and delivery of placenta.",        ),
         ),
         MedicalTermEntity(
             id = 3338,
@@ -2460,6 +2502,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈpriːtɜːrm bɜːrθ/",
+
+            exampleEn = "The Preterm birth is Birth occurring before 37 completed weeks of gestation.",        ),
         ),
         MedicalTermEntity(
             id = 3339,
@@ -2518,6 +2562,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˌæpəpˈtoʊsɪs/",
+
+            exampleEn = "The Apoptosis (Programmed cell death) is Genetically controlled cell death essential for embryonic morphogenesis and digit separation.",        ),
         ),
         MedicalTermEntity(
             id = 3343,
@@ -2562,6 +2608,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/hoʊˈmiːɒtɪk/",
+
+            exampleEn = "The Homeotic genes (Hox genes) is Master regulatory genes controlling the body plan and axis specification along the anterior-posterior axis.",        ),
         ),
         MedicalTermEntity(
             id = 3346,
@@ -2651,6 +2699,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˌɛpɪdʒɪˈnɛtɪks/",
+
+            exampleEn = "The Epigenetics is Heritable changes in gene expression not involving DNA sequence changes; important in development.",        ),
         ),
         MedicalTermEntity(
             id = 3352,
@@ -2693,6 +2743,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ɪnˈdjuːst plʊˈrɪpətənt/",
+
+            exampleEn = "The Induced pluripotent stem cells (iPSC) is Adult somatic cells reprogrammed to a pluripotent state by introducing specific transcription factors.",        ),
         ),
         MedicalTermEntity(
             id = 3355,
@@ -2811,6 +2863,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/pləˈsɛntə ˈpriːviə/",
+
+            exampleEn = "The Placenta previa is Abnormal placentation where the placenta overlies or is adjacent to the internal cervical os.",        ),
         ),
         MedicalTermEntity(
             id = 3363,
@@ -2915,6 +2969,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkreɪniəl/",
+
+            exampleEn = "The Cranial (Cephalic) is Toward the head end of the embryo; superior in the anatomical position.",        ),
         ),
         MedicalTermEntity(
             id = 3370,
@@ -2927,6 +2983,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkɔːdəl/",
+
+            exampleEn = "The Caudal is Toward the tail end of the embryo; inferior in the anatomical position.",        ),
         ),
         MedicalTermEntity(
             id = 3371,
@@ -2969,6 +3027,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈrɒstrəl/",
+
+            exampleEn = "The Rostral is Toward the front of the head (nose) in the CNS.",        ),
         ),
         MedicalTermEntity(
             id = 3374,
@@ -2981,6 +3041,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/prəˌlɪfəˈreɪʃən/",
+
+            exampleEn = "The Proliferation is Rapid increase in cell number by mitosis; essential for embryonic growth.",        ),
         ),
         MedicalTermEntity(
             id = 3375,
@@ -3068,6 +3130,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈpærəkraɪn/",
+
+            exampleEn = "The Paracrine signaling is Cell communication where signaling molecules act on nearby cells during embryonic induction.",        ),
         ),
         MedicalTermEntity(
             id = 3381,
@@ -3080,6 +3144,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌmɒnoʊzaɪˈɡɒtɪk/",
+
+            exampleEn = "The Twin (Monozygotic) is Identical twins arising from a single fertilized egg that splits into two embryos.",        ),
         ),
         MedicalTermEntity(
             id = 3382,
@@ -3092,6 +3158,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdaɪzaɪˈɡɒtɪk/",
+
+            exampleEn = "The Twin (Dizygotic) is Fraternal twins arising from two separately fertilized eggs implanting in the uterus.",        ),
         ),
         MedicalTermEntity(
             id = 3383,
@@ -3104,6 +3172,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/kənˈdʒɔɪnd/",
+
+            exampleEn = "The Conjoined twins is Identical twins with persistent physical connection due to incomplete splitting of the embryo.",        ),
         ),
         MedicalTermEntity(
             id = 3384,
@@ -3117,6 +3187,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɔːrioʊˌæmniəˈnaɪtɪs/",
+
+            exampleEn = "The Chorioamnionitis is Inflammation of the chorion and amnion usually due to bacterial infection during pregnancy.",        ),
         ),
         MedicalTermEntity(
             id = 3385,
@@ -3129,6 +3201,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/tɔːrtʃ/",
+
+            exampleEn = "The TORCH infections is Congenital infections: Toxoplasma, Other (syphilis), Rubella, Cytomegalovirus, Herpes causing fetal malformations.",        ),
         ),
         MedicalTermEntity(
             id = 3386,
@@ -3186,6 +3260,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdaɪəfræɡˈmætɪk ˈhɜːrniə/",
+
+            exampleEn = "The Diaphragmatic hernia (Congenital) is Herniation of abdominal organs into the thorax due to incomplete development of the diaphragm.",        ),
         ),
         MedicalTermEntity(
             id = 3390,
@@ -3230,6 +3306,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈhaɪəlaɪn ˈmɛmbreɪn/",
+
+            exampleEn = "The Hyaline membrane disease is Another name for RDS; hyaline membranes form from necrotic epithelium and plasma exudate in the alveoli.",        ),
         ),
         MedicalTermEntity(
             id = 3393,
@@ -3242,6 +3320,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɜːrnɪkˈtɛrəs/",
+
+            exampleEn = "The Kernicterus is Brain damage in neonates caused by high levels of bilirubin depositing in basal ganglia.",        ),
         ),
         MedicalTermEntity(
             id = 3394,
@@ -3255,6 +3335,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪˌrɪθrəblæˈstoʊsɪs fiːˈteɪlɪs/",
+
+            exampleEn = "The Erythroblastosis fetalis is Hemolytic disease of the fetus/newborn due to Rh incompatibility between mother and fetus.",        ),
         ),
         MedicalTermEntity(
             id = 3395,
@@ -3328,6 +3410,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/eɪˈɔːrtɪk ɑːrtʃɪz/",
+
+            exampleEn = "The Aortic arches is Series of paired arteries connecting the heart to the dorsal aorta; undergo extensive remodeling.",        ),
         ),
         MedicalTermEntity(
             id = 3400,
@@ -3341,6 +3425,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˈpeɪtənt ˈdʌktəs ɑːrˌtɪərioʊsəs/",
+
+            exampleEn = "The Patent ductus arteriosus (PDA) is Failure of the ductus arteriosus to close after birth resulting in abnormal shunting of blood.",        ),
         ),
         MedicalTermEntity(
             id = 3401,
@@ -3383,6 +3469,8 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/sɪnˈdæktɪli/",
+
+            exampleEn = "The Syndactyly is Fusion of two or more fingers or toes due to failure of apoptosis between the digit rays.",        ),
         ),
         MedicalTermEntity(
             id = 3404,
@@ -3472,4 +3560,5 @@ object EmbryologieTerms {
             ipaPhonetic = "/ˈwɔːrfərɪn ɛmˈbriːɒpəθi/",
         )
     )
-}
+
+            exampleEn = "The Warfarin embryopathy is Congenital anomalies caused by warfarin exposure in the first trimester including nasal hypoplasia and bone defects.",}

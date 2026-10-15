@@ -175,6 +175,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/dɪˈskrɪptɪv/",
+
+            exampleEn = "The Descriptive statistics is Methods for summarizing and describing data (mean, median, graphs).",        ),
         ),
         MedicalTermEntity(
             id = 1799,
@@ -187,6 +189,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌɪnfəˈrɛnʃəl/",
+
+            exampleEn = "The Inferential statistics is Methods for drawing conclusions about a population from a sample.",        ),
         ),
         MedicalTermEntity(
             id = 1800,
@@ -199,6 +203,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈdeɪtə/",
+
+            exampleEn = "The Data is Facts or observations collected for analysis.",        ),
         ),
         MedicalTermEntity(
             id = 1801,
@@ -211,6 +217,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/rɔː ˈdeɪtə/",
+
+            exampleEn = "The Raw data is Unprocessed data as originally collected before any analysis.",        ),
         ),
         MedicalTermEntity(
             id = 1802,
@@ -313,6 +321,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈreɪʃioʊ/",
+
+            exampleEn = "The Ratio is relative size of two quantities expressed as a:b.",        ),
         ),
         MedicalTermEntity(
             id = 1809,
@@ -611,6 +621,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsɪmpəl ˈrændəm/",
+
+            exampleEn = "The Simple random sampling is Each individual has an equal probability of being selected from the entire population.",        ),
         ),
         MedicalTermEntity(
             id = 1830,
@@ -653,6 +665,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈklʌstər/",
+
+            exampleEn = "The Cluster sampling is Randomly selecting entire groups (clusters) rather than individuals.",        ),
         ),
         MedicalTermEntity(
             id = 1833,
@@ -946,6 +960,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈkwɔːrtaɪl/",
+
+            exampleEn = "The Quartile is Values dividing ordered data into four equal parts (Q1, Q2, Q3).",        ),
         ),
         MedicalTermEntity(
             id = 1853,
@@ -1138,6 +1154,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˈmjuːtʃuəli ɪkˈskluːsɪv/",
+
+            exampleEn = "The Mutually exclusive events is Events that cannot occur simultaneously.",        ),
         ),
         MedicalTermEntity(
             id = 1866,
@@ -1150,6 +1168,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt/",
+
+            exampleEn = "The Independent events is Events where the occurrence of one does not affect the probability of the other.",        ),
         ),
         MedicalTermEntity(
             id = 1867,
@@ -1267,6 +1287,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ɪmˈpɪrɪkəl ruːl/",
+
+            exampleEn = "The Empirical rule (68-95-99.7) is In a normal distribution: 68% within ±1SD, 95% within ±2SD, 99.7% within ±3SD.",        ),
         ),
         MedicalTermEntity(
             id = 1875,
@@ -1999,6 +2021,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈpɒzɪtɪv/",
+
+            exampleEn = "The Positive correlation is Both variables increase together (r > 0).",        ),
         ),
         MedicalTermEntity(
             id = 1924,
@@ -2011,6 +2035,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈnɛɡətɪv/",
+
+            exampleEn = "The Negative correlation is One variable increases as the other decreases (r < 0).",        ),
         ),
         MedicalTermEntity(
             id = 1925,
@@ -2023,6 +2049,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/noʊ ˌkɒrəˈleɪʃən/",
+
+            exampleEn = "The No correlation is No linear relationship between two variables (r ≈ 0).",        ),
         ),
         MedicalTermEntity(
             id = 1926,
@@ -2140,6 +2168,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈmʌltɪpəl/",
+
+            exampleEn = "The Multiple regression is Regression with two or more independent variables predicting one dependent variable.",        ),
         ),
         MedicalTermEntity(
             id = 1934,
@@ -2152,6 +2182,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ləˈdʒɪstɪk/",
+
+            exampleEn = "The Logistic regression is regression model predicting a binary outcome (e.g., disease: yes/no).",        ),
         ),
         MedicalTermEntity(
             id = 1935,
@@ -2884,6 +2916,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/sɪˈlɛkʃən baɪəs/",
+
+            exampleEn = "The Selection bias is Bias arising from a non-representative sample selection.",        ),
         ),
         MedicalTermEntity(
             id = 1984,
@@ -2896,6 +2930,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˌɪnfɔːrˈmeɪʃən baɪəs/",
+
+            exampleEn = "The Information bias is Bias arising from errors in measuring or classifying data.",        ),
         ),
         MedicalTermEntity(
             id = 1985,
@@ -2908,6 +2944,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/rɪˈkɔːl baɪəs/",
+
+            exampleEn = "The Recall bias is Bias occurring when participants inaccurately remember past events.",        ),
         ),
         MedicalTermEntity(
             id = 1986,
@@ -2920,6 +2958,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/əbˈzɜːrvər baɪəs/",
+
+            exampleEn = "The Observer bias is Bias introduced by the researcher's expectations influencing data collection.",        ),
         ),
         MedicalTermEntity(
             id = 1987,
@@ -3322,6 +3362,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ɪˈfɛkt ˌmɒdɪfɪˈkeɪʃən/",
+
+            exampleEn = "The Effect modification (Interaction) is When the effect of an exposure varies across levels of a third variable.",        ),
         ),
         MedicalTermEntity(
             id = 2014,
@@ -3334,6 +3376,8 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/sərˈvaɪvəl əˈnæləsɪs/",
+
+            exampleEn = "The Survival analysis is Statistical methods analyzing the expected duration until an event occurs.",        ),
         ),
         MedicalTermEntity(
             id = 2015,
@@ -3424,4 +3468,5 @@ MedicalTermEntity(
         )
 
     )
-}
+
+            exampleEn = "The Intention-to-treat analysis (ITT) is Analysis including all participants as originally assigned regardless of compliance.",}

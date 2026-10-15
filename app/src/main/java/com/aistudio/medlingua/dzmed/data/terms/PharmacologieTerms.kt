@@ -35,6 +35,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Introduction",
             ipaPhonetic = "/drʌɡ/",
+
+            exampleEn = "The Drug (Medication) is Any chemical substance that alters physiological function when administered to a living organism.",        ),
         ),
         MedicalTermEntity(
             id = 2264,
@@ -48,6 +50,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌfɑːrməkoʊkɪˈnɛtɪks/",
+
+            exampleEn = "The Pharmacokinetics is study of what the body does to a drug: absorption, distribution, metabolism, and excretion (ADME).",        ),
         ),
         MedicalTermEntity(
             id = 2265,
@@ -61,6 +65,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌfɑːrməkoʊdaɪˈnæmɪks/",
+
+            exampleEn = "The Pharmacodynamics is study of what a drug does to the body: mechanisms of action and effects.",        ),
         ),
         MedicalTermEntity(
             id = 2266,
@@ -465,6 +471,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacocinétique",
             ipaPhonetic = "/hɪˈpætɪk məˈtæbəlɪzəm/",
+
+            exampleEn = "The Hepatic metabolism is Drug biotransformation occurring in the liver via phase I (oxidation) and phase II (conjugation) reactions.",        ),
         ),
         MedicalTermEntity(
             id = 2293,
@@ -583,6 +591,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacodynamie",
             ipaPhonetic = "/kəmˈpɛtɪtɪv ænˈtæɡənɪzəm/",
+
+            exampleEn = "The Competitive antagonism is Reversible antagonism where the antagonist competes with the agonist for the same receptor binding site.",        ),
         ),
         MedicalTermEntity(
             id = 2301,
@@ -595,6 +605,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacodynamie",
             ipaPhonetic = "/nɒn kəmˈpɛtɪtɪv/",
+
+            exampleEn = "The Non-competitive antagonism is Antagonism where the drug binds irreversibly or allosterically blocking agonist effect regardless of dose.",        ),
         ),
         MedicalTermEntity(
             id = 2302,
@@ -1273,6 +1285,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌloʊkəl ˌænɪsˈθiːziə/",
+
+            exampleEn = "The Local anesthesia is Loss of sensation in a specific body area achieved by blocking nerve conduction with local anesthetics.",        ),
         ),
         MedicalTermEntity(
             id = 2348,
@@ -1679,6 +1693,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌæntitjʊbɜːrkjʊˈloʊsɪs/",
+
+            exampleEn = "The Antituberculosis drug is drug used in combination therapy for tuberculosis (RIPE: Rifampicin, Isoniazid, Pyrazinamide, Ethambutol).",        ),
         ),
         MedicalTermEntity(
             id = 2377,
@@ -1809,6 +1825,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌsʌsɛptɪˈbɪlɪti ˈtɛstɪŋ/",
+
+            exampleEn = "The Drug susceptibility testing is Laboratory tests determining if a pathogen is sensitive or resistant to specific antimicrobial agents.",        ),
         ),
         MedicalTermEntity(
             id = 2386,
@@ -1924,6 +1942,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ɡaʊt/",
+
+            exampleEn = "The Gout treatment is Drugs for gout including colchicine (acute), allopurinol (prophylaxis), and NSAIDs.",        ),
         ),
         MedicalTermEntity(
             id = 2394,
@@ -1994,6 +2014,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ˌbaɪəˈlɒdʒɪkəl ˈθɛrəpi/",
+
+            exampleEn = "The Biological therapy (biologics) is Therapeutic agents derived from biological sources targeting specific immune pathways (e.g., TNF inhibitors).",        ),
         ),
         MedicalTermEntity(
             id = 2399,
@@ -2006,6 +2028,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ˈoʊvərˌdoʊs ˈtrɛtmənt/",
+
+            exampleEn = "The Paracetamol overdose treatment is N-acetylcysteine (NAC) is the antidote for paracetamol poisoning; replenishes glutathione.",        ),
         ),
         MedicalTermEntity(
             id = 2400,
@@ -2281,6 +2305,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/ˌɪnfləˈmɛtəri baʊəl dɪˈziːz/",
+
+            exampleEn = "The Inflammatory bowel disease (IBD) drugs is Drugs for Crohn's and UC including mesalazine, corticosteroids, immunosuppressants, and biologics.",        ),
         ),
         MedicalTermEntity(
             id = 2419,
@@ -2381,6 +2407,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˌliːvoʊˈθaɪrəksiːn/",
+
+            exampleEn = "The Levothyroxine is Synthetic T4 used as replacement therapy for hypothyroidism.",        ),
         ),
         MedicalTermEntity(
             id = 2426,
@@ -2494,6 +2522,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˈhɔːrmoʊn rɪˈpleɪsmənt ˈθɛrəpi/",
+
+            exampleEn = "The Hormone replacement therapy (HRT) is Estrogen with or without progestogen used to treat menopausal symptoms.",        ),
         ),
         MedicalTermEntity(
             id = 2434,
@@ -2593,6 +2623,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˈtɑːrɡɪtɪd ˈθɛrəpi/",
+
+            exampleEn = "The Targeted therapy is Cancer treatment using drugs that specifically target cancer cell molecular pathways (e.g., imatinib/Gleevec).",        ),
         ),
         MedicalTermEntity(
             id = 2441,
@@ -2606,6 +2638,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˌɪmjʊnoʊˈθɛrəpi/",
+
+            exampleEn = "The Immunotherapy (cancer) is Cancer treatment harnessing or enhancing the immune system to fight tumors (e.g., checkpoint inhibitors).",        ),
         ),
         MedicalTermEntity(
             id = 2442,
@@ -2720,6 +2754,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacologie Clinique et Toxicologie",
             ipaPhonetic = "/ˈtɒksɪsɪti/",
+
+            exampleEn = "The Drug toxicity is Harmful effects caused by excessive drug doses or accumulation in the body.",        ),
         ),
         MedicalTermEntity(
             id = 2450,
@@ -2899,6 +2935,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacologie Clinique et Toxicologie",
             ipaPhonetic = "/ˌnɛfroʊtɒkˈsɪsɪti/",
+
+            exampleEn = "The Nephrotoxicity is Kidney damage caused by drugs (e.g., aminoglycosides, NSAIDs, amphotericin B, cisplatin).",        ),
         ),
         MedicalTermEntity(
             id = 2462,
@@ -2924,6 +2962,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈviːnəs/",
+
+            exampleEn = "The Intravenous (IV) injection is Drug administration directly into a vein; provides fastest onset and 100% bioavailability.",        ),
         ),
         MedicalTermEntity(
             id = 2464,
@@ -2936,6 +2976,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈmʌskjʊlər/",
+
+            exampleEn = "The Intramuscular (IM) injection is Drug injection into muscle tissue providing slower absorption than IV but faster than subcutaneous.",        ),
         ),
         MedicalTermEntity(
             id = 2465,
@@ -2948,6 +2990,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌsʌbkjuːˈteɪniəs/",
+
+            exampleEn = "The Subcutaneous (SC) injection is Drug injection into the subcutaneous fat layer; used for insulin, heparin.",        ),
         ),
         MedicalTermEntity(
             id = 2466,
@@ -2960,6 +3004,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌsʌblɪŋˈɡwəl/",
+
+            exampleEn = "The Sublingual (SL) route is Drug administration under the tongue for rapid absorption bypassing first-pass effect (e.g., nitroglycerin).",        ),
         ),
         MedicalTermEntity(
             id = 2467,
@@ -2987,6 +3033,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ɪnˈheɪld drʌɡ dɪˈlɪvəri/",
+
+            exampleEn = "The Inhaled drug delivery is Drug delivery directly to the lungs via inhalers; used for asthma and COPD.",        ),
         ),
         MedicalTermEntity(
             id = 2469,
@@ -3029,6 +3077,8 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈθiːkəl/",
+
+            exampleEn = "The Intrathecal injection is Drug injection into the subarachnoid space; bypasses BBB for CNS drug delivery.",        ),
         ),
         MedicalTermEntity(
             id = 2472,

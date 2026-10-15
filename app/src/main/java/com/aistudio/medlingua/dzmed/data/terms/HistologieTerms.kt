@@ -420,6 +420,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌhiːmətˈɒksɪlɪn ænd ˈiːəsɪn/",
+
+            exampleEn = "The Hematoxylin and Eosin (H&E) is most common histological stain: hematoxylin stains nuclei blue, eosin stains cytoplasm pink.",        ),
         ),
         MedicalTermEntity(
             id = 1104,
@@ -645,6 +647,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl/",
+
+            exampleEn = "The Simple epithelium is Epithelium composed of a single layer of cells.",        ),
         ),
         MedicalTermEntity(
             id = 1119,
@@ -657,6 +661,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈstrætɪfaɪd/",
+
+            exampleEn = "The Stratified epithelium is Epithelium composed of two or more layers of cells.",        ),
         ),
         MedicalTermEntity(
             id = 1120,
@@ -753,6 +759,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌsjuːdoʊˈstrætɪfaɪd/",
+
+            exampleEn = "The Pseudostratified columnar epithelium is Epithelium appearing multilayered but all cells touch the basement membrane (e.g., trachea).",        ),
         ),
         MedicalTermEntity(
             id = 1127,
@@ -765,6 +773,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈstrætɪfaɪd ˈskweɪməs/",
+
+            exampleEn = "The Stratified squamous epithelium is Multiple layers with flat surface cells for protection against abrasion (e.g., skin, esophagus, vagina).",        ),
         ),
         MedicalTermEntity(
             id = 1128,
@@ -777,6 +787,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈkɛrətɪnaɪzd/",
+
+            exampleEn = "The Keratinized epithelium is Stratified squamous epithelium with a surface layer of dead keratin-filled cells (e.g., skin).",        ),
         ),
         MedicalTermEntity(
             id = 1129,
@@ -789,6 +801,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/nɒn ˈkɛrətɪnaɪzd/",
+
+            exampleEn = "The Non-keratinized epithelium is Stratified squamous epithelium with living surface cells (e.g., oral cavity, esophagus).",        ),
         ),
         MedicalTermEntity(
             id = 1130,
@@ -875,6 +889,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌmaɪkroʊˈvɪlaɪ/",
+
+            exampleEn = "The Microvilli is Finger-like projections on the apical surface increasing surface area for absorption.",        ),
         ),
         MedicalTermEntity(
             id = 1136,
@@ -900,6 +916,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪliə/",
+
+            exampleEn = "The Cilia is Motile hair-like projections that move substances along the epithelial surface.",        ),
         ),
         MedicalTermEntity(
             id = 1138,
@@ -912,6 +930,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌstɛrioʊˈsɪliə/",
+
+            exampleEn = "The Stereocilia is Long immotile microvilli found in the epididymis and inner ear.",        ),
         ),
         MedicalTermEntity(
             id = 1139,
@@ -982,6 +1002,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈmɛroʊkrɪn/",
+
+            exampleEn = "The Merocrine secretion (Eccrine) is Secretion by exocytosis without cell damage (e.g., sweat glands, salivary glands).",        ),
         ),
         MedicalTermEntity(
             id = 1144,
@@ -994,6 +1016,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈæpoʊkrɪn/",
+
+            exampleEn = "The Apocrine secretion is Secretion releasing the apical portion of the cell with the product (e.g., mammary gland).",        ),
         ),
         MedicalTermEntity(
             id = 1145,
@@ -1006,6 +1030,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈhɒloʊkrɪn/",
+
+            exampleEn = "The Holocrine secretion is Secretion involving complete destruction of the secretory cell (e.g., sebaceous glands).",        ),
         ),
         MedicalTermEntity(
             id = 1146,
@@ -1281,6 +1307,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/dɛns ˈrɛɡjʊlər/",
+
+            exampleEn = "The Dense regular connective tissue is Tissue with parallel collagen fibers for resistance to tension in one direction (e.g., tendons, ligaments).",        ),
         ),
         MedicalTermEntity(
             id = 1165,
@@ -1293,6 +1321,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/dɛns ɪˈrɛɡjʊlər/",
+
+            exampleEn = "The Dense irregular connective tissue is Tissue with randomly oriented collagen fibers resisting tension in multiple directions (e.g., dermis).",        ),
         ),
         MedicalTermEntity(
             id = 1166,
@@ -1305,6 +1335,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ɪˈlæstɪk/",
+
+            exampleEn = "The Elastic connective tissue is Tissue rich in elastic fibers allowing stretch and recoil (e.g., aorta wall, vocal cords).",        ),
         ),
         MedicalTermEntity(
             id = 1167,
@@ -1317,6 +1349,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/rɪˈtɪkjʊlər/",
+
+            exampleEn = "The Reticular connective tissue is Tissue forming a delicate network supporting free blood cells (e.g., spleen, lymph nodes, bone marrow).",        ),
         ),
         MedicalTermEntity(
             id = 1168,
@@ -1329,6 +1363,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/waɪt ˈædɪpoʊs/",
+
+            exampleEn = "The White adipose tissue is Fat tissue storing energy as a single large lipid droplet per cell (unilocular).",        ),
         ),
         MedicalTermEntity(
             id = 1169,
@@ -1341,6 +1377,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/braʊn ˈædɪpoʊs/",
+
+            exampleEn = "The Brown adipose tissue is Fat tissue generating heat with many small lipid droplets and abundant mitochondria (multilocular).",        ),
         ),
         MedicalTermEntity(
             id = 1170,
@@ -1458,6 +1496,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ɪˈlæstɪk ˈkɑːrtɪlɪdʒ/",
+
+            exampleEn = "The Elastic cartilage is Cartilage rich in elastic fibers providing flexibility (e.g., ear pinna, epiglottis).",        ),
         ),
         MedicalTermEntity(
             id = 1178,
@@ -1471,6 +1511,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌfaɪbroʊˈkɑːrtɪlɪdʒ/",
+
+            exampleEn = "The Fibrocartilage is Cartilage with abundant collagen fibers resisting compression and tension (e.g., intervertebral discs, menisci).",        ),
         ),
         MedicalTermEntity(
             id = 1179,
@@ -1498,6 +1540,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌɪntərˈstɪʃəl/",
+
+            exampleEn = "The Interstitial growth is Cartilage growth from within by chondrocyte division and matrix secretion.",        ),
         ),
         MedicalTermEntity(
             id = 1181,
@@ -1510,6 +1554,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌæpəˈzɪʃənəl/",
+
+            exampleEn = "The Appositional growth is Cartilage growth from the surface by differentiation of perichondrial cells.",        ),
         ),
         MedicalTermEntity(
             id = 1182,
@@ -1708,6 +1754,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈwoʊvən boʊn/",
+
+            exampleEn = "The Woven bone (Primary bone) is Immature bone with randomly oriented collagen fibers formed first during development.",        ),
         ),
         MedicalTermEntity(
             id = 1195,
@@ -1720,6 +1768,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ləˈmɛlər boʊn/",
+
+            exampleEn = "The Lamellar bone (Secondary bone) is Mature bone with organized parallel collagen lamellae replacing woven bone.",        ),
         ),
         MedicalTermEntity(
             id = 1196,
@@ -1732,6 +1782,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌɪntrəˈmɛmbrənəs/",
+
+            exampleEn = "The Intramembranous ossification is Bone formation directly from mesenchymal tissue without a cartilage model (e.g., flat skull bones).",        ),
         ),
         MedicalTermEntity(
             id = 1197,
@@ -1744,6 +1796,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌɛndoʊˈkɒndrəl/",
+
+            exampleEn = "The Endochondral ossification is Bone formation by replacing a hyaline cartilage model (e.g., long bones).",        ),
         ),
         MedicalTermEntity(
             id = 1198,
@@ -1801,6 +1855,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈskɛlɪtəl ˈmʌsəl/",
+
+            exampleEn = "The Skeletal muscle is Voluntary striated muscle attached to bones; multinucleated cylindrical fibers.",        ),
         ),
         MedicalTermEntity(
             id = 1202,
@@ -1814,6 +1870,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈmʌsəl/",
+
+            exampleEn = "The Cardiac muscle is Involuntary striated muscle of the heart; branched uninucleated cells with intercalated discs.",        ),
         ),
         MedicalTermEntity(
             id = 1203,
@@ -1826,6 +1884,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/smuːð ˈmʌsəl/",
+
+            exampleEn = "The Smooth muscle is Involuntary non-striated muscle of internal organs; spindle-shaped uninucleated cells.",        ),
         ),
         MedicalTermEntity(
             id = 1204,
@@ -2172,6 +2232,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈdɛndraɪt/",
+
+            exampleEn = "The Dendrite is Short branching processes receiving signals from other neurons.",        ),
         ),
         MedicalTermEntity(
             id = 1227,
@@ -2199,6 +2261,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈnɪsəl ˈbɒdiz/",
+
+            exampleEn = "The Nissl bodies (Rough ER) is Clusters of rough endoplasmic reticulum in neurons visible as basophilic granules.",        ),
         ),
         MedicalTermEntity(
             id = 1229,
@@ -2212,6 +2276,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/njʊəˈrɒɡliə/",
+
+            exampleEn = "The Neuroglia (Glial cells) is Non-neuronal supporting cells of the nervous system.",        ),
         ),
         MedicalTermEntity(
             id = 1230,
@@ -2255,6 +2321,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˌmaɪkroʊˈɡliːə/",
+
+            exampleEn = "The Microglia is Small phagocytic glial cells acting as the immune defense of the CNS.",        ),
         ),
         MedicalTermEntity(
             id = 1233,
@@ -2432,6 +2500,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/fɔːrmd ˈɛlɪmənts/",
+
+            exampleEn = "The Formed elements is cellular components of blood: RBCs, WBCs, and platelets (45% of blood).",        ),
         ),
         MedicalTermEntity(
             id = 1245,
@@ -3021,6 +3091,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌjuːˈkroʊmətɪn/",
+
+            exampleEn = "The Euchromatin is Lightly stained dispersed chromatin representing actively transcribed DNA.",        ),
         ),
         MedicalTermEntity(
             id = 1285,
@@ -3033,6 +3105,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌhɛtəroʊˈkroʊmətɪn/",
+
+            exampleEn = "The Heterochromatin is Darkly stained condensed chromatin representing inactive DNA.",        ),
         ),
         MedicalTermEntity(
             id = 1286,
@@ -3226,6 +3300,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/maɪˈtoʊsɪs/",
+
+            exampleEn = "The Mitosis is Nuclear division producing two identical daughter cells with the same chromosome number.",        ),
         ),
         MedicalTermEntity(
             id = 1299,
@@ -3330,6 +3406,8 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
+
+            exampleEn = "The Apoptosis is Programmed cell death that occurs in a controlled manner without inflammation.",        ),
         ),
         MedicalTermEntity(
             id = 1306,
@@ -3346,4 +3424,5 @@ MedicalTermEntity(
         )
 
     )
-}
+
+            exampleEn = "The Necrosis is Uncontrolled cell death due to injury causing inflammation and tissue damage.",}

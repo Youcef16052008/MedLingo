@@ -244,6 +244,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ɡræm ˈpɒzɪtɪv/",
+
+            exampleEn = "The Gram-positive is Bacteria retaining the crystal violet stain; have thick peptidoglycan cell wall (e.g., Staphylococcus).",        ),
         ),
         MedicalTermEntity(
             id = 2043,
@@ -256,6 +258,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ɡræm ˈnɛɡətɪv/",
+
+            exampleEn = "The Gram-negative is Bacteria losing crystal violet and appearing pink/red; have thin peptidoglycan with outer membrane (e.g., E. coli).",        ),
         ),
         MedicalTermEntity(
             id = 2044,
@@ -343,6 +347,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˈpɪlaɪ/",
+
+            exampleEn = "The Pili (Fimbriae) is Hair-like appendages on bacteria used for attachment and conjugation.",        ),
         ),
         MedicalTermEntity(
             id = 2050,
@@ -428,6 +434,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactériologie Générale",
             ipaPhonetic = "/ˌdʒɛnəˈreɪʃən taɪm/",
+
+            exampleEn = "The Generation time is time required for a bacterial population to double in number (e.g., E. coli: 20 min).",        ),
         ),
         MedicalTermEntity(
             id = 2056,
@@ -516,6 +524,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/mɜːrzə/",
+
+            exampleEn = "The MRSA (Methicillin-resistant Staphylococcus aureus) is S. aureus resistant to beta-lactam antibiotics; a major hospital-acquired pathogen.",        ),
         ),
         MedicalTermEntity(
             id = 2062,
@@ -528,6 +538,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Bactéries Pathogènes",
             ipaPhonetic = "/ˌstrɛptəˈkɒkəs paɪˈɒdʒɪniːz/",
+
+            exampleEn = "The Streptococcus pyogenes is Group A Streptococcus; causes pharyngitis, scarlet fever, rheumatic fever, and necrotizing fasciitis.",        ),
         ),
         MedicalTermEntity(
             id = 2063,
@@ -1186,6 +1198,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Parasitologie",
             ipaPhonetic = "/ˌproʊtəˈzoʊə/",
+
+            exampleEn = "The Protozoa is Single-celled eukaryotic parasites (e.g., Plasmodium, Giardia, Entamoeba).",        ),
         ),
         MedicalTermEntity(
             id = 2107,
@@ -1734,6 +1748,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Immunologie Microbienne",
             ipaPhonetic = "/hɜːrd ɪˈmjuːnɪti/",
+
+            exampleEn = "The Herd immunity is Indirect protection from infection when a sufficient proportion of a population is immune.",        ),
         ),
         MedicalTermEntity(
             id = 2144,
@@ -1883,6 +1899,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/sɪˈrɒlədʒi/",
+
+            exampleEn = "The Serology is Laboratory examination of blood serum to detect antibodies or antigens.",        ),
         ),
         MedicalTermEntity(
             id = 2154,
@@ -1956,6 +1974,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Diagnostic Microbiologique",
             ipaPhonetic = "/ˈlʌmbər ˈpʌŋktʃər/",
+
+            exampleEn = "The Lumbar puncture (CSF analysis) is Removal of cerebrospinal fluid for microbiological analysis to diagnose meningitis.",        ),
         ),
         MedicalTermEntity(
             id = 2159,
@@ -2102,6 +2122,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˌæntɪˈdʒɛnɪk drɪft/",
+
+            exampleEn = "The Antigenic drift is Gradual mutations in influenza surface proteins enabling immune evasion.",        ),
         ),
         MedicalTermEntity(
             id = 2169,
@@ -2129,6 +2151,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Virologie Clinique",
             ipaPhonetic = "/ˌsaɪtoʊˈpæθɪk ɪˈfɛkt/",
+
+            exampleEn = "The Cytopathic effect (CPE) is Structural changes in host cells caused by viral infection visible under microscopy.",        ),
         ),
         MedicalTermEntity(
             id = 2171,
@@ -2231,6 +2255,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/eɪˈsɛptɪk tɛkˈniːk/",
+
+            exampleEn = "The Aseptic technique is Procedures preventing contamination of sterile materials and patient wounds.",        ),
         ),
         MedicalTermEntity(
             id = 2178,
@@ -2243,6 +2269,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ɪnˈfɛkʃən kənˈtroʊl/",
+
+            exampleEn = "The Infection control is Policies and procedures preventing the spread of infections in healthcare settings.",        ),
         ),
         MedicalTermEntity(
             id = 2179,
@@ -2255,6 +2283,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ˈstændərd prɪˈkɔːʃənz/",
+
+            exampleEn = "The Standard precautions is Basic infection prevention measures applied to all patients regardless of diagnosis.",        ),
         ),
         MedicalTermEntity(
             id = 2180,
@@ -2267,6 +2297,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Environnementale",
             ipaPhonetic = "/ˌpɜːrsənəl prəˈtɛktɪv ɪˈkwɪpmənt/",
+
+            exampleEn = "The Personal protective equipment (PPE) is Protective clothing, gloves, masks, and goggles preventing exposure to pathogens.",        ),
         ),
         MedicalTermEntity(
             id = 2181,
@@ -2310,6 +2342,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/ˈsɛptɪk ʃɒk/",
+
+            exampleEn = "The Septic shock is Sepsis with circulatory failure and cellular metabolism abnormalities; mortality >40%.",        ),
         ),
         MedicalTermEntity(
             id = 2184,
@@ -2323,6 +2357,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/ˌmɛnɪnˈdʒaɪtɪs/",
+
+            exampleEn = "The Meningitis is Inflammation of the meninges caused by bacteria, viruses, or fungi.",        ),
         ),
         MedicalTermEntity(
             id = 2185,
@@ -2336,6 +2372,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/njʊˈmoʊniə/",
+
+            exampleEn = "The Pneumonia is Infection of the lung parenchyma causing inflammation and alveolar consolidation.",        ),
         ),
         MedicalTermEntity(
             id = 2186,
@@ -2380,6 +2418,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/ˈjʊərɪnəri trækt ɪnˈfɛkʃən/",
+
+            exampleEn = "The Urinary tract infection (UTI) is Bacterial infection of the urinary system; most commonly caused by E. coli.",        ),
         ),
         MedicalTermEntity(
             id = 2189,
@@ -2393,6 +2433,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Maladies Infectieuses",
             ipaPhonetic = "/ˌɡæstroʊˌɛntəˈraɪtɪs/",
+
+            exampleEn = "The Gastroenteritis is Inflammation of the stomach and intestines causing vomiting and diarrhea; often viral.",        ),
         ),
         MedicalTermEntity(
             id = 2190,
@@ -2461,6 +2503,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiologie Spéciale",
             ipaPhonetic = "/rɪˈkɛtsiə/",
+
+            exampleEn = "The Rickettsia is Obligate intracellular Gram-negative bacteria transmitted by arthropod vectors causing typhus.",        ),
         ),
         MedicalTermEntity(
             id = 2195,
@@ -2627,6 +2671,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/proʊˈbaɪɒtɪk/",
+
+            exampleEn = "The Probiotic is Live beneficial microorganisms providing health benefits when consumed in adequate amounts.",        ),
         ),
         MedicalTermEntity(
             id = 2206,
@@ -2639,6 +2685,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/ˈpriːbaɪɒtɪk/",
+
+            exampleEn = "The Prebiotic is Non-digestible food components stimulating the growth of beneficial intestinal bacteria.",        ),
         ),
         MedicalTermEntity(
             id = 2207,
@@ -2652,6 +2700,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Microbiome et Santé",
             ipaPhonetic = "/ˈfiːkəl maɪkroʊbaɪˈoʊtə ˈtrænsˌplɑːnt/",
+
+            exampleEn = "The Fecal microbiota transplant (FMT) is Transfer of fecal matter from a healthy donor to treat recurrent C. difficile infection.",        ),
         ),
         MedicalTermEntity(
             id = 2208,
@@ -2796,6 +2846,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈdrɒplɪt trænsˈmɪʃən/",
+
+            exampleEn = "The Droplet transmission is Spread of infection via respiratory droplets >5 μm expelled during coughing or sneezing.",        ),
         ),
         MedicalTermEntity(
             id = 2218,
@@ -2808,6 +2860,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈɛrbɔːrn trænsˈmɪʃən/",
+
+            exampleEn = "The Airborne transmission is Spread of infection via small particles <5 μm that remain airborne for extended periods.",        ),
         ),
         MedicalTermEntity(
             id = 2219,
@@ -2820,6 +2874,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkɒntækt trænsˈmɪʃən/",
+
+            exampleEn = "The Contact transmission is Direct or indirect spread of infection through physical contact.",        ),
         ),
         MedicalTermEntity(
             id = 2220,
@@ -2923,6 +2979,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌhɒrɪˈzɒntəl dʒiːn ˈtrænsfer/",
+
+            exampleEn = "The Horizontal gene transfer is Transfer of genetic material between organisms other than parent to offspring (conjugation, transduction, transformation).",        ),
         ),
         MedicalTermEntity(
             id = 2227,
@@ -2935,6 +2993,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɒndʒʊˈɡeɪʃən/",
+
+            exampleEn = "The Conjugation is Direct transfer of DNA between bacteria through cell-to-cell contact via pili.",        ),
         ),
         MedicalTermEntity(
             id = 2228,
@@ -2947,6 +3007,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/trænsˈdʌkʃən/",
+
+            exampleEn = "The Transduction is Transfer of bacterial DNA from one bacterium to another via a bacteriophage.",        ),
         ),
         MedicalTermEntity(
             id = 2229,
@@ -2959,6 +3021,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌtrænsforˈmeɪʃən/",
+
+            exampleEn = "The Transformation (bacterial) is Uptake of naked DNA from the environment by a competent bacterium.",        ),
         ),
         MedicalTermEntity(
             id = 2230,
@@ -3060,6 +3124,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈpæsɪv ɪˈmjuːnɪti/",
+
+            exampleEn = "The Passive immunity is Temporary immunity resulting from transfer of antibodies from another source (mother or injection).",        ),
         ),
         MedicalTermEntity(
             id = 2237,
@@ -3073,6 +3139,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈæktɪv ɪˈmjuːnɪti/",
+
+            exampleEn = "The Active immunity is Long-lasting immunity developed after exposure to an antigen (infection or vaccination).",        ),
         ),
         MedicalTermEntity(
             id = 2238,
@@ -3205,6 +3273,8 @@ object MicrobiologieTerms {
             module = "Microbiologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/kɒks ˈpɒstjʊlɪts/",
+
+            exampleEn = "The Koch's postulates is Four criteria establishing a causal relationship between a microbe and a disease.",        ),
         ),
         MedicalTermEntity(
             id = 2247,

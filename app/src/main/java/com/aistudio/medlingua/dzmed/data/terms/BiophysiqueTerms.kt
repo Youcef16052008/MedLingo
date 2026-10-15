@@ -265,6 +265,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈprɛʃər/",
+
+            exampleEn = "The Pressure is Force per unit area measured in Pascals (Pa) or mmHg.",        ),
         ),
         MedicalTermEntity(
             id = 1323,
@@ -307,6 +309,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈdɛnsɪti/",
+
+            exampleEn = "The Density is Mass per unit volume measured in kg/m³.",        ),
         ),
         MedicalTermEntity(
             id = 1326,
@@ -427,6 +431,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/pæˈskælz lɔː/",
+
+            exampleEn = "The Pascal's law is Pressure applied to a confined fluid is transmitted equally in all directions.",        ),
         ),
         MedicalTermEntity(
             id = 1334,
@@ -469,6 +475,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈlæmɪnər floʊ/",
+
+            exampleEn = "The Laminar flow is Smooth streamlined flow in parallel layers without disruption.",        ),
         ),
         MedicalTermEntity(
             id = 1337,
@@ -481,6 +489,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈtɜːrbjʊlənt floʊ/",
+
+            exampleEn = "The Turbulent flow is Chaotic irregular flow with eddies and mixing.",        ),
         ),
                 MedicalTermEntity(
             id = 1339,
@@ -508,6 +518,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌkɒntɪˈnjuːɪti/",
+
+            exampleEn = "The Continuity equation is principle that flow rate is constant: A₁v₁ = A₂v₂.",        ),
         ),
         MedicalTermEntity(
             id = 1341,
@@ -623,6 +635,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/fɜːrst lɔː/",
+
+            exampleEn = "The First law of thermodynamics is Energy cannot be created or destroyed, only transformed (conservation of energy).",        ),
         ),
         MedicalTermEntity(
             id = 1349,
@@ -636,6 +650,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˈsɛkənd lɔː/",
+
+            exampleEn = "The Second law of thermodynamics is In any energy transfer, entropy of the universe tends to increase.",        ),
         ),
         MedicalTermEntity(
             id = 1350,
@@ -753,6 +769,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/hiːt/",
+
+            exampleEn = "The Heat is Energy transferred between objects due to temperature difference.",        ),
         ),
         MedicalTermEntity(
             id = 1358,
@@ -810,6 +828,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/kənˈdʌkʃən/",
+
+            exampleEn = "The Conduction is Heat transfer through direct molecular contact.",        ),
         ),
         MedicalTermEntity(
             id = 1362,
@@ -822,6 +842,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/kənˈvɛkʃən/",
+
+            exampleEn = "The Convection is Heat transfer through fluid movement.",        ),
         ),
         MedicalTermEntity(
             id = 1363,
@@ -835,6 +857,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌreɪdiˈeɪʃən/",
+
+            exampleEn = "The Radiation (thermal) is Heat transfer through electromagnetic waves without a medium.",        ),
         ),
         MedicalTermEntity(
             id = 1364,
@@ -878,6 +902,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌhaɪpoʊˈθɜːrmiə/",
+
+            exampleEn = "The Hypothermia is Dangerously low body temperature below 35°C.",        ),
         ),
         MedicalTermEntity(
             id = 1367,
@@ -890,6 +916,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌhaɪpərˈθɜːrmiə/",
+
+            exampleEn = "The Hyperthermia is Abnormally elevated body temperature above 40°C.",        ),
         ),
         MedicalTermEntity(
             id = 1368,
@@ -1098,6 +1126,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ɪˈdiːmə/",
+
+            exampleEn = "The Edema is Excessive accumulation of fluid in tissues due to imbalance in Starling forces.",        ),
         ),
         MedicalTermEntity(
             id = 1382,
@@ -1170,6 +1200,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/laɪt/",
+
+            exampleEn = "The Light is Electromagnetic radiation visible to the human eye (380-750 nm).",        ),
         ),
         MedicalTermEntity(
             id = 1387,
@@ -1287,6 +1319,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈtoʊtəl ɪnˈtɜːrnəl/",
+
+            exampleEn = "The Total internal reflection is Complete reflection of light when the angle exceeds the critical angle.",        ),
         ),
         MedicalTermEntity(
             id = 1395,
@@ -1434,6 +1468,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˌprɛzbiˈoʊpiə/",
+
+            exampleEn = "The Presbyopia is Age-related loss of accommodation making near vision difficult.",        ),
         ),
         MedicalTermEntity(
             id = 1405,
@@ -1567,6 +1603,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈleɪzər/",
+
+            exampleEn = "The Laser is Light Amplification by Stimulated Emission of Radiation; coherent monochromatic light.",        ),
         ),
         MedicalTermEntity(
             id = 1414,
@@ -1655,6 +1693,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/pɪtʃ/",
+
+            exampleEn = "The Pitch is perception of sound frequency: high frequency = high pitch.",        ),
         ),
         MedicalTermEntity(
             id = 1420,
@@ -1712,6 +1752,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈʌltrəsaʊnd/",
+
+            exampleEn = "The Ultrasound is Sound waves with frequency above 20,000 Hz used in medical imaging.",        ),
         ),
         MedicalTermEntity(
             id = 1424,
@@ -1724,6 +1766,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈɪnfrəsaʊnd/",
+
+            exampleEn = "The Infrasound is Sound waves with frequency below 20 Hz inaudible to humans.",        ),
         ),
         MedicalTermEntity(
             id = 1425,
@@ -1751,6 +1795,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈdɒplər/",
+
+            exampleEn = "The Doppler ultrasound is Ultrasound technique measuring blood flow velocity using the Doppler effect.",        ),
         ),
         MedicalTermEntity(
             id = 1427,
@@ -1763,6 +1809,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˌɛkoʊˌkɑːrdiˈɒɡrəfi/",
+
+            exampleEn = "The Echocardiography is Ultrasound imaging of the heart to assess structure and function.",        ),
         ),
         MedicalTermEntity(
             id = 1428,
@@ -1927,6 +1975,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈɡæmə reɪ/",
+
+            exampleEn = "The Gamma ray (γ) is High-energy electromagnetic radiation emitted from the nucleus.",        ),
         ),
         MedicalTermEntity(
             id = 1439,
@@ -2030,6 +2080,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈaɪənaɪzɪŋ/",
+
+            exampleEn = "The Ionizing radiation is Radiation with enough energy to remove electrons from atoms.",        ),
         ),
         MedicalTermEntity(
             id = 1446,
@@ -2042,6 +2094,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/nɒn ˈaɪənaɪzɪŋ/",
+
+            exampleEn = "The Non-ionizing radiation is Radiation without enough energy to ionize atoms (UV, visible, radio waves).",        ),
         ),
         MedicalTermEntity(
             id = 1447,
@@ -2144,6 +2198,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/əˈlɑːrə/",
+
+            exampleEn = "The ALARA principle is As Low As Reasonably Achievable: minimizing radiation exposure.",        ),
         ),
         MedicalTermEntity(
             id = 1454,
@@ -2216,6 +2272,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈɛks reɪ/",
+
+            exampleEn = "The X-ray is High-energy electromagnetic radiation used to image internal body structures.",        ),
         ),
         MedicalTermEntity(
             id = 1459,
@@ -2259,6 +2317,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/flʊəˈrɒskəpi/",
+
+            exampleEn = "The Fluoroscopy is Real-time X-ray imaging allowing observation of moving structures.",        ),
         ),
         MedicalTermEntity(
             id = 1462,
@@ -2406,6 +2466,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/mæˈmɒɡrəfi/",
+
+            exampleEn = "The Mammography is X-ray imaging of the breast for screening and diagnosis of breast cancer.",        ),
         ),
         MedicalTermEntity(
             id = 1472,
@@ -2433,6 +2495,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˌbrækɪˈθɛrəpi/",
+
+            exampleEn = "The Brachytherapy is Internal radiation therapy placing radioactive sources inside or near the tumor.",        ),
         ),
         MedicalTermEntity(
             id = 1474,
@@ -2800,6 +2864,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˈmaɪkroʊweɪv/",
+
+            exampleEn = "The Microwave is Electromagnetic radiation used in diathermy and heating.",        ),
         ),
         MedicalTermEntity(
             id = 1498,
@@ -2812,6 +2878,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌɪnfrəˈrɛd/",
+
+            exampleEn = "The Infrared radiation (IR) is Electromagnetic radiation felt as heat; used in thermal imaging and physiotherapy.",        ),
         ),
         MedicalTermEntity(
             id = 1499,
@@ -2839,6 +2907,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌʌltrəˈvaɪələt/",
+
+            exampleEn = "The Ultraviolet radiation (UV) is Electromagnetic radiation that causes sunburn and vitamin D synthesis; can damage DNA.",        ),
         ),
         MedicalTermEntity(
             id = 1501,
@@ -3166,6 +3236,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/wɜːrk/",
+
+            exampleEn = "The Work is Energy transferred when a force moves an object (W = F × d) measured in Joules.",        ),
         ),
         MedicalTermEntity(
             id = 1523,
@@ -3193,6 +3265,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/pəˈtɛnʃəl ˈɛnərdʒi/",
+
+            exampleEn = "The Potential energy is Stored energy due to position or configuration (PE = mgh).",        ),
         ),
         MedicalTermEntity(
             id = 1525,
@@ -3341,6 +3415,8 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ˈaɪsətoʊp/",
+
+            exampleEn = "The Isotope is Atoms of the same element with different numbers of neutrons.",        ),
         ),
         MedicalTermEntity(
             id = 1535,

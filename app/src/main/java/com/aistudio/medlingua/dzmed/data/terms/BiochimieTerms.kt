@@ -449,6 +449,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/væn dər wɔːlz/",
+
+            exampleEn = "The Van der Waals forces is Weak intermolecular forces between molecules.",        ),
         ),
         MedicalTermEntity(
             id = 670,
@@ -809,6 +811,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈsuːkroʊs/",
+
+            exampleEn = "The Sucrose is Table sugar composed of glucose and fructose.",        ),
         ),
         MedicalTermEntity(
             id = 694,
@@ -821,6 +825,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈlæktoʊs/",
+
+            exampleEn = "The Lactose is Milk sugar composed of glucose and galactose.",        ),
         ),
         MedicalTermEntity(
             id = 695,
@@ -833,6 +839,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈmɔːltoʊs/",
+
+            exampleEn = "The Maltose is Malt sugar composed of two glucose molecules.",        ),
         ),
         MedicalTermEntity(
             id = 696,
@@ -905,6 +913,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌɡlaɪkoʊsəˌmiːnoʊˈɡlaɪkæn/",
+
+            exampleEn = "The Glycosaminoglycan (GAG) is Long unbranched polysaccharides in connective tissue (e.g., hyaluronic acid).",        ),
         ),
         MedicalTermEntity(
             id = 701,
@@ -917,6 +927,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈaɪsəmər/",
+
+            exampleEn = "The Isomer is Molecules with the same formula but different structural arrangements.",        ),
         ),
         MedicalTermEntity(
             id = 702,
@@ -929,6 +941,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈɛpɪmər/",
+
+            exampleEn = "The Epimer is Isomers differing at only one chiral carbon.",        ),
         ),
         MedicalTermEntity(
             id = 703,
@@ -941,6 +955,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈænəmər/",
+
+            exampleEn = "The Anomer is Cyclic isomers differing at the anomeric carbon (alpha or beta).",        ),
         ),
         MedicalTermEntity(
             id = 704,
@@ -1193,6 +1209,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/eɪtʃ diː ɛl/",
+
+            exampleEn = "The HDL (High-density lipoprotein) is Good cholesterol that transports cholesterol from tissues to the liver.",        ),
         ),
         MedicalTermEntity(
             id = 721,
@@ -1205,6 +1223,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ɛl diː ɛl/",
+
+            exampleEn = "The LDL (Low-density lipoprotein) is Bad cholesterol that deposits cholesterol in artery walls.",        ),
         ),
         MedicalTermEntity(
             id = 722,
@@ -1307,6 +1327,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈkiːtoʊn ˈbɒdi/",
+
+            exampleEn = "The Ketone body is Molecules produced from fatty acid breakdown when glucose is scarce.",        ),
         ),
         MedicalTermEntity(
             id = 729,
@@ -1439,6 +1461,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈsɛkəndɛri/",
+
+            exampleEn = "The Secondary structure is Local folding patterns (alpha helix and beta sheet) stabilized by hydrogen bonds.",        ),
         ),
         MedicalTermEntity(
             id = 738,
@@ -1797,6 +1821,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/kəmˈpɛtɪtɪv ɪnˈhɪbɪʃən/",
+
+            exampleEn = "The Competitive inhibition is Inhibition where a molecule competes with the substrate for the active site.",        ),
         ),
         MedicalTermEntity(
             id = 762,
@@ -1809,6 +1835,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/nɒn kəmˈpɛtɪtɪv/",
+
+            exampleEn = "The Non-competitive inhibition is Inhibition where a molecule binds to a site other than the active site changing enzyme shape.",        ),
         ),
         MedicalTermEntity(
             id = 763,
@@ -1821,6 +1849,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌæləˈstɛrɪk/",
+
+            exampleEn = "The Allosteric regulation is Regulation by binding of a molecule to a site other than the active site.",        ),
         ),
         MedicalTermEntity(
             id = 764,
@@ -1863,6 +1893,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌaɪsoʊˈɛnzaɪm/",
+
+            exampleEn = "The Isoenzyme (Isozyme) is Different forms of an enzyme catalyzing the same reaction but in different tissues.",        ),
         ),
         MedicalTermEntity(
             id = 767,
@@ -2429,6 +2461,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈfoʊlɪk ˈæsɪd/",
+
+            exampleEn = "The Vitamin B9 (Folic acid) is Essential for DNA synthesis and red blood cell formation; critical in pregnancy.",        ),
         ),
         MedicalTermEntity(
             id = 805,
@@ -2441,6 +2475,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/koʊˈbæləmɪn/",
+
+            exampleEn = "The Vitamin B12 (Cobalamin) is Essential for nerve function, DNA synthesis, and red blood cell formation.",        ),
         ),
         MedicalTermEntity(
             id = 806,
@@ -3001,6 +3037,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/blʌd ˈɡluːkoʊs/",
+
+            exampleEn = "The Blood glucose level is concentration of glucose in the blood (normal fasting: 70-100 mg/dL).",        ),
         ),
         MedicalTermEntity(
             id = 845,
@@ -3014,6 +3052,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌhaɪpərɡlaɪˈsiːmiə/",
+
+            exampleEn = "The Hyperglycemia is Abnormally high blood glucose level above 126 mg/dL fasting.",        ),
         ),
         MedicalTermEntity(
             id = 846,
@@ -3027,6 +3067,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌhaɪpoʊɡlaɪˈsiːmiə/",
+
+            exampleEn = "The Hypoglycemia is Abnormally low blood glucose level below 70 mg/dL.",        ),
         ),
         MedicalTermEntity(
             id = 847,
@@ -3100,6 +3142,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈlɪvər ˈfʌŋkʃən/",
+
+            exampleEn = "The Liver function test (LFT) is Blood tests assessing liver health (ALT, AST, ALP, bilirubin, albumin).",        ),
         ),
         MedicalTermEntity(
             id = 852,
@@ -3611,6 +3655,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈaɪsətoʊp/",
+
+            exampleEn = "The Isotope is Atoms of the same element with different numbers of neutrons.",        ),
         ),
         MedicalTermEntity(
             id = 886,
@@ -3793,6 +3839,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/əˈtɒmɪk ˈreɪdiəs/",
+
+            exampleEn = "The Atomic radius is Half the distance between the nuclei of two bonded identical atoms.",        ),
         ),
         MedicalTermEntity(
             id = 898,
@@ -4180,6 +4228,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˌævəˈɡɑːdroʊz/",
+
+            exampleEn = "The Avogadro's number is number of particles in one mole: 6.022 × 10²³.",        ),
         ),
         MedicalTermEntity(
             id = 924,
@@ -4418,6 +4468,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/moʊˈlærɪti/",
+
+            exampleEn = "The Molarity (M) is Concentration expressed as moles of solute per liter of solution (mol/L).",        ),
         ),
         MedicalTermEntity(
             id = 940,
@@ -4430,6 +4482,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/moʊˈlælɪti/",
+
+            exampleEn = "The Molality (m) is Concentration expressed as moles of solute per kilogram of solvent (mol/kg).",        ),
         ),
         MedicalTermEntity(
             id = 941,
@@ -4604,6 +4658,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/piː eɪtʃ/",
+
+            exampleEn = "The pH is negative logarithm of hydrogen ion concentration: pH = -log[H⁺].",        ),
         ),
         MedicalTermEntity(
             id = 953,
@@ -4616,6 +4672,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/piː oʊ eɪtʃ/",
+
+            exampleEn = "The pOH is negative logarithm of hydroxide ion concentration: pOH = -log[OH⁻].",        ),
         ),
         MedicalTermEntity(
             id = 954,
@@ -4673,6 +4731,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈhɛndərsən ˈhæsəlbɑːlk/",
+
+            exampleEn = "The Henderson-Hasselbalch equation is An equation relating pH to pKa and the ratio of conjugate base to acid: pH = pKa + log([A⁻]/[HA]).",        ),
         ),
         MedicalTermEntity(
             id = 958,
@@ -4909,6 +4969,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/ləˈʃætəljeɪz/",
+
+            exampleEn = "The Le Chatelier's principle is When a system at equilibrium is disturbed, it shifts to counteract the change.",        ),
         ),
         MedicalTermEntity(
             id = 974,
@@ -4951,6 +5013,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/keɪ ˈdʌbəljuː/",
+
+            exampleEn = "The Kw (Ion product of water) is equilibrium constant for the autoionization of water: Kw = [H⁺][OH⁻] = 10⁻¹⁴ at 25°C.",        ),
         ),
         MedicalTermEntity(
             id = 977,
@@ -5291,6 +5355,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/diːˈloʊkəlaɪzd/",
+
+            exampleEn = "The Delocalized electrons is Electrons shared over multiple atoms rather than localized between two atoms.",        ),
         ),
         MedicalTermEntity(
             id = 1000,
@@ -5617,6 +5683,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈstrʌktʃərəl/",
+
+            exampleEn = "The Structural isomer (Constitutional) is Isomers differing in the connectivity of atoms.",        ),
         ),
         MedicalTermEntity(
             id = 1022,
@@ -5629,6 +5697,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌstɛrioʊˈaɪsəmər/",
+
+            exampleEn = "The Stereoisomer is Isomers with the same connectivity but different spatial arrangements of atoms.",        ),
         ),
         MedicalTermEntity(
             id = 1023,
@@ -5641,6 +5711,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌdʒiːəˈmɛtrɪk/",
+
+            exampleEn = "The Geometric isomer (Cis-Trans) is Stereoisomers differing in the spatial arrangement around a double bond or ring.",        ),
         ),
         MedicalTermEntity(
             id = 1024,
@@ -5728,6 +5800,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/rəˈsiːmɪk/",
+
+            exampleEn = "The Racemic mixture is 50:50 mixture of both enantiomers that is optically inactive.",        ),
         ),
         MedicalTermEntity(
             id = 1030,
@@ -5800,6 +5874,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌkɒnfɔːrˈmeɪʃənəl/",
+
+            exampleEn = "The Conformational isomer is Isomers differing by rotation around a single bond.",        ),
         ),
         MedicalTermEntity(
             id = 1035,
@@ -5812,6 +5888,8 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈtɔːtəmər/",
+
+            exampleEn = "The Tautomer is Isomers in dynamic equilibrium that differ in the position of a hydrogen atom and a double bond.",        ),
         ),
         MedicalTermEntity(
             id = 1036,
@@ -6443,4 +6521,5 @@ MedicalTermEntity(
         )
 
     )
-}
+
+            exampleEn = "The Allotrope is Different structural forms of the same element (e.g., diamond and graphite are allotropes of carbon).",}

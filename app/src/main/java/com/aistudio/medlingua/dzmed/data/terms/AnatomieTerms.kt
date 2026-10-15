@@ -1212,6 +1212,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/proʊˈtrækʃən/",
+
+            exampleEn = "The Protraction is Forward movement of a body part in the horizontal plane.",        ),
         ),
         MedicalTermEntity(
             id = 75,
@@ -1224,6 +1226,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/rɪˈtrækʃən/",
+
+            exampleEn = "The Retraction is Backward movement of a body part in the horizontal plane.",        ),
         ),
         MedicalTermEntity(
             id = 76,
@@ -1236,6 +1240,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/ˌɛlɪˈveɪʃən/",
+
+            exampleEn = "The Elevation is Upward movement of a body part.",        ),
         ),
         MedicalTermEntity(
             id = 77,
@@ -1248,6 +1254,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/dɪˈprɛʃən/",
+
+            exampleEn = "The Depression is Downward movement of a body part.",        ),
         ),
         MedicalTermEntity(
             id = 78,
@@ -1969,6 +1977,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/suːˈpaɪn/",
+
+            exampleEn = "The Supine is Lying face up.",        ),
         ),
         MedicalTermEntity(
             id = 123,
@@ -1981,6 +1991,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˌɪpsɪˈlætərəl/",
+
+            exampleEn = "The Ipsilateral is On the same side of the body.",        ),
         ),
         MedicalTermEntity(
             id = 124,
@@ -1993,6 +2005,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˌkɒntrəˈlætərəl/",
+
+            exampleEn = "The Contralateral is On the opposite side of the body.",        ),
         ),
         MedicalTermEntity(
             id = 125,
@@ -2005,6 +2019,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/baɪˈlætərəl/",
+
+            exampleEn = "The Bilateral is On both sides of the body.",        ),
         ),
         MedicalTermEntity(
             id = 126,
@@ -4764,6 +4780,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/boʊn ˈmæroʊ/",
+
+            exampleEn = "The Bone marrow is Soft tissue found inside bones that produces blood cells.",        ),
         ),
         MedicalTermEntity(
             id = 294,
@@ -4776,6 +4794,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɒmpækt boʊn/",
+
+            exampleEn = "The Compact bone is Dense outer layer of bone.",        ),
         ),
         MedicalTermEntity(
             id = 295,
@@ -4788,6 +4808,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈspʌndʒi boʊn/",
+
+            exampleEn = "The Spongy bone is Porous inner bone tissue containing bone marrow.",        ),
         ),
         MedicalTermEntity(
             id = 296,
@@ -4815,6 +4837,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɑːrtɪlɪdʒ/",
+
+            exampleEn = "The Cartilage is Flexible connective tissue found in joints and other structures.",        ),
         ),
         MedicalTermEntity(
             id = 298,
@@ -4947,6 +4971,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈneɪzəl boʊn/",
+
+            exampleEn = "The Nasal bone is One of two small bones forming the bridge of the nose.",        ),
         ),
         MedicalTermEntity(
             id = 307,
@@ -5079,6 +5105,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈvɜːrtɪbrə/",
+
+            exampleEn = "The Vertebra (pl. Vertebrae) is Any of the individual bones making up the spinal column.",        ),
         ),
         MedicalTermEntity(
             id = 316,
@@ -5107,6 +5135,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/trænsˈvɜːrs ˈprɒsɛs/",
+
+            exampleEn = "The Transverse process is Lateral projections from each side of a vertebra.",        ),
         ),
         MedicalTermEntity(
             id = 318,
@@ -5194,6 +5224,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/fɔːls rɪbz/",
+
+            exampleEn = "The False ribs (8-10) is Ribs attached to the sternum indirectly via costal cartilage.",        ),
         ),
         MedicalTermEntity(
             id = 324,
@@ -5206,6 +5238,8 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɒstəl ˈkɑːrtɪlɪdʒ/",
+
+            exampleEn = "The Costal cartilage is Cartilage connecting the ribs to the sternum.",        ),
         ),
         MedicalTermEntity(
             id = 325,

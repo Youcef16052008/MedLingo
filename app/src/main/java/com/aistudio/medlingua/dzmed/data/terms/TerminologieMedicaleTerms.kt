@@ -501,6 +501,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/fəˈlɪkjʊlər feɪz/",
+
+            exampleEn = "The Follicular phase is Days 1–14 of the cycle: follicle growth and estrogen production under FSH stimulation.",        ),
         ),
         MedicalTermEntity(
             id = 3432,
@@ -513,6 +515,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈluːtiəl feɪz/",
+
+            exampleEn = "The Luteal phase is Days 15–28 of the cycle: corpus luteum produces progesterone to prepare the endometrium.",        ),
         ),
         MedicalTermEntity(
             id = 3433,
@@ -630,6 +634,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈɛstrədʒən/",
+
+            exampleEn = "The Estrogen is Female sex hormone produced by ovarian follicles promoting endometrial proliferation and secondary sex characteristics.",        ),
         ),
         MedicalTermEntity(
             id = 3441,
@@ -838,6 +844,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈblæstəmɪər/",
+
+            exampleEn = "The Blastomere is One of the cells produced by cleavage of the zygote during early embryonic development.",        ),
         ),
         MedicalTermEntity(
             id = 3455,
@@ -1122,6 +1130,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/dʒɜːrm ˈleɪər/",
+
+            exampleEn = "The Germ layer is One of the three primary cell layers (ectoderm, mesoderm, endoderm) formed during gastrulation.",        ),
         ),
         MedicalTermEntity(
             id = 3474,
@@ -1254,6 +1264,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/pærˈæksɪəl/",
+
+            exampleEn = "The Paraxial mesoderm is Mesoderm flanking the notochord that forms somites, giving rise to vertebrae, muscles, and dermis.",        ),
         ),
         MedicalTermEntity(
             id = 3483,
@@ -1371,6 +1383,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈnjʊərəl krɛst/",
+
+            exampleEn = "The Neural crest cells is Multipotent migratory cells arising from the dorsal neural tube with multiple derivatives throughout the body.",        ),
         ),
         MedicalTermEntity(
             id = 3491,
@@ -1413,6 +1427,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈbraɪn ˈvɛsɪkəlz/",
+
+            exampleEn = "The Primary brain vesicles is Three expansions of the neural tube: prosencephalon, mesencephalon, and rhombencephalon.",        ),
         ),
         MedicalTermEntity(
             id = 3494,
@@ -1532,6 +1548,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl ɑːrtʃɪz/",
+
+            exampleEn = "The Pharyngeal arches is Bilateral mesodermal and neural crest structures in the head/neck region forming facial and neck structures.",        ),
         ),
         MedicalTermEntity(
             id = 3502,
@@ -1545,6 +1563,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl klɛft/",
+
+            exampleEn = "The Pharyngeal cleft is Ectodermal grooves between pharyngeal arches; first forms the external auditory meatus.",        ),
         ),
         MedicalTermEntity(
             id = 3503,
@@ -1558,6 +1578,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl paʊtʃ/",
+
+            exampleEn = "The Pharyngeal pouch is Endodermal outpouchings between pharyngeal arches; form tympanic cavity, palatine tonsil, parathyroid, thymus.",        ),
         ),
         MedicalTermEntity(
             id = 3504,
@@ -1663,6 +1685,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈfiːtəl ˌsɜːrkjʊˈleɪʃən/",
+
+            exampleEn = "The Fetal circulation is pattern of blood circulation in the fetus with three shunts: ductus venosus, foramen ovale, ductus arteriosus.",        ),
         ),
         MedicalTermEntity(
             id = 3511,
@@ -1675,6 +1699,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/eɪˈɔːrtɪk ɑːrtʃɪz/",
+
+            exampleEn = "The Aortic arches is Six pairs of arterial arches associated with pharyngeal arches forming major arteries of head and neck.",        ),
         ),
         MedicalTermEntity(
             id = 3512,
@@ -1703,6 +1729,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/tɛˈtrælədʒi əv fəˈloʊ/",
+
+            exampleEn = "The Tetralogy of Fallot is congenital heart defect with four abnormalities: VSD, pulmonary stenosis, overriding aorta, RV hypertrophy.",        ),
         ),
         MedicalTermEntity(
             id = 3514,
@@ -1820,6 +1848,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/kɔːrˈɪɒnɪk ˈvɪlaɪ/",
+
+            exampleEn = "The Chorionic villi is Finger-like projections of chorionic tissue into maternal blood sinusoids; site of maternofetal exchange.",        ),
         ),
         MedicalTermEntity(
             id = 3522,
@@ -1832,6 +1862,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ˌɒlɪɡoʊhaɪˈdræmniɒs/",
+
+            exampleEn = "The Oligohydramnios is Abnormally low amniotic fluid volume often associated with renal agenesis (Potter sequence).",        ),
         ),
         MedicalTermEntity(
             id = 3523,
@@ -1844,6 +1876,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ˌpɒlihaɪˈdræmniɒs/",
+
+            exampleEn = "The Polyhydramnios is Excess amniotic fluid often associated with fetal swallowing disorders (esophageal atresia, anencephaly).",        ),
         ),
         MedicalTermEntity(
             id = 3524,
@@ -1961,6 +1995,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/əˈmiːliə/",
+
+            exampleEn = "The Amelia is Complete absence of one or more limbs due to failure of limb bud development.",        ),
         ),
         MedicalTermEntity(
             id = 3532,
@@ -2139,6 +2175,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/krɪpˈtɔːrkɪdɪzəm/",
+
+            exampleEn = "The Cryptorchidism is Failure of one or both testes to descend into the scrotal sac by birth.",        ),
         ),
         MedicalTermEntity(
             id = 3544,
@@ -2273,6 +2311,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˈhɪrʃsprʌŋ dɪˈziːz/",
+
+            exampleEn = "The Hirschsprung disease is Congenital aganglionic megacolon due to failure of neural crest cells to migrate to the distal bowel.",        ),
         ),
         MedicalTermEntity(
             id = 3553,
@@ -2360,6 +2400,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/ˈpælɪtəl ʃɛlvz/",
+
+            exampleEn = "The Palatal shelves is Bilateral horizontal outgrowths of the maxillary prominences that fuse to form the secondary palate (Week 7-12).",        ),
         ),
         MedicalTermEntity(
             id = 3559,
@@ -2450,6 +2492,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/eɪˈdʒɛnɪsɪs/",
+
+            exampleEn = "The Agenesis is Complete absence of an organ due to failure of primordium formation.",        ),
         ),
         MedicalTermEntity(
             id = 3565,
@@ -2463,6 +2507,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/eɪˈpleɪziə/",
+
+            exampleEn = "The Aplasia is Failure of an organ to develop despite the presence of the primordium.",        ),
         ),
         MedicalTermEntity(
             id = 3566,
@@ -2476,6 +2522,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ˌhaɪpəˈpleɪziə/",
+
+            exampleEn = "The Hypoplasia is Incomplete development of an organ resulting in reduced size.",        ),
         ),
         MedicalTermEntity(
             id = 3567,
@@ -2488,6 +2536,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/əˈtriːziə/",
+
+            exampleEn = "The Atresia is Congenital absence or closure of a normal body orifice or tubular structure.",        ),
         ),
         MedicalTermEntity(
             id = 3568,
@@ -2500,6 +2550,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ɛkˈtoʊpiə/",
+
+            exampleEn = "The Ectopia is Displacement of an organ to an abnormal location (e.g., ectopic kidney).",        ),
         ),
         MedicalTermEntity(
             id = 3569,
@@ -2512,6 +2564,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ˈfiːtəl ˈælkəhɒl ˈsɪndroʊm/",
+
+            exampleEn = "The Fetal alcohol syndrome is teratogenic pattern from maternal alcohol use: growth retardation, facial abnormalities, and CNS dysfunction.",        ),
         ),
         MedicalTermEntity(
             id = 3570,
@@ -2524,6 +2578,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ruːˈbɛlə/",
+
+            exampleEn = "The Rubella (German measles) is viral teratogen causing congenital rubella syndrome: deafness, cataracts, congenital heart disease if in 1st trimester.",        ),
         ),
         MedicalTermEntity(
             id = 3571,
@@ -2627,6 +2683,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˌsjuːdoʊˈɡlændʒʊlər/",
+
+            exampleEn = "The Pseudoglandular stage is Lung development stage (Week 5-17): airways form but no alveoli; not viable for breathing.",        ),
         ),
         MedicalTermEntity(
             id = 3578,
@@ -2639,6 +2697,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/kəˈnæljʊlər/",
+
+            exampleEn = "The Canalicular stage is Lung stage (Week 16-26): respiratory bronchioles and alveolar ducts form; surfactant production begins.",        ),
         ),
         MedicalTermEntity(
             id = 3579,
@@ -2651,6 +2711,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˈsækjʊlər/",
+
+            exampleEn = "The Saccular stage is Lung stage (Week 24-38): terminal sacs form with thin walls and good vascularization.",        ),
         ),
         MedicalTermEntity(
             id = 3580,
@@ -2663,6 +2725,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ælˈviːələr/",
+
+            exampleEn = "The Alveolar stage is Lung stage (Week 36 to 8 years postnatal): true alveoli multiply increasing respiratory surface area.",        ),
         ),
         MedicalTermEntity(
             id = 3581,
@@ -2720,6 +2784,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/kənˈdʒɛnɪtəl ˌdaɪəfræɡˈmætɪk ˈhɜːrniə/",
+
+            exampleEn = "The Congenital diaphragmatic hernia (CDH) is Herniation of abdominal organs into the thorax due to diaphragmatic defect; causes pulmonary hypoplasia.",        ),
         ),
         MedicalTermEntity(
             id = 3585,
@@ -2777,6 +2843,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈtraɪmɛstər/",
+
+            exampleEn = "The Trimester is One of three equal divisions of pregnancy (1st: wk 1-12, 2nd: wk 13-27, 3rd: wk 28-40).",        ),
         ),
         MedicalTermEntity(
             id = 3589,
@@ -2820,6 +2888,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/prɪˈmætʃʊər bɜːrθ/",
+
+            exampleEn = "The Premature birth is Birth before 37 completed weeks of gestation.",        ),
         ),
         MedicalTermEntity(
             id = 3592,
@@ -2832,6 +2902,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈpriːtɜːrm ˈleɪbər/",
+
+            exampleEn = "The Preterm labor is Onset of uterine contractions and cervical dilation before 37 weeks gestation.",        ),
         ),
         MedicalTermEntity(
             id = 3593,
@@ -2980,6 +3052,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˈhoʊmiˌɒtɪk dʒiːn/",
+
+            exampleEn = "The Homeotic gene (Hox gene) is Master regulatory genes containing homeobox domains controlling body axis and segment identity.",        ),
         ),
         MedicalTermEntity(
             id = 3603,
@@ -3023,6 +3097,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
+
+            exampleEn = "The Apoptosis (programmed cell death) is Genetically controlled cell death essential for morphogenesis (e.g., interdigital apoptosis shaping fingers).",        ),
         ),
         MedicalTermEntity(
             id = 3606,
@@ -3247,6 +3323,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˈmɛzəŋkaɪm/",
+
+            exampleEn = "The Mesenchyme is Loosely organized embryonic connective tissue derived mainly from mesoderm and neural crest cells.",        ),
         ),
         MedicalTermEntity(
             id = 3621,
@@ -3335,6 +3413,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/pləˈsɛntəl əˈbrʌpʃən/",
+
+            exampleEn = "The Placental abruption is Premature separation of the placenta from the uterine wall before delivery; a major obstetric emergency.",        ),
         ),
         MedicalTermEntity(
             id = 3627,
@@ -3409,6 +3489,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒlədʒi/",
+
+            exampleEn = "The -ology is Suffix meaning the study of a specific subject.",        ),
         ),
         MedicalTermEntity(
             id = 3632,
@@ -3422,6 +3504,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/aɪtɪs/",
+
+            exampleEn = "The -itis is Suffix meaning inflammation of a structure.",        ),
         ),
         MedicalTermEntity(
             id = 3633,
@@ -3435,6 +3519,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɛktəmi/",
+
+            exampleEn = "The -ectomy is Suffix meaning surgical removal of a structure.",        ),
         ),
         MedicalTermEntity(
             id = 3634,
@@ -3448,6 +3534,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒstəmi/",
+
+            exampleEn = "The -ostomy is Suffix meaning surgical creation of a new opening.",        ),
         ),
         MedicalTermEntity(
             id = 3635,
@@ -3461,6 +3549,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒtəmi/",
+
+            exampleEn = "The -otomy is Suffix meaning surgical incision into a structure.",        ),
         ),
         MedicalTermEntity(
             id = 3636,
@@ -3474,6 +3564,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/plæsti/",
+
+            exampleEn = "The -plasty is Suffix meaning surgical repair or reconstruction.",        ),
         ),
         MedicalTermEntity(
             id = 3637,
@@ -3487,6 +3579,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/skəpi/",
+
+            exampleEn = "The -scopy is Suffix meaning visual examination using an instrument.",        ),
         ),
         MedicalTermEntity(
             id = 3638,
@@ -3499,6 +3593,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɡræfi/",
+
+            exampleEn = "The -graphy is Suffix meaning the process of recording an image.",        ),
         ),
         MedicalTermEntity(
             id = 3639,
@@ -3511,6 +3607,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɡræm/",
+
+            exampleEn = "The -gram is Suffix meaning a recorded image or tracing.",        ),
         ),
         MedicalTermEntity(
             id = 3640,
@@ -3524,6 +3622,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ældʒiə/",
+
+            exampleEn = "The -algia is Suffix meaning pain in a specific area.",        ),
         ),
         MedicalTermEntity(
             id = 3641,
@@ -3536,6 +3636,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/pæθi/",
+
+            exampleEn = "The -pathy is Suffix meaning disease or disorder of a structure.",        ),
         ),
         MedicalTermEntity(
             id = 3642,
@@ -3549,6 +3651,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/riːə/",
+
+            exampleEn = "The -rrhea is Suffix meaning abnormal discharge or flow.",        ),
         ),
         MedicalTermEntity(
             id = 3643,
@@ -3562,6 +3666,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/iːmiə/",
+
+            exampleEn = "The -emia is Suffix meaning a condition of the blood.",        ),
         ),
         MedicalTermEntity(
             id = 3644,
@@ -3575,6 +3681,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mɛɡəli/",
+
+            exampleEn = "The -megaly is Suffix meaning enlargement of a structure.",        ),
         ),
         MedicalTermEntity(
             id = 3645,
@@ -3588,6 +3696,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/foʊbiə/",
+
+            exampleEn = "The -phobia is Suffix meaning fear or sensitivity to a specific thing.",        ),
         ),
         MedicalTermEntity(
             id = 3646,
@@ -3601,6 +3711,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/haɪpər/",
+
+            exampleEn = "The Hyper- is Prefix meaning excessive or above normal.",        ),
         ),
         MedicalTermEntity(
             id = 3647,
@@ -3614,6 +3726,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/haɪpoʊ/",
+
+            exampleEn = "The Hypo- is Prefix meaning deficient or below normal.",        ),
         ),
         MedicalTermEntity(
             id = 3648,
@@ -3627,6 +3741,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/breɪdi/",
+
+            exampleEn = "The Brady- is Prefix meaning slow.",        ),
         ),
         MedicalTermEntity(
             id = 3649,
@@ -3640,6 +3756,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/tæki/",
+
+            exampleEn = "The Tachy- is Prefix meaning fast or rapid.",        ),
         ),
         MedicalTermEntity(
             id = 3650,
@@ -3653,6 +3771,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mækroʊ/",
+
+            exampleEn = "The Macro- is Prefix meaning large or abnormally large.",        ),
         ),
         MedicalTermEntity(
             id = 3651,
@@ -3666,6 +3786,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/maɪkroʊ/",
+
+            exampleEn = "The Micro- is Prefix meaning small or abnormally small.",        ),
         ),
         MedicalTermEntity(
             id = 3652,
@@ -3678,6 +3800,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/pɒli/",
+
+            exampleEn = "The Poly- is Prefix meaning many or much.",        ),
         ),
         MedicalTermEntity(
             id = 3653,
@@ -3690,6 +3814,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mɒnoʊ/",
+
+            exampleEn = "The Mono- is Prefix meaning one or single.",        ),
         ),
         MedicalTermEntity(
             id = 3654,
@@ -3733,6 +3859,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ænˈtɪəriər/",
+
+            exampleEn = "The Anterior (Ventral) is Toward the front of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3657,
@@ -3745,6 +3873,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/pɒˈstɪəriər/",
+
+            exampleEn = "The Posterior (Dorsal) is Toward the back of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3658,
@@ -3757,6 +3887,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/suːˈpɪəriər/",
+
+            exampleEn = "The Superior (Cranial) is Toward the head or upper part of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3659,
@@ -3769,6 +3901,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ɪnˈfɪəriər/",
+
+            exampleEn = "The Inferior (Caudal) is Away from the head or toward the lower part of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3660,
@@ -3781,6 +3915,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈmiːdiəl/",
+
+            exampleEn = "The Medial is Toward the midline of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3661,
@@ -3793,6 +3929,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈlætərəl/",
+
+            exampleEn = "The Lateral is Away from the midline of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3662,
@@ -3805,6 +3943,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈprɒksɪməl/",
+
+            exampleEn = "The Proximal is Closer to the origin or point of attachment.",        ),
         ),
         MedicalTermEntity(
             id = 3663,
@@ -3817,6 +3957,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈdɪstəl/",
+
+            exampleEn = "The Distal is Farther from the origin or point of attachment.",        ),
         ),
         MedicalTermEntity(
             id = 3664,
@@ -3829,6 +3971,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˌsuːpəˈfɪʃəl/",
+
+            exampleEn = "The Superficial is Toward or on the surface of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3665,
@@ -3841,6 +3985,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/diːp/",
+
+            exampleEn = "The Deep is Away from the surface of the body.",        ),
         ),
         MedicalTermEntity(
             id = 3666,
@@ -4093,6 +4239,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/hɑːrt reɪt/",
+
+            exampleEn = "The Heart rate is number of heartbeats per minute (normal: 60–100 bpm).",        ),
         ),
         MedicalTermEntity(
             id = 3683,
@@ -4167,6 +4315,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpərˈtɛnʃən/",
+
+            exampleEn = "The Hypertension is Persistently elevated blood pressure (>140/90 mmHg).",        ),
         ),
         MedicalTermEntity(
             id = 3688,
@@ -4179,6 +4329,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpoʊˈtɛnʃən/",
+
+            exampleEn = "The Hypotension is Abnormally low blood pressure (<90/60 mmHg).",        ),
         ),
         MedicalTermEntity(
             id = 3689,
@@ -4191,6 +4343,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/əˈrɪðmiə/",
+
+            exampleEn = "The Arrhythmia is Any abnormal heart rhythm.",        ),
         ),
         MedicalTermEntity(
             id = 3690,
@@ -4203,6 +4357,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌmaɪoʊˈkɑːrdiəl ɪnˈfɑːrkʃən/",
+
+            exampleEn = "The Myocardial infarction is Death of heart muscle tissue due to prolonged ischemia (heart attack).",        ),
         ),
         MedicalTermEntity(
             id = 3691,
@@ -4370,6 +4526,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/njuːˈmoʊniə/",
+
+            exampleEn = "The Pneumonia is Inflammation of the lung tissue due to infection.",        ),
         ),
         MedicalTermEntity(
             id = 3702,
@@ -4504,6 +4662,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ˌpɛrɪˈstɔːlsɪs/",
+
+            exampleEn = "The Peristalsis is Wave-like muscular contractions propelling food through the digestive tract.",        ),
         ),
         MedicalTermEntity(
             id = 3711,
@@ -4668,6 +4828,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/pəˈrɪfərəl/",
+
+            exampleEn = "The Peripheral nervous system (PNS) is All nerves outside the brain and spinal cord.",        ),
         ),
         MedicalTermEntity(
             id = 3722,
@@ -4846,6 +5008,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈskɛlɪtəl ˈmʌsəl/",
+
+            exampleEn = "The Skeletal muscle is Voluntary striated muscle attached to bones for movement.",        ),
         ),
         MedicalTermEntity(
             id = 3734,
@@ -4858,6 +5022,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/smuːð ˈmʌsəl/",
+
+            exampleEn = "The Smooth muscle is Involuntary non-striated muscle in hollow organs (gut, vessels).",        ),
         ),
         MedicalTermEntity(
             id = 3735,
@@ -4871,6 +5037,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈkɑːrdiæk/",
+
+            exampleEn = "The Cardiac muscle is Involuntary striated muscle unique to the heart.",        ),
         ),
         MedicalTermEntity(
             id = 3736,
@@ -5203,6 +5371,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/ˈriːnəl ˈfeɪlər/",
+
+            exampleEn = "The Renal failure is Inability of the kidneys to filter waste products from the blood adequately.",        ),
         ),
         MedicalTermEntity(
             id = 3758,
@@ -5431,6 +5601,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ɪˈdiːmə/",
+
+            exampleEn = "The Edema is Abnormal accumulation of fluid in the interstitial spaces causing swelling.",        ),
         ),
         MedicalTermEntity(
             id = 3773,
@@ -5444,6 +5616,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/saɪˈænoʊsɪs/",
+
+            exampleEn = "The Cyanosis is Bluish discoloration of skin/mucous membranes due to reduced oxygen in blood.",        ),
         ),
         MedicalTermEntity(
             id = 3774,
@@ -5503,6 +5677,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌdaɪəˈrɪə/",
+
+            exampleEn = "The Diarrhea is Frequent passage of loose, watery stools (>3 per day).",        ),
         ),
         MedicalTermEntity(
             id = 3778,
@@ -5515,6 +5691,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌkɒnstɪˈpeɪʃən/",
+
+            exampleEn = "The Constipation is Infrequent or difficult passage of hard, dry stools.",        ),
         ),
         MedicalTermEntity(
             id = 3779,
@@ -5784,6 +5962,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˈtɒlərəns/",
+
+            exampleEn = "The Tolerance is Reduced response to a drug after repeated use requiring higher doses.",        ),
         ),
         MedicalTermEntity(
             id = 3797,
@@ -6204,6 +6384,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌɪntjʊˈbeɪʃən/",
+
+            exampleEn = "The Intubation is Insertion of a tube into the trachea to maintain an open airway.",        ),
         ),
         MedicalTermEntity(
             id = 3825,
@@ -6216,6 +6398,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌkæθɪtəraɪˈzeɪʃən/",
+
+            exampleEn = "The Catheterization is Insertion of a catheter into a body cavity for drainage or injection.",        ),
         ),
         MedicalTermEntity(
             id = 3826,
@@ -6229,6 +6413,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ɛnˈdɒskəpi/",
+
+            exampleEn = "The Endoscopy is Visual examination of internal organs using a flexible tube with a camera.",        ),
         ),
         MedicalTermEntity(
             id = 3827,
@@ -6242,6 +6428,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌlæpəˈrɒskəpi/",
+
+            exampleEn = "The Laparoscopy is Minimally invasive surgery using small incisions and a camera in the abdomen.",        ),
         ),
         MedicalTermEntity(
             id = 3828,
@@ -6269,6 +6457,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/blʌd trænsˈfjuːʒən/",
+
+            exampleEn = "The Blood transfusion is Intravenous administration of blood or blood products from a donor.",        ),
         ),
         MedicalTermEntity(
             id = 3830,
@@ -6447,6 +6637,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/məˈtæbəlɪzəm/",
+
+            exampleEn = "The Metabolism is All chemical reactions occurring in the body to maintain life.",        ),
         ),
         MedicalTermEntity(
             id = 3843,
@@ -6597,6 +6789,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌprɒfɪˈlæksɪs/",
+
+            exampleEn = "The Prophylaxis is Any measure taken to prevent disease or its complications.",        ),
         ),
         MedicalTermEntity(
             id = 3853,
@@ -6624,6 +6818,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈpæliətɪv kɛr/",
+
+            exampleEn = "The Palliative care is Care focused on providing relief from symptoms of serious illness rather than cure.",        ),
         ),
         MedicalTermEntity(
             id = 3855,
@@ -6636,6 +6832,8 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈvaɪtəl saɪnz/",
+
+            exampleEn = "The Vital signs is Basic physiological measurements: temperature, pulse, blood pressure and respiration rate.",        ),
         ),
         MedicalTermEntity(
             id = 3856,
