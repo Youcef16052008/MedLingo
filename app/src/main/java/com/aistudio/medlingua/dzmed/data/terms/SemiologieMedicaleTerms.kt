@@ -36,6 +36,10 @@ object SemiologieMedicaleTerms {
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/ˈsɪmptəm/",
             exampleEn = "The symptom is the subjective manifestation of disease reported by the patient (e.g., pain, nausea, fatigue).",
+            exampleFr = "Exemple: Le Manifestation subjective de la maladie rapportée par le patient (ex: douleur, nausée, fatigue).",
+
+            exampleAr = "مثال: يظهر مظهر ذاتي للمرض يُبلِّغ عنه المريض (مثل: الألم والغثيان والإرهاق).",
+
         ),
         MedicalTermEntity(
             id = 2492,
@@ -49,6 +53,10 @@ object SemiologieMedicaleTerms {
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/saɪn/",
             exampleEn = "The sign is the objective finding detected by the examiner during physical examination (e.g., fever, rash, murmur).",
+            exampleFr = "Exemple: Le Constat objectif détecté par l'examinateur lors de l'examen physique (ex: fièvre, éruption, souffle).",
+
+            exampleAr = "مثال: يظهر نتيجة موضوعية يكتشفها الفاحص أثناء الفحص السريري (مثل: الحمى والطفح والنفخة).",
+
         ),
         MedicalTermEntity(
             id = 2493,
@@ -141,6 +149,10 @@ object SemiologieMedicaleTerms {
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/ˈsoʊʃəl ˈhɪstri/",
 
+            exampleFr = "Exemple: Le Informations sur le mode de vie, habitudes, profession et facteurs sociaux affectant la santé.",
+
+            exampleAr = "مثال: يظهر معلومات عن أسلوب الحياة والعادات والمهنة والعوامل الاجتماعية المؤثرة في الصحة.",
+
             exampleEn = "The Social history is Information about lifestyle, habits, occupation, and social factors affecting health.",        ),
         ),
         MedicalTermEntity(
@@ -170,6 +182,10 @@ object SemiologieMedicaleTerms {
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/ɪnˈspɛkʃən/",
 
+            exampleFr = "Exemple: Le Examen visuel de la surface corporelle et des mouvements du patient.",
+
+            exampleAr = "مثال: يظهر فحص البصري لسطح جسم المريض وحركاته.",
+
             exampleEn = "The Inspection is Visual examination of a patient's body surface and movements.",        ),
         ),
         MedicalTermEntity(
@@ -183,6 +199,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Introduction à la Sémiologie",
             ipaPhonetic = "/pælˈpeɪʃən/",
+
+            exampleFr = "Exemple: Le Examen par le toucher pour évaluer les structures corporelles et organes.",
+
+            exampleAr = "مثال: يظهر فحص باستخدام حاسة اللمس لتقييم بنيات وأعضاء الجسم.",
 
             exampleEn = "The Palpation is Examination using the sense of touch to assess body structures and organs.",        ),
         ),
@@ -242,6 +262,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Signes Vitaux",
             ipaPhonetic = "/ˈvaɪtəl saɪnz/",
+
+            exampleFr = "Exemple: Le Mesures physiologiques de base: température, pouls, fréquence respiratoire et pression artérielle.",
+
+            exampleAr = "مثال: يظهر قياسات الفيزيولوجية الأساسية: الحرارة والنبض ومعدل التنفس وضغط الدم.",
 
             exampleEn = "The Vital signs is Basic physiological measurements: temperature, pulse, respiration rate, and blood pressure.",        ),
         ),
@@ -380,6 +404,10 @@ object SemiologieMedicaleTerms {
             chapter = "Signes Vitaux",
             ipaPhonetic = "/ˌhaɪpɜːrˈtɛnʃən/",
 
+            exampleFr = "Exemple: Le Pression artérielle persistamment élevée ≥140/90 mmHg; facteur de risque cardiovasculaire majeur.",
+
+            exampleAr = "مثال: يظهر ضغط دم مرتفع باستمرار ≥140/90 ملم زئبق؛ عامل خطر قلبي وعائي رئيسي.",
+
             exampleEn = "The Hypertension is Persistently elevated blood pressure ≥140/90 mmHg; a major cardiovascular risk factor.",        ),
         ),
         MedicalTermEntity(
@@ -472,6 +500,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/tʃɛst peɪn/",
 
+            exampleFr = "Exemple: Le Douleur ressentie dans la poitrine; peut provenir de causes cardiaques, pulmonaires ou musculosquelettiques.",
+
+            exampleAr = "مثال: يظهر ألم يُحسَّ به في الصدر؛ قد ينشأ من أسباب قلبية أو رئوية أو عضلية هيكلية.",
+
             exampleEn = "The Chest pain (Precordialgia) is Pain felt in the chest; can originate from cardiac, pulmonary, or musculoskeletal causes.",        ),
         ),
         MedicalTermEntity(
@@ -485,6 +517,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/dɪspˈniːə/",
+
+            exampleFr = "Exemple: Le Sensation subjective d'essoufflement ou de difficulté à respirer.",
+
+            exampleAr = "مثال: يظهر إحساس ذاتي بضيق التنفس أو صعوبة في التنفس.",
 
             exampleEn = "The Dyspnea is Subjective sensation of shortness of breath or difficult breathing.",        ),
         ),
@@ -500,6 +536,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ɔːrˈθɒpniə/",
+
+            exampleFr = "Exemple: Le Dyspnée survenant en position couchée soulagée par la position assise; signe d'insuffisance cardiaque.",
+
+            exampleAr = "مثال: يظهر ضيق تنفس يحدث في وضعية الاستلقاء يتحسن بالجلوس المنتصب؛ علامة قصور القلب.",
 
             exampleEn = "The Orthopnea is Dyspnea occurring in the lying position relieved by sitting upright; sign of heart failure.",        ),
         ),
@@ -545,6 +585,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ɪˈdiːmə/",
+
+            exampleFr = "Exemple: Le Accumulation anormale de liquide dans les tissus interstitiels causant un gonflement.",
+
+            exampleAr = "مثال: يظهر تراكم غير طبيعي للسائل في الأنسجة الخلالية مسبباً تورماً.",
 
             exampleEn = "The Edema is Abnormal accumulation of fluid in interstitial tissues causing swelling.",        ),
         ),
@@ -621,6 +665,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ˈdʒuːɡjʊlər ˈviːnəs dɪˈstɛnʃən/",
 
+            exampleFr = "Exemple: Le Distension visible des veines jugulaires indiquant une pression veineuse centrale élevée.",
+
+            exampleAr = "مثال: يظهر تمدد مرئي في الأوردة الوداجية يدل على ارتفاع الضغط الوريدي المركزي.",
+
             exampleEn = "The Jugular venous distension (JVD) is Visible distension of the jugular veins indicating elevated central venous pressure.",        ),
         ),
         MedicalTermEntity(
@@ -650,6 +698,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ˌkæpɪleri rɪˈfɪl taɪm/",
 
+            exampleFr = "Exemple: Le Temps pour que la couleur revienne au bout d'un doigt après pression; normal <2 secondes.",
+
+            exampleAr = "مثال: يظهر وقت اللازم لعودة اللون لرأس الإصبع بعد الضغط عليه؛ الطبيعي أقل من ثانيتين.",
+
             exampleEn = "The Capillary refill time (CRT) is Time for color to return to a fingertip after pressure applied; normal <2 seconds.",        ),
         ),
         MedicalTermEntity(
@@ -663,6 +715,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/pəˈrɪfərəl ˈpʌlsɪz/",
+
+            exampleFr = "Exemple: Le Pulsations artérielles palpables aux sites périphériques pour évaluer l'état cardiovasculaire.",
+
+            exampleAr = "مثال: يظهر نبضات شريانية ملموسة في المواضع المحيطية تُستخدَم لتقييم الحالة القلبية الوعائية.",
 
             exampleEn = "The Peripheral pulses is Palpable arterial pulsations at peripheral sites used to assess cardiovascular status.",        ),
         ),
@@ -739,6 +795,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Cardiovasculaire",
             ipaPhonetic = "/ˌklɔːdɪˈkeɪʃən/",
 
+            exampleFr = "Exemple: Le Douleur des jambes à l'exercice causée par un flux sanguin insuffisant; soulagement au repos.",
+
+            exampleAr = "مثال: يظهر ألم في الساق أثناء التمرين بسبب عدم كفاية تدفق الدم للعضلات؛ يتحسن بالراحة.",
+
             exampleEn = "The Claudication is Leg pain during exercise caused by inadequate blood flow to muscles; relieves with rest.",        ),
         ),
         MedicalTermEntity(
@@ -782,6 +842,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈspjuːtəm/",
+
+            exampleFr = "Exemple: Le Matériau expectoré des poumons; les caractéristiques (couleur, consistance) aident au diagnostic.",
+
+            exampleAr = "مثال: يظهر مادة تُقاء من الرئتين؛ خصائصها (اللون والقوام) تُعين على التشخيص.",
 
             exampleEn = "The Sputum is Material coughed up from the lungs; characteristics (color, consistency) aid diagnosis.",        ),
         ),
@@ -827,6 +891,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈkrækəlz/",
 
+            exampleFr = "Exemple: Le Sons pulmonaires anormaux non musicaux; crépitants fins suggèrent œdème ou fibrose pulmonaire.",
+
+            exampleAr = "مثال: يظهر أصوات رئوية غير طبيعية وغير موسيقية؛ الفرقعة الدقيقة تشير لوذمة أو تليف رئوي.",
+
             exampleEn = "The Crackles (Rales) is Abnormal non-musical lung sounds; fine crackles suggest pulmonary edema or fibrosis.",        ),
         ),
         MedicalTermEntity(
@@ -840,6 +908,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈrɒŋkaɪ/",
+
+            exampleFr = "Exemple: Le Sons pulmonaires anormaux graves causés par des sécrétions dans les grandes voies aériennes.",
+
+            exampleAr = "مثال: يظهر أصوات رئوية غير طبيعية منخفضة الحدة تسببها إفرازات في الممرات الهوائية الكبيرة.",
 
             exampleEn = "The Rhonchi is Low-pitched abnormal lung sounds caused by secretions in large airways.",        ),
         ),
@@ -872,6 +944,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/plʊˈrɪtɪk tʃɛst peɪn/",
 
+            exampleFr = "Exemple: Le Douleur thoracique aiguë aggravée par la respiration ou la toux; indique une inflammation pleurale.",
+
+            exampleAr = "مثال: يظهر ألم صدري حاد يزداد بالتنفس أو السعال؛ يدل على التهاب الغشاء الجنبي.",
+
             exampleEn = "The Pleuritic chest pain is Sharp chest pain worsened by breathing or coughing; indicates pleural inflammation.",        ),
         ),
         MedicalTermEntity(
@@ -885,6 +961,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈæpniə/",
+
+            exampleFr = "Exemple: Le Cessation temporaire de la respiration durant plus de 10 secondes.",
+
+            exampleAr = "مثال: يظهر توقف مؤقت للتنفس يستمر أكثر من 10 ثوانٍ.",
 
             exampleEn = "The Apnea is Temporary cessation of breathing lasting more than 10 seconds.",        ),
         ),
@@ -914,6 +994,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˌhaɪpɜːrˈkæpniə/",
+
+            exampleFr = "Exemple: Le Excès de dioxyde de carbone dans le sang (PaCO2 >45 mmHg); cause l'acidose respiratoire.",
+
+            exampleAr = "مثال: يظهر زيادة ثاني أكسيد الكربون في الدم (PaCO2 >45 ملم زئبق)؛ يسبب الحماض التنفسي.",
 
             exampleEn = "The Hypercapnia is Excess carbon dioxide in the blood (PaCO2 >45 mmHg); causes respiratory acidosis.",        ),
         ),
@@ -960,6 +1044,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈfrɛmɪtəs/",
 
+            exampleFr = "Exemple: Le Vibration ressentie sur la paroi thoracique quand le patient parle; augmentée dans la condensation.",
+
+            exampleAr = "مثال: يظهر اهتزاز المحسوس في جدار الصدر عند كلام المريض؛ يزيد في التكثُّف ويقل في الانصباب.",
+
             exampleEn = "The Fremitus (vocal) is Vibration felt on the chest wall when a patient speaks; increased in consolidation, decreased in effusion.",        ),
         ),
         MedicalTermEntity(
@@ -989,6 +1077,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈæksɛsəri ˈmʌsəlz/",
 
+            exampleFr = "Exemple: Le Recrutement des muscles du cou et des épaules lors de la respiration indiquant une détresse respiratoire.",
+
+            exampleAr = "مثال: يظهر استخدام عضلات العنق والكتف أثناء التنفس مما يدل على الضائقة التنفسية.",
+
             exampleEn = "The Use of accessory muscles is Recruitment of neck and shoulder muscles during breathing indicating respiratory distress.",        ),
         ),
         MedicalTermEntity(
@@ -1002,6 +1094,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˌɪntɜːrˈkɒstəl rɪˈtrækʃən/",
+
+            exampleFr = "Exemple: Le Dépression visible des tissus mous entre les côtes à l'inspiration; indique une détresse respiratoire.",
+
+            exampleAr = "مثال: يظهر انسحاب مرئي للأنسجة اللينة بين الأضلاع أثناء الشهيق؛ يدل على الضائقة التنفسية.",
 
             exampleEn = "The Intercostal retraction is Visible indrawing of soft tissues between ribs during inspiration; indicates respiratory distress.",        ),
         ),
@@ -1032,6 +1128,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Respiratoire",
             ipaPhonetic = "/ˈkʊsmɔːl ˈbriːðɪŋ/",
 
+            exampleFr = "Exemple: Le Respiration profonde, laborieuse et rapide observée dans l'acidose métabolique.",
+
+            exampleAr = "مثال: يظهر تنفس عميق ومتعب وسريع يُلاحَظ في الحماض الاستقلابي (مثل: الحماض الكيتوني السكري).",
+
             exampleEn = "The Kussmaul breathing is Deep, labored, rapid breathing seen in metabolic acidosis (e.g., diabetic ketoacidosis).",        ),
         ),
         MedicalTermEntity(
@@ -1046,6 +1146,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/æbˈdɒmɪnəl peɪn/",
+
+            exampleFr = "Exemple: Le Douleur ressentie dans l'abdomen; caractérisée par localisation, qualité, irradiation, sévérité.",
+
+            exampleAr = "مثال: يظهر ألم يُحسَّ به في البطن؛ يُوصَف بموقعه وطبيعته وإشعاعه وشدته وتوقيته.",
 
             exampleEn = "The Abdominal pain is Pain felt in the abdomen; characterized by location, quality, radiation, severity, and timing.",        ),
         ),
@@ -1076,6 +1180,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˈvɒmɪtɪŋ/",
 
+            exampleFr = "Exemple: Le Expulsion forcée du contenu gastrique par la bouche.",
+
+            exampleAr = "مثال: يظهر طرد قسري لمحتويات المعدة عبر الفم.",
+
             exampleEn = "The Vomiting (Emesis) is Forceful expulsion of stomach contents through the mouth.",        ),
         ),
         MedicalTermEntity(
@@ -1104,6 +1212,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/dɪsˈfeɪdʒiə/",
+
+            exampleFr = "Exemple: Le Difficulté à avaler; peut être due à des causes oropharyngées ou œsophagiennes.",
+
+            exampleAr = "مثال: يظهر صعوبة في البلع؛ قد تكون بسبب أسباب بلعومية أو مريئية.",
 
             exampleEn = "The Dysphagia is Difficulty swallowing; can be due to oropharyngeal or esophageal causes.",        ),
         ),
@@ -1151,6 +1263,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌkɒnstɪˈpeɪʃən/",
 
+            exampleFr = "Exemple: Le Mouvements intestinaux peu fréquents (moins de 3 par semaine) avec des selles dures et sèches.",
+
+            exampleAr = "مثال: يظهر حركات أمعاء غير متكررة (أقل من 3 في الأسبوع) مع براز صلب وجاف.",
+
             exampleEn = "The Constipation is Infrequent bowel movements (fewer than 3 per week) with hard, dry stools.",        ),
         ),
         MedicalTermEntity(
@@ -1182,6 +1298,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌhɛpətoʊˈmɛɡəli/",
 
+            exampleFr = "Exemple: Le Augmentation du volume du foie palpable sous le rebord costal droit.",
+
+            exampleAr = "مثال: يظهر تضخم الكبد الذي يمكن جسُّه أسفل الهامش الضلعي الأيمن.",
+
             exampleEn = "The Hepatomegaly is Enlargement of the liver palpable below the right costal margin.",        ),
         ),
         MedicalTermEntity(
@@ -1197,6 +1317,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌspliːnoʊˈmɛɡəli/",
 
+            exampleFr = "Exemple: Le Augmentation du volume de la rate s'étendant sous le rebord costal gauche.",
+
+            exampleAr = "مثال: يظهر تضخم الطحال الذي يمتد أسفل الهامش الضلعي الأيسر.",
+
             exampleEn = "The Splenomegaly is Enlargement of the spleen extending below the left costal margin.",        ),
         ),
         MedicalTermEntity(
@@ -1210,6 +1334,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/əˈsaɪtiːz/",
+
+            exampleFr = "Exemple: Le Accumulation anormale de liquide dans la cavité péritonéale causant distension abdominale.",
+
+            exampleAr = "مثال: يظهر تراكم غير طبيعي للسائل في التجويف البريتوني مسبباً انتفاخ البطن.",
 
             exampleEn = "The Ascites is Abnormal accumulation of fluid in the peritoneal cavity causing abdominal distension.",        ),
         ),
@@ -1225,6 +1353,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˈmɛliːnə/",
 
+            exampleFr = "Exemple: Le Selles noires et goudronneuses résultant du sang digéré; indique un saignement GI supérieur.",
+
+            exampleAr = "مثال: يظهر براز أسود قطراني ناتج عن الدم المهضوم؛ يدل على نزيف الجهاز الهضمي العلوي.",
+
             exampleEn = "The Melena is Black, tarry stools resulting from digested blood; indicates upper GI bleeding.",        ),
         ),
         MedicalTermEntity(
@@ -1238,6 +1370,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌhɛmətəˈkiːziə/",
+
+            exampleFr = "Exemple: Le Passage de sang rouge frais par le rectum; indique un saignement GI inférieur.",
+
+            exampleAr = "مثال: يظهر خروج دم أحمر طازج عبر المستقيم؛ يدل على نزيف الجهاز الهضمي السفلي.",
 
             exampleEn = "The Hematochezia is Passage of fresh red blood per rectum; indicates lower GI bleeding.",        ),
         ),
@@ -1253,6 +1389,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/rɪˈbaʊnd ˈtɛndərnɪs/",
 
+            exampleFr = "Exemple: Le Douleur lors du relâchement rapide de la pression profonde abdominale; indique irritation péritonéale.",
+
+            exampleAr = "مثال: يظهر ألم عند الإفراج السريع عن الضغط العميق على البطن؛ يدل على تهيُّج البريتون.",
+
             exampleEn = "The Rebound tenderness is Pain upon rapid release of deep pressure applied to the abdomen; indicates peritoneal irritation.",        ),
         ),
         MedicalTermEntity(
@@ -1266,6 +1406,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˈmɜːrfiz saɪn/",
+
+            exampleFr = "Exemple: Le Arrêt inspiratoire lors de la palpation de l'hypocondre droit; indique cholécystite aiguë.",
+
+            exampleAr = "مثال: يظهر توقف الشهيق أثناء جسِّ المراق الأيمن؛ يدل على التهاب المرارة الحاد.",
 
             exampleEn = "The Murphy's sign is Inspiratory arrest during palpation of the right hypochondrium; indicates acute cholecystitis.",        ),
         ),
@@ -1311,6 +1455,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Digestive",
             ipaPhonetic = "/ˌænəˈrɛksiə/",
 
+            exampleFr = "Exemple: Le Perte d'appétit accompagnant souvent une maladie systémique, un cancer ou des troubles psychiatriques.",
+
+            exampleAr = "مثال: يظهر فقدان الشهية يصاحب غالباً أمراضاً جهازية أو سرطاناً أو حالات نفسية.",
+
             exampleEn = "The Anorexia is Loss of appetite often accompanying systemic disease, cancer, or psychiatric conditions.",        ),
         ),
         MedicalTermEntity(
@@ -1340,6 +1488,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/ˈhɛdeɪk/",
+
+            exampleFr = "Exemple: Le Douleur dans la tête ou le cou supérieur; l'un des symptômes les plus courants en médecine.",
+
+            exampleAr = "مثال: يظهر ألم في الرأس أو الرقبة العلوية؛ أحد أكثر الأعراض شيوعاً في الطب.",
 
             exampleEn = "The Headache (Cephalalgia) is Pain in the head or upper neck; one of the most common symptoms in medicine.",        ),
         ),
@@ -1385,6 +1537,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/ˈsiːʒər/",
 
+            exampleFr = "Exemple: Le Activité électrique anormale et excessive dans le cerveau causant convulsions ou conscience altérée.",
+
+            exampleAr = "مثال: يظهر نشاط كهربائي غير طبيعي ومفرط في الدماغ يسبب تشنجات أو اضطراب الوعي.",
+
             exampleEn = "The Seizure (Convulsion) is Abnormal, excessive electrical activity in the brain causing convulsions or altered consciousness.",        ),
         ),
         MedicalTermEntity(
@@ -1398,6 +1554,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/pəˈræləsɪs/",
+
+            exampleFr = "Exemple: Le Perte complète de la fonction musculaire dans un ou plusieurs muscles.",
+
+            exampleAr = "مثال: يظهر فقدان كامل لوظيفة العضلات في عضلة أو أكثر أو مجموعات عضلية.",
 
             exampleEn = "The Paralysis is Complete loss of muscle function in one or more muscles or muscle groups.",        ),
         ),
@@ -1414,6 +1574,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/pəˈriːsɪs/",
 
+            exampleFr = "Exemple: Le Faiblesse musculaire partielle ou incomplète; moins grave que la paralysie.",
+
+            exampleAr = "مثال: يظهر ضعف عضلي جزئي أو غير كامل؛ أقل حدةً من الشلل الكامل.",
+
             exampleEn = "The Paresis is Partial or incomplete muscle weakness; less severe than paralysis.",        ),
         ),
         MedicalTermEntity(
@@ -1427,6 +1591,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/əˈfeɪʒə/",
+
+            exampleFr = "Exemple: Le Altération de la capacité linguistique incluant expression, compréhension, lecture et écriture.",
+
+            exampleAr = "مثال: يظهر اضطراب في القدرة اللغوية يشمل الكلام والفهم والقراءة والكتابة.",
 
             exampleEn = "The Aphasia is Impairment of language ability including speaking, comprehension, reading, and writing.",        ),
         ),
@@ -1456,6 +1624,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/əˈtæksiə/",
+
+            exampleFr = "Exemple: Le Manque de coordination volontaire des mouvements musculaires; souvent d'origine cérébelleuse.",
+
+            exampleAr = "مثال: يظهر غياب التنسيق الإرادي لحركات العضلات؛ غالباً ذات منشأ مُخيخي.",
 
             exampleEn = "The Ataxia is Lack of voluntary coordination of muscle movements; often cerebellar in origin.",        ),
         ),
@@ -1487,6 +1659,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/mɪˈnɪndʒiəl saɪnz/",
 
+            exampleFr = "Exemple: Le Signes cliniques indiquant une irritation méningée: raideur de nuque, signe de Kernig, Brudzinski.",
+
+            exampleAr = "مثال: يظهر علامات سريرية تدل على تهيُّج السحايا: تيبس الرقبة وعلامة كيرنيغ وعلامة برودزينسكي.",
+
             exampleEn = "The Meningeal signs is Clinical signs indicating meningeal irritation: nuchal rigidity, Kernig's sign, Brudzinski's sign.",        ),
         ),
         MedicalTermEntity(
@@ -1501,6 +1677,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/ˈnjuːkəl rɪˈdʒɪdɪti/",
 
+            exampleFr = "Exemple: Le Raideur et résistance à la flexion du cou; signe caractéristique de la méningite bactérienne.",
+
+            exampleAr = "مثال: يظهر تيبس ومقاومة لثني الرقبة؛ علامة مميزة لالتهاب السحايا البكتيري.",
+
             exampleEn = "The Nuchal rigidity is Stiffness and resistance to flexion of the neck; a hallmark sign of bacterial meningitis.",        ),
         ),
         MedicalTermEntity(
@@ -1514,6 +1694,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/bəˈbɪnski saɪn/",
+
+            exampleFr = "Exemple: Le Extension vers le haut du gros orteil lors du grattage de la plante du pied; indique lésion motoneurone supérieur.",
+
+            exampleAr = "مثال: يظهر امتداد الإصبع الكبير للقدم للأعلى عند خدش باطن القدم؛ يدل على آفة الخلايا العصبية الحركية العليا.",
 
             exampleEn = "The Babinski sign is Upward extension of the big toe when the plantar surface is stroked; indicates upper motor neuron lesion.",        ),
         ),
@@ -1559,6 +1743,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/dɪˈploʊpiə/",
 
+            exampleFr = "Exemple: Le Vision double; voir deux images d'un seul objet; indique une dysfonction du nerf crânien ou du muscle.",
+
+            exampleAr = "مثال: يظهر رؤية مزدوجة؛ رؤية صورتين لجسم واحد؛ تدل على خلل عصبي قحفي أو عضلي.",
+
             exampleEn = "The Diplopia is Double vision; seeing two images of a single object; indicates cranial nerve or muscle dysfunction.",        ),
         ),
         MedicalTermEntity(
@@ -1603,6 +1791,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Neurologique",
             ipaPhonetic = "/diːp ˈtɛndən ˈriːflɛksɪz/",
 
+            exampleFr = "Exemple: Le Réponses involontaires à la percussion tendineuse; évaluées de 0 à 4+; absentes en LMN, vives en UMN.",
+
+            exampleAr = "مثال: يظهر استجابات لا إرادية لقرع الوتر؛ تُقيَّم من 0 إلى 4+؛ غائبة في آفات الخلية السفلى، متيقظة في العليا.",
+
             exampleEn = "The Deep tendon reflexes (DTR) is Involuntary responses to tendon percussion; assessed as 0–4+; absent in LMN lesion, brisk in UMN.",        ),
         ),
         MedicalTermEntity(
@@ -1617,6 +1809,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ɑːrˈθrældʒiə/",
+
+            exampleFr = "Exemple: Le Douleur dans une articulation sans signes objectifs d'inflammation.",
+
+            exampleAr = "مثال: يظهر ألم في المفصل دون علامات موضوعية للالتهاب.",
 
             exampleEn = "The Arthralgia is Pain in a joint without objective signs of inflammation.",        ),
         ),
@@ -1633,6 +1829,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ɑːrˈθraɪtɪs/",
 
+            exampleFr = "Exemple: Le Inflammation d'une articulation caractérisée par douleur, gonflement, chaleur et mobilité restreinte.",
+
+            exampleAr = "مثال: يظهر تهاب المفصل يتميز بألم وتورم وحرارة وتقيُّد الحركة.",
+
             exampleEn = "The Arthritis is Inflammation of a joint characterized by pain, swelling, warmth, and restricted motion.",        ),
         ),
         MedicalTermEntity(
@@ -1646,6 +1846,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ˈmɔːrnɪŋ ˈstɪfnɪs/",
+
+            exampleFr = "Exemple: Le Raideur articulaire au réveil s'améliorant à l'activité; >1 heure suggère arthrite inflammatoire.",
+
+            exampleAr = "مثال: يظهر تيبس المفاصل عند الاستيقاظ يتحسن بالنشاط؛ استمراره أكثر من ساعة يشير لالتهاب مفاصل التهابي.",
 
             exampleEn = "The Morning stiffness is Joint stiffness upon waking that improves with activity; lasting >1 hour suggests inflammatory arthritis.",        ),
         ),
@@ -1692,6 +1896,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/maɪˈælʤɪə/",
 
+            exampleFr = "Exemple: Le Douleur ou courbature musculaire; peut être localisée ou diffuse.",
+
+            exampleAr = "مثال: يظهر ألم العضلة أو الإيجاع؛ قد يكون موضعياً أو منتشراً.",
+
             exampleEn = "The Myalgia is Muscle pain or ache; can be localized or diffuse.",        ),
         ),
         MedicalTermEntity(
@@ -1721,6 +1929,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ˈtɛndərnɪs/",
 
+            exampleFr = "Exemple: Le Douleur provoquée par une pression appliquée lors de la palpation d'une partie du corps.",
+
+            exampleAr = "مثال: يظهر ألم يُستثار بالضغط المُطبَّق أثناء جسِّ جزء من الجسم.",
+
             exampleEn = "The Tenderness is Pain elicited by pressure applied during palpation of a body part.",        ),
         ),
         MedicalTermEntity(
@@ -1749,6 +1961,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Rhumatologique",
             ipaPhonetic = "/ˈtoʊfaɪ/",
+
+            exampleFr = "Exemple: Le Dépôts de cristaux d'acide urique dans les articulations et tissus mous; pathognomonique de la goutte.",
+
+            exampleAr = "مثال: يظهر ترسُّبات بلورات حمض اليوريك في المفاصل والأنسجة الرخوة؛ مميزة للنقرس المزمن.",
 
             exampleEn = "The Tophi is Uric acid crystal deposits in joints and soft tissues; pathognomonic of chronic gout.",        ),
         ),
@@ -1857,6 +2073,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈmækjuːl/",
             exampleEn = "The macule is the flat area of skin discoloration <1 cm without elevation or depression (e.g., freckle).",
+            exampleFr = "Exemple: Le Zone de décoloration cutanée plate <1 cm sans élévation ni dépression (ex: tache de rousseur).",
+
+            exampleAr = "مثال: يظهر منطقة تغير لون الجلد المنبسطة <1 سم دون ارتفاع أو انخفاض (مثل: النمشة).",
+
         ),
         MedicalTermEntity(
             id = 2615,
@@ -1870,6 +2090,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈpæpjuːl/",
             exampleEn = "The papule is the small, solid, elevated skin lesion <1 cm (e.g., molluscum, wart).",
+            exampleFr = "Exemple: Le Petite lésion cutanée solide et surélevée <1 cm (ex: molluscum, verrue).",
+
+            exampleAr = "مثال: يظهر آفة جلدية صغيرة صلبة مرتفعة <1 سم (مثل: المليساء والثآليل).",
+
         ),
         MedicalTermEntity(
             id = 2616,
@@ -1883,6 +2107,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈvɛsɪkəl/",
             exampleEn = "The vesicle is the small, fluid-filled blister <1 cm (e.g., herpes, chickenpox).",
+            exampleFr = "Exemple: Le Petite cloque remplie de liquide <1 cm (ex: herpès, varicelle).",
+
+            exampleAr = "مثال: يظهر بثرة صغيرة مملوءة بسائل <1 سم (مثل: الهربس وجدري الماء).",
+
         ),
         MedicalTermEntity(
             id = 2617,
@@ -1896,6 +2124,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈbʌlə/",
             exampleEn = "The bulla is the large, fluid-filled blister >1 cm (e.g., pemphigus, bullous impetigo).",
+            exampleFr = "Exemple: Le Grande cloque remplie de liquide >1 cm (ex: pemphigus, impétigo bulleux).",
+
+            exampleAr = "مثال: يظهر بثرة كبيرة مملوءة بسائل >1 سم (مثل: الفقاع والحمرة الفقاعية).",
+
         ),
         MedicalTermEntity(
             id = 2618,
@@ -1909,6 +2141,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈpʌstjuːl/",
             exampleEn = "The pustule is the small, raised skin lesion filled with pus (e.g., acne, folliculitis).",
+            exampleFr = "Exemple: Le Petite lésion cutanée surélevée remplie de pus (ex: acné, folliculite).",
+
+            exampleAr = "مثال: يظهر آفة جلدية صغيرة مرتفعة مملوءة بصديد (مثل: حب الشباب والتهاب الجريبات).",
+
         ),
         MedicalTermEntity(
             id = 2619,
@@ -1937,6 +2173,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˌɛrɪˈθiːmə/",
 
+            exampleFr = "Exemple: Le Rougeur de la peau causée par une augmentation du flux sanguin; disparaît à la pression.",
+
+            exampleAr = "مثال: يظهر احمرار الجلد بسبب زيادة تدفق الدم؛ يختفي عند الضغط عليه.",
+
             exampleEn = "The Erythema is Redness of the skin caused by increased blood flow; blanchable on pressure.",        ),
         ),
         MedicalTermEntity(
@@ -1950,6 +2190,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈpɜːrpjʊrə/",
+
+            exampleFr = "Exemple: Le Décoloration pourpre/rouge de la peau due à un saignement; ne blanchit pas à la pression.",
+
+            exampleAr = "مثال: يظهر تلوُّن أرجواني/أحمر للجلد من النزيف الجلدي؛ لا يختفي عند الضغط.",
 
             exampleEn = "The Purpura is Purple/red skin discoloration from bleeding into skin; non-blanchable on pressure.",        ),
         ),
@@ -1965,6 +2209,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/pɪˈtiːkiˌiː/",
 
+            exampleFr = "Exemple: Le Petites taches hémorragiques ponctuelles (<2 mm); indique des troubles plaquettaires ou vascularite.",
+
+            exampleAr = "مثال: يظهر بقع نزفية دقيقة جداً (<2 ملم)؛ تدل على اضطرابات الصفائح الدموية أو التهاب الأوعية.",
+
             exampleEn = "The Petechiae is Tiny pinpoint (<2 mm) purpuric hemorrhagic spots; indicates platelet disorders or vasculitis.",        ),
         ),
         MedicalTermEntity(
@@ -1979,6 +2227,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ɪˈkɪmoʊsɪs/",
+
+            exampleFr = "Exemple: Le Décoloration de la peau due à un saignement sous-cutané; plus grande que les pétéchies.",
+
+            exampleAr = "مثال: يظهر تغير لون الجلد بسبب النزيف تحت الجلد (الكدمة)؛ أكبر من النمشات.",
 
             exampleEn = "The Ecchymosis (Bruise) is Discoloration of skin due to subcutaneous bleeding (bruise); larger than petechiae.",        ),
         ),
@@ -2039,6 +2291,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Dermatologique",
             ipaPhonetic = "/ˈpælər/",
 
+            exampleFr = "Exemple: Le Pâleur anormale de la peau ou des muqueuses; indique anémie, choc ou vasoconstriction.",
+
+            exampleAr = "مثال: يظهر شحوب غير طبيعي للجلد أو الأغشية المخاطية؛ يدل على فقر الدم أو الصدمة أو تضيق الأوعية.",
+
             exampleEn = "The Pallor is Abnormal paleness of the skin or mucous membranes; indicates anemia, shock, or vasoconstriction.",        ),
         ),
         MedicalTermEntity(
@@ -2053,6 +2309,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/dɪsˈjʊəriə/",
+
+            exampleFr = "Exemple: Le Miction douloureuse ou difficile; souvent signe d'infection urinaire.",
+
+            exampleAr = "مثال: يظهر تبول مؤلم أو صعب؛ غالباً علامة التهاب المسالك البولية.",
 
             exampleEn = "The Dysuria is Painful or difficult urination; often a sign of UTI.",        ),
         ),
@@ -2069,6 +2329,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌhɛməˈtjʊəriə/",
 
+            exampleFr = "Exemple: Le Présence de sang dans l'urine; peut être macroscopique (visible) ou microscopique.",
+
+            exampleAr = "مثال: يظهر وجود الدم في البول؛ قد يكون دموياً ظاهراً أو دقيقاً.",
+
             exampleEn = "The Hematuria is Presence of blood in the urine; can be gross (visible) or microscopic.",        ),
         ),
         MedicalTermEntity(
@@ -2083,6 +2347,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌproʊtiːˈnjʊəriə/",
+
+            exampleFr = "Exemple: Le Excès de protéines dans l'urine (>150 mg/j); indique une lésion glomérulaire ou tubulaire.",
+
+            exampleAr = "مثال: يظهر زيادة البروتين في البول (>150 ملغ/يوم)؛ يدل على تلف كبيبي أو خلل أنبوبي.",
 
             exampleEn = "The Proteinuria is Excess protein in urine (>150 mg/day); indicates glomerular damage or tubular dysfunction.",        ),
         ),
@@ -2099,6 +2367,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌɒlɪˈɡjʊəriə/",
 
+            exampleFr = "Exemple: Le Diminution du débit urinaire <400 mL/jour; indique insuffisance rénale ou déshydratation sévère.",
+
+            exampleAr = "مثال: يظهر انخفاض إخراج البول <400 مل/يوم؛ يدل على الفشل الكلوي أو الجفاف الشديد.",
+
             exampleEn = "The Oliguria is Decreased urine output <400 mL/day; indicates renal failure or severe dehydration.",        ),
         ),
         MedicalTermEntity(
@@ -2113,6 +2385,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈænjʊəriə/",
+
+            exampleFr = "Exemple: Le Absence de production d'urine ou <50 mL/jour; signe sévère d'insuffisance rénale ou obstruction.",
+
+            exampleAr = "مثال: يظهر غياب إنتاج البول أو <50 مل/يوم؛ علامة شديدة للفشل الكلوي أو الانسداد.",
 
             exampleEn = "The Anuria is Absence of urine production or output <50 mL/day; severe sign of renal failure or obstruction.",        ),
         ),
@@ -2129,6 +2405,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌpɒliˈjʊəriə/",
 
+            exampleFr = "Exemple: Le Production excessive d'urine >3 L/jour; vue dans diabète sucré, diabète insipide.",
+
+            exampleAr = "مثال: يظهر إنتاج بول مفرط >3 لتر/يوم؛ يُرى في السكري ومرض السكري الكاذب.",
+
             exampleEn = "The Polyuria is Excessive urine production >3 L/day; seen in diabetes mellitus, diabetes insipidus.",        ),
         ),
         MedicalTermEntity(
@@ -2143,6 +2423,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈjʊərɪnəri ˈfriːkwənsi/",
 
+            exampleFr = "Exemple: Le Miction anormalement fréquente (plus de 8 fois/jour) sans augmentation du volume.",
+
+            exampleAr = "مثال: يظهر تكرر التبول بشكل غير طبيعي (أكثر من 8 مرات/يوم) دون زيادة في الحجم.",
+
             exampleEn = "The Urinary frequency is Abnormally frequent urination (more than 8 times/day) without increased volume.",        ),
         ),
         MedicalTermEntity(
@@ -2156,6 +2440,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌjʊərɪnəri ɪnˈkɒntɪnəns/",
+
+            exampleFr = "Exemple: Le Perte involontaire d'urine; types: incontinence d'effort, par impériosité, par regorgement.",
+
+            exampleAr = "مثال: يظهر فقدان إرادي للبول؛ أنواعه: الجهدي والإلحاحي والتغلبي.",
 
             exampleEn = "The Urinary incontinence is Involuntary loss of urine; types include stress, urge, and overflow incontinence.",        ),
         ),
@@ -2172,6 +2460,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌkɒstoʊˈvɜːrtibrəl ˈæŋɡəl/",
 
+            exampleFr = "Exemple: Le Sensibilité à la percussion de l'angle costovertébral; indique une pyélonéphrite.",
+
+            exampleAr = "مثال: يظهر إيلام عند قرع الزاوية الضلعية الفقرية؛ يدل على التهاب الحويضة والكلية.",
+
             exampleEn = "The Costovertebral angle (CVA) tenderness is Tenderness on percussion of the costovertebral angle; indicates pyelonephritis.",        ),
         ),
         MedicalTermEntity(
@@ -2185,6 +2477,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈriːnəl ˈkɒlɪk/",
+
+            exampleFr = "Exemple: Le Douleur intense dans les flancs irradiant vers l'aine causée par obstruction par calcul rénal.",
+
+            exampleAr = "مثال: يظهر ألم شديد في الخاصرة يشعّ نحو الفخذ ناتج عن انسداد بحصوة كلوية.",
 
             exampleEn = "The Renal colic is Severe flank pain radiating to the groin caused by kidney stone obstruction.",        ),
         ),
@@ -2232,6 +2528,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˈhɛzɪtənsi/",
 
+            exampleFr = "Exemple: Le Difficulté à initier la miction; fréquent dans l'hypertrophie prostatique ou sténose urétrale.",
+
+            exampleAr = "مثال: يظهر صعوبة في البدء بالتبول؛ شائع في تضخم البروستاتا أو ضيق الإحليل.",
+
             exampleEn = "The Hesitancy is Difficulty initiating urination; common in prostatic hypertrophy or urethral stricture.",        ),
         ),
         MedicalTermEntity(
@@ -2247,6 +2547,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/ˌɡlaɪkəʊˈsjʊəriə/",
 
+            exampleFr = "Exemple: Le Présence de glucose dans l'urine; indique diabète sucré ou défaut tubulaire rénal.",
+
+            exampleAr = "مثال: يظهر وجود الغلوكوز في البول؛ يدل على داء السكري أو خلل أنبوبي كلوي.",
+
             exampleEn = "The Glycosuria is Presence of glucose in urine; indicates diabetes mellitus or renal tubular defect.",        ),
         ),
         MedicalTermEntity(
@@ -2260,6 +2564,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Urologique",
             ipaPhonetic = "/flæŋk peɪn/",
+
+            exampleFr = "Exemple: Le Douleur dans la partie latérale du dos entre les côtes et la hanche; indique pathologie rénale.",
+
+            exampleAr = "مثال: يظهر ألم في الجزء الجانبي للظهر بين الأضلاع والورك؛ يدل على أمراض الكلى.",
 
             exampleEn = "The Flank pain is Pain in the lateral portion of the back between the ribs and hip; indicates renal pathology.",        ),
         ),
@@ -2275,6 +2583,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌpɒliˈdɪpsiə/",
 
+            exampleFr = "Exemple: Le Soif excessive ou anormale; symptôme classique du diabète sucré et du diabète insipide.",
+
+            exampleAr = "مثال: يظهر عطش مفرط أو غير طبيعي؛ عرض كلاسيكي لداء السكري ومرض السكري الكاذب.",
+
             exampleEn = "The Polydipsia is Excessive or abnormal thirst; a classic symptom of diabetes mellitus and diabetes insipidus.",        ),
         ),
         MedicalTermEntity(
@@ -2288,6 +2600,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌpɒliˈfeɪdʒiə/",
+
+            exampleFr = "Exemple: Le Faim excessive ou apport alimentaire accru; vu dans le diabète sucré non contrôlé.",
+
+            exampleAr = "مثال: يظهر جوع مفرط أو زيادة تناول الطعام؛ يُرى في السكري غير المنضبط.",
 
             exampleEn = "The Polyphagia is Excessive hunger or increased food intake; seen in uncontrolled diabetes mellitus.",        ),
         ),
@@ -2303,6 +2619,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/weɪt lɒs/",
 
+            exampleFr = "Exemple: Le Diminution involontaire du poids corporel; associé au cancer, diabète, hyperthyroïdie et TB.",
+
+            exampleAr = "مثال: يظهر نقص غير مقصود في وزن الجسم؛ مرتبط بالسرطان والسكري وفرط الدرقية والسل.",
+
             exampleEn = "The Weight loss (involuntary) is Unintentional decrease in body weight; associated with cancer, diabetes, hyperthyroidism, and TB.",        ),
         ),
         MedicalTermEntity(
@@ -2316,6 +2636,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˈɡɔɪtər/",
+
+            exampleFr = "Exemple: Le Augmentation du volume de la glande thyroïde visible comme un gonflement au cou.",
+
+            exampleAr = "مثال: يظهر تضخم الغدة الدرقية يظهر على شكل تورم في الرقبة.",
 
             exampleEn = "The Goiter is Enlargement of the thyroid gland visible as a swelling in the neck.",        ),
         ),
@@ -2331,6 +2655,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌɛksɒfˈθælməs/",
 
+            exampleFr = "Exemple: Le Protrusion des globes oculaires; signe de la maladie de Basedow (hyperthyroïdie).",
+
+            exampleAr = "مثال: يظهر بروز مقل العيون للخارج؛ علامة مرض غريفز (فرط نشاط الدرقية).",
+
             exampleEn = "The Exophthalmos is Protrusion of the eyeballs; a sign of Graves' disease (hyperthyroidism).",        ),
         ),
         MedicalTermEntity(
@@ -2344,6 +2672,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌɡɪnɪkəʊˈmæstiə/",
+
+            exampleFr = "Exemple: Le Augmentation du tissu mammaire chez les hommes; causée par déséquilibre hormonal, médicaments.",
+
+            exampleAr = "مثال: يظهر تضخم نسيج الثدي عند الذكور؛ يسببه اختلال هرموني أو أدوية أو مرض كبدي.",
 
             exampleEn = "The Gynecomastia is Enlargement of breast tissue in males; caused by hormonal imbalance, drugs, or liver disease.",        ),
         ),
@@ -2360,6 +2692,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˌækroʊˈmɛɡəli/",
 
+            exampleFr = "Exemple: Le Manifestations cliniques de l'excès d'hormone de croissance: agrandissement des mains, pieds, mâchoire.",
+
+            exampleAr = "مثال: يظهر مظاهر السريرية لفرط هرمون النمو: تضخم اليدين والقدمين والفك وملامح الوجه.",
+
             exampleEn = "The Acromegaly signs is Clinical features of excess growth hormone: enlarged hands, feet, jaw, and facial features.",        ),
         ),
         MedicalTermEntity(
@@ -2373,6 +2709,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˈkʊʃɪŋɔɪd/",
+
+            exampleFr = "Exemple: Le Signes d'excès de cortisol: visage lunaire, bosse de bison, obésité centrale, vergetures violettes.",
+
+            exampleAr = "مثال: يظهر علامات زيادة الكورتيزول: وجه هلالي وسنام الجاموس وسمنة مركزية وخطوط أرجوانية.",
 
             exampleEn = "The Cushingoid features is Signs of excess cortisol: moon face, buffalo hump, central obesity, purple striae.",        ),
         ),
@@ -2388,6 +2728,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/ˈkvɒstɛks saɪn/",
 
+            exampleFr = "Exemple: Le Spasme du muscle facial lors de la percussion du nerf facial; indique hypocalcémie.",
+
+            exampleAr = "مثال: يظهر تشنج عضلة الوجه عند قرع العصب الوجهي؛ يدل على انخفاض الكالسيوم.",
+
             exampleEn = "The Chvostek's sign is Facial muscle spasm on tapping the facial nerve; indicates hypocalcemia.",        ),
         ),
         MedicalTermEntity(
@@ -2401,6 +2745,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Endocrinienne",
             ipaPhonetic = "/truːˈsoʊz saɪn/",
+
+            exampleFr = "Exemple: Le Spasme carpien provoqué par gonflement brassard au-dessus pression systolique; indique hypocalcémie.",
+
+            exampleAr = "مثال: يظهر تشنج رسغي يُستثار بتضخيم كفة ضغط الدم فوق الضغط الانقباضي؛ يدل على نقص الكالسيوم.",
 
             exampleEn = "The Trousseau's sign is Carpal spasm provoked by inflating a blood pressure cuff above systolic pressure; indicates hypocalcemia.",        ),
         ),
@@ -2416,6 +2764,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/oʊˈtælʤɪə/",
+
+            exampleFr = "Exemple: Le Douleur de l'oreille; peut être primaire (de l'oreille) ou référée (mâchoire, gorge, dents).",
+
+            exampleAr = "مثال: يظهر ألم الأذن؛ قد يكون أولياً (من الأذن) أو منعكساً (من الفك أو الحنجرة أو الأسنان).",
 
             exampleEn = "The Otalgia is Ear pain; can be primary (from the ear) or referred (from jaw, throat, or teeth).",        ),
         ),
@@ -2446,6 +2798,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/ˈhɪərɪŋ lɒs/",
 
+            exampleFr = "Exemple: Le Incapacité partielle ou complète d'entendre; classée en conductif ou sensorineural.",
+
+            exampleAr = "مثال: يظهر عجز جزئي أو كامل عن السمع؛ يُصنَّف إلى توصيلي أو حسي عصبي.",
+
             exampleEn = "The Hearing loss (Hypoacusis) is Partial or complete inability to hear; classified as conductive or sensorineural.",        ),
         ),
         MedicalTermEntity(
@@ -2474,6 +2830,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/ɒdɪnoʊˈfeɪdʒiə/",
+
+            exampleFr = "Exemple: Le Dysphagie: difficulté à avaler; Odynophagie: déglutition douloureuse.",
+
+            exampleAr = "مثال: يظهر عُسر البلع: صعوبة البلع؛ أَلَم البلع: ألم أثناء البلع.",
 
             exampleEn = "The Dysphagia vs Odynophagia is Dysphagia: difficulty swallowing; Odynophagia: painful swallowing.",        ),
         ),
@@ -2521,6 +2881,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/ˌfoʊtəˈfoʊbiə/",
 
+            exampleFr = "Exemple: Le Sensibilité anormale ou intolérance à la lumière; vu dans méningite, migraine et uvéite.",
+
+            exampleAr = "مثال: يظهر حساسية أو عدم تحمل مفرط للضوء؛ يُرى في التهاب السحايا والصداع النصفي والتهاب العنبية.",
+
             exampleEn = "The Photophobia is Abnormal sensitivity or intolerance to light; seen in meningitis, migraine, and uveitis.",        ),
         ),
         MedicalTermEntity(
@@ -2535,6 +2899,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/nɪˈstæɡməs/",
 
+            exampleFr = "Exemple: Le Oscillation rythmique involontaire des yeux; peut être horizontale, verticale ou rotatoire.",
+
+            exampleAr = "مثال: يظهر اهتزاز إيقاعي لا إرادي لمقل العيون؛ قد يكون أفقياً أو رأسياً أو دورانياً.",
+
             exampleEn = "The Nystagmus is Involuntary rhythmic oscillation of the eyes; can be horizontal, vertical, or rotatory.",        ),
         ),
         MedicalTermEntity(
@@ -2548,6 +2916,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie ORL et Ophtalmologique",
             ipaPhonetic = "/æˈnɒzmiə/",
+
+            exampleFr = "Exemple: Le Perte de l'odorat; associée au COVID-19, pathologie nasale et lésion du nerf olfactif.",
+
+            exampleAr = "مثال: يظهر فقدان حاسة الشم؛ مرتبط بـ COVID-19 وأمراض الأنف وتلف العصب الشمي.",
 
             exampleEn = "The Anosmia is Loss of sense of smell; associated with COVID-19, nasal pathology, and olfactory nerve damage.",        ),
         ),
@@ -2564,6 +2936,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/eɪˌmɛnəˈriːə/",
 
+            exampleFr = "Exemple: Le Absence de menstruations; primaire (jamais survenues) ou secondaire (cessées après établissement).",
+
+            exampleAr = "مثال: يظهر غياب الحيض؛ أولي (لم يحدث قط) أو ثانوي (توقف بعد أن كان منتظماً).",
+
             exampleEn = "The Amenorrhea is Absence of menstruation; primary (never occurred) or secondary (ceased after establishment).",        ),
         ),
         MedicalTermEntity(
@@ -2579,6 +2955,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/dɪsˌmɛnəˈriːə/",
 
+            exampleFr = "Exemple: Le Menstruations douloureuses; primaire (sans pathologie) ou secondaire (endométriose, fibromes).",
+
+            exampleAr = "مثال: يظهر حيض مؤلم؛ أولي (بدون أمراض) أو ثانوي (بسبب انتباذ بطانة الرحم أو الأورام الليفية).",
+
             exampleEn = "The Dysmenorrhea is Painful menstruation; primary (no pathology) or secondary (due to endometriosis, fibroids).",        ),
         ),
         MedicalTermEntity(
@@ -2593,6 +2973,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/ˌmɛtrəˈreɪdʒiə/",
+
+            exampleFr = "Exemple: Le Saignement utérin survenant entre les périodes menstruelles.",
+
+            exampleAr = "مثال: يظهر نزيف رحمي يحدث بين الدورات الشهرية.",
 
             exampleEn = "The Metrorrhagia is Uterine bleeding occurring between menstrual periods.",        ),
         ),
@@ -2654,6 +3038,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/ˌpriːɪˈklæmpsiə/",
 
+            exampleFr = "Exemple: Le Hypertension, protéinurie et œdème après 20 semaines; peut évoluer vers l'éclampsie.",
+
+            exampleAr = "مثال: يظهر ارتفاع ضغط الدم وبيلة بروتينية ووذمة بعد 20 أسبوعاً من الحمل؛ قد تتطور لتشنجات.",
+
             exampleEn = "The Preeclampsia signs is Hypertension, proteinuria, and edema after 20 weeks gestation; can progress to eclampsia.",        ),
         ),
         MedicalTermEntity(
@@ -2682,6 +3070,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Gynécologique",
             ipaPhonetic = "/ˈtʃædwɪks saɪn/",
+
+            exampleFr = "Exemple: Le Décoloration bleu-violet des parois vaginales et du col; signe précoce de grossesse.",
+
+            exampleAr = "مثال: يظهر تلوُّن أزرق-بنفسجي لجدران المهبل وعنق الرحم؛ علامة مبكرة للحمل.",
 
             exampleEn = "The Chadwick's sign is Bluish-purple discoloration of the vaginal walls and cervix; early sign of pregnancy.",        ),
         ),
@@ -2743,6 +3135,10 @@ object SemiologieMedicaleTerms {
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˌlɪmfædiˈnɒpəθi/",
 
+            exampleFr = "Exemple: Le Augmentation anormale des ganglions lymphatiques; peut être locale ou généralisée.",
+
+            exampleAr = "مثال: يظهر تضخم غير طبيعي في العقد اللمفاوية؛ قد يكون موضعياً أو معمماً.",
+
             exampleEn = "The Lymphadenopathy is Abnormal enlargement of lymph nodes; can be local (infection) or generalized (lymphoma, HIV).",        ),
         ),
         MedicalTermEntity(
@@ -2771,6 +3167,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˌdaɪəfəˈriːsɪs/",
+
+            exampleFr = "Exemple: Le Transpiration excessive et anormale; associée à fièvre, douleur, choc et hypoglycémie.",
+
+            exampleAr = "مثال: يظهر تعرق مفرط وغير طبيعي؛ مرتبط بالحمى والألم والصدمة ونقص السكر في الدم.",
 
             exampleEn = "The Diaphoresis is Excessive, abnormal sweating; associated with fever, pain, shock, and hypoglycemia.",        ),
         ),
@@ -2863,6 +3263,10 @@ object SemiologieMedicaleTerms {
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˈpɑːmər ɛrɪˈθiːmə/",
 
+            exampleFr = "Exemple: Le Rougeur des paumes aux éminences thénar et hypothénar; associée à maladie hépatique et grossesse.",
+
+            exampleAr = "مثال: يظهر احمرار راحتَي اليدين في منطقة الهياضل؛ مرتبط بمرض الكبد والحمل.",
+
             exampleEn = "The Palmer erythema is Redness of the palms at thenar and hypothenar eminences; associated with liver disease and pregnancy.",        ),
         ),
         MedicalTermEntity(
@@ -2877,6 +3281,10 @@ object SemiologieMedicaleTerms {
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˌljuːkəˈnɪkiə/",
 
+            exampleFr = "Exemple: Le Décoloration blanche des ongles; associée à l'hypoalbuminémie dans la maladie hépatique.",
+
+            exampleAr = "مثال: يظهر تبيُّض الأظافر؛ مرتبط بنقص الألبومين في أمراض الكبد.",
+
             exampleEn = "The Leukonychia is White discoloration of the nails; associated with hypoalbuminemia in liver disease.",        ),
         ),
         MedicalTermEntity(
@@ -2890,6 +3298,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˈkeɪpʌt mɪˈdjuːziː/",
+
+            exampleFr = "Exemple: Le Veines paraombilicales dilatées rayonnant de l'ombilic; signe d'hypertension portale.",
+
+            exampleAr = "مثال: يظهر أوردة حول السرة متوسعة تشعشع من السرة؛ علامة ارتفاع ضغط الدم البابي.",
 
             exampleEn = "The Caput medusae is Dilated paraumbilical veins radiating from the umbilicus; sign of portal hypertension.",        ),
         ),
@@ -2921,6 +3333,10 @@ object SemiologieMedicaleTerms {
             chapter = "Examen Clinique Général",
             ipaPhonetic = "/ˈɡɑːrdɪŋ/",
 
+            exampleFr = "Exemple: Le Contraction involontaire des muscles abdominaux à la palpation; indique irritation péritonéale.",
+
+            exampleAr = "مثال: يظهر انقباض لا إرادي لعضلات البطن أثناء الجس؛ يدل على تهيُّج البريتون.",
+
             exampleEn = "The Guarding (abdominal) is Involuntary contraction of abdominal muscles on palpation; indicates peritoneal irritation.",        ),
         ),
         MedicalTermEntity(
@@ -2934,6 +3350,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Psychiatrique",
             ipaPhonetic = "/ˌɔːriɛnˈteɪʃən/",
+
+            exampleFr = "Exemple: Le Conscience du temps, lieu et de la personne; évalué comme orienté x3 (ou désorienté).",
+
+            exampleAr = "مثال: يظهر وعي بالزمان والمكان والشخص؛ يُقيَّم كـ \.",
 
             exampleEn = "The Orientation is Awareness of time, place, and person; assessed as oriented x3 (or disoriented).",        ),
         ),
@@ -3024,6 +3444,10 @@ object SemiologieMedicaleTerms {
             chapter = "Sémiologie Psychiatrique",
             ipaPhonetic = "/ˌædʒɪˈteɪʃən/",
 
+            exampleFr = "Exemple: Le Activité motrice excessive ou agitation associée à une tension psychologique.",
+
+            exampleAr = "مثال: يظهر نشاط حركي مفرط أو توتر مرتبط بضغط نفسي.",
+
             exampleEn = "The Agitation is Excessive motor activity or restlessness associated with psychological tension.",        ),
         ),
         MedicalTermEntity(
@@ -3052,6 +3476,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Sémiologie Psychiatrique",
             ipaPhonetic = "/kɒɡˈnɪʃən/",
+
+            exampleFr = "Exemple: Le Processus mentaux incluant mémoire, attention, langage et fonctions exécutives.",
+
+            exampleAr = "مثال: يظهر عمليات الذهنية بما فيها الذاكرة والانتباه واللغة والوظائف التنفيذية.",
 
             exampleEn = "The Cognition is Mental processes including memory, attention, language, and executive function.",        ),
         ),
@@ -3082,6 +3510,10 @@ object SemiologieMedicaleTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/rɪˈfɜːrd peɪn/",
 
+            exampleFr = "Exemple: Le Douleur ressentie à un endroit éloigné de sa source réelle en raison de voies nerveuses partagées.",
+
+            exampleAr = "مثال: يظهر ألم يُحسَّ في موضع بعيد عن مصدره الحقيقي بسبب مسارات عصبية مشتركة.",
+
             exampleEn = "The Referred pain is Pain felt at a location distant from its actual source due to shared nerve pathways.",        ),
         ),
         MedicalTermEntity(
@@ -3096,6 +3528,10 @@ object SemiologieMedicaleTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌreɪdiˈeɪʃən əv peɪn/",
             exampleEn = "The radiation of pain is the spread of pain from a primary site to another location (e.g., cardiac pain to left arm).",
+            exampleFr = "Exemple: Le propagation de la douleur d'un site primaire vers un autre (ex: douleur cardiaque au bras gauche).",
+
+            exampleAr = "مثال: يظهر انتشار الألم من موقعه الأصلي إلى موقع آخر (مثل: ألم القلب إلى الذراع الأيسر).",
+
         ),
         MedicalTermEntity(
             id = 2700,
@@ -3108,6 +3544,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌpærəkˈsɪzməl peɪn/",
+
+            exampleFr = "Exemple: Le Attaques soudaines, brèves et sévères de douleur séparées par des intervalles sans douleur.",
+
+            exampleAr = "مثال: يظهر نوبات مفاجئة وقصيرة وشديدة من الألم تتخللها فترات خالية من الألم.",
 
             exampleEn = "The Paroxysmal pain is Sudden, brief, and severe attacks of pain separated by pain-free intervals.",        ),
         ),
@@ -3123,6 +3563,10 @@ object SemiologieMedicaleTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɒnstɪˈtjuːʃənəl ˈsɪmptəmz/",
 
+            exampleFr = "Exemple: Le Symptômes non spécifiques affectant tout le corps: fièvre, fatigue, perte de poids, sueurs nocturnes.",
+
+            exampleAr = "مثال: يظهر أعراض غير نوعية تؤثر في الجسم كله: حمى وتعب وفقدان وزن وتعرق ليلي.",
+
             exampleEn = "The Constitutional symptoms is Non-specific symptoms affecting the whole body: fever, fatigue, weight loss, night sweats.",        ),
         ),
         MedicalTermEntity(
@@ -3136,6 +3580,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/naɪt swɛts/",
+
+            exampleFr = "Exemple: Le Episodes récurrents de transpiration abondante durant le sommeil; associé à TB, lymphome et VIH.",
+
+            exampleAr = "مثال: يظهر نوبات متكررة من التعرق الغزير أثناء النوم؛ مرتبط بالسل والليمفوما وفيروس نقص المناعة.",
 
             exampleEn = "The Night sweats is Recurrent episodes of drenching sweating during sleep; associated with TB, lymphoma, and HIV.",        ),
         ),
@@ -3198,6 +3646,10 @@ object SemiologieMedicaleTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈproʊdroʊm/",
 
+            exampleFr = "Exemple: Le Premiers symptômes indiquant le début d'une maladie avant l'apparition de signes spécifiques.",
+
+            exampleAr = "مثال: يظهر أعراض الأولى التي تدل على بداية المرض قبل ظهور العلامات المحددة.",
+
             exampleEn = "The Prodrome is Early symptoms indicating the onset of a disease before specific signs appear.",        ),
         ),
         MedicalTermEntity(
@@ -3241,6 +3693,10 @@ object SemiologieMedicaleTerms {
             module = "Sémiologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/əˈkjuːt vɜːrsəs ˈkrɒnɪk/",
+
+            exampleFr = "Exemple: Le Aigu: début soudain, courte durée; Chronique: début progressif, longue durée >3 mois.",
+
+            exampleAr = "مثال: يظهر حاد: بداية مفاجئة ومدة قصيرة؛ مزمن: بداية تدريجية ومدة طويلة >3 أشهر.",
 
             exampleEn = "The Acute vs Chronic is Acute: sudden onset, short duration; Chronic: gradual onset, long duration >3 months.",        ),
         ),

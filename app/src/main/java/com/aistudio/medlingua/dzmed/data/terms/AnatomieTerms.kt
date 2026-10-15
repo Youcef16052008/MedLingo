@@ -1213,6 +1213,10 @@ object AnatomieTerms {
             chapter = "Arthrologie",
             ipaPhonetic = "/proʊˈtrækʃən/",
 
+            exampleFr = "Exemple: Le Mouvement vers l'avant d'une partie du corps dans le plan horizontal.",
+
+            exampleAr = "مثال: يظهر حركة جزء من الجسم للأمام في المستوى الأفقي.",
+
             exampleEn = "The Protraction is Forward movement of a body part in the horizontal plane.",        ),
         ),
         MedicalTermEntity(
@@ -1226,6 +1230,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/rɪˈtrækʃən/",
+
+            exampleFr = "Exemple: Le Mouvement vers l'arrière d'une partie du corps dans le plan horizontal.",
+
+            exampleAr = "مثال: يظهر حركة جزء من الجسم للخلف في المستوى الأفقي.",
 
             exampleEn = "The Retraction is Backward movement of a body part in the horizontal plane.",        ),
         ),
@@ -1241,6 +1249,10 @@ object AnatomieTerms {
             chapter = "Arthrologie",
             ipaPhonetic = "/ˌɛlɪˈveɪʃən/",
 
+            exampleFr = "Exemple: Le Mouvement vers le haut d'une partie du corps.",
+
+            exampleAr = "مثال: يظهر حركة جزء من الجسم للأعلى.",
+
             exampleEn = "The Elevation is Upward movement of a body part.",        ),
         ),
         MedicalTermEntity(
@@ -1254,6 +1266,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Arthrologie",
             ipaPhonetic = "/dɪˈprɛʃən/",
+
+            exampleFr = "Exemple: Le Mouvement vers le bas d'une partie du corps.",
+
+            exampleAr = "مثال: يظهر حركة جزء من الجسم للأسفل.",
 
             exampleEn = "The Depression is Downward movement of a body part.",        ),
         ),
@@ -1978,6 +1994,10 @@ object AnatomieTerms {
             chapter = "Termes généraux",
             ipaPhonetic = "/suːˈpaɪn/",
 
+            exampleFr = "Exemple: Le Couché face vers le haut.",
+
+            exampleAr = "مثال: يظهر استلقاء على الظهر.",
+
             exampleEn = "The Supine is Lying face up.",        ),
         ),
         MedicalTermEntity(
@@ -1991,6 +2011,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/ˌɪpsɪˈlætərəl/",
+
+            exampleFr = "Exemple: Le Du même côté du corps.",
+
+            exampleAr = "مثال: يظهر على نفس الجانب من الجسم.",
 
             exampleEn = "The Ipsilateral is On the same side of the body.",        ),
         ),
@@ -2006,6 +2030,10 @@ object AnatomieTerms {
             chapter = "Termes généraux",
             ipaPhonetic = "/ˌkɒntrəˈlætərəl/",
 
+            exampleFr = "Exemple: Le Du côté opposé du corps.",
+
+            exampleAr = "مثال: يظهر على الجانب المقابل من الجسم.",
+
             exampleEn = "The Contralateral is On the opposite side of the body.",        ),
         ),
         MedicalTermEntity(
@@ -2019,6 +2047,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Termes généraux",
             ipaPhonetic = "/baɪˈlætərəl/",
+
+            exampleFr = "Exemple: Le deux côtés du corps.",
+
+            exampleAr = "مثال: يظهر على كلا جانبي الجسم.",
 
             exampleEn = "The Bilateral is On both sides of the body.",        ),
         ),
@@ -2036,6 +2068,8 @@ object AnatomieTerms {
             ipaPhonetic = "/sɪˈfælɪk/",
             exampleEn = "Cephalic refers to pertaining to the head.",
             exampleFr = "La céphalique est relatif à la tête.",
+            exampleAr = "مثال: يظهر متعلق بالرأس.",
+
         ),
         MedicalTermEntity(
             id = 127,
@@ -2049,6 +2083,10 @@ object AnatomieTerms {
             chapter = "Termes généraux",
             ipaPhonetic = "/ˈsɜːrvɪkəl/",
             exampleEn = "Cervical refers to pertaining to the neck.",
+            exampleFr = "Exemple: Le Relatif au cou.",
+
+            exampleAr = "مثال: يظهر متعلق بالعنق.",
+
         ),
         MedicalTermEntity(
             id = 128,
@@ -2064,6 +2102,8 @@ object AnatomieTerms {
             ipaPhonetic = "/θɔːˈræsɪk/",
             exampleEn = "Thoracic refers to pertaining to the chest.",
             exampleFr = "La thoracique est relatif au thorax.",
+            exampleAr = "مثال: يظهر متعلق بالصدر.",
+
         ),
         MedicalTermEntity(
             id = 129,
@@ -2079,6 +2119,8 @@ object AnatomieTerms {
             ipaPhonetic = "/æbˈdɒmɪnəl/",
             exampleEn = "Abdominal refers to pertaining to the abdomen.",
             exampleFr = "L'abdominal est relatif à l'abdomen.",
+            exampleAr = "مثال: يظهر متعلق بالبطن.",
+
         ),
         MedicalTermEntity(
             id = 130,
@@ -2093,6 +2135,8 @@ object AnatomieTerms {
             ipaPhonetic = "/ˈpɛlvɪk/",
             exampleEn = "Pelvic refers to pertaining to the pelvis.",
             exampleFr = "La pelvien est relatif au bassin.",
+            exampleAr = "مثال: يظهر متعلق بالحوض.",
+
         ),
         MedicalTermEntity(
             id = 131,
@@ -4781,6 +4825,10 @@ object AnatomieTerms {
             chapter = "Ostéologie",
             ipaPhonetic = "/boʊn ˈmæroʊ/",
 
+            exampleFr = "Exemple: Le Tissu mou à l'intérieur des os produisant les cellules sanguines.",
+
+            exampleAr = "مثال: يظهر نسيج رخو داخل العظام ينتج خلايا الدم.",
+
             exampleEn = "The Bone marrow is Soft tissue found inside bones that produces blood cells.",        ),
         ),
         MedicalTermEntity(
@@ -4795,6 +4843,10 @@ object AnatomieTerms {
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɒmpækt boʊn/",
 
+            exampleFr = "Exemple: Le Couche externe dense de l'os.",
+
+            exampleAr = "مثال: يظهر طبقة الخارجية الكثيفة من العظم.",
+
             exampleEn = "The Compact bone is Dense outer layer of bone.",        ),
         ),
         MedicalTermEntity(
@@ -4808,6 +4860,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈspʌndʒi boʊn/",
+
+            exampleFr = "Exemple: Le Tissu osseux poreux interne contenant la moelle osseuse.",
+
+            exampleAr = "مثال: يظهر نسيج عظمي مسامي داخلي يحتوي على نخاع العظم.",
 
             exampleEn = "The Spongy bone is Porous inner bone tissue containing bone marrow.",        ),
         ),
@@ -4837,6 +4893,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɑːrtɪlɪdʒ/",
+
+            exampleFr = "Exemple: Le Tissu conjonctif flexible trouvé dans les articulations.",
+
+            exampleAr = "مثال: يظهر نسيج ضام مرن يوجد في المفاصل وهياكل أخرى.",
 
             exampleEn = "The Cartilage is Flexible connective tissue found in joints and other structures.",        ),
         ),
@@ -4972,6 +5032,10 @@ object AnatomieTerms {
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈneɪzəl boʊn/",
 
+            exampleFr = "Exemple: Le des deux petits os formant l'arête du nez.",
+
+            exampleAr = "مثال: يظهر أحد عظمين صغيرين يشكلان جسر الأنف.",
+
             exampleEn = "The Nasal bone is One of two small bones forming the bridge of the nose.",        ),
         ),
         MedicalTermEntity(
@@ -5106,6 +5170,10 @@ object AnatomieTerms {
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈvɜːrtɪbrə/",
 
+            exampleFr = "Exemple: Le Chacun des os individuels composant la colonne vertébrale.",
+
+            exampleAr = "مثال: يظهر أي من العظام الفردية التي تشكل العمود الفقري.",
+
             exampleEn = "The Vertebra (pl. Vertebrae) is Any of the individual bones making up the spinal column.",        ),
         ),
         MedicalTermEntity(
@@ -5135,6 +5203,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/trænsˈvɜːrs ˈprɒsɛs/",
+
+            exampleFr = "Exemple: Le Saillies latérales de chaque côté d'une vertèbre.",
+
+            exampleAr = "مثال: يظهر بروزات جانبية من كل جانب من الفقرة.",
 
             exampleEn = "The Transverse process is Lateral projections from each side of a vertebra.",        ),
         ),
@@ -5225,6 +5297,10 @@ object AnatomieTerms {
             chapter = "Ostéologie",
             ipaPhonetic = "/fɔːls rɪbz/",
 
+            exampleFr = "Exemple: Le Côtes attachées au sternum indirectement via le cartilage costal.",
+
+            exampleAr = "مثال: يظهر أضلاع مرتبطة بالقص بشكل غير مباشر عبر الغضروف الضلعي.",
+
             exampleEn = "The False ribs (8-10) is Ribs attached to the sternum indirectly via costal cartilage.",        ),
         ),
         MedicalTermEntity(
@@ -5238,6 +5314,10 @@ object AnatomieTerms {
             module = "Anatomie",
             chapter = "Ostéologie",
             ipaPhonetic = "/ˈkɒstəl ˈkɑːrtɪlɪdʒ/",
+
+            exampleFr = "Exemple: Le Cartilage reliant les côtes au sternum.",
+
+            exampleAr = "مثال: يظهر غضروف الذي يربط الأضلاع بالقص.",
 
             exampleEn = "The Costal cartilage is Cartilage connecting the ribs to the sternum.",        ),
         ),

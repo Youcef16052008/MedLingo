@@ -421,6 +421,10 @@ MedicalTermEntity(
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌhiːmətˈɒksɪlɪn ænd ˈiːəsɪn/",
 
+            exampleFr = "Exemple: Le Coloration histologique la plus courante: hématoxyline colore les noyaux en bleu, éosine le cytoplasme en rose.",
+
+            exampleAr = "مثال: يظهر أشهر صبغة نسيجية: الهيماتوكسيلين يصبغ النوى بالأزرق والإيوزين يصبغ السيتوبلازم بالوردي.",
+
             exampleEn = "The Hematoxylin and Eosin (H&E) is most common histological stain: hematoxylin stains nuclei blue, eosin stains cytoplasm pink.",        ),
         ),
         MedicalTermEntity(
@@ -435,6 +439,10 @@ MedicalTermEntity(
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌbeɪsəˈfɪlɪk/",
             exampleEn = "Basophilic refers to having affinity for basic (blue) dyes like hematoxylin (e.g., nuclei, ribosomes).",
+            exampleFr = "Exemple: Le Ayant une affinité pour les colorants basiques (bleus) comme l'hématoxyline (ex: noyaux, ribosomes).",
+
+            exampleAr = "مثال: يظهر له ألفة للأصباغ القاعدية (الزرقاء) مثل الهيماتوكسيلين (مثل: النوى والريبوسومات).",
+
         ),
         MedicalTermEntity(
             id = 1105,
@@ -448,6 +456,10 @@ MedicalTermEntity(
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌiːəsɪnəˈfɪlɪk/",
             exampleEn = "Eosinophilic (Acidophilic) refers to having affinity for acidic (pink/red) dyes like eosin (e.g., cytoplasm, collagen).",
+            exampleFr = "Exemple: Le Ayant une affinité pour les colorants acides (roses/rouges) comme l'éosine (ex: cytoplasme, collagène).",
+
+            exampleAr = "مثال: يظهر له ألفة للأصباغ الحمضية (الوردية/الحمراء) مثل الإيوزين (مثل: السيتوبلازم والكولاجين).",
+
         ),
         MedicalTermEntity(
             id = 1106,
@@ -648,6 +660,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl/",
 
+            exampleFr = "Exemple: Le Épithélium composé d'une seule couche de cellules.",
+
+            exampleAr = "مثال: يظهر ظهارة مكونة من طبقة واحدة من الخلايا.",
+
             exampleEn = "The Simple epithelium is Epithelium composed of a single layer of cells.",        ),
         ),
         MedicalTermEntity(
@@ -661,6 +677,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈstrætɪfaɪd/",
+
+            exampleFr = "Exemple: Le Épithélium composé de deux ou plusieurs couches de cellules.",
+
+            exampleAr = "مثال: يظهر ظهارة مكونة من طبقتين أو أكثر من الخلايا.",
 
             exampleEn = "The Stratified epithelium is Epithelium composed of two or more layers of cells.",        ),
         ),
@@ -721,6 +741,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl ˈskweɪməs/",
             exampleEn = "The simple squamous epithelium is the single layer of flat cells allowing diffusion and filtration (e.g., alveoli, endothelium).",
+            exampleFr = "Exemple: Le Couche unique de cellules plates permettant la diffusion et la filtration (ex: alvéoles, endothélium).",
+
+            exampleAr = "مثال: يظهر طبقة واحدة من الخلايا المسطحة تسمح بالانتشار والترشيح (مثل: الأسناخ، البطانة).",
+
         ),
         MedicalTermEntity(
             id = 1124,
@@ -734,6 +758,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl kjuːˈbɔɪdəl/",
             exampleEn = "The simple cuboidal epithelium is the single layer of cube-shaped cells for secretion and absorption (e.g., kidney tubules, thyroid).",
+            exampleFr = "Exemple: Le Couche unique de cellules cubiques pour la sécrétion et l'absorption (ex: tubules rénaux, thyroïde).",
+
+            exampleAr = "مثال: يظهر طبقة واحدة من الخلايا المكعبة للإفراز والامتصاص (مثل: النبيبات الكلوية، الدرقية).",
+
         ),
         MedicalTermEntity(
             id = 1125,
@@ -747,6 +775,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl kəˈlʌmnər/",
             exampleEn = "The simple columnar epithelium is the single layer of tall cells for absorption and secretion (e.g., stomach, intestines).",
+            exampleFr = "Exemple: Le Couche unique de cellules hautes pour l'absorption et la sécrétion (ex: estomac, intestins).",
+
+            exampleAr = "مثال: يظهر طبقة واحدة من الخلايا الطويلة للامتصاص والإفراز (مثل: المعدة، الأمعاء).",
+
         ),
         MedicalTermEntity(
             id = 1126,
@@ -759,6 +791,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌsjuːdoʊˈstrætɪfaɪd/",
+
+            exampleFr = "Exemple: Le Épithélium apparaissant multicouche mais toutes les cellules touchent la membrane basale (ex: trachée).",
+
+            exampleAr = "مثال: يظهر ظهارة تبدو متعددة الطبقات لكن جميع الخلايا تلامس الغشاء القاعدي (مثل: الرغامى).",
 
             exampleEn = "The Pseudostratified columnar epithelium is Epithelium appearing multilayered but all cells touch the basement membrane (e.g., trachea).",        ),
         ),
@@ -774,6 +810,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈstrætɪfaɪd ˈskweɪməs/",
 
+            exampleFr = "Exemple: Le Couches multiples avec cellules superficielles plates pour la protection contre l'abrasion (ex: peau, œsophage, vagin).",
+
+            exampleAr = "مثال: يظهر طبقات متعددة بخلايا سطحية مسطحة للحماية من الاحتكاك (مثل: الجلد، المريء، المهبل).",
+
             exampleEn = "The Stratified squamous epithelium is Multiple layers with flat surface cells for protection against abrasion (e.g., skin, esophagus, vagina).",        ),
         ),
         MedicalTermEntity(
@@ -787,6 +827,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈkɛrətɪnaɪzd/",
+
+            exampleFr = "Exemple: Le Épithélium pavimenteux stratifié avec une couche superficielle de cellules mortes remplies de kératine (ex: peau).",
+
+            exampleAr = "مثال: يظهر ظهارة حرشفية طبقية بطبقة سطحية من خلايا ميتة مملوءة بالكيراتين (مثل: الجلد).",
 
             exampleEn = "The Keratinized epithelium is Stratified squamous epithelium with a surface layer of dead keratin-filled cells (e.g., skin).",        ),
         ),
@@ -802,6 +846,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/nɒn ˈkɛrətɪnaɪzd/",
 
+            exampleFr = "Exemple: Le Épithélium pavimenteux stratifié avec des cellules superficielles vivantes (ex: cavité buccale, œsophage).",
+
+            exampleAr = "مثال: يظهر ظهارة حرشفية طبقية بخلايا سطحية حية (مثل: التجويف الفموي، المريء).",
+
             exampleEn = "The Non-keratinized epithelium is Stratified squamous epithelium with living surface cells (e.g., oral cavity, esophagus).",        ),
         ),
         MedicalTermEntity(
@@ -816,6 +864,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/trænˈzɪʃənəl/",
             exampleEn = "The transitional epithelium (urothelium) is the stratified epithelium that stretches and changes shape (e.g., urinary bladder, ureters).",
+            exampleFr = "Exemple: Le Épithélium stratifié qui s'étire et change de forme (ex: vessie, uretères).",
+
+            exampleAr = "مثال: يظهر ظهارة طبقية تتمدد وتغير شكلها (مثل: المثانة البولية، الحالبين).",
+
         ),
         MedicalTermEntity(
             id = 1131,
@@ -890,6 +942,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌmaɪkroʊˈvɪlaɪ/",
 
+            exampleFr = "Exemple: Le Projections digitiformes sur la surface apicale augmentant la surface d'absorption.",
+
+            exampleAr = "مثال: يظهر بروزات إصبعية على السطح القمي تزيد مساحة سطح الامتصاص.",
+
             exampleEn = "The Microvilli is Finger-like projections on the apical surface increasing surface area for absorption.",        ),
         ),
         MedicalTermEntity(
@@ -904,6 +960,10 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/brʌʃ ˈbɔːrdər/",
             exampleEn = "The brush border is the dense layer of microvilli on absorptive cells (e.g., small intestine, proximal tubule).",
+            exampleFr = "Exemple: Le Couche dense de microvillosités sur les cellules absorbantes (ex: intestin grêle, tube proximal).",
+
+            exampleAr = "مثال: يظهر طبقة كثيفة من الزغيبات الدقيقة على الخلايا الامتصاصية (مثل: الأمعاء الدقيقة، النبيب القريب).",
+
         ),
         MedicalTermEntity(
             id = 1137,
@@ -916,6 +976,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪliə/",
+
+            exampleFr = "Exemple: Le Projections mobiles ciliées déplaçant les substances le long de la surface épithéliale.",
+
+            exampleAr = "مثال: يظهر بروزات شعرية متحركة تنقل المواد على طول السطح الظهاري.",
 
             exampleEn = "The Cilia is Motile hair-like projections that move substances along the epithelial surface.",        ),
         ),
@@ -930,6 +994,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌstɛrioʊˈsɪliə/",
+
+            exampleFr = "Exemple: Le Longues microvillosités immobiles trouvées dans l'épididyme et l'oreille interne.",
+
+            exampleAr = "مثال: يظهر زغيبات دقيقة طويلة غير متحركة توجد في البربخ والأذن الداخلية.",
 
             exampleEn = "The Stereocilia is Long immotile microvilli found in the epididymis and inner ear.",        ),
         ),
@@ -975,6 +1043,10 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈɛksoʊkrɪn/",
             exampleEn = "The exocrine gland is the gland secreting its products through ducts onto a surface (e.g., sweat, salivary).",
+            exampleFr = "Exemple: Le Glande sécrétant ses produits par des canaux sur une surface (ex: sueur, salivaire).",
+
+            exampleAr = "مثال: يظهر غدة تفرز منتجاتها عبر قنوات على سطح (مثل: العرقية، اللعابية).",
+
         ),
         MedicalTermEntity(
             id = 1142,
@@ -1003,6 +1075,10 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈmɛroʊkrɪn/",
 
+            exampleFr = "Exemple: Le Sécrétion par exocytose sans dommage cellulaire (ex: glandes sudoripares, salivaires).",
+
+            exampleAr = "مثال: يظهر إفراز بالإخراج الخلوي بدون تلف الخلية (مثل: الغدد العرقية، اللعابية).",
+
             exampleEn = "The Merocrine secretion (Eccrine) is Secretion by exocytosis without cell damage (e.g., sweat glands, salivary glands).",        ),
         ),
         MedicalTermEntity(
@@ -1016,6 +1092,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈæpoʊkrɪn/",
+
+            exampleFr = "Exemple: Le Sécrétion libérant la partie apicale de la cellule avec le produit (ex: glande mammaire).",
+
+            exampleAr = "مثال: يظهر إفراز يحرر الجزء القمي من الخلية مع المنتج (مثل: الغدة الثديية).",
 
             exampleEn = "The Apocrine secretion is Secretion releasing the apical portion of the cell with the product (e.g., mammary gland).",        ),
         ),
@@ -1031,6 +1111,10 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈhɒloʊkrɪn/",
 
+            exampleFr = "Exemple: Le Sécrétion impliquant la destruction complète de la cellule sécrétrice (ex: glandes sébacées).",
+
+            exampleAr = "مثال: يظهر إفراز يتضمن التدمير الكامل للخلية الإفرازية (مثل: الغدد الدهنية).",
+
             exampleEn = "The Holocrine secretion is Secretion involving complete destruction of the secretory cell (e.g., sebaceous glands).",        ),
         ),
         MedicalTermEntity(
@@ -1045,6 +1129,10 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈsɪərəs/",
             exampleEn = "The serous gland is the gland producing a thin watery protein-rich secretion (e.g., parotid gland).",
+            exampleFr = "Exemple: Le Glande produisant une sécrétion aqueuse fine riche en protéines (ex: glande parotide).",
+
+            exampleAr = "مثال: يظهر غدة تنتج إفرازاً مائياً رقيقاً غنياً بالبروتين (مثل: الغدة النكفية).",
+
         ),
         MedicalTermEntity(
             id = 1147,
@@ -1058,6 +1146,10 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈmjuːkəs/",
             exampleEn = "The mucous gland is the gland producing a thick viscous mucus secretion (e.g., sublingual gland).",
+            exampleFr = "Exemple: Le Glande produisant une sécrétion de mucus épaisse et visqueuse (ex: glande sublinguale).",
+
+            exampleAr = "مثال: يظهر غدة تنتج إفرازاً مخاطياً سميكاً لزجاً (مثل: الغدة تحت اللسانية).",
+
         ),
         MedicalTermEntity(
             id = 1148,
@@ -1071,6 +1163,10 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/mɪkst/",
             exampleEn = "The mixed gland (seromucous) is the gland containing both serous and mucous secretory cells (e.g., submandibular gland).",
+            exampleFr = "Exemple: Le Glande contenant des cellules sécrétoires séreuses et muqueuses (ex: glande sous-mandibulaire).",
+
+            exampleAr = "مثال: يظهر غدة تحتوي على خلايا إفرازية مصلية ومخاطية (مثل: الغدة تحت الفك).",
+
         ),
         MedicalTermEntity(
             id = 1149,
@@ -1204,6 +1300,10 @@ MedicalTermEntity(
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/rɪˈtɪkjʊlər ˈfaɪbər/",
             exampleEn = "The reticular fiber is the thin branching fiber of type III collagen forming supportive networks (e.g., lymph nodes, spleen).",
+            exampleFr = "Exemple: Le Fine fibre ramifiée de collagène type III formant des réseaux de soutien (ex: ganglions lymphatiques, rate).",
+
+            exampleAr = "مثال: يظهر ليف رفيع متفرع من الكولاجين النوع III يشكل شبكات داعمة (مثل: العقد اللمفاوية، الطحال).",
+
         ),
         MedicalTermEntity(
             id = 1158,
@@ -1308,6 +1408,10 @@ MedicalTermEntity(
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/dɛns ˈrɛɡjʊlər/",
 
+            exampleFr = "Exemple: Le Tissu avec fibres de collagène parallèles résistant à la tension dans une direction (ex: tendons, ligaments).",
+
+            exampleAr = "مثال: يظهر نسيج بألياف كولاجين متوازية لمقاومة الشد في اتجاه واحد (مثل: الأوتار، الأربطة).",
+
             exampleEn = "The Dense regular connective tissue is Tissue with parallel collagen fibers for resistance to tension in one direction (e.g., tendons, ligaments).",        ),
         ),
         MedicalTermEntity(
@@ -1321,6 +1425,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/dɛns ɪˈrɛɡjʊlər/",
+
+            exampleFr = "Exemple: Le Tissu avec fibres de collagène orientées aléatoirement résistant à la tension dans plusieurs directions (ex: derme).",
+
+            exampleAr = "مثال: يظهر نسيج بألياف كولاجين موجهة عشوائياً يقاوم الشد في عدة اتجاهات (مثل: الأدمة).",
 
             exampleEn = "The Dense irregular connective tissue is Tissue with randomly oriented collagen fibers resisting tension in multiple directions (e.g., dermis).",        ),
         ),
@@ -1336,6 +1444,10 @@ MedicalTermEntity(
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ɪˈlæstɪk/",
 
+            exampleFr = "Exemple: Le Tissu riche en fibres élastiques permettant l'étirement et le recul (ex: paroi aortique, cordes vocales).",
+
+            exampleAr = "مثال: يظهر نسيج غني بالألياف المرنة يسمح بالتمدد والارتداد (مثل: جدار الأبهر، الحبال الصوتية).",
+
             exampleEn = "The Elastic connective tissue is Tissue rich in elastic fibers allowing stretch and recoil (e.g., aorta wall, vocal cords).",        ),
         ),
         MedicalTermEntity(
@@ -1349,6 +1461,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/rɪˈtɪkjʊlər/",
+
+            exampleFr = "Exemple: Le Tissu formant un réseau délicat soutenant les cellules sanguines libres (ex: rate, ganglions, moelle osseuse).",
+
+            exampleAr = "مثال: يظهر نسيج يشكل شبكة دقيقة تدعم خلايا الدم الحرة (مثل: الطحال، العقد اللمفاوية، نخاع العظم).",
 
             exampleEn = "The Reticular connective tissue is Tissue forming a delicate network supporting free blood cells (e.g., spleen, lymph nodes, bone marrow).",        ),
         ),
@@ -1364,6 +1480,10 @@ MedicalTermEntity(
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/waɪt ˈædɪpoʊs/",
 
+            exampleFr = "Exemple: Le Tissu graisseux stockant l'énergie sous forme d'une seule grande gouttelette lipidique par cellule (uniloculaire).",
+
+            exampleAr = "مثال: يظهر نسيج دهني يخزن الطاقة كقطيرة دهنية كبيرة واحدة في كل خلية (أحادي الفجوة).",
+
             exampleEn = "The White adipose tissue is Fat tissue storing energy as a single large lipid droplet per cell (unilocular).",        ),
         ),
         MedicalTermEntity(
@@ -1377,6 +1497,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/braʊn ˈædɪpoʊs/",
+
+            exampleFr = "Exemple: Le Tissu graisseux générant de la chaleur avec de nombreuses petites gouttelettes lipidiques et des mitochondries abondantes (multiloculaire).",
+
+            exampleAr = "مثال: يظهر نسيج دهني يولد الحرارة بقطيرات دهنية صغيرة عديدة وميتوكوندريا وفيرة (متعدد الفجوات).",
 
             exampleEn = "The Brown adipose tissue is Fat tissue generating heat with many small lipid droplets and abundant mitochondria (multilocular).",        ),
         ),
@@ -1484,6 +1608,10 @@ MedicalTermEntity(
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˈhaɪəlɪn/",
             exampleEn = "The hyaline cartilage is the most common cartilage type with a glassy homogeneous matrix (e.g., trachea, nose, joint surfaces).",
+            exampleFr = "Exemple: Le Type de cartilage le plus courant avec une matrice vitreuse homogène (ex: trachée, nez, surfaces articulaires).",
+
+            exampleAr = "مثال: يظهر أكثر أنواع الغضاريف شيوعاً بمطرس زجاجي متجانس (مثل: الرغامى، الأنف، سطوح المفاصل).",
+
         ),
         MedicalTermEntity(
             id = 1177,
@@ -1496,6 +1624,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ɪˈlæstɪk ˈkɑːrtɪlɪdʒ/",
+
+            exampleFr = "Exemple: Le Cartilage riche en fibres élastiques assurant la flexibilité (ex: pavillon de l'oreille, épiglotte).",
+
+            exampleAr = "مثال: يظهر غضروف غني بالألياف المرنة يوفر المرونة (مثل: صيوان الأذن، لسان المزمار).",
 
             exampleEn = "The Elastic cartilage is Cartilage rich in elastic fibers providing flexibility (e.g., ear pinna, epiglottis).",        ),
         ),
@@ -1511,6 +1643,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌfaɪbroʊˈkɑːrtɪlɪdʒ/",
+
+            exampleFr = "Exemple: Le Cartilage avec fibres de collagène abondantes résistant à la compression et la tension (ex: disques intervertébraux, ménisques).",
+
+            exampleAr = "مثال: يظهر غضروف بألياف كولاجين وفيرة يقاوم الضغط والشد (مثل: الأقراص بين الفقرية، الهلالات).",
 
             exampleEn = "The Fibrocartilage is Cartilage with abundant collagen fibers resisting compression and tension (e.g., intervertebral discs, menisci).",        ),
         ),
@@ -1541,6 +1677,10 @@ MedicalTermEntity(
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌɪntərˈstɪʃəl/",
 
+            exampleFr = "Exemple: Le Croissance du cartilage de l'intérieur par division des chondrocytes et sécrétion de matrice.",
+
+            exampleAr = "مثال: يظهر نمو الغضروف من الداخل بانقسام الخلايا الغضروفية وإفراز المطرس.",
+
             exampleEn = "The Interstitial growth is Cartilage growth from within by chondrocyte division and matrix secretion.",        ),
         ),
         MedicalTermEntity(
@@ -1554,6 +1694,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌæpəˈzɪʃənəl/",
+
+            exampleFr = "Exemple: Le Croissance du cartilage par la surface par différenciation des cellules du périchondre.",
+
+            exampleAr = "مثال: يظهر نمو الغضروف من السطح بتمايز خلايا سمحاق الغضروف.",
 
             exampleEn = "The Appositional growth is Cartilage growth from the surface by differentiation of perichondrial cells.",        ),
         ),
@@ -1755,6 +1899,10 @@ MedicalTermEntity(
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈwoʊvən boʊn/",
 
+            exampleFr = "Exemple: Le Os immature avec fibres de collagène orientées aléatoirement formé en premier lors du développement.",
+
+            exampleAr = "مثال: يظهر عظم غير ناضج بألياف كولاجين موجهة عشوائياً يتكون أولاً أثناء التطور.",
+
             exampleEn = "The Woven bone (Primary bone) is Immature bone with randomly oriented collagen fibers formed first during development.",        ),
         ),
         MedicalTermEntity(
@@ -1768,6 +1916,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ləˈmɛlər boʊn/",
+
+            exampleFr = "Exemple: Le Os mature avec lamelles de collagène parallèles organisées remplaçant l'os tissé.",
+
+            exampleAr = "مثال: يظهر عظم ناضج بصفائح كولاجين متوازية منظمة تحل محل العظم المنسوج.",
 
             exampleEn = "The Lamellar bone (Secondary bone) is Mature bone with organized parallel collagen lamellae replacing woven bone.",        ),
         ),
@@ -1783,6 +1935,10 @@ MedicalTermEntity(
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌɪntrəˈmɛmbrənəs/",
 
+            exampleFr = "Exemple: Le Formation osseuse directement à partir du tissu mésenchymateux sans modèle cartilagineux (ex: os plats du crâne).",
+
+            exampleAr = "مثال: يظهر تكون العظم مباشرة من النسيج الوسيط بدون نموذج غضروفي (مثل: عظام الجمجمة المسطحة).",
+
             exampleEn = "The Intramembranous ossification is Bone formation directly from mesenchymal tissue without a cartilage model (e.g., flat skull bones).",        ),
         ),
         MedicalTermEntity(
@@ -1796,6 +1952,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌɛndoʊˈkɒndrəl/",
+
+            exampleFr = "Exemple: Le Formation osseuse par remplacement d'un modèle de cartilage hyalin (ex: os longs).",
+
+            exampleAr = "مثال: يظهر تكون العظم عن طريق استبدال نموذج غضروفي زجاجي (مثل: العظام الطويلة).",
 
             exampleEn = "The Endochondral ossification is Bone formation by replacing a hyaline cartilage model (e.g., long bones).",        ),
         ),
@@ -1856,6 +2016,10 @@ MedicalTermEntity(
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈskɛlɪtəl ˈmʌsəl/",
 
+            exampleFr = "Exemple: Le Muscle strié volontaire attaché aux os; fibres cylindriques multinucléées.",
+
+            exampleAr = "مثال: يظهر عضلة مخططة إرادية مرتبطة بالعظام؛ ألياف أسطوانية متعددة النوى.",
+
             exampleEn = "The Skeletal muscle is Voluntary striated muscle attached to bones; multinucleated cylindrical fibers.",        ),
         ),
         MedicalTermEntity(
@@ -1871,6 +2035,10 @@ MedicalTermEntity(
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈmʌsəl/",
 
+            exampleFr = "Exemple: Le Muscle strié involontaire du cœur; cellules ramifiées uninucléées avec des disques intercalaires.",
+
+            exampleAr = "مثال: يظهر عضلة مخططة لاإرادية في القلب؛ خلايا متفرعة أحادية النواة بأقراص مقحمة.",
+
             exampleEn = "The Cardiac muscle is Involuntary striated muscle of the heart; branched uninucleated cells with intercalated discs.",        ),
         ),
         MedicalTermEntity(
@@ -1884,6 +2052,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/smuːð ˈmʌsəl/",
+
+            exampleFr = "Exemple: Le Muscle lisse involontaire des organes internes; cellules fusiformes uninucléées.",
+
+            exampleAr = "مثال: يظهر عضلة لاإرادية غير مخططة في الأعضاء الداخلية؛ خلايا مغزلية أحادية النواة.",
 
             exampleEn = "The Smooth muscle is Involuntary non-striated muscle of internal organs; spindle-shaped uninucleated cells.",        ),
         ),
@@ -2233,6 +2405,10 @@ MedicalTermEntity(
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈdɛndraɪt/",
 
+            exampleFr = "Exemple: Le Courts prolongements ramifiés recevant les signaux d'autres neurones.",
+
+            exampleAr = "مثال: يظهر استطالات قصيرة متفرعة تستقبل الإشارات من العصبونات الأخرى.",
+
             exampleEn = "The Dendrite is Short branching processes receiving signals from other neurons.",        ),
         ),
         MedicalTermEntity(
@@ -2262,6 +2438,10 @@ MedicalTermEntity(
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈnɪsəl ˈbɒdiz/",
 
+            exampleFr = "Exemple: Le Amas de réticulum endoplasmique rugueux dans les neurones visibles comme granules basophiles.",
+
+            exampleAr = "مثال: يظهر تجمعات الشبكة الإندوبلازمية الخشنة في العصبونات المرئية كحبيبات قاعدية.",
+
             exampleEn = "The Nissl bodies (Rough ER) is Clusters of rough endoplasmic reticulum in neurons visible as basophilic granules.",        ),
         ),
         MedicalTermEntity(
@@ -2276,6 +2456,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/njʊəˈrɒɡliə/",
+
+            exampleFr = "Exemple: Le Cellules de soutien non neuronales du système nerveux.",
+
+            exampleAr = "مثال: يظهر خلايا الداعمة غير العصبونية في الجهاز العصبي.",
 
             exampleEn = "The Neuroglia (Glial cells) is Non-neuronal supporting cells of the nervous system.",        ),
         ),
@@ -2321,6 +2505,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˌmaɪkroʊˈɡliːə/",
+
+            exampleFr = "Exemple: Le Petites cellules gliales phagocytaires agissant comme défense immunitaire du SNC.",
+
+            exampleAr = "مثال: يظهر خلايا دبقية صغيرة بالعة تعمل كدفاع مناعي للجهاز العصبي المركزي.",
 
             exampleEn = "The Microglia is Small phagocytic glial cells acting as the immune defense of the CNS.",        ),
         ),
@@ -2500,6 +2688,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/fɔːrmd ˈɛlɪmənts/",
+
+            exampleFr = "Exemple: Le Composants cellulaires du sang: GR, GB et plaquettes (45% du sang).",
+
+            exampleAr = "مثال: يظهر مكونات الخلوية للدم: كريات حمراء وبيضاء وصفيحات (45% من الدم).",
 
             exampleEn = "The Formed elements is cellular components of blood: RBCs, WBCs, and platelets (45% of blood).",        ),
         ),
@@ -3092,6 +3284,10 @@ MedicalTermEntity(
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌjuːˈkroʊmətɪn/",
 
+            exampleFr = "Exemple: Le Chromatine dispersée faiblement colorée représentant l'ADN activement transcrit.",
+
+            exampleAr = "مثال: يظهر كروماتين مبعثر خفيف الصبغ يمثل DNA المنسوخ بنشاط.",
+
             exampleEn = "The Euchromatin is Lightly stained dispersed chromatin representing actively transcribed DNA.",        ),
         ),
         MedicalTermEntity(
@@ -3105,6 +3301,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌhɛtəroʊˈkroʊmətɪn/",
+
+            exampleFr = "Exemple: Le Chromatine condensée fortement colorée représentant l'ADN inactif.",
+
+            exampleAr = "مثال: يظهر كروماتين مكثف داكن الصبغ يمثل DNA غير النشط.",
 
             exampleEn = "The Heterochromatin is Darkly stained condensed chromatin representing inactive DNA.",        ),
         ),
@@ -3241,6 +3441,10 @@ MedicalTermEntity(
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌɪntərˈmiːdiət/",
             exampleEn = "The intermediate filament is the rope-like cytoskeletal element (10 nm) providing mechanical strength (e.g., keratin, vimentin, desmin).",
+            exampleFr = "Exemple: Le Élément cytosquelettique en forme de corde (10 nm) fournissant la résistance mécanique (ex: kératine, vimentine, desmine).",
+
+            exampleAr = "مثال: يظهر عنصر حبلي في الهيكل الخلوي (10 نانومتر) يوفر القوة الميكانيكية (مثل: كيراتين، فيمنتين، ديسمين).",
+
         ),
         MedicalTermEntity(
             id = 1295,
@@ -3300,6 +3504,10 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/maɪˈtoʊsɪs/",
+
+            exampleFr = "Exemple: Le Division nucléaire produisant deux cellules filles identiques avec le même nombre de chromosomes.",
+
+            exampleAr = "مثال: يظهر انقسام نووي ينتج خليتين بنتين متماثلتين بنفس عدد الكروموسومات.",
 
             exampleEn = "The Mitosis is Nuclear division producing two identical daughter cells with the same chromosome number.",        ),
         ),
@@ -3407,6 +3615,10 @@ MedicalTermEntity(
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
 
+            exampleFr = "Exemple: Le Mort cellulaire programmée se produisant de manière contrôlée sans inflammation.",
+
+            exampleAr = "مثال: يظهر موت خلوي مبرمج يحدث بطريقة منضبطة بدون التهاب.",
+
             exampleEn = "The Apoptosis is Programmed cell death that occurs in a controlled manner without inflammation.",        ),
         ),
         MedicalTermEntity(
@@ -3426,3 +3638,7 @@ MedicalTermEntity(
     )
 
             exampleEn = "The Necrosis is Uncontrolled cell death due to injury causing inflammation and tissue damage.",}
+            exampleFr = "Exemple: Le Mort cellulaire incontrôlée due à une lésion causant inflammation et dommages tissulaires.",
+
+            exampleAr = "مثال: يظهر موت خلوي غير منضبط بسبب إصابة يسبب التهاباً وتلفاً نسيجياً.",
+

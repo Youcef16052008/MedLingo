@@ -628,6 +628,10 @@ object EmbryologieTerms {
             chapter = "Fécondation",
             ipaPhonetic = "/ɛkˈtɒpɪk/",
 
+            exampleFr = "Exemple: Le Implantation du blastocyste en dehors de l'utérus, le plus souvent dans la trompe utérine.",
+
+            exampleAr = "مثال: يظهر انغراس الكيسة الأريمية خارج الرحم، وفي أغلب الأحيان في قناة الرحم.",
+
             exampleEn = "The Ectopic pregnancy is Implantation of the blastocyst outside the uterus, most commonly in the uterine tube.",        ),
         ),
         MedicalTermEntity(
@@ -642,6 +646,10 @@ object EmbryologieTerms {
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈkliːvɪdʒ/",
 
+            exampleFr = "Exemple: Le Divisions mitotiques rapides du zygote produisant des cellules plus petites appelées blastomères.",
+
+            exampleAr = "مثال: يظهر انقسامات خيطية سريعة للاقحة تنتج خلايا أصغر تُسمى الأريمات.",
+
             exampleEn = "The Cleavage is Rapid mitotic divisions of the zygote producing smaller cells called blastomeres.",        ),
         ),
         MedicalTermEntity(
@@ -655,6 +663,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈblæstəmɪər/",
+
+            exampleFr = "Exemple: Le Chacune des cellules produites par la segmentation du zygote.",
+
+            exampleAr = "مثال: يظهر كل خلية من الخلايا الناتجة عن تفتت اللاقحة.",
 
             exampleEn = "The Blastomere is Each of the cells produced by cleavage of the zygote.",        ),
         ),
@@ -790,6 +802,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˌɛmbriˈɒnɪk stɛm sɛl/",
+
+            exampleFr = "Exemple: Le Cellules pluripotentes dérivées de la masse cellulaire interne du blastocyste.",
+
+            exampleAr = "مثال: يظهر خلايا متعددة القدرة مشتقة من الكتلة الخلوية الداخلية للكيسة الأريمية.",
 
             exampleEn = "The Embryonic stem cell (ESC) is Pluripotent cells derived from the inner cell mass of the blastocyst.",        ),
         ),
@@ -1091,6 +1107,10 @@ object EmbryologieTerms {
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl foʊld/",
 
+            exampleFr = "Exemple: Le Élévations latérales de la plaque neurale qui fusionnent sur la ligne médiane pour former le tube neural.",
+
+            exampleAr = "مثال: يظهر ارتفاعات جانبية للصفيحة العصبية تندمج عند خط المنتصف لتكوين الأنبوب العصبي.",
+
             exampleEn = "The Neural fold is Lateral elevations of the neural plate that fuse at the midline to form the neural tube.",        ),
         ),
         MedicalTermEntity(
@@ -1119,6 +1139,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl krɛst/",
+
+            exampleFr = "Exemple: Le Cellules migratrices dérivées du tube neural dorsal donnant naissance au système nerveux périphérique, mélanocytes et os crânio-faciaux.",
+
+            exampleAr = "مثال: يظهر خلايا مهاجرة مشتقة من الأنبوب العصبي الظهري تنشأ منها خلايا الجهاز العصبي المحيطي والميلانينات وعظام الوجه.",
 
             exampleEn = "The Neural crest cells is Migratory cells derived from the dorsal neural tube giving rise to peripheral nervous system, melanocytes, and facial bones.",        ),
         ),
@@ -1242,6 +1266,8 @@ object EmbryologieTerms {
             ipaPhonetic = "/ˈsiːləm/",
             exampleEn = "The coelom is the body cavity that forms within the lateral plate mesoderm giving rise to pericardial, pleural, and peritoneal cavities.",
             exampleAr = "التجويف الجنيني (السيلوم) هو التجويف الجسدي المتشكل في الأديم المتوسط الجانبي الذي ينشأ منه التجويفان التاموري والجنبي والصفاقي.",
+            exampleFr = "Exemple: Le cavité corporelle qui se forme dans le mésoderme de la plaque latérale donnant naissance aux cavités péricardique, pleurale et péritonéale.",
+
         ),
         MedicalTermEntity(
             id = 3255,
@@ -1269,6 +1295,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/kɒˈrɪɒnɪk ˈvɪlaɪ/",
+
+            exampleFr = "Exemple: Le Projections en doigt du trophoblaste envahissant l'endomètre pour les échanges materno-fœtaux.",
+
+            exampleAr = "مثال: يظهر نتوءات إصبعية من أرومة التغذية تغزو بطانة الرحم لتبادل المواد بين الأم والجنين.",
 
             exampleEn = "The Chorionic villi is Finger-like projections of trophoblast invading the endometrium for maternal-fetal exchange.",        ),
         ),
@@ -1419,6 +1449,10 @@ object EmbryologieTerms {
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌɒlɪɡoʊhaɪˈdræmniɒs/",
 
+            exampleFr = "Exemple: Le Volume anormalement bas de liquide amniotique souvent associé à l'agénésie rénale.",
+
+            exampleAr = "مثال: يظهر حجم منخفض بشكل غير طبيعي من السائل الأمنيوسي غالباً مرتبط بعدم نشوء الكلية.",
+
             exampleEn = "The Oligohydramnios is Abnormally low volume of amniotic fluid often associated with renal agenesis.",        ),
         ),
         MedicalTermEntity(
@@ -1433,6 +1467,10 @@ object EmbryologieTerms {
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌpɒlihaɪˈdræmniɒs/",
 
+            exampleFr = "Exemple: Le Volume anormalement élevé de liquide amniotique souvent associé à des anomalies gastro-intestinales.",
+
+            exampleAr = "مثال: يظهر حجم مرتفع بشكل غير طبيعي من السائل الأمنيوسي غالباً مرتبط بشذوذات الجهاز الهضمي.",
+
             exampleEn = "The Polyhydramnios is Abnormally high volume of amniotic fluid often associated with gastrointestinal anomalies.",        ),
         ),
         MedicalTermEntity(
@@ -1446,6 +1484,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈprɪməri breɪn ˈvɛsɪkəlz/",
+
+            exampleFr = "Exemple: Le trois renflements initiaux du tube neural crânial: prosencéphale, mésencéphale, rhombencéphale.",
+
+            exampleAr = "مثال: يظهر انتفاخات الثلاث الأولية للأنبوب العصبي القحفي: المخ الأمامي والمتوسط والمعيني.",
 
             exampleEn = "The Primary brain vesicles is three initial swellings of the cranial neural tube: prosencephalon, mesencephalon, rhombencephalon.",        ),
         ),
@@ -1535,6 +1577,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈnjʊərəl tjuːb dɪˈfɛkts/",
+
+            exampleFr = "Exemple: Le Anomalies congénitales résultant d'un défaut de fermeture du tube neural.",
+
+            exampleAr = "مثال: يظهر شذوذات خلقية ناتجة عن فشل انغلاق الأنبوب العصبي.",
 
             exampleEn = "The Neural tube defects (NTDs) is Congenital anomalies resulting from failure of neural tube closure.",        ),
         ),
@@ -1749,6 +1795,10 @@ object EmbryologieTerms {
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/tɛˈtrælədʒi ɒv fæˈloʊ/",
 
+            exampleFr = "Exemple: Le Anomalie cardiaque congénitale à quatre défauts: CIV, sténose pulmonaire, aorte à cheval et hypertrophie ventriculaire droite.",
+
+            exampleAr = "مثال: يظهر شذوذ قلبي خلقي بأربعة عيوب: حاجز بطيني، تضيق رئوي، أبهر راكب وتضخم بطيني أيمن.",
+
             exampleEn = "The Tetralogy of Fallot is congenital cardiac anomaly with four defects: VSD, pulmonary stenosis, overriding aorta, right ventricular hypertrophy.",        ),
         ),
         MedicalTermEntity(
@@ -1827,6 +1877,10 @@ object EmbryologieTerms {
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl ɑːrtʃɪz/",
 
+            exampleFr = "Exemple: Le Structures segmentaires pairées se développant à partir de cellules de la crête neurale.",
+
+            exampleAr = "مثال: يظهر تراكيب مقطعية مزدوجة تتطور من خلايا القمة العصبية تنشأ منها تراكيب الوجه والرقبة.",
+
             exampleEn = "The Pharyngeal arches (Branchial arches) is Paired segmental structures developing from neural crest cells giving rise to facial and neck structures.",        ),
         ),
         MedicalTermEntity(
@@ -1842,6 +1896,10 @@ object EmbryologieTerms {
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl klɛfts/",
 
+            exampleFr = "Exemple: Le Sillons ectodermiques entre les arcs pharyngés; le premier devient le méat acoustique externe.",
+
+            exampleAr = "مثال: يظهر أخاديد أديمية ظاهرة بين الأقواس البلعومية؛ يصبح الأول الصماخ السمعي الخارجي.",
+
             exampleEn = "The Pharyngeal clefts (grooves) is Ectodermal grooves between the pharyngeal arches; the first becomes the external acoustic meatus.",        ),
         ),
         MedicalTermEntity(
@@ -1856,6 +1914,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl paʊtʃɪz/",
+
+            exampleFr = "Exemple: Le Évaginations endodermiques entre les arcs pharyngés donnant naissance aux amygdales, thymus, parathyroïdes et thyroïde.",
+
+            exampleAr = "مثال: يظهر نتوءات من الأديم الباطن بين الأقواس البلعومية تنشأ منها اللوزات والغدة الزعترية وجارات الدرق والدرق.",
 
             exampleEn = "The Pharyngeal pouches is Endodermal outpouchings between pharyngeal arches giving rise to tonsils, thymus, parathyroid glands, and thyroid.",        ),
         ),
@@ -1994,6 +2056,10 @@ object EmbryologieTerms {
             chapter = "Organogenèse",
             ipaPhonetic = "/ɛs ɑːr waɪ/",
 
+            exampleFr = "Exemple: Le Région déterminant le sexe Y; le gène sur le chromosome Y déclenchant le développement testiculaire.",
+
+            exampleAr = "مثال: يظهر منطقة تحديد الجنس Y؛ الجين على الكروموسوم Y الذي يطلق تطور الخصية.",
+
             exampleEn = "The SRY gene is Sex-determining Region Y; the gene on the Y chromosome triggering testis development.",        ),
         ),
         MedicalTermEntity(
@@ -2052,6 +2118,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/krɪpˈtɔːrkɪdɪzəm/",
+
+            exampleFr = "Exemple: Le Échec d'un ou des deux testicules à descendre dans le scrotum.",
+
+            exampleAr = "مثال: يظهر فشل إحدى الخصيتين أو كلتيهما في النزول إلى كيس الصفن.",
 
             exampleEn = "The Cryptorchidism is Failure of one or both testes to descend into the scrotum.",        ),
         ),
@@ -2156,6 +2226,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈtɛrətədʒɛn/",
+
+            exampleFr = "Exemple: Le Tout agent (médicament, produit chimique, infection, rayonnement) causant des malformations congénitales.",
+
+            exampleAr = "مثال: يظهر أي عامل (دواء، مادة كيميائية، عدوى، إشعاع) يسبب تشوهات خلقية.",
 
             exampleEn = "The Teratogen is Any agent (drug, chemical, infection, radiation) causing congenital malformations.",        ),
         ),
@@ -2385,6 +2459,10 @@ object EmbryologieTerms {
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˌɛmbriˈɒnɪk ˈpɪəriəd/",
 
+            exampleFr = "Exemple: Le Semaines 1-8 du développement pendant lesquelles tous les organes majeurs sont établis.",
+
+            exampleAr = "مثال: يظهر أسابيع من 1 إلى 8 من التطور حيث تتأسس جميع الأعضاء الرئيسية.",
+
             exampleEn = "The Embryonic period is Weeks 1-8 of development during which all major organs are established.",        ),
         ),
         MedicalTermEntity(
@@ -2399,6 +2477,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈfiːtəl ˈpɪəriəd/",
+
+            exampleFr = "Exemple: Le Semaine 9 jusqu'à la naissance caractérisée par la croissance et la maturation des organes.",
+
+            exampleAr = "مثال: يظهر من الأسبوع التاسع حتى الولادة وتتميز بنمو ونضج الأعضاء المتكونة في الفترة الجنينية.",
 
             exampleEn = "The Fetal period is Week 9 to birth characterized by growth and maturation of organs formed during embryonic period.",        ),
         ),
@@ -2489,6 +2571,10 @@ object EmbryologieTerms {
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈsteɪdʒɪz ɒv leɪbər/",
 
+            exampleFr = "Exemple: Le Trois stades: dilatation du col, expulsion du fœtus et délivrance du placenta.",
+
+            exampleAr = "مثال: يظهر ثلاث مراحل: اتساع عنق الرحم، طرد الجنين، وخروج المشيمة.",
+
             exampleEn = "The Parturition stages is Three stages: dilation of cervix, expulsion of fetus, and delivery of placenta.",        ),
         ),
         MedicalTermEntity(
@@ -2502,6 +2588,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈpriːtɜːrm bɜːrθ/",
+
+            exampleFr = "Exemple: Le Naissance survenant avant 37 semaines complètes de gestation.",
+
+            exampleAr = "مثال: يظهر ولادة التي تحدث قبل اكتمال 37 أسبوعاً من الحمل.",
 
             exampleEn = "The Preterm birth is Birth occurring before 37 completed weeks of gestation.",        ),
         ),
@@ -2563,6 +2653,10 @@ object EmbryologieTerms {
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˌæpəpˈtoʊsɪs/",
 
+            exampleFr = "Exemple: Le Mort cellulaire génétiquement contrôlée essentielle pour la morphogenèse embryonnaire et la séparation des doigts.",
+
+            exampleAr = "مثال: يظهر موت خلوي مبرمج وراثياً ضروري للتشكل الجنيني وفصل الأصابع.",
+
             exampleEn = "The Apoptosis (Programmed cell death) is Genetically controlled cell death essential for embryonic morphogenesis and digit separation.",        ),
         ),
         MedicalTermEntity(
@@ -2608,6 +2702,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/hoʊˈmiːɒtɪk/",
+
+            exampleFr = "Exemple: Le Gènes régulateurs maîtres contrôlant le plan corporel et la spécification des axes.",
+
+            exampleAr = "مثال: يظهر جينات التنظيمية الرئيسية التي تتحكم في مخطط الجسم وتحديد المحاور على طول المحور الأمامي الخلفي.",
 
             exampleEn = "The Homeotic genes (Hox genes) is Master regulatory genes controlling the body plan and axis specification along the anterior-posterior axis.",        ),
         ),
@@ -2700,6 +2798,10 @@ object EmbryologieTerms {
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˌɛpɪdʒɪˈnɛtɪks/",
 
+            exampleFr = "Exemple: Le Changements héritables de l'expression génique n'impliquant pas de changements de séquence ADN.",
+
+            exampleAr = "مثال: يظهر تغيرات وراثية في التعبير الجيني لا تتضمن تغييرات في تسلسل الحمض النووي؛ مهمة في التطور.",
+
             exampleEn = "The Epigenetics is Heritable changes in gene expression not involving DNA sequence changes; important in development.",        ),
         ),
         MedicalTermEntity(
@@ -2743,6 +2845,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ɪnˈdjuːst plʊˈrɪpətənt/",
+
+            exampleFr = "Exemple: Le Cellules somatiques adultes reprogrammées à l'état pluripotent par introduction de facteurs de transcription spécifiques.",
+
+            exampleAr = "مثال: يظهر خلايا جسدية بالغة تُعاد برمجتها إلى حالة متعددة القدرة بإدخال عوامل نسخ محددة.",
 
             exampleEn = "The Induced pluripotent stem cells (iPSC) is Adult somatic cells reprogrammed to a pluripotent state by introducing specific transcription factors.",        ),
         ),
@@ -2864,6 +2970,10 @@ object EmbryologieTerms {
             chapter = "Termes Cliniques",
             ipaPhonetic = "/pləˈsɛntə ˈpriːviə/",
 
+            exampleFr = "Exemple: Le Placentation anormale où le placenta recouvre ou est adjacent à l'orifice interne du col.",
+
+            exampleAr = "مثال: يظهر انغراس غير طبيعي للمشيمة حيث تغطي أو تجاور فوهة عنق الرحم الداخلية.",
+
             exampleEn = "The Placenta previa is Abnormal placentation where the placenta overlies or is adjacent to the internal cervical os.",        ),
         ),
         MedicalTermEntity(
@@ -2970,6 +3080,10 @@ object EmbryologieTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkreɪniəl/",
 
+            exampleFr = "Exemple: Le Vers l'extrémité céphalique de l'embryon; supérieur en position anatomique.",
+
+            exampleAr = "مثال: يظهر باتجاه نهاية الرأس للجنين؛ علوي في الوضع التشريحي.",
+
             exampleEn = "The Cranial (Cephalic) is Toward the head end of the embryo; superior in the anatomical position.",        ),
         ),
         MedicalTermEntity(
@@ -2983,6 +3097,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkɔːdəl/",
+
+            exampleFr = "Exemple: Le Vers l'extrémité caudale de l'embryon; inférieur en position anatomique.",
+
+            exampleAr = "مثال: يظهر باتجاه نهاية الذيل للجنين؛ سفلي في الوضع التشريحي.",
 
             exampleEn = "The Caudal is Toward the tail end of the embryo; inferior in the anatomical position.",        ),
         ),
@@ -3028,6 +3146,10 @@ object EmbryologieTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈrɒstrəl/",
 
+            exampleFr = "Exemple: Le Vers la partie avant de la tête dans le SNC.",
+
+            exampleAr = "مثال: يظهر باتجاه المنطقة الأمامية للرأس (الأنف) في الجهاز العصبي المركزي.",
+
             exampleEn = "The Rostral is Toward the front of the head (nose) in the CNS.",        ),
         ),
         MedicalTermEntity(
@@ -3041,6 +3163,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/prəˌlɪfəˈreɪʃən/",
+
+            exampleFr = "Exemple: Le Augmentation rapide du nombre de cellules par mitose; essentiel pour la croissance embryonnaire.",
+
+            exampleAr = "مثال: يظهر زيادة سريعة في عدد الخلايا بالانقسام الخيطي؛ ضروري للنمو الجنيني.",
 
             exampleEn = "The Proliferation is Rapid increase in cell number by mitosis; essential for embryonic growth.",        ),
         ),
@@ -3131,6 +3257,10 @@ object EmbryologieTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈpærəkraɪn/",
 
+            exampleFr = "Exemple: Le Communication cellulaire où les molécules de signalisation agissent sur les cellules voisines.",
+
+            exampleAr = "مثال: يظهر تواصل خلوي تؤثر فيه جزيئات الإشارة على الخلايا المجاورة أثناء الحث الجنيني.",
+
             exampleEn = "The Paracrine signaling is Cell communication where signaling molecules act on nearby cells during embryonic induction.",        ),
         ),
         MedicalTermEntity(
@@ -3144,6 +3274,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌmɒnoʊzaɪˈɡɒtɪk/",
+
+            exampleFr = "Exemple: Le Jumeaux identiques issus d'un seul œuf fécondé qui se divise en deux embryons.",
+
+            exampleAr = "مثال: يظهر توأم متطابق ينشأ من بيضة مخصبة واحدة تنقسم إلى جنينين.",
 
             exampleEn = "The Twin (Monozygotic) is Identical twins arising from a single fertilized egg that splits into two embryos.",        ),
         ),
@@ -3159,6 +3293,10 @@ object EmbryologieTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdaɪzaɪˈɡɒtɪk/",
 
+            exampleFr = "Exemple: Le Jumeaux fraternels issus de deux œufs fécondés séparément s'implantant dans l'utérus.",
+
+            exampleAr = "مثال: يظهر توأم غير متطابق ينشأ من بيضتين مخصبتين بشكل منفصل تنغرسان في الرحم.",
+
             exampleEn = "The Twin (Dizygotic) is Fraternal twins arising from two separately fertilized eggs implanting in the uterus.",        ),
         ),
         MedicalTermEntity(
@@ -3172,6 +3310,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/kənˈdʒɔɪnd/",
+
+            exampleFr = "Exemple: Le Jumeaux identiques avec connexion physique persistante due à une division incomplète de l'embryon.",
+
+            exampleAr = "مثال: يظهر توأم متطابق بتواصل جسدي مستمر بسبب عدم اكتمال انقسام الجنين.",
 
             exampleEn = "The Conjoined twins is Identical twins with persistent physical connection due to incomplete splitting of the embryo.",        ),
         ),
@@ -3188,6 +3330,10 @@ object EmbryologieTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɔːrioʊˌæmniəˈnaɪtɪs/",
 
+            exampleFr = "Exemple: Le Inflammation du chorion et de l'amnios généralement due à une infection bactérienne pendant la grossesse.",
+
+            exampleAr = "مثال: يظهر تهاب الغشاء المشيمي والأمنيوسي عادةً بسبب عدوى بكتيرية أثناء الحمل.",
+
             exampleEn = "The Chorioamnionitis is Inflammation of the chorion and amnion usually due to bacterial infection during pregnancy.",        ),
         ),
         MedicalTermEntity(
@@ -3201,6 +3347,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/tɔːrtʃ/",
+
+            exampleFr = "Exemple: Le Infections congénitales: Toxoplasme, Autres (syphilis), Rubéole, Cytomégalovirus, Herpès causant des malformations.",
+
+            exampleAr = "مثال: يظهر عدوى خلقية: توكسوبلازما، أخرى (زهري)، حصبة ألمانية، فيروس مضخم الخلايا، هربس مسببة تشوهات جنينية.",
 
             exampleEn = "The TORCH infections is Congenital infections: Toxoplasma, Other (syphilis), Rubella, Cytomegalovirus, Herpes causing fetal malformations.",        ),
         ),
@@ -3261,6 +3411,10 @@ object EmbryologieTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdaɪəfræɡˈmætɪk ˈhɜːrniə/",
 
+            exampleFr = "Exemple: Le Hernie des organes abdominaux dans le thorax due au développement incomplet du diaphragme.",
+
+            exampleAr = "مثال: يظهر انتفاخ الأعضاء البطنية في الصدر بسبب عدم اكتمال تطور الحجاب الحاجز.",
+
             exampleEn = "The Diaphragmatic hernia (Congenital) is Herniation of abdominal organs into the thorax due to incomplete development of the diaphragm.",        ),
         ),
         MedicalTermEntity(
@@ -3307,6 +3461,10 @@ object EmbryologieTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈhaɪəlaɪn ˈmɛmbreɪn/",
 
+            exampleFr = "Exemple: Le Autre nom pour le SDR; des membranes hyalines se forment dans les alvéoles.",
+
+            exampleAr = "مثال: يظهر اسم آخر لمتلازمة الضائقة التنفسية؛ تتكون أغشية زجاجية من ظهارة نخرية وإفراز بلازمي في الحويصلات.",
+
             exampleEn = "The Hyaline membrane disease is Another name for RDS; hyaline membranes form from necrotic epithelium and plasma exudate in the alveoli.",        ),
         ),
         MedicalTermEntity(
@@ -3320,6 +3478,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɜːrnɪkˈtɛrəs/",
+
+            exampleFr = "Exemple: Le Lésions cérébrales chez les nouveau-nés causées par des niveaux élevés de bilirubine se déposant dans les ganglions de la base.",
+
+            exampleAr = "مثال: يظهر تلف الدماغ عند حديثي الولادة بسبب ارتفاع مستويات البيليروبين المترسب في العقد القاعدية.",
 
             exampleEn = "The Kernicterus is Brain damage in neonates caused by high levels of bilirubin depositing in basal ganglia.",        ),
         ),
@@ -3335,6 +3497,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪˌrɪθrəblæˈstoʊsɪs fiːˈteɪlɪs/",
+
+            exampleFr = "Exemple: Le Maladie hémolytique du fœtus/nouveau-né due à l'incompatibilité Rh entre mère et fœtus.",
+
+            exampleAr = "مثال: يظهر مرض انحلالي للجنين وحديث الولادة بسبب عدم توافق Rh بين الأم والجنين.",
 
             exampleEn = "The Erythroblastosis fetalis is Hemolytic disease of the fetus/newborn due to Rh incompatibility between mother and fetus.",        ),
         ),
@@ -3411,6 +3577,10 @@ object EmbryologieTerms {
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/eɪˈɔːrtɪk ɑːrtʃɪz/",
 
+            exampleFr = "Exemple: Le Série d'artères pairées reliant le cœur à l'aorte dorsale; subissent un remodelage extensif.",
+
+            exampleAr = "مثال: يظهر سلسلة من الشرايين المزدوجة الرابطة بين القلب والأبهر الظهري؛ تخضع لإعادة تشكيل واسعة.",
+
             exampleEn = "The Aortic arches is Series of paired arteries connecting the heart to the dorsal aorta; undergo extensive remodeling.",        ),
         ),
         MedicalTermEntity(
@@ -3425,6 +3595,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˈpeɪtənt ˈdʌktəs ɑːrˌtɪərioʊsəs/",
+
+            exampleFr = "Exemple: Le Défaut de fermeture du canal artériel après la naissance entraînant une dérivation anormale du sang.",
+
+            exampleAr = "مثال: يظهر فشل انغلاق القناة الشريانية بعد الولادة مما يؤدي إلى تحويل غير طبيعي للدم.",
 
             exampleEn = "The Patent ductus arteriosus (PDA) is Failure of the ductus arteriosus to close after birth resulting in abnormal shunting of blood.",        ),
         ),
@@ -3469,6 +3643,10 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/sɪnˈdæktɪli/",
+
+            exampleFr = "Exemple: Le Fusion de deux ou plusieurs doigts due à un défaut d'apoptose entre les rayons digitaux.",
+
+            exampleAr = "مثال: يظهر اندماج إصبعين أو أكثر بسبب فشل الموت المبرمج بين أشعة الأصابع.",
 
             exampleEn = "The Syndactyly is Fusion of two or more fingers or toes due to failure of apoptosis between the digit rays.",        ),
         ),
@@ -3562,3 +3740,7 @@ object EmbryologieTerms {
     )
 
             exampleEn = "The Warfarin embryopathy is Congenital anomalies caused by warfarin exposure in the first trimester including nasal hypoplasia and bone defects.",}
+            exampleFr = "Exemple: Le Anomalies congénitales causées par l'exposition à la warfarine au premier trimestre.",
+
+            exampleAr = "مثال: يظهر شذوذات خلقية تسببها التعرض للوارفارين في الثلث الأول من الحمل بما فيها نقص تنسج الأنف وعيوب العظام.",
+

@@ -176,6 +176,10 @@ MedicalTermEntity(
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/dɪˈskrɪptɪv/",
 
+            exampleFr = "Exemple: Le Méthodes pour résumer et décrire les données (moyenne, médiane, graphiques).",
+
+            exampleAr = "مثال: يظهر طرق تلخيص ووصف البيانات (المتوسط، الوسيط، الرسوم البيانية).",
+
             exampleEn = "The Descriptive statistics is Methods for summarizing and describing data (mean, median, graphs).",        ),
         ),
         MedicalTermEntity(
@@ -189,6 +193,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌɪnfəˈrɛnʃəl/",
+
+            exampleFr = "Exemple: Le Méthodes pour tirer des conclusions sur une population à partir d'un échantillon.",
+
+            exampleAr = "مثال: يظهر طرق استخلاص استنتاجات حول مجتمع من عينة.",
 
             exampleEn = "The Inferential statistics is Methods for drawing conclusions about a population from a sample.",        ),
         ),
@@ -204,6 +212,10 @@ MedicalTermEntity(
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈdeɪtə/",
 
+            exampleFr = "Exemple: Le Faits ou observations collectés pour analyse.",
+
+            exampleAr = "مثال: يظهر حقائق أو ملاحظات مجمعة للتحليل.",
+
             exampleEn = "The Data is Facts or observations collected for analysis.",        ),
         ),
         MedicalTermEntity(
@@ -217,6 +229,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/rɔː ˈdeɪtə/",
+
+            exampleFr = "Exemple: Le Données non traitées telles que collectées avant toute analyse.",
+
+            exampleAr = "مثال: يظهر بيانات غير معالجة كما جُمعت أصلاً قبل أي تحليل.",
 
             exampleEn = "The Raw data is Unprocessed data as originally collected before any analysis.",        ),
         ),
@@ -321,6 +337,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈreɪʃioʊ/",
+
+            exampleFr = "Exemple: Le Taille relative de deux quantités exprimée comme a:b.",
+
+            exampleAr = "مثال: يظهر حجم النسبي لكميتين معبر عنه كـ a:b.",
 
             exampleEn = "The Ratio is relative size of two quantities expressed as a:b.",        ),
         ),
@@ -456,6 +476,10 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈnɒmɪnəl/",
             exampleEn = "The nominal variable is the categorical variable with no natural order (e.g., blood type, sex).",
+            exampleFr = "Exemple: Le Variable catégorielle sans ordre naturel (ex: groupe sanguin, sexe).",
+
+            exampleAr = "مثال: يظهر متغير فئوي بدون ترتيب طبيعي (مثل: فصيلة الدم، الجنس).",
+
         ),
         MedicalTermEntity(
             id = 1818,
@@ -469,6 +493,10 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈɔːrdɪnəl/",
             exampleEn = "The ordinal variable is the categorical variable with a meaningful order but unequal intervals (e.g., pain scale).",
+            exampleFr = "Exemple: Le Variable catégorielle avec un ordre significatif mais des intervalles inégaux (ex: échelle de douleur).",
+
+            exampleAr = "مثال: يظهر متغير فئوي بترتيب ذي معنى لكن بفواصل غير متساوية (مثل: مقياس الألم).",
+
         ),
         MedicalTermEntity(
             id = 1819,
@@ -482,6 +510,10 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/dɪˈskriːt/",
             exampleEn = "The discrete variable is the quantitative variable taking only specific countable values (e.g., number of children).",
+            exampleFr = "Exemple: Le Variable quantitative prenant uniquement des valeurs dénombrables spécifiques (ex: nombre d'enfants).",
+
+            exampleAr = "مثال: يظهر متغير كمي يأخذ قيماً قابلة للعد فقط (مثل: عدد الأطفال).",
+
         ),
         MedicalTermEntity(
             id = 1820,
@@ -495,6 +527,10 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/kənˈtɪnjuəs/",
             exampleEn = "The continuous variable is the quantitative variable taking any value within a range (e.g., height, weight, temperature).",
+            exampleFr = "Exemple: Le Variable quantitative prenant toute valeur dans un intervalle (ex: taille, poids, température).",
+
+            exampleAr = "مثال: يظهر متغير كمي يأخذ أي قيمة ضمن مدى (مثل: الطول، الوزن، درجة الحرارة).",
+
         ),
         MedicalTermEntity(
             id = 1821,
@@ -508,6 +544,10 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈɪntərvəl skeɪl/",
             exampleEn = "The interval scale is the scale with equal intervals but no true zero point (e.g., temperature in °C).",
+            exampleFr = "Exemple: Le Échelle avec intervalles égaux mais sans vrai zéro (ex: température en °C).",
+
+            exampleAr = "مثال: يظهر مقياس بفواصل متساوية لكن بدون صفر حقيقي (مثل: درجة الحرارة بالمئوية).",
+
         ),
         MedicalTermEntity(
             id = 1822,
@@ -521,6 +561,10 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈreɪʃioʊ skeɪl/",
             exampleEn = "The ratio scale is the scale with equal intervals and a true zero point (e.g., weight, height, age).",
+            exampleFr = "Exemple: Le Échelle avec intervalles égaux et un vrai zéro (ex: poids, taille, âge).",
+
+            exampleAr = "مثال: يظهر مقياس بفواصل متساوية وصفر حقيقي (مثل: الوزن، الطول، العمر).",
+
         ),
         MedicalTermEntity(
             id = 1823,
@@ -534,6 +578,10 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈbaɪnəri/",
             exampleEn = "The binary variable (dichotomous) is the variable with only two possible values (e.g., yes/no, male/female, alive/dead).",
+            exampleFr = "Exemple: Le Variable avec seulement deux valeurs possibles (ex: oui/non, homme/femme, vivant/mort).",
+
+            exampleAr = "مثال: يظهر متغير له قيمتان ممكنتان فقط (مثل: نعم/لا، ذكر/أنثى، حي/ميت).",
+
         ),
         MedicalTermEntity(
             id = 1824,
@@ -622,6 +670,10 @@ MedicalTermEntity(
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsɪmpəl ˈrændəm/",
 
+            exampleFr = "Exemple: Le Chaque individu a une probabilité égale d'être sélectionné de la population entière.",
+
+            exampleAr = "مثال: يظهر كل فرد له احتمال متساوٍ للاختيار من المجتمع بأكمله.",
+
             exampleEn = "The Simple random sampling is Each individual has an equal probability of being selected from the entire population.",        ),
         ),
         MedicalTermEntity(
@@ -665,6 +717,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈklʌstər/",
+
+            exampleFr = "Exemple: Le Sélection aléatoire de groupes entiers (grappes) plutôt que d'individus.",
+
+            exampleAr = "مثال: يظهر اختيار عشوائي لمجموعات كاملة (عناقيد) بدلاً من أفراد.",
 
             exampleEn = "The Cluster sampling is Randomly selecting entire groups (clusters) rather than individuals.",        ),
         ),
@@ -725,6 +781,10 @@ MedicalTermEntity(
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/pəˈræmɪtər/",
             exampleEn = "The parameter is the numerical characteristic describing a population (e.g., population mean μ).",
+            exampleFr = "Exemple: Le Caractéristique numérique décrivant une population (ex: moyenne de la population μ).",
+
+            exampleAr = "مثال: يظهر خاصية رقمية تصف مجتمعاً (مثل: متوسط المجتمع μ).",
+
         ),
         MedicalTermEntity(
             id = 1837,
@@ -738,6 +798,10 @@ MedicalTermEntity(
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/stəˈtɪstɪk/",
             exampleEn = "The statistic is the numerical characteristic computed from a sample (e.g., sample mean x̄).",
+            exampleFr = "Exemple: Le Caractéristique numérique calculée à partir d'un échantillon (ex: moyenne d'échantillon x̄).",
+
+            exampleAr = "مثال: يظهر خاصية رقمية محسوبة من عينة (مثل: متوسط العينة x̄).",
+
         ),
         MedicalTermEntity(
             id = 1838,
@@ -961,6 +1025,10 @@ MedicalTermEntity(
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈkwɔːrtaɪl/",
 
+            exampleFr = "Exemple: Le Valeurs divisant les données ordonnées en quatre parties égales (Q1, Q2, Q3).",
+
+            exampleAr = "مثال: يظهر قيم تقسم البيانات المرتبة إلى أربعة أجزاء متساوية (ر1، ر2، ر3).",
+
             exampleEn = "The Quartile is Values dividing ordered data into four equal parts (Q1, Q2, Q3).",        ),
         ),
         MedicalTermEntity(
@@ -1155,6 +1223,10 @@ MedicalTermEntity(
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˈmjuːtʃuəli ɪkˈskluːsɪv/",
 
+            exampleFr = "Exemple: Le Événements qui ne peuvent pas se produire simultanément.",
+
+            exampleAr = "مثال: يظهر أحداث لا يمكن أن تقع في آن واحد.",
+
             exampleEn = "The Mutually exclusive events is Events that cannot occur simultaneously.",        ),
         ),
         MedicalTermEntity(
@@ -1168,6 +1240,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt/",
+
+            exampleFr = "Exemple: Le Événements où la survenue de l'un n'affecte pas la probabilité de l'autre.",
+
+            exampleAr = "مثال: يظهر أحداث حيث وقوع أحدها لا يؤثر على احتمالية الآخر.",
 
             exampleEn = "The Independent events is Events where the occurrence of one does not affect the probability of the other.",        ),
         ),
@@ -1287,6 +1363,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ɪmˈpɪrɪkəl ruːl/",
+
+            exampleFr = "Exemple: Le Dans une distribution normale: 68% dans ±1ET, 95% dans ±2ET, 99,7% dans ±3ET.",
+
+            exampleAr = "مثال: يظهر في التوزيع الطبيعي: 68% ضمن ±1 انحراف، 95% ضمن ±2، 99.7% ضمن ±3.",
 
             exampleEn = "The Empirical rule (68-95-99.7) is In a normal distribution: 68% within ±1SD, 95% within ±2SD, 99.7% within ±3SD.",        ),
         ),
@@ -2022,6 +2102,10 @@ MedicalTermEntity(
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈpɒzɪtɪv/",
 
+            exampleFr = "Exemple: Le deux variables augmentent ensemble (r > 0).",
+
+            exampleAr = "مثال: يظهر كلا المتغيرين يزدادان معاً (r > 0).",
+
             exampleEn = "The Positive correlation is Both variables increase together (r > 0).",        ),
         ),
         MedicalTermEntity(
@@ -2036,6 +2120,10 @@ MedicalTermEntity(
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈnɛɡətɪv/",
 
+            exampleFr = "Exemple: Le variable augmente tandis que l'autre diminue (r < 0).",
+
+            exampleAr = "مثال: يظهر متغير يزداد بينما الآخر يتناقص (r < 0).",
+
             exampleEn = "The Negative correlation is One variable increases as the other decreases (r < 0).",        ),
         ),
         MedicalTermEntity(
@@ -2049,6 +2137,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/noʊ ˌkɒrəˈleɪʃən/",
+
+            exampleFr = "Exemple: Le Absence de relation linéaire entre deux variables (r ≈ 0).",
+
+            exampleAr = "مثال: يظهر عدم وجود علاقة خطية بين متغيرين (r ≈ 0).",
 
             exampleEn = "The No correlation is No linear relationship between two variables (r ≈ 0).",        ),
         ),
@@ -2169,6 +2261,10 @@ MedicalTermEntity(
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈmʌltɪpəl/",
 
+            exampleFr = "Exemple: Le Régression avec deux ou plus variables indépendantes prédisant une variable dépendante.",
+
+            exampleAr = "مثال: يظهر انحدار بمتغيرين مستقلين أو أكثر للتنبؤ بمتغير تابع واحد.",
+
             exampleEn = "The Multiple regression is Regression with two or more independent variables predicting one dependent variable.",        ),
         ),
         MedicalTermEntity(
@@ -2182,6 +2278,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ləˈdʒɪstɪk/",
+
+            exampleFr = "Exemple: Le Modèle de régression prédisant un résultat binaire (ex: maladie: oui/non).",
+
+            exampleAr = "مثال: يظهر نموذج انحدار يتنبأ بنتيجة ثنائية (مثل: مرض: نعم/لا).",
 
             exampleEn = "The Logistic regression is regression model predicting a binary outcome (e.g., disease: yes/no).",        ),
         ),
@@ -2917,6 +3017,10 @@ MedicalTermEntity(
             chapter = "Biais et Validité",
             ipaPhonetic = "/sɪˈlɛkʃən baɪəs/",
 
+            exampleFr = "Exemple: Le Biais provenant d'une sélection d'échantillon non représentative.",
+
+            exampleAr = "مثال: يظهر تحيز ناتج عن اختيار عينة غير ممثلة.",
+
             exampleEn = "The Selection bias is Bias arising from a non-representative sample selection.",        ),
         ),
         MedicalTermEntity(
@@ -2930,6 +3034,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˌɪnfɔːrˈmeɪʃən baɪəs/",
+
+            exampleFr = "Exemple: Le Biais provenant d'erreurs dans la mesure ou la classification des données.",
+
+            exampleAr = "مثال: يظهر تحيز ناتج عن أخطاء في قياس أو تصنيف البيانات.",
 
             exampleEn = "The Information bias is Bias arising from errors in measuring or classifying data.",        ),
         ),
@@ -2945,6 +3053,10 @@ MedicalTermEntity(
             chapter = "Biais et Validité",
             ipaPhonetic = "/rɪˈkɔːl baɪəs/",
 
+            exampleFr = "Exemple: Le Biais survenant quand les participants se souviennent inexactement d'événements passés.",
+
+            exampleAr = "مثال: يظهر تحيز يحدث عندما يتذكر المشاركون أحداثاً ماضية بشكل غير دقيق.",
+
             exampleEn = "The Recall bias is Bias occurring when participants inaccurately remember past events.",        ),
         ),
         MedicalTermEntity(
@@ -2958,6 +3070,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/əbˈzɜːrvər baɪəs/",
+
+            exampleFr = "Exemple: Le Biais introduit par les attentes du chercheur influençant la collecte de données.",
+
+            exampleAr = "مثال: يظهر تحيز يحدث بسبب توقعات الباحث التي تؤثر على جمع البيانات.",
 
             exampleEn = "The Observer bias is Bias introduced by the researcher's expectations influencing data collection.",        ),
         ),
@@ -3363,6 +3479,10 @@ MedicalTermEntity(
             chapter = "Démographie",
             ipaPhonetic = "/ɪˈfɛkt ˌmɒdɪfɪˈkeɪʃən/",
 
+            exampleFr = "Exemple: Le Quand l'effet d'une exposition varie selon les niveaux d'une troisième variable.",
+
+            exampleAr = "مثال: يظهر عندما يتغير تأثير التعرض عبر مستويات متغير ثالث.",
+
             exampleEn = "The Effect modification (Interaction) is When the effect of an exposure varies across levels of a third variable.",        ),
         ),
         MedicalTermEntity(
@@ -3376,6 +3496,10 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/sərˈvaɪvəl əˈnæləsɪs/",
+
+            exampleFr = "Exemple: Le Méthodes statistiques analysant la durée attendue jusqu'à la survenue d'un événement.",
+
+            exampleAr = "مثال: يظهر طرق إحصائية تحلل المدة المتوقعة حتى وقوع حدث.",
 
             exampleEn = "The Survival analysis is Statistical methods analyzing the expected duration until an event occurs.",        ),
         ),
@@ -3470,3 +3594,7 @@ MedicalTermEntity(
     )
 
             exampleEn = "The Intention-to-treat analysis (ITT) is Analysis including all participants as originally assigned regardless of compliance.",}
+            exampleFr = "Exemple: Le Analyse incluant tous les participants tels qu'initialement affectés quel que soit leur observance.",
+
+            exampleAr = "مثال: يظهر تحليل يشمل جميع المشاركين كما وُزعوا أصلاً بغض النظر عن التزامهم.",
+

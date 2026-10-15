@@ -266,6 +266,10 @@ MedicalTermEntity(
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈprɛʃər/",
 
+            exampleFr = "Exemple: Le Force par unité de surface mesurée en Pascals (Pa) ou mmHg.",
+
+            exampleAr = "مثال: يظهر قوة لكل وحدة مساحة تُقاس بالباسكال أو ملم زئبقي.",
+
             exampleEn = "The Pressure is Force per unit area measured in Pascals (Pa) or mmHg.",        ),
         ),
         MedicalTermEntity(
@@ -309,6 +313,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈdɛnsɪti/",
+
+            exampleFr = "Exemple: Le Masse par unité de volume mesurée en kg/m³.",
+
+            exampleAr = "مثال: يظهر كتلة لكل وحدة حجم تُقاس بالكيلوغرام لكل متر مكعب.",
 
             exampleEn = "The Density is Mass per unit volume measured in kg/m³.",        ),
         ),
@@ -432,6 +440,10 @@ MedicalTermEntity(
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/pæˈskælz lɔː/",
 
+            exampleFr = "Exemple: Le pression appliquée à un fluide confiné est transmise également dans toutes les directions.",
+
+            exampleAr = "مثال: يظهر ضغط المطبق على مائع محصور ينتقل بالتساوي في جميع الاتجاهات.",
+
             exampleEn = "The Pascal's law is Pressure applied to a confined fluid is transmitted equally in all directions.",        ),
         ),
         MedicalTermEntity(
@@ -476,6 +488,10 @@ MedicalTermEntity(
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈlæmɪnər floʊ/",
 
+            exampleFr = "Exemple: Le Écoulement lisse en couches parallèles sans perturbation.",
+
+            exampleAr = "مثال: يظهر تدفق سلس في طبقات متوازية بدون اضطراب.",
+
             exampleEn = "The Laminar flow is Smooth streamlined flow in parallel layers without disruption.",        ),
         ),
         MedicalTermEntity(
@@ -489,6 +505,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈtɜːrbjʊlənt floʊ/",
+
+            exampleFr = "Exemple: Le Écoulement chaotique irrégulier avec tourbillons et mélange.",
+
+            exampleAr = "مثال: يظهر تدفق فوضوي غير منتظم مع دوامات وخلط.",
 
             exampleEn = "The Turbulent flow is Chaotic irregular flow with eddies and mixing.",        ),
         ),
@@ -518,6 +538,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌkɒntɪˈnjuːɪti/",
+
+            exampleFr = "Exemple: Le Principe selon lequel le débit est constant: A₁v₁ = A₂v₂.",
+
+            exampleAr = "مثال: يظهر مبدأ القائل بأن معدل التدفق ثابت: A₁v₁ = A₂v₂.",
 
             exampleEn = "The Continuity equation is principle that flow rate is constant: A₁v₁ = A₂v₂.",        ),
         ),
@@ -563,6 +587,10 @@ MedicalTermEntity(
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/njuːˈtoʊniən/",
             exampleEn = "The newtonian fluid is the fluid with constant viscosity regardless of shear rate (e.g., water).",
+            exampleFr = "Exemple: Le Fluide avec viscosité constante quel que soit le taux de cisaillement (ex: eau).",
+
+            exampleAr = "مثال: يظهر مائع بلزوجة ثابتة بغض النظر عن معدل القص (مثل: الماء).",
+
         ),
         MedicalTermEntity(
             id = 1344,
@@ -576,6 +604,10 @@ MedicalTermEntity(
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/nɒn njuːˈtoʊniən/",
             exampleEn = "The non-newtonian fluid is the fluid whose viscosity changes with shear rate (e.g., blood).",
+            exampleFr = "Exemple: Le Fluide dont la viscosité change avec le taux de cisaillement (ex: sang).",
+
+            exampleAr = "مثال: يظهر مائع تتغير لزوجته مع معدل القص (مثل: الدم).",
+
         ),
         MedicalTermEntity(
             id = 1345,
@@ -636,6 +668,10 @@ MedicalTermEntity(
             chapter = "Thermodynamique",
             ipaPhonetic = "/fɜːrst lɔː/",
 
+            exampleFr = "Exemple: Le L'énergie ne peut être créée ni détruite, seulement transformée (conservation de l'énergie).",
+
+            exampleAr = "مثال: يظهر طاقة لا تُخلق ولا تُفنى، بل تتحول فقط (حفظ الطاقة).",
+
             exampleEn = "The First law of thermodynamics is Energy cannot be created or destroyed, only transformed (conservation of energy).",        ),
         ),
         MedicalTermEntity(
@@ -650,6 +686,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˈsɛkənd lɔː/",
+
+            exampleFr = "Exemple: Le Dans tout transfert d'énergie, l'entropie de l'univers tend à augmenter.",
+
+            exampleAr = "مثال: يظهر في أي انتقال للطاقة، تميل إنتروبيا الكون إلى الازدياد.",
 
             exampleEn = "The Second law of thermodynamics is In any energy transfer, entropy of the universe tends to increase.",        ),
         ),
@@ -770,6 +810,10 @@ MedicalTermEntity(
             chapter = "Thermodynamique",
             ipaPhonetic = "/hiːt/",
 
+            exampleFr = "Exemple: Le Énergie transférée entre objets due à une différence de température.",
+
+            exampleAr = "مثال: يظهر طاقة تنتقل بين الأجسام بسبب فرق درجة الحرارة.",
+
             exampleEn = "The Heat is Energy transferred between objects due to temperature difference.",        ),
         ),
         MedicalTermEntity(
@@ -829,6 +873,10 @@ MedicalTermEntity(
             chapter = "Thermodynamique",
             ipaPhonetic = "/kənˈdʌkʃən/",
 
+            exampleFr = "Exemple: Le Transfert de chaleur par contact moléculaire direct.",
+
+            exampleAr = "مثال: يظهر انتقال الحرارة عبر التماس الجزيئي المباشر.",
+
             exampleEn = "The Conduction is Heat transfer through direct molecular contact.",        ),
         ),
         MedicalTermEntity(
@@ -842,6 +890,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/kənˈvɛkʃən/",
+
+            exampleFr = "Exemple: Le Transfert de chaleur par mouvement du fluide.",
+
+            exampleAr = "مثال: يظهر انتقال الحرارة عبر حركة المائع.",
 
             exampleEn = "The Convection is Heat transfer through fluid movement.",        ),
         ),
@@ -857,6 +909,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌreɪdiˈeɪʃən/",
+
+            exampleFr = "Exemple: Le Transfert de chaleur par ondes électromagnétiques sans milieu.",
+
+            exampleAr = "مثال: يظهر انتقال الحرارة عبر الموجات الكهرومغناطيسية بدون وسط.",
 
             exampleEn = "The Radiation (thermal) is Heat transfer through electromagnetic waves without a medium.",        ),
         ),
@@ -903,6 +959,10 @@ MedicalTermEntity(
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌhaɪpoʊˈθɜːrmiə/",
 
+            exampleFr = "Exemple: Le Température corporelle dangereusement basse en dessous de 35°C.",
+
+            exampleAr = "مثال: يظهر انخفاض خطير في حرارة الجسم تحت 35 درجة مئوية.",
+
             exampleEn = "The Hypothermia is Dangerously low body temperature below 35°C.",        ),
         ),
         MedicalTermEntity(
@@ -916,6 +976,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌhaɪpərˈθɜːrmiə/",
+
+            exampleFr = "Exemple: Le Température corporelle anormalement élevée au-dessus de 40°C.",
+
+            exampleAr = "مثال: يظهر ارتفاع غير طبيعي في حرارة الجسم فوق 40 درجة مئوية.",
 
             exampleEn = "The Hyperthermia is Abnormally elevated body temperature above 40°C.",        ),
         ),
@@ -1127,6 +1191,10 @@ MedicalTermEntity(
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ɪˈdiːmə/",
 
+            exampleFr = "Exemple: Le Accumulation excessive de liquide dans les tissus due à un déséquilibre des forces de Starling.",
+
+            exampleAr = "مثال: يظهر تراكم مفرط للسوائل في الأنسجة بسبب اختلال توازن قوى ستارلينغ.",
+
             exampleEn = "The Edema is Excessive accumulation of fluid in tissues due to imbalance in Starling forces.",        ),
         ),
         MedicalTermEntity(
@@ -1200,6 +1268,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/laɪt/",
+
+            exampleFr = "Exemple: Le Rayonnement électromagnétique visible par l'œil humain (380-750 nm).",
+
+            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي مرئي للعين البشرية (380-750 نانومتر).",
 
             exampleEn = "The Light is Electromagnetic radiation visible to the human eye (380-750 nm).",        ),
         ),
@@ -1319,6 +1391,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈtoʊtəl ɪnˈtɜːrnəl/",
+
+            exampleFr = "Exemple: Le Réflexion complète de la lumière lorsque l'angle dépasse l'angle critique.",
+
+            exampleAr = "مثال: يظهر انعكاس كلي للضوء عندما تتجاوز الزاوية الزاوية الحرجة.",
 
             exampleEn = "The Total internal reflection is Complete reflection of light when the angle exceeds the critical angle.",        ),
         ),
@@ -1469,6 +1545,10 @@ MedicalTermEntity(
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˌprɛzbiˈoʊpiə/",
 
+            exampleFr = "Exemple: Le Perte d'accommodation liée à l'âge rendant la vision de près difficile.",
+
+            exampleAr = "مثال: يظهر فقدان المطابقة المرتبط بالعمر مما يجعل الرؤية القريبة صعبة.",
+
             exampleEn = "The Presbyopia is Age-related loss of accommodation making near vision difficult.",        ),
         ),
         MedicalTermEntity(
@@ -1604,6 +1684,10 @@ MedicalTermEntity(
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈleɪzər/",
 
+            exampleFr = "Exemple: Le Amplification de la lumière par émission stimulée de rayonnement; lumière cohérente monochromatique.",
+
+            exampleAr = "مثال: يظهر تضخيم الضوء بالانبعاث المحفز للإشعاع؛ ضوء متماسك أحادي اللون.",
+
             exampleEn = "The Laser is Light Amplification by Stimulated Emission of Radiation; coherent monochromatic light.",        ),
         ),
         MedicalTermEntity(
@@ -1694,6 +1778,10 @@ MedicalTermEntity(
             chapter = "Acoustique",
             ipaPhonetic = "/pɪtʃ/",
 
+            exampleFr = "Exemple: Le Perception de la fréquence sonore: haute fréquence = son aigu.",
+
+            exampleAr = "مثال: يظهر إدراك تردد الصوت: تردد عالٍ = صوت حاد.",
+
             exampleEn = "The Pitch is perception of sound frequency: high frequency = high pitch.",        ),
         ),
         MedicalTermEntity(
@@ -1753,6 +1841,10 @@ MedicalTermEntity(
             chapter = "Acoustique",
             ipaPhonetic = "/ˈʌltrəsaʊnd/",
 
+            exampleFr = "Exemple: Le Ondes sonores de fréquence supérieure à 20 000 Hz utilisées en imagerie médicale.",
+
+            exampleAr = "مثال: يظهر موجات صوتية بتردد فوق 20000 هرتز تُستخدم في التصوير الطبي.",
+
             exampleEn = "The Ultrasound is Sound waves with frequency above 20,000 Hz used in medical imaging.",        ),
         ),
         MedicalTermEntity(
@@ -1766,6 +1858,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈɪnfrəsaʊnd/",
+
+            exampleFr = "Exemple: Le Ondes sonores de fréquence inférieure à 20 Hz inaudibles à l'homme.",
+
+            exampleAr = "مثال: يظهر موجات صوتية بتردد أقل من 20 هرتز غير مسموعة للإنسان.",
 
             exampleEn = "The Infrasound is Sound waves with frequency below 20 Hz inaudible to humans.",        ),
         ),
@@ -1796,6 +1892,10 @@ MedicalTermEntity(
             chapter = "Acoustique",
             ipaPhonetic = "/ˈdɒplər/",
 
+            exampleFr = "Exemple: Le Technique ultrasonore mesurant la vitesse du flux sanguin par l'effet Doppler.",
+
+            exampleAr = "مثال: يظهر تقنية بالموجات فوق الصوتية تقيس سرعة تدفق الدم باستخدام تأثير دوبلر.",
+
             exampleEn = "The Doppler ultrasound is Ultrasound technique measuring blood flow velocity using the Doppler effect.",        ),
         ),
         MedicalTermEntity(
@@ -1809,6 +1909,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˌɛkoʊˌkɑːrdiˈɒɡrəfi/",
+
+            exampleFr = "Exemple: Le Imagerie ultrasonore du cœur pour évaluer la structure et la fonction.",
+
+            exampleAr = "مثال: يظهر تصوير بالموجات فوق الصوتية للقلب لتقييم البنية والوظيفة.",
 
             exampleEn = "The Echocardiography is Ultrasound imaging of the heart to assess structure and function.",        ),
         ),
@@ -1976,6 +2080,10 @@ MedicalTermEntity(
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈɡæmə reɪ/",
 
+            exampleFr = "Exemple: Le Rayonnement électromagnétique de haute énergie émis par le noyau.",
+
+            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي عالي الطاقة يُنبعث من النواة.",
+
             exampleEn = "The Gamma ray (γ) is High-energy electromagnetic radiation emitted from the nucleus.",        ),
         ),
         MedicalTermEntity(
@@ -2081,6 +2189,10 @@ MedicalTermEntity(
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈaɪənaɪzɪŋ/",
 
+            exampleFr = "Exemple: Le Rayonnement avec assez d'énergie pour arracher des électrons aux atomes.",
+
+            exampleAr = "مثال: يظهر إشعاع بطاقة كافية لنزع الإلكترونات من الذرات.",
+
             exampleEn = "The Ionizing radiation is Radiation with enough energy to remove electrons from atoms.",        ),
         ),
         MedicalTermEntity(
@@ -2094,6 +2206,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/nɒn ˈaɪənaɪzɪŋ/",
+
+            exampleFr = "Exemple: Le Rayonnement sans assez d'énergie pour ioniser les atomes (UV, visible, ondes radio).",
+
+            exampleAr = "مثال: يظهر إشعاع بدون طاقة كافية لتأيين الذرات (فوق بنفسجي، مرئي، موجات راديو).",
 
             exampleEn = "The Non-ionizing radiation is Radiation without enough energy to ionize atoms (UV, visible, radio waves).",        ),
         ),
@@ -2199,6 +2315,10 @@ MedicalTermEntity(
             chapter = "Radioactivité",
             ipaPhonetic = "/əˈlɑːrə/",
 
+            exampleFr = "Exemple: Le Aussi Bas que Raisonnablement Possible: minimiser l'exposition au rayonnement.",
+
+            exampleAr = "مثال: يظهر أقل قدر ممكن بشكل معقول: تقليل التعرض للإشعاع.",
+
             exampleEn = "The ALARA principle is As Low As Reasonably Achievable: minimizing radiation exposure.",        ),
         ),
         MedicalTermEntity(
@@ -2273,6 +2393,10 @@ MedicalTermEntity(
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈɛks reɪ/",
 
+            exampleFr = "Exemple: Le Rayonnement électromagnétique de haute énergie utilisé pour imager les structures internes du corps.",
+
+            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي عالي الطاقة يُستخدم لتصوير البنى الداخلية للجسم.",
+
             exampleEn = "The X-ray is High-energy electromagnetic radiation used to image internal body structures.",        ),
         ),
         MedicalTermEntity(
@@ -2317,6 +2441,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/flʊəˈrɒskəpi/",
+
+            exampleFr = "Exemple: Le Imagerie par rayons X en temps réel permettant l'observation de structures en mouvement.",
+
+            exampleAr = "مثال: يظهر تصوير بالأشعة السينية في الزمن الحقيقي يسمح بمراقبة البنى المتحركة.",
 
             exampleEn = "The Fluoroscopy is Real-time X-ray imaging allowing observation of moving structures.",        ),
         ),
@@ -2467,6 +2595,10 @@ MedicalTermEntity(
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/mæˈmɒɡrəfi/",
 
+            exampleFr = "Exemple: Le Imagerie par rayons X du sein pour le dépistage et le diagnostic du cancer du sein.",
+
+            exampleAr = "مثال: يظهر تصوير الثدي بالأشعة السينية للكشف عن سرطان الثدي وتشخيصه.",
+
             exampleEn = "The Mammography is X-ray imaging of the breast for screening and diagnosis of breast cancer.",        ),
         ),
         MedicalTermEntity(
@@ -2495,6 +2627,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˌbrækɪˈθɛrəpi/",
+
+            exampleFr = "Exemple: Le Radiothérapie interne plaçant des sources radioactives à l'intérieur ou près de la tumeur.",
+
+            exampleAr = "مثال: يظهر علاج إشعاعي داخلي بوضع مصادر مشعة داخل الورم أو بالقرب منه.",
 
             exampleEn = "The Brachytherapy is Internal radiation therapy placing radioactive sources inside or near the tumor.",        ),
         ),
@@ -2865,6 +3001,10 @@ MedicalTermEntity(
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˈmaɪkroʊweɪv/",
 
+            exampleFr = "Exemple: Le Rayonnement électromagnétique utilisé en diathermie et chauffage.",
+
+            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي يُستخدم في الإنفاذ الحراري والتسخين.",
+
             exampleEn = "The Microwave is Electromagnetic radiation used in diathermy and heating.",        ),
         ),
         MedicalTermEntity(
@@ -2878,6 +3018,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌɪnfrəˈrɛd/",
+
+            exampleFr = "Exemple: Le Rayonnement électromagnétique ressenti comme chaleur; utilisé en imagerie thermique et physiothérapie.",
+
+            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي يُحس كحرارة؛ يُستخدم في التصوير الحراري والعلاج الطبيعي.",
 
             exampleEn = "The Infrared radiation (IR) is Electromagnetic radiation felt as heat; used in thermal imaging and physiotherapy.",        ),
         ),
@@ -2907,6 +3051,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌʌltrəˈvaɪələt/",
+
+            exampleFr = "Exemple: Le Rayonnement électromagnétique causant coups de soleil et synthèse de vitamine D; peut endommager l'ADN.",
+
+            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي يسبب حروق الشمس وتصنيع فيتامين D؛ يمكن أن يتلف DNA.",
 
             exampleEn = "The Ultraviolet radiation (UV) is Electromagnetic radiation that causes sunburn and vitamin D synthesis; can damage DNA.",        ),
         ),
@@ -3237,6 +3385,10 @@ MedicalTermEntity(
             chapter = "Biomécanique",
             ipaPhonetic = "/wɜːrk/",
 
+            exampleFr = "Exemple: Le Énergie transférée quand une force déplace un objet (W = F × d) mesurée en Joules.",
+
+            exampleAr = "مثال: يظهر طاقة المنقولة عندما تحرك قوة جسماً (W = F × d) يُقاس بالجول.",
+
             exampleEn = "The Work is Energy transferred when a force moves an object (W = F × d) measured in Joules.",        ),
         ),
         MedicalTermEntity(
@@ -3265,6 +3417,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/pəˈtɛnʃəl ˈɛnərdʒi/",
+
+            exampleFr = "Exemple: Le Énergie stockée due à la position ou la configuration (EP = mgh).",
+
+            exampleAr = "مثال: يظهر طاقة مخزنة بسبب الموضع أو التكوين (PE = mgh).",
 
             exampleEn = "The Potential energy is Stored energy due to position or configuration (PE = mgh).",        ),
         ),
@@ -3415,6 +3571,10 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ˈaɪsətoʊp/",
+
+            exampleFr = "Exemple: Le Atomes du même élément avec des nombres différents de neutrons.",
+
+            exampleAr = "مثال: يظهر ذرات لنفس العنصر بأعداد مختلفة من النيوترونات.",
 
             exampleEn = "The Isotope is Atoms of the same element with different numbers of neutrons.",        ),
         ),

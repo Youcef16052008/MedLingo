@@ -472,6 +472,10 @@ object CytologieTerms {
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌmaɪkrəˈtjuːbjuːl/",
 
+            exampleFr = "Exemple: Le Structures cylindriques creuses en tubuline donnant la forme à la cellule et servant de voies de transport.",
+
+            exampleAr = "مثال: يظهر بنى أسطوانية مجوفة مصنوعة من التيوبيولين توفر شكل الخلية وتعمل كمسارات للنقل.",
+
             exampleEn = "The Microtubule is Hollow cylindrical structures made of tubulin providing cell shape and serving as tracks for transport.",        ),
         ),
         MedicalTermEntity(
@@ -485,6 +489,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌɪntərˈmiːdiət ˈfɪləmənt/",
+
+            exampleFr = "Exemple: Le Fibres cytosquelettiques d'épaisseur moyenne fournissant une résistance mécanique aux cellules.",
+
+            exampleAr = "مثال: يظهر ألياف الهيكل الخلوي متوسطة السماكة توفر القوة الميكانيكية للخلايا.",
 
             exampleEn = "The Intermediate filament is Cytoskeletal fibers of medium thickness providing mechanical strength to cells.",        ),
         ),
@@ -653,6 +661,8 @@ object CytologieTerms {
             ipaPhonetic = "/ˈluːkəsaɪt/",
             exampleEn = "The leukocyte is the nucleated blood cell involved in immune defense; the five types include neutrophils, lymphocytes, monocytes, eosinophils, and basophils.",
             exampleAr = "كرية الدم البيضاء هو خلية دموية ذات نواة تشارك في الدفاع المناعي؛ الأنواع الخمسة تشمل العدلات واللمفاويات والوحيدات والحمضات والقاعدات.",
+            exampleFr = "Exemple: Le Cellule sanguine nucléée impliquée dans la défense immunitaire; les cinq types incluent neutrophiles, lymphocytes, monocytes, éosinophiles et basophiles.",
+
         ),
         MedicalTermEntity(
             id = 2977,
@@ -1202,6 +1212,10 @@ object CytologieTerms {
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈkroʊmətɪd/",
 
+            exampleFr = "Exemple: Le L'une des deux copies identiques d'un chromosome dupliqué réunies au centromère.",
+
+            exampleAr = "مثال: يظهر نسخة واحدة من نسختين متطابقتين لكروموسوم مضاعف مرتبطتين عند القسيم المركزي.",
+
             exampleEn = "The Chromatid is One of two identical copies of a duplicated chromosome joined at the centromere.",        ),
         ),
         MedicalTermEntity(
@@ -1291,6 +1305,10 @@ object CytologieTerms {
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈspɪndəl ˈfaɪbərz/",
 
+            exampleFr = "Exemple: Le Structures à base de microtubules s'étendant des centrioles qui séparent les chromosomes lors de la division cellulaire.",
+
+            exampleAr = "مثال: يظهر بنى مبنية على الأنيبيبات الدقيقة تمتد من المراكز وتفصل الكروموسومات أثناء انقسام الخلية.",
+
             exampleEn = "The Spindle fibers is Microtubule-based structures extending from centrioles that separate chromosomes during cell division.",        ),
         ),
         MedicalTermEntity(
@@ -1305,6 +1323,10 @@ object CytologieTerms {
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/æˈnjuːplɔɪdi/",
             exampleEn = "The aneuploidy is the abnormal number of chromosomes in a cell (e.g., trisomy 21 in Down syndrome).",
+            exampleFr = "Exemple: Le Nombre anormal de chromosomes dans une cellule (ex: trisomie 21 dans le syndrome de Down).",
+
+            exampleAr = "مثال: يظهر عدد غير طبيعي من الكروموسومات في الخلية (مثل: التثلث الصبغي 21 في متلازمة داون).",
+
         ),
         MedicalTermEntity(
             id = 3020,
@@ -1686,6 +1708,10 @@ object CytologieTerms {
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ɛkˈsfoʊliətɪv saɪˈtɒlədʒi/",
             exampleEn = "The exfoliative cytology is the study of cells shed naturally from body surfaces (e.g., sputum, urine, cervical smears).",
+            exampleFr = "Exemple: Le Étude des cellules détachées naturellement des surfaces corporelles (ex: crachat, urine, frottis cervical).",
+
+            exampleAr = "مثال: يظهر دراسة الخلايا المتساقطة طبيعياً من أسطح الجسم (مثل: البلغم، البول، لطاخات عنق الرحم).",
+
         ),
         MedicalTermEntity(
             id = 3045,
@@ -2001,6 +2027,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌæpəpˈtoʊsɪs/",
 
+            exampleFr = "Exemple: Le Mort cellulaire programmée caractérisée par rétrécissement cellulaire, condensation de la chromatine et formation de corps apoptotiques.",
+
+            exampleAr = "مثال: يظهر موت خلوي مبرمج يتسم بتقلص الخلية وتكثف الكروماتين وتشكل أجسام متهالكة.",
+
             exampleEn = "The Apoptosis is Programmed cell death characterized by cell shrinkage, chromatin condensation, and formation of apoptotic bodies.",        ),
         ),
         MedicalTermEntity(
@@ -2016,6 +2046,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/nɪˈkroʊsɪs/",
 
+            exampleFr = "Exemple: Le Mort cellulaire non contrôlée causée par une blessure ou maladie caractérisée par gonflement cellulaire et rupture membranaire.",
+
+            exampleAr = "مثال: يظهر موت خلوي غير منضبط ناجم عن إصابة أو مرض يتسم بتورم الخلية وتمزق الغشاء.",
+
             exampleEn = "The Necrosis is Uncontrolled cell death caused by injury or disease characterized by cell swelling and membrane rupture.",        ),
         ),
         MedicalTermEntity(
@@ -2030,6 +2064,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌniːoʊˈpleɪziə/",
+
+            exampleFr = "Exemple: Le Prolifération anormale et non contrôlée de cellules pouvant être bénigne ou maligne.",
+
+            exampleAr = "مثال: يظهر تكاثر غير طبيعي وغير منضبط للخلايا قد يكون حميداً أو خبيثاً.",
 
             exampleEn = "The Neoplasia is Abnormal and uncontrolled proliferation of cells that may be benign or malignant.",        ),
         ),
@@ -2093,6 +2131,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/dɪsˈpleɪziə/",
 
+            exampleFr = "Exemple: Le Développement cellulaire désordonné et anormal caractérisé par pléomorphisme, mitoses augmentées et atypie nucléaire.",
+
+            exampleAr = "مثال: يظهر تطور خلوي مضطرب وغير طبيعي يتسم بتعدد الأشكال وزيادة الانقسامات واللانمطية النووية.",
+
             exampleEn = "The Dysplasia is Disordered and abnormal cell development characterized by pleomorphism, increased mitoses, and nuclear atypia.",        ),
         ),
         MedicalTermEntity(
@@ -2108,6 +2150,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌmɛtəˈpleɪziə/",
             exampleEn = "The metaplasia is the reversible replacement of one mature cell type by another (e.g., columnar to squamous in smokers).",
+            exampleFr = "Exemple: Le Remplacement réversible d'un type cellulaire mature par un autre (ex: cylindrique en squameux chez les fumeurs).",
+
+            exampleAr = "مثال: يظهر استبدال العكسي لنوع خلية ناضج بنوع آخر (مثل: الأسطواني بالحرشفي في المدخنين).",
+
         ),
         MedicalTermEntity(
             id = 3073,
@@ -2121,6 +2167,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌænəˈpleɪziə/",
+
+            exampleFr = "Exemple: Le Perte de différenciation structurale et fonctionnelle dans les cellules; marqueur de malignité.",
+
+            exampleAr = "مثال: يظهر فقدان التمايز البنيوي والوظيفي في الخلايا؛ من السمات الأساسية للخباثة.",
 
             exampleEn = "The Anaplasia is Loss of structural and functional differentiation in cells; a hallmark of malignancy.",        ),
         ),
@@ -2153,6 +2203,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌædinoʊˌkɑːrsɪˈnoʊmə/",
             exampleEn = "The adenocarcinoma is the malignant tumor derived from glandular epithelial cells (e.g., colon, lung, breast cancer).",
+            exampleFr = "Exemple: Le Tumeur maligne dérivée de cellules épithéliales glandulaires (ex: cancer du côlon, poumon, sein).",
+
+            exampleAr = "مثال: يظهر ورم خبيث مشتق من الخلايا الظهارية الغدية (مثل: سرطان القولون والرئة والثدي).",
+
         ),
         MedicalTermEntity(
             id = 3076,
@@ -2167,6 +2221,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˈskweɪməs sɛl kɑːrsɪˈnoʊmə/",
             exampleEn = "The squamous cell carcinoma is the malignant tumor arising from squamous epithelial cells (e.g., skin, cervix, lungs).",
+            exampleFr = "Exemple: Le Tumeur maligne provenant de cellules épithéliales squameuses (ex: peau, col utérin, poumons).",
+
+            exampleAr = "مثال: يظهر ورم خبيث ينشأ من الخلايا الظهارية الحرشفية (مثل: الجلد وعنق الرحم والرئتين).",
+
         ),
         MedicalTermEntity(
             id = 3077,
@@ -2399,6 +2457,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪˈskiːmiə/",
 
+            exampleFr = "Exemple: Le Apport sanguin insuffisant à un tissu ou organe causant hypoxie cellulaire et nécrose potentielle.",
+
+            exampleAr = "مثال: يظهر نقص في إمداد الدم لنسيج أو عضو يسبب نقص الأكسجين الخلوي والنخر المحتمل.",
+
             exampleEn = "The Ischemia is Insufficient blood supply to a tissue or organ causing cellular hypoxia and potential necrosis.",        ),
         ),
         MedicalTermEntity(
@@ -2429,6 +2491,10 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪˈdiːmə/",
 
+            exampleFr = "Exemple: Le Accumulation anormale de liquide dans l'espace interstitiel causant un gonflement.",
+
+            exampleAr = "مثال: يظهر تراكم غير طبيعي للسائل في الفضاء الخلالي يسبب التورم.",
+
             exampleEn = "The Edema is Abnormal accumulation of fluid in the interstitial space causing swelling.",        ),
         ),
         MedicalTermEntity(
@@ -2442,6 +2508,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪnˈfɑːrkʃən/",
+
+            exampleFr = "Exemple: Le Mort tissulaire due à l'obstruction de l'apport sanguin (nécrose ischémique); ex: infarctus du myocarde.",
+
+            exampleAr = "مثال: يظهر موت الأنسجة بسبب انسداد إمداد الدم (نخر ناجم عن نقص التروية)؛ مثل: احتشاء عضلة القلب.",
 
             exampleEn = "The Infarction is Tissue death due to obstruction of blood supply (ischemic necrosis); e.g., myocardial infarction.",        ),
         ),
@@ -2457,6 +2527,10 @@ object CytologieTerms {
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌhaɪpəˈkroʊmətɪzəm/",
 
+            exampleFr = "Exemple: Le Assombrissement anormal du noyau cellulaire dû à une augmentation du contenu en ADN; signe de malignité.",
+
+            exampleAr = "مثال: يظهر تقاتم غير طبيعي لنواة الخلية بسبب زيادة محتوى DNA؛ علامة على الخباثة.",
+
             exampleEn = "The Hyperchromatism is Abnormal darkening of the cell nucleus due to increased DNA content; a sign of malignancy.",        ),
         ),
         MedicalTermEntity(
@@ -2471,6 +2545,10 @@ object CytologieTerms {
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌpliːəˈmɔːrfɪzəm/",
 
+            exampleFr = "Exemple: Le Variation de la taille et de la forme des cellules ou des noyaux; caractéristique clé des cellules malignes.",
+
+            exampleAr = "مثال: يظهر تفاوت في حجم وشكل الخلايا أو النوى؛ سمة رئيسية للخلايا الخبيثة.",
+
             exampleEn = "The Pleomorphism is Variation in the size and shape of cells or nuclei; a key feature of malignant cells.",        ),
         ),
         MedicalTermEntity(
@@ -2484,6 +2562,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˈnjuːkliər eɪˈtɪpiə/",
+
+            exampleFr = "Exemple: Le Caractéristiques nucléaires anormales incluant contour irrégulier, hyperchromatisme et nucléoles proéminents.",
+
+            exampleAr = "مثال: يظهر سمات نووية غير طبيعية تشمل حافة غير منتظمة وفرط التصبغ وأنويلات بارزة.",
 
             exampleEn = "The Nuclear atypia is Abnormal nuclear features including irregular contour, hyperchromasia, and prominent nucleoli.",        ),
         ),
@@ -2575,6 +2657,10 @@ object CytologieTerms {
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkæriəˈrɛksɪs/",
 
+            exampleFr = "Exemple: Le Fragmentation du noyau cellulaire en morceaux irréguliers; se produit dans la nécrose et l'apoptose.",
+
+            exampleAr = "مثال: يظهر تشظي نواة الخلية إلى قطع غير منتظمة؛ يحدث في النخر والموت المبرمج.",
+
             exampleEn = "The Karyorrhexis is Fragmentation of the cell nucleus into irregular pieces; occurs in necrosis and apoptosis.",        ),
         ),
         MedicalTermEntity(
@@ -2604,6 +2690,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/pɪkˈnoʊsɪs/",
+
+            exampleFr = "Exemple: Le Condensation et rétrécissement irréversibles du noyau; signe précoce de mort cellulaire.",
+
+            exampleAr = "مثال: يظهر تكثف وتقلص لا رجعة فيهما للنواة؛ علامة مبكرة على موت الخلية.",
 
             exampleEn = "The Pyknosis is Irreversible condensation and shrinkage of the nucleus; an early sign of cell death.",        ),
         ),
@@ -2635,6 +2725,10 @@ object CytologieTerms {
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌsaɪtəˈmɛɡəli/",
 
+            exampleFr = "Exemple: Le Élargissement anormal des cellules bien au-delà de la taille normale; observé dans l'infection CMV et certaines tumeurs.",
+
+            exampleAr = "مثال: يظهر تضخم غير طبيعي للخلايا يتجاوز الحجم الطبيعي بكثير؛ يُرى في عدوى CMV وبعض الأورام.",
+
             exampleEn = "The Cytomegaly is Abnormal enlargement of cells well beyond normal size; seen in CMV infection and some tumors.",        ),
         ),
         MedicalTermEntity(
@@ -2649,6 +2743,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkæriəˈmɛɡəli/",
+
+            exampleFr = "Exemple: Le Élargissement anormal du noyau cellulaire; associé aux infections virales et à la malignité.",
+
+            exampleAr = "مثال: يظهر تضخم غير طبيعي لنواة الخلية؛ مرتبط بالعدوى الفيروسية والخباثة.",
 
             exampleEn = "The Karyomegaly is Abnormal enlargement of the cell nucleus; associated with viral infections and malignancy.",        ),
         ),
@@ -2740,6 +2838,10 @@ object CytologieTerms {
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌmaɪkrəʊɪnˈveɪʒən/",
 
+            exampleFr = "Exemple: Le Invasion minimale des cellules cancéreuses au-delà de la membrane basale mesurant moins de 3-5mm.",
+
+            exampleAr = "مثال: يظهر اجتياح طفيف لخلايا سرطانية ما وراء الغشاء القاعدي بأقل من 3-5 ملم.",
+
             exampleEn = "The Microinvasion is Minimal invasion of cancer cells beyond the basement membrane measuring less than 3-5mm.",        ),
         ),
         MedicalTermEntity(
@@ -2755,6 +2857,10 @@ object CytologieTerms {
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌpærəkɛrəˈtoʊsɪs/",
 
+            exampleFr = "Exemple: Le Rétention de noyaux dans le stratum corneum indiquant une kératinisation anormale; observé dans la dysplasie.",
+
+            exampleAr = "مثال: يظهر احتباس النوى في الطبقة القرنية يدل على تقرن غير طبيعي؛ يُرى في خلل التنسج.",
+
             exampleEn = "The Parakeratosis is Retention of nuclei in the stratum corneum indicating abnormal keratinization; seen in dysplasia.",        ),
         ),
         MedicalTermEntity(
@@ -2769,6 +2875,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌhaɪpəkɛrəˈtoʊsɪs/",
+
+            exampleFr = "Exemple: Le Épaississement anormal du stratum corneum (couche cutanée externe) sans noyaux retenus.",
+
+            exampleAr = "مثال: يظهر سماكة غير طبيعية للطبقة القرنية (الطبقة الخارجية للجلد) دون احتباس النوى.",
 
             exampleEn = "The Hyperkeratosis is Abnormal thickening of the stratum corneum (outermost skin layer) without retained nuclei.",        ),
         ),
@@ -2799,6 +2909,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌmʌltiˌnjuːkliˈeɪʃən/",
+
+            exampleFr = "Exemple: Le Présence de noyaux multiples dans une seule cellule; observé dans les cellules géantes, infections virales et tumeurs.",
+
+            exampleAr = "مثال: يظهر وجود نوى متعددة داخل خلية واحدة؛ يُرى في الخلايا العملاقة والعدوى الفيروسية وبعض الأورام.",
 
             exampleEn = "The Multinucleation is Presence of multiple nuclei within a single cell; seen in giant cells, viral infections, and some tumors.",        ),
         ),
@@ -2919,6 +3033,10 @@ object CytologieTerms {
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər dʒiːn/",
             exampleEn = "The tumor suppressor gene is the gene that regulates cell division and prevents tumor formation; loss causes cancer (e.g., TP53, RB1).",
+            exampleFr = "Exemple: Le Gène régulant la division cellulaire et empêchant la formation tumorale; sa perte cause le cancer (ex: TP53, RB1).",
+
+            exampleAr = "مثال: يظهر جين ينظم انقسام الخلايا ويمنع تشكل الأورام؛ فقدانه يسبب السرطان (مثل: TP53 وRB1).",
+
         ),
         MedicalTermEntity(
             id = 3127,
@@ -3022,6 +3140,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/əˈliːl/",
+
+            exampleFr = "Exemple: Le L'une des deux ou plusieurs variantes d'un gène occupant le même locus sur des chromosomes homologues.",
+
+            exampleAr = "مثال: يظهر أحد نسختين أو أكثر من نسخ جين يحتل نفس الموقع على الكروموسومات المتماثلة.",
 
             exampleEn = "The Allele is One of two or more variants of a gene occupying the same locus on homologous chromosomes.",        ),
         ),
@@ -3355,6 +3477,10 @@ object CytologieTerms {
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˈæktɪv ˈtrænspɔːrt/",
 
+            exampleFr = "Exemple: Le Mouvement de molécules contre leur gradient de concentration nécessitant de l'énergie ATP et des protéines porteuses.",
+
+            exampleAr = "مثال: يظهر حركة الجزيئات عكس تدرج تركيزها تتطلب طاقة ATP وبروتينات ناقلة.",
+
             exampleEn = "The Active transport is Movement of molecules against their concentration gradient requiring ATP energy and carrier proteins.",        ),
         ),
         MedicalTermEntity(
@@ -3460,6 +3586,10 @@ object CytologieTerms {
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/eɪˈtɪpɪkəl sɛlz/",
 
+            exampleFr = "Exemple: Le Cellules présentant des caractéristiques anormales n'étant ni clairement bénignes ni malignes.",
+
+            exampleAr = "مثال: يظهر خلايا تُظهر سمات غير طبيعية لا تُصنف بوضوح كحميدة ولا خبيثة.",
+
             exampleEn = "The Atypical cells is Cells showing abnormal features that are neither clearly benign nor malignant.",        ),
         ),
         MedicalTermEntity(
@@ -3535,6 +3665,10 @@ object CytologieTerms {
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/loʊ ɡreɪd dɪsˈpleɪziə/",
 
+            exampleFr = "Exemple: Le Légères anomalies cellulaires cervicales correspondant à CIN 1; souvent causées par l'infection HPV.",
+
+            exampleAr = "مثال: يظهر شذوذات خلوية عنقية خفيفة تقابل CIN 1؛ غالباً بسبب عدوى HPV.",
+
             exampleEn = "The Low-grade dysplasia (LGSIL) is Mild cervical cellular abnormalities corresponding to CIN 1; often caused by HPV infection.",        ),
         ),
         MedicalTermEntity(
@@ -3549,6 +3683,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/haɪ ɡreɪd dɪsˈpleɪziə/",
+
+            exampleFr = "Exemple: Le Anomalies cellulaires cervicales modérées à sévères correspondant à CIN 2-3; risque élevé de progression vers le cancer.",
+
+            exampleAr = "مثال: يظهر شذوذات خلوية عنقية معتدلة إلى شديدة تقابل CIN 2-3؛ خطر مرتفع للتقدم نحو السرطان.",
 
             exampleEn = "The High-grade dysplasia (HGSIL) is Moderate to severe cervical cellular abnormalities corresponding to CIN 2-3; high risk of progression to cancer.",        ),
         ),
@@ -3655,6 +3793,10 @@ object CytologieTerms {
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/sɛˈljʊlər eɪˈtɪpiə/",
 
+            exampleFr = "Exemple: Le Caractéristiques cellulaires anormales incluant taille, forme, caractéristiques nucléaires ou pattern de coloration altérés.",
+
+            exampleAr = "مثال: يظهر سمات خلوية غير طبيعية تشمل تغيراً في الحجم والشكل والخصائص النووية أو نمط التلوين.",
+
             exampleEn = "The Cellular atypia is Abnormal cellular features including altered size, shape, nuclear characteristics, or staining pattern.",        ),
         ),
         MedicalTermEntity(
@@ -3668,6 +3810,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/riˈæktɪv eɪˈtɪpiə/",
+
+            exampleFr = "Exemple: Le Modifications cellulaires secondaires à une inflammation, infection ou traumatisme qui imitent mais ne sont pas une malignité.",
+
+            exampleAr = "مثال: يظهر تغيرات خلوية ثانوية لالتهاب أو عدوى أو صدمة تحاكي الخباثة لكنها ليست كذلك.",
 
             exampleEn = "The Reactive atypia is Cellular changes secondary to inflammation, infection, or trauma that mimic but are not malignancy.",        ),
         ),
@@ -3697,6 +3843,10 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/eɪ ɛs siː juː ɛs/",
+
+            exampleFr = "Exemple: Le Cellules squameuses atypiques de signification indéterminée; résultat cytologique cervical limite nécessitant un suivi.",
+
+            exampleAr = "مثال: يظهر خلايا حرشفية لانمطية ذات دلالة غير محددة؛ نتيجة خلوية عنقية حدية تستوجب المتابعة.",
 
             exampleEn = "The ASC-US is Atypical squamous cells of undetermined significance; a borderline cervical cytology result requiring follow-up.",        ),
         ),

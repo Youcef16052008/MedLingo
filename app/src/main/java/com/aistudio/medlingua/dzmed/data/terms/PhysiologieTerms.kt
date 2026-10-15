@@ -410,6 +410,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈæktɪv ˈtrænspɔːrt/",
 
+            exampleFr = "Exemple: Le Mouvement de molécules contre le gradient de concentration utilisant de l'énergie (ATP).",
+
+            exampleAr = "مثال: يظهر حركة الجزيئات عكس تدرج التركيز باستخدام الطاقة (ATP).",
+
             exampleEn = "The Active transport is Movement of molecules against concentration gradient using energy (ATP).",        ),
         ),
         MedicalTermEntity(
@@ -424,6 +428,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈpæsɪv ˈtrænspɔːrt/",
 
+            exampleFr = "Exemple: Le Mouvement de molécules le long du gradient de concentration sans énergie.",
+
+            exampleAr = "مثال: يظهر حركة الجزيئات مع تدرج التركيز دون استخدام طاقة.",
+
             exampleEn = "The Passive transport is Movement of molecules along the concentration gradient without energy.",        ),
         ),
         MedicalTermEntity(
@@ -437,6 +445,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/fəˈsɪlɪteɪtɪd dɪˈfjuːʒən/",
+
+            exampleFr = "Exemple: Le Transport passif de molécules à travers des protéines membranaires.",
+
+            exampleAr = "مثال: يظهر نقل سلبي للجزيئات عبر بروتينات الغشاء.",
 
             exampleEn = "The Facilitated diffusion is Passive transport of molecules through membrane proteins.",        ),
         ),
@@ -662,6 +674,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/əˈnæbəlɪzəm/",
 
+            exampleFr = "Exemple: Le Réactions métaboliques qui construisent des molécules complexes à partir de simples.",
+
+            exampleAr = "مثال: يظهر تفاعلات أيضية تبني جزيئات معقدة من جزيئات أبسط.",
+
             exampleEn = "The Anabolism is Metabolic reactions that build complex molecules from simpler ones.",        ),
         ),
         MedicalTermEntity(
@@ -675,6 +691,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/kəˈtæbəlɪzəm/",
+
+            exampleFr = "Exemple: Le Réactions métaboliques qui dégradent les molécules complexes en libérant de l'énergie.",
+
+            exampleAr = "مثال: يظهر تفاعلات أيضية تحلل الجزيئات المعقدة وتطلق الطاقة.",
 
             exampleEn = "The Catabolism is Metabolic reactions that break down complex molecules releasing energy.",        ),
         ),
@@ -750,6 +770,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/eɪˈroʊbɪk ˌrɛspɪˈreɪʃən/",
 
+            exampleFr = "Exemple: Le Respiration cellulaire nécessitant de l'oxygène pour produire de l'ATP.",
+
+            exampleAr = "مثال: يظهر تنفس الخلوي الذي يتطلب الأكسجين لإنتاج ATP.",
+
             exampleEn = "The Aerobic respiration is Cellular respiration requiring oxygen to produce ATP.",        ),
         ),
         MedicalTermEntity(
@@ -763,6 +787,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌænəˈroʊbɪk ˌrɛspɪˈreɪʃən/",
+
+            exampleFr = "Exemple: Le Respiration cellulaire sans oxygène produisant de l'acide lactique ou de l'éthanol.",
+
+            exampleAr = "مثال: يظهر تنفس الخلوي بدون أكسجين مع إنتاج حمض اللبن أو الإيثانول.",
 
             exampleEn = "The Anaerobic respiration is Cellular respiration without oxygen producing lactic acid or ethanol.",        ),
         ),
@@ -1149,6 +1177,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈsaɪkəl/",
 
+            exampleFr = "Exemple: Le Séquence complète de contraction et relaxation du cœur.",
+
+            exampleAr = "مثال: يظهر تسلسل كامل واحد من انقباض القلب وانبساطه.",
+
             exampleEn = "The Cardiac cycle is One complete sequence of contraction and relaxation of the heart.",        ),
         ),
         MedicalTermEntity(
@@ -1224,6 +1256,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/hɑːrt reɪt/",
 
+            exampleFr = "Exemple: Le Nombre de battements cardiaques par minute (normal: 60-100 bpm).",
+
+            exampleAr = "مثال: يظهر عدد نبضات القلب في الدقيقة (الطبيعي: 60-100 نبضة/دقيقة).",
+
             exampleEn = "The Heart rate is number of heartbeats per minute (normal: 60-100 bpm).",        ),
         ),
         MedicalTermEntity(
@@ -1253,6 +1289,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/sɪˈstɒlɪk ˈprɛʃər/",
 
+            exampleFr = "Exemple: Le Pression artérielle maximale pendant la contraction ventriculaire (normal: 120 mmHg).",
+
+            exampleAr = "مثال: يظهر أقصى ضغط شرياني أثناء انقباض البطين (الطبيعي: 120 ملم زئبقي).",
+
             exampleEn = "The Systolic pressure is maximum arterial pressure during ventricular contraction (normal: 120 mmHg).",        ),
         ),
         MedicalTermEntity(
@@ -1267,6 +1307,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌdaɪəˈstɒlɪk ˈprɛʃər/",
 
+            exampleFr = "Exemple: Le Pression artérielle minimale pendant la relaxation ventriculaire (normal: 80 mmHg).",
+
+            exampleAr = "مثال: يظهر أدنى ضغط شرياني أثناء انبساط البطين (الطبيعي: 80 ملم زئبقي).",
+
             exampleEn = "The Diastolic pressure is minimum arterial pressure during ventricular relaxation (normal: 80 mmHg).",        ),
         ),
         MedicalTermEntity(
@@ -1280,6 +1324,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpoʊˈtɛnʃən/",
+
+            exampleFr = "Exemple: Le Pression artérielle anormalement basse en dessous de 90/60 mmHg.",
+
+            exampleAr = "مثال: يظهر انخفاض غير طبيعي في ضغط الدم تحت 90/60 ملم زئبقي.",
 
             exampleEn = "The Hypotension is Abnormally low blood pressure below 90/60 mmHg.",        ),
         ),
@@ -1446,6 +1494,10 @@ MedicalTermEntity(
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/pɜːrˈkɪndʒi ˈfaɪbərz/",
 
+            exampleFr = "Exemple: Le Fibres conductrices spécialisées dans les ventricules assurant une contraction coordonnée.",
+
+            exampleAr = "مثال: يظهر ألياف ناقلة متخصصة في البطينين تضمن انقباضاً منسقاً.",
+
             exampleEn = "The Purkinje fibers is Specialized conducting fibers in the ventricles ensuring coordinated contraction.",        ),
         ),
         MedicalTermEntity(
@@ -1521,6 +1573,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/əˈrɪðmiə/",
+
+            exampleFr = "Exemple: Le Toute irrégularité du rythme cardiaque.",
+
+            exampleAr = "مثال: يظهر أي عدم انتظام في نظم القلب.",
 
             exampleEn = "The Arrhythmia is Any irregularity in the heart's rhythm.",        ),
         ),
@@ -1762,6 +1818,10 @@ MedicalTermEntity(
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌɒksihiːməˈɡloʊbɪn/",
 
+            exampleFr = "Exemple: Le Hémoglobine liée à l'oxygène.",
+
+            exampleAr = "مثال: يظهر هيموغلوبين المرتبط بالأكسجين.",
+
             exampleEn = "The Oxyhemoglobin is Hemoglobin bound to oxygen.",        ),
         ),
         MedicalTermEntity(
@@ -1775,6 +1835,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈɒksɪdʒən ˌsætʃəˈreɪʃən/",
+
+            exampleFr = "Exemple: Le Pourcentage d'hémoglobine saturée en oxygène (normal: 95-100%).",
+
+            exampleAr = "مثال: يظهر نسبة المئوية للهيموغلوبين المشبع بالأكسجين (الطبيعي: 95-100%).",
 
             exampleEn = "The Oxygen saturation (SpO2) is percentage of hemoglobin saturated with oxygen (normal: 95-100%).",        ),
         ),
@@ -1880,6 +1944,10 @@ MedicalTermEntity(
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈrɛspɪrətɔːri reɪt/",
 
+            exampleFr = "Exemple: Le Nombre de respirations par minute (normal: 12-20).",
+
+            exampleAr = "مثال: يظهر عدد مرات التنفس في الدقيقة (الطبيعي: 12-20).",
+
             exampleEn = "The Respiratory rate is number of breaths per minute (normal: 12-20).",        ),
         ),
         MedicalTermEntity(
@@ -1909,6 +1977,10 @@ MedicalTermEntity(
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈdɪspniːə/",
 
+            exampleFr = "Exemple: Le Difficulté ou essoufflement.",
+
+            exampleAr = "مثال: يظهر صعوبة أو ضيق في التنفس.",
+
             exampleEn = "The Dyspnea is Difficulty or labored breathing.",        ),
         ),
         MedicalTermEntity(
@@ -1922,6 +1994,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈæpniːə/",
+
+            exampleFr = "Exemple: Le Arrêt temporaire de la respiration.",
+
+            exampleAr = "مثال: يظهر توقف مؤقت عن التنفس.",
 
             exampleEn = "The Apnea is Temporary cessation of breathing.",        ),
         ),
@@ -2089,6 +2165,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/noʊdz əv ˈrɒnvieɪ/",
+
+            exampleFr = "Exemple: Le Espaces dans la gaine de myéline permettant la conduction saltatoire.",
+
+            exampleAr = "مثال: يظهر فجوات في غمد الميالين تسمح بالتوصيل القفزي.",
 
             exampleEn = "The Nodes of Ranvier is Gaps in the myelin sheath allowing saltatory conduction.",        ),
         ),
@@ -3193,6 +3273,10 @@ MedicalTermEntity(
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌpɛrɪˈstælsɪs/",
 
+            exampleFr = "Exemple: Le Contractions musculaires ondulées propulsant la nourriture à travers le tube digestif.",
+
+            exampleAr = "مثال: يظهر تقلصات عضلية موجية تدفع الطعام عبر الجهاز الهضمي.",
+
             exampleEn = "The Peristalsis is Wave-like muscle contractions propelling food through the digestive tract.",        ),
         ),
         MedicalTermEntity(
@@ -3345,6 +3429,10 @@ MedicalTermEntity(
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈvɪlaɪ/",
 
+            exampleFr = "Exemple: Le Projections digitiformes dans l'intestin grêle augmentant la surface d'absorption.",
+
+            exampleAr = "مثال: يظهر بروزات إصبعية في الأمعاء الدقيقة تزيد مساحة سطح الامتصاص.",
+
             exampleEn = "The Villi (sing. Villus) is Finger-like projections in the small intestine increasing surface area for absorption.",        ),
         ),
         MedicalTermEntity(
@@ -3359,6 +3447,10 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌmaɪkroʊˈvɪlaɪ/",
+
+            exampleFr = "Exemple: Le Minuscules projections sur les cellules intestinales augmentant davantage la surface (bordure en brosse).",
+
+            exampleAr = "مثال: يظهر بروزات دقيقة على الخلايا المعوية تزيد مساحة السطح أكثر (الحافة الفرشاتية).",
 
             exampleEn = "The Microvilli is Tiny projections on intestinal cells further increasing surface area (brush border).",        ),
         ),

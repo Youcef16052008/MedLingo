@@ -450,6 +450,10 @@ MedicalTermEntity(
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/væn dər wɔːlz/",
 
+            exampleFr = "Exemple: Le Forces intermoléculaires faibles entre les molécules.",
+
+            exampleAr = "مثال: يظهر قوى ضعيفة بين الجزيئات.",
+
             exampleEn = "The Van der Waals forces is Weak intermolecular forces between molecules.",        ),
         ),
         MedicalTermEntity(
@@ -812,6 +816,10 @@ MedicalTermEntity(
             chapter = "Glucides",
             ipaPhonetic = "/ˈsuːkroʊs/",
 
+            exampleFr = "Exemple: Le Sucre de table composé de glucose et de fructose.",
+
+            exampleAr = "مثال: يظهر سكر المائدة المكون من الغلوكوز والفركتوز.",
+
             exampleEn = "The Sucrose is Table sugar composed of glucose and fructose.",        ),
         ),
         MedicalTermEntity(
@@ -826,6 +834,10 @@ MedicalTermEntity(
             chapter = "Glucides",
             ipaPhonetic = "/ˈlæktoʊs/",
 
+            exampleFr = "Exemple: Le Sucre du lait composé de glucose et de galactose.",
+
+            exampleAr = "مثال: يظهر سكر الحليب المكون من الغلوكوز والغالاكتوز.",
+
             exampleEn = "The Lactose is Milk sugar composed of glucose and galactose.",        ),
         ),
         MedicalTermEntity(
@@ -839,6 +851,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈmɔːltoʊs/",
+
+            exampleFr = "Exemple: Le Sucre de malt composé de deux molécules de glucose.",
+
+            exampleAr = "مثال: يظهر سكر الشعير المكون من جزيئتي غلوكوز.",
 
             exampleEn = "The Maltose is Malt sugar composed of two glucose molecules.",        ),
         ),
@@ -914,6 +930,10 @@ MedicalTermEntity(
             chapter = "Glucides",
             ipaPhonetic = "/ˌɡlaɪkoʊsəˌmiːnoʊˈɡlaɪkæn/",
 
+            exampleFr = "Exemple: Le Longs polysaccharides non ramifiés du tissu conjonctif.",
+
+            exampleAr = "مثال: يظهر عديدات سكاريد طويلة غير متفرعة في النسيج الضام.",
+
             exampleEn = "The Glycosaminoglycan (GAG) is Long unbranched polysaccharides in connective tissue (e.g., hyaluronic acid).",        ),
         ),
         MedicalTermEntity(
@@ -927,6 +947,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈaɪsəmər/",
+
+            exampleFr = "Exemple: Le Molécules de même formule mais d'arrangements structuraux différents.",
+
+            exampleAr = "مثال: يظهر جزيئات لها نفس الصيغة ولكن بترتيبات بنائية مختلفة.",
 
             exampleEn = "The Isomer is Molecules with the same formula but different structural arrangements.",        ),
         ),
@@ -942,6 +966,10 @@ MedicalTermEntity(
             chapter = "Glucides",
             ipaPhonetic = "/ˈɛpɪmər/",
 
+            exampleFr = "Exemple: Le Isomères ne différant que par un seul carbone chiral.",
+
+            exampleAr = "مثال: يظهر متشكلات تختلف في ذرة كربون لامتناظرة واحدة فقط.",
+
             exampleEn = "The Epimer is Isomers differing at only one chiral carbon.",        ),
         ),
         MedicalTermEntity(
@@ -955,6 +983,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈænəmər/",
+
+            exampleFr = "Exemple: Le Isomères cycliques différant au carbone anomérique (alpha ou bêta).",
+
+            exampleAr = "مثال: يظهر متشكلات حلقية تختلف في ذرة الكربون الأنوميرية (ألفا أو بيتا).",
 
             exampleEn = "The Anomer is Cyclic isomers differing at the anomeric carbon (alpha or beta).",        ),
         ),
@@ -1210,6 +1242,10 @@ MedicalTermEntity(
             chapter = "Lipides",
             ipaPhonetic = "/eɪtʃ diː ɛl/",
 
+            exampleFr = "Exemple: Le Bon cholestérol transportant le cholestérol des tissus vers le foie.",
+
+            exampleAr = "مثال: يظهر كوليسترول الجيد الذي ينقل الكوليسترول من الأنسجة إلى الكبد.",
+
             exampleEn = "The HDL (High-density lipoprotein) is Good cholesterol that transports cholesterol from tissues to the liver.",        ),
         ),
         MedicalTermEntity(
@@ -1223,6 +1259,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ɛl diː ɛl/",
+
+            exampleFr = "Exemple: Le Mauvais cholestérol déposant le cholestérol dans les parois artérielles.",
+
+            exampleAr = "مثال: يظهر كوليسترول السيئ الذي يترسب في جدران الشرايين.",
 
             exampleEn = "The LDL (Low-density lipoprotein) is Bad cholesterol that deposits cholesterol in artery walls.",        ),
         ),
@@ -1327,6 +1367,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈkiːtoʊn ˈbɒdi/",
+
+            exampleFr = "Exemple: Le Molécules produites par la dégradation des acides gras en cas de manque de glucose.",
+
+            exampleAr = "مثال: يظهر جزيئات تُنتج من تحلل الأحماض الدهنية عند نقص الغلوكوز.",
 
             exampleEn = "The Ketone body is Molecules produced from fatty acid breakdown when glucose is scarce.",        ),
         ),
@@ -1462,6 +1506,10 @@ MedicalTermEntity(
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈsɛkəndɛri/",
 
+            exampleFr = "Exemple: Le Motifs de repliement local (hélice alpha et feuillet bêta) stabilisés par des liaisons hydrogène.",
+
+            exampleAr = "مثال: يظهر أنماط الطي المحلية (اللولب ألفا والصفيحة بيتا) مثبتة بروابط هيدروجينية.",
+
             exampleEn = "The Secondary structure is Local folding patterns (alpha helix and beta sheet) stabilized by hydrogen bonds.",        ),
         ),
         MedicalTermEntity(
@@ -1568,6 +1616,8 @@ MedicalTermEntity(
             ipaPhonetic = "/ˈɡlɒbjʊlər/",
             exampleEn = "The globular protein is the spherical compact protein that is water-soluble (e.g., hemoglobin, enzymes).",
             exampleAr = "البروتين الكروي هو بروتين كروي مدمج قابل للذوبان في الماء (مثل الهيموغلوبين والإنزيمات).",
+            exampleFr = "Exemple: Le Protéine sphérique compacte soluble dans l'eau (ex: hémoglobine, enzymes).",
+
         ),
         MedicalTermEntity(
             id = 745,
@@ -1583,6 +1633,8 @@ MedicalTermEntity(
             ipaPhonetic = "/ˈfaɪbrəs/",
             exampleEn = "The fibrous protein is the elongated structural protein insoluble in water (e.g., collagen, keratin).",
             exampleAr = "البروتين الليفي هو بروتين بنائي ممتد غير قابل للذوبان في الماء (مثل الكولاجين والكيراتين).",
+            exampleFr = "Exemple: Le Protéine structurale allongée insoluble dans l'eau (ex: collagène, kératine).",
+
         ),
         MedicalTermEntity(
             id = 746,
@@ -1822,6 +1874,10 @@ MedicalTermEntity(
             chapter = "Enzymologie",
             ipaPhonetic = "/kəmˈpɛtɪtɪv ɪnˈhɪbɪʃən/",
 
+            exampleFr = "Exemple: Le Inhibition où une molécule rivalise avec le substrat pour le site actif.",
+
+            exampleAr = "مثال: يظهر تثبيط حيث يتنافس جزيء مع الركيزة على الموقع الفعال.",
+
             exampleEn = "The Competitive inhibition is Inhibition where a molecule competes with the substrate for the active site.",        ),
         ),
         MedicalTermEntity(
@@ -1836,6 +1892,10 @@ MedicalTermEntity(
             chapter = "Enzymologie",
             ipaPhonetic = "/nɒn kəmˈpɛtɪtɪv/",
 
+            exampleFr = "Exemple: Le Inhibition où une molécule se lie à un site autre que le site actif changeant la forme de l'enzyme.",
+
+            exampleAr = "مثال: يظهر تثبيط حيث يرتبط جزيء بموقع غير الموقع الفعال مغيراً شكل الإنزيم.",
+
             exampleEn = "The Non-competitive inhibition is Inhibition where a molecule binds to a site other than the active site changing enzyme shape.",        ),
         ),
         MedicalTermEntity(
@@ -1849,6 +1909,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌæləˈstɛrɪk/",
+
+            exampleFr = "Exemple: Le Régulation par liaison d'une molécule à un site autre que le site actif.",
+
+            exampleAr = "مثال: يظهر تنظيم عن طريق ارتباط جزيء بموقع غير الموقع الفعال.",
 
             exampleEn = "The Allosteric regulation is Regulation by binding of a molecule to a site other than the active site.",        ),
         ),
@@ -1894,6 +1958,10 @@ MedicalTermEntity(
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌaɪsoʊˈɛnzaɪm/",
 
+            exampleFr = "Exemple: Le Formes différentes d'un enzyme catalysant la même réaction mais dans différents tissus.",
+
+            exampleAr = "مثال: يظهر أشكال مختلفة من الإنزيم تحفز نفس التفاعل ولكن في أنسجة مختلفة.",
+
             exampleEn = "The Isoenzyme (Isozyme) is Different forms of an enzyme catalyzing the same reaction but in different tissues.",        ),
         ),
         MedicalTermEntity(
@@ -1909,6 +1977,8 @@ MedicalTermEntity(
             ipaPhonetic = "/ˈzaɪmədʒən/",
             exampleEn = "The zymogen (proenzyme) is the inactive enzyme precursor requiring activation (e.g., pepsinogen → pepsin).",
             exampleFr = "La zymogène (Proenzyme) est précurseur enzymatique inactif nécessitant une activation.",
+            exampleAr = "مثال: يظهر طليعة إنزيمية غير نشطة تتطلب تنشيطاً (مثل: ببسينوجين ← ببسين).",
+
         ),
         MedicalTermEntity(
             id = 768,
@@ -2462,6 +2532,10 @@ MedicalTermEntity(
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈfoʊlɪk ˈæsɪd/",
 
+            exampleFr = "Exemple: Le Essentiel à la synthèse d'ADN et à la formation des globules rouges; crucial en grossesse.",
+
+            exampleAr = "مثال: يظهر ضروري لتصنيع DNA وتكوين كريات الدم الحمراء؛ حيوي أثناء الحمل.",
+
             exampleEn = "The Vitamin B9 (Folic acid) is Essential for DNA synthesis and red blood cell formation; critical in pregnancy.",        ),
         ),
         MedicalTermEntity(
@@ -2475,6 +2549,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/koʊˈbæləmɪn/",
+
+            exampleFr = "Exemple: Le Essentiel à la fonction nerveuse, la synthèse d'ADN et la formation des globules rouges.",
+
+            exampleAr = "مثال: يظهر ضروري لوظيفة الأعصاب وتصنيع DNA وتكوين كريات الدم الحمراء.",
 
             exampleEn = "The Vitamin B12 (Cobalamin) is Essential for nerve function, DNA synthesis, and red blood cell formation.",        ),
         ),
@@ -3038,6 +3116,10 @@ MedicalTermEntity(
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/blʌd ˈɡluːkoʊs/",
 
+            exampleFr = "Exemple: Le Concentration de glucose dans le sang (normal à jeun: 0,7-1 g/L).",
+
+            exampleAr = "مثال: يظهر تركيز الغلوكوز في الدم (الطبيعي صائم: 70-100 ملغ/دل).",
+
             exampleEn = "The Blood glucose level is concentration of glucose in the blood (normal fasting: 70-100 mg/dL).",        ),
         ),
         MedicalTermEntity(
@@ -3053,6 +3135,10 @@ MedicalTermEntity(
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌhaɪpərɡlaɪˈsiːmiə/",
 
+            exampleFr = "Exemple: Le Glycémie anormalement élevée au-dessus de 1,26 g/L à jeun.",
+
+            exampleAr = "مثال: يظهر ارتفاع غير طبيعي في مستوى سكر الدم فوق 126 ملغ/دل صائم.",
+
             exampleEn = "The Hyperglycemia is Abnormally high blood glucose level above 126 mg/dL fasting.",        ),
         ),
         MedicalTermEntity(
@@ -3067,6 +3153,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌhaɪpoʊɡlaɪˈsiːmiə/",
+
+            exampleFr = "Exemple: Le Glycémie anormalement basse en dessous de 0,7 g/L.",
+
+            exampleAr = "مثال: يظهر انخفاض غير طبيعي في مستوى سكر الدم تحت 70 ملغ/دل.",
 
             exampleEn = "The Hypoglycemia is Abnormally low blood glucose level below 70 mg/dL.",        ),
         ),
@@ -3142,6 +3232,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈlɪvər ˈfʌŋkʃən/",
+
+            exampleFr = "Exemple: Le Analyses sanguines évaluant la santé du foie (ALAT, ASAT, PAL, bilirubine, albumine).",
+
+            exampleAr = "مثال: يظهر فحوصات دم لتقييم صحة الكبد (ALT، AST، ALP، بيليروبين، ألبومين).",
 
             exampleEn = "The Liver function test (LFT) is Blood tests assessing liver health (ALT, AST, ALP, bilirubin, albumin).",        ),
         ),
@@ -3656,6 +3750,10 @@ MedicalTermEntity(
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈaɪsətoʊp/",
 
+            exampleFr = "Exemple: Le Atomes du même élément avec des nombres différents de neutrons.",
+
+            exampleAr = "مثال: يظهر ذرات لنفس العنصر بأعداد مختلفة من النيوترونات.",
+
             exampleEn = "The Isotope is Atoms of the same element with different numbers of neutrons.",        ),
         ),
         MedicalTermEntity(
@@ -3839,6 +3937,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/əˈtɒmɪk ˈreɪdiəs/",
+
+            exampleFr = "Exemple: Le Moitié de la distance entre les noyaux de deux atomes identiques liés.",
+
+            exampleAr = "مثال: يظهر نصف المسافة بين نواتي ذرتين متماثلتين مرتبطتين.",
 
             exampleEn = "The Atomic radius is Half the distance between the nuclei of two bonded identical atoms.",        ),
         ),
@@ -4229,6 +4331,10 @@ MedicalTermEntity(
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˌævəˈɡɑːdroʊz/",
 
+            exampleFr = "Exemple: Le Nombre de particules dans une mole: 6,022 × 10²³.",
+
+            exampleAr = "مثال: يظهر عدد الجسيمات في مول واحد: 6.022 × 10²³.",
+
             exampleEn = "The Avogadro's number is number of particles in one mole: 6.022 × 10²³.",        ),
         ),
         MedicalTermEntity(
@@ -4469,6 +4575,10 @@ MedicalTermEntity(
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/moʊˈlærɪti/",
 
+            exampleFr = "Exemple: Le Concentration exprimée en moles de soluté par litre de solution (mol/L).",
+
+            exampleAr = "مثال: يظهر تركيز معبر عنه بعدد مولات المذاب في لتر من المحلول (مول/لتر).",
+
             exampleEn = "The Molarity (M) is Concentration expressed as moles of solute per liter of solution (mol/L).",        ),
         ),
         MedicalTermEntity(
@@ -4482,6 +4592,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/moʊˈlælɪti/",
+
+            exampleFr = "Exemple: Le Concentration exprimée en moles de soluté par kilogramme de solvant (mol/kg).",
+
+            exampleAr = "مثال: يظهر تركيز معبر عنه بعدد مولات المذاب في كيلوغرام من المذيب (مول/كغ).",
 
             exampleEn = "The Molality (m) is Concentration expressed as moles of solute per kilogram of solvent (mol/kg).",        ),
         ),
@@ -4633,6 +4747,10 @@ MedicalTermEntity(
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/strɒŋ ˈæsɪd/",
             exampleEn = "The strong acid is the acid that completely dissociates in water (e.g., HCl, H₂SO₄, HNO₃).",
+            exampleFr = "Exemple: Le Acide se dissociant complètement dans l'eau (ex: HCl, H₂SO₄, HNO₃).",
+
+            exampleAr = "مثال: يظهر حمض يتفكك بالكامل في الماء (مثل: HCl، H₂SO₄، HNO₃).",
+
         ),
         MedicalTermEntity(
             id = 951,
@@ -4646,6 +4764,10 @@ MedicalTermEntity(
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/wiːk ˈæsɪd/",
             exampleEn = "The weak acid is the acid that partially dissociates in water (e.g., CH₃COOH, H₂CO₃).",
+            exampleFr = "Exemple: Le Acide se dissociant partiellement dans l'eau (ex: CH₃COOH, H₂CO₃).",
+
+            exampleAr = "مثال: يظهر حمض يتفكك جزئياً في الماء (مثل: CH₃COOH، H₂CO₃).",
+
         ),
         MedicalTermEntity(
             id = 952,
@@ -4658,6 +4780,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/piː eɪtʃ/",
+
+            exampleFr = "Exemple: Le Logarithme négatif de la concentration en ions hydrogène: pH = -log[H⁺].",
+
+            exampleAr = "مثال: يظهر لوغاريتم السالب لتركيز أيونات الهيدروجين: pH = -log[H⁺].",
 
             exampleEn = "The pH is negative logarithm of hydrogen ion concentration: pH = -log[H⁺].",        ),
         ),
@@ -4672,6 +4798,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/piː oʊ eɪtʃ/",
+
+            exampleFr = "Exemple: Le Logarithme négatif de la concentration en ions hydroxyde: pOH = -log[OH⁻].",
+
+            exampleAr = "مثال: يظهر لوغاريتم السالب لتركيز أيونات الهيدروكسيد: pOH = -log[OH⁻].",
 
             exampleEn = "The pOH is negative logarithm of hydroxide ion concentration: pOH = -log[OH⁻].",        ),
         ),
@@ -4732,6 +4862,10 @@ MedicalTermEntity(
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈhɛndərsən ˈhæsəlbɑːlk/",
 
+            exampleFr = "Exemple: Le Équation reliant le pH au pKa et au rapport base conjuguée/acide: pH = pKa + log([A⁻]/[HA]).",
+
+            exampleAr = "مثال: يظهر معادلة تربط pH بـ pKa ونسبة القاعدة المرافقة إلى الحمض.",
+
             exampleEn = "The Henderson-Hasselbalch equation is An equation relating pH to pKa and the ratio of conjugate base to acid: pH = pKa + log([A⁻]/[HA]).",        ),
         ),
         MedicalTermEntity(
@@ -4791,6 +4925,10 @@ MedicalTermEntity(
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/æmˈfɒtərɪk/",
             exampleEn = "The amphoteric substance is the substance that can act as both an acid and a base (e.g., water, amino acids).",
+            exampleFr = "Exemple: Le Substance pouvant agir à la fois comme acide et base (ex: eau, acides aminés).",
+
+            exampleAr = "مثال: يظهر مادة يمكنها أن تعمل كحمض وكقاعدة في آن واحد (مثل: الماء، الأحماض الأمينية).",
+
         ),
         MedicalTermEntity(
             id = 962,
@@ -4970,6 +5108,10 @@ MedicalTermEntity(
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/ləˈʃætəljeɪz/",
 
+            exampleFr = "Exemple: Le Quand un système à l'équilibre est perturbé, il se déplace pour contrecarrer le changement.",
+
+            exampleAr = "مثال: يظهر عند اختلال توازن نظام، ينزاح ليعاكس التغيير.",
+
             exampleEn = "The Le Chatelier's principle is When a system at equilibrium is disturbed, it shifts to counteract the change.",        ),
         ),
         MedicalTermEntity(
@@ -5013,6 +5155,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/keɪ ˈdʌbəljuː/",
+
+            exampleFr = "Exemple: Le Constante d'équilibre pour l'auto-ionisation de l'eau: Ke = [H⁺][OH⁻] = 10⁻¹⁴ à 25°C.",
+
+            exampleAr = "مثال: يظهر ثابت التوازن للتأين الذاتي للماء: Kw = [H⁺][OH⁻] = 10⁻¹⁴ عند 25°م.",
 
             exampleEn = "The Kw (Ion product of water) is equilibrium constant for the autoionization of water: Kw = [H⁺][OH⁻] = 10⁻¹⁴ at 25°C.",        ),
         ),
@@ -5134,6 +5280,10 @@ MedicalTermEntity(
             chapter = "Chimie Organique",
             ipaPhonetic = "/məˈlɛkjʊlər/",
             exampleEn = "The molecular formula is the formula showing the actual number and types of atoms in a molecule (e.g., C₆H₁₂O₆).",
+            exampleFr = "Exemple: Le Formule montrant le nombre réel et les types d'atomes dans une molécule (ex: C₆H₁₂O₆).",
+
+            exampleAr = "مثال: يظهر صيغة تُظهر العدد الفعلي وأنواع الذرات في الجزيء (مثل: C₆H₁₂O₆).",
+
         ),
         MedicalTermEntity(
             id = 985,
@@ -5147,6 +5297,10 @@ MedicalTermEntity(
             chapter = "Chimie Organique",
             ipaPhonetic = "/ɪmˈpɪrɪkəl/",
             exampleEn = "The empirical formula is the simplest whole-number ratio of atoms in a compound (e.g., CH₂O for glucose).",
+            exampleFr = "Exemple: Le Rapport le plus simple en nombres entiers des atomes dans un composé (ex: CH₂O pour le glucose).",
+
+            exampleAr = "مثال: يظهر أبسط نسبة عددية صحيحة للذرات في المركب (مثل: CH₂O للغلوكوز).",
+
         ),
         MedicalTermEntity(
             id = 986,
@@ -5356,6 +5510,10 @@ MedicalTermEntity(
             chapter = "Hydrocarbures",
             ipaPhonetic = "/diːˈloʊkəlaɪzd/",
 
+            exampleFr = "Exemple: Le Électrons partagés sur plusieurs atomes plutôt que localisés entre deux atomes.",
+
+            exampleAr = "مثال: يظهر إلكترونات مشتركة على عدة ذرات بدلاً من أن تكون متموضعة بين ذرتين.",
+
             exampleEn = "The Delocalized electrons is Electrons shared over multiple atoms rather than localized between two atoms.",        ),
         ),
         MedicalTermEntity(
@@ -5521,6 +5679,10 @@ MedicalTermEntity(
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˌkɑːrbɒkˈsɪlɪk/",
             exampleEn = "The carboxylic acid is the organic acid containing the -COOH group (e.g., acetic acid, citric acid).",
+            exampleFr = "Exemple: Le Acide organique contenant le groupe -COOH (ex: acide acétique, acide citrique).",
+
+            exampleAr = "مثال: يظهر حمض عضوي يحتوي على مجموعة -COOH (مثل: حمض الأسيتيك، حمض الستريك).",
+
         ),
         MedicalTermEntity(
             id = 1011,
@@ -5684,6 +5846,10 @@ MedicalTermEntity(
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈstrʌktʃərəl/",
 
+            exampleFr = "Exemple: Le Isomères différant par la connectivité des atomes.",
+
+            exampleAr = "مثال: يظهر متشكلات تختلف في طريقة ارتباط الذرات.",
+
             exampleEn = "The Structural isomer (Constitutional) is Isomers differing in the connectivity of atoms.",        ),
         ),
         MedicalTermEntity(
@@ -5698,6 +5864,10 @@ MedicalTermEntity(
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌstɛrioʊˈaɪsəmər/",
 
+            exampleFr = "Exemple: Le Isomères avec la même connectivité mais des arrangements spatiaux différents des atomes.",
+
+            exampleAr = "مثال: يظهر متشكلات بنفس الارتباط لكن بترتيبات مكانية مختلفة للذرات.",
+
             exampleEn = "The Stereoisomer is Isomers with the same connectivity but different spatial arrangements of atoms.",        ),
         ),
         MedicalTermEntity(
@@ -5711,6 +5881,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌdʒiːəˈmɛtrɪk/",
+
+            exampleFr = "Exemple: Le Stéréo-isomères différant par l'arrangement spatial autour d'une double liaison ou d'un cycle.",
+
+            exampleAr = "مثال: يظهر متشكلات فراغية تختلف في الترتيب المكاني حول رابطة مزدوجة أو حلقة.",
 
             exampleEn = "The Geometric isomer (Cis-Trans) is Stereoisomers differing in the spatial arrangement around a double bond or ring.",        ),
         ),
@@ -5801,6 +5975,10 @@ MedicalTermEntity(
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/rəˈsiːmɪk/",
 
+            exampleFr = "Exemple: Le Mélange 50:50 des deux énantiomères optiquement inactif.",
+
+            exampleAr = "مثال: يظهر خليط 50:50 من كلا المتشكلين المرآتيين يكون غير فعال بصرياً.",
+
             exampleEn = "The Racemic mixture is 50:50 mixture of both enantiomers that is optically inactive.",        ),
         ),
         MedicalTermEntity(
@@ -5875,6 +6053,10 @@ MedicalTermEntity(
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌkɒnfɔːrˈmeɪʃənəl/",
 
+            exampleFr = "Exemple: Le Isomères différant par rotation autour d'une liaison simple.",
+
+            exampleAr = "مثال: يظهر متشكلات تختلف بالدوران حول رابطة أحادية.",
+
             exampleEn = "The Conformational isomer is Isomers differing by rotation around a single bond.",        ),
         ),
         MedicalTermEntity(
@@ -5888,6 +6070,10 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈtɔːtəmər/",
+
+            exampleFr = "Exemple: Le Isomères en équilibre dynamique différant par la position d'un atome d'hydrogène et d'une double liaison.",
+
+            exampleAr = "مثال: يظهر متشكلات في توازن ديناميكي تختلف في موقع ذرة هيدروجين ورابطة مزدوجة.",
 
             exampleEn = "The Tautomer is Isomers in dynamic equilibrium that differ in the position of a hydrogen atom and a double bond.",        ),
         ),
@@ -6070,6 +6256,10 @@ MedicalTermEntity(
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌdiːhaɪˈdreɪʃən/",
             exampleEn = "The dehydration reaction is the reaction removing water from a molecule (e.g., alcohol → alkene).",
+            exampleFr = "Exemple: Le Réaction retirant de l'eau d'une molécule (ex: alcool → alcène).",
+
+            exampleAr = "مثال: يظهر تفاعل ينزع الماء من جزيء (مثل: كحول → ألكين).",
+
         ),
         MedicalTermEntity(
             id = 1048,
@@ -6390,6 +6580,10 @@ MedicalTermEntity(
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ɔːrˈɡænɪk ˈsɒlvənt/",
             exampleEn = "The organic solvent is the carbon-based liquid used to dissolve other substances (e.g., ethanol, acetone, ether).",
+            exampleFr = "Exemple: Le Liquide à base de carbone utilisé pour dissoudre d'autres substances (ex: éthanol, acétone, éther).",
+
+            exampleAr = "مثال: يظهر سائل كربوني يُستخدم لإذابة مواد أخرى (مثل: إيثانول، أسيتون، إيثر).",
+
         ),
         MedicalTermEntity(
             id = 1069,
@@ -6433,6 +6627,10 @@ MedicalTermEntity(
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈærɪl/",
             exampleEn = "The aryl group is the group derived from an aromatic compound by removing one hydrogen (e.g., phenyl C₆H₅-).",
+            exampleFr = "Exemple: Le Groupe dérivé d'un composé aromatique par retrait d'un hydrogène (ex: phényle C₆H₅-).",
+
+            exampleAr = "مثال: يظهر مجموعة مشتقة من مركب أروماتي بإزالة هيدروجين واحد (مثل: فينيل C₆H₅-).",
+
         ),
         MedicalTermEntity(
             id = 1072,
@@ -6476,6 +6674,10 @@ MedicalTermEntity(
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˌɪnɔːrˈɡænɪk/",
             exampleEn = "The inorganic compound is the compound not based on carbon-hydrogen bonds (e.g., salts, metals, minerals).",
+            exampleFr = "Exemple: Le Composé non basé sur des liaisons carbone-hydrogène (ex: sels, métaux, minéraux).",
+
+            exampleAr = "مثال: يظهر مركب غير قائم على روابط كربون-هيدروجين (مثل: الأملاح، الفلزات، المعادن).",
+
         ),
         MedicalTermEntity(
             id = 1075,
@@ -6523,3 +6725,7 @@ MedicalTermEntity(
     )
 
             exampleEn = "The Allotrope is Different structural forms of the same element (e.g., diamond and graphite are allotropes of carbon).",}
+            exampleFr = "Exemple: Le Différentes formes structurales du même élément (ex: diamant et graphite sont des allotropes du carbone).",
+
+            exampleAr = "مثال: يظهر أشكال بنائية مختلفة لنفس العنصر (مثل: الماس والغرافيت تآصلان للكربون).",
+

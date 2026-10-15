@@ -20,6 +20,10 @@ object GenetiqueTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌɔːtəˈsoʊməl ˈdɒmɪnənt/",
             exampleEn = "The autosomal dominant is the inheritance pattern where a single copy of the mutant allele causes disease (e.g., Huntington).",
+            exampleFr = "Exemple: Le Schéma d'hérédité où une seule copie de l'allèle muté cause la maladie (ex: Huntington).",
+
+            exampleAr = "مثال: يظهر نمط وراثي تسبب فيه نسخة واحدة من الأليل الطافر المرض (مثل: هانتنغتون).",
+
         ),
         MedicalTermEntity(
             id = 1537,
@@ -33,6 +37,10 @@ object GenetiqueTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌɔːtəˈsoʊməl rɪˈsɛsɪv/",
             exampleEn = "The autosomal recessive is the inheritance pattern requiring two copies of the mutant allele to cause disease (e.g., cystic fibrosis).",
+            exampleFr = "Exemple: Le Schéma d'hérédité nécessitant deux copies de l'allèle muté pour causer la maladie (ex: mucoviscidose).",
+
+            exampleAr = "مثال: يظهر نمط وراثي يتطلب نسختين من الأليل الطافر لإحداث المرض (مثل: التليف الكيسي).",
+
         ),
         MedicalTermEntity(
             id = 1538,
@@ -45,6 +53,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ɛks lɪŋkt/",
+
+            exampleFr = "Exemple: Le Hérédité des gènes situés sur le chromosome X (ex: hémophilie, daltonisme).",
+
+            exampleAr = "مثال: يظهر وراثة الجينات الموجودة على الكروموسوم X (مثل: الناعور، عمى الألوان).",
 
             exampleEn = "The X-linked inheritance is Inheritance of genes located on the X chromosome (e.g., hemophilia, color blindness).",        ),
         ),
@@ -198,6 +210,10 @@ object GenetiqueTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌbiːɑːrˈsiːeɪ/",
 
+            exampleFr = "Exemple: Le Gènes suppresseurs de tumeurs; les mutations augmentent significativement le risque de cancer du sein et ovarien.",
+
+            exampleAr = "مثال: يظهر جينات كابتة للأورام؛ طفراتها تزيد بشكل كبير من خطر سرطان الثدي والمبيض.",
+
             exampleEn = "The BRCA1/BRCA2 is Tumor suppressor genes; mutations significantly increase breast and ovarian cancer risk.",        ),
         ),
         MedicalTermEntity(
@@ -227,6 +243,10 @@ object GenetiqueTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər/",
             exampleEn = "The tumor suppressor gene is the gene that inhibits cell division and tumor formation (e.g., TP53, Rb).",
+            exampleFr = "Exemple: Le Gène inhibant la division cellulaire et la formation de tumeurs (ex: TP53, Rb).",
+
+            exampleAr = "مثال: يظهر جين يُثبِّط انقسام الخلايا وتكوُّن الأورام (مثل: TP53، Rb).",
+
         ),
         MedicalTermEntity(
             id = 1551,
@@ -330,6 +350,10 @@ object GenetiqueTerms {
             chapter = "Génétique des Populations",
             ipaPhonetic = "/dʒəˈnɛtɪk drɪft/",
 
+            exampleFr = "Exemple: Le Changements aléatoires des fréquences alléliques dans une petite population dus au hasard.",
+
+            exampleAr = "مثال: يظهر تغيرات عشوائية في تردد الأليلات في مجتمع صغير بسبب الصدفة.",
+
             exampleEn = "The Genetic drift is Random changes in allele frequencies in a small population due to chance.",        ),
         ),
         MedicalTermEntity(
@@ -404,6 +428,10 @@ object GenetiqueTerms {
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˌvɛəriˈeɪʃən/",
 
+            exampleFr = "Exemple: Le Différences dans les séquences d'ADN entre individus d'une population.",
+
+            exampleAr = "مثال: يظهر اختلافات في تسلسلات DNA بين أفراد المجتمع.",
+
             exampleEn = "The Genetic variation is Differences in DNA sequences among individuals in a population.",        ),
         ),
         MedicalTermEntity(
@@ -463,6 +491,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ˌmɒdɪfɪˈkeɪʃən/",
+
+            exampleFr = "Exemple: Le Changements chimiques des protéines histones affectant la structure de la chromatine et l'expression génique.",
+
+            exampleAr = "مثال: يظهر تغييرات كيميائية على بروتينات الهيستون تؤثر في بنية الكروماتين والتعبير الجيني.",
 
             exampleEn = "The Histone modification is Chemical changes to histone proteins affecting chromatin structure and gene expression.",        ),
         ),
@@ -886,6 +918,10 @@ object GenetiqueTerms {
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˈnɛkst ˌdʒɛnəˈreɪʃən/",
 
+            exampleFr = "Exemple: Le Technologies de séquençage à haut débit permettant un séquençage rapide de millions de fragments d'ADN.",
+
+            exampleAr = "مثال: يظهر تقنيات تسلسل عالية الإنتاجية تُتيح تسلسلاً سريعاً لملايين شظايا DNA.",
+
             exampleEn = "The Next-generation sequencing (NGS) is High-throughput sequencing technologies allowing rapid sequencing of millions of DNA fragments.",        ),
         ),
         MedicalTermEntity(
@@ -1035,6 +1071,10 @@ object GenetiqueTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/rɪˈpɔːrtər/",
             exampleEn = "The reporter gene is the gene whose expression can be easily detected and measured (e.g., GFP, luciferase).",
+            exampleFr = "Exemple: Le Gène dont l'expression peut être facilement détectée et mesurée (ex: GFP, luciférase).",
+
+            exampleAr = "مثال: يظهر جين يمكن الكشف عن تعبيره وقياسه بسهولة (مثل: GFP، اللوسيفيراز).",
+
         ),
         MedicalTermEntity(
             id = 1605,
@@ -1047,6 +1087,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈsætəlaɪt/",
+
+            exampleFr = "Exemple: Le Séquences d'ADN non codantes très répétitives trouvées près des centromères et télomères.",
+
+            exampleAr = "مثال: يظهر تسلسلات DNA غير مُشفِّرة شديدة التكرار توجد بالقرب من السنتروميير والتيلومير.",
 
             exampleEn = "The Satellite DNA is Highly repetitive non-coding DNA sequences found near centromeres and telomeres.",        ),
         ),
@@ -1062,6 +1106,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈmaɪkroʊˌsætəlaɪt/",
+
+            exampleFr = "Exemple: Le Séquences répétées en tandem utilisées dans les empreintes génétiques et l'analyse médico-légale.",
+
+            exampleAr = "مثال: يظهر تسلسلات قصيرة متكررة تُستخدَم في البصمة الوراثية والتحليل الجنائي.",
 
             exampleEn = "The Microsatellite (STR) is Short tandem repeat sequences used in DNA fingerprinting and forensic analysis.",        ),
         ),
@@ -1342,6 +1390,10 @@ object GenetiqueTerms {
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/əˈliːl/",
 
+            exampleFr = "Exemple: Le Formes alternatives d'un gène occupant le même locus sur des chromosomes homologues.",
+
+            exampleAr = "مثال: يظهر أشكال بديلة للجين تحتل نفس الموقع على الكروموسومات المتماثلة.",
+
             exampleEn = "The Allele is Alternative forms of a gene occupying the same locus on homologous chromosomes.",        ),
         ),
         MedicalTermEntity(
@@ -1475,6 +1527,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˌvɛəriˈeɪʃən/",
+
+            exampleFr = "Exemple: Le Différences de caractères entre individus d'une même espèce.",
+
+            exampleAr = "مثال: يظهر اختلافات في الصفات بين أفراد نفس النوع.",
 
             exampleEn = "The Variation is Differences in characteristics between individuals of the same species.",        ),
         ),
@@ -1670,6 +1726,10 @@ object GenetiqueTerms {
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/beɪs pɛər/",
 
+            exampleFr = "Exemple: Le Deux bases azotées complémentaires unies par des liaisons hydrogène (A-T, G-C).",
+
+            exampleAr = "مثال: يظهر قاعدتان نيتروجينيتان متكاملتان مرتبطتان بروابط هيدروجينية (A-T، G-C).",
+
             exampleEn = "The Base pair is Two complementary nitrogenous bases joined by hydrogen bonds (A-T, G-C).",        ),
         ),
         MedicalTermEntity(
@@ -1683,6 +1743,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˌkɒmplɪˈmɛntəri/",
+
+            exampleFr = "Exemple: Le Règles d'appariement spécifiques: A avec T (ou U) et G avec C.",
+
+            exampleAr = "مثال: يظهر قواعد التزاوج المحددة: A مع T (أو U) وG مع C.",
 
             exampleEn = "The Complementary base pairing is specific pairing rules: A with T (or U) and G with C.",        ),
         ),
@@ -1805,6 +1869,10 @@ object GenetiqueTerms {
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈnjuːkliəsoʊm/",
 
+            exampleFr = "Exemple: Le Unité de base de la chromatine: ADN enroulé autour d'un octamère d'histones.",
+
+            exampleAr = "مثال: يظهر وحدة الأساسية للكروماتين: DNA ملتف حول ثمانية جزيئات هيستون.",
+
             exampleEn = "The Nucleosome is basic unit of chromatin: DNA wrapped around a histone octamer.",        ),
         ),
         MedicalTermEntity(
@@ -1864,6 +1932,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌsɛmiˈkɒnsərvətɪv/",
+
+            exampleFr = "Exemple: Le Chaque nouvelle molécule d'ADN contient un brin original et un nouveau brin.",
+
+            exampleAr = "مثال: يظهر كل جزيء DNA جديد يحتوي على شريط أصلي وشريط جديد.",
 
             exampleEn = "The Semi-conservative replication is Each new DNA molecule contains one original strand and one new strand.",        ),
         ),
@@ -1999,6 +2071,10 @@ object GenetiqueTerms {
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌoʊkəˈzɑːki/",
 
+            exampleFr = "Exemple: Le Courts segments d'ADN synthétisés sur le brin retardataire lors de la réplication.",
+
+            exampleAr = "مثال: يظهر شرائح DNA القصيرة المُصنَّعة على الشريط المتأخر أثناء التضاعف.",
+
             exampleEn = "The Okazaki fragment is Short DNA segments synthesized on the lagging strand during replication.",        ),
         ),
         MedicalTermEntity(
@@ -2042,6 +2118,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈtɛləmɪər/",
+
+            exampleFr = "Exemple: Le Séquences d'ADN répétitives aux extrémités des chromosomes les protégeant de la dégradation.",
+
+            exampleAr = "مثال: يظهر تسلسلات DNA المتكررة في أطراف الكروموسومات تحميها من التحلل.",
 
             exampleEn = "The Telomere is Repetitive DNA sequences at the ends of chromosomes protecting them from degradation.",        ),
         ),
@@ -2462,6 +2542,10 @@ object GenetiqueTerms {
             chapter = "Traduction",
             ipaPhonetic = "/stɒp ˈkoʊdɒn/",
 
+            exampleFr = "Exemple: Le Trois codons (UAA, UAG, UGA) signalant la fin de la traduction sans coder d'acide aminé.",
+
+            exampleAr = "مثال: يظهر ثلاثة كودونات (UAA، UAG، UGA) تُشير إلى نهاية الترجمة دون تشفير حمض أميني.",
+
             exampleEn = "The Stop codon is Three codons (UAA, UAG, UGA) signaling the end of translation without encoding amino acids.",        ),
         ),
         MedicalTermEntity(
@@ -2536,6 +2620,10 @@ object GenetiqueTerms {
             chapter = "Traduction",
             ipaPhonetic = "/ˈpɒlisoʊm/",
 
+            exampleFr = "Exemple: Le Plusieurs ribosomes traduisant simultanément la même molécule d'ARNm.",
+
+            exampleAr = "مثال: يظهر ريبوسومات متعددة تُترجِم جزيء mRNA نفسه في آن واحد.",
+
             exampleEn = "The Polysome (Polyribosome) is Multiple ribosomes simultaneously translating the same mRNA molecule.",        ),
         ),
         MedicalTermEntity(
@@ -2549,6 +2637,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˌpoʊst trænsˈleɪʃənəl/",
+
+            exampleFr = "Exemple: Le Modifications chimiques d'une protéine après la synthèse (glycosylation, phosphorylation, etc.).",
+
+            exampleAr = "مثال: يظهر تعديلات الكيميائية للبروتين بعد التصنيع (الغليكوزيل، الفسفرة...).",
 
             exampleEn = "The Post-translational modification is Chemical modifications of a protein after synthesis (glycosylation, phosphorylation, etc.).",        ),
         ),
@@ -2684,6 +2776,10 @@ object GenetiqueTerms {
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈmjuːtədʒɛn/",
 
+            exampleFr = "Exemple: Le Agent causant des mutations (physique: UV, rayons X; chimique: agents alkylants).",
+
+            exampleAr = "مثال: يظهر عامل يُسبِّب الطفرات (فيزيائي: أشعة UV؛ كيميائي: العوامل الألكيلية).",
+
             exampleEn = "The Mutagen is An agent causing mutations (physical: UV, X-rays; chemical: alkylating agents).",        ),
         ),
         MedicalTermEntity(
@@ -2727,6 +2823,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/rɪˈpɛər/",
+
+            exampleFr = "Exemple: Le Mécanismes cellulaires corrigeant les dommages ou erreurs dans la séquence d'ADN.",
+
+            exampleAr = "مثال: يظهر آليات الخلوية التي تُصحِّح الأضرار أو الأخطاء في تسلسل DNA.",
 
             exampleEn = "The DNA repair is Cellular mechanisms correcting damage or errors in the DNA sequence.",        ),
         ),
@@ -2787,6 +2887,10 @@ object GenetiqueTerms {
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/mɛnˈdiːliən/",
 
+            exampleFr = "Exemple: Le Génétique basée sur les principes d'hérédité de Gregor Mendel.",
+
+            exampleAr = "مثال: يظهر علم الوراثة المبني على مبادئ غريغور مندل في الوراثة.",
+
             exampleEn = "The Mendelian genetics is Genetics based on Gregor Mendel's principles of inheritance.",        ),
         ),
         MedicalTermEntity(
@@ -2800,6 +2904,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌsɛɡrɪˈɡeɪʃən/",
+
+            exampleFr = "Exemple: Le Première loi de Mendel: les paires d'allèles se séparent lors de la formation des gamètes.",
+
+            exampleAr = "مثال: يظهر قانون الأول لمندل: تنفصل أزواج الأليلات أثناء تكوين الأمشاج.",
 
             exampleEn = "The Law of segregation is Mendel's first law: allele pairs separate during gamete formation.",        ),
         ),
@@ -2815,6 +2923,10 @@ object GenetiqueTerms {
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt əˈsɔːrtmənt/",
 
+            exampleFr = "Exemple: Le Deuxième loi de Mendel: les gènes sur différents chromosomes s'assortiront indépendamment.",
+
+            exampleAr = "مثال: يظهر قانون الثاني لمندل: تتوزع الجينات على كروموسومات مختلفة بشكل مستقل.",
+
             exampleEn = "The Law of independent assortment is Mendel's second law: genes on different chromosomes assort independently.",        ),
         ),
         MedicalTermEntity(
@@ -2829,6 +2941,10 @@ object GenetiqueTerms {
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌmɒnoʊˈhaɪbrɪd/",
 
+            exampleFr = "Exemple: Le Croisement génétique impliquant un seul caractère avec un ratio phénotypique 3:1 en F2.",
+
+            exampleAr = "مثال: يظهر تهجين وراثي يتضمن صفة واحدة بنسبة ظاهرية 3:1 في الجيل الثاني.",
+
             exampleEn = "The Monohybrid cross is genetic cross involving a single trait with a 3:1 phenotypic ratio in F2.",        ),
         ),
         MedicalTermEntity(
@@ -2842,6 +2958,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌdaɪˈhaɪbrɪd/",
+
+            exampleFr = "Exemple: Le Croisement génétique impliquant deux caractères avec un ratio phénotypique 9:3:3:1 en F2.",
+
+            exampleAr = "مثال: يظهر تهجين وراثي يتضمن صفتين بنسبة ظاهرية 9:3:3:1 في الجيل الثاني.",
 
             exampleEn = "The Dihybrid cross is genetic cross involving two traits with a 9:3:3:1 phenotypic ratio in F2.",        ),
         ),
@@ -2902,6 +3022,10 @@ object GenetiqueTerms {
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/koʊˈdɒmɪnəns/",
             exampleEn = "The codominance is the pattern where both alleles are fully expressed in the heterozygote (e.g., AB blood type).",
+            exampleFr = "Exemple: Le Schéma où les deux allèles sont pleinement exprimés chez l'hétérozygote (ex: groupe sanguin AB).",
+
+            exampleAr = "مثال: يظهر نمط تُعبَّر فيه عن كلا الأليلين بالكامل عند غير المتماثل (مثل: فصيلة الدم AB).",
+
         ),
         MedicalTermEntity(
             id = 1729,
@@ -2944,6 +3068,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌpɒlɪˈdʒɛnɪk/",
+
+            exampleFr = "Exemple: Le Caractères contrôlés par plusieurs gènes montrant une gamme continue de phénotypes.",
+
+            exampleAr = "مثال: يظهر صفات تتحكم فيها جينات متعددة تُظهِر طيفاً متواصلاً من الطرز الظاهرية.",
 
             exampleEn = "The Polygenic inheritance is Traits controlled by multiple genes showing a continuous range of phenotypes.",        ),
         ),
@@ -3019,6 +3147,10 @@ object GenetiqueTerms {
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈɒpərɒn/",
             exampleEn = "The operon is the cluster of genes under the control of a single promoter (e.g., lac operon in bacteria).",
+            exampleFr = "Exemple: Le Groupe de gènes sous le contrôle d'un seul promoteur (ex: opéron lac chez les bactéries).",
+
+            exampleAr = "مثال: يظهر مجموعة من الجينات تحت سيطرة مُحرِّض واحد (مثل: أوبيرون lac في البكتيريا).",
+
         ),
         MedicalTermEntity(
             id = 1737,
@@ -3077,6 +3209,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈsɛntrəl ˈdɒɡmə/",
+
+            exampleFr = "Exemple: Le Principe fondamental: ADN → ARN → Protéine (flux d'information dans les cellules).",
+
+            exampleAr = "مثال: يظهر مبدأ الأساسي: DNA → RNA → بروتين (تدفق المعلومات في الخلايا).",
 
             exampleEn = "The Central dogma is fundamental principle: DNA → RNA → Protein (information flow in cells).",        ),
         ),
@@ -3138,6 +3274,10 @@ object GenetiqueTerms {
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈmaɪkroʊ/",
 
+            exampleFr = "Exemple: Le Petits ARN non codants (~22 nucléotides) régulant l'expression génique post-transcriptionnellement.",
+
+            exampleAr = "مثال: يظهر RNA صغيرة غير مُشفِّرة (~22 نيوكليوتيد) تُنظِّم التعبير الجيني بعد النسخ.",
+
             exampleEn = "The miRNA (MicroRNA) is Small non-coding RNAs (~22 nucleotides) regulating gene expression post-transcriptionally.",        ),
         ),
         MedicalTermEntity(
@@ -3151,6 +3291,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/smɔːl ˌɪntəˈfɪərɪŋ/",
+
+            exampleFr = "Exemple: Le Petites molécules d'ARN induisant le silençage génique en dégradant l'ARNm complémentaire.",
+
+            exampleAr = "مثال: يظهر جزيئات RNA صغيرة تُحفِّز إسكات الجينات بتحليل mRNA المتكامل.",
 
             exampleEn = "The siRNA (Small interfering RNA) is Small RNA molecules inducing gene silencing by degrading complementary mRNA.",        ),
         ),
@@ -3211,6 +3355,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/maɪˈtoʊsɪs/",
+
+            exampleFr = "Exemple: Le Division cellulaire produisant deux cellules filles génétiquement identiques.",
+
+            exampleAr = "مثال: يظهر انقسام الخلية المنتج لخليتين ابنتين متطابقتين وراثياً.",
 
             exampleEn = "The Mitosis is Cell division producing two genetically identical daughter cells.",        ),
         ),
@@ -3303,6 +3451,10 @@ object GenetiqueTerms {
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈkroʊmətɪd/",
 
+            exampleFr = "Exemple: Le des deux copies identiques d'un chromosome reliées au centromère après réplication de l'ADN.",
+
+            exampleAr = "مثال: يظهر إحدى نسختين متطابقتين من الكروموسوم مرتبطتان بالسنتروميير بعد تضاعف DNA.",
+
             exampleEn = "The Chromatid is One of two identical copies of a chromosome joined at the centromere after DNA replication.",        ),
         ),
         MedicalTermEntity(
@@ -3332,6 +3484,10 @@ object GenetiqueTerms {
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈdɪplɔɪd/",
 
+            exampleFr = "Exemple: Le Cellule ou organisme ayant deux ensembles complets de chromosomes (humains: 2n = 46).",
+
+            exampleAr = "مثال: يظهر خلية أو كائن حي لديه مجموعتان كاملتان من الكروموسومات (البشر: 2n = 46).",
+
             exampleEn = "The Diploid (2n) is cell or organism having two complete sets of chromosomes (humans: 2n = 46).",        ),
         ),
         MedicalTermEntity(
@@ -3345,6 +3501,10 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈhæplɔɪd/",
+
+            exampleFr = "Exemple: Le Cellule ou organisme ayant un seul ensemble complet de chromosomes (gamètes: n = 23).",
+
+            exampleAr = "مثال: يظهر خلية أو كائن حي لديه مجموعة واحدة كاملة من الكروموسومات (الأمشاج: n = 23).",
 
             exampleEn = "The Haploid (n) is cell or organism having one complete set of chromosomes (gametes: n = 23).",        ),
         ),
@@ -3420,6 +3580,10 @@ object GenetiqueTerms {
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈtrɪsəmi/",
             exampleEn = "The trisomy is the presence of three copies of a particular chromosome instead of two (e.g., trisomy 21).",
+            exampleFr = "Exemple: Le Présence de trois copies d'un chromosome particulier au lieu de deux (ex: trisomie 21).",
+
+            exampleAr = "مثال: يظهر وجود ثلاث نسخ من كروموسوم معين بدلاً من نسختين (مثل: تثلث الصبغي 21).",
+
         ),
         MedicalTermEntity(
             id = 1764,

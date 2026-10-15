@@ -36,6 +36,10 @@ object PharmacologieTerms {
             chapter = "Introduction",
             ipaPhonetic = "/drʌɡ/",
 
+            exampleFr = "Exemple: Le Toute substance chimique qui modifie la fonction physiologique lorsqu'elle est administrée à un organisme vivant.",
+
+            exampleAr = "مثال: يظهر أي مادة كيميائية تُغيِّر الوظيفة الفسيولوجية عند إعطائها لكائن حي.",
+
             exampleEn = "The Drug (Medication) is Any chemical substance that alters physiological function when administered to a living organism.",        ),
         ),
         MedicalTermEntity(
@@ -51,6 +55,10 @@ object PharmacologieTerms {
             chapter = "Introduction",
             ipaPhonetic = "/ˌfɑːrməkoʊkɪˈnɛtɪks/",
 
+            exampleFr = "Exemple: Le L'étude de ce que le corps fait au médicament: absorption, distribution, métabolisme et excrétion.",
+
+            exampleAr = "مثال: يظهر دراسة ما يفعله الجسم بالدواء: الامتصاص والتوزيع والاستقلاب والإطراح.",
+
             exampleEn = "The Pharmacokinetics is study of what the body does to a drug: absorption, distribution, metabolism, and excretion (ADME).",        ),
         ),
         MedicalTermEntity(
@@ -65,6 +73,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌfɑːrməkoʊdaɪˈnæmɪks/",
+
+            exampleFr = "Exemple: Le L'étude de ce que le médicament fait au corps: mécanismes d'action et effets.",
+
+            exampleAr = "مثال: يظهر دراسة ما يفعله الدواء بالجسم: آليات التأثير والتأثيرات.",
 
             exampleEn = "The Pharmacodynamics is study of what a drug does to the body: mechanisms of action and effects.",        ),
         ),
@@ -443,6 +455,10 @@ object PharmacologieTerms {
             chapter = "Pharmacocinétique",
             ipaPhonetic = "/ˈproʊdrʌɡ/",
             exampleEn = "The prodrug is the inactive drug that is metabolized in the body into its active form (e.g., codeine → morphine).",
+            exampleFr = "Exemple: Le Médicament inactif métabolisé dans le corps en forme active (ex: codéine → morphine).",
+
+            exampleAr = "مثال: يظهر دواء غير نشط يُستقلَب في الجسم إلى شكله النشط (مثل: الكودايين ← المورفين).",
+
         ),
         MedicalTermEntity(
             id = 2291,
@@ -471,6 +487,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacocinétique",
             ipaPhonetic = "/hɪˈpætɪk məˈtæbəlɪzəm/",
+
+            exampleFr = "Exemple: Le Biotransformation du médicament dans le foie via réactions de phase I (oxydation) et phase II (conjugaison).",
+
+            exampleAr = "مثال: يظهر تحول الحيوي للدواء في الكبد عبر تفاعلات الطور الأول (الأكسدة) والطور الثاني (الاقتران).",
 
             exampleEn = "The Hepatic metabolism is Drug biotransformation occurring in the liver via phase I (oxidation) and phase II (conjugation) reactions.",        ),
         ),
@@ -592,6 +612,10 @@ object PharmacologieTerms {
             chapter = "Pharmacodynamie",
             ipaPhonetic = "/kəmˈpɛtɪtɪv ænˈtæɡənɪzəm/",
 
+            exampleFr = "Exemple: Le Antagonisme réversible où l'antagoniste rivalise avec l'agoniste pour le même site de liaison.",
+
+            exampleAr = "مثال: يظهر تنافس القابل للعكس حيث يتنافس المضاد مع الناهض على نفس موقع الارتباط بالمستقبل.",
+
             exampleEn = "The Competitive antagonism is Reversible antagonism where the antagonist competes with the agonist for the same receptor binding site.",        ),
         ),
         MedicalTermEntity(
@@ -605,6 +629,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacodynamie",
             ipaPhonetic = "/nɒn kəmˈpɛtɪtɪv/",
+
+            exampleFr = "Exemple: Le Antagonisme où le médicament se lie de façon irréversible ou allostérique bloquant l'effet de l'agoniste.",
+
+            exampleAr = "مثال: يظهر تنافس يرتبط فيه الدواء بصورة لا رجعة فيها أو تفارقية مما يمنع تأثير الناهض.",
 
             exampleEn = "The Non-competitive antagonism is Antagonism where the drug binds irreversibly or allosterically blocking agonist effect regardless of dose.",        ),
         ),
@@ -971,6 +999,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌnjʊəroʊˈmʌskjʊlər/",
             exampleEn = "The neuromuscular blocking agent is the drug used in anesthesia to produce skeletal muscle relaxation (e.g., succinylcholine, rocuronium).",
             exampleFr = "L'agent bloquant neuromusculaire est médicament utilisé en anesthésie pour produire une relaxation des muscles squelettiques.",
+            exampleAr = "مثال: يظهر دواء يُستخدَم في التخدير لإحداث استرخاء العضلات الهيكلية (مثل: سوكسينيلكولين وروكورونيوم).",
+
         ),
         MedicalTermEntity(
             id = 2326,
@@ -1060,6 +1090,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˈθaɪəzaɪd/",
             exampleEn = "The thiazide diuretic is the diuretic inhibiting sodium reabsorption in the distal tubule (e.g., hydrochlorothiazide).",
+            exampleFr = "Exemple: Le Diurétique inhibant la réabsorption du sodium dans le tubule distal (ex: hydrochlorothiazide).",
+
+            exampleAr = "مثال: يظهر مدر بول يُثبِّط إعادة امتصاص الصوديوم في الأنبوب البعيد (مثل: هيدروكلوروثيازيد).",
+
         ),
         MedicalTermEntity(
             id = 2332,
@@ -1073,6 +1107,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/luːp ˌdaɪjʊˈrɛtɪk/",
             exampleEn = "The loop diuretic is the most potent diuretic acting on the loop of Henle (e.g., furosemide).",
+            exampleFr = "Exemple: Le diurétique le plus puissant agissant sur l'anse de Henlé (ex: furosémide).",
+
+            exampleAr = "مثال: يظهر أقوى مدر بول يعمل على عروة هنلي (مثل: الفوروسيميد).",
+
         ),
         MedicalTermEntity(
             id = 2333,
@@ -1086,6 +1124,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/pəˈtæsiəm ˈspɛərɪŋ ˌdaɪjʊˈrɛtɪk/",
             exampleEn = "The potassium-sparing diuretic is the diuretic that does not cause potassium loss (e.g., spironolactone, amiloride).",
+            exampleFr = "Exemple: Le Diurétique ne provoquant pas de perte de potassium (ex: spironolactone, amiloride).",
+
+            exampleAr = "مثال: يظهر مدر بول لا يسبب فقدان البوتاسيوم (مثل: سبيرونولاكتون وأميلوريد).",
+
         ),
         MedicalTermEntity(
             id = 2334,
@@ -1129,6 +1171,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˈstætɪn/",
             exampleEn = "The statin is the HMG-CoA reductase inhibitor reducing cholesterol synthesis in the liver (e.g., atorvastatin).",
+            exampleFr = "Exemple: Le Inhibiteur de l'HMG-CoA réductase réduisant la synthèse du cholestérol dans le foie (ex: atorvastatine).",
+
+            exampleAr = "مثال: يظهر مثبط لإنزيم HMG-CoA اختزال يُقلِّل تركيب الكوليسترول في الكبد (مثل: أتورفاستاتين).",
+
         ),
         MedicalTermEntity(
             id = 2337,
@@ -1187,6 +1233,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˌæntiˈpleɪtlɪt/",
             exampleEn = "The antiplatelet drug is the drug reducing platelet aggregation to prevent arterial thrombosis (e.g., aspirin, clopidogrel).",
+            exampleFr = "Exemple: Le Médicament réduisant l'agrégation plaquettaire pour prévenir la thrombose artérielle (ex: aspirine, clopidogrel).",
+
+            exampleAr = "مثال: يظهر دواء يُقلِّل تجمع الصفيحات لمنع التجلط الشرياني (مثل: الأسبرين والكلوبيدوجريل).",
+
         ),
         MedicalTermEntity(
             id = 2341,
@@ -1200,6 +1250,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˈnaɪtreɪt/",
             exampleEn = "The nitrate (vasodilator) is the drug releasing nitric oxide causing vasodilation; used for angina (e.g., nitroglycerin).",
+            exampleFr = "Exemple: Le Médicament libérant de l'oxyde nitrique causant vasodilatation; utilisé pour l'angine (ex: nitroglycérine).",
+
+            exampleAr = "مثال: يظهر دواء يُطلِق أكسيد النيتريك مسبباً توسع الأوعية؛ يُستخدَم للذبحة (مثل: النيتروجليسرين).",
+
         ),
         MedicalTermEntity(
             id = 2342,
@@ -1215,6 +1269,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/θrɒmboʊˈlɪtɪk/",
             exampleEn = "The thrombolytic (fibrinolytic) is the drug dissolving blood clots by activating plasminogen; used in acute MI and stroke (e.g., alteplase).",
             exampleFr = "La thrombolytique (fibrinolytique) est médicament dissolvant les caillots en activant le plasminogène; utilisé en IDM et AVC.",
+            exampleAr = "مثال: يظهر دواء يُذيب جلطات الدم بتنشيط البلازمينوجين؛ يُستخدَم في احتشاء القلب والسكتة (مثل: ألتيبلاز).",
+
         ),
         MedicalTermEntity(
             id = 2343,
@@ -1244,6 +1300,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌveɪzəˈprɛsər/",
             exampleEn = "The vasopressor is the drug causing vasoconstriction to increase blood pressure; used in shock (e.g., norepinephrine, vasopressin).",
             exampleFr = "La vasopresseur est médicament causant vasoconstriction pour augmenter la pression artérielle; utilisé dans le choc.",
+            exampleAr = "مثال: يظهر دواء يسبب تضيق الأوعية لرفع ضغط الدم؛ يُستخدَم في الصدمة (مثل: نورإبينفرين وفازوبريسين).",
+
         ),
         MedicalTermEntity(
             id = 2345,
@@ -1258,6 +1316,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈfaɪbreɪt/",
             exampleEn = "The fibrate is the lipid-lowering drug reducing triglycerides and raising HDL cholesterol (e.g., fenofibrate).",
             exampleFr = "La fibrate est médicament hypolipémiant réduisant les triglycérides et augmentant le cholestérol HDL.",
+            exampleAr = "مثال: يظهر دواء خافض للدهون يُقلِّل الدهون الثلاثية ويرفع الكوليسترول الجيد HDL (مثل: فينوفيبرات).",
+
         ),
         MedicalTermEntity(
             id = 2346,
@@ -1286,6 +1346,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌloʊkəl ˌænɪsˈθiːziə/",
 
+            exampleFr = "Exemple: Le Perte de sensation dans une zone corporelle spécifique obtenue en bloquant la conduction nerveuse.",
+
+            exampleAr = "مثال: يظهر فقدان الإحساس في منطقة محددة من الجسم بحجب توصيل العصب بالمخدر الموضعي.",
+
             exampleEn = "The Local anesthesia is Loss of sensation in a specific body area achieved by blocking nerve conduction with local anesthetics.",        ),
         ),
         MedicalTermEntity(
@@ -1300,6 +1364,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˈoʊpiɔɪd ˌænəlˈdʒiːzɪk/",
             exampleEn = "The opioid analgesic is the pain-relieving drug acting on opioid receptors (e.g., morphine, fentanyl, codeine).",
+            exampleFr = "Exemple: Le Médicament analgésique agissant sur les récepteurs opioïdes (ex: morphine, fentanyl, codéine).",
+
+            exampleAr = "مثال: يظهر دواء مسكن للألم يعمل على المستقبلات الأفيونية (مثل: المورفين والفنتانيل والكوديين).",
+
         ),
         MedicalTermEntity(
             id = 2349,
@@ -1345,6 +1413,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌbɛnzoʊˌdaɪˈæzɪpiːn/",
             exampleEn = "The benzodiazepine is the CNS depressant enhancing GABA activity; used for anxiety, insomnia, seizures (e.g., diazepam).",
             exampleAr = "البنزوديازيبين هو مثبط للجهاز العصبي المركزي يُعزِّز نشاط GABA؛ يُستخدَم للقلق والأرق والنوبات.",
+            exampleFr = "Exemple: Le Dépresseur du SNC amplifiant l'activité GABA; utilisé pour anxiété, insomnie, convulsions (ex: diazépam).",
+
         ),
         MedicalTermEntity(
             id = 2352,
@@ -1358,6 +1428,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌæntɪˌɛpɪˈlɛptɪk/",
             exampleEn = "The antiepileptic drug (aed) is the drug reducing the frequency and severity of seizures (e.g., phenytoin, valproate, carbamazepine).",
+            exampleFr = "Exemple: Le Médicament réduisant fréquence et gravité des crises (ex: phénytoïne, valproate, carbamazépine).",
+
+            exampleAr = "مثال: يظهر دواء يُقلِّل تكرار وشدة النوبات الصرعية (مثل: فينيتوين وفالبروات وكاربامازيبين).",
+
         ),
         MedicalTermEntity(
             id = 2353,
@@ -1386,6 +1460,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/sɛlɪktɪv ˌsɛrəˈtoʊnɪn ˈriːʌpteɪk ɪnˈhɪbɪtər/",
             exampleEn = "The ssri (selective serotonin reuptake inhibitor) is the most commonly prescribed antidepressant class; first-line for depression and anxiety (e.g., fluoxetine).",
+            exampleFr = "Exemple: Le classe d'antidépresseurs la plus prescrite; première intention pour dépression (ex: fluoxétine).",
+
+            exampleAr = "مثال: يظهر فئة الأكثر وصفاً من مضادات الاكتئاب؛ الخط الأول للاكتئاب والقلق (مثل: فلوكستين).",
+
         ),
         MedicalTermEntity(
             id = 2355,
@@ -1415,6 +1493,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈsɛdətɪv hɪpˈnɒtɪk/",
             exampleEn = "The sedative-hypnotic is the drug producing sedation at low doses and sleep at higher doses (e.g., benzodiazepines, barbiturates).",
             exampleFr = "La sédatif-hypnotique est médicament produisant sédation à faible dose et sommeil à dose plus élevée.",
+            exampleAr = "مثال: يظهر دواء يُنتِج التهدئة بجرعات منخفضة والنوم بجرعات أعلى (مثل: البنزوديازيبينات والباربيتورات).",
+
         ),
         MedicalTermEntity(
             id = 2357,
@@ -1429,6 +1509,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌpɑːrkɪnsən/",
             exampleEn = "The anti-parkinson drug is the drug used to treat Parkinson's disease by restoring dopamine balance (e.g., levodopa, carbidopa).",
             exampleFr = "Le médicament anti-parkinsonien est médicament pour traiter la maladie de Parkinson en rétablissant l'équilibre de la dopamine.",
+            exampleAr = "مثال: يظهر دواء يعالج مرض باركنسون باستعادة توازن الدوبامين (مثل: ليفودوبا وكاربيدوبا).",
+
         ),
         MedicalTermEntity(
             id = 2358,
@@ -1457,6 +1539,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/koʊlɪnˈɛstəreɪz ɪnˈhɪbɪtər/",
             exampleEn = "The cholinesterase inhibitor (dementia) is the drug treating Alzheimer's by increasing acetylcholine in the brain (e.g., donepezil).",
+            exampleFr = "Exemple: Le Médicament traitant l'Alzheimer en augmentant l'acétylcholine dans le cerveau (ex: donépézil).",
+
+            exampleAr = "مثال: يظهر دواء يعالج الزهايمر بزيادة الأستيل كولين في الدماغ (مثل: دونيبيزيل).",
+
         ),
         MedicalTermEntity(
             id = 2360,
@@ -1470,6 +1556,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/muːd ˈsteɪbɪlaɪzər/",
             exampleEn = "The mood stabilizer is the drug used to treat bipolar disorder (e.g., lithium, valproate, carbamazepine).",
+            exampleFr = "Exemple: Le Médicament utilisé pour traiter le trouble bipolaire (ex: lithium, valproate, carbamazépine).",
+
+            exampleAr = "مثال: يظهر دواء يُستخدَم لعلاج الاضطراب ثنائي القطب (مثل: الليثيوم والفالبروات والكاربامازيبين).",
+
         ),
         MedicalTermEntity(
             id = 2361,
@@ -1514,6 +1604,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈstɪmjʊlənt/",
             exampleEn = "The stimulant (cns) is the drug increasing alertness and attention by enhancing monoamine activity (e.g., amphetamine, methylphenidate).",
             exampleFr = "La stimulant (SNC) est médicament augmentant vigilance et attention en amplifiant l'activité des monoamines.",
+            exampleAr = "مثال: يظهر دواء يزيد اليقظة والانتباه بتعزيز نشاط الأحاديات الأمينية (مثل: الأمفيتامين والميثيلفينيدات).",
+
         ),
         MedicalTermEntity(
             id = 2364,
@@ -1527,6 +1619,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌæntiɪˈmɛtɪk/",
             exampleEn = "The antiemetic is the drug used to prevent or treat nausea and vomiting (e.g., ondansetron, metoclopramide).",
+            exampleFr = "Exemple: Le Médicament prévenant ou traitant nausées et vomissements (ex: ondansétron, métoclopramide).",
+
+            exampleAr = "مثال: يظهر دواء يُستخدَم لمنع الغثيان والقيء أو علاجهما (مثل: أوندانسيترون وميتوكلوبراميد).",
+
         ),
         MedicalTermEntity(
             id = 2365,
@@ -1540,6 +1636,10 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌæŋksiˈɒlɪtɪk/",
             exampleEn = "The anxiolytic is the drug reducing anxiety (e.g., benzodiazepines, buspirone, SSRIs).",
+            exampleFr = "Exemple: Le Médicament réduisant l'anxiété (ex: benzodiazépines, buspirone, ISRS).",
+
+            exampleAr = "مثال: يظهر دواء يُقلِّل القلق (مثل: البنزوديازيبينات وبوسبيرون ومثبطات إعادة امتصاص السيروتونين).",
+
         ),
         MedicalTermEntity(
             id = 2366,
@@ -1570,6 +1670,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˈmækrəlaɪd/",
             exampleEn = "The macrolide is the antibiotic inhibiting bacterial protein synthesis by binding to 50S ribosome (e.g., azithromycin).",
+            exampleFr = "Exemple: Le Antibiotique inhibant la synthèse protéique bactérienne en se liant au ribosome 50S (ex: azithromycine).",
+
+            exampleAr = "مثال: يظهر مضاد حيوي يُثبِّط تركيب البروتين البكتيري بالارتباط بالريبوسوم 50S (مثل: أزيثرومايسين).",
+
         ),
         MedicalTermEntity(
             id = 2368,
@@ -1583,6 +1687,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌflʊəroʊˈkwɪnəloʊn/",
             exampleEn = "The fluoroquinolone is the broad-spectrum antibiotic inhibiting DNA gyrase and topoisomerase IV (e.g., ciprofloxacin).",
+            exampleFr = "Exemple: Le Antibiotique à large spectre inhibant gyrase ADN et topo-isomérase IV (ex: ciprofloxacine).",
+
+            exampleAr = "مثال: يظهر مضاد حيوي واسع الطيف يُثبِّط الجيراز الحمضي النووي والتوبويزوميراز الرابع (مثل: سيبروفلوكساسين).",
+
         ),
         MedicalTermEntity(
             id = 2369,
@@ -1596,6 +1704,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/əˌmiːnoʊˈɡlaɪkəsaɪd/",
             exampleEn = "The aminoglycoside is the bactericidal antibiotic binding to 30S ribosome; used for Gram-negative infections (e.g., gentamicin).",
+            exampleFr = "Exemple: Le Antibiotique bactéricide se liant au ribosome 30S; utilisé pour infections Gram-négatives (ex: gentamicine).",
+
+            exampleAr = "مثال: يظهر مضاد حيوي قاتل للبكتيريا يرتبط بالريبوسوم 30S؛ يُستخدَم لعدوى سالبة الغرام (مثل: جنتاميسين).",
+
         ),
         MedicalTermEntity(
             id = 2370,
@@ -1624,6 +1736,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌmɛtrəˈnaɪdəzoʊl/",
             exampleEn = "The metronidazole is the antibiotic effective against anaerobes and protozoa (e.g., H. pylori, C. difficile, Giardia).",
+            exampleFr = "Exemple: Le Antibiotique efficace contre anaérobies et protozoaires (ex: H. pylori, C. difficile, Giardia).",
+
+            exampleAr = "مثال: يظهر مضاد حيوي فعال ضد اللاهوائيات والأوليات (مثل: الملوية البوابية والمطثية والجيارديا).",
+
         ),
         MedicalTermEntity(
             id = 2372,
@@ -1637,6 +1753,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˈæzoʊl/",
             exampleEn = "The antifungal azole is the antifungal drug inhibiting ergosterol synthesis (e.g., fluconazole, itraconazole).",
+            exampleFr = "Exemple: Le Antifongique inhibant la synthèse de l'ergostérol (ex: fluconazole, itraconazole).",
+
+            exampleAr = "مثال: يظهر دواء مضاد للفطريات يُثبِّط تركيب الإرغوستيرول (مثل: فلوكونازول وإيتراكونازول).",
+
         ),
         MedicalTermEntity(
             id = 2373,
@@ -1665,6 +1785,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌæntiˌrɛtrəˈvaɪrəl/",
             exampleEn = "The antiretroviral (arv) is the drug used to treat HIV infection by inhibiting viral replication (e.g., NRTI, NNRTI, PI).",
+            exampleFr = "Exemple: Le Médicament pour traiter l'infection VIH en inhibant la réplication virale (ex: INTI, INNTI, IP).",
+
+            exampleAr = "مثال: يظهر دواء يُستخدَم لعلاج عدوى HIV بتثبيط تكاثر الفيروس (مثل: مثبطات النسخ العكسي والبروتياز).",
+
         ),
         MedicalTermEntity(
             id = 2375,
@@ -1693,6 +1817,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌæntitjʊbɜːrkjʊˈloʊsɪs/",
+
+            exampleFr = "Exemple: Le Médicament utilisé en thérapie combinée pour la tuberculose (RIPE: Rifampicine, Isoniazide, Pyrazinamide).",
+
+            exampleAr = "مثال: يظهر دواء يُستخدَم في العلاج المشترك للسل (RIPE: ريفامبيسين وإيزونيازيد وبيرازيناميد وإيثامبوتول).",
 
             exampleEn = "The Antituberculosis drug is drug used in combination therapy for tuberculosis (RIPE: Rifampicin, Isoniazid, Pyrazinamide, Ethambutol).",        ),
         ),
@@ -1723,6 +1851,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌæntiməˈlɛəriəl/",
             exampleEn = "The antimalarial drug is the drug used to treat or prevent malaria (e.g., chloroquine, artemisinin, primaquine).",
+            exampleFr = "Exemple: Le Médicament pour traiter ou prévenir le paludisme (ex: chloroquine, artémisinine, primaquine).",
+
+            exampleAr = "مثال: يظهر دواء يُستخدَم لعلاج الملاريا أو الوقاية منها (مثل: كلوروكين وأرتيميزينين وبريماكين).",
+
         ),
         MedicalTermEntity(
             id = 2379,
@@ -1826,6 +1958,10 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌsʌsɛptɪˈbɪlɪti ˈtɛstɪŋ/",
 
+            exampleFr = "Exemple: Le Tests de laboratoire déterminant si un pathogène est sensible ou résistant à des antimicrobiens spécifiques.",
+
+            exampleAr = "مثال: يظهر اختبارات مختبرية تُحدِّد إذا كان العامل الممرض حساساً أو مقاوماً لعوامل مضادة للميكروبات محددة.",
+
             exampleEn = "The Drug susceptibility testing is Laboratory tests determining if a pathogen is sensitive or resistant to specific antimicrobial agents.",        ),
         ),
         MedicalTermEntity(
@@ -1916,6 +2052,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌkɔːrtɪkoʊˈstɪərɔɪd/",
             exampleEn = "The corticosteroid is the steroid hormone used as a potent anti-inflammatory and immunosuppressant (e.g., prednisone, dexamethasone).",
             exampleFr = "La corticostéroïde est hormone stéroïdienne utilisée comme puissant anti-inflammatoire et immunosuppresseur.",
+            exampleAr = "مثال: يظهر هرمون ستيروئيدي يُستخدَم كمضاد قوي للالتهاب وكابت للمناعة (مثل: بريدنيزون وديكساميثازون).",
+
         ),
         MedicalTermEntity(
             id = 2392,
@@ -1930,6 +2068,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/saɪkloʊˈɒksɪdʒɪneɪz tuː ɪnˈhɪbɪtər/",
             exampleEn = "The cox-2 inhibitor is the selective NSAID with fewer GI side effects; used for arthritis (e.g., celecoxib).",
             exampleAr = "مثبط COX-2 هو مضاد التهاب لاستيروئيدي انتقائي بآثار جانبية هضمية أقل؛ يُستخدَم للتهاب المفاصل.",
+            exampleFr = "Exemple: Le AINS sélectif avec moins d'effets secondaires gastro-intestinaux; utilisé pour arthrite (ex: célécoxib).",
+
         ),
         MedicalTermEntity(
             id = 2393,
@@ -1942,6 +2082,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ɡaʊt/",
+
+            exampleFr = "Exemple: Le Médicaments pour la goutte incluant colchicine (aigu), allopurinol (prophylaxie) et AINS.",
+
+            exampleAr = "مثال: يظهر أدوية النقرس تشمل الكولشيسين (الحاد) والألوبيورينول (الوقاية) ومضادات الالتهاب.",
 
             exampleEn = "The Gout treatment is Drugs for gout including colchicine (acute), allopurinol (prophylaxis), and NSAIDs.",        ),
         ),
@@ -1972,6 +2116,10 @@ object PharmacologieTerms {
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/dɪˈziːz ˈmɒdɪfaɪɪŋ ˌæntɪrʊˈmætɪk/",
             exampleEn = "The disease-modifying antirheumatic drug (dmard) is the drug slowing the progression of rheumatoid arthritis (e.g., methotrexate, hydroxychloroquine).",
+            exampleFr = "Exemple: Le Médicament ralentissant la progression de la polyarthrite rhumatoïde (ex: méthotrexate, hydroxychloroquine).",
+
+            exampleAr = "مثال: يظهر دواء يُبطِّئ تقدم التهاب المفاصل الروماتويدي (مثل: ميثوتريكسات وهيدروكسيكلوروكين).",
+
         ),
         MedicalTermEntity(
             id = 2396,
@@ -2015,6 +2163,10 @@ object PharmacologieTerms {
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ˌbaɪəˈlɒdʒɪkəl ˈθɛrəpi/",
 
+            exampleFr = "Exemple: Le Agents thérapeutiques d'origine biologique ciblant des voies immunitaires spécifiques (ex: inhibiteurs TNF).",
+
+            exampleAr = "مثال: يظهر عوامل علاجية مشتقة من مصادر بيولوجية تستهدف مسارات مناعية محددة (مثل: مثبطات TNF).",
+
             exampleEn = "The Biological therapy (biologics) is Therapeutic agents derived from biological sources targeting specific immune pathways (e.g., TNF inhibitors).",        ),
         ),
         MedicalTermEntity(
@@ -2028,6 +2180,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ˈoʊvərˌdoʊs ˈtrɛtmənt/",
+
+            exampleFr = "Exemple: Le N-acétylcystéine (NAC) est l'antidote à l'empoisonnement au paracétamol; réplenish glutathion.",
+
+            exampleAr = "مثال: يظهر N-أستيل سيستين (NAC) هو الترياق لتسمم الباراسيتامول؛ يُجدِّد الغلوتاثيون.",
 
             exampleEn = "The Paracetamol overdose treatment is N-acetylcysteine (NAC) is the antidote for paracetamol poisoning; replenishes glutathione.",        ),
         ),
@@ -2164,6 +2320,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Respiratoires",
             ipaPhonetic = "/ˌluːkəˈtraɪiːn rɪˈsɛptər ænˈtæɡənɪst/",
             exampleEn = "The leukotriene receptor antagonist is the drug blocking leukotriene receptors to prevent bronchoconstriction and inflammation (e.g., montelukast).",
+            exampleFr = "Exemple: Le Médicament bloquant les récepteurs leucotriènes pour prévenir bronchoconstriction (ex: montélukast).",
+
+            exampleAr = "مثال: يظهر دواء يحجب مستقبلات الليوكوترين لمنع تضيق القصبات والالتهاب (مثل: مونتيلوكاست).",
+
         ),
         MedicalTermEntity(
             id = 2409,
@@ -2267,6 +2427,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/ˈlæksətɪv/",
             exampleEn = "The laxative is the drug facilitating bowel movement; types include bulk-forming, osmotic, stimulant, and stool softeners.",
+            exampleFr = "Exemple: Le Médicament facilitant les selles; types: formant masse, osmotique, stimulant et émollient.",
+
+            exampleAr = "مثال: يظهر دواء يُسهِّل حركة الأمعاء؛ أنواعه: المُجسِّم والأسموزي والمُنشِّط ومُليِّن البراز.",
+
         ),
         MedicalTermEntity(
             id = 2416,
@@ -2280,6 +2444,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/ˌæntiˌdaɪəˈriːəl/",
             exampleEn = "The antidiarrheal is the drug reducing stool frequency and loose stool consistency (e.g., loperamide, bismuth subsalicylate).",
+            exampleFr = "Exemple: Le Médicament réduisant la fréquence et la liquidité des selles (ex: lopéramide, sous-salicylate de bismuth).",
+
+            exampleAr = "مثال: يظهر دواء يُقلِّل تكرار البراز وسيولته (مثل: لوبيراميد وبزموت ثنائي السلسيلات).",
+
         ),
         MedicalTermEntity(
             id = 2417,
@@ -2293,6 +2461,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/proʊkɪˈnɛtɪk/",
             exampleEn = "The prokinetic drug is the drug enhancing gastrointestinal motility (e.g., metoclopramide, domperidone) used for GERD and nausea.",
+            exampleFr = "Exemple: Le Médicament améliorant la motilité gastro-intestinale (ex: métoclopramide, dompéridone).",
+
+            exampleAr = "مثال: يظهر دواء يُعزِّز حركية الجهاز الهضمي (مثل: ميتوكلوبراميد وديمبيريدون) للارتجاع ومضادة الغثيان.",
+
         ),
         MedicalTermEntity(
             id = 2418,
@@ -2305,6 +2477,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/ˌɪnfləˈmɛtəri baʊəl dɪˈziːz/",
+
+            exampleFr = "Exemple: Le Médicaments pour Crohn et RCH incluant mésalazine, corticostéroïdes, immunosuppresseurs et biologiques.",
+
+            exampleAr = "مثال: يظهر أدوية لمرض كرون والتهاب القولون التقرحي تشمل الميزالازين والكورتيزون وكابتات المناعة.",
 
             exampleEn = "The Inflammatory bowel disease (IBD) drugs is Drugs for Crohn's and UC including mesalazine, corticosteroids, immunosuppressants, and biologics.",        ),
         ),
@@ -2395,6 +2571,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˌsʌlfənjʊˈɒljʊərɪə/",
             exampleEn = "The sulfonylurea is the oral antidiabetic stimulating insulin secretion from beta cells (e.g., glibenclamide, glipizide).",
+            exampleFr = "Exemple: Le Antidiabétique oral stimulant la sécrétion d'insuline par les cellules bêta (ex: glibenclamide).",
+
+            exampleAr = "مثال: يظهر دواء سكري فموي يُحفِّز إفراز الأنسولين من خلايا بيتا (مثل: غليبينكلاميد وغليبيزيد).",
+
         ),
         MedicalTermEntity(
             id = 2425,
@@ -2407,6 +2587,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˌliːvoʊˈθaɪrəksiːn/",
+
+            exampleFr = "Exemple: Le T4 synthétique utilisé comme thérapie de remplacement pour l'hypothyroïdie.",
+
+            exampleAr = "مثال: يظهر T4 صناعي يُستخدَم كعلاج بديل لقصور الغدة الدرقية.",
 
             exampleEn = "The Levothyroxine is Synthetic T4 used as replacement therapy for hypothyroidism.",        ),
         ),
@@ -2423,6 +2607,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌæntiˈθaɪrɔɪd/",
             exampleEn = "The antithyroid drug is the drug reducing thyroid hormone synthesis (e.g., propylthiouracil, carbimazole); used for hyperthyroidism.",
             exampleFr = "Le médicament antithyroïdien est médicament réduisant la synthèse des hormones thyroïdiennes; utilisé pour hyperthyroïdie.",
+            exampleAr = "مثال: يظهر دواء يُقلِّل تركيب هرمونات الغدة الدرقية (مثل: بروبيلثيوراسيل وكاربيمازول).",
+
         ),
         MedicalTermEntity(
             id = 2427,
@@ -2452,6 +2638,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˌɡluːkoʊˈkɔːrtɪkɔɪd/",
             exampleEn = "The glucocorticoid is the class of corticosteroids affecting glucose metabolism and inflammation (e.g., cortisol, prednisolone).",
+            exampleFr = "Exemple: Le Classe de corticostéroïdes affectant métabolisme du glucose et inflammation (ex: cortisol, prednisolone).",
+
+            exampleAr = "مثال: يظهر فئة من الكورتيكوستيروئيدات تؤثر في استقلاب الغلوكوز والالتهاب (مثل: الكورتيزول والبريدنيزولون).",
+
         ),
         MedicalTermEntity(
             id = 2429,
@@ -2466,6 +2656,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌbɪsˈfɒsfəneɪt/",
             exampleEn = "The bisphosphonate is the drug inhibiting osteoclast activity used to treat osteoporosis and bone metastases (e.g., alendronate).",
             exampleFr = "La bisphosphonate est médicament inhibant l'activité ostéoclastique pour ostéoporose et métastases osseuses.",
+            exampleAr = "مثال: يظهر دواء يُثبِّط نشاط ناقضات العظم يُستخدَم لعلاج هشاشة العظام وانتشارات العظم (مثل: ألندرونات).",
+
         ),
         MedicalTermEntity(
             id = 2430,
@@ -2480,6 +2672,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/dʒiː ɛl piː wʌn/",
             exampleEn = "The glp-1 receptor agonist is the antidiabetic drug mimicking GLP-1 to stimulate insulin secretion; also promotes weight loss (e.g., semaglutide).",
             exampleFr = "L'agoniste du récepteur GLP-1 est médicament antidiabétique mimant GLP-1 pour stimuler la sécrétion d'insuline; favorise perte de poids.",
+            exampleAr = "مثال: يظهر دواء سكري يُقلِّد GLP-1 لتحفيز إفراز الأنسولين؛ يُعزِّز أيضاً فقدان الوزن (مثل: سيماغلوتيد).",
+
         ),
         MedicalTermEntity(
             id = 2431,
@@ -2522,6 +2716,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˈhɔːrmoʊn rɪˈpleɪsmənt ˈθɛrəpi/",
+
+            exampleFr = "Exemple: Le Estrogène avec ou sans progestogène utilisé pour traiter les symptômes de la ménopause.",
+
+            exampleAr = "مثال: يظهر إستروجين مع البروجستوجين أو بدونه لعلاج أعراض انقطاع الطمث.",
 
             exampleEn = "The Hormone replacement therapy (HRT) is Estrogen with or without progestogen used to treat menopausal symptoms.",        ),
         ),
@@ -2598,6 +2796,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈælkɪleɪtɪŋ ˈeɪdʒənt/",
             exampleEn = "The alkylating agent is the chemotherapy drug forming covalent bonds with DNA preventing replication (e.g., cyclophosphamide).",
             exampleFr = "L'agent alkylant est médicament de chimiothérapie formant des liaisons covalentes avec l'ADN empêchant la réplication.",
+            exampleAr = "مثال: يظهر دواء كيميائي يُكوِّن روابط تساهمية مع DNA مانعاً التكاثر (مثل: سيكلوفوسفاميد).",
+
         ),
         MedicalTermEntity(
             id = 2439,
@@ -2611,6 +2811,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˌæntiməˈtæbəlaɪt/",
             exampleEn = "The antimetabolite (cancer) is the chemotherapy drug structurally similar to natural metabolites; inhibits DNA/RNA synthesis (e.g., 5-fluorouracil).",
+            exampleFr = "Exemple: Le Médicament structurellement similaire aux métabolites naturels; inhibe synthèse ADN/ARN (ex: 5-fluorouracile).",
+
+            exampleAr = "مثال: يظهر دواء كيميائي مشابه هيكلياً لمستقلبات طبيعية؛ يُثبِّط تركيب DNA/RNA (مثل: 5-فلورويوراسيل).",
+
         ),
         MedicalTermEntity(
             id = 2440,
@@ -2623,6 +2827,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˈtɑːrɡɪtɪd ˈθɛrəpi/",
+
+            exampleFr = "Exemple: Le Traitement du cancer avec médicaments ciblant spécifiquement les voies moléculaires des cellules cancéreuses.",
+
+            exampleAr = "مثال: يظهر علاج السرطان بأدوية تستهدف تحديداً المسارات الجزيئية لخلايا السرطان (مثل: إيماتينيب/غليفيك).",
 
             exampleEn = "The Targeted therapy is Cancer treatment using drugs that specifically target cancer cell molecular pathways (e.g., imatinib/Gleevec).",        ),
         ),
@@ -2639,6 +2847,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˌɪmjʊnoʊˈθɛrəpi/",
 
+            exampleFr = "Exemple: Le Traitement du cancer utilisant ou renforçant le système immunitaire contre les tumeurs.",
+
+            exampleAr = "مثال: يظهر علاج السرطان باستغلال الجهاز المناعي أو تعزيزه لمحاربة الأورام (مثل: مثبطات نقاط التفتيش).",
+
             exampleEn = "The Immunotherapy (cancer) is Cancer treatment harnessing or enhancing the immune system to fight tumors (e.g., checkpoint inhibitors).",        ),
         ),
         MedicalTermEntity(
@@ -2654,6 +2866,8 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌmɒnəˈkloʊnəl ˈæntɪbɒdi/",
             exampleEn = "The monoclonal antibody (therapeutic) is the laboratory-produced antibody targeting specific antigens on cancer or immune cells (e.g., trastuzumab).",
             exampleAr = "الجسم المضاد وحيد النسيلة هو جسم مضاد مُنتَج في المختبر يستهدف مستضدات محددة على الخلايا السرطانية أو المناعية.",
+            exampleFr = "Exemple: Le Anticorps produit en laboratoire ciblant des antigènes spécifiques sur cellules cancéreuses (ex: trastuzumab).",
+
         ),
         MedicalTermEntity(
             id = 2443,
@@ -2682,6 +2896,10 @@ object PharmacologieTerms {
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˈtækseɪn/",
             exampleEn = "The taxane is the anticancer drug stabilizing microtubules preventing mitosis (e.g., paclitaxel).",
+            exampleFr = "Exemple: Le Médicament anticancéreux stabilisant les microtubules empêchant la mitose (ex: paclitaxel).",
+
+            exampleAr = "مثال: يظهر دواء مضاد للسرطان يُثبِّت الأنيبيبات الدقيقة مانعاً الانقسام الخلوي (مثل: باكليتاكسيل).",
+
         ),
         MedicalTermEntity(
             id = 2445,
@@ -2754,6 +2972,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacologie Clinique et Toxicologie",
             ipaPhonetic = "/ˈtɒksɪsɪti/",
+
+            exampleFr = "Exemple: Le Effets nocifs causés par des doses excessives de médicaments ou leur accumulation dans le corps.",
+
+            exampleAr = "مثال: يظهر تأثيرات ضارة تسببها جرعات مفرطة من الدواء أو تراكمه في الجسم.",
 
             exampleEn = "The Drug toxicity is Harmful effects caused by excessive drug doses or accumulation in the body.",        ),
         ),
@@ -2936,6 +3158,10 @@ object PharmacologieTerms {
             chapter = "Pharmacologie Clinique et Toxicologie",
             ipaPhonetic = "/ˌnɛfroʊtɒkˈsɪsɪti/",
 
+            exampleFr = "Exemple: Le Lésion rénale causée par des médicaments (ex: aminoglycosides, AINS, amphotéricine B, cisplatine).",
+
+            exampleAr = "مثال: يظهر تلف الكلى الناجم عن الأدوية (مثل: الأمينوغليكوزيدات ومضادات الالتهاب والأمفوتيريسين والسيسبلاتين).",
+
             exampleEn = "The Nephrotoxicity is Kidney damage caused by drugs (e.g., aminoglycosides, NSAIDs, amphotericin B, cisplatin).",        ),
         ),
         MedicalTermEntity(
@@ -2950,6 +3176,10 @@ object PharmacologieTerms {
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ruːt əv ədˌmɪnɪˈstreɪʃən/",
             exampleEn = "The route of administration is the path by which a drug is taken into the body (e.g., oral, IV, IM, subcutaneous, topical).",
+            exampleFr = "Exemple: Le chemin par lequel un médicament est introduit dans le corps (ex: oral, IV, IM, SC, topique).",
+
+            exampleAr = "مثال: يظهر مسار الذي يدخل منه الدواء إلى الجسم (مثل: فموي ووريدي وعضلي وتحت جلدي وموضعي).",
+
         ),
         MedicalTermEntity(
             id = 2463,
@@ -2962,6 +3192,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈviːnəs/",
+
+            exampleFr = "Exemple: Le Administration d'un médicament directement dans une veine; début d'action le plus rapide, biodisponibilité 100%.",
+
+            exampleAr = "مثال: يظهر إعطاء الدواء مباشرةً في الوريد؛ يوفر أسرع بداية تأثير و100% توافر حيوي.",
 
             exampleEn = "The Intravenous (IV) injection is Drug administration directly into a vein; provides fastest onset and 100% bioavailability.",        ),
         ),
@@ -2977,6 +3211,10 @@ object PharmacologieTerms {
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈmʌskjʊlər/",
 
+            exampleFr = "Exemple: Le Injection de médicament dans le tissu musculaire; absorption plus lente qu'IV mais plus rapide que SC.",
+
+            exampleAr = "مثال: يظهر حقن الدواء في نسيج العضلة مع امتصاص أبطأ من الوريدي لكن أسرع من تحت الجلدي.",
+
             exampleEn = "The Intramuscular (IM) injection is Drug injection into muscle tissue providing slower absorption than IV but faster than subcutaneous.",        ),
         ),
         MedicalTermEntity(
@@ -2991,6 +3229,10 @@ object PharmacologieTerms {
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌsʌbkjuːˈteɪniəs/",
 
+            exampleFr = "Exemple: Le Injection de médicament dans la couche de graisse sous-cutanée; utilisé pour insuline, héparine.",
+
+            exampleAr = "مثال: يظهر حقن الدواء في طبقة الدهن تحت الجلد؛ يُستخدَم للأنسولين والهيبارين.",
+
             exampleEn = "The Subcutaneous (SC) injection is Drug injection into the subcutaneous fat layer; used for insulin, heparin.",        ),
         ),
         MedicalTermEntity(
@@ -3004,6 +3246,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌsʌblɪŋˈɡwəl/",
+
+            exampleFr = "Exemple: Le Administration sous la langue pour absorption rapide contournant l'effet de premier passage.",
+
+            exampleAr = "مثال: يظهر إعطاء الدواء تحت اللسان للامتصاص السريع متجاوزاً تأثير المرور الأول (مثل: النيتروجليسرين).",
 
             exampleEn = "The Sublingual (SL) route is Drug administration under the tongue for rapid absorption bypassing first-pass effect (e.g., nitroglycerin).",        ),
         ),
@@ -3033,6 +3279,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ɪnˈheɪld drʌɡ dɪˈlɪvəri/",
+
+            exampleFr = "Exemple: Le Administration du médicament directement aux poumons via inhalateurs; pour asthme et BPCO.",
+
+            exampleAr = "مثال: يظهر توصيل الدواء مباشرةً إلى الرئتين عبر البخاخات؛ يُستخدَم للربو والانسداد الرئوي المزمن.",
 
             exampleEn = "The Inhaled drug delivery is Drug delivery directly to the lungs via inhalers; used for asthma and COPD.",        ),
         ),
@@ -3077,6 +3327,10 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈθiːkəl/",
+
+            exampleFr = "Exemple: Le Injection dans l'espace sous-arachnoïdien; contourne la BHE pour délivrance de médicament au SNC.",
+
+            exampleAr = "مثال: يظهر حقن الدواء في الفضاء تحت العنكبوتية؛ يتجاوز الحاجز الدموي الدماغي لتوصيل الدواء للجهاز العصبي.",
 
             exampleEn = "The Intrathecal injection is Drug injection into the subarachnoid space; bypasses BBB for CNS drug delivery.",        ),
         ),

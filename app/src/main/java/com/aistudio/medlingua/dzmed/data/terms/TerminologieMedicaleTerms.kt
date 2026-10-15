@@ -502,6 +502,10 @@ object TerminologieMedicaleTerms {
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/fəˈlɪkjʊlər feɪz/",
 
+            exampleFr = "Exemple: Le Jours 1–14 du cycle: croissance folliculaire et production d'estrogènes sous stimulation de la FSH.",
+
+            exampleAr = "مثال: يظهر أيام 1-14 من الدورة: نمو الجريب وإنتاج الإستروجين تحت تحفيز FSH.",
+
             exampleEn = "The Follicular phase is Days 1–14 of the cycle: follicle growth and estrogen production under FSH stimulation.",        ),
         ),
         MedicalTermEntity(
@@ -515,6 +519,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈluːtiəl feɪz/",
+
+            exampleFr = "Exemple: Le Jours 15–28 du cycle: le corps jaune produit de la progestérone pour préparer l'endomètre.",
+
+            exampleAr = "مثال: يظهر أيام 15-28 من الدورة: الجسم الأصفر ينتج البروجستيرون لتهيئة بطانة الرحم.",
 
             exampleEn = "The Luteal phase is Days 15–28 of the cycle: corpus luteum produces progesterone to prepare the endometrium.",        ),
         ),
@@ -634,6 +642,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈɛstrədʒən/",
+
+            exampleFr = "Exemple: Le Hormone sexuelle féminine produite par les follicules ovariens favorisant la prolifération endométriale.",
+
+            exampleAr = "مثال: يظهر هرمون الجنس الأنثوي تنتجه الجريبات المبيضية ويعزز تكاثر بطانة الرحم والصفات الجنسية الثانوية.",
 
             exampleEn = "The Estrogen is Female sex hormone produced by ovarian follicles promoting endometrial proliferation and secondary sex characteristics.",        ),
         ),
@@ -844,6 +856,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈblæstəmɪər/",
+
+            exampleFr = "Exemple: Le L'une des cellules produites par le clivage du zygote lors du développement embryonnaire précoce.",
+
+            exampleAr = "مثال: يظهر إحدى الخلايا المنتجة من انقسام اللاقحة في التطور الجنيني المبكر.",
 
             exampleEn = "The Blastomere is One of the cells produced by cleavage of the zygote during early embryonic development.",        ),
         ),
@@ -1131,6 +1147,10 @@ object TerminologieMedicaleTerms {
             chapter = "Gastrulation",
             ipaPhonetic = "/dʒɜːrm ˈleɪər/",
 
+            exampleFr = "Exemple: Le L'un des trois feuillets cellulaires primaires (ectoderme, mésoderme, endoderme) formés lors de la gastrulation.",
+
+            exampleAr = "مثال: يظهر إحدى الطبقات الخلوية الثلاث الأولية (الأديم الظاهر والمتوسط والباطن) المتكونة أثناء التمعد.",
+
             exampleEn = "The Germ layer is One of the three primary cell layers (ectoderm, mesoderm, endoderm) formed during gastrulation.",        ),
         ),
         MedicalTermEntity(
@@ -1265,6 +1285,10 @@ object TerminologieMedicaleTerms {
             chapter = "Gastrulation",
             ipaPhonetic = "/pærˈæksɪəl/",
 
+            exampleFr = "Exemple: Le Mésoderme flanquant la notochorde formant les somites, donnant naissance aux vertèbres, muscles et derme.",
+
+            exampleAr = "مثال: يظهر أديم المتوسط المجاور للحبل الظهري الذي يشكل القطيعات وينشأ منه الفقرات والعضلات والأدمة.",
+
             exampleEn = "The Paraxial mesoderm is Mesoderm flanking the notochord that forms somites, giving rise to vertebrae, muscles, and dermis.",        ),
         ),
         MedicalTermEntity(
@@ -1384,6 +1408,10 @@ object TerminologieMedicaleTerms {
             chapter = "Neurulation",
             ipaPhonetic = "/ˈnjʊərəl krɛst/",
 
+            exampleFr = "Exemple: Le Cellules migratoires multipotentes issues du tube neural dorsal avec de multiples dérivés dans tout le corps.",
+
+            exampleAr = "مثال: يظهر خلايا مهاجرة متعددة القدرات تنشأ من الأنبوب العصبي الظهري لها مشتقات متعددة في الجسم.",
+
             exampleEn = "The Neural crest cells is Multipotent migratory cells arising from the dorsal neural tube with multiple derivatives throughout the body.",        ),
         ),
         MedicalTermEntity(
@@ -1427,6 +1455,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈbraɪn ˈvɛsɪkəlz/",
+
+            exampleFr = "Exemple: Le Trois expansions du tube neural: prosencéphale, mésencéphale et rhombencéphale.",
+
+            exampleAr = "مثال: يظهر ثلاثة تمددات للأنبوب العصبي: الدماغ الأمامي والمتوسط والمؤخري.",
 
             exampleEn = "The Primary brain vesicles is Three expansions of the neural tube: prosencephalon, mesencephalon, and rhombencephalon.",        ),
         ),
@@ -1549,6 +1581,10 @@ object TerminologieMedicaleTerms {
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl ɑːrtʃɪz/",
 
+            exampleFr = "Exemple: Le Structures mésodermiques et de la crête neurale bilatérales dans la tête/cou formant les structures faciales et cervicales.",
+
+            exampleAr = "مثال: يظهر تركيبات ثنائية الجانب من الأديم المتوسط وخلايا القمة العصبية في منطقة الرأس والرقبة تكوّن بنى الوجه والرقبة.",
+
             exampleEn = "The Pharyngeal arches is Bilateral mesodermal and neural crest structures in the head/neck region forming facial and neck structures.",        ),
         ),
         MedicalTermEntity(
@@ -1564,6 +1600,10 @@ object TerminologieMedicaleTerms {
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl klɛft/",
 
+            exampleFr = "Exemple: Le Sillons ectodermiques entre les arcs pharyngiens; le premier forme le méat auditif externe.",
+
+            exampleAr = "مثال: يظهر أخاديد أديم ظاهر بين الأقواس البلعومية؛ الأول يكوّن الصماخ السمعي الخارجي.",
+
             exampleEn = "The Pharyngeal cleft is Ectodermal grooves between pharyngeal arches; first forms the external auditory meatus.",        ),
         ),
         MedicalTermEntity(
@@ -1578,6 +1618,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl paʊtʃ/",
+
+            exampleFr = "Exemple: Le Evaginations endodermiques entre les arcs pharyngiens formant cavité tympanique, tonsile, parathyroïde, thymus.",
+
+            exampleAr = "مثال: يظهر نتوءات من الأديم الباطن بين الأقواس البلعومية تكوّن تجويف الطبل واللوزة والغدة الجار درقية والتيموس.",
 
             exampleEn = "The Pharyngeal pouch is Endodermal outpouchings between pharyngeal arches; form tympanic cavity, palatine tonsil, parathyroid, thymus.",        ),
         ),
@@ -1686,6 +1730,10 @@ object TerminologieMedicaleTerms {
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈfiːtəl ˌsɜːrkjʊˈleɪʃən/",
 
+            exampleFr = "Exemple: Le schéma de circulation sanguine chez le fœtus avec trois shunts: canal veineux, foramen ovale, canal artériel.",
+
+            exampleAr = "مثال: يظهر نمط الدورة الدموية عند الجنين بثلاث تحويلات: القناة الوريدية والثقبة البيضوية والقناة الشريانية.",
+
             exampleEn = "The Fetal circulation is pattern of blood circulation in the fetus with three shunts: ductus venosus, foramen ovale, ductus arteriosus.",        ),
         ),
         MedicalTermEntity(
@@ -1699,6 +1747,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/eɪˈɔːrtɪk ɑːrtʃɪz/",
+
+            exampleFr = "Exemple: Le Six paires d'arcs artériels associés aux arcs pharyngiens formant les grandes artères de la tête et du cou.",
+
+            exampleAr = "مثال: يظهر ستة أزواج من الأقواس الشريانية المرتبطة بالأقواس البلعومية تكوّن الشرايين الرئيسية للرأس والرقبة.",
 
             exampleEn = "The Aortic arches is Six pairs of arterial arches associated with pharyngeal arches forming major arteries of head and neck.",        ),
         ),
@@ -1729,6 +1781,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/tɛˈtrælədʒi əv fəˈloʊ/",
+
+            exampleFr = "Exemple: Le Malformation cardiaque congénitale avec quatre anomalies: CIV, sténose pulmonaire, aorte à cheval, hypertrophie VD.",
+
+            exampleAr = "مثال: يظهر عيب قلبي خلقي بأربعة شذوذات: عيب الحاجز البطيني وتضيق رئوي وأبهر راكب وتضخم بطين أيمن.",
 
             exampleEn = "The Tetralogy of Fallot is congenital heart defect with four abnormalities: VSD, pulmonary stenosis, overriding aorta, RV hypertrophy.",        ),
         ),
@@ -1849,6 +1905,10 @@ object TerminologieMedicaleTerms {
             chapter = "Placenta",
             ipaPhonetic = "/kɔːrˈɪɒnɪk ˈvɪlaɪ/",
 
+            exampleFr = "Exemple: Le Projections en doigt du tissu chorial dans les sinusoïdes sanguins maternels; site d'échange materno-fœtal.",
+
+            exampleAr = "مثال: يظهر نتوءات إصبعية من نسيج المشيماء في الجيوب الدموية الأمومية؛ موقع التبادل الأمومي الجنيني.",
+
             exampleEn = "The Chorionic villi is Finger-like projections of chorionic tissue into maternal blood sinusoids; site of maternofetal exchange.",        ),
         ),
         MedicalTermEntity(
@@ -1863,6 +1923,10 @@ object TerminologieMedicaleTerms {
             chapter = "Placenta",
             ipaPhonetic = "/ˌɒlɪɡoʊhaɪˈdræmniɒs/",
 
+            exampleFr = "Exemple: Le Volume anormalement faible de liquide amniotique souvent associé à une agénésie rénale (séquence de Potter).",
+
+            exampleAr = "مثال: يظهر حجم منخفض غير طبيعي للسائل الأمنيوسي مرتبط غالباً بانعدام الكلى (تسلسل بوتر).",
+
             exampleEn = "The Oligohydramnios is Abnormally low amniotic fluid volume often associated with renal agenesis (Potter sequence).",        ),
         ),
         MedicalTermEntity(
@@ -1876,6 +1940,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ˌpɒlihaɪˈdræmniɒs/",
+
+            exampleFr = "Exemple: Le Excès de liquide amniotique souvent associé à des troubles de déglutition fœtale (atrésie œsophagienne, anencéphalie).",
+
+            exampleAr = "مثال: يظهر زيادة السائل الأمنيوسي مرتبطة غالباً باضطرابات البلع الجنيني (انسداد المريء، انعدام الدماغ).",
 
             exampleEn = "The Polyhydramnios is Excess amniotic fluid often associated with fetal swallowing disorders (esophageal atresia, anencephaly).",        ),
         ),
@@ -1995,6 +2063,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/əˈmiːliə/",
+
+            exampleFr = "Exemple: Le Absence complète d'un ou plusieurs membres due à l'échec du développement du bourgeon de membre.",
+
+            exampleAr = "مثال: يظهر غياب التام لطرف واحد أو أكثر بسبب فشل تطور برعم الطرف.",
 
             exampleEn = "The Amelia is Complete absence of one or more limbs due to failure of limb bud development.",        ),
         ),
@@ -2176,6 +2248,10 @@ object TerminologieMedicaleTerms {
             chapter = "Développement Urogénital",
             ipaPhonetic = "/krɪpˈtɔːrkɪdɪzəm/",
 
+            exampleFr = "Exemple: Le Échec d'un ou des deux testicules à descendre dans le scrotum à la naissance.",
+
+            exampleAr = "مثال: يظهر فشل خصية واحدة أو كلتيهما في النزول إلى كيس الصفن عند الولادة.",
+
             exampleEn = "The Cryptorchidism is Failure of one or both testes to descend into the scrotal sac by birth.",        ),
         ),
         MedicalTermEntity(
@@ -2312,6 +2388,10 @@ object TerminologieMedicaleTerms {
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˈhɪrʃsprʌŋ dɪˈziːz/",
 
+            exampleFr = "Exemple: Le Mégacôlon aganglionnaire congénital dû à l'échec des cellules de la crête neurale à migrer vers l'intestin distal.",
+
+            exampleAr = "مثال: يظهر توسع القولون الخلقي بغياب العقد العصبية بسبب فشل خلايا القمة العصبية في الهجرة للأمعاء البعيدة.",
+
             exampleEn = "The Hirschsprung disease is Congenital aganglionic megacolon due to failure of neural crest cells to migrate to the distal bowel.",        ),
         ),
         MedicalTermEntity(
@@ -2400,6 +2480,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/ˈpælɪtəl ʃɛlvz/",
+
+            exampleFr = "Exemple: Le Excroissances horizontales bilatérales des processus maxillaires qui fusionnent pour former le palais secondaire.",
+
+            exampleAr = "مثال: يظهر نتوءات أفقية ثنائية الجانب من البروزين الفكيين العلويين تندمج لتكوين الحنك الثانوي (الأسبوع 7-12).",
 
             exampleEn = "The Palatal shelves is Bilateral horizontal outgrowths of the maxillary prominences that fuse to form the secondary palate (Week 7-12).",        ),
         ),
@@ -2493,6 +2577,10 @@ object TerminologieMedicaleTerms {
             chapter = "Tératologie",
             ipaPhonetic = "/eɪˈdʒɛnɪsɪs/",
 
+            exampleFr = "Exemple: Le Absence complète d'un organe due à l'échec de la formation du primordium.",
+
+            exampleAr = "مثال: يظهر غياب التام لعضو بسبب فشل تكوين بداءته.",
+
             exampleEn = "The Agenesis is Complete absence of an organ due to failure of primordium formation.",        ),
         ),
         MedicalTermEntity(
@@ -2507,6 +2595,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/eɪˈpleɪziə/",
+
+            exampleFr = "Exemple: Le Échec du développement d'un organe malgré la présence du primordium.",
+
+            exampleAr = "مثال: يظهر فشل العضو في التطور رغم وجود البداءة.",
 
             exampleEn = "The Aplasia is Failure of an organ to develop despite the presence of the primordium.",        ),
         ),
@@ -2523,6 +2615,10 @@ object TerminologieMedicaleTerms {
             chapter = "Tératologie",
             ipaPhonetic = "/ˌhaɪpəˈpleɪziə/",
 
+            exampleFr = "Exemple: Le Développement incomplet d'un organe entraînant une taille réduite.",
+
+            exampleAr = "مثال: يظهر تطور غير الكامل لعضو مما يؤدي إلى حجم مصغر.",
+
             exampleEn = "The Hypoplasia is Incomplete development of an organ resulting in reduced size.",        ),
         ),
         MedicalTermEntity(
@@ -2536,6 +2632,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/əˈtriːziə/",
+
+            exampleFr = "Exemple: Le Absence ou fermeture congénitale d'un orifice corporel normal ou d'une structure tubulaire.",
+
+            exampleAr = "مثال: يظهر غياب أو الانغلاق الخلقي لفتحة الجسم الطبيعية أو تركيب أنبوبي.",
 
             exampleEn = "The Atresia is Congenital absence or closure of a normal body orifice or tubular structure.",        ),
         ),
@@ -2551,6 +2651,10 @@ object TerminologieMedicaleTerms {
             chapter = "Tératologie",
             ipaPhonetic = "/ɛkˈtoʊpiə/",
 
+            exampleFr = "Exemple: Le Déplacement d'un organe vers un emplacement anormal (ex: rein ectopique).",
+
+            exampleAr = "مثال: يظهر انتقال عضو إلى موضع غير طبيعي (مثل: الكلية المنتبذة).",
+
             exampleEn = "The Ectopia is Displacement of an organ to an abnormal location (e.g., ectopic kidney).",        ),
         ),
         MedicalTermEntity(
@@ -2565,6 +2669,10 @@ object TerminologieMedicaleTerms {
             chapter = "Tératologie",
             ipaPhonetic = "/ˈfiːtəl ˈælkəhɒl ˈsɪndroʊm/",
 
+            exampleFr = "Exemple: Le schéma tératogène dû à l'alcool maternel: retard de croissance, anomalies faciales et dysfonction du SNC.",
+
+            exampleAr = "مثال: يظهر نمط مشوِّه ناتج عن تناول الكحول من قبل الأم: تأخر نمو وشذوذات وجهية وخلل في الجهاز العصبي المركزي.",
+
             exampleEn = "The Fetal alcohol syndrome is teratogenic pattern from maternal alcohol use: growth retardation, facial abnormalities, and CNS dysfunction.",        ),
         ),
         MedicalTermEntity(
@@ -2578,6 +2686,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ruːˈbɛlə/",
+
+            exampleFr = "Exemple: Le Tératogène viral causant le syndrome de rubéole congénitale: surdité, cataractes, cardiopathie si au 1er trimestre.",
+
+            exampleAr = "مثال: يظهر مشوِّه فيروسي يسبب متلازمة الحصبة الألمانية الخلقية: صمم وساد وأمراض القلب إذا أصابت الأمهم في الثلث الأول.",
 
             exampleEn = "The Rubella (German measles) is viral teratogen causing congenital rubella syndrome: deafness, cataracts, congenital heart disease if in 1st trimester.",        ),
         ),
@@ -2684,6 +2796,10 @@ object TerminologieMedicaleTerms {
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˌsjuːdoʊˈɡlændʒʊlər/",
 
+            exampleFr = "Exemple: Le Stade du développement pulmonaire (Semaine 5-17): les voies respiratoires se forment sans alvéoles; non viable pour la respiration.",
+
+            exampleAr = "مثال: يظهر مرحلة تطور الرئة (الأسبوع 5-17): تتشكل المسالك الهوائية دون حويصلات هوائية؛ غير قابلة للحياة.",
+
             exampleEn = "The Pseudoglandular stage is Lung development stage (Week 5-17): airways form but no alveoli; not viable for breathing.",        ),
         ),
         MedicalTermEntity(
@@ -2697,6 +2813,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/kəˈnæljʊlər/",
+
+            exampleFr = "Exemple: Le Stade pulmonaire (Semaine 16-26): formation des bronchioles respiratoires et des conduits alvéolaires; début de la production de surfactant.",
+
+            exampleAr = "مثال: يظهر مرحلة الرئة (الأسبوع 16-26): تتشكل البرونخيولات التنفسية والقنوات السنخية ويبدأ إنتاج السرفاكتانت.",
 
             exampleEn = "The Canalicular stage is Lung stage (Week 16-26): respiratory bronchioles and alveolar ducts form; surfactant production begins.",        ),
         ),
@@ -2712,6 +2832,10 @@ object TerminologieMedicaleTerms {
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˈsækjʊlər/",
 
+            exampleFr = "Exemple: Le Stade pulmonaire (Semaine 24-38): formation des sacs terminaux avec parois minces et bonne vascularisation.",
+
+            exampleAr = "مثال: يظهر مرحلة الرئة (الأسبوع 24-38): تتشكل الأكياس الطرفية بجدران رقيقة وأوعية دموية جيدة.",
+
             exampleEn = "The Saccular stage is Lung stage (Week 24-38): terminal sacs form with thin walls and good vascularization.",        ),
         ),
         MedicalTermEntity(
@@ -2725,6 +2849,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ælˈviːələr/",
+
+            exampleFr = "Exemple: Le Stade pulmonaire (Semaine 36 à 8 ans postnatal): les vrais alvéoles se multiplient augmentant la surface d'échange respiratoire.",
+
+            exampleAr = "مثال: يظهر مرحلة الرئة (الأسبوع 36 حتى 8 سنوات بعد الولادة): تتكاثر الحويصلات الهوائية الحقيقية مما يزيد مساحة التبادل التنفسي.",
 
             exampleEn = "The Alveolar stage is Lung stage (Week 36 to 8 years postnatal): true alveoli multiply increasing respiratory surface area.",        ),
         ),
@@ -2785,6 +2913,10 @@ object TerminologieMedicaleTerms {
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/kənˈdʒɛnɪtəl ˌdaɪəfræɡˈmætɪk ˈhɜːrniə/",
 
+            exampleFr = "Exemple: Le Hernie des organes abdominaux dans le thorax due à un défect du diaphragme; cause une hypoplasie pulmonaire.",
+
+            exampleAr = "مثال: يظهر فتق أعضاء البطن في الصدر بسبب عيب في الحجاب الحاجز مما يسبب نقص تنسج الرئة.",
+
             exampleEn = "The Congenital diaphragmatic hernia (CDH) is Herniation of abdominal organs into the thorax due to diaphragmatic defect; causes pulmonary hypoplasia.",        ),
         ),
         MedicalTermEntity(
@@ -2844,6 +2976,10 @@ object TerminologieMedicaleTerms {
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈtraɪmɛstər/",
 
+            exampleFr = "Exemple: Le L'une des trois divisions égales de la grossesse (1er: sem 1-12, 2e: sem 13-27, 3e: sem 28-40).",
+
+            exampleAr = "مثال: يظهر إحدى الأثلاث المتساوية الثلاثة للحمل (الأول: أسبوع 1-12، الثاني: 13-27، الثالث: 28-40).",
+
             exampleEn = "The Trimester is One of three equal divisions of pregnancy (1st: wk 1-12, 2nd: wk 13-27, 3rd: wk 28-40).",        ),
         ),
         MedicalTermEntity(
@@ -2889,6 +3025,10 @@ object TerminologieMedicaleTerms {
             chapter = "Termes Cliniques",
             ipaPhonetic = "/prɪˈmætʃʊər bɜːrθ/",
 
+            exampleFr = "Exemple: Le Naissance avant 37 semaines complètes de gestation.",
+
+            exampleAr = "مثال: يظهر ولادة قبل اكتمال 37 أسبوعاً من الحمل.",
+
             exampleEn = "The Premature birth is Birth before 37 completed weeks of gestation.",        ),
         ),
         MedicalTermEntity(
@@ -2902,6 +3042,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈpriːtɜːrm ˈleɪbər/",
+
+            exampleFr = "Exemple: Le Début des contractions utérines et dilatation cervicale avant 37 semaines de gestation.",
+
+            exampleAr = "مثال: يظهر بداية تقلصات الرحم وتوسع عنق الرحم قبل 37 أسبوعاً من الحمل.",
 
             exampleEn = "The Preterm labor is Onset of uterine contractions and cervical dilation before 37 weeks gestation.",        ),
         ),
@@ -3053,6 +3197,10 @@ object TerminologieMedicaleTerms {
             chapter = "Génétique",
             ipaPhonetic = "/ˈhoʊmiˌɒtɪk dʒiːn/",
 
+            exampleFr = "Exemple: Le Gènes régulateurs maîtres contenant des domaines homéobox contrôlant l'axe corporel et l'identité des segments.",
+
+            exampleAr = "مثال: يظهر جينات تنظيمية رئيسية تحتوي على نطاقات هومياباكس تتحكم في محور الجسم وهوية القطع.",
+
             exampleEn = "The Homeotic gene (Hox gene) is Master regulatory genes containing homeobox domains controlling body axis and segment identity.",        ),
         ),
         MedicalTermEntity(
@@ -3097,6 +3245,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
+
+            exampleFr = "Exemple: Le Mort cellulaire génétiquement contrôlée essentielle à la morphogenèse (ex: apoptose interdigitale façonnant les doigts).",
+
+            exampleAr = "مثال: يظهر موت خلوي محكوم وراثياً ضروري لتشكيل المورفولوجيا (مثل: موت خلايا ما بين الأصابع).",
 
             exampleEn = "The Apoptosis (programmed cell death) is Genetically controlled cell death essential for morphogenesis (e.g., interdigital apoptosis shaping fingers).",        ),
         ),
@@ -3324,6 +3476,10 @@ object TerminologieMedicaleTerms {
             chapter = "Généralités",
             ipaPhonetic = "/ˈmɛzəŋkaɪm/",
 
+            exampleFr = "Exemple: Le Tissu conjonctif embryonnaire lâchement organisé dérivé principalement du mésoderme et des cellules de la crête neurale.",
+
+            exampleAr = "مثال: يظهر نسيج ضام جنيني فضفاض التنظيم مشتق أساساً من الأديم المتوسط وخلايا القمة العصبية.",
+
             exampleEn = "The Mesenchyme is Loosely organized embryonic connective tissue derived mainly from mesoderm and neural crest cells.",        ),
         ),
         MedicalTermEntity(
@@ -3414,6 +3570,10 @@ object TerminologieMedicaleTerms {
             chapter = "Termes Cliniques",
             ipaPhonetic = "/pləˈsɛntəl əˈbrʌpʃən/",
 
+            exampleFr = "Exemple: Le Séparation prématurée du placenta de la paroi utérine avant l'accouchement; urgence obstétricale majeure.",
+
+            exampleAr = "مثال: يظهر انفصال المشيمة قبل الأوان عن جدار الرحم قبل الولادة؛ حالة طوارئ توليدية رئيسية.",
+
             exampleEn = "The Placental abruption is Premature separation of the placenta from the uterine wall before delivery; a major obstetric emergency.",        ),
         ),
         MedicalTermEntity(
@@ -3490,6 +3650,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒlədʒi/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant l'étude d'un sujet spécifique.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني دراسة موضوع معين.",
+
             exampleEn = "The -ology is Suffix meaning the study of a specific subject.",        ),
         ),
         MedicalTermEntity(
@@ -3504,6 +3668,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/aɪtɪs/",
+
+            exampleFr = "Exemple: Le Suffixe signifiant inflammation d'une structure.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني التهاب بنية أو عضو.",
 
             exampleEn = "The -itis is Suffix meaning inflammation of a structure.",        ),
         ),
@@ -3520,6 +3688,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɛktəmi/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant ablation chirurgicale d'une structure.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني الاستئصال الجراحي لبنية.",
+
             exampleEn = "The -ectomy is Suffix meaning surgical removal of a structure.",        ),
         ),
         MedicalTermEntity(
@@ -3534,6 +3706,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒstəmi/",
+
+            exampleFr = "Exemple: Le Suffixe signifiant création chirurgicale d'une nouvelle ouverture.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني إنشاء فتحة جراحية جديدة.",
 
             exampleEn = "The -ostomy is Suffix meaning surgical creation of a new opening.",        ),
         ),
@@ -3550,6 +3726,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒtəmi/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant incision chirurgicale dans une structure.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني الشق الجراحي في بنية.",
+
             exampleEn = "The -otomy is Suffix meaning surgical incision into a structure.",        ),
         ),
         MedicalTermEntity(
@@ -3564,6 +3744,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/plæsti/",
+
+            exampleFr = "Exemple: Le Suffixe signifiant réparation ou reconstruction chirurgicale.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني الإصلاح أو إعادة البناء الجراحي.",
 
             exampleEn = "The -plasty is Suffix meaning surgical repair or reconstruction.",        ),
         ),
@@ -3580,6 +3764,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/skəpi/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant examen visuel à l'aide d'un instrument.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني الفحص البصري بواسطة أداة.",
+
             exampleEn = "The -scopy is Suffix meaning visual examination using an instrument.",        ),
         ),
         MedicalTermEntity(
@@ -3594,6 +3782,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɡræfi/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant le processus d'enregistrement d'une image.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني عملية تسجيل الصور.",
+
             exampleEn = "The -graphy is Suffix meaning the process of recording an image.",        ),
         ),
         MedicalTermEntity(
@@ -3607,6 +3799,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɡræm/",
+
+            exampleFr = "Exemple: Le Suffixe signifiant une image ou une trace enregistrée.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني صورة أو رسم مسجل.",
 
             exampleEn = "The -gram is Suffix meaning a recorded image or tracing.",        ),
         ),
@@ -3623,6 +3819,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ældʒiə/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant douleur dans une zone spécifique.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني الألم في منطقة معينة.",
+
             exampleEn = "The -algia is Suffix meaning pain in a specific area.",        ),
         ),
         MedicalTermEntity(
@@ -3636,6 +3836,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/pæθi/",
+
+            exampleFr = "Exemple: Le Suffixe signifiant maladie ou trouble d'une structure.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني مرض أو اضطراب بنية.",
 
             exampleEn = "The -pathy is Suffix meaning disease or disorder of a structure.",        ),
         ),
@@ -3652,6 +3856,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/riːə/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant écoulement ou flux anormal.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني إفراز أو تدفق غير طبيعي.",
+
             exampleEn = "The -rrhea is Suffix meaning abnormal discharge or flow.",        ),
         ),
         MedicalTermEntity(
@@ -3666,6 +3874,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/iːmiə/",
+
+            exampleFr = "Exemple: Le Suffixe signifiant une condition du sang.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني حالة الدم.",
 
             exampleEn = "The -emia is Suffix meaning a condition of the blood.",        ),
         ),
@@ -3682,6 +3894,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mɛɡəli/",
 
+            exampleFr = "Exemple: Le Suffixe signifiant élargissement d'une structure.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني تضخم بنية.",
+
             exampleEn = "The -megaly is Suffix meaning enlargement of a structure.",        ),
         ),
         MedicalTermEntity(
@@ -3696,6 +3912,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/foʊbiə/",
+
+            exampleFr = "Exemple: Le Suffixe signifiant peur ou sensibilité à quelque chose de spécifique.",
+
+            exampleAr = "مثال: يظهر لاحقة تعني خوف أو حساسية من شيء معين.",
 
             exampleEn = "The -phobia is Suffix meaning fear or sensitivity to a specific thing.",        ),
         ),
@@ -3712,6 +3932,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/haɪpər/",
 
+            exampleFr = "Exemple: Le Préfixe signifiant excessif ou au-dessus de la normale.",
+
+            exampleAr = "مثال: يظهر بادئة تعني زيادة مفرطة أو فوق الطبيعي.",
+
             exampleEn = "The Hyper- is Prefix meaning excessive or above normal.",        ),
         ),
         MedicalTermEntity(
@@ -3726,6 +3950,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/haɪpoʊ/",
+
+            exampleFr = "Exemple: Le Préfixe signifiant déficient ou en dessous de la normale.",
+
+            exampleAr = "مثال: يظهر بادئة تعني نقص أو دون الطبيعي.",
 
             exampleEn = "The Hypo- is Prefix meaning deficient or below normal.",        ),
         ),
@@ -3742,6 +3970,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/breɪdi/",
 
+            exampleFr = "Exemple: Le Préfixe signifiant lent.",
+
+            exampleAr = "مثال: يظهر بادئة تعني بطيء.",
+
             exampleEn = "The Brady- is Prefix meaning slow.",        ),
         ),
         MedicalTermEntity(
@@ -3756,6 +3988,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/tæki/",
+
+            exampleFr = "Exemple: Le Préfixe signifiant rapide.",
+
+            exampleAr = "مثال: يظهر بادئة تعني سريع.",
 
             exampleEn = "The Tachy- is Prefix meaning fast or rapid.",        ),
         ),
@@ -3772,6 +4008,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mækroʊ/",
 
+            exampleFr = "Exemple: Le Préfixe signifiant grand ou anormalement grand.",
+
+            exampleAr = "مثال: يظهر بادئة تعني كبير أو كبير بشكل غير طبيعي.",
+
             exampleEn = "The Macro- is Prefix meaning large or abnormally large.",        ),
         ),
         MedicalTermEntity(
@@ -3787,6 +4027,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/maɪkroʊ/",
 
+            exampleFr = "Exemple: Le Préfixe signifiant petit ou anormalement petit.",
+
+            exampleAr = "مثال: يظهر بادئة تعني صغير أو صغير بشكل غير طبيعي.",
+
             exampleEn = "The Micro- is Prefix meaning small or abnormally small.",        ),
         ),
         MedicalTermEntity(
@@ -3801,6 +4045,10 @@ object TerminologieMedicaleTerms {
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/pɒli/",
 
+            exampleFr = "Exemple: Le Préfixe signifiant plusieurs ou beaucoup.",
+
+            exampleAr = "مثال: يظهر بادئة تعني كثير أو متعدد.",
+
             exampleEn = "The Poly- is Prefix meaning many or much.",        ),
         ),
         MedicalTermEntity(
@@ -3814,6 +4062,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mɒnoʊ/",
+
+            exampleFr = "Exemple: Le Préfixe signifiant un ou unique.",
+
+            exampleAr = "مثال: يظهر بادئة تعني واحد أو أحادي.",
 
             exampleEn = "The Mono- is Prefix meaning one or single.",        ),
         ),
@@ -3860,6 +4112,10 @@ object TerminologieMedicaleTerms {
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ænˈtɪəriər/",
 
+            exampleFr = "Exemple: Le Vers l'avant du corps.",
+
+            exampleAr = "مثال: يظهر نحو الجهة الأمامية من الجسم.",
+
             exampleEn = "The Anterior (Ventral) is Toward the front of the body.",        ),
         ),
         MedicalTermEntity(
@@ -3873,6 +4129,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/pɒˈstɪəriər/",
+
+            exampleFr = "Exemple: Le Vers l'arrière du corps.",
+
+            exampleAr = "مثال: يظهر نحو الجهة الخلفية من الجسم.",
 
             exampleEn = "The Posterior (Dorsal) is Toward the back of the body.",        ),
         ),
@@ -3888,6 +4148,10 @@ object TerminologieMedicaleTerms {
             chapter = "Anatomie Générale",
             ipaPhonetic = "/suːˈpɪəriər/",
 
+            exampleFr = "Exemple: Le Vers la tête ou la partie supérieure du corps.",
+
+            exampleAr = "مثال: يظهر نحو الرأس أو الجزء العلوي من الجسم.",
+
             exampleEn = "The Superior (Cranial) is Toward the head or upper part of the body.",        ),
         ),
         MedicalTermEntity(
@@ -3901,6 +4165,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ɪnˈfɪəriər/",
+
+            exampleFr = "Exemple: Le Loin de la tête ou vers la partie inférieure du corps.",
+
+            exampleAr = "مثال: يظهر بعيداً عن الرأس أو نحو الجزء السفلي من الجسم.",
 
             exampleEn = "The Inferior (Caudal) is Away from the head or toward the lower part of the body.",        ),
         ),
@@ -3916,6 +4184,10 @@ object TerminologieMedicaleTerms {
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈmiːdiəl/",
 
+            exampleFr = "Exemple: Le Vers la ligne médiane du corps.",
+
+            exampleAr = "مثال: يظهر نحو الخط الأوسط للجسم.",
+
             exampleEn = "The Medial is Toward the midline of the body.",        ),
         ),
         MedicalTermEntity(
@@ -3929,6 +4201,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈlætərəl/",
+
+            exampleFr = "Exemple: Le Loin de la ligne médiane du corps.",
+
+            exampleAr = "مثال: يظهر بعيداً عن الخط الأوسط للجسم.",
 
             exampleEn = "The Lateral is Away from the midline of the body.",        ),
         ),
@@ -3944,6 +4220,10 @@ object TerminologieMedicaleTerms {
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈprɒksɪməl/",
 
+            exampleFr = "Exemple: Le Plus proche de l'origine ou du point d'attache.",
+
+            exampleAr = "مثال: يظهر أقرب إلى نقطة الأصل أو الارتباط.",
+
             exampleEn = "The Proximal is Closer to the origin or point of attachment.",        ),
         ),
         MedicalTermEntity(
@@ -3957,6 +4237,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈdɪstəl/",
+
+            exampleFr = "Exemple: Le Plus éloigné de l'origine ou du point d'attache.",
+
+            exampleAr = "مثال: يظهر أبعد عن نقطة الأصل أو الارتباط.",
 
             exampleEn = "The Distal is Farther from the origin or point of attachment.",        ),
         ),
@@ -3972,6 +4256,10 @@ object TerminologieMedicaleTerms {
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˌsuːpəˈfɪʃəl/",
 
+            exampleFr = "Exemple: Le Vers ou à la surface du corps.",
+
+            exampleAr = "مثال: يظهر نحو سطح الجسم أو عليه.",
+
             exampleEn = "The Superficial is Toward or on the surface of the body.",        ),
         ),
         MedicalTermEntity(
@@ -3985,6 +4273,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/diːp/",
+
+            exampleFr = "Exemple: Le Loin de la surface du corps.",
+
+            exampleAr = "مثال: يظهر بعيداً عن سطح الجسم.",
 
             exampleEn = "The Deep is Away from the surface of the body.",        ),
         ),
@@ -4240,6 +4532,10 @@ object TerminologieMedicaleTerms {
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/hɑːrt reɪt/",
 
+            exampleFr = "Exemple: Le nombre de battements cardiaques par minute (normal: 60–100 bpm).",
+
+            exampleAr = "مثال: يظهر عدد ضربات القلب في الدقيقة (الطبيعي: 60–100 ضربة/دقيقة).",
+
             exampleEn = "The Heart rate is number of heartbeats per minute (normal: 60–100 bpm).",        ),
         ),
         MedicalTermEntity(
@@ -4316,6 +4612,10 @@ object TerminologieMedicaleTerms {
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpərˈtɛnʃən/",
 
+            exampleFr = "Exemple: Le Pression artérielle persistamment élevée (>140/90 mmHg).",
+
+            exampleAr = "مثال: يظهر ارتفاع مستمر في ضغط الدم (>140/90 ملم زئبق).",
+
             exampleEn = "The Hypertension is Persistently elevated blood pressure (>140/90 mmHg).",        ),
         ),
         MedicalTermEntity(
@@ -4329,6 +4629,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpoʊˈtɛnʃən/",
+
+            exampleFr = "Exemple: Le Pression artérielle anormalement basse (<90/60 mmHg).",
+
+            exampleAr = "مثال: يظهر انخفاض غير طبيعي في ضغط الدم (<90/60 ملم زئبق).",
 
             exampleEn = "The Hypotension is Abnormally low blood pressure (<90/60 mmHg).",        ),
         ),
@@ -4344,6 +4648,10 @@ object TerminologieMedicaleTerms {
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/əˈrɪðmiə/",
 
+            exampleFr = "Exemple: Le Tout rythme cardiaque anormal.",
+
+            exampleAr = "مثال: يظهر أي اضطراب في النظم الطبيعي للقلب.",
+
             exampleEn = "The Arrhythmia is Any abnormal heart rhythm.",        ),
         ),
         MedicalTermEntity(
@@ -4357,6 +4665,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌmaɪoʊˈkɑːrdiəl ɪnˈfɑːrkʃən/",
+
+            exampleFr = "Exemple: Le Mort du tissu musculaire cardiaque due à une ischémie prolongée (crise cardiaque).",
+
+            exampleAr = "مثال: يظهر موت نسيج عضلة القلب بسبب نقص التروية المطول (نوبة قلبية).",
 
             exampleEn = "The Myocardial infarction is Death of heart muscle tissue due to prolonged ischemia (heart attack).",        ),
         ),
@@ -4527,6 +4839,10 @@ object TerminologieMedicaleTerms {
             chapter = "Système Respiratoire",
             ipaPhonetic = "/njuːˈmoʊniə/",
 
+            exampleFr = "Exemple: Le Inflammation du tissu pulmonaire due à une infection.",
+
+            exampleAr = "مثال: يظهر تهاب في نسيج الرئة بسبب عدوى.",
+
             exampleEn = "The Pneumonia is Inflammation of the lung tissue due to infection.",        ),
         ),
         MedicalTermEntity(
@@ -4662,6 +4978,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ˌpɛrɪˈstɔːlsɪs/",
+
+            exampleFr = "Exemple: Le Contractions musculaires ondulatoires propulsant la nourriture à travers le tractus digestif.",
+
+            exampleAr = "مثال: يظهر تقلصات عضلية موجية تدفع الطعام عبر القناة الهضمية.",
 
             exampleEn = "The Peristalsis is Wave-like muscular contractions propelling food through the digestive tract.",        ),
         ),
@@ -4828,6 +5148,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/pəˈrɪfərəl/",
+
+            exampleFr = "Exemple: Le Tous les nerfs à l'extérieur du cerveau et de la moelle épinière.",
+
+            exampleAr = "مثال: يظهر جميع الأعصاب خارج الدماغ والحبل الشوكي.",
 
             exampleEn = "The Peripheral nervous system (PNS) is All nerves outside the brain and spinal cord.",        ),
         ),
@@ -5009,6 +5333,10 @@ object TerminologieMedicaleTerms {
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈskɛlɪtəl ˈmʌsəl/",
 
+            exampleFr = "Exemple: Le Muscle strié volontaire attaché aux os pour le mouvement.",
+
+            exampleAr = "مثال: يظهر عضلة مخططة إرادية متصلة بالعظام للحركة.",
+
             exampleEn = "The Skeletal muscle is Voluntary striated muscle attached to bones for movement.",        ),
         ),
         MedicalTermEntity(
@@ -5022,6 +5350,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/smuːð ˈmʌsəl/",
+
+            exampleFr = "Exemple: Le Muscle involontaire non strié dans les organes creux (intestin, vaisseaux).",
+
+            exampleAr = "مثال: يظهر عضلة لاإرادية غير مخططة في الأعضاء الجوفاء (الأمعاء، الأوعية).",
 
             exampleEn = "The Smooth muscle is Involuntary non-striated muscle in hollow organs (gut, vessels).",        ),
         ),
@@ -5037,6 +5369,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈkɑːrdiæk/",
+
+            exampleFr = "Exemple: Le Muscle strié involontaire unique au cœur.",
+
+            exampleAr = "مثال: يظهر عضلة مخططة لاإرادية خاصة بالقلب.",
 
             exampleEn = "The Cardiac muscle is Involuntary striated muscle unique to the heart.",        ),
         ),
@@ -5372,6 +5708,10 @@ object TerminologieMedicaleTerms {
             chapter = "Système Urinaire",
             ipaPhonetic = "/ˈriːnəl ˈfeɪlər/",
 
+            exampleFr = "Exemple: Le Incapacité des reins à filtrer adéquatement les déchets du sang.",
+
+            exampleAr = "مثال: يظهر عجز الكليتين عن ترشيح فضلات الدم بشكل كافٍ.",
+
             exampleEn = "The Renal failure is Inability of the kidneys to filter waste products from the blood adequately.",        ),
         ),
         MedicalTermEntity(
@@ -5543,6 +5883,10 @@ object TerminologieMedicaleTerms {
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˈsɪmptəm/",
             exampleEn = "The symptom is the subjective experience reported by the patient (e.g., pain, nausea).",
+            exampleFr = "Exemple: Le expérience subjective rapportée par le patient (ex: douleur, nausée).",
+
+            exampleAr = "مثال: يظهر تجربة ذاتية يُبلغ عنها المريض (مثل: الألم والغثيان).",
+
         ),
         MedicalTermEntity(
             id = 3769,
@@ -5602,6 +5946,10 @@ object TerminologieMedicaleTerms {
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ɪˈdiːmə/",
 
+            exampleFr = "Exemple: Le Accumulation anormale de liquide dans les espaces interstitiels causant un gonflement.",
+
+            exampleAr = "مثال: يظهر تجمع غير طبيعي للسائل في المسافات الخلالية مما يسبب التورم.",
+
             exampleEn = "The Edema is Abnormal accumulation of fluid in the interstitial spaces causing swelling.",        ),
         ),
         MedicalTermEntity(
@@ -5616,6 +5964,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/saɪˈænoʊsɪs/",
+
+            exampleFr = "Exemple: Le Décoloration bleutée de la peau/muqueuses due à la réduction d'oxygène dans le sang.",
+
+            exampleAr = "مثال: يظهر تلون مزرق للجلد/الأغشية المخاطية بسبب انخفاض الأكسجين في الدم.",
 
             exampleEn = "The Cyanosis is Bluish discoloration of skin/mucous membranes due to reduced oxygen in blood.",        ),
         ),
@@ -5678,6 +6030,10 @@ object TerminologieMedicaleTerms {
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌdaɪəˈrɪə/",
 
+            exampleFr = "Exemple: Le Passage fréquent de selles molles et aqueuses (>3 par jour).",
+
+            exampleAr = "مثال: يظهر إخراج متكرر للبراز الرخو المائي (>3 مرات في اليوم).",
+
             exampleEn = "The Diarrhea is Frequent passage of loose, watery stools (>3 per day).",        ),
         ),
         MedicalTermEntity(
@@ -5691,6 +6047,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌkɒnstɪˈpeɪʃən/",
+
+            exampleFr = "Exemple: Le Passage peu fréquent ou difficile de selles dures et sèches.",
+
+            exampleAr = "مثال: يظهر إخراج غير متكرر أو صعب للبراز الصلب الجاف.",
 
             exampleEn = "The Constipation is Infrequent or difficult passage of hard, dry stools.",        ),
         ),
@@ -5905,6 +6265,10 @@ object TerminologieMedicaleTerms {
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌænti ɪnˈflæmətɔːri/",
             exampleEn = "The anti-inflammatory is the drug that reduces inflammation (e.g., NSAIDs, corticosteroids).",
+            exampleFr = "Exemple: Le médicament qui réduit l'inflammation (ex: AINS, corticostéroïdes).",
+
+            exampleAr = "مثال: يظهر دواء يُقلل الالتهاب (مثل: مضادات الالتهاب غير الستيرويدية والكورتيكوستيرويدات).",
+
         ),
         MedicalTermEntity(
             id = 3793,
@@ -5962,6 +6326,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˈtɒlərəns/",
+
+            exampleFr = "Exemple: Le Réponse réduite à un médicament après usage répété nécessitant des doses plus élevées.",
+
+            exampleAr = "مثال: يظهر انخفاض الاستجابة للدواء بعد الاستخدام المتكرر مما يستلزم جرعات أعلى.",
 
             exampleEn = "The Tolerance is Reduced response to a drug after repeated use requiring higher doses.",        ),
         ),
@@ -6385,6 +6753,10 @@ object TerminologieMedicaleTerms {
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌɪntjʊˈbeɪʃən/",
 
+            exampleFr = "Exemple: Le Insertion d'un tube dans la trachée pour maintenir une voie aérienne ouverte.",
+
+            exampleAr = "مثال: يظهر إدخال أنبوب في القصبة الهوائية للحفاظ على مجرى هوائي مفتوح.",
+
             exampleEn = "The Intubation is Insertion of a tube into the trachea to maintain an open airway.",        ),
         ),
         MedicalTermEntity(
@@ -6398,6 +6770,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌkæθɪtəraɪˈzeɪʃən/",
+
+            exampleFr = "Exemple: Le Insertion d'un cathéter dans une cavité corporelle pour drainage ou injection.",
+
+            exampleAr = "مثال: يظهر إدخال قسطرة في تجويف جسدي للتصريف أو الحقن.",
 
             exampleEn = "The Catheterization is Insertion of a catheter into a body cavity for drainage or injection.",        ),
         ),
@@ -6414,6 +6790,10 @@ object TerminologieMedicaleTerms {
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ɛnˈdɒskəpi/",
 
+            exampleFr = "Exemple: Le Examen visuel des organes internes à l'aide d'un tube flexible avec caméra.",
+
+            exampleAr = "مثال: يظهر فحص بصري للأعضاء الداخلية باستخدام أنبوب مرن مزود بكاميرا.",
+
             exampleEn = "The Endoscopy is Visual examination of internal organs using a flexible tube with a camera.",        ),
         ),
         MedicalTermEntity(
@@ -6428,6 +6808,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌlæpəˈrɒskəpi/",
+
+            exampleFr = "Exemple: Le Chirurgie minimalement invasive utilisant de petites incisions et une caméra dans l'abdomen.",
+
+            exampleAr = "مثال: يظهر جراحة طفيفة التوغل تستخدم شقوقاً صغيرة وكاميرا في البطن.",
 
             exampleEn = "The Laparoscopy is Minimally invasive surgery using small incisions and a camera in the abdomen.",        ),
         ),
@@ -6457,6 +6841,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/blʌd trænsˈfjuːʒən/",
+
+            exampleFr = "Exemple: Le Administration intraveineuse de sang ou de produits sanguins d'un donneur.",
+
+            exampleAr = "مثال: يظهر إعطاء الدم أو مشتقاته وريدياً من متبرع.",
 
             exampleEn = "The Blood transfusion is Intravenous administration of blood or blood products from a donor.",        ),
         ),
@@ -6638,6 +7026,10 @@ object TerminologieMedicaleTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/məˈtæbəlɪzəm/",
 
+            exampleFr = "Exemple: Le Toutes les réactions chimiques se produisant dans le corps pour maintenir la vie.",
+
+            exampleAr = "مثال: يظهر جميع التفاعلات الكيميائية التي تحدث في الجسم للحفاظ على الحياة.",
+
             exampleEn = "The Metabolism is All chemical reactions occurring in the body to maintain life.",        ),
         ),
         MedicalTermEntity(
@@ -6790,6 +7182,10 @@ object TerminologieMedicaleTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌprɒfɪˈlæksɪs/",
 
+            exampleFr = "Exemple: Le Toute mesure prise pour prévenir une maladie ou ses complications.",
+
+            exampleAr = "مثال: يظهر أي إجراء يُتخذ للوقاية من المرض أو مضاعفاته.",
+
             exampleEn = "The Prophylaxis is Any measure taken to prevent disease or its complications.",        ),
         ),
         MedicalTermEntity(
@@ -6819,6 +7215,10 @@ object TerminologieMedicaleTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈpæliətɪv kɛr/",
 
+            exampleFr = "Exemple: Le Soins axés sur le soulagement des symptômes d'une maladie grave plutôt que la guérison.",
+
+            exampleAr = "مثال: يظهر رعاية تركز على تخفيف أعراض المرض الخطير بدلاً من علاجه.",
+
             exampleEn = "The Palliative care is Care focused on providing relief from symptoms of serious illness rather than cure.",        ),
         ),
         MedicalTermEntity(
@@ -6832,6 +7232,10 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈvaɪtəl saɪnz/",
+
+            exampleFr = "Exemple: Le Mesures physiologiques de base: température, pouls, tension artérielle et fréquence respiratoire.",
+
+            exampleAr = "مثال: يظهر قياسات الفسيولوجية الأساسية: الحرارة والنبض وضغط الدم ومعدل التنفس.",
 
             exampleEn = "The Vital signs is Basic physiological measurements: temperature, pulse, blood pressure and respiration rate.",        ),
         ),
