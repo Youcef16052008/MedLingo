@@ -1,0 +1,188 @@
+<!-- MedLingo DZ — SVG Icon Set — Clinical Calm -->
+<!-- Generated from DESIGN.md spec (colors, names, stroke 2px, 24x24 viewBox) -->
+
+<!-- Heart (série 🔥) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 14c-1.5 1-3 1.5-4.5 1.5s-3-0.5-4.5-1.5-2.5-2-2.5-3.5 1-2.5 1-4.5"/>
+</svg>
+
+<!-- Star (objectif ⭐) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+</svg>
+
+<!-- Freeze (congélation ❄️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 4v12"/>
+  <path d="M8 4v12"/>
+  <path d="M12 12v8"/>
+  <path d="M6 4h12"/>
+  <path d="M4 16h16"/>
+  <path d="M6 8l-2 4h4l-2 4"/>
+</svg>
+
+<!-- Chest (caisse 📦) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 8v13H3V8"/>
+  <path d="M16 3H3v18h13"/>
+  <path d="M9 12h6"/>
+</svg>
+
+<!-- Trophy (trophée 🏆) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 9H4.5A2.5 2.5 0 0 1 2 6.5V4H0v16h2v-2.5a2.5 2.5 0 0 1 2.5-2.5h1.5"/>
+  <path d="M8 9v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2"/>
+  <path d="M8 13h8"/>
+  <path d="M8 17h8a2 2 0 0 1 2 2v2H6v-2a2 2 0 0 1-2-2"/>
+</svg>
+
+<!-- League/Bronze (🥉) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/>
+  <path d="M12 8v4l3 2"/>
+</svg>
+
+<!-- League/Silver (🥈) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/>
+  <path d="M12 9.5V13l3 1.5"/>
+</svg>
+
+<!-- League/Gold (🥇) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/>
+  <path d="M12 10V13l3 1"/>
+</svg>
+
+<!-- Goal (objectif 📍) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9"/>
+  <circle cx="12" cy="12" r="5"/>
+  <circle cx="12" cy="12" r="1"/>
+</svg>
+
+<!-- Check (vérification ✅) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 6L9 17l-5-5"/>
+</svg>
+
+<!-- X (quitter ❌) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 6L6 18M6 6l12 12"/>
+</svg>
+
+<!-- Info (ℹ️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9"/>
+  <path d="M12 11v5"/>
+  <path d="M12 8h.01"/>
+</svg>
+
+<!-- Settings (⚙️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="3"/>
+  <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+</svg>
+
+<!-- Users (groupe 👥) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="9" cy="7" r="3"/>
+  <path d="M3 21a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v1"/>
+  <path d="M16 3.13a4 4 0 0 1 0 7.77M18.13 18.13a4 4 0 0 1 0-7.77"/>
+</svg>
+
+<!-- Calendar (calendrier 📅) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="4" width="18" height="16" rx="2"/>
+  <path d="M16 2v4M8 2v4M3 10h18"/>
+</svg>
+
+<!-- Xp (XP ⚠️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2v4M12 18v4M4.93 4.93l3.54 3.54M15.53 15.53l3.54 3.54M4.93 19.07l3.54-3.54M15.53 8.47l3.54-3.54"/>
+  <circle cx="12" cy="12" r="3"/>
+</svg>
+
+<!-- Gem (💎) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 3h12l4 6-10 13L2 9z"/>
+  <path d="M11 3v13"/>
+  <path d="M8 21h8"/>
+</svg>
+
+<!-- Book (flashez ✅) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+  <path d="M6.5 17V9H18V17H6.5z"/>
+  <path d="M20 3H6.5A2.5 2.5 0 0 0 4 5.5v13A2.5 2.5 0 0 0 6.5 21h13a2.5 2.5 0 0 0 2.5-2.5v-3"/>
+</svg>
+
+<!-- Play (lecture ▶️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="5 3 19 12 5 21 5 3"/>
+</svg>
+
+<!-- Pause (pause ⏸️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="6" y="4" width="4" height="16"/>
+  <rect x="14" y="4" width="4" height="16"/>
+</svg>
+
+<!-- ChevronDown (fleche) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 9l6 6 6-6"/>
+</svg>
+
+<!-- Back (retour ◀️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M15 18l-6-6 6-6"/>
+</svg>
+
+<!-- Forward (avancer ▶️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 18l6-6-6-6"/>
+</svg>
+
+<!-- Refresh (recharger 🔄) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M23 4v6h-6"/>
+  <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+</svg>
+
+<!-- Search (rechercher 🔍) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="11" cy="11" r="7"/>
+  <path d="M21 21l-4.35-4.35"/>
+</svg>
+
+<!-- Menu (menu ☰) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 12h18M3 6h18M3 18h18"/>
+</svg>
+
+<!-- Close (fermer ✕) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 6L6 18M6 6l12 12"/>
+</svg>
+
+<!-- Home (accueil 🏠) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+  <path d="M9 22V12h6v10"/>
+</svg>
+
+<!-- Profile (profil 👤) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="8" r="4"/>
+  <path d="M4 21a8 8 0 0 1 16 0"/>
+</svg>
+
+<!-- ArrowUp (monter ⬆️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 19V5M5 12l7-7 7 7"/>
+</svg>
+
+<!-- ArrowDown (descendre ⬇️) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 5v14M19 12l-7 7-7-7"/>
+</svg>
