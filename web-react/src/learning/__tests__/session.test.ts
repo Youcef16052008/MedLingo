@@ -4,6 +4,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   initSession,
+  resumeSession,
   sessionReducer,
   currentQuestion,
   currentDrill,
@@ -192,6 +193,105 @@ describe("erreurs et aide — sémantique des trois états", () => {
   });
 });
 
+describe("reprise après interruption (régressions)", () => {
+  const atCircling = () =>
+    runTo(initSession(story), [
+      { type: "ADVANCE" }, { type: "ADVANCE" }, { type: "ADVANCE" },
+    ]);
+
+  it("REGRESS-1 : une question re-répondue après reprise ne double pas les stats", () => {
+    // Avant correction : q1 ratée (mistakeIds), interruption, reprise, q1
+    // réussie → le verdict était réenregistré (id en réussite ET en erreur).
+    let s = atCircling();
+    s = sessionReducer(s, { type: "SUBMIT_ANSWER", value: "no" }, story); // q1 ratée
+    expect(s.stats.mistakeIds).toContain("q1");
+    // Interruption puis reprise : le moteur repart avec attemptsOnCurrent = 0.
+    const resumed = resumeSession(
+      story,
+      {
+        contentVersion: story.contentVersion,
+        step: "CIRCLING",
+        qIndex: 0,
+        drillIndex: 0,
+        reviewIndex: 0,
+        stats: s.stats,
+        retellAttempted: false,
+        transferTaskAttempted: false,
+        transferTaskPending: false,
+      },
+      []
+    );
+    const after = sessionReducer(resumed, { type: "SUBMIT_ANSWER", value: "yes" }, story);
+    expect(after.lastCorrect).toBe(true); // la réponse est validée…
+    expect(after.stats.firstTryIds).not.toContain("q1"); // …mais pas comptée deux fois
+    expect(after.stats.mistakeIds).toContain("q1"); // l'erreur initiale reste
+  });
+
+  it("REGRESS-2 : reviewIndex recalé si la liste d'expressions dues a changé", () => {
+    // Sauvegardé à l'index 5 avec 3 expressions dues à l'époque ; aujourd'hui
+    // une seule est due → l'index doit être borné, pas hors liste.
+    const s = resumeSession(
+      story,
+      {
+        contentVersion: story.contentVersion,
+        step: "REVIEW",
+        qIndex: 0,
+        drillIndex: 0,
+        reviewIndex: 5,
+        stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+        retellAttempted: false,
+        transferTaskAttempted: false,
+        transferTaskPending: false,
+      },
+      ["en:no-fever:v1"]
+    );
+    expect(s.step).toBe("REVIEW");
+    expect(s.reviewIndex).toBe(0);
+    expect(s.reviewIds).toEqual(["en:no-fever:v1"]);
+  });
+
+  it("REGRESS-2b : reprise de REVIEW sans expression due → écoute directe", () => {
+    const s = resumeSession(
+      story,
+      {
+        contentVersion: story.contentVersion,
+        step: "REVIEW",
+        qIndex: 0,
+        drillIndex: 0,
+        reviewIndex: 1,
+        stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+        retellAttempted: false,
+        transferTaskAttempted: false,
+        transferTaskPending: false,
+      },
+      []
+    );
+    expect(s.step).toBe("LISTEN_DISCOVER");
+    expect(s.reviewIndex).toBe(0);
+  });
+
+  it("les curseurs de reprise sont bornés aux tableaux du contenu", () => {
+    const s = resumeSession(
+      story,
+      {
+        contentVersion: story.contentVersion,
+        step: "CIRCLING",
+        qIndex: 99,
+        drillIndex: 99,
+        reviewIndex: 0,
+        stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+        retellAttempted: false,
+        transferTaskAttempted: false,
+        transferTaskPending: false,
+      },
+      []
+    );
+    expect(s.qIndex).toBe(story.questions.length - 1);
+    expect(s.drillIndex).toBe(story.drill.items.length - 1);
+    expect(currentQuestion(s, story)).toBeDefined();
+  });
+});
+
 describe("mémoire d'expressions", () => {
   it("une expression jamais vue n'est pas « due »", () => {
     expect(duePhrases(story, {}, NOW)).toEqual([]);
@@ -242,6 +342,19 @@ describe("chargeur d'histoires", () => {
     setStories(draft);
     expect(storyById("x")).toBeUndefined();
     setStories(file); // restaurer
+  });
+
+  it("REGRESS-3 : un échec de chargement est distingué de « pas encore chargé »", async () => {
+    const { loadStories, storiesFailed, storiesSettled } = await import("../stories");
+    const orig = global.fetch;
+    global.fetch = (() => Promise.reject(new Error("offline"))) as typeof fetch;
+    await expect(loadStories()).rejects.toThrow("offline");
+    expect(storiesFailed()).toBe(true);
+    expect(storiesSettled()).toBe(true); // un id absent est alors réellement inconnu
+    global.fetch = orig;
+    setStories(file); // restaurer pour les autres tests
+    expect(storiesSettled()).toBe(true);
+    expect(storiesFailed()).toBe(false);
   });
 });
 
@@ -297,5 +410,23 @@ describe("store — storyProgress et exprSm2", () => {
       "RETELL",
       "TRANSFER_AND_SUMMARY",
     ]);
+  });
+});
+
+describe("store — récompense idempotente (anti double XP)", () => {
+  it("le second claim ne rapporte rien ; la reprise d'une séance finie repart à zéro", async () => {
+    const store = await import("../../domain/store");
+    const { startStorySession, claimStoryReward, STORY_SESSION_XP, getState } = store;
+    startStorySession("clinical-symptoms-001", 1, NOW);
+    const first = claimStoryReward("clinical-symptoms-001", NOW);
+    expect(first.xp).toBe(STORY_SESSION_XP);
+    // Re-affichage du bilan, StrictMode, double clic : plus rien.
+    const second = claimStoryReward("clinical-symptoms-001", NOW + 5_000);
+    expect(second.xp).toBe(0);
+    expect(getState().storyProgress["clinical-symptoms-001"].rewardClaimed).toBe(true);
+    // Une NOUVELLE exécution (nouvelle séance) repart à zéro.
+    startStorySession("clinical-symptoms-001", 1, NOW + 60_000);
+    const again = claimStoryReward("clinical-symptoms-001", NOW + 120_000);
+    expect(again.xp).toBe(STORY_SESSION_XP);
   });
 });

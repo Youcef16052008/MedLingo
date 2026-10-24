@@ -124,6 +124,59 @@ export function currentQuestion(state: SessionState, story: Story): StoryQuestio
   return undefined;
 }
 
+/** Snapshot de reprise persisté par l'UI (miroir de `StoryProgress` du store). */
+export interface SavedSession {
+  contentVersion: number;
+  step: Step;
+  qIndex: number;
+  drillIndex: number;
+  reviewIndex: number;
+  stats: SessionStats;
+  retellAttempted: boolean;
+  transferTaskAttempted: boolean;
+  transferTaskPending: boolean;
+}
+
+/**
+ * Reconstruit une séance interrompue. Les expressions dues sont recalculées
+ * (elles ne sont pas persistées) : si la liste a changé, `reviewIndex` est
+ * recalée — au pire une expression est passée, jamais un crash sur un indice
+ * hors bornes. Le contenu doit être à la même version, sinon l'UI repart d'une
+ * séance neuve (géré avant cet appel).
+ */
+export function resumeSession(story: Story, saved: SavedSession, due: string[]): SessionState {
+  const base = initSession(story, { duePhraseIds: due });
+  const s: SessionState = {
+    ...base,
+    step: saved.step,
+    qIndex: Math.min(saved.qIndex, Math.max(0, story.questions.length - 1)),
+    drillIndex: Math.min(saved.drillIndex, Math.max(0, story.drill.items.length - 1)),
+    reviewIndex: saved.reviewIndex,
+    stats: saved.stats,
+    retellAttempted: saved.retellAttempted,
+    transferTaskAttempted: saved.transferTaskAttempted,
+    transferTaskPending: saved.transferTaskPending,
+    revealed: false,
+    lastCorrect: null,
+    attemptsOnCurrent: 0,
+  };
+  if (s.step === "REVIEW") {
+    if (base.reviewIds.length === 0) {
+      // Plus rien à réviser (tout a été renoté entre-temps) : écoute directe.
+      s.step = "LISTEN_DISCOVER";
+      s.reviewIndex = 0;
+    } else {
+      s.reviewIndex = Math.min(saved.reviewIndex, base.reviewIds.length - 1);
+    }
+  }
+  if (s.step === "TRANSFER_AND_SUMMARY") {
+    // Récale aussi le curseur de transfert si l'étape sauvegardée y était.
+    if (s.transferTaskPending) s.qIndex = 0;
+    else s.qIndex = Math.min(saved.qIndex, Math.max(0, story.transfer.questions.length - 1));
+  }
+  return s;
+}
+
 export function currentDrill(state: SessionState, story: Story): DrillItem | undefined {
   if (state.step === "PATTERN_PRACTICE") return story.drill.items[state.drillIndex];
   return undefined;
@@ -136,7 +189,12 @@ function recordVerdict(state: SessionState, id: string, correct: boolean): Sessi
     helpedIds: [...state.stats.helpedIds],
     difficultPhraseIds: [...state.stats.difficultPhraseIds],
   };
-  const firstAttempt = state.attemptsOnCurrent === 0;
+  // Idempotent par question : après une reprise de séance, `attemptsOnCurrent`
+  // repart à zéro alors que le verdict initial est déjà compté — un second
+  // enregistrement gonflerait les stats (même id en réussite ET en erreur).
+  const already =
+    stats.firstTryIds.includes(id) || stats.mistakeIds.includes(id);
+  const firstAttempt = state.attemptsOnCurrent === 0 && !already;
   if (firstAttempt) {
     if (correct) stats.firstTryIds.push(id);
     else stats.mistakeIds.push(id);

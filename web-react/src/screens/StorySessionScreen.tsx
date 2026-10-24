@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useT } from "../i18n/useT";
 import { useAppState, update, startStorySession, saveStoryProgress, claimStoryReward } from "../domain/store";
-import { storyById } from "../learning/stories";
+import { storyById, storiesSettled } from "../learning/stories";
 import {
   initSession,
+  resumeSession,
   sessionReducer,
   currentQuestion,
   currentDrill,
@@ -76,17 +77,23 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
       saved.savedAt > 0
     ) {
       // Reprise : le contenu a changé → la séance repart du début (honnêteté).
-      setState({
-        ...initSession(story, { duePhraseIds: due }),
-        step: saved.step,
-        qIndex: saved.qIndex,
-        drillIndex: saved.drillIndex,
-        reviewIndex: saved.reviewIndex,
-        stats: saved.stats,
-        retellAttempted: saved.retellAttempted,
-        transferTaskAttempted: saved.transferTaskAttempted,
-        transferTaskPending: saved.transferTaskPending,
-      });
+      setState(
+        resumeSession(
+          story,
+          {
+            contentVersion: saved.contentVersion,
+            step: saved.step,
+            qIndex: saved.qIndex,
+            drillIndex: saved.drillIndex,
+            reviewIndex: saved.reviewIndex,
+            stats: saved.stats,
+            retellAttempted: saved.retellAttempted,
+            transferTaskAttempted: saved.transferTaskAttempted,
+            transferTaskPending: saved.transferTaskPending,
+          },
+          due
+        )
+      );
     } else {
       startStorySession(story.storyId, story.contentVersion, Date.now());
       setState(initSession(story, { duePhraseIds: due }));
@@ -143,6 +150,9 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
   const play = (text: string, slow = false) => speak(text, "en-US", slow ? 0.65 : 0.95);
 
   if (!story) {
+    // Pas encore chargé ≠ inexistant : un lien direct au démarrage ne doit
+    // pas afficher « leçon invalide » pendant que le JSON arrive.
+    if (!storiesSettled()) return <div className="skeleton" />;
     return (
       <div className="empty card" style={{ marginTop: 24 }}>
         <span className="empty-ico">⚠️</span>
