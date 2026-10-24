@@ -74,6 +74,8 @@ export interface StoryProgress {
   drillIndex: number;
   reviewIndex: number;
   stats: SessionStats;
+  /** Bloc REVIEW : phraseId → retenu/oublié (fusion dans la planification finale). */
+  reviewRatings: Record<string, boolean>;
   retellAttempted: boolean;
   transferTaskAttempted: boolean;
   /** Questions de transfert terminées, tâche de production en cours. */
@@ -216,6 +218,15 @@ function coerceNumMap(v: unknown): Record<string, number> {
   return out;
 }
 
+/** Map phraseId → booléen (verdicts du bloc REVIEW). */
+function coerceBoolMap(v: unknown): Record<string, boolean> {
+  const out: Record<string, boolean> = {};
+  for (const [k, b] of Object.entries(coerceRecord(v))) {
+    if (typeof b === "boolean") out[k] = b;
+  }
+  return out;
+}
+
 /** Champs scolaires (SM-2) : structure minimale requise par `sm2Next`. */
 function coerceSm2(v: unknown): Record<string, Sched> {
   const out: Record<string, Sched> = {};
@@ -262,6 +273,7 @@ function coerceStoryProgress(v: unknown): Record<string, StoryProgress> {
           ? stats.difficultPhraseIds.map(String)
           : [],
       },
+      reviewRatings: coerceBoolMap(o.reviewRatings),
       retellAttempted: o.retellAttempted === true,
       transferTaskAttempted: o.transferTaskAttempted === true,
       transferTaskPending: o.transferTaskPending === true,
@@ -509,6 +521,7 @@ export function startStorySession(storyId: string, contentVersion: number, now: 
       drillIndex: 0,
       reviewIndex: 0,
       stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+      reviewRatings: {},
       retellAttempted: false,
       transferTaskAttempted: false,
       transferTaskPending: false,
@@ -531,6 +544,7 @@ export function saveStoryProgress(storyId: string, s: SessionState, now: number)
       drillIndex: s.drillIndex,
       reviewIndex: s.reviewIndex,
       stats: s.stats,
+      reviewRatings: { ...s.reviewRatings },
       retellAttempted: s.retellAttempted,
       transferTaskAttempted: s.transferTaskAttempted,
       transferTaskPending: s.transferTaskPending,

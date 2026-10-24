@@ -215,6 +215,7 @@ describe("reprise après interruption (régressions)", () => {
         drillIndex: 0,
         reviewIndex: 0,
         stats: s.stats,
+        reviewRatings: {},
         retellAttempted: false,
         transferTaskAttempted: false,
         transferTaskPending: false,
@@ -239,6 +240,7 @@ describe("reprise après interruption (régressions)", () => {
         drillIndex: 0,
         reviewIndex: 5,
         stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+        reviewRatings: {},
         retellAttempted: false,
         transferTaskAttempted: false,
         transferTaskPending: false,
@@ -260,6 +262,7 @@ describe("reprise après interruption (régressions)", () => {
         drillIndex: 0,
         reviewIndex: 1,
         stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+        reviewRatings: {},
         retellAttempted: false,
         transferTaskAttempted: false,
         transferTaskPending: false,
@@ -280,6 +283,7 @@ describe("reprise après interruption (régressions)", () => {
         drillIndex: 99,
         reviewIndex: 0,
         stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+        reviewRatings: {},
         retellAttempted: false,
         transferTaskAttempted: false,
         transferTaskPending: false,
@@ -332,6 +336,27 @@ describe("mémoire d'expressions", () => {
     const prev = { "en:other:v1": { rep: 5, ef: 2.2, iv: 30, due: NOW } };
     const out = scheduleFromSession(initSession(story), story, prev, NOW);
     expect(out["en:other:v1"]).toEqual(prev["en:other:v1"]);
+  });
+
+  it("REGRESS-RISK-001 : oubliée en révision puis réussie au circling → revue demain", () => {
+    // Avant correction : scheduleFromSession ignorait le verdict du bloc
+    // REVIEW et la promouvait avec quality 5.
+    let s = initSession(story, { duePhraseIds: ["en:no-fever:v1"] });
+    s = sessionReducer(s, { type: "REVIEW_RATED", phraseId: "en:no-fever:v1", remembered: false }, story);
+    // Circling parfait sur cette expression ensuite.
+    s = runTo(s, [{ type: "ADVANCE" }, { type: "ADVANCE" }, { type: "ADVANCE" }]);
+    const out = scheduleFromSession(s, story, {}, NOW);
+    expect(out["en:no-fever:v1"]).toMatchObject({ rep: 0, iv: 1, due: NOW + DAY });
+    expect(out["en:no-fever:v1"].ef).toBeCloseTo(2.18, 2); // quality 2 (EF 2.5 − 0.32), pas 5
+  });
+
+  it("REGRESS-RISK-001b : retenue en révision, aucune difficulté → quality 4 (EF stable)", () => {
+    let s = initSession(story, { duePhraseIds: ["en:no-fever:v1"] });
+    s = sessionReducer(s, { type: "REVIEW_RATED", phraseId: "en:no-fever:v1", remembered: true }, story);
+    const out = scheduleFromSession(s, story, {}, NOW);
+    expect(out["en:no-fever:v1"].ef).toBeCloseTo(2.5, 4); // q4 laisse l'EF inchangé
+    // Jamais révisée et réussie (q5) : EF monte.
+    expect(out["en:have-headache:v1"].ef).toBeCloseTo(2.6, 4);
   });
 });
 

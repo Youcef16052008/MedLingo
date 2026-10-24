@@ -51,6 +51,10 @@ export interface SessionState {
   lastCorrect: boolean | null;
   attemptsOnCurrent: number;
   stats: SessionStats;
+  /** Bloc REVIEW : phraseId → « retenu » (true) ou « oublié » (false).
+   *  Persisté pour que la planification de fin de séance tienne compte des
+   *  révisions, même après une reprise (RISK-001 de la revue). */
+  reviewRatings: Record<string, boolean>;
   retellAttempted: boolean;
   transferTaskAttempted: boolean;
   /** TRANSFER_AND_SUMMARY : questions terminées → tâche de production finale. */
@@ -64,6 +68,7 @@ export type Action =
   | { type: "SUBMIT_DRILL"; value: string }
   | { type: "REVEAL" }
   | { type: "HELP" }
+  | { type: "REVIEW_RATED"; phraseId: string; remembered: boolean }
   | { type: "RETELL_DONE"; attempted: boolean }
   | { type: "TRANSFER_TASK_DONE"; attempted: boolean };
 
@@ -109,6 +114,7 @@ export function initSession(story: Story, opts: InitOptions = {}): SessionState 
     lastCorrect: null,
     attemptsOnCurrent: 0,
     stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+    reviewRatings: {},
     retellAttempted: false,
     transferTaskAttempted: false,
     transferTaskPending: false,
@@ -132,6 +138,7 @@ export interface SavedSession {
   drillIndex: number;
   reviewIndex: number;
   stats: SessionStats;
+  reviewRatings: Record<string, boolean>;
   retellAttempted: boolean;
   transferTaskAttempted: boolean;
   transferTaskPending: boolean;
@@ -153,6 +160,7 @@ export function resumeSession(story: Story, saved: SavedSession, due: string[]):
     drillIndex: Math.min(saved.drillIndex, Math.max(0, story.drill.items.length - 1)),
     reviewIndex: saved.reviewIndex,
     stats: saved.stats,
+    reviewRatings: { ...saved.reviewRatings },
     retellAttempted: saved.retellAttempted,
     transferTaskAttempted: saved.transferTaskAttempted,
     transferTaskPending: saved.transferTaskPending,
@@ -349,6 +357,15 @@ export function sessionReducer(state: SessionState, action: Action, story: Story
       return { ...state, stats };
     }
 
+    case "REVIEW_RATED":
+      // Le verdict est aussi écrit immédiatement dans le SM-2 par l'UI (pour
+      // survivre à une interruption) ; l'état moteur le conserve pour la
+      // planification de fin de séance (RISK-001).
+      return {
+        ...state,
+        reviewRatings: { ...state.reviewRatings, [action.phraseId]: action.remembered },
+      };
+
     case "RETELL_DONE":
       return { ...state, retellAttempted: state.retellAttempted || action.attempted };
 
@@ -371,9 +388,13 @@ export function duePhrases(story: Story, sm2: ExprScheds, now: number): string[]
 }
 
 /**
- * Planifie les expressions ciblées en fin de séance (§6.3 du guide) :
- * difficile → qualité 2 (revue demain), sinon 5. Les révisions du bloc
- * REVIEW ont déjà pu planifier certaines expressions : `prev` les conserve.
+ * Planifie les expressions ciblées en fin de séance (§6.3 du guide).
+ * Qualité retenue = la plus sévère entre le verdict du bloc REVIEW et celui
+ * du circling (RISK-001 : une expression oubliée en révision n'est jamais
+ * promue par des questions réussies ensuite) :
+ *   oubliée en révision OU difficile au circling → 2 (revue demain) ;
+ *   retenue en révision sans difficulté → 4 ; jamais révisée et réussie → 5.
+ * `prev` conserve les expressions d'autres histoires.
  */
 export function scheduleFromSession(
   state: SessionState,
@@ -384,7 +405,9 @@ export function scheduleFromSession(
   const out: ExprScheds = { ...prev };
   for (const p of story.targetPhrases) {
     const difficult = state.stats.difficultPhraseIds.includes(p.id);
-    const quality = difficult ? 2 : 5;
+    const rating = state.reviewRatings[p.id];
+    const quality =
+      difficult || rating === false ? 2 : rating === true ? 4 : 5;
     out[p.id] = sm2Next(quality, out[p.id], now);
   }
   return out;

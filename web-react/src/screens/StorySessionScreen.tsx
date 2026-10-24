@@ -87,6 +87,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
             drillIndex: saved.drillIndex,
             reviewIndex: saved.reviewIndex,
             stats: saved.stats,
+            reviewRatings: saved.reviewRatings,
             retellAttempted: saved.retellAttempted,
             transferTaskAttempted: saved.transferTaskAttempted,
             transferTaskPending: saved.transferTaskPending,
@@ -473,6 +474,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
                   const scheds = scheduleReview(phrase.id, true, draft.exprSm2, Date.now());
                   for (const [k, v] of Object.entries(scheds)) draft.exprSm2[k] = v;
                 });
+                dispatch({ type: "REVIEW_RATED", phraseId: phrase.id, remembered: true });
                 dispatch({ type: "ADVANCE" });
               }}
             >
@@ -486,6 +488,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
                   const scheds = scheduleReview(phrase.id, false, draft.exprSm2, Date.now());
                   for (const [k, v] of Object.entries(scheds)) draft.exprSm2[k] = v;
                 });
+                dispatch({ type: "REVIEW_RATED", phraseId: phrase.id, remembered: false });
                 dispatch({ type: "ADVANCE" });
               }}
             >
