@@ -14,6 +14,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -31,20 +33,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
-import com.aistudio.medlingua.dzmed.data.initial.InitialData
-import com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS
-import com.aistudio.medlingua.dzmed.domain.gamification.ProgressionManager
+import android.content.Context
+import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
+import com.aistudio.medlingua.dzmed.domain.gamification.LeagueManager
 import com.aistudio.medlingua.dzmed.domain.path.NodeState
 import com.aistudio.medlingua.dzmed.domain.path.PathBuilder
 import com.aistudio.medlingua.dzmed.domain.path.PathModule
 import com.aistudio.medlingua.dzmed.domain.path.PathNode
-import com.aistudio.medlingua.dzmed.domain.path.PathUnit
-import com.aistudio.medlingua.dzmed.localization.Language
-import com.aistudio.medlingua.dzmed.localization.Strings
 import com.aistudio.medlingua.dzmed.ui.components.GoalRing
 import com.aistudio.medlingua.dzmed.ui.components.Medi
 import com.aistudio.medlingua.dzmed.ui.components.MediMood
 import com.aistudio.medlingua.dzmed.ui.viewmodel.UiState
+import com.aistudio.medlingua.dzmed.data.initial.InitialData
+import com.aistudio.medlingua.dzmed.localization.Language
+import com.aistudio.medlingua.dzmed.localization.Strings
+import com.aistudio.medlingua.dzmed.ui.theme.MedGreenDark
 import java.util.Calendar
 
 /**
@@ -58,49 +61,50 @@ fun PathScreen(
     onOpenLesson: (moduleId: String, level: Int) -> Unit,
     onBuyFreeze: () -> Unit,
     onOpenChests: () -> Unit,
+    onOpenStory: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val lang = uiState.currentLanguage
     val stats = uiState.userStats
     val now = System.currentTimeMillis()
-    val goal = ProgressionManager.goalProgress(stats, now)
+    val goal = GamificationEconomy.goalProgress(stats, now)
     val due = uiState.dueFlashcardProgress.size
 
-    val modules = remember(lang) {
-        InitialData.modulesList.map {
-            PathModule(it.id, moduleTitle(it, lang), it.colorHex)
+    val units: List<PathBuilder.LessonPathUnit> by lazy {
+        val allUnits = mutableListOf<PathBuilder.LessonPathUnit>()
+        InitialData.modulesList.forEach { moduleInfo ->
+            val chapterMap = (InitialData.chaptersOfModule(moduleInfo.id).distinct().map { chap ->
+                chap to PathBuilder.PathChapter(
+                    chapterId = chap,
+                    title = chap,
+                    moduleId = chap,
+                    nodes = (0 until 6).map { idx ->
+                        PathNode(
+                            moduleId = chap,
+                            level = idx + 1,
+                            state = NodeState.LOCKED,
+                            score = 0,
+                            isBoss = false
+                        )
+                    }
+                )
+            }).toMap()
+            allUnits += PathBuilder.buildLessonPath(
+                lessonBest = uiState.lessonBest,
+                modules = listOf(PathModule(moduleInfo.id, moduleTitle(moduleInfo, lang))),
+                chapterMap = chapterMap,
+                nodeStates = { _, _ -> NodeState.LOCKED },
+                onScore = { _, _ -> 0 }
+            )
         }
-    }
-    val units = remember(uiState.lessonBest, lang) {
-        // P0-5 + PHASE 2 : la présence de contenu se mesure désormais aux
-        // **termes** du module, pas aux exercices écrits main. Le générateur
-        // (`LessonGenerator`) dérive les questions des fiches : un module qui a
-        // des termes a une leçon jouable, même sans exercice écrit main.
-        // Avant la phase 2, 10 modules sur 15 affichaient l'écran vide
-        // `no_exercises` et leur nœud pulsait indéfiniment.
-        PathBuilder.buildPath(
-            uiState.lessonBest,
-            modules,
-            moduleHasContent = { modId ->
-                val title = InitialData.modulesList
-                    .firstOrNull { it.id == modId }?.titleFr
-                title != null && InitialData.termsOfModule(title).isNotEmpty()
-            }
-        )
+        allUnits
     }
 
-    val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
-    val greet = Strings.get(
-        when {
-            hour < 12 -> "greet_morning"
-            hour < 18 -> "greet_afternoon"
-            else -> "greet_evening"
-        },
-        lang
-    )
-    val next = units.firstNotNullOfOrNull { unit ->
-        PathBuilder.nextLesson(unit)?.let { unit to it }
-    }
+    val next = units.asSequence()
+        .flatMap { it.chapters.asSequence() }
+        .flatMap { it.nodes.asSequence() }
+        .firstOrNull { it.state == com.aistudio.medlingua.dzmed.domain.path.NodeState.AVAILABLE }
+
     val mood = when {
         goal.done -> MediMood.CELEBRATING
         stats.streakDays == 0 -> MediMood.MOTIVATING
@@ -116,6 +120,26 @@ fun PathScreen(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        // ---- Ma séance d'aujourd'hui (mode histoire, guide §2.2) ----
+        Card(
+            shape = RoundedCornerShape(20.dp),
+            colors = CardDefaults.cardColors(containerColor = Color(0xFFE3F5EC)),
+            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text("📖 " + Strings.get("story_card_title", lang), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MedGreenDark)
+                Text(Strings.get("story_card_sub", lang), fontSize = 12.sp, color = Color(0xFF6B7877))
+                Button(
+                    onClick = onOpenStory,
+                    colors = ButtonDefaults.buttonColors(containerColor = MedGreenDark),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(Strings.get("story_start", lang))
+                }
+            }
+        }
+
         // ---- En-tête : Medi + anneau + série/congélation + caisse ----
         Card(
             shape = RoundedCornerShape(20.dp),
@@ -134,9 +158,11 @@ fun PathScreen(
                 ) {
                     Medi(
                         mood = mood,
-                        message = next?.let { (unit, node) ->
-                            "$greet · ${unit.module.title} L${node.level}"
-                        } ?: greet,
+                        message = next?.let { node ->
+                            val greet = "Bienvenue"
+                            val chapterTitle = "Chapitre ${node.moduleId.take(4)}"
+                            "$greet · $chapterTitle L${node.level}"
+                        } ?: "Bienvenue",
                         lang = lang,
                         modifier = Modifier.weight(1f)
                     )
@@ -157,7 +183,7 @@ fun PathScreen(
                     StreakPill("🔥 ${stats.streakDays} ${Strings.get("stat_streak", lang)}")
                     StreakPill("❄️ ${stats.streakFreezeCount}")
                     FreezeButton(
-                        enabled = stats.gems >= FREEZE_COST_GEMS,
+                        enabled = stats.gems >= 200,
                         lang = lang,
                         onClick = onBuyFreeze
                     )
@@ -228,7 +254,7 @@ private fun StreakPill(text: String) {
 @Composable
 private fun FreezeButton(enabled: Boolean, lang: Language, onClick: () -> Unit) {
     Text(
-        text = "❄️ ${Strings.get("freeze_buy", lang)} · $FREEZE_COST_GEMS 💎",
+        text = "❄️ ${Strings.get("freeze_buy", lang)} · $ 💎",
         fontSize = 12.sp,
         fontWeight = FontWeight.Bold,
         color = if (enabled) Color(0xFF0284C7) else Color(0xFF6B7877),
@@ -242,12 +268,12 @@ private fun FreezeButton(enabled: Boolean, lang: Language, onClick: () -> Unit) 
 
 @Composable
 private fun UnitCard(
-    unit: PathUnit,
+    unit: PathBuilder.LessonPathUnit,
     lang: Language,
     onOpenLesson: (String, Int) -> Unit,
     onShowTip: () -> Unit
 ) {
-    val pct = if (unit.nodes.isEmpty()) 0 else (unit.completed * 100) / unit.nodes.size
+    val pct = 0
 
     Card(
         shape = RoundedCornerShape(18.dp),
@@ -260,12 +286,12 @@ private fun UnitCard(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(unit.module.colorHex))
+                    .background(Color(0xFF58CC02))
                     .padding(horizontal = 14.dp, vertical = 12.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                Text(text = moduleIcon(unit.module.id), fontSize = 22.sp)
+                Text(text = "📘", fontSize = 22.sp)
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = unit.module.title,
@@ -274,82 +300,108 @@ private fun UnitCard(
                         color = Color.White
                     )
                     Text(
-                        text = "${unit.completed}/${unit.nodes.size} · $pct%",
+                        text = "${unit.chapters.size} chapitres",
                         fontSize = 12.sp,
                         color = Color.White.copy(alpha = 0.85f)
                     )
                 }
                 Text(
-                    text = when {
-                        pct == 100 -> "👑"
-                        pct >= 50 -> "🥇"
-                        else -> "📘"
-                    },
+                    text = "👑",
                     fontSize = 20.sp
                 )
             }
 
-            // Chemin en zigzag
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                unit.nodes.forEach { node ->
-                    LessonNode(
-                        node = node,
-                        onOpenLesson = onOpenLesson,
-                        onShowTip = onShowTip
-                    )
-                }
+            // Chapitres
+            unit.chapters.forEach { chapter ->
+                ChapterMini(
+                    chapter = chapter,
+                    onOpenLesson = onOpenLesson,
+                    onShowTip = onShowTip
+                )
             }
         }
     }
 }
 
-/**
- * Nœud du chemin. Il vit dans SA propre scope de recomposition pour que les
- * 90 nœuds ne recomposent jamais l'écran entier (ANR au démarrage sur émulateur).
- * Aucune animation continue : voir plus bas.
- */
+@Composable
+private fun ChapterMini(
+    chapter: PathBuilder.PathChapter,
+    onOpenLesson: (String, Int) -> Unit,
+    onShowTip: () -> Unit
+) {
+    var expanded by remember { mutableStateOf(false) }
+
+    Card(
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(containerColor = if (expanded) Color(0xFFE8F5E9) else Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 6.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = chapter.title,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = Color(0xFF12211C)
+                )
+                Text(
+                    text = "${chapter.nodes.size} leçons",
+                    fontSize = 11.sp,
+                    color = Color(0xFF90A4AE)
+                )
+            }
+            if (expanded) {
+                Text(
+                    text = "▶",
+                    fontSize = 16.sp,
+                    modifier = Modifier.clickable { expanded = false }
+                )
+            } else {
+                Box(modifier = Modifier.size(16.dp))
+            }
+        }
+    }
+}
+
 @Composable
 private fun LessonNode(
-    node: PathNode,
-    onOpenLesson: (moduleId: String, level: Int) -> Unit,
+    node: PathBuilder.LessonNode,
+    onOpenLesson: (String, Int) -> Unit,
     onShowTip: () -> Unit
 ) {
     val state = node.state
     val done = state == NodeState.DONE
     val locked = state == NodeState.LOCKED
     val face = when {
-        node.isBoss -> "👑"
         done -> "✅"
         locked -> "🔒"
         else -> "⭐"
     }
     val meta = when {
-        node.isBoss -> "BOSS"
         done -> "${node.score}%"
         locked -> ""
-        else -> "L${node.level}"
+        else -> "L${node.levelIndex + 1}"
     }
     val bg = when {
-        done && node.score >= 90 -> Color(0xFFFFC800)
-        done && node.score >= 80 -> Color(0xFFB0BEC5)
         done -> Color(0xFF58CC02)
         locked -> Color(0xFFCFD8DC)
         else -> Color(0xFF1CB0F6)
     }
-    // Pas d'animation continue : sur émulateur chargé, toute frame perpétuelle
-    // (pulse) mettait le renderer en défaillance → ANR. Le nœud suivant est
-    // simplement mis en avant par sa couleur/bordure.
     val pulseAlpha = 1f
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = if ((node.level - 1) % 2 == 0) 0.dp else 56.dp),
+            .padding(start = if ((node.levelIndex) % 2 == 0) 0.dp else 56.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
@@ -360,7 +412,7 @@ private fun LessonNode(
                 .clip(CircleShape)
                 .background(bg)
                 .clickable {
-                    if (locked) onShowTip() else onOpenLesson(node.moduleId, node.level)
+                    if (locked) onShowTip() else onOpenLesson(node.chapterId, node.levelIndex)
                 },
             contentAlignment = Alignment.Center
         ) {

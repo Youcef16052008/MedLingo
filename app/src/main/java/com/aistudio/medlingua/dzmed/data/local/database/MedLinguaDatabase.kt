@@ -8,6 +8,8 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.aistudio.medlingua.dzmed.data.initial.InitialData
 import com.aistudio.medlingua.dzmed.data.local.dao.MedicalDao
+import com.aistudio.medlingua.dzmed.data.local.dao.ReviewQueueDao
+import com.aistudio.medlingua.dzmed.data.local.dao.StoryDao
 import com.aistudio.medlingua.dzmed.data.local.entity.DownloadedModuleEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.ExerciseEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.FlashcardProgressEntity
@@ -16,6 +18,9 @@ import com.aistudio.medlingua.dzmed.data.local.entity.LeagueCohortEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.LeagueMemberEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.LessonScoreEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
+import com.aistudio.medlingua.dzmed.data.local.entity.PhraseProgressEntity
+import com.aistudio.medlingua.dzmed.data.local.entity.StorySessionProgressEntity
+import com.aistudio.medlingua.dzmed.data.local.entity.ReviewQueueItem
 import com.aistudio.medlingua.dzmed.data.local.entity.TrophyEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
 
@@ -30,7 +35,10 @@ import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
         LeagueCohortEntity::class,
         LeagueMemberEntity::class,
         TrophyEntity::class,
-        LessonScoreEntity::class
+        LessonScoreEntity::class,
+        ReviewQueueItem::class,
+        StorySessionProgressEntity::class,
+        PhraseProgressEntity::class
     ],
     // v9 : les ids des seeds ont été dédupliqués (1..N) après l'intégration des
     // dumps SQL, ce qui a RENUMÉROTÉ les termes. Aucune colonne n'a changé, mais
@@ -50,11 +58,22 @@ import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
     // v12 : suppression de la colonne legacy `example` (défaut D3). Elle
     // dupliquait `exampleEn` (692 valeurs identiques sur 972) et n'était lue
     // par aucun code — grep strict : 0 lecteur.
-    version = 12,
+    //
+    // v13 : `review_queue.missed_ex_ids` — la colonne et MIGRATION_12_13
+    // existaient mais `version` était restée à 12 : la migration ne pouvait
+    // jamais s'exécuter et les bases existantes validaient le schéma contre
+    // une entité qui avait déjà la colonne (crash assuré). Le bump à 13 rend
+    // le chemin d'upgrade réel.
+    //
+    // v14 : mode histoire — tables neuves `story_session_progress` et
+    // `phrase_progress` (mémoire d'expressions SÉPARÉE des `termId`).
+    version = 14,
     exportSchema = true
 )
 abstract class MedLinguaDatabase : RoomDatabase() {
     abstract fun medicalDao(): MedicalDao
+    abstract fun reviewQueueDao(): ReviewQueueDao
+    abstract fun storyDao(): StoryDao
 
     companion object {
         @Volatile
@@ -72,7 +91,9 @@ abstract class MedLinguaDatabase : RoomDatabase() {
                     MIGRATION_8_9,
                     MIGRATION_9_10,
                     MIGRATION_10_11,
-                    MIGRATION_11_12
+                    MIGRATION_11_12,
+                    MIGRATION_12_13,
+                    MIGRATION_13_14
                 )
                     .build()
                 INSTANCE = instance
@@ -478,5 +499,81 @@ internal val MIGRATION_11_12 = object : Migration(11, 12) {
         database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module ON medical_terms(module)")
         database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module_chapter ON medical_terms(module, chapter)")
         database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_termEn_module ON medical_terms(termEn, module)")
+    }
+}
+/**
+ * v12 → v13 : table `review_queue` (hub « Revisions en attente »).
+ *
+ * Historique : l'entité `ReviewQueueItem` et cette migration ont été écrites
+ * en parallèle sans export de schéma — la v12 committée ne contient PAS la
+ * table, et l'`ALTER TABLE review_queue ADD COLUMN missed_ex_ids` d'origine
+ * aurait planté (« no such table ») sur toute base v12 réelle, avec en plus
+ * un nom de colonne erroné (l'entité expose `missedExIds`, camelCase).
+ *
+ * La migration CRÉE donc la table à la forme exacte de l'entité (validée par
+ * l'identifiant de schéma de 13.json). Table neuve : aucune donnée existante
+ * n'est touchée.
+ */
+internal val MIGRATION_12_13 = object : Migration(12, 13) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL(
+            """
+            CREATE TABLE IF NOT EXISTS review_queue (
+                id TEXT NOT NULL PRIMARY KEY,
+                lessonId TEXT NOT NULL,
+                chapterId TEXT NOT NULL,
+                title TEXT NOT NULL,
+                questionCount INTEGER NOT NULL,
+                status TEXT NOT NULL,
+                missedExIds TEXT NOT NULL
+            )
+            """.trimIndent()
+        )
+    }
+}
+
+/**
+ * v13 → v14 : mode « histoire » — deux tables NEUVES, aucune donnée existante
+ * n'est lue, déplacée ou supprimée (guide d'intégration §8 : jamais de repli
+ * destructif).
+ *
+ * `story_session_progress` : progression/reprise de séance + récompense
+ * idempotente. `phrase_progress` : SM-2 des expressions (`en:…:v1`), espace
+ * de clés séparé de `flashcard_progress` (termId numériques).
+ */
+internal val MIGRATION_13_14 = object : Migration(13, 14) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL(
+            """
+            CREATE TABLE IF NOT EXISTS story_session_progress (
+                storyId TEXT NOT NULL PRIMARY KEY,
+                contentVersion INTEGER NOT NULL,
+                step TEXT NOT NULL,
+                qIndex INTEGER NOT NULL,
+                drillIndex INTEGER NOT NULL,
+                reviewIndex INTEGER NOT NULL,
+                statsJson TEXT NOT NULL,
+                reviewRatingsJson TEXT NOT NULL,
+                retellAttempted INTEGER NOT NULL,
+                transferTaskAttempted INTEGER NOT NULL,
+                transferTaskPending INTEGER NOT NULL,
+                savedAt INTEGER NOT NULL,
+                completedAt INTEGER NOT NULL,
+                rewardClaimed INTEGER NOT NULL
+            )
+            """.trimIndent()
+        )
+        database.execSQL(
+            """
+            CREATE TABLE IF NOT EXISTS phrase_progress (
+                phraseId TEXT NOT NULL PRIMARY KEY,
+                repetitions INTEGER NOT NULL,
+                easeFactor REAL NOT NULL,
+                intervalDays INTEGER NOT NULL,
+                nextReviewTimestamp INTEGER NOT NULL,
+                lastReviewedTimestamp INTEGER NOT NULL
+            )
+            """.trimIndent()
+        )
     }
 }

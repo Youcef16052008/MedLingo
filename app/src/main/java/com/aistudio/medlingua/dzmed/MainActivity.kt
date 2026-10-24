@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.aistudio.medlingua.dzmed.localization.Language
 import com.aistudio.medlingua.dzmed.localization.Strings
 import com.aistudio.medlingua.dzmed.ui.components.RewardPopup
 import com.aistudio.medlingua.dzmed.ui.screens.FlashcardsScreen
@@ -74,6 +75,8 @@ import com.aistudio.medlingua.dzmed.ui.components.AppIntroOverlay
 import com.aistudio.medlingua.dzmed.ui.components.GemsLeagueTopBar
 import com.aistudio.medlingua.dzmed.ui.components.LeagueScreen
 import com.aistudio.medlingua.dzmed.ui.components.SuperPaywallDialog
+import com.aistudio.medlingua.dzmed.ui.screens.StorySessionScreen
+import com.aistudio.medlingua.dzmed.data.story.StoryAssetSource
 import com.aistudio.medlingua.dzmed.service.NotificationHelper
 
 enum class MainDestination(
@@ -144,6 +147,7 @@ fun MedLinguaAppContent(
     // Full-screen overlays (spec §5 : leçons hors onglets)
     var showQuiz by remember { mutableStateOf(false) }
     var showFlash by remember { mutableStateOf(false) }
+    var showStory by remember { mutableStateOf(false) }
     val lang = uiState.currentLanguage
 
     // Runtime Permission for Notifications (Android 13+ / Tiramisu)
@@ -187,11 +191,16 @@ fun MedLinguaAppContent(
 
     // BackHandler: ferme le quiz/les flashcards, sinon revient au Parcours
     BackHandler(
-        enabled = showQuiz || showFlash || currentDestination != MainDestination.PATH
+        enabled = showQuiz || showFlash || showStory || currentDestination != MainDestination.PATH
     ) {
         when {
             showQuiz -> showQuiz = false
             showFlash -> showFlash = false
+            // Séance histoire : suspendue (progression déjà sauvegardée) + TTS coupé.
+            showStory -> {
+                (context.applicationContext as? MedLinguaApp)?.ttsManager?.stop()
+                showStory = false
+            }
             else -> currentDestination = MainDestination.PATH
         }
     }
@@ -289,7 +298,8 @@ fun MedLinguaAppContent(
                                 showQuiz = true
                             },
                             onBuyFreeze = { viewModel.buyFreeze() },
-                            onOpenChests = { viewModel.openChestRewardPopup() }
+                            onOpenChests = { viewModel.openChestRewardPopup() },
+                            onOpenStory = { showStory = true }
                         )
                     }
                     MainDestination.PRACTICE -> {
@@ -404,6 +414,28 @@ fun MedLinguaAppContent(
                             onNextLevelQuestion = { viewModel.nextLevelQuestionWithSpec() },
                             onRestartLevel = { viewModel.restartCurrentLevel() }
                         )
+                    }
+                }
+
+                // ---- Overlay : séance histoire plein écran ----
+                if (showStory) {
+                    var storyId by remember { mutableStateOf<String?>(null) }
+                    LaunchedEffect(Unit) {
+                        storyId = StoryAssetSource.load(context).firstOrNull()?.storyId
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        val id = storyId
+                        if (id != null) {
+                            StorySessionScreen(
+                                storyId = id,
+                                lang = lang,
+                                onExit = { showStory = false }
+                            )
+                        }
                     }
                 }
 
