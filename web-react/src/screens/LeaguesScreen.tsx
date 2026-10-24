@@ -85,9 +85,9 @@ export function LeaguesScreen() {
             {TIER_ICONS[s.league.tier]}
           </span>
           <div>
-            <b className="league-hero-title">
+            <h1 className="league-hero-title">
               {t("leagueTitle")} {t(TIER_KEYS[s.league.tier]).toUpperCase()}
-            </b>
+            </h1>
             <span className="league-hero-sub">
               {cohortId}... • {rows.length} membres
             </span>

@@ -172,6 +172,17 @@ function setupQuestion(ex: Exercise): Partial<QuizState> {
     base.pairs = pairs;
     base.lefts = shuffle(pairs.map((p) => p.l));
     base.rights = shuffle(pairs.map((p) => p.r));
+  } else if (ex.type === "pair") {
+    // Type "pair" dans le corpus : format question/réponse (fill-in-the-blank)
+    // Exemple : options=['Quel:est'], answer='Heart valve'
+    const q = ex.qFr || ex.qEn || ex.qAr || "";
+    const a = ex.answer || "";
+    if (q && a) {
+      const pairs: Pair[] = [{ l: q, r: a }];
+      base.pairs = pairs;
+      base.lefts = shuffle([q]);
+      base.rights = shuffle([a]);
+    }
   }
   return base;
 }
@@ -206,6 +217,7 @@ export function QuizScreen() {
   const finishedRef = useRef(false);
   const advToRef = useRef(-1);
 
+  const submittingRef = useRef(false);
   const patch = (p: Partial<QuizState>) => setQ((prev) => ({ ...prev, ...p }));
 
   const begin = (level: number) => {
@@ -266,7 +278,8 @@ export function QuizScreen() {
    * ni point « correct », exactement comme `checkFill` côté Android.
    */
   const submit = (ok: boolean, partialXp = 0) => {
-    if (q.phase !== "play" || q.alreadyResult) return;
+    if (q.phase !== "play" || q.alreadyResult || submittingRef.current) return;
+    submittingRef.current = true;
     const ex = q.list[q.i];
     const now = Date.now();
 
@@ -291,12 +304,15 @@ export function QuizScreen() {
       correctN: prev.correctN + (ok ? 1 : 0),
       xp: prev.xp + (ok ? ex.points : partialXp),
     }));
+
+    submittingRef.current = false;
   };
 
   const check = () => {
     if (q.phase !== "play" || q.checked) return;
     const ex = q.list[q.i];
-    if (ex.type === "fill_blank") {
+    // fill_blank et pair : réponse en saisie libre (voir `fillScore`/scoring).
+    if (ex.type === "fill_blank" || ex.type === "pair") {
       const score = fillScore(q.fillVal, ex.answer);
       submit(score === 1, score === 0.5 ? Math.floor(ex.points / 2) : 0);
       return;
@@ -392,7 +408,7 @@ export function QuizScreen() {
           return (
             <div
               key={lvl.n}
-              className={`level-card ${unlocked ? "" : "locked"}`}
+              className={`level-card ${unlocked ? "" : "locked"} chip-row`}
               style={{ "--lvl-color": lvl.color } as React.CSSProperties}
             >
               <div className="level-card-top">
@@ -422,9 +438,8 @@ export function QuizScreen() {
                 )}
                 <button
                   type="button"
-                  className="level-start"
+                  className="level-start chip"
                   style={{ background: unlocked ? lvl.color : "#CBD5E1" }}
-                  disabled={!unlocked}
                   onClick={() => patch({ level: lvl.n })}
                 >
                   ▶ {t("startTraining")}
@@ -547,7 +562,7 @@ export function QuizScreen() {
         ))}
       </div>
     );
-  } else if (ex.type === "fill_blank") {
+  } else if (ex.type === "fill_blank" || ex.type === "pair") {
     body = (
       <>
         <p className="tiny">{t("typeHint")}</p>
@@ -670,7 +685,7 @@ export function QuizScreen() {
   const correctText = ex.type === "matching" ? ex.options.join("  |  ") : ex.answer;
   const exp = expText(ex, lang);
   const canCheck =
-    ex.type === "fill_blank"
+    ex.type === "fill_blank" || ex.type === "pair"
       ? !!q.fillVal.trim()
       : ex.type === "sentence_order"
         ? q.wordSel.length > 0

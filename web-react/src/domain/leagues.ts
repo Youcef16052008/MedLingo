@@ -6,11 +6,17 @@
 import type { Lang } from "../types";
 import { todayKey } from "./gamification";
 
+export type Tier = "bronze" | "silver" | "gold";
+
+export interface LeagueState {
+  tier: Tier;
+  weekStart: string;
+  botSeed: number;
+}
+
 export const COHORT_SIZE = 30;
 export const PROMOTION = 10;
 export const DEMOTION = 5;
-
-export type Tier = "bronze" | "silver" | "gold";
 
 export const TIER_ORDER: Tier[] = ["bronze", "silver", "gold"];
 

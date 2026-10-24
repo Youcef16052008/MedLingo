@@ -37,7 +37,7 @@ describe("parcours", () => {
     const best = { [lessonKey("anat", 1)]: UNLOCK_SCORE - 1 };
     const [unit] = buildPath(best, {});
     expect(unit.nodes[0].state).toBe("available");
-    expect(unit.nodes[0].score).toBe(69);
+    expect(unit.nodes[0].score).toBe(UNLOCK_SCORE - 1);
     expect(unit.nodes[1].state).toBe("locked");
   });
 
@@ -51,7 +51,7 @@ describe("parcours", () => {
     expect(unit.completed).toBe(5);
   });
 
-  it("les unités sont indépendantes : une unité validée ne débloche pas la suivante", () => {
+  it("les unités sont indépendantes : une unité validée ne débloque pas la suivante", () => {
     const best: Record<string, number> = {};
     for (let l = 1; l <= 6; l++) best[lessonKey("anat", l)] = 95;
     const path = buildPath(best, {});
@@ -61,9 +61,10 @@ describe("parcours", () => {
   });
 
   it("nextLesson renvoie la première leçon ouverte", () => {
-    const [unit] = buildPath({ [lessonKey("anat", 1)]: 70 }, {});
-    expect(nextLesson(unit)?.level).toBe(2);
-    expect(nextLesson(buildPath({}, {})[0])?.level).toBe(1);
+    const [unit] = buildPath({}, {});
+    expect(nextLesson(unit, 0)?.level).toBe(1);
+    const withBest = buildPath({ [lessonKey("anat", 1)]: 70 }, {});
+    expect(nextLesson(withBest[0], 0)?.level).toBe(2);
   });
 
   it("moduleBest ne débloque rien : c'est un repli d'affichage", () => {

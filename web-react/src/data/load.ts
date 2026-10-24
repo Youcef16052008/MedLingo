@@ -1,6 +1,111 @@
-import type { Exercise, Term } from "../types";
-import { MODULES } from "./modules";
+/** Infos dérivées du corpus : chapitres + mapping leçons. */
 
+import type { Term, Exercise } from "../types";
+import { MODULES } from "./modules";
+import type { Module } from "./modules";
+
+// -----------------------------------------------------------------------
+// Chargement des données de parcours (chapters.json, lesson_map.json)
+// -----------------------------------------------------------------------
+
+let chapters: ChapterInfo[] = [];
+let lessonMap: LessonMap = {};
+let chapterPromise: Promise<void> | null = null;
+
+export interface ChapterInfo {
+  id: string;
+  moduleId: string;
+  termIds: number[];
+  modules: LessonEntry[];
+  name: string;
+}
+
+export interface LessonEntry {
+  id: string;
+  kind: "new" | "review";
+  level: number;
+  termIds: number[];
+  questionCount: number;
+  reviewedLessonIds?: string[];
+}
+
+export interface LessonMap {
+  [lessonId: string]: LessonEntry | LessonMapEntry;
+}
+
+export interface LessonMapEntry {
+  lessonId: string;
+  id: string;
+  kind: "new" | "review";
+  termIds: number[];
+  questionCount: number;
+  reviewedLessonIds?: string[];
+}
+
+export function loadLessonData(): Promise<void> {
+  if (!chapterPromise) {
+    chapterPromise = (async () => {
+      console.log("[load.ts] loadLessonData: start fetch chapters.json");
+      const [chaptersData, lessonMapData] = await Promise.all([
+        fetchJson<ChapterInfo[]>("/data/chapters.json"),
+        fetchJson<LessonMap>("/data/lesson_map.json"),
+      ]);
+      console.log("[load.ts] loadLessonData: fetch OK, chapters loaded:", chaptersData.length);
+      chapters = chaptersData;
+      lessonMap = lessonMapData;
+      emitDataChangedReview();
+    })().catch((e: unknown) => {
+      console.error("[load.ts] loadLessonData: FETCH FAILED:", e);
+      chapterPromise = null;
+      throw e;
+    });
+  }
+  return chapterPromise;
+}
+
+export function getChapters(): ChapterInfo[] {
+  return chapters;
+}
+
+export function getLessonMap(): LessonMap {
+  return lessonMap;
+}
+
+export function getLessonEntry(lessonId: string): LessonEntry | undefined {
+  return lessonMap[lessonId] as LessonEntry | undefined;
+}
+
+// Re-abonnement pour invalider les caches de parcours
+export const dataListenersReview = new Set<() => void>();
+
+export function onDataChangedReview(fn: () => void): () => void {
+  dataListenersReview.add(fn);
+  return () => dataListenersReview.delete(fn);
+}
+
+function emitDataChangedReview(): void {
+  for (const fn of dataListenersReview) fn();
+}
+
+// Invalidation partagée
+const dataListeners = new Set<() => void>();
+
+/** Abonne une invalidation de cache au changement de données. */
+export function onDataChanged(fn: () => void): () => void {
+  dataListeners.add(fn);
+  return () => dataListeners.delete(fn);
+}
+
+onDataChanged(() => {
+  // Cache des termes/exercices seulement ; le parcours (chapters/lessonMap)
+  // est alimenté par `loadLessonData()` indépendamment et ne doit pas être
+  // effacé quand le corpus source change.
+  // chapters = [];
+  // lessonMap = {};
+  emitDataChangedReview();
+});
+
+/** Infos dérivées du corpus : chapitres + mapping leçons. */
 /**
  * Chargement des données extraites des seeds Kotlin
  * (`npm run extract` régénère `public/data/*.json`).
@@ -20,14 +125,6 @@ let promise: Promise<void> | null = null;
  * tout rechargement à chaud — liraient un corpus périmé. Chaque cache dérivé
  * s'abonne ici et se vide au changement de données.
  */
-const dataListeners = new Set<() => void>();
-
-/** Abonne une invalidation de cache au changement de données. */
-export function onDataChanged(fn: () => void): () => void {
-  dataListeners.add(fn);
-  return () => dataListeners.delete(fn);
-}
-
 function emitDataChanged(): void {
   for (const fn of dataListeners) fn();
 }
@@ -77,6 +174,6 @@ export const isLoaded = (): boolean => terms.length > 0;
 export function setTestData(data: Term[]): void {
   terms = data;
   byId = new Map(data.map((x) => [x.id, x]));
-  byModule = new Map(MODULES.map((m) => [m.id, data.filter((x) => x.module === m.fr)]));
+  byModule = new Map((MODULES as Module[]).map((m) => [m.id, data.filter((x) => x.module === m.fr)]));
   emitDataChanged();
 }

@@ -24,6 +24,7 @@ export type ExerciseType =
   | "fill_blank"
   | "sentence_order"
   | "matching"
+  | "pair"
   | "reading"
   | "clinical_case";
 
