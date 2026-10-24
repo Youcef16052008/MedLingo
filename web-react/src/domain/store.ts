@@ -1,8 +1,10 @@
 import { useSyncExternalStore } from "react";
 import type { Lang } from "../types";
 import type { Sched } from "./sm2";
-import { DAILY_GOAL_OPTIONS } from "./gamification";
+import { DAILY_GOAL_OPTIONS, todayKey, addXp, touchStreak } from "./gamification";
 import type { Tier } from "./leagues";
+import type { LeagueState } from "./leagues";
+import { STORY_STEPS, type Step, type SessionStats, type SessionState } from "../learning/session";
 
 /**
  * Store applicatif unique (pattern subscribe + `useSyncExternalStore`).
@@ -47,13 +49,71 @@ export interface AppState {
   sm2: Record<string, Sched>;
   introSeen: boolean;
   dataVersion: string;
+  /** Progrès des leçons (par lessonId). */
+  lessonProgress: Record<string, LessonProgress>;
+  /** File de révision ("Revisions en attente"). */
+  reviewQueue: ReviewQueueItem[];
+  /** Heart manager par leçon. */
+  heartManager: Record<string, { hearts: number; mistakes: number }>;
+  /** Séances « histoire » : progression reprise + récompense idempotente. */
+  storyProgress: Record<string, StoryProgress>;
+  /**
+   * Mémoire d'expressions (SM-2) — espace de clés SÉPARÉ de `sm2` :
+   * les ids (`en:have-headache:v1`) ne doivent jamais entrer en collision
+   * avec les `termId` numériques des flashcards (§9.3 du guide).
+   */
+  exprSm2: Record<string, Sched>;
 }
 
-/** Ligue hebdomadaire : palier courant, début de semaine (jour clé), graine des bots. */
-export interface LeagueState {
-  tier: "bronze" | "silver" | "gold";
-  weekStart: string;
-  botSeed: number;
+/** Progrès d'une séance « histoire » (reprise après interruption). */
+export interface StoryProgress {
+  storyId: string;
+  contentVersion: number;
+  step: Step;
+  qIndex: number;
+  drillIndex: number;
+  reviewIndex: number;
+  stats: SessionStats;
+  retellAttempted: boolean;
+  transferTaskAttempted: boolean;
+  /** Questions de transfert terminées, tâche de production en cours. */
+  transferTaskPending: boolean;
+  savedAt: number;
+  /** 0 = séance non terminée. */
+  completedAt: number;
+  /** Récompense de fin déjà attribuée pour cette exécution (anti double XP). */
+  rewardClaimed: boolean;
+}
+
+/** Progrès d'une leçon (stocké par `lessonId`). */
+export interface LessonProgress {
+  lessonId: string;
+  score: number;
+  heartsRemain: number;
+  mistakes: number;
+  completedAt: number;
+  missedExIds: number[];
+}
+
+/** Élement de la file de révision ("Revisions en attente"). */
+export interface ReviewQueueItem {
+  lessonId: string;
+  exIds: number[];
+  chapterId: string;
+  moduleId: string;
+  status: "unlocked" | "played";
+  missedAt: number;
+}
+
+/** Gestionnaire des coeurs (5 par leçon, restart à 0). */
+export interface HeartManager {
+  heartsLeft: number;
+  onWrongAnswer(): boolean;
+}
+
+/** État global de l'application. */
+export interface AppState {
+
 }
 
 /** Champs d'un ancien store qui ne sont plus écrits (cœurs et flashSuccess supprimés). */
@@ -110,6 +170,11 @@ export function makeDefaults(_now: number): AppState {
     sm2: {},
     introSeen: false,
     dataVersion: TERM_DATA_VERSION,
+    lessonProgress: {},
+    reviewQueue: [],
+    heartManager: {},
+    storyProgress: {},
+    exprSm2: {},
   };
 }
 
@@ -171,6 +236,43 @@ function coerceSm2(v: unknown): Record<string, Sched> {
   return out;
 }
 
+/** Progression de séance « histoire » : entrées incomplètes écartées. */
+function coerceStoryProgress(v: unknown): Record<string, StoryProgress> {
+  const out: Record<string, StoryProgress> = {};
+  for (const [k, p] of Object.entries(coerceRecord(v))) {
+    if (!p || typeof p !== "object") continue;
+    const o = p as Record<string, unknown>;
+    if (typeof o.storyId !== "string" || !(STORY_STEPS as readonly string[]).includes(o.step as string)) continue;
+    const stats =
+      o.stats && typeof o.stats === "object"
+        ? (o.stats as Record<string, unknown>)
+        : {};
+    out[k] = {
+      storyId: o.storyId,
+      contentVersion: coerceNum(o.contentVersion, 1),
+      step: o.step as StoryProgress["step"],
+      qIndex: coerceNum(o.qIndex, 0),
+      drillIndex: coerceNum(o.drillIndex, 0),
+      reviewIndex: coerceNum(o.reviewIndex, 0),
+      stats: {
+        firstTryIds: Array.isArray(stats.firstTryIds) ? stats.firstTryIds.map(String) : [],
+        mistakeIds: Array.isArray(stats.mistakeIds) ? stats.mistakeIds.map(String) : [],
+        helpedIds: Array.isArray(stats.helpedIds) ? stats.helpedIds.map(String) : [],
+        difficultPhraseIds: Array.isArray(stats.difficultPhraseIds)
+          ? stats.difficultPhraseIds.map(String)
+          : [],
+      },
+      retellAttempted: o.retellAttempted === true,
+      transferTaskAttempted: o.transferTaskAttempted === true,
+      transferTaskPending: o.transferTaskPending === true,
+      savedAt: coerceNum(o.savedAt, 0),
+      completedAt: coerceNum(o.completedAt, 0),
+      rewardClaimed: o.rewardClaimed === true,
+    };
+  }
+  return out;
+}
+
 /**
  * Reconstitue l'état depuis une chaîne brute. Isolé de `load()` pour être testable :
  * le store est instancié au chargement du module, ce qui le rend inatteignable depuis
@@ -217,6 +319,12 @@ export function revive(raw: string | null, now: number): AppState {
         moduleBest: coerceNumMap(parsed.moduleBest),
         lessonBest: coerceNumMap(parsed.lessonBest),
         trophies: coerceNumMap(parsed.trophies),
+        // Nouveaux : LessonProgress, ReviewQueue, HeartManager
+        lessonProgress: coerceRecord(parsed.lessonProgress) as Record<string, LessonProgress>,
+        reviewQueue: coerceRecord(parsed.reviewQueue) as unknown as ReviewQueueItem[],
+        heartManager: coerceRecord(parsed.heartManager) as Record<string, { hearts: number; mistakes: number }>,
+        storyProgress: coerceStoryProgress(parsed.storyProgress),
+        exprSm2: coerceSm2(parsed.exprSm2),
         league: {
           tier: TIERS.includes(league.tier as Tier) ? (league.tier as Tier) : base.league.tier,
           weekStart: typeof league.weekStart === "string" ? league.weekStart : base.league.weekStart,
@@ -270,6 +378,11 @@ export function update(recipe: (draft: AppState) => void): void {
     moduleBest: { ...state.moduleBest },
     lessonBest: { ...state.lessonBest },
     trophies: { ...state.trophies },
+    lessonProgress: { ...state.lessonProgress },
+    reviewQueue: [...state.reviewQueue],
+    heartManager: { ...state.heartManager },
+    storyProgress: { ...state.storyProgress },
+    exprSm2: { ...state.exprSm2 },
     league: { ...state.league },
   };
   recipe(draft);
@@ -289,4 +402,162 @@ export function resetProgress(now: number): void {
 
 export function useAppState(): AppState {
   return useSyncExternalStore(subscribe, getState, getState);
+}
+
+/* ------------------------------------------------------------------ */
+/* Nouveau : parcours module -> chapitre -> leçons                       */
+/* ------------------------------------------------------------------ */
+
+/** Démarre une nouvelle leçon (initialise les coeurs à 5). */
+export function startLesson(lessonId: string, _moduleId: string, _chapterId: string): void {
+  update((draft) => {
+    draft.lessonProgress[lessonId] = {
+      lessonId,
+      score: 0,
+      heartsRemain: 5,
+      mistakes: 0,
+      completedAt: 0,
+      missedExIds: [],
+    };
+    draft.heartManager[lessonId] = { hearts: 5, mistakes: 0 };
+    draft.lastStudy = todayKey(new Date().getTime());
+  });
+}
+
+/** Enregistre une réponse. Retourne `true` si la leçon doit redémarrer (0 coeurs). */
+export function recordAnswer(lessonId: string, ok: boolean): boolean {
+  update((draft) => {
+    const progress = draft.lessonProgress[lessonId];
+    if (!progress) return;
+    const hm = draft.heartManager[lessonId];
+    if (!hm) return;
+    if (!ok) {
+      hm.hearts -= 1;
+      hm.mistakes += 1;
+      progress.mistakes += 1;
+      if (hm.hearts <= 0) {
+        // Leçon redémarrée du début
+        hm.hearts = 5;
+        hm.mistakes = 0;
+        progress.mistakes = 0;
+        return true; // signaler restart
+      }
+      progress.heartsRemain = hm.hearts;
+      progress.score = Math.max(0, (progress.score + (ok ? 20 : 0)) / 2);
+    } else {
+      hm.mistakes = 0;
+      progress.score = Math.max(0, (progress.score + 20) / 2);
+      if (progress.heartsRemain < hm.hearts) {
+        progress.heartsRemain = hm.hearts;
+      }
+    }
+  });
+  return false;
+}
+
+/** Finalise la leçon. Retourne le feedback : "continue" | "choice" (continue/revision). */
+export function endLesson(
+  lessonId: string,
+  score: number,
+  missedExIds: number[]
+): "continue" | "choice" {
+  const wasFailed = missedExIds.length > 0;
+  update((draft) => {
+    const progress = draft.lessonProgress[lessonId];
+    if (!progress) return;
+    progress.score = Math.min(100, score);
+    progress.missedExIds = missedExIds;
+    progress.completedAt = Date.now();
+  });
+  return wasFailed ? "choice" : "continue";
+}
+
+/** Ajoute un élément à la file de révision ("Revisions en attente"). */
+export function addToReviewQueue(item: Omit<ReviewQueueItem, "status" | "missedAt">): void {
+  update((draft) => {
+    draft.reviewQueue.push({
+      ...item,
+      status: "unlocked",
+      missedAt: Date.now(),
+    });
+  });
+}
+
+/** Marque une leçon de la queue comme jouée. */
+export function markReviewPlayed(lessonId: string): void {
+  update((draft) => {
+    const item = draft.reviewQueue.find((x) => x.lessonId === lessonId);
+    if (item) item.status = "played";
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/* Séances « histoire » — progression, reprise, récompense idempotente  */
+/* ------------------------------------------------------------------ */
+
+/** Récompense de participation d'une séance histoire (guide §9 du mode). */
+export const STORY_SESSION_XP = 15;
+
+/** Démarre une séance à zéro (écrase toute progression antérieure). */
+export function startStorySession(storyId: string, contentVersion: number, now: number): void {
+  update((draft) => {
+    draft.storyProgress[storyId] = {
+      storyId,
+      contentVersion,
+      step: "REVIEW",
+      qIndex: 0,
+      drillIndex: 0,
+      reviewIndex: 0,
+      stats: { firstTryIds: [], mistakeIds: [], helpedIds: [], difficultPhraseIds: [] },
+      retellAttempted: false,
+      transferTaskAttempted: false,
+      transferTaskPending: false,
+      savedAt: now,
+      completedAt: 0,
+      rewardClaimed: false,
+    };
+  });
+}
+
+/** Persiste l'état du moteur pour la reprise après interruption. */
+export function saveStoryProgress(storyId: string, s: SessionState, now: number): void {
+  update((draft) => {
+    const prev = draft.storyProgress[storyId];
+    draft.storyProgress[storyId] = {
+      storyId,
+      contentVersion: s.contentVersion,
+      step: s.step,
+      qIndex: s.qIndex,
+      drillIndex: s.drillIndex,
+      reviewIndex: s.reviewIndex,
+      stats: s.stats,
+      retellAttempted: s.retellAttempted,
+      transferTaskAttempted: s.transferTaskAttempted,
+      transferTaskPending: s.transferTaskPending,
+      savedAt: now,
+      completedAt: prev?.completedAt ?? 0,
+      rewardClaimed: prev?.rewardClaimed ?? false,
+    };
+  });
+}
+
+/**
+ * Récompense de fin de séance — idempotente : le drapeau `rewardClaimed` est
+ * vérifié et posé dans la même recette, donc reprendre le bilan ou rejouer
+ * l'effet (React StrictMode) n'attribue jamais deux fois les XP.
+ * Retourne l'XP effectivement gagné (0 si déjà attribué).
+ */
+export function claimStoryReward(storyId: string, now: number): { xp: number; goalHit: boolean } {
+  let result = { xp: 0, goalHit: false };
+  update((draft) => {
+    const p = draft.storyProgress[storyId];
+    if (!p || p.rewardClaimed) return;
+    p.rewardClaimed = true;
+    p.completedAt = now;
+    p.savedAt = now;
+    const out = addXp(draft, STORY_SESSION_XP, now);
+    touchStreak(draft, now);
+    result = { xp: out.gained, goalHit: out.goalHit };
+  });
+  return result;
 }

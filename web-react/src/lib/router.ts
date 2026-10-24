@@ -51,9 +51,11 @@ export function navigate(path: string): void {
 /** Onglet actif pour la barre du bas. */
 export function activeTab(route: string): string {
   const name = routeName(route);
-  // Sous-écrans : recherche → Cours ; fiches/quiz → Révision ; ancien accueil → Parcours.
+  // Sous-écrans : recherche → Cours ; fiches/quiz → Révision ; séance
+  // narrative → Parcours (la carte « Ma séance » y réside) ; ancien accueil → Parcours.
   if (name === "search") return "modules";
   if (name === "flash" || name === "quiz") return "practice";
+  if (name === "story") return "path";
   if (name === "home") return "path";
   return ["path", "practice", "leagues", "modules", "profile"].includes(name)
     ? name

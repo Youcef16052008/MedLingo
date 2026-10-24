@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "stories": [
+    {
+      "schemaVersion": 1,
+      "storyId": "clinical-symptoms-001",
+      "contentVersion": 1,
+      "title": {
+        "en": "Understanding a simple symptom",
+        "fr": "Comprendre un symptôme simple",
+        "ar": "فهم عَرَض بسيط"
+      },
+      "goal": {
+        "en": "Understand a symptom that is present and a symptom that is absent.",
+        "fr": "Comprendre un symptôme présent et un symptôme absent.",
+        "ar": "فهم عَرَض موجود وعَرَض غائب."
+      },
+      "moduleIds": ["clinical_en"],
+      "relatedTermIds": [3860, 3896, 3885],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "published",
+      "durationMin": 10,
+      "review": { "language": "pending", "medical": "pending" },
+      "segments": [
+        {
+          "en": "Yacine is a patient.",
+          "fr": "Yacine est un patient.",
+          "ar": "ياسين مريض."
+        },
+        {
+          "en": "He has a headache.",
+          "fr": "Il a mal à la tête.",
+          "ar": "عنده صداع."
+        },
+        {
+          "en": "He does not have a fever.",
+          "fr": "Il n'a pas de fièvre.",
+          "ar": "ليست عنده حمى."
+        },
+        {
+          "en": "Lina is a medical student.",
+          "fr": "Lina est une étudiante en médecine.",
+          "ar": "لينا طالبة طب."
+        },
+        {
+          "en": "She asks, \"Do you have a fever?\"",
+          "fr": "Elle demande : « Avez-vous de la fièvre ? »",
+          "ar": "تسأله: هل عندك حمى؟"
+        },
+        {
+          "en": "Yacine says, \"No, I do not.\"",
+          "fr": "Yacine répond : « Non. »",
+          "ar": "يجيب ياسين: لا، ليس عندي."
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:have-headache:v1",
+          "en": "has a headache",
+          "fr": "a mal à la tête",
+          "ar": "عنده صداع"
+        },
+        {
+          "id": "en:no-fever:v1",
+          "en": "does not have a fever",
+          "fr": "n'a pas de fièvre",
+          "ar": "ليست عنده حمى"
+        },
+        {
+          "id": "en:do-you-have:v1",
+          "en": "Do you have…?",
+          "fr": "Avez-vous… ?",
+          "ar": "هل عندك…؟"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Does Yacine have a headache?",
+          "qFr": "Yacine a-t-il mal à la tête ?",
+          "qAr": "هل يوجد عند ياسين صداع؟",
+          "accepted": [
+            "yes",
+            "yes he does",
+            "yes he has a headache",
+            "yes yacine has a headache"
+          ],
+          "model": "Yes, he has a headache.",
+          "phraseIds": ["en:have-headache:v1"]
+        },
+        {
+          "id": "q2",
+          "q": "Does he have a fever?",
+          "qFr": "A-t-il de la fièvre ?",
+          "qAr": "هل عنده حمى؟",
+          "accepted": [
+            "no",
+            "no he does not",
+            "no he doesn't",
+            "no he does not have a fever",
+            "no he hasn't"
+          ],
+          "model": "No, he does not have a fever.",
+          "hint": {
+            "en": "Careful: he does NOT have a fever.",
+            "fr": "Attention au sens : il n'a pas de fièvre.",
+            "ar": "انتبه للمعنى: ليست عنده حمى."
+          },
+          "phraseIds": ["en:no-fever:v1"]
+        },
+        {
+          "id": "q3",
+          "q": "Does he have a headache or back pain?",
+          "qFr": "A-t-il mal à la tête ou au dos ?",
+          "qAr": "هل عنده صداع أم ألم في الظهر؟",
+          "accepted": [
+            "a headache",
+            "headache",
+            "he has a headache"
+          ],
+          "model": "He has a headache.",
+          "phraseIds": ["en:have-headache:v1"]
+        },
+        {
+          "id": "q4",
+          "q": "What symptom does he have?",
+          "qFr": "Quel symptôme a-t-il ?",
+          "qAr": "ما العَرَض الذي يعاني منه؟",
+          "accepted": [
+            "a headache",
+            "headache",
+            "he has a headache"
+          ],
+          "model": "He has a headache.",
+          "phraseIds": ["en:have-headache:v1"]
+        },
+        {
+          "id": "q5",
+          "q": "Who is the medical student?",
+          "qFr": "Qui est l'étudiante en médecine ?",
+          "qAr": "من هي طالبة الطب؟",
+          "accepted": ["lina"],
+          "model": "Lina is the medical student.",
+          "phraseIds": []
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "I have a headache. → He has a headache. With he / she / it, use \"has\".",
+          "fr": "I have a headache. → He has a headache. Avec he / she / it, on utilise \"has\".",
+          "ar": "I have a headache. ← He has a headache. مع he / she / it نستعمل has."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "She … a headache.",
+            "accepted": ["has"],
+            "model": "She has a headache."
+          },
+          {
+            "id": "d2",
+            "prompt": "He … not have a fever.",
+            "accepted": ["does"],
+            "model": "He does not have a fever."
+          },
+          {
+            "id": "d3",
+            "prompt": "I … a headache.",
+            "accepted": ["have"],
+            "model": "I have a headache."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Present the two important facts in two short sentences. Do not propose a diagnosis.",
+          "fr": "Présente les deux informations importantes en deux phrases courtes. Ne propose pas de diagnostic.",
+          "ar": "اذكر المعلومتين المهمتين في جملتين قصيرتين. لا تقترح تشخيصًا."
+        },
+        "starters": ["He has…", "He does not have…"],
+        "model": "He has a headache. He does not have a fever."
+      },
+      "transfer": {
+        "context": {
+          "en": "Salma is a patient. She has a sore throat. She does not have a fever.",
+          "fr": "Salma est une patiente. Elle a mal à la gorge et n'a pas de fièvre.",
+          "ar": "سلمى مريضة. عندها ألم في الحلق وليست عندها حمى."
+        },
+        "gloss": {
+          "en": "a sore throat = pain in the throat",
+          "fr": "a sore throat : mal à la gorge",
+          "ar": "a sore throat: ألم في الحلق"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "Does Salma have a headache or a sore throat?",
+            "qFr": "Salma a-t-elle mal à la tête ou à la gorge ?",
+            "qAr": "هل عند سلمى صداع أم ألم في الحلق؟",
+            "accepted": [
+              "a sore throat",
+              "sore throat",
+              "she has a sore throat",
+              "salma has a sore throat"
+            ],
+            "model": "She has a sore throat.",
+            "phraseIds": []
+          },
+          {
+            "id": "t2",
+            "q": "Does she have a fever?",
+            "qFr": "A-t-elle de la fièvre ?",
+            "qAr": "هل عندها حمى؟",
+            "accepted": [
+              "no",
+              "no she does not",
+              "no she doesn't",
+              "no she does not have a fever"
+            ],
+            "model": "No, she does not have a fever.",
+            "hint": {
+              "en": "Careful: she does NOT have a fever.",
+              "fr": "Attention au sens : elle n'a pas de fièvre.",
+              "ar": "انتبه للمعنى: ليست عندها حمى."
+            },
+            "phraseIds": ["en:no-fever:v1"]
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Present Salma's symptoms in two sentences.",
+            "fr": "Présente les symptômes de Salma en deux phrases.",
+            "ar": "اذكر أعراض سلمى في جملتين."
+          },
+          "starters": ["She has…", "She does not have…"],
+          "model": "Salma has a sore throat. She does not have a fever."
+        }
+      }
+    }
+  ]
+}

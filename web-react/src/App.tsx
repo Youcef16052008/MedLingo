@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useT, applyDocumentLang } from "./i18n/useT";
 import { useAppState, update, getState } from "./domain/store";
-import { loadOnce, isLoaded } from "./data/load";
+import { loadOnce, isLoaded, loadLessonData } from "./data/load";
+import { loadStories } from "./learning/stories";
 import { useHashRoute } from "./lib/router";
 import { rollover, weekStartKey, YOU } from "./domain/leagues";
 import { warmQuizPool } from "./domain/lessons";
@@ -16,6 +17,7 @@ import { ModulesScreen } from "./screens/ModulesScreen";
 import { SearchScreen } from "./screens/SearchScreen";
 import { FlashScreen } from "./screens/FlashScreen";
 import { QuizScreen } from "./screens/QuizScreen";
+import { StorySessionScreen } from "./screens/StorySessionScreen";
 import { ProfileScreen } from "./screens/ProfileScreen";
 import { navigate } from "./lib/router";
 
@@ -49,6 +51,8 @@ function Shell() {
         if (!cancelled)
           setError(e instanceof Error ? e.message : "load failed");
       });
+    loadLessonData(); // chapters + lessonMap => parcours (path/ChapterScreen)
+    loadStories().catch(() => undefined); // histoires : le mode reste utilisable sans
     return () => {
       cancelled = true;
     };
@@ -151,6 +155,10 @@ function Shell() {
       // Clé = hash brut : un changement de query remonte l'écran et relance
       // le démarrage automatique (`?module=a` → `?module=b`).
       screen = <QuizScreen key={route} />;
+      break;
+    case "story":
+      // `#/story/:id` — séance narrative ; quitter ramène au parcours.
+      screen = <StorySessionScreen key={param} storyId={param} onQuit={() => navigate("path")} />;
       break;
     case "profile":
       screen = <ProfileScreen />;

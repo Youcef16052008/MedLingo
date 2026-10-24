@@ -1,5 +1,5 @@
 /* Service worker MedLingo DZ — application hors-ligne (mode production uniquement). */
-const CACHE = "medlingo-web-v3";
+const CACHE = "medlingo-web-v4";
 
 const SHELL = [
   "./",
@@ -14,6 +14,7 @@ const SHELL = [
   "./icon-maskable-512.png",
   "./data/terms.json",
   "./data/exercises.json",
+  "./data/stories.v1.json",
 ];
 
 self.addEventListener("install", (event) => {

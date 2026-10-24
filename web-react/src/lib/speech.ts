@@ -2,8 +2,13 @@
 
 let speakTimer: number | undefined;
 
-export function speak(text: string, code = "en-US"): void {
-  if (typeof window === "undefined" || !("speechSynthesis" in window) || !text) return;
+/** Synthèse vocale disponible sur cet appareil ? (mode texte honnête sinon). */
+export function canSpeak(): boolean {
+  return typeof window !== "undefined" && "speechSynthesis" in window;
+}
+
+export function speak(text: string, code = "en-US", rate = 0.95): void {
+  if (!canSpeak() || !text) return;
   // Chrome : `cancel()` puis `speak()` dans le même tick reste parfois sans
   // effet (course documentée) — on décale la prise de parole.
   window.speechSynthesis.cancel();
@@ -12,7 +17,7 @@ export function speak(text: string, code = "en-US"): void {
     speakTimer = undefined;
     const u = new SpeechSynthesisUtterance(text);
     u.lang = code;
-    u.rate = 0.95;
+    u.rate = rate;
     window.speechSynthesis.speak(u);
   }, 50);
 }

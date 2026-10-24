@@ -3,6 +3,8 @@ import { useT } from "../i18n/useT";
 import { useNow } from "../lib/useNow";
 import { useAppState, update } from "../domain/store";
 import { getTerms } from "../data/load";
+import { getStories, isStoryLoaded } from "../learning/stories";
+import { navigate } from "../lib/router";
 import { pickContinueModule, totalDue, type Sm2Map } from "../domain/progress";
 import { buildPath, type PathNode } from "../domain/path";
 import { goalProgress, buyFreeze, FREEZE_COST_GEMS } from "../domain/gamification";
@@ -23,6 +25,41 @@ export function pearlOfDay(terms: Term[], now: number): Term | undefined {
   return withPearl[((day % withPearl.length) + withPearl.length) % withPearl.length];
 }
 
+/**
+ * Carte « Ma séance d'aujourd'hui » : la première histoire publiée, avec
+ * reprise si une séance est interrompue (guide §2.2). Invisible tant que le
+ * contenu n'est pas chargé — la carte ne doit jamais bloquer le parcours.
+ */
+export function TodayStoryCard() {
+  const { t, lang } = useT();
+  const s = useAppState();
+
+  if (!isStoryLoaded()) return null;
+  const story = getStories()[0];
+  if (!story) return null;
+
+  const saved = s.storyProgress[story.storyId];
+  const resumable = !!saved && saved.completedAt === 0 && saved.savedAt > 0;
+  const title = story.title[lang] || story.title.fr;
+
+  return (
+    <section className="card" style={{ borderLeft: "4px solid var(--accent, #2e7d32)" }}>
+      <span className="pearl-badge">📖 {t("storyCardTitle")}</span>
+      <h3 style={{ marginTop: 8 }}>{title}</h3>
+      <p className="tiny muted">
+        {t("storyCardSub")} · {story.durationMin} {t("storyMinutes")}
+      </p>
+      <button
+        type="button"
+        className="btn block"
+        onClick={() => navigate(`story/${story.storyId}`)}
+      >
+        {resumable ? t("storyResume") : t("storyStart")}
+      </button>
+    </section>
+  );
+}
+
 export function PathScreen() {
   const { t, lang } = useT();
   const s = useAppState();
@@ -31,7 +68,7 @@ export function PathScreen() {
   const now = useNow();
   const goal = goalProgress(s, now);
   const units = useMemo(
-    () => buildPath(s.lessonBest, s.moduleBest),
+    () => buildPath(),
     [s.lessonBest, s.moduleBest]
   );
   const sm2 = s.sm2 as Sm2Map;
@@ -97,6 +134,9 @@ export function PathScreen() {
           </button>
         )}
       </section>
+
+      {/* Ma séance d'aujourd'hui — mode histoire (guide d'intégration §2.2) */}
+      <TodayStoryCard />
 
       {/* Unités : 15 modules, 6 nœuds chacun */}
       <div className="section-head">
