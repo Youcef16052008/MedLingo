@@ -70,4 +70,5 @@
 
 | Phase | Commit | Vérifications |
 |---|---|---|
+| 1 | _(commit en cours)_ (24/10/2026) | vitest 191/191 · check:stories OK (démontré échec sur divergence) · check:i18n 0 · check:seed 0 · build OK. Couvert : RISK-002 (voix honnête, classif pure + hook), RISK-004 (sélection déterministe), RISK-006 (variantes dont négations nues), RISK-007 (parité web/Android), RISK-008 (garde schemaVersion, rejet atomique), RISK-005 partiel (aria-live, labels, lang=en, focus), P1.7 tests composant (5, jsdom). Bugs trouvés par ces tests et corrigés : condition de bannière invalide sans synthèse, bouton final de production, état partagé entre tests. |
 | 0 | `85998cd` (24/10/2026) | vitest 175/175 · check:i18n 0 problème · check:seed 0 problème (4504 termes / 13000 exercices) · build OK. Notes : seed SQL ≈ 12,4 Mo (couverture complète imposée par check:seed — à assumer côté déploiement Supabase) ; relecture linguistique/médicale de l'histoire pilote toujours *pending* (humain). |

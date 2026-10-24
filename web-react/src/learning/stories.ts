@@ -8,11 +8,26 @@
 
 import type { Story, StoryFile } from "./types";
 
+/** Versions du fichier d'histoires comprises par ce client (RISK-008). */
+export const SUPPORTED_STORIES_SCHEMA = 1;
+
 let stories: Story[] = [];
 let promise: Promise<void> | null = null;
 let failed = false;
 /** Le chargement a-t-il abouti (même vide : tout en draft) ou échoué ? */
 let settled = false;
+
+/** Valide la version du fichier ; une version inconnue est un échec franc,
+ *  pas un contenu partiellement interprété. */
+function ingest(raw: unknown): Story[] {
+  const data = raw as StoryFile | null;
+  if (!data || typeof data !== "object" || data.schemaVersion !== SUPPORTED_STORIES_SCHEMA) {
+    throw new Error(
+      `stories.v1.json : schemaVersion ${String((data as StoryFile | null)?.schemaVersion)} non supporté (attendu ${SUPPORTED_STORIES_SCHEMA})`
+    );
+  }
+  return (data.stories ?? []).filter((s) => s.publicationStatus === "published");
+}
 
 async function fetchJson<T>(path: string): Promise<T> {
   const res = await fetch(path);
@@ -26,7 +41,7 @@ export function loadStories(): Promise<void> {
     settled = false;
     promise = (async () => {
       const data = await fetchJson<StoryFile>("/data/stories.v1.json");
-      stories = (data.stories ?? []).filter((s) => s.publicationStatus === "published");
+      stories = ingest(data);
       settled = true;
     })().catch((e: unknown) => {
       // Échec définitif (hors-ligne sans cache, 404) : la carte « Ma séance »
@@ -40,9 +55,10 @@ export function loadStories(): Promise<void> {
   return promise;
 }
 
-/** Branche les histoires directement depuis la mémoire (tests Node). */
+/** Branche les histoires directement depuis la mémoire (tests Node).
+ *  Lève sur version non supportée — même contrat que le chargement réseau. */
 export function setStories(data: StoryFile): void {
-  stories = (data.stories ?? []).filter((s) => s.publicationStatus === "published");
+  stories = ingest(data);
   failed = false;
   settled = true;
 }

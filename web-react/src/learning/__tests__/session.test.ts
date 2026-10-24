@@ -381,6 +381,23 @@ describe("chargeur d'histoires", () => {
     expect(storiesSettled()).toBe(true);
     expect(storiesFailed()).toBe(false);
   });
+
+  it("REGRESS-RISK-008 : une version de schéma inconnue est rejetée franchement", () => {
+    expect(() => setStories({ ...file, schemaVersion: 2 })).toThrow(/schemaVersion/);
+    // Rejet ATOMIQUE : l'assignation échoue avant d'écraser l'existant —
+    // le contenu valide précédent reste en place (pas d'état vide surprise).
+    expect(storyById("clinical-symptoms-001")).toBeDefined();
+  });
+
+  it("RISK-006 : les contractions britanniques enrichies sont acceptées", () => {
+    const q2 = story.questions[1]; // « Does he have a fever? »
+    expect(checkAccepted("No, he hasn't got a fever.", q2.accepted)).toBe(true);
+    expect(checkAccepted("he does not have a fever", q2.accepted)).toBe(true);
+    const q1 = story.questions[0];
+    expect(checkAccepted("Yes, he's got a headache!", q1.accepted)).toBe(true);
+    // L'inversion de fait reste refusée.
+    expect(checkAccepted("yes", q2.accepted)).toBe(false);
+  });
 });
 
 describe("store — storyProgress et exprSm2", () => {

@@ -15,12 +15,21 @@
         "fr": "Comprendre un symptôme présent et un symptôme absent.",
         "ar": "فهم عَرَض موجود وعَرَض غائب."
       },
-      "moduleIds": ["clinical_en"],
-      "relatedTermIds": [3860, 3896, 3885],
+      "moduleIds": [
+        "clinical_en"
+      ],
+      "relatedTermIds": [
+        3860,
+        3896,
+        3885
+      ],
       "languageBand": "beginner_supported",
       "publicationStatus": "published",
       "durationMin": 10,
-      "review": { "language": "pending", "medical": "pending" },
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
       "segments": [
         {
           "en": "Yacine is a patient.",
@@ -83,10 +92,14 @@
             "yes",
             "yes he does",
             "yes he has a headache",
+            "yes he has",
+            "yes he's got a headache",
             "yes yacine has a headache"
           ],
           "model": "Yes, he has a headache.",
-          "phraseIds": ["en:have-headache:v1"]
+          "phraseIds": [
+            "en:have-headache:v1"
+          ]
         },
         {
           "id": "q2",
@@ -98,7 +111,12 @@
             "no he does not",
             "no he doesn't",
             "no he does not have a fever",
-            "no he hasn't"
+            "no he hasn't",
+            "no he has not",
+            "no he hasn't got a fever",
+            "no fever",
+            "he does not have a fever",
+            "he doesn't"
           ],
           "model": "No, he does not have a fever.",
           "hint": {
@@ -106,7 +124,9 @@
             "fr": "Attention au sens : il n'a pas de fièvre.",
             "ar": "انتبه للمعنى: ليست عنده حمى."
           },
-          "phraseIds": ["en:no-fever:v1"]
+          "phraseIds": [
+            "en:no-fever:v1"
+          ]
         },
         {
           "id": "q3",
@@ -116,10 +136,14 @@
           "accepted": [
             "a headache",
             "headache",
-            "he has a headache"
+            "he has a headache",
+            "he's got a headache",
+            "he has got a headache"
           ],
           "model": "He has a headache.",
-          "phraseIds": ["en:have-headache:v1"]
+          "phraseIds": [
+            "en:have-headache:v1"
+          ]
         },
         {
           "id": "q4",
@@ -129,17 +153,25 @@
           "accepted": [
             "a headache",
             "headache",
-            "he has a headache"
+            "he has a headache",
+            "he's got a headache",
+            "he has got a headache"
           ],
           "model": "He has a headache.",
-          "phraseIds": ["en:have-headache:v1"]
+          "phraseIds": [
+            "en:have-headache:v1"
+          ]
         },
         {
           "id": "q5",
           "q": "Who is the medical student?",
           "qFr": "Qui est l'étudiante en médecine ?",
           "qAr": "من هي طالبة الطب؟",
-          "accepted": ["lina"],
+          "accepted": [
+            "lina",
+            "lina is",
+            "the medical student is lina"
+          ],
           "model": "Lina is the medical student.",
           "phraseIds": []
         }
@@ -154,19 +186,25 @@
           {
             "id": "d1",
             "prompt": "She … a headache.",
-            "accepted": ["has"],
+            "accepted": [
+              "has"
+            ],
             "model": "She has a headache."
           },
           {
             "id": "d2",
             "prompt": "He … not have a fever.",
-            "accepted": ["does"],
+            "accepted": [
+              "does"
+            ],
             "model": "He does not have a fever."
           },
           {
             "id": "d3",
             "prompt": "I … a headache.",
-            "accepted": ["have"],
+            "accepted": [
+              "have"
+            ],
             "model": "I have a headache."
           }
         ]
@@ -177,7 +215,10 @@
           "fr": "Présente les deux informations importantes en deux phrases courtes. Ne propose pas de diagnostic.",
           "ar": "اذكر المعلومتين المهمتين في جملتين قصيرتين. لا تقترح تشخيصًا."
         },
-        "starters": ["He has…", "He does not have…"],
+        "starters": [
+          "He has…",
+          "He does not have…"
+        ],
         "model": "He has a headache. He does not have a fever."
       },
       "transfer": {
@@ -201,7 +242,10 @@
               "a sore throat",
               "sore throat",
               "she has a sore throat",
-              "salma has a sore throat"
+              "salma has a sore throat",
+              "she's got a sore throat",
+              "she has got a sore throat",
+              "salma has got a sore throat"
             ],
             "model": "She has a sore throat.",
             "phraseIds": []
@@ -215,7 +259,11 @@
               "no",
               "no she does not",
               "no she doesn't",
-              "no she does not have a fever"
+              "no she does not have a fever",
+              "no she has not",
+              "she does not have a fever",
+              "no she hasn't got a fever",
+              "she doesn't"
             ],
             "model": "No, she does not have a fever.",
             "hint": {
@@ -223,7 +271,9 @@
               "fr": "Attention au sens : elle n'a pas de fièvre.",
               "ar": "انتبه للمعنى: ليست عندها حمى."
             },
-            "phraseIds": ["en:no-fever:v1"]
+            "phraseIds": [
+              "en:no-fever:v1"
+            ]
           }
         ],
         "task": {
@@ -232,7 +282,10 @@
             "fr": "Présente les symptômes de Salma en deux phrases.",
             "ar": "اذكر أعراض سلمى في جملتين."
           },
-          "starters": ["She has…", "She does not have…"],
+          "starters": [
+            "She has…",
+            "She does not have…"
+          ],
           "model": "Salma has a sore throat. She does not have a fever."
         }
       }

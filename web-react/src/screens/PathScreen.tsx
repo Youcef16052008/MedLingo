@@ -4,6 +4,7 @@ import { useNow } from "../lib/useNow";
 import { useAppState, update } from "../domain/store";
 import { getTerms } from "../data/load";
 import { getStories, isStoryLoaded } from "../learning/stories";
+import { pickTodayStory } from "../learning/selection";
 import { navigate } from "../lib/router";
 import { pickContinueModule, totalDue, type Sm2Map } from "../domain/progress";
 import { buildPath, type PathNode } from "../domain/path";
@@ -26,16 +27,23 @@ export function pearlOfDay(terms: Term[], now: number): Term | undefined {
 }
 
 /**
- * Carte « Ma séance d'aujourd'hui » : la première histoire publiée, avec
- * reprise si une séance est interrompue (guide §2.2). Invisible tant que le
- * contenu n'est pas chargé — la carte ne doit jamais bloquer le parcours.
+ * Carte « Ma séance d'aujourd'hui » (guide §2.2) : sélection déterministe —
+ * reprise > expressions échues > jamais vue > plus anciennement terminée
+ * (RISK-004). Invisible tant que le contenu n'est pas chargé — la carte ne
+ * doit jamais bloquer le parcours.
  */
 export function TodayStoryCard() {
   const { t, lang } = useT();
   const s = useAppState();
+  const now = useNow();
 
   if (!isStoryLoaded()) return null;
-  const story = getStories()[0];
+  const story = pickTodayStory({
+    stories: getStories(),
+    exprSm2: s.exprSm2,
+    progress: s.storyProgress,
+    now,
+  });
   if (!story) return null;
 
   const saved = s.storyProgress[story.storyId];

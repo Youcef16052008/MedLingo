@@ -17,6 +17,7 @@ import {
 } from "../learning/session";
 import type { StoryQuestion, DrillItem } from "../learning/types";
 import { speak, stopSpeak, canSpeak } from "../lib/speech";
+import { useStoryVoice } from "../lib/useStoryVoice";
 import { SessionTop } from "../components/SessionTop";
 import { useDialog } from "../components/DialogProvider";
 
@@ -63,6 +64,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
   const [transferShown, setTransferShown] = useState(false);
   const [summary, setSummary] = useState<{ xp: number; goalHit: boolean } | null>(null);
   const initialized = useRef(false);
+  const voice = useStoryVoice();
 
   /* ---------- initialisation (une seule fois) ---------- */
   useEffect(() => {
@@ -218,8 +220,8 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
 
   /* ---------- corps commun d'une question (circling / transfert) ---------- */
   const questionBody = (q: StoryQuestion) => (
-    <div className="card">
-      <h3 style={{ direction: "ltr", textAlign: "left" }}>{q.q}</h3>
+    <div className="card" key={q.id}>
+      <h3 lang="en" dir="ltr" style={{ textAlign: "left" }}>{q.q}</h3>
       {(q.qFr || q.qAr) && !showHelp && (
         <button
           type="button"
@@ -241,6 +243,8 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
             className="fill-input"
             style={{ width: "100%", marginTop: 10 }}
             placeholder={t("storyYourAnswer")}
+            aria-label={t("storyYourAnswer")}
+            autoFocus
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
@@ -262,7 +266,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
           </div>
         </>
       ) : (
-        <>
+        <div role="status" aria-live="polite">
           {state.lastCorrect === true && (
             <p className="tiny" style={{ color: "var(--ok, green)" }}>✅ {t("storyCorrect")}</p>
           )}
@@ -270,7 +274,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
             <p className="tiny" style={{ color: "var(--danger, red)" }}>⚠️ {q.hint[lang] || q.hint.fr}</p>
           )}
           <p className="muted tiny" style={{ marginTop: 6 }}>
-            {t("storyModel")} · <b style={{ direction: "ltr", display: "inline-block" }}>{q.model}</b>
+            {t("storyModel")} · <b lang="en" dir="ltr" style={{ display: "inline-block" }}>{q.model}</b>
           </p>
           <button
             type="button"
@@ -284,26 +288,28 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
           >
             {t("storyContinue")}
           </button>
-        </>
+        </div>
       )}
     </div>
   );
 
   /* ---------- corps commun d'un drill ---------- */
   const drillBody = (d: DrillItem) => (
-    <div className="card">
+    <div className="card" key={d.id}>
       {state.drillIndex === 0 && (
         <p className="muted tiny" style={{ direction: "ltr", textAlign: "left" }}>
           📘 {story.drill.explain[lang] || story.drill.explain.fr}
         </p>
       )}
-      <h3 style={{ direction: "ltr", textAlign: "left" }}>{d.prompt}</h3>
+      <h3 lang="en" dir="ltr" style={{ textAlign: "left" }}>{d.prompt}</h3>
       {!state.revealed ? (
         <>
           <input
             className="fill-input"
             style={{ width: "100%", marginTop: 10 }}
             placeholder={t("storyYourAnswer")}
+            aria-label={t("storyYourAnswer")}
+            autoFocus
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
@@ -325,12 +331,12 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
           </div>
         </>
       ) : (
-        <>
+        <div role="status" aria-live="polite">
           <p className="tiny" style={{ color: state.lastCorrect ? "var(--ok, green)" : "var(--danger, red)" }}>
             {state.lastCorrect ? `✅ ${t("storyCorrect")}` : "—"}
           </p>
           <p className="muted tiny">
-            {t("storyModel")} · <b style={{ direction: "ltr", display: "inline-block" }}>{d.model}</b>
+            {t("storyModel")} · <b lang="en" dir="ltr" style={{ display: "inline-block" }}>{d.model}</b>
           </p>
           <button
             type="button"
@@ -343,7 +349,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
           >
             {t("storyContinue")}
           </button>
-        </>
+        </div>
       )}
     </div>
   );
@@ -370,7 +376,9 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
         <>
           <textarea
             className="fill-input"
-            style={{ width: "100%", minHeight: 70, direction: "ltr" }}
+            style={{ width: "100%", minHeight: 70 }}
+            dir="ltr"
+            aria-label={t("storyRetellPromptLabel")}
             placeholder={t("storyRetellPromptLabel")}
             value={retellText}
             onChange={(e) => setRetellText(e.target.value)}
@@ -403,7 +411,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
         <>
           <p className="tiny">{t("storySelfReported")}</p>
           <p className="muted tiny">
-            {t("storyModel")} · <b style={{ direction: "ltr", display: "inline-block" }}>{model}</b>
+            {t("storyModel")} · <b lang="en" dir="ltr" style={{ display: "inline-block" }}>{model}</b>
           </p>
           <button
             type="button"
@@ -435,7 +443,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
             </button>
           </div>
           {(showText || withHelp) && (
-            <p style={{ direction: "ltr", textAlign: "left", margin: "6px 0 0" }}>{seg.en}</p>
+            <p lang="en" dir="ltr" style={{ textAlign: "left", margin: "6px 0 0" }}>{seg.en}</p>
           )}
           {withHelp && <p className="muted tiny">{lang === "ar" ? seg.ar : seg.fr}</p>}
         </div>
@@ -463,7 +471,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
       const phrase = story.targetPhrases.find((p) => p.id === phraseId);
       body = phrase ? (
         <div className="card">
-          <h3 style={{ direction: "ltr", textAlign: "left" }}>{phrase.en}</h3>
+          <h3 lang="en" dir="ltr" style={{ textAlign: "left" }}>{phrase.en}</h3>
           <p className="muted tiny">{lang === "ar" ? phrase.ar : phrase.fr}</p>
           <div style={{ display: "flex", gap: 8 }}>
             <button
@@ -531,9 +539,9 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
         body = (
           <>
             <div className="card">
-              <p style={{ direction: "ltr", textAlign: "left" }}>{story.transfer.context.en}</p>
+              <p lang="en" dir="ltr" style={{ textAlign: "left" }}>{story.transfer.context.en}</p>
               {story.transfer.gloss && (
-                <p className="muted tiny" style={{ direction: "ltr", textAlign: "left" }}>
+                <p className="muted tiny" lang="en" dir="ltr" style={{ textAlign: "left" }}>
                   💡 {story.transfer.gloss.en}
                 </p>
               )}
@@ -575,7 +583,8 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
         <h2 style={{ fontSize: "1.05rem" }}>{title}</h2>
         <span className="tiny">{stepLbl}</span>
       </div>
-      {!canSpeak() && (
+      {/* RISK-002 : honnête — pas de synthèse DU TOUT, ou aucune voix EN. */}
+      {(!canSpeak() || voice === "no-english") && (
         <p className="tiny card" style={{ borderLeft: "4px solid orange" }}>
           🔇 {t("storyTtsUnavailable")}
         </p>

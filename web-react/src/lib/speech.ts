@@ -7,6 +7,23 @@ export function canSpeak(): boolean {
   return typeof window !== "undefined" && "speechSynthesis" in window;
 }
 
+/**
+ * Classe les voix disponibles pour la langue cible (anglais) — RISK-002 :
+ * `speechSynthesis` présent mais sans voix EN (ou liste encore vide) doit
+ * s'afficher honnêtement comme « audio indisponible », pas jouer silence.
+ *  - "unknown" : liste vide (moteur non encore initialisé — réessayer).
+ *  - "no-english" : des voix existent, aucune en anglais.
+ *  - "ok" : au moins une voix anglaise.
+ */
+export function classifyEnglishVoices(
+  voices: readonly { lang?: string }[]
+): "ok" | "no-english" | "unknown" {
+  if (voices.length === 0) return "unknown";
+  return voices.some((v) => (v.lang ?? "").toLowerCase().startsWith("en"))
+    ? "ok"
+    : "no-english";
+}
+
 export function speak(text: string, code = "en-US", rate = 0.95): void {
   if (!canSpeak() || !text) return;
   // Chrome : `cancel()` puis `speak()` dans le même tick reste parfois sans
