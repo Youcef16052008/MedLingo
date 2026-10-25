@@ -26,3 +26,11 @@ __pycache__/
 # Secrets Supabase (backend optionnel) - JAMAIS commiter
 secrets.properties
 **/secrets.properties
+
+# WS0.8 — hygiène racine (revue 25/10/2026) : untracked non couverts
+/tmp/
+/probe.txt
+/tools/
+/tools_*.py
+/node_modules/
+/.hermes/

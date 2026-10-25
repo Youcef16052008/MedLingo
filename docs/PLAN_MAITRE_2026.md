@@ -87,11 +87,11 @@
 
 | # | Tâche | Type | Critère | Origine |
 |---|---|---|---|---|
-| 2.1 | **ADR-1 : finir ou retirer le sous-système révision/chapitres.** Recommandation : **finir** (LOT2 = design de référence) — router `ChapterScreen`/`ReviewHubScreen` web + Android, brancher `recordAnswer`/cœurs/file SM-2, retirer les 1,8 Mo morts du chemin critique (lazy-load) | D | `#/review` et chapitres utilisables sur les 2 plateformes ; e2e offline complet | LOT2 + BUG-018/012 |
+| 2.1 | **ADR-1 : finir ou retirer le sous-système révision/chapitres.** Recommandation : **finir** (design de référence : [`docs/archive/LOT2_ARCHITECTURE_AND_PLAN.md`](archive/LOT2_ARCHITECTURE_AND_PLAN.md)) — router `ChapterScreen`/`ReviewHubScreen` web + Android, brancher `recordAnswer`/cœurs/file SM-2, retirer les 1,8 Mo morts du chemin critique (lazy-load) | D | `#/review` et chapitres utilisables sur les 2 plateformes ; e2e offline complet | LOT2 + BUG-018/012 |
 | 2.2 | BUG-008 (atomicité user_stats), BUG-022 (main thread), BUG-023 (thread-safety TTS), BUG-024/025 (ProgressionManager mort, XpOutcome) | D | Tests concurrence verts | Revue |
 | 2.3 | **BUG-009 SM-2 « Hard »** : seuil quality<2 + **scénarios de parité web/Android partagés** (comme les histoires) | D | rate(2) = rappel réussi sur les 2 plateformes, mêmes sorties | Revue |
 | 2.4 | BUG-019 (DST + gel = 1 jour) sur les 2 plateformes | D | Tests horloge DST verts | Revue |
-| 2.5 | **ADR-2 : backend — réparer ou désactiver.** Réparer = migr. 03 régénérée + client aligné + auth JWT (si ligues réelles V1) ; sinon flag off du chemin distant (retirer deps mortes → permission INTERNET disparaît, BUG-028) | D | ADR committé ; si répare : `supabase db reset` vert en CI + synchro non-no-op | Revue + GUIDE_BACKEND |
+| 2.5 | **ADR-2 : backend — réparer ou désactiver.** Réparer = migr. 03 régénérée + client aligné + auth JWT (si ligues réelles V1) ; sinon flag off du chemin distant (retirer deps mortes → permission INTERNET disparaît, BUG-028). Guide historique : [`docs/archive/GUIDE_BACKEND.md`](archive/GUIDE_BACKEND.md) (prémisses invalidées — à réécrire si activé) | D | ADR committé ; si répare : `supabase db reset` vert en CI + synchro non-no-op | Revue + GUIDE_BACKEND |
 | 2.6 | i18n : chaînes durcies → `t()` (BUG-021) + checker élargi ; BUG-020 (trophée relégation) | D | check:i18n voit les littéraux ; 0 chaîne FR en UI ar/en | Revue |
 | 2.7 | P2 restants : BUG-015 (harnais pilote-001 + asserts exacts), BUG-032 (export préservant les cases), BUG-033 (minimums des checkers) | D | Harnais strict vert | Revue |
 
@@ -159,6 +159,7 @@ R1 juridique (trade dress : garder la palette verte, zéro emprunt) · R2 exacti
 | Date | Workstream | Commit | Vérifications | Notes |
 |---|---|---|---|---|
 | 25/10 | Création | `1a9a4c5` | — | Fusionne 40 documents ; WS0 détaillé dans TODO.md |
+| 25/10 | **WS0 exécuté** | _(ce commit)_ | vitest **5094/5094** · gradlew unitaires **exit 0** · check:stories OK · tsc + build OK · garde orphelins démontrée (corpus intact) · review_server 400/415/200 | BUG-001/002/003/004/005/006/007/013/014 corrigés avec tests de régression ; CI committée (check:stories + lint strict) ; 38 documents archivés dans `docs/archive/` ; `.gitattributes`/`.gitignore` |
 
 ---
 

@@ -10,15 +10,17 @@
 - [x] **V0.1 — Dashboard de relecture** du corpus (commit `6fbf815`) : `npm run review`, verdicts langue/médecine persistés dans `data/review-verdicts.v1.json`, publication automatique ⟺ double approbation, harnais 5086/5086 vert, cycle testé bout-en-bout.
 - [x] **Revue profonde 20 analyses** (36 findings dont 5 critiques) — [`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md)
 
-## 🚨 P0 — Bugs critiques de la revue (1–2 jours, AVANT toute publication)
+## 🚨 P0 — Bugs critiques de la revue — ✅ WS0 EXECUTÉ le 25/10/2026
 
-- [ ] **BUG-001** web : `store.ts:336` — `reviewQueue` rechargé en objet → chaque `update()` crashe après rechargement (perte silencieuse de toute progression). Fix : `coerceArray` + test roundtrip `persist→revive→update`.
-- [ ] **BUG-003** web : type `"gap"` sans renderer (4 298 exercices du corpus régénéré WIP, 1ʳᵉ leçon cassée) — **bloque le commit du corpus 13 000**. Fix : renderer gap + `"gap"` dans `ExerciseType` + test de contrat types↔renderers.
-- [ ] **BUG-002** web : `PathScreen.tsx:86` — `buildPath()` sans arguments → parcours jamais terminé, niveaux verrouillés. Fix : 1 ligne.
-- [ ] **BUG-004** Android : `TtsManager.kt` — `stop()` dans le `finally` tue chaque utterance + `onStop` non overridé (audio cassé, timeouts 6 s partout).
-- [ ] **BUG-005** Android : `MedLinguaViewModel.kt:238` — collecteur ligues imbriqué → boucle infinie d'écritures DB + accumulation de collecteurs.
-- [ ] **BUG-006** pipeline : valider sidecar et bâtir le corpus en mémoire AVANT toute écriture (aujourd'hui un verdict orphelin peut laisser un corpus de 10 histoires avec `check:stories` vert).
-- [ ] **BUG-007** CI : `git add .github/` (workflows jamais committés !) + ajouter `check:stories` à web.yml + retirer `lintDebug || true`.
+- [x] **BUG-001** web : `store.ts:336` — `reviewQueue` rechargé en objet → chaque `update()` crashe après rechargement (perte silencieuse de toute progression). **Corrigé** : `coerceArray` + gardes d'entrées + test roundtrip `persist→revive→update` (4 tests).
+- [x] **BUG-003** web : type `"gap"` sans renderer — **corrigé** : `"gap"` dans `ExerciseType` + renderer saisie libre (3 points d'ancrage) + `RENDERABLE_EXERCISE_TYPES` + test de contrat corpus↔renderers (4 tests). Le commit du corpus 13 000 est débloqué.
+- [x] **BUG-002** web : `PathScreen.tsx` — `buildPath(s.lessonBest, s.moduleBest)` : 1 ligne, la refonte du 19/10 est refermée.
+- [x] **BUG-004** Android : `TtsManager` — `stop()` retiré du `finally`, `onStop` overridé (résout l'attente en interruption), `pendingCallbacks` en `ConcurrentHashMap`, `engineGeneration` `@Volatile`.
+- [x] **BUG-005** Android : collecteur ligues — Job unique remplacé au changement de cohorte + persistance **seulement si l'animation change quelque chose** (advanceAll idempotent) + `distinctUntilChanged`. Boucle d'écritures éliminée.
+- [x] **BUG-006/016** pipeline : sidecar validé (forme + ids orphelins) **AVANT toute écriture** (import p3 différé), écritures atomiques tmp+`os.replace` dans les 2 builders. Vérifié : échec orphelin → corpus intact.
+- [x] **BUG-007** CI : `.github/` committé, `check:stories` ajouté à web.yml, `lintDebug || true` retiré.
+- [x] **BUG-013** web : race au montage `#/story/:id` — l'effet rejoue quand l'histoire arrive (`[story?.storyId]`).
+- [x] **BUG-014** serveur de relecture : Content-Type vérifié (415), corps plafonné 1 Mo (413), payloads non-objets rejetés (400). Testé en direct.
 
 ---
 
