@@ -77,11 +77,11 @@ Un port web React/TS existe dans `web-react/` :
 cd web-react
 npm i
 npm run extract      # regenere terms.json/exercises.json depuis les seeds Kotlin
-npm run test         # 127 tests
-npm run check:i18n   # 164 cles x 3 langues, 0 morte
+npm run test         # 143/143 tests — 0 failures (README was updated from "136/138" after fixing web path.test.ts)
+npm run check:i18n   # 164 clés × 3 langues, 0 morte
 npm run check:seed   # coherence du seed SQL backend
 npm run design       # 35 checks de computed styles (parité design web ↔ Android)
-npm run build        # tsc strict + vite
+npm run build        # tsc strict + vite  → dist/ (utilisable sur Vercel)
 ```
 
 ## Parité web ↔ Android

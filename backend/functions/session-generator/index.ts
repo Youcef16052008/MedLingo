@@ -77,9 +77,17 @@ serve(async (req) => {
   }
 
   try {
+    const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+    if (!serviceRoleKey) {
+      console.error('[SessionGenerator] SUPABASE_SERVICE_ROLE_KEY is not set (required for admin API calls)')
+      return new Response(
+        JSON.stringify({ error: 'Service role key is not configured (internal error)' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+      serviceRoleKey
     )
 
     // JWT Auth Check
@@ -102,6 +110,9 @@ serve(async (req) => {
     }
 
     const { user_id, level, unit_id, lesson_id, count = 10, language = 'EN' }: SessionRequest = await req.json()
+
+    // Server-side cap: count is client-supplied, cap at 50 to prevent fetch blow-up
+    const safeCount = Math.min(Math.max(Number(count) || 10, 1), 50)
 
     // Verify user_id matches authenticated user
     if (user.id !== user_id) {
@@ -162,7 +173,7 @@ serve(async (req) => {
       .from('exercises')
       .select('*')
       .eq('level', level)
-      .limit(count * 3)
+      .limit(safeCount * 3)
 
     if (unit_id) {
       query = query.eq('module', unit_id)
@@ -204,7 +215,7 @@ serve(async (req) => {
     })
 
     scoredExercises.sort((a, b) => b.birdbrain_score - a.birdbrain_score)
-    const selectedExercises = scoredExercises.slice(0, count)
+    const selectedExercises = scoredExercises.slice(0, safeCount)
 
     // 4. Same Exam Swapped Language — les exercices sont servis en EN (termes
     // médicaux) ; le paramètre `language` est accepté pour compatibilité mais

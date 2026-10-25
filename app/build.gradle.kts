@@ -130,5 +130,5 @@ dependencies {
 // génère rien et un changement d'entité casse silencieusement les bases
 // existantes. Les JSON vont dans app/schemas/ (committés).
 ksp {
-  arg("room.schemaLocation", "${projectDir}/schemas")
+  arg("room.schemaLocation", "$projectDir/schemas")
 }
