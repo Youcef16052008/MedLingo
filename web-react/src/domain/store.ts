@@ -165,7 +165,7 @@ export function makeDefaults(_now: number): AppState {
     moduleBest: {},
     lessonBest: {},
     trophies: {},
-    league: { tier: "bronze", weekStart: "", botSeed: 1 },
+    league: { tier: "bronze", weekStart: "", botSeed: 1, bestTier: "bronze" },
     answered: 0,
     correct: 0,
     flashReviewed: 0,
@@ -401,6 +401,9 @@ export function revive(raw: string | null, now: number): AppState {
           tier: TIERS.includes(league.tier as Tier) ? (league.tier as Tier) : base.league.tier,
           weekStart: typeof league.weekStart === "string" ? league.weekStart : base.league.weekStart,
           botSeed: coerceNum(league.botSeed, base.league.botSeed),
+          bestTier: TIERS.includes(league.bestTier as Tier)
+            ? (league.bestTier as Tier)
+            : base.league.bestTier,
         },
       };
       // Historique indexé par id : sans correspondance avec le numérotage courant,

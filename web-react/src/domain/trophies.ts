@@ -76,7 +76,9 @@ export function evaluate(s: AppState): TrophyId[] {
   // `free` (quiz libre, F9) ne compte pas.
   if (Object.entries(s.moduleBest).some(([id, v]) => id !== "free" && v >= 90))
     won.push("module_master");
-  if (s.league.tier !== "bronze") won.push("league_promoted");
+  // BUG-020 : on récompense le meilleur palier ATTEINT — une relégation
+  // (gold→silver) ne doit jamais débloquer « promotion ».
+  if ((s.league.bestTier ?? s.league.tier) !== "bronze") won.push("league_promoted");
   if (s.chestsOpened >= 5) won.push("chests_5");
 
   return won;
