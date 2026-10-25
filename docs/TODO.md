@@ -63,7 +63,9 @@
 - [x] **WS2.3 (BUG-009) RÉSOLU SANS CHANGEMENT** : SM-2 classique correct, étiquettes honnêtes — décision documentée (commit d6e5e81).
 - [x] **WS2.6a (BUG-020)** trophée promotion = meilleur palier atteint (commit d6e5e81).
 - [ ] **WS2.2** : BUG-008 user_stats atomique · BUG-022 main thread · BUG-024/025 Android
-- [ ] **WS2.4** : BUG-019 DST + gel 1 jour (2 plateformes)
+- [x] **WS2.4 (BUG-019)** ✅ f6ac9a1/6dabf65 : hier calendaire (DST) + gel = 1 jour manquant, 2 plateformes, tests des 2 côtés.
+- [x] **WS2.2 partiel (BUG-024/025)** ✅ 68f9107 : ProgressionManager mort supprimé (test converti vers la classe vivante), XpOutcome alimenté réellement. Reste : BUG-008 user_stats atomique + BUG-022 main thread.
+- [x] **WS3 dossier de release** ✅ [`RELEASE/BETA_PLAY_STORE.md`](RELEASE/BETA_PLAY_STORE.md) : runbook keystore, fiche store FR/AR/EN, CGU + disclaimer médical, ADR-3 (local-first, comptes opt-in post-pilote), checklist. Bloqué pour publication par : keystore (humain), relecture ≥150 (humain), BUG-029/ADR-2 (dev, WIP build.gradle).
 - [ ] **WS2.5** : ADR-2 backend désactiver/réparer (deps mortes → INTERNET)
 - [ ] **WS2.6b** : BUG-021 chaînes FR durcies (Leagues/Profile) + checker
 - [ ] **WS2.7** : BUG-015 harnais pilote-001 · BUG-032/033 checkers
