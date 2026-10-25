@@ -39,13 +39,14 @@ const TIER_KEYS: Record<Tier, "leagueTierBronze" | "leagueTierSilver" | "leagueT
   gold: "leagueTierGold",
 };
 
-/* "Bot" ou "Actif" — LeagueMemberRow.kt ; le web n'a que des bots + vous.
- * BUG-021 : traduit (était « Actif/Bot » en dur, invisible du checker i18n). */
+/* "Actif" ou "simulateur" — LeagueMemberRow.kt ; le web n'a que des bots + vous.
+ * BUG-021 : traduit. WS4 : un bot est explicitement étiqueté « simulateur » —
+ * le classement est un entraînement, l'étiquette ne laisse aucune ambiguïté. */
 function activityLabel(
   isYou: boolean,
-  t: (k: "leagueActive" | "leagueBot") => string
+  t: (k: "leagueActive" | "leagueBotSim") => string
 ): string {
-  return isYou ? t("leagueActive") : t("leagueBot");
+  return isYou ? t("leagueActive") : t("leagueBotSim");
 }
 
 /** Classement hebdomadaire de la cohorte (30 joueurs) — LeagueScreen.kt. */

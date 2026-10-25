@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.aistudio.medlingua.dzmed.MedLinguaApp
 import com.aistudio.medlingua.dzmed.di.AppModule
+import com.aistudio.medlingua.dzmed.service.StreakWidgetProvider
 import com.aistudio.medlingua.dzmed.data.initial.InitialData
 import com.aistudio.medlingua.dzmed.data.local.entity.DownloadedModuleEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.ExerciseEntity
@@ -135,6 +136,16 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     // depuis la v13 ; la population par les leçons de chapitre viendra avec
     // la résolution du WIP repository (cf. TODO.md).
     private val reviewQueueDao = AppModule.provideReviewQueueDao(app.database)
+
+    init {
+        // WS4 levier 8 : le widget reflète la série/gemmes dès le lancement
+        // (et à chaque toucher du widget lui-même), sans passer par le réseau.
+        viewModelScope.launch {
+            repository.userStats.collect {
+                StreakWidgetProvider.updateAll(app)
+            }
+        }
+    }
     val reviewQueue: StateFlow<List<com.aistudio.medlingua.dzmed.data.local.entity.ReviewQueueItem>> =
         reviewQueueDao.getAllReviews()
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
