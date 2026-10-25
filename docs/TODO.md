@@ -1,6 +1,6 @@
 # MedLingo — À faire (le reste)
 
-**Dernière mise à jour : 25/10/2026** · Stratégie complète : [`RAPPORT_COMPETITIF_ET_PLAN_2026.md`](RAPPORT_COMPETITIF_ET_PLAN_2026.md) (phases V0–V4, KPIs K1–K4).
+**Dernière mise à jour : 25/10/2026** · **Pilotage unique : [`PLAN_MAITRE_2026.md`](PLAN_MAITRE_2026.md)** (consolide les 40 rapports du dépôt, workstreams WS0–WS6, ADRs, gouvernance documentaire) · Stratégie : [`RAPPORT_COMPETITIF_ET_PLAN_2026.md`](RAPPORT_COMPETITIF_ET_PLAN_2026.md) · Constat qualité : [`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md).
 
 ---
 
