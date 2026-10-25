@@ -67,7 +67,11 @@
 - [x] **WS2.2 partiel (BUG-024/025)** ✅ 68f9107 : ProgressionManager mort supprimé (test converti vers la classe vivante), XpOutcome alimenté réellement. Reste : BUG-008 user_stats atomique + BUG-022 main thread.
 - [x] **WS3 dossier de release** ✅ [`RELEASE/BETA_PLAY_STORE.md`](RELEASE/BETA_PLAY_STORE.md) : runbook keystore, fiche store FR/AR/EN, CGU + disclaimer médical, ADR-3 (local-first, comptes opt-in post-pilote), checklist. Bloqué pour publication par : keystore (humain), relecture ≥150 (humain), BUG-029/ADR-2 (dev, WIP build.gradle).
 - [ ] **WS2.5** : ADR-2 backend désactiver/réparer (deps mortes → INTERNET)
-- [ ] **WS2.6b** : BUG-021 chaînes FR durcies (Leagues/Profile) + checker
+- [x] **WS2.6b (BUG-021)** ✅ e301d50 : chaînes via t() (fr/en/ar), VRAIE série en ligues, titre « Ligue d'entraînement » (honnête).
+- [x] **WS2.7 (BUG-015/032/033)** ✅ e301d50 : harnais pilote-001 verdict autoritaire ; export préserve les cases [x] (vérifié) ; check-stories minimum 800.
+- [x] **WS2.1b Android** ✅ 49d58a6 : ReviewHubScreen ROUTÉ (overlay + pilule parcours + VM StateFlow + delete), ChapterScreen/ReviewQueueDao versionnés. Reste dépendant du WIP : population de la file (repository) + entrée chapitres (ModulesScreen).
+- [x] **WS4 levier 2 démarré** ✅ (dans e301d50) : calendrier hebdo objectif (7 cellules) sur le parcours web ; leviers déjà actifs : coffres, ligues honnêtes, gel 1 jour.
+- [ ] **WS2.2c** : BUG-008 user_stats atomique + BUG-022 main-thread — BLOQUÉS par le WIP (repository/MedLinguaApp/PracticeScreen non committés)
 - [ ] **WS2.7** : BUG-015 harnais pilote-001 · BUG-032/033 checkers
 
 ## 🟡 DEV (agent — sur demande, dans l'ordre)
