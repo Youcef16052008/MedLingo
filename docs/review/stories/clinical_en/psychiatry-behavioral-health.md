@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : hallucination ; the patient with hallucination
   - modèle : The patient in bed 3 has hallucination.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : delusion ; he has delusion
+  - accepté : delusion
   - modèle : He has delusion.
 - **q3.** Does the patient in bed 5 have hallucination?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hallucination ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : schizophrenia ; a schizophrenia ; he has a schizophrenia
+  - accepté : schizophrenia ; a schizophrenia
   - modèle : He has a schizophrenia.
 - **Tt2.** Does the patient in bed 9 have delusion?
   - accepté : no ; no he does not ; no he doesn't ; he does not have delusion ; he doesn't

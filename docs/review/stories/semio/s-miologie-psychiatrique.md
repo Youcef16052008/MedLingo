@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : orientation ; the patient with orientation
   - modèle : The patient in bed 3 has orientation.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : hallucination ; he has hallucination
+  - accepté : hallucination
   - modèle : He has hallucination.
 - **q3.** Does the patient in bed 5 have orientation?
   - accepté : no ; no he does not ; no he doesn't ; he does not have orientation ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : delusion ; he has delusion
+  - accepté : delusion
   - modèle : He has delusion.
 - **Tt2.** Does the patient in bed 9 have hallucination?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hallucination ; he doesn't

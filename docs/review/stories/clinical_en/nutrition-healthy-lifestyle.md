@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-024` — Le cas de Sara : Nutrition / _Sara: Nutrition_
+## 1. `clinical-en-case-024` — Le cas de Karim : Glucide anormal(e) / _Karim: the carbohydrate is not normal_
 
-**Objectif :** Comprendre un cas : nutrition présent, calorie absent.
+**Objectif :** Comprendre des résultats : Nutrition normal(e), Glucide anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Sara is a patient at the clinic.
-   - FR : Sara est un·e patient·e à la clinique.
-   - AR : Sara مريض/مريضة في العيادة.
-2. **EN** Sara talks to Lina, a medical student.
-   - FR : Sara parle avec Lina, étudiant·e en médecine.
-   - AR : Sara يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a nutrition.
-   - FR : Elle a Nutrition.
-   - AR : عنده التغذية.
-4. **EN** She does not have a calorie.
-   - FR : Elle n'a pas de Calorie.
-   - AR : ليس عنده السعرة الحرارية.
-5. **EN** Lina asks, “Do you have a calorie?”
-   - FR : Lina demande : « Avez-vous Calorie ? »
-   - AR : يسأل Lina: «هل عندك السعرة الحرارية؟»
-6. **EN** Sara says, “No, I do not.”
-   - FR : Sara répond : « Non. »
-   - AR : يجيب Sara: «لا.»
-7. **EN** Lina writes “Nutrition” in the file.
-   - FR : Lina écrit « Nutrition » dans le dossier.
-   - AR : يكتب Lina «Nutrition» في الملف.
+1. **EN** Karim is a patient at the clinic.
+   - FR : Karim est un·e patient·e à la clinique.
+   - AR : Karim مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The nutrition is normal.”
+   - FR : Le médecin dit : « Nutrition est normal(e). »
+   - AR : يقول الطبيب: «التغذية طبيعي/طبيعية.»
+5. **EN** “But the carbohydrate is not normal.”
+   - FR : « Mais Glucide n'est pas normal(e). »
+   - AR : «لكن الكربوهيدرات غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the carbohydrate normal?”
+   - FR : Lina demande : « Glucide est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل الكربوهيدرات طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:nutrition:v1` — **a nutrition** · FR : Nutrition · AR : التغذية
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:carbohydrate:v1` — **a carbohydrate** · FR : Glucide · AR : الكربوهيدرات
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Sara have nutrition?
-  - accepté : yes ; yes she does ; yes she has a nutrition ; she has a nutrition
-  - modèle : Yes, she has a nutrition.
-- **q2.** Does she have calorie?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a calorie ; she doesn't
-  - modèle : No, she does not have a calorie.
-  - hint (si erreur) — FR : Attention : Sara n'a PAS calorie.
-- **q3.** Does she have nutrition or calorie?
-  - accepté : nutrition ; a nutrition ; she has a nutrition
-  - modèle : She has a nutrition.
-- **q4.** What does Sara have?
-  - accepté : nutrition ; a nutrition ; she has a nutrition
-  - modèle : She has a nutrition.
-- **q5.** Who writes in the file?
+- **q1.** Is the nutrition normal?
+  - accepté : yes ; yes it is ; the nutrition is normal ; it is normal
+  - modèle : Yes, the nutrition is normal.
+- **q2.** Is the carbohydrate normal?
+  - accepté : no ; no it is not ; no it isn't ; the carbohydrate is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the carbohydrate is not normal.
+  - hint (si erreur) — FR : Attention : Glucide n'est PAS normal(e).
+- **q3.** Which one is not normal: the nutrition or the carbohydrate?
+  - accepté : carbohydrate ; the carbohydrate
+  - modèle : The carbohydrate is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have carbohydrate?
-  - accepté : yes ; yes he does ; he has a carbohydrate
-  - modèle : Yes, he has a carbohydrate.
-- **Tt2.** Does he have nutrition?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a nutrition ; he doesn't
-  - modèle : No, he does not have a nutrition.
-  - hint (si erreur) — FR : Attention : il n'a PAS nutrition.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the calorie normal?
+  - accepté : yes ; yes it is ; the calorie is normal
+  - modèle : Yes, the calorie is normal.
+- **Tt2.** Is the nutrition normal?
+  - accepté : no ; no it is not ; no it isn't ; the nutrition is not normal ; it is not normal
+  - modèle : No, the nutrition is not normal.
+  - hint (si erreur) — FR : Attention : Nutrition n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a nutrition. (have)` → has · modèle : She has a nutrition.
-- `They … not have a calorie. (do)` → do · modèle : They do not have a calorie.
-- `I … a nutrition. (have)` → have · modèle : I have a nutrition.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The nutrition … normal. (be)` → is · modèle : The nutrition is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Sara en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a nutrition. She does not have a calorie.*
-- **Transfert (contexte) :** Un autre patient a Glucide. Il n'a pas de Nutrition.
-- Glossaire : Glucide : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a carbohydrate. He does not have a nutrition.*
+- **Reformulation :** Annonce les résultats à Karim en deux phrases. Garde la négation. — amorces : The nutrition is… / The carbohydrate is not… — modèle : *The nutrition is normal. The carbohydrate is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Calorie normal(e), mais Nutrition anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The calorie is normal. The nutrition is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a nutrition.
+3. **EN** The patient in bed 3 has a problem with the nutrition.
    - FR : Le patient du lit 3 a Nutrition.
    - AR : مريض السرير ٣ عنده التغذية.
-4. **EN** The patient in bed 5 has a calorie.
+4. **EN** The patient in bed 5 has a problem with the calorie.
    - FR : Le patient du lit 5 a Calorie.
    - AR : مريض السرير ٥ عنده السعرة الحرارية.
-5. **EN** The patient in bed 5 does not have a nutrition.
+5. **EN** The patient in bed 5 does not have a problem with the nutrition.
    - FR : Le patient du lit 5 n'a pas de Nutrition.
    - AR : مريض السرير ٥ ليس عنده التغذية.
 6. **EN** Amine reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : nutrition ; a nutrition ; the patient with nutrition
   - modèle : The patient in bed 3 has a nutrition.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : calorie ; a calorie ; he has a calorie
-  - modèle : He has a calorie.
+  - accepté : calorie ; a problem with the calorie
+  - modèle : He has a problem with the calorie.
 - **q3.** Does the patient in bed 5 have nutrition?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a nutrition ; he doesn't
-  - modèle : No, he does not have a nutrition.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the nutrition ; he doesn't
+  - modèle : No, he does not have a problem with the nutrition.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS nutrition — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : carbohydrate ; a carbohydrate ; he has a carbohydrate
-  - modèle : He has a carbohydrate.
+  - accepté : carbohydrate ; a problem with the carbohydrate
+  - modèle : He has a problem with the carbohydrate.
 - **Tt2.** Does the patient in bed 9 have calorie?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a calorie ; he doesn't
-  - modèle : No, he does not have a calorie.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the calorie ; he doesn't
+  - modèle : No, he does not have a problem with the calorie.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS calorie.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a nutrition. (do)` → does · modèle : The patient in bed 5 does not have a nutrition.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a nutrition. The patient in bed 5 has a calorie.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the nutrition. The patient in bed 5 has a problem with the calorie.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Glucide, le lit 9 a Nutrition et n'a pas Calorie.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a carbohydrate. The patient in bed 9 has a nutrition.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the carbohydrate. The patient in bed 9 has a problem with the nutrition.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

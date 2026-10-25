@@ -5,75 +5,74 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-012` — Le cas de Sara : Soins aux personnes âgées / _Sara: Elderly care_
+## 1. `clinical-en-case-012` — Le cas de Karim : Fracture du col du fémur anormal(e) / _Karim: the hip fracture is not normal_
 
-**Objectif :** Comprendre un cas : soins aux personnes âgées présent, prévention des chutes absent.
+**Objectif :** Comprendre des résultats : Soins aux personnes âgées normal(e), Fracture du col du fémur anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Sara is a patient at the clinic.
-   - FR : Sara est un·e patient·e à la clinique.
-   - AR : Sara مريض/مريضة في العيادة.
-2. **EN** Sara talks to Lina, a medical student.
-   - FR : Sara parle avec Lina, étudiant·e en médecine.
-   - AR : Sara يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a elderly care.
-   - FR : Elle a Soins aux personnes âgées.
-   - AR : عنده رعاية المسنين.
-4. **EN** She does not have a fall prevention.
-   - FR : Elle n'a pas de Prévention des chutes.
-   - AR : ليس عنده الوقاية من السقوط.
-5. **EN** Lina asks, “Do you have a fall prevention?”
-   - FR : Lina demande : « Avez-vous Prévention des chutes ? »
-   - AR : يسأل Lina: «هل عندك الوقاية من السقوط؟»
-6. **EN** Sara says, “No, I do not.”
-   - FR : Sara répond : « Non. »
-   - AR : يجيب Sara: «لا.»
-7. **EN** Lina writes “Elderly care” in the file.
-   - FR : Lina écrit « Soins aux personnes âgées » dans le dossier.
-   - AR : يكتب Lina «Soins aux personnes âgées» في الملف.
+1. **EN** Karim is a patient at the clinic.
+   - FR : Karim est un·e patient·e à la clinique.
+   - AR : Karim مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The elderly care is normal.”
+   - FR : Le médecin dit : « Soins aux personnes âgées est normal(e). »
+   - AR : يقول الطبيب: «رعاية المسنين طبيعي/طبيعية.»
+5. **EN** “But the hip fracture is not normal.”
+   - FR : « Mais Fracture du col du fémur n'est pas normal(e). »
+   - AR : «لكن كسر عظمة الفخذ غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the hip fracture normal?”
+   - FR : Lina demande : « Fracture du col du fémur est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل كسر عظمة الفخذ طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
-- `gen:elderly-care:v1` — **a elderly care** · FR : Soins aux personnes âgées · AR : رعاية المسنين
+- `gen:elderly-care:v1` — **an elderly care** · FR : Soins aux personnes âgées · AR : رعاية المسنين
 - `gen:fall-prevention:v1` — **a fall prevention** · FR : Prévention des chutes · AR : الوقاية من السقوط
 - `gen:hip-fracture:v1` — **a hip fracture** · FR : Fracture du col du fémur · AR : كسر عظمة الفخذ
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Sara have elderly care?
-  - accepté : yes ; yes she does ; yes she has a elderly care ; she has a elderly care
-  - modèle : Yes, she has a elderly care.
-- **q2.** Does she have fall prevention?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a fall prevention ; she doesn't
-  - modèle : No, she does not have a fall prevention.
-  - hint (si erreur) — FR : Attention : Sara n'a PAS prévention des chutes.
-- **q3.** Does she have elderly care or fall prevention?
-  - accepté : elderly care ; a elderly care ; she has a elderly care
-  - modèle : She has a elderly care.
-- **q4.** What does Sara have?
-  - accepté : elderly care ; a elderly care ; she has a elderly care
-  - modèle : She has a elderly care.
-- **q5.** Who writes in the file?
+- **q1.** Is the elderly care normal?
+  - accepté : yes ; yes it is ; the elderly care is normal ; it is normal
+  - modèle : Yes, the elderly care is normal.
+- **q2.** Is the hip fracture normal?
+  - accepté : no ; no it is not ; no it isn't ; the hip fracture is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the hip fracture is not normal.
+  - hint (si erreur) — FR : Attention : Fracture du col du fémur n'est PAS normal(e).
+- **q3.** Which one is not normal: the elderly care or the hip fracture?
+  - accepté : hip fracture ; the hip fracture
+  - modèle : The hip fracture is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have hip fracture?
-  - accepté : yes ; yes he does ; he has a hip fracture
-  - modèle : Yes, he has a hip fracture.
-- **Tt2.** Does he have elderly care?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a elderly care ; he doesn't
-  - modèle : No, he does not have a elderly care.
-  - hint (si erreur) — FR : Attention : il n'a PAS soins aux personnes âgées.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the fall prevention normal?
+  - accepté : yes ; yes it is ; the fall prevention is normal
+  - modèle : Yes, the fall prevention is normal.
+- **Tt2.** Is the elderly care normal?
+  - accepté : no ; no it is not ; no it isn't ; the elderly care is not normal ; it is not normal
+  - modèle : No, the elderly care is not normal.
+  - hint (si erreur) — FR : Attention : Soins aux personnes âgées n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a elderly care. (have)` → has · modèle : She has a elderly care.
-- `They … not have a fall prevention. (do)` → do · modèle : They do not have a fall prevention.
-- `I … a elderly care. (have)` → have · modèle : I have a elderly care.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The elderly care … normal. (be)` → is · modèle : The elderly care is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Sara en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a elderly care. She does not have a fall prevention.*
-- **Transfert (contexte) :** Un autre patient a Fracture du col du fémur. Il n'a pas de Soins aux personnes âgées.
-- Glossaire : Fracture du col du fémur : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a hip fracture. He does not have a elderly care.*
+- **Reformulation :** Annonce les résultats à Karim en deux phrases. Garde la négation. — amorces : The elderly care is… / The hip fracture is not… — modèle : *The elderly care is normal. The hip fracture is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Prévention des chutes normal(e), mais Soins aux personnes âgées anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The fall prevention is normal. The elderly care is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -111,7 +110,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
    - AR : يقول Youssef: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
-- `gen:elderly-care:v1` — **a elderly care** · FR : Soins aux personnes âgées · AR : رعاية المسنين
+- `gen:elderly-care:v1` — **an elderly care** · FR : Soins aux personnes âgées · AR : رعاية المسنين
 - `gen:fall-prevention:v1` — **a fall prevention** · FR : Prévention des chutes · AR : الوقاية من السقوط
 - `gen:hip-fracture:v1` — **a hip fracture** · FR : Fracture du col du fémur · AR : كسر عظمة الفخذ
 
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a elderly care.
+3. **EN** The patient in bed 3 has a problem with the elderly care.
    - FR : Le patient du lit 3 a Soins aux personnes âgées.
    - AR : مريض السرير ٣ عنده رعاية المسنين.
-4. **EN** The patient in bed 5 has a fall prevention.
+4. **EN** The patient in bed 5 has a problem with the fall prevention.
    - FR : Le patient du lit 5 a Prévention des chutes.
    - AR : مريض السرير ٥ عنده الوقاية من السقوط.
-5. **EN** The patient in bed 5 does not have a elderly care.
+5. **EN** The patient in bed 5 does not have a problem with the elderly care.
    - FR : Le patient du lit 5 n'a pas de Soins aux personnes âgées.
    - AR : مريض السرير ٥ ليس عنده رعاية المسنين.
 6. **EN** Amine reports the two cases to the doctor.
@@ -183,20 +182,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
    - AR : يذكر Amine الحالتين للطبيب.
 
 ### Expressions ciblées
-- `gen:elderly-care:v1` — **a elderly care** · FR : Soins aux personnes âgées · AR : رعاية المسنين
+- `gen:elderly-care:v1` — **an elderly care** · FR : Soins aux personnes âgées · AR : رعاية المسنين
 - `gen:fall-prevention:v1` — **a fall prevention** · FR : Prévention des chutes · AR : الوقاية من السقوط
 - `gen:hip-fracture:v1` — **a hip fracture** · FR : Fracture du col du fémur · AR : كسر عظمة الفخذ
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** Which patient is in bed 3?
-  - accepté : elderly care ; a elderly care ; the patient with elderly care
-  - modèle : The patient in bed 3 has a elderly care.
+  - accepté : elderly care ; an elderly care ; the patient with elderly care
+  - modèle : The patient in bed 3 has an elderly care.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : fall prevention ; a fall prevention ; he has a fall prevention
-  - modèle : He has a fall prevention.
+  - accepté : fall prevention ; a problem with the fall prevention
+  - modèle : He has a problem with the fall prevention.
 - **q3.** Does the patient in bed 5 have elderly care?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a elderly care ; he doesn't
-  - modèle : No, he does not have a elderly care.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the elderly care ; he doesn't
+  - modèle : No, he does not have a problem with the elderly care.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS soins aux personnes âgées — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,23 +204,23 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : hip fracture ; a hip fracture ; he has a hip fracture
-  - modèle : He has a hip fracture.
+  - accepté : hip fracture ; a problem with the hip fracture
+  - modèle : He has a problem with the hip fracture.
 - **Tt2.** Does the patient in bed 9 have fall prevention?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a fall prevention ; he doesn't
-  - modèle : No, he does not have a fall prevention.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the fall prevention ; he doesn't
+  - modèle : No, he does not have a problem with the fall prevention.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS prévention des chutes.
 
 ### Drill
 - Explication : Un patient : reports/has/does. Deux patients : report/have/do.
 - `The patient in bed 3 … the case. (report — présent)` → reports · modèle : The patient in bed 3 reports the case.
-- `The patients … a elderly care and a fall prevention. (have)` → have · modèle : The patients have a elderly care and a fall prevention.
-- `The patient in bed 5 … not have a elderly care. (do)` → does · modèle : The patient in bed 5 does not have a elderly care.
+- `The patients … an elderly care and a fall prevention. (have)` → have · modèle : The patients have an elderly care and a fall prevention.
+- `The patient in bed 5 … not have an elderly care. (do)` → does · modèle : The patient in bed 5 does not have an elderly care.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a elderly care. The patient in bed 5 has a fall prevention.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the elderly care. The patient in bed 5 has a problem with the fall prevention.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Fracture du col du fémur, le lit 9 a Soins aux personnes âgées et n'a pas Prévention des chutes.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a hip fracture. The patient in bed 9 has a elderly care.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the hip fracture. The patient in bed 9 has a problem with the elderly care.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-021` — Le cas de Sofiane : Ordonnance / _Sofiane: Prescription_
+## 1. `clinical-en-case-021` — Le cas de Sara : Pharmacien(ne) anormal(e) / _Sara: the pharmacist is not normal_
 
-**Objectif :** Comprendre un cas : ordonnance présent, pharmacie absent.
+**Objectif :** Comprendre des résultats : Ordonnance normal(e), Pharmacien(ne) anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Sofiane is a patient at the clinic.
-   - FR : Sofiane est un·e patient·e à la clinique.
-   - AR : Sofiane مريض/مريضة في العيادة.
-2. **EN** Sofiane talks to Amine, a medical student.
-   - FR : Sofiane parle avec Amine, étudiant·e en médecine.
-   - AR : Sofiane يتحدث مع Amine، طالب/طالبة طب.
-3. **EN** He has a prescription.
-   - FR : Il a Ordonnance.
-   - AR : عنده وصفة طبية.
-4. **EN** He does not have a pharmacy.
-   - FR : Il n'a pas de Pharmacie.
-   - AR : ليس عنده صيدلية.
-5. **EN** Amine asks, “Do you have a pharmacy?”
-   - FR : Amine demande : « Avez-vous Pharmacie ? »
-   - AR : يسأل Amine: «هل عندك صيدلية؟»
-6. **EN** Sofiane says, “No, I do not.”
-   - FR : Sofiane répond : « Non. »
-   - AR : يجيب Sofiane: «لا.»
-7. **EN** Amine writes “Prescription” in the file.
-   - FR : Amine écrit « Ordonnance » dans le dossier.
-   - AR : يكتب Amine «Ordonnance» في الملف.
+1. **EN** Sara is a patient at the clinic.
+   - FR : Sara est un·e patient·e à la clinique.
+   - AR : Sara مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The prescription is normal.”
+   - FR : Le médecin dit : « Ordonnance est normal(e). »
+   - AR : يقول الطبيب: «وصفة طبية طبيعي/طبيعية.»
+5. **EN** “But the pharmacist is not normal.”
+   - FR : « Mais Pharmacien(ne) n'est pas normal(e). »
+   - AR : «لكن صيدلاني غير طبيعي/طبيعية.»
+6. **EN** Amine asks, “Is the pharmacist normal?”
+   - FR : Amine demande : « Pharmacien(ne) est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل صيدلاني طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:prescription:v1` — **a prescription** · FR : Ordonnance · AR : وصفة طبية
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:pharmacist:v1` — **a pharmacist** · FR : Pharmacien(ne) · AR : صيدلاني
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Sofiane have prescription?
-  - accepté : yes ; yes he does ; yes he has a prescription ; he has a prescription
-  - modèle : Yes, he has a prescription.
-- **q2.** Does he have pharmacy?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a pharmacy ; he doesn't
-  - modèle : No, he does not have a pharmacy.
-  - hint (si erreur) — FR : Attention : Sofiane n'a PAS pharmacie.
-- **q3.** Does he have prescription or pharmacy?
-  - accepté : prescription ; a prescription ; he has a prescription
-  - modèle : He has a prescription.
-- **q4.** What does Sofiane have?
-  - accepté : prescription ; a prescription ; he has a prescription
-  - modèle : He has a prescription.
-- **q5.** Who writes in the file?
+- **q1.** Is the prescription normal?
+  - accepté : yes ; yes it is ; the prescription is normal ; it is normal
+  - modèle : Yes, the prescription is normal.
+- **q2.** Is the pharmacist normal?
+  - accepté : no ; no it is not ; no it isn't ; the pharmacist is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the pharmacist is not normal.
+  - hint (si erreur) — FR : Attention : Pharmacien(ne) n'est PAS normal(e).
+- **q3.** Which one is not normal: the prescription or the pharmacist?
+  - accepté : pharmacist ; the pharmacist
+  - modèle : The pharmacist is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : amine ; the student ; the medical student
-  - modèle : Amine writes in the file.
-- **Tt1.** Does the other patient have pharmacist?
-  - accepté : yes ; yes he does ; he has a pharmacist
-  - modèle : Yes, he has a pharmacist.
-- **Tt2.** Does he have prescription?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a prescription ; he doesn't
-  - modèle : No, he does not have a prescription.
-  - hint (si erreur) — FR : Attention : il n'a PAS ordonnance.
+  - modèle : Amine listens to the doctor.
+- **Tt1.** Is the pharmacy normal?
+  - accepté : yes ; yes it is ; the pharmacy is normal
+  - modèle : Yes, the pharmacy is normal.
+- **Tt2.** Is the prescription normal?
+  - accepté : no ; no it is not ; no it isn't ; the prescription is not normal ; it is not normal
+  - modèle : No, the prescription is not normal.
+  - hint (si erreur) — FR : Attention : Ordonnance n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `He … a prescription. (have)` → has · modèle : He has a prescription.
-- `They … not have a pharmacy. (do)` → do · modèle : They do not have a pharmacy.
-- `I … a prescription. (have)` → have · modèle : I have a prescription.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The prescription … normal. (be)` → is · modèle : The prescription is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Sofiane en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has a prescription. He does not have a pharmacy.*
-- **Transfert (contexte) :** Un autre patient a Pharmacien(ne). Il n'a pas de Ordonnance.
-- Glossaire : Pharmacien(ne) : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a pharmacist. He does not have a prescription.*
+- **Reformulation :** Annonce les résultats à Sara en deux phrases. Garde la négation. — amorces : The prescription is… / The pharmacist is not… — modèle : *The prescription is normal. The pharmacist is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Pharmacie normal(e), mais Ordonnance anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The pharmacy is normal. The prescription is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a prescription.
+3. **EN** The patient in bed 3 has a problem with the prescription.
    - FR : Le patient du lit 3 a Ordonnance.
    - AR : مريض السرير ٣ عنده وصفة طبية.
-4. **EN** The patient in bed 5 has a pharmacy.
+4. **EN** The patient in bed 5 has a problem with the pharmacy.
    - FR : Le patient du lit 5 a Pharmacie.
    - AR : مريض السرير ٥ عنده صيدلية.
-5. **EN** The patient in bed 5 does not have a prescription.
+5. **EN** The patient in bed 5 does not have a problem with the prescription.
    - FR : Le patient du lit 5 n'a pas de Ordonnance.
    - AR : مريض السرير ٥ ليس عنده وصفة طبية.
 6. **EN** Lina reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : prescription ; a prescription ; the patient with prescription
   - modèle : The patient in bed 3 has a prescription.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : pharmacy ; a pharmacy ; he has a pharmacy
-  - modèle : He has a pharmacy.
+  - accepté : pharmacy ; a problem with the pharmacy
+  - modèle : He has a problem with the pharmacy.
 - **q3.** Does the patient in bed 5 have prescription?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a prescription ; he doesn't
-  - modèle : No, he does not have a prescription.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the prescription ; he doesn't
+  - modèle : No, he does not have a problem with the prescription.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS ordonnance — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : pharmacist ; a pharmacist ; he has a pharmacist
-  - modèle : He has a pharmacist.
+  - accepté : pharmacist ; a problem with the pharmacist
+  - modèle : He has a problem with the pharmacist.
 - **Tt2.** Does the patient in bed 9 have pharmacy?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a pharmacy ; he doesn't
-  - modèle : No, he does not have a pharmacy.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the pharmacy ; he doesn't
+  - modèle : No, he does not have a problem with the pharmacy.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS pharmacie.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a prescription. (do)` → does · modèle : The patient in bed 5 does not have a prescription.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a prescription. The patient in bed 5 has a pharmacy.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the prescription. The patient in bed 5 has a problem with the pharmacy.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Pharmacien(ne), le lit 9 a Ordonnance et n'a pas Pharmacie.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a pharmacist. The patient in bed 9 has a prescription.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the pharmacist. The patient in bed 9 has a problem with the prescription.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

@@ -112,7 +112,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:take-this-medication-twice-a-day:v1` — **a take this medication twice a day** · FR : Prenez ce médicament deux fois par jour · AR : خذ هذا الدواء مرتين في اليوم
-- `gen:are-you-on-any-medication:v1` — **a are you on any medication?** · FR : Prenez-vous des médicaments? · AR : هل تتناول أي دواء؟
+- `gen:are-you-on-any-medication:v1` — **an are you on any medication?** · FR : Prenez-vous des médicaments? · AR : هل تتناول أي دواء؟
 - `gen:do-you-have-any-allergies:v1` — **a do you have any allergies?** · FR : Avez-vous des allergies? · AR : هل لديك أي حساسية؟
 
 ### Questions (acceptées / modèle / hint)
@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : how long have you had this pain? ; the patient with how long have you had this pain?
   - modèle : The patient in bed 3 has how long have you had this pain?.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : please take a deep breath ; he has please take a deep breath
+  - accepté : please take a deep breath
   - modèle : He has please take a deep breath.
 - **q3.** Does the patient in bed 5 have how long have you had this pain??
   - accepté : no ; no he does not ; no he doesn't ; he does not have how long have you had this pain? ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : take this medication twice a day ; a take this medication twice a day ; he has a take this medication twice a day
+  - accepté : take this medication twice a day ; a take this medication twice a day
   - modèle : He has a take this medication twice a day.
 - **Tt2.** Does the patient in bed 9 have please take a deep breath?
   - accepté : no ; no he does not ; no he doesn't ; he does not have please take a deep breath ; he doesn't

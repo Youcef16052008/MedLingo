@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : typhoid fever ; the patient with typhoid fever
   - modèle : The patient in bed 3 has typhoid fever.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : dengue fever ; he has dengue fever
+  - accepté : dengue fever
   - modèle : He has dengue fever.
 - **q3.** Does the patient in bed 5 have typhoid fever?
   - accepté : no ; no he does not ; no he doesn't ; he does not have typhoid fever ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : septicemia ; a septicemia ; he has a septicemia
+  - accepté : septicemia ; a septicemia
   - modèle : He has a septicemia.
 - **Tt2.** Does the patient in bed 9 have dengue fever?
   - accepté : no ; no he does not ; no he doesn't ; he does not have dengue fever ; he doesn't

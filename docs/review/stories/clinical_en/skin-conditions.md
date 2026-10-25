@@ -36,7 +36,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 ### Expressions ciblées
 - `gen:cellulitis:v1` — **cellulitis** · FR : Cellulite (infectieuse) · AR : التهاب النسيج الخلوي
 - `gen:hair-loss:v1` — **hair loss** · FR : Chute de cheveux (Alopécie) · AR : تساقط الشعر
-- `gen:acne:v1` — **a acne** · FR : Acné · AR : حب الشباب
+- `gen:acne:v1` — **an acne** · FR : Acné · AR : حب الشباب
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** Does Bilal have cellulitis?
@@ -56,8 +56,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine writes in the file.
 - **Tt1.** Does the other patient have acne?
-  - accepté : yes ; yes he does ; he has a acne
-  - modèle : Yes, he has a acne.
+  - accepté : yes ; yes he does ; he has an acne
+  - modèle : Yes, he has an acne.
 - **Tt2.** Does he have cellulitis?
   - accepté : no ; no he does not ; no he doesn't ; he does not have cellulitis ; he doesn't
   - modèle : No, he does not have cellulitis.
@@ -73,7 +73,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - **Reformulation :** Rapporte le cas de Bilal en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has cellulitis. He does not have hair loss.*
 - **Transfert (contexte) :** Un autre patient a Acné. Il n'a pas de Cellulite (infectieuse).
 - Glossaire : Acné : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a acne. He does not have cellulitis.*
+- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has an acne. He does not have cellulitis.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -111,7 +111,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
    - AR : يقول Nadia: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
-- `gen:acne:v1` — **a acne** · FR : Acné · AR : حب الشباب
+- `gen:acne:v1` — **an acne** · FR : Acné · AR : حب الشباب
 - `gen:blister:v1` — **a blister** · FR : Ampoule · AR : فقاعة جلدية
 - `gen:hives:v1` — **hives** · FR : Urticaire · AR : الشرى (حساسية الجلد)
 
@@ -185,14 +185,14 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 ### Expressions ciblées
 - `gen:cellulitis:v1` — **cellulitis** · FR : Cellulite (infectieuse) · AR : التهاب النسيج الخلوي
 - `gen:hair-loss:v1` — **hair loss** · FR : Chute de cheveux (Alopécie) · AR : تساقط الشعر
-- `gen:acne:v1` — **a acne** · FR : Acné · AR : حب الشباب
+- `gen:acne:v1` — **an acne** · FR : Acné · AR : حب الشباب
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** Which patient is in bed 3?
   - accepté : cellulitis ; the patient with cellulitis
   - modèle : The patient in bed 3 has cellulitis.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : hair loss ; he has hair loss
+  - accepté : hair loss
   - modèle : He has hair loss.
 - **q3.** Does the patient in bed 5 have cellulitis?
   - accepté : no ; no he does not ; no he doesn't ; he does not have cellulitis ; he doesn't
@@ -205,8 +205,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : acne ; a acne ; he has a acne
-  - modèle : He has a acne.
+  - accepté : acne ; an acne
+  - modèle : He has an acne.
 - **Tt2.** Does the patient in bed 9 have hair loss?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hair loss ; he doesn't
   - modèle : No, he does not have hair loss.
@@ -221,7 +221,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 ### Productions
 - **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has cellulitis. The patient in bed 5 has hair loss.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Acné, le lit 9 a Cellulite (infectieuse) et n'a pas Chute de cheveux (Alopécie).
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a acne. The patient in bed 9 has cellulitis.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has an acne. The patient in bed 9 has cellulitis.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

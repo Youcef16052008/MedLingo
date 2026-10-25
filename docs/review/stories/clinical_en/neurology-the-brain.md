@@ -112,7 +112,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:concussion:v1` — **a concussion** · FR : Commotion cérébrale · AR : ارتجاج الدماغ
-- `gen:amnesia:v1` — **a amnesia** · FR : Amnésie · AR : فقدان الذاكرة
+- `gen:amnesia:v1` — **an amnesia** · FR : Amnésie · AR : فقدان الذاكرة
 - `gen:dementia:v1` — **a dementia** · FR : Démence · AR : الخرف
 
 ### Questions (acceptées / modèle / hint)
@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : meningitis ; the patient with meningitis
   - modèle : The patient in bed 3 has meningitis.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : neuropathy ; he has neuropathy
+  - accepté : neuropathy
   - modèle : He has neuropathy.
 - **q3.** Does the patient in bed 5 have meningitis?
   - accepté : no ; no he does not ; no he doesn't ; he does not have meningitis ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : concussion ; a concussion ; he has a concussion
+  - accepté : concussion ; a concussion
   - modèle : He has a concussion.
 - **Tt2.** Does the patient in bed 9 have neuropathy?
   - accepté : no ; no he does not ; no he doesn't ; he does not have neuropathy ; he doesn't

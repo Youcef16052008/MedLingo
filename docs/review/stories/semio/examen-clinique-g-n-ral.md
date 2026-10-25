@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lymphadenopathy ; the patient with lymphadenopathy
   - modèle : The patient in bed 3 has lymphadenopathy.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : cachexia ; he has cachexia
+  - accepté : cachexia
   - modèle : He has cachexia.
 - **q3.** Does the patient in bed 5 have lymphadenopathy?
   - accepté : no ; no he does not ; no he doesn't ; he does not have lymphadenopathy ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : general appearance ; a general appearance ; he has a general appearance
+  - accepté : general appearance ; a general appearance
   - modèle : He has a general appearance.
 - **Tt2.** Does the patient in bed 9 have cachexia?
   - accepté : no ; no he does not ; no he doesn't ; he does not have cachexia ; he doesn't

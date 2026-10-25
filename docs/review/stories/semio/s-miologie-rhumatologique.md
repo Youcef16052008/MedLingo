@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : arthralgia ; the patient with arthralgia
   - modèle : The patient in bed 3 has arthralgia.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : arthritis ; he has arthritis
+  - accepté : arthritis
   - modèle : He has arthritis.
 - **q3.** Does the patient in bed 5 have arthralgia?
   - accepté : no ; no he does not ; no he doesn't ; he does not have arthralgia ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : morning stiffness ; he has morning stiffness
+  - accepté : morning stiffness
   - modèle : He has morning stiffness.
 - **Tt2.** Does the patient in bed 9 have arthritis?
   - accepté : no ; no he does not ; no he doesn't ; he does not have arthritis ; he doesn't

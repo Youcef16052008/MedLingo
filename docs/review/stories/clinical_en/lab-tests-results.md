@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-018` — Le cas de Amel : Numération formule sanguine (NFS) / _Amel: Complete blood count_
+## 1. `clinical-en-case-018` — Le cas de Sofiane : Taux d'hémoglobine anormal(e) / _Sofiane: the hemoglobin level is not normal_
 
-**Objectif :** Comprendre un cas : numération formule sanguine (nfs) présent, numération des globules blancs absent.
+**Objectif :** Comprendre des résultats : Numération formule sanguine (NFS) normal(e), Taux d'hémoglobine anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amel is a patient at the clinic.
-   - FR : Amel est un·e patient·e à la clinique.
-   - AR : Amel مريض/مريضة في العيادة.
-2. **EN** Amel talks to Lina, a medical student.
-   - FR : Amel parle avec Lina, étudiant·e en médecine.
-   - AR : Amel يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a complete blood count.
-   - FR : Elle a Numération formule sanguine (NFS).
-   - AR : عنده صورة الدم الكاملة.
-4. **EN** She does not have a white blood cell count.
-   - FR : Elle n'a pas de Numération des globules blancs.
-   - AR : ليس عنده عدد كريات الدم البيضاء.
-5. **EN** Lina asks, “Do you have a white blood cell count?”
-   - FR : Lina demande : « Avez-vous Numération des globules blancs ? »
-   - AR : يسأل Lina: «هل عندك عدد كريات الدم البيضاء؟»
-6. **EN** Amel says, “No, I do not.”
-   - FR : Amel répond : « Non. »
-   - AR : يجيب Amel: «لا.»
-7. **EN** Lina writes “Complete blood count” in the file.
-   - FR : Lina écrit « Numération formule sanguine (NFS) » dans le dossier.
-   - AR : يكتب Lina «Numération formule sanguine (NFS)» في الملف.
+1. **EN** Sofiane is a patient at the clinic.
+   - FR : Sofiane est un·e patient·e à la clinique.
+   - AR : Sofiane مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The complete blood count is normal.”
+   - FR : Le médecin dit : « Numération formule sanguine (NFS) est normal(e). »
+   - AR : يقول الطبيب: «صورة الدم الكاملة طبيعي/طبيعية.»
+5. **EN** “But the hemoglobin level is not normal.”
+   - FR : « Mais Taux d'hémoglobine n'est pas normal(e). »
+   - AR : «لكن مستوى الهيموغلوبين غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the hemoglobin level normal?”
+   - FR : Lina demande : « Taux d'hémoglobine est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل مستوى الهيموغلوبين طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:complete-blood-count:v1` — **a complete blood count** · FR : Numération formule sanguine (NFS) · AR : صورة الدم الكاملة
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:hemoglobin-level:v1` — **a hemoglobin level** · FR : Taux d'hémoglobine · AR : مستوى الهيموغلوبين
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Amel have complete blood count?
-  - accepté : yes ; yes she does ; yes she has a complete blood count ; she has a complete blood count
-  - modèle : Yes, she has a complete blood count.
-- **q2.** Does she have white blood cell count?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a white blood cell count ; she doesn't
-  - modèle : No, she does not have a white blood cell count.
-  - hint (si erreur) — FR : Attention : Amel n'a PAS numération des globules blancs.
-- **q3.** Does she have complete blood count or white blood cell count?
-  - accepté : complete blood count ; a complete blood count ; she has a complete blood count
-  - modèle : She has a complete blood count.
-- **q4.** What does Amel have?
-  - accepté : complete blood count ; a complete blood count ; she has a complete blood count
-  - modèle : She has a complete blood count.
-- **q5.** Who writes in the file?
+- **q1.** Is the complete blood count normal?
+  - accepté : yes ; yes it is ; the complete blood count is normal ; it is normal
+  - modèle : Yes, the complete blood count is normal.
+- **q2.** Is the hemoglobin level normal?
+  - accepté : no ; no it is not ; no it isn't ; the hemoglobin level is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the hemoglobin level is not normal.
+  - hint (si erreur) — FR : Attention : Taux d'hémoglobine n'est PAS normal(e).
+- **q3.** Which one is not normal: the complete blood count or the hemoglobin level?
+  - accepté : hemoglobin level ; the hemoglobin level
+  - modèle : The hemoglobin level is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have hemoglobin level?
-  - accepté : yes ; yes he does ; he has a hemoglobin level
-  - modèle : Yes, he has a hemoglobin level.
-- **Tt2.** Does he have complete blood count?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a complete blood count ; he doesn't
-  - modèle : No, he does not have a complete blood count.
-  - hint (si erreur) — FR : Attention : il n'a PAS numération formule sanguine (nfs).
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the white blood cell count normal?
+  - accepté : yes ; yes it is ; the white blood cell count is normal
+  - modèle : Yes, the white blood cell count is normal.
+- **Tt2.** Is the complete blood count normal?
+  - accepté : no ; no it is not ; no it isn't ; the complete blood count is not normal ; it is not normal
+  - modèle : No, the complete blood count is not normal.
+  - hint (si erreur) — FR : Attention : Numération formule sanguine (NFS) n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a complete blood count. (have)` → has · modèle : She has a complete blood count.
-- `They … not have a white blood cell count. (do)` → do · modèle : They do not have a white blood cell count.
-- `I … a complete blood count. (have)` → have · modèle : I have a complete blood count.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The complete blood count … normal. (be)` → is · modèle : The complete blood count is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Amel en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a complete blood count. She does not have a white blood cell count.*
-- **Transfert (contexte) :** Un autre patient a Taux d'hémoglobine. Il n'a pas de Numération formule sanguine (NFS).
-- Glossaire : Taux d'hémoglobine : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a hemoglobin level. He does not have a complete blood count.*
+- **Reformulation :** Annonce les résultats à Sofiane en deux phrases. Garde la négation. — amorces : The complete blood count is… / The hemoglobin level is not… — modèle : *The complete blood count is normal. The hemoglobin level is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Numération des globules blancs normal(e), mais Numération formule sanguine (NFS) anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The white blood cell count is normal. The complete blood count is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a complete blood count.
+3. **EN** The patient in bed 3 has a problem with the complete blood count.
    - FR : Le patient du lit 3 a Numération formule sanguine (NFS).
    - AR : مريض السرير ٣ عنده صورة الدم الكاملة.
-4. **EN** The patient in bed 5 has a white blood cell count.
+4. **EN** The patient in bed 5 has a problem with the white blood cell count.
    - FR : Le patient du lit 5 a Numération des globules blancs.
    - AR : مريض السرير ٥ عنده عدد كريات الدم البيضاء.
-5. **EN** The patient in bed 5 does not have a complete blood count.
+5. **EN** The patient in bed 5 does not have a problem with the complete blood count.
    - FR : Le patient du lit 5 n'a pas de Numération formule sanguine (NFS).
    - AR : مريض السرير ٥ ليس عنده صورة الدم الكاملة.
 6. **EN** Amine reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : complete blood count ; a complete blood count ; the patient with complete blood count
   - modèle : The patient in bed 3 has a complete blood count.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : white blood cell count ; a white blood cell count ; he has a white blood cell count
-  - modèle : He has a white blood cell count.
+  - accepté : white blood cell count ; a problem with the white blood cell count
+  - modèle : He has a problem with the white blood cell count.
 - **q3.** Does the patient in bed 5 have complete blood count?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a complete blood count ; he doesn't
-  - modèle : No, he does not have a complete blood count.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the complete blood count ; he doesn't
+  - modèle : No, he does not have a problem with the complete blood count.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS numération formule sanguine (nfs) — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : hemoglobin level ; a hemoglobin level ; he has a hemoglobin level
-  - modèle : He has a hemoglobin level.
+  - accepté : hemoglobin level ; a problem with the hemoglobin level
+  - modèle : He has a problem with the hemoglobin level.
 - **Tt2.** Does the patient in bed 9 have white blood cell count?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a white blood cell count ; he doesn't
-  - modèle : No, he does not have a white blood cell count.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the white blood cell count ; he doesn't
+  - modèle : No, he does not have a problem with the white blood cell count.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS numération des globules blancs.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a complete blood count. (do)` → does · modèle : The patient in bed 5 does not have a complete blood count.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a complete blood count. The patient in bed 5 has a white blood cell count.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the complete blood count. The patient in bed 5 has a problem with the white blood cell count.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Taux d'hémoglobine, le lit 9 a Numération formule sanguine (NFS) et n'a pas Numération des globules blancs.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a hemoglobin level. The patient in bed 9 has a complete blood count.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the hemoglobin level. The patient in bed 9 has a problem with the complete blood count.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

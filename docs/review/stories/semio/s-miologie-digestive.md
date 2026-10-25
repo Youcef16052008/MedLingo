@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : abdominal pain ; the patient with abdominal pain
   - modèle : The patient in bed 3 has abdominal pain.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : nausea ; he has nausea
+  - accepté : nausea
   - modèle : He has nausea.
 - **q3.** Does the patient in bed 5 have abdominal pain?
   - accepté : no ; no he does not ; no he doesn't ; he does not have abdominal pain ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : vomiting ; he has vomiting
+  - accepté : vomiting
   - modèle : He has vomiting.
 - **Tt2.** Does the patient in bed 9 have nausea?
   - accepté : no ; no he does not ; no he doesn't ; he does not have nausea ; he doesn't

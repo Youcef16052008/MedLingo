@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : stress ; the patient with stress
   - modèle : The patient in bed 3 has stress.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : anxiety disorder ; he has anxiety disorder
+  - accepté : anxiety disorder
   - modèle : He has anxiety disorder.
 - **q3.** Does the patient in bed 5 have stress?
   - accepté : no ; no he does not ; no he doesn't ; he does not have stress ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : mental health ; a mental health ; he has a mental health
+  - accepté : mental health ; a mental health
   - modèle : He has a mental health.
 - **Tt2.** Does the patient in bed 9 have anxiety disorder?
   - accepté : no ; no he does not ; no he doesn't ; he does not have anxiety disorder ; he doesn't

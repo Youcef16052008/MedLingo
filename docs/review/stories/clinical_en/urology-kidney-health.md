@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : urination ; the patient with urination
   - modèle : The patient in bed 3 has urination.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : incontinence ; he has incontinence
+  - accepté : incontinence
   - modèle : He has incontinence.
 - **q3.** Does the patient in bed 5 have urination?
   - accepté : no ; no he does not ; no he doesn't ; he does not have urination ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : frequency ; a frequency ; he has a frequency
+  - accepté : frequency ; a frequency
   - modèle : He has a frequency.
 - **Tt2.** Does the patient in bed 9 have incontinence?
   - accepté : no ; no he does not ; no he doesn't ; he does not have incontinence ; he doesn't

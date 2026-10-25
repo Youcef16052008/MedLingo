@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-013` — Le cas de Omar : Drépanocytose / _Omar: Sickle cell disease_
+## 1. `clinical-en-case-013` — Le cas de Nadia : Plaquette anormal(e) / _Nadia: the platelet is not normal_
 
-**Objectif :** Comprendre un cas : drépanocytose présent, hémophilie absent.
+**Objectif :** Comprendre des résultats : Drépanocytose normal(e), Plaquette anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Omar is a patient at the clinic.
-   - FR : Omar est un·e patient·e à la clinique.
-   - AR : Omar مريض/مريضة في العيادة.
-2. **EN** Omar talks to Amine, a medical student.
-   - FR : Omar parle avec Amine, étudiant·e en médecine.
-   - AR : Omar يتحدث مع Amine، طالب/طالبة طب.
-3. **EN** He has a sickle cell disease.
-   - FR : Il a Drépanocytose.
-   - AR : عنده مرض الخلايا المنجلية.
-4. **EN** He does not have a hemophilia.
-   - FR : Il n'a pas de Hémophilie.
-   - AR : ليس عنده الهيموفيليا (ناعور).
-5. **EN** Amine asks, “Do you have a hemophilia?”
-   - FR : Amine demande : « Avez-vous Hémophilie ? »
-   - AR : يسأل Amine: «هل عندك الهيموفيليا (ناعور)؟»
-6. **EN** Omar says, “No, I do not.”
-   - FR : Omar répond : « Non. »
-   - AR : يجيب Omar: «لا.»
-7. **EN** Amine writes “Sickle cell disease” in the file.
-   - FR : Amine écrit « Drépanocytose » dans le dossier.
-   - AR : يكتب Amine «Drépanocytose» في الملف.
+1. **EN** Nadia is a patient at the clinic.
+   - FR : Nadia est un·e patient·e à la clinique.
+   - AR : Nadia مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The sickle cell disease is normal.”
+   - FR : Le médecin dit : « Drépanocytose est normal(e). »
+   - AR : يقول الطبيب: «مرض الخلايا المنجلية طبيعي/طبيعية.»
+5. **EN** “But the platelet is not normal.”
+   - FR : « Mais Plaquette n'est pas normal(e). »
+   - AR : «لكن الصفيحة الدموية غير طبيعي/طبيعية.»
+6. **EN** Amine asks, “Is the platelet normal?”
+   - FR : Amine demande : « Plaquette est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل الصفيحة الدموية طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:sickle-cell-disease:v1` — **a sickle cell disease** · FR : Drépanocytose · AR : مرض الخلايا المنجلية
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:platelet:v1` — **a platelet** · FR : Plaquette · AR : الصفيحة الدموية
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Omar have sickle cell disease?
-  - accepté : yes ; yes he does ; yes he has a sickle cell disease ; he has a sickle cell disease
-  - modèle : Yes, he has a sickle cell disease.
-- **q2.** Does he have hemophilia?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a hemophilia ; he doesn't
-  - modèle : No, he does not have a hemophilia.
-  - hint (si erreur) — FR : Attention : Omar n'a PAS hémophilie.
-- **q3.** Does he have sickle cell disease or hemophilia?
-  - accepté : sickle cell disease ; a sickle cell disease ; he has a sickle cell disease
-  - modèle : He has a sickle cell disease.
-- **q4.** What does Omar have?
-  - accepté : sickle cell disease ; a sickle cell disease ; he has a sickle cell disease
-  - modèle : He has a sickle cell disease.
-- **q5.** Who writes in the file?
+- **q1.** Is the sickle cell disease normal?
+  - accepté : yes ; yes it is ; the sickle cell disease is normal ; it is normal
+  - modèle : Yes, the sickle cell disease is normal.
+- **q2.** Is the platelet normal?
+  - accepté : no ; no it is not ; no it isn't ; the platelet is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the platelet is not normal.
+  - hint (si erreur) — FR : Attention : Plaquette n'est PAS normal(e).
+- **q3.** Which one is not normal: the sickle cell disease or the platelet?
+  - accepté : platelet ; the platelet
+  - modèle : The platelet is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : amine ; the student ; the medical student
-  - modèle : Amine writes in the file.
-- **Tt1.** Does the other patient have platelet?
-  - accepté : yes ; yes he does ; he has a platelet
-  - modèle : Yes, he has a platelet.
-- **Tt2.** Does he have sickle cell disease?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a sickle cell disease ; he doesn't
-  - modèle : No, he does not have a sickle cell disease.
-  - hint (si erreur) — FR : Attention : il n'a PAS drépanocytose.
+  - modèle : Amine listens to the doctor.
+- **Tt1.** Is the hemophilia normal?
+  - accepté : yes ; yes it is ; the hemophilia is normal
+  - modèle : Yes, the hemophilia is normal.
+- **Tt2.** Is the sickle cell disease normal?
+  - accepté : no ; no it is not ; no it isn't ; the sickle cell disease is not normal ; it is not normal
+  - modèle : No, the sickle cell disease is not normal.
+  - hint (si erreur) — FR : Attention : Drépanocytose n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `He … a sickle cell disease. (have)` → has · modèle : He has a sickle cell disease.
-- `They … not have a hemophilia. (do)` → do · modèle : They do not have a hemophilia.
-- `I … a sickle cell disease. (have)` → have · modèle : I have a sickle cell disease.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The sickle cell disease … normal. (be)` → is · modèle : The sickle cell disease is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Omar en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has a sickle cell disease. He does not have a hemophilia.*
-- **Transfert (contexte) :** Un autre patient a Plaquette. Il n'a pas de Drépanocytose.
-- Glossaire : Plaquette : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a platelet. He does not have a sickle cell disease.*
+- **Reformulation :** Annonce les résultats à Nadia en deux phrases. Garde la négation. — amorces : The sickle cell disease is… / The platelet is not… — modèle : *The sickle cell disease is normal. The platelet is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Hémophilie normal(e), mais Drépanocytose anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The hemophilia is normal. The sickle cell disease is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a sickle cell disease.
+3. **EN** The patient in bed 3 has a problem with the sickle cell disease.
    - FR : Le patient du lit 3 a Drépanocytose.
    - AR : مريض السرير ٣ عنده مرض الخلايا المنجلية.
-4. **EN** The patient in bed 5 has a hemophilia.
+4. **EN** The patient in bed 5 has a problem with the hemophilia.
    - FR : Le patient du lit 5 a Hémophilie.
    - AR : مريض السرير ٥ عنده الهيموفيليا (ناعور).
-5. **EN** The patient in bed 5 does not have a sickle cell disease.
+5. **EN** The patient in bed 5 does not have a problem with the sickle cell disease.
    - FR : Le patient du lit 5 n'a pas de Drépanocytose.
    - AR : مريض السرير ٥ ليس عنده مرض الخلايا المنجلية.
 6. **EN** Lina reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : sickle cell disease ; a sickle cell disease ; the patient with sickle cell disease
   - modèle : The patient in bed 3 has a sickle cell disease.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : hemophilia ; a hemophilia ; he has a hemophilia
-  - modèle : He has a hemophilia.
+  - accepté : hemophilia ; a problem with the hemophilia
+  - modèle : He has a problem with the hemophilia.
 - **q3.** Does the patient in bed 5 have sickle cell disease?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a sickle cell disease ; he doesn't
-  - modèle : No, he does not have a sickle cell disease.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the sickle cell disease ; he doesn't
+  - modèle : No, he does not have a problem with the sickle cell disease.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS drépanocytose — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : platelet ; a platelet ; he has a platelet
-  - modèle : He has a platelet.
+  - accepté : platelet ; a problem with the platelet
+  - modèle : He has a problem with the platelet.
 - **Tt2.** Does the patient in bed 9 have hemophilia?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a hemophilia ; he doesn't
-  - modèle : No, he does not have a hemophilia.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the hemophilia ; he doesn't
+  - modèle : No, he does not have a problem with the hemophilia.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS hémophilie.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a sickle cell disease. (do)` → does · modèle : The patient in bed 5 does not have a sickle cell disease.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a sickle cell disease. The patient in bed 5 has a hemophilia.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the sickle cell disease. The patient in bed 5 has a problem with the hemophilia.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Plaquette, le lit 9 a Drépanocytose et n'a pas Hémophilie.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a platelet. The patient in bed 9 has a sickle cell disease.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the platelet. The patient in bed 9 has a problem with the sickle cell disease.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

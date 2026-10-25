@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : hypertension ; the patient with hypertension
   - modèle : The patient in bed 3 has hypertension.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : arthritis ; he has arthritis
+  - accepté : arthritis
   - modèle : He has arthritis.
 - **q3.** Does the patient in bed 5 have hypertension?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hypertension ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : cold ; a cold ; he has a cold
+  - accepté : cold ; a cold
   - modèle : He has a cold.
 - **Tt2.** Does the patient in bed 9 have arthritis?
   - accepté : no ; no he does not ; no he doesn't ; he does not have arthritis ; he doesn't

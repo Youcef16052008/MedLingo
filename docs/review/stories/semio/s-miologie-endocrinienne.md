@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : polydipsia ; the patient with polydipsia
   - modèle : The patient in bed 3 has polydipsia.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : polyphagia ; he has polyphagia
+  - accepté : polyphagia
   - modèle : He has polyphagia.
 - **q3.** Does the patient in bed 5 have polydipsia?
   - accepté : no ; no he does not ; no he doesn't ; he does not have polydipsia ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : weight loss ; he has weight loss
+  - accepté : weight loss
   - modèle : He has weight loss.
 - **Tt2.** Does the patient in bed 9 have polyphagia?
   - accepté : no ; no he does not ; no he doesn't ; he does not have polyphagia ; he doesn't

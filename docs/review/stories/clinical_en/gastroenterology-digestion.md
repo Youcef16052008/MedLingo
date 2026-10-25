@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : heartburn ; the patient with heartburn
   - modèle : The patient in bed 3 has heartburn.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : bloating ; he has bloating
+  - accepté : bloating
   - modèle : He has bloating.
 - **q3.** Does the patient in bed 5 have heartburn?
   - accepté : no ; no he does not ; no he doesn't ; he does not have heartburn ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : GERD ; a GERD ; he has a GERD
+  - accepté : GERD ; a GERD
   - modèle : He has a GERD.
 - **Tt2.** Does the patient in bed 9 have bloating?
   - accepté : no ; no he does not ; no he doesn't ; he does not have bloating ; he doesn't

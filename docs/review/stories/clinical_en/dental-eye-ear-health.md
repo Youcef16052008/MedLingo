@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : toothache ; the patient with toothache
   - modèle : The patient in bed 3 has toothache.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : hearing loss ; he has hearing loss
+  - accepté : hearing loss
   - modèle : He has hearing loss.
 - **q3.** Does the patient in bed 5 have toothache?
   - accepté : no ; no he does not ; no he doesn't ; he does not have toothache ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : cavity ; a cavity ; he has a cavity
+  - accepté : cavity ; a cavity
   - modèle : He has a cavity.
 - **Tt2.** Does the patient in bed 9 have hearing loss?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hearing loss ; he doesn't

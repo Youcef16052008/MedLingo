@@ -30,6 +30,7 @@ PROVENANCE = "generated:corpus-v1"
 WAVES = [
     {"fr": "Anglais Médical", "id": "clinical_en", "slug": "clinical-en"},
     {"fr": "Sémiologie Médicale", "id": "semio", "slug": "semio"},
+    {"fr": "Terminologie Médicale", "id": "termino", "slug": "termino"},
 ]
 
 # Sujets trop lourds pour des récits A2 de langue — relire avant usage.
@@ -52,6 +53,17 @@ SYMPTOMISH = (
     "hemoptysis", "hematemesis", "hematuria", "proteinuria", "dysuria",
     "oliguria", "goiter", "orientation", "hallucination", "delusion",
 )
+
+# Adjectifs positionnels/qualificatifs : mauvais pivots (« The anterior is
+# not normal ») — relégables en 3e terme par le tri.
+ADJECTIVAL = {
+    "anterior", "posterior", "superior", "inferior", "lateral", "medial",
+    "proximal", "distal", "external", "internal", "chronic", "acute",
+    "benign", "malignant", "congenital", "acquired", "systemic", "local",
+    "superficial", "deep", "central", "peripheral", "axial", "sagittal",
+    "coronal", "transverse", "dorsal", "ventral", "cranial", "caudal",
+    "visceral", "parietal", "afferent", "efferent",
+}
 
 # Suffixes sémiologiques : -algia (douleur), -uria (urines), -pnea (souffle),
 # -rrhea (écoulement), -phagia/polydipsia (appétit/soif), -pathy, -itis.
@@ -100,7 +112,8 @@ def np_have(display):
         return low(display)
     if display.lower().endswith("s") and not display.lower().endswith("ss"):
         return low(display)
-    return "a " + low(display)
+    article = "an" if low(display)[:1] in "aeiou" else "a"
+    return f"{article} {low(display)}"
 
 
 def L(en, fr, ar):
@@ -153,7 +166,7 @@ def make_phrases(terms):
     return out
 
 
-def story_case(mod, idx, chapter, terms):
+def story_case(mod, idx, chapter, terms, symptom_mode=True):
     name, p = PERSONAS[idx % len(PERSONAS)]
     sname, _ = STUDENTS[idx % len(STUDENTS)]
     t1, t2, t3 = terms[0], terms[1], terms[2]
@@ -162,6 +175,9 @@ def story_case(mod, idx, chapter, terms):
     p_low = prons(p)
     phrases = make_phrases(terms[:3])
     pid1, pid2 = phrases[0]["id"], phrases[1]["id"]
+
+    if not symptom_mode:
+        return story_case_results(mod, idx, chapter, terms)
 
     segments = [
         seg(f"{name} is a patient at the clinic.", f"{name} est un·e patient·e à la clinique.", f"{name} مريض/مريضة في العيادة."),
@@ -242,6 +258,94 @@ def story_case(mod, idx, chapter, terms):
                                   "اذكر الحالة الجديدة في جملتين مع الحفاظ على النفي."),
                      "starters": ["He has…", "He does not have…"],
                      "model": f"He has {np_have(d3)}. He does not have {np_have(d1)}."},
+        },
+    }
+
+
+def story_case_results(mod, idx, chapter, terms):
+    """Chapitres NON symptomatiques (anatomie, systèmes, examens) : cadre
+    « résultats » — « The {X} is normal. The {Y} is not normal. » fonctionne
+    pour n'importe quel nom et garde un fait négatif critique."""
+    name, p = PERSONAS[(idx + 3) % len(PERSONAS)]
+    sname, _ = STUDENTS[idx % len(STUDENTS)]
+    t1, t2, t3 = terms[0], terms[1], terms[2]
+    d1, d2, d3 = display_en(t1), display_en(t2), display_en(t3)
+    phrases = make_phrases(terms[:3])
+    pid1, pid3 = phrases[0]["id"], phrases[2]["id"]
+    fr1 = (t1["fr"] or d1).strip()
+    fr3 = (t3["fr"] or d3).strip()
+    ar1 = (t1["ar"] or d1).strip()
+    ar3 = (t3["ar"] or d3).strip()
+
+    segments = [
+        seg(f"{name} is a patient at the clinic.", f"{name} est un·e patient·e à la clinique.", f"{name} مريض/مريضة في العيادة."),
+        seg("Today, the doctor has the results.", "Aujourd'hui, le médecin a les résultats.", "اليوم، الطبيب عنده النتائج."),
+        seg(f"{sname}, a medical student, listens.", f"{sname}, étudiant·e en médecine, écoute.", f"{sname}، طالب/طالبة طب، يستمع."),
+        seg(f"The doctor says, “The {low(d1)} is normal.”", f"Le médecin dit : « {fr1} est normal(e). »", f"يقول الطبيب: «{ar1} طبيعي/طبيعية.»"),
+        seg(f"“But the {low(d3)} is not normal.”", f"« Mais {fr3} n'est pas normal(e). »", f"«لكن {ar3} غير طبيعي/طبيعية.»"),
+        seg(f"{sname} asks, “Is the {low(d3)} normal?”", f"{sname} demande : « {fr3} est-il/elle normal(e) ? »", f"يسأل {sname}: «هل {ar3} طبيعي/طبيعية؟»"),
+        seg("The doctor says, “No, it is not.”", "Le médecin répond : « Non. »", "يجيب الطبيب: «لا.»"),
+    ]
+
+    questions = [
+        q("q1", f"Is the {low(d1)} normal?", f"{fr1} est-il/elle normal(e) ?", f"هل {ar1} طبيعي/طبيعية؟",
+          ["yes", "yes it is", f"the {low(d1)} is normal", "it is normal"],
+          f"Yes, the {low(d1)} is normal.", phrase_ids=[pid1]),
+        q("q2", f"Is the {low(d3)} normal?", f"{fr3} est-il/elle normal(e) ?", f"هل {ar3} طبيعي/طبيعية؟",
+          ["no", "no it is not", "no it isn't", f"the {low(d3)} is not normal", "it is not normal", "it isn't normal"],
+          f"No, the {low(d3)} is not normal.",
+          hint=L(f"Careful: the {low(d3)} is NOT normal.", f"Attention : {fr3} n'est PAS normal(e).", f"انتبه: {ar3} غير طبيعي/طبيعية."),
+          phrase_ids=[pid3]),
+        q("q3", f"Which one is not normal: the {low(d1)} or the {low(d3)}?", f"Lequel/Laquelle n'est pas normal(e) : {fr1} ou {fr3} ?", f"أيهما غير طبيعي: {ar1} أم {ar3}؟",
+          [low(d3), f"the {low(d3)}"], f"The {low(d3)} is not normal.", phrase_ids=[pid3]),
+        q("q4", "Who has the results?", "Qui a les résultats ?", "من عنده النتائج؟",
+          ["the doctor", "doctor"], "The doctor has the results."),
+        q("q5", "Who listens to the doctor?", "Qui écoute le médecin ?", "من يستمع إلى الطبيب؟",
+          [sname.lower(), "the student", "the medical student"], f"{sname} listens to the doctor."),
+    ]
+
+    drills = [
+        {"id": "d1", "prompt": f"The {low(d1)} … normal. (be)", "accepted": ["is"], "model": f"The {low(d1)} is normal."},
+        {"id": "d2", "prompt": "The results … not normal. (be)", "accepted": ["are"], "model": "The results are not normal."},
+        {"id": "d3", "prompt": "It … not normal. (be)", "accepted": ["is"], "model": "It is not normal."},
+    ]
+
+    return {
+        "schemaVersion": 1, "storyId": f"{mod['slug']}-case-{idx:03d}", "contentVersion": 1,
+        "title": L(f"{name}: the {low(d3)} is not normal", f"Le cas de {name} : {fr3} anormal(e)", f"حالة {name}: {ar3} غير طبيعي"),
+        "goal": L(f"Understand exam results: {low(d1)} normal, {low(d3)} not normal.",
+                  f"Comprendre des résultats : {fr1} normal(e), {fr3} anormal(e).",
+                  f"فهم النتائج: {ar1} طبيعي و{ar3} غير طبيعي."),
+        "moduleIds": [mod["id"]], "relatedTermIds": [t1["id"], t2["id"], t3["id"]],
+        "languageBand": "beginner_supported", "publicationStatus": "draft", "durationMin": 10,
+        "review": {"language": "pending", "medical": "pending"}, "provenance": PROVENANCE,
+        "chapter": chapter,
+        "segments": segments, "targetPhrases": phrases, "questions": questions,
+        "drill": {"explain": L("The heart is → The results are. One thing: is. Many things: are.",
+                                "The heart is → The results are. Une chose : is. Plusieurs : are.",
+                                "The heart is ← The results are. شيء واحد: is. أشياء كثيرة: are."),
+                  "items": drills},
+        "retell": {"prompt": L(f"Tell {name} the results, in two sentences. Keep the negation.",
+                                f"Annonce les résultats à {name} en deux phrases. Garde la négation.",
+                                f"أخبر {name} بالنتائج في جملتين مع الحفاظ على النفي."),
+                   "starters": [f"The {low(d1)} is…", f"The {low(d3)} is not…"],
+                   "model": f"The {low(d1)} is normal. The {low(d3)} is not normal."},
+        "transfer": {
+            "context": L(f"Another patient has results too: the {low(d2)} is normal, but the {low(d1)} is not normal.",
+                          f"Un autre patient a aussi des résultats : {(t2['fr'] or d2).strip()} normal(e), mais {fr1} anormal(e).",
+                          f"مريض آخر عنده نتائج أيضًا: {(t2['ar'] or d2).strip()} طبيعي، لكن {ar1} غير طبيعي."),
+            "gloss": None,
+            "questions": [
+                q("t1", f"Is the {low(d2)} normal?", f"{(t2['fr'] or d2).strip()} est-il/elle normal(e) ?", f"هل {(t2['ar'] or d2).strip()} طبيعي؟",
+                  ["yes", "yes it is", f"the {low(d2)} is normal"], f"Yes, the {low(d2)} is normal."),
+                q("t2", f"Is the {low(d1)} normal?", f"{fr1} est-il/elle normal(e) ?", f"هل {ar1} طبيعي؟",
+                  ["no", "no it is not", "no it isn't", f"the {low(d1)} is not normal", "it is not normal"],
+                  f"No, the {low(d1)} is not normal.",
+                  hint=L(f"Careful: the {low(d1)} is NOT normal for this patient.", f"Attention : {fr1} n'est PAS normal(e) pour ce patient.", f"انتبه: {ar1} غير طبيعي لهذا المريض.")),
+            ],
+            "task": {"prompt": L("Tell the new results, in two sentences.", "Annonce les nouveaux résultats, en deux phrases.", "اذكر النتائج الجديدة في جملتين."),
+                     "starters": [f"The {low(d2)} is…", f"The {low(d1)} is not…"],
+                     "model": f"The {low(d2)} is normal. The {low(d1)} is not normal."},
         },
     }
 
@@ -327,19 +431,30 @@ def story_explain(mod, idx, chapter, terms):
     }
 
 
-def story_handover(mod, idx, chapter, terms):
+def story_handover(mod, idx, chapter, terms, symptom_mode=True):
     sname, _ = STUDENTS[(idx + 1) % len(STUDENTS)]
     t1, t2, t3 = terms[0], terms[1], terms[2]
     d1, d2, d3 = display_en(t1), display_en(t2), display_en(t3)
     phrases = make_phrases(terms[:3])
     pid1, pid2 = phrases[0]["id"], phrases[1]["id"]
 
+    # Anatomie/examens : « has a problem with the heart » est clinique ;
+    # « has a heart » ne le serait pas.
+    def np1():
+        return np_have(d1) if symptom_mode else f"a problem with the {low(d1)}"
+
+    def np2():
+        return np_have(d2) if symptom_mode else f"a problem with the {low(d2)}"
+
+    def np3():
+        return np_have(d3) if symptom_mode else f"a problem with the {low(d3)}"
+
     segments = [
         seg(f"{sname} is a medical student.", f"{sname} est étudiant·e en médecine.", f"{sname} طالب/طالبة طب."),
         seg("It is the morning shift.", "C'est la garde du matin.", "إنها مناوبة الصباح."),
-        seg(f"The patient in bed 3 has {np_have(d1)}.", f"Le patient du lit 3 a {(t1['fr'] or d1).strip()}.", f"مريض السرير ٣ عنده {(t1['ar'] or d1).strip()}."),
-        seg(f"The patient in bed 5 has {np_have(d2)}.", f"Le patient du lit 5 a {(t2['fr'] or d2).strip()}.", f"مريض السرير ٥ عنده {(t2['ar'] or d2).strip()}."),
-        seg(f"The patient in bed 5 does not have {np_have(d1)}.", f"Le patient du lit 5 n'a pas de {(t1['fr'] or d1).strip()}.", f"مريض السرير ٥ ليس عنده {(t1['ar'] or d1).strip()}."),
+        seg(f"The patient in bed 3 has {np1()}.", f"Le patient du lit 3 a {(t1['fr'] or d1).strip()}.", f"مريض السرير ٣ عنده {(t1['ar'] or d1).strip()}."),
+        seg(f"The patient in bed 5 has {np2()}.", f"Le patient du lit 5 a {(t2['fr'] or d2).strip()}.", f"مريض السرير ٥ عنده {(t2['ar'] or d2).strip()}."),
+        seg(f"The patient in bed 5 does not have {np1()}.", f"Le patient du lit 5 n'a pas de {(t1['fr'] or d1).strip()}.", f"مريض السرير ٥ ليس عنده {(t1['ar'] or d1).strip()}."),
         seg(f"{sname} reports the two cases to the doctor.", f"{sname} rapporte les deux cas au médecin.", f"يذكر {sname} الحالتين للطبيب."),
     ]
 
@@ -348,10 +463,10 @@ def story_handover(mod, idx, chapter, terms):
           [low(d1), np_have(d1), f"the patient with {low(d1)}"],
           f"The patient in bed 3 has {np_have(d1)}.", phrase_ids=[pid1]),
         q("q2", "What does the patient in bed 5 have?", "Qu'a le patient du lit 5 ?", "ماذا عند مريض السرير ٥؟",
-          [low(d2), np_have(d2), f"he has {np_have(d2)}"], f"He has {np_have(d2)}.", phrase_ids=[pid2]),
+          [low(d2), np2()], f"He has {np2()}.", phrase_ids=[pid2]),
         q("q3", "Does the patient in bed 5 have " + low(d1) + "?", f"Le patient du lit 5 a-t-il {low((t1['fr'] or d1))} ?", f"هل عند مريض السرير ٥ {(t1['ar'] or d1).strip()}؟",
-          ["no", "no he does not", "no he doesn't", f"he does not have {np_have(d1)}", "he doesn't"],
-          f"No, he does not have {np_have(d1)}.",
+          ["no", "no he does not", "no he doesn't", f"he does not have {np1()}", "he doesn't"],
+          f"No, he does not have {np1()}.",
           hint=L(f"Careful: bed 5 does NOT have {low(d1)} — that is bed 3.",
                  f"Attention : le lit 5 n'a PAS {low((t1['fr'] or d1))} — c'est le lit 3.",
                  f"انتبه: السرير ٥ ليس عنده {(t1['ar'] or d1).strip()} — ذلك السرير ٣."),
@@ -385,25 +500,25 @@ def story_handover(mod, idx, chapter, terms):
         "retell": {"prompt": L("Report the two cases to the doctor, in two sentences.",
                                 "Rapporte les deux cas au médecin, en deux phrases.", "اذكر الحالتين للطبيب في جملتين."),
                    "starters": ["The patient in bed 3 has…", "The patient in bed 5 has…"],
-                   "model": f"The patient in bed 3 has {np_have(d1)}. The patient in bed 5 has {np_have(d2)}."},
+                   "model": f"The patient in bed 3 has {np1()}. The patient in bed 5 has {np2()}."},
         "transfer": {
-            "context": L(f"Evening shift: the patient in bed 7 has {np_have(d3)}. The patient in bed 9 has {np_have(d1)}. The patient in bed 9 does not have {np_have(d2)}.",
+            "context": L(f"Evening shift: the patient in bed 7 has {np3()}. The patient in bed 9 has {np1()}. The patient in bed 9 does not have {np2()}.",
                           f"Garde du soir : le lit 7 a {(t3['fr'] or d3).strip()}, le lit 9 a {(t1['fr'] or d1).strip()} et n'a pas {(t2['fr'] or d2).strip()}.",
                           f"مناوبة المساء: السرير ٧ عنده {(t3['ar'] or d3).strip()}، والسرير ٩ عنده {(t1['ar'] or d1).strip()} وليس عنده {(t2['ar'] or d2).strip()}."),
             "gloss": None,
             "questions": [
                 q("t1", "What does the patient in bed 7 have?", "Qu'a le patient du lit 7 ?", "ماذا عند مريض السرير ٧؟",
-                  [low(d3), np_have(d3), f"he has {np_have(d3)}"], f"He has {np_have(d3)}."),
+                  [low(d3), np3()], f"He has {np3()}."),
                 q("t2", "Does the patient in bed 9 have " + low(d2) + "?", f"Le patient du lit 9 a-t-il {low((t2['fr'] or d2))} ?", f"هل عند مريض السرير ٩ {(t2['ar'] or d2).strip()}؟",
-                  ["no", "no he does not", "no he doesn't", f"he does not have {np_have(d2)}", "he doesn't"],
-                  f"No, he does not have {np_have(d2)}.",
+                  ["no", "no he does not", "no he doesn't", f"he does not have {np2()}", "he doesn't"],
+                  f"No, he does not have {np2()}.",
                   hint=L(f"Careful: bed 9 does NOT have {low(d2)}.",
                          f"Attention : le lit 9 n'a PAS {low((t2['fr'] or d2))}.",
                          f"انتبه: السرير ٩ ليس عنده {(t2['ar'] or d2).strip()}.")),
             ],
             "task": {"prompt": L("Report the evening cases, in two sentences.", "Rapporte les cas du soir, en deux phrases.", "اذكر حالات المساء في جملتين."),
                      "starters": ["The patient in bed 7 has…", "The patient in bed 9 has…"],
-                     "model": f"The patient in bed 7 has {np_have(d3)}. The patient in bed 9 has {np_have(d1)}."},
+                     "model": f"The patient in bed 7 has {np3()}. The patient in bed 9 has {np1()}."},
         },
     }
 
@@ -436,11 +551,16 @@ def main():
             # symptômes ; sinon « does not have a body temperature » n'a pas de
             # sens clinique. Explain accepte n'importe quel terme (« we check X »).
             symptomish = [t for t in ts if is_symptomish(display_en(t))]
-            case_terms = (symptomish[:2] + [t for t in ts if t not in symptomish[:2]])[:3]                 if len(symptomish) >= 2 else ts[:3]
-            explain_terms = ts[:2] + [ts[2]]
-            generated.append(story_case(mod, idx, ch, case_terms))
+            symptom_mode = len(symptomish) >= 2
+            # Pivots : termes substantifs d'abord (les adjectifs positionnels
+            # en dernier recours). Tri stable : substantifs par id, puis le reste.
+            nouns = [t for t in ts if display_en(t).lower() not in ADJECTIVAL]
+            ordered = nouns + [t for t in ts if t not in nouns]
+            case_terms = (symptomish[:2] + [t for t in ordered if t not in symptomish[:2]])[:3]                 if symptom_mode else ordered[:3]
+            explain_terms = ordered[:2] + [ordered[2]]
+            generated.append(story_case(mod, idx, ch, case_terms, symptom_mode=symptom_mode))
             generated.append(story_explain(mod, idx, ch, explain_terms))
-            generated.append(story_handover(mod, idx, ch, case_terms))
+            generated.append(story_handover(mod, idx, ch, case_terms, symptom_mode=symptom_mode))
             idx += 1
 
     # Fusion : les 10 pilotes écrits par build_stories_p3 + le corpus généré.

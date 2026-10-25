@@ -112,7 +112,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:copd:v1` — **a COPD** · FR : BPCO (Bronchopneumopathie) · AR : مرض الانسداد الرئوي المزمن
-- `gen:emphysema:v1` — **a emphysema** · FR : Emphysème · AR : انتفاخ الرئة
+- `gen:emphysema:v1` — **an emphysema** · FR : Emphysème · AR : انتفاخ الرئة
 - `gen:pulmonary-fibrosis:v1` — **pulmonary fibrosis** · FR : Fibrose pulmonaire · AR : التليف الرئوي
 
 ### Questions (acceptées / modèle / hint)
@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : sleep apnea ; the patient with sleep apnea
   - modèle : The patient in bed 3 has sleep apnea.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : wheezing ; he has wheezing
+  - accepté : wheezing
   - modèle : He has wheezing.
 - **q3.** Does the patient in bed 5 have sleep apnea?
   - accepté : no ; no he does not ; no he doesn't ; he does not have sleep apnea ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : COPD ; a COPD ; he has a COPD
+  - accepté : COPD ; a COPD
   - modèle : He has a COPD.
 - **Tt2.** Does the patient in bed 9 have wheezing?
   - accepté : no ; no he does not ; no he doesn't ; he does not have wheezing ; he doesn't

@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amenorrhea ; the patient with amenorrhea
   - modèle : The patient in bed 3 has amenorrhea.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : dysmenorrhea ; he has dysmenorrhea
+  - accepté : dysmenorrhea
   - modèle : He has dysmenorrhea.
 - **q3.** Does the patient in bed 5 have amenorrhea?
   - accepté : no ; no he does not ; no he doesn't ; he does not have amenorrhea ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : metrorrhagia ; a metrorrhagia ; he has a metrorrhagia
+  - accepté : metrorrhagia ; a metrorrhagia
   - modèle : He has a metrorrhagia.
 - **Tt2.** Does the patient in bed 9 have dysmenorrhea?
   - accepté : no ; no he does not ; no he doesn't ; he does not have dysmenorrhea ; he doesn't

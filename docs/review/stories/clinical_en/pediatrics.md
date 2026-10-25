@@ -112,7 +112,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:newborn:v1` — **a newborn** · FR : Nouveau-né · AR : المولود الجديد
-- `gen:infant:v1` — **a infant** · FR : Nourrisson · AR : الرضيع
+- `gen:infant:v1` — **an infant** · FR : Nourrisson · AR : الرضيع
 - `gen:toddler:v1` — **a toddler** · FR : Tout-petit (1-3 ans) · AR : الطفل الصغير
 
 ### Questions (acceptées / modèle / hint)
@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : febrile seizure ; the patient with febrile seizure
   - modèle : The patient in bed 3 has febrile seizure.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : diaper rash ; he has diaper rash
+  - accepté : diaper rash
   - modèle : He has diaper rash.
 - **q3.** Does the patient in bed 5 have febrile seizure?
   - accepté : no ; no he does not ; no he doesn't ; he does not have febrile seizure ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : newborn ; a newborn ; he has a newborn
+  - accepté : newborn ; a newborn
   - modèle : He has a newborn.
 - **Tt2.** Does the patient in bed 9 have diaper rash?
   - accepté : no ; no he does not ; no he doesn't ; he does not have diaper rash ; he doesn't

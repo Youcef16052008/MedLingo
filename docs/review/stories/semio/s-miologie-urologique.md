@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : dysuria ; the patient with dysuria
   - modèle : The patient in bed 3 has dysuria.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : hematuria ; he has hematuria
+  - accepté : hematuria
   - modèle : He has hematuria.
 - **q3.** Does the patient in bed 5 have dysuria?
   - accepté : no ; no he does not ; no he doesn't ; he does not have dysuria ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : proteinuria ; he has proteinuria
+  - accepté : proteinuria
   - modèle : He has proteinuria.
 - **Tt2.** Does the patient in bed 9 have hematuria?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hematuria ; he doesn't

@@ -5,75 +5,74 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-010` — Le cas de Hana : Premiers secours / _Hana: First aid_
+## 1. `clinical-en-case-010` — Le cas de Omar : Ambulance anormal(e) / _Omar: the ambulance is not normal_
 
-**Objectif :** Comprendre un cas : premiers secours présent, RCP (Réanimation) absent.
+**Objectif :** Comprendre des résultats : Premiers secours normal(e), Ambulance anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Hana is a patient at the clinic.
-   - FR : Hana est un·e patient·e à la clinique.
-   - AR : Hana مريض/مريضة في العيادة.
-2. **EN** Hana talks to Lina, a medical student.
-   - FR : Hana parle avec Lina, étudiant·e en médecine.
-   - AR : Hana يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a first aid.
-   - FR : Elle a Premiers secours.
-   - AR : عنده الإسعافات الأولية.
-4. **EN** She does not have a CPR.
-   - FR : Elle n'a pas de RCP (Réanimation).
-   - AR : ليس عنده الإنعاش القلبي الرئوي.
-5. **EN** Lina asks, “Do you have a CPR?”
-   - FR : Lina demande : « Avez-vous RCP (Réanimation) ? »
-   - AR : يسأل Lina: «هل عندك الإنعاش القلبي الرئوي؟»
-6. **EN** Hana says, “No, I do not.”
-   - FR : Hana répond : « Non. »
-   - AR : يجيب Hana: «لا.»
-7. **EN** Lina writes “First aid” in the file.
-   - FR : Lina écrit « Premiers secours » dans le dossier.
-   - AR : يكتب Lina «Premiers secours» في الملف.
+1. **EN** Omar is a patient at the clinic.
+   - FR : Omar est un·e patient·e à la clinique.
+   - AR : Omar مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The first aid is normal.”
+   - FR : Le médecin dit : « Premiers secours est normal(e). »
+   - AR : يقول الطبيب: «الإسعافات الأولية طبيعي/طبيعية.»
+5. **EN** “But the ambulance is not normal.”
+   - FR : « Mais Ambulance n'est pas normal(e). »
+   - AR : «لكن سيارة الإسعاف غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the ambulance normal?”
+   - FR : Lina demande : « Ambulance est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل سيارة الإسعاف طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:first-aid:v1` — **a first aid** · FR : Premiers secours · AR : الإسعافات الأولية
 - `gen:cpr:v1` — **a CPR** · FR : RCP (Réanimation) · AR : الإنعاش القلبي الرئوي
-- `gen:ambulance:v1` — **a ambulance** · FR : Ambulance · AR : سيارة الإسعاف
+- `gen:ambulance:v1` — **an ambulance** · FR : Ambulance · AR : سيارة الإسعاف
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Hana have first aid?
-  - accepté : yes ; yes she does ; yes she has a first aid ; she has a first aid
-  - modèle : Yes, she has a first aid.
-- **q2.** Does she have CPR?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a CPR ; she doesn't
-  - modèle : No, she does not have a CPR.
-  - hint (si erreur) — FR : Attention : Hana n'a PAS RCP (Réanimation).
-- **q3.** Does she have first aid or CPR?
-  - accepté : first aid ; a first aid ; she has a first aid
-  - modèle : She has a first aid.
-- **q4.** What does Hana have?
-  - accepté : first aid ; a first aid ; she has a first aid
-  - modèle : She has a first aid.
-- **q5.** Who writes in the file?
+- **q1.** Is the first aid normal?
+  - accepté : yes ; yes it is ; the first aid is normal ; it is normal
+  - modèle : Yes, the first aid is normal.
+- **q2.** Is the ambulance normal?
+  - accepté : no ; no it is not ; no it isn't ; the ambulance is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the ambulance is not normal.
+  - hint (si erreur) — FR : Attention : Ambulance n'est PAS normal(e).
+- **q3.** Which one is not normal: the first aid or the ambulance?
+  - accepté : ambulance ; the ambulance
+  - modèle : The ambulance is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have ambulance?
-  - accepté : yes ; yes he does ; he has a ambulance
-  - modèle : Yes, he has a ambulance.
-- **Tt2.** Does he have first aid?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a first aid ; he doesn't
-  - modèle : No, he does not have a first aid.
-  - hint (si erreur) — FR : Attention : il n'a PAS premiers secours.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the CPR normal?
+  - accepté : yes ; yes it is ; the CPR is normal
+  - modèle : Yes, the CPR is normal.
+- **Tt2.** Is the first aid normal?
+  - accepté : no ; no it is not ; no it isn't ; the first aid is not normal ; it is not normal
+  - modèle : No, the first aid is not normal.
+  - hint (si erreur) — FR : Attention : Premiers secours n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a first aid. (have)` → has · modèle : She has a first aid.
-- `They … not have a CPR. (do)` → do · modèle : They do not have a CPR.
-- `I … a first aid. (have)` → have · modèle : I have a first aid.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The first aid … normal. (be)` → is · modèle : The first aid is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Hana en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a first aid. She does not have a CPR.*
-- **Transfert (contexte) :** Un autre patient a Ambulance. Il n'a pas de Premiers secours.
-- Glossaire : Ambulance : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a ambulance. He does not have a first aid.*
+- **Reformulation :** Annonce les résultats à Omar en deux phrases. Garde la négation. — amorces : The first aid is… / The ambulance is not… — modèle : *The first aid is normal. The ambulance is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : RCP (Réanimation) normal(e), mais Premiers secours anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The CPR is normal. The first aid is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -113,7 +112,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 ### Expressions ciblées
 - `gen:first-aid:v1` — **a first aid** · FR : Premiers secours · AR : الإسعافات الأولية
 - `gen:cpr:v1` — **a CPR** · FR : RCP (Réanimation) · AR : الإنعاش القلبي الرئوي
-- `gen:ambulance:v1` — **a ambulance** · FR : Ambulance · AR : سيارة الإسعاف
+- `gen:ambulance:v1` — **an ambulance** · FR : Ambulance · AR : سيارة الإسعاف
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** What does the doctor check first?
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a first aid.
+3. **EN** The patient in bed 3 has a problem with the first aid.
    - FR : Le patient du lit 3 a Premiers secours.
    - AR : مريض السرير ٣ عنده الإسعافات الأولية.
-4. **EN** The patient in bed 5 has a CPR.
+4. **EN** The patient in bed 5 has a problem with the CPR.
    - FR : Le patient du lit 5 a RCP (Réanimation).
    - AR : مريض السرير ٥ عنده الإنعاش القلبي الرئوي.
-5. **EN** The patient in bed 5 does not have a first aid.
+5. **EN** The patient in bed 5 does not have a problem with the first aid.
    - FR : Le patient du lit 5 n'a pas de Premiers secours.
    - AR : مريض السرير ٥ ليس عنده الإسعافات الأولية.
 6. **EN** Amine reports the two cases to the doctor.
@@ -185,18 +184,18 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 ### Expressions ciblées
 - `gen:first-aid:v1` — **a first aid** · FR : Premiers secours · AR : الإسعافات الأولية
 - `gen:cpr:v1` — **a CPR** · FR : RCP (Réanimation) · AR : الإنعاش القلبي الرئوي
-- `gen:ambulance:v1` — **a ambulance** · FR : Ambulance · AR : سيارة الإسعاف
+- `gen:ambulance:v1` — **an ambulance** · FR : Ambulance · AR : سيارة الإسعاف
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** Which patient is in bed 3?
   - accepté : first aid ; a first aid ; the patient with first aid
   - modèle : The patient in bed 3 has a first aid.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : CPR ; a CPR ; he has a CPR
-  - modèle : He has a CPR.
+  - accepté : CPR ; a problem with the CPR
+  - modèle : He has a problem with the CPR.
 - **q3.** Does the patient in bed 5 have first aid?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a first aid ; he doesn't
-  - modèle : No, he does not have a first aid.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the first aid ; he doesn't
+  - modèle : No, he does not have a problem with the first aid.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS premiers secours — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : ambulance ; a ambulance ; he has a ambulance
-  - modèle : He has a ambulance.
+  - accepté : ambulance ; a problem with the ambulance
+  - modèle : He has a problem with the ambulance.
 - **Tt2.** Does the patient in bed 9 have CPR?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a CPR ; he doesn't
-  - modèle : No, he does not have a CPR.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the CPR ; he doesn't
+  - modèle : No, he does not have a problem with the CPR.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS RCP (Réanimation).
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a first aid. (do)` → does · modèle : The patient in bed 5 does not have a first aid.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a first aid. The patient in bed 5 has a CPR.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the first aid. The patient in bed 5 has a problem with the CPR.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Ambulance, le lit 9 a Premiers secours et n'a pas RCP (Réanimation).
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a ambulance. The patient in bed 9 has a first aid.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the ambulance. The patient in bed 9 has a problem with the first aid.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

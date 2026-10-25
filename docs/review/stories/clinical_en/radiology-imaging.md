@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-032` — Le cas de Meriem : Radiologue / _Meriem: Radiologist_
+## 1. `clinical-en-case-032` — Le cas de Bilal : TEP scan anormal(e) / _Bilal: the PET scan is not normal_
 
-**Objectif :** Comprendre un cas : radiologue présent, produit de contraste absent.
+**Objectif :** Comprendre des résultats : Radiologue normal(e), TEP scan anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Meriem is a patient at the clinic.
-   - FR : Meriem est un·e patient·e à la clinique.
-   - AR : Meriem مريض/مريضة في العيادة.
-2. **EN** Meriem talks to Lina, a medical student.
-   - FR : Meriem parle avec Lina, étudiant·e en médecine.
-   - AR : Meriem يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a radiologist.
-   - FR : Elle a Radiologue.
-   - AR : عنده طبيب الأشعة.
-4. **EN** She does not have a contrast dye.
-   - FR : Elle n'a pas de Produit de contraste.
-   - AR : ليس عنده صبغة التباين.
-5. **EN** Lina asks, “Do you have a contrast dye?”
-   - FR : Lina demande : « Avez-vous Produit de contraste ? »
-   - AR : يسأل Lina: «هل عندك صبغة التباين؟»
-6. **EN** Meriem says, “No, I do not.”
-   - FR : Meriem répond : « Non. »
-   - AR : يجيب Meriem: «لا.»
-7. **EN** Lina writes “Radiologist” in the file.
-   - FR : Lina écrit « Radiologue » dans le dossier.
-   - AR : يكتب Lina «Radiologue» في الملف.
+1. **EN** Bilal is a patient at the clinic.
+   - FR : Bilal est un·e patient·e à la clinique.
+   - AR : Bilal مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The radiologist is normal.”
+   - FR : Le médecin dit : « Radiologue est normal(e). »
+   - AR : يقول الطبيب: «طبيب الأشعة طبيعي/طبيعية.»
+5. **EN** “But the PET scan is not normal.”
+   - FR : « Mais TEP scan n'est pas normal(e). »
+   - AR : «لكن التصوير بالإصدار البوزيتروني غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the PET scan normal?”
+   - FR : Lina demande : « TEP scan est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل التصوير بالإصدار البوزيتروني طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:radiologist:v1` — **a radiologist** · FR : Radiologue · AR : طبيب الأشعة
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:pet-scan:v1` — **a PET scan** · FR : TEP scan · AR : التصوير بالإصدار البوزيتروني
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Meriem have radiologist?
-  - accepté : yes ; yes she does ; yes she has a radiologist ; she has a radiologist
-  - modèle : Yes, she has a radiologist.
-- **q2.** Does she have contrast dye?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a contrast dye ; she doesn't
-  - modèle : No, she does not have a contrast dye.
-  - hint (si erreur) — FR : Attention : Meriem n'a PAS produit de contraste.
-- **q3.** Does she have radiologist or contrast dye?
-  - accepté : radiologist ; a radiologist ; she has a radiologist
-  - modèle : She has a radiologist.
-- **q4.** What does Meriem have?
-  - accepté : radiologist ; a radiologist ; she has a radiologist
-  - modèle : She has a radiologist.
-- **q5.** Who writes in the file?
+- **q1.** Is the radiologist normal?
+  - accepté : yes ; yes it is ; the radiologist is normal ; it is normal
+  - modèle : Yes, the radiologist is normal.
+- **q2.** Is the PET scan normal?
+  - accepté : no ; no it is not ; no it isn't ; the PET scan is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the PET scan is not normal.
+  - hint (si erreur) — FR : Attention : TEP scan n'est PAS normal(e).
+- **q3.** Which one is not normal: the radiologist or the PET scan?
+  - accepté : PET scan ; the PET scan
+  - modèle : The PET scan is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have PET scan?
-  - accepté : yes ; yes he does ; he has a PET scan
-  - modèle : Yes, he has a PET scan.
-- **Tt2.** Does he have radiologist?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a radiologist ; he doesn't
-  - modèle : No, he does not have a radiologist.
-  - hint (si erreur) — FR : Attention : il n'a PAS radiologue.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the contrast dye normal?
+  - accepté : yes ; yes it is ; the contrast dye is normal
+  - modèle : Yes, the contrast dye is normal.
+- **Tt2.** Is the radiologist normal?
+  - accepté : no ; no it is not ; no it isn't ; the radiologist is not normal ; it is not normal
+  - modèle : No, the radiologist is not normal.
+  - hint (si erreur) — FR : Attention : Radiologue n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a radiologist. (have)` → has · modèle : She has a radiologist.
-- `They … not have a contrast dye. (do)` → do · modèle : They do not have a contrast dye.
-- `I … a radiologist. (have)` → have · modèle : I have a radiologist.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The radiologist … normal. (be)` → is · modèle : The radiologist is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Meriem en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a radiologist. She does not have a contrast dye.*
-- **Transfert (contexte) :** Un autre patient a TEP scan. Il n'a pas de Radiologue.
-- Glossaire : TEP scan : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a PET scan. He does not have a radiologist.*
+- **Reformulation :** Annonce les résultats à Bilal en deux phrases. Garde la négation. — amorces : The radiologist is… / The PET scan is not… — modèle : *The radiologist is normal. The PET scan is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Produit de contraste normal(e), mais Radiologue anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The contrast dye is normal. The radiologist is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a radiologist.
+3. **EN** The patient in bed 3 has a problem with the radiologist.
    - FR : Le patient du lit 3 a Radiologue.
    - AR : مريض السرير ٣ عنده طبيب الأشعة.
-4. **EN** The patient in bed 5 has a contrast dye.
+4. **EN** The patient in bed 5 has a problem with the contrast dye.
    - FR : Le patient du lit 5 a Produit de contraste.
    - AR : مريض السرير ٥ عنده صبغة التباين.
-5. **EN** The patient in bed 5 does not have a radiologist.
+5. **EN** The patient in bed 5 does not have a problem with the radiologist.
    - FR : Le patient du lit 5 n'a pas de Radiologue.
    - AR : مريض السرير ٥ ليس عنده طبيب الأشعة.
 6. **EN** Amine reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : radiologist ; a radiologist ; the patient with radiologist
   - modèle : The patient in bed 3 has a radiologist.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : contrast dye ; a contrast dye ; he has a contrast dye
-  - modèle : He has a contrast dye.
+  - accepté : contrast dye ; a problem with the contrast dye
+  - modèle : He has a problem with the contrast dye.
 - **q3.** Does the patient in bed 5 have radiologist?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a radiologist ; he doesn't
-  - modèle : No, he does not have a radiologist.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the radiologist ; he doesn't
+  - modèle : No, he does not have a problem with the radiologist.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS radiologue — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : PET scan ; a PET scan ; he has a PET scan
-  - modèle : He has a PET scan.
+  - accepté : PET scan ; a problem with the PET scan
+  - modèle : He has a problem with the PET scan.
 - **Tt2.** Does the patient in bed 9 have contrast dye?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a contrast dye ; he doesn't
-  - modèle : No, he does not have a contrast dye.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the contrast dye ; he doesn't
+  - modèle : No, he does not have a problem with the contrast dye.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS produit de contraste.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a radiologist. (do)` → does · modèle : The patient in bed 5 does not have a radiologist.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a radiologist. The patient in bed 5 has a contrast dye.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the radiologist. The patient in bed 5 has a problem with the contrast dye.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a TEP scan, le lit 9 a Radiologue et n'a pas Produit de contraste.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a PET scan. The patient in bed 9 has a radiologist.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the PET scan. The patient in bed 9 has a problem with the radiologist.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

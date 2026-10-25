@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : cough ; the patient with cough
   - modèle : The patient in bed 3 has cough.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : hemoptysis ; he has hemoptysis
+  - accepté : hemoptysis
   - modèle : He has hemoptysis.
 - **q3.** Does the patient in bed 5 have cough?
   - accepté : no ; no he does not ; no he doesn't ; he does not have cough ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : sputum ; he has sputum
+  - accepté : sputum
   - modèle : He has sputum.
 - **Tt2.** Does the patient in bed 9 have hemoptysis?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hemoptysis ; he doesn't

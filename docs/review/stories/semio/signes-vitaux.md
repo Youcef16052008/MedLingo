@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : fever ; the patient with fever
   - modèle : The patient in bed 3 has fever.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : hyperthermia ; he has hyperthermia
+  - accepté : hyperthermia
   - modèle : He has hyperthermia.
 - **q3.** Does the patient in bed 5 have fever?
   - accepté : no ; no he does not ; no he doesn't ; he does not have fever ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : vital signs ; he has vital signs
+  - accepté : vital signs
   - modèle : He has vital signs.
 - **Tt2.** Does the patient in bed 9 have hyperthermia?
   - accepté : no ; no he does not ; no he doesn't ; he does not have hyperthermia ; he doesn't

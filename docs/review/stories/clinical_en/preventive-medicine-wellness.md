@@ -5,75 +5,74 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-030` — Le cas de Amel : Médecine préventive / _Amel: Preventive medicine_
+## 1. `clinical-en-case-030` — Le cas de Sofiane : Vaccination (immunisation) anormal(e) / _Sofiane: the immunization is not normal_
 
-**Objectif :** Comprendre un cas : médecine préventive présent, bilan de santé annuel absent.
+**Objectif :** Comprendre des résultats : Médecine préventive normal(e), Vaccination (immunisation) anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amel is a patient at the clinic.
-   - FR : Amel est un·e patient·e à la clinique.
-   - AR : Amel مريض/مريضة في العيادة.
-2. **EN** Amel talks to Lina, a medical student.
-   - FR : Amel parle avec Lina, étudiant·e en médecine.
-   - AR : Amel يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a preventive medicine.
-   - FR : Elle a Médecine préventive.
-   - AR : عنده الطب الوقائي.
-4. **EN** She does not have a annual physical exam.
-   - FR : Elle n'a pas de Bilan de santé annuel.
-   - AR : ليس عنده الفحص الطبي السنوي.
-5. **EN** Lina asks, “Do you have a annual physical exam?”
-   - FR : Lina demande : « Avez-vous Bilan de santé annuel ? »
-   - AR : يسأل Lina: «هل عندك الفحص الطبي السنوي؟»
-6. **EN** Amel says, “No, I do not.”
-   - FR : Amel répond : « Non. »
-   - AR : يجيب Amel: «لا.»
-7. **EN** Lina writes “Preventive medicine” in the file.
-   - FR : Lina écrit « Médecine préventive » dans le dossier.
-   - AR : يكتب Lina «Médecine préventive» في الملف.
+1. **EN** Sofiane is a patient at the clinic.
+   - FR : Sofiane est un·e patient·e à la clinique.
+   - AR : Sofiane مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The preventive medicine is normal.”
+   - FR : Le médecin dit : « Médecine préventive est normal(e). »
+   - AR : يقول الطبيب: «الطب الوقائي طبيعي/طبيعية.»
+5. **EN** “But the immunization is not normal.”
+   - FR : « Mais Vaccination (immunisation) n'est pas normal(e). »
+   - AR : «لكن التطعيم غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the immunization normal?”
+   - FR : Lina demande : « Vaccination (immunisation) est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل التطعيم طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:preventive-medicine:v1` — **a preventive medicine** · FR : Médecine préventive · AR : الطب الوقائي
-- `gen:annual-physical-exam:v1` — **a annual physical exam** · FR : Bilan de santé annuel · AR : الفحص الطبي السنوي
-- `gen:immunization:v1` — **a immunization** · FR : Vaccination (immunisation) · AR : التطعيم
+- `gen:annual-physical-exam:v1` — **an annual physical exam** · FR : Bilan de santé annuel · AR : الفحص الطبي السنوي
+- `gen:immunization:v1` — **an immunization** · FR : Vaccination (immunisation) · AR : التطعيم
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Amel have preventive medicine?
-  - accepté : yes ; yes she does ; yes she has a preventive medicine ; she has a preventive medicine
-  - modèle : Yes, she has a preventive medicine.
-- **q2.** Does she have annual physical exam?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a annual physical exam ; she doesn't
-  - modèle : No, she does not have a annual physical exam.
-  - hint (si erreur) — FR : Attention : Amel n'a PAS bilan de santé annuel.
-- **q3.** Does she have preventive medicine or annual physical exam?
-  - accepté : preventive medicine ; a preventive medicine ; she has a preventive medicine
-  - modèle : She has a preventive medicine.
-- **q4.** What does Amel have?
-  - accepté : preventive medicine ; a preventive medicine ; she has a preventive medicine
-  - modèle : She has a preventive medicine.
-- **q5.** Who writes in the file?
+- **q1.** Is the preventive medicine normal?
+  - accepté : yes ; yes it is ; the preventive medicine is normal ; it is normal
+  - modèle : Yes, the preventive medicine is normal.
+- **q2.** Is the immunization normal?
+  - accepté : no ; no it is not ; no it isn't ; the immunization is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the immunization is not normal.
+  - hint (si erreur) — FR : Attention : Vaccination (immunisation) n'est PAS normal(e).
+- **q3.** Which one is not normal: the preventive medicine or the immunization?
+  - accepté : immunization ; the immunization
+  - modèle : The immunization is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have immunization?
-  - accepté : yes ; yes he does ; he has a immunization
-  - modèle : Yes, he has a immunization.
-- **Tt2.** Does he have preventive medicine?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a preventive medicine ; he doesn't
-  - modèle : No, he does not have a preventive medicine.
-  - hint (si erreur) — FR : Attention : il n'a PAS médecine préventive.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the annual physical exam normal?
+  - accepté : yes ; yes it is ; the annual physical exam is normal
+  - modèle : Yes, the annual physical exam is normal.
+- **Tt2.** Is the preventive medicine normal?
+  - accepté : no ; no it is not ; no it isn't ; the preventive medicine is not normal ; it is not normal
+  - modèle : No, the preventive medicine is not normal.
+  - hint (si erreur) — FR : Attention : Médecine préventive n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a preventive medicine. (have)` → has · modèle : She has a preventive medicine.
-- `They … not have a annual physical exam. (do)` → do · modèle : They do not have a annual physical exam.
-- `I … a preventive medicine. (have)` → have · modèle : I have a preventive medicine.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The preventive medicine … normal. (be)` → is · modèle : The preventive medicine is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Amel en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a preventive medicine. She does not have a annual physical exam.*
-- **Transfert (contexte) :** Un autre patient a Vaccination (immunisation). Il n'a pas de Médecine préventive.
-- Glossaire : Vaccination (immunisation) : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a immunization. He does not have a preventive medicine.*
+- **Reformulation :** Annonce les résultats à Sofiane en deux phrases. Garde la négation. — amorces : The preventive medicine is… / The immunization is not… — modèle : *The preventive medicine is normal. The immunization is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Bilan de santé annuel normal(e), mais Médecine préventive anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The annual physical exam is normal. The preventive medicine is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -112,8 +111,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:preventive-medicine:v1` — **a preventive medicine** · FR : Médecine préventive · AR : الطب الوقائي
-- `gen:annual-physical-exam:v1` — **a annual physical exam** · FR : Bilan de santé annuel · AR : الفحص الطبي السنوي
-- `gen:immunization:v1` — **a immunization** · FR : Vaccination (immunisation) · AR : التطعيم
+- `gen:annual-physical-exam:v1` — **an annual physical exam** · FR : Bilan de santé annuel · AR : الفحص الطبي السنوي
+- `gen:immunization:v1` — **an immunization** · FR : Vaccination (immunisation) · AR : التطعيم
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** What does the doctor check first?
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a preventive medicine.
+3. **EN** The patient in bed 3 has a problem with the preventive medicine.
    - FR : Le patient du lit 3 a Médecine préventive.
    - AR : مريض السرير ٣ عنده الطب الوقائي.
-4. **EN** The patient in bed 5 has a annual physical exam.
+4. **EN** The patient in bed 5 has a problem with the annual physical exam.
    - FR : Le patient du lit 5 a Bilan de santé annuel.
    - AR : مريض السرير ٥ عنده الفحص الطبي السنوي.
-5. **EN** The patient in bed 5 does not have a preventive medicine.
+5. **EN** The patient in bed 5 does not have a problem with the preventive medicine.
    - FR : Le patient du lit 5 n'a pas de Médecine préventive.
    - AR : مريض السرير ٥ ليس عنده الطب الوقائي.
 6. **EN** Amine reports the two cases to the doctor.
@@ -184,19 +183,19 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:preventive-medicine:v1` — **a preventive medicine** · FR : Médecine préventive · AR : الطب الوقائي
-- `gen:annual-physical-exam:v1` — **a annual physical exam** · FR : Bilan de santé annuel · AR : الفحص الطبي السنوي
-- `gen:immunization:v1` — **a immunization** · FR : Vaccination (immunisation) · AR : التطعيم
+- `gen:annual-physical-exam:v1` — **an annual physical exam** · FR : Bilan de santé annuel · AR : الفحص الطبي السنوي
+- `gen:immunization:v1` — **an immunization** · FR : Vaccination (immunisation) · AR : التطعيم
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** Which patient is in bed 3?
   - accepté : preventive medicine ; a preventive medicine ; the patient with preventive medicine
   - modèle : The patient in bed 3 has a preventive medicine.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : annual physical exam ; a annual physical exam ; he has a annual physical exam
-  - modèle : He has a annual physical exam.
+  - accepté : annual physical exam ; a problem with the annual physical exam
+  - modèle : He has a problem with the annual physical exam.
 - **q3.** Does the patient in bed 5 have preventive medicine?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a preventive medicine ; he doesn't
-  - modèle : No, he does not have a preventive medicine.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the preventive medicine ; he doesn't
+  - modèle : No, he does not have a problem with the preventive medicine.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS médecine préventive — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,23 +204,23 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : immunization ; a immunization ; he has a immunization
-  - modèle : He has a immunization.
+  - accepté : immunization ; a problem with the immunization
+  - modèle : He has a problem with the immunization.
 - **Tt2.** Does the patient in bed 9 have annual physical exam?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a annual physical exam ; he doesn't
-  - modèle : No, he does not have a annual physical exam.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the annual physical exam ; he doesn't
+  - modèle : No, he does not have a problem with the annual physical exam.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS bilan de santé annuel.
 
 ### Drill
 - Explication : Un patient : reports/has/does. Deux patients : report/have/do.
 - `The patient in bed 3 … the case. (report — présent)` → reports · modèle : The patient in bed 3 reports the case.
-- `The patients … a preventive medicine and a annual physical exam. (have)` → have · modèle : The patients have a preventive medicine and a annual physical exam.
+- `The patients … a preventive medicine and an annual physical exam. (have)` → have · modèle : The patients have a preventive medicine and an annual physical exam.
 - `The patient in bed 5 … not have a preventive medicine. (do)` → does · modèle : The patient in bed 5 does not have a preventive medicine.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a preventive medicine. The patient in bed 5 has a annual physical exam.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the preventive medicine. The patient in bed 5 has a problem with the annual physical exam.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Vaccination (immunisation), le lit 9 a Médecine préventive et n'a pas Bilan de santé annuel.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a immunization. The patient in bed 9 has a preventive medicine.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the immunization. The patient in bed 9 has a problem with the preventive medicine.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

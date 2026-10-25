@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : otalgia ; the patient with otalgia
   - modèle : The patient in bed 3 has otalgia.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : tinnitus ; he has tinnitus
+  - accepté : tinnitus
   - modèle : He has tinnitus.
 - **q3.** Does the patient in bed 5 have otalgia?
   - accepté : no ; no he does not ; no he doesn't ; he does not have otalgia ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : hearing loss ; he has hearing loss
+  - accepté : hearing loss
   - modèle : He has hearing loss.
 - **Tt2.** Does the patient in bed 9 have tinnitus?
   - accepté : no ; no he does not ; no he doesn't ; he does not have tinnitus ; he doesn't

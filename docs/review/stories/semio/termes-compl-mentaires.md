@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : referred pain ; the patient with referred pain
   - modèle : The patient in bed 3 has referred pain.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : radiation of pain ; he has radiation of pain
+  - accepté : radiation of pain
   - modèle : He has radiation of pain.
 - **q3.** Does the patient in bed 5 have referred pain?
   - accepté : no ; no he does not ; no he doesn't ; he does not have referred pain ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : paroxysmal pain ; he has paroxysmal pain
+  - accepté : paroxysmal pain
   - modèle : He has paroxysmal pain.
 - **Tt2.** Does the patient in bed 9 have radiation of pain?
   - accepté : no ; no he does not ; no he doesn't ; he does not have radiation of pain ; he doesn't

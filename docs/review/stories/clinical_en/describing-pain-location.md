@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : sharp pain ; the patient with sharp pain
   - modèle : The patient in bed 3 has sharp pain.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : burning pain ; he has burning pain
+  - accepté : burning pain
   - modèle : He has burning pain.
 - **q3.** Does the patient in bed 5 have sharp pain?
   - accepté : no ; no he does not ; no he doesn't ; he does not have sharp pain ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : throbbing pain ; he has throbbing pain
+  - accepté : throbbing pain
   - modèle : He has throbbing pain.
 - **Tt2.** Does the patient in bed 9 have burning pain?
   - accepté : no ; no he does not ; no he doesn't ; he does not have burning pain ; he doesn't

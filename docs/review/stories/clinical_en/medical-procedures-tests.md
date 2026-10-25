@@ -5,75 +5,74 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-020` — Le cas de Meriem : Analyse de sang / _Meriem: Blood test_
+## 1. `clinical-en-case-020` — Le cas de Bilal : Radiographie anormal(e) / _Bilal: the x-ray is not normal_
 
-**Objectif :** Comprendre un cas : analyse de sang présent, analyse d'urine absent.
+**Objectif :** Comprendre des résultats : Analyse de sang normal(e), Radiographie anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Meriem is a patient at the clinic.
-   - FR : Meriem est un·e patient·e à la clinique.
-   - AR : Meriem مريض/مريضة في العيادة.
-2. **EN** Meriem talks to Lina, a medical student.
-   - FR : Meriem parle avec Lina, étudiant·e en médecine.
-   - AR : Meriem يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a blood test.
-   - FR : Elle a Analyse de sang.
-   - AR : عنده تحليل الدم.
-4. **EN** She does not have a urine test.
-   - FR : Elle n'a pas de Analyse d'urine.
-   - AR : ليس عنده تحليل البول.
-5. **EN** Lina asks, “Do you have a urine test?”
-   - FR : Lina demande : « Avez-vous Analyse d'urine ? »
-   - AR : يسأل Lina: «هل عندك تحليل البول؟»
-6. **EN** Meriem says, “No, I do not.”
-   - FR : Meriem répond : « Non. »
-   - AR : يجيب Meriem: «لا.»
-7. **EN** Lina writes “Blood test” in the file.
-   - FR : Lina écrit « Analyse de sang » dans le dossier.
-   - AR : يكتب Lina «Analyse de sang» في الملف.
+1. **EN** Bilal is a patient at the clinic.
+   - FR : Bilal est un·e patient·e à la clinique.
+   - AR : Bilal مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The blood test is normal.”
+   - FR : Le médecin dit : « Analyse de sang est normal(e). »
+   - AR : يقول الطبيب: «تحليل الدم طبيعي/طبيعية.»
+5. **EN** “But the x-ray is not normal.”
+   - FR : « Mais Radiographie n'est pas normal(e). »
+   - AR : «لكن أشعة سينية غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the x-ray normal?”
+   - FR : Lina demande : « Radiographie est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل أشعة سينية طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:blood-test:v1` — **a blood test** · FR : Analyse de sang · AR : تحليل الدم
-- `gen:urine-test:v1` — **a urine test** · FR : Analyse d'urine · AR : تحليل البول
+- `gen:urine-test:v1` — **an urine test** · FR : Analyse d'urine · AR : تحليل البول
 - `gen:x-ray:v1` — **a x-ray** · FR : Radiographie · AR : أشعة سينية
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Meriem have blood test?
-  - accepté : yes ; yes she does ; yes she has a blood test ; she has a blood test
-  - modèle : Yes, she has a blood test.
-- **q2.** Does she have urine test?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a urine test ; she doesn't
-  - modèle : No, she does not have a urine test.
-  - hint (si erreur) — FR : Attention : Meriem n'a PAS analyse d'urine.
-- **q3.** Does she have blood test or urine test?
-  - accepté : blood test ; a blood test ; she has a blood test
-  - modèle : She has a blood test.
-- **q4.** What does Meriem have?
-  - accepté : blood test ; a blood test ; she has a blood test
-  - modèle : She has a blood test.
-- **q5.** Who writes in the file?
+- **q1.** Is the blood test normal?
+  - accepté : yes ; yes it is ; the blood test is normal ; it is normal
+  - modèle : Yes, the blood test is normal.
+- **q2.** Is the x-ray normal?
+  - accepté : no ; no it is not ; no it isn't ; the x-ray is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the x-ray is not normal.
+  - hint (si erreur) — FR : Attention : Radiographie n'est PAS normal(e).
+- **q3.** Which one is not normal: the blood test or the x-ray?
+  - accepté : x-ray ; the x-ray
+  - modèle : The x-ray is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have x-ray?
-  - accepté : yes ; yes he does ; he has a x-ray
-  - modèle : Yes, he has a x-ray.
-- **Tt2.** Does he have blood test?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a blood test ; he doesn't
-  - modèle : No, he does not have a blood test.
-  - hint (si erreur) — FR : Attention : il n'a PAS analyse de sang.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the urine test normal?
+  - accepté : yes ; yes it is ; the urine test is normal
+  - modèle : Yes, the urine test is normal.
+- **Tt2.** Is the blood test normal?
+  - accepté : no ; no it is not ; no it isn't ; the blood test is not normal ; it is not normal
+  - modèle : No, the blood test is not normal.
+  - hint (si erreur) — FR : Attention : Analyse de sang n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a blood test. (have)` → has · modèle : She has a blood test.
-- `They … not have a urine test. (do)` → do · modèle : They do not have a urine test.
-- `I … a blood test. (have)` → have · modèle : I have a blood test.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The blood test … normal. (be)` → is · modèle : The blood test is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Meriem en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a blood test. She does not have a urine test.*
-- **Transfert (contexte) :** Un autre patient a Radiographie. Il n'a pas de Analyse de sang.
-- Glossaire : Radiographie : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a x-ray. He does not have a blood test.*
+- **Reformulation :** Annonce les résultats à Bilal en deux phrases. Garde la négation. — amorces : The blood test is… / The x-ray is not… — modèle : *The blood test is normal. The x-ray is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Analyse d'urine normal(e), mais Analyse de sang anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The urine test is normal. The blood test is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -112,7 +111,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:blood-test:v1` — **a blood test** · FR : Analyse de sang · AR : تحليل الدم
-- `gen:urine-test:v1` — **a urine test** · FR : Analyse d'urine · AR : تحليل البول
+- `gen:urine-test:v1` — **an urine test** · FR : Analyse d'urine · AR : تحليل البول
 - `gen:x-ray:v1` — **a x-ray** · FR : Radiographie · AR : أشعة سينية
 
 ### Questions (acceptées / modèle / hint)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a blood test.
+3. **EN** The patient in bed 3 has a problem with the blood test.
    - FR : Le patient du lit 3 a Analyse de sang.
    - AR : مريض السرير ٣ عنده تحليل الدم.
-4. **EN** The patient in bed 5 has a urine test.
+4. **EN** The patient in bed 5 has a problem with the urine test.
    - FR : Le patient du lit 5 a Analyse d'urine.
    - AR : مريض السرير ٥ عنده تحليل البول.
-5. **EN** The patient in bed 5 does not have a blood test.
+5. **EN** The patient in bed 5 does not have a problem with the blood test.
    - FR : Le patient du lit 5 n'a pas de Analyse de sang.
    - AR : مريض السرير ٥ ليس عنده تحليل الدم.
 6. **EN** Amine reports the two cases to the doctor.
@@ -184,7 +183,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Expressions ciblées
 - `gen:blood-test:v1` — **a blood test** · FR : Analyse de sang · AR : تحليل الدم
-- `gen:urine-test:v1` — **a urine test** · FR : Analyse d'urine · AR : تحليل البول
+- `gen:urine-test:v1` — **an urine test** · FR : Analyse d'urine · AR : تحليل البول
 - `gen:x-ray:v1` — **a x-ray** · FR : Radiographie · AR : أشعة سينية
 
 ### Questions (acceptées / modèle / hint)
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : blood test ; a blood test ; the patient with blood test
   - modèle : The patient in bed 3 has a blood test.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : urine test ; a urine test ; he has a urine test
-  - modèle : He has a urine test.
+  - accepté : urine test ; a problem with the urine test
+  - modèle : He has a problem with the urine test.
 - **q3.** Does the patient in bed 5 have blood test?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a blood test ; he doesn't
-  - modèle : No, he does not have a blood test.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the blood test ; he doesn't
+  - modèle : No, he does not have a problem with the blood test.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS analyse de sang — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,23 +204,23 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : x-ray ; a x-ray ; he has a x-ray
-  - modèle : He has a x-ray.
+  - accepté : x-ray ; a problem with the x-ray
+  - modèle : He has a problem with the x-ray.
 - **Tt2.** Does the patient in bed 9 have urine test?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a urine test ; he doesn't
-  - modèle : No, he does not have a urine test.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the urine test ; he doesn't
+  - modèle : No, he does not have a problem with the urine test.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS analyse d'urine.
 
 ### Drill
 - Explication : Un patient : reports/has/does. Deux patients : report/have/do.
 - `The patient in bed 3 … the case. (report — présent)` → reports · modèle : The patient in bed 3 reports the case.
-- `The patients … a blood test and a urine test. (have)` → have · modèle : The patients have a blood test and a urine test.
+- `The patients … a blood test and an urine test. (have)` → have · modèle : The patients have a blood test and an urine test.
 - `The patient in bed 5 … not have a blood test. (do)` → does · modèle : The patient in bed 5 does not have a blood test.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a blood test. The patient in bed 5 has a urine test.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the blood test. The patient in bed 5 has a problem with the urine test.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Radiographie, le lit 9 a Analyse de sang et n'a pas Analyse d'urine.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a x-ray. The patient in bed 9 has a blood test.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the x-ray. The patient in bed 9 has a problem with the blood test.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

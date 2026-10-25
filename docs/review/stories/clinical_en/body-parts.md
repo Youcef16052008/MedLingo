@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-003` — Le cas de Karim : Tête / _Karim: Head_
+## 1. `clinical-en-case-003` — Le cas de Amel : Poitrine anormal(e) / _Amel: the chest is not normal_
 
-**Objectif :** Comprendre un cas : tête présent, cou absent.
+**Objectif :** Comprendre des résultats : Tête normal(e), Poitrine anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Karim is a patient at the clinic.
-   - FR : Karim est un·e patient·e à la clinique.
-   - AR : Karim مريض/مريضة في العيادة.
-2. **EN** Karim talks to Amine, a medical student.
-   - FR : Karim parle avec Amine, étudiant·e en médecine.
-   - AR : Karim يتحدث مع Amine، طالب/طالبة طب.
-3. **EN** He has a head.
-   - FR : Il a Tête.
-   - AR : عنده الرأس.
-4. **EN** He does not have a neck.
-   - FR : Il n'a pas de Cou.
-   - AR : ليس عنده الرقبة.
-5. **EN** Amine asks, “Do you have a neck?”
-   - FR : Amine demande : « Avez-vous Cou ? »
-   - AR : يسأل Amine: «هل عندك الرقبة؟»
-6. **EN** Karim says, “No, I do not.”
-   - FR : Karim répond : « Non. »
-   - AR : يجيب Karim: «لا.»
-7. **EN** Amine writes “Head” in the file.
-   - FR : Amine écrit « Tête » dans le dossier.
-   - AR : يكتب Amine «Tête» في الملف.
+1. **EN** Amel is a patient at the clinic.
+   - FR : Amel est un·e patient·e à la clinique.
+   - AR : Amel مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The head is normal.”
+   - FR : Le médecin dit : « Tête est normal(e). »
+   - AR : يقول الطبيب: «الرأس طبيعي/طبيعية.»
+5. **EN** “But the chest is not normal.”
+   - FR : « Mais Poitrine n'est pas normal(e). »
+   - AR : «لكن الصدر غير طبيعي/طبيعية.»
+6. **EN** Amine asks, “Is the chest normal?”
+   - FR : Amine demande : « Poitrine est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل الصدر طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:head:v1` — **a head** · FR : Tête · AR : الرأس
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:chest:v1` — **a chest** · FR : Poitrine · AR : الصدر
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Karim have head?
-  - accepté : yes ; yes he does ; yes he has a head ; he has a head
-  - modèle : Yes, he has a head.
-- **q2.** Does he have neck?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a neck ; he doesn't
-  - modèle : No, he does not have a neck.
-  - hint (si erreur) — FR : Attention : Karim n'a PAS cou.
-- **q3.** Does he have head or neck?
-  - accepté : head ; a head ; he has a head
-  - modèle : He has a head.
-- **q4.** What does Karim have?
-  - accepté : head ; a head ; he has a head
-  - modèle : He has a head.
-- **q5.** Who writes in the file?
+- **q1.** Is the head normal?
+  - accepté : yes ; yes it is ; the head is normal ; it is normal
+  - modèle : Yes, the head is normal.
+- **q2.** Is the chest normal?
+  - accepté : no ; no it is not ; no it isn't ; the chest is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the chest is not normal.
+  - hint (si erreur) — FR : Attention : Poitrine n'est PAS normal(e).
+- **q3.** Which one is not normal: the head or the chest?
+  - accepté : chest ; the chest
+  - modèle : The chest is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : amine ; the student ; the medical student
-  - modèle : Amine writes in the file.
-- **Tt1.** Does the other patient have chest?
-  - accepté : yes ; yes he does ; he has a chest
-  - modèle : Yes, he has a chest.
-- **Tt2.** Does he have head?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a head ; he doesn't
-  - modèle : No, he does not have a head.
-  - hint (si erreur) — FR : Attention : il n'a PAS tête.
+  - modèle : Amine listens to the doctor.
+- **Tt1.** Is the neck normal?
+  - accepté : yes ; yes it is ; the neck is normal
+  - modèle : Yes, the neck is normal.
+- **Tt2.** Is the head normal?
+  - accepté : no ; no it is not ; no it isn't ; the head is not normal ; it is not normal
+  - modèle : No, the head is not normal.
+  - hint (si erreur) — FR : Attention : Tête n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `He … a head. (have)` → has · modèle : He has a head.
-- `They … not have a neck. (do)` → do · modèle : They do not have a neck.
-- `I … a head. (have)` → have · modèle : I have a head.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The head … normal. (be)` → is · modèle : The head is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Karim en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has a head. He does not have a neck.*
-- **Transfert (contexte) :** Un autre patient a Poitrine. Il n'a pas de Tête.
-- Glossaire : Poitrine : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a chest. He does not have a head.*
+- **Reformulation :** Annonce les résultats à Amel en deux phrases. Garde la négation. — amorces : The head is… / The chest is not… — modèle : *The head is normal. The chest is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Cou normal(e), mais Tête anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The neck is normal. The head is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a head.
+3. **EN** The patient in bed 3 has a problem with the head.
    - FR : Le patient du lit 3 a Tête.
    - AR : مريض السرير ٣ عنده الرأس.
-4. **EN** The patient in bed 5 has a neck.
+4. **EN** The patient in bed 5 has a problem with the neck.
    - FR : Le patient du lit 5 a Cou.
    - AR : مريض السرير ٥ عنده الرقبة.
-5. **EN** The patient in bed 5 does not have a head.
+5. **EN** The patient in bed 5 does not have a problem with the head.
    - FR : Le patient du lit 5 n'a pas de Tête.
    - AR : مريض السرير ٥ ليس عنده الرأس.
 6. **EN** Lina reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : head ; a head ; the patient with head
   - modèle : The patient in bed 3 has a head.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : neck ; a neck ; he has a neck
-  - modèle : He has a neck.
+  - accepté : neck ; a problem with the neck
+  - modèle : He has a problem with the neck.
 - **q3.** Does the patient in bed 5 have head?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a head ; he doesn't
-  - modèle : No, he does not have a head.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the head ; he doesn't
+  - modèle : No, he does not have a problem with the head.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS tête — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : chest ; a chest ; he has a chest
-  - modèle : He has a chest.
+  - accepté : chest ; a problem with the chest
+  - modèle : He has a problem with the chest.
 - **Tt2.** Does the patient in bed 9 have neck?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a neck ; he doesn't
-  - modèle : No, he does not have a neck.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the neck ; he doesn't
+  - modèle : No, he does not have a problem with the neck.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS cou.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a head. (do)` → does · modèle : The patient in bed 5 does not have a head.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a head. The patient in bed 5 has a neck.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the head. The patient in bed 5 has a problem with the neck.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Poitrine, le lit 9 a Tête et n'a pas Cou.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a chest. The patient in bed 9 has a head.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the chest. The patient in bed 9 has a problem with the head.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

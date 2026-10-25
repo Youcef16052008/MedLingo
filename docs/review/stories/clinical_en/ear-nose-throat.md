@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : earache ; the patient with earache
   - modèle : The patient in bed 3 has earache.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : tinnitus ; he has tinnitus
+  - accepté : tinnitus
   - modèle : He has tinnitus.
 - **q3.** Does the patient in bed 5 have earache?
   - accepté : no ; no he does not ; no he doesn't ; he does not have earache ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : vertigo ; he has vertigo
+  - accepté : vertigo
   - modèle : He has vertigo.
 - **Tt2.** Does the patient in bed 9 have tinnitus?
   - accepté : no ; no he does not ; no he doesn't ; he does not have tinnitus ; he doesn't

@@ -5,75 +5,74 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-025` — Le cas de Omar : Ovulation / _Omar: Ovulation_
+## 1. `clinical-en-case-025` — Le cas de Nadia : Nausées matinales anormal(e) / _Nadia: the morning sickness is not normal_
 
-**Objectif :** Comprendre un cas : ovulation présent, trimestre absent.
+**Objectif :** Comprendre des résultats : Ovulation normal(e), Nausées matinales anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Omar is a patient at the clinic.
-   - FR : Omar est un·e patient·e à la clinique.
-   - AR : Omar مريض/مريضة في العيادة.
-2. **EN** Omar talks to Amine, a medical student.
-   - FR : Omar parle avec Amine, étudiant·e en médecine.
-   - AR : Omar يتحدث مع Amine، طالب/طالبة طب.
-3. **EN** He has a ovulation.
-   - FR : Il a Ovulation.
-   - AR : عنده الإباضة.
-4. **EN** He does not have a trimester.
-   - FR : Il n'a pas de Trimestre.
-   - AR : ليس عنده الثلث (من الحمل).
-5. **EN** Amine asks, “Do you have a trimester?”
-   - FR : Amine demande : « Avez-vous Trimestre ? »
-   - AR : يسأل Amine: «هل عندك الثلث (من الحمل)؟»
-6. **EN** Omar says, “No, I do not.”
-   - FR : Omar répond : « Non. »
-   - AR : يجيب Omar: «لا.»
-7. **EN** Amine writes “Ovulation” in the file.
-   - FR : Amine écrit « Ovulation » dans le dossier.
-   - AR : يكتب Amine «Ovulation» في الملف.
+1. **EN** Nadia is a patient at the clinic.
+   - FR : Nadia est un·e patient·e à la clinique.
+   - AR : Nadia مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The ovulation is normal.”
+   - FR : Le médecin dit : « Ovulation est normal(e). »
+   - AR : يقول الطبيب: «الإباضة طبيعي/طبيعية.»
+5. **EN** “But the morning sickness is not normal.”
+   - FR : « Mais Nausées matinales n'est pas normal(e). »
+   - AR : «لكن غثيان الصباح غير طبيعي/طبيعية.»
+6. **EN** Amine asks, “Is the morning sickness normal?”
+   - FR : Amine demande : « Nausées matinales est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل غثيان الصباح طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
-- `gen:ovulation:v1` — **a ovulation** · FR : Ovulation · AR : الإباضة
+- `gen:ovulation:v1` — **an ovulation** · FR : Ovulation · AR : الإباضة
 - `gen:trimester:v1` — **a trimester** · FR : Trimestre · AR : الثلث (من الحمل)
 - `gen:morning-sickness:v1` — **a morning sickness** · FR : Nausées matinales · AR : غثيان الصباح
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Omar have ovulation?
-  - accepté : yes ; yes he does ; yes he has a ovulation ; he has a ovulation
-  - modèle : Yes, he has a ovulation.
-- **q2.** Does he have trimester?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a trimester ; he doesn't
-  - modèle : No, he does not have a trimester.
-  - hint (si erreur) — FR : Attention : Omar n'a PAS trimestre.
-- **q3.** Does he have ovulation or trimester?
-  - accepté : ovulation ; a ovulation ; he has a ovulation
-  - modèle : He has a ovulation.
-- **q4.** What does Omar have?
-  - accepté : ovulation ; a ovulation ; he has a ovulation
-  - modèle : He has a ovulation.
-- **q5.** Who writes in the file?
+- **q1.** Is the ovulation normal?
+  - accepté : yes ; yes it is ; the ovulation is normal ; it is normal
+  - modèle : Yes, the ovulation is normal.
+- **q2.** Is the morning sickness normal?
+  - accepté : no ; no it is not ; no it isn't ; the morning sickness is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the morning sickness is not normal.
+  - hint (si erreur) — FR : Attention : Nausées matinales n'est PAS normal(e).
+- **q3.** Which one is not normal: the ovulation or the morning sickness?
+  - accepté : morning sickness ; the morning sickness
+  - modèle : The morning sickness is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : amine ; the student ; the medical student
-  - modèle : Amine writes in the file.
-- **Tt1.** Does the other patient have morning sickness?
-  - accepté : yes ; yes he does ; he has a morning sickness
-  - modèle : Yes, he has a morning sickness.
-- **Tt2.** Does he have ovulation?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a ovulation ; he doesn't
-  - modèle : No, he does not have a ovulation.
-  - hint (si erreur) — FR : Attention : il n'a PAS ovulation.
+  - modèle : Amine listens to the doctor.
+- **Tt1.** Is the trimester normal?
+  - accepté : yes ; yes it is ; the trimester is normal
+  - modèle : Yes, the trimester is normal.
+- **Tt2.** Is the ovulation normal?
+  - accepté : no ; no it is not ; no it isn't ; the ovulation is not normal ; it is not normal
+  - modèle : No, the ovulation is not normal.
+  - hint (si erreur) — FR : Attention : Ovulation n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `He … a ovulation. (have)` → has · modèle : He has a ovulation.
-- `They … not have a trimester. (do)` → do · modèle : They do not have a trimester.
-- `I … a ovulation. (have)` → have · modèle : I have a ovulation.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The ovulation … normal. (be)` → is · modèle : The ovulation is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Omar en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has a ovulation. He does not have a trimester.*
-- **Transfert (contexte) :** Un autre patient a Nausées matinales. Il n'a pas de Ovulation.
-- Glossaire : Nausées matinales : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a morning sickness. He does not have a ovulation.*
+- **Reformulation :** Annonce les résultats à Nadia en deux phrases. Garde la négation. — amorces : The ovulation is… / The morning sickness is not… — modèle : *The ovulation is normal. The morning sickness is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Trimestre normal(e), mais Ovulation anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The trimester is normal. The ovulation is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -111,7 +110,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
    - AR : يقول Amel: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
-- `gen:ovulation:v1` — **a ovulation** · FR : Ovulation · AR : الإباضة
+- `gen:ovulation:v1` — **an ovulation** · FR : Ovulation · AR : الإباضة
 - `gen:trimester:v1` — **a trimester** · FR : Trimestre · AR : الثلث (من الحمل)
 - `gen:morning-sickness:v1` — **a morning sickness** · FR : Nausées matinales · AR : غثيان الصباح
 
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a ovulation.
+3. **EN** The patient in bed 3 has a problem with the ovulation.
    - FR : Le patient du lit 3 a Ovulation.
    - AR : مريض السرير ٣ عنده الإباضة.
-4. **EN** The patient in bed 5 has a trimester.
+4. **EN** The patient in bed 5 has a problem with the trimester.
    - FR : Le patient du lit 5 a Trimestre.
    - AR : مريض السرير ٥ عنده الثلث (من الحمل).
-5. **EN** The patient in bed 5 does not have a ovulation.
+5. **EN** The patient in bed 5 does not have a problem with the ovulation.
    - FR : Le patient du lit 5 n'a pas de Ovulation.
    - AR : مريض السرير ٥ ليس عنده الإباضة.
 6. **EN** Lina reports the two cases to the doctor.
@@ -183,20 +182,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
    - AR : يذكر Lina الحالتين للطبيب.
 
 ### Expressions ciblées
-- `gen:ovulation:v1` — **a ovulation** · FR : Ovulation · AR : الإباضة
+- `gen:ovulation:v1` — **an ovulation** · FR : Ovulation · AR : الإباضة
 - `gen:trimester:v1` — **a trimester** · FR : Trimestre · AR : الثلث (من الحمل)
 - `gen:morning-sickness:v1` — **a morning sickness** · FR : Nausées matinales · AR : غثيان الصباح
 
 ### Questions (acceptées / modèle / hint)
 - **q1.** Which patient is in bed 3?
-  - accepté : ovulation ; a ovulation ; the patient with ovulation
-  - modèle : The patient in bed 3 has a ovulation.
+  - accepté : ovulation ; an ovulation ; the patient with ovulation
+  - modèle : The patient in bed 3 has an ovulation.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : trimester ; a trimester ; he has a trimester
-  - modèle : He has a trimester.
+  - accepté : trimester ; a problem with the trimester
+  - modèle : He has a problem with the trimester.
 - **q3.** Does the patient in bed 5 have ovulation?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a ovulation ; he doesn't
-  - modèle : No, he does not have a ovulation.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the ovulation ; he doesn't
+  - modèle : No, he does not have a problem with the ovulation.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS ovulation — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,23 +204,23 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : morning sickness ; a morning sickness ; he has a morning sickness
-  - modèle : He has a morning sickness.
+  - accepté : morning sickness ; a problem with the morning sickness
+  - modèle : He has a problem with the morning sickness.
 - **Tt2.** Does the patient in bed 9 have trimester?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a trimester ; he doesn't
-  - modèle : No, he does not have a trimester.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the trimester ; he doesn't
+  - modèle : No, he does not have a problem with the trimester.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS trimestre.
 
 ### Drill
 - Explication : Un patient : reports/has/does. Deux patients : report/have/do.
 - `The patient in bed 3 … the case. (report — présent)` → reports · modèle : The patient in bed 3 reports the case.
-- `The patients … a ovulation and a trimester. (have)` → have · modèle : The patients have a ovulation and a trimester.
-- `The patient in bed 5 … not have a ovulation. (do)` → does · modèle : The patient in bed 5 does not have a ovulation.
+- `The patients … an ovulation and a trimester. (have)` → have · modèle : The patients have an ovulation and a trimester.
+- `The patient in bed 5 … not have an ovulation. (do)` → does · modèle : The patient in bed 5 does not have an ovulation.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a ovulation. The patient in bed 5 has a trimester.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the ovulation. The patient in bed 5 has a problem with the trimester.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Nausées matinales, le lit 9 a Ovulation et n'a pas Trimestre.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a morning sickness. The patient in bed 9 has a ovulation.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the morning sickness. The patient in bed 9 has a problem with the ovulation.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

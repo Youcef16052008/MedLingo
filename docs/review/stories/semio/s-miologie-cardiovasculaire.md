@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : chest pain ; the patient with chest pain
   - modèle : The patient in bed 3 has chest pain.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : dyspnea ; he has dyspnea
+  - accepté : dyspnea
   - modèle : He has dyspnea.
 - **q3.** Does the patient in bed 5 have chest pain?
   - accepté : no ; no he does not ; no he doesn't ; he does not have chest pain ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : orthopnea ; he has orthopnea
+  - accepté : orthopnea
   - modèle : He has orthopnea.
 - **Tt2.** Does the patient in bed 9 have dyspnea?
   - accepté : no ; no he does not ; no he doesn't ; he does not have dyspnea ; he doesn't

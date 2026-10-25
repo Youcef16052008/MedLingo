@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `semio-case-001` — Le cas de Omar : Sémiologie / _Omar: Semiology_
+## 1. `semio-case-001` — Le cas de Nadia : Signe anormal(e) / _Nadia: the sign is not normal_
 
-**Objectif :** Comprendre un cas : sémiologie présent, symptôme absent.
+**Objectif :** Comprendre des résultats : Sémiologie normal(e), Signe anormal(e).
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Omar is a patient at the clinic.
-   - FR : Omar est un·e patient·e à la clinique.
-   - AR : Omar مريض/مريضة في العيادة.
-2. **EN** Omar talks to Amine, a medical student.
-   - FR : Omar parle avec Amine, étudiant·e en médecine.
-   - AR : Omar يتحدث مع Amine، طالب/طالبة طب.
-3. **EN** He has a semiology.
-   - FR : Il a Sémiologie.
-   - AR : عنده علم الأعراض.
-4. **EN** He does not have a symptom.
-   - FR : Il n'a pas de Symptôme.
-   - AR : ليس عنده العَرَض.
-5. **EN** Amine asks, “Do you have a symptom?”
-   - FR : Amine demande : « Avez-vous Symptôme ? »
-   - AR : يسأل Amine: «هل عندك العَرَض؟»
-6. **EN** Omar says, “No, I do not.”
-   - FR : Omar répond : « Non. »
-   - AR : يجيب Omar: «لا.»
-7. **EN** Amine writes “Semiology” in the file.
-   - FR : Amine écrit « Sémiologie » dans le dossier.
-   - AR : يكتب Amine «Sémiologie» في الملف.
+1. **EN** Nadia is a patient at the clinic.
+   - FR : Nadia est un·e patient·e à la clinique.
+   - AR : Nadia مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The semiology is normal.”
+   - FR : Le médecin dit : « Sémiologie est normal(e). »
+   - AR : يقول الطبيب: «علم الأعراض طبيعي/طبيعية.»
+5. **EN** “But the sign is not normal.”
+   - FR : « Mais Signe n'est pas normal(e). »
+   - AR : «لكن العلامة غير طبيعي/طبيعية.»
+6. **EN** Amine asks, “Is the sign normal?”
+   - FR : Amine demande : « Signe est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل العلامة طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:semiology:v1` — **a semiology** · FR : Sémiologie · AR : علم الأعراض
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:sign:v1` — **a sign** · FR : Signe · AR : العلامة
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Omar have semiology?
-  - accepté : yes ; yes he does ; yes he has a semiology ; he has a semiology
-  - modèle : Yes, he has a semiology.
-- **q2.** Does he have symptom?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a symptom ; he doesn't
-  - modèle : No, he does not have a symptom.
-  - hint (si erreur) — FR : Attention : Omar n'a PAS symptôme.
-- **q3.** Does he have semiology or symptom?
-  - accepté : semiology ; a semiology ; he has a semiology
-  - modèle : He has a semiology.
-- **q4.** What does Omar have?
-  - accepté : semiology ; a semiology ; he has a semiology
-  - modèle : He has a semiology.
-- **q5.** Who writes in the file?
+- **q1.** Is the semiology normal?
+  - accepté : yes ; yes it is ; the semiology is normal ; it is normal
+  - modèle : Yes, the semiology is normal.
+- **q2.** Is the sign normal?
+  - accepté : no ; no it is not ; no it isn't ; the sign is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the sign is not normal.
+  - hint (si erreur) — FR : Attention : Signe n'est PAS normal(e).
+- **q3.** Which one is not normal: the semiology or the sign?
+  - accepté : sign ; the sign
+  - modèle : The sign is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : amine ; the student ; the medical student
-  - modèle : Amine writes in the file.
-- **Tt1.** Does the other patient have sign?
-  - accepté : yes ; yes he does ; he has a sign
-  - modèle : Yes, he has a sign.
-- **Tt2.** Does he have semiology?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a semiology ; he doesn't
-  - modèle : No, he does not have a semiology.
-  - hint (si erreur) — FR : Attention : il n'a PAS sémiologie.
+  - modèle : Amine listens to the doctor.
+- **Tt1.** Is the symptom normal?
+  - accepté : yes ; yes it is ; the symptom is normal
+  - modèle : Yes, the symptom is normal.
+- **Tt2.** Is the semiology normal?
+  - accepté : no ; no it is not ; no it isn't ; the semiology is not normal ; it is not normal
+  - modèle : No, the semiology is not normal.
+  - hint (si erreur) — FR : Attention : Sémiologie n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `He … a semiology. (have)` → has · modèle : He has a semiology.
-- `They … not have a symptom. (do)` → do · modèle : They do not have a symptom.
-- `I … a semiology. (have)` → have · modèle : I have a semiology.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The semiology … normal. (be)` → is · modèle : The semiology is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Omar en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has a semiology. He does not have a symptom.*
-- **Transfert (contexte) :** Un autre patient a Signe. Il n'a pas de Sémiologie.
-- Glossaire : Signe : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a sign. He does not have a semiology.*
+- **Reformulation :** Annonce les résultats à Nadia en deux phrases. Garde la négation. — amorces : The semiology is… / The sign is not… — modèle : *The semiology is normal. The sign is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Symptôme normal(e), mais Sémiologie anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The symptom is normal. The semiology is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a semiology.
+3. **EN** The patient in bed 3 has a problem with the semiology.
    - FR : Le patient du lit 3 a Sémiologie.
    - AR : مريض السرير ٣ عنده علم الأعراض.
-4. **EN** The patient in bed 5 has a symptom.
+4. **EN** The patient in bed 5 has a problem with the symptom.
    - FR : Le patient du lit 5 a Symptôme.
    - AR : مريض السرير ٥ عنده العَرَض.
-5. **EN** The patient in bed 5 does not have a semiology.
+5. **EN** The patient in bed 5 does not have a problem with the semiology.
    - FR : Le patient du lit 5 n'a pas de Sémiologie.
    - AR : مريض السرير ٥ ليس عنده علم الأعراض.
 6. **EN** Lina reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : semiology ; a semiology ; the patient with semiology
   - modèle : The patient in bed 3 has a semiology.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : symptom ; a symptom ; he has a symptom
-  - modèle : He has a symptom.
+  - accepté : symptom ; a problem with the symptom
+  - modèle : He has a problem with the symptom.
 - **q3.** Does the patient in bed 5 have semiology?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a semiology ; he doesn't
-  - modèle : No, he does not have a semiology.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the semiology ; he doesn't
+  - modèle : No, he does not have a problem with the semiology.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS sémiologie — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : sign ; a sign ; he has a sign
-  - modèle : He has a sign.
+  - accepté : sign ; a problem with the sign
+  - modèle : He has a problem with the sign.
 - **Tt2.** Does the patient in bed 9 have symptom?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a symptom ; he doesn't
-  - modèle : No, he does not have a symptom.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the symptom ; he doesn't
+  - modèle : No, he does not have a problem with the symptom.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS symptôme.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a semiology. (do)` → does · modèle : The patient in bed 5 does not have a semiology.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a semiology. The patient in bed 5 has a symptom.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the semiology. The patient in bed 5 has a problem with the symptom.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Signe, le lit 9 a Sémiologie et n'a pas Symptôme.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a sign. The patient in bed 9 has a semiology.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the sign. The patient in bed 9 has a problem with the semiology.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

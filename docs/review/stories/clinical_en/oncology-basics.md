@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-026` — Le cas de Leila : Marqueur tumoral / _Leila: Tumor marker_
+## 1. `clinical-en-case-026` — Le cas de Youssef : Ganglions gonflés anormal(e) / _Youssef: the swollen lymph nodes is not normal_
 
-**Objectif :** Comprendre un cas : marqueur tumoral présent, ganglion lymphatique absent.
+**Objectif :** Comprendre des résultats : Marqueur tumoral normal(e), Ganglions gonflés anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Leila is a patient at the clinic.
-   - FR : Leila est un·e patient·e à la clinique.
-   - AR : Leila مريض/مريضة في العيادة.
-2. **EN** Leila talks to Lina, a medical student.
-   - FR : Leila parle avec Lina, étudiant·e en médecine.
-   - AR : Leila يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a tumor marker.
-   - FR : Elle a Marqueur tumoral.
-   - AR : عنده علامة الورم.
-4. **EN** She does not have a lymph node.
-   - FR : Elle n'a pas de Ganglion lymphatique.
-   - AR : ليس عنده العقدة اللمفاوية.
-5. **EN** Lina asks, “Do you have a lymph node?”
-   - FR : Lina demande : « Avez-vous Ganglion lymphatique ? »
-   - AR : يسأل Lina: «هل عندك العقدة اللمفاوية؟»
-6. **EN** Leila says, “No, I do not.”
-   - FR : Leila répond : « Non. »
-   - AR : يجيب Leila: «لا.»
-7. **EN** Lina writes “Tumor marker” in the file.
-   - FR : Lina écrit « Marqueur tumoral » dans le dossier.
-   - AR : يكتب Lina «Marqueur tumoral» في الملف.
+1. **EN** Youssef is a patient at the clinic.
+   - FR : Youssef est un·e patient·e à la clinique.
+   - AR : Youssef مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The tumor marker is normal.”
+   - FR : Le médecin dit : « Marqueur tumoral est normal(e). »
+   - AR : يقول الطبيب: «علامة الورم طبيعي/طبيعية.»
+5. **EN** “But the swollen lymph nodes is not normal.”
+   - FR : « Mais Ganglions gonflés n'est pas normal(e). »
+   - AR : «لكن تضخم الغدد الليمفاوية غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the swollen lymph nodes normal?”
+   - FR : Lina demande : « Ganglions gonflés est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل تضخم الغدد الليمفاوية طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:tumor-marker:v1` — **a tumor marker** · FR : Marqueur tumoral · AR : علامة الورم
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:swollen-lymph-nodes:v1` — **swollen lymph nodes** · FR : Ganglions gonflés · AR : تضخم الغدد الليمفاوية
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Leila have tumor marker?
-  - accepté : yes ; yes she does ; yes she has a tumor marker ; she has a tumor marker
-  - modèle : Yes, she has a tumor marker.
-- **q2.** Does she have lymph node?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a lymph node ; she doesn't
-  - modèle : No, she does not have a lymph node.
-  - hint (si erreur) — FR : Attention : Leila n'a PAS ganglion lymphatique.
-- **q3.** Does she have tumor marker or lymph node?
-  - accepté : tumor marker ; a tumor marker ; she has a tumor marker
-  - modèle : She has a tumor marker.
-- **q4.** What does Leila have?
-  - accepté : tumor marker ; a tumor marker ; she has a tumor marker
-  - modèle : She has a tumor marker.
-- **q5.** Who writes in the file?
+- **q1.** Is the tumor marker normal?
+  - accepté : yes ; yes it is ; the tumor marker is normal ; it is normal
+  - modèle : Yes, the tumor marker is normal.
+- **q2.** Is the swollen lymph nodes normal?
+  - accepté : no ; no it is not ; no it isn't ; the swollen lymph nodes is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the swollen lymph nodes is not normal.
+  - hint (si erreur) — FR : Attention : Ganglions gonflés n'est PAS normal(e).
+- **q3.** Which one is not normal: the tumor marker or the swollen lymph nodes?
+  - accepté : swollen lymph nodes ; the swollen lymph nodes
+  - modèle : The swollen lymph nodes is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have swollen lymph nodes?
-  - accepté : yes ; yes he does ; he has swollen lymph nodes
-  - modèle : Yes, he has swollen lymph nodes.
-- **Tt2.** Does he have tumor marker?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a tumor marker ; he doesn't
-  - modèle : No, he does not have a tumor marker.
-  - hint (si erreur) — FR : Attention : il n'a PAS marqueur tumoral.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the lymph node normal?
+  - accepté : yes ; yes it is ; the lymph node is normal
+  - modèle : Yes, the lymph node is normal.
+- **Tt2.** Is the tumor marker normal?
+  - accepté : no ; no it is not ; no it isn't ; the tumor marker is not normal ; it is not normal
+  - modèle : No, the tumor marker is not normal.
+  - hint (si erreur) — FR : Attention : Marqueur tumoral n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a tumor marker. (have)` → has · modèle : She has a tumor marker.
-- `They … not have a lymph node. (do)` → do · modèle : They do not have a lymph node.
-- `I … a tumor marker. (have)` → have · modèle : I have a tumor marker.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The tumor marker … normal. (be)` → is · modèle : The tumor marker is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Leila en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a tumor marker. She does not have a lymph node.*
-- **Transfert (contexte) :** Un autre patient a Ganglions gonflés. Il n'a pas de Marqueur tumoral.
-- Glossaire : Ganglions gonflés : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has swollen lymph nodes. He does not have a tumor marker.*
+- **Reformulation :** Annonce les résultats à Youssef en deux phrases. Garde la négation. — amorces : The tumor marker is… / The swollen lymph nodes is not… — modèle : *The tumor marker is normal. The swollen lymph nodes is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Ganglion lymphatique normal(e), mais Marqueur tumoral anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The lymph node is normal. The tumor marker is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a tumor marker.
+3. **EN** The patient in bed 3 has a problem with the tumor marker.
    - FR : Le patient du lit 3 a Marqueur tumoral.
    - AR : مريض السرير ٣ عنده علامة الورم.
-4. **EN** The patient in bed 5 has a lymph node.
+4. **EN** The patient in bed 5 has a problem with the lymph node.
    - FR : Le patient du lit 5 a Ganglion lymphatique.
    - AR : مريض السرير ٥ عنده العقدة اللمفاوية.
-5. **EN** The patient in bed 5 does not have a tumor marker.
+5. **EN** The patient in bed 5 does not have a problem with the tumor marker.
    - FR : Le patient du lit 5 n'a pas de Marqueur tumoral.
    - AR : مريض السرير ٥ ليس عنده علامة الورم.
 6. **EN** Amine reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : tumor marker ; a tumor marker ; the patient with tumor marker
   - modèle : The patient in bed 3 has a tumor marker.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : lymph node ; a lymph node ; he has a lymph node
-  - modèle : He has a lymph node.
+  - accepté : lymph node ; a problem with the lymph node
+  - modèle : He has a problem with the lymph node.
 - **q3.** Does the patient in bed 5 have tumor marker?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a tumor marker ; he doesn't
-  - modèle : No, he does not have a tumor marker.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the tumor marker ; he doesn't
+  - modèle : No, he does not have a problem with the tumor marker.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS marqueur tumoral — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : swollen lymph nodes ; he has swollen lymph nodes
-  - modèle : He has swollen lymph nodes.
+  - accepté : swollen lymph nodes ; a problem with the swollen lymph nodes
+  - modèle : He has a problem with the swollen lymph nodes.
 - **Tt2.** Does the patient in bed 9 have lymph node?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a lymph node ; he doesn't
-  - modèle : No, he does not have a lymph node.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the lymph node ; he doesn't
+  - modèle : No, he does not have a problem with the lymph node.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS ganglion lymphatique.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a tumor marker. (do)` → does · modèle : The patient in bed 5 does not have a tumor marker.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a tumor marker. The patient in bed 5 has a lymph node.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the tumor marker. The patient in bed 5 has a problem with the lymph node.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Ganglions gonflés, le lit 9 a Marqueur tumoral et n'a pas Ganglion lymphatique.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has swollen lymph nodes. The patient in bed 9 has a tumor marker.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the swollen lymph nodes. The patient in bed 9 has a problem with the tumor marker.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

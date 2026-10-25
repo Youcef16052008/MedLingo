@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : headache ; the patient with headache
   - modèle : The patient in bed 3 has headache.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : coma ; he has coma
+  - accepté : coma
   - modèle : He has coma.
 - **q3.** Does the patient in bed 5 have headache?
   - accepté : no ; no he does not ; no he doesn't ; he does not have headache ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : level of consciousness ; a level of consciousness ; he has a level of consciousness
+  - accepté : level of consciousness ; a level of consciousness
   - modèle : He has a level of consciousness.
 - **Tt2.** Does the patient in bed 9 have coma?
   - accepté : no ; no he does not ; no he doesn't ; he does not have coma ; he doesn't

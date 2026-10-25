@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : shortness of breath ; the patient with shortness of breath
   - modèle : The patient in bed 3 has shortness of breath.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : nausea and vomiting ; he has nausea and vomiting
+  - accepté : nausea and vomiting
   - modèle : He has nausea and vomiting.
 - **q3.** Does the patient in bed 5 have shortness of breath?
   - accepté : no ; no he does not ; no he doesn't ; he does not have shortness of breath ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : lina ; the student ; the medical student
   - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : blood pressure ; a blood pressure ; he has a blood pressure
+  - accepté : blood pressure ; a blood pressure
   - modèle : He has a blood pressure.
 - **Tt2.** Does the patient in bed 9 have nausea and vomiting?
   - accepté : no ; no he does not ; no he doesn't ; he does not have nausea and vomiting ; he doesn't

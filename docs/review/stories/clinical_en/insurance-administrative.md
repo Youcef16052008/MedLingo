@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `clinical-en-case-016` — Le cas de Nadia : Assurance maladie / _Nadia: Health insurance_
+## 1. `clinical-en-case-016` — Le cas de Farid : Franchise anormal(e) / _Farid: the deductible is not normal_
 
-**Objectif :** Comprendre un cas : assurance maladie présent, quote-part / participation absent.
+**Objectif :** Comprendre des résultats : Assurance maladie normal(e), Franchise anormal(e).
 **Archétype :** en · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Nadia is a patient at the clinic.
-   - FR : Nadia est un·e patient·e à la clinique.
-   - AR : Nadia مريض/مريضة في العيادة.
-2. **EN** Nadia talks to Lina, a medical student.
-   - FR : Nadia parle avec Lina, étudiant·e en médecine.
-   - AR : Nadia يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has a health insurance.
-   - FR : Elle a Assurance maladie.
-   - AR : عنده التأمين الصحي.
-4. **EN** She does not have a co-payment.
-   - FR : Elle n'a pas de Quote-part / Participation.
-   - AR : ليس عنده الدفعة المشتركة.
-5. **EN** Lina asks, “Do you have a co-payment?”
-   - FR : Lina demande : « Avez-vous Quote-part / Participation ? »
-   - AR : يسأل Lina: «هل عندك الدفعة المشتركة؟»
-6. **EN** Nadia says, “No, I do not.”
-   - FR : Nadia répond : « Non. »
-   - AR : يجيب Nadia: «لا.»
-7. **EN** Lina writes “Health insurance” in the file.
-   - FR : Lina écrit « Assurance maladie » dans le dossier.
-   - AR : يكتب Lina «Assurance maladie» في الملف.
+1. **EN** Farid is a patient at the clinic.
+   - FR : Farid est un·e patient·e à la clinique.
+   - AR : Farid مريض/مريضة في العيادة.
+2. **EN** Today, the doctor has the results.
+   - FR : Aujourd'hui, le médecin a les résultats.
+   - AR : اليوم، الطبيب عنده النتائج.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
+4. **EN** The doctor says, “The health insurance is normal.”
+   - FR : Le médecin dit : « Assurance maladie est normal(e). »
+   - AR : يقول الطبيب: «التأمين الصحي طبيعي/طبيعية.»
+5. **EN** “But the deductible is not normal.”
+   - FR : « Mais Franchise n'est pas normal(e). »
+   - AR : «لكن المبلغ القابل للخصم غير طبيعي/طبيعية.»
+6. **EN** Lina asks, “Is the deductible normal?”
+   - FR : Lina demande : « Franchise est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل المبلغ القابل للخصم طبيعي/طبيعية؟»
+7. **EN** The doctor says, “No, it is not.”
+   - FR : Le médecin répond : « Non. »
+   - AR : يجيب الطبيب: «لا.»
 
 ### Expressions ciblées
 - `gen:health-insurance:v1` — **a health insurance** · FR : Assurance maladie · AR : التأمين الصحي
@@ -39,41 +39,40 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:deductible:v1` — **a deductible** · FR : Franchise · AR : المبلغ القابل للخصم
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Nadia have health insurance?
-  - accepté : yes ; yes she does ; yes she has a health insurance ; she has a health insurance
-  - modèle : Yes, she has a health insurance.
-- **q2.** Does she have co-payment?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have a co-payment ; she doesn't
-  - modèle : No, she does not have a co-payment.
-  - hint (si erreur) — FR : Attention : Nadia n'a PAS quote-part / participation.
-- **q3.** Does she have health insurance or co-payment?
-  - accepté : health insurance ; a health insurance ; she has a health insurance
-  - modèle : She has a health insurance.
-- **q4.** What does Nadia have?
-  - accepté : health insurance ; a health insurance ; she has a health insurance
-  - modèle : She has a health insurance.
-- **q5.** Who writes in the file?
+- **q1.** Is the health insurance normal?
+  - accepté : yes ; yes it is ; the health insurance is normal ; it is normal
+  - modèle : Yes, the health insurance is normal.
+- **q2.** Is the deductible normal?
+  - accepté : no ; no it is not ; no it isn't ; the deductible is not normal ; it is not normal ; it isn't normal
+  - modèle : No, the deductible is not normal.
+  - hint (si erreur) — FR : Attention : Franchise n'est PAS normal(e).
+- **q3.** Which one is not normal: the health insurance or the deductible?
+  - accepté : deductible ; the deductible
+  - modèle : The deductible is not normal.
+- **q4.** Who has the results?
+  - accepté : the doctor ; doctor
+  - modèle : The doctor has the results.
+- **q5.** Who listens to the doctor?
   - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
-- **Tt1.** Does the other patient have deductible?
-  - accepté : yes ; yes he does ; he has a deductible
-  - modèle : Yes, he has a deductible.
-- **Tt2.** Does he have health insurance?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a health insurance ; he doesn't
-  - modèle : No, he does not have a health insurance.
-  - hint (si erreur) — FR : Attention : il n'a PAS assurance maladie.
+  - modèle : Lina listens to the doctor.
+- **Tt1.** Is the co-payment normal?
+  - accepté : yes ; yes it is ; the co-payment is normal
+  - modèle : Yes, the co-payment is normal.
+- **Tt2.** Is the health insurance normal?
+  - accepté : no ; no it is not ; no it isn't ; the health insurance is not normal ; it is not normal
+  - modèle : No, the health insurance is not normal.
+  - hint (si erreur) — FR : Attention : Assurance maladie n'est PAS normal(e) pour ce patient.
 
 ### Drill
-- Explication : I have → He/She has. He has → He does not have (négation).
-- `She … a health insurance. (have)` → has · modèle : She has a health insurance.
-- `They … not have a co-payment. (do)` → do · modèle : They do not have a co-payment.
-- `I … a health insurance. (have)` → have · modèle : I have a health insurance.
+- Explication : The heart is → The results are. Une chose : is. Plusieurs : are.
+- `The health insurance … normal. (be)` → is · modèle : The health insurance is normal.
+- `The results … not normal. (be)` → are · modèle : The results are not normal.
+- `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Nadia en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has a health insurance. She does not have a co-payment.*
-- **Transfert (contexte) :** Un autre patient a Franchise. Il n'a pas de Assurance maladie.
-- Glossaire : Franchise : un mot médical de ce chapitre
-- **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a deductible. He does not have a health insurance.*
+- **Reformulation :** Annonce les résultats à Farid en deux phrases. Garde la négation. — amorces : The health insurance is… / The deductible is not… — modèle : *The health insurance is normal. The deductible is not normal.*
+- **Transfert (contexte) :** Un autre patient a aussi des résultats : Quote-part / Participation normal(e), mais Assurance maladie anormal(e).
+- **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The co-payment is normal. The health insurance is not normal.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)
@@ -169,13 +168,13 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
-3. **EN** The patient in bed 3 has a health insurance.
+3. **EN** The patient in bed 3 has a problem with the health insurance.
    - FR : Le patient du lit 3 a Assurance maladie.
    - AR : مريض السرير ٣ عنده التأمين الصحي.
-4. **EN** The patient in bed 5 has a co-payment.
+4. **EN** The patient in bed 5 has a problem with the co-payment.
    - FR : Le patient du lit 5 a Quote-part / Participation.
    - AR : مريض السرير ٥ عنده الدفعة المشتركة.
-5. **EN** The patient in bed 5 does not have a health insurance.
+5. **EN** The patient in bed 5 does not have a problem with the health insurance.
    - FR : Le patient du lit 5 n'a pas de Assurance maladie.
    - AR : مريض السرير ٥ ليس عنده التأمين الصحي.
 6. **EN** Amine reports the two cases to the doctor.
@@ -192,11 +191,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : health insurance ; a health insurance ; the patient with health insurance
   - modèle : The patient in bed 3 has a health insurance.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : co-payment ; a co-payment ; he has a co-payment
-  - modèle : He has a co-payment.
+  - accepté : co-payment ; a problem with the co-payment
+  - modèle : He has a problem with the co-payment.
 - **q3.** Does the patient in bed 5 have health insurance?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a health insurance ; he doesn't
-  - modèle : No, he does not have a health insurance.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the health insurance ; he doesn't
+  - modèle : No, he does not have a problem with the health insurance.
   - hint (si erreur) — FR : Attention : le lit 5 n'a PAS assurance maladie — c'est le lit 3.
 - **q4.** How many cases does the student report?
   - accepté : two ; 2 ; two cases
@@ -205,11 +204,11 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : deductible ; a deductible ; he has a deductible
-  - modèle : He has a deductible.
+  - accepté : deductible ; a problem with the deductible
+  - modèle : He has a problem with the deductible.
 - **Tt2.** Does the patient in bed 9 have co-payment?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have a co-payment ; he doesn't
-  - modèle : No, he does not have a co-payment.
+  - accepté : no ; no he does not ; no he doesn't ; he does not have a problem with the co-payment ; he doesn't
+  - modèle : No, he does not have a problem with the co-payment.
   - hint (si erreur) — FR : Attention : le lit 9 n'a PAS quote-part / participation.
 
 ### Drill
@@ -219,9 +218,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `The patient in bed 5 … not have a health insurance. (do)` → does · modèle : The patient in bed 5 does not have a health insurance.
 
 ### Productions
-- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a health insurance. The patient in bed 5 has a co-payment.*
+- **Reformulation :** Rapporte les deux cas au médecin, en deux phrases. — amorces : The patient in bed 3 has… / The patient in bed 5 has… — modèle : *The patient in bed 3 has a problem with the health insurance. The patient in bed 5 has a problem with the co-payment.*
 - **Transfert (contexte) :** Garde du soir : le lit 7 a Franchise, le lit 9 a Assurance maladie et n'a pas Quote-part / Participation.
-- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a deductible. The patient in bed 9 has a health insurance.*
+- **Tâche :** Rapporte les cas du soir, en deux phrases. — modèle : *The patient in bed 7 has a problem with the deductible. The patient in bed 9 has a problem with the health insurance.*
 
 ### À vérifier
 - [ ] Anglais naturel et niveau A1–A2 (articles, genre, pluriel)

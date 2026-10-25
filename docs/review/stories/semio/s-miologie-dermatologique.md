@@ -192,7 +192,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : rash ; the patient with rash
   - modèle : The patient in bed 3 has rash.
 - **q2.** What does the patient in bed 5 have?
-  - accepté : macule ; he has macule
+  - accepté : macule
   - modèle : He has macule.
 - **q3.** Does the patient in bed 5 have rash?
   - accepté : no ; no he does not ; no he doesn't ; he does not have rash ; he doesn't
@@ -205,7 +205,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : amine ; the student ; the medical student
   - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
-  - accepté : papule ; he has papule
+  - accepté : papule
   - modèle : He has papule.
 - **Tt2.** Does the patient in bed 9 have macule?
   - accepté : no ; no he does not ; no he doesn't ; he does not have macule ; he doesn't
