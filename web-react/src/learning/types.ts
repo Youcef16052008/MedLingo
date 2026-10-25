@@ -96,6 +96,8 @@ export interface Story {
   review: { language: string; medical: string };
   /** Traçabilité éditoriale (ex. "generated:corpus-v1") — ignoré par les chargeurs. */
   provenance?: string;
+  /** Chapitre source (corpus généré) — pour la relecture, ignoré au runtime. */
+  chapter?: string;
   segments: StorySegment[];
   targetPhrases: TargetPhrase[];
   questions: StoryQuestion[];

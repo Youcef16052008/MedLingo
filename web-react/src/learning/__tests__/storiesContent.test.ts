@@ -33,13 +33,18 @@ describe("contenu des histoires (pilote ×10)", () => {
     const ids = raw.stories.map((s) => s.storyId);
     expect(new Set(ids).size).toBe(ids.length);
     expect(raw.stories.slice(0, 10).map((s) => s.storyId)).toEqual(PILOT_IDS);
-    // Vague 1 : Anglais Médical — 42 chapitres × 3 archétypes.
+    // Vagues 1+2 : Anglais Médical + Sémiologie (42 + 15 chapitres × 3).
     const generated = raw.stories.slice(10);
-    expect(generated.length).toBeGreaterThanOrEqual(126);
+    expect(generated.length).toBeGreaterThanOrEqual(171);
+    const byModule = new Set<string>();
     for (const s of generated) {
       expect(s.provenance, s.storyId).toBe("generated:corpus-v1");
       expect(s.publicationStatus, s.storyId).toBe("draft");
+      expect(s.chapter, s.storyId).toBeTruthy();
+      expect(s.moduleIds.length, s.storyId).toBe(1);
+      byModule.add(s.moduleIds[0]);
     }
+    expect([...byModule].sort()).toEqual(["clinical_en", "semio"]);
   });
 
   it("seule l'histoire pilote est published — les 9 nouvelles attendent la relecture", () => {

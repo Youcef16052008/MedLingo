@@ -22,10 +22,15 @@ ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "public" / "data" / "stories.v1.json"
 ANDROID = ROOT.parent / "app" / "src" / "main" / "assets" / "learning" / "stories.v1.json"
 
-MODULE_FR = "Anglais Médical"
-MODULE_ID = "clinical_en"
-MODULE_SLUG = "clinical-en"
 PROVENANCE = "generated:corpus-v1"
+
+# Vagues du rollout (docs/PLAN_STORIES_CORPUS.md). Les ids d'histoires sont
+# préfixés par le slug du module ; les ids d'EXPRESSIONS sont globaux (un seul
+# SM-2 par expression, même terme dans plusieurs modules).
+WAVES = [
+    {"fr": "Anglais Médical", "id": "clinical_en", "slug": "clinical-en"},
+    {"fr": "Sémiologie Médicale", "id": "semio", "slug": "semio"},
+]
 
 # Sujets trop lourds pour des récits A2 de langue — relire avant usage.
 DENYLIST = {
@@ -39,7 +44,18 @@ SYMPTOMISH = (
     "numbness", "tingling", "constipation", "diarrhea", "incontinence", "urination",
     "anxiety", "stress", "insomnia", "memory loss", "hearing loss", "hair loss",
     "weight loss", "vertigo", "tinnitus", "heartburn", "bloating",
+    # Sémiologie : signes mesurables + suffixes classiques.
+    "tachycardia", "bradycardia", "hypertension", "hypotension",
+    "hyperthermia", "hypothermia", "pyrexia", "palpitations", "sputum",
+    "wheezing", "macule", "papule", "vesicle", "seizure", "coma", "convulsion",
+    "headache", "stiffness", "crepitus", "lymphadenopathy", "cachexia",
+    "hemoptysis", "hematemesis", "hematuria", "proteinuria", "dysuria",
+    "oliguria", "goiter", "orientation", "hallucination", "delusion",
 )
+
+# Suffixes sémiologiques : -algia (douleur), -uria (urines), -pnea (souffle),
+# -rrhea (écoulement), -phagia/polydipsia (appétit/soif), -pathy, -itis.
+SYMPTOM_SUFFIXES = ("algia", "uria", "pnea", "rrhea", "phagia", "dipsia", "pathy", "itis", "emesis")
 
 PERSONAS = [
     ("Sara", "she"), ("Omar", "he"), ("Leila", "she"), ("Karim", "he"),
@@ -73,12 +89,18 @@ def low(display):
 
 
 def is_symptomish(display):
-    return any(k in display.lower() for k in SYMPTOMISH)
+    dl = display.lower()
+    return any(k in dl for k in SYMPTOMISH) or dl.endswith(SYMPTOM_SUFFIXES)
 
 
 def np_have(display):
-    """Groupe nominal après « have » : bare pour les symptômes non comptables."""
-    return low(display) if is_symptomish(display) else "a " + low(display)
+    """Groupe nominal après « have » : bare pour les symptômes non comptables
+    ET pour les pluriels (« has vital signs », pas « has a vital signs »)."""
+    if is_symptomish(display):
+        return low(display)
+    if display.lower().endswith("s") and not display.lower().endswith("ss"):
+        return low(display)
+    return "a " + low(display)
 
 
 def L(en, fr, ar):
@@ -117,12 +139,13 @@ def prons(p):
 
 
 def make_phrases(terms):
-    """Expressions = l'expression canonique « has X » (stable, déterministe)."""
+    """Expressions = l'expression canonique « has X » — id GLOBAL par terme
+    (slug du terme, pas du module) : une seule carte SM-2 partout."""
     out = []
     for t in terms:
         d = display_en(t)
         out.append({
-            "id": f"gen:{MODULE_SLUG}:{slug(d)}:v1",
+            "id": f"gen:{slug(d)}:v1",
             "en": np_have(d),
             "fr": (t["fr"] or d).strip(),
             "ar": (t["ar"] or d).strip(),
@@ -130,7 +153,7 @@ def make_phrases(terms):
     return out
 
 
-def story_case(idx, chapter, terms):
+def story_case(mod, idx, chapter, terms):
     name, p = PERSONAS[idx % len(PERSONAS)]
     sname, _ = STUDENTS[idx % len(STUDENTS)]
     t1, t2, t3 = terms[0], terms[1], terms[2]
@@ -178,13 +201,13 @@ def story_case(idx, chapter, terms):
     ]
 
     return {
-        "schemaVersion": 1, "storyId": f"{MODULE_SLUG}-case-{idx:03d}", "contentVersion": 1,
-        "title": L(f"Mr./Ms. {name}: {d1}", f"Le cas de {name} : {(t1['fr'] or d1).strip()}", f"حالة {name}: {(t1['ar'] or d1).strip()}"),
+        "schemaVersion": 1, "storyId": f"{mod['slug']}-case-{idx:03d}", "contentVersion": 1,
+        "title": L(f"{name}: {d1}", f"Le cas de {name} : {(t1['fr'] or d1).strip()}", f"حالة {name}: {(t1['ar'] or d1).strip()}"),
         "goal": L(f"Understand a patient case: {low(d1)} present, {low(d2)} absent.",
                   f"Comprendre un cas : {low((t1['fr'] or d1))} présent, {low((t2['fr'] or d2))} absent.",
                   f"فهم حالة: {(t1['ar'] or d1).strip()} موجود و{(t2['ar'] or d2).strip()} غائب."),
-        "moduleIds": [MODULE_ID], "relatedTermIds": [t1["id"], t2["id"], t3["id"]],
-        "languageBand": "beginner_supported", "publicationStatus": "draft", "durationMin": 10,
+        "moduleIds": [mod["id"]], "relatedTermIds": [t1["id"], t2["id"], t3["id"]],
+        "languageBand": "beginner_supported", "publicationStatus": "draft", "durationMin": 10, "chapter": chapter,
         "review": {"language": "pending", "medical": "pending"},
         "provenance": PROVENANCE,
         "segments": segments, "targetPhrases": phrases, "questions": questions,
@@ -223,7 +246,7 @@ def story_case(idx, chapter, terms):
     }
 
 
-def story_explain(idx, chapter, terms):
+def story_explain(mod, idx, chapter, terms):
     name, p = PERSONAS[(idx + 5) % len(PERSONAS)]
     t1, t2, t3 = terms[0], terms[1], terms[2]
     d1, d2, d3 = display_en(t1), display_en(t2), display_en(t3)
@@ -269,13 +292,13 @@ def story_explain(idx, chapter, terms):
     ]
 
     return {
-        "schemaVersion": 1, "storyId": f"{MODULE_SLUG}-explain-{idx:03d}", "contentVersion": 1,
+        "schemaVersion": 1, "storyId": f"{mod['slug']}-explain-{idx:03d}", "contentVersion": 1,
         "title": L(f"Explaining the plan to {name}", f"Expliquer le plan à {name}", f"شرح الخطة لـ{name}"),
         "goal": L(f"Understand a doctor explaining {low(d1)} and {low(d2)} to a patient.",
                   f"Comprendre un médecin qui explique {(t1['fr'] or d1).strip()} et {(t2['fr'] or d2).strip()} à un patient.",
                   f"فهم الطبيب وهو يشرح {(t1['ar'] or d1).strip()} و{(t2['ar'] or d2).strip()} لمريض."),
-        "moduleIds": [MODULE_ID], "relatedTermIds": [t1["id"], t2["id"], t3["id"]],
-        "languageBand": "beginner_supported", "publicationStatus": "draft", "durationMin": 10,
+        "moduleIds": [mod["id"]], "relatedTermIds": [t1["id"], t2["id"], t3["id"]],
+        "languageBand": "beginner_supported", "publicationStatus": "draft", "durationMin": 10, "chapter": chapter,
         "review": {"language": "pending", "medical": "pending"}, "provenance": PROVENANCE,
         "segments": segments, "targetPhrases": phrases, "questions": questions,
         "drill": {"explain": L("we check → the doctor checkS. First / then / after that = order.",
@@ -304,7 +327,7 @@ def story_explain(idx, chapter, terms):
     }
 
 
-def story_handover(idx, chapter, terms):
+def story_handover(mod, idx, chapter, terms):
     sname, _ = STUDENTS[(idx + 1) % len(STUDENTS)]
     t1, t2, t3 = terms[0], terms[1], terms[2]
     d1, d2, d3 = display_en(t1), display_en(t2), display_en(t3)
@@ -346,13 +369,13 @@ def story_handover(idx, chapter, terms):
     ]
 
     return {
-        "schemaVersion": 1, "storyId": f"{MODULE_SLUG}-handover-{idx:03d}", "contentVersion": 1,
+        "schemaVersion": 1, "storyId": f"{mod['slug']}-handover-{idx:03d}", "contentVersion": 1,
         "title": L(f"Morning shift: two cases", "Garde du matin : deux cas", "مناوبة الصباح: حالتان"),
         "goal": L(f"Report two patient cases correctly ({low(d1)} / {low(d2)}, lit 3 et 5).".replace("lit 3 et 5", "beds 3 and 5"),
                   f"Rapporter correctement deux cas ({(t1['fr'] or d1).strip()} / {(t2['fr'] or d2).strip()}, lits 3 et 5).",
                   f"نقل حالتين بدقة ({(t1['ar'] or d1).strip()} / {(t2['ar'] or d2).strip()}، السرير ٣ والسرير ٥)."),
-        "moduleIds": [MODULE_ID], "relatedTermIds": [t1["id"], t2["id"], t3["id"]],
-        "languageBand": "beginner_supported", "publicationStatus": "draft", "durationMin": 10,
+        "moduleIds": [mod["id"]], "relatedTermIds": [t1["id"], t2["id"], t3["id"]],
+        "languageBand": "beginner_supported", "publicationStatus": "draft", "durationMin": 10, "chapter": chapter,
         "review": {"language": "pending", "medical": "pending"}, "provenance": PROVENANCE,
         "segments": segments, "targetPhrases": phrases, "questions": questions,
         "drill": {"explain": L("One patient: reports/has/does. Two patients: report/have/do.",
@@ -387,32 +410,38 @@ def story_handover(idx, chapter, terms):
 
 def main():
     terms_all = json.loads((ROOT / "public" / "data" / "terms.json").read_text(encoding="utf-8"))
-    chapters = {}
-    for t in terms_all:
-        if t["module"] != MODULE_FR:
-            continue
-        ch = (t.get("chapter") or "").strip()
-        if not ch:
-            continue
-        d = display_en(t)
-        if not d or d in DENYLIST:
-            continue
-        chapters.setdefault(ch, []).append(t)
 
     generated = []
     skipped = []
-    idx = 0
-    for ch in sorted(chapters):
-        ts = sorted(chapters[ch], key=lambda x: x["id"])
-        if len(ts) < 4:
-            skipped.append((ch, len(ts)))
-            continue
-        # 3 termes pivots, pris en tête du chapitre (déterministe).
-        picked = ts[:2] + [ts[2]]
-        generated.append(story_case(idx, ch, picked))
-        generated.append(story_explain(idx, ch, picked))
-        generated.append(story_handover(idx, ch, picked))
-        idx += 1
+    for mod in WAVES:
+        chapters = {}
+        for t in terms_all:
+            if t["module"] != mod["fr"]:
+                continue
+            ch = (t.get("chapter") or "").strip()
+            if not ch:
+                continue
+            d = display_en(t)
+            if not d or d in DENYLIST:
+                continue
+            chapters.setdefault(ch, []).append(t)
+
+        idx = 0
+        for ch in sorted(chapters):
+            ts = sorted(chapters[ch], key=lambda x: x["id"])
+            if len(ts) < 4:
+                skipped.append((mod["slug"], ch, len(ts)))
+                continue
+            # Case/handover : les cadres « has / does not have » exigent des
+            # symptômes ; sinon « does not have a body temperature » n'a pas de
+            # sens clinique. Explain accepte n'importe quel terme (« we check X »).
+            symptomish = [t for t in ts if is_symptomish(display_en(t))]
+            case_terms = (symptomish[:2] + [t for t in ts if t not in symptomish[:2]])[:3]                 if len(symptomish) >= 2 else ts[:3]
+            explain_terms = ts[:2] + [ts[2]]
+            generated.append(story_case(mod, idx, ch, case_terms))
+            generated.append(story_explain(mod, idx, ch, explain_terms))
+            generated.append(story_handover(mod, idx, ch, case_terms))
+            idx += 1
 
     # Fusion : les 10 pilotes écrits par build_stories_p3 + le corpus généré.
     current = json.loads(WEB.read_text(encoding="utf-8"))
@@ -439,7 +468,7 @@ def main():
         target.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     print(f"pilotes: {len(pilots)} · générées: {len(generated)} · total: {len(all_stories)}")
-    print(f"chapitres traités: {idx} · reportés (<4 termes): {skipped}")
+    print(f"chapitres traités: {len(generated) // 3} · reportés (<4 termes): {skipped}")
 
 
 if __name__ == "__main__":

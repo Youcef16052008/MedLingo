@@ -53,7 +53,9 @@ sont des brouillons structurés produits par `scripts/build_stories_corpus.py`
 l'explication au patient, la passation de garde — voir
 [PLAN_STORIES_CORPUS.md](PLAN_STORIES_CORPUS.md)).
 
-Relecture par lot (un chapitre = 3 histoires, mêmes 3 termes) :
+Relecture par lot (un chapitre = 3 histoires, mêmes 3 termes) — **les fiches
+lisibles sont déjà exportées dans [docs/review/stories/](review/stories/)**
+(un fichier par chapitre, régénérées par `python scripts/export_story_review.py`) :
 1. corriger articles/genre des phrases générées (`a chest pain` → `chest pain`, etc.) ;
 2. vérifier les aides FR/AR (issues des champs `fr`/`ar` des termes) ;
 3. ajuster les faits si un terme ne se prête pas au cadre (ex. terms administratifs) ;
