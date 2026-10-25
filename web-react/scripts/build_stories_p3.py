@@ -13,6 +13,7 @@ Usage : python scripts/build_stories_p3.py   (depuis web-react/)
 Écrit les DEUX copies (web + asset Android) puis vérifie la parité.
 """
 import json
+import os
 import shutil
 from pathlib import Path
 
@@ -690,6 +691,10 @@ for k, v in sorted(reused.items()):
 
 out = {"schemaVersion": 1, "stories": stories}
 for target in (WEB, ANDROID):
-    target.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    # BUG-006 : écriture atomique (tmp + os.replace) — jamais de JSON à moitié
+    # écrit, le serveur de relecture relit ce fichier à chaque requête.
+    tmp = target.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    os.replace(tmp, target)
 print("écrit:", WEB)
 print("écrit:", ANDROID)

@@ -60,6 +60,10 @@ MODULES = [
 _LOCK = threading.Lock()
 
 
+class _Handled(Exception):
+    """Réponse déjà envoyée par un garde (_read_json) : sortir proprement."""
+
+
 def load_stories():
     data = json.loads(STORIES_PATH.read_text(encoding="utf-8"))
     return data["stories"]
@@ -157,8 +161,23 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    MAX_BODY = 1_000_000  # 1 Mo amplement suffisant pour un verdict
+
     def _read_json(self):
+        # BUG-014 : un JSON valide mais non-dict ([1,2] ou "foo") crachait
+        # le handler (AttributeError sans code HTTP) ; un corps démesuré était
+        # lu intégralement en mémoire ; et sans vérification de Content-Type,
+        # un formulaire text/plain cross-origine pouvait forger un verdict
+        # (CSRF locale — les POST JSON purs sont bloqués par preflight, pas les
+        # forms simples).
+        ctype = (self.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+        if ctype != "application/json":
+            self._send_json({"error": "Content-Type: application/json requis"}, 415)
+            raise _Handled()
         n = int(self.headers.get("Content-Length") or 0)
+        if n > self.MAX_BODY:
+            self._send_json({"error": f"corps trop grand (max {self.MAX_BODY} octets)"}, 413)
+            raise _Handled()
         return json.loads(self.rfile.read(n).decode("utf-8"))
 
     # ---- routes ------------------------------------------------------
@@ -184,8 +203,22 @@ class Handler(BaseHTTPRequestHandler):
         url = urlparse(self.path)
         try:
             payload = self._read_json()
+        except _Handled:
+            return  # garde déjà répondu (415/413)
         except Exception:
             self._send_json({"error": "JSON invalide"}, 400)
+            return
+        # BUG-014 : un JSON valide mais non-objet (liste, chaîne, nombre) doit
+        # renvoyer 400, pas cracher sur payload.get().
+        if not isinstance(payload, dict):
+            self._send_json({"error": "corps JSON attendu : objet {storyId, …}"}, 400)
+            return
+        for field in ("storyId", "by", "note"):
+            if field in payload and not isinstance(payload[field], (str, type(None))):
+                self._send_json({"error": f"champ « {field} » : chaîne attendue"}, 400)
+                return
+        if "dimension" in payload and not isinstance(payload["dimension"], str):
+            self._send_json({"error": "champ « dimension » : chaîne attendue"}, 400)
             return
 
         with _LOCK:

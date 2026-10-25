@@ -11,17 +11,28 @@ C (la passation de garde). Déterministe ; tout est `draft` avec
 Usage : python scripts/build_stories_corpus.py  (exécute d'abord build_stories_p3)
 """
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import build_stories_p3 as p3  # exécute le builder pilote (écrit les 10 pilotes)
+# NB (BUG-006) : build_stories_p3 n'est PAS importé au niveau module — il
+# réécrit les deux copies dès son import ; on ne l'importe dans main() qu'une
+# fois le sidecar de relecture validé et le corpus complet bâti en mémoire.
 
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "public" / "data" / "stories.v1.json"
 ANDROID = ROOT.parent / "app" / "src" / "main" / "assets" / "learning" / "stories.v1.json"
 VERDICTS_PATH = ROOT / "data" / "review-verdicts.v1.json"
+
+
+def write_atomic(target: Path, text: str):
+    """tmp + os.replace : jamais de JSON à moitié écrit (le serveur de
+    relecture relit ce fichier à chaque requête)."""
+    tmp = target.with_suffix(".json.tmp")
+    tmp.write_text(text, encoding="utf-8", newline="\n")
+    os.replace(tmp, target)
 
 PROVENANCE = "generated:corpus-v1"
 
@@ -537,19 +548,43 @@ def story_handover(mod, idx, chapter, terms, symptom_mode=True):
     }
 
 
-def apply_verdicts(all_stories):
-    """Applique les verdicts de relecture notés via le dashboard
-    (scripts/review_server.py → data/review-verdicts.v1.json).
+VALID_VERDICTS = {"approved", "needs_fixes", "rejected"}
 
-    Règle : une histoire est `published` ⟺ relecture langue ET médecine
-    « approved ». Tout autre verdict (needs_fixes/rejected) la retient en
-    `draft`. Dès qu'un verdict existe il est AUTORITAIRE (même pour les
-    pilotes) ; sans verdict, le statut du builder tient (le pilote dev
-    clinical-symptoms-001 reste published tant qu'il n'est pas jugé)."""
+
+def load_verdicts():
+    """Charge et valide le sidecar de relecture — AVANT toute écriture
+    (BUG-006/016 : un sidecar mal formé doit produire une erreur claire et un
+    working tree intact, pas un traceback après écrasement du corpus)."""
     if not VERDICTS_PATH.exists():
         return {}
-    doc = json.loads(VERDICTS_PATH.read_text(encoding="utf-8"))
+    try:
+        doc = json.loads(VERDICTS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        raise SystemExit(f"sidecar de relecture illisible ({VERDICTS_PATH}) : JSON invalide — {e}")
     verdicts = doc.get("verdicts", {})
+    if not isinstance(verdicts, dict):
+        raise SystemExit("sidecar de relecture invalide : « verdicts » doit être un objet {storyId: {...}}")
+    for sid, entry in verdicts.items():
+        if not isinstance(entry, dict):
+            raise SystemExit(
+                f"sidecar de relecture invalide : « {sid} » doit être un objet "
+                f'{{"language": {{"verdict": …}}, "medical": …}}, pas {type(entry).__name__}'
+            )
+        for dim in ("language", "medical"):
+            if dim in entry:
+                v = entry[dim]
+                if not isinstance(v, dict) or v.get("verdict") not in VALID_VERDICTS:
+                    raise SystemExit(
+                        f'sidecar de relecture invalide : « {sid}.{dim} » doit être '
+                        f'{{"verdict": "approved"|"needs_fixes"|"rejected", …}}'
+                    )
+    return verdicts
+
+
+def check_verdict_ids(verdicts, all_stories):
+    """BUG-006 : rejeter les verdicts orphelins AVANT la moindre écriture —
+    sinon le corpus déjà écrasé + un SystemExit laissaient un working tree à
+    10 histoires avec `check:stories` vert."""
     known = {s["storyId"] for s in all_stories}
     stale = sorted(set(verdicts) - known)
     if stale:
@@ -557,6 +592,18 @@ def apply_verdicts(all_stories):
             f"verdicts orphelins (ids inconnus du corpus) : {stale}\n"
             f"→ nettoyer data/review-verdicts.v1.json avant de régénérer."
         )
+
+
+def apply_verdicts(all_stories, verdicts):
+    """Applique les verdicts de relecture notés via le dashboard
+    (scripts/review_server.py → data/review-verdicts.v1.json).
+
+    Règle : une histoire est `published` ⟺ relecture langue ET médecine
+    « approved ». Tout autre verdict (needs_fixes/rejected) la retient en
+    `draft`. Dès qu'un verdict existe il est AUTORITAIRE (même pour les
+    pilotes) ; sans verdict, le statut du builder tient (le pilote dev
+    clinical-symptoms-001 reste published tant qu'il n'est pas jugé).
+    Pure : aucun fichier n'est lu ni écrit ici."""
     published = 0
     for s in all_stories:
         v = verdicts.get(s["storyId"])
@@ -570,8 +617,8 @@ def apply_verdicts(all_stories):
             published += 1
         else:
             s["publicationStatus"] = "draft"
-    print(f"verdicts de relecture : {len(verdicts)} histoire(s) · publiées : {published}")
-    return verdicts
+    if verdicts:
+        print(f"verdicts de relecture : {len(verdicts)} histoire(s) · publiées : {published}")
 
 
 def main():
@@ -615,12 +662,16 @@ def main():
             idx += 1
 
     # Fusion : les 10 pilotes écrits par build_stories_p3 + le corpus généré.
+    # BUG-006 : le corpus existant est lu AVANT tout import de p3 — p3 écrit
+    # les deux copies dès son import ; toute validation doit donc précéder.
     current = json.loads(WEB.read_text(encoding="utf-8"))
     pilots = [s for s in current["stories"] if "provenance" not in s]
     all_stories = pilots + generated
 
-    # Verdicts de relecture (V0.1) : publiés ⟺ langue ET médecine approuvées.
-    verdicts = apply_verdicts(all_stories)
+    # Verdicts de relecture (V0.1) : validés (forme) puis (ids) AVANT écriture.
+    verdicts = load_verdicts()
+    check_verdict_ids(verdicts, all_stories)
+    apply_verdicts(all_stories, verdicts)
 
     # Invariants (les mêmes que le pilote + le harnais de test).
     ids = [s["storyId"] for s in all_stories]
@@ -641,9 +692,14 @@ def main():
         expected = "published" if (lang == "approved" and med == "approved") else "draft"
         assert s["publicationStatus"] == expected, f"{s['storyId']}: statut ≠ verdicts de relecture"
 
+    # Tout est validé en mémoire : on peut écrire. p3 d'abord (pilotes — écrit
+    # dès l'import, d'où l'import tardif), puis le corpus complet, atomiquement
+    # (tmp + os.replace) : un crash en cours d'écriture ne laisse jamais un
+    # JSON à moitié écrit, que le serveur de relecture relit à chaque requête.
+    import build_stories_p3 as p3  # noqa: F401 — exécute le builder pilote
     out = {"schemaVersion": 1, "stories": all_stories}
     for target in (WEB, ANDROID):
-        target.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+        write_atomic(target, json.dumps(out, ensure_ascii=False, indent=2) + "\n")
 
     print(f"pilotes: {len(pilots)} · générées: {len(generated)} · total: {len(all_stories)}")
     print(f"chapitres traités: {len(generated) // 3} · reportés (<4 termes): {skipped}")
