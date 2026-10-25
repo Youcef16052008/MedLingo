@@ -75,7 +75,10 @@
 - [x] **WS2.2c (BUG-008)** ✅ f5cc423 : mutateUserStats = section critique RMW ; 2 sites chauds convertis, 13 restants à convertir (mécanique posée).
 - [x] **ADR-2 exécuté (DÉSACTIVER)** ✅ f5cc423 : 10 deps réseau/IA mortes retirées + plugin google-services → **permission INTERNET disparue du manifest**. Réactivation guidée le jour des ligues réelles.
 - [ ] BUG-022 main-thread (langue au démarrage) : restant, maintenant débloqué — petite mécanique prefs à poser
-- [x] **WS4 leviers 3/5/7** ✅ 32c8dbe : coffres cadencés (3 journées-objectif consécutives, calcul pur), cliffhanger « À suivre » en fin d'histoire (même chapitre, publié uniquement), certificat de maîtrise (≥ 90 %, offline, partageable). Leviers 1-2-4 (hub maîtrise, calendrier, ligue honnête) déjà en place. **Restent : push ≤ 1/j (rappel persistant déjà là — à finir côté function), widget Android, sous-titrage honest des bots.**
+- [x] **WS4 leviers 3/5/7** ✅ 32c8dbe : coffres cadencés (3 journées-objectif consécutives, calcul pur), cliffhanger « À suivre » en fin d'histoire (même chapitre, publié uniquement), certificat de maîtrise (≥ 90 %, offline, partageable). Leviers 1-2-4 (hub maîtrise, calendrier, ligue honnête) déjà en place. **✅ LEVIERS 6/8 + bots honnêtes (6d39b3d) — LES 8 LEVIERS SONT ACTIFS :**
+- Levier 6 = RÉSOLU COMME RAPPELS LOCAUX : Android avait déjà 3 rappels locaux opt-in (révision SM-2, série, perle clinique), réglage horaire persistant, ≤ 1/jour, zéro serveur. Le push cloud est REJETÉ (function `notifications` = queue sans consommateur ; contredit ADR-2 et le non-goal anti-dark-pattern). Dormante pour ADR-2bis.
+- Levier 8 = widget de série 2×2 ✅ (StreakWidgetProvider : Room direct, rafraîchi par le flux userStats + au toucher, fond vert médical, FR/AR).
+- Bots web étiquetés « simulateur » (classement = entraînement, zéro ambiguïté).
 - [ ] **WS2.7** : BUG-015 harnais pilote-001 · BUG-032/033 checkers
 
 ## 🟡 DEV (agent — sur demande, dans l'ordre)
