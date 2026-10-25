@@ -210,6 +210,62 @@ function coerceRecord(v: unknown): Record<string, unknown> {
   return v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : {};
 }
 
+/**
+ * Tableau persisté : rejette tout le reste. BUG-001 — `reviewQueue` était
+ * rechargé via `coerceRecord` (qui rejette les tableaux) puis étalé par
+ * `[...state.reviewQueue]` dans `update()` : chaque update jetait `TypeError`
+ * après rechargement, et plus aucune progression n'était sauvegardée.
+ */
+function coerceArray<T>(v: unknown, guard: (item: unknown) => boolean): T[] {
+  return Array.isArray(v) ? (v.filter(guard) as T[]) : [];
+}
+
+/** Map validée entrée par entrée — une entrée corrompue est écartée, pas castée. */
+function coerceRecordMap<T>(v: unknown, guard: (item: unknown) => item is T): Record<string, T> {
+  const out: Record<string, T> = {};
+  for (const [k, item] of Object.entries(coerceRecord(v))) {
+    if (guard(item)) out[k] = item;
+  }
+  return out;
+}
+
+function isFiniteNum(v: unknown): v is number {
+  return typeof v === "number" && Number.isFinite(v);
+}
+
+function isReviewQueueItem(v: unknown): v is ReviewQueueItem {
+  if (!v || typeof v !== "object") return false;
+  const o = v as Record<string, unknown>;
+  return (
+    typeof o.lessonId === "string" &&
+    typeof o.chapterId === "string" &&
+    typeof o.moduleId === "string" &&
+    (o.status === "unlocked" || o.status === "played") &&
+    Array.isArray(o.exIds) &&
+    isFiniteNum(o.missedAt)
+  );
+}
+
+function isLessonProgress(v: unknown): v is LessonProgress {
+  if (!v || typeof v !== "object") return false;
+  const o = v as Record<string, unknown>;
+  return (
+    typeof o.lessonId === "string" &&
+    isFiniteNum(o.score) &&
+    isFiniteNum(o.heartsRemain) &&
+    isFiniteNum(o.mistakes) &&
+    isFiniteNum(o.completedAt) &&
+    Array.isArray(o.missedExIds)
+  );
+}
+
+/** Forme persistée par le sous-système cœurs : {hearts, mistakes} par leçon. */
+function isHeartState(v: unknown): v is { hearts: number; mistakes: number } {
+  if (!v || typeof v !== "object") return false;
+  const o = v as Record<string, unknown>;
+  return isFiniteNum(o.hearts) && isFiniteNum(o.mistakes);
+}
+
 function coerceNumMap(v: unknown): Record<string, number> {
   const out: Record<string, number> = {};
   for (const [k, n] of Object.entries(coerceRecord(v))) {
@@ -331,10 +387,13 @@ export function revive(raw: string | null, now: number): AppState {
         moduleBest: coerceNumMap(parsed.moduleBest),
         lessonBest: coerceNumMap(parsed.lessonBest),
         trophies: coerceNumMap(parsed.trophies),
-        // Nouveaux : LessonProgress, ReviewQueue, HeartManager
-        lessonProgress: coerceRecord(parsed.lessonProgress) as Record<string, LessonProgress>,
-        reviewQueue: coerceRecord(parsed.reviewQueue) as unknown as ReviewQueueItem[],
-        heartManager: coerceRecord(parsed.heartManager) as Record<string, { hearts: number; mistakes: number }>,
+        // Nouveaux : LessonProgress, ReviewQueue, HeartManager.
+        // BUG-001 : reviewQueue est un TABLEAU — coerceArray, jamais coerceRecord
+        // (qui rejette les tableaux et cassait tout update() après rechargement).
+        // Les entrées invalides sont écartées, pas castées à l'aveugle.
+        lessonProgress: coerceRecordMap(parsed.lessonProgress, isLessonProgress),
+        reviewQueue: coerceArray(parsed.reviewQueue, isReviewQueueItem),
+        heartManager: coerceRecordMap(parsed.heartManager, isHeartState),
         storyProgress: coerceStoryProgress(parsed.storyProgress),
         exprSm2: coerceSm2(parsed.exprSm2),
         league: {

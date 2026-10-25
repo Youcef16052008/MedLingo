@@ -66,7 +66,11 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
   const initialized = useRef(false);
   const voice = useStoryVoice();
 
-  /* ---------- initialisation (une seule fois) ---------- */
+  /* ---------- initialisation (une seule fois l'histoire chargée) ---------- */
+  // BUG-013 : dépendances vides — si l'histoire était encore en vol au montage
+  // (lien direct #/story/:id pendant le chargement des 7,6 Mo), l'effet
+  // s'exécutait avec story === undefined et ne rejouait jamais : squelette
+  // éternel. La clé storyId rejoue l'effet quand l'histoire finit d'arriver.
   useEffect(() => {
     if (!story || initialized.current) return;
     initialized.current = true;
@@ -102,7 +106,7 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
       setState(initSession(story, { duePhraseIds: due }));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [story?.storyId]);
 
   /* ---------- arrêt de la narration à la sortie (guide §8 Android) ---------- */
   useEffect(() => {

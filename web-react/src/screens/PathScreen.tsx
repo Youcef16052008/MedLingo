@@ -83,7 +83,9 @@ export function PathScreen() {
   const now = useNow();
   const goal = goalProgress(s, now);
   const units = useMemo(
-    () => buildPath(),
+    // BUG-002 : sans ses arguments, buildPath() prend {} → tout niveau ≥ 2
+    // restait « locked » à vie et aucune leçon n'apparaissait terminée.
+    () => buildPath(s.lessonBest, s.moduleBest),
     [s.lessonBest, s.moduleBest]
   );
   const sm2 = s.sm2 as Sm2Map;

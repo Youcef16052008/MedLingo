@@ -22,14 +22,28 @@ export interface Term {
 export type ExerciseType =
   | "mcq"
   | "fill_blank"
+  | "gap"
   | "sentence_order"
   | "matching"
   | "pair"
   | "reading"
   | "clinical_case";
 
+/** Types réellement rendus par QuizScreen — contrat corpus ↔ UI (testé). */
+export const RENDERABLE_EXERCISE_TYPES: readonly ExerciseType[] = [
+  "mcq",
+  "fill_blank",
+  "gap",
+  "sentence_order",
+  "matching",
+  "pair",
+  "reading",
+  "clinical_case",
+];
+
 export interface Exercise {
-  id: number;
+  /** Les corpus générés (v2, 13k) utilisent des ids textuels — leçon : ids négatifs synthétiques. */
+  id: number | string;
   level: number;
   type: ExerciseType;
   module: string;

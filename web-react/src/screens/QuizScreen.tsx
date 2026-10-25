@@ -311,8 +311,8 @@ export function QuizScreen() {
   const check = () => {
     if (q.phase !== "play" || q.checked) return;
     const ex = q.list[q.i];
-    // fill_blank et pair : réponse en saisie libre (voir `fillScore`/scoring).
-    if (ex.type === "fill_blank" || ex.type === "pair") {
+    // fill_blank, gap et pair : réponse en saisie libre (voir `fillScore`/scoring).
+    if (ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair") {
       const score = fillScore(q.fillVal, ex.answer);
       submit(score === 1, score === 0.5 ? Math.floor(ex.points / 2) : 0);
       return;
@@ -562,7 +562,7 @@ export function QuizScreen() {
         ))}
       </div>
     );
-  } else if (ex.type === "fill_blank" || ex.type === "pair") {
+  } else if (ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair") {
     body = (
       <>
         <p className="tiny">{t("typeHint")}</p>
@@ -685,7 +685,7 @@ export function QuizScreen() {
   const correctText = ex.type === "matching" ? ex.options.join("  |  ") : ex.answer;
   const exp = expText(ex, lang);
   const canCheck =
-    ex.type === "fill_blank" || ex.type === "pair"
+    ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair"
       ? !!q.fillVal.trim()
       : ex.type === "sentence_order"
         ? q.wordSel.length > 0

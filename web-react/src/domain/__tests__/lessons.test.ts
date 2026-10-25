@@ -126,7 +126,7 @@ describe("générateur de leçons", () => {
 
   it("les exercices réels sont réutilisés en priorité (max 4)", () => {
     const lesson = lessonQuestions("anat", 1);
-    const real = lesson.filter((e) => e.id > 0);
+    const real = lesson.filter((e) => typeof e.id === "number" && e.id > 0);
     expect(real.length).toBeGreaterThan(0);
     expect(real.length).toBeLessThanOrEqual(4);
     expect(real.every((e) => e.module === "Anatomie" && e.level === 1)).toBe(true);
@@ -142,7 +142,8 @@ describe("générateur de leçons", () => {
     const lesson = lessonQuestions("biochim", 2);
     // Seules les questions générées appliquent la rampe de difficulté
     // (les exercices réels en tête de leçon sont fixes).
-    const generated = lesson.filter((e) => e.id < 0 && e.type === "mcq");
+    // ids négatifs = questions générées (le corpus v2 utilise des ids textuels)
+    const generated = lesson.filter((e) => typeof e.id === "number" && e.id < 0 && e.type === "mcq");
     expect(generated.length).toBeGreaterThanOrEqual(4);
 
     const distractorSim = (ex: Exercise): number => {
