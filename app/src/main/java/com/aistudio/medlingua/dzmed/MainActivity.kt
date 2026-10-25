@@ -77,6 +77,7 @@ import com.aistudio.medlingua.dzmed.ui.components.LeagueScreen
 import com.aistudio.medlingua.dzmed.ui.components.SuperPaywallDialog
 import com.aistudio.medlingua.dzmed.ui.screens.StorySessionScreen
 import com.aistudio.medlingua.dzmed.data.story.StoryAssetSource
+import com.aistudio.medlingua.dzmed.data.repository.StoryRepository
 import com.aistudio.medlingua.dzmed.service.NotificationHelper
 
 enum class MainDestination(
@@ -421,7 +422,13 @@ fun MedLinguaAppContent(
                 if (showStory) {
                     var storyId by remember { mutableStateOf<String?>(null) }
                     LaunchedEffect(Unit) {
-                        storyId = StoryAssetSource.load(context).firstOrNull()?.storyId
+                        val app = context.applicationContext as MedLinguaApp
+                        val repo = StoryRepository(
+                            context.applicationContext,
+                            app.database.storyDao(),
+                            app.database.medicalDao()
+                        )
+                        storyId = repo.todayStory(System.currentTimeMillis())?.storyId
                     }
                     Box(
                         modifier = Modifier

@@ -289,6 +289,2393 @@
           "model": "Salma has a sore throat. She does not have a fever."
         }
       }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "self-intro-002",
+      "contentVersion": 1,
+      "title": {
+        "en": "Introducing yourself as a student",
+        "fr": "Se présenter comme étudiant",
+        "ar": "التعرّف بنفسك كطالب"
+      },
+      "goal": {
+        "en": "Say who you are, what you study and what language you speak.",
+        "fr": "Dire qui tu es, ce que tu étudies et quelle langue tu parles.",
+        "ar": "تقول من أنت وماذا تدرس وأي لغة تتحدث."
+      },
+      "moduleIds": [
+        "clinical_en"
+      ],
+      "relatedTermIds": [
+        3860,
+        3858
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "Hello, my name is Amine.",
+          "fr": "Bonjour, je m'appelle Amine.",
+          "ar": "مرحبًا، اسمي أمين."
+        },
+        {
+          "en": "I am a medical student.",
+          "fr": "Je suis étudiant en médecine.",
+          "ar": "أنا طالب طب."
+        },
+        {
+          "en": "I am in my first year.",
+          "fr": "Je suis en première année.",
+          "ar": "أنا في السنة الأولى."
+        },
+        {
+          "en": "I speak a little English.",
+          "fr": "Je parle un peu anglais.",
+          "ar": "أتحدث قليلًا من الإنجليزية."
+        },
+        {
+          "en": "The doctor says, “Welcome to the clinic.”",
+          "fr": "Le médecin dit : « Bienvenue à la clinique. »",
+          "ar": "يقول الطبيب: «مرحبًا بك في العيادة.»"
+        },
+        {
+          "en": "Amine answers, “Thank you, doctor.”",
+          "fr": "Amine répond : « Merci, docteur. »",
+          "ar": "يجيب أمين: «شكرًا يا دكتور.»"
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:my-name-is:v1",
+          "en": "my name is…",
+          "fr": "je m'appelle…",
+          "ar": "اسمي…"
+        },
+        {
+          "id": "en:medical-student:v1",
+          "en": "I am a medical student",
+          "fr": "je suis étudiant en médecine",
+          "ar": "أنا طالب طب"
+        },
+        {
+          "id": "en:a-little:v1",
+          "en": "a little English",
+          "fr": "un peu d'anglais",
+          "ar": "قليلًا من الإنجليزية"
+        },
+        {
+          "id": "en:welcome-to:v1",
+          "en": "Welcome to the clinic",
+          "fr": "Bienvenue à la clinique",
+          "ar": "مرحبًا بك في العيادة"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the student's name?",
+          "qFr": "Quel est le nom de l'étudiant ?",
+          "qAr": "ما اسم الطالب؟",
+          "accepted": [
+            "amine",
+            "his name is amine",
+            "my name is amine"
+          ],
+          "model": "His name is Amine.",
+          "phraseIds": [
+            "en:my-name-is:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "Is Amine a doctor?",
+          "qFr": "Amine est-il médecin ?",
+          "qAr": "هل أمين طبيب؟",
+          "accepted": [
+            "no",
+            "no he is not",
+            "no he isn't",
+            "he is a student"
+          ],
+          "model": "No, he is not. He is a medical student.",
+          "hint": {
+            "en": "Careful: Amine is a STUDENT, not a doctor.",
+            "fr": "Attention : Amine est ÉTUDIANT, pas médecin.",
+            "ar": "انتبه: أمين طالب، وليس طبيبًا."
+          },
+          "phraseIds": [
+            "en:medical-student:v1"
+          ]
+        },
+        {
+          "id": "q3",
+          "q": "Does Amine speak English?",
+          "qFr": "Amine parle-t-il anglais ?",
+          "qAr": "هل يتحدث أمين الإنجليزية؟",
+          "accepted": [
+            "yes",
+            "yes he does",
+            "yes a little",
+            "a little"
+          ],
+          "model": "Yes, he speaks a little English.",
+          "phraseIds": [
+            "en:a-little:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "What year is he in?",
+          "qFr": "En quelle année est-il ?",
+          "qAr": "في أي سنة هو؟",
+          "accepted": [
+            "first year",
+            "the first year",
+            "his first year",
+            "one"
+          ],
+          "model": "He is in his first year."
+        },
+        {
+          "id": "q5",
+          "q": "Who says “Welcome to the clinic”?",
+          "qFr": "Qui dit « Bienvenue à la clinique » ?",
+          "qAr": "من قال «مرحبًا بك في العيادة»؟",
+          "accepted": [
+            "the doctor",
+            "doctor"
+          ],
+          "model": "The doctor says it.",
+          "phraseIds": [
+            "en:welcome-to:v1"
+          ]
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "I am → He is. My name is → His name is.",
+          "fr": "I am → He is. My name is → His name is.",
+          "ar": "I am ← He is. My name is ← His name is."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "He … a medical student.",
+            "accepted": [
+              "is"
+            ],
+            "model": "He is a medical student."
+          },
+          {
+            "id": "d2",
+            "prompt": "… name is Amine.",
+            "accepted": [
+              "his"
+            ],
+            "model": "His name is Amine."
+          },
+          {
+            "id": "d3",
+            "prompt": "I … in my first year.",
+            "accepted": [
+              "am"
+            ],
+            "model": "I am in my first year."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Introduce Amine in two short sentences.",
+          "fr": "Présente Amine en deux phrases courtes.",
+          "ar": "قدّم أمين في جملتين قصيرتين."
+        },
+        "starters": [
+          "His name is…",
+          "He is…"
+        ],
+        "model": "His name is Amine. He is a medical student."
+      },
+      "transfer": {
+        "context": {
+          "en": "Salma is a nursing student. She is in her second year. She speaks a little English too.",
+          "fr": "Salma est étudiante en soins infirmiers. Elle est en deuxième année. Elle parle aussi un peu anglais.",
+          "ar": "سلمى طالبة تمريض. هي في السنة الثانية. تتحدث هي أيضًا قليلًا من الإنجليزية."
+        },
+        "gloss": {
+          "en": "a nursing student = a student who studies nursing",
+          "fr": "nursing student : étudiant(e) en soins infirmiers",
+          "ar": "nursing student: طالب/طالبة تمريض"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "Is Salma a medical student or a nursing student?",
+            "qFr": "Salma est-elle étudiante en médecine ou en soins infirmiers ?",
+            "qAr": "هل سلمى طالبة طب أم تمريض؟",
+            "accepted": [
+              "a nursing student",
+              "nursing student",
+              "she is a nursing student"
+            ],
+            "model": "She is a nursing student."
+          },
+          {
+            "id": "t2",
+            "q": "What year is she in?",
+            "qFr": "En quelle année est-elle ?",
+            "qAr": "في أي سنة هي؟",
+            "accepted": [
+              "second year",
+              "the second year",
+              "her second year",
+              "two"
+            ],
+            "model": "She is in her second year."
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Introduce Salma in two sentences.",
+            "fr": "Présente Salma en deux phrases.",
+            "ar": "قدّم سلمى في جملتين."
+          },
+          "starters": [
+            "Her name is…",
+            "She is…"
+          ],
+          "model": "Her name is Salma. She is a nursing student."
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "locate-structure-003",
+      "contentVersion": 1,
+      "title": {
+        "en": "Locating a structure: the heart",
+        "fr": "Localiser une structure : le cœur",
+        "ar": "تحديد موقع بنية: القلب"
+      },
+      "goal": {
+        "en": "Say where an organ is and what is around it.",
+        "fr": "Dire où se trouve un organe et ce qui l'entoure.",
+        "ar": "تقول أين يقع العضو وما حوله."
+      },
+      "moduleIds": [
+        "anat"
+      ],
+      "relatedTermIds": [
+        3989,
+        3691,
+        3960
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "The heart is an organ.",
+          "fr": "Le cœur est un organe.",
+          "ar": "القلب عضو."
+        },
+        {
+          "en": "It is in the chest.",
+          "fr": "Il est dans la poitrine.",
+          "ar": "يقع في الصدر."
+        },
+        {
+          "en": "It is between the two lungs.",
+          "fr": "Il est entre les deux poumons.",
+          "ar": "يقع بين الرئتين."
+        },
+        {
+          "en": "The heart pumps blood.",
+          "fr": "Le cœur pompe le sang.",
+          "ar": "القلب يضخ الدم."
+        },
+        {
+          "en": "A student asks, “Where is the heart?”",
+          "fr": "Un étudiant demande : « Où est le cœur ? »",
+          "ar": "يسأل طالب: «أين يقع القلب؟»"
+        },
+        {
+          "en": "The teacher points to the chest.",
+          "fr": "L'enseignant désigne la poitrine.",
+          "ar": "يشير الأستاذ إلى الصدر."
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:in-the-chest:v1",
+          "en": "in the chest",
+          "fr": "dans la poitrine",
+          "ar": "في الصدر"
+        },
+        {
+          "id": "en:between-the-lungs:v1",
+          "en": "between the two lungs",
+          "fr": "entre les deux poumons",
+          "ar": "بين الرئتين"
+        },
+        {
+          "id": "en:where-is:v1",
+          "en": "Where is…?",
+          "fr": "Où est… ?",
+          "ar": "أين يقع…؟"
+        },
+        {
+          "id": "en:pumps-blood:v1",
+          "en": "pumps blood",
+          "fr": "pompe le sang",
+          "ar": "يضخ الدم"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Where is the heart?",
+          "qFr": "Où est le cœur ?",
+          "qAr": "أين يقع القلب؟",
+          "accepted": [
+            "in the chest",
+            "the chest",
+            "it is in the chest"
+          ],
+          "model": "It is in the chest.",
+          "phraseIds": [
+            "en:in-the-chest:v1",
+            "en:where-is:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "Is the heart in the abdomen?",
+          "qFr": "Le cœur est-il dans l'abdomen ?",
+          "qAr": "هل القلب في البطن؟",
+          "accepted": [
+            "no",
+            "no it is not",
+            "no it isn't",
+            "it is in the chest"
+          ],
+          "model": "No, it is not. It is in the chest.",
+          "hint": {
+            "en": "Careful: the heart is in the CHEST, not in the abdomen.",
+            "fr": "Attention : le cœur est dans la POITRINE, pas dans l'abdomen.",
+            "ar": "انتبه: القلب في الصدر، وليس في البطن."
+          },
+          "phraseIds": [
+            "en:in-the-chest:v1"
+          ]
+        },
+        {
+          "id": "q3",
+          "q": "Is it between the lungs or behind the stomach?",
+          "qFr": "Est-il entre les poumons ou derrière l'estomac ?",
+          "qAr": "هل هو بين الرئتين أم خلف المعدة؟",
+          "accepted": [
+            "between the lungs",
+            "between the two lungs",
+            "it is between the lungs"
+          ],
+          "model": "It is between the two lungs.",
+          "phraseIds": [
+            "en:between-the-lungs:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "What does the heart pump?",
+          "qFr": "Que pompe le cœur ?",
+          "qAr": "ماذا يضخ القلب؟",
+          "accepted": [
+            "blood",
+            "it pumps blood"
+          ],
+          "model": "It pumps blood.",
+          "phraseIds": [
+            "en:pumps-blood:v1"
+          ]
+        },
+        {
+          "id": "q5",
+          "q": "Who asks, “Where is the heart?”",
+          "qFr": "Qui demande : « Où est le cœur ? »",
+          "qAr": "من يسأل: «أين يقع القلب؟»",
+          "accepted": [
+            "a student",
+            "the student",
+            "student"
+          ],
+          "model": "A student asks it."
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "It is in… → They are in… One organ: is. Two organs: are.",
+          "fr": "It is in… → They are in… Un organe : is. Deux organes : are.",
+          "ar": "It is in… ← They are in… عضو واحد: is. عضوان: are."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "The heart … in the chest.",
+            "accepted": [
+              "is"
+            ],
+            "model": "The heart is in the chest."
+          },
+          {
+            "id": "d2",
+            "prompt": "The lungs … in the chest.",
+            "accepted": [
+              "are"
+            ],
+            "model": "The lungs are in the chest."
+          },
+          {
+            "id": "d3",
+            "prompt": "The heart … between the lungs.",
+            "accepted": [
+              "is"
+            ],
+            "model": "The heart is between the lungs."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Say where the heart is, in two sentences.",
+          "fr": "Dis où est le cœur, en deux phrases.",
+          "ar": "قل أين يقع القلب في جملتين."
+        },
+        "starters": [
+          "The heart is…",
+          "It is between…"
+        ],
+        "model": "The heart is in the chest. It is between the two lungs."
+      },
+      "transfer": {
+        "context": {
+          "en": "The stomach is an organ. It is in the abdomen. The liver is in the abdomen too.",
+          "fr": "L'estomac est un organe. Il est dans l'abdomen. Le foie est aussi dans l'abdomen.",
+          "ar": "المعدة عضو. تقع في البطن. الكبد أيضًا في البطن."
+        },
+        "gloss": {
+          "en": "the abdomen = the belly",
+          "fr": "abdomen : le ventre",
+          "ar": "abdomen: البطن"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "Where is the stomach?",
+            "qFr": "Où est l'estomac ?",
+            "qAr": "أين تقع المعدة؟",
+            "accepted": [
+              "in the abdomen",
+              "the abdomen",
+              "it is in the abdomen"
+            ],
+            "model": "It is in the abdomen."
+          },
+          {
+            "id": "t2",
+            "q": "Is the liver in the chest or in the abdomen?",
+            "qFr": "Le foie est-il dans la poitrine ou dans l'abdomen ?",
+            "qAr": "هل الكبد في الصدر أم في البطن؟",
+            "accepted": [
+              "in the abdomen",
+              "the abdomen",
+              "it is in the abdomen"
+            ],
+            "model": "It is in the abdomen.",
+            "hint": {
+              "en": "Careful: the liver is in the abdomen.",
+              "fr": "Attention : le foie est dans l'abdomen.",
+              "ar": "انتبه: الكبد في البطن."
+            }
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Say where the stomach is, in two sentences.",
+            "fr": "Dis où est l'estomac, en deux phrases.",
+            "ar": "قل أين تقع المعدة في جملتين."
+          },
+          "starters": [
+            "The stomach is…",
+            "The liver is…"
+          ],
+          "model": "The stomach is in the abdomen. The liver is in the abdomen too."
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "symptom-absent-004",
+      "contentVersion": 1,
+      "title": {
+        "en": "A symptom that is NOT there",
+        "fr": "Un symptôme qui n'est PAS là",
+        "ar": "عَرَض غير موجود"
+      },
+      "goal": {
+        "en": "Understand and ask about absent symptoms without changing the meaning.",
+        "fr": "Comprendre et interroger les symptômes absents sans inverser le sens.",
+        "ar": "فهم السؤال عن الأعراض الغائبة دون قلب المعنى."
+      },
+      "moduleIds": [
+        "clinical_en",
+        "semio"
+      ],
+      "relatedTermIds": [
+        3886,
+        3885,
+        3895
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "Amina is a patient.",
+          "fr": "Amina est une patiente.",
+          "ar": "أمينة مريضة."
+        },
+        {
+          "en": "She has a cough.",
+          "fr": "Elle a une toux.",
+          "ar": "لديها سعال."
+        },
+        {
+          "en": "She does not have a fever.",
+          "fr": "Elle n'a pas de fièvre.",
+          "ar": "ليست لديها حمى."
+        },
+        {
+          "en": "She does not have chest pain.",
+          "fr": "Elle n'a pas de douleur thoracique.",
+          "ar": "ليست لديها آلام في الصدر."
+        },
+        {
+          "en": "The student asks, “Do you have chest pain?”",
+          "fr": "L'étudiante demande : « Avez-vous une douleur thoracique ? »",
+          "ar": "تسأل الطالبة: «هل عندك ألم في الصدر؟»"
+        },
+        {
+          "en": "Amina says, “No, I do not.”",
+          "fr": "Amina répond : « Non. »",
+          "ar": "تجيب أمينة: «لا.»"
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:has-a-cough:v1",
+          "en": "has a cough",
+          "fr": "a une toux",
+          "ar": "لديها سعال"
+        },
+        {
+          "id": "en:no-fever:v1",
+          "en": "does not have a fever",
+          "fr": "n'a pas de fièvre",
+          "ar": "ليست لديها حمى"
+        },
+        {
+          "id": "en:no-chest-pain:v1",
+          "en": "does not have chest pain",
+          "fr": "n'a pas de douleur thoracique",
+          "ar": "ليست لديها آلام في الصدر"
+        },
+        {
+          "id": "en:do-you-have:v1",
+          "en": "Do you have…?",
+          "fr": "Avez-vous… ?",
+          "ar": "هل عندك…؟"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Does Amina have a cough?",
+          "qFr": "Amina a-t-elle une toux ?",
+          "qAr": "هل عند أمينة سعال؟",
+          "accepted": [
+            "yes",
+            "yes she does",
+            "yes she has a cough"
+          ],
+          "model": "Yes, she has a cough.",
+          "phraseIds": [
+            "en:has-a-cough:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "Does she have a fever?",
+          "qFr": "A-t-elle de la fièvre ?",
+          "qAr": "هل عندها حمى؟",
+          "accepted": [
+            "no",
+            "no she does not",
+            "no she doesn't",
+            "she does not have a fever",
+            "no she has not",
+            "she doesn't"
+          ],
+          "model": "No, she does not have a fever.",
+          "hint": {
+            "en": "Careful: she does NOT have a fever.",
+            "fr": "Attention : elle n'a PAS de fièvre.",
+            "ar": "انتبه: ليست عندها حمى."
+          },
+          "phraseIds": [
+            "en:no-fever:v1"
+          ]
+        },
+        {
+          "id": "q3",
+          "q": "Does she have chest pain?",
+          "qFr": "A-t-elle une douleur thoracique ?",
+          "qAr": "هل عندها ألم في الصدر؟",
+          "accepted": [
+            "no",
+            "no she does not",
+            "no she doesn't",
+            "she does not have chest pain",
+            "no she has not",
+            "she doesn't"
+          ],
+          "model": "No, she does not have chest pain.",
+          "hint": {
+            "en": "Careful: she does NOT have chest pain.",
+            "fr": "Attention : elle n'a PAS de douleur thoracique.",
+            "ar": "انتبه: ليست عندها آلام في الصدر."
+          },
+          "phraseIds": [
+            "en:no-chest-pain:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "Does she have a cough or chest pain?",
+          "qFr": "A-t-elle une toux ou une douleur thoracique ?",
+          "qAr": "هل عندها سعال أم ألم في الصدر؟",
+          "accepted": [
+            "a cough",
+            "cough",
+            "she has a cough"
+          ],
+          "model": "She has a cough."
+        },
+        {
+          "id": "q5",
+          "q": "Who asks the question?",
+          "qFr": "Qui pose la question ?",
+          "qAr": "من طرح السؤال؟",
+          "accepted": [
+            "the student",
+            "a student",
+            "student"
+          ],
+          "model": "The student asks it."
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "I do not have… → She does not have…",
+          "fr": "I do not have… → She does not have…",
+          "ar": "I do not have… ← She does not have…"
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "She … not have a fever.",
+            "accepted": [
+              "does"
+            ],
+            "model": "She does not have a fever."
+          },
+          {
+            "id": "d2",
+            "prompt": "They … not have chest pain.",
+            "accepted": [
+              "do"
+            ],
+            "model": "They do not have chest pain."
+          },
+          {
+            "id": "d3",
+            "prompt": "I … not have a cough.",
+            "accepted": [
+              "do"
+            ],
+            "model": "I do not have a cough."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Present Amina's situation in two sentences. Keep the negation.",
+          "fr": "Présente la situation d'Amina en deux phrases. Garde la négation.",
+          "ar": "اذكر حالة أمينة في جملتين مع الحفاظ على النفي."
+        },
+        "starters": [
+          "She has…",
+          "She does not have…"
+        ],
+        "model": "She has a cough. She does not have a fever."
+      },
+      "transfer": {
+        "context": {
+          "en": "Omar is a patient. He has back pain. He does not have a fever. He does not have a cough.",
+          "fr": "Omar est un patient. Il a mal au dos. Il n'a pas de fièvre. Il n'a pas de toux.",
+          "ar": "عمر مريض. لديه ألم في الظهر. ليست عنده حمى وليس عنده سعال."
+        },
+        "gloss": {
+          "en": "back pain = pain in the back",
+          "fr": "back pain : mal au dos",
+          "ar": "back pain: ألم في الظهر"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "Does Omar have back pain or chest pain?",
+            "qFr": "Omar a-t-il mal au dos ou à la poitrine ?",
+            "qAr": "هل عند عمر ألم في الظهر أم في الصدر؟",
+            "accepted": [
+              "back pain",
+              "he has back pain"
+            ],
+            "model": "He has back pain."
+          },
+          {
+            "id": "t2",
+            "q": "Does he have a fever?",
+            "qFr": "A-t-il de la fièvre ?",
+            "qAr": "هل عنده حمى؟",
+            "accepted": [
+              "no",
+              "no he does not",
+              "no he doesn't",
+              "he does not have a fever",
+              "no he has not",
+              "he doesn't"
+            ],
+            "model": "No, he does not have a fever.",
+            "hint": {
+              "en": "Careful: he does NOT have a fever.",
+              "fr": "Attention : il n'a PAS de fièvre.",
+              "ar": "انتبه: ليست عنده حمى."
+            },
+            "phraseIds": [
+              "en:no-fever:v1"
+            ]
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Present Omar's symptoms in two sentences. Keep the negation.",
+            "fr": "Présente les symptômes d'Omar en deux phrases. Garde la négation.",
+            "ar": "اذكر أعراض عمر في جملتين مع الحفاظ على النفي."
+          },
+          "starters": [
+            "He has…",
+            "He does not have…"
+          ],
+          "model": "He has back pain. He does not have a fever."
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "when-started-005",
+      "contentVersion": 1,
+      "title": {
+        "en": "When did it start?",
+        "fr": "Quand est-ce commencé ?",
+        "ar": "متى بدأ الألم؟"
+      },
+      "goal": {
+        "en": "Ask and answer when a symptom started.",
+        "fr": "Demander et dire quand un symptôme a commencé.",
+        "ar": "السؤال والإجابة عن موعد بدأ العَرَض."
+      },
+      "moduleIds": [
+        "clinical_en",
+        "semio"
+      ],
+      "relatedTermIds": [
+        3992,
+        3768
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "Karim has a stomach ache.",
+          "fr": "Karim a mal à l'estomac.",
+          "ar": "عند كريم ألم في المعدة."
+        },
+        {
+          "en": "It started yesterday.",
+          "fr": "Cela a commencé hier.",
+          "ar": "بدأ الألم أمس."
+        },
+        {
+          "en": "It started after lunch.",
+          "fr": "Cela a commencé après le déjeuner.",
+          "ar": "بدأ بعد الغداء."
+        },
+        {
+          "en": "Lina asks, “When did it start?”",
+          "fr": "Lina demande : « Quand est-ce commencé ? »",
+          "ar": "تسأل لينا: «متى بدأ؟»"
+        },
+        {
+          "en": "Karim says, “Yesterday, after lunch.”",
+          "fr": "Karim répond : « Hier, après le déjeuner. »",
+          "ar": "يجيب كريم: «أمس، بعد الغداء.»"
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:stomach-ache:v1",
+          "en": "a stomach ache",
+          "fr": "mal à l'estomac",
+          "ar": "ألم في المعدة"
+        },
+        {
+          "id": "en:started-yesterday:v1",
+          "en": "it started yesterday",
+          "fr": "cela a commencé hier",
+          "ar": "بدأ أمس"
+        },
+        {
+          "id": "en:when-did-it-start:v1",
+          "en": "When did it start?",
+          "fr": "Quand est-ce commencé ?",
+          "ar": "متى بدأ؟"
+        },
+        {
+          "id": "en:after-lunch:v1",
+          "en": "after lunch",
+          "fr": "après le déjeuner",
+          "ar": "بعد الغداء"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What does Karim have?",
+          "qFr": "Qu'a Karim ?",
+          "qAr": "ماذا عند كريم؟",
+          "accepted": [
+            "a stomach ache",
+            "stomach ache",
+            "he has a stomach ache"
+          ],
+          "model": "He has a stomach ache.",
+          "phraseIds": [
+            "en:stomach-ache:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "When did it start?",
+          "qFr": "Quand est-ce commencé ?",
+          "qAr": "متى بدأ؟",
+          "accepted": [
+            "yesterday",
+            "it started yesterday",
+            "yesterday after lunch"
+          ],
+          "model": "It started yesterday.",
+          "phraseIds": [
+            "en:started-yesterday:v1",
+            "en:when-did-it-start:v1"
+          ]
+        },
+        {
+          "id": "q3",
+          "q": "Did it start this morning or yesterday?",
+          "qFr": "Cela a-t-il commencé ce matin ou hier ?",
+          "qAr": "هل بدأ هذا الصباح أم أمس؟",
+          "accepted": [
+            "yesterday",
+            "it started yesterday"
+          ],
+          "model": "It started yesterday.",
+          "hint": {
+            "en": "Careful: it started YESTERDAY, not this morning.",
+            "fr": "Attention : cela a commencé HIER, pas ce matin.",
+            "ar": "انتبه: بدأ أمس، وليس هذا الصباح."
+          },
+          "phraseIds": [
+            "en:started-yesterday:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "Did it start before or after lunch?",
+          "qFr": "Cela a-t-il commencé avant ou après le déjeuner ?",
+          "qAr": "هل بدأ قبل الغداء أم بعده؟",
+          "accepted": [
+            "after lunch",
+            "after",
+            "it started after lunch"
+          ],
+          "model": "It started after lunch.",
+          "phraseIds": [
+            "en:after-lunch:v1"
+          ]
+        },
+        {
+          "id": "q5",
+          "q": "Who asks, “When did it start?”",
+          "qFr": "Qui demande : « Quand est-ce commencé ? »",
+          "qAr": "من يسأل: «متى بدأ؟»",
+          "accepted": [
+            "lina",
+            "the student",
+            "a student"
+          ],
+          "model": "Lina asks it."
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "It starts → It started. Yesterday, the pain … (past).",
+          "fr": "It starts → It started. Hier, la douleur … (passé).",
+          "ar": "It starts ← It started. بالأمس، الألم… (الماضي)."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "The pain … yesterday. (start)",
+            "accepted": [
+              "started"
+            ],
+            "model": "The pain started yesterday."
+          },
+          {
+            "id": "d2",
+            "prompt": "The pain … after lunch. (start)",
+            "accepted": [
+              "started"
+            ],
+            "model": "The pain started after lunch."
+          },
+          {
+            "id": "d3",
+            "prompt": "The pain usually … at night. (start — present)",
+            "accepted": [
+              "starts"
+            ],
+            "model": "The pain usually starts at night."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Say what Karim has and when it started, in two sentences.",
+          "fr": "Dis ce que Karim a et quand cela a commencé, en deux phrases.",
+          "ar": "قل ماذا عند كريم ومتى بدأ، في جملتين."
+        },
+        "starters": [
+          "He has…",
+          "It started…"
+        ],
+        "model": "He has a stomach ache. It started yesterday."
+      },
+      "transfer": {
+        "context": {
+          "en": "Farida has a sore throat. It started two days ago. It started in the morning.",
+          "fr": "Farida a mal à la gorge. Cela a commencé il y a deux jours, le matin.",
+          "ar": "عند فريدة ألم في الحلق. بدأ قبل يومين، في الصباح."
+        },
+        "gloss": {
+          "en": "two days ago = two days before today",
+          "fr": "two days ago : il y a deux jours",
+          "ar": "two days ago: قبل يومين"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "What does Farida have?",
+            "qFr": "Qu'a Farida ?",
+            "qAr": "ماذا عند فريدة؟",
+            "accepted": [
+              "a sore throat",
+              "sore throat",
+              "she has a sore throat"
+            ],
+            "model": "She has a sore throat."
+          },
+          {
+            "id": "t2",
+            "q": "When did it start?",
+            "qFr": "Quand est-ce commencé ?",
+            "qAr": "متى بدأ؟",
+            "accepted": [
+              "two days ago",
+              "it started two days ago",
+              "two days ago in the morning"
+            ],
+            "model": "It started two days ago."
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Say what Farida has and when it started, in two sentences.",
+            "fr": "Dis ce que Farida a et quand cela a commencé, en deux phrases.",
+            "ar": "قل ماذا عند فريدة ومتى بدأ، في جملتين."
+          },
+          "starters": [
+            "She has…",
+            "It started…"
+          ],
+          "model": "She has a sore throat. It started two days ago."
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "reformulate-confirm-006",
+      "contentVersion": 1,
+      "title": {
+        "en": "Checking you understood",
+        "fr": "Vérifier qu'on a compris",
+        "ar": "التأكد من الفهم"
+      },
+      "goal": {
+        "en": "Repeat the facts and confirm them with the patient.",
+        "fr": "Répéter les faits et les confirmer avec le patient.",
+        "ar": "إعادة ذكر الحقائق والتأكد منها مع المريض."
+      },
+      "moduleIds": [
+        "clinical_en"
+      ],
+      "relatedTermIds": [
+        3860,
+        3896
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "The patient has a headache.",
+          "fr": "Le patient a mal à la tête.",
+          "ar": "المريض عنده صداع."
+        },
+        {
+          "en": "It started two days ago.",
+          "fr": "Cela a commencé il y a deux jours.",
+          "ar": "بدأ قبل يومين."
+        },
+        {
+          "en": "Lina repeats: “You have a headache.”",
+          "fr": "Lina répète : « Vous avez mal à la tête. »",
+          "ar": "تعيد لينا: «عندك صداع.»"
+        },
+        {
+          "en": "“It started two days ago.”",
+          "fr": "« Cela a commencé il y a deux jours. »",
+          "ar": "«بدأ قبل يومين.»"
+        },
+        {
+          "en": "She asks, “Is that right?”",
+          "fr": "Elle demande : « C'est bien ça ? »",
+          "ar": "تسأل: «هل هذا صحيح؟»"
+        },
+        {
+          "en": "The patient says, “Yes, that is right.”",
+          "fr": "Le patient dit : « Oui, c'est bien ça. »",
+          "ar": "يقول المريض: «نعم، هذا صحيح.»"
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:have-headache:v1",
+          "en": "has a headache",
+          "fr": "a mal à la tête",
+          "ar": "عنده صداع"
+        },
+        {
+          "id": "en:is-that-right:v1",
+          "en": "Is that right?",
+          "fr": "C'est bien ça ?",
+          "ar": "هل هذا صحيح؟"
+        },
+        {
+          "id": "en:that-is-right:v1",
+          "en": "Yes, that is right",
+          "fr": "Oui, c'est bien ça",
+          "ar": "نعم، هذا صحيح"
+        },
+        {
+          "id": "en:you-have:v1",
+          "en": "You have…",
+          "fr": "Vous avez…",
+          "ar": "عندك…"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What does the patient have?",
+          "qFr": "Qu'a le patient ?",
+          "qAr": "ماذا عند المريض؟",
+          "accepted": [
+            "a headache",
+            "headache",
+            "he has a headache"
+          ],
+          "model": "He has a headache.",
+          "phraseIds": [
+            "en:have-headache:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "When did it start?",
+          "qFr": "Quand est-ce commencé ?",
+          "qAr": "متى بدأ؟",
+          "accepted": [
+            "two days ago",
+            "it started two days ago"
+          ],
+          "model": "It started two days ago."
+        },
+        {
+          "id": "q3",
+          "q": "Does Lina invent new information?",
+          "qFr": "Lina invente-t-elle des informations ?",
+          "qAr": "هل تختلق لينا معلومات جديدة؟",
+          "accepted": [
+            "no",
+            "no she does not",
+            "no she doesn't"
+          ],
+          "model": "No, she does not. She repeats the facts.",
+          "hint": {
+            "en": "Careful: Lina repeats the SAME facts, she does not invent.",
+            "fr": "Attention : Lina répète les MÊMES faits, elle n'invente rien.",
+            "ar": "انتبه: تعيد لينا الحقائق نفسها ولا تختلق شيئًا."
+          }
+        },
+        {
+          "id": "q4",
+          "q": "What does Lina ask at the end?",
+          "qFr": "Que demande Lina à la fin ?",
+          "qAr": "ماذا تسأل لينا في النهاية؟",
+          "accepted": [
+            "is that right",
+            "\"is that right?\"",
+            "she asks if that is right"
+          ],
+          "model": "She asks, “Is that right?”",
+          "phraseIds": [
+            "en:is-that-right:v1"
+          ]
+        },
+        {
+          "id": "q5",
+          "q": "Does the patient confirm?",
+          "qFr": "Le patient confirme-t-il ?",
+          "qAr": "هل يؤكد المريض؟",
+          "accepted": [
+            "yes",
+            "yes he does",
+            "yes that is right"
+          ],
+          "model": "Yes, he says, “That is right.”",
+          "phraseIds": [
+            "en:that-is-right:v1"
+          ]
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "I have → You have. He has → She has.",
+          "fr": "I have → You have. He has → She has.",
+          "ar": "I have ← You have. He has ← She has."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "… have a headache. (to the patient)",
+            "accepted": [
+              "you"
+            ],
+            "model": "You have a headache."
+          },
+          {
+            "id": "d2",
+            "prompt": "The patient … a headache.",
+            "accepted": [
+              "has"
+            ],
+            "model": "The patient has a headache."
+          },
+          {
+            "id": "d3",
+            "prompt": "… have a headache. (about yourself)",
+            "accepted": [
+              "i"
+            ],
+            "model": "I have a headache."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Confirm the two facts to the patient, then ask if it is right.",
+          "fr": "Confirme les deux faits au patient, puis demande si c'est bien ça.",
+          "ar": "أكّد الحقيقتين للمريض ثم اسأل إن كان ذلك صحيحًا."
+        },
+        "starters": [
+          "You have…",
+          "It started…",
+          "Is that right?"
+        ],
+        "model": "You have a headache. It started two days ago. Is that right?"
+      },
+      "transfer": {
+        "context": {
+          "en": "The patient has back pain. It started on Monday. Lina repeats and confirms.",
+          "fr": "Le patient a mal au dos. Cela a commencé lundi. Lina répète et confirme.",
+          "ar": "المريض عنده ألم في الظهر. بدأ يوم الاثنين. تعيد لينا وتتأكد."
+        },
+        "gloss": {
+          "en": "on Monday = the day called Monday",
+          "fr": "on Monday : le lundi",
+          "ar": "on Monday: يوم الاثنين"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "What does the patient have?",
+            "qFr": "Qu'a le patient ?",
+            "qAr": "ماذا عند المريض؟",
+            "accepted": [
+              "back pain",
+              "he has back pain"
+            ],
+            "model": "He has back pain."
+          },
+          {
+            "id": "t2",
+            "q": "When did it start?",
+            "qFr": "Quand est-ce commencé ?",
+            "qAr": "متى بدأ؟",
+            "accepted": [
+              "on monday",
+              "monday",
+              "it started on monday"
+            ],
+            "model": "It started on Monday."
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Confirm the two facts, then ask if it is right.",
+            "fr": "Confirme les deux faits, puis demande si c'est bien ça.",
+            "ar": "أكّد الحقيقتين ثم اسأل إن كان ذلك صحيحًا."
+          },
+          "starters": [
+            "You have…",
+            "It started…",
+            "Is that right?"
+          ],
+          "model": "You have back pain. It started on Monday. Is that right?"
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "organ-function-007",
+      "contentVersion": 1,
+      "title": {
+        "en": "What does the heart do?",
+        "fr": "Que fait le cœur ?",
+        "ar": "ماذا يفعل القلب؟"
+      },
+      "goal": {
+        "en": "Describe what an organ does, simply.",
+        "fr": "Décrire simplement ce que fait un organe.",
+        "ar": "وصف وظيفة عضو ببساطة."
+      },
+      "moduleIds": [
+        "physio"
+      ],
+      "relatedTermIds": [
+        3989,
+        1243
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "The heart is a muscle.",
+          "fr": "Le cœur est un muscle.",
+          "ar": "القلب عضلة."
+        },
+        {
+          "en": "It pumps blood.",
+          "fr": "Il pompe le sang.",
+          "ar": "يضخ الدم."
+        },
+        {
+          "en": "The blood carries oxygen.",
+          "fr": "Le sang transporte l'oxygène.",
+          "ar": "الدم يحمل الأكسجين."
+        },
+        {
+          "en": "The oxygen goes to the organs.",
+          "fr": "L'oxygène va vers les organes.",
+          "ar": "يذهب الأكسجين إلى الأعضاء."
+        },
+        {
+          "en": "A student asks, “What does the heart do?”",
+          "fr": "Un étudiant demande : « Que fait le cœur ? »",
+          "ar": "يسأل طالب: «ماذا يفعل القلب؟»"
+        },
+        {
+          "en": "The teacher answers, “It pumps blood.”",
+          "fr": "L'enseignant répond : « Il pompe le sang. »",
+          "ar": "يجيب الأستاذ: «يضخ الدم.»"
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:pumps-blood:v1",
+          "en": "pumps blood",
+          "fr": "pompe le sang",
+          "ar": "يضخ الدم"
+        },
+        {
+          "id": "en:carries-oxygen:v1",
+          "en": "carries oxygen",
+          "fr": "transporte l'oxygène",
+          "ar": "يحمل الأكسجين"
+        },
+        {
+          "id": "en:goes-to:v1",
+          "en": "goes to the organs",
+          "fr": "va vers les organes",
+          "ar": "يذهب إلى الأعضاء"
+        },
+        {
+          "id": "en:what-does-do:v1",
+          "en": "What does … do?",
+          "fr": "Que fait … ?",
+          "ar": "ماذا يفعل…؟"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What does the heart do?",
+          "qFr": "Que fait le cœur ?",
+          "qAr": "ماذا يفعل القلب؟",
+          "accepted": [
+            "it pumps blood",
+            "pumps blood",
+            "pump blood"
+          ],
+          "model": "It pumps blood.",
+          "phraseIds": [
+            "en:pumps-blood:v1",
+            "en:what-does-do:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "Is the heart a bone?",
+          "qFr": "Le cœur est-il un os ?",
+          "qAr": "هل القلب عظمة؟",
+          "accepted": [
+            "no",
+            "no it is not",
+            "no it isn't",
+            "it is a muscle"
+          ],
+          "model": "No, it is not. It is a muscle.",
+          "hint": {
+            "en": "Careful: the heart is a MUSCLE.",
+            "fr": "Attention : le cœur est une MUSCLE.",
+            "ar": "انتبه: القلب عضلة."
+          }
+        },
+        {
+          "id": "q3",
+          "q": "What does the blood carry?",
+          "qFr": "Que transporte le sang ?",
+          "qAr": "ماذا يحمل الدم؟",
+          "accepted": [
+            "oxygen",
+            "it carries oxygen"
+          ],
+          "model": "It carries oxygen.",
+          "phraseIds": [
+            "en:carries-oxygen:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "Does the blood carry oxygen or food?",
+          "qFr": "Le sang transporte-t-il l'oxygène ou la nourriture ?",
+          "qAr": "هل يحمل الدم الأكسجين أم الطعام؟",
+          "accepted": [
+            "oxygen",
+            "it carries oxygen"
+          ],
+          "model": "It carries oxygen.",
+          "hint": {
+            "en": "Careful: the blood carries OXYGEN.",
+            "fr": "Attention : le sang transporte l'OXYGÈNE.",
+            "ar": "انتبه: الدم يحمل الأكسجين."
+          }
+        },
+        {
+          "id": "q5",
+          "q": "Where does the oxygen go?",
+          "qFr": "Où va l'oxygène ?",
+          "qAr": "إلى أين يذهب الأكسجين؟",
+          "accepted": [
+            "to the organs",
+            "the organs",
+            "it goes to the organs"
+          ],
+          "model": "It goes to the organs.",
+          "phraseIds": [
+            "en:goes-to:v1"
+          ]
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "It pumps → They pump. The heart pumpS (one) / the lungs pump? No — carry!",
+          "fr": "It pumps → They pump. Le cœur pumpS (un) / les poumons… carry !",
+          "ar": "It pumps ← They pump. عضو واحد يأخذ s، وعضوان لا."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "The heart … blood. (pump)",
+            "accepted": [
+              "pumps"
+            ],
+            "model": "The heart pumps blood."
+          },
+          {
+            "id": "d2",
+            "prompt": "The blood … oxygen. (carry)",
+            "accepted": [
+              "carries"
+            ],
+            "model": "The blood carries oxygen."
+          },
+          {
+            "id": "d3",
+            "prompt": "The organs … the blood. (receive — present)",
+            "accepted": [
+              "receive"
+            ],
+            "model": "The organs receive the blood."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Explain what the heart does, in two sentences.",
+          "fr": "Explique ce que fait le cœur, en deux phrases.",
+          "ar": "اشرح ماذا يفعل القلب في جملتين."
+        },
+        "starters": [
+          "The heart is…",
+          "It pumps…"
+        ],
+        "model": "The heart is a muscle. It pumps blood."
+      },
+      "transfer": {
+        "context": {
+          "en": "The kidneys are organs. They filter the blood. They clean the blood.",
+          "fr": "Les reins sont des organes. Ils filtrent le sang. Ils nettoient le sang.",
+          "ar": "الكليتان عضوان. تصفّيان الدم وتنظّفانه."
+        },
+        "gloss": {
+          "en": "to filter = to remove waste",
+          "fr": "filter : éliminer les déchets",
+          "ar": "to filter: يصفّي"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "What do the kidneys do?",
+            "qFr": "Que font les reins ?",
+            "qAr": "ماذا تفعل الكليتان؟",
+            "accepted": [
+              "they filter the blood",
+              "filter the blood",
+              "they filter blood"
+            ],
+            "model": "They filter the blood."
+          },
+          {
+            "id": "t2",
+            "q": "Are the kidneys organs?",
+            "qFr": "Les reins sont-ils des organes ?",
+            "qAr": "هل الكليتان عضوان؟",
+            "accepted": [
+              "yes",
+              "yes they are"
+            ],
+            "model": "Yes, they are organs."
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Explain what the kidneys do, in two sentences.",
+            "fr": "Explique ce que font les reins, en deux phrases.",
+            "ar": "اشرح ماذا تفعل الكليتان في جملتين."
+          },
+          "starters": [
+            "The kidneys are…",
+            "They filter…"
+          ],
+          "model": "The kidneys are organs. They filter the blood."
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "tissue-simple-008",
+      "contentVersion": 1,
+      "title": {
+        "en": "Describing a tissue simply",
+        "fr": "Décrire un tissu simplement",
+        "ar": "وصف نسيج ببساطة"
+      },
+      "goal": {
+        "en": "Describe a tissue: what it does and how it looks.",
+        "fr": "Décrire un tissu : ce qu'il fait et son aspect.",
+        "ar": "وصف نسيج: ما يفعله وشكله."
+      },
+      "moduleIds": [
+        "histo"
+      ],
+      "relatedTermIds": [
+        1117
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "Epithelial tissue covers the body.",
+          "fr": "Le tissu épithélial couvre le corps.",
+          "ar": "النسيج الظهاري يغطي الجسم."
+        },
+        {
+          "en": "It forms a protective layer.",
+          "fr": "Il forme une couche protectrice.",
+          "ar": "يشكّل طبقة واقية."
+        },
+        {
+          "en": "The cells are close together.",
+          "fr": "Les cellules sont serrées.",
+          "ar": "الخلايا متقاربة."
+        },
+        {
+          "en": "There is little space between the cells.",
+          "fr": "Il y a peu d'espace entre les cellules.",
+          "ar": "هناك مساحة صغيرة بين الخلايا."
+        },
+        {
+          "en": "A student asks, “What does epithelial tissue do?”",
+          "fr": "Un étudiant demande : « Que fait le tissu épithélial ? »",
+          "ar": "يسأل طالب: «ماذا يفعل النسيج الظهاري؟»"
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:covers-the-body:v1",
+          "en": "covers the body",
+          "fr": "couvre le corps",
+          "ar": "يغطي الجسم"
+        },
+        {
+          "id": "en:protective-layer:v1",
+          "en": "a protective layer",
+          "fr": "une couche protectrice",
+          "ar": "طبقة واقية"
+        },
+        {
+          "id": "en:close-together:v1",
+          "en": "the cells are close together",
+          "fr": "les cellules sont serrées",
+          "ar": "الخلايا متقاربة"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What does epithelial tissue cover?",
+          "qFr": "Que couvre le tissu épithélial ?",
+          "qAr": "ماذا يغطي النسيج الظهاري؟",
+          "accepted": [
+            "the body",
+            "body",
+            "it covers the body"
+          ],
+          "model": "It covers the body.",
+          "phraseIds": [
+            "en:covers-the-body:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "Does it form a protective layer?",
+          "qFr": "Forme-t-il une couche protectrice ?",
+          "qAr": "هل يشكّل طبقة واقية؟",
+          "accepted": [
+            "yes",
+            "yes it does",
+            "it forms a protective layer"
+          ],
+          "model": "Yes, it forms a protective layer.",
+          "phraseIds": [
+            "en:protective-layer:v1"
+          ]
+        },
+        {
+          "id": "q3",
+          "q": "Are the cells close together or far apart?",
+          "qFr": "Les cellules sont-elles serrées ou espacées ?",
+          "qAr": "هل الخلايا متقاربة أم متباعدة؟",
+          "accepted": [
+            "close together",
+            "they are close together"
+          ],
+          "model": "They are close together.",
+          "phraseIds": [
+            "en:close-together:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "Is there a lot of space between the cells?",
+          "qFr": "Y a-t-il beaucoup d'espace entre les cellules ?",
+          "qAr": "هل هناك مساحة كبيرة بين الخلايا؟",
+          "accepted": [
+            "no",
+            "no there is not",
+            "no there isn't",
+            "there is little space"
+          ],
+          "model": "No, there is little space.",
+          "hint": {
+            "en": "Careful: there is LITTLE space between the cells.",
+            "fr": "Attention : il y a PEU d'espace entre les cellules.",
+            "ar": "انتبه: هناك مساحة صغيرة بين الخلايا."
+          }
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "It covers → They cover. One tissue: covers. Many cells: cover.",
+          "fr": "It covers → They cover. Un tissu : covers. Des cellules : cover.",
+          "ar": "It covers ← They cover. نسيج واحد: covers. خلايا كثيرة: cover."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "Epithelial tissue … the body. (cover)",
+            "accepted": [
+              "covers"
+            ],
+            "model": "Epithelial tissue covers the body."
+          },
+          {
+            "id": "d2",
+            "prompt": "The cells … a layer. (form)",
+            "accepted": [
+              "form"
+            ],
+            "model": "The cells form a layer."
+          },
+          {
+            "id": "d3",
+            "prompt": "The cells … close together. (be)",
+            "accepted": [
+              "are"
+            ],
+            "model": "The cells are close together."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Describe epithelial tissue in two sentences.",
+          "fr": "Décris le tissu épithélial en deux phrases.",
+          "ar": "صِف النسيج الظهاري في جملتين."
+        },
+        "starters": [
+          "It covers…",
+          "The cells are…"
+        ],
+        "model": "Epithelial tissue covers the body. The cells are close together."
+      },
+      "transfer": {
+        "context": {
+          "en": "Muscle tissue moves the body. The muscle cells are long. They contract.",
+          "fr": "Le tissu musculaire fait bouger le corps. Les cellules musculaires sont longues. Elles se contractent.",
+          "ar": "النسيج العضلي يحرّك الجسم. خلايا العضلات طويلة وتنقبض."
+        },
+        "gloss": {
+          "en": "to contract = to become shorter",
+          "fr": "contract : se raccourcir",
+          "ar": "to contract: ينقبض"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "What does muscle tissue do?",
+            "qFr": "Que fait le tissu musculaire ?",
+            "qAr": "ماذا يفعل النسيج العضلي؟",
+            "accepted": [
+              "it moves the body",
+              "moves the body",
+              "move the body"
+            ],
+            "model": "It moves the body."
+          },
+          {
+            "id": "t2",
+            "q": "Are the muscle cells short or long?",
+            "qFr": "Les cellules musculaires sont-elles courtes ou longues ?",
+            "qAr": "هل خلايا العضلات قصيرة أم طويلة؟",
+            "accepted": [
+              "long",
+              "they are long"
+            ],
+            "model": "They are long.",
+            "hint": {
+              "en": "Careful: the muscle cells are LONG.",
+              "fr": "Attention : les cellules musculaires sont LONGUES.",
+              "ar": "انتبه: خلايا العضلات طويلة."
+            }
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Describe muscle tissue in two sentences.",
+            "fr": "Décris le tissu musculaire en deux phrases.",
+            "ar": "صِف النسيج العضلي في جملتين."
+          },
+          "starters": [
+            "Muscle tissue…",
+            "The cells are…"
+          ],
+          "model": "Muscle tissue moves the body. The cells are long."
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "cause-consequence-009",
+      "contentVersion": 1,
+      "title": {
+        "en": "If the artery is blocked",
+        "fr": "Si l'artère est bouchée",
+        "ar": "إذا انسدّ الشريان"
+      },
+      "goal": {
+        "en": "Link a cause and its consequence with “if”.",
+        "fr": "Relier une cause et sa conséquence avec « if ».",
+        "ar": "ربط السبب بنتيجته باستخدام if."
+      },
+      "moduleIds": [
+        "physio"
+      ],
+      "relatedTermIds": [
+        3673,
+        1243,
+        3727
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "An artery carries blood.",
+          "fr": "Une artère transporte le sang.",
+          "ar": "الشريان يحمل الدم."
+        },
+        {
+          "en": "If the artery is blocked, the blood stops.",
+          "fr": "Si l'artère est bouchée, le sang s'arrête.",
+          "ar": "إذا انسدّ الشريان يتوقف الدم."
+        },
+        {
+          "en": "The muscle does not receive oxygen.",
+          "fr": "Le muscle ne reçoit pas d'oxygène.",
+          "ar": "العضلة لا تستقبل الأكسجين."
+        },
+        {
+          "en": "The muscle hurts.",
+          "fr": "La muscle fait mal.",
+          "ar": "العضلة تتألم."
+        },
+        {
+          "en": "The teacher explains the cause and the consequence.",
+          "fr": "L'enseignant explique la cause et la conséquence.",
+          "ar": "يشرح الأستاذ السبب والنتيجة."
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:if-blocked:v1",
+          "en": "If the artery is blocked",
+          "fr": "Si l'artère est bouchée",
+          "ar": "إذا انسدّ الشريان"
+        },
+        {
+          "id": "en:blood-stops:v1",
+          "en": "the blood stops",
+          "fr": "le sang s'arrête",
+          "ar": "يتوقف الدم"
+        },
+        {
+          "id": "en:not-receive:v1",
+          "en": "does not receive oxygen",
+          "fr": "ne reçoit pas d'oxygène",
+          "ar": "لا يستقبل الأكسجين"
+        },
+        {
+          "id": "en:cause-consequence:v1",
+          "en": "the cause and the consequence",
+          "fr": "la cause et la conséquence",
+          "ar": "السبب والنتيجة"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What does an artery carry?",
+          "qFr": "Que transporte une artère ?",
+          "qAr": "ماذا يحمل الشريان؟",
+          "accepted": [
+            "blood",
+            "it carries blood"
+          ],
+          "model": "It carries blood."
+        },
+        {
+          "id": "q2",
+          "q": "What happens if the artery is blocked?",
+          "qFr": "Que se passe-t-il si l'artère est bouchée ?",
+          "qAr": "ماذا يحدث إذا انسدّ الشريان؟",
+          "accepted": [
+            "the blood stops",
+            "blood stops",
+            "it stops"
+          ],
+          "model": "The blood stops.",
+          "phraseIds": [
+            "en:if-blocked:v1",
+            "en:blood-stops:v1"
+          ]
+        },
+        {
+          "id": "q3",
+          "q": "Does the muscle receive oxygen?",
+          "qFr": "Le muscle reçoit-il de l'oxygène ?",
+          "qAr": "هل تستقبل العضلة الأكسجين؟",
+          "accepted": [
+            "no",
+            "no it does not",
+            "no it doesn't",
+            "it does not receive oxygen",
+            "it doesn't"
+          ],
+          "model": "No, it does not receive oxygen.",
+          "hint": {
+            "en": "Careful: the muscle does NOT receive oxygen.",
+            "fr": "Attention : le muscle ne reçoit PAS d'oxygène.",
+            "ar": "انتبه: العضلة لا تستقبل الأكسجين."
+          },
+          "phraseIds": [
+            "en:not-receive:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "Why does the muscle hurt?",
+          "qFr": "Pourquoi le muscle fait-il mal ?",
+          "qAr": "لماذا تتألم العضلة؟",
+          "accepted": [
+            "it does not receive oxygen",
+            "because it does not receive oxygen",
+            "no oxygen",
+            "because there is no oxygen"
+          ],
+          "model": "Because it does not receive oxygen.",
+          "hint": {
+            "en": "Careful: the muscle hurts because it does NOT receive oxygen.",
+            "fr": "Attention : le muscle fait mal parce qu'il ne reçoit PAS d'oxygène.",
+            "ar": "انتبه: تتألم العضلة لأنها لا تستقبل الأكسجين."
+          },
+          "phraseIds": [
+            "en:not-receive:v1"
+          ]
+        },
+        {
+          "id": "q5",
+          "q": "What does the teacher explain?",
+          "qFr": "Qu'explique l'enseignant ?",
+          "qAr": "ماذا يشرح الأستاذ؟",
+          "accepted": [
+            "the cause and the consequence",
+            "the cause",
+            "cause and consequence"
+          ],
+          "model": "The teacher explains the cause and the consequence.",
+          "phraseIds": [
+            "en:cause-consequence:v1"
+          ]
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "If the artery IS blocked, the blood STOPS. Present after “if”, present for the result.",
+          "fr": "If the artery IS blocked, the blood STOPS. Présent après « if », présent pour le résultat.",
+          "ar": "بعد if نستخدم المضارع، والنتيجة أيضًا مضارع."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "If the artery … blocked, the blood stops. (be)",
+            "accepted": [
+              "is"
+            ],
+            "model": "If the artery is blocked, the blood stops."
+          },
+          {
+            "id": "d2",
+            "prompt": "If the arteries … blocked, the blood stops. (be)",
+            "accepted": [
+              "are"
+            ],
+            "model": "If the arteries are blocked, the blood stops."
+          },
+          {
+            "id": "d3",
+            "prompt": "If the artery is blocked, the muscle … not receive oxygen. (do)",
+            "accepted": [
+              "does"
+            ],
+            "model": "If the artery is blocked, the muscle does not receive oxygen."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Link the cause and the consequence in two sentences.",
+          "fr": "Relie la cause et la conséquence en deux phrases.",
+          "ar": "اربط السبب بالنتيجة في جملتين."
+        },
+        "starters": [
+          "If the artery is blocked,",
+          "the blood…"
+        ],
+        "model": "If the artery is blocked, the blood stops. The muscle does not receive oxygen."
+      },
+      "transfer": {
+        "context": {
+          "en": "A nerve carries messages. If the nerve is cut, the message stops. The muscle does not move.",
+          "fr": "Un nerf transporte des messages. Si le nerf est coupé, le message s'arrête. Le muscle ne bouge pas.",
+          "ar": "العصب يحمل الرسائل. إذا قُطع العصب تتوقف الرسالة. العضلة لا تتحرك."
+        },
+        "gloss": {
+          "en": "a nerve = a fibre that carries messages",
+          "fr": "nerf : fibre qui transporte des messages",
+          "ar": "a nerve: عصب ينقل الرسائل"
+        },
+        "questions": [
+          {
+            "id": "t1",
+            "q": "What happens if the nerve is cut?",
+            "qFr": "Que se passe-t-il si le nerf est coupé ?",
+            "qAr": "ماذا يحدث إذا قُطع العصب؟",
+            "accepted": [
+              "the message stops",
+              "the message stops and the muscle does not move",
+              "it stops"
+            ],
+            "model": "The message stops."
+          },
+          {
+            "id": "t2",
+            "q": "Does the muscle move?",
+            "qFr": "Le muscle bouge-t-il ?",
+            "qAr": "هل تتحرك العضلة؟",
+            "accepted": [
+              "no",
+              "no it does not",
+              "no it doesn't",
+              "it does not move"
+            ],
+            "model": "No, it does not move.",
+            "hint": {
+              "en": "Careful: the muscle does NOT move.",
+              "fr": "Attention : le muscle ne bouge PAS.",
+              "ar": "انتبه: العضلة لا تتحرك."
+            }
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Link the cause and the consequence, in two sentences.",
+            "fr": "Relie la cause et la conséquence, en deux phrases.",
+            "ar": "اربط السبب بالنتيجة في جملتين."
+          },
+          "starters": [
+            "If the nerve is cut,",
+            "the message…"
+          ],
+          "model": "If the nerve is cut, the message stops. The muscle does not move."
+        }
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "storyId": "summarize-situation-010",
+      "contentVersion": 1,
+      "title": {
+        "en": "Summarizing a new situation",
+        "fr": "Résumer une situation nouvelle",
+        "ar": "تلخيص حالة جديدة"
+      },
+      "goal": {
+        "en": "Listen to a new situation and report the facts correctly.",
+        "fr": "Écouter une nouvelle situation et rapporter les faits correctement.",
+        "ar": "الاستماع لحالة جديدة ونقل الحقائق بدقة."
+      },
+      "moduleIds": [
+        "clinical_en"
+      ],
+      "relatedTermIds": [
+        3910,
+        3886,
+        3885
+      ],
+      "languageBand": "beginner_supported",
+      "publicationStatus": "draft",
+      "durationMin": 10,
+      "review": {
+        "language": "pending",
+        "medical": "pending"
+      },
+      "segments": [
+        {
+          "en": "Nadia is a patient.",
+          "fr": "Nadia est une patiente.",
+          "ar": "ناديا مريضة."
+        },
+        {
+          "en": "She has a sore throat and a cough.",
+          "fr": "Elle a mal à la gorge et une toux.",
+          "ar": "عندها ألم في الحلق وسعال."
+        },
+        {
+          "en": "She does not have a fever.",
+          "fr": "Elle n'a pas de fièvre.",
+          "ar": "ليست عندها حمى."
+        },
+        {
+          "en": "The symptoms started three days ago.",
+          "fr": "Les symptômes ont commencé il y a trois jours.",
+          "ar": "بدأت الأعراض قبل ثلاثة أيام."
+        },
+        {
+          "en": "The student listens and takes notes.",
+          "fr": "L'étudiante écoute et prend des notes.",
+          "ar": "تستمع الطالبة وتدوّن الملاحظات."
+        }
+      ],
+      "targetPhrases": [
+        {
+          "id": "en:sore-throat:v1",
+          "en": "a sore throat",
+          "fr": "un mal de gorge",
+          "ar": "ألم في الحلق"
+        },
+        {
+          "id": "en:has-a-cough:v1",
+          "en": "has a cough",
+          "fr": "a une toux",
+          "ar": "لديها سعال"
+        },
+        {
+          "id": "en:no-fever:v1",
+          "en": "does not have a fever",
+          "fr": "n'a pas de fièvre",
+          "ar": "ليست عندها حمى"
+        },
+        {
+          "id": "en:three-days-ago:v1",
+          "en": "three days ago",
+          "fr": "il y a trois jours",
+          "ar": "قبل ثلاثة أيام"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What symptoms does Nadia have?",
+          "qFr": "Quels symptômes Nadia a-t-elle ?",
+          "qAr": "ما أعراض ناديا؟",
+          "accepted": [
+            "a sore throat and a cough",
+            "a sore throat",
+            "sore throat and cough",
+            "a cough"
+          ],
+          "model": "She has a sore throat and a cough.",
+          "phraseIds": [
+            "en:sore-throat:v1",
+            "en:has-a-cough:v1"
+          ]
+        },
+        {
+          "id": "q2",
+          "q": "Does she have a fever?",
+          "qFr": "A-t-elle de la fièvre ?",
+          "qAr": "هل عندها حمى؟",
+          "accepted": [
+            "no",
+            "no she does not",
+            "no she doesn't",
+            "she does not have a fever",
+            "no she has not",
+            "she doesn't"
+          ],
+          "model": "No, she does not have a fever.",
+          "hint": {
+            "en": "Careful: she does NOT have a fever.",
+            "fr": "Attention : elle n'a PAS de fièvre.",
+            "ar": "انتبه: ليست عندها حمى."
+          },
+          "phraseIds": [
+            "en:no-fever:v1"
+          ]
+        },
+        {
+          "id": "q3",
+          "q": "When did the symptoms start?",
+          "qFr": "Quand les symptômes ont-ils commencé ?",
+          "qAr": "متى بدأت الأعراض؟",
+          "accepted": [
+            "three days ago",
+            "they started three days ago"
+          ],
+          "model": "They started three days ago.",
+          "phraseIds": [
+            "en:three-days-ago:v1"
+          ]
+        },
+        {
+          "id": "q4",
+          "q": "Does the student invent information?",
+          "qFr": "L'étudiante invente-t-elle des informations ?",
+          "qAr": "هل تختلق الطالبة معلومات؟",
+          "accepted": [
+            "no",
+            "no she does not",
+            "no she doesn't"
+          ],
+          "model": "No, she does not. She takes notes.",
+          "hint": {
+            "en": "Careful: the student does NOT invent. She listens and takes notes.",
+            "fr": "Attention : l'étudiante n'invente RIEN. Elle écoute et prend des notes.",
+            "ar": "انتبه: الطالبة لا تختلق شيئًا. تستمع وتدوّن."
+          }
+        },
+        {
+          "id": "q5",
+          "q": "Does Nadia have a headache?",
+          "qFr": "Nadia a-t-elle mal à la tête ?",
+          "qAr": "هل عند ناديا صداع؟",
+          "accepted": [
+            "we do not know",
+            "i don't know",
+            "unknown",
+            "the story does not say"
+          ],
+          "model": "We do not know. The story does not say.",
+          "hint": {
+            "en": "Careful: do not invent facts. The story does not say.",
+            "fr": "Attention : n'invente pas de faits. L'histoire ne le dit pas.",
+            "ar": "انتبه: لا تخترع حقائق. القصة لا تذكر ذلك."
+          }
+        }
+      ],
+      "drill": {
+        "explain": {
+          "en": "She has → They have. The symptom … (one) / the symptoms … (many).",
+          "fr": "She has → They have. Le symptôme … (un) / les symptômes … (plusieurs).",
+          "ar": "She has ← They have. عَرَض واحد يأخذ s، وأعراض كثيرة لا."
+        },
+        "items": [
+          {
+            "id": "d1",
+            "prompt": "She … a sore throat. (have)",
+            "accepted": [
+              "has"
+            ],
+            "model": "She has a sore throat."
+          },
+          {
+            "id": "d2",
+            "prompt": "The symptoms … three days ago. (start)",
+            "accepted": [
+              "started"
+            ],
+            "model": "The symptoms started three days ago."
+          },
+          {
+            "id": "d3",
+            "prompt": "The patient … not have a fever. (do)",
+            "accepted": [
+              "does"
+            ],
+            "model": "The patient does not have a fever."
+          }
+        ]
+      },
+      "retell": {
+        "prompt": {
+          "en": "Summarize Nadia's situation in three sentences. Do not invent facts.",
+          "fr": "Résume la situation de Nadia en trois phrases. N'invente pas de faits.",
+          "ar": "لخّص حالة ناديا في ثلاث جمل دون اختلاق حقائق."
+        },
+        "starters": [
+          "She has…",
+          "She does not have…",
+          "The symptoms started…"
+        ],
+        "model": "Nadia has a sore throat and a cough. She does not have a fever. The symptoms started three days ago."
+      },
+      "transfer": {
+        "context": {
+          "en": "Yacine is a patient. He has back pain. The pain started two days ago. He does not have a fever.",
+          "fr": "Yacine est un patient. Il a mal au dos. La douleur a commencé il y a deux jours. Il n'a pas de fièvre.",
+          "ar": "ياسين مريض. عنده ألم في الظهر. بدأ الألم قبل يومين. ليست عنده حمى."
+        },
+        "gloss": null,
+        "questions": [
+          {
+            "id": "t1",
+            "q": "What does Yacine have?",
+            "qFr": "Qu'a Yacine ?",
+            "qAr": "ماذا عند ياسين؟",
+            "accepted": [
+              "back pain",
+              "he has back pain"
+            ],
+            "model": "He has back pain."
+          },
+          {
+            "id": "t2",
+            "q": "When did the pain start?",
+            "qFr": "Quand la douleur a-t-elle commencé ?",
+            "qAr": "متى بدأ الألم؟",
+            "accepted": [
+              "two days ago",
+              "it started two days ago"
+            ],
+            "model": "It started two days ago."
+          },
+          {
+            "id": "t3",
+            "q": "Does he have a fever?",
+            "qFr": "A-t-il de la fièvre ?",
+            "qAr": "هل عنده حمى؟",
+            "accepted": [
+              "no",
+              "no he does not",
+              "no he doesn't",
+              "he does not have a fever",
+              "no he has not",
+              "he doesn't"
+            ],
+            "model": "No, he does not have a fever.",
+            "hint": {
+              "en": "Careful: he does NOT have a fever.",
+              "fr": "Attention : il n'a PAS de fièvre.",
+              "ar": "انتبه: ليست عنده حمى."
+            },
+            "phraseIds": [
+              "en:no-fever:v1"
+            ]
+          }
+        ],
+        "task": {
+          "prompt": {
+            "en": "Summarize Yacine's situation in three sentences.",
+            "fr": "Résume la situation de Yacine en trois phrases.",
+            "ar": "لخّص حالة ياسين في ثلاث جمل."
+          },
+          "starters": [
+            "He has…",
+            "The pain started…",
+            "He does not have…"
+          ],
+          "model": "Yacine has back pain. The pain started two days ago. He does not have a fever."
+        }
+      }
     }
   ]
 }

@@ -14,6 +14,9 @@ interface StoryDao {
     @Query("SELECT * FROM story_session_progress WHERE storyId = :storyId")
     suspend fun storyProgress(storyId: String): StorySessionProgressEntity?
 
+    @Query("SELECT * FROM story_session_progress")
+    suspend fun storyProgressOfAll(): List<StorySessionProgressEntity>
+
     @Upsert
     suspend fun upsertPhrases(phrases: List<PhraseProgressEntity>)
 

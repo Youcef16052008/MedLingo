@@ -8,6 +8,8 @@ import com.aistudio.medlingua.dzmed.data.local.entity.StorySessionProgressEntity
 import com.aistudio.medlingua.dzmed.data.story.StoryAssetSource
 import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
 import com.aistudio.medlingua.dzmed.domain.story.ExprScheds
+import com.aistudio.medlingua.dzmed.domain.story.StoryPickProgress
+import com.aistudio.medlingua.dzmed.domain.story.pickTodayStory
 import com.aistudio.medlingua.dzmed.domain.story.PhraseSched
 import com.aistudio.medlingua.dzmed.domain.story.SessionState
 import com.aistudio.medlingua.dzmed.domain.story.SessionStats
@@ -43,6 +45,14 @@ class StoryRepository(
     }
 
     suspend fun storyById(id: String): Story? = stories().firstOrNull { it.storyId == id }
+
+    /** Séance du jour — reprise > expressions échues > jamais vue > plus ancienne. */
+    suspend fun todayStory(now: Long): Story? {
+        val progress = storyDao.storyProgressOfAll().associate {
+            it.storyId to StoryPickProgress(completedAt = it.completedAt, savedAt = it.savedAt)
+        }
+        return pickTodayStory(stories(), phraseScheds(), progress, now)
+    }
 
     /* ---------- progression de séance ---------- */
 

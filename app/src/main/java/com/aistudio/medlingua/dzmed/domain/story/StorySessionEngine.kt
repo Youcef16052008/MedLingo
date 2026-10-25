@@ -300,7 +300,8 @@ private fun sm2NextExpr(quality: Int, prev: PhraseSched?, now: Long): PhraseSche
     return PhraseSched(r.repetitions, r.easeFactor, r.intervalDays, r.nextReviewTimestamp)
 }
 
-private fun isDueExpr(s: PhraseSched?, now: Long): Boolean = s != null && s.due <= now
+/** Écho de `isDue` (web) — public : partagé avec la sélection de séance. */
+fun isDueExpr(s: PhraseSched?, now: Long): Boolean = s != null && s.due <= now
 
 /** Une expression jamais vue n'est pas « due » : elle sera découverte dans la séance. */
 fun duePhrases(story: Story, sm2: ExprScheds, now: Long): List<String> =

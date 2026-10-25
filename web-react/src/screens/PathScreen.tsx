@@ -49,6 +49,12 @@ export function TodayStoryCard() {
   const saved = s.storyProgress[story.storyId];
   const resumable = !!saved && saved.completedAt === 0 && saved.savedAt > 0;
   const title = story.title[lang] || story.title.fr;
+  // Progression du pilote (seules les histoires publiées comptent).
+  const allStories = getStories();
+  const done = allStories.filter((x) => {
+    const p = s.storyProgress[x.storyId];
+    return !!p && p.completedAt > 0;
+  }).length;
 
   return (
     <section className="card" style={{ borderLeft: "4px solid var(--accent, #2e7d32)" }}>
@@ -56,6 +62,7 @@ export function TodayStoryCard() {
       <h3 style={{ marginTop: 8 }}>{title}</h3>
       <p className="tiny muted">
         {t("storyCardSub")} · {story.durationMin} {t("storyMinutes")}
+        {allStories.length > 1 ? ` · ${done}/${allStories.length}` : ""}
       </p>
       <button
         type="button"
