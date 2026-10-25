@@ -33,8 +33,9 @@ export function ReviewHubScreen() {
           type="button"
           className="btn primary"
           onClick={() => {
-            // Ouvrir la session review pour cette leçon
-            window.location.hash = `#/review/${item.lessonId}`;
+            // WS2.1 : la séance de révision se joue via le quiz encadré
+            // (`?review=` → getReview + markReviewPlayed à la fin).
+            window.location.hash = `#/quiz?review=${encodeURIComponent(item.lessonId)}`;
           }}
         >
           ▶ Jouer

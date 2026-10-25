@@ -126,6 +126,17 @@ export function PathScreen() {
           {goal.today} / {goal.goal} {t("statXp")} · {allDue} {t("cardsDue")}
         </p>
 
+        {s.reviewQueue.filter((x) => x.status === "unlocked").length > 0 && (
+          <a
+            className="btn small block"
+            href="#/review"
+            style={{ marginTop: 8, textAlign: "center" }}
+          >
+            📥 {s.reviewQueue.filter((x) => x.status === "unlocked").length}{" "}
+            {t("reviewHubTitle")}
+          </a>
+        )}
+
         <div className="streak-row">
           <span className="streak-pill">
             🔥 {s.streak} {t("statStreak")}

@@ -15,6 +15,10 @@ const SHELL = [
   "./data/terms.json",
   "./data/exercises.json",
   "./data/stories.v1.json",
+  // WS2.1 : parcours par chapitres (LOT2) — précâchés maintenant qu'ils
+  // sont chargés paresseusement (offline complet, cf. BUG-012).
+  "./data/chapters.json",
+  "./data/lesson_map.json",
 ];
 
 self.addEventListener("install", (event) => {

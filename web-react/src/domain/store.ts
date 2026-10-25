@@ -94,13 +94,14 @@ export interface LessonProgress {
   heartsRemain: number;
   mistakes: number;
   completedAt: number;
-  missedExIds: number[];
+  /** Le corpus v2 utilise des ids textuels — les ids générés restent numériques. */
+  missedExIds: Array<number | string>;
 }
 
 /** Élement de la file de révision ("Revisions en attente"). */
 export interface ReviewQueueItem {
   lessonId: string;
-  exIds: number[];
+  exIds: Array<number | string>;
   chapterId: string;
   moduleId: string;
   status: "unlocked" | "played";
@@ -530,7 +531,7 @@ export function recordAnswer(lessonId: string, ok: boolean): boolean {
 export function endLesson(
   lessonId: string,
   score: number,
-  missedExIds: number[]
+  missedExIds: Array<number | string>
 ): "continue" | "choice" {
   const wasFailed = missedExIds.length > 0;
   update((draft) => {

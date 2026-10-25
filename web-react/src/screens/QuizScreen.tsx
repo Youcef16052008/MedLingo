@@ -3,10 +3,12 @@ import { useT } from "../i18n/useT";
 import type { TKey } from "../i18n";
 import { update, useAppState } from "../domain/store";
 import type { AppState } from "../domain/store";
-import { lessonQuestions, quizExercises, quizExercisesForLevel } from "../domain/lessons";
+import { startLesson, endLesson, addToReviewQueue, markReviewPlayed } from "../domain/store";
+import { lessonQuestions, quizExercises, quizExercisesForLevel, getReview } from "../domain/lessons";
 import { addXp, touchStreak, calculateGemsForLesson } from "../domain/gamification";
 import { lessonKey } from "../domain/path";
 import { modLabel } from "../data/modules";
+import { loadLessonData, getLessonEntry, getLessonMap, chapterIdOf } from "../data/load";
 import { earnChest } from "../domain/chests";
 import { claimTrophies, type TrophyId } from "../domain/trophies";
 import { fillScore } from "../domain/scoring";
@@ -49,7 +51,15 @@ function isLevelUnlocked(n: number, s: AppState): boolean {
 }
 
 /** Cadre de session lue dans le hash : `#/quiz?module=anat&level=3`, `#/quiz?mode=exam`. */
-function frameFromHash(): { module?: string; level: number; mode?: string } {
+function frameFromHash(): {
+  module?: string;
+  level: number;
+  mode?: string;
+  /** Entrée de chapitre (LOT2) : trace la progression + alimente la file de révision. */
+  lesson?: string;
+  /** Leçon de révision (LOT2) : rejoue les exercices ratés (`getReview`). */
+  review?: string;
+} {
   if (typeof window === "undefined") return { level: 0 };
   const query = window.location.hash.split("?")[1] ?? "";
   const p = new URLSearchParams(query);
@@ -58,6 +68,8 @@ function frameFromHash(): { module?: string; level: number; mode?: string } {
     module: p.get("module") ?? undefined,
     level: Number.isFinite(raw) && raw >= 1 && raw <= 6 ? raw : 0,
     mode: p.get("mode") ?? undefined,
+    lesson: p.get("lesson") ?? undefined,
+    review: p.get("review") ?? undefined,
   };
 }
 
@@ -218,6 +230,11 @@ export function QuizScreen() {
   const advToRef = useRef(-1);
 
   const submittingRef = useRef(false);
+  /** Cadre LOT2 : entrée de chapitre en cours (progression + file de révision). */
+  const lessonRef = useRef<{ id: string; chapterId: string } | null>(null);
+  const missedRef = useRef<Array<number | string>>([]);
+  /** Cadre LOT2 : leçon de révision en cours (marquée jouée à la fin). */
+  const reviewRef = useRef<string | null>(null);
   const patch = (p: Partial<QuizState>) => setQ((prev) => ({ ...prev, ...p }));
 
   const begin = (level: number) => {
@@ -245,24 +262,70 @@ export function QuizScreen() {
     return true;
   };
 
-  // Démarrage automatique quand on arrive avec un cadre (`?module=`, `?mode=exam`).
-  // Un cadre invalide (module/niveau inconnu) affiche une erreur au lieu de
-  // retomber silencieusement sur l'écran de choix de niveau (B34).
+  /** Leçon de révision (LOT2) : rejoue les exercices ratés d'une leçon. */
+  const beginReview = (entryId: string) => {
+    const list = getReview(entryId);
+    if (!list || !list.length) return false;
+    goalHitRef.current = false;
+    finishedRef.current = false;
+    advToRef.current = -1;
+    reviewRef.current = entryId;
+    setQ({ ...IDLE, phase: "play", list, ...setupQuestion(list[0]) });
+    return true;
+  };
+
+  // Démarrage automatique quand on arrive avec un cadre (`?module=`, `?mode=exam`,
+  // `?lesson=`, `?review=`). Un cadre invalide (module/niveau inconnu) affiche
+  // une erreur au lieu de retomber silencieusement sur l'écran de choix (B34).
   useEffect(() => {
     if (started.current) return;
-    started.current = true;
     const f = frameFromHash();
-    if (f.module) {
-      if (!f.level || !beginLesson(f.module, f.level)) {
-        toast(t("invalidLesson"));
-        navigate("quiz");
+    const run = () => {
+      started.current = true;
+      if (f.review) {
+        if (!beginReview(f.review)) {
+          toast(t("invalidLesson"));
+          navigate("review");
+        }
+        return;
       }
-    } else if (f.mode === "exam") {
-      if (!begin(0)) {
-        toast(t("invalidLesson"));
-        navigate("quiz");
+      if (f.module) {
+        if (f.lesson) {
+          // Cadre chapitre (LOT2) : trace la leçon (progression + file de révision).
+          const entry = getLessonEntry(f.lesson);
+          if (!entry) {
+            toast(t("invalidLesson"));
+            navigate("quiz");
+            return;
+          }
+          startLesson(entry.id, f.module, chapterIdOf(entry));
+          lessonRef.current = { id: entry.id, chapterId: chapterIdOf(entry) };
+          missedRef.current = [];
+        }
+        if (!f.level || !beginLesson(f.module, f.level)) {
+          toast(t("invalidLesson"));
+          navigate("quiz");
+        }
+      } else if (f.mode === "exam") {
+        if (!begin(0)) {
+          toast(t("invalidLesson"));
+          navigate("quiz");
+        }
       }
+    };
+    // `?lesson=`/`?review=` ont besoin de lesson_map.json, chargé
+    // paresseusement (WS2.1 : plus de 1,8 Mo au démarrage global).
+    if ((f.lesson || f.review) && Object.keys(getLessonMap()).length === 0) {
+      loadLessonData()
+        .then(run)
+        .catch(() => {
+          started.current = true;
+          toast(t("invalidLesson"));
+          navigate(f.review ? "review" : "quiz");
+        });
+      return;
     }
+    run();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -311,13 +374,22 @@ export function QuizScreen() {
   const check = () => {
     if (q.phase !== "play" || q.checked) return;
     const ex = q.list[q.i];
+    // Cadre chapitre (LOT2) : un raté alimente la file de révision en fin de leçon.
+    const trackMiss = (ok: boolean) => {
+      if (!ok && lessonRef.current && !missedRef.current.includes(ex.id)) {
+        missedRef.current.push(ex.id);
+      }
+    };
     // fill_blank, gap et pair : réponse en saisie libre (voir `fillScore`/scoring).
     if (ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair") {
       const score = fillScore(q.fillVal, ex.answer);
+      trackMiss(score === 1);
       submit(score === 1, score === 0.5 ? Math.floor(ex.points / 2) : 0);
       return;
     }
-    submit(evalAnswer(q, ex));
+    const ok = evalAnswer(q, ex);
+    trackMiss(ok);
+    submit(ok);
   };
 
   /** Question suivante — la session se termine normalement, sans barrière de cœurs. */
@@ -354,6 +426,25 @@ export function QuizScreen() {
         earnChest(draft, "quiz", 0);
         trophies = claimTrophies(draft, now);
       });
+      // Cadres LOT2 (WS2.1) : clôturer la leçon de chapitre (progression +
+      // file de révision) ou marquer la révision comme jouée.
+      const lesson = lessonRef.current;
+      if (lesson) {
+        endLesson(lesson.id, score, missedRef.current);
+        if (missedRef.current.length > 0) {
+          addToReviewQueue({
+            lessonId: lesson.id,
+            exIds: missedRef.current,
+            chapterId: lesson.chapterId,
+            moduleId: q.moduleId ?? "",
+          });
+        }
+        lessonRef.current = null;
+      }
+      if (reviewRef.current) {
+        markReviewPlayed(reviewRef.current);
+        reviewRef.current = null;
+      }
       setReward({ xp: q.xp, gems, goalHit: goalHitRef.current, trophies });
       setQ((prev) => ({ ...prev, phase: "done", i, gems }));
     } else {

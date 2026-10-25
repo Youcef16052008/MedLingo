@@ -27,6 +27,13 @@ export interface LessonEntry {
   termIds: number[];
   questionCount: number;
   reviewedLessonIds?: string[];
+  /** Présent dans chapters.json (« anat-Angiologie ») ; sinon dérivé de l'id. */
+  chapterId?: string;
+}
+
+/** Chapitre d'une entrée : champ explicite, sinon « anat-Angiologie-l1 » → « anat-Angiologie ». */
+export function chapterIdOf(entry: LessonEntry): string {
+  return entry.chapterId ?? entry.id.replace(/-l\d+$/, "");
 }
 
 export interface LessonMap {
@@ -45,12 +52,10 @@ export interface LessonMapEntry {
 export function loadLessonData(): Promise<void> {
   if (!chapterPromise) {
     chapterPromise = (async () => {
-      console.log("[load.ts] loadLessonData: start fetch chapters.json");
       const [chaptersData, lessonMapData] = await Promise.all([
         fetchJson<ChapterInfo[]>("/data/chapters.json"),
         fetchJson<LessonMap>("/data/lesson_map.json"),
       ]);
-      console.log("[load.ts] loadLessonData: fetch OK, chapters loaded:", chaptersData.length);
       chapters = chaptersData;
       lessonMap = lessonMapData;
       emitDataChangedReview();
