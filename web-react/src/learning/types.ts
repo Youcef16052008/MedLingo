@@ -94,6 +94,8 @@ export interface Story {
   publicationStatus: "draft" | "published";
   durationMin: number;
   review: { language: string; medical: string };
+  /** Traçabilité éditoriale (ex. "generated:corpus-v1") — ignoré par les chargeurs. */
+  provenance?: string;
   segments: StorySegment[];
   targetPhrases: TargetPhrase[];
   questions: StoryQuestion[];

@@ -45,6 +45,27 @@ sont validées, puis les deux copies (web + asset Android) sont resynchronisées
 > Note : `clinical-symptoms-001` est publiée pour le pilote développeur ;
 > elle doit passer la même relecture avant toute mise en store.
 
+## Corpus généré (vague 1 — Anglais Médical, 126 histoires)
+
+Les histoires `provenance: "generated:corpus-v1"` (`clinical-en-case/explain/handover-NNN`)
+sont des brouillons structurés produits par `scripts/build_stories_corpus.py`
+à partir des vrais termes de chaque chapitre (3 archétypes : le cas,
+l'explication au patient, la passation de garde — voir
+[PLAN_STORIES_CORPUS.md](PLAN_STORIES_CORPUS.md)).
+
+Relecture par lot (un chapitre = 3 histoires, mêmes 3 termes) :
+1. corriger articles/genre des phrases générées (`a chest pain` → `chest pain`, etc.) ;
+2. vérifier les aides FR/AR (issues des champs `fr`/`ar` des termes) ;
+3. ajuster les faits si un terme ne se prête pas au cadre (ex. terms administratifs) ;
+4. publier le chapitre : `publicationStatus: "published"` + `review: approved`
+   dans `build_stories_corpus.py` (ou éditer le JSON après génération), puis
+   resynchroniser les deux copies (`check:stories`).
+Le relecteur note sa progression ci-dessous.
+
+| Chapitre | Histoires | Linguistique | Médical | Relecteur·rice | Date |
+|---|---|---|---|---|---|
+| _(42 chapitres — remplir au fur et à mesure)_ | | | | | |
+
 ## Garde-fous automatiques (déjà en place)
 
 - `storiesContent.test.ts` (63 tests) : structure, réponses non ambiguës,

@@ -22,11 +22,24 @@ const terms = JSON.parse(
 const termIds = new Set(terms.map((t) => t.id));
 
 describe("contenu des histoires (pilote ×10)", () => {
-  it("10 histoires, schéma v1, ids uniques et ordre stable", () => {
+  const PILOT_IDS = [
+    "clinical-symptoms-001", "self-intro-002", "locate-structure-003", "symptom-absent-004",
+    "when-started-005", "reformulate-confirm-006", "organ-function-007", "tissue-simple-008",
+    "cause-consequence-009", "summarize-situation-010",
+  ];
+
+  it("10 pilotes en tête + corpus généré, schéma v1, ids uniques", () => {
     expect(raw.schemaVersion).toBe(1);
-    expect(raw.stories).toHaveLength(10);
     const ids = raw.stories.map((s) => s.storyId);
-    expect(new Set(ids).size).toBe(10);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(raw.stories.slice(0, 10).map((s) => s.storyId)).toEqual(PILOT_IDS);
+    // Vague 1 : Anglais Médical — 42 chapitres × 3 archétypes.
+    const generated = raw.stories.slice(10);
+    expect(generated.length).toBeGreaterThanOrEqual(126);
+    for (const s of generated) {
+      expect(s.provenance, s.storyId).toBe("generated:corpus-v1");
+      expect(s.publicationStatus, s.storyId).toBe("draft");
+    }
   });
 
   it("seule l'histoire pilote est published — les 9 nouvelles attendent la relecture", () => {
