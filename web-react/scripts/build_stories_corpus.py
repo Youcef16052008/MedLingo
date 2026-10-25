@@ -21,6 +21,7 @@ import build_stories_p3 as p3  # exécute le builder pilote (écrit les 10 pilot
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "public" / "data" / "stories.v1.json"
 ANDROID = ROOT.parent / "app" / "src" / "main" / "assets" / "learning" / "stories.v1.json"
+VERDICTS_PATH = ROOT / "data" / "review-verdicts.v1.json"
 
 PROVENANCE = "generated:corpus-v1"
 
@@ -536,6 +537,43 @@ def story_handover(mod, idx, chapter, terms, symptom_mode=True):
     }
 
 
+def apply_verdicts(all_stories):
+    """Applique les verdicts de relecture notés via le dashboard
+    (scripts/review_server.py → data/review-verdicts.v1.json).
+
+    Règle : une histoire est `published` ⟺ relecture langue ET médecine
+    « approved ». Tout autre verdict (needs_fixes/rejected) la retient en
+    `draft`. Dès qu'un verdict existe il est AUTORITAIRE (même pour les
+    pilotes) ; sans verdict, le statut du builder tient (le pilote dev
+    clinical-symptoms-001 reste published tant qu'il n'est pas jugé)."""
+    if not VERDICTS_PATH.exists():
+        return {}
+    doc = json.loads(VERDICTS_PATH.read_text(encoding="utf-8"))
+    verdicts = doc.get("verdicts", {})
+    known = {s["storyId"] for s in all_stories}
+    stale = sorted(set(verdicts) - known)
+    if stale:
+        raise SystemExit(
+            f"verdicts orphelins (ids inconnus du corpus) : {stale}\n"
+            f"→ nettoyer data/review-verdicts.v1.json avant de régénérer."
+        )
+    published = 0
+    for s in all_stories:
+        v = verdicts.get(s["storyId"])
+        if not v:
+            continue
+        for dim in ("language", "medical"):
+            if dim in v:
+                s["review"][dim] = v[dim]["verdict"]
+        if s["review"]["language"] == "approved" and s["review"]["medical"] == "approved":
+            s["publicationStatus"] = "published"
+            published += 1
+        else:
+            s["publicationStatus"] = "draft"
+    print(f"verdicts de relecture : {len(verdicts)} histoire(s) · publiées : {published}")
+    return verdicts
+
+
 def main():
     terms_all = json.loads((ROOT / "public" / "data" / "terms.json").read_text(encoding="utf-8"))
 
@@ -581,6 +619,9 @@ def main():
     pilots = [s for s in current["stories"] if "provenance" not in s]
     all_stories = pilots + generated
 
+    # Verdicts de relecture (V0.1) : publiés ⟺ langue ET médecine approuvées.
+    verdicts = apply_verdicts(all_stories)
+
     # Invariants (les mêmes que le pilote + le harnais de test).
     ids = [s["storyId"] for s in all_stories]
     assert len(ids) == len(set(ids)), "ids dupliqués"
@@ -594,7 +635,11 @@ def main():
             for pid in qn.get("phraseIds", []):
                 assert pid in phrase_ids
         assert s["provenance"] == PROVENANCE
-        assert s["publicationStatus"] == "draft"
+        v = verdicts.get(s["storyId"], {})
+        lang = v.get("language", {}).get("verdict", "pending")
+        med = v.get("medical", {}).get("verdict", "pending")
+        expected = "published" if (lang == "approved" and med == "approved") else "draft"
+        assert s["publicationStatus"] == expected, f"{s['storyId']}: statut ≠ verdicts de relecture"
 
     out = {"schemaVersion": 1, "stories": all_stories}
     for target in (WEB, ANDROID):

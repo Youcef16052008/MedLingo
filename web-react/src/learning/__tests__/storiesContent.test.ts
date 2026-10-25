@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { StoryFile } from "../types";
@@ -21,6 +21,13 @@ const terms = JSON.parse(
 ) as { id: number; en: string }[];
 const termIds = new Set(terms.map((t) => t.id));
 
+/** Sidecar de relecture (V0.1) — source de vérité des verdicts langue/médecine. */
+type VerdictEntry = { language?: { verdict: string }; medical?: { verdict: string } };
+const verdictsPath = join(__dirname, "..", "..", "..", "data", "review-verdicts.v1.json");
+const verdicts: Record<string, VerdictEntry> = existsSync(verdictsPath)
+  ? (JSON.parse(readFileSync(verdictsPath, "utf-8")) as { verdicts: Record<string, VerdictEntry> }).verdicts ?? {}
+  : {};
+
 describe("contenu des histoires (pilote ×10)", () => {
   const PILOT_IDS = [
     "clinical-symptoms-001", "self-intro-002", "locate-structure-003", "symptom-absent-004",
@@ -40,7 +47,7 @@ describe("contenu des histoires (pilote ×10)", () => {
     const byModule = new Set<string>();
     for (const s of generated) {
       expect(s.provenance, s.storyId).toBe("generated:corpus-v1");
-      expect(s.publicationStatus, s.storyId).toBe("draft");
+      expect(s.publicationStatus, s.storyId).toBe(publishedPerVerdicts(s.storyId) ? "published" : "draft");
       expect(s.chapter, s.storyId).toBeTruthy();
       expect(s.moduleIds.length, s.storyId).toBe(1);
       byModule.add(s.moduleIds[0]);
@@ -50,16 +57,32 @@ describe("contenu des histoires (pilote ×10)", () => {
     );
   });
 
-  it("seule l'histoire pilote est published — les 9 nouvelles attendent la relecture", () => {
+  /** Publiée ⟺ double approbation (langue ET médecine) dans le sidecar. */
+  function publishedPerVerdicts(storyId: string): boolean {
+    const v = verdicts[storyId];
+    return v?.language?.verdict === "approved" && v?.medical?.verdict === "approved";
+  }
+
+  it("publication ⟺ double approbation dans le sidecar de relecture (V0.1)", () => {
+    // Exception documentée : le pilote dev clinical-symptoms-001 est publié
+    // AVANT relecture (pilote développeur, cf. docs/RELECTURE_HISTOIRES.md) ;
+    // un verdict sur lui devient autoritaire et peut le retirer.
     const published = raw.stories.filter((s) => s.publicationStatus === "published");
-    expect(published.map((s) => s.storyId)).toEqual(["clinical-symptoms-001"]);
+    expect(published).toEqual(
+      raw.stories.filter((s) => s.storyId === "clinical-symptoms-001" || publishedPerVerdicts(s.storyId))
+    );
     for (const s of raw.stories) {
-      if (s.storyId !== "clinical-symptoms-001") {
-        expect(s.publicationStatus, s.storyId).toBe("draft");
-        expect(s.review.language, s.storyId).toBe("pending");
-        expect(s.review.medical, s.storyId).toBe("pending");
-      }
+      if (s.storyId === "clinical-symptoms-001") continue;
+      const v = verdicts[s.storyId];
+      expect(s.review.language, s.storyId).toBe(v?.language?.verdict ?? "pending");
+      expect(s.review.medical, s.storyId).toBe(v?.medical?.verdict ?? "pending");
     }
+  });
+
+  it("aucun verdict orphelin dans le sidecar (ids tous connus du corpus)", () => {
+    const known = new Set(raw.stories.map((s) => s.storyId));
+    const stale = Object.keys(verdicts).filter((id) => !known.has(id));
+    expect(stale, "verdicts référençant des histoires disparues — nettoyer le sidecar").toEqual([]);
   });
 
   for (const s of raw.stories) {

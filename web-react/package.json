@@ -15,7 +15,8 @@
     "e2e": "python e2e/verify.py",
     "audit": "python e2e/full_audit.py",
     "design": "python e2e/check_design.py",
-    "check:stories": "node scripts/check-stories.mjs"
+    "check:stories": "node scripts/check-stories.mjs",
+    "review": "python scripts/review_server.py"
   },
   "dependencies": {
     "react": "^19.1.0",

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedLingo — Relecture du corpus</title>
+<style>
+  :root {
+    --green-900:#08301B; --green-700:#0B5A3C; --green-600:#0F766E; --green-100:#E7F5F0;
+    --ink:#122019; --muted:#5C6B63; --line:#D8E4DE; --bg:#F4F8F6; --card:#FFFFFF;
+    --ok:#0E8A5F; --ok-bg:#E2F5EC; --warn:#B45309; --warn-bg:#FDF0DC; --bad:#B3261E; --bad-bg:#FBE7E5;
+    --pending:#64748B; --pending-bg:#EEF1F4;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.5 "Segoe UI", system-ui, sans-serif; color:var(--ink); background:var(--bg); }
+  header { position:sticky; top:0; z-index:10; display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+           padding:10px 16px; background:var(--green-900); color:#fff; }
+  header h1 { font-size:16px; margin:0 12px 0 0; white-space:nowrap; }
+  .bar { flex:1; min-width:220px; }
+  .bar .track { height:8px; border-radius:4px; background:rgba(255,255,255,.25); overflow:hidden; }
+  .bar .fill { height:100%; background:#34D399; transition:width .3s; }
+  .bar small { opacity:.85; }
+  header label { display:flex; gap:6px; align-items:center; font-size:13px; }
+  header input, header select { border:none; border-radius:6px; padding:5px 8px; font-size:13px; }
+  #layout { display:grid; grid-template-columns:300px 1fr; min-height:calc(100vh - 56px); }
+  aside { border-right:1px solid var(--line); background:var(--card); overflow:auto; max-height:calc(100vh - 56px); position:sticky; top:56px; }
+  .mod { border-bottom:1px solid var(--line); }
+  .mod > button { all:unset; display:flex; width:100%; justify-content:space-between; gap:8px; padding:9px 12px;
+                  font-weight:600; cursor:pointer; color:var(--green-700); }
+  .mod > button:hover { background:var(--green-100); }
+  .mod .cnt { font-size:12px; color:var(--muted); font-weight:400; white-space:nowrap; }
+  .chapters { display:none; }
+  .mod.open .chapters { display:block; }
+  .chapters button { all:unset; display:flex; width:100%; justify-content:space-between; gap:8px; padding:6px 12px 6px 22px;
+                     font-size:13px; cursor:pointer; color:var(--ink); }
+  .chapters button:hover { background:var(--green-100); }
+  .chapters button.sel { background:var(--green-700); color:#fff; }
+  .chapters button.dim { opacity:.35; }
+  .chapters .cnt { font-size:11.5px; color:inherit; opacity:.75; white-space:nowrap; }
+  main { padding:16px 20px 80px; max-width:980px; }
+  .ch-head { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:8px; }
+  .ch-head h2 { font-size:18px; margin:0; flex:1; min-width:220px; }
+  .btn { border:1px solid var(--line); background:var(--card); border-radius:8px; padding:6px 12px;
+         font-size:13px; cursor:pointer; }
+  .btn:hover { border-color:var(--green-600); }
+  .btn.ok { background:var(--ok-bg); color:var(--ok); border-color:var(--ok); font-weight:600; }
+  .batch { display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 14px; }
+  details.check { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; margin-bottom:16px; }
+  details.check summary { cursor:pointer; font-weight:600; color:var(--green-700); }
+  .check .cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
+  .check h4 { margin:0 0 4px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.4px; }
+  .check li { margin:2px 0; font-size:13px; }
+  @media (max-width:800px){ .check .cols{ grid-template-columns:1fr; } #layout{ grid-template-columns:1fr; } aside{ position:static; max-height:40vh; } }
+  .story { background:var(--card); border:1px solid var(--line); border-radius:12px; margin-bottom:18px; overflow:hidden; }
+  .story.ready { border-color:var(--ok); box-shadow:0 0 0 2px var(--ok-bg); }
+  .st-head { display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px 14px; border-bottom:1px solid var(--line); }
+  .st-head .id { font-family:Consolas, monospace; font-size:12px; color:var(--muted); }
+  .st-head .title { font-weight:700; flex:1; min-width:180px; }
+  .chip { font-size:11.5px; border-radius:999px; padding:2px 9px; font-weight:600; }
+  .chip.pending { background:var(--pending-bg); color:var(--pending); }
+  .chip.approved { background:var(--ok-bg); color:var(--ok); }
+  .chip.needs_fixes { background:var(--warn-bg); color:var(--warn); }
+  .chip.rejected { background:var(--bad-bg); color:var(--bad); }
+  .verdict { display:flex; flex-wrap:wrap; gap:14px; padding:10px 14px; background:#FAFCFB; border-bottom:1px solid var(--line); }
+  .vgroup > b { display:block; font-size:12px; text-transform:uppercase; letter-spacing:.4px; color:var(--muted); margin-bottom:4px; }
+  .vbtns { display:flex; gap:6px; }
+  .vbtns button { border:1px solid var(--line); background:#fff; border-radius:8px; padding:4px 10px; font-size:13px; cursor:pointer; }
+  .vbtns button.v-approved { color:var(--ok); border-color:var(--ok); }
+  .vbtns button.v-needs_fixes { color:var(--warn); border-color:var(--warn); }
+  .vbtns button.v-rejected { color:var(--bad); border-color:var(--bad); }
+  .vbtns button.on { font-weight:700; box-shadow:inset 0 0 0 2px currentColor; }
+  .note { padding:8px 14px 12px; background:#FAFCFB; border-bottom:1px solid var(--line); }
+  .note textarea { width:100%; min-height:44px; border:1px solid var(--line); border-radius:8px; padding:6px 8px; font:13px/1.4 inherit; }
+  .note .row { display:flex; justify-content:space-between; align-items:center; margin-top:4px; }
+  .note small { color:var(--muted); }
+  .content { padding:6px 14px 14px; }
+  .content h4 { margin:12px 0 4px; font-size:12.5px; text-transform:uppercase; letter-spacing:.5px; color:var(--green-700); }
+  .seg { padding:5px 0; border-bottom:1px dashed var(--line); }
+  .seg .en { font-size:15px; }
+  .aid { font-size:12.5px; color:var(--muted); margin-top:2px; }
+  .aid .ar { direction:rtl; unicode-bidi:isolate; display:inline-block; }
+  body.noaids .aid { display:none; }
+  ul.plain { list-style:none; margin:4px 0; padding:0; }
+  ul.plain li { padding:3px 0; }
+  .q .qq { font-weight:600; }
+  .q .acc { color:var(--ok); font-size:12.5px; }
+  .q .mdl { color:var(--muted); font-size:12.5px; font-style:italic; }
+  .q .hnt { color:var(--warn); font-size:12.5px; }
+  .empty { color:var(--muted); font-style:italic; padding:30px; text-align:center; }
+  #toast { position:fixed; bottom:18px; left:50%; transform:translateX(-50%); background:var(--green-900); color:#fff;
+           border-radius:10px; padding:9px 16px; font-size:13.5px; opacity:0; pointer-events:none; transition:opacity .25s; }
+  #toast.show { opacity:1; }
+</style>
+</head>
+<body class="">
+<header>
+  <h1>🩺 Relecture du corpus</h1>
+  <div class="bar">
+    <div class="track"><div class="fill" id="pfill"></div></div>
+    <small id="ptext">…</small>
+  </div>
+  <label>Relecteur <input id="reviewer" maxlength="24" placeholder="initiales"></label>
+  <label title="Afficher les traductions FR/AR sous chaque segment anglais"><input type="checkbox" id="aids" checked> Aides FR/AR</label>
+  <label>Filtre
+    <select id="mode">
+      <option value="all">tout</option>
+      <option value="pending" selected>à relire</option>
+      <option value="ready">prêts</option>
+      <option value="fixes">à corriger</option>
+    </select>
+  </label>
+</header>
+<div id="layout">
+  <aside id="sidebar"><div class="empty">chargement…</div></aside>
+  <main>
+    <div class="empty" id="hint">Choisir un module puis un chapitre.<br>
+      Une histoire est <b>publiée</b> uniquement quand <b>langue ET médecine</b> sont approuvées
+      (appliqué par <code>build_stories_corpus.py</code>, jamais depuis cette page).</div>
+    <div id="chapter" style="display:none">
+      <div class="ch-head"><h2 id="ch-title"></h2></div>
+      <div class="batch">
+        <button class="btn ok" id="b-lang">✔ Approuver LANGUE — les 3 histoires</button>
+        <button class="btn ok" id="b-med">✔ Approuver MÉDECINE — les 3 histoires</button>
+      </div>
+      <details class="check">
+        <summary>Liste de contrôle (protocole RELECTURE_HISTOIRES.md)</summary>
+        <div class="cols">
+          <div>
+            <h4>Langue</h4>
+            <ul>
+              <li>Anglais naturel, niveau A1–A2 annoncé</li>
+              <li>Aides FR/AR fidèles (pas de contresens, négation non inversée)</li>
+              <li>Questions ET réponses acceptées grammaticalement correctes</li>
+              <li>Variantes/contractions acceptées cohérentes</li>
+              <li>L'anglais reste LTR même en interface arabe</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Médecine</h4>
+            <ul>
+              <li>Exactitude anatomique / physiologique / clinique</li>
+              <li>AUCUN conseil de diagnostic ou de traitement</li>
+              <li>Faits critiques (négation, localisation, durée) non ambigus</li>
+              <li>Personnages fictifs — aucune donnée de patient réel</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+      <div id="stories"></div>
+    </div>
+  </main>
+</div>
+<div id="toast"></div>
+<script>
+"use strict";
+const $ = (s, el=document) => el.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const aid = (fr, ar) => `<div class="aid">fr : ${esc(fr)} · <span class="ar">ar : ${esc(ar)}</span></div>`;
+const L3 = (t) => t ? `${esc(t.en)}${aid(t.fr, t.ar)}` : "";
+
+let STATE = null;          // /api/state
+let CURRENT = null;        // {moduleId, label, chapter, storyIds}
+let DETAILS = {};          // cache id → histoire complète
+
+function toast(msg, err=false){
+  const t = $("#toast");
+  t.textContent = msg;
+  t.style.background = err ? "#B3261E" : "#08301B";
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2200);
+}
+
+function chip(dim, v){
+  const labels = { pending:"en attente", approved:"validé", needs_fixes:"à corriger", rejected:"rejeté" };
+  const val = v?.verdict || "pending";
+  const extra = v?.by ? ` title="par ${esc(v.by)} — ${esc(v.date || "")}"` : "";
+  return `<span class="chip ${val}"${extra}>${dim} : ${labels[val] || val}</span>`;
+}
+
+async function refreshState(){
+  STATE = await (await fetch("/api/state")).json();
+  const p = STATE.progress;
+  $("#pfill").style.width = (100 * p.reviewed / Math.max(1, p.total)).toFixed(1) + "%";
+  $("#ptext").textContent = `${p.reviewed}/${p.total} relues · ${p.ready} prêtes à publier · ${p.fixes} à corriger · ${p.published} publiées`;
+  renderSidebar();
+}
+
+function chapterMatchesMode(ch){
+  const mode = $("#mode").value;
+  if (mode === "all") return true;
+  if (mode === "ready") return ch.approved === ch.storyIds.length;
+  if (mode === "fixes") return ch.storyIds.some(id => {
+    const v = STATE.stories[id].verdict;
+    return ["needs_fixes","rejected"].includes(v.language?.verdict) || ["needs_fixes","rejected"].includes(v.medical?.verdict);
+  });
+  return ch.reviewed < ch.storyIds.length; // pending
+}
+
+function renderSidebar(){
+  const frag = document.createDocumentFragment();
+  for (const mod of STATE.modules){
+    const reviewed = mod.chapters.reduce((a,c)=>a + c.reviewed, 0);
+    const ready = mod.chapters.reduce((a,c)=>a + c.approved, 0);
+    const total = mod.chapters.reduce((a,c)=>a + c.storyIds.length, 0);
+    const div = document.createElement("div");
+    div.className = "mod" + (CURRENT && CURRENT.moduleId === mod.id ? " open" : "");
+    const anyMatch = mod.chapters.some(chapterMatchesMode);
+    div.style.opacity = anyMatch ? "1" : ".45";
+    div.innerHTML = `<button>▸ ${esc(mod.label)} <span class="cnt">${reviewed}/${total} · prêt ${ready}</span></button>
+      <div class="chapters"></div>`;
+    div.firstElementChild.onclick = () => { div.classList.toggle("open"); };
+    const chs = $(".chapters", div);
+    for (const ch of mod.chapters){
+      const b = document.createElement("button");
+      const sel = CURRENT && CURRENT.moduleId === mod.id && CURRENT.chapter === ch.name;
+      b.className = (sel ? "sel " : "") + (chapterMatchesMode(ch) ? "" : "dim");
+      b.innerHTML = `${esc(ch.name)} <span class="cnt">${ch.reviewed}/${ch.storyIds.length}${ch.approved === ch.storyIds.length ? " ✓" : ""}</span>`;
+      b.onclick = () => openChapter(mod, ch);
+      chs.appendChild(b);
+    }
+    frag.appendChild(div);
+  }
+  const sb = $("#sidebar");
+  sb.innerHTML = ""; sb.appendChild(frag);
+}
+
+async function openChapter(mod, ch){
+  CURRENT = { moduleId: mod.id, label: mod.label, chapter: ch.name, storyIds: ch.storyIds };
+  $("#hint").style.display = "none";
+  $("#chapter").style.display = "";
+  $("#ch-title").textContent = `${mod.label} — ${ch.name}`;
+  renderSidebar();
+  $("#stories").innerHTML = `<div class="empty">chargement des ${ch.storyIds.length} histoires…</div>`;
+  const stories = [];
+  for (const id of ch.storyIds){
+    if (!DETAILS[id]) DETAILS[id] = await (await fetch("/api/story?id=" + encodeURIComponent(id))).json();
+    stories.push(DETAILS[id]);
+  }
+  $("#stories").innerHTML = stories.map(renderStory).join("");
+  bindVerdictButtons($("#stories"));
+}
+
+function renderStory(s){
+  const st = STATE.stories[s.storyId];
+  const ready = st.ready;
+  const v = st.verdict;
+  const note = [v.language?.note, v.medical?.note].filter(Boolean).join(" · ");
+  const segs = s.segments.map(x => `<div class="seg"><div class="en">${esc(x.en)}</div>${aid(x.fr, x.ar)}</div>`).join("");
+  const qs = (arr) => arr.map(q => `
+    <li class="q"><span class="qq">${esc(q.q)}</span>${q.qFr || q.qAr ? aid(q.qFr || "—", q.qAr || "—") : ""}
+      <div class="acc">accepté : ${q.accepted.map(esc).join(" | ")}</div>
+      <div class="mdl">modèle : ${esc(q.model)}</div>
+      ${q.hint ? `<div class="hnt">hint : ${L3(q.hint)}</div>` : ""}</li>`).join("");
+  const phrases = s.targetPhrases.map(p => `<li><code>${esc(p.id)}</code> — <b>${esc(p.en)}</b>${aid(p.fr, p.ar)}</li>`).join("");
+  const drills = s.drill.items.map(d => `<li>${esc(d.prompt)} → <b>${esc(d.accepted.join(" / "))}</b> <span class="mdl">${esc(d.model)}</span></li>`).join("");
+  return `
+  <section class="story ${ready ? "ready" : ""}" data-id="${esc(s.storyId)}">
+    <div class="st-head">
+      <span class="title">${esc(s.title.en)}</span>
+      <span class="id">${esc(s.storyId)}</span>
+      ${chip("Langue", v.language)} ${chip("Médecine", v.medical)}
+      <span class="chip pending">${st.publicationStatus === "published" ? "PUBLIÉE" : "draft"}</span>
+    </div>
+    <div class="verdict">
+      <div class="vgroup"><b>Relecture langue</b>
+        <div class="vbtns" data-dim="language">
+          <button class="v-approved" data-v="approved">✔ Approuver</button>
+          <button class="v-needs_fixes" data-v="needs_fixes">⚠ À corriger</button>
+          <button class="v-rejected" data-v="rejected">✗ Rejeter</button>
+        </div>
+      </div>
+      <div class="vgroup"><b>Relecture médicale</b>
+        <div class="vbtns" data-dim="medical">
+          <button class="v-approved" data-v="approved">✔ Approuver</button>
+          <button class="v-needs_fixes" data-v="needs_fixes">⚠ À corriger</button>
+          <button class="v-rejected" data-v="rejected">✗ Rejeter</button>
+        </div>
+      </div>
+    </div>
+    <div class="note">
+      <textarea placeholder="Note (obligatoire si « à corriger » ou « rejeté ») : quoi, où, pourquoi…">${esc(note)}</textarea>
+      <div class="row"><small>La note est conservée avec le prochain verdict de cette histoire.</small>
+        <button class="btn note-save">Enregistrer la note</button></div>
+    </div>
+    <div class="content">
+      <h4>Objectif</h4><div>${L3(s.goal)}</div>
+      <h4>Récit (${s.segments.length} segments)</h4>${segs}
+      <h4>Expressions cibles (cartes SM-2)</h4><ul class="plain">${phrases}</ul>
+      <h4>Questions de compréhension</h4><ul class="plain">${qs(s.questions)}</ul>
+      <h4>Drill — ${esc(s.drill.explain.fr)}</h4><ul class="plain">${drills}</ul>
+      <h4>Production (retell)</h4>
+        <div>${L3(s.retell.prompt)}</div>
+        <div class="mdl">amorce : ${s.retell.starters.map(esc).join(" / ")} · modèle : ${esc(s.retell.model)}</div>
+      <h4>Transfert</h4>
+        <div>${L3(s.transfer.context)}</div>
+        <ul class="plain">${qs(s.transfer.questions)}</ul>
+        <div class="mdl">tâche : ${esc(s.transfer.task.model)}</div>
+    </div>
+  </section>`;
+}
+
+function bindVerdictButtons(root){
+  root.querySelectorAll(".vbtns button").forEach(b => {
+    b.onclick = () => postVerdict(b.closest(".story").dataset.id,
+                                  b.parentElement.dataset.dim,
+                                  b.dataset.v,
+                                  b.closest(".story").querySelector("textarea").value);
+  });
+  root.querySelectorAll(".note-save").forEach(b => {
+    b.onclick = async () => {
+      const sec = b.closest(".story");
+      const r = await fetch("/api/note", { method:"POST", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({ storyId: sec.dataset.id, note: sec.querySelector("textarea").value }) });
+      toast(r.ok ? "Note enregistrée." : "Échec de l'enregistrement.", !r.ok);
+    };
+  });
+}
+
+async function postVerdict(storyId, dimension, verdict, note){
+  const by = $("#reviewer").value.trim();
+  if (!by){ toast("Renseigner vos initiales dans l'en-tête d'abord.", true); $("#reviewer").focus(); return; }
+  if (verdict !== "approved" && !note.trim()){ toast("Une note est requise pour « à corriger » / « rejeté ».", true); return; }
+  const r = await fetch("/api/verdict", { method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({ storyId, dimension, verdict, by, note }) });
+  if (!r.ok){ toast("Échec : " + (await r.json()).error, true); return; }
+  toast(`${storyId} · ${dimension === "language" ? "langue" : "médecine"} → ${verdict}`);
+  await refreshState();
+  // ré-affiche le chapitre courant avec les nouveaux états
+  const mod = STATE.modules.find(m => m.id === CURRENT.moduleId);
+  const ch = mod && mod.chapters.find(c => c.name === CURRENT.chapter);
+  if (ch) openChapter(mod, ch);
+}
+
+async function batchApprove(dimension){
+  if (!CURRENT) return;
+  const pending = CURRENT.storyIds.filter(id => STATE.stories[id].verdict[dimension]?.verdict !== "approved");
+  if (!pending.length){ toast("Rien à approuver : déjà fait."); return; }
+  const label = dimension === "language" ? "LANGUE" : "MÉDECINE";
+  if (!confirm(`Approuver la relecture ${label} de ${pending.length} histoire(s) du chapitre « ${CURRENT.chapter} » ?`)) return;
+  const by = $("#reviewer").value.trim();
+  if (!by){ toast("Renseigner vos initiales d'abord.", true); return; }
+  for (const id of pending){
+    const r = await fetch("/api/verdict", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ storyId:id, dimension, verdict:"approved", by }) });
+    if (!r.ok){ toast("Échec sur " + id, true); return; }
+  }
+  toast(`${label} approuvée ×${pending.length}.`);
+  await refreshState();
+  const mod = STATE.modules.find(m => m.id === CURRENT.moduleId);
+  const ch = mod && mod.chapters.find(c => c.name === CURRENT.chapter);
+  if (ch) openChapter(mod, ch);
+}
+
+$("#b-lang").onclick = () => batchApprove("language");
+$("#b-med").onclick = () => batchApprove("medical");
+$("#mode").onchange = () => renderSidebar();
+$("#aids").onchange = (e) => document.body.classList.toggle("noaids", !e.target.checked);
+$("#reviewer").value = localStorage.getItem("medlingo-reviewer") || "";
+$("#reviewer").onchange = (e) => localStorage.setItem("medlingo-reviewer", e.target.value.trim());
+
+refreshState().catch(e => { $("#sidebar").innerHTML = `<div class="empty">Erreur : ${esc(e)}</div>`; });
+</script>
+</body>
+</html>
