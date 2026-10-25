@@ -6,6 +6,7 @@ import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import android.util.Log
 import java.util.Locale
+import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger
 
 class TtsManager(context: Context) {
@@ -15,6 +16,8 @@ class TtsManager(context: Context) {
     private var isReady = false
     // Bumped on every engine (re)creation and on shutdown: a late onInit from a
     // superseded or shut-down engine must never mark the manager ready again.
+    // @Volatile : incrémenté sur le main, lu depuis les threads binder du TTS.
+    @Volatile
     private var engineGeneration = 0
     private var initFailed = false
     private var currentRate = 0.9f
@@ -44,8 +47,9 @@ class TtsManager(context: Context) {
 
     // Callbacks keyed by utteranceId: the late onDone/onError of a superseded
     // utterance (QUEUE_FLUSH + stop) must never fire the callbacks of the
-    // utterance that replaced it.
-    private val pendingCallbacks = mutableMapOf<String, UtteranceCallbacks>()
+    // utterance that replaced it. ConcurrentHashMap : écrit ici (main) mais lu
+    // et retiré depuis les threads binder du TTS (onDone/onError/onStop).
+    private val pendingCallbacks = ConcurrentHashMap<String, UtteranceCallbacks>()
     private val utteranceSeq = AtomicInteger(0)
 
     init {
@@ -113,6 +117,17 @@ class TtsManager(context: Context) {
 
             override fun onError(utteranceId: String?, errorCode: Int) {
                 Log.w("TtsManager", "TTS utterance error code: $errorCode")
+                utteranceId?.let { pendingCallbacks.remove(it) }?.onError?.invoke()
+            }
+
+            /**
+             * BUG-004 : invoqué quand une utterance est interrompue (stop()
+             * explicite, ou flush par l'utterance suivante). Sans cet override,
+             * la carte supprimée ne voyait JAMAIS son callback résolu — d'où
+             * les timeouts de 6 s dans le ViewModel. Interruption = échec pour
+             * l'attente en cours : on résout en onError.
+             */
+            override fun onStop(utteranceId: String?, interrupted: Boolean) {
                 utteranceId?.let { pendingCallbacks.remove(it) }?.onError?.invoke()
             }
         })
@@ -201,12 +216,6 @@ class TtsManager(context: Context) {
 
     private fun speakInternal(p: PendingSpeak) {
         try {
-            applyLanguage(p.languageCode)
-
-            // Supersede any pending utterance and drop its callbacks so only
-            // this utterance's callbacks can fire.
-            stop()
-
             val utteranceId = "MedLingua_${utteranceSeq.incrementAndGet()}"
             pendingCallbacks[utteranceId] = UtteranceCallbacks(p.onStart, p.onDone, p.onError)
 
@@ -222,6 +231,12 @@ class TtsManager(context: Context) {
             pendingCallbacks.values.remove(UtteranceCallbacks(p.onStart, p.onDone, p.onError))
             p.onError?.invoke()
         }
+        // BUG-004 : PAS de stop() ici. speak() est asynchrone (simple dispatch
+        // IPC) : un stop() dans ce finally s'exécutait la même milliseconde et
+        // annulait l'utterance qui venait d'être mise en file, en détruisant
+        // ses callbacks (pendingCallbacks.clear()) avant même onStart. Les
+        // appelants compensaient par des timeouts de 6 s. Arrêter la voix est
+        // du ressort de l'appelant explicite (stop()/shutdown()/flush suivant).
     }
 
     fun stop() {
