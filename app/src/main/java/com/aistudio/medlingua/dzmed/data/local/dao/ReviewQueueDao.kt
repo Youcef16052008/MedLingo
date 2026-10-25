@@ -28,9 +28,6 @@ interface ReviewQueueDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertReview(review: ReviewQueueItem)
 
-    @Query("DELETE FROM review_queue WHERE id = :id")
-    suspend fun deleteReview(id: String)
-
     @Query("INSERT OR REPLACE INTO review_queue (id, lessonId, chapterId, title, questionCount, status) VALUES (:id, :lessonId, :chapterId, :title, :questionCount, :status)")
     suspend fun upsertReview(
         id: String,

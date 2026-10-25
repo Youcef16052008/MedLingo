@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.aistudio.medlingua.dzmed.MedLinguaApp
+import com.aistudio.medlingua.dzmed.di.AppModule
 import com.aistudio.medlingua.dzmed.data.initial.InitialData
 import com.aistudio.medlingua.dzmed.data.local.entity.DownloadedModuleEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.ExerciseEntity

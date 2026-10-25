@@ -62,6 +62,22 @@ val currentClock: Clock get() = clock
 
     private val userStatsMutex = Mutex()
 
+    /**
+     * BUG-008 : section critique lecture→transformation→écriture. L'ancien
+     * mutex ne couvrait que l'écriture : deux mises à jour concurrentes
+     * lisaient le même état périmé et la dernière écrasait l'XP/gemmes de
+     * l'autre (lost updates).
+     */
+    private suspend fun mutateUserStats(
+        transform: (UserStatsEntity) -> UserStatsEntity
+    ): UserStatsEntity = withContext(Dispatchers.IO) {
+        userStatsMutex.withLock {
+            val next = transform(dao.getUserStatsOnce() ?: UserStatsEntity.createFresh())
+            dao.upsertUserStats(next)
+            next
+        }
+    }
+
     private suspend fun safeUpsertUserStats(stats: UserStatsEntity) = withContext(Dispatchers.IO) {
         userStatsMutex.withLock {
             dao.upsertUserStats(stats)
@@ -329,32 +345,32 @@ val currentClock: Clock get() = clock
         )
         dao.upsertFlashcardProgress(updatedProgress)
 
-        val currentStats = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
+        // BUG-008 : lecture→transformation→écriture SOUS le mutex (lost updates).
         // Plus de perte de cœur : une révision crédite de l'XP (objectif quotidien,
         // ligue, série) et alimente le compteur du trophée 🗂️.
         val gained = if (quality < 3) quality * 2 else quality * 5
-        val newStats = GamificationEconomy
-            .addXp(currentStats, gained, clock.now())
-            .stats
-            .copy(flashReviewed = currentStats.flashReviewed + 1)
+        val newStats = mutateUserStats { current ->
+            GamificationEconomy
+                .addXp(current, gained, clock.now())
+                .stats
+                .copy(flashReviewed = current.flashReviewed + 1)
+        }
 
         if (newStats.leagueCohortId != null) {
             dao.addXpToCurrentUserInLeague(newStats.leagueCohortId, gained)
         }
-
-        safeUpsertUserStats(newStats)
         result
     }
 
     suspend fun recordQuizCompletion(pointsEarned: Int, totalQuestions: Int, correctAnswers: Int) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
-        val currentStats = GamificationEconomy.addXp(current, pointsEarned, clock.now())
-            .stats
-            .copy(quizzesCompleted = current.quizzesCompleted + 1,
-                totalQuestionsAnswered = current.totalQuestionsAnswered + totalQuestions,
-                correctAnswersCount = current.correctAnswersCount + correctAnswers
-            )
-        safeUpsertUserStats(currentStats)
+        val currentStats = mutateUserStats { current ->
+            GamificationEconomy.addXp(current, pointsEarned, clock.now())
+                .stats
+                .copy(quizzesCompleted = current.quizzesCompleted + 1,
+                    totalQuestionsAnswered = current.totalQuestionsAnswered + totalQuestions,
+                    correctAnswersCount = current.correctAnswersCount + correctAnswers
+                )
+        }
 
         if (currentStats.leagueCohortId != null) {
             dao.addXpToCurrentUserInLeague(currentStats.leagueCohortId, pointsEarned)

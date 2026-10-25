@@ -10,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -310,7 +311,7 @@ fun MedLinguaAppContent(
                                         .padding(horizontal = 16.dp, vertical = 4.dp)
                                 ) {
                                     Text(
-                                        (if (lang == Language.AR) "مراجعات في الانتظار" else if (lang == Language.EN) "Reviews waiting" else "Révisions en attente") + " · $reviewCount",
+                                        (if (lang == Language.ARABIC) "مراجعات في الانتظار" else if (lang == Language.ENGLISH) "Reviews waiting" else "Révisions en attente") + " · $reviewCount",
                                         color = Color.White,
                                         modifier = Modifier.padding(10.dp),
                                         fontSize = 14.sp
