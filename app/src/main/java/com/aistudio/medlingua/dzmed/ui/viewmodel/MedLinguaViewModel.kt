@@ -30,6 +30,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -127,6 +129,18 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
 
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
+
+    // LOT2/WS2.1 : file de révision (hub ReviewHubScreen). Le DAO existe
+    // depuis la v13 ; la population par les leçons de chapitre viendra avec
+    // la résolution du WIP repository (cf. TODO.md).
+    private val reviewQueueDao = AppModule.provideReviewQueueDao(app.database)
+    val reviewQueue: StateFlow<List<com.aistudio.medlingua.dzmed.data.local.entity.ReviewQueueItem>> =
+        reviewQueueDao.getAllReviews()
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
+
+    fun deleteReview(id: String) {
+        viewModelScope.launch { reviewQueueDao.deleteReview(id) }
+    }
 
     companion object {
         const val DEFAULT_REMINDER_HOUR = 20

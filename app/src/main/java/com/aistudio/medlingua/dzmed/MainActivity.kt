@@ -149,6 +149,7 @@ fun MedLinguaAppContent(
     var showQuiz by remember { mutableStateOf(false) }
     var showFlash by remember { mutableStateOf(false) }
     var showStory by remember { mutableStateOf(false) }
+    var showReview by remember { mutableStateOf(false) }  // LOT2/WS2.1 : hub révisions
     val lang = uiState.currentLanguage
 
     // Runtime Permission for Notifications (Android 13+ / Tiramisu)
@@ -192,11 +193,12 @@ fun MedLinguaAppContent(
 
     // BackHandler: ferme le quiz/les flashcards, sinon revient au Parcours
     BackHandler(
-        enabled = showQuiz || showFlash || showStory || currentDestination != MainDestination.PATH
+        enabled = showQuiz || showFlash || showStory || showReview || currentDestination != MainDestination.PATH
     ) {
         when {
             showQuiz -> showQuiz = false
             showFlash -> showFlash = false
+            showReview -> showReview = false
             // Séance histoire : suspendue (progression déjà sauvegardée) + TTS coupé.
             showStory -> {
                 (context.applicationContext as? MedLinguaApp)?.ttsManager?.stop()
@@ -292,16 +294,40 @@ fun MedLinguaAppContent(
             ) {
                 when (currentDestination) {
                     MainDestination.PATH -> {
-                        PathScreen(
-                            uiState = uiState,
-                            onOpenLesson = { moduleId, level ->
-                                viewModel.startPathLesson(moduleId, level)
-                                showQuiz = true
-                            },
-                            onBuyFreeze = { viewModel.buyFreeze() },
-                            onOpenChests = { viewModel.openChestRewardPopup() },
-                            onOpenStory = { showStory = true }
-                        )
+                        Column {
+                            // LOT2/WS2.1 : entrée vers le hub de révision dès
+                            // qu'une leçon ratée y attend (file peuplée par les
+                            // leçons de chapitre — cf. TODO pour le câblage restant).
+                            val allReviews by viewModel.reviewQueue.collectAsStateWithLifecycle()
+                            val reviewCount = allReviews.count { it.status == com.aistudio.medlingua.dzmed.data.local.entity.ReviewQueueItem.Status.UNLOCKED }
+                            if (reviewCount > 0) {
+                                androidx.compose.material3.Surface(
+                                    onClick = { showReview = true },
+                                    shape = androidx.compose.foundation.shape.RoundedCornerShape(20.dp),
+                                    color = Color(0xFF0B5A3C),
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = 16.dp, vertical = 4.dp)
+                                ) {
+                                    Text(
+                                        (if (lang == Language.AR) "مراجعات في الانتظار" else if (lang == Language.EN) "Reviews waiting" else "Révisions en attente") + " · $reviewCount",
+                                        color = Color.White,
+                                        modifier = Modifier.padding(10.dp),
+                                        fontSize = 14.sp
+                                    )
+                                }
+                            }
+                            PathScreen(
+                                uiState = uiState,
+                                onOpenLesson = { moduleId, level ->
+                                    viewModel.startPathLesson(moduleId, level)
+                                    showQuiz = true
+                                },
+                                onBuyFreeze = { viewModel.buyFreeze() },
+                                onOpenChests = { viewModel.openChestRewardPopup() },
+                                onOpenStory = { showStory = true }
+                            )
+                        }
                     }
                     MainDestination.PRACTICE -> {
                         PracticeScreen(
@@ -414,6 +440,24 @@ fun MedLinguaAppContent(
                             },
                             onNextLevelQuestion = { viewModel.nextLevelQuestionWithSpec() },
                             onRestartLevel = { viewModel.restartCurrentLevel() }
+                        )
+                    }
+                }
+
+                // ---- Overlay : hub de révision plein écran (LOT2/WS2.1) ----
+                if (showReview) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        val reviews by viewModel.reviewQueue.collectAsStateWithLifecycle()
+                        com.aistudio.medlingua.dzmed.ui.screens.ReviewHubScreen(
+                            reviews = reviews,
+                            lang = lang,
+                            onPlay = { showFlash = true }, // révision = flashcards SM-2 (sémantique existante)
+                            onDelete = { viewModel.deleteReview(it.id) },
+                            modifier = Modifier.fillMaxSize()
                         )
                     }
                 }
