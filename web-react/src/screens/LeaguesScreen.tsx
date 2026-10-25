@@ -39,9 +39,13 @@ const TIER_KEYS: Record<Tier, "leagueTierBronze" | "leagueTierSilver" | "leagueT
   gold: "leagueTierGold",
 };
 
-/* "Bot" ou "Actif" — LeagueMemberRow.kt ; le web n'a que des bots + vous. */
-function activityLabel(isYou: boolean): string {
-  return isYou ? "Actif" : "Bot";
+/* "Bot" ou "Actif" — LeagueMemberRow.kt ; le web n'a que des bots + vous.
+ * BUG-021 : traduit (était « Actif/Bot » en dur, invisible du checker i18n). */
+function activityLabel(
+  isYou: boolean,
+  t: (k: "leagueActive" | "leagueBot") => string
+): string {
+  return isYou ? t("leagueActive") : t("leagueBot");
 }
 
 /** Classement hebdomadaire de la cohorte (30 joueurs) — LeagueScreen.kt. */
@@ -146,10 +150,11 @@ export function LeaguesScreen() {
               <span className="league-id">
                 <span className="league-name">
                   {r.isYou ? t("leagueYou") : r.name}
-                  {r.isYou && <b className="league-you-tag">TOI</b>}
+                  {r.isYou && <b className="league-you-tag">{t("leagueYou")}</b>}
                 </span>
                 <span className="league-sub">
-                  🔥 0j • {activityLabel(r.isYou)}
+                  🔥 {r.isYou ? s.streak : 0}
+                  {t("leagueStreakDays")} • {activityLabel(r.isYou, t)}
                 </span>
               </span>
               <span className="league-xp-col">

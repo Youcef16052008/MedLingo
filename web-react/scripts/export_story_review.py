@@ -28,6 +28,29 @@ def check(label):
     return f"- [ ] {label}"
 
 
+def preserve_checks(new_text, existing_path):
+    """BUG-032 : réexporter ne doit pas effacer le travail des relecteurs.
+    Toute case « - [x] <label> » du fichier existant dont le libellé figure
+    dans le nouveau texte est réintroduite cochée."""
+    if not existing_path.exists():
+        return new_text
+    done = set()
+    for line in existing_path.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"- \[x\] (.+)$", line.strip())
+        if m:
+            done.add(m.group(1).strip())
+    if not done:
+        return new_text
+    out = []
+    for line in new_text.split("\n"):
+        m = re.match(r"- \[ \] (.+)$", line)
+        if m and m.group(1).strip() in done:
+            out.append(f"- [x] {m.group(1)}")
+        else:
+            out.append(line)
+    return "\n".join(out)
+
+
 def render_story(s, n):
     lines = []
     lines.append(f"## {n}. `{s['storyId']}` — {s['title']['fr']} / _{s['title']['en']}_")
@@ -102,7 +125,7 @@ for (mod, chapter), stories in sorted(by_chapter.items()):
         content.append(render_story(s, i))
     target = OUT_DIR / mod / f"{slug(chapter)}.md"
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text("\n".join(content), encoding="utf-8", newline="\n")
+    target.write_text(preserve_checks("\n".join(content), target), encoding="utf-8", newline="\n")
     count += 1
 
 print(f"{count} fiches de relecture écrites dans {OUT_DIR}")

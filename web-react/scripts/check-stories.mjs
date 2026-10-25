@@ -38,6 +38,13 @@ if (webIds.join("|") !== androidIds.join("|")) {
   );
 }
 
+// BUG-033 : deux corpus VIDES passaient (« OK … 0 histoire(s) »). Minimum
+// uniquement sur les chemins par défaut (les surcharges servent aux tests).
+const usingDefaults = !process.argv[2] && !process.argv[3];
+if (usingDefaults && webIds.length < 800) {
+  fail(`corpus anormalement petit : ${webIds.length} histoires (< 800) — régénération manquante ?`);
+}
+
 // 2. Contenu strictement identique (comparaison canonique, ordre des clés
 //    insensible — seule la sémantique compte).
 function canon(value) {

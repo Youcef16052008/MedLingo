@@ -63,16 +63,16 @@ describe("contenu des histoires (pilote ×10)", () => {
     return v?.language?.verdict === "approved" && v?.medical?.verdict === "approved";
   }
 
-  it("publication ⟺ double approbation dans le sidecar de relecture (V0.1)", () => {
-    // Exception documentée : le pilote dev clinical-symptoms-001 est publié
-    // AVANT relecture (pilote développeur, cf. docs/RELECTURE_HISTOIRES.md) ;
-    // un verdict sur lui devient autoritaire et peut le retirer.
-    const published = raw.stories.filter((s) => s.publicationStatus === "published");
-    expect(published).toEqual(
-      raw.stories.filter((s) => s.storyId === "clinical-symptoms-001" || publishedPerVerdicts(s.storyId))
+  it("publication ⟺ double approbation dans le sidecar (V0.1) — verdict AUTORITAIRE, même sur le pilote", () => {
+    // BUG-015 : le pilote dev clinical-symptoms-001 est publié par son builder
+    // SANS verdict ; dès qu'un verdict existe sur lui, il l'emporte (un rejet
+    // le retire). L'ancien test l'exigeait published inconditionnellement —
+    // faux échec dès qu'un relecteur le juge.
+    const expectedPublished = raw.stories.filter(
+      (s) => publishedPerVerdicts(s.storyId) || (!verdicts[s.storyId] && s.storyId === "clinical-symptoms-001")
     );
+    expect(raw.stories.filter((s) => s.publicationStatus === "published")).toEqual(expectedPublished);
     for (const s of raw.stories) {
-      if (s.storyId === "clinical-symptoms-001") continue;
       const v = verdicts[s.storyId];
       expect(s.review.language, s.storyId).toBe(v?.language?.verdict ?? "pending");
       expect(s.review.medical, s.storyId).toBe(v?.medical?.verdict ?? "pending");

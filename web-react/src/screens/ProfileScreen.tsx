@@ -61,7 +61,7 @@ export function ProfileScreen() {
 
   return (
     <div className="profile-screen">
-      <h1 className="profile-screen-title">Profil — {PROFILE.name}</h1>
+      <h1 className="profile-screen-title">{t("profileTitle")} — {PROFILE.name}</h1>
       {/* ===== Carte profil étudiant (gradient #146B43 → #15803D) ===== */}
       <div className="card profile-hero">
         <div className="profile-hero-row">

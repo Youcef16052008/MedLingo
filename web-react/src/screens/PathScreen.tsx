@@ -8,7 +8,7 @@ import { pickTodayStory } from "../learning/selection";
 import { navigate } from "../lib/router";
 import { pickContinueModule, totalDue, type Sm2Map } from "../domain/progress";
 import { buildPath, type PathNode } from "../domain/path";
-import { goalProgress, buyFreeze, FREEZE_COST_GEMS } from "../domain/gamification";
+import { goalProgress, buyFreeze, FREEZE_COST_GEMS, last7Days } from "../domain/gamification";
 import { Medi } from "../components/Medi";
 import { GoalRing } from "../components/GoalRing";
 import { RewardPopup, type RewardData } from "../components/RewardPopup";
@@ -136,6 +136,40 @@ export function PathScreen() {
             {t("reviewHubTitle")}
           </a>
         )}
+
+        {/* WS4 levier 2 : calendrier hebdo de l'objectif — 7 cellules
+            « tracé ECG » (objectif atteint / XP partiel / rien). */}
+        <div
+          className="streak-row"
+          style={{ gap: 4, justifyContent: "space-between", marginTop: 8 }}
+          aria-label={t("cardsDue")}
+        >
+          {last7Days(now).map((day) => {
+            const xp = s.weeklyXp[day] ?? 0;
+            const hit = xp >= s.dailyGoal && s.dailyGoal > 0;
+            const some = xp > 0;
+            return (
+              <div
+                key={day}
+                title={`${day} · ${xp} XP`}
+                style={{
+                  flex: 1,
+                  height: 26,
+                  borderRadius: 6,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: 11,
+                  fontWeight: hit ? 700 : 400,
+                  color: hit ? "#fff" : "var(--muted, #5C6B63)",
+                  background: hit ? "#0E8A5F" : some ? "rgba(14,138,95,.25)" : "rgba(0,0,0,.06)",
+                }}
+              >
+                {hit ? "✓" : some ? "·" : ""}
+              </div>
+            );
+          })}
+        </div>
 
         <div className="streak-row">
           <span className="streak-pill">
