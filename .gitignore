@@ -34,3 +34,4 @@ secrets.properties
 /tools_*.py
 /node_modules/
 /.hermes/
+*.bak
