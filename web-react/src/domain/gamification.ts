@@ -160,6 +160,30 @@ export function addXp(state: XpState, n: number, now: number): XpOutcome {
   return { gained: n, goalHit };
 }
 
+/**
+ * WS4 : journées-objectif CONSÉCUTIVES atteintes — calcul PUR dérivable de
+ * l'historique hebdo (aucun champ persisté en plus, aucun drapeau ad-hoc) :
+ * on remonte les jours calendaires tant que l'objectif était atteint.
+ */
+export function goalStreakOf(
+  s: Pick<XpState, "weeklyXp" | "dailyGoal" | "goalDate" | "xpToday">,
+  now: number
+): number {
+  const today = todayKey(now);
+  const hitOn = (key: string) => (s.weeklyXp[key] ?? 0) >= s.dailyGoal && s.dailyGoal > 0;
+  let count = 0;
+  // Le jour courant compte s'il est déjà atteint (en cours ou fini).
+  let cursor = hitOn(today) ? today : yesterdayKey(now);
+  while (hitOn(cursor) && count < 60) {
+    count += 1;
+    const d = new Date(cursor + "T12:00:00");
+    d.setDate(d.getDate() - 1);
+    const p = (n: number) => String(n).padStart(2, "0");
+    cursor = `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+  }
+  return count;
+}
+
 /** Progression de l'objectif quotidien (0 si le jour a changé). */
 export function goalProgress(
   s: Pick<XpState, "xpToday" | "goalDate" | "dailyGoal">,

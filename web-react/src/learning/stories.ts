@@ -65,6 +65,24 @@ export function setStories(data: StoryFile): void {
 
 export const getStories = (): Story[] => stories;
 
+/**
+ * WS4 levier 5 — la suite du chapitre : première histoire PUBLIÉE du même
+ * chapitre, id strictement supérieur (ordre stable du corpus), ≠ courante.
+ * `null` = pas de suite disponible (dernière du chapitre ou tout est draft).
+ */
+export function nextStoryInChapter(current: Story): Story | null {
+  return (
+    stories
+      .filter((s) => s.publicationStatus === "published")
+      .find(
+        (s) =>
+          s.storyId > current.storyId &&
+          s.chapter === current.chapter &&
+          s.moduleIds[0] === current.moduleIds[0]
+      ) ?? null
+  );
+}
+
 export function storyById(id: string): Story | undefined {
   return stories.find((s) => s.storyId === id);
 }

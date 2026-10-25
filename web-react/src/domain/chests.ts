@@ -51,6 +51,18 @@ export function earnChest(
   return earned;
 }
 
+/**
+ * WS4 levier 3 : cadence « objectif en série ». Toutes les
+ * `CADENCE_GOAL_DAYS` journées-objectif CONSÉCUTIVES → 1 coffre bonus
+ * (récompense variable, jamais achetable, jamais liée à l'argent).
+ * Pure : le compteur vient de `goalStreakOf` (dérivable de l'historique).
+ */
+export const CADENCE_GOAL_DAYS = 3;
+
+export function cadenceBonusChest(goalStreak: number): boolean {
+  return goalStreak > 0 && goalStreak % CADENCE_GOAL_DAYS === 0;
+}
+
 /** Applique une récompense de caisse à l'état. */
 export function applyChestReward(
   s: XpState & { gems: number },

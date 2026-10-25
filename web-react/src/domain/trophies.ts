@@ -85,6 +85,17 @@ export function evaluate(s: AppState): TrophyId[] {
 }
 
 /**
+ * WS4 levier 7 — modules MAÎTRISÉS (best ≥ 90 %), hors pseudo-clé `free`
+ * (quiz libre, F9 — cf. module_master). Source du certificat de maîtrise.
+ */
+export function masteredModules(s: AppState): string[] {
+  return Object.entries(s.moduleBest)
+    .filter(([id, v]) => id !== "free" && v >= 90)
+    .map(([id]) => id)
+    .sort();
+}
+
+/**
  * Persiste les trophées nouvellement gagnés (horodatage en ms) et retourne
  * uniquement ceux-ci — à afficher dans la pop-up de récompense.
  */

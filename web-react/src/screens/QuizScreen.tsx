@@ -5,11 +5,11 @@ import { update, useAppState } from "../domain/store";
 import type { AppState } from "../domain/store";
 import { startLesson, endLesson, addToReviewQueue, markReviewPlayed } from "../domain/store";
 import { lessonQuestions, quizExercises, quizExercisesForLevel, getReview } from "../domain/lessons";
-import { addXp, touchStreak, calculateGemsForLesson } from "../domain/gamification";
+import { addXp, touchStreak, calculateGemsForLesson, goalStreakOf } from "../domain/gamification";
 import { lessonKey } from "../domain/path";
 import { modLabel } from "../data/modules";
 import { loadLessonData, getLessonEntry, getLessonMap, chapterIdOf } from "../data/load";
-import { earnChest } from "../domain/chests";
+import { earnChest, cadenceBonusChest } from "../domain/chests";
 import { claimTrophies, type TrophyId } from "../domain/trophies";
 import { fillScore } from "../domain/scoring";
 import { shuffle, norm } from "../lib/utils";
@@ -424,6 +424,15 @@ export function QuizScreen() {
         }
         if (gems > 0) draft.gems += gems;
         earnChest(draft, "quiz", 0);
+        // WS4 levier 3 : objectif du jour atteint + cadence de 3 journées
+        // consécutives → 1 coffre bonus (récompense variable, non achetable).
+        if (
+          draft.xpToday >= draft.dailyGoal &&
+          draft.dailyGoal > 0 &&
+          cadenceBonusChest(goalStreakOf(draft, now))
+        ) {
+          earnChest(draft, "quiz", 0);
+        }
         trophies = claimTrophies(draft, now);
       });
       // Cadres LOT2 (WS2.1) : clôturer la leçon de chapitre (progression +

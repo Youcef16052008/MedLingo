@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useT } from "../i18n/useT";
 import { useAppState, update, startStorySession, saveStoryProgress, claimStoryReward } from "../domain/store";
-import { storyById, storiesSettled } from "../learning/stories";
+import { nextStoryInChapter, storyById, storiesSettled } from "../learning/stories";
 import {
   initSession,
   resumeSession,
@@ -174,6 +174,10 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
   if (!state) return <div className="skeleton" />;
 
   const title = story.title[lang] || story.title.fr;
+  // WS4 levier 5 : la suite du même chapitre (null si aucune).
+  // Teaser seulement quand le corpus est chargé (sinon nextStory serait
+  // faussement null pendant le fetch des 7,6 Mo).
+  const nextStory = storiesSettled() ? nextStoryInChapter(story) : null;
 
   /* ================= BILAN FINAL ================= */
   if (state.finished && summary) {
@@ -210,7 +214,18 @@ export function StorySessionScreen({ storyId, onQuit }: Props) {
             +{summary.xp} XP {summary.goalHit ? "🎯" : ""}
           </p>
         )}
-        <button type="button" className="btn block" style={{ marginTop: 12 }} onClick={onQuit}>
+        {/* WS4 levier 5 — cliffhanger : la suite du chapitre est proposée
+            (s'il existe une histoire publiée suivante dans le même chapitre). */}
+        {nextStory && (
+          <a
+            className="btn primary block"
+            style={{ marginTop: 12 }}
+            href={`#/story/${nextStory.storyId}`}
+          >
+            📖 {t("storyNext")} « {nextStory.title[lang] || nextStory.title.fr} » →
+          </a>
+        )}
+        <button type="button" className="btn block ghost" style={{ marginTop: 8 }} onClick={onQuit}>
           {t("homeLbl")}
         </button>
       </div>

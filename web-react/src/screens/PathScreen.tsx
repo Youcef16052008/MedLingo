@@ -8,7 +8,7 @@ import { pickTodayStory } from "../learning/selection";
 import { navigate } from "../lib/router";
 import { pickContinueModule, totalDue, type Sm2Map } from "../domain/progress";
 import { buildPath, type PathNode } from "../domain/path";
-import { goalProgress, buyFreeze, FREEZE_COST_GEMS, last7Days } from "../domain/gamification";
+import { goalProgress, buyFreeze, FREEZE_COST_GEMS, last7Days, goalStreakOf } from "../domain/gamification";
 import { Medi } from "../components/Medi";
 import { GoalRing } from "../components/GoalRing";
 import { RewardPopup, type RewardData } from "../components/RewardPopup";
@@ -170,6 +170,13 @@ export function PathScreen() {
             );
           })}
         </div>
+
+        {/* WS4 : la cadence d'objectifs consécutifs, lisible sous le calendrier. */}
+        {goalStreakOf(s, now) > 0 && (
+          <p className="tiny path-goal" style={{ marginTop: 4 }}>
+            🎯 {goalStreakOf(s, now)} {goalStreakOf(s, now) === 1 ? "jour d'objectif d'affilée" : "jours d'objectif d'affilée"} · coffre bonus tous les 3
+          </p>
+        )}
 
         <div className="streak-row">
           <span className="streak-pill">
