@@ -55,6 +55,19 @@
 
 ---
 
+## 🟢 WS1/WS2 — état après la session du 25/10 (soir)
+
+- [x] **WS1.3** corpus 13 000 committé + explications trilingues 100 % (commit 7d60020) — script `fill_exercise_explanations.py` réexécutable.
+- [x] **WS1.4/1.6** listes d'audit générées : [`AUDIT_TERMES_WS1.md`](AUDIT_TERMES_WS1.md) (44 chapitres minces, 519 fr==en, 0 doublon restant) — **traitement humain**.
+- [x] **WS2.1 web** sous-système révision/chapitres ROUTÉ (commit 083b2a7) : #/chapter/:id, #/review, cadres ?lesson/?review dans le quiz, lazy-load 1,8 Mo, SW précâché, puce PathScreen. **Reste : routage Android** (ChapterScreen.kt/ReviewHubScreen.kt existent, non branchés dans la nav).
+- [x] **WS2.3 (BUG-009) RÉSOLU SANS CHANGEMENT** : SM-2 classique correct, étiquettes honnêtes — décision documentée (commit d6e5e81).
+- [x] **WS2.6a (BUG-020)** trophée promotion = meilleur palier atteint (commit d6e5e81).
+- [ ] **WS2.2** : BUG-008 user_stats atomique · BUG-022 main thread · BUG-024/025 Android
+- [ ] **WS2.4** : BUG-019 DST + gel 1 jour (2 plateformes)
+- [ ] **WS2.5** : ADR-2 backend désactiver/réparer (deps mortes → INTERNET)
+- [ ] **WS2.6b** : BUG-021 chaînes FR durcies (Leagues/Profile) + checker
+- [ ] **WS2.7** : BUG-015 harnais pilote-001 · BUG-032/033 checkers
+
 ## 🟡 DEV (agent — sur demande, dans l'ordre)
 
 ### V0.4 — Release interne Play Store (prochain jalon dev)
