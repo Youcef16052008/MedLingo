@@ -1,11 +1,6 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Anatomie Pathologique — 218 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object AnatomiePathologiqueTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
@@ -36,12 +31,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˌhɪstoʊpəˈθɒlədʒi/",
-
-            exampleFr = "Exemple: Le Examen microscopique des tissus pour étudier les manifestations de la maladie.",
-
-            exampleAr = "مثال: يظهر فحص المجهري للأنسجة لدراسة مظاهر المرض.",
-
-            exampleEn = "The Histopathology is Microscopic examination of tissue to study manifestations of disease.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2730,
@@ -61,6 +53,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2731,
+            etymology = "",
             termEn = "Biopsy",
             termFr = "Biopsie",
             termAr = "خزعة النسيج",
@@ -156,6 +149,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2737,
+            etymology = "",
             termEn = "Lesion",
             termFr = "Lésion",
             termAr = "الآفة",
@@ -165,15 +159,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
             ipaPhonetic = "/ˈliːʒən/",
-
-            exampleFr = "Exemple: Le Tout changement anormal dans la structure d'un organe ou tissu dû à une blessure ou maladie.",
-
-            exampleAr = "مثال: يظهر أي تغيير غير طبيعي في بنية عضو أو نسيج بسبب إصابة أو مرض.",
-
-            exampleEn = "The Lesion is Any abnormal change in structure of an organ or tissue due to injury or disease.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2738,
+            etymology = "",
             termEn = "Frozen section",
             termFr = "Coupe extemporanée (Section congelée)",
             termAr = "القطع المجمد",
@@ -189,6 +181,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2739,
+            etymology = "",
             termEn = "Fine needle aspiration (FNA)",
             termFr = "Cytoponction (ponction à l'aiguille fine)",
             termAr = "الشفط بالإبرة الدقيقة",
@@ -204,6 +197,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2740,
+            etymology = "",
             termEn = "Hematoxylin and Eosin (H&E)",
             termFr = "Hématoxyline-éosine (HE)",
             termAr = "صبغة الهيماتوكسيلين والإيوزين",
@@ -235,6 +229,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2742,
+            etymology = "",
             termEn = "Cell injury",
             termFr = "Lésion cellulaire",
             termAr = "إصابة الخلية",
@@ -244,15 +239,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/sɛl ˈɪndʒəri/",
-
-            exampleFr = "Exemple: Le Dommage à une cellule résultant de divers facteurs de stress; peut être réversible ou irréversible.",
-
-            exampleAr = "مثال: يظهر ضرر يلحق بالخلية نتيجة عوامل ضغط متنوعة؛ قد يكون عكوساً أو غير عكوس.",
-
-            exampleEn = "The Cell injury is Damage to a cell resulting from various stressors; can be reversible or irreversible.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2743,
+            etymology = "",
             termEn = "Reversible injury",
             termFr = "Lésion réversible",
             termAr = "الإصابة العكوسة",
@@ -262,15 +255,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/rɪˈvɜːrsɪbəl ˈɪndʒəri/",
-
-            exampleFr = "Exemple: Le Lésion cellulaire corrigeable si le stimulus nocif est retiré; caractérisée par un gonflement.",
-
-            exampleAr = "مثال: يظهر ضرر خلوي يمكن تصحيحه إذا أُزيل المحفز المؤذي؛ يتميز بالتورم.",
-
-            exampleEn = "The Reversible injury is Cell damage that can be corrected if the injurious stimulus is removed; characterized by swelling.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2744,
+            etymology = "",
             termEn = "Irreversible injury",
             termFr = "Lésion irréversible",
             termAr = "الإصابة غير العكوسة",
@@ -280,12 +271,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ɪˈrɪvɜːrsɪbəl ˈɪndʒəri/",
-
-            exampleFr = "Exemple: Le Lésion cellulaire permanente conduisant à la mort cellulaire; signes: modifications nucléaires et membranaires.",
-
-            exampleAr = "مثال: يظهر ضرر خلوي دائم يؤدي إلى موت الخلية؛ علاماته: تغيرات نووية وتلف الغشاء.",
-
-            exampleEn = "The Irreversible injury is Permanent cell damage leading to cell death; hallmarks are nuclear changes and membrane damage.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2745,
@@ -299,12 +287,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/nɪˈkroʊsɪs/",
-
-            exampleFr = "Exemple: Le Mort cellulaire non contrôlée causée par une blessure externe entraînant une inflammation.",
-
-            exampleAr = "مثال: يظهر موت الخلية غير المنضبط الناجم عن إصابة خارجية مما يُسبِّب التهاباً.",
-
-            exampleEn = "The Necrosis is Uncontrolled cell death caused by external injury resulting in inflammation.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2746,
@@ -318,12 +303,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
-
-            exampleFr = "Exemple: Le Mort cellulaire programmée et ordonnée sans inflammation; essentielle au développement et homéostasie.",
-
-            exampleAr = "مثال: يظهر موت الخلية المبرمج والمنظم دون التهاب؛ ضروري للنمو والتوازن الداخلي.",
-
-            exampleEn = "The Apoptosis is Programmed, orderly cell death without inflammation; essential for development and homeostasis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2747,
@@ -353,12 +335,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌlɪkwɪˈfæktɪv nɪˈkroʊsɪs/",
-
-            exampleFr = "Exemple: Le Nécrose résultant en une masse liquide due à la digestion enzymatique; typique du cerveau et abcès.",
-
-            exampleAr = "مثال: يظهر نخر يُنتِج كتلة سائلة بسبب الهضم الإنزيمي؛ نموذجي في الدماغ والخراجات.",
-
-            exampleEn = "The Liquefactive necrosis is Necrosis resulting in liquid mass due to enzymatic digestion; typical in brain and abscesses.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2749,
@@ -372,12 +351,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˈkeɪsiəs nɪˈkroʊsɪs/",
-
-            exampleFr = "Exemple: Le Nécrose ressemblant au fromage caractéristique des granulomes tuberculeux; architecture détruite.",
-
-            exampleAr = "مثال: يظهر نخر يشبه الجبن مميز لحبيبومات السل؛ يُدمَّر فيه هيكل الأنسجة.",
-
-            exampleEn = "The Caseous necrosis is Cheese-like necrosis characteristic of tuberculosis granulomas; tissue architecture destroyed.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2750,
@@ -391,12 +367,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/fæt nɪˈkroʊsɪs/",
-
-            exampleFr = "Exemple: Le Mort du tissu adipeux; vue dans pancréatite aiguë et traumatisme mammaire; dépôts de savon calcique.",
-
-            exampleAr = "مثال: يظهر موت النسيج الشحمي؛ يُرى في التهاب البنكرياس الحاد وصدمة الثدي؛ ترسبات صابون الكالسيوم.",
-
-            exampleEn = "The Fat necrosis is Death of adipose tissue; seen in acute pancreatitis and breast trauma; calcium soap deposits.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2751,
@@ -410,15 +383,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˈɡæŋɡrɪnəs nɪˈkroʊsɪs/",
-
-            exampleFr = "Exemple: Le Nécrose de coagulation modifiée par infection bactérienne; gangrène humide a composante liquéfiante.",
-
-            exampleAr = "مثال: يظهر نخر التخثري المعدَّل بعدوى بكتيرية؛ الغنغرينا الرطبة تحتوي مكوناً تميعياً.",
-
-            exampleEn = "The Gangrenous necrosis is Coagulative necrosis modified by bacterial infection; wet gangrene has liquefactive component.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2752,
+            etymology = "",
             termEn = "Cellular swelling",
             termFr = "Gonflement cellulaire (Dégénérescence hydropique)",
             termAr = "التورم الخلوي",
@@ -444,15 +415,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˈfæti tʃeɪndʒ/",
-
-            exampleFr = "Exemple: Le Accumulation anormale de triglycérides dans les cellules; plus fréquente dans le foie et le cœur.",
-
-            exampleAr = "مثال: يظهر تراكم غير طبيعي للدهون الثلاثية في الخلايا؛ الأكثر شيوعاً في الكبد والقلب.",
-
-            exampleEn = "The Fatty change (Steatosis) is Abnormal accumulation of triglycerides in cells; most commonly seen in liver and heart.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2754,
+            etymology = "",
             termEn = "Karyolysis",
             termFr = "Caryolyse",
             termAr = "التحلل النووي",
@@ -462,15 +431,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/kəˈraɪəlɪsɪs/",
-
-            exampleFr = "Exemple: Le Dissolution de la chromatine due à l'activité des DNases; estompage nucléaire dans les cellules nécrotiques.",
-
-            exampleAr = "مثال: يظهر تحلل الكروماتين بسبب نشاط إنزيم DNase؛ تلاشي النواة في الخلايا النخرية.",
-
-            exampleEn = "The Karyolysis is Dissolution of the chromatin due to DNase activity; nuclear fading in necrotic cells.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2755,
+            etymology = "",
             termEn = "Karyorrhexis",
             termFr = "Caryorrhexie",
             termAr = "التفتت النووي",
@@ -480,12 +447,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌkæriəˈrɛksɪs/",
-
-            exampleFr = "Exemple: Le Fragmentation du noyau en petits amas de chromatine; vue dans nécrose et apoptose.",
-
-            exampleAr = "مثال: يظهر تفتت النواة إلى كتل صغيرة من الكروماتين؛ يُرى في النخر والموت الخلوي المبرمج.",
-
-            exampleEn = "The Karyorrhexis is Fragmentation of the nucleus into small clumps of chromatin; seen in necrosis and apoptosis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2756,
@@ -499,15 +463,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/pɪkˈnoʊsɪs/",
-
-            exampleFr = "Exemple: Le Rétrécissement nucléaire et condensation accrue de la chromatine; signe de lésion irréversible.",
-
-            exampleAr = "مثال: يظهر انكماش النواة وزيادة تكثف الكروماتين؛ علامة إصابة خلوية لا رجعة فيها.",
-
-            exampleEn = "The Pyknosis is Nuclear shrinkage and increased chromatin condensation; a sign of irreversible cell injury.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2757,
+            etymology = "",
             termEn = "Autophagy",
             termFr = "Autophagie",
             termAr = "الالتهام الذاتي",
@@ -533,15 +495,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ɪˈskiːmiə/",
-
-            exampleFr = "Exemple: Le Approvisionnement sanguin insuffisant d'un tissu causant carence en oxygène et lésion cellulaire.",
-
-            exampleAr = "مثال: يظهر إمداد دموي غير كافٍ للنسيج مسبباً نقصاً في الأكسجين وإصابة خلوية.",
-
-            exampleEn = "The Ischemia is Inadequate blood supply to a tissue causing oxygen deficiency and cellular injury.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2759,
+            etymology = "",
             termEn = "Reperfusion injury",
             termFr = "Lésion de reperfusion",
             termAr = "إصابة إعادة الاستروية",
@@ -551,15 +511,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/ˌriːpɜːrˈfjuːʒən ˈɪndʒəri/",
-
-            exampleFr = "Exemple: Le Dommage tissulaire paradoxal survenant lors du rétablissement du flux sanguin après ischémie.",
-
-            exampleAr = "مثال: يظهر ضرر نسيجي متناقض يحدث عند استعادة تدفق الدم بعد نقص التروية؛ تُوسِّطه الجذور الحرة.",
-
-            exampleEn = "The Reperfusion injury is Paradoxical tissue damage occurring when blood flow is restored after ischemia; mediated by free radicals.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2760,
+            etymology = "",
             termEn = "Free radicals",
             termFr = "Radicaux libres",
             termAr = "الجذور الحرة",
@@ -569,15 +527,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
             ipaPhonetic = "/friː ˈrædɪkəlz/",
-
-            exampleFr = "Exemple: Le Molécules hautement réactives avec des électrons non appariés qui endommagent les composants cellulaires.",
-
-            exampleAr = "مثال: يظهر جزيئات شديدة التفاعل تحتوي إلكترونات غير مزاوجة تُتلِف مكونات الخلية.",
-
-            exampleEn = "The Free radicals is Highly reactive molecules with unpaired electrons that damage cellular components.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2761,
+            etymology = "",
             termEn = "Infarction",
             termFr = "Infarctus",
             termAr = "الاحتشاء",
@@ -593,6 +549,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2762,
+            etymology = "",
             termEn = "Inflammation",
             termFr = "Inflammation",
             termAr = "الالتهاب",
@@ -608,6 +565,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2763,
+            etymology = "",
             termEn = "Acute inflammation",
             termFr = "Inflammation aiguë",
             termAr = "الالتهاب الحاد",
@@ -633,15 +591,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈkɑːrdɪnəl saɪnz/",
-
-            exampleFr = "Exemple: Le Cinq signes classiques: rougeur, chaleur, gonflement, douleur, perte de fonction.",
-
-            exampleAr = "مثال: يظهر علامات الخمس الكلاسيكية: احمرار وحرارة وتورم وألم وفقدان وظيفة.",
-
-            exampleEn = "The Cardinal signs of inflammation is Five classic signs: redness (rubor), heat (calor), swelling (tumor), pain (dolor), loss of function.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2765,
+            etymology = "",
             termEn = "Exudate",
             termFr = "Exsudat",
             termAr = "الإفراز الالتهابي",
@@ -651,15 +607,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈɛksjʊdeɪt/",
-
-            exampleFr = "Exemple: Le Liquide inflammatoire riche en protéines et cellules qui s'échappe des vaisseaux sanguins vers les tissus.",
-
-            exampleAr = "مثال: يظهر سائل التهابي غني بالبروتينات والخلايا يتسرب من الأوعية الدموية إلى الأنسجة.",
-
-            exampleEn = "The Exudate is Inflammatory fluid rich in proteins and cells that escapes from blood vessels into tissue.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2766,
+            etymology = "",
             termEn = "Transudate",
             termFr = "Transsudat",
             termAr = "الإفراز غير الالتهابي",
@@ -675,6 +629,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2767,
+            etymology = "",
             termEn = "Vasodilation",
             termFr = "Vasodilatation",
             termAr = "توسع الأوعية",
@@ -690,6 +645,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2768,
+            etymology = "",
             termEn = "Vascular permeability",
             termFr = "Perméabilité vasculaire",
             termAr = "النفاذية الوعائية",
@@ -705,6 +661,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2769,
+            etymology = "",
             termEn = "Chemotaxis",
             termFr = "Chimiotactisme",
             termAr = "التجاذب الكيميائي",
@@ -720,6 +677,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2770,
+            etymology = "",
             termEn = "Margination",
             termFr = "Margination",
             termAr = "التهميش",
@@ -735,6 +693,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2771,
+            etymology = "",
             termEn = "Diapedesis",
             termFr = "Diapédèse",
             termAr = "النضح الكروي",
@@ -750,6 +709,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2772,
+            etymology = "",
             termEn = "Phagocytosis",
             termFr = "Phagocytose",
             termAr = "الابتلاع الخلوي",
@@ -765,6 +725,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2773,
+            etymology = "",
             termEn = "Neutrophil",
             termFr = "Neutrophile (Polynucléaire neutrophile)",
             termAr = "العدلة",
@@ -780,6 +741,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2774,
+            etymology = "",
             termEn = "Histamine",
             termFr = "Histamine",
             termAr = "الهيستامين",
@@ -795,6 +757,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2775,
+            etymology = "",
             termEn = "Prostaglandins",
             termFr = "Prostaglandines",
             termAr = "البروستاغلاندينات",
@@ -804,15 +767,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌprɒstəˈɡlændɪnz/",
-
-            exampleFr = "Exemple: Le Médiateurs lipidiques dérivés de l'acide arachidonique; causent vasodilatation, fièvre et sensibilisation à la douleur.",
-
-            exampleAr = "مثال: يظهر وسيطات دهنية مشتقة من حمض الأراكيدونيك؛ تسبب توسع الأوعية والحمى وتحسيس الألم.",
-
-            exampleEn = "The Prostaglandins is Lipid mediators derived from arachidonic acid; cause vasodilation, fever, and pain sensitization.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2776,
+            etymology = "",
             termEn = "Complement system (in inflammation)",
             termFr = "Système du complément (dans l'inflammation)",
             termAr = "المتمم (في الالتهاب)",
@@ -828,6 +789,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2777,
+            etymology = "",
             termEn = "Abscess",
             termFr = "Abcès",
             termAr = "الخراج",
@@ -843,6 +805,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2778,
+            etymology = "",
             termEn = "Purulent (Suppurative) inflammation",
             termFr = "Inflammation purulente (suppurée)",
             termAr = "الالتهاب القيحي",
@@ -852,15 +815,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈpjʊərʊlənt/",
-
-            exampleFr = "Exemple: Le Inflammation produisant de grandes quantités de pus; causée par des bactéries pyogènes.",
-
-            exampleAr = "مثال: يظهر تهاب يُنتِج كميات كبيرة من الصديد؛ تسببه البكتيريا القيحية.",
-
-            exampleEn = "The Purulent (Suppurative) inflammation is Inflammation producing large amounts of pus; caused by pyogenic bacteria.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2779,
+            etymology = "",
             termEn = "Fibrinous inflammation",
             termFr = "Inflammation fibrineuse",
             termAr = "الالتهاب الليفيني",
@@ -870,15 +831,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˈfɪbrɪnəs/",
-
-            exampleFr = "Exemple: Le Exsudat riche en fibrine formant une membrane sur les surfaces séreuses ou muqueuses.",
-
-            exampleAr = "مثال: يظهر إفراز غني بالفيبرين يُشكِّل غشاءً على الأسطح المصلية أو المخاطية (مثل: التهاب التامور).",
-
-            exampleEn = "The Fibrinous inflammation is Exudate rich in fibrin forming a membrane on serosal or mucosal surfaces (e.g., pericarditis).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2780,
+            etymology = "",
             termEn = "Serous inflammation",
             termFr = "Inflammation séreuse",
             termAr = "الالتهاب المصلي",
@@ -894,6 +853,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2781,
+            etymology = "",
             termEn = "Pseudomembranous inflammation",
             termFr = "Inflammation pseudomembraneuse",
             termAr = "الالتهاب الغشائي الكاذب",
@@ -903,15 +863,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Aiguë",
             ipaPhonetic = "/ˌsjuːdoʊˈmɛmbrənəs/",
-
-            exampleFr = "Exemple: Le Formation de fausses membranes de fibrine sur les surfaces muqueuses (ex: colite à C. diff).",
-
-            exampleAr = "مثال: يظهر تشكُّل أغشية كاذبة من الفيبرين والنسيج النخري على الأسطح المخاطية.",
-
-            exampleEn = "The Pseudomembranous inflammation is Formation of false membranes of fibrin and necrotic tissue on mucosal surfaces (e.g., C. diff colitis).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2782,
+            etymology = "",
             termEn = "Chronic inflammation",
             termFr = "Inflammation chronique",
             termAr = "الالتهاب المزمن",
@@ -921,15 +879,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˈkrɒnɪk ˌɪnfləˈmeɪʃən/",
-
-            exampleFr = "Exemple: Le Inflammation prolongée (semaines à années) avec lésion et réparation simultanées; lymphocytes prédominants.",
-
-            exampleAr = "مثال: يظهر تهاب مطوَّل (أسابيع إلى سنوات) يتزامن فيه تلف الأنسجة والإصلاح؛ تسود الخلايا الليمفاوية.",
-
-            exampleEn = "The Chronic inflammation is Prolonged inflammation (weeks to years) with simultaneous tissue injury and repair; lymphocytes predominate.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2783,
+            etymology = "",
             termEn = "Granuloma",
             termFr = "Granulome",
             termAr = "الحبيبوم",
@@ -945,6 +901,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2784,
+            etymology = "",
             termEn = "Epithelioid cell",
             termFr = "Cellule épithélioïde",
             termAr = "الخلية الظهارية الشكل",
@@ -960,6 +917,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2785,
+            etymology = "",
             termEn = "Giant cell (Langhans type)",
             termFr = "Cellule géante (type Langhans)",
             termAr = "الخلية العملاقة (نوع لانغهانز)",
@@ -1001,15 +959,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/faɪˈbroʊsɪs/",
-
-            exampleFr = "Exemple: Le Dépôt excessif de tissu conjonctif fibreux (collagène) remplaçant le tissu normal après lésion.",
-
-            exampleAr = "مثال: يظهر ترسُّب مفرط للنسيج الضام الليفي (الكولاجين) محلَّ الأنسجة الطبيعية بعد الإصابة.",
-
-            exampleEn = "The Fibrosis is Excessive deposition of fibrous connective tissue (collagen) replacing normal tissue after injury.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2788,
+            etymology = "",
             termEn = "Scar (Cicatrix)",
             termFr = "Cicatrice",
             termAr = "الندبة",
@@ -1019,15 +975,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/skɑːr/",
-
-            exampleFr = "Exemple: Le Tissu conjonctif fibreux dense remplaçant le tissu lésé; moins fonctionnel que le tissu original.",
-
-            exampleAr = "مثال: يظهر نسيج ضام ليفي كثيف يحلُّ محلَّ النسيج المصاب؛ أقل وظيفية من النسيج الأصلي.",
-
-            exampleEn = "The Scar (Cicatrix) is Dense fibrous connective tissue replacing injured tissue; less functional than original tissue.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2789,
+            etymology = "",
             termEn = "Keloid",
             termFr = "Chéloïde",
             termAr = "الجدرة",
@@ -1043,6 +997,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2790,
+            etymology = "",
             termEn = "Granulation tissue",
             termFr = "Tissu de granulation",
             termAr = "نسيج الحبيبات",
@@ -1052,15 +1007,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌɡrænjʊˈleɪʃən ˈtɪʃuː/",
-
-            exampleFr = "Exemple: Le Nouveau tissu conjonctif vasculaire formé pendant la cicatrisation; composé de fibroblastes, vaisseaux, macrophages.",
-
-            exampleAr = "مثال: يظهر نسيج ضام وعائي جديد يتشكل خلال التئام الجروح؛ يتكون من الخلايا الليفية والأوعية والبلاعم.",
-
-            exampleEn = "The Granulation tissue is New vascular connective tissue formed during wound healing; consists of fibroblasts, vessels, and macrophages.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2791,
+            etymology = "",
             termEn = "Resolution",
             termFr = "Résolution",
             termAr = "الانحلال",
@@ -1070,15 +1023,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌrɛzəˈluːʃən/",
-
-            exampleFr = "Exemple: Le Restauration complète de l'architecture tissulaire normale après inflammation sans cicatrice.",
-
-            exampleAr = "مثال: يظهر استعادة الكاملة لبنية الأنسجة الطبيعية بعد الالتهاب دون تشكُّل ندبة.",
-
-            exampleEn = "The Resolution is Complete restoration of normal tissue architecture after inflammation without scarring.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2792,
+            etymology = "",
             termEn = "Regeneration",
             termFr = "Régénération",
             termAr = "التجديد",
@@ -1094,6 +1045,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2793,
+            etymology = "",
             termEn = "Primary intention (wound healing)",
             termFr = "Cicatrisation par première intention",
             termAr = "الالتئام بالنية الأولى",
@@ -1109,6 +1061,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2794,
+            etymology = "",
             termEn = "Secondary intention (wound healing)",
             termFr = "Cicatrisation par deuxième intention",
             termAr = "الالتئام بالنية الثانية",
@@ -1140,6 +1093,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2796,
+            etymology = "",
             termEn = "Plasma cell",
             termFr = "Plasmocyte",
             termAr = "الخلية البلازمية",
@@ -1155,6 +1109,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2797,
+            etymology = "",
             termEn = "Mast cell",
             termFr = "Mastocyte",
             termAr = "الخلية البدينة",
@@ -1170,6 +1125,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2798,
+            etymology = "",
             termEn = "Eosinophil",
             termFr = "Éosinophile",
             termAr = "الحمضة (اليوزينية)",
@@ -1185,6 +1141,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2799,
+            etymology = "",
             termEn = "Cytokines (in inflammation)",
             termFr = "Cytokines (dans l'inflammation)",
             termAr = "السيتوكينات الالتهابية",
@@ -1210,15 +1167,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
             ipaPhonetic = "/ˌændʒioʊˈdʒɛnɪsɪs/",
-
-            exampleFr = "Exemple: Le Formation de nouveaux vaisseaux sanguins à partir d'existants; essentielle pour cicatrisation et tumeur.",
-
-            exampleAr = "مثال: يظهر تشكُّل أوعية دموية جديدة من أوعية موجودة؛ ضروري لالتئام الجروح ونمو الأورام.",
-
-            exampleEn = "The Angiogenesis is Formation of new blood vessels from pre-existing ones; essential for wound healing and tumor growth.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2801,
+            etymology = "",
             termEn = "Collagen",
             termFr = "Collagène",
             termAr = "الكولاجين",
@@ -1234,6 +1189,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2802,
+            etymology = "",
             termEn = "Hyperemia",
             termFr = "Hyperhémie",
             termAr = "الاحتقان",
@@ -1259,12 +1215,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/kənˈdʒɛstʃən/",
-
-            exampleFr = "Exemple: Le Drainage veineux altéré causant accumulation de sang; vu dans insuffisance cardiaque (foie muscade).",
-
-            exampleAr = "مثال: يظهر اضطراب التصريف الوريدي مسبباً تراكم الدم؛ يُرى في قصور القلب (كبد جوزة الطيب).",
-
-            exampleEn = "The Congestion (passive hyperemia) is Impaired venous outflow causing blood accumulation; seen in heart failure (nutmeg liver).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2804,
@@ -1278,15 +1231,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/θrɒmˈboʊsɪs/",
-
-            exampleFr = "Exemple: Le Coagulation intravasculaire formant un thrombus dans le système vasculaire.",
-
-            exampleAr = "مثال: يظهر تخثر داخل الأوعية يُشكِّل خثرة في الجهاز الوعائي.",
-
-            exampleEn = "The Thrombosis is Intravascular coagulation forming a thrombus within the vascular system.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2805,
+            etymology = "",
             termEn = "Virchow's triad",
             termFr = "Triade de Virchow",
             termAr = "ثالوث فيرشو",
@@ -1296,12 +1247,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈvɪrkoʊz ˈtraɪæd/",
-
-            exampleFr = "Exemple: Le Trois facteurs prédisposant à la thrombose: lésion endothéliale, stase et hypercoagulabilité.",
-
-            exampleAr = "مثال: يظهر ثلاثة عوامل تُهيِّئ للتخثر: إصابة البطانة والركود وفرط التخثر.",
-
-            exampleEn = "The Virchow's triad is Three factors predisposing to thrombosis: endothelial injury, stasis, and hypercoagulability.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2806,
@@ -1347,15 +1295,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈpʌlmənəri ˈɛmbəlɪzəm/",
-
-            exampleFr = "Exemple: Le Obstruction des artères pulmonaires par un caillot; le plus souvent d'une thrombose veineuse profonde.",
-
-            exampleAr = "مثال: يظهر انسداد الشرايين الرئوية بجلطة دموية؛ في الغالب قادمة من التخثر الوريدي العميق.",
-
-            exampleEn = "The Pulmonary embolism is Occlusion of pulmonary arteries by a blood clot; most commonly from deep vein thrombosis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2809,
+            etymology = "",
             termEn = "Hemorrhage",
             termFr = "Hémorragie",
             termAr = "النزيف",
@@ -1371,6 +1317,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2810,
+            etymology = "",
             termEn = "Shock",
             termFr = "Choc",
             termAr = "الصدمة",
@@ -1396,12 +1343,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ɪˈdiːmə/",
-
-            exampleFr = "Exemple: Le Accumulation anormale de liquide dans les espaces interstitiels; causes: pression hydrostatique accrue.",
-
-            exampleAr = "مثال: يظهر تراكم غير طبيعي للسائل في الفراغات الخلالية؛ أسبابه: زيادة الضغط الهيدروستاتيكي.",
-
-            exampleEn = "The Edema (pathological) is Abnormal fluid accumulation in interstitial spaces; causes include increased hydrostatic pressure and decreased oncotic pressure.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2812,
@@ -1421,6 +1365,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2813,
+            etymology = "",
             termEn = "Hematoma",
             termFr = "Hématome",
             termAr = "الورم الدموي",
@@ -1436,6 +1381,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2814,
+            etymology = "",
             termEn = "Aneurysm",
             termFr = "Anévrisme",
             termAr = "تمدد الأوعية الدموية",
@@ -1467,6 +1413,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2816,
+            etymology = "",
             termEn = "Atheroma (Atheromatous plaque)",
             termFr = "Athérome (Plaque athéromateuse)",
             termAr = "الرسوب الشرياني (اللويحة الأثيرومية)",
@@ -1492,12 +1439,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ɪˈskiːmiə/",
-
-            exampleFr = "Exemple: Le Approvisionnement sanguin insuffisant à un tissu causant un déficit en oxygène et nutriments.",
-
-            exampleAr = "مثال: يظهر إمداد دموي غير كافٍ للنسيج مسبباً عجزاً في الأكسجين والمغذيات.",
-
-            exampleEn = "The Ischemia (circulatory) is Insufficient blood supply to a tissue causing oxygen and nutrient deficit.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2818,
@@ -1517,6 +1461,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2819,
+            etymology = "",
             termEn = "Infarct (types)",
             termFr = "Infarctus (types)",
             termAr = "الاحتشاء (أنواعه)",
@@ -1526,12 +1471,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈɪnfɑːrkt/",
-
-            exampleFr = "Exemple: Le Infarctus rouge (hémorragique) dans tissu lâche; blanc (anémique) dans organes solides.",
-
-            exampleAr = "مثال: يظهر احتشاء أحمر (نزفي) في النسيج الرخو؛ أبيض (فقر الدم) في الأعضاء الصلبة.",
-
-            exampleEn = "The Infarct (types) is Red (hemorrhagic) infarct in loose tissue; white (anemic) infarct in solid organs like heart and spleen.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2820,
@@ -1545,12 +1487,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/ˈkɑːrdɪæk tæmˈpɒneɪd/",
-
-            exampleFr = "Exemple: Le Compression du cœur par accumulation de liquide dans le sac péricardique limitant le débit cardiaque.",
-
-            exampleAr = "مثال: يظهر ضغط على القلب بسبب تراكم السائل في كيس التامور مما يُحدُّ من نتاج القلب.",
-
-            exampleEn = "The Cardiac tamponade is Compression of the heart by fluid accumulation in the pericardial sac limiting cardiac output.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2821,
@@ -1564,12 +1503,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
             ipaPhonetic = "/pɪˈtiːkiˌiː ˈpɜːrpjʊrə ɪˈkɪmoʊsɪs/",
-
-            exampleFr = "Exemple: Le Types d'hémorragie: <2 mm (pétéchies), 2–10 mm (purpura), >10 mm (ecchymose).",
-
-            exampleAr = "مثال: يظهر أنواع النزيف: <2 ملم (نمشات)، 2–10 ملم (فرفرية)، >10 ملم (كدمة).",
-
-            exampleEn = "The Petechiae, purpura, ecchymosis is Types of hemorrhage: <2 mm (petechiae), 2–10 mm (purpura), >10 mm (ecchymosis).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2822,
@@ -1589,6 +1525,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2823,
+            etymology = "",
             termEn = "Tumor (Neoplasm)",
             termFr = "Tumeur (Néoplasme)",
             termAr = "الورم",
@@ -1604,6 +1541,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2824,
+            etymology = "",
             termEn = "Benign tumor",
             termFr = "Tumeur bénigne",
             termAr = "الورم الحميد",
@@ -1619,6 +1557,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2825,
+            etymology = "",
             termEn = "Malignant tumor (Cancer)",
             termFr = "Tumeur maligne (Cancer)",
             termAr = "الورم الخبيث (السرطان)",
@@ -1730,6 +1669,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2832,
+            etymology = "",
             termEn = "Metastasis",
             termFr = "Métastase",
             termAr = "النقيلة",
@@ -1745,6 +1685,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2833,
+            etymology = "",
             termEn = "Differentiation",
             termFr = "Différenciation",
             termAr = "التمايز",
@@ -1770,12 +1711,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌænəˈpleɪʒə/",
-
-            exampleFr = "Exemple: Le Perte de différenciation des cellules tumorales avec anomalies structurelles et fonctionnelles.",
-
-            exampleAr = "مثال: يظهر فقدان تمايز خلايا الورم مع شذوذات بنيوية ووظيفية؛ سمة الخباثة.",
-
-            exampleEn = "The Anaplasia is Loss of differentiation of tumor cells with structural and functional abnormalities; feature of malignancy.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2835,
@@ -1789,12 +1727,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/dɪsˈpleɪʒə/",
-
-            exampleFr = "Exemple: Le Croissance cellulaire anormale pré-néoplasique avec perte d'uniformité et d'orientation architecturale.",
-
-            exampleAr = "مثال: يظهر نمو خلوي غير طبيعي ما قبل الورمي مع فقدان التجانس والتوجه البنيوي.",
-
-            exampleEn = "The Dysplasia is Pre-neoplastic abnormal cellular growth with loss of uniformity and architectural orientation.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2836,
@@ -1808,15 +1743,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌkɑːrsɪˈnoʊmə ɪn ˈsɪtjuː/",
-
-            exampleFr = "Exemple: Le Dysplasie sévère où toute l'épaisseur de l'épithélium est remplacée par des cellules malignes sans invasion.",
-
-            exampleAr = "مثال: يظهر خلل تنسج شديد يُستبدَل فيه سماكة الظهارة كاملة بخلايا خبيثة دون غزو.",
-
-            exampleEn = "The Carcinoma in situ (CIS) is Severe dysplasia where the full thickness of epithelium is replaced by malignant cells without invasion.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2837,
+            etymology = "",
             termEn = "Invasion",
             termFr = "Invasion",
             termAr = "الغزو",
@@ -1832,6 +1765,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2838,
+            etymology = "",
             termEn = "Grading (tumor)",
             termFr = "Grade tumoral",
             termAr = "درجة الورم",
@@ -1847,6 +1781,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2839,
+            etymology = "",
             termEn = "Staging (tumor)",
             termFr = "Stadification tumorale (TNM)",
             termAr = "تحديد مرحلة الورم",
@@ -1856,15 +1791,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˈsteɪdʒɪŋ/",
-
-            exampleFr = "Exemple: Le Évaluation de l'étendue tumorale par le système TNM: T (taille), N (ganglions), M (métastase).",
-
-            exampleAr = "مثال: يظهر تقييم امتداد الورم بنظام TNM: T (حجم الورم) وN (العقد) وM (النقيلة).",
-
-            exampleEn = "The Staging (tumor) is Assessment of tumor extent using TNM system: T (tumor size), N (nodes), M (metastasis).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2840,
+            etymology = "",
             termEn = "Tumor markers",
             termFr = "Marqueurs tumoraux",
             termAr = "الواسمات الورمية",
@@ -1874,15 +1807,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˈtjuːmər ˈmɑːrkərz/",
-
-            exampleFr = "Exemple: Le Substances dans le sang ou tissu indiquant la présence de cancer; ex: PSA, AFP, ACE, CA-125.",
-
-            exampleAr = "مثال: يظهر مواد في الدم أو الأنسجة تدل على وجود سرطان؛ مثل: PSA وAFP وCEA وCA-125.",
-
-            exampleEn = "The Tumor markers is Substances in blood or tissue indicating cancer presence; e.g., PSA, AFP, CEA, CA-125.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2841,
+            etymology = "",
             termEn = "Paraneoplastic syndrome",
             termFr = "Syndrome paranéoplasique",
             termAr = "متلازمة مجاورة الورم",
@@ -1892,12 +1823,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
             ipaPhonetic = "/ˌpærəˌniːoʊˈplæstɪk/",
-
-            exampleFr = "Exemple: Le Symptômes non causés par la masse tumorale mais par des substances sécrétées par la tumeur.",
-
-            exampleAr = "مثال: يظهر أعراض لا تنجم عن الكتلة الورمية أو النقيلة بل عن مواد يُفرِزها الورم أو الاستجابة المناعية.",
-
-            exampleEn = "The Paraneoplastic syndrome is Symptoms not caused by tumor mass or metastasis but by tumor-secreted substances or immune response.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2842,
@@ -1917,6 +1845,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2843,
+            etymology = "",
             termEn = "Oncogene",
             termFr = "Oncogène",
             termAr = "الجين الورمي",
@@ -1932,6 +1861,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2844,
+            etymology = "",
             termEn = "Proto-oncogene",
             termFr = "Proto-oncogène",
             termAr = "الجين الأولي الورمي",
@@ -1947,6 +1877,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2845,
+            etymology = "",
             termEn = "Tumor suppressor gene",
             termFr = "Gène suppresseur de tumeur",
             termAr = "الجين الكابح للأورام",
@@ -1957,13 +1888,12 @@ object AnatomiePathologiqueTerms {
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər dʒiːn/",
             exampleEn = "The tumor suppressor gene is the gene that inhibits cell growth; loss of function leads to cancer; e.g., TP53, RB, BRCA1.",
-            exampleFr = "Exemple: Le Gène qui inhibe la croissance cellulaire; perte de fonction mène au cancer; ex: TP53, RB, BRCA1.",
-
-            exampleAr = "مثال: يظهر جين يُثبِّط نمو الخلايا؛ فقدان وظيفته يُؤدي إلى السرطان؛ مثل: TP53 وRB وBRCA1.",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2846,
+            etymology = "",
             termEn = "TP53 (p53)",
             termFr = "TP53 (p53)",
             termAr = "الجين TP53 (p53)",
@@ -1989,12 +1919,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈkɑːrsɪnədʒən/",
-
-            exampleFr = "Exemple: Le Tout agent causant le cancer; classifié en chimique, physique (radiation) ou biologique (virus).",
-
-            exampleAr = "مثال: يظهر أي عامل يُسبِّب السرطان؛ يُصنَّف إلى كيميائي وجسدي (إشعاع) وبيولوجي (فيروسات).",
-
-            exampleEn = "The Carcinogen is Any agent causing cancer; classified as chemical, physical (radiation), or biological (viruses).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2848,
@@ -2046,6 +1973,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2851,
+            etymology = "",
             termEn = "Mutation",
             termFr = "Mutation",
             termAr = "الطفرة",
@@ -2061,6 +1989,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2852,
+            etymology = "",
             termEn = "Epigenetics (in cancer)",
             termFr = "Épigénétique (dans le cancer)",
             termAr = "علم التعبير الجيني (في السرطان)",
@@ -2070,15 +1999,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌɛpɪdʒɪˈnɛtɪks/",
-
-            exampleFr = "Exemple: Le Modifications héritables de l'expression génique sans altération de la séquence ADN.",
-
-            exampleAr = "مثال: يظهر تغيرات وراثية في التعبير الجيني دون تغيير تسلسل DNA؛ المثيلة والتعديل الهيستوني.",
-
-            exampleEn = "The Epigenetics (in cancer) is Heritable changes in gene expression without DNA sequence alteration; DNA methylation and histone modification.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2853,
+            etymology = "",
             termEn = "Telomerase (in cancer)",
             termFr = "Télomérase (dans le cancer)",
             termAr = "التيلوميراز (في السرطان)",
@@ -2094,6 +2021,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2854,
+            etymology = "",
             termEn = "Hallmarks of cancer",
             termFr = "Caractéristiques du cancer (Hallmarks)",
             termAr = "سمات السرطان",
@@ -2103,12 +2031,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈhɔːlmɑːrks əv ˈkænsər/",
-
-            exampleFr = "Exemple: Le Dix capacités acquises du cancer: autosuffisance, évasion de l'apoptose, invasion, métastase, angiogenèse.",
-
-            exampleAr = "مثال: يظهر خصائص العشر المكتسبة للسرطان: الاكتفاء الذاتي والتهرب من الموت الخلوي والغزو والانتشار.",
-
-            exampleEn = "The Hallmarks of cancer is Ten acquired capabilities of cancer: self-sufficiency, evasion of apoptosis, invasion, metastasis, angiogenesis, etc.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2855,
@@ -2122,12 +2047,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈkɛmɪkəl ˈkɑːrsɪnədʒənz/",
-
-            exampleFr = "Exemple: Le Substances chimiques induisant le cancer; incluent aflatoxines, hydrocarbures, tabac, amiante, benzène.",
-
-            exampleAr = "مثال: يظهر مواد كيميائية تُحرِّض السرطان؛ تشمل الأفلاتوكسينات والهيدروكربونات والتبغ والأسبستوس.",
-
-            exampleEn = "The Chemical carcinogens is Chemical substances inducing cancer; include aflatoxins, polycyclic hydrocarbons, tobacco, asbestos, benzene.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2856,
@@ -2141,12 +2063,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌreɪdiˈeɪʃən ˌkɑːrsɪnəˈdʒɛnɪsɪs/",
-
-            exampleFr = "Exemple: Le Cancer causé par radiation ionisante causant des cassures double brin d'ADN; UV cause cancer cutané.",
-
-            exampleAr = "مثال: يظهر سرطان تسببه الإشعاعات المُؤيِّنة بإحداث كسور مزدوجة في DNA؛ الأشعة فوق البنفسجية تسبب سرطان الجلد.",
-
-            exampleEn = "The Radiation carcinogenesis is Cancer caused by ionizing radiation causing DNA double-strand breaks; UV radiation causes skin cancer.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2857,
@@ -2160,15 +2079,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˈvaɪrəl ˌkɑːrsɪnəˈdʒɛnɪsɪs/",
-
-            exampleFr = "Exemple: Le Cancer causé par des virus oncogènes; HPV (col), VHB (hépatocel.), EBV (Burkitt).",
-
-            exampleAr = "مثال: يظهر سرطان تسببه الفيروسات المُسرطِنة؛ HPV (عنق الرحم)، HBV (الكبد)، EBV (ليمفوما بوركيت).",
-
-            exampleEn = "The Viral carcinogenesis is Cancer caused by oncogenic viruses; HPV (cervical cancer), HBV (hepatocellular), EBV (Burkitt lymphoma).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2858,
+            etymology = "",
             termEn = "Hereditary cancer",
             termFr = "Cancer héréditaire",
             termAr = "السرطان الوراثي",
@@ -2178,12 +2095,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/həˈrɛdɪtəri ˈkænsər/",
-
-            exampleFr = "Exemple: Le Cancer causé par mutations germinales héritées; ex: BRCA1/2 (sein), APC (côlon), TP53.",
-
-            exampleAr = "مثال: يظهر سرطان تسببه طفرات خط الجرثومة الموروثة؛ مثل BRCA1/2 والـAPC والـTP53.",
-
-            exampleEn = "The Hereditary cancer is Cancer caused by inherited germline mutations; e.g., BRCA1/2 (breast), APC (colon), TP53 (Li-Fraumeni).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2859,
@@ -2213,12 +2127,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
             ipaPhonetic = "/ˌændʒioʊˈdʒɛnɪsɪs/",
-
-            exampleFr = "Exemple: Le Formation de nouveaux vaisseaux alimentant la tumeur; médié par VEGF; requis pour croissance >2mm.",
-
-            exampleAr = "مثال: يظهر تشكُّل أوعية دموية جديدة تُغذِّي الورم؛ تُوسِّطه VEGF؛ ضروري للنمو فوق 2 ملم.",
-
-            exampleEn = "The Angiogenesis (tumor) is Formation of new blood vessels supplying the tumor; mediated by VEGF; required for growth >2mm.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2861,
@@ -2238,6 +2149,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2862,
+            etymology = "",
             termEn = "Myocardial infarction (MI)",
             termFr = "Infarctus du myocarde (IDM)",
             termAr = "احتشاء عضلة القلب",
@@ -2247,12 +2159,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌmaɪəˌkɑːrdiəl ɪnˈfɑːrkʃən/",
-
-            exampleFr = "Exemple: Le Mort des cellules myocardiques due à ischémie prolongée; généralement par thrombose coronarienne.",
-
-            exampleAr = "مثال: يظهر موت خلايا عضلة القلب بسبب نقص التروية المطوَّل؛ يُسبِّبه عادةً تخثر الشريان التاجي.",
-
-            exampleEn = "The Myocardial infarction (MI) is Death of myocardial cells due to prolonged ischemia; usually caused by coronary artery thrombosis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2863,
@@ -2282,12 +2191,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌhɑɪpɜːˈtrəʊfi/",
-
-            exampleFr = "Exemple: Le Augmentation de la taille des cardiomyocytes; réponse compensatoire à la surcharge; peut mener à insuffisance.",
-
-            exampleAr = "مثال: يظهر زيادة في حجم خلايا القلب؛ استجابة تعويضية لزيادة العبء؛ قد تُؤدِّي إلى الفشل.",
-
-            exampleEn = "The Cardiac hypertrophy is Increase in size of cardiomyocytes; compensatory response to increased workload; can lead to failure.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2865,
@@ -2301,12 +2207,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌpɛrɪkɑːrˈdaɪtɪs/",
-
-            exampleFr = "Exemple: Le Inflammation du péricarde; peut être fibrineuse, séreuse ou constrictive.",
-
-            exampleAr = "مثال: يظهر تهاب التامور (الغشاء المحيط بالقلب)؛ قد يكون ليفينياً أو مصلياً أو انضغاطياً.",
-
-            exampleEn = "The Pericarditis is Inflammation of the pericardium; can be fibrinous, serous, or constrictive.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2866,
@@ -2320,12 +2223,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌɛndoʊkɑːrˈdaɪtɪs/",
-
-            exampleFr = "Exemple: Le Inflammation de l'endocarde; infectieuse (végétations sur valves) ou non infectieuse.",
-
-            exampleAr = "مثال: يظهر تهاب الطبقة الداخلية للقلب؛ معدٍ (نباتات على الصمامات) أو غير معدٍ.",
-
-            exampleEn = "The Endocarditis is Inflammation of the endocardium; infectious (vegetations on valves) or non-infectious (Libman-Sacks).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2867,
@@ -2371,15 +2271,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˌkɑːrdiəʊmaɪˈɒpəθi/",
-
-            exampleFr = "Exemple: Le Maladie primaire du myocarde; classifiée en dilatée, hypertrophique ou restrictive.",
-
-            exampleAr = "مثال: يظهر مرض أولي في عضلة القلب؛ يُصنَّف إلى مُتوسِّع وضخامي وانضغاطي.",
-
-            exampleEn = "The Cardiomyopathy is Primary disease of the myocardium; classified as dilated, hypertrophic, or restrictive.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2870,
+            etymology = "",
             termEn = "Rheumatic heart disease",
             termFr = "Cardiopathie rhumatismale",
             termAr = "أمراض القلب الروماتيزمية",
@@ -2389,15 +2287,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ruːˈmætɪk hɑːrt dɪˈziːz/",
-
-            exampleFr = "Exemple: Le Lésion valvulaire faisant suite au rhumatisme articulaire; causée par mimétisme moléculaire du Streptocoque A.",
-
-            exampleAr = "مثال: يظهر تلف الصمامات بعد الحمى الروماتيزمية؛ تسببه المحاكاة الجزيئية للعقدية الزمرة A.",
-
-            exampleEn = "The Rheumatic heart disease is Valve damage following rheumatic fever; caused by molecular mimicry of Group A Streptococcus.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2871,
+            etymology = "",
             termEn = "Aschoff bodies",
             termFr = "Corps d'Aschoff",
             termAr = "أجسام أشوف",
@@ -2407,12 +2303,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˈæʃɒf ˈbɒdɪz/",
-
-            exampleFr = "Exemple: Le Lésions granulomateuses pathognomoniques dans la cardiopathie rhumatismale; nécrose fibrinoïde centrale.",
-
-            exampleAr = "مثال: يظهر آفات حبيبومية مميزة لأمراض القلب الروماتيزمية؛ تتكون من نخر ليفيني مركزي.",
-
-            exampleEn = "The Aschoff bodies is Pathognomonic granulomatous lesions in rheumatic heart disease; consist of central fibrinoid necrosis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2872,
@@ -2426,15 +2319,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/hɑːrt ˈfeɪljər/",
-
-            exampleFr = "Exemple: Le Incapacité du cœur à pomper suffisamment de sang; cause foie muscade et œdème pulmonaire.",
-
-            exampleAr = "مثال: يظهر عجز القلب عن ضخ دم كافٍ؛ يسبب كبد جوزة الطيب (احتقان سلبي) ووذمة رئوية.",
-
-            exampleEn = "The Heart failure (pathological) is Inability of the heart to pump sufficient blood; causes nutmeg liver (passive congestion) and pulmonary edema.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2873,
+            etymology = "",
             termEn = "Nutmeg liver",
             termFr = "Foie muscade",
             termAr = "كبد جوزة الطيب",
@@ -2444,12 +2335,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
             ipaPhonetic = "/ˈnʌtmɛɡ ˈlɪvər/",
-
-            exampleFr = "Exemple: Le Aspect macroscopique du foie congestionné en insuffisance cardiaque droite; veines centrales congestionnées.",
-
-            exampleAr = "مثال: يظهر مظهر العياني للكبد المحتقن في قصور القلب الأيمن؛ الأوردة المركزية محتقنة والمناطق المحيطة شاحبة.",
-
-            exampleEn = "The Nutmeg liver is Gross appearance of congested liver in right heart failure; central veins are congested, surrounding areas pale.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2874,
@@ -2469,6 +2357,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2875,
+            etymology = "",
             termEn = "Foam cell",
             termFr = "Cellule spumeuse",
             termAr = "الخلية الرغوية",
@@ -2484,6 +2373,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2876,
+            etymology = "",
             termEn = "Fatty streak",
             termFr = "Strie lipidique",
             termAr = "الخط الدهني",
@@ -2509,12 +2399,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/njuːˈmoʊniə/",
-
-            exampleFr = "Exemple: Le Consolidation inflammatoire du tissu pulmonaire; lobaire (lobe entier) ou bronchopneumonie (en plaques).",
-
-            exampleAr = "مثال: يظهر تصلُّب التهابي في نسيج الرئة؛ فصي (فص كامل) أو قصبي رئوي (بؤري).",
-
-            exampleEn = "The Pneumonia (pathological) is Inflammatory consolidation of lung tissue; lobar (entire lobe) or bronchopneumonia (patchy).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2878,
@@ -2528,15 +2415,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈloʊbər njuːˈmoʊniə/",
-
-            exampleFr = "Exemple: Le Quatre stades: congestion, hépatisation rouge, hépatisation grise et résolution.",
-
-            exampleAr = "مثال: يظهر أربع مراحل: الاحتقان والتكبُّد الأحمر والتكبُّد الرمادي والانحلال.",
-
-            exampleEn = "The Lobar pneumonia (stages) is Four stages: congestion, red hepatization, grey hepatization, and resolution.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2879,
+            etymology = "",
             termEn = "Emphysema",
             termFr = "Emphysème",
             termAr = "النفاخ الرئوي",
@@ -2546,12 +2431,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌɛmfɪˈsiːmə/",
-
-            exampleFr = "Exemple: Le Élargissement anormal permanent des espaces aériens distaux aux bronchioles terminales avec destruction.",
-
-            exampleAr = "مثال: يظهر توسع غير طبيعي دائم لفراغات الهواء البعيدة عن القصيبات الطرفية مع تدمير جدران الحويصلات.",
-
-            exampleEn = "The Emphysema is Permanent abnormal enlargement of air spaces distal to terminal bronchioles with destruction of alveolar walls.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2880,
@@ -2565,12 +2447,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈpʌlmənəri faɪˈbroʊsɪs/",
-
-            exampleFr = "Exemple: Le Tissu fibreux excessif remplaçant le parenchyme pulmonaire normal causant un trouble ventilatoire restrictif.",
-
-            exampleAr = "مثال: يظهر نسيج ليفي مفرط يحلُّ محلَّ الحمة الرئوية الطبيعية مسبباً خللاً تنفسياً قيدياً.",
-
-            exampleEn = "The Pulmonary fibrosis is Excessive fibrous tissue replacing normal lung parenchyma causing restrictive ventilatory defect.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2881,
@@ -2584,15 +2463,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/tjʊˌbɜːrkjʊˈloʊsɪs/",
-
-            exampleFr = "Exemple: Le TB primaire: complexe de Ghon (lésion périphérique + adénopathie hilaire); TB secondaire: cavitation apicale.",
-
-            exampleAr = "مثال: يظهر سل الأولي: مجمع غون (آفة محيطية + اعتلال عقدة النقير)؛ الثانوي: تكهُّف قمي.",
-
-            exampleEn = "The Tuberculosis (pathological) is Primary TB: Ghon complex (peripheral lesion + hilar adenopathy); Secondary TB: apical cavitation.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2882,
+            etymology = "",
             termEn = "Ghon complex",
             termFr = "Complexe de Ghon",
             termAr = "مجمع غون",
@@ -2602,12 +2479,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ɡɒn ˈkɒmplɛks/",
-
-            exampleFr = "Exemple: Le lésion primaire de la TB: petit foyer parenchymateux périphérique + ganglions hilaires élargis.",
-
-            exampleAr = "مثال: يظهر آفة السل الأولى: بؤرة حمة محيطية صغيرة + تضخم العقد اللمفاوية النقيرية.",
-
-            exampleEn = "The Ghon complex is primary TB lesion: a small peripheral parenchymal focus + enlarged hilar lymph nodes.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2883,
@@ -2621,12 +2495,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈpʌlmənəri ɪˈdiːmə/",
-
-            exampleFr = "Exemple: Le Accumulation de liquide dans les alvéoles et l'interstitium; causes: insuffisance cardiaque gauche, SDRA.",
-
-            exampleAr = "مثال: يظهر تراكم السائل في الحويصلات والخلال؛ أسبابه: قصور القلب الأيسر والمتلازمة النفروزية.",
-
-            exampleEn = "The Pulmonary edema is Fluid accumulation in the alveoli and interstitium; causes: left heart failure, ARDS, nephrotic syndrome.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2884,
@@ -2640,12 +2511,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/lʌŋ ˈkɑːrsɪnoʊmə/",
-
-            exampleFr = "Exemple: Le Types principaux: adénocarcinome (plus fréquent), épidermoïde, à petites cellules et à grandes cellules.",
-
-            exampleAr = "مثال: يظهر أنواع الرئيسية: السرطانة الغدية (الأكثر شيوعاً) والحرشفية وصغيرة الخلايا وكبيرة الخلايا.",
-
-            exampleEn = "The Lung carcinoma (types) is Major types: adenocarcinoma (most common), squamous cell, small cell (SCLC), and large cell carcinoma.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2885,
@@ -2659,15 +2527,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/smɔːl sɛl ˈkɑːrsɪnoʊmə/",
-
-            exampleFr = "Exemple: Le Carcinome pulmonaire neuroendocrine très agressif; fortement associé au tabac; répond à la chimiothérapie.",
-
-            exampleAr = "مثال: يظهر سرطانة رئة عصبية صماوية شديدة العدوانية؛ مرتبطة بالتدخين؛ تستجيب للعلاج الكيميائي.",
-
-            exampleEn = "The Small cell carcinoma (SCLC) is Highly aggressive neuroendocrine lung carcinoma; strongly associated with smoking; responds to chemotherapy.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2886,
+            etymology = "",
             termEn = "Mesothelioma",
             termFr = "Mésothéliome",
             termAr = "ورم البطانة المتوسطة",
@@ -2693,15 +2559,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌsɪlɪˈkoʊsɪs/",
-
-            exampleFr = "Exemple: Le Pneumoconiose causée par inhalation de dioxyde de silicium; cristaux biréfringents dans macrophages.",
-
-            exampleAr = "مثال: يظهر تهاب رئوي صناعي تسببه استنشاق ثاني أكسيد السيليكون؛ تكلُّس على شكل قشرة بيضة.",
-
-            exampleEn = "The Silicosis is Pneumoconiosis caused by silicon dioxide inhalation; birefringent crystals in macrophages; eggshell calcification.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2888,
+            etymology = "",
             termEn = "ARDS (Acute Respiratory Distress Syndrome)",
             termFr = "SDRA (Syndrome de détresse respiratoire aiguë)",
             termAr = "متلازمة الضيق التنفسي الحاد",
@@ -2711,15 +2575,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌeɪɑːrdiːɛs/",
-
-            exampleFr = "Exemple: Le Lésion alvéolaire diffuse avec formation de membranes hyalines; infiltrats bilatéraux à la radiographie.",
-
-            exampleAr = "مثال: يظهر تلف حويصلي منتشر مع تشكُّل الأغشية الهيالينية؛ ارتشاح ثنائي الجانب في الأشعة.",
-
-            exampleEn = "The ARDS (Acute Respiratory Distress Syndrome) is Diffuse alveolar damage with hyaline membrane formation; diffuse bilateral infiltrates on X-ray.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2889,
+            etymology = "",
             termEn = "Hyaline membrane disease",
             termFr = "Maladie des membranes hyalines",
             termAr = "مرض الغشاء الهياليني",
@@ -2729,12 +2591,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈhaɪəlɪn ˈmɛmbreɪn dɪˈziːz/",
-
-            exampleFr = "Exemple: Le Détresse respiratoire néonatale due à un déficit en surfactant; membranes hyalines roses tapissant les alvéoles.",
-
-            exampleAr = "مثال: يظهر ضائقة تنفسية عند المواليد بسبب نقص المادة الفاعلة بالسطح؛ أغشية هيالينية وردية تبطن الحويصلات.",
-
-            exampleEn = "The Hyaline membrane disease is Neonatal respiratory distress due to surfactant deficiency; pink hyaline membranes lining alveoli.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2890,
@@ -2748,12 +2607,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˌbrɒŋkɪˈɛktəsɪs/",
-
-            exampleFr = "Exemple: Le Dilatation permanente des bronches due à la destruction des parois bronchiques; crachats purulents.",
-
-            exampleAr = "مثال: يظهر اتساع دائم في القصبات بسبب تدمير جدرانها؛ يتميز بالبلغم القيحي.",
-
-            exampleEn = "The Bronchiectasis is Permanent dilation of bronchi due to destruction of bronchial walls; characterized by purulent sputum.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2891,
@@ -2767,12 +2623,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Respiratoire",
             ipaPhonetic = "/ˈplʊərəl ɪˈfjuːʒən/",
-
-            exampleFr = "Exemple: Le Liquide anormal dans l'espace pleural; classé transudat (insuffisance cardiaque) ou exsudat.",
-
-            exampleAr = "مثال: يظهر سائل غير طبيعي في الفراغ الجنبي؛ يُصنَّف إلى إفراز غير التهابي أو التهابي.",
-
-            exampleEn = "The Pleural effusion (pathological) is Abnormal fluid in the pleural space; classified as transudate (heart failure) or exudate (infection, cancer).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2892,
@@ -2802,12 +2655,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌhɛlɪkəˈbæktər paɪˈlɔːraɪ/",
-
-            exampleFr = "Exemple: Le Cause gastrite chronique, ulcères, adénocarcinome gastrique et lymphome MALT.",
-
-            exampleAr = "مثال: يظهر تسبب التهاب المعدة المزمن والقرحة والسرطانة الغدية المعدية وليمفوما MALT.",
-
-            exampleEn = "The Helicobacter pylori (gastric pathology) is Causes chronic gastritis, peptic ulcers, gastric adenocarcinoma, and MALT lymphoma.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2894,
@@ -2853,12 +2703,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/kroʊn dɪˈziːz/",
-
-            exampleFr = "Exemple: Le Inflammation granulomateuse transmurale affectant n'importe quelle partie du tractus GI; lésions discontinues.",
-
-            exampleAr = "مثال: يظهر تهاب حبيبومي عبر الجدار يصيب أي جزء من الجهاز الهضمي؛ آفات متقطعة؛ غشاء مخاطي مُرصَّف.",
-
-            exampleEn = "The Crohn's disease (pathology) is Transmural granulomatous inflammation affecting any part of GI tract; skip lesions; cobblestone mucosa.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2897,
@@ -2872,12 +2719,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌʌlsəˈreɪtɪv koʊˈlaɪtɪs/",
-
-            exampleFr = "Exemple: Le Inflammation muqueuse continue limitée au côlon et rectum; abcès des cryptes; pseudopolypes.",
-
-            exampleAr = "مثال: يظهر تهاب مستمر للغشاء المخاطي محدود بالقولون والمستقيم؛ خراجات خبايا؛ ورام كاذبة.",
-
-            exampleEn = "The Ulcerative colitis (pathology) is Continuous mucosal inflammation limited to colon and rectum; crypt abscesses; pseudopolyps.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2898,
@@ -2891,12 +2735,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/sɪˈroʊsɪs/",
-
-            exampleFr = "Exemple: Le Maladie hépatique terminale avec remplacement du parenchyme hépatique par du tissu fibreux et nodules.",
-
-            exampleAr = "مثال: يظهر مرحلة النهائية لأمراض الكبد يُستبدَل فيها الحمة الكبدية بنسيج ليفي وعقيدات تجديدية.",
-
-            exampleEn = "The Cirrhosis is End-stage liver disease with replacement of hepatic parenchyma by fibrous tissue and regenerative nodules.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2899,
@@ -2910,12 +2751,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌhɛpətoʊˈsɛljʊlər ˌkɑːrsɪˈnoʊmə/",
-
-            exampleFr = "Exemple: Le Cancer primitif du foie; associé à VHB, VHC, cirrhose et aflatoxines; AFP élevée.",
-
-            exampleAr = "مثال: يظهر سرطان الكبد الأولي؛ مرتبط بـHBV وHCV والتليف والأفلاتوكسينات؛ ارتفاع AFP.",
-
-            exampleEn = "The Hepatocellular carcinoma (HCC) is Primary liver cancer; associated with HBV, HCV, cirrhosis, and aflatoxins; elevated AFP.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2900,
@@ -2929,12 +2767,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/ˌpæŋkrɪˈaɪtɪs/",
-
-            exampleFr = "Exemple: Le Autodigestion du pancréas par ses propres enzymes; causes: lithiase biliaire et alcool; nécrose graisseuse.",
-
-            exampleAr = "مثال: يظهر هضم الذاتي للبنكرياس بإنزيماته الخاصة؛ أسبابه: حصوات المرارة والكحول؛ نخر الدهون والنزيف.",
-
-            exampleEn = "The Acute pancreatitis (pathological) is Autodigestion of pancreas by its own enzymes; causes: gallstones and alcohol; fat necrosis, hemorrhage.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2901,
@@ -2948,12 +2783,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
             ipaPhonetic = "/əˌpɛndɪˈsaɪtɪs/",
-
-            exampleFr = "Exemple: Le Inflammation aiguë de l'appendice; généralement par obstruction par un fécalithe; infiltration neutrophile.",
-
-            exampleAr = "مثال: يظهر تهاب حاد في الزائدة الدودية؛ عادةً من انسداد بحجر برازي؛ تسرب عدلي لجدارها.",
-
-            exampleEn = "The Appendicitis (pathological) is Acute inflammation of the appendix; usually from fecalith obstruction; neutrophilic infiltration of wall.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2902,
@@ -2967,12 +2799,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌɡlɒmɛrjʊloʊnɪˈfraɪtɪs/",
-
-            exampleFr = "Exemple: Le Maladie inflammatoire des glomérules; classifiée en néphritique ou néphrotique.",
-
-            exampleAr = "مثال: يظهر مرض التهابي في كبيبات الكلى؛ يُصنَّف إلى نفريتي (بول دموي وضغط) أو نفروزي (بيلة بروتينية).",
-
-            exampleEn = "The Glomerulonephritis is Inflammatory disease of glomeruli; classified as nephritic (hematuria, hypertension) or nephrotic (proteinuria).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2903,
@@ -2986,15 +2815,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/nɪˈfrɒtɪk ˈsɪndroʊm/",
-
-            exampleFr = "Exemple: Le Protéinurie massive (>3,5 g/j), hypoalbuminémie, œdèmes, hyperlipidémie et lipidurie.",
-
-            exampleAr = "مثال: يظهر بيلة بروتينية ضخمة (>3.5 غ/يوم) ونقص ألبومين الدم ووذمة وفرط الدهون في الدم.",
-
-            exampleEn = "The Nephrotic syndrome (pathological) is Massive proteinuria (>3.5 g/day), hypoalbuminemia, edema, hyperlipidemia, and lipiduria.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2904,
+            etymology = "",
             termEn = "Minimal change disease",
             termFr = "Néphrose lipoïdique (maladie à lésions minimes)",
             termAr = "مرض الآفات الشحمية",
@@ -3020,12 +2847,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌpaɪɛloʊnɪˈfraɪtɪs/",
-
-            exampleFr = "Exemple: Le Infection bactérienne du bassinet et parenchyme rénal; cause la plus fréquente: E. coli.",
-
-            exampleAr = "مثال: يظهر عدوى بكتيرية في الحويضة الكلوية والحمة؛ أكثر الأسباب شيوعاً: الإشريكية القولونية.",
-
-            exampleEn = "The Pyelonephritis (pathological) is Bacterial infection of renal pelvis and parenchyma; most common cause: E. coli; neutrophilic infiltration.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2906,
@@ -3071,12 +2895,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌdaɪəˈbɛtɪk nɪˈfrɒpəθi/",
-
-            exampleFr = "Exemple: Le Lésion rénale causée par le diabète; nodules de Kimmelstiel-Wilson (sclérose glomérulaire nodulaire).",
-
-            exampleAr = "مثال: يظهر تلف كلوي تسببه السكري؛ عقيدات كيمملستيل-ويلسون (التصلب الكبيبي العقدي).",
-
-            exampleEn = "The Diabetic nephropathy is Renal damage caused by diabetes; Kimmelstiel-Wilson nodules (glomerular nodular sclerosis).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2909,
@@ -3090,12 +2911,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌhaɪpɜːrˈtɛnsɪv ˌnɛfroʊskləˈroʊsɪs/",
-
-            exampleFr = "Exemple: Le Lésion rénale par hypertension; bénigne: hyalinose artériolaire; maligne: nécrose fibrinoïde artériolaire.",
-
-            exampleAr = "مثال: يظهر تلف كلوي من ارتفاع ضغط الدم؛ حميد: هيالينوز الشريينات؛ خبيث: نخر ليفيني للشريينات.",
-
-            exampleEn = "The Hypertensive nephrosclerosis is Kidney damage from hypertension; benign: arteriolar hyalinosis; malignant: fibrinoid necrosis of arterioles.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2910,
@@ -3109,12 +2927,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌnɛfroʊlɪˈθaɪəsɪs/",
-
-            exampleFr = "Exemple: Le Calculs rénaux; type le plus courant: oxalate de calcium; peut causer hydronéphrose si obstruction.",
-
-            exampleAr = "مثال: يظهر حصيات الكلية؛ النوع الأكثر شيوعاً: أكسالات الكالسيوم؛ قد تسبب استسقاء الكلية إن انسدت.",
-
-            exampleEn = "The Nephrolithiasis (renal calculi) is Kidney stones; most common type: calcium oxalate; can cause hydronephrosis if obstructing.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2911,
@@ -3128,15 +2943,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie Rénale",
             ipaPhonetic = "/ˌhaɪdroʊnɪˈfroʊsɪs/",
-
-            exampleFr = "Exemple: Le Dilatation du bassinet et des calices due à une obstruction urinaire; mène à atrophie corticale.",
-
-            exampleAr = "مثال: يظهر اتساع الحويضة والكؤوس الكلوية بسبب انسداد في المسالك البولية؛ يُفضي إلى ضمور القشرة.",
-
-            exampleEn = "The Hydronephrosis is Dilation of renal pelvis and calyces due to urinary tract obstruction; leads to cortical atrophy.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2912,
+            etymology = "",
             termEn = "Glioblastoma multiforme (GBM)",
             termFr = "Glioblastome multiforme (GBM)",
             termAr = "الورم الدبقي متعدد الأشكال",
@@ -3168,6 +2981,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2914,
+            etymology = "",
             termEn = "Cerebral infarction",
             termFr = "Infarctus cérébral",
             termAr = "الاحتشاء الدماغي",
@@ -3177,12 +2991,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˈsɛrɪbrəl ɪnˈfɑːrkʃən/",
-
-            exampleFr = "Exemple: Le Mort du tissu cérébral due à l'ischémie; résulte en nécrose de liquéfaction (contrairement à d'autres organes).",
-
-            exampleAr = "مثال: يظهر موت نسيج الدماغ بسبب نقص التروية؛ يُنتِج نخراً تميعياً (على خلاف الأعضاء الأخرى).",
-
-            exampleEn = "The Cerebral infarction is Death of brain tissue due to ischemia; results in liquefactive necrosis (unlike other organs).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2915,
@@ -3196,15 +3007,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˈæltshaɪmərz dɪˈziːz/",
-
-            exampleFr = "Exemple: Le Caractérisée par plaques séniles (bêta-amyloïde) et enchevêtrements neurofibrillaires (protéine tau).",
-
-            exampleAr = "مثال: يظهر يتميز باللويحات الشيخوخية (بيتا-أميلويد) والتشابكات الليفية العصبية (بروتين تاو).",
-
-            exampleEn = "The Alzheimer's disease (pathological) is Characterized by senile plaques (beta-amyloid) and neurofibrillary tangles (tau protein).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2916,
+            etymology = "",
             termEn = "Subarachnoid hemorrhage",
             termFr = "Hémorragie sous-arachnoïdienne",
             termAr = "النزيف تحت العنكبوتية",
@@ -3215,13 +3024,12 @@ object AnatomiePathologiqueTerms {
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌsʌbəˈræknɔɪd ˈhɛmərɪdʒ/",
             exampleEn = "Subarachnoid hemorrhage refers to bleeding into the subarachnoid space; most common cause is ruptured berry aneurysm; thunderclap headache.",
-            exampleFr = "Exemple: Le Saignement dans l'espace sous-arachnoïdien; cause la plus courante: rupture d'anévrisme sacculaire.",
-
-            exampleAr = "مثال: يظهر نزيف في الفضاء تحت العنكبوتي؛ أكثر الأسباب شيوعاً: تمزق تمدد الأوعية التوتية؛ صداع كالرعد.",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2917,
+            etymology = "",
             termEn = "Demyelination",
             termFr = "Démyélinisation",
             termAr = "إزالة الميالين",
@@ -3231,12 +3039,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌdiːˌmaɪɪlɪˈneɪʃən/",
-
-            exampleFr = "Exemple: Le Perte de la gaine de myéline entourant les fibres nerveuses; vue dans la SEP et Guillain-Barré.",
-
-            exampleAr = "مثال: يظهر فقدان غلاف الميالين المحيط بالألياف العصبية؛ يُرى في التصلب المتعدد ومتلازمة غيان-باريه.",
-
-            exampleEn = "The Demyelination is Loss of the myelin sheath surrounding nerve fibers; seen in multiple sclerosis and Guillain-Barré.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2918,
@@ -3250,12 +3055,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ɡlaɪˈoʊsɪs/",
-
-            exampleFr = "Exemple: Le Prolifération des cellules gliales (astrocytes) en réponse à une lésion du SNC; forme une cicatrice gliale.",
-
-            exampleAr = "مثال: يظهر تكاثر الخلايا الدبقية (النجمية) استجابةً لإصابة الجهاز العصبي المركزي؛ تُشكِّل ندبة دبقية.",
-
-            exampleEn = "The Gliosis is Proliferation of glial cells (astrocytes) in response to CNS injury; forms a glial scar.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2919,
@@ -3269,15 +3071,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌkroʊmætəˈlaɪsɪs/",
-
-            exampleFr = "Exemple: Le Dissolution de la substance de Nissl dans les neurones après lésion axonale.",
-
-            exampleAr = "مثال: يظهر تحلل مادة نيسل في الخلايا العصبية بعد إصابة المحور؛ يعكس الاستجابة الاستقلابية لتلف المحور.",
-
-            exampleEn = "The Neuronal chromatolysis is Dissolution of Nissl substance in neurons after axonal injury; reflects metabolic response to axon damage.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2920,
+            etymology = "",
             termEn = "Epidural hematoma",
             termFr = "Hématome épidural",
             termAr = "الورم الدموي فوق الجافية",
@@ -3293,6 +3093,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2921,
+            etymology = "",
             termEn = "Subdural hematoma",
             termFr = "Hématome sous-dural",
             termAr = "الورم الدموي تحت الجافية",
@@ -3302,12 +3103,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Pathologie du Système Nerveux",
             ipaPhonetic = "/ˌsʌbˈdjʊərəl hɛˈmætoʊmə/",
-
-            exampleFr = "Exemple: Le Saignement veineux entre la dure-mère et l'arachnoïde; veines ponts; aspect en croissant au TDM.",
-
-            exampleAr = "مثال: يظهر نزيف وريدي بين الأم الجافية والعنكبوتية؛ من الأوردة الجسرية؛ يظهر هلالياً في الأشعة.",
-
-            exampleEn = "The Subdural hematoma is Venous bleeding between dura and arachnoid; from bridging veins; crescent-shaped on CT.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2922,
@@ -3321,12 +3119,9 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ɪˈlɛktrɒn maɪˈkrɒskəpi/",
-
-            exampleFr = "Exemple: Le Fournit des détails ultrastructuraux par faisceaux d'électrons; essentiel pour la pathologie glomérulaire.",
-
-            exampleAr = "مثال: يظهر يوفر التفاصيل دقيقة البنية بالحزم الإلكترونية؛ ضروري لتشخيص أمراض الكبيبات.",
-
-            exampleEn = "The Electron microscopy is Provides ultrastructural detail using electron beams; essential for glomerular pathology diagnosis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2923,
@@ -3346,6 +3141,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2924,
+            etymology = "",
             termEn = "Special stains",
             termFr = "Colorations spéciales",
             termAr = "الصبغات الخاصة",
@@ -3355,15 +3151,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ˈspɛʃəl steɪnz/",
-
-            exampleFr = "Exemple: Le Colorations histologiques au-delà de HE; PAS (mucus/champignons), trichrome de Masson (collagène).",
-
-            exampleAr = "مثال: يظهر صبغات نسيجية إضافية لما وراء H&E؛ PAS (مخاط/فطريات)، تريكروم ماسون (كولاجين)، أحمر الكونغو (أميلويد).",
-
-            exampleEn = "The Special stains is Histological stains beyond H&E; PAS (mucus/fungi), Masson trichrome (collagen), Congo red (amyloid).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2925,
+            etymology = "",
             termEn = "Congo red stain",
             termFr = "Coloration au rouge Congo",
             termAr = "صبغة أحمر الكونغو",
@@ -3395,6 +3189,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2927,
+            etymology = "",
             termEn = "Masson trichrome stain",
             termFr = "Trichrome de Masson",
             termAr = "صبغة ماسون ثلاثية اللون",
@@ -3420,15 +3215,13 @@ object AnatomiePathologiqueTerms {
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
             ipaPhonetic = "/ˌziːl ˈniːlsən/",
-
-            exampleFr = "Exemple: Le Coloration acido-résistante identifiant Mycobacterium tuberculosis comme bâtonnets rouges sur fond bleu.",
-
-            exampleAr = "مثال: يظهر صبغة صامدة للحمض تُعرِّف المتفطرة السلية على شكل عصيات حمراء على خلفية زرقاء.",
-
-            exampleEn = "The Ziehl-Neelsen stain (in pathology) is Acid-fast stain identifying Mycobacterium tuberculosis as red rods on blue background.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2929,
+            etymology = "",
             termEn = "Flow cytometry",
             termFr = "Cytométrie en flux",
             termAr = "قياس التدفق الخلوي",
@@ -3444,6 +3237,7 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2930,
+            etymology = "",
             termEn = "FISH (Fluorescence In Situ Hybridization)",
             termFr = "FISH (Hybridation in situ en fluorescence)",
             termAr = "التهجين الموضعي الفلوري",
@@ -3459,273 +3253,273 @@ object AnatomiePathologiqueTerms {
         ),
         MedicalTermEntity(
             id = 2931,
+            etymology = "Greek: βίος (bios) — 'life' + ὄψις (opsis) — 'sight / view'.",
             termEn = "Biopsy & Histopathology",
             termFr = "Biopsie et Histopathologie",
             termAr = "الخزعة النسيجية وعلم الأنسجة المرضية",
             definitionEn = "The surgical removal and microscopic diagnostic examination of tissue excised from a living patient to identify cellular architecture, dysplasia, or neoplasia.",
             definitionFr = "Prélèvement chirurgical d'un fragment tissulaire chez un être vivant pour examen microscopique anatomopathologique.",
             definitionAr = "الاستئصال الجراحي لعينة نسيجية من كائن حي وفحصها مجهرياً لتحديد البنية الخلوية والتشوهات النسيجية أو الأورام.",
-            etymology = "Greek: βίος (bios) — 'life' + ὄψις (opsis) — 'sight / view'.",
-            clinicalPearl = "Formalin fixation (10% neutral buffered formalin) prevents autolysis and stabilizes proteins; routine sections are stained with Hematoxylin and Eosin (H&E).",
-            mnemonic = "H&E Stain: Hematoxylin stains nucleic acids Blue (Basophilic); Eosin stains proteins Pink (Acidophilic).",
             module = "Anatomie Pathologique",
             chapter = "Introduction à l'Anatomie Pathologique",
+            ipaPhonetic = "/ˈbaɪ.ɒp.si ænd ˌhɪs.toʊ.pəˈθɒl.ə.dʒi/",
             exampleEn = "An ultrasound-guided core needle biopsy of the breast mass confirmed invasive ductal carcinoma.",
             exampleFr = "Une microbiopsie échoguidée de la masse mammaire a confirmé un carcinome canalaire infiltrant.",
             exampleAr = "أكدت الخزعة الموجهة بالأمواج فوق الصوتية لكتلة الثدي وجود سرطانة قنوية ارتشاحية خبيثة.",
-            ipaPhonetic = "/ˈbaɪ.ɒp.si ænd ˌhɪs.toʊ.pəˈθɒl.ə.dʒi/",
+            clinicalPearl = "Formalin fixation (10% neutral buffered formalin) prevents autolysis and stabilizes proteins; routine sections are stained with Hematoxylin and Eosin (H&E).",
+            mnemonic = "H&E Stain: Hematoxylin stains nucleic acids Blue (Basophilic); Eosin stains proteins Pink (Acidophilic).",
         ),
         MedicalTermEntity(
             id = 2932,
+            etymology = "Greek: νέκρωσις (nekrosis) — 'becoming dead / mortification'.",
             termEn = "Necrosis Types (Coagulative, Liquefactive, Caseous)",
             termFr = "Types de Nécrose (Coagulation, Liquéfaction, Caséeuse)",
             termAr = "أنماط النخر النسيجي (التخثري، التميعي، الجبني)",
             definitionEn = "Patterns of irreversible pathological cell death: Coagulative (ischemic preservation of cell outlines); Liquefactive (enzymatic digestion in brain and abscesses); Caseous (friable cheese-like in tuberculosis).",
             definitionFr = "Formes de mort cellulaire pathologique: coagulation (ischémie myocardique/rénale); liquéfaction (SNC et abcès); caséeuse (tuberculose).",
             definitionAr = "أشكال موت الخلايا المرضي غير القابل للعكس: التخثري (يحفظ هيكل الخلية الشبح في احتشاء القلب والكلية)؛ والتميعي (هضم إنزيمي في الدماغ والخراجات)؛ والجبني (فتاتي يشبه الجبن في السل).",
-            etymology = "Greek: νέκρωσις (nekrosis) — 'becoming dead / mortification'.",
-            clinicalPearl = "Caseous necrosis under light microscopy reveals an amorphous, structureless, granular pink eosinophilic core surrounded by a rim of epithelioid histiocytes and Langhans giant cells.",
-            mnemonic = "Brain ischemia = Liquefactive necrosis; Solid organ ischemia (heart, kidney, spleen) = Coagulative necrosis.",
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
+            ipaPhonetic = "/nɪˈkroʊ.sɪs taɪps/",
             exampleEn = "Histopathology of the resected lung nodule demonstrated central caseous necrosis characteristic of tuberculosis.",
             exampleFr = "L'histopathologie du nodule pulmonaire montrait une nécrose caséeuse centrale caractéristique de la tuberculose.",
             exampleAr = "أظهر الفحص النسيجي للعقدة الرئوية المستأصلة وجود نخر جبني مركزي مميز لداء السل.",
-            ipaPhonetic = "/nɪˈkroʊ.sɪs taɪps/",
+            clinicalPearl = "Caseous necrosis under light microscopy reveals an amorphous, structureless, granular pink eosinophilic core surrounded by a rim of epithelioid histiocytes and Langhans giant cells.",
+            mnemonic = "Brain ischemia = Liquefactive necrosis; Solid organ ischemia (heart, kidney, spleen) = Coagulative necrosis.",
         ),
         MedicalTermEntity(
             id = 2933,
+            etymology = "Greek: ἀπόπτωσις (apoptosis) — 'falling away / shedding of autumn leaves'.",
             termEn = "Apoptosis & Caspases",
             termFr = "Apoptose et Caspases",
             termAr = "الموت الخلوي المبرمج وإنزيمات الكاسباز",
             definitionEn = "Genetically programmed physiological cell death orchestrated by cysteine-aspartic acid proteases (caspases) without cell membrane rupture or surrounding inflammatory response.",
             definitionFr = "Mort cellulaire programmée orchestrée par l'activation d'enzymes protéolytiques (caspases), caractérisée par la formation de corps apoptotiques sans réaction inflammatoire.",
             definitionAr = "موت خلوي فسيولوجي مبرمج ومنظم وراثياً تحفزه إنزيمات الكاسباز؛ لا يترافق مع تمزق الغشاء أو إحداث رد فعل التهابي محيط.",
-            etymology = "Greek: ἀπόπτωσις (apoptosis) — 'falling away / shedding of autumn leaves'.",
-            clinicalPearl = "Hallmarks: Cell shrinkage, chromatin condensation (pyknosis), nuclear fragmentation (karyorrhexis), and membrane blebbing into apoptotic bodies phagocytosed by macrophages.",
-            mnemonic = "Intrinsic pathway: Cytochrome c released from mitochondria via BAX/BAK pore formation activates caspase-9; Extrinsic pathway: FasL/TNF activates caspase-8.",
             module = "Anatomie Pathologique",
             chapter = "Lésions Cellulaires et Mort Cellulaire",
+            ipaPhonetic = "/ˌæp.əpˈtəʊ.sɪs/",
             exampleEn = "Evasion of apoptosis via overexpression of anti-apoptotic Bcl-2 is a premier oncogenic hallmark in follicular lymphoma.",
             exampleFr = "L'échappement à l'apoptose par surexpression de Bcl-2 est une caractéristique majeure du lymphome folliculaire.",
             exampleAr = "يمثل التهرب من الموت الخلوي المبرمج عبر التعبير المفرط لـ Bcl-2 علامة ورامية رئيسية في الليمفوما الجريبية.",
-            ipaPhonetic = "/ˌæp.əpˈtəʊ.sɪs/",
+            clinicalPearl = "Hallmarks: Cell shrinkage, chromatin condensation (pyknosis), nuclear fragmentation (karyorrhexis), and membrane blebbing into apoptotic bodies phagocytosed by macrophages.",
+            mnemonic = "Intrinsic pathway: Cytochrome c released from mitochondria via BAX/BAK pore formation activates caspase-9; Extrinsic pathway: FasL/TNF activates caspase-8.",
         ),
         MedicalTermEntity(
             id = 2934,
+            etymology = "Latin: granulum — 'little grain' + Greek: -oma — 'mass / tumor'.",
             termEn = "Granulomatous Inflammation & Giant Cells",
             termFr = "Inflammation granulomateuse et Cellules géantes",
             termAr = "الالتهاب الحبيبي والخلايا العملاقة",
             definitionEn = "A distinctive pattern of chronic inflammation characterized by focal collections of activated macrophages transformed into epithelioid cells and multinucleated giant cells.",
             definitionFr = "Type d'inflammation chronique caractérisé par des granulomes épithélioïdes et des cellules géantes multinucléées (type Langhans ou à corps étranger).",
             definitionAr = "نمط مميز من الالتهاب المزمن يتميز بتشكل بؤر من البلاعم المنشطة المتحولة إلى خلايا شبيهة بالظهارة وخلايا عرطلة عملاقة متعددة النوى.",
-            etymology = "Latin: granulum — 'little grain' + Greek: -oma — 'mass / tumor'.",
-            clinicalPearl = "Langhans giant cells exhibit peripheral nuclei arranged in a characteristic horseshoe pattern; Foreign body giant cells show haphazardly scattered central nuclei.",
-            mnemonic = "Causes of Granulomas: 'GRANULOMAS' (Gram-negative cat-scratch, Ringworm, Acid-fast TB, Nematodes, Unusual foreign bodies, Leprosy, Oval histoplasma, Mycoses, Autoimmune Crohn, Sarcoidosis).",
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
+            ipaPhonetic = "/ˌɡræn.jʊˈləʊ.mə.təs ˌɪn.fləˈmeɪ.ʃən/",
             exampleEn = "Non-caseating epithelioid granulomas on transbronchial lung biopsy confirmed clinical pulmonary sarcoidosis.",
             exampleFr = "La présence de granulomes épithélioïdes sans nécrose caséeuse a confirmé le diagnostic de sarcoïdose.",
             exampleAr = "أكد وجود الحبيبيومات غير الجبنية في الخزعة الرئوية التشخيص السريري لمرض الساركوئيد الرئوي.",
-            ipaPhonetic = "/ˌɡræn.jʊˈləʊ.mə.təs ˌɪn.fləˈmeɪ.ʃən/",
+            clinicalPearl = "Langhans giant cells exhibit peripheral nuclei arranged in a characteristic horseshoe pattern; Foreign body giant cells show haphazardly scattered central nuclei.",
+            mnemonic = "Causes of Granulomas: 'GRANULOMAS' (Gram-negative cat-scratch, Ringworm, Acid-fast TB, Nematodes, Unusual foreign bodies, Leprosy, Oval histoplasma, Mycoses, Autoimmune Crohn, Sarcoidosis).",
         ),
         MedicalTermEntity(
             id = 2935,
+            etymology = "Latin: granum — 'grain' (granular surface appearance) + fibra — 'fiber'.",
             termEn = "Granulation Tissue vs Fibrosis",
             termFr = "Tissu de granulation vs Fibrose (Cicatrisation)",
             termAr = "النسيج الحبيبي مقابل التليف (الندبة النسيجية)",
             definitionEn = "Granulation tissue is soft, pink, edematous vascular repair tissue formed during early wound healing; Fibrosis is mature dense collagen deposition forming a permanent structural scar.",
             definitionFr = "Le tissu de granulation associe néo-vaisseaux, fibroblastes et macrophages; la fibrose correspond au dépôt cicatriciel de collagène dense mature.",
             definitionAr = "النسيج الحبيبي هو نسيج ترميمي وردي غني بالأوعية الدموية الفتية والأرومات الليفية؛ بينما التليف هو ترسب الكولاجين الناضج الكثيف مشكلاً ندبة دائمة.",
-            etymology = "Latin: granum — 'grain' (granular surface appearance) + fibra — 'fiber'.",
-            clinicalPearl = "Key molecular driver: Transforming Growth Factor-beta (TGF-β) is the premier master cytokine stimulating fibroblast collagen production and scar contraction.",
-            mnemonic = "Granulation tissue = Healing scaffold (Capillaries + Fibroblasts); Fibrosis = Finished concrete scar (Dense Type I Collagen).",
             module = "Anatomie Pathologique",
             chapter = "Inflammation Chronique et Réparation",
+            ipaPhonetic = "/ˌɡræn.jʊˈleɪ.ʃən ˈtɪʃ.uː/",
             exampleEn = "Angiogenesis in granulation tissue provides oxygen and essential nutrients to the repairing surgical wound.",
             exampleFr = "L'angiogenèse au sein du tissu de granulation apporte les nutriments indispensables à la cicatrisation cutanée.",
             exampleAr = "يوفر تشكل الأوعية الدموية في النسيج الحبيبي الأكسجين والمغذيات اللازمة لالتئام الجروح الجراحية.",
-            ipaPhonetic = "/ˌɡræn.jʊˈleɪ.ʃən ˈtɪʃ.uː/",
+            clinicalPearl = "Key molecular driver: Transforming Growth Factor-beta (TGF-β) is the premier master cytokine stimulating fibroblast collagen production and scar contraction.",
+            mnemonic = "Granulation tissue = Healing scaffold (Capillaries + Fibroblasts); Fibrosis = Finished concrete scar (Dense Type I Collagen).",
         ),
         MedicalTermEntity(
             id = 2936,
+            etymology = "Greek: θρόμβος (thrombos) — 'clot / lump'; formulated by Rudolf Virchow in 1856.",
             termEn = "Thrombus & Virchow's Triad",
             termFr = "Thrombus et Triade de Virchow",
             termAr = "الخثرة الوعائية وثالوث فيرشو",
             definitionEn = "A solid mass formed within the living cardiovascular system by platelets and fibrin; Virchow's triad outlines the primary pathogenetic triggers: Endothelial injury, Stasis, and Hypercoagulability.",
             definitionFr = "Masse sanguine intravasculaire structurée adhérant à la paroi vasculaire; la triade de Virchow associe lésion endothéliale, stase sanguine et hypercoagulabilité.",
             definitionAr = "كتلة صلبة تشكلها الصفائح الدموية والفيبرين داخل الأوعية أثناء الحياة؛ يحدد ثالوث فيرشو العوامل المسببة: تلف البطانة، والركودة الدموية، وفرط التخثر.",
-            etymology = "Greek: θρόμβος (thrombos) — 'clot / lump'; formulated by Rudolf Virchow in 1856.",
-            clinicalPearl = "Lines of Zahn (alternating pale platelet/fibrin layers and dark red erythrocyte layers) prove that a thrombus formed in flowing blood, distinguishing it from a postmortem clot.",
-            mnemonic = "Virchow's Triad: 1. Vessel wall damage (endothelial), 2. Velocity change (stasis), 3. Viscosity/coagulation increase.",
             module = "Anatomie Pathologique",
             chapter = "Troubles Circulatoires",
+            ipaPhonetic = "/ˈθrɒm.bəs ænd ˈvɪər.kəʊz ˈtraɪ.æd/",
             exampleEn = "Prolonged immobilization triggered deep vein thrombosis in the femoral vein according to Virchow principles.",
             exampleFr = "L'alitement prolongé a favorisé une thrombose veineuse profonde fémorale selon la triade de Virchow.",
             exampleAr = "أدى الركود الحركي الطويل إلى إحداث خثار وريدي عميق في الفخذ وفقاً لمبادئ ثالوث فيرشو.",
-            ipaPhonetic = "/ˈθrɒm.bəs ænd ˈvɪər.kəʊz ˈtraɪ.æd/",
+            clinicalPearl = "Lines of Zahn (alternating pale platelet/fibrin layers and dark red erythrocyte layers) prove that a thrombus formed in flowing blood, distinguishing it from a postmortem clot.",
+            mnemonic = "Virchow's Triad: 1. Vessel wall damage (endothelial), 2. Velocity change (stasis), 3. Viscosity/coagulation increase.",
         ),
         MedicalTermEntity(
             id = 2937,
+            etymology = "Greek: ἀθήρα (athera) — 'groats / porridge / gruel' + σκληρός (skleros) — 'hard'.",
             termEn = "Atherosclerotic Plaque (Atheroma)",
             termFr = "Plaque d'athérome (Athérosclérose)",
             termAr = "اللويحة العصيدية (التصلب العصيدي للشرايين)",
             definitionEn = "An intimal fibroinflammatory plaque comprising a necrotic core of cholesterol crystals, debris, and foam cells, shielded by a fibrous cap of smooth muscle and collagen.",
             definitionFr = "Lésion de l'intima artérielle comprenant un centre nécrotique lipidique riche en cholestérol et une chape fibreuse fibromusculaire.",
             definitionAr = "لويحة التهابية ليفية في بطانة الشرايين تتكون من لب متنخر غني ببلورات الكوليسترول والخلايا الرغوية، تغطيها قبعة ليفية عضلية ملساء.",
-            etymology = "Greek: ἀθήρα (athera) — 'groats / porridge / gruel' + σκληρός (skleros) — 'hard'.",
-            clinicalPearl = "Plaque rupture or erosion exposes underlying thrombogenic collagen and tissue factor, triggering instantaneous occlusive thrombosis and acute myocardial infarction.",
-            mnemonic = "Foam cells = Macrophages and vascular smooth muscle cells that have engulfed oxidized LDL cholesterol via scavenger receptors.",
             module = "Anatomie Pathologique",
             chapter = "Pathologie Cardiovasculaire",
+            ipaPhonetic = "/ˌæθ.ər.əʊ.skləˈrɒt.ɪk plɑːk/",
             exampleEn = "Rupture of a vulnerable thin-cap fibroatheroma in the left anterior descending artery caused fatal transmural myocardial infarction.",
             exampleFr = "La rupture d'une plaque d'athérome instable dans l'artère coronaire a provoqué un infarctus du myocarde.",
             exampleAr = "أدى تمزق لويحة عصيدية هشة في الشريان التاجي الأيسر إلى حدوث احتشاء قلبي حاد عبر كامل الجدار.",
-            ipaPhonetic = "/ˌæθ.ər.əʊ.skləˈrɒt.ɪk plɑːk/",
+            clinicalPearl = "Plaque rupture or erosion exposes underlying thrombogenic collagen and tissue factor, triggering instantaneous occlusive thrombosis and acute myocardial infarction.",
+            mnemonic = "Foam cells = Macrophages and vascular smooth muscle cells that have engulfed oxidized LDL cholesterol via scavenger receptors.",
         ),
         MedicalTermEntity(
             id = 2938,
+            etymology = "Greek: καρκίνος (karkinos) — 'crab' + σάρξ (sarx) — 'flesh'.",
             termEn = "Carcinoma vs Sarcoma",
             termFr = "Carcinome vs Sarcome",
             termAr = "السرطانة الظهارية مقابل الساركوما اللحمية",
             definitionEn = "Carcinomas are malignant tumors arising from epithelial tissues (skin, glands, lining) spreading via lymphatics; Sarcomas arise from mesenchymal connective tissues (bone, fat, muscle) spreading hematogenously.",
             definitionFr = "Les carcinomes dérivent des épithéliums et disséminent par voie lymphatique; les sarcomes naissent des tissus mésenchymateux et métastasent par voie hématogène.",
             definitionAr = "السرطانات تنشأ من الأنسجة الظهارية وتنتشر لمفاوياً؛ والساركومات تنشأ من الأنسجة الضامة اللحمية (العظام، العضلات) وتنتشر عبر الأوعية الدموية.",
-            etymology = "Greek: καρκίνος (karkinos) — 'crab' + σάρξ (sarx) — 'flesh'.",
-            clinicalPearl = "Immunohistochemistry: Cytokeratin positivity identifies carcinomas; Vimentin positivity characterizes mesenchymal sarcomas.",
-            mnemonic = "Carcinomas = Epithelial, Lymphatic spread; Sarcomas = Mesenchymal, Hematogenous blood spread.",
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
+            ipaPhonetic = "/ˌkɑː.sɪˈnəʊ.mə ænd sɑːˈkəʊ.mə/",
             exampleEn = "Osteosarcoma is a primary high-grade malignant bone sarcoma characterized by production of unmineralized osteoid matrix.",
             exampleFr = "L'ostéosarcome est une tumeur osseuse maligne mésenchymateuse hautement agressive produisant de l'ostéoïde.",
             exampleAr = "الساركوما العظمية هي ورم خبيث عدواني ينشأ من الخلايا اللحمية العظمية ويتصف بإنتاج مادة عظمية غير متكلسة.",
-            ipaPhonetic = "/ˌkɑː.sɪˈnəʊ.mə ænd sɑːˈkəʊ.mə/",
+            clinicalPearl = "Immunohistochemistry: Cytokeratin positivity identifies carcinomas; Vimentin positivity characterizes mesenchymal sarcomas.",
+            mnemonic = "Carcinomas = Epithelial, Lymphatic spread; Sarcomas = Mesenchymal, Hematogenous blood spread.",
         ),
         MedicalTermEntity(
             id = 2939,
+            etymology = "Greek: δυσ- (dys-) — 'bad / disordered' + πλάσις (plasis) — 'formation' + Latin: in situ — 'in its original place'.",
             termEn = "Dysplasia & Carcinoma In Situ (CIS)",
             termFr = "Dysplasie et Carcinome in situ (CIS)",
             termAr = "خلل التنسج والسرطانة في الموضع (CIS)",
             definitionEn = "Dysplasia is disordered disordered non-neoplastic epithelial architecture and pleomorphism; Carcinoma in situ is severe full-thickness malignant transformation respecting an intact basement membrane.",
             definitionFr = "La dysplasie est un trouble architectural avec anomalies nucléaires; le carcinome in situ occupe toute l'épaisseur de l'épithélium sans franchir la membrane basale.",
             definitionAr = "خلل التنسج هو اضطراب في ترتيب الخلايا الظهارية مع تبدل نووي؛ والسرطانة في الموضع تشمل كامل سماكة الظهارة لكنها لا تخترق الغشاء القاعدي السليم.",
-            etymology = "Greek: δυσ- (dys-) — 'bad / disordered' + πλάσις (plasis) — 'formation' + Latin: in situ — 'in its original place'.",
-            clinicalPearl = "Because carcinoma in situ has not breached the basement membrane, it lacks access to lymphatics and blood vessels and has ZERO risk of metastasis if resected.",
-            mnemonic = "Intact basement membrane = Zero metastasis potential; Breached basement membrane = Invasive cancer.",
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
+            ipaPhonetic = "/dɪsˈpleɪ.ʒə ænd ɪn ˈsaɪ.tʃuː/",
             exampleEn = "Cervical screening identifies high-grade squamous intraepithelial lesions (CIS) before invasive progression occurs.",
             exampleFr = "Le frottis cervico-utérin dépiste les dysplasies sévères (carcinomes in situ) avant le stade invasif.",
             exampleAr = "يكشف فحص لطاخة عنق الرحم الآفات ما قبل الورمية والسرطانة في الموضع قبل تحولها إلى سرطان غازٍ.",
-            ipaPhonetic = "/dɪsˈpleɪ.ʒə ænd ɪn ˈsaɪ.tʃuː/",
+            clinicalPearl = "Because carcinoma in situ has not breached the basement membrane, it lacks access to lymphatics and blood vessels and has ZERO risk of metastasis if resected.",
+            mnemonic = "Intact basement membrane = Zero metastasis potential; Breached basement membrane = Invasive cancer.",
         ),
         MedicalTermEntity(
             id = 2940,
+            etymology = "Established by Pierre Denoix between 1943 and 1952 at the Institut Gustave-Roussy.",
             termEn = "Tumor Staging (TNM System)",
             termFr = "Stadification tumorale (Système TNM)",
             termAr = "تصنيف وتحديد مراحل الأورام الخبيثة (نظام TNM)",
             definitionEn = "The international anatomical classification of malignant cancer extent: T (size/extent of primary Tumor), N (regional lymph Node involvement), and M (distant Metastasis).",
             definitionFr = "Classification pronostique standardisée: T (taille et invasion de la tumeur primitive), N (envahissement ganglionnaire), M (métastases à distance).",
             definitionAr = "التصنيف التشريحي الدولي لمدى انتشار السرطان: T (حجم وعمق الورم الأولي)، N (إصابة العقد اللمفاوية الناحية)، و M (النقائل البعيدة).",
-            etymology = "Established by Pierre Denoix between 1943 and 1952 at the Institut Gustave-Roussy.",
-            clinicalPearl = "Stage (TNM) is the single most important clinical determinant of cancer prognosis and guides decisions for surgical resection, chemotherapy, or radiotherapy.",
-            mnemonic = "Stage = Where and how far it has spread (TNM); Grade = What it looks like under microscope (differentiation).",
             module = "Anatomie Pathologique",
             chapter = "Néoplasies - Généralités",
+            ipaPhonetic = "/ˈtjuː.mər ˈsteɪ.dʒɪŋ/",
             exampleEn = "The resected colorectal adenocarcinoma was pathologically staged as pT3 N1 M0.",
             exampleFr = "L'adénocarcinome colique réséqué a été classé pT3 N1 M0 après analyse de 16 ganglions lymphatiques.",
             exampleAr = "تم تصنيف السرطانة القولونية المستأصلة تشريحياً بالمرحلة pT3 N1 M0 بناءً على فحص العقد اللمفاوية.",
-            ipaPhonetic = "/ˈtjuː.mər ˈsteɪ.dʒɪŋ/",
+            clinicalPearl = "Stage (TNM) is the single most important clinical determinant of cancer prognosis and guides decisions for surgical resection, chemotherapy, or radiotherapy.",
+            mnemonic = "Stage = Where and how far it has spread (TNM); Grade = What it looks like under microscope (differentiation).",
         ),
         MedicalTermEntity(
             id = 2941,
+            etymology = "Tumor Protein 53 (53 kilodaltons molecular mass).",
             termEn = "TP53 & Tumor Suppressor Genes",
             termFr = "Gène TP53 et Gènes suppresseurs de tumeurs",
             termAr = "الجين الكابح للأورام TP53 (حارس الجينوم)",
             definitionEn = "A critical gene encoding the p53 protein ('guardian of the genome'); senses DNA damage, pauses the cell cycle at G1/S for repair, or induces apoptosis if damage is irreparable.",
             definitionFr = "Gène suppresseur de tumeur fondamental codant la protéine p53, régulant le cycle cellulaire, la réparation de l'ADN et l'apoptose.",
             definitionAr = "جين كابح للأورام رئيسي يرمز لبروتين p53 الذي يوقف الدورة الخلوية عند اكتشاف تلف الدنا لإصلاحه، أو يحفز الموت الخلوي إذا تعذر الإصلاح.",
-            etymology = "Tumor Protein 53 (53 kilodaltons molecular mass).",
-            clinicalPearl = "TP53 is mutated or inactivated in more than 50% of all human malignant neoplasms; germline mutations cause Li-Fraumeni syndrome.",
-            mnemonic = "Knudson's Two-Hit Hypothesis: Both alleles of a tumor suppressor gene must be inactivated to lose growth control.",
             module = "Anatomie Pathologique",
             chapter = "Cancérogenèse et Oncologie Moléculaire",
+            ipaPhonetic = "/tiː piː ˈfɪf.ti θriː/",
             exampleEn = "Biallelic loss of TP53 function permits cells with damaged genetic material to replicate aberrantly.",
             exampleFr = "L'inactivation biallélique de TP53 autorise la réplication incontrôlée de cellules porteuses de mutations.",
             exampleAr = "يتيح التعطيل المزدوج لجين TP53 للخلايا ذات المادة الوراثية التالفة التكاثر العشوائي غير المنضبط.",
-            ipaPhonetic = "/tiː piː ˈfɪf.ti θriː/",
+            clinicalPearl = "TP53 is mutated or inactivated in more than 50% of all human malignant neoplasms; germline mutations cause Li-Fraumeni syndrome.",
+            mnemonic = "Knudson's Two-Hit Hypothesis: Both alleles of a tumor suppressor gene must be inactivated to lose growth control.",
         ),
         MedicalTermEntity(
             id = 2942,
+            etymology = "Greek: κιρρός (kirrhos) — 'tawny / tawny-orange / yellowish' (describing diseased liver color).",
             termEn = "Cirrhosis & Regenerative Nodules",
             termFr = "Cirrhose hépatique et Nodules de régénération",
             termAr = "تشمع الكبد والعقيدات التجديدية",
             definitionEn = "The irreversible end-stage of chronic diffuse liver disease characterized by bridging fibrous septa, parenchymal extinction, and nodular hepatocyte regeneration disrupting vascular architecture.",
             definitionFr = "Stade terminal irréversible des hépatopathies chroniques associant fibrose mutilante en ponts et nodules hépatocytaires de régénération.",
             definitionAr = "المرحلة النهائية غير العكوسة لأمراض الكبد المزمنة، وتتصف بتشكل حواجز ليفية واسعة وعقيدات كبدية تجديدية تعطل العمارة الوعائية.",
-            etymology = "Greek: κιρρός (kirrhos) — 'tawny / tawny-orange / yellowish' (describing diseased liver color).",
-            clinicalPearl = "Portal hypertension results from sinusoidal architectural distortion; major risks include esophageal variceal bleeding and hepatocellular carcinoma (HCC).",
-            mnemonic = "Cirrhosis Triad: 1. Bridging fibrous septa, 2. Regenerative parenchymal nodules, 3. Disrupted whole-organ vascular architecture.",
             module = "Anatomie Pathologique",
             chapter = "Pathologie Digestive",
+            ipaPhonetic = "/sɪˈrəʊ.sɪs/",
             exampleEn = "Masson trichrome staining highlights the blue bridging bands of collagen encircling regenerative hepatic nodules in cirrhosis.",
             exampleFr = "La coloration trichrome de Masson colore en bleu les ponts de fibrose encerclant les nodules de régénération hépatique.",
             exampleAr = "تظهر صبغة ماسون ثلاثية الألوان حزم الكولاجين الليفي باللون الأزرق وهي تطوق العقيدات الكبدية التجديدية.",
-            ipaPhonetic = "/sɪˈrəʊ.sɪs/",
+            clinicalPearl = "Portal hypertension results from sinusoidal architectural distortion; major risks include esophageal variceal bleeding and hepatocellular carcinoma (HCC).",
+            mnemonic = "Cirrhosis Triad: 1. Bridging fibrous septa, 2. Regenerative parenchymal nodules, 3. Disrupted whole-organ vascular architecture.",
         ),
         MedicalTermEntity(
             id = 2943,
+            etymology = "Immuno (antibodies) + Histo (tissue) + Chemistry.",
             termEn = "Immunohistochemistry (IHC)",
             termFr = "Immunohistochimie (IHC)",
             termAr = "الكيمياء المناعية النسيجية (IHC)",
             definitionEn = "An essential diagnostic technique utilizing specific labeled monoclonal antibodies to detect target protein antigens in formalin-fixed paraffin-embedded (FFPE) tissue sections.",
             definitionFr = "Technique diagnostique utilisant des anticorps couplés à des enzymes chromogènes pour identifier des antigènes cellulaires spécifiques sur coupes.",
             definitionAr = "تقنية تشخيصية دقيقة تستخدم أجساماً مضادة نوعية ملونة للكشف عن بروتينات ومستضدات معينة في مقاطع الأنسجة النسيجية المثبتة.",
-            etymology = "Immuno (antibodies) + Histo (tissue) + Chemistry.",
-            clinicalPearl = "Key diagnostic panel: Cytokeratins (Carcinomas), Vimentin (Sarcomas), CD20/CD3 (Lymphomas), S100/HMB45 (Melanomas), HER2/ER/PR (Breast cancer predictive markers).",
-            mnemonic = "IHC turns invisible proteins into brown microscopic chromogen signals (DAB substrate).",
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
+            ipaPhonetic = "/ˌɪm.jʊ.nəʊˌhɪs.təʊˈkem.ɪ.stri/",
             exampleEn = "Strong nuclear estrogen receptor (ER) expression on immunohistochemistry predicts favorable response to tamoxifen hormonal therapy.",
             exampleFr = "La positivité des récepteurs aux estrogènes en immunohistochimie indique une sensibilité à l'hormonothérapie.",
             exampleAr = "تشير إيجابية مستقبلات الإستروجين في الفحص الكيميائي المناعي إلى استجابة ممتازة للعلاج الهرموني بالتاموكسيفين.",
-            ipaPhonetic = "/ˌɪm.jʊ.nəʊˌhɪs.təʊˈkem.ɪ.stri/",
+            clinicalPearl = "Key diagnostic panel: Cytokeratins (Carcinomas), Vimentin (Sarcomas), CD20/CD3 (Lymphomas), S100/HMB45 (Melanomas), HER2/ER/PR (Breast cancer predictive markers).",
+            mnemonic = "IHC turns invisible proteins into brown microscopic chromogen signals (DAB substrate).",
         ),
         MedicalTermEntity(
             id = 2944,
+            etymology = "From frozen + section (microscopic slice).",
             termEn = "Frozen Section (Extemporaneous Examination)",
             termFr = "Examen extemporané (Coupe congelée)",
             termAr = "الفحص النسيجي الميداني الفوري (المقطع المجمد)",
             definitionEn = "Rapid intraoperative histological evaluation of fresh tissue flash-frozen in a cryostat, cut into micron-thick slices, and stained within 15 minutes to guide immediate surgical strategy.",
             definitionFr = "Examen anatomopathologique peropératoire rapide de tissu frais congelé par cryostat, permettant de guider le geste chirurgical en moins de 15 minutes.",
             definitionAr = "تقييم نسيجي جراحي سريع يُجرى أثناء العملية الجراحية بتجميد النسيج فورياً وتقطيعه وصبغه خلال 15 دقيقة لتحديد نظافة حواف الاستئصال أو خباثة الورم.",
-            etymology = "From frozen + section (microscopic slice).",
-            clinicalPearl = "Primary indications: Assessment of surgical margins (clean vs involved margins), sentinel lymph node biopsy, and determining malignancy of unexpected lesions.",
-            mnemonic = "Frozen section = Fast intraoperative answer (<15 min), but inferior morphology compared to permanent paraffin sections.",
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
+            ipaPhonetic = "/ˈfrəʊ.zən ˈsek.ʃən/",
             exampleEn = "The frozen section report confirmed negative surgical margins, allowing the surgeon to conclude partial pancreatectomy.",
             exampleFr = "L'examen extemporané a confirmé des berges d'exérèse saines permettant de clore l'intervention.",
             exampleAr = "أكد تقرير المقطع المجمد نظافة وخلو حواف الاستئصال الجراحي من الخلايا الورمية.",
-            ipaPhonetic = "/ˈfrəʊ.zən ˈsek.ʃən/",
+            clinicalPearl = "Primary indications: Assessment of surgical margins (clean vs involved margins), sentinel lymph node biopsy, and determining malignancy of unexpected lesions.",
+            mnemonic = "Frozen section = Fast intraoperative answer (<15 min), but inferior morphology compared to permanent paraffin sections.",
         ),
         MedicalTermEntity(
             id = 2945,
+            etymology = "Greek: ἄμυλον (amylon) — 'starch' (mistakenly believed to be starch-like by Virchow).",
             termEn = "Amyloidosis & Congo Red Birefringence",
             termFr = "Amylose et Biréfringence au Rouge Congo",
             termAr = "الداء النشواني وثنائية انكسار أحمر الكونغو",
             definitionEn = "Extracellular deposition of pathological insoluble fibrillar protein aggregates in beta-pleated sheet conformation; stains pale pink on H&E and reveals apple-green birefringence under polarized light with Congo red.",
             definitionFr = "Dépôt extracellulaire de protéines fibrillaires en feuillets bêta-plissés; pathognomonique par sa biréfringence vert pomme au rouge Congo en lumière polarisée.",
             definitionAr = "ترسب غير طبيعي خارج خلوي لبروتينات غير ذائبة في بنية صفائح بيتا المطوية؛ تتميز بإعطاء انكسار ضوئي أخضر تفاحي مميز تحت المجهر المستقطب بصبغة أحمر الكونغو.",
-            etymology = "Greek: ἄμυλον (amylon) — 'starch' (mistakenly believed to be starch-like by Virchow).",
-            clinicalPearl = "AL amyloidosis (primary): immunoglobulin light chains in plasma cell dyscrasias; AA amyloidosis (secondary): serum amyloid A in chronic inflammation (rheumatoid arthritis, familial Mediterranean fever).",
-            mnemonic = "Congo Red + Polarized Light = Apple-Green Birefringence (Diagnostic gold standard).",
             module = "Anatomie Pathologique",
             chapter = "Techniques en Anatomie Pathologique",
+            ipaPhonetic = "/ˌæm.ɪ.lɔɪˈdəʊ.sɪs/",
             exampleEn = "Renal biopsy demonstrated diffuse glomerular amyloid deposits showing characteristic apple-green birefringence on polarized Congo red stain.",
             exampleFr = "La biopsie rénale montrait une amylose glomérulaire avec biréfringence vert pomme typique au rouge Congo.",
             exampleAr = "أظهرت خزعة الكلية وجود ترسبات نشوانية كبيبية أعطت انكساراً بلون التفاح الأخضر المميز بصبغة أحمر الكونغو المستقطبة.",
-            ipaPhonetic = "/ˌæm.ɪ.lɔɪˈdəʊ.sɪs/"
-        )
+            clinicalPearl = "AL amyloidosis (primary): immunoglobulin light chains in plasma cell dyscrasias; AA amyloidosis (secondary): serum amyloid A in chronic inflammation (rheumatoid arthritis, familial Mediterranean fever).",
+            mnemonic = "Congo Red + Polarized Light = Apple-Green Birefringence (Diagnostic gold standard).",
+        ),
     )
 }

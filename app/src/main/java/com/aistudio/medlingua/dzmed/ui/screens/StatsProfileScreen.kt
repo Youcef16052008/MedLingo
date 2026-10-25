@@ -47,9 +47,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aistudio.medlingua.dzmed.data.initial.InitialData
-import com.aistudio.medlingua.dzmed.localization.Language
+import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
+import com.aistudio.medlingua.dzmed.domain.gamification.LeagueManager
 import com.aistudio.medlingua.dzmed.localization.Strings
 import com.aistudio.medlingua.dzmed.ui.components.LanguageSelector
+import com.aistudio.medlingua.dzmed.localization.Language
 import com.aistudio.medlingua.dzmed.ui.theme.AmberGold
 import com.aistudio.medlingua.dzmed.ui.theme.MedGreenDark
 import com.aistudio.medlingua.dzmed.ui.theme.MedGreenPrimary
@@ -156,7 +158,7 @@ fun StatsProfileScreen(
             modifier = Modifier.fillMaxWidth()
         ) {
             val now = System.currentTimeMillis()
-            val goal = com.aistudio.medlingua.dzmed.domain.gamification.ProgressionManager.goalProgress(stats, now)
+            val goal = GamificationEconomy.goalProgress(stats, now)
             Column(
                 modifier = Modifier
                     .fillMaxWidth()

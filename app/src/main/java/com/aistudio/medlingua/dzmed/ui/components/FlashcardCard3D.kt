@@ -47,6 +47,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -56,9 +57,16 @@ import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 import com.aistudio.medlingua.dzmed.localization.Language
 import com.aistudio.medlingua.dzmed.localization.Strings
 import com.aistudio.medlingua.dzmed.ui.theme.AmberGold
-import com.aistudio.medlingua.dzmed.ui.theme.ClinicalTeal
+import com.aistudio.medlingua.dzmed.ui.theme.ClinicalViolet
+import com.aistudio.medlingua.dzmed.ui.theme.DeepGreen
+import com.aistudio.medlingua.dzmed.ui.theme.Emeral
 import com.aistudio.medlingua.dzmed.ui.theme.MedGreenDark
 import com.aistudio.medlingua.dzmed.ui.theme.MedGreenPrimary
+import com.aistudio.medlingua.dzmed.ui.theme.SemanticBlue
+import com.aistudio.medlingua.dzmed.ui.theme.SemanticViolet
+import com.aistudio.medlingua.dzmed.ui.theme.SemanticYellow
+import com.aistudio.medlingua.dzmed.ui.theme.TextTertiary
+import com.aistudio.medlingua.dzmed.ui.theme.AmberGold
 
 @Composable
 fun FlashcardCard3D(
@@ -128,18 +136,10 @@ private fun FrontCardSide(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(
-                Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFF0B4A2E),
-                        Color(0xFF146B43),
-                        Color(0xFF15803D)
-                    )
-                )
-            )
-            .padding(22.dp)
+            .background(Color.White)
+            .padding(20.dp)
     ) {
-        // Top Row: Module and Bookmark
+        // Top Row: Medical specialty tag + Bookmark
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -147,9 +147,9 @@ private fun FrontCardSide(
         ) {
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(20.dp))
-                    .background(Color.White.copy(alpha = 0.18f))
-                    .padding(horizontal = 14.dp, vertical = 6.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(MedGreenPrimary.copy(alpha = 0.12f))
+                    .padding(horizontal = 12.dp, vertical = 6.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -158,12 +158,12 @@ private fun FrontCardSide(
                     Icon(
                         imageVector = Icons.Default.School,
                         contentDescription = null,
-                        tint = Color(0xFFA7F3D0),
-                        modifier = Modifier.size(16.dp)
+                        tint = MedGreenDark,
+                        modifier = Modifier.size(14.dp)
                     )
                     Text(
                         text = "${term.module} • ${term.chapter}",
-                        color = Color.White,
+                        color = MedGreenDark,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -177,80 +177,106 @@ private fun FrontCardSide(
                 Icon(
                     imageVector = if (term.isBookmarked) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
                     contentDescription = "Bookmark",
-                    tint = if (term.isBookmarked) AmberGold else Color.White
+                    tint = if (term.isBookmarked) AmberGold else TextTertiary,
+                    modifier = Modifier.size(18.dp)
                 )
             }
         }
 
-        // Center Content
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Primary term (French)
         Column(
             modifier = Modifier
                 .align(Alignment.Center)
                 .fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
+            verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
+            // Language tag
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(Color.White.copy(alpha = 0.12f))
-                    .padding(horizontal = 12.dp, vertical = 4.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(TextTertiary.copy(alpha = 0.12f))
+                    .padding(horizontal = 10.dp, vertical = 4.dp)
             ) {
                 Text(
-                    text = "🇫🇷 Nomenclature Médicale Française",
-                    color = Color.White.copy(alpha = 0.85f),
-                    fontSize = 12.sp,
+                    text = "🇫🇷 ${Strings.get("language_fr", currentLanguage)}",
+                    color = TextTertiary,
+                    fontSize = 10.sp,
                     fontWeight = FontWeight.Medium
                 )
             }
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
+            // Main term
             Text(
                 text = term.termFr,
-                color = Color.White,
-                fontSize = 32.sp,
-                fontWeight = FontWeight.ExtraBold,
+                color = DeepGreen,
+                fontSize = 34.sp,
+                fontWeight = FontWeight.Black,
                 textAlign = TextAlign.Center,
-                lineHeight = 38.sp
+                lineHeight = 40.sp,
+                fontFamily = FontFamily.SansSerif
             )
 
+            // Arabic variant
             if (term.termAr.isNotBlank()) {
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "🇸🇦 ${term.termAr}",
-                    color = Color(0xFFA7F3D0),
+                    color = Emeral.copy(alpha = 0.9f),
                     fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center
+                    fontWeight = FontWeight.SemiBold,
+                    textAlign = TextAlign.Center,
+                    fontFamily = FontFamily.SansSerif
                 )
             }
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
+            // Speak button
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(30.dp))
-                    .background(Color.White.copy(alpha = 0.18f))
-                    .border(1.dp, Color.White.copy(alpha = 0.3f), RoundedCornerShape(30.dp))
-                    .padding(horizontal = 18.dp, vertical = 8.dp)
+                    .clip(RoundedCornerShape(24.dp))
+                    .background(MedGreenPrimary.copy(alpha = 0.15f))
+                    .border(1.dp, MedGreenPrimary.copy(alpha = 0.3f), RoundedCornerShape(24.dp))
+                    .padding(horizontal = 16.dp, vertical = 8.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     Icon(
-                        imageVector = Icons.Default.TouchApp,
-                        contentDescription = null,
-                        tint = Color.White,
+                        imageVector = Icons.Default.VolumeUp,
+                        contentDescription = "Listen",
+                        tint = MedGreenDark,
                         modifier = Modifier.size(16.dp)
                     )
                     Text(
-                        text = Strings.get("tap_to_flip", currentLanguage),
-                        color = Color.White,
-                        fontSize = 12.sp,
+                        text = Strings.get("tap_to_speak", currentLanguage),
+                        color = MedGreenDark,
+                        fontSize = 11.sp,
                         fontWeight = FontWeight.Medium
                     )
                 }
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            // Flip indicator
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(TextTertiary.copy(alpha = 0.1f))
+                    .padding(horizontal = 14.dp, vertical = 6.dp)
+            ) {
+                Text(
+                    text = Strings.get("flip_card", currentLanguage),
+                    color = TextTertiary,
+                    fontSize = 11.sp,
+                    fontWeight = FontWeight.Medium
+                )
             }
         }
     }
@@ -267,16 +293,14 @@ private fun BackCardSide(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .border(2.dp, Color(0xFF146B43), RoundedCornerShape(24.dp))
-            .padding(18.dp)
+            .border(1.dp, TextTertiary.copy(alpha = 0.2f), RoundedCornerShape(20.dp))
+            .padding(16.dp)
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            // English Header + Speaker
+            // English header + Speaker
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -289,96 +313,113 @@ private fun BackCardSide(
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(38.dp)
+                            .size(40.dp)
                             .clip(CircleShape)
-                            .background(Color(0xFFE3F5EC)),
+                            .background(SemanticBlue.copy(alpha = 0.15f))
+                            .border(1.dp, SemanticBlue.copy(alpha = 0.3f), CircleShape),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(text = "🇬🇧", fontSize = 20.sp)
+                        Text(
+                            text = "🇬🇧",
+                            color = SemanticBlue,
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.Bold
+                        )
                     }
 
                     Column {
                         Text(
                             text = term.termEn,
-                            color = MedGreenDark,
-                            fontSize = 22.sp,
-                            fontWeight = FontWeight.ExtraBold
+                            color = DeepGreen,
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            fontFamily = FontFamily.SansSerif
                         )
                         if (term.ipaPhonetic.isNotBlank()) {
                             Text(
                                 text = term.ipaPhonetic,
-                                color = Color(0xFF388E3C),
-                                fontSize = 13.sp,
+                                color = SemanticBlue,
+                                fontSize = 12.sp,
                                 fontStyle = FontStyle.Italic
                             )
                         }
                     }
                 }
 
-                FilledIconButton(
+                IconButton(
                     onClick = { onSpeak(term.termEn) },
-                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFE3F5EC)),
-                    modifier = Modifier.size(42.dp)
+                    colors = IconButtonDefaults.iconButtonColors(
+                        containerColor = SemanticBlue.copy(alpha = 0.15f)
+                    ),
+                    modifier = Modifier.size(40.dp)
                 ) {
                     Icon(
                         imageVector = Icons.Default.VolumeUp,
-                        contentDescription = "Listen to pronunciation",
-                        tint = MedGreenDark,
-                        modifier = Modifier.size(22.dp)
+                        contentDescription = "Listen",
+                        tint = SemanticBlue,
+                        modifier = Modifier.size(18.dp)
                     )
                 }
             }
 
-            HorizontalDivider(color = Color(0xFFDFEAE4), thickness = 1.dp)
-            TermIllustrationView(term = term, language = currentLanguage, height = 110.dp)
-
-            // Trilingual Cross-Reference (Standard Arabic & French)
+            // Language tabs
             Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFF0F7F4))
-                    .border(1.dp, Color(0xFFDFEAE4), RoundedCornerShape(12.dp))
-                    .padding(horizontal = 12.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp)
             ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = "🇸🇦 ${term.termAr}",
-                        color = Color(0xFF0C1414),
-                        fontSize = 15.sp,
-                        fontWeight = FontWeight.Bold
-                    )
+                Card(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(TextTertiary.copy(alpha = 0.1f))
+                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                    shape = RoundedCornerShape(8.dp)
+                ) {
                     Text(
                         text = "🇫🇷 ${term.termFr}",
-                        color = Color(0xFF6B7877),
-                        fontSize = 12.sp,
+                        color = MedGreenDark,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Medium
+                    )
+                }
+                Card(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(TextTertiary.copy(alpha = 0.1f))
+                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                    shape = RoundedCornerShape(8.dp)
+                ) {
+                    Text(
+                        text = "🇸🇦 ${term.termAr}",
+                        color = Emeral,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Medium
                     )
                 }
             }
 
-            // Etymology & Roots Section (🏛️)
+            // Etymology Section (Green)
             if (term.etymology.isNotBlank()) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(Color(0xFFF0FDF4))
-                        .border(1.dp, Color(0xFFBBF7D0), RoundedCornerShape(12.dp))
-                        .padding(10.dp)
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
-                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Column(
+                        modifier = Modifier.padding(12.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
                         Text(
-                            text = Strings.get("etymology", currentLanguage),
-                            color = Color(0xFF166534),
-                            fontSize = 11.sp,
+                            text = "🏛️ Étymologie",
+                            color = DeepGreen,
+                            fontSize = 12.sp,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = term.etymology,
-                            color = Color(0xFF14532D),
+                            color = TextTertiary.copy(alpha = 0.85f),
                             fontSize = 12.sp,
                             lineHeight = 16.sp
                         )
@@ -386,26 +427,29 @@ private fun BackCardSide(
                 }
             }
 
-            // Clinical Pearl / High-Yield Box (🩺)
+            // Clinical Pearl Section (Violet)
             if (term.clinicalPearl.isNotBlank()) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(Color(0xFFEFF6FF))
-                        .border(1.dp, Color(0xFFBFDBFE), RoundedCornerShape(12.dp))
-                        .padding(10.dp)
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
-                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Column(
+                        modifier = Modifier.padding(12.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
                         Text(
-                            text = Strings.get("clinical_pearl", currentLanguage),
-                            color = Color(0xFF1E40AF),
-                            fontSize = 11.sp,
+                            text = "🩺 Clinical Pearl",
+                            color = ClinicalViolet,
+                            fontSize = 12.sp,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = term.clinicalPearl,
-                            color = Color(0xFF1E3A8A),
+                            color = TextTertiary.copy(alpha = 0.85f),
                             fontSize = 12.sp,
                             lineHeight = 16.sp
                         )
@@ -413,28 +457,30 @@ private fun BackCardSide(
                 }
             }
 
-            // Medical Mnemonic (💡)
+            // Mnemonic Section (Yellow)
             if (term.mnemonic.isNotBlank()) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(Color(0xFFFEF3C7))
-                        .border(1.dp, Color(0xFFFDE68A), RoundedCornerShape(12.dp))
-                        .padding(10.dp)
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
-                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Column(
+                        modifier = Modifier.padding(12.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
                         Text(
-                            text = Strings.get("mnemonic_tip", currentLanguage),
-                            color = Color(0xFF92400E),
-                            fontSize = 11.sp,
+                            text = "💡 Mnémotechnique",
+                            color = SemanticYellow,
+                            fontSize = 12.sp,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = term.mnemonic,
-                            color = Color(0xFF78350F),
+                            color = TextTertiary.copy(alpha = 0.85f),
                             fontSize = 12.sp,
-                            fontStyle = FontStyle.Italic,
                             lineHeight = 16.sp
                         )
                     }
@@ -443,12 +489,32 @@ private fun BackCardSide(
 
             // English Academic Definition
             if (term.definitionEn.isNotBlank()) {
-                Text(
-                    text = "📖 ${term.definitionEn}",
-                    color = Color(0xFF475050),
-                    fontSize = 12.sp,
-                    lineHeight = 17.sp
-                )
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                ) {
+                    Column(
+                        modifier = Modifier.padding(12.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        Text(
+                            text = "📖 Définition",
+                            color = MedGreenDark,
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            text = term.definitionEn,
+                            color = TextTertiary.copy(alpha = 0.85f),
+                            fontSize = 12.sp,
+                            lineHeight = 17.sp
+                        )
+                    }
+                }
             }
         }
     }

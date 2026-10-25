@@ -1,141 +1,137 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Informatique Médicale — 232 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object InformatiqueMedicaleTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 1789,
+            etymology = "Latin: significare — 'to make known' + p (probability).",
             termEn = "Statistical Significance and P-Value",
             termFr = "Significativité statistique et P-valeur (p-value)",
             termAr = "الدلالة الإحصائية والقيمة الاحتمالية (p-value)",
             definitionEn = "The probability of observing results at least as extreme as those measured, assuming the null hypothesis (H0) is true; conventionally significant when p < 0.05.",
             definitionFr = "Probabilité d'obtenir un résultat au moins aussi extrême que celui observé sous l'hypothèse nulle (H0); seuil classique fixé à 5% (p < 0,05).",
             definitionAr = "احتمال الحصول على نتائج متطرفة على الأقل مثل النتائج المرصودة في الدراسة على افتراض صحة الفرضية الصفرية؛ تكون ذات دلالة إذا كانت p < 0.05.",
-            etymology = "Latin: significare — 'to make known' + p (probability).",
-            clinicalPearl = "A statistically significant difference does not inherently imply clinical relevance; always evaluate absolute effect size and 95% confidence intervals.",
-            mnemonic = "If p is low (p < α), the null must go (reject H0); Type I error (α) = False positive.",
             module = "Informatique Médicale",
             chapter = "Biostatistiques Fondamentales",
+            ipaPhonetic = "/stəˈtɪs.tɪ.kəl sɪɡˈnɪf.ɪ.kəns/",
             exampleEn = "The clinical trial demonstrated a statistically significant reduction in cardiovascular mortality (p = 0.002).",
             exampleFr = "L'essai clinique a démontré une réduction statistiquement significative de la mortalité (p = 0,002).",
             exampleAr = "أظهرت التجربة السريرية انخفاضاً ذا دلالة إحصائية في وفيات أمراض القلب والأوعية الدموية (p = 0.002).",
-            ipaPhonetic = "/stəˈtɪs.tɪ.kəl sɪɡˈnɪf.ɪ.kəns/",
+            clinicalPearl = "A statistically significant difference does not inherently imply clinical relevance; always evaluate absolute effect size and 95% confidence intervals.",
+            mnemonic = "If p is low (p < α), the null must go (reject H0); Type I error (α) = False positive.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1790,
+            etymology = "Latin: confidentia — 'trust / reliance' + intervallum — 'space between ramparts'.",
             termEn = "Confidence Interval (95% CI)",
             termFr = "Intervalle de confiance (IC à 95%)",
             termAr = "مجال الثقة (مجال ثقة 95%)",
             definitionEn = "A range of plausible estimated values for an unknown population parameter calculated from sample data, containing the true parameter 95% of the time under repeated sampling.",
             definitionFr = "Zone de valeurs probables encadrant l'estimation ponctuelle, qui contiendrait la vraie valeur du paramètre dans 95% des échantillonnages répétés.",
             definitionAr = "نطاق من القيم المعقولة التي يُتوقع أن تحتوي على القيمة الحقيقية لمعلمة المجتمع بنسبة احتمال 95% عند تكرار العينات.",
-            etymology = "Latin: confidentia — 'trust / reliance' + intervallum — 'space between ramparts'.",
-            clinicalPearl = "For a risk ratio (RR) or odds ratio (OR), if the 95% CI includes 1.0, there is no statistically significant association at the 5% level.",
-            mnemonic = "For differences: excludes 0 = significant; For ratios (RR, OR, HR): excludes 1.0 = significant.",
             module = "Informatique Médicale",
             chapter = "Biostatistiques Fondamentales",
+            ipaPhonetic = "/ˈkɒn.fɪ.dəns ˈɪn.tə.vəl/",
             exampleEn = "The hazard ratio for stroke was 0.65 with a 95% confidence interval spanning from 0.52 to 0.81.",
             exampleFr = "Le rapport de risque était de 0,65 avec un intervalle de confiance à 95% de 0,52 à 0,81.",
             exampleAr = "كانت نسبة المخاطر لحدوث السكتة الدماغية 0.65 مع مجال ثقة 95% يتراوح بين 0.52 و 0.81.",
-            ipaPhonetic = "/ˈkɒn.fɪ.dəns ˈɪn.tə.vəl/",
+            clinicalPearl = "For a risk ratio (RR) or odds ratio (OR), if the 95% CI includes 1.0, there is no statistically significant association at the 5% level.",
+            mnemonic = "For differences: excludes 0 = significant; For ratios (RR, OR, HR): excludes 1.0 = significant.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1791,
+            etymology = "Latin: sensibilis — 'perceptible' + specificus — 'constituting a kind'.",
             termEn = "Sensitivity and Specificity",
             termFr = "Sensibilité et Spécificité",
             termAr = "الحساسية والنوعية (النوعية التشخيصية)",
             definitionEn = "Diagnostic metrics: Sensitivity is the probability of a positive test among diseased individuals (TP/(TP+FN)); Specificity is true negative rate among non-diseased (TN/(TN+FP)).",
             definitionFr = "Performances intrinsèques d'un test diagnostique: Sensibilité (détecter les malades, vrais positifs) et Spécificité (exclure les non-malades, vrais négatifs).",
             definitionAr = "مؤشرات دقة الاختبارات التشخيصية: الحساسية هي قدرة الفحص على كشف المرضى، والنوعية هي قدرته على استبعاد الأصحاء غير المصابين.",
-            etymology = "Latin: sensibilis — 'perceptible' + specificus — 'constituting a kind'.",
-            clinicalPearl = "High sensitivity test is optimal for screening (rules OUT disease if negative: SnNOut); high specificity test confirms diagnosis (rules IN disease if positive: SpPIn).",
-            mnemonic = "SnNOut = High Sensitivity, Negative test rules Out; SpPIn = High Specificity, Positive test rules In.",
             module = "Informatique Médicale",
             chapter = "Épidémiologie & Risque Clinique",
+            ipaPhonetic = "/ˌsen.sɪˈtɪv.ə.ti ænd ˌspes.ɪˈfɪs.ə.ti/",
             exampleEn = "The rapid PCR test boasts 98% sensitivity and 99% specificity for acute viral pathogen detection.",
             exampleFr = "Le test PCR présente une sensibilité de 98% et une spécificité de 99% pour le diagnostic viral.",
             exampleAr = "يمتلك فحص تفاعل البوليميراز المتسلسل PCR السريع حساسية 98% ونوعية 99% في الكشف عن الفيروسات.",
-            ipaPhonetic = "/ˌsen.sɪˈtɪv.ə.ti ænd ˌspes.ɪˈfɪs.ə.ti/",
+            clinicalPearl = "High sensitivity test is optimal for screening (rules OUT disease if negative: SnNOut); high specificity test confirms diagnosis (rules IN disease if positive: SpPIn).",
+            mnemonic = "SnNOut = High Sensitivity, Negative test rules Out; SpPIn = High Specificity, Positive test rules In.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1792,
+            etymology = "Latin: relatio — 'reference' + ratio — 'computation / reckoning'.",
             termEn = "Relative Risk (RR) and Odds Ratio (OR)",
             termFr = "Risque Relatif (RR) et Rapport de Cotes (Odds Ratio)",
             termAr = "الخطر النسبي ونسبة الأرجحية",
             definitionEn = "Measures of association: Relative Risk (cohort studies) compares incidence between exposed and unexposed; Odds Ratio (case-control studies) compares odds of exposure between cases and controls.",
             definitionFr = "Indicateurs d'association: Risque Relatif en études de cohorte (incidences) et Odds Ratio en études cas-témoins (cotes d'exposition).",
             definitionAr = "مقاييس الارتباط الوبائي: الخطر النسبي يقارن نسبة حدوث المرض بين المعرضين وغير المعرضين، ونسبة الأرجحية تقارن احتمالات التعرض بين الحالات والشواهد.",
-            etymology = "Latin: relatio — 'reference' + ratio — 'computation / reckoning'.",
-            clinicalPearl = "When disease incidence is rare (<5-10% in the population), the odds ratio closely approximates the relative risk (rare disease assumption).",
-            mnemonic = "RR = (a/(a+b)) / (c/(c+d)) in 2x2 contingency table; OR = (a*d) / (b*c) cross-product ratio.",
             module = "Informatique Médicale",
             chapter = "Épidémiologie & Risque Clinique",
+            ipaPhonetic = "/ˈrel.ə.tɪv rɪsk/",
             exampleEn = "Tobacco smokers exhibited a relative risk of 15.2 for developing bronchogenic carcinoma compared to non-smokers.",
             exampleFr = "Les fumeurs présentaient un risque relatif de 15,2 de développer un carcinome bronchique.",
             exampleAr = "أظهر المدخنون خطراً نسبياً قدره 15.2 للإصابة بسرطان القصبات مقارنة بغير المدخنين.",
-            ipaPhonetic = "/ˈrel.ə.tɪv rɪsk/",
+            clinicalPearl = "When disease incidence is rare (<5-10% in the population), the odds ratio closely approximates the relative risk (rare disease assumption).",
+            mnemonic = "RR = (a/(a+b)) / (c/(c+d)) in 2x2 contingency table; OR = (a*d) / (b*c) cross-product ratio.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1793,
+            etymology = "Greek: ἤλεκτρον (elektron) — 'amber' + Old French: dossier — 'bundle of papers with a label'.",
             termEn = "Electronic Health Record (EHR / DMP)",
             termFr = "Dossier Médical Partagé / Dossier Patient Informatisé (DPI)",
             termAr = "السجل الصحي الإلكتروني / الملف الطبي المحوسب",
             definitionEn = "A standardized, secure, real-time longitudinal digital collection of patient health information and clinical documentation accessible to authorized healthcare professionals across encounters.",
             definitionFr = "Système informatique sécurisé centralisant l'historique médical, les prescriptions, les résultats d'analyses et les comptes-rendus d'un patient.",
             definitionAr = "منظومة رقمية آمنة وموحدة لجمع وتوثيق السيرة المرضية والوصفات الطبية ونتائج الفحوصات في متناول الفريق الطبي المصرح له.",
-            etymology = "Greek: ἤλεκτρον (elektron) — 'amber' + Old French: dossier — 'bundle of papers with a label'.",
-            clinicalPearl = "Interoperability standards like HL7 FHIR (Fast Healthcare Interoperability Resources) allow distinct hospital IT systems to seamlessly exchange medical data.",
-            mnemonic = "Core EHR pillars: Confidentiality, Integrity, Availability, Traceability of all medical entries.",
             module = "Informatique Médicale",
             chapter = "Dossier Patient Informatisé & SIH",
+            ipaPhonetic = "/ɪˌlekˈtrɒn.ɪk helθ rɪˈkɔːd/",
             exampleEn = "The physician accessed the electronic health record to check previous drug allergies prior to prescribing penicillin.",
             exampleFr = "Le médecin a consulté le dossier informatisé pour vérifier les allergies médicamenteuses avant la prescription.",
             exampleAr = "قام الطبيب بمراجعة السجل الصحي الإلكتروني للتحقق من عدم وجود حساسية تجاه البنسلين قبل كتابة الوصفة.",
-            ipaPhonetic = "/ɪˌlekˈtrɒn.ɪk helθ rɪˈkɔːd/",
+            clinicalPearl = "Interoperability standards like HL7 FHIR (Fast Healthcare Interoperability Resources) allow distinct hospital IT systems to seamlessly exchange medical data.",
+            mnemonic = "Core EHR pillars: Confidentiality, Integrity, Availability, Traceability of all medical entries.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1794,
+            etymology = "Latin: intelligere — 'to understand / perceive' + artificialis — 'made by art'.",
             termEn = "Artificial Intelligence in Medical Imaging",
             termFr = "Intelligence Artificielle en Imagerie Médicale",
             termAr = "الذكاء الاصطناعي في التصوير الطبي",
             definitionEn = "The application of deep learning convolutional neural networks (CNN) to automate detection, segmentation, and diagnostic classification in radiographic scans (CT, MRI, X-ray).",
             definitionFr = "Utilisation d'algorithmes d'apprentissage profond pour assister le radiologue dans la détection et la quantification automatisée de lésions.",
             definitionAr = "تطبيق خوارزميات التعلم العميق والشبكات العصبونية الالتفافية للمساعدة في الكشف الآلي وتصنيف الآفات في الصور الشعاعية والرنين المغناطيسي.",
-            etymology = "Latin: intelligere — 'to understand / perceive' + artificialis — 'made by art'.",
-            clinicalPearl = "Used as clinical decision support systems (CDSS) for triaging acute intracranial hemorrhages on non-contrast head CT and mammographic breast lesions.",
-            mnemonic = "Performance evaluated by ROC AUC (Area Under Receiver Operating Characteristic Curve); 1.0 = perfect classifier.",
             module = "Informatique Médicale",
             chapter = "Intelligence Artificielle en Santé",
+            ipaPhonetic = "/ˌɑː.tɪˈfɪʃ.əl ɪnˈtel.ɪ.dʒəns/",
             exampleEn = "The AI triage algorithm flagged an acute pulmonary embolism on the chest CT angiogram within 30 seconds.",
             exampleFr = "L'algorithme d'IA a détecté une embolie pulmonaire sur l'angioscanner en moins de 30 secondes.",
             exampleAr = "تعرف خوارزمية الذكاء الاصطناعي على انصمام رئوي حاد في التصوير المقطعي المحوسب خلال ثلاثين ثانية.",
-            ipaPhonetic = "/ˌɑː.tɪˈfɪʃ.əl ɪnˈtel.ɪ.dʒəns/",
+            clinicalPearl = "Used as clinical decision support systems (CDSS) for triaging acute intracranial hemorrhages on non-contrast head CT and mammographic breast lesions.",
+            mnemonic = "Performance evaluated by ROC AUC (Area Under Receiver Operating Characteristic Curve); 1.0 = perfect classifier.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1795,
+            etymology = "Latin: privatus — 'set apart / secret' + confidentia — 'trust'.",
             termEn = "Health Data Privacy and HIPAA / RGPD",
             termFr = "Protection des Données de Santé et Confidentialité",
             termAr = "حماية وسرية البيانات الصحية الرقمية",
             definitionEn = "Legal and technological frameworks regulating end-to-end encryption, pseudonymization, patient consent, and access governance for personal protected health information (PHI).",
             definitionFr = "Réglementations juridiques et informatiques (RGPD, HDS) garantissant le secret médical, le chiffrement et le consentement du patient.",
             definitionAr = "الأطر القانونية والتقنية التي تنظم تشفير البيانات الطبية وسريتها التامة وحوكمة الوصول إلى المعلومات الصحية المحمية للمرضى.",
-            etymology = "Latin: privatus — 'set apart / secret' + confidentia — 'trust'.",
-            clinicalPearl = "Data breaches compromising electronic medical records carry severe regulatory sanctions and violate Hippocratic medical confidentiality.",
-            mnemonic = "Anonymization: irreversible removal of identifiers; Pseudonymization: replaces identifiers with synthetic keys requiring lookup table.",
             module = "Informatique Médicale",
             chapter = "Sécurité des Données de Santé",
+            ipaPhonetic = "/helθ ˈdeɪ.tə ˈprɪv.ə.si/",
             exampleEn = "Clinical research datasets must undergo rigorous de-identification and pseudonymization prior to external analytics.",
             exampleFr = "Les données de recherche clinique doivent être rigoureusement pseudonymisées avant toute analyse.",
             exampleAr = "يجب إجراء إخفاء هوية دقيق وترميز مستعار لبيانات الأبحاث السريرية قبل إرسالها للتحليل الخارجي.",
-            ipaPhonetic = "/helθ ˈdeɪ.tə ˈprɪv.ə.si/"
+            clinicalPearl = "Data breaches compromising electronic medical records carry severe regulatory sanctions and violate Hippocratic medical confidentiality.",
+            mnemonic = "Anonymization: irreversible removal of identifiers; Pseudonymization: replaces identifiers with synthetic keys requiring lookup table.",
         ),
         MedicalTermEntity(
             id = 1796,
+            etymology = "",
             termEn = "Biostatistics",
             termFr = "Biostatistique",
             termAr = "الإحصاء الحيوي",
@@ -151,6 +147,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1797,
+            etymology = "",
             termEn = "Statistics",
             termFr = "Statistique",
             termAr = "الإحصاء",
@@ -166,6 +163,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1798,
+            etymology = "",
             termEn = "Descriptive statistics",
             termFr = "Statistique descriptive",
             termAr = "الإحصاء الوصفي",
@@ -175,15 +173,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/dɪˈskrɪptɪv/",
-
-            exampleFr = "Exemple: Le Méthodes pour résumer et décrire les données (moyenne, médiane, graphiques).",
-
-            exampleAr = "مثال: يظهر طرق تلخيص ووصف البيانات (المتوسط، الوسيط، الرسوم البيانية).",
-
-            exampleEn = "The Descriptive statistics is Methods for summarizing and describing data (mean, median, graphs).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1799,
+            etymology = "",
             termEn = "Inferential statistics",
             termFr = "Statistique inférentielle",
             termAr = "الإحصاء الاستدلالي",
@@ -193,15 +189,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˌɪnfəˈrɛnʃəl/",
-
-            exampleFr = "Exemple: Le Méthodes pour tirer des conclusions sur une population à partir d'un échantillon.",
-
-            exampleAr = "مثال: يظهر طرق استخلاص استنتاجات حول مجتمع من عينة.",
-
-            exampleEn = "The Inferential statistics is Methods for drawing conclusions about a population from a sample.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1800,
+            etymology = "",
             termEn = "Data",
             termFr = "Données",
             termAr = "البيانات",
@@ -211,15 +205,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈdeɪtə/",
-
-            exampleFr = "Exemple: Le Faits ou observations collectés pour analyse.",
-
-            exampleAr = "مثال: يظهر حقائق أو ملاحظات مجمعة للتحليل.",
-
-            exampleEn = "The Data is Facts or observations collected for analysis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1801,
+            etymology = "",
             termEn = "Raw data",
             termFr = "Données brutes",
             termAr = "البيانات الخام",
@@ -229,15 +221,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/rɔː ˈdeɪtə/",
-
-            exampleFr = "Exemple: Le Données non traitées telles que collectées avant toute analyse.",
-
-            exampleAr = "مثال: يظهر بيانات غير معالجة كما جُمعت أصلاً قبل أي تحليل.",
-
-            exampleEn = "The Raw data is Unprocessed data as originally collected before any analysis.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1802,
+            etymology = "",
             termEn = "Dataset",
             termFr = "Jeu de données",
             termAr = "مجموعة البيانات",
@@ -253,6 +243,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1803,
+            etymology = "",
             termEn = "Observation",
             termFr = "Observation",
             termAr = "الملاحظة (المشاهدة)",
@@ -268,6 +259,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1804,
+            etymology = "",
             termEn = "Frequency",
             termFr = "Fréquence",
             termAr = "التكرار",
@@ -283,6 +275,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1805,
+            etymology = "",
             termEn = "Relative frequency",
             termFr = "Fréquence relative",
             termAr = "التكرار النسبي",
@@ -298,6 +291,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1806,
+            etymology = "",
             termEn = "Cumulative frequency",
             termFr = "Fréquence cumulée",
             termAr = "التكرار التراكمي",
@@ -313,6 +307,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1807,
+            etymology = "",
             termEn = "Percentage",
             termFr = "Pourcentage",
             termAr = "النسبة المئوية",
@@ -328,6 +323,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1808,
+            etymology = "",
             termEn = "Ratio",
             termFr = "Rapport (Ratio)",
             termAr = "النسبة",
@@ -337,15 +333,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Concepts Fondamentaux",
             ipaPhonetic = "/ˈreɪʃioʊ/",
-
-            exampleFr = "Exemple: Le Taille relative de deux quantités exprimée comme a:b.",
-
-            exampleAr = "مثال: يظهر حجم النسبي لكميتين معبر عنه كـ a:b.",
-
-            exampleEn = "The Ratio is relative size of two quantities expressed as a:b.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1809,
+            etymology = "",
             termEn = "Rate",
             termFr = "Taux",
             termAr = "المعدل",
@@ -361,6 +355,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1810,
+            etymology = "",
             termEn = "Proportion",
             termFr = "Proportion",
             termAr = "التناسب",
@@ -376,6 +371,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1811,
+            etymology = "",
             termEn = "Variable",
             termFr = "Variable",
             termAr = "المتغير",
@@ -391,6 +387,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1812,
+            etymology = "",
             termEn = "Independent variable",
             termFr = "Variable indépendante",
             termAr = "المتغير المستقل",
@@ -406,6 +403,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1813,
+            etymology = "",
             termEn = "Dependent variable",
             termFr = "Variable dépendante",
             termAr = "المتغير التابع",
@@ -421,6 +419,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1814,
+            etymology = "",
             termEn = "Confounding variable",
             termFr = "Variable de confusion (confondante)",
             termAr = "المتغير المربك",
@@ -436,6 +435,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1815,
+            etymology = "",
             termEn = "Qualitative variable (Categorical)",
             termFr = "Variable qualitative (Catégorielle)",
             termAr = "المتغير النوعي",
@@ -451,6 +451,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1816,
+            etymology = "",
             termEn = "Quantitative variable (Numerical)",
             termFr = "Variable quantitative (Numérique)",
             termAr = "المتغير الكمي",
@@ -466,6 +467,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1817,
+            etymology = "",
             termEn = "Nominal variable",
             termFr = "Variable nominale",
             termAr = "المتغير الاسمي",
@@ -476,13 +478,12 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈnɒmɪnəl/",
             exampleEn = "The nominal variable is the categorical variable with no natural order (e.g., blood type, sex).",
-            exampleFr = "Exemple: Le Variable catégorielle sans ordre naturel (ex: groupe sanguin, sexe).",
-
-            exampleAr = "مثال: يظهر متغير فئوي بدون ترتيب طبيعي (مثل: فصيلة الدم، الجنس).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1818,
+            etymology = "",
             termEn = "Ordinal variable",
             termFr = "Variable ordinale",
             termAr = "المتغير الترتيبي",
@@ -493,13 +494,12 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈɔːrdɪnəl/",
             exampleEn = "The ordinal variable is the categorical variable with a meaningful order but unequal intervals (e.g., pain scale).",
-            exampleFr = "Exemple: Le Variable catégorielle avec un ordre significatif mais des intervalles inégaux (ex: échelle de douleur).",
-
-            exampleAr = "مثال: يظهر متغير فئوي بترتيب ذي معنى لكن بفواصل غير متساوية (مثل: مقياس الألم).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1819,
+            etymology = "",
             termEn = "Discrete variable",
             termFr = "Variable discrète",
             termAr = "المتغير المنفصل",
@@ -510,13 +510,12 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/dɪˈskriːt/",
             exampleEn = "The discrete variable is the quantitative variable taking only specific countable values (e.g., number of children).",
-            exampleFr = "Exemple: Le Variable quantitative prenant uniquement des valeurs dénombrables spécifiques (ex: nombre d'enfants).",
-
-            exampleAr = "مثال: يظهر متغير كمي يأخذ قيماً قابلة للعد فقط (مثل: عدد الأطفال).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1820,
+            etymology = "",
             termEn = "Continuous variable",
             termFr = "Variable continue",
             termAr = "المتغير المستمر",
@@ -527,13 +526,12 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/kənˈtɪnjuəs/",
             exampleEn = "The continuous variable is the quantitative variable taking any value within a range (e.g., height, weight, temperature).",
-            exampleFr = "Exemple: Le Variable quantitative prenant toute valeur dans un intervalle (ex: taille, poids, température).",
-
-            exampleAr = "مثال: يظهر متغير كمي يأخذ أي قيمة ضمن مدى (مثل: الطول، الوزن، درجة الحرارة).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1821,
+            etymology = "",
             termEn = "Interval scale",
             termFr = "Échelle d'intervalle",
             termAr = "مقياس الفترات",
@@ -544,13 +542,12 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈɪntərvəl skeɪl/",
             exampleEn = "The interval scale is the scale with equal intervals but no true zero point (e.g., temperature in °C).",
-            exampleFr = "Exemple: Le Échelle avec intervalles égaux mais sans vrai zéro (ex: température en °C).",
-
-            exampleAr = "مثال: يظهر مقياس بفواصل متساوية لكن بدون صفر حقيقي (مثل: درجة الحرارة بالمئوية).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1822,
+            etymology = "",
             termEn = "Ratio scale",
             termFr = "Échelle de rapport",
             termAr = "مقياس النسبة",
@@ -561,13 +558,12 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈreɪʃioʊ skeɪl/",
             exampleEn = "The ratio scale is the scale with equal intervals and a true zero point (e.g., weight, height, age).",
-            exampleFr = "Exemple: Le Échelle avec intervalles égaux et un vrai zéro (ex: poids, taille, âge).",
-
-            exampleAr = "مثال: يظهر مقياس بفواصل متساوية وصفر حقيقي (مثل: الوزن، الطول، العمر).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1823,
+            etymology = "",
             termEn = "Binary variable (Dichotomous)",
             termFr = "Variable binaire (Dichotomique)",
             termAr = "المتغير الثنائي",
@@ -578,13 +574,12 @@ MedicalTermEntity(
             chapter = "Variables et Types",
             ipaPhonetic = "/ˈbaɪnəri/",
             exampleEn = "The binary variable (dichotomous) is the variable with only two possible values (e.g., yes/no, male/female, alive/dead).",
-            exampleFr = "Exemple: Le Variable avec seulement deux valeurs possibles (ex: oui/non, homme/femme, vivant/mort).",
-
-            exampleAr = "مثال: يظهر متغير له قيمتان ممكنتان فقط (مثل: نعم/لا، ذكر/أنثى، حي/ميت).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1824,
+            etymology = "",
             termEn = "Population",
             termFr = "Population",
             termAr = "المجتمع (الإحصائي)",
@@ -600,6 +595,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1825,
+            etymology = "",
             termEn = "Sample",
             termFr = "Échantillon",
             termAr = "العينة",
@@ -615,6 +611,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1826,
+            etymology = "",
             termEn = "Sample size (n)",
             termFr = "Taille de l'échantillon (n)",
             termAr = "حجم العينة",
@@ -630,6 +627,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1827,
+            etymology = "",
             termEn = "Sampling",
             termFr = "Échantillonnage",
             termAr = "أخذ العينات",
@@ -645,6 +643,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1828,
+            etymology = "",
             termEn = "Random sampling",
             termFr = "Échantillonnage aléatoire",
             termAr = "العينة العشوائية",
@@ -660,6 +659,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1829,
+            etymology = "",
             termEn = "Simple random sampling",
             termFr = "Échantillonnage aléatoire simple",
             termAr = "العينة العشوائية البسيطة",
@@ -669,15 +669,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈsɪmpəl ˈrændəm/",
-
-            exampleFr = "Exemple: Le Chaque individu a une probabilité égale d'être sélectionné de la population entière.",
-
-            exampleAr = "مثال: يظهر كل فرد له احتمال متساوٍ للاختيار من المجتمع بأكمله.",
-
-            exampleEn = "The Simple random sampling is Each individual has an equal probability of being selected from the entire population.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1830,
+            etymology = "",
             termEn = "Stratified sampling",
             termFr = "Échantillonnage stratifié",
             termAr = "العينة الطبقية",
@@ -693,6 +691,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1831,
+            etymology = "",
             termEn = "Systematic sampling",
             termFr = "Échantillonnage systématique",
             termAr = "العينة المنتظمة",
@@ -708,6 +707,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1832,
+            etymology = "",
             termEn = "Cluster sampling",
             termFr = "Échantillonnage en grappes",
             termAr = "العينة العنقودية",
@@ -717,15 +717,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/ˈklʌstər/",
-
-            exampleFr = "Exemple: Le Sélection aléatoire de groupes entiers (grappes) plutôt que d'individus.",
-
-            exampleAr = "مثال: يظهر اختيار عشوائي لمجموعات كاملة (عناقيد) بدلاً من أفراد.",
-
-            exampleEn = "The Cluster sampling is Randomly selecting entire groups (clusters) rather than individuals.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1833,
+            etymology = "",
             termEn = "Convenience sampling",
             termFr = "Échantillonnage de convenance",
             termAr = "عينة الملاءمة",
@@ -741,6 +739,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1834,
+            etymology = "",
             termEn = "Sampling error",
             termFr = "Erreur d'échantillonnage",
             termAr = "خطأ العينة",
@@ -756,6 +755,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1835,
+            etymology = "",
             termEn = "Sampling bias",
             termFr = "Biais d'échantillonnage",
             termAr = "تحيز العينة",
@@ -771,6 +771,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1836,
+            etymology = "",
             termEn = "Parameter",
             termFr = "Paramètre",
             termAr = "المعلمة",
@@ -781,13 +782,12 @@ MedicalTermEntity(
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/pəˈræmɪtər/",
             exampleEn = "The parameter is the numerical characteristic describing a population (e.g., population mean μ).",
-            exampleFr = "Exemple: Le Caractéristique numérique décrivant une population (ex: moyenne de la population μ).",
-
-            exampleAr = "مثال: يظهر خاصية رقمية تصف مجتمعاً (مثل: متوسط المجتمع μ).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1837,
+            etymology = "",
             termEn = "Statistic",
             termFr = "Statistique (d'échantillon)",
             termAr = "الإحصائية",
@@ -798,13 +798,12 @@ MedicalTermEntity(
             chapter = "Population et Échantillonnage",
             ipaPhonetic = "/stəˈtɪstɪk/",
             exampleEn = "The statistic is the numerical characteristic computed from a sample (e.g., sample mean x̄).",
-            exampleFr = "Exemple: Le Caractéristique numérique calculée à partir d'un échantillon (ex: moyenne d'échantillon x̄).",
-
-            exampleAr = "مثال: يظهر خاصية رقمية محسوبة من عينة (مثل: متوسط العينة x̄).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1838,
+            etymology = "",
             termEn = "Representativeness",
             termFr = "Représentativité",
             termAr = "التمثيلية",
@@ -820,6 +819,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1839,
+            etymology = "",
             termEn = "Central tendency",
             termFr = "Tendance centrale",
             termAr = "النزعة المركزية",
@@ -835,6 +835,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1840,
+            etymology = "",
             termEn = "Mean (Arithmetic mean)",
             termFr = "Moyenne (Moyenne arithmétique)",
             termAr = "المتوسط (الوسط الحسابي)",
@@ -850,6 +851,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1841,
+            etymology = "",
             termEn = "Weighted mean",
             termFr = "Moyenne pondérée",
             termAr = "المتوسط المرجح",
@@ -865,6 +867,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1842,
+            etymology = "",
             termEn = "Geometric mean",
             termFr = "Moyenne géométrique",
             termAr = "المتوسط الهندسي",
@@ -880,6 +883,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1843,
+            etymology = "",
             termEn = "Median",
             termFr = "Médiane",
             termAr = "الوسيط",
@@ -895,6 +899,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1844,
+            etymology = "",
             termEn = "Mode",
             termFr = "Mode",
             termAr = "المنوال",
@@ -910,6 +915,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1845,
+            etymology = "",
             termEn = "Unimodal",
             termFr = "Unimodal",
             termAr = "أحادي المنوال",
@@ -925,6 +931,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1846,
+            etymology = "",
             termEn = "Bimodal",
             termFr = "Bimodal",
             termAr = "ثنائي المنوال",
@@ -940,6 +947,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1847,
+            etymology = "",
             termEn = "Multimodal",
             termFr = "Multimodal",
             termAr = "متعدد المنوال",
@@ -955,6 +963,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1848,
+            etymology = "",
             termEn = "Outlier",
             termFr = "Valeur aberrante",
             termAr = "القيمة الشاذة",
@@ -970,6 +979,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1849,
+            etymology = "",
             termEn = "Dispersion (Variability)",
             termFr = "Dispersion (Variabilité)",
             termAr = "التشتت (التباينية)",
@@ -985,6 +995,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1850,
+            etymology = "",
             termEn = "Range",
             termFr = "Étendue",
             termAr = "المدى",
@@ -1000,6 +1011,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1851,
+            etymology = "",
             termEn = "Interquartile range (IQR)",
             termFr = "Écart interquartile (EIQ)",
             termAr = "المدى الربيعي",
@@ -1015,6 +1027,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1852,
+            etymology = "",
             termEn = "Quartile",
             termFr = "Quartile",
             termAr = "الربيع",
@@ -1024,15 +1037,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Mesures de Dispersion",
             ipaPhonetic = "/ˈkwɔːrtaɪl/",
-
-            exampleFr = "Exemple: Le Valeurs divisant les données ordonnées en quatre parties égales (Q1, Q2, Q3).",
-
-            exampleAr = "مثال: يظهر قيم تقسم البيانات المرتبة إلى أربعة أجزاء متساوية (ر1، ر2، ر3).",
-
-            exampleEn = "The Quartile is Values dividing ordered data into four equal parts (Q1, Q2, Q3).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1853,
+            etymology = "",
             termEn = "Percentile",
             termFr = "Percentile (Centile)",
             termAr = "المئين",
@@ -1048,6 +1059,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1854,
+            etymology = "",
             termEn = "Deviation",
             termFr = "Écart (Déviation)",
             termAr = "الانحراف",
@@ -1063,6 +1075,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1855,
+            etymology = "",
             termEn = "Variance",
             termFr = "Variance",
             termAr = "التباين",
@@ -1078,6 +1091,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1856,
+            etymology = "",
             termEn = "Standard deviation (SD)",
             termFr = "Écart-type",
             termAr = "الانحراف المعياري",
@@ -1093,6 +1107,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1857,
+            etymology = "",
             termEn = "Coefficient of variation (CV)",
             termFr = "Coefficient de variation (CV)",
             termAr = "معامل الاختلاف",
@@ -1108,6 +1123,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1858,
+            etymology = "",
             termEn = "Standard error (SE)",
             termFr = "Erreur standard (ES)",
             termAr = "الخطأ المعياري",
@@ -1123,6 +1139,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1859,
+            etymology = "",
             termEn = "Skewness",
             termFr = "Asymétrie",
             termAr = "الالتواء",
@@ -1138,6 +1155,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1860,
+            etymology = "",
             termEn = "Positive skew (Right skew)",
             termFr = "Asymétrie positive (à droite)",
             termAr = "التواء موجب (يميني)",
@@ -1153,6 +1171,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1861,
+            etymology = "",
             termEn = "Negative skew (Left skew)",
             termFr = "Asymétrie négative (à gauche)",
             termAr = "التواء سالب (يساري)",
@@ -1168,6 +1187,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1862,
+            etymology = "",
             termEn = "Kurtosis",
             termFr = "Kurtosis (Aplatissement)",
             termAr = "التفلطح",
@@ -1183,6 +1203,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1863,
+            etymology = "",
             termEn = "Probability",
             termFr = "Probabilité",
             termAr = "الاحتمال",
@@ -1198,6 +1219,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1864,
+            etymology = "",
             termEn = "Event",
             termFr = "Événement",
             termAr = "الحدث",
@@ -1213,6 +1235,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1865,
+            etymology = "",
             termEn = "Mutually exclusive events",
             termFr = "Événements mutuellement exclusifs",
             termAr = "أحداث متنافية",
@@ -1222,15 +1245,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˈmjuːtʃuəli ɪkˈskluːsɪv/",
-
-            exampleFr = "Exemple: Le Événements qui ne peuvent pas se produire simultanément.",
-
-            exampleAr = "مثال: يظهر أحداث لا يمكن أن تقع في آن واحد.",
-
-            exampleEn = "The Mutually exclusive events is Events that cannot occur simultaneously.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1866,
+            etymology = "",
             termEn = "Independent events",
             termFr = "Événements indépendants",
             termAr = "أحداث مستقلة",
@@ -1240,15 +1261,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt/",
-
-            exampleFr = "Exemple: Le Événements où la survenue de l'un n'affecte pas la probabilité de l'autre.",
-
-            exampleAr = "مثال: يظهر أحداث حيث وقوع أحدها لا يؤثر على احتمالية الآخر.",
-
-            exampleEn = "The Independent events is Events where the occurrence of one does not affect the probability of the other.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1867,
+            etymology = "",
             termEn = "Conditional probability",
             termFr = "Probabilité conditionnelle",
             termAr = "الاحتمال الشرطي",
@@ -1264,6 +1283,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1868,
+            etymology = "",
             termEn = "Bayes' theorem",
             termFr = "Théorème de Bayes",
             termAr = "نظرية بايز",
@@ -1279,6 +1299,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1869,
+            etymology = "",
             termEn = "Probability distribution",
             termFr = "Distribution de probabilité",
             termAr = "التوزيع الاحتمالي",
@@ -1294,6 +1315,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1870,
+            etymology = "",
             termEn = "Normal distribution (Gaussian)",
             termFr = "Distribution normale (Gaussienne)",
             termAr = "التوزيع الطبيعي (الغاوسي)",
@@ -1309,6 +1331,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1871,
+            etymology = "",
             termEn = "Bell curve",
             termFr = "Courbe en cloche",
             termAr = "منحنى الجرس",
@@ -1324,6 +1347,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1872,
+            etymology = "",
             termEn = "Standard normal distribution",
             termFr = "Distribution normale centrée réduite",
             termAr = "التوزيع الطبيعي المعياري",
@@ -1339,6 +1363,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1873,
+            etymology = "",
             termEn = "Z-score (Standard score)",
             termFr = "Score Z (Cote Z)",
             termAr = "درجة Z المعيارية",
@@ -1354,6 +1379,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1874,
+            etymology = "",
             termEn = "Empirical rule (68-95-99.7)",
             termFr = "Règle empirique (68-95-99,7)",
             termAr = "القاعدة التجريبية",
@@ -1363,15 +1389,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Distributions de Probabilité",
             ipaPhonetic = "/ɪmˈpɪrɪkəl ruːl/",
-
-            exampleFr = "Exemple: Le Dans une distribution normale: 68% dans ±1ET, 95% dans ±2ET, 99,7% dans ±3ET.",
-
-            exampleAr = "مثال: يظهر في التوزيع الطبيعي: 68% ضمن ±1 انحراف، 95% ضمن ±2، 99.7% ضمن ±3.",
-
-            exampleEn = "The Empirical rule (68-95-99.7) is In a normal distribution: 68% within ±1SD, 95% within ±2SD, 99.7% within ±3SD.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1875,
+            etymology = "",
             termEn = "Binomial distribution",
             termFr = "Distribution binomiale",
             termAr = "التوزيع ذو الحدين",
@@ -1387,6 +1411,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1876,
+            etymology = "",
             termEn = "Poisson distribution",
             termFr = "Distribution de Poisson",
             termAr = "توزيع بواسون",
@@ -1402,6 +1427,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1877,
+            etymology = "",
             termEn = "Chi-square distribution (χ²)",
             termFr = "Distribution du Chi-deux (χ²)",
             termAr = "توزيع كاي تربيع (χ²)",
@@ -1417,6 +1443,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1878,
+            etymology = "",
             termEn = "Student's t-distribution",
             termFr = "Distribution t de Student",
             termAr = "توزيع ت لستيودنت",
@@ -1432,6 +1459,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1879,
+            etymology = "",
             termEn = "F-distribution",
             termFr = "Distribution F (Fisher)",
             termAr = "توزيع F (فيشر)",
@@ -1447,6 +1475,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1880,
+            etymology = "",
             termEn = "Degrees of freedom (df)",
             termFr = "Degrés de liberté (dl)",
             termAr = "درجات الحرية",
@@ -1462,6 +1491,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1881,
+            etymology = "",
             termEn = "Estimation",
             termFr = "Estimation",
             termAr = "التقدير",
@@ -1477,6 +1507,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1882,
+            etymology = "",
             termEn = "Point estimate",
             termFr = "Estimation ponctuelle",
             termAr = "التقدير النقطي",
@@ -1492,6 +1523,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1883,
+            etymology = "",
             termEn = "Interval estimate",
             termFr = "Estimation par intervalle",
             termAr = "التقدير بالفترة",
@@ -1507,6 +1539,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1884,
+            etymology = "",
             termEn = "Confidence interval (CI)",
             termFr = "Intervalle de confiance (IC)",
             termAr = "فترة الثقة",
@@ -1522,6 +1555,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1885,
+            etymology = "",
             termEn = "Confidence level",
             termFr = "Niveau de confiance",
             termAr = "مستوى الثقة",
@@ -1537,6 +1571,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1886,
+            etymology = "",
             termEn = "Margin of error",
             termFr = "Marge d'erreur",
             termAr = "هامش الخطأ",
@@ -1552,6 +1587,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1887,
+            etymology = "",
             termEn = "Hypothesis",
             termFr = "Hypothèse",
             termAr = "الفرضية",
@@ -1567,6 +1603,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1888,
+            etymology = "",
             termEn = "Null hypothesis (H₀)",
             termFr = "Hypothèse nulle (H₀)",
             termAr = "الفرضية الصفرية",
@@ -1582,6 +1619,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1889,
+            etymology = "",
             termEn = "Alternative hypothesis (H₁ or Hₐ)",
             termFr = "Hypothèse alternative (H₁ ou Hₐ)",
             termAr = "الفرضية البديلة",
@@ -1597,6 +1635,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1890,
+            etymology = "",
             termEn = "Significance level (α)",
             termFr = "Niveau de signification (α)",
             termAr = "مستوى الدلالة",
@@ -1612,6 +1651,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1891,
+            etymology = "",
             termEn = "P-value",
             termFr = "Valeur p",
             termAr = "القيمة الاحتمالية p",
@@ -1627,6 +1667,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1892,
+            etymology = "",
             termEn = "Statistical significance",
             termFr = "Signification statistique",
             termAr = "الدلالة الإحصائية",
@@ -1642,6 +1683,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1893,
+            etymology = "",
             termEn = "Type I error (α error)",
             termFr = "Erreur de type I (erreur α)",
             termAr = "خطأ النوع الأول",
@@ -1657,6 +1699,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1894,
+            etymology = "",
             termEn = "Type II error (β error)",
             termFr = "Erreur de type II (erreur β)",
             termAr = "خطأ النوع الثاني",
@@ -1672,6 +1715,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1895,
+            etymology = "",
             termEn = "Statistical power (1 - β)",
             termFr = "Puissance statistique (1 - β)",
             termAr = "القوة الإحصائية",
@@ -1687,6 +1731,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1896,
+            etymology = "",
             termEn = "One-tailed test",
             termFr = "Test unilatéral",
             termAr = "اختبار أحادي الطرف",
@@ -1702,6 +1747,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1897,
+            etymology = "",
             termEn = "Two-tailed test",
             termFr = "Test bilatéral",
             termAr = "اختبار ثنائي الطرف",
@@ -1717,6 +1763,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1898,
+            etymology = "",
             termEn = "Test statistic",
             termFr = "Statistique de test",
             termAr = "إحصائية الاختبار",
@@ -1732,6 +1779,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1899,
+            etymology = "",
             termEn = "Critical value",
             termFr = "Valeur critique",
             termAr = "القيمة الحرجة",
@@ -1747,6 +1795,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1900,
+            etymology = "",
             termEn = "Rejection region",
             termFr = "Région de rejet",
             termAr = "منطقة الرفض",
@@ -1762,6 +1811,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1901,
+            etymology = "",
             termEn = "Z-test",
             termFr = "Test Z",
             termAr = "اختبار Z",
@@ -1777,6 +1827,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1902,
+            etymology = "",
             termEn = "T-test (Student's t-test)",
             termFr = "Test t (Test t de Student)",
             termAr = "اختبار t (اختبار ستيودنت)",
@@ -1792,6 +1843,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1903,
+            etymology = "",
             termEn = "Independent samples t-test",
             termFr = "Test t pour échantillons indépendants",
             termAr = "اختبار t للعينات المستقلة",
@@ -1807,6 +1859,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1904,
+            etymology = "",
             termEn = "Paired samples t-test",
             termFr = "Test t pour échantillons appariés",
             termAr = "اختبار t للعينات المزدوجة",
@@ -1822,6 +1875,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1905,
+            etymology = "",
             termEn = "Chi-square test (χ²)",
             termFr = "Test du Chi-deux (χ²)",
             termAr = "اختبار كاي تربيع (χ²)",
@@ -1837,6 +1891,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1906,
+            etymology = "",
             termEn = "ANOVA (Analysis of Variance)",
             termFr = "ANOVA (Analyse de la Variance)",
             termAr = "تحليل التباين",
@@ -1852,6 +1907,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1907,
+            etymology = "",
             termEn = "One-way ANOVA",
             termFr = "ANOVA à un facteur",
             termAr = "تحليل التباين أحادي الاتجاه",
@@ -1867,6 +1923,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1908,
+            etymology = "",
             termEn = "Two-way ANOVA",
             termFr = "ANOVA à deux facteurs",
             termAr = "تحليل التباين ثنائي الاتجاه",
@@ -1882,6 +1939,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1909,
+            etymology = "",
             termEn = "Post-hoc test",
             termFr = "Test post-hoc",
             termAr = "اختبار ما بعد التحليل",
@@ -1897,6 +1955,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1910,
+            etymology = "",
             termEn = "Fisher's exact test",
             termFr = "Test exact de Fisher",
             termAr = "اختبار فيشر الدقيق",
@@ -1912,6 +1971,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1911,
+            etymology = "",
             termEn = "Mann-Whitney U test",
             termFr = "Test U de Mann-Whitney",
             termAr = "اختبار مان-ويتني",
@@ -1927,6 +1987,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1912,
+            etymology = "",
             termEn = "Wilcoxon signed-rank test",
             termFr = "Test des rangs signés de Wilcoxon",
             termAr = "اختبار ويلكوكسن للرتب المؤشرة",
@@ -1942,6 +2003,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1913,
+            etymology = "",
             termEn = "Kruskal-Wallis test",
             termFr = "Test de Kruskal-Wallis",
             termAr = "اختبار كروسكال-واليس",
@@ -1957,6 +2019,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1914,
+            etymology = "",
             termEn = "Parametric test",
             termFr = "Test paramétrique",
             termAr = "اختبار معلمي",
@@ -1972,6 +2035,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1915,
+            etymology = "",
             termEn = "Non-parametric test",
             termFr = "Test non paramétrique",
             termAr = "اختبار لا معلمي",
@@ -1987,6 +2051,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1916,
+            etymology = "",
             termEn = "Contingency table",
             termFr = "Tableau de contingence",
             termAr = "جدول الطوارئ",
@@ -2002,6 +2067,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1917,
+            etymology = "",
             termEn = "Expected frequency",
             termFr = "Fréquence attendue (théorique)",
             termAr = "التكرار المتوقع",
@@ -2017,6 +2083,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1918,
+            etymology = "",
             termEn = "Observed frequency",
             termFr = "Fréquence observée",
             termAr = "التكرار الملاحظ",
@@ -2032,6 +2099,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1919,
+            etymology = "",
             termEn = "Correlation",
             termFr = "Corrélation",
             termAr = "الارتباط",
@@ -2047,6 +2115,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1920,
+            etymology = "",
             termEn = "Correlation coefficient (r)",
             termFr = "Coefficient de corrélation (r)",
             termAr = "معامل الارتباط",
@@ -2062,6 +2131,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1921,
+            etymology = "",
             termEn = "Pearson correlation",
             termFr = "Corrélation de Pearson",
             termAr = "ارتباط بيرسون",
@@ -2077,6 +2147,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1922,
+            etymology = "",
             termEn = "Spearman rank correlation",
             termFr = "Corrélation de Spearman",
             termAr = "ارتباط سبيرمان",
@@ -2092,6 +2163,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1923,
+            etymology = "",
             termEn = "Positive correlation",
             termFr = "Corrélation positive",
             termAr = "ارتباط إيجابي (طردي)",
@@ -2101,15 +2173,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈpɒzɪtɪv/",
-
-            exampleFr = "Exemple: Le deux variables augmentent ensemble (r > 0).",
-
-            exampleAr = "مثال: يظهر كلا المتغيرين يزدادان معاً (r > 0).",
-
-            exampleEn = "The Positive correlation is Both variables increase together (r > 0).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1924,
+            etymology = "",
             termEn = "Negative correlation",
             termFr = "Corrélation négative",
             termAr = "ارتباط سلبي (عكسي)",
@@ -2119,15 +2189,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈnɛɡətɪv/",
-
-            exampleFr = "Exemple: Le variable augmente tandis que l'autre diminue (r < 0).",
-
-            exampleAr = "مثال: يظهر متغير يزداد بينما الآخر يتناقص (r < 0).",
-
-            exampleEn = "The Negative correlation is One variable increases as the other decreases (r < 0).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1925,
+            etymology = "",
             termEn = "No correlation",
             termFr = "Absence de corrélation",
             termAr = "عدم وجود ارتباط",
@@ -2137,15 +2205,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/noʊ ˌkɒrəˈleɪʃən/",
-
-            exampleFr = "Exemple: Le Absence de relation linéaire entre deux variables (r ≈ 0).",
-
-            exampleAr = "مثال: يظهر عدم وجود علاقة خطية بين متغيرين (r ≈ 0).",
-
-            exampleEn = "The No correlation is No linear relationship between two variables (r ≈ 0).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1926,
+            etymology = "",
             termEn = "Coefficient of determination (R²)",
             termFr = "Coefficient de détermination (R²)",
             termAr = "معامل التحديد",
@@ -2161,6 +2227,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1927,
+            etymology = "",
             termEn = "Regression",
             termFr = "Régression",
             termAr = "الانحدار",
@@ -2176,6 +2243,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1928,
+            etymology = "",
             termEn = "Linear regression",
             termFr = "Régression linéaire",
             termAr = "الانحدار الخطي",
@@ -2191,6 +2259,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1929,
+            etymology = "",
             termEn = "Regression line",
             termFr = "Droite de régression",
             termAr = "خط الانحدار",
@@ -2206,6 +2275,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1930,
+            etymology = "",
             termEn = "Slope",
             termFr = "Pente",
             termAr = "الميل",
@@ -2221,6 +2291,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1931,
+            etymology = "",
             termEn = "Intercept",
             termFr = "Ordonnée à l'origine",
             termAr = "المقطع (التقاطع)",
@@ -2236,6 +2307,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1932,
+            etymology = "",
             termEn = "Residual",
             termFr = "Résidu",
             termAr = "الباقي",
@@ -2251,6 +2323,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1933,
+            etymology = "",
             termEn = "Multiple regression",
             termFr = "Régression multiple",
             termAr = "الانحدار المتعدد",
@@ -2260,15 +2333,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ˈmʌltɪpəl/",
-
-            exampleFr = "Exemple: Le Régression avec deux ou plus variables indépendantes prédisant une variable dépendante.",
-
-            exampleAr = "مثال: يظهر انحدار بمتغيرين مستقلين أو أكثر للتنبؤ بمتغير تابع واحد.",
-
-            exampleEn = "The Multiple regression is Regression with two or more independent variables predicting one dependent variable.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1934,
+            etymology = "",
             termEn = "Logistic regression",
             termFr = "Régression logistique",
             termAr = "الانحدار اللوجستي",
@@ -2278,15 +2349,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Corrélation et Régression",
             ipaPhonetic = "/ləˈdʒɪstɪk/",
-
-            exampleFr = "Exemple: Le Modèle de régression prédisant un résultat binaire (ex: maladie: oui/non).",
-
-            exampleAr = "مثال: يظهر نموذج انحدار يتنبأ بنتيجة ثنائية (مثل: مرض: نعم/لا).",
-
-            exampleEn = "The Logistic regression is regression model predicting a binary outcome (e.g., disease: yes/no).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1935,
+            etymology = "",
             termEn = "Scatter plot",
             termFr = "Nuage de points (Diagramme de dispersion)",
             termAr = "مخطط الانتشار",
@@ -2302,6 +2371,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1936,
+            etymology = "",
             termEn = "Histogram",
             termFr = "Histogramme",
             termAr = "المدرج التكراري",
@@ -2317,6 +2387,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1937,
+            etymology = "",
             termEn = "Bar chart",
             termFr = "Diagramme en barres",
             termAr = "مخطط الأعمدة",
@@ -2332,6 +2403,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1938,
+            etymology = "",
             termEn = "Pie chart",
             termFr = "Diagramme circulaire (Camembert)",
             termAr = "المخطط الدائري",
@@ -2347,6 +2419,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1939,
+            etymology = "",
             termEn = "Line graph",
             termFr = "Graphique linéaire (Courbe)",
             termAr = "الرسم البياني الخطي",
@@ -2362,6 +2435,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1940,
+            etymology = "",
             termEn = "Box plot (Box-and-whisker)",
             termFr = "Boîte à moustaches",
             termAr = "مخطط الصندوق",
@@ -2377,6 +2451,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1941,
+            etymology = "",
             termEn = "Stem-and-leaf plot",
             termFr = "Diagramme tige-feuilles",
             termAr = "مخطط الجذع والأوراق",
@@ -2392,6 +2467,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1942,
+            etymology = "",
             termEn = "Frequency polygon",
             termFr = "Polygone de fréquences",
             termAr = "مضلع التكرار",
@@ -2407,6 +2483,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1943,
+            etymology = "",
             termEn = "Ogive (Cumulative frequency curve)",
             termFr = "Ogive (Courbe de fréquences cumulées)",
             termAr = "المنحنى التراكمي",
@@ -2422,6 +2499,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1944,
+            etymology = "",
             termEn = "Frequency table",
             termFr = "Tableau de fréquences",
             termAr = "جدول التكرار",
@@ -2437,6 +2515,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1945,
+            etymology = "",
             termEn = "Class interval",
             termFr = "Intervalle de classe",
             termAr = "فترة الفئة",
@@ -2452,6 +2531,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1946,
+            etymology = "",
             termEn = "Class width",
             termFr = "Amplitude de classe",
             termAr = "عرض الفئة",
@@ -2467,6 +2547,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1947,
+            etymology = "",
             termEn = "Epidemiology",
             termFr = "Épidémiologie",
             termAr = "علم الوبائيات",
@@ -2482,6 +2563,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1948,
+            etymology = "",
             termEn = "Prevalence",
             termFr = "Prévalence",
             termAr = "الانتشار",
@@ -2497,6 +2579,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1949,
+            etymology = "",
             termEn = "Incidence",
             termFr = "Incidence",
             termAr = "الوقوع (الحدوث)",
@@ -2512,6 +2595,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1950,
+            etymology = "",
             termEn = "Incidence rate",
             termFr = "Taux d'incidence",
             termAr = "معدل الوقوع",
@@ -2527,6 +2611,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1951,
+            etymology = "",
             termEn = "Mortality rate",
             termFr = "Taux de mortalité",
             termAr = "معدل الوفيات",
@@ -2542,6 +2627,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1952,
+            etymology = "",
             termEn = "Morbidity rate",
             termFr = "Taux de morbidité",
             termAr = "معدل الاعتلال",
@@ -2557,6 +2643,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1953,
+            etymology = "",
             termEn = "Case fatality rate",
             termFr = "Taux de létalité",
             termAr = "معدل الإماتة",
@@ -2572,6 +2659,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1954,
+            etymology = "",
             termEn = "Relative risk (RR)",
             termFr = "Risque relatif (RR)",
             termAr = "الخطر النسبي",
@@ -2587,6 +2675,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1955,
+            etymology = "",
             termEn = "Odds ratio (OR)",
             termFr = "Rapport de cotes (OR)",
             termAr = "نسبة الأرجحية",
@@ -2602,6 +2691,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1956,
+            etymology = "",
             termEn = "Absolute risk",
             termFr = "Risque absolu",
             termAr = "الخطر المطلق",
@@ -2617,6 +2707,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1957,
+            etymology = "",
             termEn = "Attributable risk",
             termFr = "Risque attribuable",
             termAr = "الخطر المعزو",
@@ -2632,6 +2723,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1958,
+            etymology = "",
             termEn = "Number needed to treat (NNT)",
             termFr = "Nombre de sujets à traiter (NST)",
             termAr = "العدد اللازم للعلاج",
@@ -2647,6 +2739,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1959,
+            etymology = "",
             termEn = "Sensitivity",
             termFr = "Sensibilité",
             termAr = "الحساسية",
@@ -2662,6 +2755,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1960,
+            etymology = "",
             termEn = "Specificity",
             termFr = "Spécificité",
             termAr = "النوعية",
@@ -2677,6 +2771,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1961,
+            etymology = "",
             termEn = "Positive predictive value (PPV)",
             termFr = "Valeur prédictive positive (VPP)",
             termAr = "القيمة التنبؤية الإيجابية",
@@ -2692,6 +2787,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1962,
+            etymology = "",
             termEn = "Negative predictive value (NPV)",
             termFr = "Valeur prédictive négative (VPN)",
             termAr = "القيمة التنبؤية السلبية",
@@ -2707,6 +2803,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1963,
+            etymology = "",
             termEn = "False positive",
             termFr = "Faux positif",
             termAr = "إيجابي كاذب",
@@ -2722,6 +2819,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1964,
+            etymology = "",
             termEn = "False negative",
             termFr = "Faux négatif",
             termAr = "سلبي كاذب",
@@ -2737,6 +2835,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1965,
+            etymology = "",
             termEn = "True positive",
             termFr = "Vrai positif",
             termAr = "إيجابي حقيقي",
@@ -2752,6 +2851,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1966,
+            etymology = "",
             termEn = "True negative",
             termFr = "Vrai négatif",
             termAr = "سلبي حقيقي",
@@ -2767,6 +2867,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1967,
+            etymology = "",
             termEn = "ROC curve",
             termFr = "Courbe ROC",
             termAr = "منحنى ROC",
@@ -2782,6 +2883,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1968,
+            etymology = "",
             termEn = "Area under the curve (AUC)",
             termFr = "Aire sous la courbe (ASC)",
             termAr = "المساحة تحت المنحنى",
@@ -2797,6 +2899,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1969,
+            etymology = "",
             termEn = "Study design",
             termFr = "Plan d'étude",
             termAr = "تصميم الدراسة",
@@ -2812,6 +2915,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1970,
+            etymology = "",
             termEn = "Observational study",
             termFr = "Étude observationnelle",
             termAr = "الدراسة الملاحظية",
@@ -2827,6 +2931,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1971,
+            etymology = "",
             termEn = "Experimental study",
             termFr = "Étude expérimentale",
             termAr = "الدراسة التجريبية",
@@ -2842,6 +2947,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1972,
+            etymology = "",
             termEn = "Randomized controlled trial (RCT)",
             termFr = "Essai contrôlé randomisé (ECR)",
             termAr = "التجربة المعشاة المضبوطة",
@@ -2857,6 +2963,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1973,
+            etymology = "",
             termEn = "Cohort study",
             termFr = "Étude de cohorte",
             termAr = "دراسة الفوج",
@@ -2872,6 +2979,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1974,
+            etymology = "",
             termEn = "Case-control study",
             termFr = "Étude cas-témoins",
             termAr = "دراسة الحالات والشواهد",
@@ -2887,6 +2995,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1975,
+            etymology = "",
             termEn = "Cross-sectional study",
             termFr = "Étude transversale",
             termAr = "الدراسة المقطعية",
@@ -2902,6 +3011,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1976,
+            etymology = "",
             termEn = "Prospective study",
             termFr = "Étude prospective",
             termAr = "دراسة استشرافية",
@@ -2917,6 +3027,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1977,
+            etymology = "",
             termEn = "Retrospective study",
             termFr = "Étude rétrospective",
             termAr = "دراسة بأثر رجعي",
@@ -2932,6 +3043,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1978,
+            etymology = "",
             termEn = "Case report",
             termFr = "Rapport de cas",
             termAr = "تقرير حالة",
@@ -2947,6 +3059,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1979,
+            etymology = "",
             termEn = "Case series",
             termFr = "Série de cas",
             termAr = "سلسلة حالات",
@@ -2962,6 +3075,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1980,
+            etymology = "",
             termEn = "Meta-analysis",
             termFr = "Méta-analyse",
             termAr = "التحليل التلوي",
@@ -2977,6 +3091,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1981,
+            etymology = "",
             termEn = "Systematic review",
             termFr = "Revue systématique",
             termAr = "المراجعة المنهجية",
@@ -2992,6 +3107,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1982,
+            etymology = "",
             termEn = "Bias",
             termFr = "Biais",
             termAr = "التحيز",
@@ -3007,6 +3123,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1983,
+            etymology = "",
             termEn = "Selection bias",
             termFr = "Biais de sélection",
             termAr = "تحيز الاختيار",
@@ -3016,15 +3133,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/sɪˈlɛkʃən baɪəs/",
-
-            exampleFr = "Exemple: Le Biais provenant d'une sélection d'échantillon non représentative.",
-
-            exampleAr = "مثال: يظهر تحيز ناتج عن اختيار عينة غير ممثلة.",
-
-            exampleEn = "The Selection bias is Bias arising from a non-representative sample selection.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1984,
+            etymology = "",
             termEn = "Information bias",
             termFr = "Biais d'information",
             termAr = "تحيز المعلومات",
@@ -3034,15 +3149,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/ˌɪnfɔːrˈmeɪʃən baɪəs/",
-
-            exampleFr = "Exemple: Le Biais provenant d'erreurs dans la mesure ou la classification des données.",
-
-            exampleAr = "مثال: يظهر تحيز ناتج عن أخطاء في قياس أو تصنيف البيانات.",
-
-            exampleEn = "The Information bias is Bias arising from errors in measuring or classifying data.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1985,
+            etymology = "",
             termEn = "Recall bias",
             termFr = "Biais de rappel (Biais de mémoire)",
             termAr = "تحيز الاسترجاع",
@@ -3052,15 +3165,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/rɪˈkɔːl baɪəs/",
-
-            exampleFr = "Exemple: Le Biais survenant quand les participants se souviennent inexactement d'événements passés.",
-
-            exampleAr = "مثال: يظهر تحيز يحدث عندما يتذكر المشاركون أحداثاً ماضية بشكل غير دقيق.",
-
-            exampleEn = "The Recall bias is Bias occurring when participants inaccurately remember past events.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1986,
+            etymology = "",
             termEn = "Observer bias",
             termFr = "Biais de l'observateur",
             termAr = "تحيز المراقب",
@@ -3070,15 +3181,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Biais et Validité",
             ipaPhonetic = "/əbˈzɜːrvər baɪəs/",
-
-            exampleFr = "Exemple: Le Biais introduit par les attentes du chercheur influençant la collecte de données.",
-
-            exampleAr = "مثال: يظهر تحيز يحدث بسبب توقعات الباحث التي تؤثر على جمع البيانات.",
-
-            exampleEn = "The Observer bias is Bias introduced by the researcher's expectations influencing data collection.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1987,
+            etymology = "",
             termEn = "Placebo effect",
             termFr = "Effet placebo",
             termAr = "تأثير الدواء الوهمي",
@@ -3094,6 +3203,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1988,
+            etymology = "",
             termEn = "Placebo",
             termFr = "Placebo",
             termAr = "الدواء الوهمي",
@@ -3109,6 +3219,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1989,
+            etymology = "",
             termEn = "Blinding (Masking)",
             termFr = "Aveugle (Insu)",
             termAr = "التعمية",
@@ -3124,6 +3235,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1990,
+            etymology = "",
             termEn = "Single-blind study",
             termFr = "Étude en simple aveugle",
             termAr = "دراسة أحادية التعمية",
@@ -3139,6 +3251,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1991,
+            etymology = "",
             termEn = "Double-blind study",
             termFr = "Étude en double aveugle",
             termAr = "دراسة مزدوجة التعمية",
@@ -3154,6 +3267,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1992,
+            etymology = "",
             termEn = "Randomization",
             termFr = "Randomisation",
             termAr = "التعشية (العشوائية)",
@@ -3169,6 +3283,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1993,
+            etymology = "",
             termEn = "Control group",
             termFr = "Groupe contrôle (Groupe témoin)",
             termAr = "المجموعة الضابطة",
@@ -3184,6 +3299,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1994,
+            etymology = "",
             termEn = "Treatment group (Experimental)",
             termFr = "Groupe traitement (Expérimental)",
             termAr = "مجموعة العلاج (التجريبية)",
@@ -3199,6 +3315,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1995,
+            etymology = "",
             termEn = "Internal validity",
             termFr = "Validité interne",
             termAr = "الصلاحية الداخلية",
@@ -3214,6 +3331,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1996,
+            etymology = "",
             termEn = "External validity",
             termFr = "Validité externe",
             termAr = "الصلاحية الخارجية",
@@ -3229,6 +3347,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1997,
+            etymology = "",
             termEn = "Reliability",
             termFr = "Fiabilité (Fidélité)",
             termAr = "الموثوقية",
@@ -3244,6 +3363,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1998,
+            etymology = "",
             termEn = "Validity",
             termFr = "Validité",
             termAr = "الصلاحية (الصدق)",
@@ -3259,6 +3379,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1999,
+            etymology = "",
             termEn = "Informed consent",
             termFr = "Consentement éclairé",
             termAr = "الموافقة المستنيرة",
@@ -3274,6 +3395,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2000,
+            etymology = "",
             termEn = "Demography",
             termFr = "Démographie",
             termAr = "الديموغرافيا (علم السكان)",
@@ -3289,6 +3411,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2001,
+            etymology = "",
             termEn = "Birth rate (Natality rate)",
             termFr = "Taux de natalité",
             termAr = "معدل المواليد",
@@ -3304,6 +3427,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2002,
+            etymology = "",
             termEn = "Death rate (Crude mortality rate)",
             termFr = "Taux brut de mortalité",
             termAr = "معدل الوفيات الخام",
@@ -3319,6 +3443,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2003,
+            etymology = "",
             termEn = "Infant mortality rate",
             termFr = "Taux de mortalité infantile",
             termAr = "معدل وفيات الرضع",
@@ -3334,6 +3459,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2004,
+            etymology = "",
             termEn = "Life expectancy",
             termFr = "Espérance de vie",
             termAr = "متوسط العمر المتوقع",
@@ -3349,6 +3475,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2005,
+            etymology = "",
             termEn = "Fertility rate",
             termFr = "Taux de fécondité",
             termAr = "معدل الخصوبة",
@@ -3364,6 +3491,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2006,
+            etymology = "",
             termEn = "Population pyramid",
             termFr = "Pyramide des âges",
             termAr = "هرم السكان",
@@ -3379,6 +3507,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2007,
+            etymology = "",
             termEn = "Endemic",
             termFr = "Endémique",
             termAr = "متوطن",
@@ -3394,6 +3523,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2008,
+            etymology = "",
             termEn = "Epidemic",
             termFr = "Épidémie",
             termAr = "وباء",
@@ -3409,6 +3539,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2009,
+            etymology = "",
             termEn = "Pandemic",
             termFr = "Pandémie",
             termAr = "جائحة",
@@ -3424,6 +3555,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2010,
+            etymology = "",
             termEn = "Screening",
             termFr = "Dépistage",
             termAr = "التحري (الفحص المبكر)",
@@ -3439,6 +3571,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2011,
+            etymology = "",
             termEn = "Risk factor",
             termFr = "Facteur de risque",
             termAr = "عامل الخطر",
@@ -3454,6 +3587,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2012,
+            etymology = "",
             termEn = "Confounding",
             termFr = "Confusion (Facteur de confusion)",
             termAr = "الإرباك",
@@ -3469,6 +3603,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2013,
+            etymology = "",
             termEn = "Effect modification (Interaction)",
             termFr = "Modification d'effet (Interaction)",
             termAr = "تعديل التأثير (التفاعل)",
@@ -3478,15 +3613,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ɪˈfɛkt ˌmɒdɪfɪˈkeɪʃən/",
-
-            exampleFr = "Exemple: Le Quand l'effet d'une exposition varie selon les niveaux d'une troisième variable.",
-
-            exampleAr = "مثال: يظهر عندما يتغير تأثير التعرض عبر مستويات متغير ثالث.",
-
-            exampleEn = "The Effect modification (Interaction) is When the effect of an exposure varies across levels of a third variable.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2014,
+            etymology = "",
             termEn = "Survival analysis",
             termFr = "Analyse de survie",
             termAr = "تحليل البقاء",
@@ -3496,15 +3629,13 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/sərˈvaɪvəl əˈnæləsɪs/",
-
-            exampleFr = "Exemple: Le Méthodes statistiques analysant la durée attendue jusqu'à la survenue d'un événement.",
-
-            exampleAr = "مثال: يظهر طرق إحصائية تحلل المدة المتوقعة حتى وقوع حدث.",
-
-            exampleEn = "The Survival analysis is Statistical methods analyzing the expected duration until an event occurs.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2015,
+            etymology = "",
             termEn = "Kaplan-Meier curve",
             termFr = "Courbe de Kaplan-Meier",
             termAr = "منحنى كابلان-ماير",
@@ -3520,6 +3651,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2016,
+            etymology = "",
             termEn = "Hazard ratio (HR)",
             termFr = "Rapport de risques instantanés (HR)",
             termAr = "نسبة الخطورة",
@@ -3535,6 +3667,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2017,
+            etymology = "",
             termEn = "Evidence-based medicine (EBM)",
             termFr = "Médecine fondée sur les preuves (EBM)",
             termAr = "الطب المبني على الأدلة",
@@ -3550,6 +3683,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2018,
+            etymology = "",
             termEn = "Level of evidence",
             termFr = "Niveau de preuve",
             termAr = "مستوى الدليل",
@@ -3565,6 +3699,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2019,
+            etymology = "",
             termEn = "Clinical significance",
             termFr = "Signification clinique",
             termAr = "الدلالة السريرية",
@@ -3580,6 +3715,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 2020,
+            etymology = "",
             termEn = "Intention-to-treat analysis (ITT)",
             termFr = "Analyse en intention de traiter (ITT)",
             termAr = "تحليل القصد بالعلاج",
@@ -3589,12 +3725,9 @@ MedicalTermEntity(
             module = "Informatique Médicale",
             chapter = "Démographie",
             ipaPhonetic = "/ɪnˈtɛnʃən tə triːt/",
-        )
-
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
+        ),
     )
-
-            exampleEn = "The Intention-to-treat analysis (ITT) is Analysis including all participants as originally assigned regardless of compliance.",}
-            exampleFr = "Exemple: Le Analyse incluant tous les participants tels qu'initialement affectés quel que soit leur observance.",
-
-            exampleAr = "مثال: يظهر تحليل يشمل جميع المشاركين كما وُزعوا أصلاً بغض النظر عن التزامهم.",
-
+}

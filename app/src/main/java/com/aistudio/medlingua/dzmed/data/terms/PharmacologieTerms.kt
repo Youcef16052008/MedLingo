@@ -1,11 +1,6 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Pharmacologie — 228 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object PharmacologieTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
@@ -26,6 +21,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2263,
+            etymology = "",
             termEn = "Drug (Medication)",
             termFr = "Médicament (Drogue)",
             termAr = "الدواء",
@@ -35,12 +31,9 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Introduction",
             ipaPhonetic = "/drʌɡ/",
-
-            exampleFr = "Exemple: Le Toute substance chimique qui modifie la fonction physiologique lorsqu'elle est administrée à un organisme vivant.",
-
-            exampleAr = "مثال: يظهر أي مادة كيميائية تُغيِّر الوظيفة الفسيولوجية عند إعطائها لكائن حي.",
-
-            exampleEn = "The Drug (Medication) is Any chemical substance that alters physiological function when administered to a living organism.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2264,
@@ -54,12 +47,9 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌfɑːrməkoʊkɪˈnɛtɪks/",
-
-            exampleFr = "Exemple: Le L'étude de ce que le corps fait au médicament: absorption, distribution, métabolisme et excrétion.",
-
-            exampleAr = "مثال: يظهر دراسة ما يفعله الجسم بالدواء: الامتصاص والتوزيع والاستقلاب والإطراح.",
-
-            exampleEn = "The Pharmacokinetics is study of what the body does to a drug: absorption, distribution, metabolism, and excretion (ADME).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2265,
@@ -73,15 +63,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Introduction",
             ipaPhonetic = "/ˌfɑːrməkoʊdaɪˈnæmɪks/",
-
-            exampleFr = "Exemple: Le L'étude de ce que le médicament fait au corps: mécanismes d'action et effets.",
-
-            exampleAr = "مثال: يظهر دراسة ما يفعله الدواء بالجسم: آليات التأثير والتأثيرات.",
-
-            exampleEn = "The Pharmacodynamics is study of what a drug does to the body: mechanisms of action and effects.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2266,
+            etymology = "",
             termEn = "Receptor",
             termFr = "Récepteur",
             termAr = "المستقبل",
@@ -97,6 +85,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2267,
+            etymology = "",
             termEn = "Ligand",
             termFr = "Ligand",
             termAr = "الرابط",
@@ -112,6 +101,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2268,
+            etymology = "",
             termEn = "Dose",
             termFr = "Dose",
             termAr = "الجرعة",
@@ -127,6 +117,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2269,
+            etymology = "",
             termEn = "Therapeutic index (TI)",
             termFr = "Index thérapeutique (IT)",
             termAr = "المؤشر العلاجي",
@@ -142,6 +133,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2270,
+            etymology = "",
             termEn = "Efficacy",
             termFr = "Efficacité",
             termAr = "الفاعلية",
@@ -157,6 +149,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2271,
+            etymology = "",
             termEn = "Potency",
             termFr = "Puissance",
             termAr = "القوة الدوائية",
@@ -188,6 +181,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2273,
+            etymology = "",
             termEn = "Placebo",
             termFr = "Placebo",
             termAr = "الدواء الوهمي",
@@ -203,6 +197,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2274,
+            etymology = "",
             termEn = "Indication",
             termFr = "Indication",
             termAr = "الدواعي (المؤشر)",
@@ -218,6 +213,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2275,
+            etymology = "",
             termEn = "Contraindication",
             termFr = "Contre-indication",
             termAr = "موانع الاستعمال",
@@ -249,6 +245,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2277,
+            etymology = "",
             termEn = "Absorption",
             termFr = "Absorption",
             termAr = "الامتصاص",
@@ -264,6 +261,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2278,
+            etymology = "",
             termEn = "Bioavailability",
             termFr = "Biodisponibilité",
             termAr = "التوافر الحيوي",
@@ -279,6 +277,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2279,
+            etymology = "",
             termEn = "Distribution",
             termFr = "Distribution",
             termAr = "التوزيع",
@@ -294,6 +293,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2280,
+            etymology = "",
             termEn = "Volume of distribution (Vd)",
             termFr = "Volume de distribution (Vd)",
             termAr = "حجم التوزيع",
@@ -325,6 +325,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2282,
+            etymology = "",
             termEn = "Metabolism (Drug)",
             termFr = "Métabolisme (Médicament)",
             termAr = "الاستقلاب الدوائي",
@@ -340,6 +341,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2283,
+            etymology = "",
             termEn = "First-pass effect",
             termFr = "Effet de premier passage",
             termAr = "تأثير المرور الأول",
@@ -355,6 +357,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2284,
+            etymology = "",
             termEn = "Excretion",
             termFr = "Excrétion",
             termAr = "الإطراح",
@@ -370,6 +373,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2285,
+            etymology = "",
             termEn = "Half-life (t½)",
             termFr = "Demi-vie (t½)",
             termAr = "عمر النصف",
@@ -385,6 +389,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2286,
+            etymology = "",
             termEn = "Clearance (CL)",
             termFr = "Clairance (CL)",
             termAr = "الإزالة الدوائية",
@@ -400,6 +405,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2287,
+            etymology = "",
             termEn = "Steady state",
             termFr = "État d'équilibre",
             termAr = "الحالة المستقرة",
@@ -415,6 +421,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2288,
+            etymology = "",
             termEn = "Loading dose",
             termFr = "Dose de charge",
             termAr = "جرعة التحميل",
@@ -430,6 +437,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2289,
+            etymology = "",
             termEn = "Maintenance dose",
             termFr = "Dose d'entretien",
             termAr = "جرعة الصيانة",
@@ -445,6 +453,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2290,
+            etymology = "",
             termEn = "Prodrug",
             termFr = "Prodrogue",
             termAr = "الدواء الأولي (البروداج)",
@@ -455,13 +464,12 @@ object PharmacologieTerms {
             chapter = "Pharmacocinétique",
             ipaPhonetic = "/ˈproʊdrʌɡ/",
             exampleEn = "The prodrug is the inactive drug that is metabolized in the body into its active form (e.g., codeine → morphine).",
-            exampleFr = "Exemple: Le Médicament inactif métabolisé dans le corps en forme active (ex: codéine → morphine).",
-
-            exampleAr = "مثال: يظهر دواء غير نشط يُستقلَب في الجسم إلى شكله النشط (مثل: الكودايين ← المورفين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2291,
+            etymology = "",
             termEn = "Renal clearance",
             termFr = "Clairance rénale",
             termAr = "الإزالة الكلوية",
@@ -487,15 +495,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacocinétique",
             ipaPhonetic = "/hɪˈpætɪk məˈtæbəlɪzəm/",
-
-            exampleFr = "Exemple: Le Biotransformation du médicament dans le foie via réactions de phase I (oxydation) et phase II (conjugaison).",
-
-            exampleAr = "مثال: يظهر تحول الحيوي للدواء في الكبد عبر تفاعلات الطور الأول (الأكسدة) والطور الثاني (الاقتران).",
-
-            exampleEn = "The Hepatic metabolism is Drug biotransformation occurring in the liver via phase I (oxidation) and phase II (conjugation) reactions.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2293,
+            etymology = "",
             termEn = "Blood-brain barrier (BBB)",
             termFr = "Barrière hémato-encéphalique (BHE)",
             termAr = "الحاجز الدموي الدماغي",
@@ -511,6 +517,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2294,
+            etymology = "",
             termEn = "Plasma concentration",
             termFr = "Concentration plasmatique",
             termAr = "التركيز البلازمي",
@@ -542,6 +549,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2296,
+            etymology = "",
             termEn = "Agonist",
             termFr = "Agoniste",
             termAr = "الناهض",
@@ -557,6 +565,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2297,
+            etymology = "",
             termEn = "Antagonist",
             termFr = "Antagoniste",
             termAr = "المضاد (المناهض)",
@@ -572,6 +581,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2298,
+            etymology = "",
             termEn = "Partial agonist",
             termFr = "Agoniste partiel",
             termAr = "الناهض الجزئي",
@@ -587,6 +597,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2299,
+            etymology = "",
             termEn = "Inverse agonist",
             termFr = "Agoniste inverse",
             termAr = "الناهض العكسي",
@@ -602,6 +613,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2300,
+            etymology = "",
             termEn = "Competitive antagonism",
             termFr = "Antagonisme compétitif",
             termAr = "التنافس التنافسي",
@@ -611,15 +623,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacodynamie",
             ipaPhonetic = "/kəmˈpɛtɪtɪv ænˈtæɡənɪzəm/",
-
-            exampleFr = "Exemple: Le Antagonisme réversible où l'antagoniste rivalise avec l'agoniste pour le même site de liaison.",
-
-            exampleAr = "مثال: يظهر تنافس القابل للعكس حيث يتنافس المضاد مع الناهض على نفس موقع الارتباط بالمستقبل.",
-
-            exampleEn = "The Competitive antagonism is Reversible antagonism where the antagonist competes with the agonist for the same receptor binding site.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2301,
+            etymology = "",
             termEn = "Non-competitive antagonism",
             termFr = "Antagonisme non compétitif",
             termAr = "التنافس غير التنافسي",
@@ -629,15 +639,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacodynamie",
             ipaPhonetic = "/nɒn kəmˈpɛtɪtɪv/",
-
-            exampleFr = "Exemple: Le Antagonisme où le médicament se lie de façon irréversible ou allostérique bloquant l'effet de l'agoniste.",
-
-            exampleAr = "مثال: يظهر تنافس يرتبط فيه الدواء بصورة لا رجعة فيها أو تفارقية مما يمنع تأثير الناهض.",
-
-            exampleEn = "The Non-competitive antagonism is Antagonism where the drug binds irreversibly or allosterically blocking agonist effect regardless of dose.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2302,
+            etymology = "",
             termEn = "Dose-response curve",
             termFr = "Courbe dose-réponse",
             termAr = "منحنى الجرعة-الاستجابة",
@@ -653,6 +661,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2303,
+            etymology = "",
             termEn = "ED50 (Effective Dose 50)",
             termFr = "DE50 (Dose Efficace 50)",
             termAr = "الجرعة الفعالة 50",
@@ -684,6 +693,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2305,
+            etymology = "",
             termEn = "LD50 (Lethal Dose 50)",
             termFr = "DL50 (Dose Létale 50)",
             termAr = "الجرعة المميتة 50",
@@ -699,6 +709,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2306,
+            etymology = "",
             termEn = "Tolerance",
             termFr = "Tolérance",
             termAr = "التحمل الدوائي",
@@ -730,6 +741,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2308,
+            etymology = "",
             termEn = "Drug synergism",
             termFr = "Synergie médicamenteuse",
             termAr = "التآزر الدوائي",
@@ -745,6 +757,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2309,
+            etymology = "",
             termEn = "Drug antagonism",
             termFr = "Antagonisme médicamenteux",
             termAr = "التضاد الدوائي",
@@ -760,6 +773,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2310,
+            etymology = "",
             termEn = "Signal transduction",
             termFr = "Transduction du signal",
             termAr = "نقل الإشارة",
@@ -775,6 +789,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2311,
+            etymology = "",
             termEn = "Autonomic nervous system (ANS)",
             termFr = "Système nerveux autonome (SNA)",
             termAr = "الجهاز العصبي الذاتي",
@@ -806,6 +821,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2313,
+            etymology = "",
             termEn = "Cholinergic drug",
             termFr = "Médicament cholinergique",
             termAr = "الدواء الكوليني",
@@ -821,6 +837,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2314,
+            etymology = "",
             termEn = "Beta-blocker (β-blocker)",
             termFr = "Bêta-bloquant",
             termAr = "حاصرات بيتا",
@@ -836,6 +853,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2315,
+            etymology = "",
             termEn = "Alpha-blocker (α-blocker)",
             termFr = "Alpha-bloquant",
             termAr = "حاصرات ألفا",
@@ -851,6 +869,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2316,
+            etymology = "",
             termEn = "Anticholinergic drug",
             termFr = "Médicament anticholinergique",
             termAr = "مضاد الكولين",
@@ -866,6 +885,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2317,
+            etymology = "",
             termEn = "Sympathomimetic",
             termFr = "Sympathomimétique",
             termAr = "محاكي الودي",
@@ -881,6 +901,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2318,
+            etymology = "",
             termEn = "Parasympathomimetic",
             termFr = "Parasympathomimétique",
             termAr = "محاكي اللاودي",
@@ -912,6 +933,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2320,
+            etymology = "",
             termEn = "Atropine",
             termFr = "Atropine",
             termAr = "الأتروبين",
@@ -927,6 +949,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2321,
+            etymology = "",
             termEn = "Norepinephrine (Noradrenaline)",
             termFr = "Norépinéphrine (Noradrénaline)",
             termAr = "النورإبينفرين",
@@ -942,6 +965,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2322,
+            etymology = "",
             termEn = "Dopamine",
             termFr = "Dopamine",
             termAr = "الدوبامين",
@@ -957,6 +981,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2323,
+            etymology = "",
             termEn = "Neostigmine",
             termFr = "Néostigmine",
             termAr = "النيوستيغمين",
@@ -972,6 +997,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2324,
+            etymology = "",
             termEn = "Organophosphate",
             termFr = "Organophosphoré",
             termAr = "المركبات الفوسفاتية العضوية",
@@ -999,11 +1025,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌnjʊəroʊˈmʌskjʊlər/",
             exampleEn = "The neuromuscular blocking agent is the drug used in anesthesia to produce skeletal muscle relaxation (e.g., succinylcholine, rocuronium).",
             exampleFr = "L'agent bloquant neuromusculaire est médicament utilisé en anesthésie pour produire une relaxation des muscles squelettiques.",
-            exampleAr = "مثال: يظهر دواء يُستخدَم في التخدير لإحداث استرخاء العضلات الهيكلية (مثل: سوكسينيلكولين وروكورونيوم).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2326,
+            etymology = "",
             termEn = "Antihypertensive",
             termFr = "Antihypertenseur",
             termAr = "مضاد الضغط المرتفع",
@@ -1019,6 +1045,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2327,
+            etymology = "",
             termEn = "ACE inhibitor (ACEI)",
             termFr = "Inhibiteur de l'ECA",
             termAr = "مثبط إنزيم تحويل الأنجيوتنسين",
@@ -1050,6 +1077,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2329,
+            etymology = "",
             termEn = "Calcium channel blocker (CCB)",
             termFr = "Inhibiteur calcique (IC)",
             termAr = "حاصرات قنوات الكالسيوم",
@@ -1065,6 +1093,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2330,
+            etymology = "",
             termEn = "Diuretic",
             termFr = "Diurétique",
             termAr = "مدر البول",
@@ -1080,6 +1109,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2331,
+            etymology = "",
             termEn = "Thiazide diuretic",
             termFr = "Diurétique thiazidique",
             termAr = "مدر البول الثيازيدي",
@@ -1090,13 +1120,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˈθaɪəzaɪd/",
             exampleEn = "The thiazide diuretic is the diuretic inhibiting sodium reabsorption in the distal tubule (e.g., hydrochlorothiazide).",
-            exampleFr = "Exemple: Le Diurétique inhibant la réabsorption du sodium dans le tubule distal (ex: hydrochlorothiazide).",
-
-            exampleAr = "مثال: يظهر مدر بول يُثبِّط إعادة امتصاص الصوديوم في الأنبوب البعيد (مثل: هيدروكلوروثيازيد).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2332,
+            etymology = "",
             termEn = "Loop diuretic",
             termFr = "Diurétique de l'anse",
             termAr = "مدر البول العروي",
@@ -1107,13 +1136,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/luːp ˌdaɪjʊˈrɛtɪk/",
             exampleEn = "The loop diuretic is the most potent diuretic acting on the loop of Henle (e.g., furosemide).",
-            exampleFr = "Exemple: Le diurétique le plus puissant agissant sur l'anse de Henlé (ex: furosémide).",
-
-            exampleAr = "مثال: يظهر أقوى مدر بول يعمل على عروة هنلي (مثل: الفوروسيميد).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2333,
+            etymology = "",
             termEn = "Potassium-sparing diuretic",
             termFr = "Diurétique épargneur de potassium",
             termAr = "مدر بول محافظ على البوتاسيوم",
@@ -1124,13 +1152,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/pəˈtæsiəm ˈspɛərɪŋ ˌdaɪjʊˈrɛtɪk/",
             exampleEn = "The potassium-sparing diuretic is the diuretic that does not cause potassium loss (e.g., spironolactone, amiloride).",
-            exampleFr = "Exemple: Le Diurétique ne provoquant pas de perte de potassium (ex: spironolactone, amiloride).",
-
-            exampleAr = "مثال: يظهر مدر بول لا يسبب فقدان البوتاسيوم (مثل: سبيرونولاكتون وأميلوريد).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2334,
+            etymology = "",
             termEn = "Antiarrhythmic drug",
             termFr = "Médicament antiarythmique",
             termAr = "دواء مضاد لاضطرابات ضربات القلب",
@@ -1146,6 +1173,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2335,
+            etymology = "",
             termEn = "Digoxin",
             termFr = "Digoxine",
             termAr = "الديجوكسين",
@@ -1161,6 +1189,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2336,
+            etymology = "",
             termEn = "Statin",
             termFr = "Statine",
             termAr = "الستاتين",
@@ -1171,13 +1200,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˈstætɪn/",
             exampleEn = "The statin is the HMG-CoA reductase inhibitor reducing cholesterol synthesis in the liver (e.g., atorvastatin).",
-            exampleFr = "Exemple: Le Inhibiteur de l'HMG-CoA réductase réduisant la synthèse du cholestérol dans le foie (ex: atorvastatine).",
-
-            exampleAr = "مثال: يظهر مثبط لإنزيم HMG-CoA اختزال يُقلِّل تركيب الكوليسترول في الكبد (مثل: أتورفاستاتين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2337,
+            etymology = "",
             termEn = "Anticoagulant",
             termFr = "Anticoagulant",
             termAr = "مضاد التخثر",
@@ -1193,6 +1221,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2338,
+            etymology = "",
             termEn = "Warfarin",
             termFr = "Warfarine",
             termAr = "الوارفارين",
@@ -1208,6 +1237,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2339,
+            etymology = "",
             termEn = "Heparin",
             termFr = "Héparine",
             termAr = "الهيبارين",
@@ -1223,6 +1253,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2340,
+            etymology = "",
             termEn = "Antiplatelet drug",
             termFr = "Médicament antiplaquettaire",
             termAr = "دواء مضاد الصفيحات",
@@ -1233,13 +1264,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˌæntiˈpleɪtlɪt/",
             exampleEn = "The antiplatelet drug is the drug reducing platelet aggregation to prevent arterial thrombosis (e.g., aspirin, clopidogrel).",
-            exampleFr = "Exemple: Le Médicament réduisant l'agrégation plaquettaire pour prévenir la thrombose artérielle (ex: aspirine, clopidogrel).",
-
-            exampleAr = "مثال: يظهر دواء يُقلِّل تجمع الصفيحات لمنع التجلط الشرياني (مثل: الأسبرين والكلوبيدوجريل).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2341,
+            etymology = "",
             termEn = "Nitrate (vasodilator)",
             termFr = "Dérivé nitré (vasodilatateur)",
             termAr = "النترات (موسع وعائي)",
@@ -1250,10 +1280,8 @@ object PharmacologieTerms {
             chapter = "Médicaments Cardiovasculaires",
             ipaPhonetic = "/ˈnaɪtreɪt/",
             exampleEn = "The nitrate (vasodilator) is the drug releasing nitric oxide causing vasodilation; used for angina (e.g., nitroglycerin).",
-            exampleFr = "Exemple: Le Médicament libérant de l'oxyde nitrique causant vasodilatation; utilisé pour l'angine (ex: nitroglycérine).",
-
-            exampleAr = "مثال: يظهر دواء يُطلِق أكسيد النيتريك مسبباً توسع الأوعية؛ يُستخدَم للذبحة (مثل: النيتروجليسرين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2342,
@@ -1269,11 +1297,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/θrɒmboʊˈlɪtɪk/",
             exampleEn = "The thrombolytic (fibrinolytic) is the drug dissolving blood clots by activating plasminogen; used in acute MI and stroke (e.g., alteplase).",
             exampleFr = "La thrombolytique (fibrinolytique) est médicament dissolvant les caillots en activant le plasminogène; utilisé en IDM et AVC.",
-            exampleAr = "مثال: يظهر دواء يُذيب جلطات الدم بتنشيط البلازمينوجين؛ يُستخدَم في احتشاء القلب والسكتة (مثل: ألتيبلاز).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2343,
+            etymology = "",
             termEn = "Inotropic drug",
             termFr = "Médicament inotrope",
             termAr = "الدواء المؤثر في تقلص القلب",
@@ -1289,6 +1317,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2344,
+            etymology = "",
             termEn = "Vasopressor",
             termFr = "Vasopresseur",
             termAr = "مضيق الأوعية",
@@ -1300,11 +1329,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌveɪzəˈprɛsər/",
             exampleEn = "The vasopressor is the drug causing vasoconstriction to increase blood pressure; used in shock (e.g., norepinephrine, vasopressin).",
             exampleFr = "La vasopresseur est médicament causant vasoconstriction pour augmenter la pression artérielle; utilisé dans le choc.",
-            exampleAr = "مثال: يظهر دواء يسبب تضيق الأوعية لرفع ضغط الدم؛ يُستخدَم في الصدمة (مثل: نورإبينفرين وفازوبريسين).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2345,
+            etymology = "",
             termEn = "Fibrate",
             termFr = "Fibrate",
             termAr = "الفايبرات",
@@ -1316,11 +1345,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈfaɪbreɪt/",
             exampleEn = "The fibrate is the lipid-lowering drug reducing triglycerides and raising HDL cholesterol (e.g., fenofibrate).",
             exampleFr = "La fibrate est médicament hypolipémiant réduisant les triglycérides et augmentant le cholestérol HDL.",
-            exampleAr = "مثال: يظهر دواء خافض للدهون يُقلِّل الدهون الثلاثية ويرفع الكوليسترول الجيد HDL (مثل: فينوفيبرات).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2346,
+            etymology = "",
             termEn = "General anesthesia",
             termFr = "Anesthésie générale",
             termAr = "التخدير العام",
@@ -1336,6 +1365,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2347,
+            etymology = "",
             termEn = "Local anesthesia",
             termFr = "Anesthésie locale",
             termAr = "التخدير الموضعي",
@@ -1345,15 +1375,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌloʊkəl ˌænɪsˈθiːziə/",
-
-            exampleFr = "Exemple: Le Perte de sensation dans une zone corporelle spécifique obtenue en bloquant la conduction nerveuse.",
-
-            exampleAr = "مثال: يظهر فقدان الإحساس في منطقة محددة من الجسم بحجب توصيل العصب بالمخدر الموضعي.",
-
-            exampleEn = "The Local anesthesia is Loss of sensation in a specific body area achieved by blocking nerve conduction with local anesthetics.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2348,
+            etymology = "",
             termEn = "Opioid analgesic",
             termFr = "Analgésique opioïde",
             termAr = "المسكن الأفيوني",
@@ -1364,10 +1392,8 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˈoʊpiɔɪd ˌænəlˈdʒiːzɪk/",
             exampleEn = "The opioid analgesic is the pain-relieving drug acting on opioid receptors (e.g., morphine, fentanyl, codeine).",
-            exampleFr = "Exemple: Le Médicament analgésique agissant sur les récepteurs opioïdes (ex: morphine, fentanyl, codéine).",
-
-            exampleAr = "مثال: يظهر دواء مسكن للألم يعمل على المستقبلات الأفيونية (مثل: المورفين والفنتانيل والكوديين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2349,
@@ -1387,6 +1413,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2350,
+            etymology = "",
             termEn = "Naloxone",
             termFr = "Naloxone",
             termAr = "النالوكسون",
@@ -1402,6 +1429,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2351,
+            etymology = "",
             termEn = "Benzodiazepine",
             termFr = "Benzodiazépine",
             termAr = "البنزوديازيبين",
@@ -1412,12 +1440,12 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌbɛnzoʊˌdaɪˈæzɪpiːn/",
             exampleEn = "The benzodiazepine is the CNS depressant enhancing GABA activity; used for anxiety, insomnia, seizures (e.g., diazepam).",
+            exampleFr = "",
             exampleAr = "البنزوديازيبين هو مثبط للجهاز العصبي المركزي يُعزِّز نشاط GABA؛ يُستخدَم للقلق والأرق والنوبات.",
-            exampleFr = "Exemple: Le Dépresseur du SNC amplifiant l'activité GABA; utilisé pour anxiété, insomnie, convulsions (ex: diazépam).",
-
         ),
         MedicalTermEntity(
             id = 2352,
+            etymology = "",
             termEn = "Antiepileptic drug (AED)",
             termFr = "Médicament antiépileptique",
             termAr = "الدواء المضاد للصرع",
@@ -1428,13 +1456,12 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌæntɪˌɛpɪˈlɛptɪk/",
             exampleEn = "The antiepileptic drug (aed) is the drug reducing the frequency and severity of seizures (e.g., phenytoin, valproate, carbamazepine).",
-            exampleFr = "Exemple: Le Médicament réduisant fréquence et gravité des crises (ex: phénytoïne, valproate, carbamazépine).",
-
-            exampleAr = "مثال: يظهر دواء يُقلِّل تكرار وشدة النوبات الصرعية (مثل: فينيتوين وفالبروات وكاربامازيبين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2353,
+            etymology = "",
             termEn = "Antidepressant",
             termFr = "Antidépresseur",
             termAr = "مضاد الاكتئاب",
@@ -1450,6 +1477,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2354,
+            etymology = "",
             termEn = "SSRI (Selective Serotonin Reuptake Inhibitor)",
             termFr = "ISRS (Inhibiteur Sélectif de la Recapture de la Sérotonine)",
             termAr = "مثبط انتقائي لاسترداد السيروتونين",
@@ -1460,13 +1488,12 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/sɛlɪktɪv ˌsɛrəˈtoʊnɪn ˈriːʌpteɪk ɪnˈhɪbɪtər/",
             exampleEn = "The ssri (selective serotonin reuptake inhibitor) is the most commonly prescribed antidepressant class; first-line for depression and anxiety (e.g., fluoxetine).",
-            exampleFr = "Exemple: Le classe d'antidépresseurs la plus prescrite; première intention pour dépression (ex: fluoxétine).",
-
-            exampleAr = "مثال: يظهر فئة الأكثر وصفاً من مضادات الاكتئاب؛ الخط الأول للاكتئاب والقلق (مثل: فلوكستين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2355,
+            etymology = "",
             termEn = "Antipsychotic drug",
             termFr = "Médicament antipsychotique",
             termAr = "الدواء المضاد للذهان",
@@ -1482,6 +1509,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2356,
+            etymology = "",
             termEn = "Sedative-hypnotic",
             termFr = "Sédatif-hypnotique",
             termAr = "المهدئ المنوم",
@@ -1493,11 +1521,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈsɛdətɪv hɪpˈnɒtɪk/",
             exampleEn = "The sedative-hypnotic is the drug producing sedation at low doses and sleep at higher doses (e.g., benzodiazepines, barbiturates).",
             exampleFr = "La sédatif-hypnotique est médicament produisant sédation à faible dose et sommeil à dose plus élevée.",
-            exampleAr = "مثال: يظهر دواء يُنتِج التهدئة بجرعات منخفضة والنوم بجرعات أعلى (مثل: البنزوديازيبينات والباربيتورات).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2357,
+            etymology = "",
             termEn = "Anti-Parkinson drug",
             termFr = "Médicament anti-parkinsonien",
             termAr = "دواء مضاد لمرض باركنسون",
@@ -1509,11 +1537,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌpɑːrkɪnsən/",
             exampleEn = "The anti-parkinson drug is the drug used to treat Parkinson's disease by restoring dopamine balance (e.g., levodopa, carbidopa).",
             exampleFr = "Le médicament anti-parkinsonien est médicament pour traiter la maladie de Parkinson en rétablissant l'équilibre de la dopamine.",
-            exampleAr = "مثال: يظهر دواء يعالج مرض باركنسون باستعادة توازن الدوبامين (مثل: ليفودوبا وكاربيدوبا).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2358,
+            etymology = "",
             termEn = "Levodopa (L-DOPA)",
             termFr = "Lévodopa (L-DOPA)",
             termAr = "الليفودوبا",
@@ -1529,6 +1557,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2359,
+            etymology = "",
             termEn = "Cholinesterase inhibitor (dementia)",
             termFr = "Inhibiteur de la cholinestérase (démence)",
             termAr = "مثبط الكولينستيراز للخرف",
@@ -1539,13 +1568,12 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/koʊlɪnˈɛstəreɪz ɪnˈhɪbɪtər/",
             exampleEn = "The cholinesterase inhibitor (dementia) is the drug treating Alzheimer's by increasing acetylcholine in the brain (e.g., donepezil).",
-            exampleFr = "Exemple: Le Médicament traitant l'Alzheimer en augmentant l'acétylcholine dans le cerveau (ex: donépézil).",
-
-            exampleAr = "مثال: يظهر دواء يعالج الزهايمر بزيادة الأستيل كولين في الدماغ (مثل: دونيبيزيل).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2360,
+            etymology = "",
             termEn = "Mood stabilizer",
             termFr = "Stabilisateur de l'humeur",
             termAr = "مثبت المزاج",
@@ -1556,13 +1584,12 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/muːd ˈsteɪbɪlaɪzər/",
             exampleEn = "The mood stabilizer is the drug used to treat bipolar disorder (e.g., lithium, valproate, carbamazepine).",
-            exampleFr = "Exemple: Le Médicament utilisé pour traiter le trouble bipolaire (ex: lithium, valproate, carbamazépine).",
-
-            exampleAr = "مثال: يظهر دواء يُستخدَم لعلاج الاضطراب ثنائي القطب (مثل: الليثيوم والفالبروات والكاربامازيبين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2361,
+            etymology = "",
             termEn = "Lithium",
             termFr = "Lithium",
             termAr = "الليثيوم",
@@ -1578,6 +1605,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2362,
+            etymology = "",
             termEn = "Barbiturate",
             termFr = "Barbiturique",
             termAr = "الباربيتوريك",
@@ -1593,6 +1621,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2363,
+            etymology = "",
             termEn = "Stimulant (CNS)",
             termFr = "Stimulant (SNC)",
             termAr = "المنشط (الجهاز العصبي المركزي)",
@@ -1604,11 +1633,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈstɪmjʊlənt/",
             exampleEn = "The stimulant (cns) is the drug increasing alertness and attention by enhancing monoamine activity (e.g., amphetamine, methylphenidate).",
             exampleFr = "La stimulant (SNC) est médicament augmentant vigilance et attention en amplifiant l'activité des monoamines.",
-            exampleAr = "مثال: يظهر دواء يزيد اليقظة والانتباه بتعزيز نشاط الأحاديات الأمينية (مثل: الأمفيتامين والميثيلفينيدات).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2364,
+            etymology = "",
             termEn = "Antiemetic",
             termFr = "Antiémétique",
             termAr = "مضاد الغثيان",
@@ -1619,13 +1648,12 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌæntiɪˈmɛtɪk/",
             exampleEn = "The antiemetic is the drug used to prevent or treat nausea and vomiting (e.g., ondansetron, metoclopramide).",
-            exampleFr = "Exemple: Le Médicament prévenant ou traitant nausées et vomissements (ex: ondansétron, métoclopramide).",
-
-            exampleAr = "مثال: يظهر دواء يُستخدَم لمنع الغثيان والقيء أو علاجهما (مثل: أوندانسيترون وميتوكلوبراميد).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2365,
+            etymology = "",
             termEn = "Anxiolytic",
             termFr = "Anxiolytique",
             termAr = "مضاد القلق",
@@ -1636,10 +1664,8 @@ object PharmacologieTerms {
             chapter = "Médicaments du SNC",
             ipaPhonetic = "/ˌæŋksiˈɒlɪtɪk/",
             exampleEn = "The anxiolytic is the drug reducing anxiety (e.g., benzodiazepines, buspirone, SSRIs).",
-            exampleFr = "Exemple: Le Médicament réduisant l'anxiété (ex: benzodiazépines, buspirone, ISRS).",
-
-            exampleAr = "مثال: يظهر دواء يُقلِّل القلق (مثل: البنزوديازيبينات وبوسبيرون ومثبطات إعادة امتصاص السيروتونين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2366,
@@ -1670,13 +1696,12 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˈmækrəlaɪd/",
             exampleEn = "The macrolide is the antibiotic inhibiting bacterial protein synthesis by binding to 50S ribosome (e.g., azithromycin).",
-            exampleFr = "Exemple: Le Antibiotique inhibant la synthèse protéique bactérienne en se liant au ribosome 50S (ex: azithromycine).",
-
-            exampleAr = "مثال: يظهر مضاد حيوي يُثبِّط تركيب البروتين البكتيري بالارتباط بالريبوسوم 50S (مثل: أزيثرومايسين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2368,
+            etymology = "",
             termEn = "Fluoroquinolone",
             termFr = "Fluoroquinolone",
             termAr = "الفلوروكينولون",
@@ -1687,13 +1712,12 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌflʊəroʊˈkwɪnəloʊn/",
             exampleEn = "The fluoroquinolone is the broad-spectrum antibiotic inhibiting DNA gyrase and topoisomerase IV (e.g., ciprofloxacin).",
-            exampleFr = "Exemple: Le Antibiotique à large spectre inhibant gyrase ADN et topo-isomérase IV (ex: ciprofloxacine).",
-
-            exampleAr = "مثال: يظهر مضاد حيوي واسع الطيف يُثبِّط الجيراز الحمضي النووي والتوبويزوميراز الرابع (مثل: سيبروفلوكساسين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2369,
+            etymology = "",
             termEn = "Aminoglycoside",
             termFr = "Aminoglycoside",
             termAr = "الأمينوغليكوزيد",
@@ -1704,13 +1728,12 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/əˌmiːnoʊˈɡlaɪkəsaɪd/",
             exampleEn = "The aminoglycoside is the bactericidal antibiotic binding to 30S ribosome; used for Gram-negative infections (e.g., gentamicin).",
-            exampleFr = "Exemple: Le Antibiotique bactéricide se liant au ribosome 30S; utilisé pour infections Gram-négatives (ex: gentamicine).",
-
-            exampleAr = "مثال: يظهر مضاد حيوي قاتل للبكتيريا يرتبط بالريبوسوم 30S؛ يُستخدَم لعدوى سالبة الغرام (مثل: جنتاميسين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2370,
+            etymology = "",
             termEn = "Tetracycline",
             termFr = "Tétracycline",
             termAr = "التيتراسيكلين",
@@ -1726,6 +1749,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2371,
+            etymology = "",
             termEn = "Metronidazole",
             termFr = "Métronidazole",
             termAr = "الميترونيدازول",
@@ -1736,13 +1760,12 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌmɛtrəˈnaɪdəzoʊl/",
             exampleEn = "The metronidazole is the antibiotic effective against anaerobes and protozoa (e.g., H. pylori, C. difficile, Giardia).",
-            exampleFr = "Exemple: Le Antibiotique efficace contre anaérobies et protozoaires (ex: H. pylori, C. difficile, Giardia).",
-
-            exampleAr = "مثال: يظهر مضاد حيوي فعال ضد اللاهوائيات والأوليات (مثل: الملوية البوابية والمطثية والجيارديا).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2372,
+            etymology = "",
             termEn = "Antifungal azole",
             termFr = "Azole antifongique",
             termAr = "مضاد الفطريات الآزولي",
@@ -1753,13 +1776,12 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˈæzoʊl/",
             exampleEn = "The antifungal azole is the antifungal drug inhibiting ergosterol synthesis (e.g., fluconazole, itraconazole).",
-            exampleFr = "Exemple: Le Antifongique inhibant la synthèse de l'ergostérol (ex: fluconazole, itraconazole).",
-
-            exampleAr = "مثال: يظهر دواء مضاد للفطريات يُثبِّط تركيب الإرغوستيرول (مثل: فلوكونازول وإيتراكونازول).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2373,
+            etymology = "",
             termEn = "Amphotericin B",
             termFr = "Amphotéricine B",
             termAr = "أمفوتيريسين B",
@@ -1775,6 +1797,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2374,
+            etymology = "",
             termEn = "Antiretroviral (ARV)",
             termFr = "Antirétroviral (ARV)",
             termAr = "مضاد الفيروسات الرجعية",
@@ -1785,13 +1808,12 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌæntiˌrɛtrəˈvaɪrəl/",
             exampleEn = "The antiretroviral (arv) is the drug used to treat HIV infection by inhibiting viral replication (e.g., NRTI, NNRTI, PI).",
-            exampleFr = "Exemple: Le Médicament pour traiter l'infection VIH en inhibant la réplication virale (ex: INTI, INNTI, IP).",
-
-            exampleAr = "مثال: يظهر دواء يُستخدَم لعلاج عدوى HIV بتثبيط تكاثر الفيروس (مثل: مثبطات النسخ العكسي والبروتياز).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2375,
+            etymology = "",
             termEn = "Oseltamivir (Tamiflu)",
             termFr = "Oseltamivir (Tamiflu)",
             termAr = "أوسيلتاميفير (تاميفلو)",
@@ -1817,15 +1839,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌæntitjʊbɜːrkjʊˈloʊsɪs/",
-
-            exampleFr = "Exemple: Le Médicament utilisé en thérapie combinée pour la tuberculose (RIPE: Rifampicine, Isoniazide, Pyrazinamide).",
-
-            exampleAr = "مثال: يظهر دواء يُستخدَم في العلاج المشترك للسل (RIPE: ريفامبيسين وإيزونيازيد وبيرازيناميد وإيثامبوتول).",
-
-            exampleEn = "The Antituberculosis drug is drug used in combination therapy for tuberculosis (RIPE: Rifampicin, Isoniazid, Pyrazinamide, Ethambutol).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2377,
+            etymology = "",
             termEn = "Isoniazid (INH)",
             termFr = "Isoniazide (INH)",
             termAr = "الإيزونيازيد",
@@ -1841,6 +1861,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2378,
+            etymology = "",
             termEn = "Antimalarial drug",
             termFr = "Médicament antipaludéen",
             termAr = "الدواء المضاد للملاريا",
@@ -1851,13 +1872,12 @@ object PharmacologieTerms {
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌæntiməˈlɛəriəl/",
             exampleEn = "The antimalarial drug is the drug used to treat or prevent malaria (e.g., chloroquine, artemisinin, primaquine).",
-            exampleFr = "Exemple: Le Médicament pour traiter ou prévenir le paludisme (ex: chloroquine, artémisinine, primaquine).",
-
-            exampleAr = "مثال: يظهر دواء يُستخدَم لعلاج الملاريا أو الوقاية منها (مثل: كلوروكين وأرتيميزينين وبريماكين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2379,
+            etymology = "",
             termEn = "Chloramphenicol",
             termFr = "Chloramphénicol",
             termAr = "الكلورامفينيكول",
@@ -1873,6 +1893,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2380,
+            etymology = "",
             termEn = "Linezolid",
             termFr = "Linézolide",
             termAr = "اللينيزوليد",
@@ -1888,6 +1909,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2381,
+            etymology = "",
             termEn = "Acyclovir",
             termFr = "Acyclovir",
             termAr = "الأسيكلوفير",
@@ -1903,6 +1925,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2382,
+            etymology = "",
             termEn = "Trimethoprim-Sulfamethoxazole (TMP-SMX)",
             termFr = "Triméthoprime-Sulfaméthoxazole (TMP-SMX)",
             termAr = "تريميثوبريم-سلفاميثوكسازول",
@@ -1918,6 +1941,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2383,
+            etymology = "",
             termEn = "Doxycycline",
             termFr = "Doxycycline",
             termAr = "الدوكسيسيكلين",
@@ -1933,6 +1957,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2384,
+            etymology = "",
             termEn = "Clindamycin",
             termFr = "Clindamycine",
             termAr = "الكليندامايسين",
@@ -1948,6 +1973,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2385,
+            etymology = "",
             termEn = "Drug susceptibility testing",
             termFr = "Test de sensibilité aux médicaments",
             termAr = "اختبار حساسية الدواء",
@@ -1957,15 +1983,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Antibiotiques et Anti-infectieux",
             ipaPhonetic = "/ˌsʌsɛptɪˈbɪlɪti ˈtɛstɪŋ/",
-
-            exampleFr = "Exemple: Le Tests de laboratoire déterminant si un pathogène est sensible ou résistant à des antimicrobiens spécifiques.",
-
-            exampleAr = "مثال: يظهر اختبارات مختبرية تُحدِّد إذا كان العامل الممرض حساساً أو مقاوماً لعوامل مضادة للميكروبات محددة.",
-
-            exampleEn = "The Drug susceptibility testing is Laboratory tests determining if a pathogen is sensitive or resistant to specific antimicrobial agents.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2386,
+            etymology = "",
             termEn = "Anti-inflammatory drug",
             termFr = "Médicament anti-inflammatoire",
             termAr = "الدواء المضاد للالتهاب",
@@ -1981,6 +2005,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2387,
+            etymology = "",
             termEn = "NSAID (Non-Steroidal Anti-Inflammatory Drug)",
             termFr = "AINS (Anti-Inflammatoire Non Stéroïdien)",
             termAr = "مضاد الالتهاب اللاستيروئيدي",
@@ -1996,6 +2021,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2388,
+            etymology = "",
             termEn = "Aspirin (acetylsalicylic acid)",
             termFr = "Aspirine (acide acétylsalicylique)",
             termAr = "الأسبرين",
@@ -2011,6 +2037,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2389,
+            etymology = "",
             termEn = "Ibuprofen",
             termFr = "Ibuprofène",
             termAr = "الإيبوبروفين",
@@ -2026,6 +2053,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2390,
+            etymology = "",
             termEn = "Paracetamol (Acetaminophen)",
             termFr = "Paracétamol (Acétaminophène)",
             termAr = "الباراسيتامول",
@@ -2041,6 +2069,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2391,
+            etymology = "",
             termEn = "Corticosteroid",
             termFr = "Corticostéroïde",
             termAr = "الكورتيكوستيروئيد",
@@ -2052,11 +2081,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌkɔːrtɪkoʊˈstɪərɔɪd/",
             exampleEn = "The corticosteroid is the steroid hormone used as a potent anti-inflammatory and immunosuppressant (e.g., prednisone, dexamethasone).",
             exampleFr = "La corticostéroïde est hormone stéroïdienne utilisée comme puissant anti-inflammatoire et immunosuppresseur.",
-            exampleAr = "مثال: يظهر هرمون ستيروئيدي يُستخدَم كمضاد قوي للالتهاب وكابت للمناعة (مثل: بريدنيزون وديكساميثازون).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2392,
+            etymology = "",
             termEn = "COX-2 inhibitor",
             termFr = "Inhibiteur COX-2",
             termAr = "مثبط COX-2",
@@ -2067,12 +2096,12 @@ object PharmacologieTerms {
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/saɪkloʊˈɒksɪdʒɪneɪz tuː ɪnˈhɪbɪtər/",
             exampleEn = "The cox-2 inhibitor is the selective NSAID with fewer GI side effects; used for arthritis (e.g., celecoxib).",
+            exampleFr = "",
             exampleAr = "مثبط COX-2 هو مضاد التهاب لاستيروئيدي انتقائي بآثار جانبية هضمية أقل؛ يُستخدَم للتهاب المفاصل.",
-            exampleFr = "Exemple: Le AINS sélectif avec moins d'effets secondaires gastro-intestinaux; utilisé pour arthrite (ex: célécoxib).",
-
         ),
         MedicalTermEntity(
             id = 2393,
+            etymology = "",
             termEn = "Gout treatment",
             termFr = "Traitement de la goutte",
             termAr = "علاج النقرس",
@@ -2082,15 +2111,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ɡaʊt/",
-
-            exampleFr = "Exemple: Le Médicaments pour la goutte incluant colchicine (aigu), allopurinol (prophylaxie) et AINS.",
-
-            exampleAr = "مثال: يظهر أدوية النقرس تشمل الكولشيسين (الحاد) والألوبيورينول (الوقاية) ومضادات الالتهاب.",
-
-            exampleEn = "The Gout treatment is Drugs for gout including colchicine (acute), allopurinol (prophylaxis), and NSAIDs.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2394,
+            etymology = "",
             termEn = "Allopurinol",
             termFr = "Allopurinol",
             termAr = "الألوبيورينول",
@@ -2106,6 +2133,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2395,
+            etymology = "",
             termEn = "Disease-modifying antirheumatic drug (DMARD)",
             termFr = "Médicament antirhumatismal de fond (DMARD)",
             termAr = "الدواء المُعدِّل لمجرى المرض الروماتيزمي",
@@ -2116,13 +2144,12 @@ object PharmacologieTerms {
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/dɪˈziːz ˈmɒdɪfaɪɪŋ ˌæntɪrʊˈmætɪk/",
             exampleEn = "The disease-modifying antirheumatic drug (dmard) is the drug slowing the progression of rheumatoid arthritis (e.g., methotrexate, hydroxychloroquine).",
-            exampleFr = "Exemple: Le Médicament ralentissant la progression de la polyarthrite rhumatoïde (ex: méthotrexate, hydroxychloroquine).",
-
-            exampleAr = "مثال: يظهر دواء يُبطِّئ تقدم التهاب المفاصل الروماتويدي (مثل: ميثوتريكسات وهيدروكسيكلوروكين).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2396,
+            etymology = "",
             termEn = "Colchicine",
             termFr = "Colchicine",
             termAr = "الكولشيسين",
@@ -2138,6 +2165,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2397,
+            etymology = "",
             termEn = "Methotrexate",
             termFr = "Méthotrexate",
             termAr = "الميثوتريكسات",
@@ -2153,6 +2181,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2398,
+            etymology = "",
             termEn = "Biological therapy (biologics)",
             termFr = "Thérapie biologique",
             termAr = "العلاج البيولوجي",
@@ -2162,15 +2191,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ˌbaɪəˈlɒdʒɪkəl ˈθɛrəpi/",
-
-            exampleFr = "Exemple: Le Agents thérapeutiques d'origine biologique ciblant des voies immunitaires spécifiques (ex: inhibiteurs TNF).",
-
-            exampleAr = "مثال: يظهر عوامل علاجية مشتقة من مصادر بيولوجية تستهدف مسارات مناعية محددة (مثل: مثبطات TNF).",
-
-            exampleEn = "The Biological therapy (biologics) is Therapeutic agents derived from biological sources targeting specific immune pathways (e.g., TNF inhibitors).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2399,
+            etymology = "",
             termEn = "Paracetamol overdose treatment",
             termFr = "Traitement surdosage paracétamol",
             termAr = "علاج جرعة الباراسيتامول الزائدة",
@@ -2180,15 +2207,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
             ipaPhonetic = "/ˈoʊvərˌdoʊs ˈtrɛtmənt/",
-
-            exampleFr = "Exemple: Le N-acétylcystéine (NAC) est l'antidote à l'empoisonnement au paracétamol; réplenish glutathion.",
-
-            exampleAr = "مثال: يظهر N-أستيل سيستين (NAC) هو الترياق لتسمم الباراسيتامول؛ يُجدِّد الغلوتاثيون.",
-
-            exampleEn = "The Paracetamol overdose treatment is N-acetylcysteine (NAC) is the antidote for paracetamol poisoning; replenishes glutathione.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2400,
+            etymology = "",
             termEn = "Tramadol",
             termFr = "Tramadol",
             termAr = "الترامادول",
@@ -2204,6 +2229,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2401,
+            etymology = "",
             termEn = "Dexamethasone",
             termFr = "Dexaméthasone",
             termAr = "الديكساميثازون",
@@ -2235,6 +2261,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2403,
+            etymology = "",
             termEn = "Beta-2 agonist",
             termFr = "Agoniste bêta-2",
             termAr = "ناهض بيتا-2",
@@ -2250,6 +2277,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2404,
+            etymology = "",
             termEn = "Inhaled corticosteroid (ICS)",
             termFr = "Corticostéroïde inhalé (CSI)",
             termAr = "الكورتيكوستيروئيد بالاستنشاق",
@@ -2265,6 +2293,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2405,
+            etymology = "",
             termEn = "Antihistamine",
             termFr = "Antihistaminique",
             termAr = "مضاد الهيستامين",
@@ -2280,6 +2309,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2406,
+            etymology = "",
             termEn = "Ipratropium bromide",
             termFr = "Bromure d'ipratropium",
             termAr = "إبراتروبيوم برومايد",
@@ -2295,6 +2325,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2407,
+            etymology = "",
             termEn = "Theophylline",
             termFr = "Théophylline",
             termAr = "الثيوفيلين",
@@ -2310,6 +2341,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2408,
+            etymology = "",
             termEn = "Leukotriene receptor antagonist",
             termFr = "Antagoniste des récepteurs aux leucotriènes",
             termAr = "مضاد مستقبلات الليوكوترين",
@@ -2320,13 +2352,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Respiratoires",
             ipaPhonetic = "/ˌluːkəˈtraɪiːn rɪˈsɛptər ænˈtæɡənɪst/",
             exampleEn = "The leukotriene receptor antagonist is the drug blocking leukotriene receptors to prevent bronchoconstriction and inflammation (e.g., montelukast).",
-            exampleFr = "Exemple: Le Médicament bloquant les récepteurs leucotriènes pour prévenir bronchoconstriction (ex: montélukast).",
-
-            exampleAr = "مثال: يظهر دواء يحجب مستقبلات الليوكوترين لمنع تضيق القصبات والالتهاب (مثل: مونتيلوكاست).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2409,
+            etymology = "",
             termEn = "N-acetylcysteine (mucolytic)",
             termFr = "N-acétylcystéine (mucolytique)",
             termAr = "N-أستيل سيستين (مُفكِّك المخاط)",
@@ -2342,6 +2373,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2410,
+            etymology = "",
             termEn = "Oxygen therapy",
             termFr = "Oxygénothérapie",
             termAr = "العلاج بالأكسجين",
@@ -2357,6 +2389,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2411,
+            etymology = "",
             termEn = "Epinephrine for anaphylaxis",
             termFr = "Adrénaline pour anaphylaxie",
             termAr = "الأدرينالين للصدمة التأقية",
@@ -2372,6 +2405,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2412,
+            etymology = "",
             termEn = "Proton pump inhibitor (PPI)",
             termFr = "Inhibiteur de la pompe à protons (IPP)",
             termAr = "مثبط مضخة البروتون",
@@ -2387,6 +2421,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2413,
+            etymology = "",
             termEn = "H2 receptor antagonist",
             termFr = "Antagoniste des récepteurs H2",
             termAr = "مضاد مستقبلات H2",
@@ -2402,6 +2437,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2414,
+            etymology = "",
             termEn = "Antacid",
             termFr = "Antiacide",
             termAr = "مضاد الحموضة",
@@ -2417,6 +2453,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2415,
+            etymology = "",
             termEn = "Laxative",
             termFr = "Laxatif",
             termAr = "المُسهِّل",
@@ -2427,13 +2464,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/ˈlæksətɪv/",
             exampleEn = "The laxative is the drug facilitating bowel movement; types include bulk-forming, osmotic, stimulant, and stool softeners.",
-            exampleFr = "Exemple: Le Médicament facilitant les selles; types: formant masse, osmotique, stimulant et émollient.",
-
-            exampleAr = "مثال: يظهر دواء يُسهِّل حركة الأمعاء؛ أنواعه: المُجسِّم والأسموزي والمُنشِّط ومُليِّن البراز.",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2416,
+            etymology = "",
             termEn = "Antidiarrheal",
             termFr = "Antidiarrhéique",
             termAr = "مضاد الإسهال",
@@ -2444,13 +2480,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/ˌæntiˌdaɪəˈriːəl/",
             exampleEn = "The antidiarrheal is the drug reducing stool frequency and loose stool consistency (e.g., loperamide, bismuth subsalicylate).",
-            exampleFr = "Exemple: Le Médicament réduisant la fréquence et la liquidité des selles (ex: lopéramide, sous-salicylate de bismuth).",
-
-            exampleAr = "مثال: يظهر دواء يُقلِّل تكرار البراز وسيولته (مثل: لوبيراميد وبزموت ثنائي السلسيلات).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2417,
+            etymology = "",
             termEn = "Prokinetic drug",
             termFr = "Médicament prokinétique",
             termAr = "الدواء المُحرِّك",
@@ -2461,13 +2496,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/proʊkɪˈnɛtɪk/",
             exampleEn = "The prokinetic drug is the drug enhancing gastrointestinal motility (e.g., metoclopramide, domperidone) used for GERD and nausea.",
-            exampleFr = "Exemple: Le Médicament améliorant la motilité gastro-intestinale (ex: métoclopramide, dompéridone).",
-
-            exampleAr = "مثال: يظهر دواء يُعزِّز حركية الجهاز الهضمي (مثل: ميتوكلوبراميد وديمبيريدون) للارتجاع ومضادة الغثيان.",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2418,
+            etymology = "",
             termEn = "Inflammatory bowel disease (IBD) drugs",
             termFr = "Médicaments pour MICI",
             termAr = "أدوية أمراض الأمعاء الالتهابية",
@@ -2477,15 +2511,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Digestifs",
             ipaPhonetic = "/ˌɪnfləˈmɛtəri baʊəl dɪˈziːz/",
-
-            exampleFr = "Exemple: Le Médicaments pour Crohn et RCH incluant mésalazine, corticostéroïdes, immunosuppresseurs et biologiques.",
-
-            exampleAr = "مثال: يظهر أدوية لمرض كرون والتهاب القولون التقرحي تشمل الميزالازين والكورتيزون وكابتات المناعة.",
-
-            exampleEn = "The Inflammatory bowel disease (IBD) drugs is Drugs for Crohn's and UC including mesalazine, corticosteroids, immunosuppressants, and biologics.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2419,
+            etymology = "",
             termEn = "Ondansetron",
             termFr = "Ondansétron",
             termAr = "الأوندانسيترون",
@@ -2501,6 +2533,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2420,
+            etymology = "",
             termEn = "Omeprazole",
             termFr = "Oméprazole",
             termAr = "الأوميبرازول",
@@ -2516,6 +2549,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2421,
+            etymology = "",
             termEn = "Sucralfate",
             termFr = "Sucralfate",
             termAr = "السوكرالفات",
@@ -2531,6 +2565,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2422,
+            etymology = "",
             termEn = "Insulin",
             termFr = "Insuline",
             termAr = "الأنسولين",
@@ -2546,6 +2581,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2423,
+            etymology = "",
             termEn = "Metformin",
             termFr = "Metformine",
             termAr = "الميتفورمين",
@@ -2561,6 +2597,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2424,
+            etymology = "",
             termEn = "Sulfonylurea",
             termFr = "Sulfonylurée",
             termAr = "السلفونيل يوريا",
@@ -2571,13 +2608,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˌsʌlfənjʊˈɒljʊərɪə/",
             exampleEn = "The sulfonylurea is the oral antidiabetic stimulating insulin secretion from beta cells (e.g., glibenclamide, glipizide).",
-            exampleFr = "Exemple: Le Antidiabétique oral stimulant la sécrétion d'insuline par les cellules bêta (ex: glibenclamide).",
-
-            exampleAr = "مثال: يظهر دواء سكري فموي يُحفِّز إفراز الأنسولين من خلايا بيتا (مثل: غليبينكلاميد وغليبيزيد).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2425,
+            etymology = "",
             termEn = "Levothyroxine",
             termFr = "Lévothyroxine",
             termAr = "ليفوثيروكسين",
@@ -2587,15 +2623,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˌliːvoʊˈθaɪrəksiːn/",
-
-            exampleFr = "Exemple: Le T4 synthétique utilisé comme thérapie de remplacement pour l'hypothyroïdie.",
-
-            exampleAr = "مثال: يظهر T4 صناعي يُستخدَم كعلاج بديل لقصور الغدة الدرقية.",
-
-            exampleEn = "The Levothyroxine is Synthetic T4 used as replacement therapy for hypothyroidism.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2426,
+            etymology = "",
             termEn = "Antithyroid drug",
             termFr = "Médicament antithyroïdien",
             termAr = "الدواء المضاد للغدة الدرقية",
@@ -2607,11 +2641,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌæntiˈθaɪrɔɪd/",
             exampleEn = "The antithyroid drug is the drug reducing thyroid hormone synthesis (e.g., propylthiouracil, carbimazole); used for hyperthyroidism.",
             exampleFr = "Le médicament antithyroïdien est médicament réduisant la synthèse des hormones thyroïdiennes; utilisé pour hyperthyroïdie.",
-            exampleAr = "مثال: يظهر دواء يُقلِّل تركيب هرمونات الغدة الدرقية (مثل: بروبيلثيوراسيل وكاربيمازول).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2427,
+            etymology = "",
             termEn = "Oral contraceptive pill (OCP)",
             termFr = "Pilule contraceptive orale",
             termAr = "حبة منع الحمل الفموية",
@@ -2638,13 +2672,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˌɡluːkoʊˈkɔːrtɪkɔɪd/",
             exampleEn = "The glucocorticoid is the class of corticosteroids affecting glucose metabolism and inflammation (e.g., cortisol, prednisolone).",
-            exampleFr = "Exemple: Le Classe de corticostéroïdes affectant métabolisme du glucose et inflammation (ex: cortisol, prednisolone).",
-
-            exampleAr = "مثال: يظهر فئة من الكورتيكوستيروئيدات تؤثر في استقلاب الغلوكوز والالتهاب (مثل: الكورتيزول والبريدنيزولون).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2429,
+            etymology = "",
             termEn = "Bisphosphonate",
             termFr = "Bisphosphonate",
             termAr = "البيسفوسفونات",
@@ -2656,11 +2689,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˌbɪsˈfɒsfəneɪt/",
             exampleEn = "The bisphosphonate is the drug inhibiting osteoclast activity used to treat osteoporosis and bone metastases (e.g., alendronate).",
             exampleFr = "La bisphosphonate est médicament inhibant l'activité ostéoclastique pour ostéoporose et métastases osseuses.",
-            exampleAr = "مثال: يظهر دواء يُثبِّط نشاط ناقضات العظم يُستخدَم لعلاج هشاشة العظام وانتشارات العظم (مثل: ألندرونات).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2430,
+            etymology = "",
             termEn = "GLP-1 receptor agonist",
             termFr = "Agoniste du récepteur GLP-1",
             termAr = "ناهض مستقبل GLP-1",
@@ -2672,11 +2705,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/dʒiː ɛl piː wʌn/",
             exampleEn = "The glp-1 receptor agonist is the antidiabetic drug mimicking GLP-1 to stimulate insulin secretion; also promotes weight loss (e.g., semaglutide).",
             exampleFr = "L'agoniste du récepteur GLP-1 est médicament antidiabétique mimant GLP-1 pour stimuler la sécrétion d'insuline; favorise perte de poids.",
-            exampleAr = "مثال: يظهر دواء سكري يُقلِّد GLP-1 لتحفيز إفراز الأنسولين؛ يُعزِّز أيضاً فقدان الوزن (مثل: سيماغلوتيد).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2431,
+            etymology = "",
             termEn = "SGLT2 inhibitor",
             termFr = "Inhibiteur SGLT2",
             termAr = "مثبط SGLT2",
@@ -2692,6 +2725,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2432,
+            etymology = "",
             termEn = "Testosterone",
             termFr = "Testostérone",
             termAr = "التستوستيرون",
@@ -2707,6 +2741,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2433,
+            etymology = "",
             termEn = "Hormone replacement therapy (HRT)",
             termFr = "Thérapie hormonale substitutive (THS)",
             termAr = "العلاج بالهرمونات البديلة",
@@ -2716,15 +2751,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Endocriniens",
             ipaPhonetic = "/ˈhɔːrmoʊn rɪˈpleɪsmənt ˈθɛrəpi/",
-
-            exampleFr = "Exemple: Le Estrogène avec ou sans progestogène utilisé pour traiter les symptômes de la ménopause.",
-
-            exampleAr = "مثال: يظهر إستروجين مع البروجستوجين أو بدونه لعلاج أعراض انقطاع الطمث.",
-
-            exampleEn = "The Hormone replacement therapy (HRT) is Estrogen with or without progestogen used to treat menopausal symptoms.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2434,
+            etymology = "",
             termEn = "Vasopressin (ADH)",
             termFr = "Vasopressine (ADH)",
             termAr = "الفازوبريسين (الهرمون المضاد لإدرار البول)",
@@ -2740,6 +2773,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2435,
+            etymology = "",
             termEn = "Glucagon",
             termFr = "Glucagon",
             termAr = "الغلوكاغون",
@@ -2755,6 +2789,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2436,
+            etymology = "",
             termEn = "Calcitonin",
             termFr = "Calcitonine",
             termAr = "الكالسيتونين",
@@ -2770,6 +2805,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2437,
+            etymology = "",
             termEn = "Chemotherapy",
             termFr = "Chimiothérapie",
             termAr = "العلاج الكيميائي",
@@ -2785,6 +2821,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2438,
+            etymology = "",
             termEn = "Alkylating agent",
             termFr = "Agent alkylant",
             termAr = "العامل الألكيلي",
@@ -2796,11 +2833,11 @@ object PharmacologieTerms {
             ipaPhonetic = "/ˈælkɪleɪtɪŋ ˈeɪdʒənt/",
             exampleEn = "The alkylating agent is the chemotherapy drug forming covalent bonds with DNA preventing replication (e.g., cyclophosphamide).",
             exampleFr = "L'agent alkylant est médicament de chimiothérapie formant des liaisons covalentes avec l'ADN empêchant la réplication.",
-            exampleAr = "مثال: يظهر دواء كيميائي يُكوِّن روابط تساهمية مع DNA مانعاً التكاثر (مثل: سيكلوفوسفاميد).",
-
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2439,
+            etymology = "",
             termEn = "Antimetabolite (cancer)",
             termFr = "Antimétabolite (cancer)",
             termAr = "مضاد الاستقلاب (السرطان)",
@@ -2811,13 +2848,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˌæntiməˈtæbəlaɪt/",
             exampleEn = "The antimetabolite (cancer) is the chemotherapy drug structurally similar to natural metabolites; inhibits DNA/RNA synthesis (e.g., 5-fluorouracil).",
-            exampleFr = "Exemple: Le Médicament structurellement similaire aux métabolites naturels; inhibe synthèse ADN/ARN (ex: 5-fluorouracile).",
-
-            exampleAr = "مثال: يظهر دواء كيميائي مشابه هيكلياً لمستقلبات طبيعية؛ يُثبِّط تركيب DNA/RNA (مثل: 5-فلورويوراسيل).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2440,
+            etymology = "",
             termEn = "Targeted therapy",
             termFr = "Thérapie ciblée",
             termAr = "العلاج المستهدف",
@@ -2827,12 +2863,9 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˈtɑːrɡɪtɪd ˈθɛrəpi/",
-
-            exampleFr = "Exemple: Le Traitement du cancer avec médicaments ciblant spécifiquement les voies moléculaires des cellules cancéreuses.",
-
-            exampleAr = "مثال: يظهر علاج السرطان بأدوية تستهدف تحديداً المسارات الجزيئية لخلايا السرطان (مثل: إيماتينيب/غليفيك).",
-
-            exampleEn = "The Targeted therapy is Cancer treatment using drugs that specifically target cancer cell molecular pathways (e.g., imatinib/Gleevec).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2441,
@@ -2846,15 +2879,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˌɪmjʊnoʊˈθɛrəpi/",
-
-            exampleFr = "Exemple: Le Traitement du cancer utilisant ou renforçant le système immunitaire contre les tumeurs.",
-
-            exampleAr = "مثال: يظهر علاج السرطان باستغلال الجهاز المناعي أو تعزيزه لمحاربة الأورام (مثل: مثبطات نقاط التفتيش).",
-
-            exampleEn = "The Immunotherapy (cancer) is Cancer treatment harnessing or enhancing the immune system to fight tumors (e.g., checkpoint inhibitors).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2442,
+            etymology = "",
             termEn = "Monoclonal antibody (therapeutic)",
             termFr = "Anticorps monoclonal (thérapeutique)",
             termAr = "الجسم المضاد وحيد النسيلة",
@@ -2865,12 +2896,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˌmɒnəˈkloʊnəl ˈæntɪbɒdi/",
             exampleEn = "The monoclonal antibody (therapeutic) is the laboratory-produced antibody targeting specific antigens on cancer or immune cells (e.g., trastuzumab).",
+            exampleFr = "",
             exampleAr = "الجسم المضاد وحيد النسيلة هو جسم مضاد مُنتَج في المختبر يستهدف مستضدات محددة على الخلايا السرطانية أو المناعية.",
-            exampleFr = "Exemple: Le Anticorps produit en laboratoire ciblant des antigènes spécifiques sur cellules cancéreuses (ex: trastuzumab).",
-
         ),
         MedicalTermEntity(
             id = 2443,
+            etymology = "",
             termEn = "Vinca alkaloid",
             termFr = "Alcaloïde de la pervenche",
             termAr = "قلويد الوينكا",
@@ -2886,6 +2917,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2444,
+            etymology = "",
             termEn = "Taxane",
             termFr = "Taxane",
             termAr = "التاكسان",
@@ -2896,13 +2928,12 @@ object PharmacologieTerms {
             chapter = "Médicaments Anticancéreux",
             ipaPhonetic = "/ˈtækseɪn/",
             exampleEn = "The taxane is the anticancer drug stabilizing microtubules preventing mitosis (e.g., paclitaxel).",
-            exampleFr = "Exemple: Le Médicament anticancéreux stabilisant les microtubules empêchant la mitose (ex: paclitaxel).",
-
-            exampleAr = "مثال: يظهر دواء مضاد للسرطان يُثبِّت الأنيبيبات الدقيقة مانعاً الانقسام الخلوي (مثل: باكليتاكسيل).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2445,
+            etymology = "",
             termEn = "Cisplatin",
             termFr = "Cisplatine",
             termAr = "السيسبلاتين",
@@ -2918,6 +2949,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2446,
+            etymology = "",
             termEn = "Tamoxifen",
             termFr = "Tamoxifène",
             termAr = "التاموكسيفين",
@@ -2933,6 +2965,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2447,
+            etymology = "",
             termEn = "Adverse drug reaction (ADR)",
             termFr = "Effet indésirable médicamenteux (EIM)",
             termAr = "التأثير الدوائي الضار",
@@ -2948,6 +2981,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2448,
+            etymology = "",
             termEn = "Side effect",
             termFr = "Effet secondaire",
             termAr = "التأثير الجانبي",
@@ -2963,6 +2997,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2449,
+            etymology = "",
             termEn = "Drug toxicity",
             termFr = "Toxicité médicamenteuse",
             termAr = "سمية الدواء",
@@ -2972,15 +3007,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacologie Clinique et Toxicologie",
             ipaPhonetic = "/ˈtɒksɪsɪti/",
-
-            exampleFr = "Exemple: Le Effets nocifs causés par des doses excessives de médicaments ou leur accumulation dans le corps.",
-
-            exampleAr = "مثال: يظهر تأثيرات ضارة تسببها جرعات مفرطة من الدواء أو تراكمه في الجسم.",
-
-            exampleEn = "The Drug toxicity is Harmful effects caused by excessive drug doses or accumulation in the body.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2450,
+            etymology = "",
             termEn = "Drug interaction",
             termFr = "Interaction médicamenteuse",
             termAr = "التفاعل الدوائي",
@@ -2996,6 +3029,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2451,
+            etymology = "",
             termEn = "Antidote",
             termFr = "Antidote",
             termAr = "الترياق",
@@ -3011,6 +3045,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2452,
+            etymology = "",
             termEn = "Drug dependence",
             termFr = "Dépendance médicamenteuse",
             termAr = "الاعتماد على الدواء",
@@ -3026,6 +3061,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2453,
+            etymology = "",
             termEn = "Withdrawal syndrome",
             termFr = "Syndrome de sevrage",
             termAr = "متلازمة الانسحاب",
@@ -3057,6 +3093,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2455,
+            etymology = "",
             termEn = "Clinical trial",
             termFr = "Essai clinique",
             termAr = "التجربة السريرية",
@@ -3072,6 +3109,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2456,
+            etymology = "",
             termEn = "Phase I clinical trial",
             termFr = "Essai clinique de phase I",
             termAr = "التجربة السريرية المرحلة الأولى",
@@ -3087,6 +3125,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2457,
+            etymology = "",
             termEn = "Double-blind study",
             termFr = "Étude en double aveugle",
             termAr = "الدراسة المعماة المزدوجة",
@@ -3102,6 +3141,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2458,
+            etymology = "",
             termEn = "Iatrogenic disease",
             termFr = "Maladie iatrogène",
             termAr = "المرض الناجم عن الطب",
@@ -3117,6 +3157,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2459,
+            etymology = "",
             termEn = "Orphan drug",
             termFr = "Médicament orphelin",
             termAr = "الدواء اليتيم",
@@ -3132,6 +3173,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2460,
+            etymology = "",
             termEn = "Generic drug",
             termFr = "Médicament générique",
             termAr = "الدواء الجنيسي (الجنيريك)",
@@ -3157,15 +3199,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Pharmacologie Clinique et Toxicologie",
             ipaPhonetic = "/ˌnɛfroʊtɒkˈsɪsɪti/",
-
-            exampleFr = "Exemple: Le Lésion rénale causée par des médicaments (ex: aminoglycosides, AINS, amphotéricine B, cisplatine).",
-
-            exampleAr = "مثال: يظهر تلف الكلى الناجم عن الأدوية (مثل: الأمينوغليكوزيدات ومضادات الالتهاب والأمفوتيريسين والسيسبلاتين).",
-
-            exampleEn = "The Nephrotoxicity is Kidney damage caused by drugs (e.g., aminoglycosides, NSAIDs, amphotericin B, cisplatin).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2462,
+            etymology = "",
             termEn = "Route of administration",
             termFr = "Voie d'administration",
             termAr = "طريق الإعطاء",
@@ -3176,13 +3216,12 @@ object PharmacologieTerms {
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ruːt əv ədˌmɪnɪˈstreɪʃən/",
             exampleEn = "The route of administration is the path by which a drug is taken into the body (e.g., oral, IV, IM, subcutaneous, topical).",
-            exampleFr = "Exemple: Le chemin par lequel un médicament est introduit dans le corps (ex: oral, IV, IM, SC, topique).",
-
-            exampleAr = "مثال: يظهر مسار الذي يدخل منه الدواء إلى الجسم (مثل: فموي ووريدي وعضلي وتحت جلدي وموضعي).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2463,
+            etymology = "",
             termEn = "Intravenous (IV) injection",
             termFr = "Injection intraveineuse (IV)",
             termAr = "الحقن الوريدي",
@@ -3192,15 +3231,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈviːnəs/",
-
-            exampleFr = "Exemple: Le Administration d'un médicament directement dans une veine; début d'action le plus rapide, biodisponibilité 100%.",
-
-            exampleAr = "مثال: يظهر إعطاء الدواء مباشرةً في الوريد؛ يوفر أسرع بداية تأثير و100% توافر حيوي.",
-
-            exampleEn = "The Intravenous (IV) injection is Drug administration directly into a vein; provides fastest onset and 100% bioavailability.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2464,
+            etymology = "",
             termEn = "Intramuscular (IM) injection",
             termFr = "Injection intramusculaire (IM)",
             termAr = "الحقن العضلي",
@@ -3210,15 +3247,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈmʌskjʊlər/",
-
-            exampleFr = "Exemple: Le Injection de médicament dans le tissu musculaire; absorption plus lente qu'IV mais plus rapide que SC.",
-
-            exampleAr = "مثال: يظهر حقن الدواء في نسيج العضلة مع امتصاص أبطأ من الوريدي لكن أسرع من تحت الجلدي.",
-
-            exampleEn = "The Intramuscular (IM) injection is Drug injection into muscle tissue providing slower absorption than IV but faster than subcutaneous.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2465,
+            etymology = "",
             termEn = "Subcutaneous (SC) injection",
             termFr = "Injection sous-cutanée (SC)",
             termAr = "الحقن تحت الجلد",
@@ -3228,15 +3263,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌsʌbkjuːˈteɪniəs/",
-
-            exampleFr = "Exemple: Le Injection de médicament dans la couche de graisse sous-cutanée; utilisé pour insuline, héparine.",
-
-            exampleAr = "مثال: يظهر حقن الدواء في طبقة الدهن تحت الجلد؛ يُستخدَم للأنسولين والهيبارين.",
-
-            exampleEn = "The Subcutaneous (SC) injection is Drug injection into the subcutaneous fat layer; used for insulin, heparin.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2466,
+            etymology = "",
             termEn = "Sublingual (SL) route",
             termFr = "Voie sublinguale (SL)",
             termAr = "الطريق تحت اللسان",
@@ -3246,15 +3279,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌsʌblɪŋˈɡwəl/",
-
-            exampleFr = "Exemple: Le Administration sous la langue pour absorption rapide contournant l'effet de premier passage.",
-
-            exampleAr = "مثال: يظهر إعطاء الدواء تحت اللسان للامتصاص السريع متجاوزاً تأثير المرور الأول (مثل: النيتروجليسرين).",
-
-            exampleEn = "The Sublingual (SL) route is Drug administration under the tongue for rapid absorption bypassing first-pass effect (e.g., nitroglycerin).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2467,
+            etymology = "",
             termEn = "Transdermal patch",
             termFr = "Timbre transdermique (patch)",
             termAr = "لصقة عبر الجلد",
@@ -3270,6 +3301,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2468,
+            etymology = "",
             termEn = "Inhaled drug delivery",
             termFr = "Administration par inhalation",
             termAr = "الإعطاء بالاستنشاق",
@@ -3279,15 +3311,13 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ɪnˈheɪld drʌɡ dɪˈlɪvəri/",
-
-            exampleFr = "Exemple: Le Administration du médicament directement aux poumons via inhalateurs; pour asthme et BPCO.",
-
-            exampleAr = "مثال: يظهر توصيل الدواء مباشرةً إلى الرئتين عبر البخاخات؛ يُستخدَم للربو والانسداد الرئوي المزمن.",
-
-            exampleEn = "The Inhaled drug delivery is Drug delivery directly to the lungs via inhalers; used for asthma and COPD.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2469,
+            etymology = "",
             termEn = "Controlled-release formulation",
             termFr = "Formulation à libération contrôlée",
             termAr = "التركيبة ذات الإطلاق المتحكَّم",
@@ -3303,6 +3333,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2470,
+            etymology = "",
             termEn = "Topical drug",
             termFr = "Médicament topique",
             termAr = "الدواء الموضعي",
@@ -3318,6 +3349,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2471,
+            etymology = "",
             termEn = "Intrathecal injection",
             termFr = "Injection intrathécale",
             termAr = "الحقن داخل القناة الشوكية",
@@ -3327,12 +3359,9 @@ object PharmacologieTerms {
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
             ipaPhonetic = "/ˌɪntrəˈθiːkəl/",
-
-            exampleFr = "Exemple: Le Injection dans l'espace sous-arachnoïdien; contourne la BHE pour délivrance de médicament au SNC.",
-
-            exampleAr = "مثال: يظهر حقن الدواء في الفضاء تحت العنكبوتية؛ يتجاوز الحاجز الدموي الدماغي لتوصيل الدواء للجهاز العصبي.",
-
-            exampleEn = "The Intrathecal injection is Drug injection into the subarachnoid space; bypasses BBB for CNS drug delivery.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2472,
@@ -3352,6 +3381,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2473,
+            etymology = "",
             termEn = "Drug absorption enhancer",
             termFr = "Promoteur d'absorption",
             termAr = "مُعزِّز امتصاص الدواء",
@@ -3367,6 +3397,7 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2474,
+            etymology = "",
             termEn = "Idiosyncratic reaction",
             termFr = "Réaction idiosyncrasique",
             termAr = "التفاعل الشاذ (الخاص بالفرد)",
@@ -3382,273 +3413,273 @@ object PharmacologieTerms {
         ),
         MedicalTermEntity(
             id = 2475,
+            etymology = "Greek: φάρμακον (pharmakon) — 'drug / remedy' + κίνησις (kinesis) — 'motion'.",
             termEn = "Pharmacokinetics (ADME)",
             termFr = "Pharmacocinétique (ADME)",
             termAr = "الحرائك الدوائية (ADME)",
             definitionEn = "The study of what the body does to a drug over time, encompassing Absorption, Distribution, Metabolism, and Excretion.",
             definitionFr = "L'étude quantitative du devenir du médicament dans l'organisme: Absorption, Distribution, Métabolisme et Élimination.",
             definitionAr = "دراسة التغيرات التي يطرأ بها الجسم على الدواء عبر الزمن: الامتصاص والتوزيع والاستقلاب والإطراح.",
-            etymology = "Greek: φάρμακον (pharmakon) — 'drug / remedy' + κίνησις (kinesis) — 'motion'.",
-            clinicalPearl = "Crucial for determining dosing regimens, interval calculations, and therapeutic drug monitoring in renal or hepatic impairment.",
-            mnemonic = "ADME: Absorption (entry), Distribution (tissue spread), Metabolism (hepatic clearance), Excretion (renal exit).",
             module = "Pharmacologie",
             chapter = "Pharmacocinétique",
+            ipaPhonetic = "/ˌfɑːrməkoʊkɪˈnɛtɪks/",
             exampleEn = "Bioavailability measures the fraction of unchanged active drug that successfully reaches systemic circulation.",
             exampleFr = "La biodisponibilité mesure la fraction de dose de médicament atteignant la circulation générale sous forme inchangée.",
             exampleAr = "يقيس التوافر الحيوي النسبة المئوية من الدواء الفعال التي تصل دون تغيير إلى الدورة الدموية الجهازية.",
-            ipaPhonetic = "/ˌfɑːrməkoʊkɪˈnɛtɪks/",
+            clinicalPearl = "Crucial for determining dosing regimens, interval calculations, and therapeutic drug monitoring in renal or hepatic impairment.",
+            mnemonic = "ADME: Absorption (entry), Distribution (tissue spread), Metabolism (hepatic clearance), Excretion (renal exit).",
         ),
         MedicalTermEntity(
             id = 2476,
+            etymology = "From half + life (time elapsed for fifty percent decay).",
             termEn = "Elimination Half-Life (t½)",
             termFr = "Demi-vie d'élimination (t½)",
             termAr = "عمر النصف للإطراح (t½)",
             definitionEn = "The time required for plasma drug concentration to decrease by 50% during the elimination phase under first-order kinetics.",
             definitionFr = "Le temps nécessaire pour que la concentration plasmatique d'un médicament diminue de moitié.",
             definitionAr = "الزمن اللازم لانخفاض تركيز الدواء في بلازما الدم بنسبة 50% خلال طور الإطراح.",
-            etymology = "From half + life (time elapsed for fifty percent decay).",
-            clinicalPearl = "It takes 4 to 5 half-lives to achieve steady-state plasma concentrations (Css) during chronic dosing, and 4 to 5 half-lives for complete drug washout.",
-            mnemonic = "Rule of 5: ~97% eliminated after 5 half-lives (50% → 75% → 87.5% → 93.75% → 96.88%).",
             module = "Pharmacologie",
             chapter = "Pharmacocinétique",
+            ipaPhonetic = "/ɪˌlɪm.ɪˈneɪ.ʃən hæf laɪf/",
             exampleEn = "Digoxin possesses a long elimination half-life of 36 to 48 hours, requiring careful dosage titration.",
             exampleFr = "La digoxine possède une demi-vie longue de 36 à 48 heures justifiant un suivi thérapeutique étroit.",
             exampleAr = "يمتلك الديجوكسين عمر نصف طويلاً يمتد من 36 إلى 48 ساعة مما يتطلب معايرة دقيقة للجرعات.",
-            ipaPhonetic = "/ɪˌlɪm.ɪˈneɪ.ʃən hæf laɪf/",
+            clinicalPearl = "It takes 4 to 5 half-lives to achieve steady-state plasma concentrations (Css) during chronic dosing, and 4 to 5 half-lives for complete drug washout.",
+            mnemonic = "Rule of 5: ~97% eliminated after 5 half-lives (50% → 75% → 87.5% → 93.75% → 96.88%).",
         ),
         MedicalTermEntity(
             id = 2477,
+            etymology = "Named for light pigment (P) absorption peak at 450 nm when bound to carbon monoxide.",
             termEn = "Cytochrome P450 Enzymes",
             termFr = "Cytochrome P450 (CYP450)",
             termAr = "إنزيمات السيتوكروم P450",
             definitionEn = "A major superfamily of heme-containing microsomal enzymes in the liver mediating phase I oxidative biotransformation of xenobiotics and endogenous molecules.",
             definitionFr = "Superfamille d'enzymes microsomales hépatiques catalysant les réactions d'oxydation de phase I de la plupart des médicaments.",
             definitionAr = "عائلة كبرى من الإنزيمات الكبدية الصبغية المسؤولة عن أكسدة واستقلاب معظم الأدوية والسموم في الطور الأول.",
-            etymology = "Named for light pigment (P) absorption peak at 450 nm when bound to carbon monoxide.",
-            clinicalPearl = "CYP3A4 metabolizes >50% of prescription medications; potent inhibitors (e.g., ketoconazole, clarithromycin, grapefruit juice) dramatically elevate drug toxicity.",
-            mnemonic = "CYP Inducers: 'CRAP GPS' (Carbamazepine, Rifampicin, Alcohol, Phenytoin, Griseofulvin, Phenobarbital, St. John's Wort).",
             module = "Pharmacologie",
             chapter = "Pharmacocinétique",
+            ipaPhonetic = "/ˈsaɪtəˌkroʊm piː fɔːr ˈfɪfti/",
             exampleEn = "Co-administration of a potent CYP3A4 inhibitor with simvastatin can cause severe rhabdomyolysis.",
             exampleFr = "L'association d'un inhibiteur du CYP3A4 à la simvastatine expose à un risque majeur de rhabdomyolyse.",
             exampleAr = "قد يؤدي إعطاء مثبط قوي لـ CYP3A4 مع السيمفاستاتين إلى انحلال الربيدات العضلي الشديد.",
-            ipaPhonetic = "/ˈsaɪtəˌkroʊm piː fɔːr ˈfɪfti/",
+            clinicalPearl = "CYP3A4 metabolizes >50% of prescription medications; potent inhibitors (e.g., ketoconazole, clarithromycin, grapefruit juice) dramatically elevate drug toxicity.",
+            mnemonic = "CYP Inducers: 'CRAP GPS' (Carbamazepine, Rifampicin, Alcohol, Phenytoin, Griseofulvin, Phenobarbital, St. John's Wort).",
         ),
         MedicalTermEntity(
             id = 2478,
+            etymology = "Greek: θεραπευτικός (therapeutikos) — 'inclined to heal' + Latin: index — 'sign / indicator'.",
             termEn = "Therapeutic Index & Window",
             termFr = "Index Thérapeutique et Fenêtre Thérapeutique",
             termAr = "المؤشر العلاجي والنافذة العلاجية",
             definitionEn = "The ratio quantifying drug safety (TD50 / ED50); narrow therapeutic index drugs have small margins between effective dose and toxic concentrations.",
             definitionFr = "Rapport entre la dose toxique (DT50) et la dose efficace (DE50); mesure quantitative de la marge de sécurité d'un médicament.",
             definitionAr = "النسبة بين الجرعة السامة والجرعة الفعالة (TD50 / ED50)؛ تدل النوافذ الضيقة على هامش أمان ضيق بين الفعالية والسمية.",
-            etymology = "Greek: θεραπευτικός (therapeutikos) — 'inclined to heal' + Latin: index — 'sign / indicator'.",
-            clinicalPearl = "Narrow therapeutic window drugs require Therapeutic Drug Monitoring (TDM): Warfarin, Lithium, Digoxin, Gentamicin, Theophylline, Phenytoin.",
-            mnemonic = "Narrow Therapeutic Index: 'These Little Drugs Will Prompt Trouble' (Theophylline, Lithium, Digoxin, Warfarin, Phenytoin/Phenobarbital).",
             module = "Pharmacologie",
             chapter = "Pharmacodynamie",
+            ipaPhonetic = "/ˌθɛrəˈpjuːtɪk ˈɪndɛks/",
             exampleEn = "Serum lithium concentrations must be monitored regularly to avoid severe neurotoxicity.",
             exampleFr = "La lithémie doit être mesurée régulièrement pour prévenir une intoxication neurologique.",
             exampleAr = "يجب قياس تركيز الليثيوم في الدم دورياً لتجنب التسمم العصبي الكلوي الحاد.",
-            ipaPhonetic = "/ˌθɛrəˈpjuːtɪk ˈɪndɛks/",
+            clinicalPearl = "Narrow therapeutic window drugs require Therapeutic Drug Monitoring (TDM): Warfarin, Lithium, Digoxin, Gentamicin, Theophylline, Phenytoin.",
+            mnemonic = "Narrow Therapeutic Index: 'These Little Drugs Will Prompt Trouble' (Theophylline, Lithium, Digoxin, Warfarin, Phenytoin/Phenobarbital).",
         ),
         MedicalTermEntity(
             id = 2479,
+            etymology = "Greek: ἀγωνιστής (agonistes) — 'combatant / rival' + ἀντί (anti) — 'against'.",
             termEn = "Agonist vs Antagonist",
             termFr = "Agoniste vs Antagoniste",
             termAr = "الناهض الدوائي مقابل المناهض (المضاد)",
             definitionEn = "An agonist binds to a receptor and stabilizes its active conformation triggering a biological signal; an antagonist occupies the receptor site without activating it, blocking agonist action.",
             definitionFr = "L'agoniste se lie au récepteur et l'active; l'antagoniste se lie sans l'activer et empêche la fixation de l'agoniste endogène.",
             definitionAr = "الناهض يرتبط بالمستقبل ويحفز الاستجابة الحيوية؛ بينما المناهض يغلق المستقبل ويمنع تفعيله بواسطة المركبات الطبيعية.",
-            etymology = "Greek: ἀγωνιστής (agonistes) — 'combatant / rival' + ἀντί (anti) — 'against'.",
-            clinicalPearl = "Competitive antagonists shift the dose-response curve to the right without reducing maximal efficacy (Emax); non-competitive antagonists lower Emax.",
-            mnemonic = "Agonist = Activates; Antagonist = Arrests / Blocks.",
             module = "Pharmacologie",
             chapter = "Pharmacodynamie",
+            ipaPhonetic = "/ˈæɡənɪst ænd ænˈtæɡənɪst/",
             exampleEn = "Naloxone acts as a pure competitive opioid receptor antagonist to instantly reverse morphine-induced respiratory arrest.",
             exampleFr = "La naloxone est un antagoniste pur des récepteurs morphiniques utilisé pour inverser le surdosage aux opioïdes.",
             exampleAr = "يعمل النالوكسون كمناهض تنافسي نقي للمستقبلات الأفيونية لعكس التثبيط التنفسي الناجم عن المورفين فورياً.",
-            ipaPhonetic = "/ˈæɡənɪst ænd ænˈtæɡənɪst/",
+            clinicalPearl = "Competitive antagonists shift the dose-response curve to the right without reducing maximal efficacy (Emax); non-competitive antagonists lower Emax.",
+            mnemonic = "Agonist = Activates; Antagonist = Arrests / Blocks.",
         ),
         MedicalTermEntity(
             id = 2480,
+            etymology = "Beta (second Greek letter) + block (obstruction of signaling).",
             termEn = "Beta-Blockers (β-Adrenergic Blockers)",
             termFr = "Bêta-bloquants (Antagonistes β-adrénergiques)",
             termAr = "حاصرات بيتا (مضادات المستقبلات الأدرينالية β)",
             definitionEn = "Competitive antagonists of beta-1 and/or beta-2 adrenergic receptors; decrease heart rate (negative chronotropy), contractility (negative inotropy), and blood pressure.",
             definitionFr = "Médicaments bloquant les récepteurs bêta-adrénergiques, réduisant la fréquence cardiaque, la contractilité myocardique et la rénine.",
             definitionAr = "أدوية تحجب المستقبلات الأدرينالية بيتا فتخفض سرعة ضربات القلب وقوة انقباضه وضغط الدم الشرياني وإفراز الرينين.",
-            etymology = "Beta (second Greek letter) + block (obstruction of signaling).",
-            clinicalPearl = "Cardioselective beta-1 blockers (e.g., bisoprolol, metoprolol, atenolol) have reduced risk of bronchospasm compared to non-selective agents like propranolol.",
-            mnemonic = "Beta-1 = 1 Heart; Beta-2 = 2 Lungs (Beta-2 block in asthma causes dangerous bronchoconstriction).",
             module = "Pharmacologie",
             chapter = "Médicaments Cardiovasculaires",
+            ipaPhonetic = "/ˈbeɪtə ˈblɒkərz/",
             exampleEn = "Beta-blockers improve long-term survival in chronic heart failure with reduced ejection fraction (HFrEF).",
             exampleFr = "Les bêta-bloquants réduisent la mortalité dans l'insuffisance cardiaque à fraction d'éjection altérée.",
             exampleAr = "تحسن حاصرات بيتا معدلات البقاء على قيد الحياة لدى مرضى قصور القلب ذوي الكسر القذفي المنخفض.",
-            ipaPhonetic = "/ˈbeɪtə ˈblɒkərz/",
+            clinicalPearl = "Cardioselective beta-1 blockers (e.g., bisoprolol, metoprolol, atenolol) have reduced risk of bronchospasm compared to non-selective agents like propranolol.",
+            mnemonic = "Beta-1 = 1 Heart; Beta-2 = 2 Lungs (Beta-2 block in asthma causes dangerous bronchoconstriction).",
         ),
         MedicalTermEntity(
             id = 2481,
+            etymology = "From Angiotensin-Converting Enzyme (ACE) and Angiotensin Receptor Blocker (ARB).",
             termEn = "ACE Inhibitors (ACEI) & ARBs",
             termFr = "Inhibiteurs de l'ECA (IEC) et ARA II",
             termAr = "مثبطات إنزيم تحويل الأنجيوتنسين وحاصرات مستقبلاته",
             definitionEn = "Antihypertensive agents targeting the Renin-Angiotensin-Aldosterone System (RAAS); ACE inhibitors block angiotensin II synthesis; ARBs block AT1 receptors.",
             definitionFr = "Médicaments du système rénine-angiotensine-aldostérone bloquant la synthèse d'angiotensine II (IEC) ou ses récepteurs AT1 (sartans).",
             definitionAr = "أدوية خافضة للضغط تستهدف نظام الرينين أنجيوتنسين؛ تثبط تصنيع أنجيوتنسين II أو تحجب مستقبلاته AT1 فتمنع تقبض الأوعية واحتباس الصوديوم.",
-            etymology = "From Angiotensin-Converting Enzyme (ACE) and Angiotensin Receptor Blocker (ARB).",
-            clinicalPearl = "ACE inhibitors can cause dry bradykinin-mediated cough and angioedema; ARBs provide equal nephroprotection and cardioprotection without the cough.",
-            mnemonic = "Both ACE inhibitors and ARBs are strictly teratogenic (contraindicated in pregnancy) and cause hyperkalemia.",
             module = "Pharmacologie",
             chapter = "Médicaments Cardiovasculaires",
+            ipaPhonetic = "/ˌeɪ siː iː ɪnˈhɪbɪtərz/",
             exampleEn = "Enalapril and losartan slow the progression of diabetic nephropathy by lowering intraglomerular capillary pressure.",
             exampleFr = "L'énalapril et le losartan ralentissent la progression de la néphropathie diabétique en diminuant l'hypertension intraglomérulaire.",
             exampleAr = "يبطئ الإنالابريل واللوسارتان تدهور الاعتلال الكلوي السكري عبر خفض الضغط المرتفع داخل كبيبات الكلى.",
-            ipaPhonetic = "/ˌeɪ siː iː ɪnˈhɪbɪtərz/",
+            clinicalPearl = "ACE inhibitors can cause dry bradykinin-mediated cough and angioedema; ARBs provide equal nephroprotection and cardioprotection without the cough.",
+            mnemonic = "Both ACE inhibitors and ARBs are strictly teratogenic (contraindicated in pregnancy) and cause hyperkalemia.",
         ),
         MedicalTermEntity(
             id = 2482,
+            etymology = "From the anatomical loop of Henle.",
             termEn = "Loop Diuretics (Furosemide)",
             termFr = "Diurétiques de l'anse (Furosémide)",
             termAr = "مدرات البول العروية (فوروسيميد)",
             definitionEn = "High-ceiling diuretics that selectively inhibit the Na+/K+/2Cl- cotransporter in the thick ascending limb of Henle's loop, causing marked natriuresis and diuresis.",
             definitionFr = "Diurétiques puissants inhibant le cotransporteur Na+/K+/2Cl- dans la branche ascendante large de l'anse de Henlé.",
             definitionAr = "مدرات بول قوية تثبط ناقل الصوديوم والبوتاسيوم والكلور في الطرف الصاعد الثخين لعروة هنلي مسببة إدراراً مائياً وملحياً غزيراً.",
-            etymology = "From the anatomical loop of Henle.",
-            clinicalPearl = "First-line therapy for acute cardiogenic pulmonary edema and congestive fluid overload; can cause hypokalemia, hypomagnesemia, and ototoxicity.",
-            mnemonic = "Loop Diuretics: Lose Calcium (unlike thiazides which retain calcium); Loop = Lowers Ca2+.",
             module = "Pharmacologie",
             chapter = "Médicaments Cardiovasculaires",
+            ipaPhonetic = "/luːp ˌdaɪjʊˈrɛtɪks/",
             exampleEn = "Intravenous furosemide induces rapid venodilation and subsequent diuresis in acute decompensated heart failure.",
             exampleFr = "Le furosémide par voie intraveineuse permet un soulagement rapide dans l'œdème aigu du poumon.",
             exampleAr = "يؤدي إعطاء الفوروسيميد وريدياً إلى توسع وريدي سريع يليه إدرار بولي يخفف وذمة الرئة الحادة.",
-            ipaPhonetic = "/luːp ˌdaɪjʊˈrɛtɪks/",
+            clinicalPearl = "First-line therapy for acute cardiogenic pulmonary edema and congestive fluid overload; can cause hypokalemia, hypomagnesemia, and ototoxicity.",
+            mnemonic = "Loop Diuretics: Lose Calcium (unlike thiazides which retain calcium); Loop = Lowers Ca2+.",
         ),
         MedicalTermEntity(
             id = 2483,
+            etymology = "Non-Steroidal (to differentiate from corticosteroid glucocorticoids).",
             termEn = "NSAIDs (Non-Steroidal Anti-Inflammatory Drugs)",
             termFr = "AINS (Anti-inflammatoires non stéroïdiens)",
             termAr = "مضادات الالتهاب اللاستيرويدية (AINS)",
             definitionEn = "Medications inhibiting cyclooxygenase (COX-1 and COX-2) enzymes to diminish prostaglandin synthesis, producing analgesic, antipyretic, and anti-inflammatory effects.",
             definitionFr = "Médicaments inhibant les cyclooxygénases (COX-1 et COX-2), bloquant la synthèse de prostaglandines pour soulager douleur, fièvre et inflammation.",
             definitionAr = "أدوية تثبط إنزيمات السيكلوأوكسيجيناز وتمنع اصطناع البروستاغلاندينات فتحقق تسكيناً للألم وخفضاً للحرارة ومكافحة للالتهاب.",
-            etymology = "Non-Steroidal (to differentiate from corticosteroid glucocorticoids).",
-            clinicalPearl = "Non-selective NSAIDs (ibuprofen, diclofenac) carry risks of peptic ulceration, renal acute kidney injury, and platelet dysfunction; COX-2 selective agents have higher thrombotic risk.",
-            mnemonic = "Aspirin irreversibly acetylates COX; other NSAIDs are reversible competitive inhibitors.",
             module = "Pharmacologie",
             chapter = "Anti-inflammatoires et Analgésiques",
+            ipaPhonetic = "/ˌɛn.ɛs.eɪ.aɪˈdiːz/",
             exampleEn = "Co-prescription of a proton pump inhibitor protects the gastroduodenal mucosa during chronic NSAID therapy.",
             exampleFr = "L'association d'un inhibiteur de la pompe à protons protège la muqueuse gastrique sous AINS au long cours.",
             exampleAr = "توصف مثبطات مضخة البروتون كحماية للمعدة والأمعاء عند تناول مضادات الالتهاب اللاستيرويدية لفترات طويلة.",
-            ipaPhonetic = "/ˌɛn.ɛs.eɪ.aɪˈdiːz/",
+            clinicalPearl = "Non-selective NSAIDs (ibuprofen, diclofenac) carry risks of peptic ulceration, renal acute kidney injury, and platelet dysfunction; COX-2 selective agents have higher thrombotic risk.",
+            mnemonic = "Aspirin irreversibly acetylates COX; other NSAIDs are reversible competitive inhibitors.",
         ),
         MedicalTermEntity(
             id = 2484,
+            etymology = "Greek: ὄπιον (opion) — 'poppy juice'.",
             termEn = "Opioids & Naloxone Antidote",
             termFr = "Opioïdes et Antidote Naloxone",
             termAr = "المسكنات الأفيونية وترياق النالوكسون",
             definitionEn = "Agonists of mu-opioid (MOR) receptors inhibiting ascending nociceptive pathways in the spinal cord and brain; overdose causes the lethal triad of coma, pinpoint pupils, and respiratory depression.",
             definitionFr = "Antalgiques majeurs agissant sur les récepteurs mu-opioïdes; l'overdose associe coma, myosis serré et bradypnée, réversible par naloxone.",
             definitionAr = "مسكنات مركزية كبرى ترتبط بمستقبلات مو الأفيونية؛ تتظاهر الجرعة السامة بثالوث الغيبوبة وتضيق الحدقتين والتثبيط التنفسي الشديد.",
-            etymology = "Greek: ὄπιον (opion) — 'poppy juice'.",
-            clinicalPearl = "Opioid overdose antidote: Naloxone administered via IV, IM, or intranasal route. Its half-life is shorter than morphine, so recurrent sedation must be anticipated.",
-            mnemonic = "Opioid Overdose Triad: Coma + Pinpoint Pupils (Miosis) + Respiratory Depression (CPR).",
             module = "Pharmacologie",
             chapter = "Médicaments du SNC",
+            ipaPhonetic = "/ˈoʊpiɔɪdz ænd næˈlɒksoʊn/",
             exampleEn = "Intranasal naloxone spray can save lives in community-encountered fentanyl and heroin overdoses.",
             exampleFr = "Le spray nasal de naloxone permet d'inverser rapidement les surdoses d'héroïne ou de fentanyl.",
             exampleAr = "يستطيع بخاخ النالوكسون الأنفي إنقاذ حياة المصابين بالجرعات المفرطة القاتلة من مشتقات الفنتانيل والهيروين.",
-            ipaPhonetic = "/ˈoʊpiɔɪdz ænd næˈlɒksoʊn/",
+            clinicalPearl = "Opioid overdose antidote: Naloxone administered via IV, IM, or intranasal route. Its half-life is shorter than morphine, so recurrent sedation must be anticipated.",
+            mnemonic = "Opioid Overdose Triad: Coma + Pinpoint Pupils (Miosis) + Respiratory Depression (CPR).",
         ),
         MedicalTermEntity(
             id = 2485,
+            etymology = "From chemical ring: Benzene fused to diazepine (7-membered ring with 2 nitrogen atoms).",
             termEn = "Benzodiazepines & GABA-A Receptors",
             termFr = "Benzodiazépines et Récepteurs GABA-A",
             termAr = "البنزوديازيبينات ومستقبلات غابا (GABA-A)",
             definitionEn = "Positive allosteric modulators of ionotropic GABA-A receptors that increase chloride channel opening frequency, producing sedative, hypnotic, anxiolytic, and anticonvulsant effects.",
             definitionFr = "Modulateurs allostériques positifs du récepteur GABA-A augmentant la fréquence d'ouverture du canal chlore, aux vertus anxiolytiques et sédatives.",
             definitionAr = "معدلات موجبة لمستقبلات غابا-أ تزيد تردد فتح قنوات الكلور فتحدث تهدئة عصبية وتسكين القلق وتثبيط النوبات الصرعية.",
-            etymology = "From chemical ring: Benzene fused to diazepine (7-membered ring with 2 nitrogen atoms).",
-            clinicalPearl = "Specific antidote for benzodiazepine overdose: Flumazenil (competitive antagonist at the benzodiazepine binding site).",
-            mnemonic = "Benzos increase Frequency of Cl- channel opening; Barbiturates increase Duration of opening.",
             module = "Pharmacologie",
             chapter = "Médicaments du SNC",
+            ipaPhonetic = "/ˌbɛnzoʊˌdaɪˈæzɪpiːnz/",
             exampleEn = "Intravenous diazepam or lorazepam is the immediate first-line treatment for status epilepticus.",
             exampleFr = "Le diazépam ou le clonazépam intraveineux est le traitement de première ligne de l'état de mal épileptique.",
             exampleAr = "يعد الديازيبام أو اللورازيبام وريدياً خط العلاج الإسعافي الأول للحالة الصرعية المستمرة.",
-            ipaPhonetic = "/ˌbɛnzoʊˌdaɪˈæzɪpiːnz/",
+            clinicalPearl = "Specific antidote for benzodiazepine overdose: Flumazenil (competitive antagonist at the benzodiazepine binding site).",
+            mnemonic = "Benzos increase Frequency of Cl- channel opening; Barbiturates increase Duration of opening.",
         ),
         MedicalTermEntity(
             id = 2486,
+            etymology = "From Proton (H+) + Pump + Inhibitor.",
             termEn = "Proton Pump Inhibitors (PPI)",
             termFr = "Inhibiteurs de la Pompe à Protons (IPP)",
             termAr = "مثبطات مضخة البروتون (IPP / PPI)",
             definitionEn = "Irreversible covalent inhibitors of the gastric parietal cell H+/K+ ATPase enzyme, profoundly suppressing basal and stimulated hydrochloric acid secretion.",
             definitionFr = "Médicaments formant des liaisons covalentes avec l'H+/K+ ATPase gastrique, inhibant puissamment la sécrétion d'acide chlorhydrique.",
             definitionAr = "أدوية تثبط إنزيم مضخة البروتون الهيدروجين-بوتاسيوم في جدار المعدة بروابط تساهمية لا رجعة فيها فتوقف إفراز الحمض المعدي.",
-            etymology = "From Proton (H+) + Pump + Inhibitor.",
-            clinicalPearl = "Administered 30 to 60 minutes before breakfast as prodrugs activated in the acidic environment of active parietal cells.",
-            mnemonic = "All end in '-prazole': Omeprazole, Esomeprazole, Pantoprazole, Rabeprazole.",
             module = "Pharmacologie",
             chapter = "Médicaments Digestifs",
+            ipaPhonetic = "/ˈproʊtɒn pʌmp ɪnˈhɪbɪtərz/",
             exampleEn = "PPIs are the gold standard for healing reflux esophagitis and peptic ulcers, as well as eradicating H. pylori.",
             exampleFr = "Les IPP constituent le traitement de référence du reflux gastro-œsophagien et de l'ulcère gastrique.",
             exampleAr = "تعد مثبطات مضخة البروتون المعيار الذهبي لعلاج القلس المعدي المريئي والقرحة الهضمية والتخلص من جرثومة المعدة.",
-            ipaPhonetic = "/ˈproʊtɒn pʌmp ɪnˈhɪbɪtərz/",
+            clinicalPearl = "Administered 30 to 60 minutes before breakfast as prodrugs activated in the acidic environment of active parietal cells.",
+            mnemonic = "All end in '-prazole': Omeprazole, Esomeprazole, Pantoprazole, Rabeprazole.",
         ),
         MedicalTermEntity(
             id = 2487,
+            etymology = "Latin: insula — 'island' (referring to islets of Langerhans).",
             termEn = "Insulin Preparations & Metformin",
             termFr = "Insulines et Metformine",
             termAr = "مستحضرات الأنسولين والميتفورمين",
             definitionEn = "Antidiabetic pharmacology: Insulin promotes cellular glucose uptake via tyrosine kinase receptors; Metformin (biguanide) activates AMPK to reduce hepatic gluconeogenesis without hypoglycemia.",
             definitionFr = "L'insuline favorise l'entrée cellulaire du glucose; la metformine inhibe la néoglucogenèse hépatique sans risque d'hypoglycémie.",
             definitionAr = "الأنسولين يدخل الغلوكوز للخلايا عبر مستقبلات التيروزين كيناز؛ والميتفورمين ينشط إنزيم AMPK فيثبط توليد الغلوكوز الكبدي دون إحداث هبوط سكر.",
-            etymology = "Latin: insula — 'island' (referring to islets of Langerhans).",
-            clinicalPearl = "Metformin is contraindicated in severe renal failure (eGFR <30 mL/min) due to the dangerous risk of lactic acidosis.",
-            mnemonic = "Insulin types: Rapid (Lispro, Aspart), Short (Regular), Intermediate (NPH), Long-acting (Glargine, Degludec).",
             module = "Pharmacologie",
             chapter = "Médicaments Endocriniens",
+            ipaPhonetic = "/ˈɪnsjʊlɪn ænd mɛtˈfɔːrmɪn/",
             exampleEn = "Metformin represents the first-line pharmacotherapy for patients diagnosed with type 2 diabetes mellitus.",
             exampleFr = "La metformine est le traitement pharmacologique de première intention dans le diabète de type 2.",
             exampleAr = "يمثل الميتفورمين خط العلاج الدوائي الأول للمرضى المشخصين حديثاً بداء السكري من النوع الثاني.",
-            ipaPhonetic = "/ˈɪnsjʊlɪn ænd mɛtˈfɔːrmɪn/",
+            clinicalPearl = "Metformin is contraindicated in severe renal failure (eGFR <30 mL/min) due to the dangerous risk of lactic acidosis.",
+            mnemonic = "Insulin types: Rapid (Lispro, Aspart), Short (Regular), Intermediate (NPH), Long-acting (Glargine, Degludec).",
         ),
         MedicalTermEntity(
             id = 2488,
+            etymology = "From chemical name: para-acetylaminophenol.",
             termEn = "Paracetamol (Acetaminophen) Toxicity & NAC",
             termFr = "Toxicité du Paracétamol et N-acétylcystéine",
             termAr = "سمية الباراسيتامول وترياق N-أستيل سيستين",
             definitionEn = "At supratherapeutic doses, CYP2E1 converts paracetamol to toxic NAPQI which depletes hepatic glutathione, causing centrilobular liver necrosis; N-acetylcysteine (NAC) replenishes glutathione stores.",
             definitionFr = "Le surdosage produit le métabolite toxique NAPQI épuisant le glutathion hépatique; la N-acétylcystéine agit comme antidote salvateur.",
             definitionAr = "عند الجرعات الزائدة يتحول الباراسيتامول إلى المركب السام NAPQI المستنزف للغلوتاثيون مسبباً نخراً كبدياً؛ ويعمل N-أستيل سيستين كترياق نوعي منقذ.",
-            etymology = "From chemical name: para-acetylaminophenol.",
-            clinicalPearl = "Rumack-Matthew nomogram plots plasma paracetamol levels vs hours post-ingestion to dictate intravenous NAC therapy.",
-            mnemonic = "NAC provides cysteine to synthesize Glutathione (antioxidant shield against NAPQI).",
             module = "Pharmacologie",
             chapter = "Pharmacologie Clinique et Toxicologie",
+            ipaPhonetic = "/ˌpærəˈsiːtəmɒl tɒkˈsɪsɪti/",
             exampleEn = "Prompt administration of IV N-acetylcysteine within 8 hours of overdose completely prevents fatal acute hepatic failure.",
             exampleFr = "L'administration précoce de N-acétylcystéine dans les 8 heures prévient la défaillance hépatique fulminante.",
             exampleAr = "يمنع الإعطاء المبكر للـ N-أستيل سيستين خلال أول 8 ساعات من التسمم حدوث القصور الكبدي الصاعق.",
-            ipaPhonetic = "/ˌpærəˈsiːtəmɒl tɒkˈsɪsɪti/",
+            clinicalPearl = "Rumack-Matthew nomogram plots plasma paracetamol levels vs hours post-ingestion to dictate intravenous NAC therapy.",
+            mnemonic = "NAC provides cysteine to synthesize Glutathione (antioxidant shield against NAPQI).",
         ),
         MedicalTermEntity(
             id = 2489,
+            etymology = "Greek: παρά (para) — 'beside' + ἔντερον (enteron) — 'intestine' (Parenteral = bypassing the gut).",
             termEn = "Routes of Drug Administration",
             termFr = "Voies d'administration des médicaments",
             termAr = "طرق إعطاء وتوصيل الأدوية",
             definitionEn = "The delivery route (Enteral: oral, sublingual; Parenteral: intravenous, intramuscular, subcutaneous; Inhalation; Topical) dictating bioavailability, onset of action, and first-pass hepatic bypass.",
             definitionFr = "Voies d'administration (orale, sublinguale, IV, IM, SC, inhalée, transdermique) conditionnant la vitesse d'action et la biodisponibilité.",
             definitionAr = "المسارات الدوائية (الفموية، تحت اللسان، الوريدية، العضلية، تحت الجلد، الاستنشاقية) التي تحدد سرعة المفعول ونسبة الوصول الحيوي وتجاوز المرور الكبدي.",
-            etymology = "Greek: παρά (para) — 'beside' + ἔντερον (enteron) — 'intestine' (Parenteral = bypassing the gut).",
-            clinicalPearl = "Intravenous route achieves 100% bioavailability immediately; sublingual nitroglycerin bypasses portal circulation to avert first-pass liver degradation.",
-            mnemonic = "IV = Instant & 100% available; Oral = Subject to gastric acid & first-pass hepatic metabolism.",
             module = "Pharmacologie",
             chapter = "Formes Pharmaceutiques",
+            ipaPhonetic = "/ruːts əv ədˌmɪnɪˈstreɪʃən/",
             exampleEn = "Sublingual nitroglycerin rapidly relieves acute anginal chest pain by rapid mucosal absorption into the superior vena cava.",
             exampleFr = "La trinitrine sublinguale soulage la crise d'angor en quelques minutes en évitant le premier passage hépatique.",
             exampleAr = "تخفف أقراص النتروغليسرين تحت اللسان ألم الذبحة الصدرية سريعاً بامتصاصها المباشر متجاوزة المرور الكبدي.",
-            ipaPhonetic = "/ruːts əv ədˌmɪnɪˈstreɪʃən/"
-        )
+            clinicalPearl = "Intravenous route achieves 100% bioavailability immediately; sublingual nitroglycerin bypasses portal circulation to avert first-pass liver degradation.",
+            mnemonic = "IV = Instant & 100% available; Oral = Subject to gastric acid & first-pass hepatic metabolism.",
+        ),
     )
 }

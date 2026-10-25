@@ -24,7 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.aistudio.medlingua.dzmed.domain.gamification.ProgressionManager
+import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
+import com.aistudio.medlingua.dzmed.domain.gamification.LeagueManager
 import com.aistudio.medlingua.dzmed.localization.Strings
 import com.aistudio.medlingua.dzmed.ui.components.GoalRing
 import com.aistudio.medlingua.dzmed.ui.components.Medi
@@ -47,7 +48,7 @@ fun PracticeScreen(
     val lang = uiState.currentLanguage
     val stats = uiState.userStats
     val now = System.currentTimeMillis()
-    val goal = ProgressionManager.goalProgress(stats, now)
+    val goal = GamificationEconomy.goalProgress(stats, now)
     val due = uiState.dueFlashcardProgress.size
 
     Column(

@@ -1,141 +1,137 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Biophysique — 229 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object BiophysiqueTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 1307,
+            etymology = "Formulated by French physician and physicist Jean Léonard Marie Poiseuille in 1838.",
             termEn = "Poiseuille's Law",
             termFr = "Loi de Poiseuille",
             termAr = "قانون بواسوي في جريان الموائع",
             definitionEn = "Physical law stating that laminar flow rate of a viscous fluid through a cylindrical tube is directly proportional to the fourth power of the vessel radius.",
             definitionFr = "Loi physique régissant le débit laminaire d'un fluide visqueux : le débit est proportionnel à la puissance 4 du rayon du vaisseau.",
             definitionAr = "قانون فيزيائي ينص على أن معدل التدفق الصفائحي لمائع لزج يتناسب طردياً مع القوة الرابعة لنصف قطر الوعاء الدموي.",
-            etymology = "Formulated by French physician and physicist Jean Léonard Marie Poiseuille in 1838.",
-            clinicalPearl = "Because flow depends on radius to the 4th power (r^4), reducing arteriolar radius by 50% increases vascular resistance by 16-fold, demonstrating why arterioles are master regulators of blood pressure.",
-            mnemonic = "Resistance = (8 × viscosity × length) / (π × r^4). Half radius = 16x resistance!",
             module = "Biophysique",
             chapter = "Mécanique des Fluides et Hémodynamique",
+            ipaPhonetic = "/pwɑːˈzɜːj lɔː/",
             exampleEn = "Arteriolar vasoconstriction dramatically reduces local organ perfusion according to Poiseuille's law.",
             exampleFr = "La vasoconstriction artériolaire diminue drastiquement le débit sanguin selon la loi de Poiseuille.",
             exampleAr = "يقلل انقباض الأوعية الشريانية الصغير تدفق الدم الموضعي بشكل هائل وفقاً لقانون بواسوي.",
-            ipaPhonetic = "/pwɑːˈzɜːj lɔː/",
+            clinicalPearl = "Because flow depends on radius to the 4th power (r^4), reducing arteriolar radius by 50% increases vascular resistance by 16-fold, demonstrating why arterioles are master regulators of blood pressure.",
+            mnemonic = "Resistance = (8 × viscosity × length) / (π × r^4). Half radius = 16x resistance!",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1308,
+            etymology = "Named after Osborne Reynolds who introduced the concept in 1883.",
             termEn = "Reynolds Number (Re)",
             termFr = "Nombre de Reynolds",
             termAr = "رقم رينولدز لجريان السوائل",
             definitionEn = "A dimensionless quantity measuring the ratio of inertial forces to viscous forces in fluid flow, predicting laminar (Re < 2000) versus turbulent (Re > 2000) blood flow.",
             definitionFr = "Nombre sans dimension quantifiant le rapport entre forces d'inertie et forces visqueuses, prédisant la transition du régime laminaire au régime turbulent.",
             definitionAr = "معامل لا بعدي يقيس النسبة بين قوى القصور الذاتي وقوى اللزوجة في جريان السائل، للتنبؤ بنمط الجريان الهادئ أو المضطرب.",
-            etymology = "Named after Osborne Reynolds who introduced the concept in 1883.",
-            clinicalPearl = "Turbulent blood flow occurs when Re exceeds critical threshold (e.g., across stenotic heart valves or large aneurysms), producing audible clinical cardiac murmurs or vascular bruits on auscultation.",
-            mnemonic = "Re = (density × velocity × diameter) / viscosity. Anemia lowers viscosity → Re rises → audible flow murmur.",
             module = "Biophysique",
             chapter = "Mécanique des Fluides et Hémodynamique",
+            ipaPhonetic = "/ˈren.əldz ˈnʌm.bər/",
             exampleEn = "Turbulence caused by high Reynolds number over an atherosclerotic plaque generates carotid bruits.",
             exampleFr = "La turbulence liée à un nombre de Reynolds élevé sur une plaque d'athérome génère un souffle carotidien.",
             exampleAr = "يولد الجريان المضطرب الناجم عن ارتفاع رقم رينولدز فوق لويحة التصلب العصيدي لغطاً شريانياً مسموعاً.",
-            ipaPhonetic = "/ˈren.əldz ˈnʌm.bər/",
+            clinicalPearl = "Turbulent blood flow occurs when Re exceeds critical threshold (e.g., across stenotic heart valves or large aneurysms), producing audible clinical cardiac murmurs or vascular bruits on auscultation.",
+            mnemonic = "Re = (density × velocity × diameter) / viscosity. Anemia lowers viscosity → Re rises → audible flow murmur.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1309,
+            etymology = "Published by Daniel Bernoulli in his book Hydrodynamica in 1738.",
             termEn = "Bernoulli's Principle",
             termFr = "Théorème de Bernoulli",
             termAr = "مبدأ برنولي لديناميكا السوائل",
             definitionEn = "Principle stating that within a steady, inviscid fluid flow, an increase in flow speed occurs simultaneously with a decrease in static pressure or potential energy.",
             definitionFr = "Principe de conservation de l'énergie mécanique : dans un écoulement sans frottement, une accélération de la vitesse s'accompagne d'une baisse de pression statique.",
             definitionAr = "مبدأ فيزيائي ينص على أن زيادة سرعة تدفق المائع تترافق دائماً مع انخفاض في ضغطه الساكن أو طاقته الكامنة.",
-            etymology = "Published by Daniel Bernoulli in his book Hydrodynamica in 1738.",
-            clinicalPearl = "Used in Doppler echocardiography (simplified Bernoulli equation: ΔP = 4v^2) to non-invasively calculate pressure gradients across stenotic aortic and mitral valves.",
-            mnemonic = "Modified Bernoulli: ΔP = 4 × Vmax^2 (if blood jets at 4 m/s through aortic valve, gradient is 4 × 16 = 64 mmHg).",
             module = "Biophysique",
             chapter = "Mécanique des Fluides et Hémodynamique",
+            ipaPhonetic = "/bɜːˈnuː.li/",
             exampleEn = "Cardiologists use Bernoulli's equation to quantify transvalvular pressure gradients during echocardiography.",
             exampleFr = "Les cardiologues utilisent l'équation de Bernoulli pour mesurer les gradients de pression transvalvulaire.",
             exampleAr = "يستخدم أطباء القلب معادلة برنولي لقياس تدرج الضغط عبر صمامات القلب بواسطة تخطيط صدى القلب.",
-            ipaPhonetic = "/bɜːˈnuː.li/",
+            clinicalPearl = "Used in Doppler echocardiography (simplified Bernoulli equation: ΔP = 4v^2) to non-invasively calculate pressure gradients across stenotic aortic and mitral valves.",
+            mnemonic = "Modified Bernoulli: ΔP = 4 × Vmax^2 (if blood jets at 4 m/s through aortic valve, gradient is 4 × 16 = 64 mmHg).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1310,
+            etymology = "Greek: ἔμμετρος (emmetros) — 'in proper measure' + ὤψ (ops) — 'eye'.",
             termEn = "Emmetropia and Refraction",
             termFr = "Emmétropie et Réfraction",
             termAr = "حرجية البصر السوي والانكسار الضوئي",
             definitionEn = "The ideal optical state of the eye where parallel incident light rays focus precisely onto the fovea centralis of the retina without optical accommodation.",
             definitionFr = "État optique normal de l'œil au repos où le foyer image principal coïncide exactement avec le plan de la rétine sans accommodation.",
             definitionAr = "الحالة البصرية المثالية للعين الطبيعية حيث تتجمع الأشعة الضوئية المتوازية بدقة على نقرة الشبكية دون إجهاد عضلي للتكيف.",
-            etymology = "Greek: ἔμμετρος (emmetros) — 'in proper measure' + ὤψ (ops) — 'eye'.",
-            clinicalPearl = "In myopia (near-sightedness), the axial eyeball length is excessively long, focusing light in front of the retina; corrected with concave (divergent, negative diopter) lenses.",
-            mnemonic = "Myopia = Light falls short (front of retina) → Minus/Divergent lens; Hyperopia = Light falls behind retina → Plus/Convergent lens.",
             module = "Biophysique",
             chapter = "Optique Médicale et Vision",
+            ipaPhonetic = "/ˌem.ɪˈtroʊ.pi.ə/",
             exampleEn = "An emmetropic human eye has a total refractive power of approximately +60 diopters at rest.",
             exampleFr = "L'œil emmétrope possède une puissance réfractive totale d'environ 60 dioptries au repos.",
             exampleAr = "تمتلك العين السوية قوة كسرية إجمالية تبلغ حوالي 60 ديوبتر في حالة الراحة.",
-            ipaPhonetic = "/ˌem.ɪˈtroʊ.pi.ə/",
+            clinicalPearl = "In myopia (near-sightedness), the axial eyeball length is excessively long, focusing light in front of the retina; corrected with concave (divergent, negative diopter) lenses.",
+            mnemonic = "Myopia = Light falls short (front of retina) → Minus/Divergent lens; Hyperopia = Light falls behind retina → Plus/Convergent lens.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1311,
+            etymology = "Greek: ἰόν (ion) — 'going / particle' + Latin: radius — 'spoke / ray'.",
             termEn = "Ionizing Radiation and Dosimetry",
             termFr = "Rayonnement ionisant et Dosimétrie",
             termAr = "الإشعاع المؤين وقياس الجرعات الإشعاعية",
             definitionEn = "High-energy particulate or electromagnetic radiation (X-rays, gamma rays) capable of liberating electrons from atoms, quantified by absorbed dose (Gray) and equivalent dose (Sievert).",
             definitionFr = "Rayonnements de haute énergie capables d'arracher des électrons aux atomes, quantifiés en dose absorbée (Gray) et dose efficace (Sievert).",
             definitionAr = "إشعاعات كهرومغناطيسية أو جسيمية عالية الطاقة قادرة على تأيين الذرات، تقاس بالجرعة الممتصة (غراي) والجرعة الفعالة (سيفرت).",
-            etymology = "Greek: ἰόν (ion) — 'going / particle' + Latin: radius — 'spoke / ray'.",
-            clinicalPearl = "1 Gray (Gy) = 1 Joule/kg absorbed; 1 Sievert (Sv) factors in biological tissue weight and radiation quality. Radioprotection principle ALARA: 'As Low As Reasonably Achievable'.",
-            mnemonic = "Gray (Gy) = Physical Energy absorbed; Sievert (Sv) = Biological Health harm.",
             module = "Biophysique",
             chapter = "Rayonnements et Radiobiologie",
+            ipaPhonetic = "/ˈaɪ.ə.naɪ.zɪŋ ˌreɪ.diˈeɪ.ʃən/",
             exampleEn = "A standard chest X-ray exposes the patient to an effective dose of roughly 0.02 mSv.",
             exampleFr = "Une radiographie thoracique standard expose le patient à une dose efficace d'environ 0,02 mSv.",
             exampleAr = "يعرض التصوير البسيط للصدر المريض لجرعة إشعاعية فعالة تقارب 0.02 ملي سيفرت.",
-            ipaPhonetic = "/ˈaɪ.ə.naɪ.zɪŋ ˌreɪ.diˈeɪ.ʃən/",
+            clinicalPearl = "1 Gray (Gy) = 1 Joule/kg absorbed; 1 Sievert (Sv) factors in biological tissue weight and radiation quality. Radioprotection principle ALARA: 'As Low As Reasonably Achievable'.",
+            mnemonic = "Gray (Gy) = Physical Energy absorbed; Sievert (Sv) = Biological Health harm.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1312,
+            etymology = "Formulated by German chemist Walther Hermann Nernst in 1888.",
             termEn = "Nernst Equation",
             termFr = "Équation de Nernst",
             termAr = "معادلة نيرنست للجهد الكهربائي",
             definitionEn = "Thermodynamic equation relating the chemical concentration gradient of an ion across a selectively permeable membrane to its electrical equilibrium potential.",
             definitionFr = "Équation thermodynamique reliant le gradient de concentration transmembranaire d'un ion à son potentiel d'équilibre électrique.",
             definitionAr = "معادلة ديناميكية حرارية تربط التدرج الكيميائي لتركيز أيون ما عبر غشاء نصف نفوذ بجهد التوازن الكهربائي المقابل له.",
-            etymology = "Formulated by German chemist Walther Hermann Nernst in 1888.",
-            clinicalPearl = "At normal body temperature (37°C), E = (61.5 / z) × log10([Ion]out / [Ion]in). For K+ with [K+]in = 140 mM and [K+]out = 4 mM, E_K ≈ -94 mV, close to resting resting potential.",
-            mnemonic = "Resting membrane potential is predominantly governed by K+ permeability because resting membrane is far more permeable to K+ than Na+.",
             module = "Biophysique",
             chapter = "Électrophysiologie et Phénomènes de Membrane",
+            ipaPhonetic = "/nɜːnst ɪˈkweɪ.ʒən/",
             exampleEn = "The resting membrane potential of human neurons approximates the Nernst equilibrium potential for potassium.",
             exampleFr = "Le potentiel de repos membranaire est très proche du potentiel d'équilibre de Nernst du potassium.",
             exampleAr = "يقترب جهد الراحة للغشاء العصبي البشري بشدة من جهد التوازن المحسوب بنيرنست للبوتاسيوم.",
-            ipaPhonetic = "/nɜːnst ɪˈkweɪ.ʒən/",
+            clinicalPearl = "At normal body temperature (37°C), E = (61.5 / z) × log10([Ion]out / [Ion]in). For K+ with [K+]in = 140 mM and [K+]out = 4 mM, E_K ≈ -94 mV, close to resting resting potential.",
+            mnemonic = "Resting membrane potential is predominantly governed by K+ permeability because resting membrane is far more permeable to K+ than Na+.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1313,
+            etymology = "Named after British physiologist Ernest Henry Starling who established capillary filtration laws in 1896.",
             termEn = "Osmotic Pressure and Starling Forces",
             termFr = "Pression osmotique et Forces de Starling",
             termAr = "الضغط الإسموزي وقوى ستارلينغ الشعرية",
             definitionEn = "The hydrostatic and colloid oncotic pressure gradients governing transcapillary fluid filtration and reabsorption across the vascular endothelium.",
             definitionFr = "Pressions hydrostatique et oncotique qui régissent les échanges liquidiens et la filtration transcapillaire selon l'équilibre de Starling.",
             definitionAr = "فروق الضغط الهيدروستاتيكي والضغط التناضحي الغرواني (الأونكوتي) المتحكمة في ترشيح وامتصاص السوائل عبر البطانة الشعرية الدموية.",
-            etymology = "Named after British physiologist Ernest Henry Starling who established capillary filtration laws in 1896.",
-            clinicalPearl = "Plasma oncotic pressure (~25-28 mmHg) is primarily exerted by serum albumin; hypoalbuminemia in nephrotic syndrome causes peripheral edema due to decreased capillary reabsorption.",
-            mnemonic = "Net Filtration = Kf × [(Pc - Pi) - σ(πc - πi)]. High capillary hydrostatic pressure (heart failure) or low albumin causes edema.",
             module = "Biophysique",
             chapter = "Solutions Biologiques et Échanges",
+            ipaPhonetic = "/ɒzˈmɒt.ɪk ˈpreʃ.ər/",
             exampleEn = "Imbalance in Starling forces favoring capillary extravasation leads to tissue edema and ascites.",
             exampleFr = "Le déséquilibre des forces de Starling favorisant la filtration capillaire conduit à l'œdème interstitiel.",
             exampleAr = "يؤدي اختلال قوى ستارلينغ لصالح الترشيح الشعري إلى تراكم السوائل وظهور الوذمة النسيجية.",
-            ipaPhonetic = "/ɒzˈmɒt.ɪk ˈpreʃ.ər/"
+            clinicalPearl = "Plasma oncotic pressure (~25-28 mmHg) is primarily exerted by serum albumin; hypoalbuminemia in nephrotic syndrome causes peripheral edema due to decreased capillary reabsorption.",
+            mnemonic = "Net Filtration = Kf × [(Pc - Pi) - σ(πc - πi)]. High capillary hydrostatic pressure (heart failure) or low albumin causes edema.",
         ),
         MedicalTermEntity(
             id = 1314,
+            etymology = "",
             termEn = "Biophysics",
             termFr = "Biophysique",
             termAr = "الفيزياء الحيوية",
@@ -151,6 +147,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1315,
+            etymology = "",
             termEn = "Mass",
             termFr = "Masse",
             termAr = "الكتلة",
@@ -166,6 +163,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1316,
+            etymology = "",
             termEn = "Length",
             termFr = "Longueur",
             termAr = "الطول",
@@ -181,6 +179,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1317,
+            etymology = "",
             termEn = "Time",
             termFr = "Temps",
             termAr = "الزمن",
@@ -196,6 +195,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1318,
+            etymology = "",
             termEn = "Temperature",
             termFr = "Température",
             termAr = "درجة الحرارة",
@@ -211,6 +211,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1319,
+            etymology = "",
             termEn = "Force",
             termFr = "Force",
             termAr = "القوة",
@@ -226,6 +227,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1320,
+            etymology = "",
             termEn = "Energy",
             termFr = "Énergie",
             termAr = "الطاقة",
@@ -241,6 +243,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1321,
+            etymology = "",
             termEn = "Power",
             termFr = "Puissance",
             termAr = "الاستطاعة (القدرة)",
@@ -256,6 +259,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1322,
+            etymology = "",
             termEn = "Pressure",
             termFr = "Pression",
             termAr = "الضغط",
@@ -265,15 +269,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈprɛʃər/",
-
-            exampleFr = "Exemple: Le Force par unité de surface mesurée en Pascals (Pa) ou mmHg.",
-
-            exampleAr = "مثال: يظهر قوة لكل وحدة مساحة تُقاس بالباسكال أو ملم زئبقي.",
-
-            exampleEn = "The Pressure is Force per unit area measured in Pascals (Pa) or mmHg.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1323,
+            etymology = "",
             termEn = "Velocity",
             termFr = "Vitesse",
             termAr = "السرعة",
@@ -289,6 +291,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1324,
+            etymology = "",
             termEn = "Acceleration",
             termFr = "Accélération",
             termAr = "التسارع",
@@ -304,6 +307,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1325,
+            etymology = "",
             termEn = "Density",
             termFr = "Densité (Masse volumique)",
             termAr = "الكثافة",
@@ -313,15 +317,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Grandeurs et Unités",
             ipaPhonetic = "/ˈdɛnsɪti/",
-
-            exampleFr = "Exemple: Le Masse par unité de volume mesurée en kg/m³.",
-
-            exampleAr = "مثال: يظهر كتلة لكل وحدة حجم تُقاس بالكيلوغرام لكل متر مكعب.",
-
-            exampleEn = "The Density is Mass per unit volume measured in kg/m³.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1326,
+            etymology = "",
             termEn = "Viscosity",
             termFr = "Viscosité",
             termAr = "اللزوجة",
@@ -337,6 +339,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1327,
+            etymology = "",
             termEn = "Surface tension",
             termFr = "Tension superficielle",
             termAr = "التوتر السطحي",
@@ -352,6 +355,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1328,
+            etymology = "",
             termEn = "Concentration",
             termFr = "Concentration",
             termAr = "التركيز",
@@ -367,6 +371,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1329,
+            etymology = "",
             termEn = "Fluid",
             termFr = "Fluide",
             termAr = "المائع",
@@ -430,6 +435,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1333,
+            etymology = "",
             termEn = "Pascal's law",
             termFr = "Loi de Pascal",
             termAr = "قانون باسكال",
@@ -439,15 +445,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/pæˈskælz lɔː/",
-
-            exampleFr = "Exemple: Le pression appliquée à un fluide confiné est transmise également dans toutes les directions.",
-
-            exampleAr = "مثال: يظهر ضغط المطبق على مائع محصور ينتقل بالتساوي في جميع الاتجاهات.",
-
-            exampleEn = "The Pascal's law is Pressure applied to a confined fluid is transmitted equally in all directions.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1334,
+            etymology = "",
             termEn = "Archimedes' principle",
             termFr = "Principe d'Archimède",
             termAr = "مبدأ أرخميدس",
@@ -463,6 +467,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1335,
+            etymology = "",
             termEn = "Buoyancy",
             termFr = "Poussée d'Archimède (Flottabilité)",
             termAr = "قوة الطفو",
@@ -478,6 +483,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1336,
+            etymology = "",
             termEn = "Laminar flow",
             termFr = "Flux laminaire",
             termAr = "التدفق الصفائحي",
@@ -487,15 +493,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈlæmɪnər floʊ/",
-
-            exampleFr = "Exemple: Le Écoulement lisse en couches parallèles sans perturbation.",
-
-            exampleAr = "مثال: يظهر تدفق سلس في طبقات متوازية بدون اضطراب.",
-
-            exampleEn = "The Laminar flow is Smooth streamlined flow in parallel layers without disruption.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1337,
+            etymology = "",
             termEn = "Turbulent flow",
             termFr = "Flux turbulent",
             termAr = "التدفق المضطرب",
@@ -505,15 +509,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˈtɜːrbjʊlənt floʊ/",
-
-            exampleFr = "Exemple: Le Écoulement chaotique irrégulier avec tourbillons et mélange.",
-
-            exampleAr = "مثال: يظهر تدفق فوضوي غير منتظم مع دوامات وخلط.",
-
-            exampleEn = "The Turbulent flow is Chaotic irregular flow with eddies and mixing.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
-                MedicalTermEntity(
+        MedicalTermEntity(
             id = 1339,
+            etymology = "",
             termEn = "Flow rate",
             termFr = "Débit",
             termAr = "معدل التدفق",
@@ -529,6 +531,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1340,
+            etymology = "",
             termEn = "Continuity equation",
             termFr = "Équation de continuité",
             termAr = "معادلة الاستمرارية",
@@ -538,15 +541,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/ˌkɒntɪˈnjuːɪti/",
-
-            exampleFr = "Exemple: Le Principe selon lequel le débit est constant: A₁v₁ = A₂v₂.",
-
-            exampleAr = "مثال: يظهر مبدأ القائل بأن معدل التدفق ثابت: A₁v₁ = A₂v₂.",
-
-            exampleEn = "The Continuity equation is principle that flow rate is constant: A₁v₁ = A₂v₂.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1341,
+            etymology = "",
             termEn = "Vascular resistance",
             termFr = "Résistance vasculaire",
             termAr = "المقاومة الوعائية",
@@ -562,6 +563,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1342,
+            etymology = "",
             termEn = "Hematocrit effect",
             termFr = "Effet de l'hématocrite",
             termAr = "تأثير الهيماتوكريت",
@@ -577,6 +579,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1343,
+            etymology = "",
             termEn = "Newtonian fluid",
             termFr = "Fluide newtonien",
             termAr = "مائع نيوتوني",
@@ -587,13 +590,12 @@ MedicalTermEntity(
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/njuːˈtoʊniən/",
             exampleEn = "The newtonian fluid is the fluid with constant viscosity regardless of shear rate (e.g., water).",
-            exampleFr = "Exemple: Le Fluide avec viscosité constante quel que soit le taux de cisaillement (ex: eau).",
-
-            exampleAr = "مثال: يظهر مائع بلزوجة ثابتة بغض النظر عن معدل القص (مثل: الماء).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1344,
+            etymology = "",
             termEn = "Non-Newtonian fluid",
             termFr = "Fluide non newtonien",
             termAr = "مائع غير نيوتوني",
@@ -604,13 +606,12 @@ MedicalTermEntity(
             chapter = "Mécanique des Fluides",
             ipaPhonetic = "/nɒn njuːˈtoʊniən/",
             exampleEn = "The non-newtonian fluid is the fluid whose viscosity changes with shear rate (e.g., blood).",
-            exampleFr = "Exemple: Le Fluide dont la viscosité change avec le taux de cisaillement (ex: sang).",
-
-            exampleAr = "مثال: يظهر مائع تتغير لزوجته مع معدل القص (مثل: الدم).",
-
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1345,
+            etymology = "",
             termEn = "Sphygmomanometer",
             termFr = "Sphygmomanomètre (Tensiomètre)",
             termAr = "جهاز قياس ضغط الدم",
@@ -626,6 +627,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1346,
+            etymology = "",
             termEn = "Stethoscope",
             termFr = "Stéthoscope",
             termAr = "السماعة الطبية",
@@ -667,12 +669,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/fɜːrst lɔː/",
-
-            exampleFr = "Exemple: Le L'énergie ne peut être créée ni détruite, seulement transformée (conservation de l'énergie).",
-
-            exampleAr = "مثال: يظهر طاقة لا تُخلق ولا تُفنى، بل تتحول فقط (حفظ الطاقة).",
-
-            exampleEn = "The First law of thermodynamics is Energy cannot be created or destroyed, only transformed (conservation of energy).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1349,
@@ -686,15 +685,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˈsɛkənd lɔː/",
-
-            exampleFr = "Exemple: Le Dans tout transfert d'énergie, l'entropie de l'univers tend à augmenter.",
-
-            exampleAr = "مثال: يظهر في أي انتقال للطاقة، تميل إنتروبيا الكون إلى الازدياد.",
-
-            exampleEn = "The Second law of thermodynamics is In any energy transfer, entropy of the universe tends to increase.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1350,
+            etymology = "",
             termEn = "Entropy",
             termFr = "Entropie",
             termAr = "الإنتروبيا (العشوائية)",
@@ -710,6 +707,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1351,
+            etymology = "",
             termEn = "Enthalpy",
             termFr = "Enthalpie",
             termAr = "المحتوى الحراري",
@@ -725,6 +723,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1352,
+            etymology = "",
             termEn = "Free energy (Gibbs)",
             termFr = "Énergie libre (de Gibbs)",
             termAr = "الطاقة الحرة (غيبس)",
@@ -740,6 +739,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1353,
+            etymology = "",
             termEn = "Exothermic reaction",
             termFr = "Réaction exothermique",
             termAr = "تفاعل طارد للحرارة",
@@ -755,6 +755,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1354,
+            etymology = "",
             termEn = "Endothermic reaction",
             termFr = "Réaction endothermique",
             termAr = "تفاعل ماص للحرارة",
@@ -770,6 +771,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1355,
+            etymology = "",
             termEn = "Exergonic reaction",
             termFr = "Réaction exergonique",
             termAr = "تفاعل طارد للطاقة",
@@ -785,6 +787,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1356,
+            etymology = "",
             termEn = "Endergonic reaction",
             termFr = "Réaction endergonique",
             termAr = "تفاعل ماص للطاقة",
@@ -800,6 +803,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1357,
+            etymology = "",
             termEn = "Heat",
             termFr = "Chaleur",
             termAr = "الحرارة",
@@ -809,15 +813,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/hiːt/",
-
-            exampleFr = "Exemple: Le Énergie transférée entre objets due à une différence de température.",
-
-            exampleAr = "مثال: يظهر طاقة تنتقل بين الأجسام بسبب فرق درجة الحرارة.",
-
-            exampleEn = "The Heat is Energy transferred between objects due to temperature difference.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1358,
+            etymology = "",
             termEn = "Specific heat capacity",
             termFr = "Capacité thermique massique",
             termAr = "السعة الحرارية النوعية",
@@ -833,6 +835,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1359,
+            etymology = "",
             termEn = "Calorimetry",
             termFr = "Calorimétrie",
             termAr = "قياس الحرارة",
@@ -848,6 +851,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1360,
+            etymology = "",
             termEn = "Basal metabolic rate (BMR)",
             termFr = "Métabolisme de base (MB)",
             termAr = "معدل الأيض الأساسي",
@@ -863,6 +867,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1361,
+            etymology = "",
             termEn = "Conduction",
             termFr = "Conduction",
             termAr = "التوصيل الحراري",
@@ -872,15 +877,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/kənˈdʌkʃən/",
-
-            exampleFr = "Exemple: Le Transfert de chaleur par contact moléculaire direct.",
-
-            exampleAr = "مثال: يظهر انتقال الحرارة عبر التماس الجزيئي المباشر.",
-
-            exampleEn = "The Conduction is Heat transfer through direct molecular contact.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1362,
+            etymology = "",
             termEn = "Convection",
             termFr = "Convection",
             termAr = "الحمل الحراري",
@@ -890,12 +893,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/kənˈvɛkʃən/",
-
-            exampleFr = "Exemple: Le Transfert de chaleur par mouvement du fluide.",
-
-            exampleAr = "مثال: يظهر انتقال الحرارة عبر حركة المائع.",
-
-            exampleEn = "The Convection is Heat transfer through fluid movement.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1363,
@@ -909,15 +909,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌreɪdiˈeɪʃən/",
-
-            exampleFr = "Exemple: Le Transfert de chaleur par ondes électromagnétiques sans milieu.",
-
-            exampleAr = "مثال: يظهر انتقال الحرارة عبر الموجات الكهرومغناطيسية بدون وسط.",
-
-            exampleEn = "The Radiation (thermal) is Heat transfer through electromagnetic waves without a medium.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1364,
+            etymology = "",
             termEn = "Evaporation",
             termFr = "Évaporation",
             termAr = "التبخر",
@@ -949,6 +947,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1366,
+            etymology = "",
             termEn = "Hypothermia",
             termFr = "Hypothermie",
             termAr = "انخفاض الحرارة",
@@ -958,15 +957,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌhaɪpoʊˈθɜːrmiə/",
-
-            exampleFr = "Exemple: Le Température corporelle dangereusement basse en dessous de 35°C.",
-
-            exampleAr = "مثال: يظهر انخفاض خطير في حرارة الجسم تحت 35 درجة مئوية.",
-
-            exampleEn = "The Hypothermia is Dangerously low body temperature below 35°C.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1367,
+            etymology = "",
             termEn = "Hyperthermia",
             termFr = "Hyperthermie",
             termAr = "ارتفاع الحرارة",
@@ -976,15 +973,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Thermodynamique",
             ipaPhonetic = "/ˌhaɪpərˈθɜːrmiə/",
-
-            exampleFr = "Exemple: Le Température corporelle anormalement élevée au-dessus de 40°C.",
-
-            exampleAr = "مثال: يظهر ارتفاع غير طبيعي في حرارة الجسم فوق 40 درجة مئوية.",
-
-            exampleEn = "The Hyperthermia is Abnormally elevated body temperature above 40°C.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1368,
+            etymology = "",
             termEn = "Fever (Pyrexia)",
             termFr = "Fièvre (Pyrexie)",
             termAr = "الحمى",
@@ -1000,6 +995,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1369,
+            etymology = "",
             termEn = "Diffusion",
             termFr = "Diffusion",
             termAr = "الانتشار",
@@ -1015,6 +1011,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1370,
+            etymology = "",
             termEn = "Fick's law of diffusion",
             termFr = "Loi de Fick",
             termAr = "قانون فيك للانتشار",
@@ -1030,6 +1027,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1371,
+            etymology = "",
             termEn = "Osmosis",
             termFr = "Osmose",
             termAr = "التناضح",
@@ -1045,6 +1043,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1372,
+            etymology = "",
             termEn = "Osmotic pressure",
             termFr = "Pression osmotique",
             termAr = "الضغط الأسموزي",
@@ -1060,6 +1059,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1373,
+            etymology = "",
             termEn = "Osmolarity",
             termFr = "Osmolarité",
             termAr = "الأسمولارية",
@@ -1075,6 +1075,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1374,
+            etymology = "",
             termEn = "Osmolality",
             termFr = "Osmolalité",
             termAr = "الأسمولالية",
@@ -1090,6 +1091,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1375,
+            etymology = "",
             termEn = "Tonicity",
             termFr = "Tonicité",
             termAr = "التوترية",
@@ -1105,6 +1107,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1376,
+            etymology = "",
             termEn = "Semipermeable membrane",
             termFr = "Membrane semi-perméable",
             termAr = "غشاء نصف نفوذ",
@@ -1120,6 +1123,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1377,
+            etymology = "",
             termEn = "Dialysis",
             termFr = "Dialyse",
             termAr = "الديلزة (غسيل الكلى)",
@@ -1135,6 +1139,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1378,
+            etymology = "",
             termEn = "Hemodialysis",
             termFr = "Hémodialyse",
             termAr = "الديلزة الدموية",
@@ -1150,6 +1155,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1379,
+            etymology = "",
             termEn = "Oncotic pressure",
             termFr = "Pression oncotique",
             termAr = "الضغط الجرمي",
@@ -1165,6 +1171,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1380,
+            etymology = "",
             termEn = "Starling forces",
             termFr = "Forces de Starling",
             termAr = "قوى ستارلينغ",
@@ -1190,15 +1197,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Diffusion et Osmose",
             ipaPhonetic = "/ɪˈdiːmə/",
-
-            exampleFr = "Exemple: Le Accumulation excessive de liquide dans les tissus due à un déséquilibre des forces de Starling.",
-
-            exampleAr = "مثال: يظهر تراكم مفرط للسوائل في الأنسجة بسبب اختلال توازن قوى ستارلينغ.",
-
-            exampleEn = "The Edema is Excessive accumulation of fluid in tissues due to imbalance in Starling forces.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1382,
+            etymology = "",
             termEn = "Crenation",
             termFr = "Crénation",
             termAr = "التسنن (التجعد)",
@@ -1214,6 +1219,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1383,
+            etymology = "",
             termEn = "Hemolysis",
             termFr = "Hémolyse",
             termAr = "انحلال الدم",
@@ -1229,6 +1235,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1384,
+            etymology = "",
             termEn = "Donnan equilibrium",
             termFr = "Équilibre de Donnan",
             termAr = "توازن دونان",
@@ -1244,6 +1251,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1385,
+            etymology = "",
             termEn = "Goldman equation",
             termFr = "Équation de Goldman",
             termAr = "معادلة غولدمان",
@@ -1259,6 +1267,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1386,
+            etymology = "",
             termEn = "Light",
             termFr = "Lumière",
             termAr = "الضوء",
@@ -1268,15 +1277,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/laɪt/",
-
-            exampleFr = "Exemple: Le Rayonnement électromagnétique visible par l'œil humain (380-750 nm).",
-
-            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي مرئي للعين البشرية (380-750 نانومتر).",
-
-            exampleEn = "The Light is Electromagnetic radiation visible to the human eye (380-750 nm).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1387,
+            etymology = "",
             termEn = "Wavelength",
             termFr = "Longueur d'onde",
             termAr = "الطول الموجي",
@@ -1292,6 +1299,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1388,
+            etymology = "",
             termEn = "Frequency",
             termFr = "Fréquence",
             termAr = "التردد",
@@ -1307,6 +1315,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1389,
+            etymology = "",
             termEn = "Amplitude",
             termFr = "Amplitude",
             termAr = "السعة",
@@ -1322,6 +1331,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1390,
+            etymology = "",
             termEn = "Reflection",
             termFr = "Réflexion",
             termAr = "الانعكاس",
@@ -1337,6 +1347,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1391,
+            etymology = "",
             termEn = "Refraction",
             termFr = "Réfraction",
             termAr = "الانكسار",
@@ -1352,6 +1363,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1392,
+            etymology = "",
             termEn = "Refractive index",
             termFr = "Indice de réfraction",
             termAr = "معامل الانكسار",
@@ -1367,6 +1379,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1393,
+            etymology = "",
             termEn = "Snell's law",
             termFr = "Loi de Snell-Descartes",
             termAr = "قانون سنيل",
@@ -1382,6 +1395,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1394,
+            etymology = "",
             termEn = "Total internal reflection",
             termFr = "Réflexion totale interne",
             termAr = "الانعكاس الكلي الداخلي",
@@ -1391,15 +1405,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈtoʊtəl ɪnˈtɜːrnəl/",
-
-            exampleFr = "Exemple: Le Réflexion complète de la lumière lorsque l'angle dépasse l'angle critique.",
-
-            exampleAr = "مثال: يظهر انعكاس كلي للضوء عندما تتجاوز الزاوية الزاوية الحرجة.",
-
-            exampleEn = "The Total internal reflection is Complete reflection of light when the angle exceeds the critical angle.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1395,
+            etymology = "",
             termEn = "Lens",
             termFr = "Lentille",
             termAr = "العدسة",
@@ -1415,6 +1427,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1396,
+            etymology = "",
             termEn = "Converging lens (Convex)",
             termFr = "Lentille convergente (Convexe)",
             termAr = "عدسة محدبة (مجمعة)",
@@ -1430,6 +1443,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1397,
+            etymology = "",
             termEn = "Diverging lens (Concave)",
             termFr = "Lentille divergente (Concave)",
             termAr = "عدسة مقعرة (مبعثرة)",
@@ -1445,6 +1459,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1398,
+            etymology = "",
             termEn = "Focal length",
             termFr = "Distance focale",
             termAr = "البُعد البؤري",
@@ -1460,6 +1475,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1399,
+            etymology = "",
             termEn = "Diopter",
             termFr = "Dioptrie",
             termAr = "الديوبتر",
@@ -1475,6 +1491,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1400,
+            etymology = "",
             termEn = "Accommodation",
             termFr = "Accommodation",
             termAr = "المطابقة (التكيف البصري)",
@@ -1490,6 +1507,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1401,
+            etymology = "",
             termEn = "Myopia (Nearsightedness)",
             termFr = "Myopie",
             termAr = "قصر النظر",
@@ -1505,6 +1523,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1402,
+            etymology = "",
             termEn = "Hyperopia (Farsightedness)",
             termFr = "Hypermétropie",
             termAr = "طول النظر",
@@ -1520,6 +1539,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1403,
+            etymology = "",
             termEn = "Astigmatism",
             termFr = "Astigmatisme",
             termAr = "اللابؤرية (الأستيغماتيزم)",
@@ -1535,6 +1555,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1404,
+            etymology = "",
             termEn = "Presbyopia",
             termFr = "Presbytie",
             termAr = "قصو البصر (طول نظر الشيخوخة)",
@@ -1544,15 +1565,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˌprɛzbiˈoʊpiə/",
-
-            exampleFr = "Exemple: Le Perte d'accommodation liée à l'âge rendant la vision de près difficile.",
-
-            exampleAr = "مثال: يظهر فقدان المطابقة المرتبط بالعمر مما يجعل الرؤية القريبة صعبة.",
-
-            exampleEn = "The Presbyopia is Age-related loss of accommodation making near vision difficult.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1405,
+            etymology = "",
             termEn = "Cornea",
             termFr = "Cornée",
             termAr = "القرنية",
@@ -1568,6 +1587,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1406,
+            etymology = "",
             termEn = "Retina",
             termFr = "Rétine",
             termAr = "الشبكية",
@@ -1583,6 +1603,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1407,
+            etymology = "",
             termEn = "Rod cell",
             termFr = "Bâtonnet",
             termAr = "الخلية العصوية",
@@ -1598,6 +1619,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1408,
+            etymology = "",
             termEn = "Cone cell",
             termFr = "Cône",
             termAr = "الخلية المخروطية",
@@ -1613,6 +1635,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1409,
+            etymology = "",
             termEn = "Visual acuity",
             termFr = "Acuité visuelle",
             termAr = "حدة البصر",
@@ -1644,6 +1667,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1411,
+            etymology = "",
             termEn = "Fiber optics",
             termFr = "Fibre optique",
             termAr = "الألياف البصرية",
@@ -1659,6 +1683,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1412,
+            etymology = "",
             termEn = "Endoscope",
             termFr = "Endoscope",
             termAr = "المنظار الداخلي",
@@ -1674,6 +1699,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1413,
+            etymology = "",
             termEn = "Laser",
             termFr = "Laser",
             termAr = "الليزر",
@@ -1683,12 +1709,9 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Optique Médicale",
             ipaPhonetic = "/ˈleɪzər/",
-
-            exampleFr = "Exemple: Le Amplification de la lumière par émission stimulée de rayonnement; lumière cohérente monochromatique.",
-
-            exampleAr = "مثال: يظهر تضخيم الضوء بالانبعاث المحفز للإشعاع؛ ضوء متماسك أحادي اللون.",
-
-            exampleEn = "The Laser is Light Amplification by Stimulated Emission of Radiation; coherent monochromatic light.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1414,
@@ -1708,6 +1731,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1415,
+            etymology = "",
             termEn = "Magnification",
             termFr = "Grossissement",
             termAr = "التكبير",
@@ -1723,6 +1747,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1416,
+            etymology = "",
             termEn = "Resolution (Resolving power)",
             termFr = "Résolution (Pouvoir de résolution)",
             termAr = "القدرة على التمييز (التحليل)",
@@ -1738,6 +1763,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1417,
+            etymology = "",
             termEn = "Sound",
             termFr = "Son",
             termAr = "الصوت",
@@ -1753,6 +1779,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1418,
+            etymology = "",
             termEn = "Sound wave",
             termFr = "Onde sonore",
             termAr = "الموجة الصوتية",
@@ -1768,6 +1795,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1419,
+            etymology = "",
             termEn = "Pitch",
             termFr = "Hauteur (tonalité)",
             termAr = "حدة الصوت",
@@ -1777,15 +1805,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/pɪtʃ/",
-
-            exampleFr = "Exemple: Le Perception de la fréquence sonore: haute fréquence = son aigu.",
-
-            exampleAr = "مثال: يظهر إدراك تردد الصوت: تردد عالٍ = صوت حاد.",
-
-            exampleEn = "The Pitch is perception of sound frequency: high frequency = high pitch.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1420,
+            etymology = "",
             termEn = "Loudness",
             termFr = "Intensité sonore (Volume)",
             termAr = "شدة الصوت",
@@ -1801,6 +1827,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1421,
+            etymology = "",
             termEn = "Decibel (dB)",
             termFr = "Décibel (dB)",
             termAr = "الديسيبل",
@@ -1816,6 +1843,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1422,
+            etymology = "",
             termEn = "Audible range",
             termFr = "Domaine audible",
             termAr = "المدى المسموع",
@@ -1831,6 +1859,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1423,
+            etymology = "",
             termEn = "Ultrasound",
             termFr = "Ultrasons",
             termAr = "الأمواج فوق الصوتية",
@@ -1840,15 +1869,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈʌltrəsaʊnd/",
-
-            exampleFr = "Exemple: Le Ondes sonores de fréquence supérieure à 20 000 Hz utilisées en imagerie médicale.",
-
-            exampleAr = "مثال: يظهر موجات صوتية بتردد فوق 20000 هرتز تُستخدم في التصوير الطبي.",
-
-            exampleEn = "The Ultrasound is Sound waves with frequency above 20,000 Hz used in medical imaging.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1424,
+            etymology = "",
             termEn = "Infrasound",
             termFr = "Infrasons",
             termAr = "الأمواج تحت الصوتية",
@@ -1858,15 +1885,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈɪnfrəsaʊnd/",
-
-            exampleFr = "Exemple: Le Ondes sonores de fréquence inférieure à 20 Hz inaudibles à l'homme.",
-
-            exampleAr = "مثال: يظهر موجات صوتية بتردد أقل من 20 هرتز غير مسموعة للإنسان.",
-
-            exampleEn = "The Infrasound is Sound waves with frequency below 20 Hz inaudible to humans.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1425,
+            etymology = "",
             termEn = "Doppler effect",
             termFr = "Effet Doppler",
             termAr = "تأثير دوبلر",
@@ -1882,6 +1907,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1426,
+            etymology = "",
             termEn = "Doppler ultrasound",
             termFr = "Échographie Doppler",
             termAr = "الموجات فوق الصوتية بتقنية دوبلر",
@@ -1891,15 +1917,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˈdɒplər/",
-
-            exampleFr = "Exemple: Le Technique ultrasonore mesurant la vitesse du flux sanguin par l'effet Doppler.",
-
-            exampleAr = "مثال: يظهر تقنية بالموجات فوق الصوتية تقيس سرعة تدفق الدم باستخدام تأثير دوبلر.",
-
-            exampleEn = "The Doppler ultrasound is Ultrasound technique measuring blood flow velocity using the Doppler effect.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1427,
+            etymology = "",
             termEn = "Echocardiography",
             termFr = "Échocardiographie",
             termAr = "تخطيط صدى القلب",
@@ -1909,15 +1933,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Acoustique",
             ipaPhonetic = "/ˌɛkoʊˌkɑːrdiˈɒɡrəfi/",
-
-            exampleFr = "Exemple: Le Imagerie ultrasonore du cœur pour évaluer la structure et la fonction.",
-
-            exampleAr = "مثال: يظهر تصوير بالموجات فوق الصوتية للقلب لتقييم البنية والوظيفة.",
-
-            exampleEn = "The Echocardiography is Ultrasound imaging of the heart to assess structure and function.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1428,
+            etymology = "",
             termEn = "Resonance",
             termFr = "Résonance",
             termAr = "الرنين",
@@ -1933,6 +1955,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1429,
+            etymology = "",
             termEn = "Acoustic impedance",
             termFr = "Impédance acoustique",
             termAr = "الممانعة الصوتية",
@@ -1948,6 +1971,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1430,
+            etymology = "",
             termEn = "Audiometry",
             termFr = "Audiométrie",
             termAr = "قياس السمع",
@@ -1963,6 +1987,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1431,
+            etymology = "",
             termEn = "Audiogram",
             termFr = "Audiogramme",
             termAr = "مخطط السمع",
@@ -1978,6 +2003,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1432,
+            etymology = "",
             termEn = "Conductive hearing loss",
             termFr = "Surdité de transmission",
             termAr = "فقدان السمع التوصيلي",
@@ -1993,6 +2019,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1433,
+            etymology = "",
             termEn = "Sensorineural hearing loss",
             termFr = "Surdité de perception (neurosensorielle)",
             termAr = "فقدان السمع الحسي العصبي",
@@ -2040,6 +2067,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1436,
+            etymology = "",
             termEn = "Alpha particle (α)",
             termFr = "Particule alpha (α)",
             termAr = "جسيم ألفا",
@@ -2055,6 +2083,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1437,
+            etymology = "",
             termEn = "Beta particle (β)",
             termFr = "Particule bêta (β)",
             termAr = "جسيم بيتا",
@@ -2070,6 +2099,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1438,
+            etymology = "",
             termEn = "Gamma ray (γ)",
             termFr = "Rayon gamma (γ)",
             termAr = "أشعة غاما",
@@ -2079,15 +2109,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈɡæmə reɪ/",
-
-            exampleFr = "Exemple: Le Rayonnement électromagnétique de haute énergie émis par le noyau.",
-
-            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي عالي الطاقة يُنبعث من النواة.",
-
-            exampleEn = "The Gamma ray (γ) is High-energy electromagnetic radiation emitted from the nucleus.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1439,
+            etymology = "",
             termEn = "Half-life",
             termFr = "Demi-vie",
             termAr = "عمر النصف",
@@ -2119,6 +2147,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1441,
+            etymology = "",
             termEn = "Decay constant (λ)",
             termFr = "Constante de désintégration (λ)",
             termAr = "ثابت التفكك",
@@ -2134,6 +2163,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1442,
+            etymology = "",
             termEn = "Activity",
             termFr = "Activité",
             termAr = "النشاط",
@@ -2149,6 +2179,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1443,
+            etymology = "",
             termEn = "Becquerel (Bq)",
             termFr = "Becquerel (Bq)",
             termAr = "البيكريل",
@@ -2164,6 +2195,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1444,
+            etymology = "",
             termEn = "Curie (Ci)",
             termFr = "Curie (Ci)",
             termAr = "الكوري",
@@ -2179,6 +2211,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1445,
+            etymology = "",
             termEn = "Ionizing radiation",
             termFr = "Rayonnement ionisant",
             termAr = "الإشعاع المؤين",
@@ -2188,15 +2221,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/ˈaɪənaɪzɪŋ/",
-
-            exampleFr = "Exemple: Le Rayonnement avec assez d'énergie pour arracher des électrons aux atomes.",
-
-            exampleAr = "مثال: يظهر إشعاع بطاقة كافية لنزع الإلكترونات من الذرات.",
-
-            exampleEn = "The Ionizing radiation is Radiation with enough energy to remove electrons from atoms.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1446,
+            etymology = "",
             termEn = "Non-ionizing radiation",
             termFr = "Rayonnement non ionisant",
             termAr = "الإشعاع غير المؤين",
@@ -2206,15 +2237,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/nɒn ˈaɪənaɪzɪŋ/",
-
-            exampleFr = "Exemple: Le Rayonnement sans assez d'énergie pour ioniser les atomes (UV, visible, ondes radio).",
-
-            exampleAr = "مثال: يظهر إشعاع بدون طاقة كافية لتأيين الذرات (فوق بنفسجي، مرئي، موجات راديو).",
-
-            exampleEn = "The Non-ionizing radiation is Radiation without enough energy to ionize atoms (UV, visible, radio waves).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1447,
+            etymology = "",
             termEn = "Absorbed dose",
             termFr = "Dose absorbée",
             termAr = "الجرعة الممتصة",
@@ -2230,6 +2259,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1448,
+            etymology = "",
             termEn = "Gray (Gy)",
             termFr = "Gray (Gy)",
             termAr = "الغراي",
@@ -2245,6 +2275,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1449,
+            etymology = "",
             termEn = "Equivalent dose",
             termFr = "Dose équivalente",
             termAr = "الجرعة المكافئة",
@@ -2260,6 +2291,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1450,
+            etymology = "",
             termEn = "Sievert (Sv)",
             termFr = "Sievert (Sv)",
             termAr = "السيفرت",
@@ -2275,6 +2307,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1451,
+            etymology = "",
             termEn = "Effective dose",
             termFr = "Dose efficace",
             termAr = "الجرعة الفعالة",
@@ -2290,6 +2323,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1452,
+            etymology = "",
             termEn = "Radiation protection",
             termFr = "Radioprotection",
             termAr = "الوقاية من الإشعاع",
@@ -2305,6 +2339,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1453,
+            etymology = "",
             termEn = "ALARA principle",
             termFr = "Principe ALARA",
             termAr = "مبدأ ألارا",
@@ -2314,15 +2349,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Radioactivité",
             ipaPhonetic = "/əˈlɑːrə/",
-
-            exampleFr = "Exemple: Le Aussi Bas que Raisonnablement Possible: minimiser l'exposition au rayonnement.",
-
-            exampleAr = "مثال: يظهر أقل قدر ممكن بشكل معقول: تقليل التعرض للإشعاع.",
-
-            exampleEn = "The ALARA principle is As Low As Reasonably Achievable: minimizing radiation exposure.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1454,
+            etymology = "",
             termEn = "Dosimeter",
             termFr = "Dosimètre",
             termAr = "مقياس الجرعات",
@@ -2338,6 +2371,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1455,
+            etymology = "",
             termEn = "Geiger counter",
             termFr = "Compteur Geiger",
             termAr = "عداد غايغر",
@@ -2353,6 +2387,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1456,
+            etymology = "",
             termEn = "Stochastic effect",
             termFr = "Effet stochastique",
             termAr = "التأثير العشوائي",
@@ -2368,6 +2403,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1457,
+            etymology = "",
             termEn = "Deterministic effect",
             termFr = "Effet déterministe",
             termAr = "التأثير الحتمي",
@@ -2383,6 +2419,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1458,
+            etymology = "",
             termEn = "X-ray",
             termFr = "Rayon X",
             termAr = "الأشعة السينية",
@@ -2392,15 +2429,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˈɛks reɪ/",
-
-            exampleFr = "Exemple: Le Rayonnement électromagnétique de haute énergie utilisé pour imager les structures internes du corps.",
-
-            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي عالي الطاقة يُستخدم لتصوير البنى الداخلية للجسم.",
-
-            exampleEn = "The X-ray is High-energy electromagnetic radiation used to image internal body structures.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1459,
+            etymology = "",
             termEn = "X-ray tube",
             termFr = "Tube à rayons X",
             termAr = "أنبوب الأشعة السينية",
@@ -2416,6 +2451,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1460,
+            etymology = "",
             termEn = "Radiography",
             termFr = "Radiographie",
             termAr = "التصوير الشعاعي",
@@ -2441,15 +2477,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/flʊəˈrɒskəpi/",
-
-            exampleFr = "Exemple: Le Imagerie par rayons X en temps réel permettant l'observation de structures en mouvement.",
-
-            exampleAr = "مثال: يظهر تصوير بالأشعة السينية في الزمن الحقيقي يسمح بمراقبة البنى المتحركة.",
-
-            exampleEn = "The Fluoroscopy is Real-time X-ray imaging allowing observation of moving structures.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1462,
+            etymology = "",
             termEn = "CT scan (Computed Tomography)",
             termFr = "Scanner (Tomodensitométrie)",
             termAr = "التصوير المقطعي المحوسب",
@@ -2465,6 +2499,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1463,
+            etymology = "",
             termEn = "Hounsfield unit (HU)",
             termFr = "Unité Hounsfield (UH)",
             termAr = "وحدة هاونزفيلد",
@@ -2480,6 +2515,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1464,
+            etymology = "",
             termEn = "Contrast medium",
             termFr = "Produit de contraste",
             termAr = "مادة التباين",
@@ -2495,6 +2531,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1465,
+            etymology = "",
             termEn = "MRI (Magnetic Resonance Imaging)",
             termFr = "IRM (Imagerie par Résonance Magnétique)",
             termAr = "التصوير بالرنين المغناطيسي",
@@ -2510,6 +2547,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1466,
+            etymology = "",
             termEn = "Nuclear Magnetic Resonance (NMR)",
             termFr = "Résonance Magnétique Nucléaire (RMN)",
             termAr = "الرنين المغناطيسي النووي",
@@ -2525,6 +2563,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1467,
+            etymology = "",
             termEn = "PET scan (Positron Emission Tomography)",
             termFr = "TEP (Tomographie par Émission de Positons)",
             termAr = "التصوير المقطعي بالإصدار البوزيتروني",
@@ -2540,6 +2579,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1468,
+            etymology = "",
             termEn = "SPECT (Single Photon Emission CT)",
             termFr = "TEMP (Tomographie d'Émission Monophotonique)",
             termAr = "التصوير المقطعي بإصدار الفوتون الواحد",
@@ -2555,6 +2595,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1469,
+            etymology = "",
             termEn = "Scintigraphy",
             termFr = "Scintigraphie",
             termAr = "التصوير الومضاني",
@@ -2570,6 +2611,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1470,
+            etymology = "",
             termEn = "Radiology",
             termFr = "Radiologie",
             termAr = "الأشعة (علم الإشعاع)",
@@ -2585,6 +2627,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1471,
+            etymology = "",
             termEn = "Mammography",
             termFr = "Mammographie",
             termAr = "تصوير الثدي الشعاعي",
@@ -2594,15 +2637,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/mæˈmɒɡrəfi/",
-
-            exampleFr = "Exemple: Le Imagerie par rayons X du sein pour le dépistage et le diagnostic du cancer du sein.",
-
-            exampleAr = "مثال: يظهر تصوير الثدي بالأشعة السينية للكشف عن سرطان الثدي وتشخيصه.",
-
-            exampleEn = "The Mammography is X-ray imaging of the breast for screening and diagnosis of breast cancer.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1472,
+            etymology = "",
             termEn = "Radiotherapy",
             termFr = "Radiothérapie",
             termAr = "العلاج الإشعاعي",
@@ -2618,6 +2659,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1473,
+            etymology = "",
             termEn = "Brachytherapy",
             termFr = "Curiethérapie (Brachythérapie)",
             termAr = "العلاج الإشعاعي الموضعي",
@@ -2627,15 +2669,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Imagerie Médicale",
             ipaPhonetic = "/ˌbrækɪˈθɛrəpi/",
-
-            exampleFr = "Exemple: Le Radiothérapie interne plaçant des sources radioactives à l'intérieur ou près de la tumeur.",
-
-            exampleAr = "مثال: يظهر علاج إشعاعي داخلي بوضع مصادر مشعة داخل الورم أو بالقرب منه.",
-
-            exampleEn = "The Brachytherapy is Internal radiation therapy placing radioactive sources inside or near the tumor.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1474,
+            etymology = "",
             termEn = "Nuclear medicine",
             termFr = "Médecine nucléaire",
             termAr = "الطب النووي",
@@ -2683,6 +2723,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1477,
+            etymology = "",
             termEn = "Voltage (Potential difference)",
             termFr = "Tension (Différence de potentiel)",
             termAr = "الجهد الكهربائي (فرق الكمون)",
@@ -2698,6 +2739,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1478,
+            etymology = "",
             termEn = "Resistance",
             termFr = "Résistance",
             termAr = "المقاومة",
@@ -2713,6 +2755,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1479,
+            etymology = "",
             termEn = "Ohm's law",
             termFr = "Loi d'Ohm",
             termAr = "قانون أوم",
@@ -2728,6 +2771,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1480,
+            etymology = "",
             termEn = "Capacitance",
             termFr = "Capacité (Capacitance)",
             termAr = "السعة الكهربائية",
@@ -2743,6 +2787,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1481,
+            etymology = "",
             termEn = "Membrane potential",
             termFr = "Potentiel de membrane",
             termAr = "جهد الغشاء (كمون الغشاء)",
@@ -2758,6 +2803,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1482,
+            etymology = "",
             termEn = "Depolarization",
             termFr = "Dépolarisation",
             termAr = "زوال الاستقطاب",
@@ -2773,6 +2819,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1483,
+            etymology = "",
             termEn = "Repolarization",
             termFr = "Repolarisation",
             termAr = "عودة الاستقطاب",
@@ -2788,6 +2835,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1484,
+            etymology = "",
             termEn = "Hyperpolarization",
             termFr = "Hyperpolarisation",
             termAr = "فرط الاستقطاب",
@@ -2803,6 +2851,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1485,
+            etymology = "",
             termEn = "Action potential",
             termFr = "Potentiel d'action",
             termAr = "جهد الفعل",
@@ -2882,6 +2931,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1490,
+            etymology = "",
             termEn = "Defibrillator",
             termFr = "Défibrillateur",
             termAr = "مزيل الرجفان",
@@ -2897,6 +2947,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1491,
+            etymology = "",
             termEn = "Pacemaker",
             termFr = "Stimulateur cardiaque (Pacemaker)",
             termAr = "منظم ضربات القلب",
@@ -2912,6 +2963,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1492,
+            etymology = "",
             termEn = "Impedance",
             termFr = "Impédance",
             termAr = "الممانعة",
@@ -2927,6 +2979,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1493,
+            etymology = "",
             termEn = "Bioimpedance",
             termFr = "Bioimpédance",
             termAr = "الممانعة الحيوية",
@@ -3000,15 +3053,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˈmaɪkroʊweɪv/",
-
-            exampleFr = "Exemple: Le Rayonnement électromagnétique utilisé en diathermie et chauffage.",
-
-            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي يُستخدم في الإنفاذ الحراري والتسخين.",
-
-            exampleEn = "The Microwave is Electromagnetic radiation used in diathermy and heating.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1498,
+            etymology = "",
             termEn = "Infrared radiation (IR)",
             termFr = "Rayonnement infrarouge (IR)",
             termAr = "الأشعة تحت الحمراء",
@@ -3018,15 +3069,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌɪnfrəˈrɛd/",
-
-            exampleFr = "Exemple: Le Rayonnement électromagnétique ressenti comme chaleur; utilisé en imagerie thermique et physiothérapie.",
-
-            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي يُحس كحرارة؛ يُستخدم في التصوير الحراري والعلاج الطبيعي.",
-
-            exampleEn = "The Infrared radiation (IR) is Electromagnetic radiation felt as heat; used in thermal imaging and physiotherapy.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1499,
+            etymology = "",
             termEn = "Visible light",
             termFr = "Lumière visible",
             termAr = "الضوء المرئي",
@@ -3042,6 +3091,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1500,
+            etymology = "",
             termEn = "Ultraviolet radiation (UV)",
             termFr = "Rayonnement ultraviolet (UV)",
             termAr = "الأشعة فوق البنفسجية",
@@ -3051,15 +3101,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Spectre Électromagnétique",
             ipaPhonetic = "/ˌʌltrəˈvaɪələt/",
-
-            exampleFr = "Exemple: Le Rayonnement électromagnétique causant coups de soleil et synthèse de vitamine D; peut endommager l'ADN.",
-
-            exampleAr = "مثال: يظهر إشعاع كهرومغناطيسي يسبب حروق الشمس وتصنيع فيتامين D؛ يمكن أن يتلف DNA.",
-
-            exampleEn = "The Ultraviolet radiation (UV) is Electromagnetic radiation that causes sunburn and vitamin D synthesis; can damage DNA.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1501,
+            etymology = "",
             termEn = "Photon",
             termFr = "Photon",
             termAr = "الفوتون",
@@ -3075,6 +3123,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1502,
+            etymology = "",
             termEn = "Photoelectric effect",
             termFr = "Effet photoélectrique",
             termAr = "التأثير الكهروضوئي",
@@ -3090,6 +3139,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1503,
+            etymology = "",
             termEn = "Compton scattering",
             termFr = "Diffusion Compton",
             termAr = "تشتت كومبتون",
@@ -3105,6 +3155,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1504,
+            etymology = "",
             termEn = "Pair production",
             termFr = "Production de paires",
             termAr = "إنتاج الأزواج",
@@ -3120,6 +3171,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1505,
+            etymology = "",
             termEn = "Attenuation",
             termFr = "Atténuation",
             termAr = "التوهين",
@@ -3135,6 +3187,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1506,
+            etymology = "",
             termEn = "Beer-Lambert law",
             termFr = "Loi de Beer-Lambert",
             termAr = "قانون بير-لامبرت",
@@ -3150,6 +3203,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1507,
+            etymology = "",
             termEn = "Spectrophotometry",
             termFr = "Spectrophotométrie",
             termAr = "قياس الطيف الضوئي",
@@ -3165,6 +3219,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1508,
+            etymology = "",
             termEn = "Absorbance",
             termFr = "Absorbance",
             termAr = "الامتصاصية",
@@ -3180,6 +3235,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1509,
+            etymology = "",
             termEn = "Transmittance",
             termFr = "Transmittance",
             termAr = "النفاذية",
@@ -3195,6 +3251,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1510,
+            etymology = "",
             termEn = "Pulse oximetry",
             termFr = "Oxymétrie de pouls",
             termAr = "قياس التأكسج النبضي",
@@ -3210,6 +3267,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1511,
+            etymology = "",
             termEn = "Biomechanics",
             termFr = "Biomécanique",
             termAr = "الميكانيكا الحيوية",
@@ -3225,6 +3283,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1512,
+            etymology = "",
             termEn = "Lever",
             termFr = "Levier",
             termAr = "الرافعة",
@@ -3240,6 +3299,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1513,
+            etymology = "",
             termEn = "Fulcrum",
             termFr = "Pivot (Point d'appui)",
             termAr = "نقطة الارتكاز",
@@ -3255,6 +3315,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1514,
+            etymology = "",
             termEn = "Torque (Moment)",
             termFr = "Couple (Moment de force)",
             termAr = "العزم (عزم القوة)",
@@ -3270,6 +3331,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1515,
+            etymology = "",
             termEn = "Center of gravity",
             termFr = "Centre de gravité",
             termAr = "مركز الثقل",
@@ -3285,6 +3347,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1516,
+            etymology = "",
             termEn = "Elasticity",
             termFr = "Élasticité",
             termAr = "المرونة",
@@ -3300,6 +3363,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1517,
+            etymology = "",
             termEn = "Young's modulus",
             termFr = "Module de Young",
             termAr = "معامل يونغ",
@@ -3315,6 +3379,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1518,
+            etymology = "",
             termEn = "Stress (mechanical)",
             termFr = "Contrainte (mécanique)",
             termAr = "الإجهاد (الميكانيكي)",
@@ -3330,6 +3395,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1519,
+            etymology = "",
             termEn = "Strain",
             termFr = "Déformation",
             termAr = "الانفعال",
@@ -3345,6 +3411,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1520,
+            etymology = "",
             termEn = "Hooke's law",
             termFr = "Loi de Hooke",
             termAr = "قانون هوك",
@@ -3360,6 +3427,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1521,
+            etymology = "",
             termEn = "Friction",
             termFr = "Frottement",
             termAr = "الاحتكاك",
@@ -3375,6 +3443,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1522,
+            etymology = "",
             termEn = "Work",
             termFr = "Travail",
             termAr = "الشغل",
@@ -3384,15 +3453,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/wɜːrk/",
-
-            exampleFr = "Exemple: Le Énergie transférée quand une force déplace un objet (W = F × d) mesurée en Joules.",
-
-            exampleAr = "مثال: يظهر طاقة المنقولة عندما تحرك قوة جسماً (W = F × d) يُقاس بالجول.",
-
-            exampleEn = "The Work is Energy transferred when a force moves an object (W = F × d) measured in Joules.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1523,
+            etymology = "",
             termEn = "Kinetic energy",
             termFr = "Énergie cinétique",
             termAr = "الطاقة الحركية",
@@ -3408,6 +3475,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1524,
+            etymology = "",
             termEn = "Potential energy",
             termFr = "Énergie potentielle",
             termAr = "الطاقة الكامنة",
@@ -3417,15 +3485,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Biomécanique",
             ipaPhonetic = "/pəˈtɛnʃəl ˈɛnərdʒi/",
-
-            exampleFr = "Exemple: Le Énergie stockée due à la position ou la configuration (EP = mgh).",
-
-            exampleAr = "مثال: يظهر طاقة مخزنة بسبب الموضع أو التكوين (PE = mgh).",
-
-            exampleEn = "The Potential energy is Stored energy due to position or configuration (PE = mgh).",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1525,
+            etymology = "",
             termEn = "Newton's laws of motion",
             termFr = "Lois de Newton",
             termAr = "قوانين نيوتن للحركة",
@@ -3441,6 +3507,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1526,
+            etymology = "",
             termEn = "Gravity",
             termFr = "Gravité (Pesanteur)",
             termAr = "الجاذبية",
@@ -3456,6 +3523,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1527,
+            etymology = "",
             termEn = "Centripetal force",
             termFr = "Force centripète",
             termAr = "القوة الجاذبة المركزية",
@@ -3471,6 +3539,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1528,
+            etymology = "",
             termEn = "Atom",
             termFr = "Atome",
             termAr = "الذرة",
@@ -3486,6 +3555,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1529,
+            etymology = "",
             termEn = "Proton",
             termFr = "Proton",
             termAr = "البروتون",
@@ -3501,6 +3571,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1530,
+            etymology = "",
             termEn = "Neutron",
             termFr = "Neutron",
             termAr = "النيوترون",
@@ -3532,6 +3603,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1532,
+            etymology = "",
             termEn = "Atomic number (Z)",
             termFr = "Numéro atomique (Z)",
             termAr = "العدد الذري",
@@ -3547,6 +3619,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1533,
+            etymology = "",
             termEn = "Mass number (A)",
             termFr = "Nombre de masse (A)",
             termAr = "العدد الكتلي",
@@ -3562,6 +3635,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1534,
+            etymology = "",
             termEn = "Isotope",
             termFr = "Isotope",
             termAr = "النظير",
@@ -3571,15 +3645,13 @@ MedicalTermEntity(
             module = "Biophysique",
             chapter = "Physique Atomique",
             ipaPhonetic = "/ˈaɪsətoʊp/",
-
-            exampleFr = "Exemple: Le Atomes du même élément avec des nombres différents de neutrons.",
-
-            exampleAr = "مثال: يظهر ذرات لنفس العنصر بأعداد مختلفة من النيوترونات.",
-
-            exampleEn = "The Isotope is Atoms of the same element with different numbers of neutrons.",        ),
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1535,
+            etymology = "",
             termEn = "Nuclear fission",
             termFr = "Fission nucléaire",
             termAr = "الانشطار النووي",
@@ -3592,7 +3664,6 @@ MedicalTermEntity(
             exampleEn = "The nuclear fission is the splitting of a heavy nucleus into lighter nuclei releasing enormous energy.",
             exampleFr = "Le fission nucléaire est division d'un noyau lourd en noyaux plus légers libérant une énergie énorme.",
             exampleAr = "الانشطار النووي هو انقسام نواة ثقيلة إلى نوى أخف مع تحرر طاقة هائلة.",
-        )
-
+        ),
     )
 }

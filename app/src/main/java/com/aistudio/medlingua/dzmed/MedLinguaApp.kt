@@ -37,11 +37,14 @@ class MedLinguaApp : Application() {
             com.aistudio.medlingua.dzmed.service.NotificationHelper.PREFS_REMINDERS,
             MODE_PRIVATE
         )
+        val reminderHour = reminderPrefs.getInt(com.aistudio.medlingua.dzmed.service.NotificationHelper.KEY_REMINDER_HOUR, 20)
+        val reminderMinute = reminderPrefs.getInt(com.aistudio.medlingua.dzmed.service.NotificationHelper.KEY_REMINDER_MINUTE, 0)
+
         if (reminderPrefs.getBoolean(
                 com.aistudio.medlingua.dzmed.service.NotificationHelper.KEY_DAILY_REMINDER_ENABLED, true
             )
         ) {
-            com.aistudio.medlingua.dzmed.service.NotificationHelper.scheduleDailyReminder(this, 20, 0)
+            com.aistudio.medlingua.dzmed.service.NotificationHelper.scheduleDailyReminder(this, reminderHour, reminderMinute)
         }
         if (reminderPrefs.getBoolean(
                 com.aistudio.medlingua.dzmed.service.NotificationHelper.KEY_STREAK_REMINDER_ENABLED, true
