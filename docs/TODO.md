@@ -75,7 +75,7 @@
 - [x] **WS2.2c (BUG-008)** ✅ f5cc423 : mutateUserStats = section critique RMW ; 2 sites chauds convertis, 13 restants à convertir (mécanique posée).
 - [x] **ADR-2 exécuté (DÉSACTIVER)** ✅ f5cc423 : 10 deps réseau/IA mortes retirées + plugin google-services → **permission INTERNET disparue du manifest**. Réactivation guidée le jour des ligues réelles.
 - [ ] BUG-022 main-thread (langue au démarrage) : restant, maintenant débloqué — petite mécanique prefs à poser
-- [ ] **WS4 suite** : coffres cadencés sur l'objectif, histoires sérialisées « to be continued », push ≤1/j (rappel existant désormais persistant), certificats, widget
+- [x] **WS4 leviers 3/5/7** ✅ 32c8dbe : coffres cadencés (3 journées-objectif consécutives, calcul pur), cliffhanger « À suivre » en fin d'histoire (même chapitre, publié uniquement), certificat de maîtrise (≥ 90 %, offline, partageable). Leviers 1-2-4 (hub maîtrise, calendrier, ligue honnête) déjà en place. **Restent : push ≤ 1/j (rappel persistant déjà là — à finir côté function), widget Android, sous-titrage honest des bots.**
 - [ ] **WS2.7** : BUG-015 harnais pilote-001 · BUG-032/033 checkers
 
 ## 🟡 DEV (agent — sur demande, dans l'ordre)
