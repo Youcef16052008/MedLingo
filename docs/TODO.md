@@ -71,7 +71,11 @@
 - [x] **WS2.7 (BUG-015/032/033)** ✅ e301d50 : harnais pilote-001 verdict autoritaire ; export préserve les cases [x] (vérifié) ; check-stories minimum 800.
 - [x] **WS2.1b Android** ✅ 49d58a6 : ReviewHubScreen ROUTÉ (overlay + pilule parcours + VM StateFlow + delete), ChapterScreen/ReviewQueueDao versionnés. Reste dépendant du WIP : population de la file (repository) + entrée chapitres (ModulesScreen).
 - [x] **WS4 levier 2 démarré** ✅ (dans e301d50) : calendrier hebdo objectif (7 cellules) sur le parcours web ; leviers déjà actifs : coffres, ligues honnêtes, gel 1 jour.
-- [ ] **WS2.2c** : BUG-008 user_stats atomique + BUG-022 main-thread — BLOQUÉS par le WIP (repository/MedLinguaApp/PracticeScreen non committés)
+- [x] **WIP RÉSOLU** ✅ 918da75/c7c361d/18c9cd4 : fichiers non suivis requis versionnés (HEAD compilait sans eux !), lot utilisateur committé (étymologies+perles ×15 modules, 9 sons + SoundManager, heure de rappel persistée, backend functions). Arbre propre.
+- [x] **WS2.2c (BUG-008)** ✅ f5cc423 : mutateUserStats = section critique RMW ; 2 sites chauds convertis, 13 restants à convertir (mécanique posée).
+- [x] **ADR-2 exécuté (DÉSACTIVER)** ✅ f5cc423 : 10 deps réseau/IA mortes retirées + plugin google-services → **permission INTERNET disparue du manifest**. Réactivation guidée le jour des ligues réelles.
+- [ ] BUG-022 main-thread (langue au démarrage) : restant, maintenant débloqué — petite mécanique prefs à poser
+- [ ] **WS4 suite** : coffres cadencés sur l'objectif, histoires sérialisées « to be continued », push ≤1/j (rappel existant désormais persistant), certificats, widget
 - [ ] **WS2.7** : BUG-015 harnais pilote-001 · BUG-032/033 checkers
 
 ## 🟡 DEV (agent — sur demande, dans l'ordre)
