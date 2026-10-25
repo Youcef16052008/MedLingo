@@ -8,6 +8,17 @@
 
 - [x] Rapport d'analyse concurrentielle + plan stratégique « mieux que Duolingo sur le créneau » — commit `852671d`
 - [x] **V0.1 — Dashboard de relecture** du corpus (commit `6fbf815`) : `npm run review`, verdicts langue/médecine persistés dans `data/review-verdicts.v1.json`, publication automatique ⟺ double approbation, harnais 5086/5086 vert, cycle testé bout-en-bout.
+- [x] **Revue profonde 20 analyses** (36 findings dont 5 critiques) — [`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md)
+
+## 🚨 P0 — Bugs critiques de la revue (1–2 jours, AVANT toute publication)
+
+- [ ] **BUG-001** web : `store.ts:336` — `reviewQueue` rechargé en objet → chaque `update()` crashe après rechargement (perte silencieuse de toute progression). Fix : `coerceArray` + test roundtrip `persist→revive→update`.
+- [ ] **BUG-003** web : type `"gap"` sans renderer (4 298 exercices du corpus régénéré WIP, 1ʳᵉ leçon cassée) — **bloque le commit du corpus 13 000**. Fix : renderer gap + `"gap"` dans `ExerciseType` + test de contrat types↔renderers.
+- [ ] **BUG-002** web : `PathScreen.tsx:86` — `buildPath()` sans arguments → parcours jamais terminé, niveaux verrouillés. Fix : 1 ligne.
+- [ ] **BUG-004** Android : `TtsManager.kt` — `stop()` dans le `finally` tue chaque utterance + `onStop` non overridé (audio cassé, timeouts 6 s partout).
+- [ ] **BUG-005** Android : `MedLinguaViewModel.kt:238` — collecteur ligues imbriqué → boucle infinie d'écritures DB + accumulation de collecteurs.
+- [ ] **BUG-006** pipeline : valider sidecar et bâtir le corpus en mémoire AVANT toute écriture (aujourd'hui un verdict orphelin peut laisser un corpus de 10 histoires avec `check:stories` vert).
+- [ ] **BUG-007** CI : `git add .github/` (workflows jamais committés !) + ajouter `check:stories` à web.yml + retirer `lintDebug || true`.
 
 ---
 
