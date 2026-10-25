@@ -5,30 +5,30 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-015` — Le cas de Amel : Gène anormal(e) / _Amel: the gene is not normal_
+## 1. `termino-case-016` — Le cas de Farid : Gène anormal(e) / _Farid: the gene is not normal_
 
 **Objectif :** Comprendre des résultats : Génétique normal(e), Gène anormal(e).
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amel is a patient at the clinic.
-   - FR : Amel est un·e patient·e à la clinique.
-   - AR : Amel مريض/مريضة في العيادة.
+1. **EN** Farid is a patient at the clinic.
+   - FR : Farid est un·e patient·e à la clinique.
+   - AR : Farid مريض/مريضة في العيادة.
 2. **EN** Today, the doctor has the results.
    - FR : Aujourd'hui, le médecin a les résultats.
    - AR : اليوم، الطبيب عنده النتائج.
-3. **EN** Amine, a medical student, listens.
-   - FR : Amine, étudiant·e en médecine, écoute.
-   - AR : Amine، طالب/طالبة طب، يستمع.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
 4. **EN** The doctor says, “The genetics is normal.”
    - FR : Le médecin dit : « Génétique est normal(e). »
    - AR : يقول الطبيب: «علم الوراثة طبيعي/طبيعية.»
 5. **EN** “But the gene is not normal.”
    - FR : « Mais Gène n'est pas normal(e). »
    - AR : «لكن الجين غير طبيعي/طبيعية.»
-6. **EN** Amine asks, “Is the gene normal?”
-   - FR : Amine demande : « Gène est-il/elle normal(e) ? »
-   - AR : يسأل Amine: «هل الجين طبيعي/طبيعية؟»
+6. **EN** Lina asks, “Is the gene normal?”
+   - FR : Lina demande : « Gène est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل الجين طبيعي/طبيعية؟»
 7. **EN** The doctor says, “No, it is not.”
    - FR : Le médecin répond : « Non. »
    - AR : يجيب الطبيب: «لا.»
@@ -53,8 +53,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : the doctor ; doctor
   - modèle : The doctor has the results.
 - **q5.** Who listens to the doctor?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine listens to the doctor.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina listens to the doctor.
 - **Tt1.** Is the chromosome normal?
   - accepté : yes ; yes it is ; the chromosome is normal
   - modèle : Yes, the chromosome is normal.
@@ -70,7 +70,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Annonce les résultats à Amel en deux phrases. Garde la négation. — amorces : The genetics is… / The gene is not… — modèle : *The genetics is normal. The gene is not normal.*
+- **Reformulation :** Annonce les résultats à Farid en deux phrases. Garde la négation. — amorces : The genetics is… / The gene is not… — modèle : *The genetics is normal. The gene is not normal.*
 - **Transfert (contexte) :** Un autre patient a aussi des résultats : Chromosome normal(e), mais Génétique anormal(e).
 - **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The chromosome is normal. The genetics is not normal.*
 
@@ -81,20 +81,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-015` — Expliquer le plan à Meriem / _Explaining the plan to Meriem_
+## 2. `termino-explain-016` — Expliquer le plan à Sofiane / _Explaining the plan to Sofiane_
 
 **Objectif :** Comprendre un médecin qui explique Génétique et Chromosome à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Meriem is a patient.
-   - FR : Meriem est un·e patient·e.
-   - AR : Meriem مريض/مريضة.
-2. **EN** She is at the hospital.
-   - FR : Elle est à l'hôpital.
+1. **EN** Sofiane is a patient.
+   - FR : Sofiane est un·e patient·e.
+   - AR : Sofiane مريض/مريضة.
+2. **EN** He is at the hospital.
+   - FR : Il est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to her.
-   - FR : Le médecin explique le plan à elle.
+3. **EN** The doctor explains the plan to him.
+   - FR : Le médecin explique le plan à lui.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check genetics.”
    - FR : « D'abord, nous vérifions Génétique. »
@@ -105,9 +105,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Meriem says, “Thank you. I understand now.”
-   - FR : Meriem dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Meriem: «شكرًا. أفهم الآن.»
+7. **EN** Sofiane says, “Thank you. I understand now.”
+   - FR : Sofiane dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Sofiane: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:genetics:v1` — **genetics** · FR : Génétique · AR : علم الوراثة
@@ -129,8 +129,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : meriem ; the patient ; the patient (meriem)
-  - modèle : Meriem understands now.
+  - accepté : sofiane ; the patient ; the patient (sofiane)
+  - modèle : Sofiane understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : gene ; gene first ; he checks gene first
   - modèle : First, the doctor checks gene.
@@ -156,15 +156,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-015` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-016` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Génétique / Chromosome, lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Lina is a medical student.
-   - FR : Lina est étudiant·e en médecine.
-   - AR : Lina طالب/طالبة طب.
+1. **EN** Amine is a medical student.
+   - FR : Amine est étudiant·e en médecine.
+   - AR : Amine طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -177,9 +177,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have a problem with the genetics.
    - FR : Le patient du lit 5 n'a pas de Génétique.
    - AR : مريض السرير ٥ ليس عنده علم الوراثة.
-6. **EN** Lina reports the two cases to the doctor.
-   - FR : Lina rapporte les deux cas au médecin.
-   - AR : يذكر Lina الحالتين للطبيب.
+6. **EN** Amine reports the two cases to the doctor.
+   - FR : Amine rapporte les deux cas au médecin.
+   - AR : يذكر Amine الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:genetics:v1` — **genetics** · FR : Génétique · AR : علم الوراثة
@@ -201,8 +201,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina reports them.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : gene ; a problem with the gene
   - modèle : He has a problem with the gene.

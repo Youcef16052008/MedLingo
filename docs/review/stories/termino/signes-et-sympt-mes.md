@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-024` — Le cas de Sara : Fièvre (Pyrexie) / _Sara: Fever_
+## 1. `termino-case-025` — Le cas de Omar : Fièvre (Pyrexie) / _Omar: Fever_
 
 **Objectif :** Comprendre un cas : fièvre (pyrexie) présent, douleur absent.
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Sara is a patient at the clinic.
-   - FR : Sara est un·e patient·e à la clinique.
-   - AR : Sara مريض/مريضة في العيادة.
-2. **EN** Sara talks to Lina, a medical student.
-   - FR : Sara parle avec Lina, étudiant·e en médecine.
-   - AR : Sara يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has fever.
-   - FR : Elle a Fièvre (Pyrexie).
+1. **EN** Omar is a patient at the clinic.
+   - FR : Omar est un·e patient·e à la clinique.
+   - AR : Omar مريض/مريضة في العيادة.
+2. **EN** Omar talks to Amine, a medical student.
+   - FR : Omar parle avec Amine, étudiant·e en médecine.
+   - AR : Omar يتحدث مع Amine، طالب/طالبة طب.
+3. **EN** He has fever.
+   - FR : Il a Fièvre (Pyrexie).
    - AR : عنده الحُمى.
-4. **EN** She does not have pain.
-   - FR : Elle n'a pas de Douleur.
+4. **EN** He does not have pain.
+   - FR : Il n'a pas de Douleur.
    - AR : ليس عنده الألم.
-5. **EN** Lina asks, “Do you have pain?”
-   - FR : Lina demande : « Avez-vous Douleur ? »
-   - AR : يسأل Lina: «هل عندك الألم؟»
-6. **EN** Sara says, “No, I do not.”
-   - FR : Sara répond : « Non. »
-   - AR : يجيب Sara: «لا.»
-7. **EN** Lina writes “Fever” in the file.
-   - FR : Lina écrit « Fièvre (Pyrexie) » dans le dossier.
-   - AR : يكتب Lina «Fièvre (Pyrexie)» في الملف.
+5. **EN** Amine asks, “Do you have pain?”
+   - FR : Amine demande : « Avez-vous Douleur ? »
+   - AR : يسأل Amine: «هل عندك الألم؟»
+6. **EN** Omar says, “No, I do not.”
+   - FR : Omar répond : « Non. »
+   - AR : يجيب Omar: «لا.»
+7. **EN** Amine writes “Fever” in the file.
+   - FR : Amine écrit « Fièvre (Pyrexie) » dans le dossier.
+   - AR : يكتب Amine «Fièvre (Pyrexie)» في الملف.
 
 ### Expressions ciblées
 - `gen:fever:v1` — **fever** · FR : Fièvre (Pyrexie) · AR : الحُمى
@@ -39,22 +39,22 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:symptom:v1` — **a symptom** · FR : Symptôme · AR : العَرَض
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Sara have fever?
-  - accepté : yes ; yes she does ; yes she has fever ; she has fever
-  - modèle : Yes, she has fever.
-- **q2.** Does she have pain?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have pain ; she doesn't
-  - modèle : No, she does not have pain.
-  - hint (si erreur) — FR : Attention : Sara n'a PAS douleur.
-- **q3.** Does she have fever or pain?
-  - accepté : fever ; she has fever
-  - modèle : She has fever.
-- **q4.** What does Sara have?
-  - accepté : fever ; she has fever
-  - modèle : She has fever.
+- **q1.** Does Omar have fever?
+  - accepté : yes ; yes he does ; yes he has fever ; he has fever
+  - modèle : Yes, he has fever.
+- **q2.** Does he have pain?
+  - accepté : no ; no he does not ; no he doesn't ; he does not have pain ; he doesn't
+  - modèle : No, he does not have pain.
+  - hint (si erreur) — FR : Attention : Omar n'a PAS douleur.
+- **q3.** Does he have fever or pain?
+  - accepté : fever ; he has fever
+  - modèle : He has fever.
+- **q4.** What does Omar have?
+  - accepté : fever ; he has fever
+  - modèle : He has fever.
 - **q5.** Who writes in the file?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine writes in the file.
 - **Tt1.** Does the other patient have symptom?
   - accepté : yes ; yes he does ; he has a symptom
   - modèle : Yes, he has a symptom.
@@ -65,12 +65,12 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Drill
 - Explication : I have → He/She has. He has → He does not have (négation).
-- `She … fever. (have)` → has · modèle : She has fever.
+- `He … fever. (have)` → has · modèle : He has fever.
 - `They … not have pain. (do)` → do · modèle : They do not have pain.
 - `I … fever. (have)` → have · modèle : I have fever.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Sara en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has fever. She does not have pain.*
+- **Reformulation :** Rapporte le cas de Omar en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has fever. He does not have pain.*
 - **Transfert (contexte) :** Un autre patient a Symptôme. Il n'a pas de Fièvre (Pyrexie).
 - Glossaire : Symptôme : un mot médical de ce chapitre
 - **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a symptom. He does not have fever.*
@@ -82,20 +82,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-024` — Expliquer le plan à Youssef / _Explaining the plan to Youssef_
+## 2. `termino-explain-025` — Expliquer le plan à Amel / _Explaining the plan to Amel_
 
 **Objectif :** Comprendre un médecin qui explique Symptôme et Signe à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Youssef is a patient.
-   - FR : Youssef est un·e patient·e.
-   - AR : Youssef مريض/مريضة.
-2. **EN** He is at the hospital.
-   - FR : Il est à l'hôpital.
+1. **EN** Amel is a patient.
+   - FR : Amel est un·e patient·e.
+   - AR : Amel مريض/مريضة.
+2. **EN** She is at the hospital.
+   - FR : Elle est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to him.
-   - FR : Le médecin explique le plan à lui.
+3. **EN** The doctor explains the plan to her.
+   - FR : Le médecin explique le plan à elle.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check symptom.”
    - FR : « D'abord, nous vérifions Symptôme. »
@@ -106,9 +106,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Youssef says, “Thank you. I understand now.”
-   - FR : Youssef dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Youssef: «شكرًا. أفهم الآن.»
+7. **EN** Amel says, “Thank you. I understand now.”
+   - FR : Amel dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Amel: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:symptom:v1` — **a symptom** · FR : Symptôme · AR : العَرَض
@@ -130,8 +130,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : youssef ; the patient ; the patient (youssef)
-  - modèle : Youssef understands now.
+  - accepté : amel ; the patient ; the patient (amel)
+  - modèle : Amel understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : fever ; fever first ; he checks fever first
   - modèle : First, the doctor checks fever.
@@ -157,15 +157,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-024` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-025` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Fièvre (Pyrexie) / Douleur, lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amine is a medical student.
-   - FR : Amine est étudiant·e en médecine.
-   - AR : Amine طالب/طالبة طب.
+1. **EN** Lina is a medical student.
+   - FR : Lina est étudiant·e en médecine.
+   - AR : Lina طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -178,9 +178,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have fever.
    - FR : Le patient du lit 5 n'a pas de Fièvre (Pyrexie).
    - AR : مريض السرير ٥ ليس عنده الحُمى.
-6. **EN** Amine reports the two cases to the doctor.
-   - FR : Amine rapporte les deux cas au médecin.
-   - AR : يذكر Amine الحالتين للطبيب.
+6. **EN** Lina reports the two cases to the doctor.
+   - FR : Lina rapporte les deux cas au médecin.
+   - AR : يذكر Lina الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:fever:v1` — **fever** · FR : Fièvre (Pyrexie) · AR : الحُمى
@@ -202,8 +202,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine reports them.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : symptom ; a symptom
   - modèle : He has a symptom.

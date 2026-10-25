@@ -5,30 +5,30 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-020` — Le cas de Bilal : Dose anormal(e) / _Bilal: the dose is not normal_
+## 1. `termino-case-021` — Le cas de Sara : Dose anormal(e) / _Sara: the dose is not normal_
 
 **Objectif :** Comprendre des résultats : Pharmacologie normal(e), Dose anormal(e).
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Bilal is a patient at the clinic.
-   - FR : Bilal est un·e patient·e à la clinique.
-   - AR : Bilal مريض/مريضة في العيادة.
+1. **EN** Sara is a patient at the clinic.
+   - FR : Sara est un·e patient·e à la clinique.
+   - AR : Sara مريض/مريضة في العيادة.
 2. **EN** Today, the doctor has the results.
    - FR : Aujourd'hui, le médecin a les résultats.
    - AR : اليوم، الطبيب عنده النتائج.
-3. **EN** Lina, a medical student, listens.
-   - FR : Lina, étudiant·e en médecine, écoute.
-   - AR : Lina، طالب/طالبة طب، يستمع.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
 4. **EN** The doctor says, “The pharmacology is normal.”
    - FR : Le médecin dit : « Pharmacologie est normal(e). »
    - AR : يقول الطبيب: «علم الأدوية طبيعي/طبيعية.»
 5. **EN** “But the dose is not normal.”
    - FR : « Mais Dose n'est pas normal(e). »
    - AR : «لكن الجرعة غير طبيعي/طبيعية.»
-6. **EN** Lina asks, “Is the dose normal?”
-   - FR : Lina demande : « Dose est-il/elle normal(e) ? »
-   - AR : يسأل Lina: «هل الجرعة طبيعي/طبيعية؟»
+6. **EN** Amine asks, “Is the dose normal?”
+   - FR : Amine demande : « Dose est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل الجرعة طبيعي/طبيعية؟»
 7. **EN** The doctor says, “No, it is not.”
    - FR : Le médecin répond : « Non. »
    - AR : يجيب الطبيب: «لا.»
@@ -53,8 +53,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : the doctor ; doctor
   - modèle : The doctor has the results.
 - **q5.** Who listens to the doctor?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina listens to the doctor.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine listens to the doctor.
 - **Tt1.** Is the drug normal?
   - accepté : yes ; yes it is ; the drug is normal
   - modèle : Yes, the drug is normal.
@@ -70,7 +70,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Annonce les résultats à Bilal en deux phrases. Garde la négation. — amorces : The pharmacology is… / The dose is not… — modèle : *The pharmacology is normal. The dose is not normal.*
+- **Reformulation :** Annonce les résultats à Sara en deux phrases. Garde la négation. — amorces : The pharmacology is… / The dose is not… — modèle : *The pharmacology is normal. The dose is not normal.*
 - **Transfert (contexte) :** Un autre patient a aussi des résultats : Médicament (Drogue) normal(e), mais Pharmacologie anormal(e).
 - **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The drug is normal. The pharmacology is not normal.*
 
@@ -81,20 +81,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-020` — Expliquer le plan à Omar / _Explaining the plan to Omar_
+## 2. `termino-explain-021` — Expliquer le plan à Leila / _Explaining the plan to Leila_
 
 **Objectif :** Comprendre un médecin qui explique Pharmacologie et Médicament (Drogue) à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Omar is a patient.
-   - FR : Omar est un·e patient·e.
-   - AR : Omar مريض/مريضة.
-2. **EN** He is at the hospital.
-   - FR : Il est à l'hôpital.
+1. **EN** Leila is a patient.
+   - FR : Leila est un·e patient·e.
+   - AR : Leila مريض/مريضة.
+2. **EN** She is at the hospital.
+   - FR : Elle est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to him.
-   - FR : Le médecin explique le plan à lui.
+3. **EN** The doctor explains the plan to her.
+   - FR : Le médecin explique le plan à elle.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check pharmacology.”
    - FR : « D'abord, nous vérifions Pharmacologie. »
@@ -105,9 +105,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Omar says, “Thank you. I understand now.”
-   - FR : Omar dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Omar: «شكرًا. أفهم الآن.»
+7. **EN** Leila says, “Thank you. I understand now.”
+   - FR : Leila dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Leila: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:pharmacology:v1` — **a pharmacology** · FR : Pharmacologie · AR : علم الأدوية
@@ -129,8 +129,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : omar ; the patient ; the patient (omar)
-  - modèle : Omar understands now.
+  - accepté : leila ; the patient ; the patient (leila)
+  - modèle : Leila understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : dose ; dose first ; he checks dose first
   - modèle : First, the doctor checks dose.
@@ -156,15 +156,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-020` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-021` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Pharmacologie / Médicament (Drogue), lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amine is a medical student.
-   - FR : Amine est étudiant·e en médecine.
-   - AR : Amine طالب/طالبة طب.
+1. **EN** Lina is a medical student.
+   - FR : Lina est étudiant·e en médecine.
+   - AR : Lina طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -177,9 +177,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have a problem with the pharmacology.
    - FR : Le patient du lit 5 n'a pas de Pharmacologie.
    - AR : مريض السرير ٥ ليس عنده علم الأدوية.
-6. **EN** Amine reports the two cases to the doctor.
-   - FR : Amine rapporte les deux cas au médecin.
-   - AR : يذكر Amine الحالتين للطبيب.
+6. **EN** Lina reports the two cases to the doctor.
+   - FR : Lina rapporte les deux cas au médecin.
+   - AR : يذكر Lina الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:pharmacology:v1` — **a pharmacology** · FR : Pharmacologie · AR : علم الأدوية
@@ -201,8 +201,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine reports them.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : dose ; a problem with the dose
   - modèle : He has a problem with the dose.

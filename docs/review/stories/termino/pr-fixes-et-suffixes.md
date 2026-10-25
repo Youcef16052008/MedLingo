@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-023` — Le cas de Bilal : Bradycardie / _Bilal: Bradycardia_
+## 1. `termino-case-024` — Le cas de Sara : Bradycardie / _Sara: Bradycardia_
 
 **Objectif :** Comprendre un cas : bradycardie présent, tachycardie absent.
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Bilal is a patient at the clinic.
-   - FR : Bilal est un·e patient·e à la clinique.
-   - AR : Bilal مريض/مريضة في العيادة.
-2. **EN** Bilal talks to Amine, a medical student.
-   - FR : Bilal parle avec Amine, étudiant·e en médecine.
-   - AR : Bilal يتحدث مع Amine، طالب/طالبة طب.
-3. **EN** He has bradycardia.
-   - FR : Il a Bradycardie.
+1. **EN** Sara is a patient at the clinic.
+   - FR : Sara est un·e patient·e à la clinique.
+   - AR : Sara مريض/مريضة في العيادة.
+2. **EN** Sara talks to Lina, a medical student.
+   - FR : Sara parle avec Lina, étudiant·e en médecine.
+   - AR : Sara يتحدث مع Lina، طالب/طالبة طب.
+3. **EN** She has bradycardia.
+   - FR : Elle a Bradycardie.
    - AR : عنده بطء ضربات القلب.
-4. **EN** He does not have tachycardia.
-   - FR : Il n'a pas de Tachycardie.
+4. **EN** She does not have tachycardia.
+   - FR : Elle n'a pas de Tachycardie.
    - AR : ليس عنده تسارع ضربات القلب.
-5. **EN** Amine asks, “Do you have tachycardia?”
-   - FR : Amine demande : « Avez-vous Tachycardie ? »
-   - AR : يسأل Amine: «هل عندك تسارع ضربات القلب؟»
-6. **EN** Bilal says, “No, I do not.”
-   - FR : Bilal répond : « Non. »
-   - AR : يجيب Bilal: «لا.»
-7. **EN** Amine writes “Bradycardia” in the file.
-   - FR : Amine écrit « Bradycardie » dans le dossier.
-   - AR : يكتب Amine «Bradycardie» في الملف.
+5. **EN** Lina asks, “Do you have tachycardia?”
+   - FR : Lina demande : « Avez-vous Tachycardie ? »
+   - AR : يسأل Lina: «هل عندك تسارع ضربات القلب؟»
+6. **EN** Sara says, “No, I do not.”
+   - FR : Sara répond : « Non. »
+   - AR : يجيب Sara: «لا.»
+7. **EN** Lina writes “Bradycardia” in the file.
+   - FR : Lina écrit « Bradycardie » dans le dossier.
+   - AR : يكتب Lina «Bradycardie» في الملف.
 
 ### Expressions ciblées
 - `gen:bradycardia:v1` — **bradycardia** · FR : Bradycardie · AR : بطء ضربات القلب
@@ -39,22 +39,22 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:dyspnea:v1` — **dyspnea** · FR : Dyspnée · AR : عسر التنفس / ضيق التنفس
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Bilal have bradycardia?
-  - accepté : yes ; yes he does ; yes he has bradycardia ; he has bradycardia
-  - modèle : Yes, he has bradycardia.
-- **q2.** Does he have tachycardia?
-  - accepté : no ; no he does not ; no he doesn't ; he does not have tachycardia ; he doesn't
-  - modèle : No, he does not have tachycardia.
-  - hint (si erreur) — FR : Attention : Bilal n'a PAS tachycardie.
-- **q3.** Does he have bradycardia or tachycardia?
-  - accepté : bradycardia ; he has bradycardia
-  - modèle : He has bradycardia.
-- **q4.** What does Bilal have?
-  - accepté : bradycardia ; he has bradycardia
-  - modèle : He has bradycardia.
+- **q1.** Does Sara have bradycardia?
+  - accepté : yes ; yes she does ; yes she has bradycardia ; she has bradycardia
+  - modèle : Yes, she has bradycardia.
+- **q2.** Does she have tachycardia?
+  - accepté : no ; no she does not ; no she doesn't ; she does not have tachycardia ; she doesn't
+  - modèle : No, she does not have tachycardia.
+  - hint (si erreur) — FR : Attention : Sara n'a PAS tachycardie.
+- **q3.** Does she have bradycardia or tachycardia?
+  - accepté : bradycardia ; she has bradycardia
+  - modèle : She has bradycardia.
+- **q4.** What does Sara have?
+  - accepté : bradycardia ; she has bradycardia
+  - modèle : She has bradycardia.
 - **q5.** Who writes in the file?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine writes in the file.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina writes in the file.
 - **Tt1.** Does the other patient have dyspnea?
   - accepté : yes ; yes he does ; he has dyspnea
   - modèle : Yes, he has dyspnea.
@@ -65,12 +65,12 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Drill
 - Explication : I have → He/She has. He has → He does not have (négation).
-- `He … bradycardia. (have)` → has · modèle : He has bradycardia.
+- `She … bradycardia. (have)` → has · modèle : She has bradycardia.
 - `They … not have tachycardia. (do)` → do · modèle : They do not have tachycardia.
 - `I … bradycardia. (have)` → have · modèle : I have bradycardia.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Bilal en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has bradycardia. He does not have tachycardia.*
+- **Reformulation :** Rapporte le cas de Sara en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has bradycardia. She does not have tachycardia.*
 - **Transfert (contexte) :** Un autre patient a Dyspnée. Il n'a pas de Bradycardie.
 - Glossaire : Dyspnée : un mot médical de ce chapitre
 - **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has dyspnea. He does not have bradycardia.*
@@ -82,20 +82,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-023` — Expliquer le plan à Nadia / _Explaining the plan to Nadia_
+## 2. `termino-explain-024` — Expliquer le plan à Youssef / _Explaining the plan to Youssef_
 
 **Objectif :** Comprendre un médecin qui explique Bradycardie et Tachycardie à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Nadia is a patient.
-   - FR : Nadia est un·e patient·e.
-   - AR : Nadia مريض/مريضة.
-2. **EN** She is at the hospital.
-   - FR : Elle est à l'hôpital.
+1. **EN** Youssef is a patient.
+   - FR : Youssef est un·e patient·e.
+   - AR : Youssef مريض/مريضة.
+2. **EN** He is at the hospital.
+   - FR : Il est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to her.
-   - FR : Le médecin explique le plan à elle.
+3. **EN** The doctor explains the plan to him.
+   - FR : Le médecin explique le plan à lui.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check bradycardia.”
    - FR : « D'abord, nous vérifions Bradycardie. »
@@ -106,9 +106,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Nadia says, “Thank you. I understand now.”
-   - FR : Nadia dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Nadia: «شكرًا. أفهم الآن.»
+7. **EN** Youssef says, “Thank you. I understand now.”
+   - FR : Youssef dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Youssef: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:bradycardia:v1` — **bradycardia** · FR : Bradycardie · AR : بطء ضربات القلب
@@ -130,8 +130,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : nadia ; the patient ; the patient (nadia)
-  - modèle : Nadia understands now.
+  - accepté : youssef ; the patient ; the patient (youssef)
+  - modèle : Youssef understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : dyspnea ; dyspnea first ; he checks dyspnea first
   - modèle : First, the doctor checks dyspnea.
@@ -157,15 +157,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-023` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-024` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Bradycardie / Tachycardie, lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Lina is a medical student.
-   - FR : Lina est étudiant·e en médecine.
-   - AR : Lina طالب/طالبة طب.
+1. **EN** Amine is a medical student.
+   - FR : Amine est étudiant·e en médecine.
+   - AR : Amine طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -178,9 +178,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have bradycardia.
    - FR : Le patient du lit 5 n'a pas de Bradycardie.
    - AR : مريض السرير ٥ ليس عنده بطء ضربات القلب.
-6. **EN** Lina reports the two cases to the doctor.
-   - FR : Lina rapporte les deux cas au médecin.
-   - AR : يذكر Lina الحالتين للطبيب.
+6. **EN** Amine reports the two cases to the doctor.
+   - FR : Amine rapporte les deux cas au médecin.
+   - AR : يذكر Amine الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:bradycardia:v1` — **bradycardia** · FR : Bradycardie · AR : بطء ضربات القلب
@@ -202,8 +202,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina reports them.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : dyspnea
   - modèle : He has dyspnea.

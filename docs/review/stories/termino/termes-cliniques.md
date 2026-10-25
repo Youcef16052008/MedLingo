@@ -5,30 +5,30 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-034` — Le cas de Omar : Gestation (Grossesse) anormal(e) / _Omar: the gestation is not normal_
+## 1. `termino-case-035` — Le cas de Leila : Gestation (Grossesse) anormal(e) / _Leila: the gestation is not normal_
 
 **Objectif :** Comprendre des résultats : Embryon normal(e), Gestation (Grossesse) anormal(e).
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Omar is a patient at the clinic.
-   - FR : Omar est un·e patient·e à la clinique.
-   - AR : Omar مريض/مريضة في العيادة.
+1. **EN** Leila is a patient at the clinic.
+   - FR : Leila est un·e patient·e à la clinique.
+   - AR : Leila مريض/مريضة في العيادة.
 2. **EN** Today, the doctor has the results.
    - FR : Aujourd'hui, le médecin a les résultats.
    - AR : اليوم، الطبيب عنده النتائج.
-3. **EN** Lina, a medical student, listens.
-   - FR : Lina, étudiant·e en médecine, écoute.
-   - AR : Lina، طالب/طالبة طب، يستمع.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
 4. **EN** The doctor says, “The embryo is normal.”
    - FR : Le médecin dit : « Embryon est normal(e). »
    - AR : يقول الطبيب: «الجنين (المضغة) طبيعي/طبيعية.»
 5. **EN** “But the gestation is not normal.”
    - FR : « Mais Gestation (Grossesse) n'est pas normal(e). »
    - AR : «لكن الحمل غير طبيعي/طبيعية.»
-6. **EN** Lina asks, “Is the gestation normal?”
-   - FR : Lina demande : « Gestation (Grossesse) est-il/elle normal(e) ? »
-   - AR : يسأل Lina: «هل الحمل طبيعي/طبيعية؟»
+6. **EN** Amine asks, “Is the gestation normal?”
+   - FR : Amine demande : « Gestation (Grossesse) est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل الحمل طبيعي/طبيعية؟»
 7. **EN** The doctor says, “No, it is not.”
    - FR : Le médecin répond : « Non. »
    - AR : يجيب الطبيب: «لا.»
@@ -53,8 +53,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : the doctor ; doctor
   - modèle : The doctor has the results.
 - **q5.** Who listens to the doctor?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina listens to the doctor.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine listens to the doctor.
 - **Tt1.** Is the fetus normal?
   - accepté : yes ; yes it is ; the fetus is normal
   - modèle : Yes, the fetus is normal.
@@ -70,7 +70,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Annonce les résultats à Omar en deux phrases. Garde la négation. — amorces : The embryo is… / The gestation is not… — modèle : *The embryo is normal. The gestation is not normal.*
+- **Reformulation :** Annonce les résultats à Leila en deux phrases. Garde la négation. — amorces : The embryo is… / The gestation is not… — modèle : *The embryo is normal. The gestation is not normal.*
 - **Transfert (contexte) :** Un autre patient a aussi des résultats : Fœtus normal(e), mais Embryon anormal(e).
 - **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The fetus is normal. The embryo is not normal.*
 
@@ -81,20 +81,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-034` — Expliquer le plan à Karim / _Explaining the plan to Karim_
+## 2. `termino-explain-035` — Expliquer le plan à Nadia / _Explaining the plan to Nadia_
 
 **Objectif :** Comprendre un médecin qui explique Embryon et Fœtus à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Karim is a patient.
-   - FR : Karim est un·e patient·e.
-   - AR : Karim مريض/مريضة.
-2. **EN** He is at the hospital.
-   - FR : Il est à l'hôpital.
+1. **EN** Nadia is a patient.
+   - FR : Nadia est un·e patient·e.
+   - AR : Nadia مريض/مريضة.
+2. **EN** She is at the hospital.
+   - FR : Elle est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to him.
-   - FR : Le médecin explique le plan à lui.
+3. **EN** The doctor explains the plan to her.
+   - FR : Le médecin explique le plan à elle.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check embryo.”
    - FR : « D'abord, nous vérifions Embryon. »
@@ -105,9 +105,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Karim says, “Thank you. I understand now.”
-   - FR : Karim dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Karim: «شكرًا. أفهم الآن.»
+7. **EN** Nadia says, “Thank you. I understand now.”
+   - FR : Nadia dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Nadia: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:embryo:v1` — **an embryo** · FR : Embryon · AR : الجنين (المضغة)
@@ -129,8 +129,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : karim ; the patient ; the patient (karim)
-  - modèle : Karim understands now.
+  - accepté : nadia ; the patient ; the patient (nadia)
+  - modèle : Nadia understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : gestation ; gestation first ; he checks gestation first
   - modèle : First, the doctor checks gestation.
@@ -156,15 +156,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-034` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-035` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Embryon / Fœtus, lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amine is a medical student.
-   - FR : Amine est étudiant·e en médecine.
-   - AR : Amine طالب/طالبة طب.
+1. **EN** Lina is a medical student.
+   - FR : Lina est étudiant·e en médecine.
+   - AR : Lina طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -177,9 +177,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have a problem with the embryo.
    - FR : Le patient du lit 5 n'a pas de Embryon.
    - AR : مريض السرير ٥ ليس عنده الجنين (المضغة).
-6. **EN** Amine reports the two cases to the doctor.
-   - FR : Amine rapporte les deux cas au médecin.
-   - AR : يذكر Amine الحالتين للطبيب.
+6. **EN** Lina reports the two cases to the doctor.
+   - FR : Lina rapporte les deux cas au médecin.
+   - AR : يذكر Lina الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:embryo:v1` — **an embryo** · FR : Embryon · AR : الجنين (المضغة)
@@ -201,8 +201,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine reports them.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : gestation ; a problem with the gestation
   - modèle : He has a problem with the gestation.

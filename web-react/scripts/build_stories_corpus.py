@@ -31,6 +31,19 @@ WAVES = [
     {"fr": "Anglais Médical", "id": "clinical_en", "slug": "clinical-en"},
     {"fr": "Sémiologie Médicale", "id": "semio", "slug": "semio"},
     {"fr": "Terminologie Médicale", "id": "termino", "slug": "termino"},
+    # Vagues 4–15 : couverture complète (ids unit du dépôt, cf. MODULE_TO_UNIT).
+    {"fr": "Anatomie", "id": "anat", "slug": "anat"},
+    {"fr": "Physiologie", "id": "physio", "slug": "physio"},
+    {"fr": "Biochimie", "id": "biochim", "slug": "biochim"},
+    {"fr": "Histologie", "id": "histo", "slug": "histo"},
+    {"fr": "Biophysique", "id": "biophys", "slug": "biophys"},
+    {"fr": "Génétique", "id": "genet", "slug": "genet"},
+    {"fr": "Cytologie", "id": "cytol", "slug": "cytol"},
+    {"fr": "Embryologie", "id": "embryo", "slug": "embryo"},
+    {"fr": "Microbiologie", "id": "microbio", "slug": "microbio"},
+    {"fr": "Pharmacologie", "id": "pharmaco", "slug": "pharmaco"},
+    {"fr": "Informatique Médicale", "id": "info_med", "slug": "info-med"},
+    {"fr": "Anatomie Pathologique", "id": "anapath", "slug": "anapath"},
 ]
 
 # Sujets trop lourds pour des récits A2 de langue — relire avant usage.
@@ -544,7 +557,7 @@ def main():
         idx = 0
         for ch in sorted(chapters):
             ts = sorted(chapters[ch], key=lambda x: x["id"])
-            if len(ts) < 4:
+            if len(ts) < 3:
                 skipped.append((mod["slug"], ch, len(ts)))
                 continue
             # Case/handover : les cadres « has / does not have » exigent des

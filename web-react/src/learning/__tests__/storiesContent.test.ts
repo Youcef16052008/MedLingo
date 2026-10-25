@@ -33,9 +33,10 @@ describe("contenu des histoires (pilote ×10)", () => {
     const ids = raw.stories.map((s) => s.storyId);
     expect(new Set(ids).size).toBe(ids.length);
     expect(raw.stories.slice(0, 10).map((s) => s.storyId)).toEqual(PILOT_IDS);
-    // Vagues 1–3 : Anglais Médical + Sémiologie + Terminologie (42+15+37 ch. × 3).
+    // Vagues 1–15 : couverture complète — 268 chapitres × 3 (44 chapitres à
+    // 1–2 termes reportés, cf. PLAN_STORIES_CORPUS.md).
     const generated = raw.stories.slice(10);
-    expect(generated.length).toBeGreaterThanOrEqual(282);
+    expect(generated.length).toBeGreaterThanOrEqual(804);
     const byModule = new Set<string>();
     for (const s of generated) {
       expect(s.provenance, s.storyId).toBe("generated:corpus-v1");
@@ -44,7 +45,9 @@ describe("contenu des histoires (pilote ×10)", () => {
       expect(s.moduleIds.length, s.storyId).toBe(1);
       byModule.add(s.moduleIds[0]);
     }
-    expect([...byModule].sort()).toEqual(["clinical_en", "semio", "termino"]);
+    expect([...byModule].sort()).toEqual(
+      ["anapath", "anat", "biochim", "biophys", "clinical_en", "cytol", "embryo", "genet", "histo", "info_med", "microbio", "pharmaco", "physio", "semio", "termino"]
+    );
   });
 
   it("seule l'histoire pilote est published — les 9 nouvelles attendent la relecture", () => {

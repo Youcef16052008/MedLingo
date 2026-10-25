@@ -5,33 +5,33 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-026` — Le cas de Leila : Hypertension / _Leila: Hypertension_
+## 1. `termino-case-027` — Le cas de Karim : Hypertension / _Karim: Hypertension_
 
 **Objectif :** Comprendre un cas : hypertension présent, hypotension absent.
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Leila is a patient at the clinic.
-   - FR : Leila est un·e patient·e à la clinique.
-   - AR : Leila مريض/مريضة في العيادة.
-2. **EN** Leila talks to Lina, a medical student.
-   - FR : Leila parle avec Lina, étudiant·e en médecine.
-   - AR : Leila يتحدث مع Lina، طالب/طالبة طب.
-3. **EN** She has hypertension.
-   - FR : Elle a Hypertension.
+1. **EN** Karim is a patient at the clinic.
+   - FR : Karim est un·e patient·e à la clinique.
+   - AR : Karim مريض/مريضة في العيادة.
+2. **EN** Karim talks to Amine, a medical student.
+   - FR : Karim parle avec Amine, étudiant·e en médecine.
+   - AR : Karim يتحدث مع Amine، طالب/طالبة طب.
+3. **EN** He has hypertension.
+   - FR : Il a Hypertension.
    - AR : عنده ارتفاع ضغط الدم.
-4. **EN** She does not have hypotension.
-   - FR : Elle n'a pas de Hypotension.
+4. **EN** He does not have hypotension.
+   - FR : Il n'a pas de Hypotension.
    - AR : ليس عنده انخفاض ضغط الدم.
-5. **EN** Lina asks, “Do you have hypotension?”
-   - FR : Lina demande : « Avez-vous Hypotension ? »
-   - AR : يسأل Lina: «هل عندك انخفاض ضغط الدم؟»
-6. **EN** Leila says, “No, I do not.”
-   - FR : Leila répond : « Non. »
-   - AR : يجيب Leila: «لا.»
-7. **EN** Lina writes “Hypertension” in the file.
-   - FR : Lina écrit « Hypertension » dans le dossier.
-   - AR : يكتب Lina «Hypertension» في الملف.
+5. **EN** Amine asks, “Do you have hypotension?”
+   - FR : Amine demande : « Avez-vous Hypotension ? »
+   - AR : يسأل Amine: «هل عندك انخفاض ضغط الدم؟»
+6. **EN** Karim says, “No, I do not.”
+   - FR : Karim répond : « Non. »
+   - AR : يجيب Karim: «لا.»
+7. **EN** Amine writes “Hypertension” in the file.
+   - FR : Amine écrit « Hypertension » dans le dossier.
+   - AR : يكتب Amine «Hypertension» في الملف.
 
 ### Expressions ciblées
 - `gen:hypertension:v1` — **hypertension** · FR : Hypertension · AR : ارتفاع ضغط الدم
@@ -39,22 +39,22 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `gen:heart:v1` — **a heart** · FR : Cœur · AR : القلب
 
 ### Questions (acceptées / modèle / hint)
-- **q1.** Does Leila have hypertension?
-  - accepté : yes ; yes she does ; yes she has hypertension ; she has hypertension
-  - modèle : Yes, she has hypertension.
-- **q2.** Does she have hypotension?
-  - accepté : no ; no she does not ; no she doesn't ; she does not have hypotension ; she doesn't
-  - modèle : No, she does not have hypotension.
-  - hint (si erreur) — FR : Attention : Leila n'a PAS hypotension.
-- **q3.** Does she have hypertension or hypotension?
-  - accepté : hypertension ; she has hypertension
-  - modèle : She has hypertension.
-- **q4.** What does Leila have?
-  - accepté : hypertension ; she has hypertension
-  - modèle : She has hypertension.
+- **q1.** Does Karim have hypertension?
+  - accepté : yes ; yes he does ; yes he has hypertension ; he has hypertension
+  - modèle : Yes, he has hypertension.
+- **q2.** Does he have hypotension?
+  - accepté : no ; no he does not ; no he doesn't ; he does not have hypotension ; he doesn't
+  - modèle : No, he does not have hypotension.
+  - hint (si erreur) — FR : Attention : Karim n'a PAS hypotension.
+- **q3.** Does he have hypertension or hypotension?
+  - accepté : hypertension ; he has hypertension
+  - modèle : He has hypertension.
+- **q4.** What does Karim have?
+  - accepté : hypertension ; he has hypertension
+  - modèle : He has hypertension.
 - **q5.** Who writes in the file?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina writes in the file.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine writes in the file.
 - **Tt1.** Does the other patient have heart?
   - accepté : yes ; yes he does ; he has a heart
   - modèle : Yes, he has a heart.
@@ -65,12 +65,12 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 
 ### Drill
 - Explication : I have → He/She has. He has → He does not have (négation).
-- `She … hypertension. (have)` → has · modèle : She has hypertension.
+- `He … hypertension. (have)` → has · modèle : He has hypertension.
 - `They … not have hypotension. (do)` → do · modèle : They do not have hypotension.
 - `I … hypertension. (have)` → have · modèle : I have hypertension.
 
 ### Productions
-- **Reformulation :** Rapporte le cas de Leila en deux phrases. Garde la négation. — amorces : She has… / She does not have… — modèle : *She has hypertension. She does not have hypotension.*
+- **Reformulation :** Rapporte le cas de Karim en deux phrases. Garde la négation. — amorces : He has… / He does not have… — modèle : *He has hypertension. He does not have hypotension.*
 - **Transfert (contexte) :** Un autre patient a Cœur. Il n'a pas de Hypertension.
 - Glossaire : Cœur : un mot médical de ce chapitre
 - **Tâche :** Rapporte le nouveau cas en deux phrases. Garde la négation. — modèle : *He has a heart. He does not have hypertension.*
@@ -82,20 +82,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-026` — Expliquer le plan à Farid / _Explaining the plan to Farid_
+## 2. `termino-explain-027` — Expliquer le plan à Meriem / _Explaining the plan to Meriem_
 
 **Objectif :** Comprendre un médecin qui explique Cœur et Artère à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Farid is a patient.
-   - FR : Farid est un·e patient·e.
-   - AR : Farid مريض/مريضة.
-2. **EN** He is at the hospital.
-   - FR : Il est à l'hôpital.
+1. **EN** Meriem is a patient.
+   - FR : Meriem est un·e patient·e.
+   - AR : Meriem مريض/مريضة.
+2. **EN** She is at the hospital.
+   - FR : Elle est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to him.
-   - FR : Le médecin explique le plan à lui.
+3. **EN** The doctor explains the plan to her.
+   - FR : Le médecin explique le plan à elle.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check heart.”
    - FR : « D'abord, nous vérifions Cœur. »
@@ -106,9 +106,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Farid says, “Thank you. I understand now.”
-   - FR : Farid dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Farid: «شكرًا. أفهم الآن.»
+7. **EN** Meriem says, “Thank you. I understand now.”
+   - FR : Meriem dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Meriem: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:heart:v1` — **a heart** · FR : Cœur · AR : القلب
@@ -130,8 +130,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : farid ; the patient ; the patient (farid)
-  - modèle : Farid understands now.
+  - accepté : meriem ; the patient ; the patient (meriem)
+  - modèle : Meriem understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : vein ; vein first ; he checks vein first
   - modèle : First, the doctor checks vein.
@@ -157,15 +157,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-026` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-027` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Hypertension / Hypotension, lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amine is a medical student.
-   - FR : Amine est étudiant·e en médecine.
-   - AR : Amine طالب/طالبة طب.
+1. **EN** Lina is a medical student.
+   - FR : Lina est étudiant·e en médecine.
+   - AR : Lina طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -178,9 +178,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have hypertension.
    - FR : Le patient du lit 5 n'a pas de Hypertension.
    - AR : مريض السرير ٥ ليس عنده ارتفاع ضغط الدم.
-6. **EN** Amine reports the two cases to the doctor.
-   - FR : Amine rapporte les deux cas au médecin.
-   - AR : يذكر Amine الحالتين للطبيب.
+6. **EN** Lina reports the two cases to the doctor.
+   - FR : Lina rapporte les deux cas au médecin.
+   - AR : يذكر Lina الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:hypertension:v1` — **hypertension** · FR : Hypertension · AR : ارتفاع ضغط الدم
@@ -202,8 +202,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine reports them.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : heart ; a heart
   - modèle : He has a heart.

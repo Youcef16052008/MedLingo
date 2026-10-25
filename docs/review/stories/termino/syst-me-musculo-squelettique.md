@@ -5,30 +5,30 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-030` — Le cas de Sofiane : Tendon anormal(e) / _Sofiane: the tendon is not normal_
+## 1. `termino-case-031` — Le cas de Hana : Tendon anormal(e) / _Hana: the tendon is not normal_
 
 **Objectif :** Comprendre des résultats : Os normal(e), Tendon anormal(e).
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Sofiane is a patient at the clinic.
-   - FR : Sofiane est un·e patient·e à la clinique.
-   - AR : Sofiane مريض/مريضة في العيادة.
+1. **EN** Hana is a patient at the clinic.
+   - FR : Hana est un·e patient·e à la clinique.
+   - AR : Hana مريض/مريضة في العيادة.
 2. **EN** Today, the doctor has the results.
    - FR : Aujourd'hui, le médecin a les résultats.
    - AR : اليوم، الطبيب عنده النتائج.
-3. **EN** Lina, a medical student, listens.
-   - FR : Lina, étudiant·e en médecine, écoute.
-   - AR : Lina، طالب/طالبة طب، يستمع.
+3. **EN** Amine, a medical student, listens.
+   - FR : Amine, étudiant·e en médecine, écoute.
+   - AR : Amine، طالب/طالبة طب، يستمع.
 4. **EN** The doctor says, “The bone is normal.”
    - FR : Le médecin dit : « Os est normal(e). »
    - AR : يقول الطبيب: «العظم طبيعي/طبيعية.»
 5. **EN** “But the tendon is not normal.”
    - FR : « Mais Tendon n'est pas normal(e). »
    - AR : «لكن الوتر غير طبيعي/طبيعية.»
-6. **EN** Lina asks, “Is the tendon normal?”
-   - FR : Lina demande : « Tendon est-il/elle normal(e) ? »
-   - AR : يسأل Lina: «هل الوتر طبيعي/طبيعية؟»
+6. **EN** Amine asks, “Is the tendon normal?”
+   - FR : Amine demande : « Tendon est-il/elle normal(e) ? »
+   - AR : يسأل Amine: «هل الوتر طبيعي/طبيعية؟»
 7. **EN** The doctor says, “No, it is not.”
    - FR : Le médecin répond : « Non. »
    - AR : يجيب الطبيب: «لا.»
@@ -53,8 +53,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : the doctor ; doctor
   - modèle : The doctor has the results.
 - **q5.** Who listens to the doctor?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina listens to the doctor.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine listens to the doctor.
 - **Tt1.** Is the muscle normal?
   - accepté : yes ; yes it is ; the muscle is normal
   - modèle : Yes, the muscle is normal.
@@ -70,7 +70,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Annonce les résultats à Sofiane en deux phrases. Garde la négation. — amorces : The bone is… / The tendon is not… — modèle : *The bone is normal. The tendon is not normal.*
+- **Reformulation :** Annonce les résultats à Hana en deux phrases. Garde la négation. — amorces : The bone is… / The tendon is not… — modèle : *The bone is normal. The tendon is not normal.*
 - **Transfert (contexte) :** Un autre patient a aussi des résultats : Muscle normal(e), mais Os anormal(e).
 - **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The muscle is normal. The bone is not normal.*
 
@@ -81,20 +81,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-030` — Expliquer le plan à Bilal / _Explaining the plan to Bilal_
+## 2. `termino-explain-031` — Expliquer le plan à Sara / _Explaining the plan to Sara_
 
 **Objectif :** Comprendre un médecin qui explique Os et Muscle à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Bilal is a patient.
-   - FR : Bilal est un·e patient·e.
-   - AR : Bilal مريض/مريضة.
-2. **EN** He is at the hospital.
-   - FR : Il est à l'hôpital.
+1. **EN** Sara is a patient.
+   - FR : Sara est un·e patient·e.
+   - AR : Sara مريض/مريضة.
+2. **EN** She is at the hospital.
+   - FR : Elle est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to him.
-   - FR : Le médecin explique le plan à lui.
+3. **EN** The doctor explains the plan to her.
+   - FR : Le médecin explique le plan à elle.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check bone.”
    - FR : « D'abord, nous vérifions Os. »
@@ -105,9 +105,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Bilal says, “Thank you. I understand now.”
-   - FR : Bilal dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Bilal: «شكرًا. أفهم الآن.»
+7. **EN** Sara says, “Thank you. I understand now.”
+   - FR : Sara dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Sara: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:bone:v1` — **a bone** · FR : Os · AR : العظم
@@ -129,8 +129,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : bilal ; the patient ; the patient (bilal)
-  - modèle : Bilal understands now.
+  - accepté : sara ; the patient ; the patient (sara)
+  - modèle : Sara understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : tendon ; tendon first ; he checks tendon first
   - modèle : First, the doctor checks tendon.
@@ -156,15 +156,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-030` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-031` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Os / Muscle, lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amine is a medical student.
-   - FR : Amine est étudiant·e en médecine.
-   - AR : Amine طالب/طالبة طب.
+1. **EN** Lina is a medical student.
+   - FR : Lina est étudiant·e en médecine.
+   - AR : Lina طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -177,9 +177,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have a problem with the bone.
    - FR : Le patient du lit 5 n'a pas de Os.
    - AR : مريض السرير ٥ ليس عنده العظم.
-6. **EN** Amine reports the two cases to the doctor.
-   - FR : Amine rapporte les deux cas au médecin.
-   - AR : يذكر Amine الحالتين للطبيب.
+6. **EN** Lina reports the two cases to the doctor.
+   - FR : Lina rapporte les deux cas au médecin.
+   - AR : يذكر Lina الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:bone:v1` — **a bone** · FR : Os · AR : العظم
@@ -201,8 +201,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine reports them.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : tendon ; a problem with the tendon
   - modèle : He has a problem with the tendon.

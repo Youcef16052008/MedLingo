@@ -5,30 +5,30 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] **Chapitre entier relu (linguistique)**
 - [ ] **Chapitre entier relu (médical)**
 
-## 1. `termino-case-025` — Le cas de Nadia : Myotome anormal(e) / _Nadia: the myotome is not normal_
+## 1. `termino-case-026` — Le cas de Youssef : Myotome anormal(e) / _Youssef: the myotome is not normal_
 
 **Objectif :** Comprendre des résultats : Somite normal(e), Myotome anormal(e).
 **Archétype :** case · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Nadia is a patient at the clinic.
-   - FR : Nadia est un·e patient·e à la clinique.
-   - AR : Nadia مريض/مريضة في العيادة.
+1. **EN** Youssef is a patient at the clinic.
+   - FR : Youssef est un·e patient·e à la clinique.
+   - AR : Youssef مريض/مريضة في العيادة.
 2. **EN** Today, the doctor has the results.
    - FR : Aujourd'hui, le médecin a les résultats.
    - AR : اليوم، الطبيب عنده النتائج.
-3. **EN** Amine, a medical student, listens.
-   - FR : Amine, étudiant·e en médecine, écoute.
-   - AR : Amine، طالب/طالبة طب، يستمع.
+3. **EN** Lina, a medical student, listens.
+   - FR : Lina, étudiant·e en médecine, écoute.
+   - AR : Lina، طالب/طالبة طب، يستمع.
 4. **EN** The doctor says, “The somite is normal.”
    - FR : Le médecin dit : « Somite est normal(e). »
    - AR : يقول الطبيب: «القطيعة طبيعي/طبيعية.»
 5. **EN** “But the myotome is not normal.”
    - FR : « Mais Myotome n'est pas normal(e). »
    - AR : «لكن الأديم العضلي غير طبيعي/طبيعية.»
-6. **EN** Amine asks, “Is the myotome normal?”
-   - FR : Amine demande : « Myotome est-il/elle normal(e) ? »
-   - AR : يسأل Amine: «هل الأديم العضلي طبيعي/طبيعية؟»
+6. **EN** Lina asks, “Is the myotome normal?”
+   - FR : Lina demande : « Myotome est-il/elle normal(e) ? »
+   - AR : يسأل Lina: «هل الأديم العضلي طبيعي/طبيعية؟»
 7. **EN** The doctor says, “No, it is not.”
    - FR : Le médecin répond : « Non. »
    - AR : يجيب الطبيب: «لا.»
@@ -53,8 +53,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : the doctor ; doctor
   - modèle : The doctor has the results.
 - **q5.** Who listens to the doctor?
-  - accepté : amine ; the student ; the medical student
-  - modèle : Amine listens to the doctor.
+  - accepté : lina ; the student ; the medical student
+  - modèle : Lina listens to the doctor.
 - **Tt1.** Is the sclerotome normal?
   - accepté : yes ; yes it is ; the sclerotome is normal
   - modèle : Yes, the sclerotome is normal.
@@ -70,7 +70,7 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - `It … not normal. (be)` → is · modèle : It is not normal.
 
 ### Productions
-- **Reformulation :** Annonce les résultats à Nadia en deux phrases. Garde la négation. — amorces : The somite is… / The myotome is not… — modèle : *The somite is normal. The myotome is not normal.*
+- **Reformulation :** Annonce les résultats à Youssef en deux phrases. Garde la négation. — amorces : The somite is… / The myotome is not… — modèle : *The somite is normal. The myotome is not normal.*
 - **Transfert (contexte) :** Un autre patient a aussi des résultats : Sclérotome normal(e), mais Somite anormal(e).
 - **Tâche :** Annonce les nouveaux résultats, en deux phrases. — modèle : *The sclerotome is normal. The somite is not normal.*
 
@@ -81,20 +81,20 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 2. `termino-explain-025` — Expliquer le plan à Amel / _Explaining the plan to Amel_
+## 2. `termino-explain-026` — Expliquer le plan à Farid / _Explaining the plan to Farid_
 
 **Objectif :** Comprendre un médecin qui explique Somite et Sclérotome à un patient.
 **Archétype :** explain · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Amel is a patient.
-   - FR : Amel est un·e patient·e.
-   - AR : Amel مريض/مريضة.
-2. **EN** She is at the hospital.
-   - FR : Elle est à l'hôpital.
+1. **EN** Farid is a patient.
+   - FR : Farid est un·e patient·e.
+   - AR : Farid مريض/مريضة.
+2. **EN** He is at the hospital.
+   - FR : Il est à l'hôpital.
    - AR : هي/هو في المستشفى.
-3. **EN** The doctor explains the plan to her.
-   - FR : Le médecin explique le plan à elle.
+3. **EN** The doctor explains the plan to him.
+   - FR : Le médecin explique le plan à lui.
    - AR : يشرح الطبيب الخطة له/لها.
 4. **EN** “First, we check somite.”
    - FR : « D'abord, nous vérifions Somite. »
@@ -105,9 +105,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 6. **EN** “After that, I explain the results.”
    - FR : « Après, j'explique les résultats. »
    - AR : «بعد ذلك أشرح النتائج.»
-7. **EN** Amel says, “Thank you. I understand now.”
-   - FR : Amel dit : « Merci. Je comprends maintenant. »
-   - AR : يقول Amel: «شكرًا. أفهم الآن.»
+7. **EN** Farid says, “Thank you. I understand now.”
+   - FR : Farid dit : « Merci. Je comprends maintenant. »
+   - AR : يقول Farid: «شكرًا. أفهم الآن.»
 
 ### Expressions ciblées
 - `gen:somite:v1` — **a somite** · FR : Somite · AR : القطيعة
@@ -129,8 +129,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : yes ; yes he does ; he explains the results
   - modèle : Yes, he explains the results.
 - **q5.** Who understands now?
-  - accepté : amel ; the patient ; the patient (amel)
-  - modèle : Amel understands now.
+  - accepté : farid ; the patient ; the patient (farid)
+  - modèle : Farid understands now.
 - **Tt1.** What does the doctor check first in the new plan?
   - accepté : myotome ; myotome first ; he checks myotome first
   - modèle : First, the doctor checks myotome.
@@ -156,15 +156,15 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 - [ ] Hints présents et justes sur les faits négatifs
 - [ ] Réponses acceptées exhaustives (contractions incluses)
 
-## 3. `termino-handover-025` — Garde du matin : deux cas / _Morning shift: two cases_
+## 3. `termino-handover-026` — Garde du matin : deux cas / _Morning shift: two cases_
 
 **Objectif :** Rapporter correctement deux cas (Somite / Sclérotome, lits 3 et 5).
 **Archétype :** handover · **Durée :** 10 min · **Statut :** draft
 
 ### Récit (segments EN / aide FR / aide AR)
-1. **EN** Lina is a medical student.
-   - FR : Lina est étudiant·e en médecine.
-   - AR : Lina طالب/طالبة طب.
+1. **EN** Amine is a medical student.
+   - FR : Amine est étudiant·e en médecine.
+   - AR : Amine طالب/طالبة طب.
 2. **EN** It is the morning shift.
    - FR : C'est la garde du matin.
    - AR : إنها مناوبة الصباح.
@@ -177,9 +177,9 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
 5. **EN** The patient in bed 5 does not have a problem with the somite.
    - FR : Le patient du lit 5 n'a pas de Somite.
    - AR : مريض السرير ٥ ليس عنده القطيعة.
-6. **EN** Lina reports the two cases to the doctor.
-   - FR : Lina rapporte les deux cas au médecin.
-   - AR : يذكر Lina الحالتين للطبيب.
+6. **EN** Amine reports the two cases to the doctor.
+   - FR : Amine rapporte les deux cas au médecin.
+   - AR : يذكر Amine الحالتين للطبيب.
 
 ### Expressions ciblées
 - `gen:somite:v1` — **a somite** · FR : Somite · AR : القطيعة
@@ -201,8 +201,8 @@ Fiche générée automatiquement (`scripts/export_story_review.py`). Cocher, cor
   - accepté : two ; 2 ; two cases
   - modèle : The student reports two cases.
 - **q5.** Who reports the cases?
-  - accepté : lina ; the student ; the medical student
-  - modèle : Lina reports them.
+  - accepté : amine ; the student ; the medical student
+  - modèle : Amine reports them.
 - **Tt1.** What does the patient in bed 7 have?
   - accepté : myotome ; a problem with the myotome
   - modèle : He has a problem with the myotome.
