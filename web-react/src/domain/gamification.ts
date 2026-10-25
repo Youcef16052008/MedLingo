@@ -63,17 +63,42 @@ export function todayKey(now: number): string {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
+/** Clé d'hier par jour CALENDAIRE (BUG-019 : `now - 24h` tombait sur
+ * l'avant-veille au petit matin d'un jour de 23 h — changement d'heure). */
+export function yesterdayKey(now: number): string {
+  const d = new Date(now);
+  d.setDate(d.getDate() - 1);
+  const p = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+/** Jours calendaires entre deux clés YYYY-MM-DD (calcul UTC, robuste DST). */
+export function daysBetweenKeys(a: string, b: string): number {
+  const key = (k: string) => {
+    const [y, m, d] = k.split("-").map(Number);
+    return Date.UTC(y, m - 1, d);
+  };
+  return Math.round((key(b) - key(a)) / 86_400_000);
+}
+
 /** Clés des 7 derniers jours (aujourd'hui inclus), du plus ancien au plus récent. */
 export function last7Days(now: number): string[] {
   const out: string[] = [];
-  for (let i = 6; i >= 0; i--) out.push(todayKey(now - i * 86_400_000));
+  const d = new Date(now);
+  for (let i = 6; i >= 0; i--) {
+    const e = new Date(d);
+    e.setDate(e.getDate() - i);
+    const p = (n: number) => String(n).padStart(2, "0");
+    out.push(`${e.getFullYear()}-${p(e.getMonth() + 1)}-${p(e.getDate())}`);
+  }
   return out;
 }
 
 /**
  * Incrémente la série si l'utilisateur n'avait pas encore étudié aujourd'hui.
- * Écart d'un jour ou plus : une congélation consommée conserve la série,
- * sinon la série repart à 1.
+ * Écart d'un jour : continuation normale. Écart de N jours (N ≥ 2) : chaque
+ * congélation comble UN jour manquant (BUG-019 : un gel ne couvrait plus un
+ * trou illimité) ; sans assez de gels, la série repart à 1.
  */
 export function touchStreak(state: StreakState, now: number): StreakOutcome {
   const today = todayKey(now);
@@ -87,17 +112,17 @@ export function touchStreak(state: StreakState, now: number): StreakOutcome {
     return { streak: state.streak, freezeUsed: false };
   }
 
-  const yesterday = todayKey(now - 86_400_000);
-  if (state.lastStudy === yesterday) {
+  const gap = daysBetweenKeys(state.lastStudy, today);
+  if (gap === 1) {
     state.streak += 1;
     state.lastStudy = today;
     return { streak: state.streak, freezeUsed: false };
   }
 
-  const frozen = (state.freezeCount ?? 0) > 0;
-  if (frozen) {
-    // Écart > 1 jour : la congélation comble le trou, la série reste telle quelle.
-    state.freezeCount = (state.freezeCount ?? 0) - 1;
+  // gap ≥ 2 : jours manquants = gap - 1 ; un gel par jour manquant.
+  const missing = gap - 1;
+  if ((state.freezeCount ?? 0) >= missing && missing > 0) {
+    state.freezeCount = (state.freezeCount ?? 0) - missing;
     state.lastStudy = today;
     return { streak: state.streak, freezeUsed: true };
   }

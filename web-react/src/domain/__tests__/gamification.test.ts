@@ -2,6 +2,8 @@ import { describe, it, expect } from "vitest";
 import {
   addXp,
   touchStreak,
+  yesterdayKey,
+  daysBetweenKeys,
   goalProgress,
   buyFreeze,
   todayKey,
@@ -54,26 +56,37 @@ describe("série (streak)", () => {
     expect(s.streak).toBe(1);
   });
 
-  it("avec une congélation l'absence ne casse pas la série", () => {
+  it("BUG-019 : une congélation comble exactement UN jour manquant", () => {
+    // Écart de 3 jours = 2 jours manquants : 2 gels → série conservée, tout consommé.
     const s = state({ streak: 9, lastStudy: todayKey(NOW - 3 * DAY), freezeCount: 2 });
     const out = touchStreak(s, NOW);
     expect(out.freezeUsed).toBe(true);
     expect(s.streak).toBe(9);
-    expect(s.freezeCount).toBe(1);
+    expect(s.freezeCount).toBe(0);
     expect(s.lastStudy).toBe(todayKey(NOW));
   });
 
-  it("la congélation ne s'applique qu'une fois par absence", () => {
+  it("BUG-019 : pas assez de gels pour le trou → la série casse", () => {
+    // Écart de 5 jours = 4 manquants, 1 seul gel : insuffisant.
     const s = state({ streak: 4, lastStudy: todayKey(NOW - 5 * DAY), freezeCount: 1 });
-    expect(touchStreak(s, NOW).freezeUsed).toBe(true);
-    expect(s.freezeCount).toBe(0);
-    expect(s.streak).toBe(4);
-
-    // absence suivante, sans congélation : la série casse
-    s.lastStudy = todayKey(NOW - 5 * DAY);
-    const second = touchStreak(s, NOW);
-    expect(second.freezeUsed).toBe(false);
+    const out = touchStreak(s, NOW);
+    expect(out.freezeUsed).toBe(false);
     expect(s.streak).toBe(1);
+    expect(s.freezeCount).toBe(1); // le gel n'est pas brûlé pour rien
+  });
+
+  it("BUG-019 : un seul jour manquant consomme un seul gel", () => {
+    const s = state({ streak: 7, lastStudy: todayKey(NOW - 2 * DAY), freezeCount: 3 });
+    expect(touchStreak(s, NOW).freezeUsed).toBe(true);
+    expect(s.streak).toBe(7);
+    expect(s.freezeCount).toBe(2);
+  });
+
+  it("BUG-019 : « hier » par jour calendaire, pas par soustraction de 24 h", () => {
+    // Fonctions pures, déterministes quelle que soit la TZ du runner.
+    expect(yesterdayKey(Date.UTC(2026, 2, 30, 12))).toBe("2026-03-29");
+    expect(daysBetweenKeys("2026-03-28", "2026-03-30")).toBe(2);
+    expect(daysBetweenKeys("2026-12-31", "2027-01-01")).toBe(1);
   });
 
   it("une base sans lastStudy adopte le jour sans casser la série (migration)", () => {
