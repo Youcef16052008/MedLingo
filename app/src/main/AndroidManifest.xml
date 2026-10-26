@@ -33,6 +33,18 @@
             </intent-filter>
         </activity>
 
+        <!-- WS4 levier 8 : widget de série (rappel passif, offline). -->
+        <receiver
+            android:name=".service.StreakWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/streak_widget_info" />
+        </receiver>
+
         <receiver
             android:name=".service.NotificationReceiver"
             android:exported="false" />

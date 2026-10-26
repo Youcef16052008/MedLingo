@@ -9,6 +9,8 @@ de répétition espacée **SM-2**, prononciation TTS et tableau de bord de progr
 - **Package** : `com.aistudio.medlingua.dzmed`
 - **Stack** : Kotlin · Jetpack Compose (Material 3) · Room · Navigation Compose · Coroutines · AGP 9.1.1 / Gradle 9.3.1
 - **minSdk 24** · **targetSdk / compileSdk 36.1**
+- **Aussi** : web React 19 + Vite (`web-react/`, PWA offline) · backend Supabase (dormant — l'app ne demande AUCUNE permission réseau)
+- **Statut (25/10/2026)** : dev complet — workstreams WS0→WS5 livrés (stabilisation 36 findings, contenu 13 000 exercices + 814 histoires, intégration, release dossier, 8 leviers d'engagement, moteur de maîtrise + examen EMD). **Portes restantes (humaines)** : relecture des histoires (`web-react && npm run review`), keystore + CGU, pilote étudiant. Pilotage : [docs/PLAN_MAITRE_2026.md](docs/PLAN_MAITRE_2026.md).
 
 ## Fonctionnalités
 
@@ -77,11 +79,11 @@ Un port web React/TS existe dans `web-react/` :
 cd web-react
 npm i
 npm run extract      # regenere terms.json/exercises.json depuis les seeds Kotlin
-npm run test         # 127 tests
-npm run check:i18n   # 164 cles x 3 langues, 0 morte
+npm run test         # 143/143 tests — 0 failures (README was updated from "136/138" after fixing web path.test.ts)
+npm run check:i18n   # 164 clés × 3 langues, 0 morte
 npm run check:seed   # coherence du seed SQL backend
 npm run design       # 35 checks de computed styles (parité design web ↔ Android)
-npm run build        # tsc strict + vite
+npm run build        # tsc strict + vite  → dist/ (utilisable sur Vercel)
 ```
 
 ## Parité web ↔ Android

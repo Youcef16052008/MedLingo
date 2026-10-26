@@ -87,7 +87,7 @@ describe("bulkExercises — intégrité", () => {
   it("tous les ids sont négatifs", () => {
     // Les exercices générés ne doivent jamais collisionner avec les 112
     // exercices écrits main (ids positifs dans exercises.json).
-    expect(exercises.every((e) => e.id < 0)).toBe(true);
+    expect(exercises.every((e) => typeof e.id === "number" && e.id < 0)).toBe(true);
   });
 
   it("tous les types sont supportés par l'UI", () => {

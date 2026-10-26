@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/vercel@canary/schema.json",
+  "projectName": "medlingo",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci",
+  "framework": "vite",
+  "env": [
+    {
+      "key": "VITE_API_BASE",
+      "description": "Base URL of the backend API (Supabase/Edge). Leave empty for frontend-only (localStorage offline mode).",
+      "value": ""
+    }
+  ]
+}

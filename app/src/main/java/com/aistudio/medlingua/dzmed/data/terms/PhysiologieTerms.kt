@@ -1,195 +1,191 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Physiologie — 231 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object PhysiologieTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 413,
+            etymology = "Greek: ὑπέρ (hyper) — 'above / excessive' + Latin: tensio — 'stretching / tension'",
             termEn = "Hypertension",
             termFr = "Hypertension artérielle",
             termAr = "ارتفاع ضغط الدم الشرياني",
             definitionEn = "A chronic clinical condition characterized by persistent elevation of systemic arterial blood pressure.",
             definitionFr = "Élévation pathologique et durable de la pression artérielle systolique (≥140 mmHg) ou diastolique (≥90 mmHg).",
             definitionAr = "حالة سريرية مزمنة تتسم بالارتفاع المستمر لضغط الدم الشرياني الجهازي عن المعدلات الطبيعية.",
-            etymology = "Greek: ὑπέρ (hyper) — 'above / excessive' + Latin: tensio — 'stretching / tension'",
-            clinicalPearl = "Known as the 'silent killer'; major modifiable etiology for ischemic stroke, coronary artery disease, and nephropathy.",
-            mnemonic = "Diagnostic thresholds: Stage 1 = 130-139 / 80-89 mmHg; Stage 2 = ≥140 / ≥90 mmHg.",
             module = "Physiologie",
             chapter = "Cardiovasculaire",
+            ipaPhonetic = "/ˌhaɪ.pəˈten.ʃən/",
             exampleEn = "Essential hypertension accounts for over 90% of all diagnosed hypertensive patients.",
             exampleFr = "L'hypertension essentielle représente plus de 90% des cas d'hypertension diagnostiqués.",
             exampleAr = "يمثل ارتفاع ضغط الدم الأساسي أكثر من 90% من جميع حالات ارتفاع ضغط الدم المشخصة.",
-            ipaPhonetic = "/ˌhaɪ.pəˈten.ʃən/",
+            clinicalPearl = "Known as the 'silent killer'; major modifiable etiology for ischemic stroke, coronary artery disease, and nephropathy.",
+            mnemonic = "Diagnostic thresholds: Stage 1 = 130-139 / 80-89 mmHg; Stage 2 = ≥140 / ≥90 mmHg.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 414,
+            etymology = "Greek: ὅμοιος (homoios) — 'similar' + στάσις (stasis) — 'standing still'",
             termEn = "Homeostasis",
             termFr = "Homéostasie",
             termAr = "الاستتباب / التوازن البدني",
             definitionEn = "The physiological tendency of an organism to regulate and maintain constant internal equilibrium.",
             definitionFr = "Maintien dynamique de la constance du milieu intérieur face aux perturbations de l'environnement.",
             definitionAr = "قدرة الكائن الحي الفسيولوجية على تنظيم واستقرار وسطه الداخلي وحفظ توازنه الديناميكي.",
-            etymology = "Greek: ὅμοιος (homoios) — 'similar' + στάσις (stasis) — 'standing still'",
-            clinicalPearl = "Operates primarily via negative feedback loops regulating body temperature (37°C), pH (7.35-7.45), and glycemia.",
-            mnemonic = "Homeostasis Loop: Receptor → Control Center (Hypothalamus) → Effector.",
             module = "Physiologie",
             chapter = "Physiologie cellulaire",
+            ipaPhonetic = "/ˌhəʊ.mi.əʊˈsteɪ.sɪs/",
             exampleEn = "Renal acid-base buffering and pulmonary ventilation act collaboratively in acid-base homeostasis.",
             exampleFr = "Le tampon rénal acido-basique et la ventilation pulmonaire collaborent pour maintenir l'homéostasie.",
             exampleAr = "يعمل التوازن الكلوي والتهوية الرئوية معاً للحفاظ على الاستتباب الحامضي القاعدي.",
-            ipaPhonetic = "/ˌhəʊ.mi.əʊˈsteɪ.sɪs/",
+            clinicalPearl = "Operates primarily via negative feedback loops regulating body temperature (37°C), pH (7.35-7.45), and glycemia.",
+            mnemonic = "Homeostasis Loop: Receptor → Control Center (Hypothalamus) → Effector.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 415,
+            etymology = "Latin: actio — 'doing / movement' + potentialis — 'having power'",
             termEn = "Action Potential",
             termFr = "Potentiel d'action",
             termAr = "جهد الفعل العصبي",
             definitionEn = "A brief, all-or-none reversal of electric polarization across an excitable cell membrane.",
             definitionFr = "Dépolarisation transitoire et régénérative de la membrane plasmique des cellules excitables.",
             definitionAr = "تغير كهربائي سريع ومؤقت ينعكس فيه استقطاب الغشاء الخلوي في الخلايا القابلة للاستثارة.",
-            etymology = "Latin: actio — 'doing / movement' + potentialis — 'having power'",
-            clinicalPearl = "Triggered when membrane depolarization surpasses threshold (-55 mV), inducing rapid opening of voltage-gated Na+ channels.",
-            mnemonic = "Phases: 1. Depolarization (Na+ in) → 2. Repolarization (K+ out) → 3. Hyperpolarization.",
             module = "Physiologie",
             chapter = "Physiologie nerveuse",
+            ipaPhonetic = "/ˈæk.ʃən pəˈten.ʃəl/",
             exampleEn = "Myelinated axons exhibit saltatory conduction of the action potential along the nodes of Ranvier.",
             exampleFr = "Les axones myélinisés présentent une conduction saltatoire du potentiel d'action.",
             exampleAr = "تظهر المحاور المايلينية توصيلاً قفزياً لجهد الفعل عبر عقد رانفييه.",
-            ipaPhonetic = "/ˈæk.ʃən pəˈten.ʃəl/",
+            clinicalPearl = "Triggered when membrane depolarization surpasses threshold (-55 mV), inducing rapid opening of voltage-gated Na+ channels.",
+            mnemonic = "Phases: 1. Depolarization (Na+ in) → 2. Repolarization (K+ out) → 3. Hyperpolarization.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 416,
+            etymology = "Latin: alveolus — 'little hollow vessel, cavity, or basin'",
             termEn = "Alveoli",
             termFr = "Alvéoles pulmonaires",
             termAr = "الأسناخ الرئوية",
             definitionEn = "Microscopic sac-like dilatations of terminal bronchioles where alveolar-capillary gas exchange occurs.",
             definitionFr = "Petits sacs microscopiques terminaux des poumons où s'effectuent les échanges gazeux hématosiques.",
             definitionAr = "أكياس مجهرية طرفية في الرئتين يتم عبر جدرانها التبادل الغازي بين الهواء المستنشق والدم.",
-            etymology = "Latin: alveolus — 'little hollow vessel, cavity, or basin'",
-            clinicalPearl = "Type II pneumocytes synthesize pulmonary surfactant, preventing alveolar atelectasis by reducing surface tension.",
-            mnemonic = "Type I = Gas Exchange (95% surface area); Type II = Surfactant Synthesis & Stem Cell repair.",
             module = "Physiologie",
             chapter = "Respiratoire",
+            ipaPhonetic = "/ælˈviː.ə.laɪ/",
             exampleEn = "Adult human lungs contain approximately 300 to 500 million functional alveoli.",
             exampleFr = "Les poumons humains adultes contiennent environ 300 à 500 millions d'alvéoles fonctionnelles.",
             exampleAr = "تحتوي رئتا الإنسان البالغ على ما يقارب 300 إلى 500 مليون سنخ وظيفي.",
-            ipaPhonetic = "/ælˈviː.ə.laɪ/",
+            clinicalPearl = "Type II pneumocytes synthesize pulmonary surfactant, preventing alveolar atelectasis by reducing surface tension.",
+            mnemonic = "Type I = Gas Exchange (95% surface area); Type II = Surfactant Synthesis & Stem Cell repair.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 417,
+            etymology = "Greek: καρδία (kardia) — 'heart' + output.",
             termEn = "Cardiac Output (CO)",
             termFr = "Débit cardiaque (Dc)",
             termAr = "النتاج القلبي / صبيب القلب",
             definitionEn = "The volume of blood pumped by each ventricle per minute, calculated as the mathematical product of stroke volume (SV) and heart rate (HR).",
             definitionFr = "Volume de sang éjecté par chaque ventricule cardiaque par minute, produit du volume d'éjection systolique (VES) par la fréquence cardiaque (FC).",
             definitionAr = "حجم الدم الذي يضخه كل بطين في الدقيقة الواحدة، ويساوي حاصل ضرب حجم الضربة (VES) في معدل ضربات القلب (FC).",
-            etymology = "Greek: καρδία (kardia) — 'heart' + output.",
-            clinicalPearl = "Normal resting cardiac output in an adult human is approximately 5.0 L/min; cardiac index normalizes this to body surface area (normal: 2.8 - 4.2 L/min/m^2).",
-            mnemonic = "CO = HR × SV. Frank-Starling law states: Greater ventricular end-diastolic volume (preload) → stronger contractile force.",
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
+            ipaPhonetic = "/ˈkɑː.di.æk ˈaʊt.pʊt/",
             exampleEn = "During intense aerobic exertion, cardiac output can surge up to 25 to 30 liters per minute.",
             exampleFr = "Lors d'un effort physique intense, le débit cardiaque peut atteindre 25 à 30 L/min.",
             exampleAr = "أثناء التمارين الهوائية الشديدة، يمكن للنتاج القلبي أن يرتفع ليصل إلى 25 أو 30 لتراً في الدقيقة.",
-            ipaPhonetic = "/ˈkɑː.di.æk ˈaʊt.pʊt/",
+            clinicalPearl = "Normal resting cardiac output in an adult human is approximately 5.0 L/min; cardiac index normalizes this to body surface area (normal: 2.8 - 4.2 L/min/m^2).",
+            mnemonic = "CO = HR × SV. Frank-Starling law states: Greater ventricular end-diastolic volume (preload) → stronger contractile force.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 418,
+            etymology = "Named after Otto Frank and Ernest Starling who demonstrated myocardial length-tension dynamics in 1895 and 1914.",
             termEn = "Frank-Starling Law of the Heart",
             termFr = "Loi de Frank-Starling",
             termAr = "قانون فرانك ستارلينغ القلبي",
             definitionEn = "The intrinsic physiological principle stating that the stroke volume of the heart increases in response to an increase in the volume of blood filling the heart (end-diastolic volume).",
             definitionFr = "Loi physiologique fondamentale selon laquelle la force de contraction du myocarde augmente avec l'étirement initial des fibres myocardiques en télédiastole.",
             definitionAr = "قانون فسيولوجي أساسي ينص على أن قوة انقباض العضلة القلبية وحجم الضربة يزدادان طردياً مع زيادة حجم الدم الممتلئ في نهاية الانبساط.",
-            etymology = "Named after Otto Frank and Ernest Starling who demonstrated myocardial length-tension dynamics in 1895 and 1914.",
-            clinicalPearl = "Explains how the heart automatically balances the outputs of the right and left ventricles; in decompensated systolic heart failure, the Frank-Starling curve shifts downward and flattens.",
-            mnemonic = "More In = More Out (Increased venous return → increased stretch → optimal actin-myosin overlap → greater stroke volume).",
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
+            ipaPhonetic = "/fræŋk ˈstɑː.lɪŋ lɔː/",
             exampleEn = "Intravenous fluid resuscitation improves cardiac output through the Frank-Starling mechanism.",
             exampleFr = "Le remplissage vasculaire améliore le débit cardiaque via le mécanisme de Frank-Starling.",
             exampleAr = "يؤدي الإنعاش بالسوائل الوريدية إلى تحسين نتاج القلب من خلال آلية فرانك ستارلينغ.",
-            ipaPhonetic = "/fræŋk ˈstɑː.lɪŋ lɔː/",
+            clinicalPearl = "Explains how the heart automatically balances the outputs of the right and left ventricles; in decompensated systolic heart failure, the Frank-Starling curve shifts downward and flattens.",
+            mnemonic = "More In = More Out (Increased venous return → increased stretch → optimal actin-myosin overlap → greater stroke volume).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 419,
+            etymology = "Latin: expirare — 'to breathe out' + volumen.",
             termEn = "Forced Expiratory Volume in 1 Second (FEV1)",
             termFr = "Volume expiratoire maximal par seconde (VEMS)",
             termAr = "الحجم الزفيري الأقصى في الثانية الأولى (FEV1)",
             definitionEn = "The volume of air exhaled with maximum force in the first second of a spirometry maneuver after full inspiration, assessing airway patency.",
             definitionFr = "Volume maximal d'air expiré avec force durant la toute première seconde d'une expiration maximale forcée débutant à capacité pulmonaire totale.",
             definitionAr = "أقصى حجم هواء يمكن زفيره بقوة قصوى خلال الثانية الأولى من اختبار قياس التنفس بعد شهيق كامل لتقييم سالكية المسالك الهوائية.",
-            etymology = "Latin: expirare — 'to breathe out' + volumen.",
-            clinicalPearl = "Tiffeneau-Pinelli index (FEV1/FVC ratio) normally exceeds 70-75%; a post-bronchodilator ratio <0.70 confirms obstructive lung disease (Asthma, COPD).",
-            mnemonic = "FEV1/FVC < 0.70 = Obstructive defect; FEV1/FVC normal or high with reduced TLC = Restrictive defect (Fibrosis).",
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
+            ipaPhonetic = "/ˌef.iː.viː ˈwʌn/",
             exampleEn = "Reversible reduction of FEV1 by more than 12% following bronchodilator inhalation is diagnostic for asthma.",
             exampleFr = "Une amélioration du VEMS de plus de 12% après bronchodilatateur confirme le diagnostic d'asthme.",
             exampleAr = "إن التحسن العكوس للـ FEV1 بأكثر من 12% بعد استنشاق موسع قصبي يؤكد تشخيص الربو القصبي.",
-            ipaPhonetic = "/ˌef.iː.viː ˈwʌn/",
+            clinicalPearl = "Tiffeneau-Pinelli index (FEV1/FVC ratio) normally exceeds 70-75%; a post-bronchodilator ratio <0.70 confirms obstructive lung disease (Asthma, COPD).",
+            mnemonic = "FEV1/FVC < 0.70 = Obstructive defect; FEV1/FVC normal or high with reduced TLC = Restrictive defect (Fibrosis).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 420,
+            etymology = "Latin: glomerulus — 'little ball of yarn' + filtration.",
             termEn = "Glomerular Filtration Rate (GFR)",
             termFr = "Débit de filtration glomérulaire (DFG)",
             termAr = "معدل الترشيح الكبيبي الكلوي (GFR)",
             definitionEn = "The total volume of plasma filtered through all functional glomeruli of both kidneys per unit of time, serving as the gold standard measure of renal function.",
             definitionFr = "Volume total de plasma filtré à travers les glomérules des deux reins par unité de temps, critère de référence de la fonction rénale.",
             definitionAr = "إجمالي حجم بلازما الدم المترشحة عبر جميع كبيبات الكليتين في وحدة الزمن، ويعد المعيار الذهبي لقياس كفاءة الوظيفة الكلوية.",
-            etymology = "Latin: glomerulus — 'little ball of yarn' + filtration.",
-            clinicalPearl = "Normal GFR in healthy young adults is 90 to 120 mL/min/1.73 m^2; chronic kidney disease (CKD) is clinically defined by GFR <60 mL/min/1.73 m^2 persisting for ≥3 months.",
-            mnemonic = "Stages of CKD: Stage 1 (>90), Stage 2 (60-89), Stage 3a (45-59), Stage 3b (30-44), Stage 4 (15-29), Stage 5 / ESRD (<15 mL/min).",
             module = "Physiologie",
             chapter = "Physiologie Rénale",
+            ipaPhonetic = "/ɡlɒmˈer.jʊ.lər fɪlˈtreɪ.ʃən reɪt/",
             exampleEn = "Creatinine clearance and the CKD-EPI formula provide clinical estimates of glomerular filtration rate.",
             exampleFr = "La formule CKD-EPI permet d'estimer cliniquement le débit de filtration glomérulaire.",
             exampleAr = "تتيح معادلة CKD-EPI وتصفية الكرياتينين التقدير السريري الدقيق لمعدل الترشيح الكبيبي.",
-            ipaPhonetic = "/ɡlɒmˈer.jʊ.lər fɪlˈtreɪ.ʃən reɪt/",
+            clinicalPearl = "Normal GFR in healthy young adults is 90 to 120 mL/min/1.73 m^2; chronic kidney disease (CKD) is clinically defined by GFR <60 mL/min/1.73 m^2 persisting for ≥3 months.",
+            mnemonic = "Stages of CKD: Stage 1 (>90), Stage 2 (60-89), Stage 3a (45-59), Stage 3b (30-44), Stage 4 (15-29), Stage 5 / ESRD (<15 mL/min).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 421,
+            etymology = "Renin from Latin ren (kidney) + Angio (Greek: vessel) + Tensin (tension).",
             termEn = "Renin-Angiotensin-Aldosterone System (RAAS)",
             termFr = "Système rénine-angiotensine-aldostérone (SRAA)",
             termAr = "جهاز الرينين أنجيوتنسين ألدوستيرون",
             definitionEn = "A coordinated systemic endocrine hormone cascade regulating arterial blood pressure, extracellular fluid volume, and systemic vascular resistance.",
             definitionFr = "Cascade hormonale endocrine systémique régulant la pression artérielle et l'équilibre hydro-électrolytique de l'organisme.",
             definitionAr = "شلال هرموني متناسق ينظم ضغط الدم الشرياني وحجم السائل خارج الخلوي وتوازن الكهارل في الجسم البشري.",
-            etymology = "Renin from Latin ren (kidney) + Angio (Greek: vessel) + Tensin (tension).",
-            clinicalPearl = "Juxtaglomerular cells secrete renin in response to ↓renal perfusion, ↓NaCl at macula densa, or sympathetic stimulation; Angiotensin II triggers vasoconstriction and stimulates aldosterone.",
-            mnemonic = "RAAS cascade: Renin (kidney) cleaves Angiotensinogen (liver) → Angiotensin I → ACE (pulmonary capillary endothelia) → Angiotensin II → Aldosterone (adrenal cortex).",
             module = "Physiologie",
             chapter = "Physiologie Rénale",
+            ipaPhonetic = "/ˌriː.nɪn ˌæn.dʒi.oʊˈten.sɪn ælˈdɒs.tər.oʊn/",
             exampleEn = "ACE inhibitors and ARBs block the RAAS cascade to lower blood pressure and protect diabetic kidneys.",
             exampleFr = "Les inhibiteurs de l'enzyme de conversion bloquent le SRAA pour traiter l'hypertension artérielle.",
             exampleAr = "تثبط مثبطات الإنزيم المحول للأنجيوتنسين شلال SRAA لعلاج ارتفاع ضغط الدم وحماية الكلى السكرية.",
-            ipaPhonetic = "/ˌriː.nɪn ˌæn.dʒi.oʊˈten.sɪn ælˈdɒs.tər.oʊn/",
+            clinicalPearl = "Juxtaglomerular cells secrete renin in response to ↓renal perfusion, ↓NaCl at macula densa, or sympathetic stimulation; Angiotensin II triggers vasoconstriction and stimulates aldosterone.",
+            mnemonic = "RAAS cascade: Renin (kidney) cleaves Angiotensinogen (liver) → Angiotensin I → ACE (pulmonary capillary endothelia) → Angiotensin II → Aldosterone (adrenal cortex).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 422,
+            etymology = "Latin: insula — 'island' (islets of Langerhans) + Greek: glykys (sweet) + agon (driving).",
             termEn = "Insulin and Glucagon",
             termFr = "Insuline et Glucagon",
             termAr = "الإنسولين والغلوكاغون البنكرياسي",
             definitionEn = "The two master antagonistic pancreatic endocrine hormones regulating glycemic balance: beta cells secrete anabolic insulin (hypoglycemic), alpha cells secrete catabolic glucagon (hyperglycemic).",
             definitionFr = "Les deux principales hormones pancréatiques régulant la glycémie : l'insuline hypoglycémiante des cellules bêta et le glucagon hyperglycémiant des cellules alpha.",
             definitionAr = "الهرمونان البنكرياسيان الرئيسيان المتعاكسان في تنظيم سكر الدم: الإنسولين الخافض للسكر من خلايا بيتا، والغلوكاغون الرافع للسكر من خلايا ألفا.",
-            etymology = "Latin: insula — 'island' (islets of Langerhans) + Greek: glykys (sweet) + agon (driving).",
-            clinicalPearl = "Insulin promotes GLUT4 translocation in muscle and adipose tissue, stimulates glycogenesis and lipogenesis, while inhibiting lipolysis and gluconeogenesis.",
-            mnemonic = "Insulin = Hormone of Plenty / Storage (anabolic); Glucagon = Hormone of Fasting / Breakdown ('Glucose is GONE').",
             module = "Physiologie",
             chapter = "Endocrinologie et Homéostasie",
+            ipaPhonetic = "/ˈɪn.sjʊ.lɪn ænd ˈɡluː.kə.ɡɒn/",
             exampleEn = "Postprandial hyperglycemia immediately triggers pulsatile insulin secretion from pancreatic beta cells.",
             exampleFr = "L'hyperglycémie postprandiale déclenche la sécrétion immédiate d'insuline par les cellules bêta.",
             exampleAr = "يحفز ارتفاع سكر الدم بعد الوجبات إفرازاً فورياً ونبضياً للإنسولين من خلايا بيتا البنكرياسية.",
-            ipaPhonetic = "/ˈɪn.sjʊ.lɪn ænd ˈɡluː.kə.ɡɒn/"
+            clinicalPearl = "Insulin promotes GLUT4 translocation in muscle and adipose tissue, stimulates glycogenesis and lipogenesis, while inhibiting lipolysis and gluconeogenesis.",
+            mnemonic = "Insulin = Hormone of Plenty / Storage (anabolic); Glucagon = Hormone of Fasting / Breakdown ('Glucose is GONE').",
         ),
         MedicalTermEntity(
             id = 423,
+            etymology = "",
             termEn = "Cell",
             termFr = "Cellule",
             termAr = "الخلية",
@@ -205,6 +201,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 424,
+            etymology = "",
             termEn = "Cell membrane",
             termFr = "Membrane cellulaire",
             termAr = "الغشاء الخلوي",
@@ -220,6 +217,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 425,
+            etymology = "",
             termEn = "Cytoplasm",
             termFr = "Cytoplasme",
             termAr = "السيتوبلازم",
@@ -235,6 +233,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 426,
+            etymology = "",
             termEn = "Nucleus",
             termFr = "Noyau",
             termAr = "النواة",
@@ -250,6 +249,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 427,
+            etymology = "",
             termEn = "Mitochondria",
             termFr = "Mitochondrie",
             termAr = "الميتوكوندريا",
@@ -265,6 +265,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 428,
+            etymology = "",
             termEn = "Endoplasmic reticulum",
             termFr = "Réticulum endoplasmique",
             termAr = "الشبكة الإندوبلازمية",
@@ -280,6 +281,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 429,
+            etymology = "",
             termEn = "Golgi apparatus",
             termFr = "Appareil de Golgi",
             termAr = "جهاز غولجي",
@@ -295,6 +297,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 430,
+            etymology = "",
             termEn = "Lysosome",
             termFr = "Lysosome",
             termAr = "الجسيم الحال",
@@ -310,6 +313,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 431,
+            etymology = "",
             termEn = "Ribosome",
             termFr = "Ribosome",
             termAr = "الريبوسوم",
@@ -325,6 +329,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 432,
+            etymology = "",
             termEn = "Peroxisome",
             termFr = "Peroxysome",
             termAr = "البيروكسيسوم",
@@ -340,6 +345,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 433,
+            etymology = "",
             termEn = "Cytoskeleton",
             termFr = "Cytosquelette",
             termAr = "الهيكل الخلوي",
@@ -355,6 +361,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 434,
+            etymology = "",
             termEn = "Centrosome",
             termFr = "Centrosome",
             termAr = "الجسيم المركزي",
@@ -370,6 +377,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 435,
+            etymology = "",
             termEn = "Diffusion",
             termFr = "Diffusion",
             termAr = "الانتشار",
@@ -385,6 +393,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 436,
+            etymology = "",
             termEn = "Osmosis",
             termFr = "Osmose",
             termAr = "التناضح (الأسموزية)",
@@ -400,6 +409,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 437,
+            etymology = "",
             termEn = "Active transport",
             termFr = "Transport actif",
             termAr = "النقل الفعال",
@@ -409,9 +419,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈæktɪv ˈtrænspɔːrt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 438,
+            etymology = "",
             termEn = "Passive transport",
             termFr = "Transport passif",
             termAr = "النقل السلبي",
@@ -421,9 +435,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˈpæsɪv ˈtrænspɔːrt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 439,
+            etymology = "",
             termEn = "Facilitated diffusion",
             termFr = "Diffusion facilitée",
             termAr = "الانتشار الميسر",
@@ -433,9 +451,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/fəˈsɪlɪteɪtɪd dɪˈfjuːʒən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 440,
+            etymology = "",
             termEn = "Sodium-potassium pump",
             termFr = "Pompe sodium-potassium",
             termAr = "مضخة الصوديوم والبوتاسيوم",
@@ -451,6 +473,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 441,
+            etymology = "",
             termEn = "Endocytosis",
             termFr = "Endocytose",
             termAr = "الإدخال الخلوي",
@@ -466,6 +489,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 442,
+            etymology = "",
             termEn = "Exocytosis",
             termFr = "Exocytose",
             termAr = "الإخراج الخلوي",
@@ -481,6 +505,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 443,
+            etymology = "",
             termEn = "Phagocytosis",
             termFr = "Phagocytose",
             termAr = "البلعمة",
@@ -496,6 +521,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 444,
+            etymology = "",
             termEn = "Pinocytosis",
             termFr = "Pinocytose",
             termAr = "الاحتساء الخلوي",
@@ -511,6 +537,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 445,
+            etymology = "",
             termEn = "Osmotic pressure",
             termFr = "Pression osmotique",
             termAr = "الضغط الأسموزي",
@@ -526,6 +553,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 446,
+            etymology = "",
             termEn = "Isotonic",
             termFr = "Isotonique",
             termAr = "متساوي التوتر",
@@ -541,6 +569,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 447,
+            etymology = "",
             termEn = "Hypertonic",
             termFr = "Hypertonique",
             termAr = "مفرط التوتر",
@@ -556,6 +585,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 448,
+            etymology = "",
             termEn = "Hypotonic",
             termFr = "Hypotonique",
             termAr = "ناقص التوتر",
@@ -571,6 +601,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 449,
+            etymology = "",
             termEn = "Concentration gradient",
             termFr = "Gradient de concentration",
             termAr = "تدرج التركيز",
@@ -586,6 +617,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 450,
+            etymology = "",
             termEn = "Equilibrium",
             termFr = "Équilibre",
             termAr = "التوازن",
@@ -601,6 +633,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 451,
+            etymology = "",
             termEn = "Ion channel",
             termFr = "Canal ionique",
             termAr = "القناة الأيونية",
@@ -616,6 +649,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 452,
+            etymology = "",
             termEn = "Receptor",
             termFr = "Récepteur",
             termAr = "المستقبل",
@@ -631,6 +665,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 453,
+            etymology = "",
             termEn = "Metabolism",
             termFr = "Métabolisme",
             termAr = "الاستقلاب (الأيض)",
@@ -646,6 +681,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 454,
+            etymology = "",
             termEn = "Anabolism",
             termFr = "Anabolisme",
             termAr = "البناء (الابتناء)",
@@ -655,9 +691,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/əˈnæbəlɪzəm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 455,
+            etymology = "",
             termEn = "Catabolism",
             termFr = "Catabolisme",
             termAr = "الهدم (التقويض)",
@@ -667,9 +707,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/kəˈtæbəlɪzəm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 456,
+            etymology = "",
             termEn = "ATP (Adenosine triphosphate)",
             termFr = "ATP (Adénosine triphosphate)",
             termAr = "أدينوسين ثلاثي الفوسفات",
@@ -685,6 +729,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 457,
+            etymology = "",
             termEn = "Glycolysis",
             termFr = "Glycolyse",
             termAr = "تحلل الغلوكوز",
@@ -700,6 +745,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 458,
+            etymology = "",
             termEn = "Krebs cycle",
             termFr = "Cycle de Krebs",
             termAr = "دورة كريبس",
@@ -715,6 +761,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 459,
+            etymology = "",
             termEn = "Oxidative phosphorylation",
             termFr = "Phosphorylation oxydative",
             termAr = "الفسفرة التأكسدية",
@@ -730,6 +777,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 460,
+            etymology = "",
             termEn = "Aerobic respiration",
             termFr = "Respiration aérobie",
             termAr = "التنفس الهوائي",
@@ -739,9 +787,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/eɪˈroʊbɪk ˌrɛspɪˈreɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 461,
+            etymology = "",
             termEn = "Anaerobic respiration",
             termFr = "Respiration anaérobie",
             termAr = "التنفس اللاهوائي",
@@ -751,9 +803,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cellulaire",
             ipaPhonetic = "/ˌænəˈroʊbɪk ˌrɛspɪˈreɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 462,
+            etymology = "",
             termEn = "Enzyme",
             termFr = "Enzyme",
             termAr = "الإنزيم",
@@ -769,6 +825,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 463,
+            etymology = "",
             termEn = "Blood",
             termFr = "Sang",
             termAr = "الدم",
@@ -784,6 +841,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 464,
+            etymology = "",
             termEn = "Plasma",
             termFr = "Plasma",
             termAr = "البلازما",
@@ -815,6 +873,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 466,
+            etymology = "",
             termEn = "White blood cell (Leukocyte)",
             termFr = "Globule blanc (Leucocyte)",
             termAr = "كرية الدم البيضاء",
@@ -846,6 +905,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 468,
+            etymology = "",
             termEn = "Hemoglobin",
             termFr = "Hémoglobine",
             termAr = "الهيموغلوبين",
@@ -861,6 +921,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 469,
+            etymology = "",
             termEn = "Hematocrit",
             termFr = "Hématocrite",
             termAr = "الهيماتوكريت",
@@ -908,6 +969,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 472,
+            etymology = "",
             termEn = "Hemostasis",
             termFr = "Hémostase",
             termAr = "الإرقاء",
@@ -939,6 +1001,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 474,
+            etymology = "",
             termEn = "Fibrinogen",
             termFr = "Fibrinogène",
             termAr = "الفيبرينوجين",
@@ -954,6 +1017,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 475,
+            etymology = "",
             termEn = "Fibrin",
             termFr = "Fibrine",
             termAr = "الفيبرين",
@@ -1001,6 +1065,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 478,
+            etymology = "",
             termEn = "Blood group (Blood type)",
             termFr = "Groupe sanguin",
             termAr = "فصيلة الدم (الزمرة الدموية)",
@@ -1016,6 +1081,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 479,
+            etymology = "",
             termEn = "Antigen",
             termFr = "Antigène",
             termAr = "المستضد",
@@ -1031,6 +1097,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 480,
+            etymology = "",
             termEn = "Antibody",
             termFr = "Anticorps",
             termAr = "الجسم المضاد",
@@ -1046,6 +1113,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 481,
+            etymology = "",
             termEn = "Rh factor",
             termFr = "Facteur Rhésus",
             termAr = "عامل الريزوس",
@@ -1109,6 +1177,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 485,
+            etymology = "",
             termEn = "Sedimentation rate (ESR)",
             termFr = "Vitesse de sédimentation (VS)",
             termAr = "سرعة التثفل",
@@ -1134,9 +1203,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈsaɪkəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 487,
+            etymology = "",
             termEn = "Systole",
             termFr = "Systole",
             termAr = "الانقباض",
@@ -1152,6 +1225,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 488,
+            etymology = "",
             termEn = "Diastole",
             termFr = "Diastole",
             termAr = "الانبساط",
@@ -1167,6 +1241,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 489,
+            etymology = "",
             termEn = "Stroke volume",
             termFr = "Volume d'éjection systolique (VES)",
             termAr = "حجم الضربة",
@@ -1198,6 +1273,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 491,
+            etymology = "",
             termEn = "Heart rate",
             termFr = "Fréquence cardiaque",
             termAr = "معدل ضربات القلب",
@@ -1207,9 +1283,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/hɑːrt reɪt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 492,
+            etymology = "",
             termEn = "Blood pressure",
             termFr = "Pression artérielle",
             termAr = "ضغط الدم",
@@ -1225,6 +1305,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 493,
+            etymology = "",
             termEn = "Systolic pressure",
             termFr = "Pression systolique",
             termAr = "الضغط الانقباضي",
@@ -1234,9 +1315,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/sɪˈstɒlɪk ˈprɛʃər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 494,
+            etymology = "",
             termEn = "Diastolic pressure",
             termFr = "Pression diastolique",
             termAr = "الضغط الانبساطي",
@@ -1246,9 +1331,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌdaɪəˈstɒlɪk ˈprɛʃər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 495,
+            etymology = "",
             termEn = "Hypotension",
             termFr = "Hypotension artérielle",
             termAr = "انخفاض ضغط الدم",
@@ -1258,9 +1347,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpoʊˈtɛnʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 496,
+            etymology = "",
             termEn = "Peripheral resistance",
             termFr = "Résistance périphérique",
             termAr = "المقاومة المحيطية",
@@ -1276,6 +1369,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 497,
+            etymology = "",
             termEn = "Vasoconstriction",
             termFr = "Vasoconstriction",
             termAr = "تضيق الأوعية",
@@ -1291,6 +1385,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 498,
+            etymology = "",
             termEn = "Vasodilation",
             termFr = "Vasodilatation",
             termAr = "توسع الأوعية",
@@ -1322,6 +1417,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 500,
+            etymology = "",
             termEn = "P wave",
             termFr = "Onde P",
             termAr = "الموجة P",
@@ -1337,6 +1433,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 501,
+            etymology = "",
             termEn = "QRS complex",
             termFr = "Complexe QRS",
             termAr = "مركب QRS",
@@ -1352,6 +1449,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 502,
+            etymology = "",
             termEn = "T wave",
             termFr = "Onde T",
             termAr = "الموجة T",
@@ -1367,6 +1465,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 503,
+            etymology = "",
             termEn = "Sinoatrial node (SA node)",
             termFr = "Nœud sinusal (nœud SA)",
             termAr = "العقدة الجيبية الأذينية",
@@ -1382,6 +1481,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 504,
+            etymology = "",
             termEn = "Atrioventricular node (AV node)",
             termFr = "Nœud auriculo-ventriculaire (nœud AV)",
             termAr = "العقدة الأذينية البطينية",
@@ -1397,6 +1497,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 505,
+            etymology = "",
             termEn = "Bundle of His",
             termFr = "Faisceau de His",
             termAr = "حزمة هيس",
@@ -1412,6 +1513,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 506,
+            etymology = "",
             termEn = "Purkinje fibers",
             termFr = "Fibres de Purkinje",
             termAr = "ألياف بوركنجي",
@@ -1421,9 +1523,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/pɜːrˈkɪndʒi ˈfaɪbərz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 507,
+            etymology = "",
             termEn = "Depolarization",
             termFr = "Dépolarisation",
             termAr = "زوال الاستقطاب",
@@ -1439,6 +1545,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 508,
+            etymology = "",
             termEn = "Repolarization",
             termFr = "Repolarisation",
             termAr = "عودة الاستقطاب",
@@ -1486,6 +1593,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 511,
+            etymology = "",
             termEn = "Arrhythmia",
             termFr = "Arythmie",
             termAr = "اضطراب النظم القلبي",
@@ -1495,9 +1603,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Cardiovasculaire",
             ipaPhonetic = "/əˈrɪðmiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 512,
+            etymology = "",
             termEn = "Preload",
             termFr = "Précharge",
             termAr = "الحمل المسبق",
@@ -1513,6 +1625,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 513,
+            etymology = "",
             termEn = "Afterload",
             termFr = "Postcharge",
             termAr = "الحمل اللاحق",
@@ -1526,8 +1639,9 @@ MedicalTermEntity(
             exampleFr = "La postcharge est résistance que le cœur doit surmonter pour éjecter le sang.",
             exampleAr = "الحمل اللاحق هو المقاومة التي يجب على القلب التغلب عليها لقذف الدم.",
         ),
-                MedicalTermEntity(
+        MedicalTermEntity(
             id = 515,
+            etymology = "",
             termEn = "Baroreceptor",
             termFr = "Barorécepteur",
             termAr = "مستقبل الضغط",
@@ -1559,6 +1673,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 517,
+            etymology = "",
             termEn = "Ventilation",
             termFr = "Ventilation",
             termAr = "التهوية",
@@ -1574,6 +1689,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 518,
+            etymology = "",
             termEn = "Inspiration (Inhalation)",
             termFr = "Inspiration",
             termAr = "الشهيق",
@@ -1589,6 +1705,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 519,
+            etymology = "",
             termEn = "Expiration (Exhalation)",
             termFr = "Expiration",
             termAr = "الزفير",
@@ -1604,6 +1721,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 520,
+            etymology = "",
             termEn = "Tidal volume",
             termFr = "Volume courant",
             termAr = "الحجم الجاري",
@@ -1619,6 +1737,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 521,
+            etymology = "",
             termEn = "Vital capacity",
             termFr = "Capacité vitale",
             termAr = "السعة الحيوية",
@@ -1634,6 +1753,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 522,
+            etymology = "",
             termEn = "Residual volume",
             termFr = "Volume résiduel",
             termAr = "الحجم المتبقي",
@@ -1649,6 +1769,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 523,
+            etymology = "",
             termEn = "Total lung capacity",
             termFr = "Capacité pulmonaire totale",
             termAr = "السعة الرئوية الكلية",
@@ -1664,6 +1785,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 524,
+            etymology = "",
             termEn = "Functional residual capacity",
             termFr = "Capacité résiduelle fonctionnelle",
             termAr = "السعة الوظيفية المتبقية",
@@ -1679,6 +1801,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 525,
+            etymology = "",
             termEn = "Dead space",
             termFr = "Espace mort",
             termAr = "المسافة الميتة",
@@ -1694,6 +1817,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 526,
+            etymology = "",
             termEn = "Gas exchange",
             termFr = "Échanges gazeux",
             termAr = "تبادل الغازات",
@@ -1709,6 +1833,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 527,
+            etymology = "",
             termEn = "Partial pressure",
             termFr = "Pression partielle",
             termAr = "الضغط الجزئي",
@@ -1724,6 +1849,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 528,
+            etymology = "",
             termEn = "Oxyhemoglobin",
             termFr = "Oxyhémoglobine",
             termAr = "أوكسي هيموغلوبين",
@@ -1733,9 +1859,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˌɒksihiːməˈɡloʊbɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 529,
+            etymology = "",
             termEn = "Oxygen saturation (SpO2)",
             termFr = "Saturation en oxygène (SpO2)",
             termAr = "تشبع الأكسجين",
@@ -1745,9 +1875,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈɒksɪdʒən ˌsætʃəˈreɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 530,
+            etymology = "",
             termEn = "Hypoxia",
             termFr = "Hypoxie",
             termAr = "نقص الأكسجة",
@@ -1763,6 +1897,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 531,
+            etymology = "",
             termEn = "Hypercapnia",
             termFr = "Hypercapnie",
             termAr = "فرط ثاني أكسيد الكربون",
@@ -1778,6 +1913,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 532,
+            etymology = "",
             termEn = "Hypocapnia",
             termFr = "Hypocapnie",
             termAr = "نقص ثاني أكسيد الكربون",
@@ -1793,6 +1929,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 533,
+            etymology = "",
             termEn = "Surfactant",
             termFr = "Surfactant",
             termAr = "المادة الفاعلة بالسطح",
@@ -1808,6 +1945,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 534,
+            etymology = "",
             termEn = "Compliance",
             termFr = "Compliance (Distensibilité)",
             termAr = "المطاوعة",
@@ -1823,6 +1961,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 535,
+            etymology = "",
             termEn = "Spirometry",
             termFr = "Spirométrie",
             termAr = "قياس التنفس",
@@ -1838,6 +1977,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 536,
+            etymology = "",
             termEn = "Respiratory rate",
             termFr = "Fréquence respiratoire",
             termAr = "معدل التنفس",
@@ -1847,9 +1987,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈrɛspɪrətɔːri reɪt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 537,
+            etymology = "",
             termEn = "Chemoreceptor",
             termFr = "Chémorécepteur",
             termAr = "المستقبل الكيميائي",
@@ -1865,6 +2009,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 538,
+            etymology = "",
             termEn = "Dyspnea",
             termFr = "Dyspnée",
             termAr = "ضيق التنفس",
@@ -1874,9 +2019,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈdɪspniːə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 539,
+            etymology = "",
             termEn = "Apnea",
             termFr = "Apnée",
             termAr = "انقطاع التنفس",
@@ -1886,6 +2035,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Respiratoire",
             ipaPhonetic = "/ˈæpniːə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 540,
@@ -1921,6 +2073,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 542,
+            etymology = "",
             termEn = "Axon",
             termFr = "Axone",
             termAr = "المحور العصبي",
@@ -1936,6 +2089,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 543,
+            etymology = "",
             termEn = "Dendrite",
             termFr = "Dendrite",
             termAr = "التغصن",
@@ -1951,6 +2105,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 544,
+            etymology = "",
             termEn = "Synapse",
             termFr = "Synapse",
             termAr = "المشبك العصبي",
@@ -1982,6 +2137,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 546,
+            etymology = "",
             termEn = "Resting membrane potential",
             termFr = "Potentiel de repos membranaire",
             termAr = "جهد الراحة الغشائي",
@@ -1997,6 +2153,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 547,
+            etymology = "",
             termEn = "Threshold",
             termFr = "Seuil",
             termAr = "العتبة",
@@ -2012,6 +2169,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 548,
+            etymology = "",
             termEn = "All-or-none principle",
             termFr = "Loi du tout ou rien",
             termAr = "مبدأ الكل أو لا شيء",
@@ -2027,6 +2185,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 549,
+            etymology = "",
             termEn = "Myelin sheath",
             termFr = "Gaine de myéline",
             termAr = "غمد الميالين",
@@ -2042,6 +2201,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 550,
+            etymology = "",
             termEn = "Nodes of Ranvier",
             termFr = "Nœuds de Ranvier",
             termAr = "عقد رانفييه",
@@ -2051,9 +2211,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Nerveuse",
             ipaPhonetic = "/noʊdz əv ˈrɒnvieɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 551,
+            etymology = "",
             termEn = "Saltatory conduction",
             termFr = "Conduction saltatoire",
             termAr = "التوصيل القفزي",
@@ -2069,6 +2233,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 552,
+            etymology = "",
             termEn = "Refractory period",
             termFr = "Période réfractaire",
             termAr = "فترة العصيان",
@@ -2084,6 +2249,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 553,
+            etymology = "",
             termEn = "Acetylcholine (ACh)",
             termFr = "Acétylcholine (ACh)",
             termAr = "الأسيتيل كولين",
@@ -2099,6 +2265,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 554,
+            etymology = "",
             termEn = "Norepinephrine (Noradrenaline)",
             termFr = "Noradrénaline",
             termAr = "النورأدرينالين",
@@ -2114,6 +2281,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 555,
+            etymology = "",
             termEn = "Dopamine",
             termFr = "Dopamine",
             termAr = "الدوبامين",
@@ -2129,6 +2297,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 556,
+            etymology = "",
             termEn = "Serotonin",
             termFr = "Sérotonine",
             termAr = "السيروتونين",
@@ -2144,6 +2313,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 557,
+            etymology = "",
             termEn = "GABA (Gamma-aminobutyric acid)",
             termFr = "GABA (Acide gamma-aminobutyrique)",
             termAr = "حمض غاما أمينوبيوتيريك",
@@ -2159,6 +2329,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 558,
+            etymology = "",
             termEn = "Glutamate",
             termFr = "Glutamate",
             termAr = "الغلوتامات",
@@ -2206,6 +2377,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 561,
+            etymology = "",
             termEn = "Interneuron",
             termFr = "Interneurone",
             termAr = "العصبون البيني",
@@ -2221,6 +2393,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 562,
+            etymology = "",
             termEn = "Reflex arc",
             termFr = "Arc réflexe",
             termAr = "القوس الانعكاسية",
@@ -2252,6 +2425,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 564,
+            etymology = "",
             termEn = "Motor end plate",
             termFr = "Plaque motrice",
             termAr = "الصفيحة المحركة النهائية",
@@ -2267,6 +2441,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 565,
+            etymology = "",
             termEn = "Excitatory postsynaptic potential (EPSP)",
             termFr = "Potentiel postsynaptique excitateur (PPSE)",
             termAr = "الكمون التالي للمشبك المنبه",
@@ -2282,6 +2457,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 566,
+            etymology = "",
             termEn = "Inhibitory postsynaptic potential (IPSP)",
             termFr = "Potentiel postsynaptique inhibiteur (PPSI)",
             termAr = "الكمون التالي للمشبك المثبط",
@@ -2297,6 +2473,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 567,
+            etymology = "",
             termEn = "Muscle contraction",
             termFr = "Contraction musculaire",
             termAr = "التقلص العضلي",
@@ -2312,6 +2489,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 568,
+            etymology = "",
             termEn = "Sliding filament theory",
             termFr = "Théorie des filaments glissants",
             termAr = "نظرية الخيوط المنزلقة",
@@ -2327,6 +2505,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 569,
+            etymology = "",
             termEn = "Actin",
             termFr = "Actine",
             termAr = "الأكتين",
@@ -2342,6 +2521,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 570,
+            etymology = "",
             termEn = "Myosin",
             termFr = "Myosine",
             termAr = "الميوسين",
@@ -2373,6 +2553,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 572,
+            etymology = "",
             termEn = "Troponin",
             termFr = "Troponine",
             termAr = "التروبونين",
@@ -2388,6 +2569,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 573,
+            etymology = "",
             termEn = "Tropomyosin",
             termFr = "Tropomyosine",
             termAr = "التروبوميوسين",
@@ -2419,6 +2601,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 575,
+            etymology = "",
             termEn = "Tetanus (Tetanic contraction)",
             termFr = "Tétanos (Contraction tétanique)",
             termAr = "التيبس (التقلص الكزازي)",
@@ -2434,6 +2617,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 576,
+            etymology = "",
             termEn = "Muscle twitch",
             termFr = "Secousse musculaire",
             termAr = "الارتعاش العضلي",
@@ -2449,6 +2633,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 577,
+            etymology = "",
             termEn = "Motor unit",
             termFr = "Unité motrice",
             termAr = "الوحدة المحركة",
@@ -2464,6 +2649,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 578,
+            etymology = "",
             termEn = "Muscle tone",
             termFr = "Tonus musculaire",
             termAr = "المقوية العضلية",
@@ -2479,6 +2665,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 579,
+            etymology = "",
             termEn = "Muscle fatigue",
             termFr = "Fatigue musculaire",
             termAr = "الإعياء العضلي",
@@ -2510,6 +2697,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 581,
+            etymology = "",
             termEn = "Glomerulus",
             termFr = "Glomérule",
             termAr = "الكبيبة",
@@ -2525,6 +2713,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 582,
+            etymology = "",
             termEn = "Bowman's capsule",
             termFr = "Capsule de Bowman",
             termAr = "محفظة بومان",
@@ -2540,6 +2729,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 583,
+            etymology = "",
             termEn = "Glomerular filtration",
             termFr = "Filtration glomérulaire",
             termAr = "الترشيح الكبيبي",
@@ -2555,6 +2745,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 584,
+            etymology = "",
             termEn = "Tubular reabsorption",
             termFr = "Réabsorption tubulaire",
             termAr = "إعادة الامتصاص الأنبوبي",
@@ -2570,6 +2761,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 585,
+            etymology = "",
             termEn = "Tubular secretion",
             termFr = "Sécrétion tubulaire",
             termAr = "الإفراز الأنبوبي",
@@ -2585,6 +2777,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 586,
+            etymology = "",
             termEn = "Proximal convoluted tubule",
             termFr = "Tube contourné proximal",
             termAr = "النبيب الملتوي القريب",
@@ -2600,6 +2793,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 587,
+            etymology = "",
             termEn = "Loop of Henle",
             termFr = "Anse de Henlé",
             termAr = "عروة هنلي",
@@ -2615,6 +2809,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 588,
+            etymology = "",
             termEn = "Distal convoluted tubule",
             termFr = "Tube contourné distal",
             termAr = "النبيب الملتوي البعيد",
@@ -2630,6 +2825,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 589,
+            etymology = "",
             termEn = "Collecting duct",
             termFr = "Canal collecteur",
             termAr = "القناة الجامعة",
@@ -2645,6 +2841,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 590,
+            etymology = "",
             termEn = "Antidiuretic hormone (ADH)",
             termFr = "Hormone antidiurétique (ADH)",
             termAr = "الهرمون المضاد لإدرار البول",
@@ -2660,6 +2857,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 591,
+            etymology = "",
             termEn = "Aldosterone",
             termFr = "Aldostérone",
             termAr = "الألدوستيرون",
@@ -2675,6 +2873,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 592,
+            etymology = "",
             termEn = "Renin",
             termFr = "Rénine",
             termAr = "الرينين",
@@ -2706,6 +2905,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 594,
+            etymology = "",
             termEn = "Diuresis",
             termFr = "Diurèse",
             termAr = "إدرار البول",
@@ -2721,6 +2921,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 595,
+            etymology = "",
             termEn = "Creatinine",
             termFr = "Créatinine",
             termAr = "الكرياتينين",
@@ -2736,6 +2937,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 596,
+            etymology = "",
             termEn = "Urea",
             termFr = "Urée",
             termAr = "اليوريا",
@@ -2751,6 +2953,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 597,
+            etymology = "",
             termEn = "Micturition (Urination)",
             termFr = "Miction",
             termAr = "التبول",
@@ -2766,6 +2969,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 598,
+            etymology = "",
             termEn = "Hormone",
             termFr = "Hormone",
             termAr = "الهرمون",
@@ -2781,6 +2985,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 599,
+            etymology = "",
             termEn = "Endocrine gland",
             termFr = "Glande endocrine",
             termAr = "الغدة الصماء",
@@ -2796,6 +3001,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 600,
+            etymology = "",
             termEn = "Exocrine gland",
             termFr = "Glande exocrine",
             termAr = "الغدة خارجية الإفراز",
@@ -2811,6 +3017,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 601,
+            etymology = "",
             termEn = "Pituitary gland (Hypophysis)",
             termFr = "Hypophyse",
             termAr = "الغدة النخامية",
@@ -2826,6 +3033,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 602,
+            etymology = "",
             termEn = "Hypothalamus",
             termFr = "Hypothalamus",
             termAr = "الوطاء (تحت المهاد)",
@@ -2841,6 +3049,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 603,
+            etymology = "",
             termEn = "Growth hormone (GH)",
             termFr = "Hormone de croissance (GH)",
             termAr = "هرمون النمو",
@@ -2872,6 +3081,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 605,
+            etymology = "",
             termEn = "Thyroxine (T4)",
             termFr = "Thyroxine (T4)",
             termAr = "الثيروكسين",
@@ -2887,6 +3097,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 606,
+            etymology = "",
             termEn = "Triiodothyronine (T3)",
             termFr = "Triiodothyronine (T3)",
             termAr = "ثلاثي يودوثيرونين",
@@ -2902,6 +3113,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 607,
+            etymology = "",
             termEn = "Insulin",
             termFr = "Insuline",
             termAr = "الأنسولين",
@@ -2917,6 +3129,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 608,
+            etymology = "",
             termEn = "Glucagon",
             termFr = "Glucagon",
             termAr = "الغلوكاغون",
@@ -2932,6 +3145,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 609,
+            etymology = "",
             termEn = "Cortisol",
             termFr = "Cortisol",
             termAr = "الكورتيزول",
@@ -2963,6 +3177,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 611,
+            etymology = "",
             termEn = "Parathyroid hormone (PTH)",
             termFr = "Parathormone (PTH)",
             termAr = "هرمون الغدة جار الدرقية",
@@ -2978,6 +3193,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 612,
+            etymology = "",
             termEn = "Calcitonin",
             termFr = "Calcitonine",
             termAr = "الكالسيتونين",
@@ -2993,6 +3209,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 613,
+            etymology = "",
             termEn = "Negative feedback",
             termFr = "Rétrocontrôle négatif",
             termAr = "التغذية الراجعة السلبية",
@@ -3008,6 +3225,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 614,
+            etymology = "",
             termEn = "Positive feedback",
             termFr = "Rétrocontrôle positif",
             termAr = "التغذية الراجعة الإيجابية",
@@ -3023,6 +3241,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 615,
+            etymology = "",
             termEn = "Testosterone",
             termFr = "Testostérone",
             termAr = "التستوستيرون",
@@ -3038,6 +3257,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 616,
+            etymology = "",
             termEn = "Estrogen",
             termFr = "Œstrogène",
             termAr = "الإستروجين",
@@ -3053,6 +3273,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 617,
+            etymology = "",
             termEn = "Progesterone",
             termFr = "Progestérone",
             termAr = "البروجسترون",
@@ -3068,6 +3289,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 618,
+            etymology = "",
             termEn = "Prolactin",
             termFr = "Prolactine",
             termAr = "البرولاكتين",
@@ -3083,6 +3305,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 619,
+            etymology = "",
             termEn = "Oxytocin",
             termFr = "Ocytocine",
             termAr = "الأوكسيتوسين",
@@ -3098,6 +3321,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 620,
+            etymology = "",
             termEn = "Melatonin",
             termFr = "Mélatonine",
             termAr = "الميلاتونين",
@@ -3113,6 +3337,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 621,
+            etymology = "",
             termEn = "Digestion",
             termFr = "Digestion",
             termAr = "الهضم",
@@ -3128,6 +3353,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 622,
+            etymology = "",
             termEn = "Absorption",
             termFr = "Absorption",
             termAr = "الامتصاص",
@@ -3143,6 +3369,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 623,
+            etymology = "",
             termEn = "Peristalsis",
             termFr = "Péristaltisme",
             termAr = "الحركة الدودية",
@@ -3152,9 +3379,13 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌpɛrɪˈstælsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 624,
+            etymology = "",
             termEn = "Saliva",
             termFr = "Salive",
             termAr = "اللعاب",
@@ -3202,6 +3433,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 627,
+            etymology = "",
             termEn = "Pepsin",
             termFr = "Pepsine",
             termAr = "البيبسين",
@@ -3217,6 +3449,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 628,
+            etymology = "",
             termEn = "Bile",
             termFr = "Bile",
             termAr = "الصفراء (العصارة الصفراوية)",
@@ -3248,6 +3481,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 630,
+            etymology = "",
             termEn = "Amylase",
             termFr = "Amylase",
             termAr = "الأميلاز",
@@ -3263,6 +3497,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 631,
+            etymology = "",
             termEn = "Lipase",
             termFr = "Lipase",
             termAr = "الليباز",
@@ -3278,6 +3513,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 632,
+            etymology = "",
             termEn = "Trypsin",
             termFr = "Trypsine",
             termAr = "التربسين",
@@ -3293,6 +3529,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 633,
+            etymology = "",
             termEn = "Villi (sing. Villus)",
             termFr = "Villosités",
             termAr = "الزغابات",
@@ -3302,6 +3539,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˈvɪlaɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 634,
@@ -3315,6 +3555,9 @@ MedicalTermEntity(
             module = "Physiologie",
             chapter = "Physiologie Digestive",
             ipaPhonetic = "/ˌmaɪkroʊˈvɪlaɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 635,
@@ -3334,6 +3577,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 636,
+            etymology = "",
             termEn = "Secretin",
             termFr = "Sécrétine",
             termAr = "السكرتين",
@@ -3365,6 +3609,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 638,
+            etymology = "",
             termEn = "Defecation",
             termFr = "Défécation",
             termAr = "التغوط",
@@ -3380,6 +3625,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 639,
+            etymology = "",
             termEn = "Chyme",
             termFr = "Chyme",
             termAr = "الكيموس",
@@ -3395,6 +3641,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 640,
+            etymology = "",
             termEn = "pH",
             termFr = "pH",
             termAr = "الأس الهيدروجيني",
@@ -3442,6 +3689,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 643,
+            etymology = "",
             termEn = "Buffer system",
             termFr = "Système tampon",
             termAr = "النظام الدارئ",
@@ -3454,7 +3702,6 @@ MedicalTermEntity(
             exampleEn = "The buffer system is the chemical system that resists changes in pH.",
             exampleFr = "La système tampon est système chimique qui résiste aux changements de pH.",
             exampleAr = "النظام الدارئ هو نظام كيميائي يقاوم التغيرات في الأس الهيدروجيني.",
-        )
-
+        ),
     )
 }

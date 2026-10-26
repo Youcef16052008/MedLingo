@@ -51,7 +51,7 @@ object ChestManager {
             ChestSource.FLASH -> score >= 10
         }
 
-    /** Applique une récompense de caisse (l'XP suit les règles de [ProgressionManager]). */
+    /** Applique une récompense de caisse (l'XP suit les règles de [GamificationEconomy]). */
     fun applyChestReward(
         stats: UserStatsEntity,
         reward: ChestReward,
@@ -61,6 +61,6 @@ object ChestManager {
         ChestKind.FREEZE -> stats.copy(
             streakFreezeCount = stats.streakFreezeCount + reward.amount
         )
-        ChestKind.XP -> ProgressionManager.addXp(stats, reward.amount, now).stats
+        ChestKind.XP -> GamificationEconomy.addXp(stats, reward.amount, now).stats
     }
 }

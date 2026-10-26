@@ -16,11 +16,11 @@ import com.aistudio.medlingua.dzmed.domain.gamification.ChestKind
 import com.aistudio.medlingua.dzmed.domain.gamification.ChestManager
 import com.aistudio.medlingua.dzmed.domain.gamification.ChestReward
 import com.aistudio.medlingua.dzmed.domain.gamification.ChestSource
-import com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS
 import com.aistudio.medlingua.dzmed.domain.gamification.DAILY_GOAL_OPTIONS
+import com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS
+import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
 import com.aistudio.medlingua.dzmed.domain.gamification.GemsManager
 import com.aistudio.medlingua.dzmed.domain.gamification.LeagueManager
-import com.aistudio.medlingua.dzmed.domain.gamification.ProgressionManager
 import com.aistudio.medlingua.dzmed.domain.gamification.TrophyId
 import com.aistudio.medlingua.dzmed.domain.gamification.TrophyManager
 import com.aistudio.medlingua.dzmed.domain.lesson.BulkExerciseGenerator
@@ -31,6 +31,7 @@ import com.aistudio.medlingua.dzmed.domain.time.Clock
 import com.aistudio.medlingua.dzmed.domain.time.SystemClock
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -45,21 +46,37 @@ class MedLinguaRepository(private val dao: MedicalDao, private val clock: Clock 
  */
 val currentClock: Clock get() = clock
 
-    val allTerms: Flow<List<MedicalTermEntity>> = dao.getAllTerms()
-    val allExercises: Flow<List<ExerciseEntity>> = dao.getAllExercises()
-    val allFlashcardProgress: Flow<List<FlashcardProgressEntity>> = dao.getAllFlashcardProgress()
-    val allDownloadedModules: Flow<List<DownloadedModuleEntity>> = dao.getAllDownloadedModules()
-    val userStats: Flow<UserStatsEntity?> = dao.getUserStats()
-    val gemsTransactions: Flow<List<GemsTransactionEntity>> = dao.getAllGemsTransactions()
-    val trophies: Flow<List<TrophyEntity>> = dao.getAllTrophies()
-    val lessonScores: Flow<List<LessonScoreEntity>> = dao.getAllLessonScores()
-    val activeLeagueCohort: Flow<LeagueCohortEntity?> = dao.getActiveLeagueCohort()
-    val allLeagueCohorts: Flow<List<LeagueCohortEntity>> = dao.getAllLeagueCohorts()
+    val allTerms: Flow<List<MedicalTermEntity>> = dao.getAllTerms().flowOn(Dispatchers.IO)
+    val allExercises: Flow<List<ExerciseEntity>> = dao.getAllExercises().flowOn(Dispatchers.IO)
+    val allFlashcardProgress: Flow<List<FlashcardProgressEntity>> = dao.getAllFlashcardProgress().flowOn(Dispatchers.IO)
+    val allDownloadedModules: Flow<List<DownloadedModuleEntity>> = dao.getAllDownloadedModules().flowOn(Dispatchers.IO)
+    val userStats: Flow<UserStatsEntity?> = dao.getUserStats().flowOn(Dispatchers.IO)
+    val gemsTransactions: Flow<List<GemsTransactionEntity>> = dao.getAllGemsTransactions().flowOn(Dispatchers.IO)
+    val trophies: Flow<List<TrophyEntity>> = dao.getAllTrophies().flowOn(Dispatchers.IO)
+    val lessonScores: Flow<List<LessonScoreEntity>> = dao.getAllLessonScores().flowOn(Dispatchers.IO)
+    val activeLeagueCohort: Flow<LeagueCohortEntity?> = dao.getActiveLeagueCohort().flowOn(Dispatchers.IO)
+    val allLeagueCohorts: Flow<List<LeagueCohortEntity>> = dao.getAllLeagueCohorts().flowOn(Dispatchers.IO)
 
-    fun getExercisesByLevel(level: Int): Flow<List<ExerciseEntity>> = dao.getExercisesByLevel(level)
-    fun getLeagueMembers(cohortId: String): Flow<List<LeagueMemberEntity>> = dao.getLeagueMembers(cohortId)
+    fun getExercisesByLevel(level: Int): Flow<List<ExerciseEntity>> = dao.getExercisesByLevel(level).flowOn(Dispatchers.IO)
+    fun getLeagueMembers(cohortId: String): Flow<List<LeagueMemberEntity>> = dao.getLeagueMembers(cohortId).flowOn(Dispatchers.IO)
 
     private val userStatsMutex = Mutex()
+
+    /**
+     * BUG-008 : section critique lecture→transformation→écriture. L'ancien
+     * mutex ne couvrait que l'écriture : deux mises à jour concurrentes
+     * lisaient le même état périmé et la dernière écrasait l'XP/gemmes de
+     * l'autre (lost updates).
+     */
+    private suspend fun mutateUserStats(
+        transform: (UserStatsEntity) -> UserStatsEntity
+    ): UserStatsEntity = withContext(Dispatchers.IO) {
+        userStatsMutex.withLock {
+            val next = transform(dao.getUserStatsOnce() ?: UserStatsEntity.createFresh())
+            dao.upsertUserStats(next)
+            next
+        }
+    }
 
     private suspend fun safeUpsertUserStats(stats: UserStatsEntity) = withContext(Dispatchers.IO) {
         userStatsMutex.withLock {
@@ -119,7 +136,7 @@ val currentClock: Clock get() = clock
         val freshStats = UserStatsEntity.createFresh(clock).copy(
             // La série doit partir du jour courant pour que la première étude la
             // compte bien à 1 (et non à 0).
-            lastStudy = ProgressionManager.todayKey(now),
+            lastStudy = GamificationEconomy.todayKey(now),
             weeklyXpReset = LeagueManager.getWeekStartTimestamp(clock)
         )
 
@@ -328,32 +345,32 @@ val currentClock: Clock get() = clock
         )
         dao.upsertFlashcardProgress(updatedProgress)
 
-        val currentStats = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
+        // BUG-008 : lecture→transformation→écriture SOUS le mutex (lost updates).
         // Plus de perte de cœur : une révision crédite de l'XP (objectif quotidien,
         // ligue, série) et alimente le compteur du trophée 🗂️.
         val gained = if (quality < 3) quality * 2 else quality * 5
-        val newStats = ProgressionManager
-            .addXp(currentStats, gained, clock.now())
-            .stats
-            .copy(flashReviewed = currentStats.flashReviewed + 1)
+        val newStats = mutateUserStats { current ->
+            GamificationEconomy
+                .addXp(current, gained, clock.now())
+                .stats
+                .copy(flashReviewed = current.flashReviewed + 1)
+        }
 
         if (newStats.leagueCohortId != null) {
             dao.addXpToCurrentUserInLeague(newStats.leagueCohortId, gained)
         }
-
-        safeUpsertUserStats(newStats)
         result
     }
 
     suspend fun recordQuizCompletion(pointsEarned: Int, totalQuestions: Int, correctAnswers: Int) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
-        val currentStats = ProgressionManager.addXp(current, pointsEarned, clock.now())
-            .stats
-            .copy(quizzesCompleted = current.quizzesCompleted + 1,
-                totalQuestionsAnswered = current.totalQuestionsAnswered + totalQuestions,
-                correctAnswersCount = current.correctAnswersCount + correctAnswers
-            )
-        safeUpsertUserStats(currentStats)
+        val currentStats = mutateUserStats { current ->
+            GamificationEconomy.addXp(current, pointsEarned, clock.now())
+                .stats
+                .copy(quizzesCompleted = current.quizzesCompleted + 1,
+                    totalQuestionsAnswered = current.totalQuestionsAnswered + totalQuestions,
+                    correctAnswersCount = current.correctAnswersCount + correctAnswers
+                )
+        }
 
         if (currentStats.leagueCohortId != null) {
             dao.addXpToCurrentUserInLeague(currentStats.leagueCohortId, pointsEarned)
@@ -390,7 +407,7 @@ val currentClock: Clock get() = clock
         val isPerfect = correctAnswers == totalQuestions && totalQuestions > 0
         val gemsEarned = GemsManager.calculateGemsForLesson(correctAnswers, totalQuestions)
 
-        val xpStats = ProgressionManager.addXp(current, pointsEarned, clock.now()).stats
+        val xpStats = GamificationEconomy.addXp(current, pointsEarned, clock.now()).stats
         var updated = when (level) {
             1 -> xpStats.copy(level1Score = newScore)
             2 -> xpStats.copy(level2Score = newScore)
@@ -648,7 +665,7 @@ val currentClock: Clock get() = clock
     /** Achète une congélation (200 💎). `false` si les gemmes manquent. */
     suspend fun buyFreeze(): Boolean = withContext(Dispatchers.IO) {
         val stats = dao.getUserStatsOnce() ?: return@withContext false
-        val updated = ProgressionManager.buyFreeze(stats) ?: return@withContext false
+        val updated = GamificationEconomy.buyFreeze(stats) ?: return@withContext false
         safeUpsertUserStats(updated)
         dao.insertGemsTransaction(
             GemsManager.createSpendTransaction(

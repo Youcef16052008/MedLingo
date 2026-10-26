@@ -31,6 +31,21 @@ val TextPrimary = Color(0xFF0C1414)
 val TextSecondary = Color(0xFF475050)
 val TextTertiary = Color(0xFF6B7877)
 
+// Neutral Grays
+val WarmGray = Color(0xFF9CA3AF)
+val CoolGray = Color(0xFF6B7280)
+val NeutralDark = Color(0xFF374151)
+
+// Medical specialized accents — for Anki-style flashcards
+val SemanticBlue = Color(0xFF1D4ED8)
+val SemanticViolet = Color(0xFF7C3AED)
+val SemanticYellow = Color(0xFFF59E0B)
+val SemanticGreen = Color(0xFF059669)
+val SemanticRed = Color(0xFFDC2626)
+val DeepGreen = Color(0xFF0B4A2E)
+val Emeral = Color(0xFF047857)
+val ClinicalViolet = Color(0xFF4338CA)
+
 // Dark Theme Colors — teal-noir profond + menthe (miroir du thème sombre web)
 val MedGreenPrimaryDark = Color(0xFF6EE7B7)
 val MedGreenContainerDark = Color(0xFF0F391E)

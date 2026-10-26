@@ -1,156 +1,151 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Histologie — 229 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object HistologieTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 1078,
+            etymology = "Latin: zonula — 'little belt / zone' + occludere — 'to shut off / close up'.",
             termEn = "Tight Junction (Zonula Occludens)",
             termFr = "Jonction serrée (Zonula occludens)",
             termAr = "الموصل المحكم / النطاق الساد",
             definitionEn = "The most apical specialized intercellular junction sealing adjacent epithelial cells, preventing paracellular diffusion of solutes and maintaining apical-basolateral polarity.",
             definitionFr = "Jonction intercellulaire la plus apicale formant une barrière étanche à la diffusion paracellulaire entre les cellules épithéliales.",
             definitionAr = "موصل خلوي قمي شديد التخصص يغلق المسافات بين الخلايا الظهارية المجاورة لمنع التسرب وتحديد الاستقطاب الخلوي.",
-            etymology = "Latin: zonula — 'little belt / zone' + occludere — 'to shut off / close up'.",
-            clinicalPearl = "Composed of transmembrane proteins claudins and occludins; Clostridium perfringens enterotoxin binds claudins, destroying tight junctions and causing acute food poisoning diarrhea.",
-            mnemonic = "Junctional complex top-to-bottom: 'T-A-D-G' (Tight junction, Adherens junction, Desmosome, Gap junction).",
             module = "Histologie",
             chapter = "Tissus Épithéliaux",
+            ipaPhonetic = "/taɪt ˈdʒʌŋk.ʃən/",
             exampleEn = "Tight junctions of cerebral capillary endothelial cells form the structural basis of the blood-brain barrier.",
             exampleFr = "Les jonctions serrées des cellules endothéliales cérébrales constituent la barrière hémato-encéphalique.",
             exampleAr = "تشكل الموصلات المحكمة في الخلايا البطانية للشعيرات الدموية الأساس الهيكلي للحاجز الدموي الدماغي.",
-            ipaPhonetic = "/taɪt ˈdʒʌŋk.ʃən/",
+            clinicalPearl = "Composed of transmembrane proteins claudins and occludins; Clostridium perfringens enterotoxin binds claudins, destroying tight junctions and causing acute food poisoning diarrhea.",
+            mnemonic = "Junctional complex top-to-bottom: 'T-A-D-G' (Tight junction, Adherens junction, Desmosome, Gap junction).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1079,
+            etymology = "Latin: basis — 'foundation / base' + membrana — 'skin / parchment'.",
             termEn = "Basement Membrane",
             termFr = "Membrane basale",
             termAr = "الغشاء القاعدي النسيجي",
             definitionEn = "A thin specialized sheet of extracellular matrix underlying all epithelia and endothelia, composed of the basal lamina (type IV collagen, laminin, perlecan) and reticular lamina.",
             definitionFr = "Mince feuillet matriciel extracellulaire acellulaire soutenant tout épithélium, composé de collagène IV, laminine et protéoglycanes.",
             definitionAr = "طبقة رقيقة ومتخصصة من المطرس خارج الخلوي ترتكز عليها جميع النسج الظهارية والبطانية، وتتكون أساساً من كولاجين النمط الرابع واللامينين.",
-            etymology = "Latin: basis — 'foundation / base' + membrana — 'skin / parchment'.",
-            clinicalPearl = "In carcinomas, tumor invasion is histopathologically defined when neoplastic epithelial cells breach the basement membrane into the underlying stroma.",
-            mnemonic = "Components: 'L-N-C-P' (Laminin, Nidogen, Collagen IV, Perlecan). Goodpasture syndrome involves anti-collagen IV antibodies.",
             module = "Histologie",
             chapter = "Tissus Épithéliaux",
+            ipaPhonetic = "/ˈbeɪs.mənt ˈmem.breɪn/",
             exampleEn = "The glomerular basement membrane serves as a selective charge- and size-dependent filtration barrier in the kidney.",
             exampleFr = "La membrane basale glomérulaire assure la filtration sélective selon la taille et la charge électrique.",
             exampleAr = "يعمل الغشاء القاعدي الكبيبي كحاجز انتقائي للترشيح الكلوي بناءً على الحجم والشحنة الكهربائية.",
-            ipaPhonetic = "/ˈbeɪs.mənt ˈmem.breɪn/",
+            clinicalPearl = "In carcinomas, tumor invasion is histopathologically defined when neoplastic epithelial cells breach the basement membrane into the underlying stroma.",
+            mnemonic = "Components: 'L-N-C-P' (Laminin, Nidogen, Collagen IV, Perlecan). Goodpasture syndrome involves anti-collagen IV antibodies.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1080,
+            etymology = "Latin: fibra — 'fiber' + Greek: βλαστός (blastos) — 'germ / sprout'.",
             termEn = "Fibroblast",
             termFr = "Fibroblaste",
             termAr = "الخلية الليفية اليافعة",
             definitionEn = "The principal and most abundant resident cell of connective tissue, responsible for synthesizing collagen, elastin, reticular fibers, and ground substance.",
             definitionFr = "Cellule résidente principale et la plus abondante du tissu conjonctif, synthétisant les fibres matricielles et la substance fondamentale.",
             definitionAr = "الخلية الرئيسية والأكثر وفرة في النسيج الضام، المسؤولة عن إفراز ألياف الكولاجين والإيلاستين والمادة الأساسية للمطرس.",
-            etymology = "Latin: fibra — 'fiber' + Greek: βλαστός (blastos) — 'germ / sprout'.",
-            clinicalPearl = "During tissue repair, fibroblasts differentiate into contractile myofibroblasts expressing alpha-smooth muscle actin, orchestrating wound contraction and scar formation.",
-            mnemonic = "FibroBLAST = Active builder of matrix (euchromatic nucleus); FibroCYTE = Quiescent mature cell (spindle heterochromatic nucleus).",
             module = "Histologie",
             chapter = "Tissus Conjonctifs et Cartilage/Os",
+            ipaPhonetic = "/ˈfaɪ.brəʊ.blæst/",
             exampleEn = "Active fibroblasts exhibit abundant rough endoplasmic reticulum and an extensive Golgi apparatus for protein secretion.",
             exampleFr = "Les fibroblastes actifs présentent un réticulum endoplasmique rugueux très développé.",
             exampleAr = "تتميز الخلايا الليفية النشطة باحتوائها على شبكة هيولية داخلية خشنة وجهاز غولجي متطور لإفراز البروتينات.",
-            ipaPhonetic = "/ˈfaɪ.brəʊ.blæst/",
+            clinicalPearl = "During tissue repair, fibroblasts differentiate into contractile myofibroblasts expressing alpha-smooth muscle actin, orchestrating wound contraction and scar formation.",
+            mnemonic = "FibroBLAST = Active builder of matrix (euchromatic nucleus); FibroCYTE = Quiescent mature cell (spindle heterochromatic nucleus).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1081,
+            etymology = "Greek: ὀστέον (osteon) — 'bone' + blastos (sprout) / klastos (broken in pieces).",
             termEn = "Osteoblast and Osteoclast",
             termFr = "Ostéoblaste et Ostéoclaste",
             termAr = "الخلية بانية العظم وهادمة العظم",
             definitionEn = "The primary cellular effectors of bone remodeling: osteoblasts deposit osteoid collagen matrix and initiate calcification, while multinucleated osteoclasts resorb bone via acid and proteases.",
             definitionFr = "Cellules clés du remodelage osseux : les ostéoblastes synthétisent la matrice osseuse, et les ostéoclastes multinucléés assurent la résorption.",
             definitionAr = "الخلايا المسؤولة عن تجدد العظم: تبني الخلايا البانية المادة العظمية، بينما تمتص الخلايا الهادمة متعددة النوى العظم بواسطة الأحماض والإنزيمات.",
-            etymology = "Greek: ὀστέον (osteon) — 'bone' + blastos (sprout) / klastos (broken in pieces).",
-            clinicalPearl = "Osteoclasts originate from the monocyte-macrophage hematopoietic lineage, differentiating in response to RANKL secreted by osteoblasts; inhibited by bisphosphonates and osteoprotegerin.",
-            mnemonic = "OsteoBlast = Builds bone; OsteoClast = Cleaves / Consumes bone.",
             module = "Histologie",
             chapter = "Tissus Conjonctifs et Cartilage/Os",
+            ipaPhonetic = "/ˈɒs.ti.əʊ.blæst/",
             exampleEn = "Osteoclasts create shallow resorption pits called Howship's lacunae on bone surfaces.",
             exampleFr = "Les ostéoclastes creusent des cavités de résorption appelées lacunes de Howship.",
             exampleAr = "تحفر الخلايا الهادمة للعظم فجوات ارتشاف سطحية تُعرف بجيوب هاوشيب على سطح العظم.",
-            ipaPhonetic = "/ˈɒs.ti.əʊ.blæst/",
+            clinicalPearl = "Osteoclasts originate from the monocyte-macrophage hematopoietic lineage, differentiating in response to RANKL secreted by osteoblasts; inhibited by bisphosphonates and osteoprotegerin.",
+            mnemonic = "OsteoBlast = Builds bone; OsteoClast = Cleaves / Consumes bone.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1082,
+            etymology = "Greek: ἄστρον (astron) — 'star' + κύτος (kytos) — 'hollow cell'.",
             termEn = "Astrocyte",
             termFr = "Astrocyte",
             termAr = "الخلية الدبقية النجمية",
             definitionEn = "Star-shaped neuroglial cells of the central nervous system whose perivascular end-feet envelop capillaries to maintain the blood-brain barrier and regulate extracellular potassium and glutamate.",
             definitionFr = "Cellules gliales étoilées du SNC dont les pieds vasculaires entourent les capillaires sanguins pour consolider la barrière hémato-encéphalique.",
             definitionAr = "خلايا دبقية نجمية الشكل في الجهاز العصبي المركزي، تحيط استطالاتها بالشعيرات الدموية لدعم الحاجز الدموي الدماغي وتنظيم الوسط العصبي.",
-            etymology = "Greek: ἄστρον (astron) — 'star' + κύτος (kytos) — 'hollow cell'.",
-            clinicalPearl = "Protoplasmic astrocytes reside in gray matter, fibrous astrocytes in white matter. Astrocytes proliferate to form a glial scar (gliosis) after CNS infarction or trauma, marked by GFAP expression.",
-            mnemonic = "Astrocytes = 'A-S-T-R-O' (Anchor to vessels, Scar formation, Transport nutrients, Regulate K+ & glutamate, Outer barrier).",
             module = "Histologie",
             chapter = "Tissu Nerveux",
+            ipaPhonetic = "/ˈæs.trə.saɪt/",
             exampleEn = "Astrocytic end-feet completely envelop the cerebral microvasculature.",
             exampleFr = "Les pieds astrocytaires recouvrent entièrement la microvascularisation cérébrale.",
             exampleAr = "تغلف الأقدام الوعائية للخلايا النجمية كامل الأوعية الدموية الدقيقة في الدماغ.",
-            ipaPhonetic = "/ˈæs.trə.saɪt/",
+            clinicalPearl = "Protoplasmic astrocytes reside in gray matter, fibrous astrocytes in white matter. Astrocytes proliferate to form a glial scar (gliosis) after CNS infarction or trauma, marked by GFAP expression.",
+            mnemonic = "Astrocytes = 'A-S-T-R-O' (Anchor to vessels, Scar formation, Transport nutrients, Regulate K+ & glutamate, Outer barrier).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1083,
+            etymology = "Greek: ἐρυθρός (erythros) — 'red' + κύτος (kytos) — 'cell'.",
             termEn = "Erythrocyte and Reticulocyte",
             termFr = "Érythrocyte et Réticulocyte",
             termAr = "كرية الدم الحمراء والخلية الشبكية",
             definitionEn = "Anucleate biconcave blood disc optimized for oxygen transport; reticulocytes are immature erythrocytes containing residual ribosomal RNA, indicating active bone marrow erythropoiesis.",
             definitionFr = "Disque biconcave anucléé transportant l'oxygène ; le réticulocyte est le précurseur immédiat contenant des débris d'ARN ribosomique.",
             definitionAr = "قرص دموي مقعر الوجهين وخالٍ من النواة مخصص لنقل الأكسجين؛ وتعد الخلية الشبكية الطليعة غير الناضجة الحاوية على بقايا رنا ريبوسومي.",
-            etymology = "Greek: ἐρυθρός (erythros) — 'red' + κύτος (kytos) — 'cell'.",
-            clinicalPearl = "Normal reticulocyte count is 0.5% to 2.0% (50,000 - 100,000/μL); elevated reticulocyte count (>2%) indicates bone marrow response to hemolytic anemia or acute hemorrhage (regenerative anemia).",
-            mnemonic = "Reticulocyte > 2% = Regenerative (Hemolysis / Bleeding); Reticulocyte < 1% = Hypoproliferative / Aregenerative (Aplasia, Deficiency).",
             module = "Histologie",
             chapter = "Tissu Sanguin et Hématopoïèse",
+            ipaPhonetic = "/ɪˈrɪθ.rə.saɪt/",
             exampleEn = "Erythrocytes have an average circulating lifespan of 120 days before splenic macrophage destruction.",
             exampleFr = "Les érythrocytes ont une durée de vie moyenne de 120 jours dans la circulation.",
             exampleAr = "يبلغ متوسط عمر كريات الدم الحمراء في الدورة الدموية 120 يوماً قبل أن تبتلعها بلعميات الطحال.",
-            ipaPhonetic = "/ɪˈrɪθ.rə.saɪt/",
+            clinicalPearl = "Normal reticulocyte count is 0.5% to 2.0% (50,000 - 100,000/μL); elevated reticulocyte count (>2%) indicates bone marrow response to hemolytic anemia or acute hemorrhage (regenerative anemia).",
+            mnemonic = "Reticulocyte > 2% = Regenerative (Hemolysis / Bleeding); Reticulocyte < 1% = Hypoproliferative / Aregenerative (Aplasia, Deficiency).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1084,
+            etymology = "Greek: ἐπί (epi) — 'upon / over' + θηλή (thele) — 'nipple / layer of delicate tissue'",
             termEn = "Epithelium",
             termFr = "Épithélium",
             termAr = "النسيج الظهاري / الطلائي",
             definitionEn = "A primary avascular tissue composed of tightly cohesive cells lining internal cavities, external surfaces, and forming glands.",
             definitionFr = "Tissu fondamental avasculaire constitué de cellules jointives reposant sur une membrane basale.",
             definitionAr = "نسيج أولي لا وعائي يتألف من خلايا متلاصقة ترتكز على غشاء قاعدي، يبطن التجاويف ويغطي الأسطح الخارجية.",
-            etymology = "Greek: ἐπί (epi) — 'upon / over' + θηλή (thele) — 'nipple / layer of delicate tissue'",
-            clinicalPearl = "Classified by layer count (simple, stratified, pseudostratified) and cellular morphology (squamous, cuboidal, columnar).",
-            mnemonic = "Functions: 'P-A-S-S' (Protection, Absorption, Secretion, Sensation).",
             module = "Histologie",
             chapter = "Tissus épithéliaux",
+            ipaPhonetic = "/ˌep.ɪˈθiː.li.əm/",
             exampleEn = "Stratified non-keratinized squamous epithelium lines the mucosal lumen of the esophagus.",
             exampleFr = "Un épithélium malpighien non kératinisé tapisse la lumière de l'œsophage.",
             exampleAr = "يبطن النسيج الظهاري الحرشفي الطبقي غير المتقرن تجويف المريء.",
-            ipaPhonetic = "/ˌep.ɪˈθiː.li.əm/",
+            clinicalPearl = "Classified by layer count (simple, stratified, pseudostratified) and cellular morphology (squamous, cuboidal, columnar).",
+            mnemonic = "Functions: 'P-A-S-S' (Protection, Absorption, Secretion, Sensation).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 1085,
+            etymology = "Named after Theodor Schwann, German anatomist and physiologist (1810–1882)",
             termEn = "Schwann Cell",
             termFr = "Cellule de Schwann",
             termAr = "خلية شوان",
             definitionEn = "Principal glial cells of the peripheral nervous system that form myelin sheaths around peripheral axons.",
             definitionFr = "Cellules gliales du système nerveux périphérique responsables de la myélinisation des axones.",
             definitionAr = "الخلايا الدبقية الرئيسية في الجهاز العصبي المحيطي المسؤولة عن تكوين غمد المايلين حول المحاور العصبية.",
-            etymology = "Named after Theodor Schwann, German anatomist and physiologist (1810–1882)",
-            clinicalPearl = "Each Schwann cell myelinates only a single internode of a single peripheral axon, unlike oligodendrocytes which myelinate multiple axons in the CNS.",
-            mnemonic = "Schwann = Single PNS axon myelination; Oligodendrocyte = Many CNS axons.",
             module = "Histologie",
             chapter = "Tissu nerveux",
+            ipaPhonetic = "/ʃvɑːn sel/",
             exampleEn = "Schwann cells facilitate nerve regeneration after peripheral axon injury.",
             exampleFr = "Les cellules de Schwann facilitent la régénération après une lésion axonale périphérique.",
             exampleAr = "تسهل خلايا شوان تجدد الأعصاب بعد إصابة المحاور العصبية المحيطية.",
-            ipaPhonetic = "/ʃvɑːn sel/"
+            clinicalPearl = "Each Schwann cell myelinates only a single internode of a single peripheral axon, unlike oligodendrocytes which myelinate multiple axons in the CNS.",
+            mnemonic = "Schwann = Single PNS axon myelination; Oligodendrocyte = Many CNS axons.",
         ),
         MedicalTermEntity(
             id = 1086,
@@ -170,6 +165,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1087,
+            etymology = "",
             termEn = "Tissue",
             termFr = "Tissu",
             termAr = "النسيج",
@@ -185,6 +181,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1088,
+            etymology = "",
             termEn = "Cell",
             termFr = "Cellule",
             termAr = "الخلية",
@@ -200,6 +197,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1089,
+            etymology = "",
             termEn = "Organ",
             termFr = "Organe",
             termAr = "العضو",
@@ -215,6 +213,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1090,
+            etymology = "",
             termEn = "Extracellular matrix (ECM)",
             termFr = "Matrice extracellulaire (MEC)",
             termAr = "المطرس خارج الخلوي",
@@ -230,6 +229,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1091,
+            etymology = "",
             termEn = "Intercellular junction",
             termFr = "Jonction intercellulaire",
             termAr = "الوصلة بين الخلايا",
@@ -245,6 +245,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1092,
+            etymology = "",
             termEn = "Adherens junction (Zonula adherens)",
             termFr = "Jonction d'adhérence (Zonula adherens)",
             termAr = "وصلة الالتصاق",
@@ -260,6 +261,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1093,
+            etymology = "",
             termEn = "Desmosome (Macula adherens)",
             termFr = "Desmosome (Macula adherens)",
             termAr = "الجسيم الرابط",
@@ -275,6 +277,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1094,
+            etymology = "",
             termEn = "Gap junction (Nexus)",
             termFr = "Jonction communicante (Gap junction)",
             termAr = "الوصلة الفجوية",
@@ -290,6 +293,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1095,
+            etymology = "",
             termEn = "Hemidesmosome",
             termFr = "Hémidesmosome",
             termAr = "نصف الجسيم الرابط",
@@ -305,6 +309,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1096,
+            etymology = "",
             termEn = "Basal lamina",
             termFr = "Lame basale",
             termAr = "الصفيحة القاعدية",
@@ -320,6 +325,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1097,
+            etymology = "",
             termEn = "Fixation",
             termFr = "Fixation",
             termAr = "التثبيت",
@@ -335,6 +341,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1098,
+            etymology = "",
             termEn = "Formalin",
             termFr = "Formol (Formaldéhyde)",
             termAr = "الفورمالين",
@@ -350,6 +357,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1099,
+            etymology = "",
             termEn = "Embedding",
             termFr = "Inclusion (Enrobage)",
             termAr = "التضمين (الطمر)",
@@ -365,6 +373,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1100,
+            etymology = "",
             termEn = "Sectioning",
             termFr = "Coupe",
             termAr = "التقطيع",
@@ -396,6 +405,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1102,
+            etymology = "",
             termEn = "Staining",
             termFr = "Coloration",
             termAr = "التلوين",
@@ -411,6 +421,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1103,
+            etymology = "",
             termEn = "Hematoxylin and Eosin (H&E)",
             termFr = "Hématoxyline et Éosine (H&E)",
             termAr = "الهيماتوكسيلين والإيوزين",
@@ -420,9 +431,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌhiːmətˈɒksɪlɪn ænd ˈiːəsɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1104,
+            etymology = "",
             termEn = "Basophilic",
             termFr = "Basophile",
             termAr = "محب القاعدة (أليف القلويات)",
@@ -433,9 +448,12 @@ MedicalTermEntity(
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌbeɪsəˈfɪlɪk/",
             exampleEn = "Basophilic refers to having affinity for basic (blue) dyes like hematoxylin (e.g., nuclei, ribosomes).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1105,
+            etymology = "",
             termEn = "Eosinophilic (Acidophilic)",
             termFr = "Éosinophile (Acidophile)",
             termAr = "محب الحمض (أليف الحمضيات)",
@@ -446,6 +464,8 @@ MedicalTermEntity(
             chapter = "Techniques Histologiques",
             ipaPhonetic = "/ˌiːəsɪnəˈfɪlɪk/",
             exampleEn = "Eosinophilic (Acidophilic) refers to having affinity for acidic (pink/red) dyes like eosin (e.g., cytoplasm, collagen).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1106,
@@ -465,6 +485,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1107,
+            etymology = "",
             termEn = "Masson's trichrome",
             termFr = "Trichrome de Masson",
             termAr = "صبغة ماسون ثلاثية الألوان",
@@ -480,6 +501,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1108,
+            etymology = "",
             termEn = "Silver stain",
             termFr = "Coloration à l'argent",
             termAr = "صبغة الفضة",
@@ -575,6 +597,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1114,
+            etymology = "",
             termEn = "Biopsy",
             termFr = "Biopsie",
             termAr = "الخزعة",
@@ -606,6 +629,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1116,
+            etymology = "",
             termEn = "Artifact",
             termFr = "Artéfact",
             termAr = "الخلل الاصطناعي",
@@ -621,6 +645,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1117,
+            etymology = "",
             termEn = "Epithelial tissue (Epithelium)",
             termFr = "Tissu épithélial (Épithélium)",
             termAr = "النسيج الظهاري",
@@ -636,6 +661,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1118,
+            etymology = "",
             termEn = "Simple epithelium",
             termFr = "Épithélium simple",
             termAr = "ظهارة بسيطة",
@@ -645,9 +671,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1119,
+            etymology = "",
             termEn = "Stratified epithelium",
             termFr = "Épithélium stratifié",
             termAr = "ظهارة طبقية",
@@ -657,9 +687,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈstrætɪfaɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1120,
+            etymology = "",
             termEn = "Squamous cell",
             termFr = "Cellule pavimenteuse (squameuse)",
             termAr = "خلية حرشفية",
@@ -675,6 +709,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1121,
+            etymology = "",
             termEn = "Cuboidal cell",
             termFr = "Cellule cubique (cuboïde)",
             termAr = "خلية مكعبة",
@@ -690,6 +725,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1122,
+            etymology = "",
             termEn = "Columnar cell",
             termFr = "Cellule cylindrique (prismatique)",
             termAr = "خلية عمودية",
@@ -705,6 +741,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1123,
+            etymology = "",
             termEn = "Simple squamous epithelium",
             termFr = "Épithélium pavimenteux simple",
             termAr = "ظهارة حرشفية بسيطة",
@@ -715,9 +752,12 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl ˈskweɪməs/",
             exampleEn = "The simple squamous epithelium is the single layer of flat cells allowing diffusion and filtration (e.g., alveoli, endothelium).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1124,
+            etymology = "",
             termEn = "Simple cuboidal epithelium",
             termFr = "Épithélium cubique simple",
             termAr = "ظهارة مكعبة بسيطة",
@@ -728,9 +768,12 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl kjuːˈbɔɪdəl/",
             exampleEn = "The simple cuboidal epithelium is the single layer of cube-shaped cells for secretion and absorption (e.g., kidney tubules, thyroid).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1125,
+            etymology = "",
             termEn = "Simple columnar epithelium",
             termFr = "Épithélium cylindrique simple",
             termAr = "ظهارة عمودية بسيطة",
@@ -741,9 +784,12 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪmpəl kəˈlʌmnər/",
             exampleEn = "The simple columnar epithelium is the single layer of tall cells for absorption and secretion (e.g., stomach, intestines).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1126,
+            etymology = "",
             termEn = "Pseudostratified columnar epithelium",
             termFr = "Épithélium pseudostratifié cylindrique",
             termAr = "ظهارة عمودية كاذبة الطبقات",
@@ -753,9 +799,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌsjuːdoʊˈstrætɪfaɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1127,
+            etymology = "",
             termEn = "Stratified squamous epithelium",
             termFr = "Épithélium pavimenteux stratifié",
             termAr = "ظهارة حرشفية طبقية",
@@ -765,9 +815,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈstrætɪfaɪd ˈskweɪməs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1128,
+            etymology = "",
             termEn = "Keratinized epithelium",
             termFr = "Épithélium kératinisé",
             termAr = "ظهارة متقرنة",
@@ -777,9 +831,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈkɛrətɪnaɪzd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1129,
+            etymology = "",
             termEn = "Non-keratinized epithelium",
             termFr = "Épithélium non kératinisé",
             termAr = "ظهارة غير متقرنة",
@@ -789,9 +847,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/nɒn ˈkɛrətɪnaɪzd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1130,
+            etymology = "",
             termEn = "Transitional epithelium (Urothelium)",
             termFr = "Épithélium transitionnel (Urothélium)",
             termAr = "الظهارة الانتقالية",
@@ -802,9 +864,12 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/trænˈzɪʃənəl/",
             exampleEn = "The transitional epithelium (urothelium) is the stratified epithelium that stretches and changes shape (e.g., urinary bladder, ureters).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1131,
+            etymology = "",
             termEn = "Endothelium",
             termFr = "Endothélium",
             termAr = "البطانة الوعائية",
@@ -820,6 +885,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1132,
+            etymology = "",
             termEn = "Mesothelium",
             termFr = "Mésothélium",
             termAr = "الظهارة المتوسطة",
@@ -835,6 +901,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1133,
+            etymology = "",
             termEn = "Apical surface",
             termFr = "Surface apicale",
             termAr = "السطح القمي",
@@ -850,6 +917,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1134,
+            etymology = "",
             termEn = "Basal surface",
             termFr = "Surface basale",
             termAr = "السطح القاعدي",
@@ -875,9 +943,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌmaɪkroʊˈvɪlaɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1136,
+            etymology = "",
             termEn = "Brush border",
             termFr = "Bordure en brosse",
             termAr = "الحافة الفرشاتية",
@@ -888,9 +960,12 @@ MedicalTermEntity(
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/brʌʃ ˈbɔːrdər/",
             exampleEn = "The brush border is the dense layer of microvilli on absorptive cells (e.g., small intestine, proximal tubule).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1137,
+            etymology = "",
             termEn = "Cilia",
             termFr = "Cils",
             termAr = "الأهداب",
@@ -900,9 +975,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˈsɪliə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1138,
+            etymology = "",
             termEn = "Stereocilia",
             termFr = "Stéréocils",
             termAr = "الأهداب الساكنة",
@@ -912,9 +991,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Épithélial",
             ipaPhonetic = "/ˌstɛrioʊˈsɪliə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1139,
+            etymology = "",
             termEn = "Goblet cell",
             termFr = "Cellule caliciforme",
             termAr = "الخلية الكأسية",
@@ -930,6 +1013,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1140,
+            etymology = "",
             termEn = "Gland",
             termFr = "Glande",
             termAr = "الغدة",
@@ -945,6 +1029,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1141,
+            etymology = "",
             termEn = "Exocrine gland",
             termFr = "Glande exocrine",
             termAr = "الغدة خارجية الإفراز",
@@ -955,9 +1040,12 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈɛksoʊkrɪn/",
             exampleEn = "The exocrine gland is the gland secreting its products through ducts onto a surface (e.g., sweat, salivary).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1142,
+            etymology = "",
             termEn = "Endocrine gland",
             termFr = "Glande endocrine",
             termAr = "الغدة الصماء",
@@ -973,6 +1061,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1143,
+            etymology = "",
             termEn = "Merocrine secretion (Eccrine)",
             termFr = "Sécrétion mérocrine (Eccrine)",
             termAr = "الإفراز الميروكريني",
@@ -982,9 +1071,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈmɛroʊkrɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1144,
+            etymology = "",
             termEn = "Apocrine secretion",
             termFr = "Sécrétion apocrine",
             termAr = "الإفراز القمي",
@@ -994,9 +1087,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈæpoʊkrɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1145,
+            etymology = "",
             termEn = "Holocrine secretion",
             termFr = "Sécrétion holocrine",
             termAr = "الإفراز الشامل",
@@ -1006,9 +1103,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈhɒloʊkrɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1146,
+            etymology = "",
             termEn = "Serous gland",
             termFr = "Glande séreuse",
             termAr = "الغدة المصلية",
@@ -1019,9 +1120,12 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈsɪərəs/",
             exampleEn = "The serous gland is the gland producing a thin watery protein-rich secretion (e.g., parotid gland).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1147,
+            etymology = "",
             termEn = "Mucous gland",
             termFr = "Glande muqueuse",
             termAr = "الغدة المخاطية",
@@ -1032,9 +1136,12 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/ˈmjuːkəs/",
             exampleEn = "The mucous gland is the gland producing a thick viscous mucus secretion (e.g., sublingual gland).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1148,
+            etymology = "",
             termEn = "Mixed gland (Seromucous)",
             termFr = "Glande mixte (Séromuqueuse)",
             termAr = "الغدة المختلطة",
@@ -1045,9 +1152,12 @@ MedicalTermEntity(
             chapter = "Épithélium Glandulaire",
             ipaPhonetic = "/mɪkst/",
             exampleEn = "The mixed gland (seromucous) is the gland containing both serous and mucous secretory cells (e.g., submandibular gland).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1149,
+            etymology = "",
             termEn = "Acinus (pl. Acini)",
             termFr = "Acinus (pl. Acini)",
             termAr = "العنيبة (ج: عنيبات)",
@@ -1063,6 +1173,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1150,
+            etymology = "",
             termEn = "Tubular gland",
             termFr = "Glande tubulaire",
             termAr = "الغدة الأنبوبية",
@@ -1078,6 +1189,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1151,
+            etymology = "",
             termEn = "Serous demilune",
             termFr = "Demi-lune séreuse (Croissant de Gianuzzi)",
             termAr = "الهلال المصلي",
@@ -1093,6 +1205,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1152,
+            etymology = "",
             termEn = "Myoepithelial cell",
             termFr = "Cellule myoépithéliale",
             termAr = "الخلية العضلية الظهارية",
@@ -1108,6 +1221,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1153,
+            etymology = "",
             termEn = "Connective tissue",
             termFr = "Tissu conjonctif",
             termAr = "النسيج الضام",
@@ -1123,6 +1237,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1154,
+            etymology = "",
             termEn = "Ground substance",
             termFr = "Substance fondamentale",
             termAr = "المادة الأساسية (الأرضية)",
@@ -1138,6 +1253,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1155,
+            etymology = "",
             termEn = "Collagen fiber",
             termFr = "Fibre de collagène",
             termAr = "الليف الكولاجيني",
@@ -1153,6 +1269,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1156,
+            etymology = "",
             termEn = "Elastic fiber",
             termFr = "Fibre élastique",
             termAr = "الليف المرن",
@@ -1168,6 +1285,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1157,
+            etymology = "",
             termEn = "Reticular fiber",
             termFr = "Fibre réticulaire (de réticuline)",
             termAr = "الليف الشبكي",
@@ -1178,6 +1296,8 @@ MedicalTermEntity(
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/rɪˈtɪkjʊlər ˈfaɪbər/",
             exampleEn = "The reticular fiber is the thin branching fiber of type III collagen forming supportive networks (e.g., lymph nodes, spleen).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1158,
@@ -1197,6 +1317,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1159,
+            etymology = "",
             termEn = "Mast cell",
             termFr = "Mastocyte (Labrocyte)",
             termAr = "الخلية البدينة",
@@ -1212,6 +1333,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1160,
+            etymology = "",
             termEn = "Plasma cell",
             termFr = "Plasmocyte",
             termAr = "الخلية البلازمية",
@@ -1227,6 +1349,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1161,
+            etymology = "",
             termEn = "Adipocyte (Fat cell)",
             termFr = "Adipocyte (Cellule adipeuse)",
             termAr = "الخلية الدهنية",
@@ -1242,6 +1365,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1162,
+            etymology = "",
             termEn = "Mesenchyme",
             termFr = "Mésenchyme",
             termAr = "اللحمة المتوسطة",
@@ -1257,6 +1381,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1163,
+            etymology = "",
             termEn = "Loose connective tissue (Areolar)",
             termFr = "Tissu conjonctif lâche (Aréolaire)",
             termAr = "النسيج الضام الرخو",
@@ -1272,6 +1397,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1164,
+            etymology = "",
             termEn = "Dense regular connective tissue",
             termFr = "Tissu conjonctif dense régulier",
             termAr = "النسيج الضام الكثيف المنتظم",
@@ -1281,9 +1407,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/dɛns ˈrɛɡjʊlər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1165,
+            etymology = "",
             termEn = "Dense irregular connective tissue",
             termFr = "Tissu conjonctif dense irrégulier",
             termAr = "النسيج الضام الكثيف غير المنتظم",
@@ -1293,9 +1423,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/dɛns ɪˈrɛɡjʊlər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1166,
+            etymology = "",
             termEn = "Elastic connective tissue",
             termFr = "Tissu conjonctif élastique",
             termAr = "النسيج الضام المرن",
@@ -1305,9 +1439,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/ɪˈlæstɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1167,
+            etymology = "",
             termEn = "Reticular connective tissue",
             termFr = "Tissu conjonctif réticulaire",
             termAr = "النسيج الضام الشبكي",
@@ -1317,9 +1455,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/rɪˈtɪkjʊlər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1168,
+            etymology = "",
             termEn = "White adipose tissue",
             termFr = "Tissu adipeux blanc",
             termAr = "النسيج الدهني الأبيض",
@@ -1329,9 +1471,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/waɪt ˈædɪpoʊs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1169,
+            etymology = "",
             termEn = "Brown adipose tissue",
             termFr = "Tissu adipeux brun",
             termAr = "النسيج الدهني البني",
@@ -1341,9 +1487,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Conjonctif",
             ipaPhonetic = "/braʊn ˈædɪpoʊs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1170,
+            etymology = "",
             termEn = "Mucous connective tissue",
             termFr = "Tissu conjonctif muqueux",
             termAr = "النسيج الضام المخاطي",
@@ -1359,6 +1509,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1171,
+            etymology = "",
             termEn = "Cartilage",
             termFr = "Cartilage",
             termAr = "الغضروف",
@@ -1406,6 +1557,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1174,
+            etymology = "",
             termEn = "Lacuna (pl. Lacunae)",
             termFr = "Lacune",
             termAr = "الثغرة (الفجوة)",
@@ -1421,6 +1573,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1175,
+            etymology = "",
             termEn = "Perichondrium",
             termFr = "Périchondre",
             termAr = "سمحاق الغضروف",
@@ -1436,6 +1589,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1176,
+            etymology = "",
             termEn = "Hyaline cartilage",
             termFr = "Cartilage hyalin",
             termAr = "الغضروف الزجاجي",
@@ -1446,9 +1600,12 @@ MedicalTermEntity(
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˈhaɪəlɪn/",
             exampleEn = "The hyaline cartilage is the most common cartilage type with a glassy homogeneous matrix (e.g., trachea, nose, joint surfaces).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1177,
+            etymology = "",
             termEn = "Elastic cartilage",
             termFr = "Cartilage élastique",
             termAr = "الغضروف المرن",
@@ -1458,6 +1615,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ɪˈlæstɪk ˈkɑːrtɪlɪdʒ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1178,
@@ -1471,9 +1631,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌfaɪbroʊˈkɑːrtɪlɪdʒ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1179,
+            etymology = "",
             termEn = "Isogenous group (Cell nest)",
             termFr = "Groupe isogénique (Nid cellulaire)",
             termAr = "المجموعة متماثلة المنشأ",
@@ -1489,6 +1653,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1180,
+            etymology = "",
             termEn = "Interstitial growth",
             termFr = "Croissance interstitielle",
             termAr = "النمو البيني (الخلالي)",
@@ -1498,9 +1663,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌɪntərˈstɪʃəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1181,
+            etymology = "",
             termEn = "Appositional growth",
             termFr = "Croissance appositionnelle",
             termAr = "النمو الإضافي (التراكمي)",
@@ -1510,9 +1679,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Cartilagineux",
             ipaPhonetic = "/ˌæpəˈzɪʃənəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1182,
+            etymology = "",
             termEn = "Bone tissue (Osseous tissue)",
             termFr = "Tissu osseux",
             termAr = "النسيج العظمي",
@@ -1608,6 +1781,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1188,
+            etymology = "",
             termEn = "Haversian canal",
             termFr = "Canal de Havers",
             termAr = "قناة هافرس",
@@ -1623,6 +1797,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1189,
+            etymology = "",
             termEn = "Volkmann's canal",
             termFr = "Canal de Volkmann",
             termAr = "قناة فولكمان",
@@ -1638,6 +1813,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1190,
+            etymology = "",
             termEn = "Lamella (pl. Lamellae)",
             termFr = "Lamelle",
             termAr = "الصفيحة",
@@ -1653,6 +1829,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1191,
+            etymology = "",
             termEn = "Canaliculus (pl. Canaliculi)",
             termFr = "Canalicule",
             termAr = "القنية",
@@ -1684,6 +1861,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1193,
+            etymology = "",
             termEn = "Endosteum",
             termFr = "Endoste",
             termAr = "بطانة العظم",
@@ -1699,6 +1877,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1194,
+            etymology = "",
             termEn = "Woven bone (Primary bone)",
             termFr = "Os tissé (Os primaire)",
             termAr = "العظم المنسوج (الأولي)",
@@ -1708,9 +1887,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˈwoʊvən boʊn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1195,
+            etymology = "",
             termEn = "Lamellar bone (Secondary bone)",
             termFr = "Os lamellaire (Os secondaire)",
             termAr = "العظم الصفائحي (الثانوي)",
@@ -1720,9 +1903,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ləˈmɛlər boʊn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1196,
+            etymology = "",
             termEn = "Intramembranous ossification",
             termFr = "Ossification intramembraneuse",
             termAr = "التعظم داخل الغشاء",
@@ -1732,9 +1919,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌɪntrəˈmɛmbrənəs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1197,
+            etymology = "",
             termEn = "Endochondral ossification",
             termFr = "Ossification endochondrale",
             termAr = "التعظم داخل الغضروف",
@@ -1744,9 +1935,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Osseux",
             ipaPhonetic = "/ˌɛndoʊˈkɒndrəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1198,
+            etymology = "",
             termEn = "Epiphyseal plate (Growth plate)",
             termFr = "Cartilage de croissance (Plaque épiphysaire)",
             termAr = "صفيحة النمو",
@@ -1762,6 +1957,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1199,
+            etymology = "",
             termEn = "Howship's lacuna (Resorption pit)",
             termFr = "Lacune de Howship",
             termAr = "ثغرة هاوشيب",
@@ -1777,6 +1973,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1200,
+            etymology = "",
             termEn = "Muscle tissue",
             termFr = "Tissu musculaire",
             termAr = "النسيج العضلي",
@@ -1792,6 +1989,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1201,
+            etymology = "",
             termEn = "Skeletal muscle",
             termFr = "Muscle squelettique (strié)",
             termAr = "العضلة الهيكلية",
@@ -1801,6 +1999,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈskɛlɪtəl ˈmʌsəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1202,
@@ -1814,9 +2015,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/ˈkɑːrdiæk ˈmʌsəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1203,
+            etymology = "",
             termEn = "Smooth muscle",
             termFr = "Muscle lisse",
             termAr = "العضلة الملساء",
@@ -1826,9 +2031,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Musculaire",
             ipaPhonetic = "/smuːð ˈmʌsəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1204,
+            etymology = "",
             termEn = "Muscle fiber (Myofiber)",
             termFr = "Fibre musculaire (Myofibre)",
             termAr = "الليف العضلي",
@@ -1844,6 +2053,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1205,
+            etymology = "",
             termEn = "Myofibril",
             termFr = "Myofibrille",
             termAr = "اللييف العضلي",
@@ -1875,6 +2085,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1207,
+            etymology = "",
             termEn = "A band",
             termFr = "Bande A",
             termAr = "النطاق A (الداكن)",
@@ -1890,6 +2101,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1208,
+            etymology = "",
             termEn = "I band",
             termFr = "Bande I",
             termAr = "النطاق I (الفاتح)",
@@ -1905,6 +2117,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1209,
+            etymology = "",
             termEn = "H zone",
             termFr = "Zone H",
             termAr = "المنطقة H",
@@ -1920,6 +2133,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1210,
+            etymology = "",
             termEn = "Z line (Z disc)",
             termFr = "Ligne Z (Disque Z)",
             termAr = "خط Z",
@@ -1935,6 +2149,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1211,
+            etymology = "",
             termEn = "M line",
             termFr = "Ligne M",
             termAr = "خط M",
@@ -1950,6 +2165,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1212,
+            etymology = "",
             termEn = "Intercalated disc",
             termFr = "Disque intercalaire",
             termAr = "القرص المقحم",
@@ -1965,6 +2181,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1213,
+            etymology = "",
             termEn = "Endomysium",
             termFr = "Endomysium",
             termAr = "بطانة الليف العضلي",
@@ -1980,6 +2197,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1214,
+            etymology = "",
             termEn = "Perimysium",
             termFr = "Périmysium",
             termAr = "غلاف الحزمة العضلية",
@@ -1995,6 +2213,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1215,
+            etymology = "",
             termEn = "Epimysium",
             termFr = "Épimysium",
             termAr = "غلاف العضلة",
@@ -2010,6 +2229,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1216,
+            etymology = "",
             termEn = "Fascicle",
             termFr = "Fascicule",
             termAr = "الحزمة",
@@ -2057,6 +2277,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1219,
+            etymology = "",
             termEn = "T-tubule (Transverse tubule)",
             termFr = "Tubule T (Tubule transverse)",
             termAr = "النُبيب المستعرض",
@@ -2072,6 +2293,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1220,
+            etymology = "",
             termEn = "Triad",
             termFr = "Triade",
             termAr = "الثالوث",
@@ -2087,6 +2309,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1221,
+            etymology = "",
             termEn = "Muscle spindle",
             termFr = "Fuseau neuromusculaire",
             termAr = "المغزل العضلي",
@@ -2102,6 +2325,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1222,
+            etymology = "",
             termEn = "Nervous tissue",
             termFr = "Tissu nerveux",
             termAr = "النسيج العصبي",
@@ -2133,6 +2357,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1224,
+            etymology = "",
             termEn = "Cell body (Soma/Perikaryon)",
             termFr = "Corps cellulaire (Soma/Péricaryon)",
             termAr = "جسم الخلية",
@@ -2148,6 +2373,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1225,
+            etymology = "",
             termEn = "Axon",
             termFr = "Axone",
             termAr = "المحور العصبي",
@@ -2163,6 +2389,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1226,
+            etymology = "",
             termEn = "Dendrite",
             termFr = "Dendrite",
             termAr = "التغصن",
@@ -2172,9 +2399,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈdɛndraɪt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1227,
+            etymology = "",
             termEn = "Axon hillock",
             termFr = "Cône d'émergence (Colline axonale)",
             termAr = "التل المحوري",
@@ -2190,6 +2421,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1228,
+            etymology = "",
             termEn = "Nissl bodies (Rough ER)",
             termFr = "Corps de Nissl (RER)",
             termAr = "أجسام نيسل",
@@ -2199,6 +2431,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˈnɪsəl ˈbɒdiz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1229,
@@ -2212,9 +2447,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/njʊəˈrɒɡliə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1230,
+            etymology = "",
             termEn = "Oligodendrocyte",
             termFr = "Oligodendrocyte",
             termAr = "الخلية قليلة التغصن",
@@ -2230,6 +2469,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1231,
+            etymology = "",
             termEn = "Schwann cell (Neurilemma cell)",
             termFr = "Cellule de Schwann (Neurilemme)",
             termAr = "خلية شوان",
@@ -2255,9 +2495,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Nerveux",
             ipaPhonetic = "/ˌmaɪkroʊˈɡliːə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1233,
+            etymology = "",
             termEn = "Ependymal cell",
             termFr = "Cellule épendymaire",
             termAr = "الخلية البطانية العصبية",
@@ -2273,6 +2517,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1234,
+            etymology = "",
             termEn = "Satellite cell (Nervous)",
             termFr = "Cellule satellite (Nerveuse)",
             termAr = "الخلية التابعة (العصبية)",
@@ -2288,6 +2533,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1235,
+            etymology = "",
             termEn = "Myelin sheath",
             termFr = "Gaine de myéline",
             termAr = "غمد الميالين",
@@ -2303,6 +2549,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1236,
+            etymology = "",
             termEn = "Node of Ranvier",
             termFr = "Nœud de Ranvier",
             termAr = "عقدة رانفييه",
@@ -2318,6 +2565,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1237,
+            etymology = "",
             termEn = "Synapse",
             termFr = "Synapse",
             termAr = "المشبك العصبي",
@@ -2333,6 +2581,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1238,
+            etymology = "",
             termEn = "Ganglion (pl. Ganglia)",
             termFr = "Ganglion",
             termAr = "العقدة العصبية",
@@ -2348,6 +2597,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1239,
+            etymology = "",
             termEn = "Nerve",
             termFr = "Nerf",
             termAr = "العصب",
@@ -2363,6 +2613,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1240,
+            etymology = "",
             termEn = "Endoneurium",
             termFr = "Endonèvre",
             termAr = "بطانة الليف العصبي",
@@ -2378,6 +2629,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1241,
+            etymology = "",
             termEn = "Perineurium",
             termFr = "Périnèvre",
             termAr = "غلاف الحزمة العصبية",
@@ -2393,6 +2645,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1242,
+            etymology = "",
             termEn = "Epineurium",
             termFr = "Épinèvre",
             termAr = "غلاف العصب",
@@ -2408,6 +2661,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1243,
+            etymology = "",
             termEn = "Blood",
             termFr = "Sang",
             termAr = "الدم",
@@ -2423,6 +2677,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1244,
+            etymology = "",
             termEn = "Formed elements",
             termFr = "Éléments figurés",
             termAr = "العناصر المشكلة",
@@ -2432,6 +2687,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Tissu Sanguin",
             ipaPhonetic = "/fɔːrmd ˈɛlɪmənts/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1245,
@@ -2451,6 +2709,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1246,
+            etymology = "",
             termEn = "Reticulocyte",
             termFr = "Réticulocyte",
             termAr = "الخلية الشبكية",
@@ -2466,6 +2725,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1247,
+            etymology = "",
             termEn = "Neutrophil",
             termFr = "Neutrophile",
             termAr = "العدلة (الخلية المتعادلة)",
@@ -2481,6 +2741,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1248,
+            etymology = "",
             termEn = "Eosinophil",
             termFr = "Éosinophile",
             termAr = "الخلية الحمضية",
@@ -2494,7 +2755,7 @@ MedicalTermEntity(
             exampleFr = "L'éosinophile est gB avec noyau bilobé et granules éosinophiles; combat les parasites et les allergies.",
             exampleAr = "الخلية الحمضية هو كرية دم بيضاء بنواة ثنائية الفصوص وحبيبات حمضية؛ تحارب الطفيليات والحساسية.",
         ),
-                MedicalTermEntity(
+        MedicalTermEntity(
             id = 1250,
             etymology = "Latin: lympha — 'Lymph / Lymphatic system'",
             termEn = "Lymphocyte",
@@ -2512,6 +2773,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1251,
+            etymology = "",
             termEn = "Monocyte",
             termFr = "Monocyte",
             termAr = "الخلية الوحيدة",
@@ -2543,6 +2805,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1253,
+            etymology = "",
             termEn = "Megakaryocyte",
             termFr = "Mégacaryocyte",
             termAr = "الخلية النواءية",
@@ -2558,6 +2821,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1254,
+            etymology = "",
             termEn = "Hematopoiesis",
             termFr = "Hématopoïèse",
             termAr = "تكون الدم",
@@ -2573,6 +2837,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1255,
+            etymology = "",
             termEn = "Hematopoietic stem cell",
             termFr = "Cellule souche hématopoïétique",
             termAr = "الخلية الجذعية المكونة للدم",
@@ -2588,6 +2853,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1256,
+            etymology = "",
             termEn = "Blood smear",
             termFr = "Frottis sanguin",
             termAr = "اللطاخة الدموية",
@@ -2603,6 +2869,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1257,
+            etymology = "",
             termEn = "Wright stain",
             termFr = "Coloration de Wright",
             termAr = "صبغة رايت",
@@ -2618,6 +2885,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1258,
+            etymology = "",
             termEn = "Granulocyte",
             termFr = "Granulocyte",
             termAr = "الخلية المحببة",
@@ -2633,6 +2901,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1259,
+            etymology = "",
             termEn = "Agranulocyte",
             termFr = "Agranulocyte",
             termAr = "الخلية غير المحببة",
@@ -2648,6 +2917,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1260,
+            etymology = "",
             termEn = "Skin (Integument)",
             termFr = "Peau (Tégument)",
             termAr = "الجلد",
@@ -2663,6 +2933,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1261,
+            etymology = "",
             termEn = "Epidermis",
             termFr = "Épiderme",
             termAr = "البشرة",
@@ -2678,6 +2949,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1262,
+            etymology = "",
             termEn = "Dermis",
             termFr = "Derme",
             termAr = "الأدمة",
@@ -2693,6 +2965,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1263,
+            etymology = "",
             termEn = "Hypodermis (Subcutaneous layer)",
             termFr = "Hypoderme (Tissu sous-cutané)",
             termAr = "تحت الأدمة",
@@ -2708,6 +2981,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1264,
+            etymology = "",
             termEn = "Stratum basale (Basal layer)",
             termFr = "Couche basale",
             termAr = "الطبقة القاعدية",
@@ -2739,6 +3013,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1266,
+            etymology = "",
             termEn = "Stratum granulosum (Granular layer)",
             termFr = "Couche granuleuse",
             termAr = "الطبقة الحبيبية",
@@ -2754,6 +3029,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1267,
+            etymology = "",
             termEn = "Stratum lucidum (Clear layer)",
             termFr = "Couche claire",
             termAr = "الطبقة الشفافة",
@@ -2769,6 +3045,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1268,
+            etymology = "",
             termEn = "Stratum corneum (Horny layer)",
             termFr = "Couche cornée",
             termAr = "الطبقة المتقرنة",
@@ -2784,6 +3061,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1269,
+            etymology = "",
             termEn = "Keratinocyte",
             termFr = "Kératinocyte",
             termAr = "الخلية الكيراتينية",
@@ -2831,6 +3109,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1272,
+            etymology = "",
             termEn = "Langerhans cell",
             termFr = "Cellule de Langerhans",
             termAr = "خلية لانغرهانس",
@@ -2846,6 +3125,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1273,
+            etymology = "",
             termEn = "Merkel cell",
             termFr = "Cellule de Merkel",
             termAr = "خلية ميركل",
@@ -2861,6 +3141,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1274,
+            etymology = "",
             termEn = "Sebaceous gland",
             termFr = "Glande sébacée",
             termAr = "الغدة الدهنية",
@@ -2876,6 +3157,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1275,
+            etymology = "",
             termEn = "Sweat gland (Sudoriferous)",
             termFr = "Glande sudoripare",
             termAr = "الغدة العرقية",
@@ -2891,6 +3173,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1276,
+            etymology = "",
             termEn = "Hair follicle",
             termFr = "Follicule pileux",
             termAr = "بصيلة الشعر (الجريب الشعري)",
@@ -2906,6 +3189,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1277,
+            etymology = "",
             termEn = "Arrector pili muscle",
             termFr = "Muscle arrecteur du poil",
             termAr = "العضلة الناصبة للشعر",
@@ -2921,6 +3205,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1278,
+            etymology = "",
             termEn = "Papillary dermis",
             termFr = "Derme papillaire",
             termAr = "الأدمة الحليمية",
@@ -2936,6 +3221,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1279,
+            etymology = "",
             termEn = "Reticular dermis",
             termFr = "Derme réticulaire",
             termAr = "الأدمة الشبكية",
@@ -2951,6 +3237,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1280,
+            etymology = "",
             termEn = "Organelle",
             termFr = "Organite",
             termAr = "العضية",
@@ -2966,6 +3253,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1281,
+            etymology = "",
             termEn = "Nucleus",
             termFr = "Noyau",
             termAr = "النواة",
@@ -2981,6 +3269,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1282,
+            etymology = "",
             termEn = "Nucleolus",
             termFr = "Nucléole",
             termAr = "النوية",
@@ -3012,6 +3301,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1284,
+            etymology = "",
             termEn = "Euchromatin",
             termFr = "Euchromatine",
             termAr = "الكروماتين الحقيقي (المفكوك)",
@@ -3021,9 +3311,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌjuːˈkroʊmətɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1285,
+            etymology = "",
             termEn = "Heterochromatin",
             termFr = "Hétérochromatine",
             termAr = "الكروماتين المغاير (المكثف)",
@@ -3033,9 +3327,13 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌhɛtəroʊˈkroʊmətɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1286,
+            etymology = "",
             termEn = "Rough endoplasmic reticulum (RER)",
             termFr = "Réticulum endoplasmique rugueux (RER)",
             termAr = "الشبكة الإندوبلازمية الخشنة",
@@ -3051,6 +3349,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1287,
+            etymology = "",
             termEn = "Smooth endoplasmic reticulum (SER)",
             termFr = "Réticulum endoplasmique lisse (REL)",
             termAr = "الشبكة الإندوبلازمية الملساء",
@@ -3066,6 +3365,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1288,
+            etymology = "",
             termEn = "Golgi apparatus",
             termFr = "Appareil de Golgi",
             termAr = "جهاز غولجي",
@@ -3081,6 +3381,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1289,
+            etymology = "",
             termEn = "Lysosome",
             termFr = "Lysosome",
             termAr = "الجسيم الحال",
@@ -3096,6 +3397,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1290,
+            etymology = "",
             termEn = "Mitochondria",
             termFr = "Mitochondrie",
             termAr = "الميتوكوندريا",
@@ -3111,6 +3413,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1291,
+            etymology = "",
             termEn = "Peroxisome",
             termFr = "Peroxysome",
             termAr = "الجسيم البيروكسيدي",
@@ -3126,6 +3429,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1292,
+            etymology = "",
             termEn = "Cytoskeleton",
             termFr = "Cytosquelette",
             termAr = "الهيكل الخلوي",
@@ -3157,6 +3461,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1294,
+            etymology = "",
             termEn = "Intermediate filament",
             termFr = "Filament intermédiaire",
             termAr = "الخييط المتوسط",
@@ -3167,6 +3472,8 @@ MedicalTermEntity(
             chapter = "Biologie Cellulaire",
             ipaPhonetic = "/ˌɪntərˈmiːdiət/",
             exampleEn = "The intermediate filament is the rope-like cytoskeletal element (10 nm) providing mechanical strength (e.g., keratin, vimentin, desmin).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1295,
@@ -3186,6 +3493,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1296,
+            etymology = "",
             termEn = "Cell cycle",
             termFr = "Cycle cellulaire",
             termAr = "الدورة الخلوية",
@@ -3201,6 +3509,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1297,
+            etymology = "",
             termEn = "Interphase",
             termFr = "Interphase",
             termAr = "الطور البيني",
@@ -3226,6 +3535,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/maɪˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1299,
@@ -3245,6 +3557,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1300,
+            etymology = "",
             termEn = "Prophase",
             termFr = "Prophase",
             termAr = "الطور التمهيدي",
@@ -3260,6 +3573,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1301,
+            etymology = "",
             termEn = "Metaphase",
             termFr = "Métaphase",
             termAr = "الطور الاستوائي",
@@ -3275,6 +3589,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1302,
+            etymology = "",
             termEn = "Anaphase",
             termFr = "Anaphase",
             termAr = "الطور الانفصالي",
@@ -3290,6 +3605,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1303,
+            etymology = "",
             termEn = "Telophase",
             termFr = "Télophase",
             termAr = "الطور النهائي",
@@ -3305,6 +3621,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1304,
+            etymology = "",
             termEn = "Cytokinesis",
             termFr = "Cytocinèse",
             termAr = "انقسام السيتوبلازم",
@@ -3330,6 +3647,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1306,
@@ -3343,7 +3663,9 @@ MedicalTermEntity(
             module = "Histologie",
             chapter = "Division Cellulaire",
             ipaPhonetic = "/nɛˈkroʊsɪs/",
-        )
-
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
+        ),
     )
 }

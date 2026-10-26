@@ -3,9 +3,12 @@ import { useT } from "../i18n/useT";
 import { useNow } from "../lib/useNow";
 import { useAppState, update } from "../domain/store";
 import { getTerms } from "../data/load";
+import { getStories, isStoryLoaded } from "../learning/stories";
+import { pickTodayStory } from "../learning/selection";
+import { navigate } from "../lib/router";
 import { pickContinueModule, totalDue, type Sm2Map } from "../domain/progress";
 import { buildPath, type PathNode } from "../domain/path";
-import { goalProgress, buyFreeze, FREEZE_COST_GEMS } from "../domain/gamification";
+import { goalProgress, buyFreeze, FREEZE_COST_GEMS, last7Days, goalStreakOf } from "../domain/gamification";
 import { Medi } from "../components/Medi";
 import { GoalRing } from "../components/GoalRing";
 import { RewardPopup, type RewardData } from "../components/RewardPopup";
@@ -23,6 +26,55 @@ export function pearlOfDay(terms: Term[], now: number): Term | undefined {
   return withPearl[((day % withPearl.length) + withPearl.length) % withPearl.length];
 }
 
+/**
+ * Carte « Ma séance d'aujourd'hui » (guide §2.2) : sélection déterministe —
+ * reprise > expressions échues > jamais vue > plus anciennement terminée
+ * (RISK-004). Invisible tant que le contenu n'est pas chargé — la carte ne
+ * doit jamais bloquer le parcours.
+ */
+export function TodayStoryCard() {
+  const { t, lang } = useT();
+  const s = useAppState();
+  const now = useNow();
+
+  if (!isStoryLoaded()) return null;
+  const story = pickTodayStory({
+    stories: getStories(),
+    exprSm2: s.exprSm2,
+    progress: s.storyProgress,
+    now,
+  });
+  if (!story) return null;
+
+  const saved = s.storyProgress[story.storyId];
+  const resumable = !!saved && saved.completedAt === 0 && saved.savedAt > 0;
+  const title = story.title[lang] || story.title.fr;
+  // Progression du pilote (seules les histoires publiées comptent).
+  const allStories = getStories();
+  const done = allStories.filter((x) => {
+    const p = s.storyProgress[x.storyId];
+    return !!p && p.completedAt > 0;
+  }).length;
+
+  return (
+    <section className="card" style={{ borderLeft: "4px solid var(--accent, #2e7d32)" }}>
+      <span className="pearl-badge">📖 {t("storyCardTitle")}</span>
+      <h3 style={{ marginTop: 8 }}>{title}</h3>
+      <p className="tiny muted">
+        {t("storyCardSub")} · {story.durationMin} {t("storyMinutes")}
+        {allStories.length > 1 ? ` · ${done}/${allStories.length}` : ""}
+      </p>
+      <button
+        type="button"
+        className="btn block"
+        onClick={() => navigate(`story/${story.storyId}`)}
+      >
+        {resumable ? t("storyResume") : t("storyStart")}
+      </button>
+    </section>
+  );
+}
+
 export function PathScreen() {
   const { t, lang } = useT();
   const s = useAppState();
@@ -31,6 +83,8 @@ export function PathScreen() {
   const now = useNow();
   const goal = goalProgress(s, now);
   const units = useMemo(
+    // BUG-002 : sans ses arguments, buildPath() prend {} → tout niveau ≥ 2
+    // restait « locked » à vie et aucune leçon n'apparaissait terminée.
     () => buildPath(s.lessonBest, s.moduleBest),
     [s.lessonBest, s.moduleBest]
   );
@@ -72,6 +126,58 @@ export function PathScreen() {
           {goal.today} / {goal.goal} {t("statXp")} · {allDue} {t("cardsDue")}
         </p>
 
+        {s.reviewQueue.filter((x) => x.status === "unlocked").length > 0 && (
+          <a
+            className="btn small block"
+            href="#/review"
+            style={{ marginTop: 8, textAlign: "center" }}
+          >
+            📥 {s.reviewQueue.filter((x) => x.status === "unlocked").length}{" "}
+            {t("reviewHubTitle")}
+          </a>
+        )}
+
+        {/* WS4 levier 2 : calendrier hebdo de l'objectif — 7 cellules
+            « tracé ECG » (objectif atteint / XP partiel / rien). */}
+        <div
+          className="streak-row"
+          style={{ gap: 4, justifyContent: "space-between", marginTop: 8 }}
+          aria-label={t("cardsDue")}
+        >
+          {last7Days(now).map((day) => {
+            const xp = s.weeklyXp[day] ?? 0;
+            const hit = xp >= s.dailyGoal && s.dailyGoal > 0;
+            const some = xp > 0;
+            return (
+              <div
+                key={day}
+                title={`${day} · ${xp} XP`}
+                style={{
+                  flex: 1,
+                  height: 26,
+                  borderRadius: 6,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: 11,
+                  fontWeight: hit ? 700 : 400,
+                  color: hit ? "#fff" : "var(--muted, #5C6B63)",
+                  background: hit ? "#0E8A5F" : some ? "rgba(14,138,95,.25)" : "rgba(0,0,0,.06)",
+                }}
+              >
+                {hit ? "✓" : some ? "·" : ""}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* WS4 : la cadence d'objectifs consécutifs, lisible sous le calendrier. */}
+        {goalStreakOf(s, now) > 0 && (
+          <p className="tiny path-goal" style={{ marginTop: 4 }}>
+            🎯 {goalStreakOf(s, now)} {goalStreakOf(s, now) === 1 ? "jour d'objectif d'affilée" : "jours d'objectif d'affilée"} · coffre bonus tous les 3
+          </p>
+        )}
+
         <div className="streak-row">
           <span className="streak-pill">
             🔥 {s.streak} {t("statStreak")}
@@ -97,6 +203,9 @@ export function PathScreen() {
           </button>
         )}
       </section>
+
+      {/* Ma séance d'aujourd'hui — mode histoire (guide d'intégration §2.2) */}
+      <TodayStoryCard />
 
       {/* Unités : 15 modules, 6 nœuds chacun */}
       <div className="section-head">

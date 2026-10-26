@@ -3,7 +3,7 @@ package com.aistudio.medlingua.dzmed
 import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
 import com.aistudio.medlingua.dzmed.domain.gamification.DAILY_GOAL_OPTIONS
 import com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS
-import com.aistudio.medlingua.dzmed.domain.gamification.ProgressionManager
+import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
 import com.aistudio.medlingua.dzmed.domain.gamification.LeagueManager
 import com.aistudio.medlingua.dzmed.domain.time.FakeClock
 import org.junit.Assert.assertEquals
@@ -58,8 +58,8 @@ class ProgressionManagerTest {
     @Test
     fun `todayKey est une date au format yyyy-MM-dd et est deterministe`() {
         val now = utc(2026, 10, 6)
-        assertEquals("2026-10-06", ProgressionManager.todayKey(now))
-        assertEquals(ProgressionManager.todayKey(now), ProgressionManager.todayKey(now))
+        assertEquals("2026-10-06", GamificationEconomy.todayKey(now))
+        assertEquals(GamificationEconomy.todayKey(now), GamificationEconomy.todayKey(now))
     }
 
     // ---------- syncWeek ----------
@@ -67,7 +67,7 @@ class ProgressionManagerTest {
     @Test
     fun `syncWeek adopte la semaine en cours sans rien ecraser`() {
         val now = utc(2026, 10, 6)
-        val adopted = ProgressionManager.syncWeek(stats(weeklyXp = 300, goalDays = 2), now)
+        val adopted = GamificationEconomy.syncWeek(stats(weeklyXp = 300, goalDays = 2), now)
         assertEquals(LeagueManager.getWeekStartTimestamp(FakeClock(now)), adopted.weeklyXpReset)
         assertEquals(300, adopted.weeklyXp)
         assertEquals(2, adopted.goalDays)
@@ -78,14 +78,14 @@ class ProgressionManagerTest {
         val now = utc(2026, 10, 6)
         val weekStart = LeagueManager.getWeekStartTimestamp(FakeClock(now))
         val s = stats(weeklyXp = 42, goalDays = 1, weeklyXpReset = weekStart)
-        assertEquals(s, ProgressionManager.syncWeek(s, now))
+        assertEquals(s, GamificationEconomy.syncWeek(s, now))
     }
 
     @Test
     fun `syncWeek remet a zero XP ligue et jours d objectif au changement de semaine`() {
         val now = utc(2026, 10, 6)
         val lastWeek = LeagueManager.getWeekStartTimestamp(FakeClock(utc(2026, 9, 21)))
-        val reset = ProgressionManager.syncWeek(
+        val reset = GamificationEconomy.syncWeek(
             stats(weeklyXp = 900, goalDays = 4, weeklyXpReset = lastWeek),
             now
         )
@@ -99,8 +99,8 @@ class ProgressionManagerTest {
     @Test
     fun `touchStreak ne bouge pas quand on a deja etudie aujourd hui`() {
         val now = utc(2026, 10, 6)
-        val today = ProgressionManager.todayKey(now)
-        val out = ProgressionManager.touchStreak(stats(streakDays = 12, lastStudy = today), now)
+        val today = GamificationEconomy.todayKey(now)
+        val out = GamificationEconomy.touchStreak(stats(streakDays = 12, lastStudy = today), now)
         assertEquals(12, out.stats.streakDays)
         assertEquals(today, out.stats.lastStudy)
         assertFalse(out.freezeUsed)
@@ -109,40 +109,54 @@ class ProgressionManagerTest {
     @Test
     fun `touchStreak adopte le jour sur une base migratee sans lastStudy`() {
         val now = utc(2026, 10, 6)
-        val out = ProgressionManager.touchStreak(stats(streakDays = 12, lastStudy = ""), now)
+        val out = GamificationEconomy.touchStreak(stats(streakDays = 12, lastStudy = ""), now)
         assertEquals(12, out.stats.streakDays)
-        assertEquals(ProgressionManager.todayKey(now), out.stats.lastStudy)
+        assertEquals(GamificationEconomy.todayKey(now), out.stats.lastStudy)
         assertFalse(out.freezeUsed)
     }
 
     @Test
     fun `touchStreak incremente la serie quand hier etudie`() {
         val now = utc(2026, 10, 6)
-        val yesterday = ProgressionManager.todayKey(now - 86_400_000L)
-        val out = ProgressionManager.touchStreak(stats(streakDays = 12, lastStudy = yesterday), now)
+        val yesterday = GamificationEconomy.todayKey(now - 86_400_000L)
+        val out = GamificationEconomy.touchStreak(stats(streakDays = 12, lastStudy = yesterday), now)
         assertEquals(13, out.stats.streakDays)
         assertFalse(out.freezeUsed)
     }
 
     @Test
-    fun `touchStreak consomme une congelation sur un trou de plusieurs jours`() {
+    fun `BUG-019 un gel comble exactement un jour manquant`() {
         val now = utc(2026, 10, 6)
-        val threeDaysAgo = ProgressionManager.todayKey(now - 3 * 86_400_000L)
-        val out = ProgressionManager.touchStreak(
-            stats(streakDays = 12, lastStudy = threeDaysAgo, streakFreezeCount = 1),
+        val threeDaysAgo = GamificationEconomy.todayKey(now - 3 * 86_400_000L)
+        // Trou de 3 jours = 2 manquants : 2 gels → conservés, tout consommé.
+        val out = GamificationEconomy.touchStreak(
+            stats(streakDays = 12, lastStudy = threeDaysAgo, streakFreezeCount = 2),
             now
         )
         assertTrue(out.freezeUsed)
         assertEquals(0, out.stats.streakFreezeCount)
         assertEquals(12, out.stats.streakDays)
-        assertEquals(ProgressionManager.todayKey(now), out.stats.lastStudy)
+        assertEquals(GamificationEconomy.todayKey(now), out.stats.lastStudy)
+    }
+
+    @Test
+    fun `BUG-019 un seul gel ne suffit pas pour deux jours manquants`() {
+        val now = utc(2026, 10, 6)
+        val threeDaysAgo = GamificationEconomy.todayKey(now - 3 * 86_400_000L)
+        val out = GamificationEconomy.touchStreak(
+            stats(streakDays = 12, lastStudy = threeDaysAgo, streakFreezeCount = 1),
+            now
+        )
+        assertFalse(out.freezeUsed)
+        assertEquals(1, out.stats.streakDays)
+        assertEquals(1, out.stats.streakFreezeCount) // pas brûlé pour rien
     }
 
     @Test
     fun `touchStreak casse la serie sans congelation disponible`() {
         val now = utc(2026, 10, 6)
-        val threeDaysAgo = ProgressionManager.todayKey(now - 3 * 86_400_000L)
-        val out = ProgressionManager.touchStreak(
+        val threeDaysAgo = GamificationEconomy.todayKey(now - 3 * 86_400_000L)
+        val out = GamificationEconomy.touchStreak(
             stats(streakDays = 12, lastStudy = threeDaysAgo, streakFreezeCount = 0),
             now
         )
@@ -155,14 +169,17 @@ class ProgressionManagerTest {
     @Test
     fun `addXp credite total du jour ligue et touche la serie`() {
         val now = utc(2026, 10, 6)
-        val yesterday = ProgressionManager.todayKey(now - 86_400_000L)
-        val out = ProgressionManager.addXp(stats(lastStudy = yesterday), xp = 25, now = now)
+        val yesterday = GamificationEconomy.todayKey(now - 86_400_000L)
+        val out = GamificationEconomy.addXp(stats(lastStudy = yesterday), xp = 25, now = now)
         assertEquals(25, out.gained)
-        assertEquals(25, out.stats.totalPoints)
+        // La classe vivante crédite un bonus de série (13 jours → +25) au
+        // total : le jumeau mort (ProgressionManager) ne le faisait pas —
+        // c'est son contrat que ce test copiait.
+        assertEquals(25 + GamificationEconomy.streakXpBonus(13), out.stats.totalPoints)
         assertEquals(25, out.stats.xpToday)
         assertEquals(25, out.stats.weeklyXp)
         assertEquals(13, out.stats.streakDays)
-        assertEquals(ProgressionManager.todayKey(now), out.stats.lastStudy)
+        assertEquals(GamificationEconomy.todayKey(now), out.stats.lastStudy)
     }
 
     @Test
@@ -170,15 +187,15 @@ class ProgressionManagerTest {
         val now = utc(2026, 10, 6)
         var s = stats(dailyGoal = 50)
 
-        val first = ProgressionManager.addXp(s, xp = 40, now = now)
+        val first = GamificationEconomy.addXp(s, xp = 40, now = now)
         assertFalse(first.goalHit)
         assertEquals(0, first.stats.goalDays)
 
-        val cross = ProgressionManager.addXp(first.stats, xp = 20, now = now)
+        val cross = GamificationEconomy.addXp(first.stats, xp = 20, now = now)
         assertTrue(cross.goalHit)
         assertEquals(1, cross.stats.goalDays)
 
-        val later = ProgressionManager.addXp(cross.stats, xp = 50, now = now)
+        val later = GamificationEconomy.addXp(cross.stats, xp = 50, now = now)
         assertFalse(later.goalHit)
         assertEquals(1, later.stats.goalDays)
         assertEquals(110, later.stats.xpToday)
@@ -187,14 +204,14 @@ class ProgressionManagerTest {
     @Test
     fun `addXp remet a zero xpToday au changement de jour civil`() {
         val now = utc(2026, 10, 6)
-        val yesterday = ProgressionManager.todayKey(now - 86_400_000L)
-        val out = ProgressionManager.addXp(
+        val yesterday = GamificationEconomy.todayKey(now - 86_400_000L)
+        val out = GamificationEconomy.addXp(
             stats(xpToday = 45, goalDate = yesterday, goalDays = 1),
             xp = 5,
             now = now
         )
         assertEquals(5, out.stats.xpToday)
-        assertEquals(ProgressionManager.todayKey(now), out.stats.goalDate)
+        assertEquals(GamificationEconomy.todayKey(now), out.stats.goalDate)
         assertFalse(out.goalHit)
     }
 
@@ -208,8 +225,8 @@ class ProgressionManagerTest {
     @Test
     fun `goalProgress reflete le jour courant avec un pourcentage borne`() {
         val now = utc(2026, 10, 6)
-        val today = ProgressionManager.todayKey(now)
-        val p = ProgressionManager.goalProgress(
+        val today = GamificationEconomy.todayKey(now)
+        val p = GamificationEconomy.goalProgress(
             stats(xpToday = 60, goalDate = today, dailyGoal = 50),
             now
         )
@@ -222,8 +239,8 @@ class ProgressionManagerTest {
     @Test
     fun `goalProgress tombe a zero quand le jour a change`() {
         val now = utc(2026, 10, 6)
-        val yesterday = ProgressionManager.todayKey(now - 86_400_000L)
-        val p = ProgressionManager.goalProgress(
+        val yesterday = GamificationEconomy.todayKey(now - 86_400_000L)
+        val p = GamificationEconomy.goalProgress(
             stats(xpToday = 45, goalDate = yesterday, dailyGoal = 50),
             now
         )
@@ -236,12 +253,12 @@ class ProgressionManagerTest {
 
     @Test
     fun `buyFreeze refuse sans assez de gemmes`() {
-        assertNull(ProgressionManager.buyFreeze(stats(gems = FREEZE_COST_GEMS - 1)))
+        assertNull(GamificationEconomy.buyFreeze(stats(gems = FREEZE_COST_GEMS - 1)))
     }
 
     @Test
     fun `buyFreeze debite les gemmes et ajoute une congelation`() {
-        val bought = ProgressionManager.buyFreeze(stats(gems = 300, streakFreezeCount = 1))
+        val bought = GamificationEconomy.buyFreeze(stats(gems = 300, streakFreezeCount = 1))
         assertNotNull(bought)
         assertEquals(300 - FREEZE_COST_GEMS, bought!!.gems)
         assertEquals(2, bought.streakFreezeCount)

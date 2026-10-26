@@ -6,11 +6,20 @@
 import type { Lang } from "../types";
 import { todayKey } from "./gamification";
 
+export type Tier = "bronze" | "silver" | "gold";
+
+export interface LeagueState {
+  tier: Tier;
+  weekStart: string;
+  botSeed: number;
+  /** Meilleur palier ATTEINT (BUG-020 : une relégation gold→silver ne doit
+   * jamais débloquer « promotion » — le trophée lit ceci, pas `tier`). */
+  bestTier?: Tier;
+}
+
 export const COHORT_SIZE = 30;
 export const PROMOTION = 10;
 export const DEMOTION = 5;
-
-export type Tier = "bronze" | "silver" | "gold";
 
 export const TIER_ORDER: Tier[] = ["bronze", "silver", "gold"];
 
@@ -46,6 +55,7 @@ export interface LeagueInfo {
   tier: Tier;
   weekStart: string;
   botSeed: number;
+  bestTier?: Tier;
 }
 
 /** PRNG déterministe (mulberry32). */
@@ -175,10 +185,14 @@ export function rollover(
     demoted = true;
   }
 
+  const prevBest = state.league.bestTier ?? state.league.tier;
+  const bestTier =
+    TIER_ORDER.indexOf(tier) > TIER_ORDER.indexOf(prevBest) ? tier : prevBest;
   state.league = {
     tier,
     weekStart: current,
     botSeed: (state.league.botSeed + 1) % 1_000_000,
+    bestTier,
   };
   // On ne garde que l'XP déjà gagné dans la nouvelle semaine : l'XP de la
   // semaine close a servi au classement ci-dessus, celui de la nouvelle

@@ -49,7 +49,7 @@ class ChestManagerTest {
     @Test
     fun `appliquer une recompense gemmes congelation ou xp`() {
         val now = 1_770_000_000_000L
-        val base = UserStatsEntity(gems = 100, streakFreezeCount = 1, totalPoints = 0, weeklyXp = 0, xpToday = 0)
+        val base = UserStatsEntity(gems = 100, streakDays = 0, streakFreezeCount = 1, totalPoints = 0, weeklyXp = 0, xpToday = 0)
 
         val gems = ChestManager.applyChestReward(base, ChestReward(ChestKind.GEMS, 50), now)
         assertEquals(150, gems.gems)

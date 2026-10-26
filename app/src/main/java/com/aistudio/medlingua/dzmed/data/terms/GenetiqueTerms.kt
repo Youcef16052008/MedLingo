@@ -1,15 +1,11 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Génétique — 232 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object GenetiqueTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 1536,
+            etymology = "",
             termEn = "Autosomal dominant",
             termFr = "Autosomique dominant",
             termAr = "جسمي سائد",
@@ -20,9 +16,12 @@ object GenetiqueTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌɔːtəˈsoʊməl ˈdɒmɪnənt/",
             exampleEn = "The autosomal dominant is the inheritance pattern where a single copy of the mutant allele causes disease (e.g., Huntington).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1537,
+            etymology = "",
             termEn = "Autosomal recessive",
             termFr = "Autosomique récessif",
             termAr = "جسمي متنحٍ",
@@ -33,9 +32,12 @@ object GenetiqueTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌɔːtəˈsoʊməl rɪˈsɛsɪv/",
             exampleEn = "The autosomal recessive is the inheritance pattern requiring two copies of the mutant allele to cause disease (e.g., cystic fibrosis).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1538,
+            etymology = "",
             termEn = "X-linked inheritance",
             termFr = "Hérédité liée à l'X",
             termAr = "الوراثة المرتبطة بالكروموسوم X",
@@ -45,9 +47,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ɛks lɪŋkt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1539,
+            etymology = "",
             termEn = "Carrier",
             termFr = "Porteur",
             termAr = "الحامل للجين",
@@ -63,6 +69,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1540,
+            etymology = "",
             termEn = "Down syndrome (Trisomy 21)",
             termFr = "Syndrome de Down (Trisomie 21)",
             termAr = "متلازمة داون (تثلث الصبغي 21)",
@@ -78,6 +85,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1541,
+            etymology = "",
             termEn = "Turner syndrome (45,X)",
             termFr = "Syndrome de Turner (45,X)",
             termAr = "متلازمة تيرنر",
@@ -93,6 +101,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1542,
+            etymology = "",
             termEn = "Klinefelter syndrome (47,XXY)",
             termFr = "Syndrome de Klinefelter (47,XXY)",
             termAr = "متلازمة كلاينفلتر",
@@ -124,6 +133,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1544,
+            etymology = "",
             termEn = "Sickle cell disease",
             termFr = "Drépanocytose",
             termAr = "مرض فقر الدم المنجلي",
@@ -171,6 +181,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1547,
+            etymology = "",
             termEn = "Huntington disease",
             termFr = "Maladie de Huntington",
             termAr = "مرض هانتنغتون",
@@ -186,6 +197,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1548,
+            etymology = "",
             termEn = "BRCA1/BRCA2",
             termFr = "BRCA1/BRCA2",
             termAr = "جينا BRCA1/BRCA2",
@@ -195,9 +207,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˌbiːɑːrˈsiːeɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1549,
+            etymology = "",
             termEn = "Oncogene",
             termFr = "Oncogène",
             termAr = "الجين الورمي",
@@ -213,6 +229,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1550,
+            etymology = "",
             termEn = "Tumor suppressor gene",
             termFr = "Gène suppresseur de tumeurs",
             termAr = "الجين الكابت للأورام",
@@ -223,9 +240,12 @@ object GenetiqueTerms {
             chapter = "Génétique Médicale",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər/",
             exampleEn = "The tumor suppressor gene is the gene that inhibits cell division and tumor formation (e.g., TP53, Rb).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1551,
+            etymology = "",
             termEn = "Pedigree",
             termFr = "Arbre généalogique (pédigrée)",
             termAr = "الشجرة العائلية",
@@ -241,6 +261,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1552,
+            etymology = "",
             termEn = "Proband",
             termFr = "Proposant (Cas index)",
             termAr = "الحالة الأولى",
@@ -256,6 +277,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1553,
+            etymology = "",
             termEn = "Genetic counseling",
             termFr = "Conseil génétique",
             termAr = "الإرشاد الوراثي",
@@ -271,6 +293,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1554,
+            etymology = "",
             termEn = "Population genetics",
             termFr = "Génétique des populations",
             termAr = "وراثة المجتمعات",
@@ -286,6 +309,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1555,
+            etymology = "",
             termEn = "Hardy-Weinberg equilibrium",
             termFr = "Équilibre de Hardy-Weinberg",
             termAr = "توازن هاردي-واينبرغ",
@@ -301,6 +325,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1556,
+            etymology = "",
             termEn = "Allele frequency",
             termFr = "Fréquence allélique",
             termAr = "تردد الأليل",
@@ -316,6 +341,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1557,
+            etymology = "",
             termEn = "Genetic drift",
             termFr = "Dérive génétique",
             termAr = "الانجراف الجيني",
@@ -325,9 +351,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/dʒəˈnɛtɪk drɪft/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1558,
+            etymology = "",
             termEn = "Natural selection",
             termFr = "Sélection naturelle",
             termAr = "الانتقاء الطبيعي",
@@ -343,6 +373,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1559,
+            etymology = "",
             termEn = "Gene flow",
             termFr = "Flux génique",
             termAr = "تدفق الجينات",
@@ -358,6 +389,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1560,
+            etymology = "",
             termEn = "Founder effect",
             termFr = "Effet fondateur",
             termAr = "تأثير المؤسس",
@@ -373,6 +405,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1561,
+            etymology = "",
             termEn = "Bottleneck effect",
             termFr = "Effet goulot d'étranglement",
             termAr = "تأثير عنق الزجاجة",
@@ -388,6 +421,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1562,
+            etymology = "",
             termEn = "Genetic variation",
             termFr = "Variation génétique",
             termAr = "التنوع الجيني",
@@ -397,9 +431,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique des Populations",
             ipaPhonetic = "/ˌvɛəriˈeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1563,
+            etymology = "",
             termEn = "Heterozygosity",
             termFr = "Hétérozygotie",
             termAr = "النسبة غير المتماثلة",
@@ -415,6 +453,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1564,
+            etymology = "",
             termEn = "Epigenetics",
             termFr = "Épigénétique",
             termAr = "علم الوراثة فوق الجينية",
@@ -430,6 +469,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1565,
+            etymology = "",
             termEn = "DNA methylation",
             termFr = "Méthylation de l'ADN",
             termAr = "مثيلة DNA",
@@ -455,9 +495,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Épigénétique",
             ipaPhonetic = "/ˌmɒdɪfɪˈkeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1567,
+            etymology = "",
             termEn = "Acetylation",
             termFr = "Acétylation",
             termAr = "الأسيتيل",
@@ -489,6 +533,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1569,
+            etymology = "",
             termEn = "Genomic imprinting",
             termFr = "Empreinte génomique",
             termAr = "البصمة الجينومية",
@@ -504,6 +549,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1570,
+            etymology = "",
             termEn = "X-inactivation (Lyonization)",
             termFr = "Inactivation du chromosome X (Lyonisation)",
             termAr = "إسكات الكروموسوم X",
@@ -519,6 +565,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1571,
+            etymology = "",
             termEn = "Barr body",
             termFr = "Corpuscule de Barr",
             termAr = "جسيم بار",
@@ -534,6 +581,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1572,
+            etymology = "",
             termEn = "CpG island",
             termFr = "Îlot CpG",
             termAr = "جزيرة CpG",
@@ -549,6 +597,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1573,
+            etymology = "",
             termEn = "Genetic engineering",
             termFr = "Génie génétique",
             termAr = "الهندسة الوراثية",
@@ -564,6 +613,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1574,
+            etymology = "",
             termEn = "Restriction enzyme (Endonuclease)",
             termFr = "Enzyme de restriction (Endonucléase)",
             termAr = "إنزيم القطع (الإندونوكلياز)",
@@ -579,6 +629,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1575,
+            etymology = "",
             termEn = "Recombinant DNA",
             termFr = "ADN recombinant",
             termAr = "الـ DNA المؤشب",
@@ -594,6 +645,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1576,
+            etymology = "",
             termEn = "Cloning vector",
             termFr = "Vecteur de clonage",
             termAr = "ناقل الاستنساخ",
@@ -609,6 +661,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1577,
+            etymology = "",
             termEn = "Plasmid",
             termFr = "Plasmide",
             termAr = "البلازميد",
@@ -624,6 +677,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1578,
+            etymology = "",
             termEn = "PCR (Polymerase Chain Reaction)",
             termFr = "PCR (Réaction en chaîne par polymérase)",
             termAr = "تفاعل البوليميراز المتسلسل",
@@ -639,6 +693,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1579,
+            etymology = "",
             termEn = "DNA sequencing",
             termFr = "Séquençage de l'ADN",
             termAr = "تسلسل DNA",
@@ -670,6 +725,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1581,
+            etymology = "",
             termEn = "Gene therapy",
             termFr = "Thérapie génique",
             termAr = "العلاج الجيني",
@@ -685,6 +741,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1582,
+            etymology = "",
             termEn = "CRISPR-Cas9",
             termFr = "CRISPR-Cas9",
             termAr = "كريسبر-كاس9",
@@ -700,6 +757,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1583,
+            etymology = "",
             termEn = "Transgenic organism",
             termFr = "Organisme transgénique",
             termAr = "الكائن الحي المُحوَّل وراثياً",
@@ -715,6 +773,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1584,
+            etymology = "",
             termEn = "Southern blotting",
             termFr = "Buvardage de Southern",
             termAr = "بصمة ساذرن",
@@ -730,6 +789,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1585,
+            etymology = "",
             termEn = "Northern blotting",
             termFr = "Buvardage de Northern",
             termAr = "بصمة نورذرن",
@@ -745,6 +805,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1586,
+            etymology = "",
             termEn = "Genomics",
             termFr = "Génomique",
             termAr = "علم الجينومات",
@@ -760,6 +821,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1587,
+            etymology = "",
             termEn = "Human Genome Project",
             termFr = "Projet Génome Humain",
             termAr = "مشروع الجينوم البشري",
@@ -775,6 +837,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1588,
+            etymology = "",
             termEn = "SNP (Single nucleotide polymorphism)",
             termFr = "SNP (Polymorphisme nucléotidique simple)",
             termAr = "التعدد الشكلي للنيوكليوتيد الواحد",
@@ -790,6 +853,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1589,
+            etymology = "",
             termEn = "Proteomics",
             termFr = "Protéomique",
             termAr = "علم البروتينوم",
@@ -805,6 +869,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1590,
+            etymology = "",
             termEn = "Transcriptomics",
             termFr = "Transcriptomique",
             termAr = "علم الترانسكريبتوم",
@@ -820,6 +885,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1591,
+            etymology = "",
             termEn = "Bioinformatics",
             termFr = "Bioinformatique",
             termAr = "المعلوماتية الحيوية",
@@ -851,6 +917,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1593,
+            etymology = "",
             termEn = "Whole genome sequencing",
             termFr = "Séquençage du génome entier (WGS)",
             termAr = "التسلسل الكامل للجينوم",
@@ -866,6 +933,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1594,
+            etymology = "",
             termEn = "Next-generation sequencing (NGS)",
             termFr = "Séquençage de nouvelle génération",
             termAr = "التسلسل الجيلي التالي",
@@ -875,9 +943,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génomique et Bioinformatique",
             ipaPhonetic = "/ˈnɛkst ˌdʒɛnəˈreɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1595,
+            etymology = "",
             termEn = "GWAS (Genome-wide association study)",
             termFr = "Étude d'association pangénomique (GWAS)",
             termAr = "دراسة الارتباط على مستوى الجينوم",
@@ -893,6 +965,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1596,
+            etymology = "",
             termEn = "Exome sequencing",
             termFr = "Séquençage de l'exome",
             termAr = "تسلسل الإكسوم",
@@ -908,6 +981,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1597,
+            etymology = "",
             termEn = "Comparative genomics",
             termFr = "Génomique comparative",
             termAr = "الجينومات المقارنة",
@@ -923,6 +997,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1598,
+            etymology = "",
             termEn = "Recombination",
             termFr = "Recombinaison",
             termAr = "إعادة التركيب",
@@ -938,6 +1013,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1599,
+            etymology = "",
             termEn = "Linkage",
             termFr = "Liaison génétique",
             termAr = "الترابط الجيني",
@@ -953,6 +1029,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1600,
+            etymology = "",
             termEn = "Genetic mapping",
             termFr = "Cartographie génétique",
             termAr = "رسم الخرائط الجينية",
@@ -968,6 +1045,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1601,
+            etymology = "",
             termEn = "Probe",
             termFr = "Sonde",
             termAr = "المسبار",
@@ -983,6 +1061,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1602,
+            etymology = "",
             termEn = "FISH (Fluorescence in situ hybridization)",
             termFr = "FISH (Hybridation in situ fluorescente)",
             termAr = "التهجين الموضعي الفلوري",
@@ -998,6 +1077,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1603,
+            etymology = "",
             termEn = "Knockout gene",
             termFr = "Gène knockout",
             termAr = "الجين المُعطَّل",
@@ -1013,6 +1093,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1604,
+            etymology = "",
             termEn = "Reporter gene",
             termFr = "Gène rapporteur",
             termAr = "الجين المُعلِّم",
@@ -1023,9 +1104,12 @@ object GenetiqueTerms {
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/rɪˈpɔːrtər/",
             exampleEn = "The reporter gene is the gene whose expression can be easily detected and measured (e.g., GFP, luciferase).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1605,
+            etymology = "",
             termEn = "Satellite DNA",
             termFr = "ADN satellite",
             termAr = "الـ DNA القمري",
@@ -1035,6 +1119,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈsætəlaɪt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1606,
@@ -1048,9 +1135,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈmaɪkroʊˌsætəlaɪt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1607,
+            etymology = "",
             termEn = "DNA fingerprinting",
             termFr = "Empreinte génétique (ADN)",
             termAr = "البصمة الوراثية",
@@ -1066,6 +1157,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1608,
+            etymology = "",
             termEn = "Prenatal genetic testing",
             termFr = "Test génétique prénatal",
             termAr = "الفحص الجيني قبل الولادة",
@@ -1097,6 +1189,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1610,
+            etymology = "",
             termEn = "Stem cell",
             termFr = "Cellule souche",
             termAr = "الخلية الجذعية",
@@ -1112,150 +1205,151 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1611,
+            etymology = "From Deoxyribo- + Nucleic Acid + Greek: ἕλιξ (helix) — 'spiral'.",
             termEn = "DNA Double Helix and Base Pairing",
             termFr = "Double hélice d'ADN et Appariement des bases",
             termAr = "الحلزون المزدوج للحمض النووي واقتران القواعد",
             definitionEn = "The antiparallel double-stranded helical polymer of deoxyribonucleotides stabilized by Watson-Crick hydrogen bonds (A=T with 2 bonds, G≡C with 3 bonds).",
             definitionFr = "Polymère bicaténaire antiparallèle de désoxyribonucléotides stabilisé par des liaisons hydrogène spécifiques (A=T par 2 liaisons, G≡C par 3 liaisons).",
             definitionAr = "بوليمر حلزوني مزدوج السلسلة ومضاد التوازي من النيوكليوتيدات منقوصة الأكسجين، مرتبط بروابط هيدروجينية (A=T برابطتين، G≡C بثلاث روابط).",
-            etymology = "From Deoxyribo- + Nucleic Acid + Greek: ἕλιξ (helix) — 'spiral'.",
-            clinicalPearl = "G-C rich regions have higher thermal denaturation melting temperatures (Tm) due to 3 hydrogen bonds compared to 2 in A-T pairs.",
-            mnemonic = "Watson-Crick Pairing: Pure As Gold (Purines = Adenine, Guanine); CUT the Py (Pyrimidines = Cytosine, Uracil, Thymine).",
             module = "Génétique",
             chapter = "Structure de l'ADN & Chromatine",
+            ipaPhonetic = "/ˌdiː.enˈeɪ ˈdʌb.əl ˈhiː.lɪks/",
             exampleEn = "Histone octamers wrap 147 base pairs of DNA to form the repeating nucleosome unit of chromatin.",
             exampleFr = "L'octamère d'histones enroule 147 paires de bases d'ADN pour former le nucléosome.",
             exampleAr = "يلتف 147 زوجاً من قواعد الحمض النووي حول مثمن الهستونات ليشكل الوحدة الأساسية للكروماتين (الجسيم النووي).",
-            ipaPhonetic = "/ˌdiː.enˈeɪ ˈdʌb.əl ˈhiː.lɪks/",
+            clinicalPearl = "G-C rich regions have higher thermal denaturation melting temperatures (Tm) due to 3 hydrogen bonds compared to 2 in A-T pairs.",
+            mnemonic = "Watson-Crick Pairing: Pure As Gold (Purines = Adenine, Guanine); CUT the Py (Pyrimidines = Cytosine, Uracil, Thymine).",
         ),
         MedicalTermEntity(
             id = 1612,
+            etymology = "Greek: τέλος (telos) — 'end / goal' + μέρος (meros) — 'part'.",
             termEn = "Telomeres and Telomerase",
             termFr = "Télomères et Télomérase",
             termAr = "القسيمات الطرفية (التيلوميرات) وإنزيم التيلوميراز",
             definitionEn = "Repetitive tandem nucleotide hexamers (TTAGGG in humans) capping chromosome ends to preserve genomic integrity, maintained by ribonucleoprotein reverse transcriptase telomerase.",
             definitionFr = "Séquences répétées en tandem (TTAGGG) protégeant les extrémités chromosomiques de la dégradation, maintenues par la télomérase.",
             definitionAr = "تسلسلات نيوكليوتيدية متكررة (TTAGGG) تغطي أطراف الصبغيات لحماية الجينوم، ويحافظ عليها إنزيم التيلوميراز الناسخ العكسي.",
-            etymology = "Greek: τέλος (telos) — 'end / goal' + μέρος (meros) — 'part'.",
-            clinicalPearl = "Telomere shortening acts as a mitotic clock triggering cellular senescence (Hayflick limit); up-regulated in >85% of malignant human tumors.",
-            mnemonic = "Telomere sequence: 'TTAGGG' (Tele-Tags Always Guard Genomic Growth).",
             module = "Génétique",
             chapter = "Structure de l'ADN & Chromatine",
+            ipaPhonetic = "/ˈtel.ə.mɪərz ænd təˈlɒm.ər.eɪs/",
             exampleEn = "Reactivation of telomerase expression is a pivotal hallmark of human neoplastic cellular immortalization.",
             exampleFr = "La réactivation de la télomérase est une étape clé de l'immortalisation tumorale.",
             exampleAr = "تعد إعادة تنشيط التيلوميراز خطوة محورية في إكساب الخلايا السرطانية القدرة على التكاثر اللامحدود.",
-            ipaPhonetic = "/ˈtel.ə.mɪərz ænd təˈlɒm.ər.eɪs/",
+            clinicalPearl = "Telomere shortening acts as a mitotic clock triggering cellular senescence (Hayflick limit); up-regulated in >85% of malignant human tumors.",
+            mnemonic = "Telomere sequence: 'TTAGGG' (Tele-Tags Always Guard Genomic Growth).",
         ),
         MedicalTermEntity(
             id = 1613,
+            etymology = "Latin: semi — 'half' + conservare — 'to keep / preserve'.",
             termEn = "Semiconservative DNA Replication",
             termFr = "Réplication semi-conservative de l'ADN",
             termAr = "التضاعف نصف المحافظ للحمض النووي",
             definitionEn = "The process during S phase where each parental DNA strand acts as a template for synthesizing a complementary daughter strand catalyzed by DNA polymerase δ and ε.",
             definitionFr = "Synthèse d'ADN en phase S où chaque brin parental sert de matrice pour un brin néoformé complémentaire sous l'action des ADN polymérases.",
             definitionAr = "عملية تضاعف المادة الوراثية في طور التصنيع S بحيث تعمل كل سلسلة أصلية كقالب لبناء سلسلة جديدة متممة لها.",
-            etymology = "Latin: semi — 'half' + conservare — 'to keep / preserve'.",
-            clinicalPearl = "DNA polymerase proofreading (3'→5' exonuclease activity) reduces replication error rate to 1 in 10^9 to 10^10 base pairs.",
-            mnemonic = "Leading strand = continuous 5'→3' toward replication fork; Lagging strand = discontinuous Okazaki fragments synthesized away.",
             module = "Génétique",
             chapter = "Réplication & Transcription",
+            ipaPhonetic = "/ˌsem.i.kənˈsɜː.və.tɪv ˌdiː.enˈeɪ ˌrep.lɪˈkeɪ.ʃən/",
             exampleEn = "Okazaki fragments on the lagging strand are joined together by DNA ligase 1.",
             exampleFr = "Les fragments d'Okazaki du brin discontinu sont liés par l'ADN ligase 1.",
             exampleAr = "تتصل قطع أوكازاكي على السلسلة المتأخرة ببعضها البعض بواسطة إنزيم ليغاز الحمض النووي.",
-            ipaPhonetic = "/ˌsem.i.kənˈsɜː.və.tɪv ˌdiː.enˈeɪ ˌrep.lɪˈkeɪ.ʃən/",
+            clinicalPearl = "DNA polymerase proofreading (3'→5' exonuclease activity) reduces replication error rate to 1 in 10^9 to 10^10 base pairs.",
+            mnemonic = "Leading strand = continuous 5'→3' toward replication fork; Lagging strand = discontinuous Okazaki fragments synthesized away.",
         ),
         MedicalTermEntity(
             id = 1614,
+            etymology = "Middle English: splicen — 'to join ends of ropes by interweaving'.",
             termEn = "Alternative Splicing and Spliceosome",
             termFr = "Épissage alternatif et Spliceosome",
             termAr = "التضفير البديل والجسيم التضفيري",
             definitionEn = "The nuclear processing mechanism catalyzed by snRNPs (U1, U2, U4, U5, U6) that removes introns and differentially ligates exons, generating multiple protein isoforms from one gene.",
             definitionFr = "Processus post-transcriptionnel où les introns sont excisés et les exons assemblés de différentes manières, générant la diversité protéomique.",
             definitionAr = "المعالجة النووية للرنا الأولي باستئصال الإنترونات ووصل الإكسونات بتوليفات مختلفة لإنتاج بروتينات متنوعة من جين واحد.",
-            etymology = "Middle English: splicen — 'to join ends of ropes by interweaving'.",
-            clinicalPearl = "Mutations in splice sites cause up to 15% of genetic diseases, including spinal muscular atrophy (SMA) and certain beta-thalassemias.",
-            mnemonic = "Consensus Splice Signals: 5' donor site GU ... Branch site A ... 3' acceptor site AG.",
             module = "Génétique",
             chapter = "Réplication & Transcription",
+            ipaPhonetic = "/ɔːlˈtɜː.nə.tɪv ˈsplaɪ.sɪŋ/",
             exampleEn = "Alternative splicing of the tropomysoin gene yields distinct tissue-specific isoforms in striated versus smooth muscle.",
             exampleFr = "L'épissage alternatif du gène de la tropomyosine produit des isoformes distinctes selon le tissu musculaire.",
             exampleAr = "يؤدي التضفير البديل لجين التروبوميوزين إلى إنتاج أشكال بروتينية خاصة بكل من العضلات الهيكلية والملساء.",
-            ipaPhonetic = "/ɔːlˈtɜː.nə.tɪv ˈsplaɪ.sɪŋ/",
+            clinicalPearl = "Mutations in splice sites cause up to 15% of genetic diseases, including spinal muscular atrophy (SMA) and certain beta-thalassemias.",
+            mnemonic = "Consensus Splice Signals: 5' donor site GU ... Branch site A ... 3' acceptor site AG.",
         ),
         MedicalTermEntity(
             id = 1615,
+            etymology = "From frame (triplet reading boundary) + shift (displacement).",
             termEn = "Frameshift Mutation",
             termFr = "Mutation par décalage du cadre de lecture",
             termAr = "طفرة انزياح إطار القراءة الجيني",
             definitionEn = "A genetic mutation caused by insertion or deletion of a number of nucleotides not divisible by 3, altering the downstream triplet codon reading frame and causing premature termination.",
             definitionFr = "Mutation due à l'insertion ou délétion d'un nombre de nucléotides non multiple de 3, modifiant tous les codons en aval et créant un codon stop prématuré.",
             definitionAr = "طفرة جينية تنجم عن إدخال أو حذف عدد من النيوكليوتيدات لا يقبل القسمة على 3، مما يغير جميع الكودونات اللاحقة وينتج بروتيناً مبتوراً.",
-            etymology = "From frame (triplet reading boundary) + shift (displacement).",
-            clinicalPearl = "Duchenne muscular dystrophy is typically caused by out-of-frame deletions of dystrophin, whereas milder Becker dystrophy involves in-frame deletions.",
-            mnemonic = "In-frame (multiple of 3) = protein partially functional (Becker); Out-of-frame (not mult of 3) = truncated/nonfunctional (Duchenne).",
             module = "Génétique",
             chapter = "Mutations & Hérédité Mendélienne",
+            ipaPhonetic = "/ˈfreɪm.ʃɪft mjuːˈteɪ.ʃən/",
             exampleEn = "A single base pair insertion in the CFTR gene resulted in a severe frameshift mutation and classic cystic fibrosis.",
             exampleFr = "L'insertion d'une seule base a provoqué une mutation décalante sévère responsable d'une mucoviscidose.",
             exampleAr = "أحدث إدخال نيوكليوتيد واحد في جين CFTR طفرة انزياح إطار شديدة أدت إلى الإصابة بالتليف الكيسي.",
-            ipaPhonetic = "/ˈfreɪm.ʃɪft mjuːˈteɪ.ʃən/",
+            clinicalPearl = "Duchenne muscular dystrophy is typically caused by out-of-frame deletions of dystrophin, whereas milder Becker dystrophy involves in-frame deletions.",
+            mnemonic = "In-frame (multiple of 3) = protein partially functional (Becker); Out-of-frame (not mult of 3) = truncated/nonfunctional (Duchenne).",
         ),
         MedicalTermEntity(
             id = 1616,
+            etymology = "Greek: αὐτός (autos) — 'self' + σῶμα (soma) — 'body' + Latin: dominari — 'to rule'.",
             termEn = "Autosomal Dominant vs Recessive Inheritance",
             termFr = "Transmission autosomique dominante vs récessive",
             termAr = "الوراثة الصبغية الجسدية السائدة والمتنحية",
             definitionEn = "Mendelian inheritance patterns: Autosomal dominant requires only one mutant allele (50% transmission risk; e.g., Marfan); recessive requires two mutant alleles (25% recurrence risk; e.g., CFTR).",
             definitionFr = "Modes de transmission mendélienne: dominante (un allèle muté suffit, risque de 50%) ou récessive (deux allèles mutés requis, risque de 25% si parents hétérozygotes).",
             definitionAr = "أنماط التوريث المندلي: السائدة تتطلب أليلاً طافراً واحداً (احتمال 50%)، بينما المتنحية تتطلب أليلين طافرين (احتمال 25% عند أبوين حاملين).",
-            etymology = "Greek: αὐτός (autos) — 'self' + σῶμα (soma) — 'body' + Latin: dominari — 'to rule'.",
-            clinicalPearl = "Dominant diseases often exhibit variable expressivity and incomplete penetrance (e.g., neurofibromatosis type 1); recessive diseases often affect metabolic enzymes.",
-            mnemonic = "Autosomal Recessive: horizontal pedigree (siblings affected); Autosomal Dominant: vertical pedigree (every generation affected).",
             module = "Génétique",
             chapter = "Mutations & Hérédité Mendélienne",
+            ipaPhonetic = "/ˌɔː.təˈsəʊ.məl ˈdɒm.ɪ.nənt/",
             exampleEn = "Huntington disease exhibits complete autosomal dominant penetrance with genetic anticipation due to trinucleotide repeat expansion.",
             exampleFr = "La maladie de Huntington est une affection autosomique dominante avec anticipation génétique.",
             exampleAr = "تظهر متلازمة هنتنغتون نفوذاً صبغياً سادداً كاملاً مع ظاهرة الاستباق الوراثي بسبب تكرار الثلاثيات.",
-            ipaPhonetic = "/ˌɔː.təˈsəʊ.məl ˈdɒm.ɪ.nənt/",
+            clinicalPearl = "Dominant diseases often exhibit variable expressivity and incomplete penetrance (e.g., neurofibromatosis type 1); recessive diseases often affect metabolic enzymes.",
+            mnemonic = "Autosomal Recessive: horizontal pedigree (siblings affected); Autosomal Dominant: vertical pedigree (every generation affected).",
         ),
         MedicalTermEntity(
             id = 1617,
+            etymology = "Greek: ἀ- (a-) — 'not' + εὖ (eu) — 'good' + πλόος (ploos) — 'fold' + εἶδος (eidos) — 'form'.",
             termEn = "Aneuploidy and Karyotype",
             termFr = "Aneuploïdie et Caryotype",
             termAr = "اعتلال الصيغة الصبغية والنمط النووي (الكاريوتايب)",
             definitionEn = "The presence of an abnormal chromosome number that is not an exact multiple of the haploid set (e.g., monosomy 45,X in Turner or trisomy 47,XX,+21 in Down syndrome).",
             definitionFr = "Anomalie quantitative du nombre de chromosomes, non multiple du nombre haploïde, résultant d'une non-disjonction méiotique.",
             definitionAr = "وجود عدد غير طبيعي من الصبغيات لا يمثل مضاعفاً صحيحاً للعدد الأحادي، كأحادية الصبغي X في تيرنر وتثلث الصبغي 21 في داون.",
-            etymology = "Greek: ἀ- (a-) — 'not' + εὖ (eu) — 'good' + πλόος (ploos) — 'fold' + εἶδος (eidos) — 'form'.",
-            clinicalPearl = "Giemsa banding (G-banding) of metaphase chromosomes produces characteristic dark and light bands allowing high-resolution cytogenetic karyotyping.",
-            mnemonic = "Sex chromosome aneuploidies: Turner = 45,X (female, webbed neck, coarctation); Klinefelter = 47,XXY (tall male, gynecomastia, hypogonadism).",
             module = "Génétique",
             chapter = "Anomalies Chromosomiques",
+            ipaPhonetic = "/ˌæn.juːˈplɔɪ.di/",
             exampleEn = "Conventional G-banded karyotype confirmed a 47,XY,+18 configuration diagnostic of Edwards syndrome.",
             exampleFr = "Le caryotype standard a confirmé la présence d'une trisomie 18 (syndrome d'Edwards).",
             exampleAr = "أكد فحص النمط النووي بالصبغة وجود تثلث في الصبغي 18 المشخص لمتلازمة إدواردز.",
-            ipaPhonetic = "/ˌæn.juːˈplɔɪ.di/",
+            clinicalPearl = "Giemsa banding (G-banding) of metaphase chromosomes produces characteristic dark and light bands allowing high-resolution cytogenetic karyotyping.",
+            mnemonic = "Sex chromosome aneuploidies: Turner = 45,X (female, webbed neck, coarctation); Klinefelter = 47,XXY (tall male, gynecomastia, hypogonadism).",
         ),
         MedicalTermEntity(
             id = 1618,
+            etymology = "Greek: ἐπί (epi) — 'upon / over' + genetics.",
             termEn = "Epigenetics and DNA Methylation",
             termFr = "Épigénétique et Méthylation de l'ADN",
             termAr = "علم التخلق (فوق الجينات) ومَثيَلة الحمض النووي",
             definitionEn = "Heritable phenotypic changes in gene expression that do not alter the primary DNA sequence, predominantly mediated by cytosine CpG methylation and histone acetylation.",
             definitionFr = "Modifications transmissibles de l'expression des gènes sans altération de la séquence nucléotidique, incluant méthylation des CpG et modifications d'histones.",
             definitionAr = "تغيرات قابلة للتوريث في التعبير الجيني لا تتضمن تغييراً في تسلسل القواعد النيوكليوتيدية، كإضافة مجموعات الميثيل لنوكليوتيدات السايتوسين.",
-            etymology = "Greek: ἐπί (epi) — 'upon / over' + genetics.",
-            clinicalPearl = "Genomic imprinting involves monoallelic parent-of-origin methylation: deletion of maternal 15q11-q13 causes Angelman syndrome; paternal deletion causes Prader-Willi.",
-            mnemonic = "DNA Methylation Mutes gene expression (CpG islands methylated = silenced); Histone Acetylation Activates transcription.",
             module = "Génétique",
             chapter = "Structure de l'ADN & Chromatine",
+            ipaPhonetic = "/ˌep.ɪ.dʒəˈnet.ɪks/",
             exampleEn = "Loss of DNA methylation at proto-oncogene promoters can aberrantly derepress oncogenic transcription in human leukemia.",
             exampleFr = "La déméthylation anormale de promoteurs de proto-oncogènes participe à la cancérogenèse.",
             exampleAr = "يؤدي فقدان مثيلة محفزات الجينات الورمية إلى تنشيطها غير الطبيعي وتكاثر الخلايا السرطانية.",
-            ipaPhonetic = "/ˌep.ɪ.dʒəˈnet.ɪks/",
+            clinicalPearl = "Genomic imprinting involves monoallelic parent-of-origin methylation: deletion of maternal 15q11-q13 causes Angelman syndrome; paternal deletion causes Prader-Willi.",
+            mnemonic = "DNA Methylation Mutes gene expression (CpG islands methylated = silenced); Histone Acetylation Activates transcription.",
         ),
         MedicalTermEntity(
             id = 1619,
+            etymology = "",
             termEn = "Genetics",
             termFr = "Génétique",
             termAr = "علم الوراثة",
@@ -1271,6 +1365,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1620,
+            etymology = "",
             termEn = "Heredity",
             termFr = "Hérédité",
             termAr = "الوراثة",
@@ -1286,6 +1381,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1621,
+            etymology = "",
             termEn = "Gene",
             termFr = "Gène",
             termAr = "الجين",
@@ -1301,6 +1397,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1622,
+            etymology = "",
             termEn = "Genome",
             termFr = "Génome",
             termAr = "الجينوم",
@@ -1316,6 +1413,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1623,
+            etymology = "",
             termEn = "Allele",
             termFr = "Allèle",
             termAr = "الأليل",
@@ -1325,9 +1423,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/əˈliːl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1624,
+            etymology = "",
             termEn = "Locus",
             termFr = "Locus",
             termAr = "الموقع الجيني",
@@ -1343,6 +1445,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1625,
+            etymology = "",
             termEn = "Genotype",
             termFr = "Génotype",
             termAr = "الطراز الجيني",
@@ -1358,6 +1461,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1626,
+            etymology = "",
             termEn = "Phenotype",
             termFr = "Phénotype",
             termAr = "الطراز الظاهري",
@@ -1373,6 +1477,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1627,
+            etymology = "",
             termEn = "Dominant allele",
             termFr = "Allèle dominant",
             termAr = "الأليل السائد",
@@ -1388,6 +1493,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1628,
+            etymology = "",
             termEn = "Recessive allele",
             termFr = "Allèle récessif",
             termAr = "الأليل المتنحي",
@@ -1403,6 +1509,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1629,
+            etymology = "",
             termEn = "Homozygous",
             termFr = "Homozygote",
             termAr = "متماثل الزيجوت",
@@ -1418,6 +1525,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1630,
+            etymology = "",
             termEn = "Heterozygous",
             termFr = "Hétérozygote",
             termAr = "مختلف الزيجوت",
@@ -1433,6 +1541,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1631,
+            etymology = "",
             termEn = "Trait",
             termFr = "Caractère",
             termAr = "الصفة الوراثية",
@@ -1448,6 +1557,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1632,
+            etymology = "",
             termEn = "Variation",
             termFr = "Variation",
             termAr = "التباين",
@@ -1457,9 +1567,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Introduction à la Génétique",
             ipaPhonetic = "/ˌvɛəriˈeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1633,
+            etymology = "",
             termEn = "Hereditary disease",
             termFr = "Maladie héréditaire",
             termAr = "مرض وراثي",
@@ -1475,6 +1589,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1634,
+            etymology = "",
             termEn = "DNA (Deoxyribonucleic acid)",
             termFr = "ADN (Acide désoxyribonucléique)",
             termAr = "الحمض النووي الريبوزي المنقوص الأكسجين",
@@ -1490,6 +1605,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1635,
+            etymology = "",
             termEn = "RNA (Ribonucleic acid)",
             termFr = "ARN (Acide ribonucléique)",
             termAr = "الحمض النووي الريبوزي",
@@ -1505,6 +1621,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1636,
+            etymology = "",
             termEn = "Nucleotide",
             termFr = "Nucléotide",
             termAr = "النيوكليوتيد",
@@ -1520,6 +1637,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1637,
+            etymology = "",
             termEn = "Nitrogenous base",
             termFr = "Base azotée",
             termAr = "القاعدة النيتروجينية",
@@ -1535,6 +1653,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1638,
+            etymology = "",
             termEn = "Purine",
             termFr = "Purine",
             termAr = "البيورين",
@@ -1550,6 +1669,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1639,
+            etymology = "",
             termEn = "Pyrimidine",
             termFr = "Pyrimidine",
             termAr = "البيريميدين",
@@ -1565,6 +1685,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1640,
+            etymology = "",
             termEn = "Adenine (A)",
             termFr = "Adénine (A)",
             termAr = "الأدينين",
@@ -1580,6 +1701,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1641,
+            etymology = "",
             termEn = "Guanine (G)",
             termFr = "Guanine (G)",
             termAr = "الغوانين",
@@ -1595,6 +1717,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1642,
+            etymology = "",
             termEn = "Cytosine (C)",
             termFr = "Cytosine (C)",
             termAr = "السيتوزين",
@@ -1610,6 +1733,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1643,
+            etymology = "",
             termEn = "Thymine (T)",
             termFr = "Thymine (T)",
             termAr = "الثيمين",
@@ -1625,6 +1749,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1644,
+            etymology = "",
             termEn = "Uracil (U)",
             termFr = "Uracile (U)",
             termAr = "الأوراسيل",
@@ -1640,6 +1765,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1645,
+            etymology = "",
             termEn = "Base pair",
             termFr = "Paire de bases",
             termAr = "زوج القواعد",
@@ -1649,9 +1775,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/beɪs pɛər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1646,
+            etymology = "",
             termEn = "Complementary base pairing",
             termFr = "Appariement complémentaire des bases",
             termAr = "التكامل في التزاوج القاعدي",
@@ -1661,9 +1791,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˌkɒmplɪˈmɛntəri/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1647,
+            etymology = "",
             termEn = "Double helix",
             termFr = "Double hélice",
             termAr = "الحلزون المزدوج",
@@ -1679,6 +1813,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1648,
+            etymology = "",
             termEn = "Antiparallel",
             termFr = "Antiparallèle",
             termAr = "مضاد التوازي",
@@ -1694,6 +1829,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1649,
+            etymology = "",
             termEn = "Deoxyribose",
             termFr = "Désoxyribose",
             termAr = "الديوكسيريبوز",
@@ -1709,6 +1845,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1650,
+            etymology = "",
             termEn = "Ribose",
             termFr = "Ribose",
             termAr = "الريبوز",
@@ -1724,6 +1861,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1651,
+            etymology = "",
             termEn = "Phosphodiester bond",
             termFr = "Liaison phosphodiester",
             termAr = "الرابطة الفوسفوديإستر",
@@ -1771,6 +1909,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1654,
+            etymology = "",
             termEn = "Nucleosome",
             termFr = "Nucléosome",
             termAr = "النيوكليوسوم",
@@ -1780,9 +1919,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Structure ADN et ARN",
             ipaPhonetic = "/ˈnjuːkliəsoʊm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1655,
+            etymology = "",
             termEn = "Chromosome",
             termFr = "Chromosome",
             termAr = "الكروموسوم",
@@ -1798,6 +1941,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1656,
+            etymology = "",
             termEn = "Karyotype",
             termFr = "Caryotype",
             termAr = "النمط النووي",
@@ -1813,6 +1957,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1657,
+            etymology = "",
             termEn = "DNA replication",
             termFr = "Réplication de l'ADN",
             termAr = "تضاعف DNA",
@@ -1838,9 +1983,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌsɛmiˈkɒnsərvətɪv/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1659,
+            etymology = "",
             termEn = "Origin of replication",
             termFr = "Origine de réplication",
             termAr = "نقطة بداية التضاعف",
@@ -1856,6 +2005,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1660,
+            etymology = "",
             termEn = "Replication fork",
             termFr = "Fourche de réplication",
             termAr = "شوكة التضاعف",
@@ -1871,6 +2021,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1661,
+            etymology = "",
             termEn = "Helicase",
             termFr = "Hélicase",
             termAr = "الهيليكاز",
@@ -1886,6 +2037,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1662,
+            etymology = "",
             termEn = "DNA polymerase",
             termFr = "ADN polymérase",
             termAr = "بوليميراز DNA",
@@ -1901,6 +2053,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1663,
+            etymology = "",
             termEn = "Primase",
             termFr = "Primase",
             termAr = "البريماز",
@@ -1916,6 +2069,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1664,
+            etymology = "",
             termEn = "RNA primer",
             termFr = "Amorce ARN",
             termAr = "بادئ RNA",
@@ -1931,6 +2085,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1665,
+            etymology = "",
             termEn = "Leading strand",
             termFr = "Brin directeur",
             termAr = "الشريط الرائد",
@@ -1946,6 +2101,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1666,
+            etymology = "",
             termEn = "Lagging strand",
             termFr = "Brin retardataire",
             termAr = "الشريط المتأخر",
@@ -1961,6 +2117,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1667,
+            etymology = "",
             termEn = "Okazaki fragment",
             termFr = "Fragment d'Okazaki",
             termAr = "شظية أوكازاكي",
@@ -1970,9 +2127,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˌoʊkəˈzɑːki/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1668,
+            etymology = "",
             termEn = "DNA ligase",
             termFr = "ADN ligase",
             termAr = "ليغاز DNA",
@@ -1988,6 +2149,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1669,
+            etymology = "",
             termEn = "Topoisomerase",
             termFr = "Topo-isomérase",
             termAr = "التوبويزوميراز",
@@ -2003,6 +2165,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1670,
+            etymology = "",
             termEn = "Telomere",
             termFr = "Télomère",
             termAr = "التيلومير",
@@ -2012,9 +2175,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Réplication de l'ADN",
             ipaPhonetic = "/ˈtɛləmɪər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1671,
+            etymology = "",
             termEn = "Telomerase",
             termFr = "Télomérase",
             termAr = "التيلوميراز",
@@ -2030,6 +2197,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1672,
+            etymology = "",
             termEn = "Proofreading",
             termFr = "Correction d'épreuves (correction des erreurs)",
             termAr = "التصحيح الذاتي",
@@ -2045,6 +2213,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1673,
+            etymology = "",
             termEn = "Transcription",
             termFr = "Transcription",
             termAr = "النسخ",
@@ -2060,6 +2229,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1674,
+            etymology = "",
             termEn = "RNA polymerase",
             termFr = "ARN polymérase",
             termAr = "بوليميراز RNA",
@@ -2075,6 +2245,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1675,
+            etymology = "",
             termEn = "Promoter",
             termFr = "Promoteur",
             termAr = "المُحرِّض",
@@ -2090,6 +2261,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1676,
+            etymology = "",
             termEn = "Terminator",
             termFr = "Terminateur",
             termAr = "المُنهي",
@@ -2105,6 +2277,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1677,
+            etymology = "",
             termEn = "Template strand",
             termFr = "Brin matrice",
             termAr = "الشريط النموذجي",
@@ -2120,6 +2293,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1678,
+            etymology = "",
             termEn = "Coding strand (sense strand)",
             termFr = "Brin codant (brin sens)",
             termAr = "الشريط المُشفِّر",
@@ -2135,6 +2309,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1679,
+            etymology = "",
             termEn = "mRNA (Messenger RNA)",
             termFr = "ARNm (ARN messager)",
             termAr = "الRNA الرسول",
@@ -2150,6 +2325,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1680,
+            etymology = "",
             termEn = "Pre-mRNA",
             termFr = "Pré-ARNm",
             termAr = "الـ mRNA السابق للمعالجة",
@@ -2165,6 +2341,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1681,
+            etymology = "",
             termEn = "Exon",
             termFr = "Exon",
             termAr = "الإكسون",
@@ -2180,6 +2357,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1682,
+            etymology = "",
             termEn = "Intron",
             termFr = "Intron",
             termAr = "الإنترون",
@@ -2195,6 +2373,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1683,
+            etymology = "",
             termEn = "RNA splicing",
             termFr = "Épissage de l'ARN",
             termAr = "القطع والربط للـ RNA",
@@ -2210,6 +2389,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1684,
+            etymology = "",
             termEn = "Spliceosome",
             termFr = "Spliceosome",
             termAr = "الجسم الرابط",
@@ -2225,6 +2405,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1685,
+            etymology = "",
             termEn = "5' Cap",
             termFr = "Coiffe 5' (5'cap)",
             termAr = "الغطاء 5'",
@@ -2240,6 +2421,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1686,
+            etymology = "",
             termEn = "Poly-A tail",
             termFr = "Queue poly-A",
             termAr = "الذيل البولي-أدينيني",
@@ -2255,6 +2437,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1687,
+            etymology = "",
             termEn = "Transcription factor",
             termFr = "Facteur de transcription",
             termAr = "عامل النسخ",
@@ -2270,6 +2453,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1688,
+            etymology = "",
             termEn = "Enhancer",
             termFr = "Amplificateur (Enhancer)",
             termAr = "المُعزِّز",
@@ -2285,6 +2469,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1689,
+            etymology = "",
             termEn = "Silencer",
             termFr = "Silencieux (Silencer)",
             termAr = "الكاتم",
@@ -2300,6 +2485,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1690,
+            etymology = "",
             termEn = "Translation",
             termFr = "Traduction",
             termAr = "الترجمة",
@@ -2315,6 +2501,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1691,
+            etymology = "",
             termEn = "Ribosome",
             termFr = "Ribosome",
             termAr = "الريبوسوم",
@@ -2330,6 +2517,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1692,
+            etymology = "",
             termEn = "tRNA (Transfer RNA)",
             termFr = "ARNt (ARN de transfert)",
             termAr = "الـ RNA الناقل",
@@ -2345,6 +2533,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1693,
+            etymology = "",
             termEn = "rRNA (Ribosomal RNA)",
             termFr = "ARNr (ARN ribosomique)",
             termAr = "الـ RNA الريبوسومي",
@@ -2360,6 +2549,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1694,
+            etymology = "",
             termEn = "Codon",
             termFr = "Codon",
             termAr = "الكودون (الرامزة)",
@@ -2375,6 +2565,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1695,
+            etymology = "",
             termEn = "Anticodon",
             termFr = "Anticodon",
             termAr = "الكودون المضاد",
@@ -2390,6 +2581,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1696,
+            etymology = "",
             termEn = "Genetic code",
             termFr = "Code génétique",
             termAr = "الشفرة الوراثية",
@@ -2405,6 +2597,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1697,
+            etymology = "",
             termEn = "Start codon",
             termFr = "Codon d'initiation (AUG)",
             termAr = "كودون البداية",
@@ -2420,6 +2613,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1698,
+            etymology = "",
             termEn = "Stop codon",
             termFr = "Codon stop (nonsense)",
             termAr = "كودون الإيقاف",
@@ -2429,9 +2623,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/stɒp ˈkoʊdɒn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1699,
+            etymology = "",
             termEn = "Aminoacyl-tRNA synthetase",
             termFr = "Aminoacyl-ARNt synthétase",
             termAr = "أمينوأسيل-tRNA سينثيتاز",
@@ -2447,6 +2645,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1700,
+            etymology = "",
             termEn = "Polypeptide",
             termFr = "Polypeptide",
             termAr = "البولي ببتيد",
@@ -2462,6 +2661,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1701,
+            etymology = "",
             termEn = "Degenerate code",
             termFr = "Code dégénéré",
             termAr = "الشفرة المتكررة",
@@ -2477,6 +2677,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1702,
+            etymology = "",
             termEn = "Universal code",
             termFr = "Code universel",
             termAr = "الشفرة الكونية",
@@ -2492,6 +2693,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1703,
+            etymology = "",
             termEn = "Polysome (Polyribosome)",
             termFr = "Polysome",
             termAr = "البوليسوم",
@@ -2501,9 +2703,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˈpɒlisoʊm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1704,
+            etymology = "",
             termEn = "Post-translational modification",
             termFr = "Modification post-traductionnelle",
             termAr = "التعديل بعد الترجمة",
@@ -2513,9 +2719,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Traduction",
             ipaPhonetic = "/ˌpoʊst trænsˈleɪʃənəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1705,
+            etymology = "",
             termEn = "Mutation",
             termFr = "Mutation",
             termAr = "الطفرة",
@@ -2531,6 +2741,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1706,
+            etymology = "",
             termEn = "Point mutation",
             termFr = "Mutation ponctuelle",
             termAr = "الطفرة النقطية",
@@ -2546,6 +2757,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1707,
+            etymology = "",
             termEn = "Substitution",
             termFr = "Substitution",
             termAr = "الاستبدال",
@@ -2561,6 +2773,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1708,
+            etymology = "",
             termEn = "Insertion",
             termFr = "Insertion",
             termAr = "الإدراج",
@@ -2576,6 +2789,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1709,
+            etymology = "",
             termEn = "Deletion",
             termFr = "Délétion",
             termAr = "الحذف",
@@ -2591,6 +2805,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1710,
+            etymology = "",
             termEn = "Missense mutation",
             termFr = "Mutation faux-sens",
             termAr = "الطفرة الخاطئة المعنى",
@@ -2606,6 +2821,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1711,
+            etymology = "",
             termEn = "Nonsense mutation",
             termFr = "Mutation non-sens",
             termAr = "الطفرة العديمة المعنى",
@@ -2621,6 +2837,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1712,
+            etymology = "",
             termEn = "Silent mutation",
             termFr = "Mutation silencieuse",
             termAr = "الطفرة الصامتة",
@@ -2636,6 +2853,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1713,
+            etymology = "",
             termEn = "Mutagen",
             termFr = "Mutagène",
             termAr = "المطفِّر",
@@ -2645,9 +2863,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/ˈmjuːtədʒɛn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1714,
+            etymology = "",
             termEn = "Spontaneous mutation",
             termFr = "Mutation spontanée",
             termAr = "الطفرة التلقائية",
@@ -2663,6 +2885,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1715,
+            etymology = "",
             termEn = "Induced mutation",
             termFr = "Mutation induite",
             termAr = "الطفرة المستحثة",
@@ -2678,6 +2901,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1716,
+            etymology = "",
             termEn = "DNA repair",
             termFr = "Réparation de l'ADN",
             termAr = "إصلاح DNA",
@@ -2687,9 +2911,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Mutations et Réparation",
             ipaPhonetic = "/rɪˈpɛər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1717,
+            etymology = "",
             termEn = "Base excision repair (BER)",
             termFr = "Réparation par excision de base (BER)",
             termAr = "إصلاح استئصال القاعدة",
@@ -2705,6 +2933,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1718,
+            etymology = "",
             termEn = "Nucleotide excision repair (NER)",
             termFr = "Réparation par excision de nucléotides (NER)",
             termAr = "إصلاح استئصال النيوكليوتيد",
@@ -2720,6 +2949,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1719,
+            etymology = "",
             termEn = "Mismatch repair (MMR)",
             termFr = "Réparation des mésappariements (MMR)",
             termAr = "إصلاح عدم التطابق",
@@ -2735,6 +2965,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1720,
+            etymology = "",
             termEn = "Mendelian genetics",
             termFr = "Génétique mendélienne",
             termAr = "وراثة مندل",
@@ -2744,9 +2975,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/mɛnˈdiːliən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1721,
+            etymology = "",
             termEn = "Law of segregation",
             termFr = "Loi de ségrégation",
             termAr = "قانون الفصل",
@@ -2756,9 +2991,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌsɛɡrɪˈɡeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1722,
+            etymology = "",
             termEn = "Law of independent assortment",
             termFr = "Loi d'assortiment indépendant",
             termAr = "قانون التوزيع المستقل",
@@ -2768,9 +3007,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌɪndɪˈpɛndənt əˈsɔːrtmənt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1723,
+            etymology = "",
             termEn = "Monohybrid cross",
             termFr = "Croisement monohybride",
             termAr = "التهجين الأحادي",
@@ -2780,9 +3023,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌmɒnoʊˈhaɪbrɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1724,
+            etymology = "",
             termEn = "Dihybrid cross",
             termFr = "Croisement dihybride",
             termAr = "التهجين الثنائي",
@@ -2792,9 +3039,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌdaɪˈhaɪbrɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1725,
+            etymology = "",
             termEn = "Punnett square",
             termFr = "Carré de Punnett",
             termAr = "مربع بانيت",
@@ -2810,6 +3061,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1726,
+            etymology = "",
             termEn = "Test cross",
             termFr = "Croisement test",
             termAr = "التهجين الاختباري",
@@ -2825,6 +3077,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1727,
+            etymology = "",
             termEn = "Incomplete dominance",
             termFr = "Dominance incomplète",
             termAr = "السيادة غير التامة",
@@ -2840,6 +3093,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1728,
+            etymology = "",
             termEn = "Codominance",
             termFr = "Codominance",
             termAr = "التكافؤ السيادي",
@@ -2850,9 +3104,12 @@ object GenetiqueTerms {
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/koʊˈdɒmɪnəns/",
             exampleEn = "The codominance is the pattern where both alleles are fully expressed in the heterozygote (e.g., AB blood type).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1729,
+            etymology = "",
             termEn = "Epistasis",
             termFr = "Épistasie",
             termAr = "التفوق الجيني",
@@ -2868,6 +3125,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1730,
+            etymology = "",
             termEn = "Pleiotropy",
             termFr = "Pléiotropie",
             termAr = "التأثير المتعدد للجين",
@@ -2883,6 +3141,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1731,
+            etymology = "",
             termEn = "Polygenic inheritance",
             termFr = "Hérédité polygénique",
             termAr = "الوراثة متعددة الجينات",
@@ -2892,9 +3151,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Mendélienne",
             ipaPhonetic = "/ˌpɒlɪˈdʒɛnɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1732,
+            etymology = "",
             termEn = "Penetrance",
             termFr = "Pénétrance",
             termAr = "النفاذية",
@@ -2910,6 +3173,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1733,
+            etymology = "",
             termEn = "Expressivity",
             termFr = "Expressivité",
             termAr = "القدرة التعبيرية",
@@ -2925,6 +3189,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1734,
+            etymology = "",
             termEn = "Gene expression",
             termFr = "Expression génique",
             termAr = "التعبير الجيني",
@@ -2940,6 +3205,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1735,
+            etymology = "",
             termEn = "Gene regulation",
             termFr = "Régulation génique",
             termAr = "التنظيم الجيني",
@@ -2955,6 +3221,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1736,
+            etymology = "",
             termEn = "Operon",
             termFr = "Opéron",
             termAr = "الأوبيرون",
@@ -2965,6 +3232,8 @@ object GenetiqueTerms {
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈɒpərɒn/",
             exampleEn = "The operon is the cluster of genes under the control of a single promoter (e.g., lac operon in bacteria).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1737,
@@ -2984,6 +3253,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1738,
+            etymology = "",
             termEn = "Activator protein",
             termFr = "Protéine activatrice",
             termAr = "البروتين المُنشِّط",
@@ -2999,6 +3269,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1739,
+            etymology = "",
             termEn = "Operator",
             termFr = "Opérateur",
             termAr = "المُشغِّل",
@@ -3014,6 +3285,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1740,
+            etymology = "",
             termEn = "Central dogma",
             termFr = "Dogme central",
             termAr = "العقيدة المركزية",
@@ -3023,9 +3295,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈsɛntrəl ˈdɒɡmə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1741,
+            etymology = "",
             termEn = "Reverse transcription",
             termFr = "Transcription inverse",
             termAr = "النسخ العكسي",
@@ -3041,6 +3317,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1742,
+            etymology = "",
             termEn = "Reverse transcriptase",
             termFr = "Transcriptase inverse",
             termAr = "الترانسكريبتاز العكسي",
@@ -3056,6 +3333,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1743,
+            etymology = "",
             termEn = "Non-coding RNA",
             termFr = "ARN non codant",
             termAr = "الـ RNA غير المُشفِّر",
@@ -3081,9 +3359,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/ˈmaɪkroʊ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1745,
+            etymology = "",
             termEn = "siRNA (Small interfering RNA)",
             termFr = "siARN (Petit ARN interférent)",
             termAr = "الـ siRNA",
@@ -3093,9 +3375,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Génétique Moléculaire",
             ipaPhonetic = "/smɔːl ˌɪntəˈfɪərɪŋ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1746,
+            etymology = "",
             termEn = "RNA interference (RNAi)",
             termFr = "Interférence ARN (ARNi)",
             termAr = "تدخل RNA",
@@ -3111,6 +3397,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1747,
+            etymology = "",
             termEn = "Gene silencing",
             termFr = "Silençage génique",
             termAr = "إسكات الجين",
@@ -3126,6 +3413,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1748,
+            etymology = "",
             termEn = "Cytogenetics",
             termFr = "Cytogénétique",
             termAr = "علم الوراثة الخلوية",
@@ -3151,6 +3439,9 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/maɪˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1750,
@@ -3170,6 +3461,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1751,
+            etymology = "",
             termEn = "Prophase",
             termFr = "Prophase",
             termAr = "طور التهيؤ",
@@ -3185,6 +3477,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1752,
+            etymology = "",
             termEn = "Metaphase",
             termFr = "Métaphase",
             termAr = "طور التوسط",
@@ -3200,6 +3493,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1753,
+            etymology = "",
             termEn = "Anaphase",
             termFr = "Anaphase",
             termAr = "طور الانفصال",
@@ -3215,6 +3509,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1754,
+            etymology = "",
             termEn = "Telophase",
             termFr = "Télophase",
             termAr = "طور الانتهاء",
@@ -3240,9 +3535,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈkroʊmətɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1756,
+            etymology = "",
             termEn = "Centromere",
             termFr = "Centromère",
             termAr = "السنتروميير",
@@ -3258,6 +3557,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1757,
+            etymology = "",
             termEn = "Diploid (2n)",
             termFr = "Diploïde (2n)",
             termAr = "ثنائي الصيغة الصبغية",
@@ -3267,9 +3567,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈdɪplɔɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1758,
+            etymology = "",
             termEn = "Haploid (n)",
             termFr = "Haploïde (n)",
             termAr = "أحادي الصيغة الصبغية",
@@ -3279,9 +3583,13 @@ object GenetiqueTerms {
             module = "Génétique",
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈhæplɔɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1759,
+            etymology = "",
             termEn = "Crossing over (Recombination)",
             termFr = "Enjambement (Recombinaison)",
             termAr = "العبور الجيني",
@@ -3297,6 +3605,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1760,
+            etymology = "",
             termEn = "Chiasma",
             termFr = "Chiasma",
             termAr = "الكياسما",
@@ -3312,6 +3621,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1761,
+            etymology = "",
             termEn = "Nondisjunction",
             termFr = "Non-disjonction",
             termAr = "عدم الانفصال",
@@ -3327,6 +3637,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1762,
+            etymology = "",
             termEn = "Aneuploidy",
             termFr = "Aneuploïdie",
             termAr = "الأنيوبلويدية",
@@ -3342,6 +3653,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1763,
+            etymology = "",
             termEn = "Trisomy",
             termFr = "Trisomie",
             termAr = "ثلاثية الصبغي",
@@ -3352,9 +3664,12 @@ object GenetiqueTerms {
             chapter = "Cytogénétique",
             ipaPhonetic = "/ˈtrɪsəmi/",
             exampleEn = "The trisomy is the presence of three copies of a particular chromosome instead of two (e.g., trisomy 21).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1764,
+            etymology = "",
             termEn = "Monosomy",
             termFr = "Monosomie",
             termAr = "أحادية الصبغي",
@@ -3370,6 +3685,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1765,
+            etymology = "",
             termEn = "Polyploidy",
             termFr = "Polyploïdie",
             termAr = "تعدد الصيغة الصبغية",
@@ -3385,6 +3701,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1766,
+            etymology = "",
             termEn = "Translocation",
             termFr = "Translocation",
             termAr = "الانتقال الكروموسومي",
@@ -3400,6 +3717,7 @@ object GenetiqueTerms {
         ),
         MedicalTermEntity(
             id = 1767,
+            etymology = "",
             termEn = "Inversion",
             termFr = "Inversion",
             termAr = "الانقلاب الكروموسومي",
@@ -3412,6 +3730,6 @@ object GenetiqueTerms {
             exampleEn = "The inversion is the chromosomal rearrangement where a segment is reversed in orientation.",
             exampleFr = "L'inversion est réarrangement chromosomique où un segment est inversé d'orientation.",
             exampleAr = "الانقلاب الكروموسومي هو إعادة ترتيب كروموسومي تُعكس فيه اتجاه جزء من الكروموسوم.",
-        )
+        ),
     )
 }

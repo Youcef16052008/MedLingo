@@ -1,5 +1,9 @@
 package com.aistudio.medlingua.dzmed.domain.path
 
+import com.aistudio.medlingua.dzmed.domain.lesson.LessonGeneratorV2
+import com.aistudio.medlingua.dzmed.domain.path.NodeState
+import com.aistudio.medlingua.dzmed.domain.path.PathUnit
+
 /**
  * Parcours « chemin vert » : 1 unité = 1 module = 6 leçons (L1 → L6, L6 = BOSS).
  * Déblocage : une leçon est ouverte dès que la précédente est validée à ≥ 70 %.
@@ -99,5 +103,85 @@ object PathBuilder {
 
     /** Première leçon jouable d'une unité (le nœud « pulse » du parcours). */
     fun nextLesson(unit: PathUnit): PathNode? =
-        unit.nodes.firstOrNull { it.state == NodeState.AVAILABLE }
-}
+        unit.nodes
+            .firstOrNull { it.state == NodeState.AVAILABLE }
+
+    // ─── Nouveau : Module → Chapter → Lesson ────────────────────────
+
+    /** Chapitre d'un module (apparait dans l'architecture du parcours). */
+    data class PathChapter(
+        val chapterId: String,
+        val title: String,
+        val moduleId: String,
+        val nodes: List<PathNode>
+    )
+
+    /** Nœud de leçon dans un chapitre (nouveau nœud dans l'architecture).
+     *  levelIndex 0-based, kind = NEW | REVIEW, questionCount = 8 | 16. */
+    data class LessonNode(
+        val chapterId: String,
+        val levelIndex: Int,
+        val kind: LessonKind,
+        val questionCount: Int,
+        val state: NodeState,
+        val score: Int,
+        val hearts: Int = LessonGeneratorV2.HEARTS_MAX
+    )
+
+    /** 1 unité = 1 module avec ses chapitres et les nœuds de leçon. */
+    data class LessonPathUnit(
+        val module: PathModule,
+        val chapters: List<PathChapter> = emptyList()
+    )
+
+    /** Type de leçon dans le parcours. */
+    enum class LessonKind { NEW, REVIEW }
+
+    /**
+     * Construit le parcours au format Module → Chapter → Lesson.
+     * `lessonBest` : clé "${chapterId}:L${index}" → meilleur score.
+     * `chapterMap` : clé chapterId → PathChapter (avec titre, etc.)
+     */
+    fun buildLessonPath(
+        lessonBest: Map<String, Int>,
+        modules: List<PathModule>,
+        chapterMap: Map<String, PathChapter> = emptyMap(),
+        nodeStates: (chapterId: String, levelIndex: Int) -> NodeState = { _, _ -> NodeState.LOCKED },
+        onScore: (chapterId: String, levelIndex: Int) -> Int = { _, _ -> 0 }
+    ): List<LessonPathUnit> =
+        modules.map { module ->
+            val chapterIds = chapterMap.keys.filter { it.startsWith(module.id) }
+            val chapters = chapterIds.mapNotNull { chapterId ->
+                chapterMap[chapterId]?.takeIf { it.moduleId == module.id }?.let { chap ->
+                    val nodes = (0 until 6).map { idx ->
+                        val key = "${chapterId}:L${idx + 1}"
+                        val score = onScore(chapterId, idx)
+                        nodeStates(chapterId, idx).let { state ->
+                            LessonNode(
+                                chapterId = chapterId,
+                                levelIndex = idx,
+                                kind = if (state == NodeState.DONE) LessonKind.REVIEW else LessonKind.NEW,
+                                questionCount = if (state == NodeState.DONE) LessonGeneratorV2.REVIEW_SIZE else LessonGeneratorV2.LESSON_SIZE,
+                                state = state,
+                                score = score
+                            )
+                        }
+                    }
+                    PathChapter(
+                        chapterId = chap.chapterId,
+                        title = chap.title,
+                        moduleId = chap.moduleId,
+                        nodes = nodes.map { node ->
+                            PathNode(
+                                moduleId = node.chapterId,
+                                level = node.levelIndex,
+                                state = node.state,
+                                score = node.score,
+                                isBoss = node.levelIndex == 5
+                            )
+                        }
+                    )
+                }
+            }
+            LessonPathUnit(module = module, chapters = chapters)
+        }}

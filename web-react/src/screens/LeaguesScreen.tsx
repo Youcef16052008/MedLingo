@@ -39,9 +39,14 @@ const TIER_KEYS: Record<Tier, "leagueTierBronze" | "leagueTierSilver" | "leagueT
   gold: "leagueTierGold",
 };
 
-/* "Bot" ou "Actif" — LeagueMemberRow.kt ; le web n'a que des bots + vous. */
-function activityLabel(isYou: boolean): string {
-  return isYou ? "Actif" : "Bot";
+/* "Actif" ou "simulateur" — LeagueMemberRow.kt ; le web n'a que des bots + vous.
+ * BUG-021 : traduit. WS4 : un bot est explicitement étiqueté « simulateur » —
+ * le classement est un entraînement, l'étiquette ne laisse aucune ambiguïté. */
+function activityLabel(
+  isYou: boolean,
+  t: (k: "leagueActive" | "leagueBotSim") => string
+): string {
+  return isYou ? t("leagueActive") : t("leagueBotSim");
 }
 
 /** Classement hebdomadaire de la cohorte (30 joueurs) — LeagueScreen.kt. */
@@ -85,9 +90,9 @@ export function LeaguesScreen() {
             {TIER_ICONS[s.league.tier]}
           </span>
           <div>
-            <b className="league-hero-title">
+            <h1 className="league-hero-title">
               {t("leagueTitle")} {t(TIER_KEYS[s.league.tier]).toUpperCase()}
-            </b>
+            </h1>
             <span className="league-hero-sub">
               {cohortId}... • {rows.length} membres
             </span>
@@ -146,10 +151,11 @@ export function LeaguesScreen() {
               <span className="league-id">
                 <span className="league-name">
                   {r.isYou ? t("leagueYou") : r.name}
-                  {r.isYou && <b className="league-you-tag">TOI</b>}
+                  {r.isYou && <b className="league-you-tag">{t("leagueYou")}</b>}
                 </span>
                 <span className="league-sub">
-                  🔥 0j • {activityLabel(r.isYou)}
+                  🔥 {r.isYou ? s.streak : 0}
+                  {t("leagueStreakDays")} • {activityLabel(r.isYou, t)}
                 </span>
               </span>
               <span className="league-xp-col">

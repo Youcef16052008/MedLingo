@@ -1,120 +1,115 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Embryologie — 236 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object EmbryologieTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 2021,
+            etymology = "Latin: capacitas — 'capacity / fitness' + Greek: ἄκρον (akron) — 'summit' + σῶμα (soma) — 'body'.",
             termEn = "Capacitation and Acrosome Reaction",
             termFr = "Capacitation et Réaction acrosomique",
             termAr = "نضج النطاف (التمكين) والتفاعل الجسيمي الطرفي",
             definitionEn = "Physiological priming of spermatozoa in the female genital tract followed by exocytosis of hydrolytic enzymes from the acrosome to penetrate the zona pellucida.",
             definitionFr = "Maturation finale des spermatozoïdes dans les voies génitales femelles suivie de la libération d'enzymes acrosomiques pour traverser la zone pellucide de l'ovocyte.",
             definitionAr = "العملية الفيزيولوجية لاكتمال نضج الحيوانات المنوية في الجهاز التناسلي الأنثوي ثم إفراز الإنزيمات الهاضمة لاختراق المنطقة الشفافة للبويضة.",
-            etymology = "Latin: capacitas — 'capacity / fitness' + Greek: ἄκρον (akron) — 'summit' + σῶμα (soma) — 'body'.",
-            clinicalPearl = "Binding to zona pellucida protein 3 (ZP3) induces intracellular Ca2+ influx that triggers the exocytosis of acrosin and hyaluronidase.",
-            mnemonic = "Fast block to polyspermy = Oocyte membrane depolarization (Na+); Slow block = Cortical granule reaction (Ca2+ wave hardening ZP).",
             module = "Embryologie",
             chapter = "Gamétogenèse & Fécondation",
+            ipaPhonetic = "/kəˌpæs.ɪˈteɪ.ʃən/",
             exampleEn = "Successful fertilization in vitro requires sperm capacitation prior to microinjection or insemination.",
             exampleFr = "La fécondation nécessite la capacitation préalable des spermatozoïdes pour féconder l'ovocyte.",
             exampleAr = "يتطلب الإخصاب الناجح حدوث نضج وتمكين مسبق للحيوانات المنوية لتتمكن من تلقيح البويضة.",
-            ipaPhonetic = "/kəˌpæs.ɪˈteɪ.ʃən/",
+            clinicalPearl = "Binding to zona pellucida protein 3 (ZP3) induces intracellular Ca2+ influx that triggers the exocytosis of acrosin and hyaluronidase.",
+            mnemonic = "Fast block to polyspermy = Oocyte membrane depolarization (Na+); Slow block = Cortical granule reaction (Ca2+ wave hardening ZP).",
         ),
         MedicalTermEntity(
             id = 2022,
+            etymology = "Latin: morum — 'mulberry / blackberry' (due to berry-like appearance).",
             termEn = "Morula and Compaction",
             termFr = "Morula et Compaction",
             termAr = "التوتية والاندماج الخلوي الجنيني",
             definitionEn = "The solid spherical clump of 16 to 32 blastomeres at day 3-4 post-fertilization where outer cells establish tight junctions and E-cadherin polarization.",
             definitionFr = "Stade embryonnaire à 16-32 cellules (jour 3-4) subissant le phénomène de compaction sous l'action de l'E-cadhérine.",
             definitionAr = "المرحلة الجنينية المصمتة المكونة من 16 إلى 32 قسيمة أريمية في اليوم الثالث إلى الرابع، تتراصف خلاياها الخارجية بروابط محكمة.",
-            etymology = "Latin: morum — 'mulberry / blackberry' (due to berry-like appearance).",
-            clinicalPearl = "Compaction is the very first cellular differentiation event in human development, segregating internal embryoblast cells from external trophoblast.",
-            mnemonic = "Zygote (day 1) → Cleavage (days 2-3) → Morula (day 4) → Blastocyst (day 5) → Implantation (day 6-7).",
             module = "Embryologie",
             chapter = "Segmentation & Blastocyste",
+            ipaPhonetic = "/ˈmɒr.jʊ.lə/",
             exampleEn = "Compaction of the morula creates an osmotic gradient that drives fluid into the central blastocoel cavity.",
             exampleFr = "La compaction de la morula permet la formation de la cavité du blastocyste par cavitation liquidienne.",
             exampleAr = "يؤدي اندماج خلايا التوتية إلى تكوين تجويف الكيسة الأريمية المملوء بالسائل.",
-            ipaPhonetic = "/ˈmɒr.jʊ.lə/",
+            clinicalPearl = "Compaction is the very first cellular differentiation event in human development, segregating internal embryoblast cells from external trophoblast.",
+            mnemonic = "Zygote (day 1) → Cleavage (days 2-3) → Morula (day 4) → Blastocyst (day 5) → Implantation (day 6-7).",
         ),
         MedicalTermEntity(
             id = 2023,
+            etymology = "Greek: νεῦρον (neuron) — 'nerve / sinew'.",
             termEn = "Neurulation and Neural Crest Cells",
             termFr = "Neurulation et Crêtes Neurales",
             termAr = "التكون العصبي وخلايا العرف العصبي",
             definitionEn = "The embryonic folding of the neuroectoderm induced by the underlying notochord to form the neural tube, while boundary neural crest cells migrate extensively.",
             definitionFr = "Formation du tube neural à partir de la plaque neurale induite par la notochorde, avec détachement des crêtes neurales pluripotentes.",
             definitionAr = "انثناء الصفيحة العصبية بإيعاز من الحبل الظهري لتشكيل الأنبوب العصبي وانفصال خلايا العرف العصبي ذات القدرة التمايزية الفائقة.",
-            etymology = "Greek: νεῦρον (neuron) — 'nerve / sinew'.",
-            clinicalPearl = "Neural crest derivatives: Schwann cells, melanocytes, adrenal medulla chromaffin cells, dorsal root ganglia, and craniofacial bones/cartilage.",
-            mnemonic = "Neural Crest: 'SOME CELLS MOVE' (Schwann, Odontoblasts, Melanocytes, Enteric plexuses, Craniofacial, Endocrine medulla, Leptomeninges, Sympathetic).",
             module = "Embryologie",
             chapter = "Neurulation & Crêtes Neurales",
+            ipaPhonetic = "/ˌnjʊə.rʊˈleɪ.ʃən/",
             exampleEn = "Failure of the posterior neuropore to close at day 28 results in spina bifida.",
             exampleFr = "Le défaut de fermeture du neuropore postérieur au 28e jour entraîne un spina bifida.",
             exampleAr = "يؤدي فشل انغلاق المسام العصبي الخلفي في اليوم الثامن والعشرين إلى الإصابة بالشوك المشقوق.",
-            ipaPhonetic = "/ˌnjʊə.rʊˈleɪ.ʃən/",
+            clinicalPearl = "Neural crest derivatives: Schwann cells, melanocytes, adrenal medulla chromaffin cells, dorsal root ganglia, and craniofacial bones/cartilage.",
+            mnemonic = "Neural Crest: 'SOME CELLS MOVE' (Schwann, Odontoblasts, Melanocytes, Enteric plexuses, Craniofacial, Endocrine medulla, Leptomeninges, Sympathetic).",
         ),
         MedicalTermEntity(
             id = 2024,
+            etymology = "Greek: σῶμα (soma) — 'body'.",
             termEn = "Somites and Paraxial Mesoderm",
             termFr = "Somites et Mésoderme Paraxial",
             termAr = "البضعات الجسدية والميزودرم المجاور للمحور",
             definitionEn = "Paired segmented blocks of paraxial mesoderm that flank the neural tube, subdividing into sclerotome (vertebrae, ribs), myotome (skeletal muscle), and dermatome (dermis).",
             definitionFr = "Massifs mésodermiques pairs et métamérisés situés de part et d'autre du tube neural, à l'origine du squelette axial, des muscles et du derme.",
             definitionAr = "كتل ميزودرمية متناظرة ومقطعة على جانبي الأنبوب العصبي، تتمايز إلى بضعة عظمية وبضعة عضلية وبضعة جلدية.",
-            etymology = "Greek: σῶμα (soma) — 'body'.",
-            clinicalPearl = "Somitogenesis occurs at a strict clock-and-wavefront periodicity driven by Notch and Wnt/FGF signaling gradients.",
-            mnemonic = "Somite Trio: Sclerotome = Skeleton (spine/ribs); Myotome = Muscle; Dermatome = Dermis.",
             module = "Embryologie",
             chapter = "Mésoderme & Somites",
+            ipaPhonetic = "/ˈsəʊ.maɪts/",
             exampleEn = "Human embryos develop 42 to 44 pairs of somites along the craniocaudal axis by the end of the 5th week.",
             exampleFr = "L'embryon humain développe 42 à 44 paires de somites le long de l'axe crânio-caudal.",
             exampleAr = "يطور الجنين البشري من 42 إلى 44 زوجاً من البضعات الجسدية على طول المحور الرأسي الذيلي.",
-            ipaPhonetic = "/ˈsəʊ.maɪts/",
+            clinicalPearl = "Somitogenesis occurs at a strict clock-and-wavefront periodicity driven by Notch and Wnt/FGF signaling gradients.",
+            mnemonic = "Somite Trio: Sclerotome = Skeleton (spine/ribs); Myotome = Muscle; Dermatome = Dermis.",
         ),
         MedicalTermEntity(
             id = 2025,
+            etymology = "Latin: placenta — 'flat cake' (from Greek πλακόεις) + hemo (blood) + chorial (chorion).",
             termEn = "Placental Barrier and Hemochorial Villus",
             termFr = "Barrière Placentaire et Villosité Hémochoriale",
             termAr = "الحاجز المشيمي والزغابة المشيمية الدموية",
             definitionEn = "The selective fetal-maternal physiological interface composed of syncytiotrophoblast, cytotrophoblast, villous mesenchyme, and fetal capillary endothelium.",
             definitionFr = "Interface hématologique foeto-maternelle régissant les échanges d'oxygène, de nutriments et d'anticorps IgG tout en bloquant la plupart des pathogènes.",
             definitionAr = "الفاصل الفسيولوجي الانتقائي بين دم الأم ودم الجنين، ينظم تبادل الأكسجين والمغذيات والأجسام المضادة مع حماية الجنين من مسببات الأمراض.",
-            etymology = "Latin: placenta — 'flat cake' (from Greek πλακόεις) + hemo (blood) + chorial (chorion).",
-            clinicalPearl = "Maternal IgG antibodies selectively cross the placental barrier via neonatal Fc receptors (FcRn), providing passive neonatal humoral immunity.",
-            mnemonic = "TORCH infections that bypass the placental barrier: Toxoplasmosis, Other (Syphilis, Parvovirus), Rubella, CMV, Herpes/HIV.",
             module = "Embryologie",
             chapter = "Placenta & Tératologie",
+            ipaPhonetic = "/pləˈsen.təl ˈbær.i.ər/",
             exampleEn = "The syncytiotrophoblast synthesizes progesterone, estrogen, human placental lactogen, and hCG.",
             exampleFr = "Le syncytiotrophoblaste sécrète la progestérone, les oestrogènes et l'hormone hCG.",
             exampleAr = "تفرز الأرومة الغاذية المخلوية هرمونات البروجسترون والإستروجين والـ hCG الأساسية لديمومة الحمل.",
-            ipaPhonetic = "/pləˈsen.təl ˈbær.i.ər/",
+            clinicalPearl = "Maternal IgG antibodies selectively cross the placental barrier via neonatal Fc receptors (FcRn), providing passive neonatal humoral immunity.",
+            mnemonic = "TORCH infections that bypass the placental barrier: Toxoplasmosis, Other (Syphilis, Parvovirus), Rubella, CMV, Herpes/HIV.",
         ),
         MedicalTermEntity(
             id = 2026,
+            etymology = "Greek: τέρας (teras) — 'monster / marvel' + γένεσις (genesis) — 'origin / creation'.",
             termEn = "Teratogenesis and Critical Embryonic Period",
             termFr = "Tératogenèse et Période embryonnaire critique",
             termAr = "تخلق التشوهات الجنينية والفترة الحرجة",
             definitionEn = "The induction of structural developmental malformations in an embryo exposed to exogenous teratogens; maximum susceptibility occurs during weeks 3 to 8 (organogenesis).",
             definitionFr = "Production d'anomalies morphologiques congénitales par des agents tératogènes (médicaments, radiations, virus), maximale durant l'organogenèse (S3-S8).",
             definitionAr = "إحداث تشوهات خلقية في البنية التشريحية للجنين نتيجة التعرض لعوامل ماسخة خارجية؛ وتبلغ ذروة الحساسية بين الأسبوع الثالث والثامن.",
-            etymology = "Greek: τέρας (teras) — 'monster / marvel' + γένεσις (genesis) — 'origin / creation'.",
-            clinicalPearl = "Weeks 1-2 follow an 'all-or-none' rule (lethal damage vs complete recovery); weeks 3-8 cause major structural birth defects; weeks 9-38 cause functional/growth defects.",
-            mnemonic = "Major Teratogens: Thalidomide (phocomelia), Isotretinoin (craniofacial/cardiac), ACE inhibitors (renal dysgenesis), Valproate (neural tube defects).",
             module = "Embryologie",
             chapter = "Placenta & Tératologie",
+            ipaPhonetic = "/ˌter.ə.təʊˈdʒen.ə.sɪs/",
             exampleEn = "Periconceptional maternal folic acid supplementation reduces the risk of neural tube defects by up to 70%.",
             exampleFr = "La supplémentation maternelle en acide folique réduit le risque d'anomalies du tube neural de 70%.",
             exampleAr = "يقلل تناول حمض الفوليك قبل وأثناء الحمل المبكر من خطر تشوهات الأنبوب العصبي بنسبة تصل إلى 70%.",
-            ipaPhonetic = "/ˌter.ə.təʊˈdʒen.ə.sɪs/",
+            clinicalPearl = "Weeks 1-2 follow an 'all-or-none' rule (lethal damage vs complete recovery); weeks 3-8 cause major structural birth defects; weeks 9-38 cause functional/growth defects.",
+            mnemonic = "Major Teratogens: Thalidomide (phocomelia), Isotretinoin (craniofacial/cardiac), ACE inhibitors (renal dysgenesis), Valproate (neural tube defects).",
         ),
         MedicalTermEntity(
             id = 3180,
@@ -150,6 +145,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3182,
+            etymology = "",
             termEn = "Gamete",
             termFr = "Gamète",
             termAr = "المشيج",
@@ -197,6 +193,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3185,
+            etymology = "",
             termEn = "Spermatogonium",
             termFr = "Spermatogonie",
             termAr = "الأرومة المنوية",
@@ -212,6 +209,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3186,
+            etymology = "",
             termEn = "Primary spermatocyte",
             termFr = "Spermatocyte I (primaire)",
             termAr = "الخلية المنوية الأولية",
@@ -227,6 +225,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3187,
+            etymology = "",
             termEn = "Secondary spermatocyte",
             termFr = "Spermatocyte II (secondaire)",
             termAr = "الخلية المنوية الثانوية",
@@ -242,6 +241,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3188,
+            etymology = "",
             termEn = "Spermatid",
             termFr = "Spermatide",
             termAr = "الخلية المنوية الناشئة",
@@ -257,6 +257,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3189,
+            etymology = "",
             termEn = "Spermatozoon (Sperm)",
             termFr = "Spermatozoïde",
             termAr = "الحيوان المنوي",
@@ -272,6 +273,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3190,
+            etymology = "",
             termEn = "Acrosome",
             termFr = "Acrosome",
             termAr = "الأكروسوم (قبيعة الرأس)",
@@ -303,6 +305,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3192,
+            etymology = "",
             termEn = "Oogonium",
             termFr = "Ovogonie",
             termAr = "الأرومة البيضية",
@@ -318,6 +321,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3193,
+            etymology = "",
             termEn = "Primary oocyte",
             termFr = "Ovocyte I (primaire)",
             termAr = "البيضة الأولية",
@@ -333,6 +337,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3194,
+            etymology = "",
             termEn = "Secondary oocyte",
             termFr = "Ovocyte II (secondaire)",
             termAr = "البيضة الثانوية",
@@ -348,6 +353,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3195,
+            etymology = "",
             termEn = "Polar body",
             termFr = "Globule polaire",
             termAr = "الجسيم القطبي",
@@ -363,6 +369,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3196,
+            etymology = "",
             termEn = "Ovum (Egg)",
             termFr = "Ovule",
             termAr = "البويضة",
@@ -378,6 +385,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3197,
+            etymology = "",
             termEn = "Zona pellucida",
             termFr = "Zone pellucide",
             termAr = "المنطقة الشفافة",
@@ -393,6 +401,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3198,
+            etymology = "",
             termEn = "Follicle (Ovarian)",
             termFr = "Follicule ovarien",
             termAr = "الجريب المبيضي",
@@ -408,6 +417,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3199,
+            etymology = "",
             termEn = "Primordial follicle",
             termFr = "Follicule primordial",
             termAr = "الجريب الأولي",
@@ -423,6 +433,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3200,
+            etymology = "",
             termEn = "Graafian follicle (Mature follicle)",
             termFr = "Follicule de De Graaf (Follicule mûr)",
             termAr = "الجريب الناضج (جريب غراف)",
@@ -438,6 +449,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3201,
+            etymology = "",
             termEn = "Ovulation",
             termFr = "Ovulation",
             termAr = "الإباضة",
@@ -453,6 +465,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3202,
+            etymology = "",
             termEn = "Corpus luteum",
             termFr = "Corps jaune",
             termAr = "الجسم الأصفر",
@@ -468,6 +481,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3203,
+            etymology = "",
             termEn = "Corpus albicans",
             termFr = "Corps blanc (Corpus albicans)",
             termAr = "الجسم الأبيض",
@@ -483,6 +497,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3204,
+            etymology = "",
             termEn = "Capacitation",
             termFr = "Capacitation",
             termAr = "التقدير (الاستعداد للإخصاب)",
@@ -498,6 +513,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3205,
+            etymology = "",
             termEn = "Fertilization",
             termFr = "Fécondation",
             termAr = "الإخصاب",
@@ -513,6 +529,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3206,
+            etymology = "",
             termEn = "Zygote",
             termFr = "Zygote",
             termAr = "اللاقحة",
@@ -528,6 +545,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3207,
+            etymology = "",
             termEn = "Acrosomal reaction",
             termFr = "Réaction acrosomiale",
             termAr = "التفاعل الأكروسومي",
@@ -543,6 +561,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3208,
+            etymology = "",
             termEn = "Cortical reaction",
             termFr = "Réaction corticale",
             termAr = "التفاعل القشري",
@@ -558,6 +577,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3209,
+            etymology = "",
             termEn = "Polyspermy",
             termFr = "Polyspermie",
             termAr = "تعدد الإخصاب",
@@ -573,6 +593,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3210,
+            etymology = "",
             termEn = "Pronucleus",
             termFr = "Pronoyau (Pronucléus)",
             termAr = "النواة الأولية",
@@ -588,6 +609,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3211,
+            etymology = "",
             termEn = "Syngamy",
             termFr = "Syngamie",
             termAr = "الاندماج النووي",
@@ -603,6 +625,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3212,
+            etymology = "",
             termEn = "Uterine (Fallopian) tube",
             termFr = "Trompe utérine (de Fallope)",
             termAr = "قناة الرحم (قناة فالوب)",
@@ -618,6 +641,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3213,
+            etymology = "",
             termEn = "Ectopic pregnancy",
             termFr = "Grossesse ectopique",
             termAr = "الحمل خارج الرحم",
@@ -627,9 +651,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Fécondation",
             ipaPhonetic = "/ɛkˈtɒpɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3214,
+            etymology = "",
             termEn = "Cleavage",
             termFr = "Segmentation (Clivage)",
             termAr = "التفتت",
@@ -639,9 +667,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈkliːvɪdʒ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3215,
+            etymology = "",
             termEn = "Blastomere",
             termFr = "Blastomère",
             termAr = "الأريمة",
@@ -651,9 +683,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˈblæstəmɪər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3216,
+            etymology = "",
             termEn = "Morula",
             termFr = "Morula",
             termAr = "التوتة (الأريمة المصمتة)",
@@ -669,6 +705,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3217,
+            etymology = "",
             termEn = "Compaction",
             termFr = "Compaction",
             termAr = "الانضغاط",
@@ -684,6 +721,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3218,
+            etymology = "",
             termEn = "Blastocyst",
             termFr = "Blastocyste",
             termAr = "الكيسة الأريمية",
@@ -699,6 +737,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3219,
+            etymology = "",
             termEn = "Inner cell mass (ICM)",
             termFr = "Masse cellulaire interne (Embryoblaste)",
             termAr = "الكتلة الخلوية الداخلية (الأريمة الجنينية)",
@@ -730,6 +769,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3221,
+            etymology = "",
             termEn = "Blastocoel",
             termFr = "Blastocoele",
             termAr = "تجويف الكيسة الأريمية",
@@ -745,6 +785,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3222,
+            etymology = "",
             termEn = "Totipotent",
             termFr = "Totipotent",
             termAr = "كلي القدرة",
@@ -760,6 +801,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3223,
+            etymology = "",
             termEn = "Pluripotent",
             termFr = "Pluripotent",
             termAr = "متعدد القدرة",
@@ -775,6 +817,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3224,
+            etymology = "",
             termEn = "Embryonic stem cell (ESC)",
             termFr = "Cellule souche embryonnaire",
             termAr = "الخلية الجذعية الجنينية",
@@ -784,9 +827,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Segmentation et Blastulation",
             ipaPhonetic = "/ˌɛmbriˈɒnɪk stɛm sɛl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3225,
+            etymology = "",
             termEn = "Zona hatching",
             termFr = "Éclosion de la zone pellucide",
             termAr = "خروج الجنين من المنطقة الشفافة",
@@ -802,6 +849,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3226,
+            etymology = "",
             termEn = "Implantation",
             termFr = "Implantation (Nidation)",
             termAr = "الانغراس",
@@ -817,6 +865,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3227,
+            etymology = "",
             termEn = "Endometrium",
             termFr = "Endomètre",
             termAr = "بطانة الرحم (الغشاء المخاطي)",
@@ -832,6 +881,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3228,
+            etymology = "",
             termEn = "Decidua",
             termFr = "Décidue",
             termAr = "الساقطة (الغشاء الساقط)",
@@ -847,6 +897,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3229,
+            etymology = "",
             termEn = "Syncytiotrophoblast",
             termFr = "Syncytiotrophoblaste",
             termAr = "الأرومة التغذية المخلوية",
@@ -862,6 +913,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3230,
+            etymology = "",
             termEn = "Cytotrophoblast",
             termFr = "Cytotrophoblaste",
             termAr = "الأرومة التغذية الخلوية",
@@ -877,6 +929,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3231,
+            etymology = "",
             termEn = "Bilaminar disc (Bilaminar embryo)",
             termFr = "Disque embryonnaire bilaminaire",
             termAr = "القرص الجنيني ثنائي الطبقات",
@@ -892,6 +945,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3232,
+            etymology = "",
             termEn = "Epiblast",
             termFr = "Épiblaste",
             termAr = "الطبقة الظاهرة",
@@ -907,6 +961,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3233,
+            etymology = "",
             termEn = "Hypoblast",
             termFr = "Hypoblaste",
             termAr = "الطبقة الباطنة",
@@ -938,6 +993,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3235,
+            etymology = "",
             termEn = "Primitive streak",
             termFr = "Ligne primitive",
             termAr = "الخط البدائي",
@@ -953,6 +1009,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3236,
+            etymology = "",
             termEn = "Primitive node (Hensen's node)",
             termFr = "Nœud primitif (de Hensen)",
             termAr = "العقدة البدائية",
@@ -968,6 +1025,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3237,
+            etymology = "",
             termEn = "Ectoderm",
             termFr = "Ectoderme",
             termAr = "الأديم الظاهر",
@@ -983,6 +1041,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3238,
+            etymology = "",
             termEn = "Mesoderm",
             termFr = "Mésoderme",
             termAr = "الأديم المتوسط",
@@ -998,6 +1057,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3239,
+            etymology = "",
             termEn = "Endoderm",
             termFr = "Endoderme",
             termAr = "الأديم الباطن",
@@ -1013,6 +1073,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3240,
+            etymology = "",
             termEn = "Notochord",
             termFr = "Notochorde",
             termAr = "الوتر الظهري",
@@ -1028,6 +1089,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3241,
+            etymology = "",
             termEn = "Induction (Embryonic)",
             termFr = "Induction embryonnaire",
             termAr = "الحث الجنيني",
@@ -1043,6 +1105,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3242,
+            etymology = "",
             termEn = "Neurulation",
             termFr = "Neurulation",
             termAr = "تشكل الأنبوب العصبي",
@@ -1058,6 +1121,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3243,
+            etymology = "",
             termEn = "Neural plate",
             termFr = "Plaque neurale",
             termAr = "الصفيحة العصبية",
@@ -1073,6 +1137,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3244,
+            etymology = "",
             termEn = "Neural fold",
             termFr = "Repli neural",
             termAr = "الطية العصبية",
@@ -1082,9 +1147,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl foʊld/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3245,
+            etymology = "",
             termEn = "Neural tube",
             termFr = "Tube neural",
             termAr = "الأنبوب العصبي",
@@ -1100,6 +1169,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3246,
+            etymology = "",
             termEn = "Neural crest cells",
             termFr = "Cellules de la crête neurale",
             termAr = "خلايا القمة العصبية",
@@ -1109,6 +1179,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈnjʊərəl krɛst/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3247,
@@ -1128,6 +1201,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3248,
+            etymology = "",
             termEn = "Somite",
             termFr = "Somite",
             termAr = "الجسيدة",
@@ -1159,6 +1233,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3250,
+            etymology = "",
             termEn = "Myotome",
             termFr = "Myotome",
             termAr = "الأدمة العضلية",
@@ -1174,6 +1249,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3251,
+            etymology = "",
             termEn = "Dermatome",
             termFr = "Dermatome",
             termAr = "الأدمة الجلدية",
@@ -1189,6 +1265,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3252,
+            etymology = "",
             termEn = "Lateral plate mesoderm",
             termFr = "Mésoderme de la plaque latérale",
             termAr = "الأديم المتوسط للصفيحة الجانبية",
@@ -1204,6 +1281,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3253,
+            etymology = "",
             termEn = "Intermediate mesoderm",
             termFr = "Mésoderme intermédiaire",
             termAr = "الأديم المتوسط الوسيط",
@@ -1219,6 +1297,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3254,
+            etymology = "",
             termEn = "Coelom",
             termFr = "Coelome",
             termAr = "التجويف الجنيني (السيلوم)",
@@ -1229,10 +1308,12 @@ object EmbryologieTerms {
             chapter = "Neurulation et Dérivés",
             ipaPhonetic = "/ˈsiːləm/",
             exampleEn = "The coelom is the body cavity that forms within the lateral plate mesoderm giving rise to pericardial, pleural, and peritoneal cavities.",
+            exampleFr = "",
             exampleAr = "التجويف الجنيني (السيلوم) هو التجويف الجسدي المتشكل في الأديم المتوسط الجانبي الذي ينشأ منه التجويفان التاموري والجنبي والصفاقي.",
         ),
         MedicalTermEntity(
             id = 3255,
+            etymology = "",
             termEn = "Placenta",
             termFr = "Placenta",
             termAr = "المشيمة",
@@ -1248,6 +1329,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3256,
+            etymology = "",
             termEn = "Chorionic villi",
             termFr = "Villosités choriales",
             termAr = "الزغابات المشيمية",
@@ -1257,9 +1339,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/kɒˈrɪɒnɪk ˈvɪlaɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3257,
+            etymology = "",
             termEn = "Chorion",
             termFr = "Chorion",
             termAr = "الغشاء المشيمي",
@@ -1275,6 +1361,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3258,
+            etymology = "",
             termEn = "Amnion",
             termFr = "Amnios",
             termAr = "السلى (غشاء السلى)",
@@ -1290,6 +1377,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3259,
+            etymology = "",
             termEn = "Amniotic fluid",
             termFr = "Liquide amniotique",
             termAr = "السائل الأمنيوسي",
@@ -1305,6 +1393,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3260,
+            etymology = "",
             termEn = "Yolk sac",
             termFr = "Vésicule vitelline (Sac vitellin)",
             termAr = "الكيس المحي",
@@ -1320,6 +1409,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3261,
+            etymology = "",
             termEn = "Allantois",
             termFr = "Allantoïde",
             termAr = "النسيج البولي (الجسيدة البولية)",
@@ -1335,6 +1425,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3262,
+            etymology = "",
             termEn = "Umbilical cord",
             termFr = "Cordon ombilical",
             termAr = "الحبل السري",
@@ -1350,6 +1441,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3263,
+            etymology = "",
             termEn = "Human chorionic gonadotropin (hCG)",
             termFr = "Gonadotrophine chorionique humaine (hCG)",
             termAr = "الغونادوتروبين المشيمي البشري",
@@ -1365,6 +1457,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3264,
+            etymology = "",
             termEn = "Intervillous space",
             termFr = "Espace intervilleux",
             termAr = "الفراغ البيني الزغابي",
@@ -1380,6 +1473,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3265,
+            etymology = "",
             termEn = "Placental barrier",
             termFr = "Barrière placentaire",
             termAr = "الحاجز المشيمي",
@@ -1395,6 +1489,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3266,
+            etymology = "",
             termEn = "Oligohydramnios",
             termFr = "Oligohydramnios",
             termAr = "قلة السائل الأمنيوسي",
@@ -1404,9 +1499,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌɒlɪɡoʊhaɪˈdræmniɒs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3267,
+            etymology = "",
             termEn = "Polyhydramnios",
             termFr = "Polyhydramnios",
             termAr = "كثرة السائل الأمنيوسي",
@@ -1416,9 +1515,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Placenta et Membranes",
             ipaPhonetic = "/ˌpɒlihaɪˈdræmniɒs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3268,
+            etymology = "",
             termEn = "Primary brain vesicles",
             termFr = "Vésicules cérébrales primaires",
             termAr = "الحويصلات الدماغية الأولية",
@@ -1428,9 +1531,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈprɪməri breɪn ˈvɛsɪkəlz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3269,
+            etymology = "",
             termEn = "Prosencephalon (Forebrain)",
             termFr = "Prosencéphale (Cerveau antérieur)",
             termAr = "المخ الأمامي",
@@ -1446,6 +1553,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3270,
+            etymology = "",
             termEn = "Mesencephalon (Midbrain)",
             termFr = "Mésencéphale (Cerveau moyen)",
             termAr = "الدماغ المتوسط",
@@ -1461,6 +1569,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3271,
+            etymology = "",
             termEn = "Rhombencephalon (Hindbrain)",
             termFr = "Rhombencéphale (Cerveau postérieur)",
             termAr = "المخ المعيني",
@@ -1476,6 +1585,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3272,
+            etymology = "",
             termEn = "Telencephalon",
             termFr = "Télencéphale",
             termAr = "المخ النهائي",
@@ -1491,6 +1601,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3273,
+            etymology = "",
             termEn = "Diencephalon",
             termFr = "Diencéphale",
             termAr = "المخ البيني",
@@ -1506,6 +1617,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3274,
+            etymology = "",
             termEn = "Neural tube defects (NTDs)",
             termFr = "Défauts du tube neural (DTN)",
             termAr = "عيوب الأنبوب العصبي",
@@ -1515,9 +1627,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Système Nerveux",
             ipaPhonetic = "/ˈnjʊərəl tjuːb dɪˈfɛkts/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3275,
+            etymology = "",
             termEn = "Spina bifida",
             termFr = "Spina bifida",
             termAr = "الظهر المشقوق",
@@ -1533,6 +1649,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3276,
+            etymology = "",
             termEn = "Anencephaly",
             termFr = "Anencéphalie",
             termAr = "اللادماغية",
@@ -1548,6 +1665,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3277,
+            etymology = "",
             termEn = "Folic acid",
             termFr = "Acide folique",
             termAr = "حمض الفوليك",
@@ -1563,6 +1681,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3278,
+            etymology = "",
             termEn = "Placode",
             termFr = "Placode",
             termAr = "الصفيحة الخارجية",
@@ -1578,6 +1697,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3279,
+            etymology = "",
             termEn = "Optic cup",
             termFr = "Coupe optique",
             termAr = "الكأس البصري",
@@ -1609,6 +1729,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3281,
+            etymology = "",
             termEn = "Heart tube",
             termFr = "Tube cardiaque",
             termAr = "الأنبوب القلبي",
@@ -1640,6 +1761,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3283,
+            etymology = "",
             termEn = "Foramen ovale",
             termFr = "Foramen ovale",
             termAr = "الثقبة البيضية",
@@ -1671,6 +1793,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3285,
+            etymology = "",
             termEn = "Ductus venosus",
             termFr = "Canal veineux",
             termAr = "القناة الوريدية",
@@ -1686,6 +1809,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3286,
+            etymology = "",
             termEn = "Ventricular septal defect (VSD)",
             termFr = "Communication interventriculaire (CIV)",
             termAr = "العيب في الحاجز البطيني",
@@ -1701,6 +1825,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3287,
+            etymology = "",
             termEn = "Atrial septal defect (ASD)",
             termFr = "Communication interauriculaire (CIA)",
             termAr = "العيب في الحاجز الأذيني",
@@ -1726,6 +1851,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/tɛˈtrælədʒi ɒv fæˈloʊ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3289,
@@ -1761,6 +1889,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3291,
+            etymology = "",
             termEn = "Hematopoiesis",
             termFr = "Hématopoïèse",
             termAr = "تكون الدم",
@@ -1802,6 +1931,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl ɑːrtʃɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3294,
@@ -1815,6 +1947,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl klɛfts/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3295,
@@ -1828,6 +1963,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl paʊtʃɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3296,
@@ -1847,6 +1985,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3297,
+            etymology = "",
             termEn = "Lung bud",
             termFr = "Bourgeon pulmonaire",
             termAr = "برعم الرئة",
@@ -1878,6 +2017,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3299,
+            etymology = "",
             termEn = "Metanephros",
             termFr = "Métanéphros",
             termAr = "الكلية الثالثة (النهائية)",
@@ -1909,6 +2049,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3301,
+            etymology = "",
             termEn = "Pronephros",
             termFr = "Pronéphros",
             termAr = "الكلية الأولى (البدائية)",
@@ -1924,6 +2065,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3302,
+            etymology = "",
             termEn = "Mesonephros",
             termFr = "Mésonéphros",
             termAr = "الكلية الوسطى",
@@ -1939,6 +2081,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3303,
+            etymology = "",
             termEn = "Gonadal development",
             termFr = "Développement des gonades",
             termAr = "تطور الغدد التناسلية",
@@ -1954,6 +2097,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3304,
+            etymology = "",
             termEn = "SRY gene",
             termFr = "Gène SRY",
             termAr = "جين SRY",
@@ -1963,9 +2107,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/ɛs ɑːr waɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3305,
+            etymology = "",
             termEn = "Müllerian duct (Paramesonephric duct)",
             termFr = "Canal de Müller (Paramésonéphrique)",
             termAr = "قناة مولر",
@@ -1981,6 +2129,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3306,
+            etymology = "",
             termEn = "Wolffian duct (Mesonephric duct)",
             termFr = "Canal de Wolff (Mésonéphrique)",
             termAr = "قناة وولف",
@@ -1996,6 +2145,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3307,
+            etymology = "",
             termEn = "Gubernaculum",
             termFr = "Gubernaculum",
             termAr = "الرابط المبيضي / الخصوي",
@@ -2011,6 +2161,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3308,
+            etymology = "",
             termEn = "Cryptorchidism",
             termFr = "Cryptorchidie",
             termAr = "الخصية الخفية",
@@ -2020,9 +2171,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Organogenèse",
             ipaPhonetic = "/krɪpˈtɔːrkɪdɪzəm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3309,
+            etymology = "",
             termEn = "Limb bud",
             termFr = "Bourgeon du membre",
             termAr = "برعم الطرف",
@@ -2038,6 +2193,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3310,
+            etymology = "",
             termEn = "Apical ectodermal ridge (AER)",
             termFr = "Crête ectodermique apicale (CEA)",
             termAr = "الحافة الأديمية الظاهرة القمية",
@@ -2053,6 +2209,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3311,
+            etymology = "",
             termEn = "Zone of polarizing activity (ZPA)",
             termFr = "Zone d'activité polarisante (ZAP)",
             termAr = "منطقة النشاط الاستقطابي",
@@ -2068,6 +2225,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3312,
+            etymology = "",
             termEn = "Cleft lip",
             termFr = "Fente labiale",
             termAr = "الشفة المشقوقة",
@@ -2083,6 +2241,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3313,
+            etymology = "",
             termEn = "Cleft palate",
             termFr = "Fente palatine",
             termAr = "الحنك المشقوق",
@@ -2098,6 +2257,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3314,
+            etymology = "",
             termEn = "Congenital malformation",
             termFr = "Malformation congénitale",
             termAr = "التشوه الخلقي",
@@ -2113,6 +2273,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3315,
+            etymology = "",
             termEn = "Teratogen",
             termFr = "Tératogène",
             termAr = "المُشوِّه (العامل المشوه)",
@@ -2122,6 +2283,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Malformations Congénitales",
             ipaPhonetic = "/ˈtɛrətədʒɛn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3316,
@@ -2157,6 +2321,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3318,
+            etymology = "",
             termEn = "Thalidomide",
             termFr = "Thalidomide",
             termAr = "الثاليدومايد",
@@ -2172,6 +2337,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3319,
+            etymology = "",
             termEn = "Rubella (German measles)",
             termFr = "Rubéole (Rougeole allemande)",
             termAr = "الحصبة الألمانية",
@@ -2187,6 +2353,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3320,
+            etymology = "",
             termEn = "Down syndrome (Trisomy 21)",
             termFr = "Syndrome de Down (Trisomie 21)",
             termAr = "متلازمة داون (ثلاثية الكروموسوم 21)",
@@ -2202,6 +2369,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3321,
+            etymology = "",
             termEn = "Turner syndrome (45,X)",
             termFr = "Syndrome de Turner (45,X)",
             termAr = "متلازمة تيرنر",
@@ -2217,6 +2385,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3322,
+            etymology = "",
             termEn = "Klinefelter syndrome (47,XXY)",
             termFr = "Syndrome de Klinefelter (47,XXY)",
             termAr = "متلازمة كلاينفلتر",
@@ -2232,6 +2401,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3323,
+            etymology = "",
             termEn = "Non-disjunction",
             termFr = "Non-disjonction",
             termAr = "عدم الانفصال",
@@ -2263,6 +2433,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3325,
+            etymology = "",
             termEn = "Omphalocele",
             termFr = "Omphalocèle",
             termAr = "القيلة السرية",
@@ -2278,6 +2449,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3326,
+            etymology = "",
             termEn = "Hirschsprung disease",
             termFr = "Maladie de Hirschsprung",
             termAr = "مرض هيرشسبرونغ",
@@ -2293,6 +2465,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3327,
+            etymology = "",
             termEn = "Hypospadias",
             termFr = "Hypospadias",
             termAr = "الإحليل تحتي الموضع",
@@ -2308,6 +2481,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3328,
+            etymology = "",
             termEn = "Horseshoe kidney",
             termFr = "Rein en fer à cheval",
             termAr = "الكلية الحدوة",
@@ -2323,6 +2497,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3329,
+            etymology = "",
             termEn = "Meckel's diverticulum",
             termFr = "Diverticule de Meckel",
             termAr = "رتج ميكل",
@@ -2348,6 +2523,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˌɛmbriˈɒnɪk ˈpɪəriəd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3331,
@@ -2361,9 +2539,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈfiːtəl ˈpɪəriəd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3332,
+            etymology = "",
             termEn = "Embryo",
             termFr = "Embryon",
             termAr = "الجنين (المضغة)",
@@ -2379,6 +2561,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3333,
+            etymology = "",
             termEn = "Fetus",
             termFr = "Fœtus",
             termAr = "الجنين",
@@ -2394,6 +2577,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3334,
+            etymology = "",
             termEn = "Gestational age",
             termFr = "Âge gestationnel",
             termAr = "العمر الجستاشوني",
@@ -2409,6 +2593,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3335,
+            etymology = "",
             termEn = "Fertilization age",
             termFr = "Âge de fécondation",
             termAr = "عمر الإخصاب",
@@ -2424,6 +2609,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3336,
+            etymology = "",
             termEn = "Parturition (Childbirth)",
             termFr = "Parturition (Accouchement)",
             termAr = "الوضع (الولادة)",
@@ -2439,6 +2625,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3337,
+            etymology = "",
             termEn = "Parturition stages",
             termFr = "Stades du travail",
             termAr = "مراحل المخاض",
@@ -2448,9 +2635,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈsteɪdʒɪz ɒv leɪbər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3338,
+            etymology = "",
             termEn = "Preterm birth",
             termFr = "Naissance prématurée",
             termAr = "الولادة المبكرة",
@@ -2460,9 +2651,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Périodes du Développement",
             ipaPhonetic = "/ˈpriːtɜːrm bɜːrθ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3339,
+            etymology = "",
             termEn = "Viability",
             termFr = "Viabilité",
             termAr = "قابلية الحياة",
@@ -2478,6 +2673,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3340,
+            etymology = "",
             termEn = "Stillbirth",
             termFr = "Mortinatalité (Mort-né)",
             termAr = "الولادة الميتة",
@@ -2493,6 +2689,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3341,
+            etymology = "",
             termEn = "Abortion (Miscarriage)",
             termFr = "Avortement (Fausse couche)",
             termAr = "الإجهاض",
@@ -2518,6 +2715,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˌæpəpˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3343,
@@ -2553,6 +2753,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3345,
+            etymology = "",
             termEn = "Homeotic genes (Hox genes)",
             termFr = "Gènes homéotiques (Gènes Hox)",
             termAr = "الجينات المنزلية (جينات Hox)",
@@ -2562,9 +2763,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/hoʊˈmiːɒtɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3346,
+            etymology = "",
             termEn = "Sonic hedgehog (Shh)",
             termFr = "Sonic Hedgehog (Shh)",
             termAr = "بروتين الشيح الصوتي",
@@ -2580,6 +2785,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3347,
+            etymology = "",
             termEn = "Wnt signaling pathway",
             termFr = "Voie de signalisation Wnt",
             termAr = "مسار إشارة Wnt",
@@ -2627,6 +2833,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3350,
+            etymology = "",
             termEn = "Lateral inhibition",
             termFr = "Inhibition latérale",
             termAr = "التثبيط الجانبي",
@@ -2642,6 +2849,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3351,
+            etymology = "",
             termEn = "Epigenetics",
             termFr = "Épigénétique",
             termAr = "فوق الجينيات",
@@ -2651,9 +2859,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ˌɛpɪdʒɪˈnɛtɪks/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3352,
+            etymology = "",
             termEn = "Imprinting (Genomic)",
             termFr = "Empreinte génomique",
             termAr = "البصمة الجينومية",
@@ -2669,6 +2881,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3353,
+            etymology = "",
             termEn = "Stem cell",
             termFr = "Cellule souche",
             termAr = "الخلية الجذعية",
@@ -2684,6 +2897,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3354,
+            etymology = "",
             termEn = "Induced pluripotent stem cells (iPSC)",
             termFr = "Cellules souches pluripotentes induites (iPSC)",
             termAr = "الخلايا الجذعية متعددة القدرة المستحثة",
@@ -2693,6 +2907,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Avancés",
             ipaPhonetic = "/ɪnˈdjuːst plʊˈrɪpətənt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3355,
@@ -2712,6 +2929,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3356,
+            etymology = "",
             termEn = "Amniocentesis",
             termFr = "Amniocentèse",
             termAr = "بزل السلى",
@@ -2727,6 +2945,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3357,
+            etymology = "",
             termEn = "Chorionic villus sampling (CVS)",
             termFr = "Prélèvement de villosités choriales (PVC)",
             termAr = "أخذ عينة من الزغابات المشيمية",
@@ -2742,6 +2961,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3358,
+            etymology = "",
             termEn = "Ultrasound (Sonography)",
             termFr = "Échographie",
             termAr = "الموجات فوق الصوتية",
@@ -2757,6 +2977,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3359,
+            etymology = "",
             termEn = "Crown-rump length (CRL)",
             termFr = "Longueur crânio-caudale (LCC)",
             termAr = "طول القمة إلى العجز",
@@ -2772,6 +2993,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3360,
+            etymology = "",
             termEn = "APGAR score",
             termFr = "Score d'APGAR",
             termAr = "مقياس أبغار",
@@ -2787,6 +3009,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3361,
+            etymology = "",
             termEn = "Neonatal period",
             termFr = "Période néonatale",
             termAr = "فترة حديث الولادة",
@@ -2802,6 +3025,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3362,
+            etymology = "",
             termEn = "Placenta previa",
             termFr = "Placenta prævia",
             termAr = "المشيمة المنزاحة",
@@ -2811,9 +3035,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/pləˈsɛntə ˈpriːviə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3363,
+            etymology = "",
             termEn = "Intrauterine growth restriction (IUGR)",
             termFr = "Retard de croissance intra-utérin (RCIU)",
             termAr = "تقييد النمو داخل الرحم",
@@ -2829,6 +3057,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3364,
+            etymology = "",
             termEn = "Pre-eclampsia",
             termFr = "Pré-éclampsie",
             termAr = "ما قبل تسمم الحمل",
@@ -2844,6 +3073,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3365,
+            etymology = "",
             termEn = "Lateral symmetry",
             termFr = "Symétrie latérale",
             termAr = "التماثل الجانبي",
@@ -2859,6 +3089,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3366,
+            etymology = "",
             termEn = "Situs inversus",
             termFr = "Situs inversus",
             termAr = "انعكاس الأحشاء",
@@ -2890,6 +3121,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3368,
+            etymology = "",
             termEn = "Organizer (Spemann-Mangold)",
             termFr = "Organisateur (de Spemann-Mangold)",
             termAr = "المنظم (سبيمان-مانغولد)",
@@ -2915,9 +3147,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkreɪniəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3370,
+            etymology = "",
             termEn = "Caudal",
             termFr = "Caudal",
             termAr = "ذيلي",
@@ -2927,9 +3163,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈkɔːdəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3371,
+            etymology = "",
             termEn = "Dorsal",
             termFr = "Dorsal",
             termAr = "ظهري",
@@ -2945,6 +3185,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3372,
+            etymology = "",
             termEn = "Ventral",
             termFr = "Ventral",
             termAr = "بطني",
@@ -2960,6 +3201,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3373,
+            etymology = "",
             termEn = "Rostral",
             termFr = "Rostral",
             termAr = "منقاري (أمامي)",
@@ -2969,9 +3211,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈrɒstrəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3374,
+            etymology = "",
             termEn = "Proliferation",
             termFr = "Prolifération",
             termAr = "التكاثر الخلوي",
@@ -2981,9 +3227,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/prəˌlɪfəˈreɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3375,
+            etymology = "",
             termEn = "Differentiation",
             termFr = "Différenciation",
             termAr = "التمايز",
@@ -2999,6 +3249,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3376,
+            etymology = "",
             termEn = "Migration (Cell)",
             termFr = "Migration cellulaire",
             termAr = "الهجرة الخلوية",
@@ -3014,6 +3265,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3377,
+            etymology = "",
             termEn = "Cell adhesion molecule (CAM)",
             termFr = "Molécule d'adhésion cellulaire (CAM)",
             termAr = "جزيء التصاق الخلية",
@@ -3029,6 +3281,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3378,
+            etymology = "",
             termEn = "Epithelial-mesenchymal transition (EMT)",
             termFr = "Transition épithélio-mésenchymateuse (TEM)",
             termAr = "تحول الظهارة إلى وسيطة",
@@ -3044,6 +3297,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3379,
+            etymology = "",
             termEn = "Extracellular matrix (ECM)",
             termFr = "Matrice extracellulaire (MEC)",
             termAr = "المصفوفة خارج الخلوية",
@@ -3059,6 +3313,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3380,
+            etymology = "",
             termEn = "Paracrine signaling",
             termFr = "Signalisation paracrine",
             termAr = "الإشارة المجاورة (الباراكرين)",
@@ -3068,9 +3323,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈpærəkraɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3381,
+            etymology = "",
             termEn = "Twin (Monozygotic)",
             termFr = "Jumeaux monozygotes",
             termAr = "توأم أحادي البيضة",
@@ -3080,9 +3339,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌmɒnoʊzaɪˈɡɒtɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3382,
+            etymology = "",
             termEn = "Twin (Dizygotic)",
             termFr = "Jumeaux dizygotes",
             termAr = "توأم ثنائي البيضة",
@@ -3092,9 +3355,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdaɪzaɪˈɡɒtɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3383,
+            etymology = "",
             termEn = "Conjoined twins",
             termFr = "Jumeaux siamois",
             termAr = "التوأم الملتصق",
@@ -3104,6 +3371,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/kənˈdʒɔɪnd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3384,
@@ -3117,9 +3387,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɔːrioʊˌæmniəˈnaɪtɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3385,
+            etymology = "",
             termEn = "TORCH infections",
             termFr = "Infections TORCH",
             termAr = "عدوى TORCH",
@@ -3129,9 +3403,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/tɔːrtʃ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3386,
+            etymology = "",
             termEn = "Fetal alcohol syndrome",
             termFr = "Syndrome d'alcoolisation fœtale",
             termAr = "متلازمة الكحول الجنينية",
@@ -3147,6 +3425,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3387,
+            etymology = "",
             termEn = "Surfactant",
             termFr = "Surfactant",
             termAr = "المادة الخافضة للتوتر السطحي (الفاعل السطحي)",
@@ -3162,6 +3441,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3388,
+            etymology = "",
             termEn = "Respiratory distress syndrome (RDS)",
             termFr = "Syndrome de détresse respiratoire (SDR)",
             termAr = "متلازمة ضائقة الجهاز التنفسي",
@@ -3177,6 +3457,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3389,
+            etymology = "",
             termEn = "Diaphragmatic hernia (Congenital)",
             termFr = "Hernie diaphragmatique congénitale",
             termAr = "الفتق الحجابي الخلقي",
@@ -3186,6 +3467,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌdaɪəfræɡˈmætɪk ˈhɜːrniə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3390,
@@ -3221,6 +3505,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3392,
+            etymology = "",
             termEn = "Hyaline membrane disease",
             termFr = "Maladie des membranes hyalines",
             termAr = "مرض الغشاء الزجاجي",
@@ -3230,9 +3515,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈhaɪəlaɪn ˈmɛmbreɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3393,
+            etymology = "",
             termEn = "Kernicterus",
             termFr = "Ictère nucléaire (Kérnictère)",
             termAr = "اليرقان النووي",
@@ -3242,6 +3531,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌkɜːrnɪkˈtɛrəs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3394,
@@ -3255,6 +3547,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ɪˌrɪθrəblæˈstoʊsɪs fiːˈteɪlɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3395,
@@ -3274,6 +3569,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3396,
+            etymology = "",
             termEn = "Paraxial mesoderm",
             termFr = "Mésoderme paraxial",
             termAr = "الأديم المتوسط المحوري",
@@ -3289,6 +3585,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3397,
+            etymology = "",
             termEn = "Primitive gut (Archenteron)",
             termFr = "Tube intestinal primitif (Archentéron)",
             termAr = "الأنبوب الهضمي البدائي",
@@ -3304,6 +3601,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3398,
+            etymology = "",
             termEn = "Pharynx development",
             termFr = "Développement du pharynx",
             termAr = "تطور البلعوم",
@@ -3319,6 +3617,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3399,
+            etymology = "",
             termEn = "Aortic arches",
             termFr = "Arcs aortiques",
             termAr = "الأقواس الأبهرية",
@@ -3328,6 +3627,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/eɪˈɔːrtɪk ɑːrtʃɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3400,
@@ -3341,9 +3643,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˈpeɪtənt ˈdʌktəs ɑːrˌtɪərioʊsəs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3401,
+            etymology = "",
             termEn = "Transposition of great vessels",
             termFr = "Transposition des gros vaisseaux",
             termAr = "تبادل موضع الأوعية الكبيرة",
@@ -3359,6 +3665,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3402,
+            etymology = "",
             termEn = "Polydactyly",
             termFr = "Polydactylie",
             termAr = "تعدد الأصابع",
@@ -3374,6 +3681,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3403,
+            etymology = "",
             termEn = "Syndactyly",
             termFr = "Syndactylie",
             termAr = "التصاق الأصابع",
@@ -3383,9 +3691,13 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/sɪnˈdæktɪli/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3404,
+            etymology = "",
             termEn = "Caudal regression syndrome",
             termFr = "Syndrome de régression caudale",
             termAr = "متلازمة التراجع الذيلي",
@@ -3401,6 +3713,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3405,
+            etymology = "",
             termEn = "DiGeorge syndrome (22q11 deletion)",
             termFr = "Syndrome de DiGeorge (délétion 22q11)",
             termAr = "متلازمة دي جورج",
@@ -3416,6 +3729,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3406,
+            etymology = "",
             termEn = "Pierre Robin sequence",
             termFr = "Séquence de Pierre Robin",
             termAr = "متتالية بيير روبان",
@@ -3431,6 +3745,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3407,
+            etymology = "",
             termEn = "Retinoic acid",
             termFr = "Acide rétinoïque",
             termAr = "حمض الريتينويك",
@@ -3446,6 +3761,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3408,
+            etymology = "",
             termEn = "Valproic acid",
             termFr = "Acide valproïque",
             termAr = "حمض الفالبرويك",
@@ -3461,6 +3777,7 @@ object EmbryologieTerms {
         ),
         MedicalTermEntity(
             id = 3409,
+            etymology = "",
             termEn = "Warfarin embryopathy",
             termFr = "Embryopathie à la warfarine",
             termAr = "اعتلال جنيني بالوارفارين",
@@ -3470,6 +3787,9 @@ object EmbryologieTerms {
             module = "Embryologie",
             chapter = "Termes Supplémentaires",
             ipaPhonetic = "/ˈwɔːrfərɪn ɛmˈbriːɒpəθi/",
-        )
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
+        ),
     )
 }

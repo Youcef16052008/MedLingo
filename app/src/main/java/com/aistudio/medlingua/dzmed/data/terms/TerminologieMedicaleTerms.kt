@@ -1,174 +1,169 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Terminologie Médicale — 457 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object TerminologieMedicaleTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 1768,
+            etymology = "Greek: βραδύς (bradys) — 'slow' + καρδία (kardia) — 'heart'",
             termEn = "Bradycardia",
             termFr = "Bradycardie",
             termAr = "بطء ضربات القلب",
             definitionEn = "An abnormally slow resting heart rate measuring below 60 beats per minute in adult humans.",
             definitionFr = "Ralentissement pathologique ou physiologique de la fréquence cardiaque au-dessous de 60 battements/minute.",
             definitionAr = "انخفاض معدل ضربات القلب في وضعية الراحة إلى أقل من 60 نبضة في الدقيقة لدى البالغين.",
-            etymology = "Greek: βραδύς (bradys) — 'slow' + καρδία (kardia) — 'heart'",
-            clinicalPearl = "May be physiological in elite endurance athletes, or pathological in sick sinus syndrome, hypothyroidism, and AV block.",
-            mnemonic = "Prefix Brady- = Slow (<60 bpm); Suffix -cardia = Relating to heart rate.",
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
+            ipaPhonetic = "/ˌbræd.iˈkɑː.di.ə/",
             exampleEn = "Severe symptomatic bradycardia may require transcutaneous pacing and intravenous atropine administration.",
             exampleFr = "Une bradycardie symptomatique sévère peut nécessiter une stimulation transcutanée.",
             exampleAr = "قد يتطلب بطء القلب المصحوب بأعراض شديدة إعطاء الأتروبين وريدياً.",
-            ipaPhonetic = "/ˌbræd.iˈkɑː.di.ə/",
+            clinicalPearl = "May be physiological in elite endurance athletes, or pathological in sick sinus syndrome, hypothyroidism, and AV block.",
+            mnemonic = "Prefix Brady- = Slow (<60 bpm); Suffix -cardia = Relating to heart rate.",
         ),
         MedicalTermEntity(
             id = 1769,
+            etymology = "Greek: ταχύς (tachys) — 'rapid / swift' + καρδία (kardia) — 'heart'",
             termEn = "Tachycardia",
             termFr = "Tachycardie",
             termAr = "تسارع ضربات القلب",
             definitionEn = "An abnormally accelerated resting heart rate exceeding 100 beats per minute.",
             definitionFr = "Accélération du rythme cardiaque au repos dépassant 100 battements par minute chez l'adulte.",
             definitionAr = "تسارع غير طبيعي في نظم القلب أثناء الراحة يزيد عن 100 نبضة في الدقيقة الواحدة.",
-            etymology = "Greek: ταχύς (tachys) — 'rapid / swift' + καρδία (kardia) — 'heart'",
-            clinicalPearl = "Categorized as narrow-complex (supraventricular) or wide-complex (ventricular tachycardia), the latter being potentially fatal.",
-            mnemonic = "Prefix Tachy- = Fast (>100 bpm); Contrast with Brady- (Slow).",
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
+            ipaPhonetic = "/ˌtæk.ɪˈkɑː.di.ə/",
             exampleEn = "Sinus tachycardia is a physiological compensatory response to hypovolemia, anemia, fever, and acute exercise.",
             exampleFr = "La tachycardie sinusale est une réponse physiologique à l'hypovolémie ou à la fièvre.",
             exampleAr = "تعد تسرع القلب الجيبي استجابة تعويضية فيزيولوجية لنقص حجم الدم أو الحمى.",
-            ipaPhonetic = "/ˌtæk.ɪˈkɑː.di.ə/",
+            clinicalPearl = "Categorized as narrow-complex (supraventricular) or wide-complex (ventricular tachycardia), the latter being potentially fatal.",
+            mnemonic = "Prefix Tachy- = Fast (>100 bpm); Contrast with Brady- (Slow).",
         ),
         MedicalTermEntity(
             id = 1770,
+            etymology = "Greek: νεφρός (nephros) — 'kidney' + ἐκتوμή (ektome) — 'cutting out / excision'",
             termEn = "Nephrectomy",
             termFr = "Néphrectomie",
             termAr = "استئصال الكلية الجراحي",
             definitionEn = "The surgical excision and anatomical removal of all or part of one kidney.",
             definitionFr = "Intervention chirurgicale consistant en l'ablation totale ou partielle d'un rein.",
             definitionAr = "إجراء جراحي يتضمن الاستئصال الكامل أو الجزئي لإحدى الكليتين بسبب مرض أو ورم.",
-            etymology = "Greek: νεφρός (nephros) — 'kidney' + ἐκتوμή (ektome) — 'cutting out / excision'",
-            clinicalPearl = "Radical nephrectomy involves en bloc resection of the kidney, Gerota's fascia, perirenal fat, and ipsilateral adrenal gland.",
-            mnemonic = "Suffix -ectomy = Surgical removal; -otomy = Incision into; -ostomy = Creating an opening.",
             module = "Terminologie Médicale",
             chapter = "Suffixes chirurgicaux",
+            ipaPhonetic = "/nəˈfrek.tə.mi/",
             exampleEn = "Laparoscopic donor nephrectomy is the gold standard for living kidney donation.",
             exampleFr = "La néphrectomie laparoscopique est la technique de référence pour le don de rein.",
             exampleAr = "يعد استئصال الكلية بالمنظار المعيار الذهبي للتبرع الحي بالكلية.",
-            ipaPhonetic = "/nəˈfrek.tə.mi/",
+            clinicalPearl = "Radical nephrectomy involves en bloc resection of the kidney, Gerota's fascia, perirenal fat, and ipsilateral adrenal gland.",
+            mnemonic = "Suffix -ectomy = Surgical removal; -otomy = Incision into; -ostomy = Creating an opening.",
         ),
         MedicalTermEntity(
             id = 1771,
+            etymology = "Greek: δυσ- (dys-) — 'bad / difficult / painful' + πνοή (pnoe) — 'breathing'.",
             termEn = "Dyspnea",
             termFr = "Dyspnée",
             termAr = "عسر التنفس / ضيق التنفس",
             definitionEn = "The subjective clinical symptom of difficult, labored, uncomfortable, or distressing awareness of breathing.",
             definitionFr = "Sensation subjective d'inconfort respiratoire ou de difficulté à ventiler ressentie péniblement par le patient.",
             definitionAr = "العَرَض السريري الذاتي لشعور المريض بصعوبة ومشقة غير طبيعية في التنفس.",
-            etymology = "Greek: δυσ- (dys-) — 'bad / difficult / painful' + πνοή (pnoe) — 'breathing'.",
-            clinicalPearl = "Classified into exertional dyspnea, orthopnea (recumbent dyspnea, hallmark of left heart failure), and paroxysmal nocturnal dyspnea.",
-            mnemonic = "Prefix Dys- = Difficult / Abnormal (Dysphagia = swallowing; Dysuria = urination; Dyspnea = breathing).",
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
+            ipaPhonetic = "/dɪspˈniː.ə/",
             exampleEn = "The patient presented to the emergency department with acute orthopnea and paroxysmal nocturnal dyspnea.",
             exampleFr = "Le patient s'est présenté aux urgences avec une orthopnée aiguë et une dyspnée paroxystique nocturne.",
             exampleAr = "راجع المريض قسم الطوارئ وهو يعاني من ضيق تنفس استلقائي حاد ونوبات ضيق تنفس ليلية فجائية.",
-            ipaPhonetic = "/dɪspˈniː.ə/",
+            clinicalPearl = "Classified into exertional dyspnea, orthopnea (recumbent dyspnea, hallmark of left heart failure), and paroxysmal nocturnal dyspnea.",
+            mnemonic = "Prefix Dys- = Difficult / Abnormal (Dysphagia = swallowing; Dysuria = urination; Dyspnea = breathing).",
         ),
         MedicalTermEntity(
             id = 1772,
+            etymology = "Greek: σπλήν (splen) / ἧπαρ (hepar) + μέγας (megas) — 'large / huge'.",
             termEn = "Splenomegaly and Hepatomegaly",
             termFr = "Splénomégalie et Hépatomégalie",
             termAr = "ضخامة الطحال وضخامة الكبد",
             definitionEn = "The pathological enlargement of the spleen and liver beyond their standard anatomical boundaries detectable by palpation or ultrasonography.",
             definitionFr = "Augmentation anormale du volume de la rate et du foie au-delà des limites anatomiques physiologiques normales.",
             definitionAr = "التضخم المرضي غير الطبيعي في حجم الطحال والكبد بما يتجاوز حدودهما التشريحية الطبيعية.",
-            etymology = "Greek: σπλήν (splen) / ἧπαρ (hepar) + μέγας (megas) — 'large / huge'.",
-            clinicalPearl = "A palpable spleen tip beneath the left costal margin is pathologically enlarged by at least two- to three-fold.",
-            mnemonic = "Suffix -megaly = Enlargement (Cardiomegaly = heart; Hepatomegaly = liver; Splenomegaly = spleen).",
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
+            ipaPhonetic = "/ˌsplek.nəʊˈmeɡ.ə.li/",
             exampleEn = "Deep inspiration allowed clear palpation of an enlarged spleen tip 3 cm below the left costal margin.",
             exampleFr = "L'inspiration profonde a permis de palper le bord splénique à 3 cm sous le rebord costal gauche.",
             exampleAr = "أتاح الشهيق العميق جس حافة الطحال المتضخم على بعد 3 سنتيمترات أسفل الحافة الضلعية اليسرى.",
-            ipaPhonetic = "/ˌsplek.nəʊˈmeɡ.ə.li/",
+            clinicalPearl = "A palpable spleen tip beneath the left costal margin is pathologically enlarged by at least two- to three-fold.",
+            mnemonic = "Suffix -megaly = Enlargement (Cardiomegaly = heart; Hepatomegaly = liver; Splenomegaly = spleen).",
         ),
         MedicalTermEntity(
             id = 1773,
+            etymology = "Greek: λαπάρα (lapara) — 'flank / abdominal wall' + τομή (tome) — 'cutting' / σκοπέω (skopeo) — 'to examine'.",
             termEn = "Laparotomy vs Laparoscopy",
             termFr = "Laparotomie vs Laparoscopie (Coelioscopie)",
             termAr = "فتح البطن الجراحي مقابل تنظير البطن",
             definitionEn = "Surgical access routes: Laparotomy is an open surgical incision into the abdominal wall; Laparoscopy uses rigid fiberoptic trocars and insufflated CO2.",
             definitionFr = "Voies d'abord chirurgicales abdominales: laparotomie par incision large versus laparoscopie par trocarts mini-invasifs sous pneumopéritoine.",
             definitionAr = "طرق التدخل الجراحي على البطن: فتح البطن التقليدي عبر شق جراحي واسع مقابل تنظير البطن طفيف التوغل عبر منافذ صغيرة.",
-            etymology = "Greek: λαπάρα (lapara) — 'flank / abdominal wall' + τομή (tome) — 'cutting' / σκοπέω (skopeo) — 'to examine'.",
-            clinicalPearl = "Suffix -otomy means surgical incising; -ostomy means fashioning an opening to exterior; -ectomy means surgical excision.",
-            mnemonic = "Surgical Suffixes: -otomy = Cut into; -ectomy = Cut out; -ostomy = Make a stoma; -scopy = Look with camera.",
             module = "Terminologie Médicale",
             chapter = "Suffixes Chirurgicaux",
+            ipaPhonetic = "/ˌlæp.əˈrɒt.ə.mi/",
             exampleEn = "Laparoscopic cholecystectomy is the surgical gold standard for symptomatic cholelithiasis.",
             exampleFr = "La cholécystectomie par laparoscopie est le traitement de référence de la lithiase biliaire symptomatique.",
             exampleAr = "يعد استئصال المرارة بالتنظير المعيار الجراحي الذهبي لعلاج الحصيات الصفراوية العَرَضية.",
-            ipaPhonetic = "/ˌlæp.əˈrɒt.ə.mi/",
+            clinicalPearl = "Suffix -otomy means surgical incising; -ostomy means fashioning an opening to exterior; -ectomy means surgical excision.",
+            mnemonic = "Surgical Suffixes: -otomy = Cut into; -ectomy = Cut out; -ostomy = Make a stoma; -scopy = Look with camera.",
         ),
         MedicalTermEntity(
             id = 1774,
+            etymology = "Greek: κυανός (kyanos) — 'dark blue' + pathos — 'suffering'.",
             termEn = "Acyanotic vs Cyanotic Heart Defect",
             termFr = "Cardiopathie congénitale cyanogène vs non cyanogène",
             termAr = "اعتلالات القلب الخلقية المزرقة وغير المزرقة",
             definitionEn = "Classification of congenital heart anomalies based on presence of deoxyhemoglobin >5 g/dL resulting from right-to-left shunting (cyanotic) vs left-to-right shunting (acyanotic).",
             definitionFr = "Classification pédiatrique selon la présence de cyanose: shunt droite-gauche (cyanogène: Tétralogie de Fallot) vs shunt gauche-droite (non cyanogène: CIV, CIA, PCA).",
             definitionAr = "تصنيف تشوهات القلب الخلقية بناء على وجود الزراق الناجم عن تحويلة من اليمين إلى اليسار مقابل التحويلات غير المزرقة من اليسار إلى اليمين.",
-            etymology = "Greek: κυανός (kyanos) — 'dark blue' + pathos — 'suffering'.",
-            clinicalPearl = "5 'T's of cyanotic congenital heart disease: Tetralogy of Fallot, Transposition of great arteries, Truncus arteriosus, Tricuspid atresia, Total anomalous pulmonary venous return.",
-            mnemonic = "The 5 Ts = Cyanotic (Right to Left shunt); VSD, ASD, PDA = Acyanotic (Left to Right shunt).",
             module = "Terminologie Médicale",
             chapter = "Sémiologie Cardio-Vasculaire",
+            ipaPhonetic = "/saɪ.əˈnɒt.ɪk hɑːt dɪˈfekt/",
             exampleEn = "Hypercyanotic 'tet spells' in Tetralogy of Fallot improve with squatting by increasing systemic vascular resistance.",
             exampleFr = "Les malaises de Fallot s'améliorent en position accroupie par augmentation des résistances systémiques.",
             exampleAr = "تتحسن نوبات الزراق الشديدة لدى أطفال رباعي فالو بوضعية القرفصاء عبر زيادة المقاومة الوعائية الجهازية.",
-            ipaPhonetic = "/saɪ.əˈnɒt.ɪk hɑːt dɪˈfekt/",
+            clinicalPearl = "5 'T's of cyanotic congenital heart disease: Tetralogy of Fallot, Transposition of great arteries, Truncus arteriosus, Tricuspid atresia, Total anomalous pulmonary venous return.",
+            mnemonic = "The 5 Ts = Cyanotic (Right to Left shunt); VSD, ASD, PDA = Acyanotic (Left to Right shunt).",
         ),
         MedicalTermEntity(
             id = 1775,
+            etymology = "Greek: αἷμα (haima) — 'blood' + πτύσις (ptysis) — 'spitting' / ἔμετος (emetos) — 'vomiting'.",
             termEn = "Hemoptysis vs Hematemesis",
             termFr = "Hémoptysie vs Hématémèse",
             termAr = "نفث الدم الرئوي مقابل القيء الدموي الهضمي",
             definitionEn = "Distinction in acute bleeding: Hemoptysis is expectoration of blood originating from the respiratory tract (frothy, bright red, alkaline pH); hematemesis is vomiting blood from GI tract (acidic, coffee-ground).",
             definitionFr = "Différenciation sémiologique majeure: hémoptysie (expectoration de sang d'origine sous-glottique, aéré, rouge vif) versus hématémèse (rejet de sang digestif noir ou digéré).",
             definitionAr = "التمييز السريري الحاسم: نفث الدم هو سعال دموي رغوي قادم من الجهاز التنفسي، بينما القيء الدموي هو تقيؤ دم مهضوم قادم من الجهاز الهضمي.",
-            etymology = "Greek: αἷμα (haima) — 'blood' + πτύσις (ptysis) — 'spitting' / ἔμετος (emetos) — 'vomiting'.",
-            clinicalPearl = "Massive hemoptysis (>100-600 mL/24h) poses an acute asphyxiation threat; requires urgent bronchoscopy and bronchial artery embolization.",
-            mnemonic = "Hemoptysis = Ptysis (Spit / Cough from Lungs); Hematemesis = Emetic (Vomit from Stomach).",
             module = "Terminologie Médicale",
             chapter = "Sémiologie Respiratoire & Digestive",
+            ipaPhonetic = "/hɪˈmɒp.tɪ.sɪs ænd ˌhiː.məˈtem.ə.sɪs/",
             exampleEn = "The emergency team quickly differentiated true pulmonary hemoptysis from upper GI coffee-ground hematemesis.",
             exampleFr = "L'équipe d'urgence a rapidement différencié une hémoptysie pulmonaire d'une hématémèse haute.",
             exampleAr = "ميز فريق الطوارئ بسرعة بين نفث الدم الرئوي والقيء الدموي الناتج عن نزف هضمي علوي.",
-            ipaPhonetic = "/hɪˈmɒp.tɪ.sɪs ænd ˌhiː.məˈtem.ə.sɪs/",
+            clinicalPearl = "Massive hemoptysis (>100-600 mL/24h) poses an acute asphyxiation threat; requires urgent bronchoscopy and bronchial artery embolization.",
+            mnemonic = "Hemoptysis = Ptysis (Spit / Cough from Lungs); Hematemesis = Emetic (Vomit from Stomach).",
         ),
         MedicalTermEntity(
             id = 1776,
+            etymology = "Greek: πολύς (polys) — 'much / many' + οὖρον (ouron) — 'urine' / δίψα (dipsa) — 'thirst' / φαγεῖν (phagein) — 'to eat'.",
             termEn = "Polyuria, Polydipsia, and Polyphagia",
             termFr = "Syndrome Polyuro-Polydipsique et Polyphagie",
             termAr = "ثلاثي البوال والعطاش والنهام (أعراض السكري)",
             definitionEn = "The classic clinical triad of overt diabetes mellitus: excessive urinary volume (>3 L/24h), excessive fluid consumption due to thirst, and paradoxical increased hunger with weight loss.",
             definitionFr = "Triade clinique inaugurale du diabète sucré: diurèse osmotique excessive, soif inextinguible et faim accrue contrastant avec un amaigrissement.",
             definitionAr = "الثالوث السريري الكلاسيكي لداء السكري: التبول المفرط نتيجة الإدرار الأسموزي، والعطش الشديد، وزيادة الشهية المترافقة مع نقص الوزن.",
-            etymology = "Greek: πολύς (polys) — 'much / many' + οὖρον (ouron) — 'urine' / δίψα (dipsa) — 'thirst' / φαγεῖν (phagein) — 'to eat'.",
-            clinicalPearl = "Caused by osmotic diuresis when glycemia exceeds the renal threshold (approx. 180 mg/dL or 10 mmol/L), leading to glucosuria.",
-            mnemonic = "The 3 P's of Hyperglycemia: Polyuria (Peeing), Polydipsia (Drinking), Polyphagia (Eating).",
             module = "Terminologie Médicale",
             chapter = "Grands Syndromes Cliniques",
+            ipaPhonetic = "/ˌpɒl.iˈjʊə.ri.ə ˌpɒl.iˈdɪp.si.ə/",
             exampleEn = "A newly diagnosed adolescent with type 1 diabetes presented with severe polyuria, polydipsia, and ketonuria.",
             exampleFr = "Un adolescent présentant un diabète de type 1 a consulté pour syndrome polyuro-polydipsique sévère.",
             exampleAr = "راجع مراهق مصاب حديثاً بالسكري من النوع الأول وهو يعاني من بوال وعطاش شديدين مع وجود الكيتون في البول.",
-            ipaPhonetic = "/ˌpɒl.iˈjʊə.ri.ə ˌpɒl.iˈdɪp.si.ə/",
+            clinicalPearl = "Caused by osmotic diuresis when glycemia exceeds the renal threshold (approx. 180 mg/dL or 10 mmol/L), leading to glucosuria.",
+            mnemonic = "The 3 P's of Hyperglycemia: Polyuria (Peeing), Polydipsia (Drinking), Polyphagia (Eating).",
         ),
         MedicalTermEntity(
             id = 3410,
@@ -236,6 +231,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3414,
+            etymology = "",
             termEn = "Gamete",
             termFr = "Gamète",
             termAr = "المشيج",
@@ -251,6 +247,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3415,
+            etymology = "",
             termEn = "Spermatogonium",
             termFr = "Spermatogonie",
             termAr = "الخلية المنوية الأولية",
@@ -266,6 +263,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3416,
+            etymology = "",
             termEn = "Primary spermatocyte",
             termFr = "Spermatocyte I (primaire)",
             termAr = "الخلية المنوية الأولى",
@@ -281,6 +279,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3417,
+            etymology = "",
             termEn = "Secondary spermatocyte",
             termFr = "Spermatocyte II (secondaire)",
             termAr = "الخلية المنوية الثانية",
@@ -296,6 +295,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3418,
+            etymology = "",
             termEn = "Spermatid",
             termFr = "Spermatide",
             termAr = "البييضة المنوية",
@@ -311,6 +311,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3419,
+            etymology = "",
             termEn = "Spermatozoon",
             termFr = "Spermatozoïde",
             termAr = "الحيوان المنوي",
@@ -326,6 +327,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3420,
+            etymology = "",
             termEn = "Acrosome",
             termFr = "Acrosome",
             termAr = "القرناء",
@@ -357,6 +359,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3422,
+            etymology = "",
             termEn = "Sertoli cell",
             termFr = "Cellule de Sertoli",
             termAr = "خلية سيرتولي",
@@ -372,6 +375,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3423,
+            etymology = "",
             termEn = "Leydig cell",
             termFr = "Cellule de Leydig",
             termAr = "خلية ليديغ",
@@ -387,6 +391,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3424,
+            etymology = "",
             termEn = "Oogonium",
             termFr = "Ovogonie",
             termAr = "الخلية البيضية الأولية",
@@ -402,6 +407,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3425,
+            etymology = "",
             termEn = "Primary oocyte",
             termFr = "Ovocyte I (primaire)",
             termAr = "البييضة الأولى",
@@ -417,6 +423,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3426,
+            etymology = "",
             termEn = "Secondary oocyte",
             termFr = "Ovocyte II (secondaire)",
             termAr = "البييضة الثانية",
@@ -432,6 +439,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3427,
+            etymology = "",
             termEn = "Polar body",
             termFr = "Globule polaire",
             termAr = "الجسيم القطبي",
@@ -447,6 +455,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3428,
+            etymology = "",
             termEn = "Follicular cell",
             termFr = "Cellule folliculaire (Granulosa)",
             termAr = "الخلية الجريبية",
@@ -462,6 +471,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3429,
+            etymology = "",
             termEn = "Zona pellucida",
             termFr = "Zone pellucide",
             termAr = "المنطقة الشفافة",
@@ -477,6 +487,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3430,
+            etymology = "",
             termEn = "Menstrual cycle",
             termFr = "Cycle menstruel",
             termAr = "الدورة الشهرية",
@@ -492,6 +503,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3431,
+            etymology = "",
             termEn = "Follicular phase",
             termFr = "Phase folliculaire",
             termAr = "المرحلة الجريبية",
@@ -501,9 +513,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/fəˈlɪkjʊlər feɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3432,
+            etymology = "",
             termEn = "Luteal phase",
             termFr = "Phase lutéale",
             termAr = "المرحلة الجسمية الصفراء",
@@ -513,9 +529,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈluːtiəl feɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3433,
+            etymology = "",
             termEn = "Ovulation",
             termFr = "Ovulation",
             termAr = "الإباضة",
@@ -531,6 +551,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3434,
+            etymology = "",
             termEn = "Corpus luteum",
             termFr = "Corps jaune",
             termAr = "الجسم الأصفر",
@@ -546,6 +567,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3435,
+            etymology = "",
             termEn = "Corpus albicans",
             termFr = "Corps blanc (Corpus albicans)",
             termAr = "الجسم الأبيض",
@@ -561,6 +583,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3436,
+            etymology = "",
             termEn = "Graafian follicle",
             termFr = "Follicule de de Graaf",
             termAr = "الجريب الناضج",
@@ -576,6 +599,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3437,
+            etymology = "",
             termEn = "Antrum",
             termFr = "Antre folliculaire",
             termAr = "التجويف الجريبي",
@@ -591,6 +615,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3438,
+            etymology = "",
             termEn = "FSH (Follicle-stimulating hormone)",
             termFr = "FSH (Hormone folliculo-stimulante)",
             termAr = "الهرمون المنبه للجريب",
@@ -606,6 +631,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3439,
+            etymology = "",
             termEn = "LH (Luteinizing hormone)",
             termFr = "LH (Hormone lutéinisante)",
             termAr = "الهرمون الملوتن",
@@ -621,6 +647,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3440,
+            etymology = "",
             termEn = "Estrogen",
             termFr = "Estrogène",
             termAr = "الإستروجين",
@@ -630,9 +657,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Cycle Menstruel",
             ipaPhonetic = "/ˈɛstrədʒən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3441,
+            etymology = "",
             termEn = "Progesterone",
             termFr = "Progestérone",
             termAr = "البروجستيرون",
@@ -648,6 +679,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3442,
+            etymology = "",
             termEn = "GnRH (Gonadotropin-releasing hormone)",
             termFr = "GnRH (Hormone de libération des gonadotrophines)",
             termAr = "هرمون إطلاق الغدد التناسلية",
@@ -663,6 +695,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3443,
+            etymology = "",
             termEn = "Fertilization",
             termFr = "Fécondation",
             termAr = "الإخصاب",
@@ -678,6 +711,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3444,
+            etymology = "",
             termEn = "Zygote",
             termFr = "Zygote",
             termAr = "اللاقحة",
@@ -693,6 +727,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3445,
+            etymology = "",
             termEn = "Acrosome reaction",
             termFr = "Réaction acrosomique",
             termAr = "التفاعل الأكروسومي",
@@ -708,6 +743,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3446,
+            etymology = "",
             termEn = "Cortical reaction",
             termFr = "Réaction corticale",
             termAr = "التفاعل القشري",
@@ -723,6 +759,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3447,
+            etymology = "",
             termEn = "Polyspermy",
             termFr = "Polyspermie",
             termAr = "تعدد الإخصاب",
@@ -738,6 +775,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3448,
+            etymology = "",
             termEn = "Capacitation",
             termFr = "Capacitation",
             termAr = "التهيؤ المنوي",
@@ -753,6 +791,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3449,
+            etymology = "",
             termEn = "Pronucleus",
             termFr = "Pronucleus (Pronoyau)",
             termAr = "النويات قبل الانقسام",
@@ -768,6 +807,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3450,
+            etymology = "",
             termEn = "Hyaluronidase",
             termFr = "Hyaluronidase",
             termAr = "هيالورونيداز",
@@ -799,6 +839,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3452,
+            etymology = "",
             termEn = "Corona radiata",
             termFr = "Couronne radiée",
             termAr = "التاج المشع",
@@ -814,6 +855,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3453,
+            etymology = "",
             termEn = "Cleavage",
             termFr = "Clivage (Segmentation)",
             termAr = "الانقسام الأولي",
@@ -829,6 +871,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3454,
+            etymology = "",
             termEn = "Blastomere",
             termFr = "Blastomère",
             termAr = "الأريمة (الخلية الأريمية)",
@@ -838,9 +881,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Clivage",
             ipaPhonetic = "/ˈblæstəmɪər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3455,
+            etymology = "",
             termEn = "Morula",
             termFr = "Morula",
             termAr = "التوتة",
@@ -856,6 +903,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3456,
+            etymology = "",
             termEn = "Blastocyst",
             termFr = "Blastocyste",
             termAr = "الأريمة المكيسة",
@@ -871,6 +919,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3457,
+            etymology = "",
             termEn = "Inner cell mass (ICM)",
             termFr = "Masse cellulaire interne (Bouton embryonnaire)",
             termAr = "الكتلة الخلوية الداخلية",
@@ -902,6 +951,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3459,
+            etymology = "",
             termEn = "Blastocoel",
             termFr = "Blastocœle",
             termAr = "تجويف الأريمة",
@@ -917,6 +967,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3460,
+            etymology = "",
             termEn = "Compaction",
             termFr = "Compaction",
             termAr = "التضام",
@@ -932,6 +983,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3461,
+            etymology = "",
             termEn = "Embryoblast",
             termFr = "Embryoblaste",
             termAr = "الأريمة الجنينية",
@@ -947,6 +999,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3462,
+            etymology = "",
             termEn = "Implantation",
             termFr = "Implantation (Nidation)",
             termAr = "الانغراس",
@@ -962,6 +1015,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3463,
+            etymology = "",
             termEn = "Endometrium",
             termFr = "Endomètre",
             termAr = "بطانة الرحم",
@@ -977,6 +1031,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3464,
+            etymology = "",
             termEn = "Decidua",
             termFr = "Décidue",
             termAr = "الغشاء الساقط",
@@ -992,6 +1047,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3465,
+            etymology = "",
             termEn = "Decidua basalis",
             termFr = "Décidue basale",
             termAr = "الغشاء الساقط القاعدي",
@@ -1007,6 +1063,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3466,
+            etymology = "",
             termEn = "Decidua capsularis",
             termFr = "Décidue capsulaire",
             termAr = "الغشاء الساقط المحيطي",
@@ -1022,6 +1079,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3467,
+            etymology = "",
             termEn = "Decidua parietalis",
             termFr = "Décidue pariétale",
             termAr = "الغشاء الساقط الجداري",
@@ -1037,6 +1095,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3468,
+            etymology = "",
             termEn = "Syncytiotrophoblast",
             termFr = "Syncytiotrophoblaste",
             termAr = "المخلوية الغاذية",
@@ -1052,6 +1111,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3469,
+            etymology = "",
             termEn = "Cytotrophoblast",
             termFr = "Cytotrophoblaste",
             termAr = "الأرومة الغاذية الخلوية",
@@ -1067,6 +1127,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3470,
+            etymology = "",
             termEn = "hCG (Human chorionic gonadotropin)",
             termFr = "hCG (Gonadotrophine chorionique humaine)",
             termAr = "موجهة الغدد التناسلية المشيمية",
@@ -1082,6 +1143,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3471,
+            etymology = "",
             termEn = "Ectopic pregnancy",
             termFr = "Grossesse ectopique (extra-utérine)",
             termAr = "الحمل خارج الرحم",
@@ -1113,6 +1175,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3473,
+            etymology = "",
             termEn = "Germ layer",
             termFr = "Feuillet germinatif (germinale)",
             termAr = "الطبقة الجرثومية",
@@ -1122,9 +1185,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/dʒɜːrm ˈleɪər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3474,
+            etymology = "",
             termEn = "Ectoderm",
             termFr = "Ectoderme",
             termAr = "الأديم الظاهر",
@@ -1140,6 +1207,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3475,
+            etymology = "",
             termEn = "Mesoderm",
             termFr = "Mésoderme",
             termAr = "الأديم المتوسط",
@@ -1155,6 +1223,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3476,
+            etymology = "",
             termEn = "Endoderm",
             termFr = "Endoderme",
             termAr = "الأديم الباطن",
@@ -1170,6 +1239,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3477,
+            etymology = "",
             termEn = "Primitive streak",
             termFr = "Ligne primitive",
             termAr = "الخط البدائي",
@@ -1185,6 +1255,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3478,
+            etymology = "",
             termEn = "Primitive node (Hensen's node)",
             termFr = "Nœud primitif (Nœud de Hensen)",
             termAr = "العقدة البدائية",
@@ -1200,6 +1271,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3479,
+            etymology = "",
             termEn = "Epiblast",
             termFr = "Épiblaste",
             termAr = "الأديم الظاهر الجنيني",
@@ -1215,6 +1287,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3480,
+            etymology = "",
             termEn = "Hypoblast",
             termFr = "Hypoblaste",
             termAr = "الأديم الباطن الجنيني",
@@ -1230,6 +1303,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3481,
+            etymology = "",
             termEn = "Intraembryonic mesoderm",
             termFr = "Mésoderme intra-embryonnaire",
             termAr = "الأديم المتوسط داخل الجنيني",
@@ -1245,6 +1319,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3482,
+            etymology = "",
             termEn = "Paraxial mesoderm",
             termFr = "Mésoderme paraaxial",
             termAr = "الأديم المتوسط المجاور للمحور",
@@ -1254,9 +1329,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Gastrulation",
             ipaPhonetic = "/pærˈæksɪəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3483,
+            etymology = "",
             termEn = "Lateral plate mesoderm",
             termFr = "Mésoderme latéral",
             termAr = "الأديم المتوسط الصفيحي الجانبي",
@@ -1272,6 +1351,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3484,
+            etymology = "",
             termEn = "Intermediate mesoderm",
             termFr = "Mésoderme intermédiaire",
             termAr = "الأديم المتوسط الوسيط",
@@ -1287,6 +1367,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3485,
+            etymology = "",
             termEn = "Neurulation",
             termFr = "Neurulation",
             termAr = "تكوين الأنبوب العصبي",
@@ -1302,6 +1383,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3486,
+            etymology = "",
             termEn = "Notochord",
             termFr = "Notochorde",
             termAr = "الحبل الظهري",
@@ -1317,6 +1399,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3487,
+            etymology = "",
             termEn = "Neural plate",
             termFr = "Plaque neurale",
             termAr = "الصفيحة العصبية",
@@ -1332,6 +1415,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3488,
+            etymology = "",
             termEn = "Neural fold",
             termFr = "Repli neural",
             termAr = "الطية العصبية",
@@ -1347,6 +1431,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3489,
+            etymology = "",
             termEn = "Neural tube",
             termFr = "Tube neural",
             termAr = "الأنبوب العصبي",
@@ -1362,6 +1447,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3490,
+            etymology = "",
             termEn = "Neural crest cells",
             termFr = "Cellules de la crête neurale",
             termAr = "خلايا القمة العصبية",
@@ -1371,9 +1457,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈnjʊərəl krɛst/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3491,
+            etymology = "",
             termEn = "Anencephaly",
             termFr = "Anencéphalie",
             termAr = "انعدام الدماغ",
@@ -1389,6 +1479,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3492,
+            etymology = "",
             termEn = "Spina bifida",
             termFr = "Spina bifida",
             termAr = "السنسنة المشقوقة",
@@ -1404,6 +1495,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3493,
+            etymology = "",
             termEn = "Primary brain vesicles",
             termFr = "Vésicules cérébrales primaires",
             termAr = "الحويصلات الدماغية الأولية",
@@ -1413,9 +1505,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Neurulation",
             ipaPhonetic = "/ˈbraɪn ˈvɛsɪkəlz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3494,
+            etymology = "",
             termEn = "Prosencephalon",
             termFr = "Prosencéphale",
             termAr = "الدماغ الأمامي",
@@ -1431,6 +1527,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3495,
+            etymology = "",
             termEn = "Mesencephalon",
             termFr = "Mésencéphale",
             termAr = "الدماغ المتوسط",
@@ -1446,6 +1543,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3496,
+            etymology = "",
             termEn = "Rhombencephalon",
             termFr = "Rhombencéphale",
             termAr = "الدماغ المعيني",
@@ -1461,6 +1559,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3497,
+            etymology = "",
             termEn = "Somite",
             termFr = "Somite",
             termAr = "القطيعة",
@@ -1492,6 +1591,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3499,
+            etymology = "",
             termEn = "Myotome",
             termFr = "Myotome",
             termAr = "الأديم العضلي",
@@ -1507,6 +1607,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3500,
+            etymology = "",
             termEn = "Dermatome",
             termFr = "Dermatome",
             termAr = "الأديم الجلدي",
@@ -1532,6 +1633,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl ɑːrtʃɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3502,
@@ -1545,6 +1649,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl klɛft/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3503,
@@ -1558,6 +1665,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Somitogenèse",
             ipaPhonetic = "/fəˈrɪndʒiəl paʊtʃ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3504,
@@ -1577,6 +1687,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3505,
+            etymology = "",
             termEn = "Heart tube",
             termFr = "Tube cardiaque",
             termAr = "الأنبوب القلبي",
@@ -1608,6 +1719,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3507,
+            etymology = "",
             termEn = "Foramen ovale",
             termFr = "Foramen ovale",
             termAr = "الثقبة البيضوية",
@@ -1639,6 +1751,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3509,
+            etymology = "",
             termEn = "Ductus venosus",
             termFr = "Canal veineux (Ductus venosus)",
             termAr = "القناة الوريدية",
@@ -1654,6 +1767,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3510,
+            etymology = "",
             termEn = "Fetal circulation",
             termFr = "Circulation fœtale",
             termAr = "الدورة الدموية الجنينية",
@@ -1663,9 +1777,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/ˈfiːtəl ˌsɜːrkjʊˈleɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3511,
+            etymology = "",
             termEn = "Aortic arches",
             termFr = "Arcs aortiques",
             termAr = "الأقواس الأبهرية",
@@ -1675,9 +1793,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/eɪˈɔːrtɪk ɑːrtʃɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3512,
+            etymology = "",
             termEn = "Ventricular septal defect (VSD)",
             termFr = "Communication interventriculaire (CIV)",
             termAr = "عيب الحاجز البطيني",
@@ -1703,9 +1825,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Cardiovasculaire",
             ipaPhonetic = "/tɛˈtrælədʒi əv fəˈloʊ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3514,
+            etymology = "",
             termEn = "Placenta",
             termFr = "Placenta",
             termAr = "المشيمة",
@@ -1721,6 +1847,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3515,
+            etymology = "",
             termEn = "Chorion",
             termFr = "Chorion",
             termAr = "المشيماء",
@@ -1736,6 +1863,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3516,
+            etymology = "",
             termEn = "Amnion",
             termFr = "Amnios",
             termAr = "السلى (الغشاء الأمنيوسي)",
@@ -1751,6 +1879,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3517,
+            etymology = "",
             termEn = "Amniotic fluid",
             termFr = "Liquide amniotique",
             termAr = "السائل الأمنيوسي",
@@ -1766,6 +1895,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3518,
+            etymology = "",
             termEn = "Yolk sac",
             termFr = "Vésicule ombilicale (Sac vitellin)",
             termAr = "الكيس المحي",
@@ -1781,6 +1911,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3519,
+            etymology = "",
             termEn = "Allantois",
             termFr = "Allantoïde",
             termAr = "الغشاء الخلفي (الأللانتوئيس)",
@@ -1796,6 +1927,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3520,
+            etymology = "",
             termEn = "Umbilical cord",
             termFr = "Cordon ombilical",
             termAr = "الحبل السري",
@@ -1811,6 +1943,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3521,
+            etymology = "",
             termEn = "Chorionic villi",
             termFr = "Villosités choriales",
             termAr = "الزغابات المشيمائية",
@@ -1820,9 +1953,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/kɔːrˈɪɒnɪk ˈvɪlaɪ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3522,
+            etymology = "",
             termEn = "Oligohydramnios",
             termFr = "Oligohydramnios",
             termAr = "قلة السائل الأمنيوسي",
@@ -1832,9 +1969,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ˌɒlɪɡoʊhaɪˈdræmniɒs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3523,
+            etymology = "",
             termEn = "Polyhydramnios",
             termFr = "Polyhydramnios",
             termAr = "كثرة السائل الأمنيوسي",
@@ -1844,9 +1985,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Placenta",
             ipaPhonetic = "/ˌpɒlihaɪˈdræmniɒs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3524,
+            etymology = "",
             termEn = "Placenta previa",
             termFr = "Placenta prævia",
             termAr = "المشيمة المنزاحة",
@@ -1862,6 +2007,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3525,
+            etymology = "",
             termEn = "Limb bud",
             termFr = "Bourgeon de membre",
             termAr = "بُرعم الطرف",
@@ -1877,6 +2023,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3526,
+            etymology = "",
             termEn = "Apical ectodermal ridge (AER)",
             termFr = "Bourrelet ectodermique apical (BEA)",
             termAr = "التلال الأديمي الظاهر القمي",
@@ -1892,6 +2039,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3527,
+            etymology = "",
             termEn = "Zone of polarizing activity (ZPA)",
             termFr = "Zone d'activité polarisante (ZPA)",
             termAr = "منطقة النشاط المستقطب",
@@ -1907,6 +2055,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3528,
+            etymology = "",
             termEn = "Polydactyly",
             termFr = "Polydactylie",
             termAr = "تعدد الأصابع",
@@ -1922,6 +2071,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3529,
+            etymology = "",
             termEn = "Syndactyly",
             termFr = "Syndactylie",
             termAr = "التصاق الأصابع",
@@ -1937,6 +2087,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3530,
+            etymology = "",
             termEn = "Clubfoot (Talipes equinovarus)",
             termFr = "Pied bot varus équin",
             termAr = "القدم الحنفاء",
@@ -1952,6 +2103,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3531,
+            etymology = "",
             termEn = "Amelia",
             termFr = "Amélie",
             termAr = "انعدام الطرف",
@@ -1961,9 +2113,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement des Membres",
             ipaPhonetic = "/əˈmiːliə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3532,
+            etymology = "",
             termEn = "Pronephros",
             termFr = "Pronéphros",
             termAr = "الكلية الأولية",
@@ -1979,6 +2135,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3533,
+            etymology = "",
             termEn = "Mesonephros",
             termFr = "Mésonéphros",
             termAr = "الكلية الوسطى",
@@ -1994,6 +2151,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3534,
+            etymology = "",
             termEn = "Metanephros",
             termFr = "Métanéphros",
             termAr = "الكلية النهائية",
@@ -2025,6 +2183,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3536,
+            etymology = "",
             termEn = "Gonad",
             termFr = "Gonade",
             termAr = "الغدة التناسلية",
@@ -2040,6 +2199,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3537,
+            etymology = "",
             termEn = "Primordial germ cells",
             termFr = "Cellules germinales primordiales",
             termAr = "الخلايا الجرثومية الأولية",
@@ -2055,6 +2215,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3538,
+            etymology = "",
             termEn = "SRY gene",
             termFr = "Gène SRY",
             termAr = "جين SRY",
@@ -2070,6 +2231,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3539,
+            etymology = "",
             termEn = "Müllerian duct",
             termFr = "Canal de Müller (Paramésonéphrique)",
             termAr = "قناة مولر",
@@ -2085,6 +2247,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3540,
+            etymology = "",
             termEn = "Wolffian duct (Mesonephric duct)",
             termFr = "Canal de Wolff (Mésonéphrique)",
             termAr = "قناة ولف",
@@ -2100,6 +2263,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3541,
+            etymology = "",
             termEn = "Anti-Müllerian hormone (AMH)",
             termFr = "Hormone anti-Müllérienne (HAM)",
             termAr = "الهرمون المضاد لمولر",
@@ -2115,6 +2279,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3542,
+            etymology = "",
             termEn = "Hypospadias",
             termFr = "Hypospadias",
             termAr = "الإحليل تحتي",
@@ -2130,6 +2295,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3543,
+            etymology = "",
             termEn = "Cryptorchidism",
             termFr = "Cryptorchidie",
             termAr = "الخصية المعتقلة",
@@ -2139,9 +2305,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Urogénital",
             ipaPhonetic = "/krɪpˈtɔːrkɪdɪzəm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3544,
+            etymology = "",
             termEn = "Gut tube",
             termFr = "Tube intestinal primitif",
             termAr = "الأنبوب الهضمي البدائي",
@@ -2157,6 +2327,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3545,
+            etymology = "",
             termEn = "Foregut",
             termFr = "Intestin antérieur",
             termAr = "الأمعاء الأمامية",
@@ -2172,6 +2343,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3546,
+            etymology = "",
             termEn = "Midgut",
             termFr = "Intestin moyen",
             termAr = "الأمعاء الوسطى",
@@ -2187,6 +2359,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3547,
+            etymology = "",
             termEn = "Hindgut",
             termFr = "Intestin postérieur",
             termAr = "الأمعاء الخلفية",
@@ -2202,6 +2375,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3548,
+            etymology = "",
             termEn = "Physiological herniation",
             termFr = "Hernie physiologique",
             termAr = "الفتق الفسيولوجي",
@@ -2233,6 +2407,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3550,
+            etymology = "",
             termEn = "Omphalocele",
             termFr = "Omphalocèle",
             termAr = "القيلة السرية",
@@ -2264,6 +2439,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3552,
+            etymology = "",
             termEn = "Hirschsprung disease",
             termFr = "Maladie de Hirschsprung",
             termAr = "مرض هيرشسبرونغ",
@@ -2273,9 +2449,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Digestif",
             ipaPhonetic = "/ˈhɪrʃsprʌŋ dɪˈziːz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3553,
+            etymology = "",
             termEn = "Stomodeum",
             termFr = "Stomodeum",
             termAr = "الفم البدائي",
@@ -2291,6 +2471,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3554,
+            etymology = "",
             termEn = "Oropharyngeal membrane",
             termFr = "Membrane oropharyngée (buccopharyngée)",
             termAr = "الغشاء الفمي البلعومي",
@@ -2306,6 +2487,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3555,
+            etymology = "",
             termEn = "Frontonasal prominence",
             termFr = "Processus frontonasal",
             termAr = "البروز الجبهي الأنفي",
@@ -2321,6 +2503,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3556,
+            etymology = "",
             termEn = "Cleft lip",
             termFr = "Fente labiale (Bec de lièvre)",
             termAr = "الشفة المشقوقة",
@@ -2336,6 +2519,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3557,
+            etymology = "",
             termEn = "Cleft palate",
             termFr = "Fente palatine",
             termAr = "الحنك المشقوق",
@@ -2351,6 +2535,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3558,
+            etymology = "",
             termEn = "Palatal shelves",
             termFr = "Lames palatines",
             termAr = "رفوف الحنك",
@@ -2360,9 +2545,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement du Visage",
             ipaPhonetic = "/ˈpælɪtəl ʃɛlvz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3559,
+            etymology = "",
             termEn = "Primary palate",
             termFr = "Palais primaire",
             termAr = "الحنك الأولي",
@@ -2378,6 +2567,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3560,
+            etymology = "",
             termEn = "Teratogen",
             termFr = "Tératogène",
             termAr = "المشوِّه الجنيني",
@@ -2425,6 +2615,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3563,
+            etymology = "",
             termEn = "Congenital malformation",
             termFr = "Malformation congénitale",
             termAr = "التشوه الخلقي",
@@ -2450,6 +2641,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/eɪˈdʒɛnɪsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3565,
@@ -2463,6 +2657,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/eɪˈpleɪziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3566,
@@ -2476,9 +2673,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ˌhaɪpəˈpleɪziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3567,
+            etymology = "",
             termEn = "Atresia",
             termFr = "Atrésie",
             termAr = "الانسداد الخلقي",
@@ -2488,9 +2689,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/əˈtriːziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3568,
+            etymology = "",
             termEn = "Ectopia",
             termFr = "Ectopie",
             termAr = "الانتباذ",
@@ -2500,9 +2705,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ɛkˈtoʊpiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3569,
+            etymology = "",
             termEn = "Fetal alcohol syndrome",
             termFr = "Syndrome d'alcoolisation fœtale",
             termAr = "متلازمة الكحول الجنينية",
@@ -2512,9 +2721,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ˈfiːtəl ˈælkəhɒl ˈsɪndroʊm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3570,
+            etymology = "",
             termEn = "Rubella (German measles)",
             termFr = "Rubéole (Rougeole allemande)",
             termAr = "الحصبة الألمانية",
@@ -2524,9 +2737,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Tératologie",
             ipaPhonetic = "/ruːˈbɛlə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3571,
+            etymology = "",
             termEn = "Thalidomide",
             termFr = "Thalidomide",
             termAr = "الثاليدومايد",
@@ -2542,6 +2759,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3572,
+            etymology = "",
             termEn = "Down syndrome (Trisomy 21)",
             termFr = "Syndrome de Down (Trisomie 21)",
             termAr = "متلازمة داون (تثلث الصبغي 21)",
@@ -2557,6 +2775,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3573,
+            etymology = "",
             termEn = "Turner syndrome (45, X)",
             termFr = "Syndrome de Turner (45, X)",
             termAr = "متلازمة تيرنر",
@@ -2572,6 +2791,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3574,
+            etymology = "",
             termEn = "Klinefelter syndrome (47, XXY)",
             termFr = "Syndrome de Klinefelter (47, XXY)",
             termAr = "متلازمة كلاينفيلتر",
@@ -2587,6 +2807,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3575,
+            etymology = "",
             termEn = "Lung bud",
             termFr = "Bourgeon pulmonaire",
             termAr = "برعم الرئة",
@@ -2618,6 +2839,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3577,
+            etymology = "",
             termEn = "Pseudoglandular stage",
             termFr = "Stade pseudoglandulaire",
             termAr = "المرحلة الكاذبة الغدية",
@@ -2627,9 +2849,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˌsjuːdoʊˈɡlændʒʊlər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3578,
+            etymology = "",
             termEn = "Canalicular stage",
             termFr = "Stade canaliculaire",
             termAr = "المرحلة القنوية",
@@ -2639,9 +2865,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/kəˈnæljʊlər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3579,
+            etymology = "",
             termEn = "Saccular stage",
             termFr = "Stade sacculaire",
             termAr = "المرحلة الكيسية",
@@ -2651,9 +2881,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ˈsækjʊlər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3580,
+            etymology = "",
             termEn = "Alveolar stage",
             termFr = "Stade alvéolaire",
             termAr = "المرحلة السنخية",
@@ -2663,9 +2897,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/ælˈviːələr/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3581,
+            etymology = "",
             termEn = "Surfactant",
             termFr = "Surfactant (Tensioactif)",
             termAr = "السرفاكتانت",
@@ -2681,6 +2919,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3582,
+            etymology = "",
             termEn = "Respiratory distress syndrome (RDS)",
             termFr = "Syndrome de détresse respiratoire (SDR)",
             termAr = "متلازمة الضائقة التنفسية",
@@ -2696,6 +2935,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3583,
+            etymology = "",
             termEn = "Diaphragm",
             termFr = "Diaphragme",
             termAr = "الحجاب الحاجز",
@@ -2711,6 +2951,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3584,
+            etymology = "",
             termEn = "Congenital diaphragmatic hernia (CDH)",
             termFr = "Hernie diaphragmatique congénitale (HDC)",
             termAr = "الفتق الحجابي الخلقي",
@@ -2720,9 +2961,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Développement Respiratoire",
             ipaPhonetic = "/kənˈdʒɛnɪtəl ˌdaɪəfræɡˈmætɪk ˈhɜːrniə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3585,
+            etymology = "",
             termEn = "Embryo",
             termFr = "Embryon",
             termAr = "الجنين (المضغة)",
@@ -2738,6 +2983,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3586,
+            etymology = "",
             termEn = "Fetus",
             termFr = "Fœtus",
             termAr = "الجنين",
@@ -2753,6 +2999,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3587,
+            etymology = "",
             termEn = "Gestation",
             termFr = "Gestation (Grossesse)",
             termAr = "الحمل",
@@ -2768,6 +3015,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3588,
+            etymology = "",
             termEn = "Trimester",
             termFr = "Trimestre",
             termAr = "الثلث (ثلاثة أشهر)",
@@ -2777,6 +3025,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈtraɪmɛstər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3589,
@@ -2796,6 +3047,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3590,
+            etymology = "",
             termEn = "Parturition",
             termFr = "Parturition (Accouchement)",
             termAr = "الولادة",
@@ -2811,6 +3063,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3591,
+            etymology = "",
             termEn = "Premature birth",
             termFr = "Naissance prématurée",
             termAr = "الولادة المبكرة",
@@ -2820,9 +3073,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/prɪˈmætʃʊər bɜːrθ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3592,
+            etymology = "",
             termEn = "Preterm labor",
             termFr = "Travail prématuré",
             termAr = "المخاض المبكر",
@@ -2832,9 +3089,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/ˈpriːtɜːrm ˈleɪbər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3593,
+            etymology = "",
             termEn = "Stillbirth",
             termFr = "Mort-né",
             termAr = "الولادة ميتاً",
@@ -2850,6 +3111,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3594,
+            etymology = "",
             termEn = "Miscarriage (Spontaneous abortion)",
             termFr = "Fausse couche (Avortement spontané)",
             termAr = "الإجهاض التلقائي",
@@ -2865,6 +3127,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3595,
+            etymology = "",
             termEn = "Amniocentesis",
             termFr = "Amniocentèse",
             termAr = "بزل السائل الأمنيوسي",
@@ -2880,6 +3143,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3596,
+            etymology = "",
             termEn = "Chorionic villus sampling (CVS)",
             termFr = "Biopsie de trophoblaste (choriocentèse)",
             termAr = "أخذ عينة من الزغابات المشيمائية",
@@ -2895,6 +3159,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3597,
+            etymology = "",
             termEn = "Ultrasound (Sonography)",
             termFr = "Échographie (Ultrasons)",
             termAr = "الموجات فوق الصوتية (التصوير الإيكوغرافي)",
@@ -2910,6 +3175,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3598,
+            etymology = "",
             termEn = "APGAR score",
             termFr = "Score d'APGAR",
             termAr = "مقياس أبغار",
@@ -2925,6 +3191,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3599,
+            etymology = "",
             termEn = "Crown-rump length (CRL)",
             termFr = "Longueur cranio-caudale (LCC)",
             termAr = "طول الرأس إلى المؤخرة",
@@ -2940,6 +3207,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3600,
+            etymology = "",
             termEn = "Induction",
             termFr = "Induction (embryonnaire)",
             termAr = "التحريض الجنيني",
@@ -2971,6 +3239,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3602,
+            etymology = "",
             termEn = "Homeotic gene (Hox gene)",
             termFr = "Gène homéotique (gène Hox)",
             termAr = "الجين الهيوكسي",
@@ -2980,9 +3249,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˈhoʊmiˌɒtɪk dʒiːn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3603,
+            etymology = "",
             termEn = "Sonic hedgehog (SHH)",
             termFr = "Sonic hedgehog (SHH)",
             termAr = "هرمون سونيك هيدجهوج",
@@ -2998,6 +3271,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3604,
+            etymology = "",
             termEn = "Wnt signaling pathway",
             termFr = "Voie de signalisation Wnt",
             termAr = "مسار إشارة Wnt",
@@ -3023,9 +3297,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Génétique",
             ipaPhonetic = "/ˌæpəˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3606,
+            etymology = "",
             termEn = "Cell signaling",
             termFr = "Signalisation cellulaire",
             termAr = "الإشارة الخلوية",
@@ -3073,6 +3351,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3609,
+            etymology = "",
             termEn = "Genomic imprinting",
             termFr = "Empreinte génomique",
             termAr = "البصمة الجينومية",
@@ -3088,6 +3367,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3610,
+            etymology = "",
             termEn = "Optic vesicle",
             termFr = "Vésicule optique",
             termAr = "الحويصلة البصرية",
@@ -3103,6 +3383,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3611,
+            etymology = "",
             termEn = "Optic cup",
             termFr = "Coupe optique",
             termAr = "الكأس البصري",
@@ -3118,6 +3399,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3612,
+            etymology = "",
             termEn = "Lens placode",
             termFr = "Placode du cristallin",
             termAr = "لويحة العدسة",
@@ -3133,6 +3415,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3613,
+            etymology = "",
             termEn = "Retina",
             termFr = "Rétine",
             termAr = "الشبكية",
@@ -3148,6 +3431,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3614,
+            etymology = "",
             termEn = "Coloboma",
             termFr = "Colobome",
             termAr = "شق القزحية",
@@ -3163,6 +3447,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3615,
+            etymology = "",
             termEn = "Otic placode",
             termFr = "Placode otique",
             termAr = "لويحة الأذن",
@@ -3178,6 +3463,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3616,
+            etymology = "",
             termEn = "Otic vesicle (Otocyst)",
             termFr = "Vésicule otique (Otocyste)",
             termAr = "الحويصلة السمعية",
@@ -3193,6 +3479,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3617,
+            etymology = "",
             termEn = "Membranous labyrinth",
             termFr = "Labyrinthe membraneux",
             termAr = "المتاه الغشائي",
@@ -3208,6 +3495,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3618,
+            etymology = "",
             termEn = "Inductive interaction",
             termFr = "Interaction inductive",
             termAr = "التفاعل التحريضي",
@@ -3223,6 +3511,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3619,
+            etymology = "",
             termEn = "Competence",
             termFr = "Compétence (embryonnaire)",
             termAr = "الاستعداد الجنيني",
@@ -3238,6 +3527,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3620,
+            etymology = "",
             termEn = "Mesenchyme",
             termFr = "Mésenchyme",
             termAr = "السدى الجنيني",
@@ -3247,9 +3537,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Généralités",
             ipaPhonetic = "/ˈmɛzəŋkaɪm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3621,
+            etymology = "",
             termEn = "Epithelium",
             termFr = "Épithélium",
             termAr = "الظهارة",
@@ -3265,6 +3559,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3622,
+            etymology = "",
             termEn = "Epithelial-mesenchymal transition (EMT)",
             termFr = "Transition épithéliale-mésenchymateuse (TEM)",
             termAr = "التحول الظهاري-السدوي",
@@ -3280,6 +3575,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3623,
+            etymology = "",
             termEn = "Lateral body folding",
             termFr = "Repliage latéral du corps",
             termAr = "الطي الجانبي للجسم",
@@ -3311,6 +3607,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3625,
+            etymology = "",
             termEn = "Dorsal-ventral axis",
             termFr = "Axe dorso-ventral",
             termAr = "المحور الظهري البطني",
@@ -3326,6 +3623,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3626,
+            etymology = "",
             termEn = "Placental abruption",
             termFr = "Hématome rétroplacentaire",
             termAr = "انفصال المشيمة المبكر",
@@ -3335,9 +3633,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Cliniques",
             ipaPhonetic = "/pləˈsɛntəl əˈbrʌpʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3627,
+            etymology = "",
             termEn = "Preeclampsia",
             termFr = "Prééclampsie",
             termAr = "تسمم الحمل",
@@ -3369,6 +3671,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3629,
+            etymology = "",
             termEn = "Breech presentation",
             termFr = "Présentation du siège",
             termAr = "وضع مقعدي",
@@ -3384,6 +3687,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3630,
+            etymology = "",
             termEn = "Nuchal translucency",
             termFr = "Clarté nucale",
             termAr = "الشفافية القفوية",
@@ -3409,6 +3713,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒlədʒi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3632,
@@ -3422,6 +3729,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/aɪtɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3633,
@@ -3435,6 +3745,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɛktəmi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3634,
@@ -3448,6 +3761,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒstəmi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3635,
@@ -3461,6 +3777,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɒtəmi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3636,
@@ -3474,6 +3793,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/plæsti/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3637,
@@ -3487,9 +3809,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/skəpi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3638,
+            etymology = "",
             termEn = "-graphy",
             termFr = "-graphie",
             termAr = "-تصوير",
@@ -3499,9 +3825,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɡræfi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3639,
+            etymology = "",
             termEn = "-gram",
             termFr = "-gramme",
             termAr = "-تخطيط",
@@ -3511,6 +3841,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ɡræm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3640,
@@ -3524,9 +3857,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/ældʒiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3641,
+            etymology = "",
             termEn = "-pathy",
             termFr = "-pathie",
             termAr = "-مرض",
@@ -3536,6 +3873,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/pæθi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3642,
@@ -3549,6 +3889,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/riːə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3643,
@@ -3562,6 +3905,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/iːmiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3644,
@@ -3575,6 +3921,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mɛɡəli/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3645,
@@ -3588,6 +3937,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/foʊbiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3646,
@@ -3601,6 +3953,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/haɪpər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3647,
@@ -3614,6 +3969,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/haɪpoʊ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3648,
@@ -3627,6 +3985,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/breɪdi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3649,
@@ -3640,6 +4001,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/tæki/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3650,
@@ -3653,6 +4017,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mækroʊ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3651,
@@ -3666,9 +4033,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/maɪkroʊ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3652,
+            etymology = "",
             termEn = "Poly-",
             termFr = "Poly-",
             termAr = "متعدد-",
@@ -3678,9 +4049,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/pɒli/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3653,
+            etymology = "",
             termEn = "Mono-",
             termFr = "Mono-",
             termAr = "أحادي-",
@@ -3690,9 +4065,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Préfixes et Suffixes",
             ipaPhonetic = "/mɒnoʊ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3654,
+            etymology = "",
             termEn = "Anatomy",
             termFr = "Anatomie",
             termAr = "علم التشريح",
@@ -3724,6 +4103,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3656,
+            etymology = "",
             termEn = "Anterior (Ventral)",
             termFr = "Antérieur (Ventral)",
             termAr = "أمامي (بطني)",
@@ -3733,9 +4113,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ænˈtɪəriər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3657,
+            etymology = "",
             termEn = "Posterior (Dorsal)",
             termFr = "Postérieur (Dorsal)",
             termAr = "خلفي (ظهري)",
@@ -3745,9 +4129,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/pɒˈstɪəriər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3658,
+            etymology = "",
             termEn = "Superior (Cranial)",
             termFr = "Supérieur (Crânial)",
             termAr = "علوي (رأسي)",
@@ -3757,9 +4145,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/suːˈpɪəriər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3659,
+            etymology = "",
             termEn = "Inferior (Caudal)",
             termFr = "Inférieur (Caudal)",
             termAr = "سفلي (ذيلي)",
@@ -3769,9 +4161,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ɪnˈfɪəriər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3660,
+            etymology = "",
             termEn = "Medial",
             termFr = "Médial",
             termAr = "إنسي (أوسط)",
@@ -3781,9 +4177,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈmiːdiəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3661,
+            etymology = "",
             termEn = "Lateral",
             termFr = "Latéral",
             termAr = "وحشي (جانبي)",
@@ -3793,9 +4193,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈlætərəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3662,
+            etymology = "",
             termEn = "Proximal",
             termFr = "Proximal",
             termAr = "قريب",
@@ -3805,9 +4209,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈprɒksɪməl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3663,
+            etymology = "",
             termEn = "Distal",
             termFr = "Distal",
             termAr = "بعيد",
@@ -3817,9 +4225,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˈdɪstəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3664,
+            etymology = "",
             termEn = "Superficial",
             termFr = "Superficiel",
             termAr = "سطحي",
@@ -3829,9 +4241,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/ˌsuːpəˈfɪʃəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3665,
+            etymology = "",
             termEn = "Deep",
             termFr = "Profond",
             termAr = "عميق",
@@ -3841,9 +4257,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Anatomie Générale",
             ipaPhonetic = "/diːp/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3666,
+            etymology = "",
             termEn = "Sagittal plane",
             termFr = "Plan sagittal",
             termAr = "المستوى السهمي",
@@ -3859,6 +4279,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3667,
+            etymology = "",
             termEn = "Coronal plane (Frontal)",
             termFr = "Plan coronal (Frontal)",
             termAr = "المستوى الإكليلي (الجبهي)",
@@ -3874,6 +4295,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3668,
+            etymology = "",
             termEn = "Transverse plane (Horizontal)",
             termFr = "Plan transversal (Horizontal)",
             termAr = "المستوى المستعرض (الأفقي)",
@@ -3889,6 +4311,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3669,
+            etymology = "",
             termEn = "Organ",
             termFr = "Organe",
             termAr = "عضو",
@@ -3904,6 +4327,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3670,
+            etymology = "",
             termEn = "Tissue",
             termFr = "Tissu",
             termAr = "نسيج",
@@ -3919,6 +4343,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3671,
+            etymology = "",
             termEn = "Organ system",
             termFr = "Système d'organes",
             termAr = "جهاز",
@@ -3934,6 +4359,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3672,
+            etymology = "",
             termEn = "Heart",
             termFr = "Cœur",
             termAr = "القلب",
@@ -3949,6 +4375,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3673,
+            etymology = "",
             termEn = "Artery",
             termFr = "Artère",
             termAr = "شريان",
@@ -3964,6 +4391,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3674,
+            etymology = "",
             termEn = "Vein",
             termFr = "Veine",
             termAr = "وريد",
@@ -3979,6 +4407,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3675,
+            etymology = "",
             termEn = "Capillary",
             termFr = "Capillaire",
             termAr = "شعيرة دموية",
@@ -3994,6 +4423,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3676,
+            etymology = "",
             termEn = "Aorta",
             termFr = "Aorte",
             termAr = "الشريان الأورطي",
@@ -4009,6 +4439,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3677,
+            etymology = "",
             termEn = "Ventricle",
             termFr = "Ventricule",
             termAr = "البطين",
@@ -4024,6 +4455,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3678,
+            etymology = "",
             termEn = "Atrium",
             termFr = "Oreillette",
             termAr = "الأذين",
@@ -4039,6 +4471,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3679,
+            etymology = "",
             termEn = "Myocardium",
             termFr = "Myocarde",
             termAr = "عضلة القلب",
@@ -4054,6 +4487,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3680,
+            etymology = "",
             termEn = "Pericardium",
             termFr = "Péricarde",
             termAr = "التامور",
@@ -4069,6 +4503,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3681,
+            etymology = "",
             termEn = "Endocardium",
             termFr = "Endocarde",
             termAr = "الشغاف",
@@ -4084,6 +4519,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3682,
+            etymology = "",
             termEn = "Heart rate",
             termFr = "Fréquence cardiaque",
             termAr = "معدل ضربات القلب",
@@ -4093,9 +4529,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/hɑːrt reɪt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3683,
+            etymology = "",
             termEn = "Blood pressure",
             termFr = "Pression artérielle",
             termAr = "ضغط الدم",
@@ -4111,6 +4551,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3684,
+            etymology = "",
             termEn = "Systole",
             termFr = "Systole",
             termAr = "الانقباض القلبي",
@@ -4126,6 +4567,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3685,
+            etymology = "",
             termEn = "Diastole",
             termFr = "Diastole",
             termAr = "الانبساط القلبي",
@@ -4167,9 +4609,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpərˈtɛnʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3688,
+            etymology = "",
             termEn = "Hypotension",
             termFr = "Hypotension",
             termAr = "انخفاض ضغط الدم",
@@ -4179,9 +4625,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌhaɪpoʊˈtɛnʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3689,
+            etymology = "",
             termEn = "Arrhythmia",
             termFr = "Arythmie",
             termAr = "اضطراب النظم القلبي",
@@ -4191,9 +4641,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/əˈrɪðmiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3690,
+            etymology = "",
             termEn = "Myocardial infarction",
             termFr = "Infarctus du myocarde",
             termAr = "احتشاء عضلة القلب",
@@ -4203,9 +4657,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Cardiovasculaire",
             ipaPhonetic = "/ˌmaɪoʊˈkɑːrdiəl ɪnˈfɑːrkʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3691,
+            etymology = "",
             termEn = "Lung",
             termFr = "Poumon",
             termAr = "الرئة",
@@ -4269,6 +4727,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3695,
+            etymology = "",
             termEn = "Alveolus (pl. Alveoli)",
             termFr = "Alvéole (pl. Alvéoles)",
             termAr = "السنخ الرئوي",
@@ -4300,6 +4759,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3697,
+            etymology = "",
             termEn = "Respiration",
             termFr = "Respiration",
             termAr = "التنفس",
@@ -4315,6 +4775,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3698,
+            etymology = "",
             termEn = "Inspiration (Inhalation)",
             termFr = "Inspiration (Inhalation)",
             termAr = "الشهيق",
@@ -4330,6 +4791,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3699,
+            etymology = "",
             termEn = "Expiration (Exhalation)",
             termFr = "Expiration (Exhalation)",
             termAr = "الزفير",
@@ -4345,6 +4807,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3700,
+            etymology = "",
             termEn = "Tidal volume",
             termFr = "Volume courant",
             termAr = "حجم المد والجزر",
@@ -4370,9 +4833,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Respiratoire",
             ipaPhonetic = "/njuːˈmoʊniə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3702,
+            etymology = "",
             termEn = "Asthma",
             termFr = "Asthme",
             termAr = "الربو",
@@ -4404,6 +4871,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3704,
+            etymology = "",
             termEn = "Stomach",
             termFr = "Estomac",
             termAr = "المعدة",
@@ -4419,6 +4887,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3705,
+            etymology = "",
             termEn = "Small intestine",
             termFr = "Intestin grêle",
             termAr = "الأمعاء الدقيقة",
@@ -4450,6 +4919,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3707,
+            etymology = "",
             termEn = "Liver",
             termFr = "Foie",
             termAr = "الكبد",
@@ -4465,6 +4935,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3708,
+            etymology = "",
             termEn = "Pancreas",
             termFr = "Pancréas",
             termAr = "البنكرياس",
@@ -4480,6 +4951,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3709,
+            etymology = "",
             termEn = "Gallbladder",
             termFr = "Vésicule biliaire",
             termAr = "المرارة",
@@ -4495,6 +4967,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3710,
+            etymology = "",
             termEn = "Peristalsis",
             termFr = "Péristaltisme",
             termAr = "التمعج",
@@ -4504,9 +4977,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Digestif",
             ipaPhonetic = "/ˌpɛrɪˈstɔːlsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3711,
+            etymology = "",
             termEn = "Digestion",
             termFr = "Digestion",
             termAr = "الهضم",
@@ -4522,6 +4999,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3712,
+            etymology = "",
             termEn = "Absorption",
             termFr = "Absorption",
             termAr = "الامتصاص",
@@ -4537,6 +5015,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3713,
+            etymology = "",
             termEn = "Brain",
             termFr = "Cerveau",
             termAr = "الدماغ",
@@ -4552,6 +5031,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3714,
+            etymology = "",
             termEn = "Spinal cord",
             termFr = "Moelle épinière",
             termAr = "الحبل الشوكي",
@@ -4583,6 +5063,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3716,
+            etymology = "",
             termEn = "Synapse",
             termFr = "Synapse",
             termAr = "المشبك العصبي",
@@ -4598,6 +5079,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3717,
+            etymology = "",
             termEn = "Axon",
             termFr = "Axone",
             termAr = "المحور العصبي",
@@ -4613,6 +5095,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3718,
+            etymology = "",
             termEn = "Dendrite",
             termFr = "Dendrite",
             termAr = "التشعبات العصبية",
@@ -4644,6 +5127,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3720,
+            etymology = "",
             termEn = "Central nervous system (CNS)",
             termFr = "Système nerveux central (SNC)",
             termAr = "الجهاز العصبي المركزي",
@@ -4659,6 +5143,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3721,
+            etymology = "",
             termEn = "Peripheral nervous system (PNS)",
             termFr = "Système nerveux périphérique (SNP)",
             termAr = "الجهاز العصبي المحيطي",
@@ -4668,9 +5153,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Nerveux",
             ipaPhonetic = "/pəˈrɪfərəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3722,
+            etymology = "",
             termEn = "Cerebrum",
             termFr = "Cerveau (hémisphères)",
             termAr = "المخ",
@@ -4686,6 +5175,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3723,
+            etymology = "",
             termEn = "Cerebellum",
             termFr = "Cervelet",
             termAr = "المخيخ",
@@ -4701,6 +5191,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3724,
+            etymology = "",
             termEn = "Brainstem",
             termFr = "Tronc cérébral",
             termAr = "جذع الدماغ",
@@ -4716,6 +5207,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3725,
+            etymology = "",
             termEn = "Reflex",
             termFr = "Réflexe",
             termAr = "المنعكس",
@@ -4731,6 +5223,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3726,
+            etymology = "",
             termEn = "Bone",
             termFr = "Os",
             termAr = "العظم",
@@ -4746,6 +5239,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3727,
+            etymology = "",
             termEn = "Muscle",
             termFr = "Muscle",
             termAr = "العضلة",
@@ -4761,6 +5255,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3728,
+            etymology = "",
             termEn = "Tendon",
             termFr = "Tendon",
             termAr = "الوتر",
@@ -4776,6 +5271,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3729,
+            etymology = "",
             termEn = "Ligament",
             termFr = "Ligament",
             termAr = "الرباط",
@@ -4791,6 +5287,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3730,
+            etymology = "",
             termEn = "Joint (Articulation)",
             termFr = "Articulation",
             termAr = "المفصل",
@@ -4806,6 +5303,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3731,
+            etymology = "",
             termEn = "Cartilage",
             termFr = "Cartilage",
             termAr = "الغضروف",
@@ -4837,6 +5335,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3733,
+            etymology = "",
             termEn = "Skeletal muscle",
             termFr = "Muscle squelettique",
             termAr = "العضلة الهيكلية",
@@ -4846,9 +5345,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈskɛlɪtəl ˈmʌsəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3734,
+            etymology = "",
             termEn = "Smooth muscle",
             termFr = "Muscle lisse",
             termAr = "العضلة الملساء",
@@ -4858,6 +5361,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/smuːð ˈmʌsəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3735,
@@ -4871,9 +5377,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Musculo-Squelettique",
             ipaPhonetic = "/ˈkɑːrdiæk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3736,
+            etymology = "",
             termEn = "Fracture",
             termFr = "Fracture",
             termAr = "الكسر",
@@ -4905,6 +5415,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3738,
+            etymology = "",
             termEn = "Hormone",
             termFr = "Hormone",
             termAr = "الهرمون",
@@ -4920,6 +5431,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3739,
+            etymology = "",
             termEn = "Endocrine gland",
             termFr = "Glande endocrine",
             termAr = "الغدة الصماء",
@@ -4935,6 +5447,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3740,
+            etymology = "",
             termEn = "Exocrine gland",
             termFr = "Glande exocrine",
             termAr = "الغدة خارجية الإفراز",
@@ -4950,6 +5463,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3741,
+            etymology = "",
             termEn = "Pituitary gland",
             termFr = "Glande hypophyse (Hypophyse)",
             termAr = "الغدة النخامية",
@@ -4997,6 +5511,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3744,
+            etymology = "",
             termEn = "Insulin",
             termFr = "Insuline",
             termAr = "الأنسولين",
@@ -5012,6 +5527,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3745,
+            etymology = "",
             termEn = "Glucagon",
             termFr = "Glucagon",
             termAr = "الغلوكاغون",
@@ -5027,6 +5543,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3746,
+            etymology = "",
             termEn = "Cortisol",
             termFr = "Cortisol",
             termAr = "الكورتيزول",
@@ -5042,6 +5559,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3747,
+            etymology = "",
             termEn = "Diabetes mellitus",
             termFr = "Diabète sucré",
             termAr = "داء السكري",
@@ -5057,6 +5575,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3748,
+            etymology = "",
             termEn = "Kidney",
             termFr = "Rein",
             termAr = "الكلية",
@@ -5088,6 +5607,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3750,
+            etymology = "",
             termEn = "Glomerulus",
             termFr = "Glomérule",
             termAr = "الكبيبة",
@@ -5119,6 +5639,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3752,
+            etymology = "",
             termEn = "Urinary bladder",
             termFr = "Vessie",
             termAr = "المثانة البولية",
@@ -5134,6 +5655,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3753,
+            etymology = "",
             termEn = "Urethra",
             termFr = "Urètre",
             termAr = "مجرى البول",
@@ -5149,6 +5671,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3754,
+            etymology = "",
             termEn = "Filtration",
             termFr = "Filtration",
             termAr = "الترشيح",
@@ -5164,6 +5687,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3755,
+            etymology = "",
             termEn = "Reabsorption",
             termFr = "Réabsorption",
             termAr = "إعادة الامتصاص",
@@ -5179,6 +5703,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3756,
+            etymology = "",
             termEn = "Secretion (renal)",
             termFr = "Sécrétion (rénale)",
             termAr = "الإفراز (الكلوي)",
@@ -5194,6 +5719,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3757,
+            etymology = "",
             termEn = "Renal failure",
             termFr = "Insuffisance rénale",
             termAr = "الفشل الكلوي",
@@ -5203,6 +5729,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Système Urinaire",
             ipaPhonetic = "/ˈriːnəl ˈfeɪlər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3758,
@@ -5222,6 +5751,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3759,
+            etymology = "",
             termEn = "Antigen",
             termFr = "Antigène",
             termAr = "المستضد",
@@ -5285,6 +5815,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3763,
+            etymology = "",
             termEn = "Inflammation",
             termFr = "Inflammation",
             termAr = "التهاب",
@@ -5332,6 +5863,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3766,
+            etymology = "",
             termEn = "Hemoglobin",
             termFr = "Hémoglobine",
             termAr = "الهيموغلوبين",
@@ -5363,6 +5895,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3768,
+            etymology = "",
             termEn = "Symptom",
             termFr = "Symptôme",
             termAr = "العَرَض",
@@ -5373,9 +5906,12 @@ object TerminologieMedicaleTerms {
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˈsɪmptəm/",
             exampleEn = "The symptom is the subjective experience reported by the patient (e.g., pain, nausea).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3769,
+            etymology = "",
             termEn = "Sign",
             termFr = "Signe",
             termAr = "العلامة",
@@ -5391,6 +5927,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3770,
+            etymology = "",
             termEn = "Fever (Pyrexia)",
             termFr = "Fièvre (Pyrexie)",
             termAr = "الحُمى",
@@ -5406,6 +5943,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3771,
+            etymology = "",
             termEn = "Pain",
             termFr = "Douleur",
             termAr = "الألم",
@@ -5431,6 +5969,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ɪˈdiːmə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3773,
@@ -5444,6 +5985,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/saɪˈænoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3774,
@@ -5463,6 +6007,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3775,
+            etymology = "",
             termEn = "Nausea",
             termFr = "Nausée",
             termAr = "الغثيان",
@@ -5478,6 +6023,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3776,
+            etymology = "",
             termEn = "Vomiting (Emesis)",
             termFr = "Vomissements (Émèse)",
             termAr = "القيء",
@@ -5503,9 +6049,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌdaɪəˈrɪə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3778,
+            etymology = "",
             termEn = "Constipation",
             termFr = "Constipation",
             termAr = "الإمساك",
@@ -5515,9 +6065,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Signes et Symptômes",
             ipaPhonetic = "/ˌkɒnstɪˈpeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3779,
+            etymology = "",
             termEn = "Diagnosis",
             termFr = "Diagnostic",
             termAr = "التشخيص",
@@ -5549,6 +6103,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3781,
+            etymology = "",
             termEn = "Prognosis",
             termFr = "Pronostic",
             termAr = "التكهن بالمآل",
@@ -5580,6 +6135,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3783,
+            etymology = "",
             termEn = "Drug (Medication)",
             termFr = "Médicament (Drogue)",
             termAr = "الدواء",
@@ -5595,6 +6151,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3784,
+            etymology = "",
             termEn = "Dose",
             termFr = "Dose",
             termAr = "الجرعة",
@@ -5642,6 +6199,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3787,
+            etymology = "",
             termEn = "Half-life (t½)",
             termFr = "Demi-vie (t½)",
             termAr = "عمر النصف",
@@ -5657,6 +6215,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3788,
+            etymology = "",
             termEn = "Side effect",
             termFr = "Effet secondaire",
             termAr = "التأثير الجانبي",
@@ -5672,6 +6231,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3789,
+            etymology = "",
             termEn = "Contraindication",
             termFr = "Contre-indication",
             termAr = "الموانع",
@@ -5687,6 +6247,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3790,
+            etymology = "",
             termEn = "Antibiotic",
             termFr = "Antibiotique",
             termAr = "المضاد الحيوي",
@@ -5702,6 +6263,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3791,
+            etymology = "",
             termEn = "Analgesic",
             termFr = "Analgésique",
             termAr = "المسكن",
@@ -5717,6 +6279,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3792,
+            etymology = "",
             termEn = "Anti-inflammatory",
             termFr = "Anti-inflammatoire",
             termAr = "مضاد الالتهاب",
@@ -5727,9 +6290,12 @@ object TerminologieMedicaleTerms {
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˌænti ɪnˈflæmətɔːri/",
             exampleEn = "The anti-inflammatory is the drug that reduces inflammation (e.g., NSAIDs, corticosteroids).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3793,
+            etymology = "",
             termEn = "Antihypertensive",
             termFr = "Antihypertenseur",
             termAr = "خافض ضغط الدم",
@@ -5745,6 +6311,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3794,
+            etymology = "",
             termEn = "Diuretic",
             termFr = "Diurétique",
             termAr = "مُدر البول",
@@ -5760,6 +6327,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3795,
+            etymology = "",
             termEn = "Placebo",
             termFr = "Placebo",
             termAr = "الدواء الوهمي",
@@ -5775,6 +6343,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3796,
+            etymology = "",
             termEn = "Tolerance",
             termFr = "Tolérance",
             termAr = "التحمل الدوائي",
@@ -5784,9 +6353,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Pharmacologie",
             ipaPhonetic = "/ˈtɒlərəns/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3797,
+            etymology = "",
             termEn = "Pathogen",
             termFr = "Pathogène",
             termAr = "مسبب المرض",
@@ -5802,6 +6375,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3798,
+            etymology = "",
             termEn = "Bacterium (pl. Bacteria)",
             termFr = "Bactérie (pl. Bactéries)",
             termAr = "البكتيريا",
@@ -5817,6 +6391,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3799,
+            etymology = "",
             termEn = "Virus",
             termFr = "Virus",
             termAr = "الفيروس",
@@ -5832,6 +6407,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3800,
+            etymology = "",
             termEn = "Fungus (pl. Fungi)",
             termFr = "Champignon (pl. Champignons)",
             termAr = "الفطر",
@@ -5847,6 +6423,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3801,
+            etymology = "",
             termEn = "Parasite",
             termFr = "Parasite",
             termAr = "الطفيل",
@@ -5862,6 +6439,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3802,
+            etymology = "",
             termEn = "Infection",
             termFr = "Infection",
             termAr = "العدوى",
@@ -5877,6 +6455,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3803,
+            etymology = "",
             termEn = "Sepsis",
             termFr = "Sepsis",
             termAr = "الإنتان",
@@ -5892,6 +6471,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3804,
+            etymology = "",
             termEn = "Epidemic",
             termFr = "Épidémie",
             termAr = "وباء محلي",
@@ -5907,6 +6487,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3805,
+            etymology = "",
             termEn = "Pandemic",
             termFr = "Pandémie",
             termAr = "جائحة",
@@ -5922,6 +6503,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3806,
+            etymology = "",
             termEn = "Vaccine",
             termFr = "Vaccin",
             termAr = "اللقاح",
@@ -5937,6 +6519,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3807,
+            etymology = "",
             termEn = "Antibiotic resistance",
             termFr = "Résistance aux antibiotiques",
             termAr = "مقاومة المضادات الحيوية",
@@ -5968,6 +6551,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3809,
+            etymology = "",
             termEn = "Tumor (Neoplasm)",
             termFr = "Tumeur (Néoplasme)",
             termAr = "الورم",
@@ -5983,6 +6567,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3810,
+            etymology = "",
             termEn = "Benign",
             termFr = "Bénin",
             termAr = "حميد",
@@ -5998,6 +6583,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3811,
+            etymology = "",
             termEn = "Malignant",
             termFr = "Malin",
             termAr = "خبيث",
@@ -6013,6 +6599,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3812,
+            etymology = "",
             termEn = "Metastasis",
             termFr = "Métastase",
             termAr = "النقيلة (الانتشار)",
@@ -6060,6 +6647,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3815,
+            etymology = "",
             termEn = "Chemotherapy",
             termFr = "Chimiothérapie",
             termAr = "العلاج الكيميائي",
@@ -6075,6 +6663,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3816,
+            etymology = "",
             termEn = "Radiotherapy",
             termFr = "Radiothérapie",
             termAr = "العلاج الإشعاعي",
@@ -6090,6 +6679,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3817,
+            etymology = "",
             termEn = "Biopsy",
             termFr = "Biopsie",
             termAr = "الخزعة",
@@ -6105,6 +6695,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3818,
+            etymology = "",
             termEn = "Remission",
             termFr = "Rémission",
             termAr = "الهدأة",
@@ -6120,6 +6711,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3819,
+            etymology = "",
             termEn = "Staging",
             termFr = "Stadification",
             termAr = "تحديد المرحلة",
@@ -6135,6 +6727,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3820,
+            etymology = "",
             termEn = "Surgery",
             termFr = "Chirurgie",
             termAr = "الجراحة",
@@ -6150,6 +6743,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3821,
+            etymology = "",
             termEn = "Incision",
             termFr = "Incision",
             termAr = "الشق الجراحي",
@@ -6165,6 +6759,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3822,
+            etymology = "",
             termEn = "Suture",
             termFr = "Suture",
             termAr = "الخياطة الجراحية",
@@ -6180,6 +6775,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3823,
+            etymology = "",
             termEn = "Anesthesia",
             termFr = "Anesthésie",
             termAr = "التخدير",
@@ -6195,6 +6791,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3824,
+            etymology = "",
             termEn = "Intubation",
             termFr = "Intubation",
             termAr = "التنبيب",
@@ -6204,9 +6801,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌɪntjʊˈbeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3825,
+            etymology = "",
             termEn = "Catheterization",
             termFr = "Cathétérisme",
             termAr = "القسطرة",
@@ -6216,6 +6817,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌkæθɪtəraɪˈzeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3826,
@@ -6229,6 +6833,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ɛnˈdɒskəpi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3827,
@@ -6242,9 +6849,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/ˌlæpəˈrɒskəpi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3828,
+            etymology = "",
             termEn = "Dialysis",
             termFr = "Dialyse",
             termAr = "الغسيل الكلوي",
@@ -6260,6 +6871,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3829,
+            etymology = "",
             termEn = "Blood transfusion",
             termFr = "Transfusion sanguine",
             termAr = "نقل الدم",
@@ -6269,6 +6881,9 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Procédures Médicales",
             ipaPhonetic = "/blʌd trænsˈfjuːʒən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3830,
@@ -6288,6 +6903,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3831,
+            etymology = "",
             termEn = "MRI (Magnetic resonance imaging)",
             termFr = "IRM (Imagerie par résonance magnétique)",
             termAr = "التصوير بالرنين المغناطيسي",
@@ -6303,6 +6919,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3832,
+            etymology = "",
             termEn = "CT scan (Computed tomography)",
             termFr = "Scanner (TDM)",
             termAr = "الأشعة المقطعية",
@@ -6318,6 +6935,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3833,
+            etymology = "",
             termEn = "Genetics",
             termFr = "Génétique",
             termAr = "علم الوراثة",
@@ -6333,6 +6951,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3834,
+            etymology = "",
             termEn = "Chromosome",
             termFr = "Chromosome",
             termAr = "الصبغي (الكروموسوم)",
@@ -6348,6 +6967,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3835,
+            etymology = "",
             termEn = "Gene",
             termFr = "Gène",
             termAr = "الجين",
@@ -6363,6 +6983,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3836,
+            etymology = "",
             termEn = "Mutation",
             termFr = "Mutation",
             termAr = "الطفرة الجينية",
@@ -6378,6 +6999,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3837,
+            etymology = "",
             termEn = "Dominant gene",
             termFr = "Gène dominant",
             termAr = "الجين السائد",
@@ -6393,6 +7015,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3838,
+            etymology = "",
             termEn = "Recessive gene",
             termFr = "Gène récessif",
             termAr = "الجين المتنحي",
@@ -6408,6 +7031,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3839,
+            etymology = "",
             termEn = "Hereditary disease",
             termFr = "Maladie héréditaire",
             termAr = "المرض الوراثي",
@@ -6421,8 +7045,9 @@ object TerminologieMedicaleTerms {
             exampleFr = "La maladie héréditaire est une maladie transmise des parents à la progéniture par les gènes.",
             exampleAr = "المرض الوراثي هو مرض ينتقل من الوالدين إلى الأبناء عبر الجينات.",
         ),
-                MedicalTermEntity(
+        MedicalTermEntity(
             id = 3841,
+            etymology = "",
             termEn = "Homeostasis",
             termFr = "Homéostasie",
             termAr = "التوازن الداخلي",
@@ -6438,6 +7063,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3842,
+            etymology = "",
             termEn = "Metabolism",
             termFr = "Métabolisme",
             termAr = "الأيض",
@@ -6447,9 +7073,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/məˈtæbəlɪzəm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3843,
+            etymology = "",
             termEn = "Catabolism",
             termFr = "Catabolisme",
             termAr = "الهدم",
@@ -6465,6 +7095,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3844,
+            etymology = "",
             termEn = "Anabolism",
             termFr = "Anabolisme",
             termAr = "البناء الحيوي",
@@ -6512,6 +7143,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3847,
+            etymology = "",
             termEn = "Acute",
             termFr = "Aigu",
             termAr = "حاد",
@@ -6527,6 +7159,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3848,
+            etymology = "",
             termEn = "Chronic",
             termFr = "Chronique",
             termAr = "مزمن",
@@ -6542,6 +7175,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3849,
+            etymology = "",
             termEn = "Idiopathic",
             termFr = "Idiopathique",
             termAr = "مجهول السبب",
@@ -6573,6 +7207,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3851,
+            etymology = "",
             termEn = "Nosocomial infection",
             termFr = "Infection nosocomiale",
             termAr = "العدوى المكتسبة في المستشفى",
@@ -6588,6 +7223,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3852,
+            etymology = "",
             termEn = "Prophylaxis",
             termFr = "Prophylaxie",
             termAr = "الوقاية",
@@ -6597,9 +7233,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˌprɒfɪˈlæksɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3853,
+            etymology = "",
             termEn = "Rehabilitation",
             termFr = "Rééducation (Réhabilitation)",
             termAr = "إعادة التأهيل",
@@ -6615,6 +7255,7 @@ object TerminologieMedicaleTerms {
         ),
         MedicalTermEntity(
             id = 3854,
+            etymology = "",
             termEn = "Palliative care",
             termFr = "Soins palliatifs",
             termAr = "الرعاية التلطيفية",
@@ -6624,9 +7265,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈpæliətɪv kɛr/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3855,
+            etymology = "",
             termEn = "Vital signs",
             termFr = "Signes vitaux",
             termAr = "العلامات الحيوية",
@@ -6636,9 +7281,13 @@ object TerminologieMedicaleTerms {
             module = "Terminologie Médicale",
             chapter = "Termes Complémentaires",
             ipaPhonetic = "/ˈvaɪtəl saɪnz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3856,
+            etymology = "",
             termEn = "Informed consent",
             termFr = "Consentement éclairé",
             termAr = "الموافقة المستنيرة",
@@ -6667,6 +7316,6 @@ object TerminologieMedicaleTerms {
             exampleEn = "The medical history is the record of a patient's past and present health conditions and treatments.",
             exampleFr = "L'antécédents médicaux est un enregistrement des conditions de santé et traitements passés et présents d'un patient.",
             exampleAr = "التاريخ المرضي هو سجل بالحالات الصحية والعلاجات السابقة والحالية للمريض.",
-        )
+        ),
     )
 }

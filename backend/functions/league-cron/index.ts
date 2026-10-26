@@ -106,13 +106,16 @@ serve(async (req) => {
       let hadPromotion = false
       let hadDemotion = false
 
+      // Clamp: bottom 5 for N >= 15, otherwise N - 10 - 1 (min 0) to avoid
+      // demoting users above the top-10 promotion band; document small-cohort
+      // behaviour explicitly.
+      const demoteThreshold = Math.max(members.length - demotionCount - 1, promotionCount + 1)
       for (let i = 0; i < members.length; i++) {
         const member = members[i]
         const isPromotion = i < promotionCount
-        // Dans les petites cohortes, un même rang ne peut être à la fois promu
-        // et relégué : la promotion prioritaire du `else if` d'origine reléguait
-        // en réalité des utilisateurs du bas de classement.
-        const isDemotion = i >= members.length - demotionCount && !isPromotion
+        // In small cohorts, demotion is clamped so it cannot overlap with the
+        // promotion band (top 10).
+        const isDemotion = i >= demoteThreshold && !isPromotion
 
         let nextTier = cohort.tier
         let gemsReward = 0

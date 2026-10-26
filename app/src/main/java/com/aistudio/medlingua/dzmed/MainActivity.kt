@@ -10,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -48,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.aistudio.medlingua.dzmed.localization.Language
 import com.aistudio.medlingua.dzmed.localization.Strings
 import com.aistudio.medlingua.dzmed.ui.components.RewardPopup
 import com.aistudio.medlingua.dzmed.ui.screens.FlashcardsScreen
@@ -74,6 +76,9 @@ import com.aistudio.medlingua.dzmed.ui.components.AppIntroOverlay
 import com.aistudio.medlingua.dzmed.ui.components.GemsLeagueTopBar
 import com.aistudio.medlingua.dzmed.ui.components.LeagueScreen
 import com.aistudio.medlingua.dzmed.ui.components.SuperPaywallDialog
+import com.aistudio.medlingua.dzmed.ui.screens.StorySessionScreen
+import com.aistudio.medlingua.dzmed.data.story.StoryAssetSource
+import com.aistudio.medlingua.dzmed.data.repository.StoryRepository
 import com.aistudio.medlingua.dzmed.service.NotificationHelper
 
 enum class MainDestination(
@@ -144,6 +149,8 @@ fun MedLinguaAppContent(
     // Full-screen overlays (spec §5 : leçons hors onglets)
     var showQuiz by remember { mutableStateOf(false) }
     var showFlash by remember { mutableStateOf(false) }
+    var showStory by remember { mutableStateOf(false) }
+    var showReview by remember { mutableStateOf(false) }  // LOT2/WS2.1 : hub révisions
     val lang = uiState.currentLanguage
 
     // Runtime Permission for Notifications (Android 13+ / Tiramisu)
@@ -187,11 +194,17 @@ fun MedLinguaAppContent(
 
     // BackHandler: ferme le quiz/les flashcards, sinon revient au Parcours
     BackHandler(
-        enabled = showQuiz || showFlash || currentDestination != MainDestination.PATH
+        enabled = showQuiz || showFlash || showStory || showReview || currentDestination != MainDestination.PATH
     ) {
         when {
             showQuiz -> showQuiz = false
             showFlash -> showFlash = false
+            showReview -> showReview = false
+            // Séance histoire : suspendue (progression déjà sauvegardée) + TTS coupé.
+            showStory -> {
+                (context.applicationContext as? MedLinguaApp)?.ttsManager?.stop()
+                showStory = false
+            }
             else -> currentDestination = MainDestination.PATH
         }
     }
@@ -282,15 +295,40 @@ fun MedLinguaAppContent(
             ) {
                 when (currentDestination) {
                     MainDestination.PATH -> {
-                        PathScreen(
-                            uiState = uiState,
-                            onOpenLesson = { moduleId, level ->
-                                viewModel.startPathLesson(moduleId, level)
-                                showQuiz = true
-                            },
-                            onBuyFreeze = { viewModel.buyFreeze() },
-                            onOpenChests = { viewModel.openChestRewardPopup() }
-                        )
+                        Column {
+                            // LOT2/WS2.1 : entrée vers le hub de révision dès
+                            // qu'une leçon ratée y attend (file peuplée par les
+                            // leçons de chapitre — cf. TODO pour le câblage restant).
+                            val allReviews by viewModel.reviewQueue.collectAsStateWithLifecycle()
+                            val reviewCount = allReviews.count { it.status == com.aistudio.medlingua.dzmed.data.local.entity.ReviewQueueItem.Status.UNLOCKED }
+                            if (reviewCount > 0) {
+                                androidx.compose.material3.Surface(
+                                    onClick = { showReview = true },
+                                    shape = androidx.compose.foundation.shape.RoundedCornerShape(20.dp),
+                                    color = Color(0xFF0B5A3C),
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = 16.dp, vertical = 4.dp)
+                                ) {
+                                    Text(
+                                        (if (lang == Language.ARABIC) "مراجعات في الانتظار" else if (lang == Language.ENGLISH) "Reviews waiting" else "Révisions en attente") + " · $reviewCount",
+                                        color = Color.White,
+                                        modifier = Modifier.padding(10.dp),
+                                        fontSize = 14.sp
+                                    )
+                                }
+                            }
+                            PathScreen(
+                                uiState = uiState,
+                                onOpenLesson = { moduleId, level ->
+                                    viewModel.startPathLesson(moduleId, level)
+                                    showQuiz = true
+                                },
+                                onBuyFreeze = { viewModel.buyFreeze() },
+                                onOpenChests = { viewModel.openChestRewardPopup() },
+                                onOpenStory = { showStory = true }
+                            )
+                        }
                     }
                     MainDestination.PRACTICE -> {
                         PracticeScreen(
@@ -404,6 +442,52 @@ fun MedLinguaAppContent(
                             onNextLevelQuestion = { viewModel.nextLevelQuestionWithSpec() },
                             onRestartLevel = { viewModel.restartCurrentLevel() }
                         )
+                    }
+                }
+
+                // ---- Overlay : hub de révision plein écran (LOT2/WS2.1) ----
+                if (showReview) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        val reviews by viewModel.reviewQueue.collectAsStateWithLifecycle()
+                        com.aistudio.medlingua.dzmed.ui.screens.ReviewHubScreen(
+                            reviews = reviews,
+                            lang = lang,
+                            onPlay = { showFlash = true }, // révision = flashcards SM-2 (sémantique existante)
+                            onDelete = { viewModel.deleteReview(it.id) },
+                            modifier = Modifier.fillMaxSize()
+                        )
+                    }
+                }
+
+                // ---- Overlay : séance histoire plein écran ----
+                if (showStory) {
+                    var storyId by remember { mutableStateOf<String?>(null) }
+                    LaunchedEffect(Unit) {
+                        val app = context.applicationContext as MedLinguaApp
+                        val repo = StoryRepository(
+                            context.applicationContext,
+                            app.database.storyDao(),
+                            app.database.medicalDao()
+                        )
+                        storyId = repo.todayStory(System.currentTimeMillis())?.storyId
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        val id = storyId
+                        if (id != null) {
+                            StorySessionScreen(
+                                storyId = id,
+                                lang = lang,
+                                onExit = { showStory = false }
+                            )
+                        }
                     }
                 }
 

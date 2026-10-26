@@ -1,0 +1,15 @@
+# Épingler LF pour les types de fichiers dont le contenu committé est déjà
+# LF (builders Python newline="\n", JSON du corpus) — évite que core.autocrlf
+# sous Windows introduise du bruit CRLF et des diffs fantômes.
+# Pas de `* text=auto` global : renormaliserait tout l'index d'un coup.
+*.json text eol=lf
+*.py  text eol=lf
+*.md  text eol=lf
+*.kt  text eol=lf
+*.kts text eol=lf
+*.ts  text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.yml text eol=lf
+*.css text eol=lf
+*.html text eol=lf

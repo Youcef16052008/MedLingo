@@ -1,195 +1,191 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Cytologie — 244 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object CytologieTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 1779,
+            etymology = "Greek: φῶς (phos) — 'light' + λίπος (lipos) — 'fat' + Latin: bi- — 'two'.",
             termEn = "Phospholipid Bilayer",
             termFr = "Bicouche phospholipidique",
             termAr = "طبقة الفسفوليبيد المزدوجة",
             definitionEn = "The fundamental amphipathic double-layered structural matrix of cellular membranes composed of hydrophilic phosphate heads and hydrophobic fatty acid tails.",
             definitionFr = "Structure de base de la membrane cellulaire formée de deux couches de phospholipides amphiphiles délimitant le milieu intra et extra-cellulaire.",
             definitionAr = "المصفوفة البنيوية الأساسية للغشاء الخلوي، تتكون من طبقتين من الليبيدات المفسفرة ذات رؤوس قطبية محبة للماء وذيول كارهة للماء.",
-            etymology = "Greek: φῶς (phos) — 'light' + λίπος (lipos) — 'fat' + Latin: bi- — 'two'.",
-            clinicalPearl = "Membrane fluidity depends on cholesterol content and saturation of fatty acyl chains; disrupted in acanthocytosis and liver cirrhosis.",
-            mnemonic = "Fluid Mosaic Model (Singer & Nicolson): Hydrophilic heads face water, Hydrophobic tails shield inside.",
             module = "Cytologie",
             chapter = "Membrane Plasmique & Transports",
+            ipaPhonetic = "/ˌfɒs.fəʊˈlɪp.ɪd ˈbaɪˌleɪ.ər/",
             exampleEn = "Lipid rafts within the phospholipid bilayer compartmentalize signal transduction cascades.",
             exampleFr = "Les radeaux lipidiques dans la bicouche phospholipidique compartimentent la signalisation cellulaire.",
             exampleAr = "تعمل الطوافات الليبيدية داخل طبقة الفسفوليبيد المزدوجة على عزل مسارات نقل الإشارات الحيوية.",
-            ipaPhonetic = "/ˌfɒs.fəʊˈlɪp.ɪd ˈbaɪˌleɪ.ər/",
+            clinicalPearl = "Membrane fluidity depends on cholesterol content and saturation of fatty acyl chains; disrupted in acanthocytosis and liver cirrhosis.",
+            mnemonic = "Fluid Mosaic Model (Singer & Nicolson): Hydrophilic heads face water, Hydrophobic tails shield inside.",
         ),
         MedicalTermEntity(
             id = 1780,
+            etymology = "From Latin: Natrium (Na) + Kalium (K) + Suffix -ase (enzymatic hydrolysis).",
             termEn = "Sodium-Potassium Pump (Na+/K+ ATPase)",
             termFr = "Pompe Sodium-Potassium (Na+/K+ ATPase)",
             termAr = "مضخة الصوديوم والبوتاسيوم",
             definitionEn = "An electrogenic integral membrane transport enzyme that hydrolyzes one ATP to export 3 Na+ ions and import 2 K+ ions against their electrochemical gradients.",
             definitionFr = "Transporteur membranaire actif primaire consommant de l'ATP pour expulser 3 Na+ et faire entrer 2 K+, maintenant le potentiel de repos.",
             definitionAr = "إنزيم ناقل غشائي نشط يستهلك جزيء ATP لطرد 3 أيونات صوديوم وإدخال أيوني بوتاسيوم عكس مدروج التركيز الكهروكيميائي.",
-            etymology = "From Latin: Natrium (Na) + Kalium (K) + Suffix -ase (enzymatic hydrolysis).",
-            clinicalPearl = "Inhibited pharmacologically by cardiac glycosides (Digoxin, Ouabain), increasing intracellular Ca2+ and cardiac inotropy.",
-            mnemonic = "Pump Ratio: 3 Na+ OUT, 2 K+ IN, 1 ATP spent (3 NO, 2 KI).",
             module = "Cytologie",
             chapter = "Membrane Plasmique & Transports",
+            ipaPhonetic = "/ˈsəʊ.di.əm pəˈtæs.i.əm pʌmp/",
             exampleEn = "The Na+/K+ ATPase accounts for up to one third of the human body's total basal energy expenditure.",
             exampleFr = "La Na+/K+ ATPase consomme jusqu'à un tiers de la dépense énergétique basale de l'organisme.",
             exampleAr = "تستهلك مضخة الصوديوم والبوتاسيوم ما يصل إلى ثلث إجمالي الطاقة الأساسية المستهلكة في جسم الإنسان.",
-            ipaPhonetic = "/ˈsəʊ.di.əm pəˈtæs.i.əm pʌmp/",
+            clinicalPearl = "Inhibited pharmacologically by cardiac glycosides (Digoxin, Ouabain), increasing intracellular Ca2+ and cardiac inotropy.",
+            mnemonic = "Pump Ratio: 3 Na+ OUT, 2 K+ IN, 1 ATP spent (3 NO, 2 KI).",
         ),
         MedicalTermEntity(
             id = 1781,
+            etymology = "Greek: ἔνδον (endon) — 'within' + κύτος (kytos) — 'cell' + φαγεῖν (phagein) — 'to eat'.",
             termEn = "Endocytosis and Phagocytosis",
             termFr = "Endocytose et Phagocytose",
             termAr = "الالتقام والبلعمة الخلوية",
             definitionEn = "Vesicular transport mechanisms whereby cells engulf macromolecules (pinocytosis) or large particles/microorganisms (phagocytosis) into phagosomes.",
             definitionFr = "Mécanismes de transport vésiculaire permettant l'internalisation de macromolécules ou de microorganismes par invagination de la membrane plasmique.",
             definitionAr = "آليات نقل حويصلية خلوية تقوم الخلية من خلالها بابتلاع الجزيئات الكبيرة أو البكتيريا والأجسام الغريبة داخل جسيم بلعمي.",
-            etymology = "Greek: ἔνδον (endon) — 'within' + κύτος (kytos) — 'cell' + φαγεῖν (phagein) — 'to eat'.",
-            clinicalPearl = "Macrophages and neutrophils are professional phagocytes; defective phagolysosomal fusion occurs in Chédiak-Higashi syndrome.",
-            mnemonic = "Phago = Cellular Eating (Solids); Pino = Cellular Drinking (Liquids).",
             module = "Cytologie",
             chapter = "Membrane Plasmique & Transports",
+            ipaPhonetic = "/ˌen.dəʊ.saɪˈtəʊ.sɪs/",
             exampleEn = "Receptor-mediated endocytosis of LDL cholesterol via clathrin-coated pits prevents severe familial hypercholesterolemia.",
             exampleFr = "L'endocytose médiée par les récepteurs LDL prévient l'hypercholestérolémie familiale sévère.",
             exampleAr = "يمنع الالتقام الخلوي عبر مستقبلات الكوليسترول الضار LDL حدوث فرط كوليسترول الدم العائلي الشديد.",
-            ipaPhonetic = "/ˌen.dəʊ.saɪˈtəʊ.sɪs/",
+            clinicalPearl = "Macrophages and neutrophils are professional phagocytes; defective phagolysosomal fusion occurs in Chédiak-Higashi syndrome.",
+            mnemonic = "Phago = Cellular Eating (Solids); Pino = Cellular Drinking (Liquids).",
         ),
         MedicalTermEntity(
             id = 1782,
+            etymology = "Latin: reticulum — 'little net / network' + Greek: ἔνδον (endon) — 'inside' + πλάσμα (plasma).",
             termEn = "Endoplasmic Reticulum (Rough & Smooth)",
             termFr = "Réticulum Endoplasmique (Rugueux et Lisse)",
             termAr = "الشبكة الإندوبلازمية (الخشنة والملساء)",
             definitionEn = "An extensive interconnected membranous network of cisternae; rough (RER, studded with ribosomes) for secretory protein synthesis, smooth (SER) for lipid synthesis and detoxification.",
             definitionFr = "Réseau complexe de tubules et saccules membranaires; granuleux (RER) pour la synthèse protéique, lisse (REL) pour les lipides et la détoxification.",
             definitionAr = "شبكة متداخلة واسعة من الأغشية والحويصلات؛ الخشنة محاطة بالريبوسومات لتصنيع البروتينات الإفرازية، والملساء لتصنيع الليبيدات وإزالة السموم.",
-            etymology = "Latin: reticulum — 'little net / network' + Greek: ἔνδον (endon) — 'inside' + πλάσμα (plasma).",
-            clinicalPearl = "In muscle cells, specialized SER called sarcoplasmic reticulum sequesters and rapidly releases Ca2+ ions to trigger contraction.",
-            mnemonic = "RER = Ribosomes, Extracellular proteins; SER = Steroids, Storage of Calcium, Smooth detox.",
             module = "Cytologie",
             chapter = "Système Endomembranaire & Organites",
+            ipaPhonetic = "/ˌen.dəʊˈplæz.mɪk rɪˈtɪk.jə.ləm/",
             exampleEn = "Plasma B cells possess massive rough endoplasmic reticulum expansion to churn out thousands of antibodies per second.",
             exampleFr = "Les plasmocytes possèdent un réticulum rugueux très développé pour sécréter des milliers d'anticorps.",
             exampleAr = "تمتلك الخلايا البلازمية شبكة إندوبلازمية خشنة ضخمة لإنتاج آلاف الأجسام المضادة في كل ثانية.",
-            ipaPhonetic = "/ˌen.dəʊˈplæz.mɪk rɪˈtɪk.jə.ləm/",
+            clinicalPearl = "In muscle cells, specialized SER called sarcoplasmic reticulum sequesters and rapidly releases Ca2+ ions to trigger contraction.",
+            mnemonic = "RER = Ribosomes, Extracellular proteins; SER = Steroids, Storage of Calcium, Smooth detox.",
         ),
         MedicalTermEntity(
             id = 1783,
+            etymology = "Named after Italian neurohistologist and Nobel laureate Camillo Golgi (1843-1926).",
             termEn = "Golgi Apparatus",
             termFr = "Appareil de Golgi",
             termAr = "جهاز غولجي",
             definitionEn = "A series of stacked flattened cisternae with cis (entry) and trans (exit) faces dedicated to post-translational modification, glycosylation, sorting, and packaging of proteins.",
             definitionFr = "Organite membranaire empilé assurant la maturation, la N- et O-glycosylation et le tri des protéines destinées aux lysosomes ou à l'exocytose.",
             definitionAr = "عضية خلوية مكونة من حويصلات غشائية مسطحة متراكمة متخصصة في التعديل النهائي والارتباط السكري وفرز وتعبئة البروتينات.",
-            etymology = "Named after Italian neurohistologist and Nobel laureate Camillo Golgi (1843-1926).",
-            clinicalPearl = "Mannose-6-phosphate tagging in the cis-Golgi targets hydrolytic enzymes to lysosomes; defective tagging causes I-cell disease (mucolipidosis II).",
-            mnemonic = "Golgi = Post Office: Receives (cis), modifies (cisternae), stamps with M6P, ships out (trans).",
             module = "Cytologie",
             chapter = "Système Endomembranaire & Organites",
+            ipaPhonetic = "/ˈɡɒl.dʒi ˌæp.əˈreɪ.təs/",
             exampleEn = "The Golgi apparatus adds complex carbohydrate moieties to nascent glycoproteins prior to membrane delivery.",
             exampleFr = "L'appareil de Golgi assure la glycosylation complexe des glycoprotéines avant leur libération.",
             exampleAr = "يقوم جهاز غولجي بإضافة السلاسل السكرية المعقدة إلى البروتينات السكرية الوليدة قبل إرسالها إلى وجهتها.",
-            ipaPhonetic = "/ˈɡɒl.dʒi ˌæp.əˈreɪ.təs/",
+            clinicalPearl = "Mannose-6-phosphate tagging in the cis-Golgi targets hydrolytic enzymes to lysosomes; defective tagging causes I-cell disease (mucolipidosis II).",
+            mnemonic = "Golgi = Post Office: Receives (cis), modifies (cisternae), stamps with M6P, ships out (trans).",
         ),
         MedicalTermEntity(
             id = 1784,
+            etymology = "Greek: λύσις (lysis) — 'dissolution / breaking down' + σῶμα (soma) — 'body'.",
             termEn = "Lysosome and Autophagy",
             termFr = "Lysosome et Autophagie",
             termAr = "الجسيم الحال (اللايزوزوم) والالتهام الذاتي",
             definitionEn = "Acidic (pH ~4.5-5.0) membrane-bound hydrolytic organelles containing acid hydrolases for intracellular degradation of senescent organelles and phagocytosed pathogens.",
             definitionFr = "Organites acides contenant plus de 50 hydrolases acides actives à pH bas, essentiels au recyclage cellulaire et à l'élimination des débris.",
             definitionAr = "عضيات خلوية حامضية محاطة بغشاء تحتوي على إنزيمات هاضمة نشطة في بيئة حامضية مسؤولة عن تفكيك النفايات الخلوية وإعادة تدويرها.",
-            etymology = "Greek: λύσις (lysis) — 'dissolution / breaking down' + σῶμα (soma) — 'body'.",
-            clinicalPearl = "Inherited deficiencies of lysosomal enzymes lead to lysosomal storage diseases such as Tay-Sachs, Gaucher, and Pompe disease.",
-            mnemonic = "Proton pump (V-type H+ ATPase) pumps protons inside to maintain pH 4.5; protects cytosol if lysosome leaks.",
             module = "Cytologie",
             chapter = "Système Endomembranaire & Organites",
+            ipaPhonetic = "/ˈlaɪ.sə.səʊm/",
             exampleEn = "Macroautophagy encapsulates damaged organelles in double-membrane autophagosomes that fuse with lysosomes.",
             exampleFr = "L'autophagie recycle les constituants cytoplasmiques endommagés par fusion avec les lysosomes.",
             exampleAr = "يقوم الالتهام الذاتي بتطويق العضيات التالفة بحويصلات تندمج مع الجسيمات الحالة لإعادة تدويرها.",
-            ipaPhonetic = "/ˈlaɪ.sə.səʊm/",
+            clinicalPearl = "Inherited deficiencies of lysosomal enzymes lead to lysosomal storage diseases such as Tay-Sachs, Gaucher, and Pompe disease.",
+            mnemonic = "Proton pump (V-type H+ ATPase) pumps protons inside to maintain pH 4.5; protects cytosol if lysosome leaks.",
         ),
         MedicalTermEntity(
             id = 1785,
+            etymology = "Greek: μικρός (mikros) — 'small' + Latin: tubulus — 'little pipe'.",
             termEn = "Microtubules and Centrosome",
             termFr = "Microtubules et Centrosome",
             termAr = "النبيبات الدقيقة والجسيم المركزي",
             definitionEn = "Hollow cylindrical cytoskeletal filaments (25 nm diameter) composed of α- and β-tubulin heterodimers that originate from the pericentriolar material of the centrosome.",
             definitionFr = "Tubes creux polymérisés de tubuline alpha et bêta servant de rails pour le transport axonal et formant le fuseau mitotique.",
             definitionAr = "أسطوانات خلوية أنبوبية مجوفة بقطر 25 نانومتر تتألف من ثنائيات التوبولين، تنشأ من الجسيم المركزي وتشكل المغزل الانقسامي.",
-            etymology = "Greek: μικρός (mikros) — 'small' + Latin: tubulus — 'little pipe'.",
-            clinicalPearl = "Antimitotic chemotherapy drugs target microtubules: Paclitaxel prevents depolymerization; Vincristine/Vinblastine prevent assembly.",
-            mnemonic = "Microtubule Motors: Dynein = Retrograde (to minus end / center); Kinesin = Anterograde (to plus end / periphery).",
             module = "Cytologie",
             chapter = "Cytosquelette & Motilité cellulaire",
+            ipaPhonetic = "/ˌmaɪ.krəʊˈtjuː.bjuːlz/",
             exampleEn = "Motor proteins kinesin and dynein transport neurotransmitter vesicles along axonal microtubules.",
             exampleFr = "Les moteurs moléculaires kinésine et dynéine transportent les vésicules le long des microtubules.",
             exampleAr = "تنقل البروتينات المحركة مثل الكينيزين والداينين الحويصلات العصبية على طول النبيبات الدقيقة المحورية.",
-            ipaPhonetic = "/ˌmaɪ.krəʊˈtjuː.bjuːlz/",
+            clinicalPearl = "Antimitotic chemotherapy drugs target microtubules: Paclitaxel prevents depolymerization; Vincristine/Vinblastine prevent assembly.",
+            mnemonic = "Microtubule Motors: Dynein = Retrograde (to minus end / center); Kinesin = Anterograde (to plus end / periphery).",
         ),
         MedicalTermEntity(
             id = 1786,
+            etymology = "Greek: ἀκτίς (aktis) — 'ray / beam'.",
             termEn = "Actin Microfilaments",
             termFr = "Microfilaments d'actine",
             termAr = "خيوط الأكتين الدقيقة",
             definitionEn = "Thin flexible cytoskeletal polymers (7 nm diameter) formed by globular G-actin subunits assembling into polarized filamentous F-actin helices.",
             definitionFr = "Filaments fins protéiques régissant la motilité cellulaire, la cytochimie membranaire, les microvillosités et l'anneau contractile de cytodiérèse.",
             definitionAr = "خيوط هيكلية رفيعة بقطر 7 نانومتر تتشكل من بلمرة وحدات أكتين كروية، مسؤولة عن الحركة الخلوية والزغيبات والحلقة المقلصة.",
-            etymology = "Greek: ἀκτίς (aktis) — 'ray / beam'.",
-            clinicalPearl = "Forms the contractile cleavage furrow ring during cytokinesis alongside non-muscle myosin II to pinch dividing daughter cells.",
-            mnemonic = "Actin Sizes: Microfilaments (7 nm) < Intermediate filaments (10 nm) < Microtubules (25 nm).",
             module = "Cytologie",
             chapter = "Cytosquelette & Motilité cellulaire",
+            ipaPhonetic = "/ˈæk.tɪn ˈmaɪ.krəʊˌfɪl.ə.mənts/",
             exampleEn = "Actin microfilaments in intestinal enterocytes provide structural rigidity to brush border microvilli.",
             exampleFr = "Les microfilaments d'actine maintiennent la rigidité structurelle des microvillosités de l'entérocyte.",
             exampleAr = "توفر خيوط الأكتين الدقيقة في خلايا الأمعاء الدعامة الهيكلية للزغيبات المعوية الماصة.",
-            ipaPhonetic = "/ˈæk.tɪn ˈmaɪ.krəʊˌfɪl.ə.mənts/",
+            clinicalPearl = "Forms the contractile cleavage furrow ring during cytokinesis alongside non-muscle myosin II to pinch dividing daughter cells.",
+            mnemonic = "Actin Sizes: Microfilaments (7 nm) < Intermediate filaments (10 nm) < Microtubules (25 nm).",
         ),
         MedicalTermEntity(
             id = 1787,
+            etymology = "Greek: ἀπόπτωσις (apoptosis) — 'falling off / shedding', like autumn leaves from trees.",
             termEn = "Apoptosis (Programmed Cell Death)",
             termFr = "Apoptose (Mort cellulaire programmée)",
             termAr = "الموت الخلوي المبرمج (الاستماتة)",
             definitionEn = "An active, genetically orchestrated physiological mode of programmed cellular demise mediated by cysteine-aspartate proteases (caspases) without inflammation.",
             definitionFr = "Processus génétiquement programmé de mort cellulaire propre, caractérisé par condensation chromatinienne et formation de corps apoptotiques sans réaction inflammatoire.",
             definitionAr = "عملية حيوية منظمة جينياً لموت الخلية الذاتي الهادئ تتم عبر إنزيمات الكاسباز دون إحداث تفاعل التهابي في الأنسجة المحيطة.",
-            etymology = "Greek: ἀπόπτωσις (apoptosis) — 'falling off / shedding', like autumn leaves from trees.",
-            clinicalPearl = "Intrinsic mitochondrial pathway involves cytochrome c release via BAX/BAK pore formation, which activates Apaf-1 and caspase-9 apoptosome.",
-            mnemonic = "Apoptosis vs Necrosis: Apoptosis = Quiet cellular suicide (shrinkage, no lysis); Necrosis = Violent burst (edema, inflammation).",
             module = "Cytologie",
             chapter = "Signalisation cellulaire & Apoptose",
+            ipaPhonetic = "/ˌæp.əpˈtəʊ.sɪs/",
             exampleEn = "Syndactyly results from failure of interdigital mesenchymal apoptosis during embryonic limb development.",
             exampleFr = "La syndactylie résulte de l'échec de l'apoptose interdigitale pendant le développement embryonnaire.",
             exampleAr = "ينتج التصاق الأصابع الخلقي عن فشل الموت المبرمج للأنسجة الواقعة بين أصابع الجنين أثناء النمو.",
-            ipaPhonetic = "/ˌæp.əpˈtəʊ.sɪs/",
+            clinicalPearl = "Intrinsic mitochondrial pathway involves cytochrome c release via BAX/BAK pore formation, which activates Apaf-1 and caspase-9 apoptosome.",
+            mnemonic = "Apoptosis vs Necrosis: Apoptosis = Quiet cellular suicide (shrinkage, no lysis); Necrosis = Violent burst (edema, inflammation).",
         ),
         MedicalTermEntity(
             id = 1788,
+            etymology = "Latin: nucleus — 'kernel / inner part' + porus — 'opening / passage'.",
             termEn = "Nuclear Pore Complex (NPC)",
             termFr = "Complexe du pore nucléaire (CPN)",
             termAr = "معقد المسام النووي",
             definitionEn = "A massive multiprotein channel (~120 MDa) spanning the inner and outer nuclear membranes regulating selective nucleocytoplasmic bidirectional transport.",
             definitionFr = "Complexe macromoléculaire inséré dans l'enveloppe nucléaire contrôlant les échanges sélectifs d'ARN et de protéines entre noyau et cytoplasme.",
             definitionAr = "معقد بروتيني جزيئي عملاق يخترق غلافي النواة وينظم بدقة حركة الجزيئات والبروتينات والحمض النووي الريبي بين النواة والهيولى.",
-            etymology = "Latin: nucleus — 'kernel / inner part' + porus — 'opening / passage'.",
-            clinicalPearl = "Proteins destined for the nucleus display a Nuclear Localization Signal (NLS) recognized by importin alpha/beta heterodimers driven by Ran-GTP.",
-            mnemonic = "Ran Cycle: Ran-GTP high inside nucleus (drives export); Ran-GDP high in cytoplasm (enables import).",
             module = "Cytologie",
             chapter = "Noyau & Cycle Cellulaire",
+            ipaPhonetic = "/ˈnjuː.kli.ər pɔːr ˈkɒm.pleks/",
             exampleEn = "Messenger RNA transcripts bound to export proteins traverse the nuclear pore complex into the cytoplasm.",
             exampleFr = "Les ARNm matures traversent le complexe du pore nucléaire pour être traduits dans le cytoplasme.",
             exampleAr = "تعبر جزيئات الرنا الرسول الناضجة معقد المسام النووي لتصل إلى الهيولى حيث تتم ترجمتها إلى بروتينات.",
-            ipaPhonetic = "/ˈnjuː.kli.ər pɔːr ˈkɒm.pleks/",
+            clinicalPearl = "Proteins destined for the nucleus display a Nuclear Localization Signal (NLS) recognized by importin alpha/beta heterodimers driven by Ran-GTP.",
+            mnemonic = "Ran Cycle: Ran-GTP high inside nucleus (drives export); Ran-GDP high in cytoplasm (enables import).",
         ),
         MedicalTermEntity(
             id = 2946,
+            etymology = "",
             termEn = "Cell",
             termFr = "Cellule",
             termAr = "الخلية",
@@ -205,6 +201,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2947,
+            etymology = "",
             termEn = "Nucleus",
             termFr = "Noyau",
             termAr = "النواة",
@@ -220,6 +217,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2948,
+            etymology = "",
             termEn = "Cytoplasm",
             termFr = "Cytoplasme",
             termAr = "الهيولى (السيتوبلازم)",
@@ -235,6 +233,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2949,
+            etymology = "",
             termEn = "Cell membrane",
             termFr = "Membrane cellulaire",
             termAr = "الغشاء الخلوي",
@@ -250,6 +249,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2950,
+            etymology = "",
             termEn = "Nuclear membrane",
             termFr = "Membrane nucléaire",
             termAr = "الغشاء النووي",
@@ -265,6 +265,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2951,
+            etymology = "",
             termEn = "Nucleolus",
             termFr = "Nucléole",
             termAr = "النوية",
@@ -280,6 +281,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2952,
+            etymology = "",
             termEn = "Mitochondria",
             termFr = "Mitochondrie",
             termAr = "الميتوكوندريا",
@@ -295,6 +297,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2953,
+            etymology = "",
             termEn = "Endoplasmic reticulum",
             termFr = "Réticulum endoplasmique",
             termAr = "الشبكة الإندوبلازمية",
@@ -310,6 +313,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2954,
+            etymology = "",
             termEn = "Rough ER",
             termFr = "Réticulum endoplasmique rugueux",
             termAr = "الشبكة الإندوبلازمية الخشنة",
@@ -325,6 +329,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2955,
+            etymology = "",
             termEn = "Smooth ER",
             termFr = "Réticulum endoplasmique lisse",
             termAr = "الشبكة الإندوبلازمية الملساء",
@@ -340,6 +345,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2956,
+            etymology = "",
             termEn = "Ribosome",
             termFr = "Ribosome",
             termAr = "الريبوسوم",
@@ -355,6 +361,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2957,
+            etymology = "",
             termEn = "Lysosome",
             termFr = "Lysosome",
             termAr = "الجسيم الحال",
@@ -370,6 +377,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2958,
+            etymology = "",
             termEn = "Peroxisome",
             termFr = "Peroxysome",
             termAr = "البيروكسيسوم",
@@ -385,6 +393,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2959,
+            etymology = "",
             termEn = "Centrosome",
             termFr = "Centrosome",
             termAr = "المركزوم",
@@ -400,6 +409,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2960,
+            etymology = "",
             termEn = "Centriole",
             termFr = "Centriole",
             termAr = "المريكز",
@@ -415,6 +425,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2961,
+            etymology = "",
             termEn = "Vacuole",
             termFr = "Vacuole",
             termAr = "الفجوة",
@@ -430,6 +441,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2962,
+            etymology = "",
             termEn = "Cytoskeleton",
             termFr = "Cytosquelette",
             termAr = "الهيكل الخلوي",
@@ -471,9 +483,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌmaɪkrəˈtjuːbjuːl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2965,
+            etymology = "",
             termEn = "Intermediate filament",
             termFr = "Filament intermédiaire",
             termAr = "الخيط الوسيط",
@@ -483,6 +499,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "La Cellule & Ses Composants",
             ipaPhonetic = "/ˌɪntərˈmiːdiət ˈfɪləmənt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 2966,
@@ -502,6 +521,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2967,
+            etymology = "",
             termEn = "Chromosome",
             termFr = "Chromosome",
             termAr = "الصبغي (الكروموسوم)",
@@ -517,6 +537,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2968,
+            etymology = "",
             termEn = "Nuclear pore",
             termFr = "Pore nucléaire",
             termAr = "المسام النووية",
@@ -532,6 +553,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2969,
+            etymology = "",
             termEn = "Cytosol",
             termFr = "Cytosol",
             termAr = "السيتوسول",
@@ -547,6 +569,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2970,
+            etymology = "",
             termEn = "Epithelial cell",
             termFr = "Cellule épithéliale",
             termAr = "الخلية الظهارية",
@@ -562,6 +585,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2971,
+            etymology = "",
             termEn = "Squamous cell",
             termFr = "Cellule squameuse",
             termAr = "الخلية الحرشفية",
@@ -577,6 +601,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2972,
+            etymology = "",
             termEn = "Columnar cell",
             termFr = "Cellule cylindrique",
             termAr = "الخلية الأسطوانية",
@@ -592,6 +617,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2973,
+            etymology = "",
             termEn = "Cuboidal cell",
             termFr = "Cellule cubique",
             termAr = "الخلية المكعبية",
@@ -607,6 +633,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2974,
+            etymology = "",
             termEn = "Goblet cell",
             termFr = "Cellule caliciforme",
             termAr = "الخلية الكأسية",
@@ -638,6 +665,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2976,
+            etymology = "",
             termEn = "Leukocyte",
             termFr = "Leucocyte",
             termAr = "كرية الدم البيضاء",
@@ -648,6 +676,7 @@ object CytologieTerms {
             chapter = "Types Cellulaires",
             ipaPhonetic = "/ˈluːkəsaɪt/",
             exampleEn = "The leukocyte is the nucleated blood cell involved in immune defense; the five types include neutrophils, lymphocytes, monocytes, eosinophils, and basophils.",
+            exampleFr = "",
             exampleAr = "كرية الدم البيضاء هو خلية دموية ذات نواة تشارك في الدفاع المناعي؛ الأنواع الخمسة تشمل العدلات واللمفاويات والوحيدات والحمضات والقاعدات.",
         ),
         MedicalTermEntity(
@@ -668,6 +697,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2978,
+            etymology = "",
             termEn = "Neutrophil",
             termFr = "Neutrophile",
             termAr = "العدلة",
@@ -683,6 +713,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2979,
+            etymology = "",
             termEn = "Eosinophil",
             termFr = "Éosinophile",
             termAr = "الحمضة",
@@ -698,6 +729,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2980,
+            etymology = "",
             termEn = "Basophil",
             termFr = "Basophile",
             termAr = "القاعدة",
@@ -729,6 +761,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2982,
+            etymology = "",
             termEn = "Monocyte",
             termFr = "Monocyte",
             termAr = "الوحيدة",
@@ -760,6 +793,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2984,
+            etymology = "",
             termEn = "Plasma cell",
             termFr = "Plasmocyte",
             termAr = "الخلية البلازمية",
@@ -775,6 +809,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2985,
+            etymology = "",
             termEn = "Mast cell",
             termFr = "Mastocyte",
             termAr = "الخلية البدينة",
@@ -870,6 +905,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2991,
+            etymology = "",
             termEn = "Adipocyte",
             termFr = "Adipocyte",
             termAr = "الخلية الشحمية",
@@ -885,6 +921,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2992,
+            etymology = "",
             termEn = "Myocyte",
             termFr = "Myocyte",
             termAr = "الخلية العضلية",
@@ -900,6 +937,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2993,
+            etymology = "",
             termEn = "Stem cell",
             termFr = "Cellule souche",
             termAr = "الخلية الجذعية",
@@ -915,6 +953,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2994,
+            etymology = "",
             termEn = "Megakaryocyte",
             termFr = "Mégacaryocyte",
             termAr = "الخلية كبيرة النواة",
@@ -930,6 +969,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2995,
+            etymology = "",
             termEn = "Natural killer cell",
             termFr = "Cellule tueuse naturelle (NK)",
             termAr = "الخلية القاتلة الطبيعية",
@@ -945,6 +985,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2996,
+            etymology = "",
             termEn = "Dendritic cell",
             termFr = "Cellule dendritique",
             termAr = "الخلية الشجيرية",
@@ -960,6 +1001,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2997,
+            etymology = "",
             termEn = "Parietal cell",
             termFr = "Cellule pariétale",
             termAr = "الخلية الجدارية",
@@ -975,6 +1017,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2998,
+            etymology = "",
             termEn = "Chief cell",
             termFr = "Cellule principale",
             termAr = "الخلية الرئيسية",
@@ -990,6 +1033,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 2999,
+            etymology = "",
             termEn = "Glial cell",
             termFr = "Cellule gliale",
             termAr = "الخلية الدبقية",
@@ -1005,6 +1049,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3000,
+            etymology = "",
             termEn = "Cell cycle",
             termFr = "Cycle cellulaire",
             termAr = "دورة الخلية",
@@ -1020,6 +1065,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3001,
+            etymology = "",
             termEn = "Interphase",
             termFr = "Interphase",
             termAr = "الطور البيني",
@@ -1035,6 +1081,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3002,
+            etymology = "",
             termEn = "G1 phase",
             termFr = "Phase G1",
             termAr = "طور G1 (ما قبل التضاعف)",
@@ -1050,6 +1097,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3003,
+            etymology = "",
             termEn = "S phase",
             termFr = "Phase S (Synthèse)",
             termAr = "طور S (التضاعف)",
@@ -1065,6 +1113,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3004,
+            etymology = "",
             termEn = "G2 phase",
             termFr = "Phase G2",
             termAr = "طور G2 (ما بعد التضاعف)",
@@ -1112,6 +1161,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3007,
+            etymology = "",
             termEn = "Prophase",
             termFr = "Prophase",
             termAr = "الطور التمهيدي",
@@ -1127,6 +1177,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3008,
+            etymology = "",
             termEn = "Metaphase",
             termFr = "Métaphase",
             termAr = "الطور الاستوائي",
@@ -1142,6 +1193,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3009,
+            etymology = "",
             termEn = "Anaphase",
             termFr = "Anaphase",
             termAr = "الطور الانفصالي",
@@ -1157,6 +1209,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3010,
+            etymology = "",
             termEn = "Telophase",
             termFr = "Télophase",
             termAr = "الطور النهائي",
@@ -1172,6 +1225,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3011,
+            etymology = "",
             termEn = "Cytokinesis",
             termFr = "Cytokinèse",
             termAr = "انقسام السيتوبلازم",
@@ -1197,9 +1251,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈkroʊmətɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3013,
+            etymology = "",
             termEn = "Centromere",
             termFr = "Centromère",
             termAr = "القسيم المركزي",
@@ -1215,6 +1273,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3014,
+            etymology = "",
             termEn = "Telomere",
             termFr = "Télomère",
             termAr = "التيلومير",
@@ -1230,6 +1289,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3015,
+            etymology = "",
             termEn = "Karyotype",
             termFr = "Caryotype",
             termAr = "النمط النووي",
@@ -1245,6 +1305,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3016,
+            etymology = "",
             termEn = "Diploid (2n)",
             termFr = "Diploïde (2n)",
             termAr = "ثنائي المجموعة الصبغية",
@@ -1260,6 +1321,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3017,
+            etymology = "",
             termEn = "Haploid (n)",
             termFr = "Haploïde (n)",
             termAr = "أحادي المجموعة الصبغية",
@@ -1275,6 +1337,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3018,
+            etymology = "",
             termEn = "Spindle fibers",
             termFr = "Fibres du fuseau",
             termAr = "خيوط المغزل",
@@ -1284,9 +1347,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/ˈspɪndəl ˈfaɪbərz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3019,
+            etymology = "",
             termEn = "Aneuploidy",
             termFr = "Aneuploïdie",
             termAr = "اختلال عدد الصبغيات",
@@ -1297,9 +1364,12 @@ object CytologieTerms {
             chapter = "Cycle Cellulaire & Division",
             ipaPhonetic = "/æˈnjuːplɔɪdi/",
             exampleEn = "The aneuploidy is the abnormal number of chromosomes in a cell (e.g., trisomy 21 in Down syndrome).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3020,
+            etymology = "",
             termEn = "Polyploidy",
             termFr = "Polyploïdie",
             termAr = "تعدد الصيغة الصبغية",
@@ -1315,6 +1385,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3021,
+            etymology = "",
             termEn = "Mitotic index",
             termFr = "Index mitotique",
             termAr = "مؤشر الانقسام الخيطي",
@@ -1346,6 +1417,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3023,
+            etymology = "",
             termEn = "Fine needle aspiration (FNA)",
             termFr = "Cytoponction à l'aiguille fine (FNAC)",
             termAr = "خزعة بالإبرة الدقيقة",
@@ -1361,6 +1433,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3024,
+            etymology = "",
             termEn = "Smear",
             termFr = "Frottis",
             termAr = "اللطاخة",
@@ -1376,6 +1449,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3025,
+            etymology = "",
             termEn = "Pap smear (Papanicolaou test)",
             termFr = "Frottis cervico-vaginal (Test de Papanicolaou)",
             termAr = "فحص عنق الرحم (اختبار باباnikولاو)",
@@ -1407,6 +1481,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3027,
+            etymology = "",
             termEn = "Biopsy",
             termFr = "Biopsie",
             termAr = "الخزعة",
@@ -1422,6 +1497,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3028,
+            etymology = "",
             termEn = "Centrifugation",
             termFr = "Centrifugation",
             termAr = "الطرد المركزي",
@@ -1437,6 +1513,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3029,
+            etymology = "",
             termEn = "Cytospin",
             termFr = "Cytospin (Cytocentrifugation)",
             termAr = "الطرد المركزي الخلوي",
@@ -1452,6 +1529,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3030,
+            etymology = "",
             termEn = "Cell culture",
             termFr = "Culture cellulaire",
             termAr = "زراعة الخلايا",
@@ -1467,6 +1545,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3031,
+            etymology = "",
             termEn = "Flow cytometry",
             termFr = "Cytométrie en flux",
             termAr = "قياس التدفق الخلوي",
@@ -1514,6 +1593,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3034,
+            etymology = "",
             termEn = "In situ hybridization (ISH)",
             termFr = "Hybridation in situ",
             termAr = "التهجين في الموضع",
@@ -1529,6 +1609,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3035,
+            etymology = "",
             termEn = "FISH (Fluorescence in situ hybridization)",
             termFr = "FISH (Hybridation fluorescente in situ)",
             termAr = "التهجين الفلوري في الموضع",
@@ -1592,6 +1673,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3039,
+            etymology = "",
             termEn = "Western blot",
             termFr = "Western blot (Immunoempreinte)",
             termAr = "الترحيل الكهربائي الغربي",
@@ -1607,6 +1689,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3040,
+            etymology = "",
             termEn = "ELISA",
             termFr = "ELISA (Dosage immuno-enzymatique)",
             termAr = "إيليزا",
@@ -1622,6 +1705,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3041,
+            etymology = "",
             termEn = "PCR (Polymerase chain reaction)",
             termFr = "PCR (Réaction en chaîne par polymérase)",
             termAr = "تفاعل البوليميراز التسلسلي",
@@ -1637,6 +1721,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3042,
+            etymology = "",
             termEn = "Autoradiography",
             termFr = "Autoradiographie",
             termAr = "التصوير الإشعاعي الذاتي",
@@ -1652,6 +1737,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3043,
+            etymology = "",
             termEn = "Cell sorting (FACS)",
             termFr = "Tri cellulaire (FACS)",
             termAr = "فرز الخلايا",
@@ -1678,9 +1764,12 @@ object CytologieTerms {
             chapter = "Techniques Cytologiques",
             ipaPhonetic = "/ɛkˈsfoʊliətɪv saɪˈtɒlədʒi/",
             exampleEn = "The exfoliative cytology is the study of cells shed naturally from body surfaces (e.g., sputum, urine, cervical smears).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3045,
+            etymology = "",
             termEn = "Hematoxylin & Eosin (H&E)",
             termFr = "Hématoxyline & Éosine (H&E)",
             termAr = "هيماتوكسيلين وإيوزين",
@@ -1696,6 +1785,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3046,
+            etymology = "",
             termEn = "Papanicolaou stain (PAP)",
             termFr = "Coloration de Papanicolaou (PAP)",
             termAr = "تلوين باباnikولاو",
@@ -1711,6 +1801,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3047,
+            etymology = "",
             termEn = "Giemsa stain",
             termFr = "Coloration de Giemsa",
             termAr = "تلوين غيمزا",
@@ -1726,6 +1817,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3048,
+            etymology = "",
             termEn = "Wright stain",
             termFr = "Coloration de Wright",
             termAr = "تلوين رايت",
@@ -1741,6 +1833,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3049,
+            etymology = "",
             termEn = "Gram stain",
             termFr = "Coloration de Gram",
             termAr = "تلوين غرام",
@@ -1756,6 +1849,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3050,
+            etymology = "",
             termEn = "Ziehl-Neelsen stain",
             termFr = "Coloration de Ziehl-Neelsen",
             termAr = "تلوين زيل-نيلسن",
@@ -1787,6 +1881,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3052,
+            etymology = "",
             termEn = "Masson's trichrome",
             termFr = "Trichrome de Masson",
             termAr = "تريكروم ماسون",
@@ -1802,6 +1897,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3053,
+            etymology = "",
             termEn = "May-Grünwald-Giemsa (MGG)",
             termFr = "May-Grünwald-Giemsa (MGG)",
             termAr = "تلوين ماي-غرونوالد-غيمزا",
@@ -1817,6 +1913,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3054,
+            etymology = "",
             termEn = "Alcian blue",
             termFr = "Bleu Alcian",
             termAr = "الأزرق الألشياني",
@@ -1832,6 +1929,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3055,
+            etymology = "",
             termEn = "Silver stain",
             termFr = "Coloration argentique",
             termAr = "التلوين الفضي",
@@ -1847,6 +1945,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3056,
+            etymology = "",
             termEn = "Oil Red O",
             termFr = "Rouge Oil O",
             termAr = "الأحمر الزيتي O",
@@ -1862,6 +1961,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3057,
+            etymology = "",
             termEn = "Toluidine blue",
             termFr = "Bleu de Toluidine",
             termAr = "الأزرق التولويديني",
@@ -1877,6 +1977,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3058,
+            etymology = "",
             termEn = "Hematoxylin",
             termFr = "Hématoxyline",
             termAr = "الهيماتوكسيلين",
@@ -1892,6 +1993,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3059,
+            etymology = "",
             termEn = "Eosin",
             termFr = "Éosine",
             termAr = "الإيوزين",
@@ -1907,6 +2009,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3060,
+            etymology = "",
             termEn = "Congo red",
             termFr = "Rouge Congo",
             termAr = "الأحمر الكونغوي",
@@ -1922,6 +2025,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3061,
+            etymology = "",
             termEn = "Crystal violet",
             termFr = "Violet de cristal",
             termAr = "البنفسجي الكريستالي",
@@ -1937,6 +2041,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3062,
+            etymology = "",
             termEn = "Fluorescent dye",
             termFr = "Colorant fluorescent",
             termAr = "الصبغة الفلورية",
@@ -1952,6 +2057,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3063,
+            etymology = "",
             termEn = "Romanowsky stain",
             termFr = "Coloration de Romanowsky",
             termAr = "تلوين رومانوفسكي",
@@ -1967,6 +2073,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3064,
+            etymology = "",
             termEn = "Sudan stain",
             termFr = "Coloration au Soudan",
             termAr = "تلوين سودان",
@@ -1992,6 +2099,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌæpəpˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3066,
@@ -2005,6 +2115,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/nɪˈkroʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3067,
@@ -2018,6 +2131,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌniːoʊˈpleɪziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3068,
@@ -2053,6 +2169,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3070,
+            etymology = "",
             termEn = "Atrophy",
             termFr = "Atrophie",
             termAr = "الضمور",
@@ -2078,6 +2195,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/dɪsˈpleɪziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3072,
@@ -2092,6 +2212,8 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌmɛtəˈpleɪziə/",
             exampleEn = "The metaplasia is the reversible replacement of one mature cell type by another (e.g., columnar to squamous in smokers).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3073,
@@ -2105,6 +2227,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌænəˈpleɪziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3074,
@@ -2135,6 +2260,8 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˌædinoʊˌkɑːrsɪˈnoʊmə/",
             exampleEn = "The adenocarcinoma is the malignant tumor derived from glandular epithelial cells (e.g., colon, lung, breast cancer).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3076,
@@ -2149,6 +2276,8 @@ object CytologieTerms {
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ˈskweɪməs sɛl kɑːrsɪˈnoʊmə/",
             exampleEn = "The squamous cell carcinoma is the malignant tumor arising from squamous epithelial cells (e.g., skin, cervix, lungs).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3077,
@@ -2216,6 +2345,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3081,
+            etymology = "",
             termEn = "Benign tumor",
             termFr = "Tumeur bénigne",
             termAr = "الورم الحميد",
@@ -2231,6 +2361,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3082,
+            etymology = "",
             termEn = "Malignant tumor",
             termFr = "Tumeur maligne",
             termAr = "الورم الخبيث",
@@ -2246,6 +2377,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3083,
+            etymology = "",
             termEn = "Metastasis",
             termFr = "Métastase",
             termAr = "النقيلة (الانتشار السرطاني)",
@@ -2277,6 +2409,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3085,
+            etymology = "",
             termEn = "Inflammation",
             termFr = "Inflammation",
             termAr = "الالتهاب",
@@ -2308,6 +2441,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3087,
+            etymology = "",
             termEn = "Granuloma",
             termFr = "Granulome",
             termAr = "الورم الحبيبي",
@@ -2323,6 +2457,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3088,
+            etymology = "",
             termEn = "Abscess",
             termFr = "Abcès",
             termAr = "الخراج",
@@ -2380,9 +2515,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪˈskiːmiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3092,
+            etymology = "",
             termEn = "Calcification",
             termFr = "Calcification",
             termAr = "التكلس",
@@ -2408,9 +2547,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪˈdiːmə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3094,
+            etymology = "",
             termEn = "Infarction",
             termFr = "Infarctus",
             termAr = "الاحتشاء",
@@ -2420,9 +2563,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Pathologies Cellulaires",
             ipaPhonetic = "/ɪnˈfɑːrkʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3095,
+            etymology = "",
             termEn = "Hyperchromatism",
             termFr = "Hyperchromatisme",
             termAr = "فرط التصبغ النووي",
@@ -2432,9 +2579,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌhaɪpəˈkroʊmətɪzəm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3096,
+            etymology = "",
             termEn = "Pleomorphism",
             termFr = "Pléomorphisme",
             termAr = "تعدد الأشكال الخلوية",
@@ -2444,9 +2595,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌpliːəˈmɔːrfɪzəm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3097,
+            etymology = "",
             termEn = "Nuclear atypia",
             termFr = "Atypie nucléaire",
             termAr = "اللانمطية النووية",
@@ -2456,9 +2611,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˈnjuːkliər eɪˈtɪpiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3098,
+            etymology = "",
             termEn = "N/C ratio (Nuclear-Cytoplasmic ratio)",
             termFr = "Rapport N/C (Nucléo-cytoplasmique)",
             termAr = "النسبة النووية/السيتوبلازمية",
@@ -2474,6 +2633,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3099,
+            etymology = "",
             termEn = "Mitotic figure",
             termFr = "Figure mitotique",
             termAr = "صورة الانقسام الخيطي",
@@ -2505,6 +2665,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3101,
+            etymology = "",
             termEn = "Koilocyte",
             termFr = "Koïlocyte",
             termAr = "الخلية الكوليوسيتية",
@@ -2520,6 +2681,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3102,
+            etymology = "",
             termEn = "Keratinization",
             termFr = "Kératinisation",
             termAr = "التقرن",
@@ -2535,6 +2697,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3103,
+            etymology = "",
             termEn = "Karyorrhexis",
             termFr = "Caryorrhexis",
             termAr = "تفتت النواة",
@@ -2544,9 +2707,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkæriəˈrɛksɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3104,
+            etymology = "",
             termEn = "Karyolysis",
             termFr = "Caryolyse",
             termAr = "ذوبان النواة",
@@ -2572,9 +2739,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/pɪkˈnoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3106,
+            etymology = "",
             termEn = "Vacuolization",
             termFr = "Vacuolisation",
             termAr = "التفجر الفجوي",
@@ -2600,6 +2771,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌsaɪtəˈmɛɡəli/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3108,
@@ -2613,9 +2787,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌkæriəˈmɛɡəli/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3109,
+            etymology = "",
             termEn = "Signet ring cell",
             termFr = "Cellule en bague à chaton",
             termAr = "الخلية الخاتمية",
@@ -2631,6 +2809,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3110,
+            etymology = "",
             termEn = "Giant cell",
             termFr = "Cellule géante",
             termAr = "الخلية العملاقة",
@@ -2646,6 +2825,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3111,
+            etymology = "",
             termEn = "Reed-Sternberg cell",
             termFr = "Cellule de Reed-Sternberg",
             termAr = "خلية ريد-ستيرنبرغ",
@@ -2661,6 +2841,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3112,
+            etymology = "",
             termEn = "Psammoma body",
             termFr = "Corps psammomateux",
             termAr = "الجسم الرملي",
@@ -2676,6 +2857,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3113,
+            etymology = "",
             termEn = "Foam cell",
             termFr = "Cellule spumeuse",
             termAr = "الخلية الرغوية",
@@ -2701,6 +2883,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌmaɪkrəʊɪnˈveɪʒən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3115,
@@ -2714,6 +2899,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌpærəkɛrəˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3116,
@@ -2727,6 +2915,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌhaɪpəkɛrəˈtoʊsɪs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3117,
@@ -2746,6 +2937,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3118,
+            etymology = "",
             termEn = "Multinucleation",
             termFr = "Multinucléation",
             termAr = "تعدد النوى",
@@ -2755,9 +2947,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Terminologie Cytopathologique",
             ipaPhonetic = "/ˌmʌltiˌnjuːkliˈeɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3119,
+            etymology = "",
             termEn = "Cytolysis",
             termFr = "Cytolyse",
             termAr = "التحلل الخلوي",
@@ -2773,6 +2969,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3120,
+            etymology = "",
             termEn = "DNA (Deoxyribonucleic acid)",
             termFr = "ADN (Acide désoxyribonucléique)",
             termAr = "الحمض النووي الريبوزي منقوص الأكسجين",
@@ -2788,6 +2985,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3121,
+            etymology = "",
             termEn = "RNA (Ribonucleic acid)",
             termFr = "ARN (Acide ribonucléique)",
             termAr = "الحمض النووي الريبوزي",
@@ -2803,6 +3001,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3122,
+            etymology = "",
             termEn = "Gene",
             termFr = "Gène",
             termAr = "الجين",
@@ -2818,6 +3017,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3123,
+            etymology = "",
             termEn = "Genome",
             termFr = "Génome",
             termAr = "الجينوم",
@@ -2833,6 +3033,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3124,
+            etymology = "",
             termEn = "Mutation",
             termFr = "Mutation",
             termAr = "الطفرة",
@@ -2848,6 +3049,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3125,
+            etymology = "",
             termEn = "Oncogene",
             termFr = "Oncogène",
             termAr = "الجين الورمي",
@@ -2863,6 +3065,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3126,
+            etymology = "",
             termEn = "Tumor suppressor gene",
             termFr = "Gène suppresseur de tumeur",
             termAr = "جين كابح الورم",
@@ -2873,9 +3076,12 @@ object CytologieTerms {
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/ˈtjuːmər səˈprɛsər dʒiːn/",
             exampleEn = "The tumor suppressor gene is the gene that regulates cell division and prevents tumor formation; loss causes cancer (e.g., TP53, RB1).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3127,
+            etymology = "",
             termEn = "Transcription",
             termFr = "Transcription",
             termAr = "النسخ",
@@ -2891,6 +3097,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3128,
+            etymology = "",
             termEn = "Translation",
             termFr = "Traduction",
             termAr = "الترجمة",
@@ -2906,6 +3113,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3129,
+            etymology = "",
             termEn = "DNA replication",
             termFr = "Réplication de l'ADN",
             termAr = "تضاعف DNA",
@@ -2921,6 +3129,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3130,
+            etymology = "",
             termEn = "Epigenetics",
             termFr = "Épigénétique",
             termAr = "علم فوق الجينيات",
@@ -2936,6 +3145,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3131,
+            etymology = "",
             termEn = "Methylation",
             termFr = "Méthylation",
             termAr = "المثيلة",
@@ -2967,6 +3177,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3133,
+            etymology = "",
             termEn = "Allele",
             termFr = "Allèle",
             termAr = "الأليل",
@@ -2976,9 +3187,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Macromolécules & Génétique",
             ipaPhonetic = "/əˈliːl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3134,
+            etymology = "",
             termEn = "Genotype",
             termFr = "Génotype",
             termAr = "النمط الجيني",
@@ -2994,6 +3209,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3135,
+            etymology = "",
             termEn = "Phenotype",
             termFr = "Phénotype",
             termAr = "النمط الظاهري",
@@ -3025,6 +3241,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3137,
+            etymology = "",
             termEn = "Protein",
             termFr = "Protéine",
             termAr = "البروتين",
@@ -3040,6 +3257,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3138,
+            etymology = "",
             termEn = "Enzyme",
             termFr = "Enzyme",
             termAr = "الإنزيم",
@@ -3055,6 +3273,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3139,
+            etymology = "",
             termEn = "Receptor",
             termFr = "Récepteur",
             termAr = "المستقبل",
@@ -3070,6 +3289,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3140,
+            etymology = "",
             termEn = "Phagocytosis",
             termFr = "Phagocytose",
             termAr = "البلعمة",
@@ -3085,6 +3305,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3141,
+            etymology = "",
             termEn = "Endocytosis",
             termFr = "Endocytose",
             termAr = "الالتقام الخلوي",
@@ -3100,6 +3321,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3142,
+            etymology = "",
             termEn = "Exocytosis",
             termFr = "Exocytose",
             termAr = "الإخراج الخلوي",
@@ -3115,6 +3337,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3143,
+            etymology = "",
             termEn = "Pinocytosis",
             termFr = "Pinocytose",
             termAr = "شرب الخلية",
@@ -3130,6 +3353,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3144,
+            etymology = "",
             termEn = "Autophagy",
             termFr = "Autophagie",
             termAr = "الأكل الذاتي (الأوتوفاجي)",
@@ -3145,6 +3369,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3145,
+            etymology = "",
             termEn = "Cell differentiation",
             termFr = "Différenciation cellulaire",
             termAr = "التمايز الخلوي",
@@ -3160,6 +3385,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3146,
+            etymology = "",
             termEn = "Cell proliferation",
             termFr = "Prolifération cellulaire",
             termAr = "التكاثر الخلوي",
@@ -3175,6 +3401,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3147,
+            etymology = "",
             termEn = "Cell migration",
             termFr = "Migration cellulaire",
             termAr = "الهجرة الخلوية",
@@ -3190,6 +3417,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3148,
+            etymology = "",
             termEn = "Cell adhesion",
             termFr = "Adhésion cellulaire",
             termAr = "الالتصاق الخلوي",
@@ -3205,6 +3433,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3149,
+            etymology = "",
             termEn = "Signal transduction",
             termFr = "Transduction du signal",
             termAr = "نقل الإشارة",
@@ -3252,6 +3481,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3152,
+            etymology = "",
             termEn = "Cellular senescence",
             termFr = "Sénescence cellulaire",
             termAr = "الشيخوخة الخلوية",
@@ -3267,6 +3497,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3153,
+            etymology = "",
             termEn = "Diffusion",
             termFr = "Diffusion",
             termAr = "الانتشار",
@@ -3282,6 +3513,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3154,
+            etymology = "",
             termEn = "Osmosis",
             termFr = "Osmose",
             termAr = "التناضح",
@@ -3297,6 +3529,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3155,
+            etymology = "",
             termEn = "Active transport",
             termFr = "Transport actif",
             termAr = "النقل النشط",
@@ -3306,9 +3539,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Processus Biologiques",
             ipaPhonetic = "/ˈæktɪv ˈtrænspɔːrt/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3156,
+            etymology = "",
             termEn = "Apoptotic pathway",
             termFr = "Voie apoptotique",
             termAr = "مسار الموت المبرمج",
@@ -3324,6 +3561,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3157,
+            etymology = "",
             termEn = "Inflammatory response",
             termFr = "Réponse inflammatoire",
             termAr = "الاستجابة الالتهابية",
@@ -3339,6 +3577,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3158,
+            etymology = "",
             termEn = "Phagocytic pathway",
             termFr = "Voie phagocytaire",
             termAr = "مسار البلعمة",
@@ -3370,6 +3609,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3160,
+            etymology = "",
             termEn = "Negative for malignancy",
             termFr = "Négatif pour malignité",
             termAr = "سلبي للخباثة",
@@ -3385,6 +3625,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3161,
+            etymology = "",
             termEn = "Positive for malignancy",
             termFr = "Positif pour malignité",
             termAr = "إيجابي للخباثة",
@@ -3400,6 +3641,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3162,
+            etymology = "",
             termEn = "Atypical cells",
             termFr = "Cellules atypiques",
             termAr = "خلايا لانمطية",
@@ -3409,9 +3651,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/eɪˈtɪpɪkəl sɛlz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3163,
+            etymology = "",
             termEn = "Suspicious for malignancy",
             termFr = "Suspect de malignité",
             termAr = "مشتبه بالخباثة",
@@ -3427,6 +3673,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3164,
+            etymology = "",
             termEn = "Unsatisfactory specimen",
             termFr = "Prélèvement non satisfaisant",
             termAr = "عينة غير مُرضية",
@@ -3442,6 +3689,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3165,
+            etymology = "",
             termEn = "Adequate sample",
             termFr = "Échantillon adéquat",
             termAr = "عينة كافية",
@@ -3457,6 +3705,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3166,
+            etymology = "",
             termEn = "Inflammatory background",
             termFr = "Fond inflammatoire",
             termAr = "الخلفية الالتهابية",
@@ -3482,6 +3731,9 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/loʊ ɡreɪd dɪsˈpleɪziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3168,
@@ -3495,9 +3747,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/haɪ ɡreɪd dɪsˈpleɪziə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3169,
+            etymology = "",
             termEn = "Well-differentiated",
             termFr = "Bien différencié",
             termAr = "متمايز جيداً",
@@ -3513,6 +3769,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3170,
+            etymology = "",
             termEn = "Moderately differentiated",
             termFr = "Moyennement différencié",
             termAr = "متمايز بشكل معتدل",
@@ -3528,6 +3785,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3171,
+            etymology = "",
             termEn = "Poorly differentiated",
             termFr = "Peu différencié",
             termAr = "ضعيف التمايز",
@@ -3543,6 +3801,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3172,
+            etymology = "",
             termEn = "Undifferentiated",
             termFr = "Indifférencié",
             termAr = "غير متمايز",
@@ -3574,6 +3833,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3174,
+            etymology = "",
             termEn = "Hemorrhagic background",
             termFr = "Fond hémorragique",
             termAr = "الخلفية النزفية",
@@ -3589,6 +3849,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3175,
+            etymology = "",
             termEn = "Cellular atypia",
             termFr = "Atypie cellulaire",
             termAr = "اللانمطية الخلوية",
@@ -3598,9 +3859,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/sɛˈljʊlər eɪˈtɪpiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3176,
+            etymology = "",
             termEn = "Reactive atypia",
             termFr = "Atypie réactionnelle",
             termAr = "اللانمطية التفاعلية",
@@ -3610,9 +3875,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/riˈæktɪv eɪˈtɪpiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3177,
+            etymology = "",
             termEn = "Bethesda system",
             termFr = "Système Bethesda",
             termAr = "نظام بيثيزدا",
@@ -3628,6 +3897,7 @@ object CytologieTerms {
         ),
         MedicalTermEntity(
             id = 3178,
+            etymology = "",
             termEn = "ASC-US",
             termFr = "ASC-US",
             termAr = "خلايا حرشفية لانمطية ذات أهمية غير محددة",
@@ -3637,9 +3907,13 @@ object CytologieTerms {
             module = "Cytologie",
             chapter = "Résultats & Rapports Cytologiques",
             ipaPhonetic = "/eɪ ɛs siː juː ɛs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 3179,
+            etymology = "",
             termEn = "Cytopathologist",
             termFr = "Cytopathologiste",
             termAr = "عالم الخلوية المرضية",
@@ -3652,6 +3926,6 @@ object CytologieTerms {
             exampleEn = "The cytopathologist is the physician specialized in diagnosing diseases by examining cells under the microscope.",
             exampleFr = "La cytopathologiste est médecin spécialisé dans le diagnostic des maladies par examen de cellules au microscope.",
             exampleAr = "عالم الخلوية المرضية هو طبيب متخصص في تشخيص الأمراض عن طريق فحص الخلايا تحت المجهر.",
-        )
+        ),
     )
 }

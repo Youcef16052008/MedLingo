@@ -14,17 +14,22 @@
     "icons": "python scripts/make_icons.py",
     "e2e": "python e2e/verify.py",
     "audit": "python e2e/full_audit.py",
-    "design": "python e2e/check_design.py"
+    "design": "python e2e/check_design.py",
+    "check:stories": "node scripts/check-stories.mjs",
+    "review": "python scripts/review_server.py"
   },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
     "@types/node": "^26.6.4",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@vitejs/plugin-react": "^4.6.0",
+    "jsdom": "^30.1.3",
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
     "vitest": "^3.2.0"

@@ -4,6 +4,8 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.aistudio.medlingua.dzmed.MedLinguaApp
+import com.aistudio.medlingua.dzmed.di.AppModule
+import com.aistudio.medlingua.dzmed.service.StreakWidgetProvider
 import com.aistudio.medlingua.dzmed.data.initial.InitialData
 import com.aistudio.medlingua.dzmed.data.local.entity.DownloadedModuleEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.ExerciseEntity
@@ -16,15 +18,22 @@ import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
 import com.aistudio.medlingua.dzmed.domain.exercise.ExerciseSpec
 import com.aistudio.medlingua.dzmed.domain.gamification.ChestReward
 import com.aistudio.medlingua.dzmed.domain.gamification.ChestSource
+import com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS
+import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
+import com.aistudio.medlingua.dzmed.domain.gamification.GoalProgress
 import com.aistudio.medlingua.dzmed.domain.gamification.LeagueBotAnimator
 import com.aistudio.medlingua.dzmed.domain.lesson.LessonGenerator
 import com.aistudio.medlingua.dzmed.domain.sm2.ReviewResult
 import com.aistudio.medlingua.dzmed.localization.Language
 import com.aistudio.medlingua.dzmed.ui.components.RewardData
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -63,6 +72,8 @@ data class UiState(
     val activeFlashcardIndex: Int = 0,
     val isCardFlipped: Boolean = false,
     val lastReviewResult: ReviewResult? = null,
+    /** Progression de l'objectif quotidien (calculée à partir du statut utilisateur). */
+    val goalProgress: GoalProgress = GoalProgress(0, 0, 0, false),
     // 6-Level Progressive Learning State
     val selectedLearningLevel: Int? = null,
     val levelExercises: List<ExerciseEntity> = emptyList(),
@@ -120,6 +131,28 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
 
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
+
+    // LOT2/WS2.1 : file de révision (hub ReviewHubScreen). Le DAO existe
+    // depuis la v13 ; la population par les leçons de chapitre viendra avec
+    // la résolution du WIP repository (cf. TODO.md).
+    private val reviewQueueDao = AppModule.provideReviewQueueDao(app.database)
+
+    init {
+        // WS4 levier 8 : le widget reflète la série/gemmes dès le lancement
+        // (et à chaque toucher du widget lui-même), sans passer par le réseau.
+        viewModelScope.launch {
+            repository.userStats.collect {
+                StreakWidgetProvider.updateAll(app)
+            }
+        }
+    }
+    val reviewQueue: StateFlow<List<com.aistudio.medlingua.dzmed.data.local.entity.ReviewQueueItem>> =
+        reviewQueueDao.getAllReviews()
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
+
+    fun deleteReview(id: String) {
+        viewModelScope.launch { reviewQueueDao.deleteReview(id) }
+    }
 
     companion object {
         const val DEFAULT_REMINDER_HOUR = 20
@@ -227,31 +260,47 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             }
         }
         viewModelScope.launch {
+            // PHASE 3 #8 (rapport final) : animer les bots. Sans cela, leur XP
+            // figé dès la création de la cohorte rendait le classement statique.
+            // Déterministe (même instant → même classement), donc testable.
+            //
+            // BUG-005 : le collecteur de membres vivait DANS le collect du
+            // cohort — chaque émission y lançait un NOUVEAU collecteur jamais
+            // annulé, et le persist inconditionnel invalidait la table Room à
+            // chaque tour (écriture → invalidation → ré-émission → écriture…
+            // en boucle, pendant toute la vie du ViewModel). Désormais :
+            // 1. le Job est annulé puis remplacé au changement de cohorte ;
+            // 2. on ne persiste QUE si l'animation a changé quelque chose —
+            //    advanceAll est idempotent à `now` fixé (il renvoie l'entité
+            //    non modifiée quand target == weeklyXp), donc l'égalité de
+            //    listes prouve qu'il n'y a rien à écrire et la boucle converge.
+            var membersJob: Job? = null
             repository.activeLeagueCohort.collect { cohort ->
                 _uiState.update { it.copy(activeLeagueCohort = cohort) }
+                membersJob?.cancel()
                 if (cohort != null) {
-                    launch {
-                        repository.getLeagueMembers(cohort.cohortId).collect { members ->
-                            // PHASE 3 #8 (rapport final) : animer les bots. Sans
-                            // cela, leur XP figé dès la création de la cohorte
-                            // rendait le classement statique : un seul exercice
-                            // plaçait le joueur définitivement, et l'urgence
-                            // hebdomadaire n'existait pas. Déterministe (même
-                            // instant → même classement), donc testable.
-                            val animated = LeagueBotAnimator.advanceAll(
-                                members,
-                                cohort.weekStartTimestamp,
-                                cohort.weekEndTimestamp,
-                                System.currentTimeMillis()
-                            )
-                            _uiState.update { it.copy(leagueMembers = animated) }
+                    membersJob = launch {
+                        repository.getLeagueMembers(cohort.cohortId)
+                            .distinctUntilChanged()
+                            .collect { members ->
+                                val animated = LeagueBotAnimator.advanceAll(
+                                    members,
+                                    cohort.weekStartTimestamp,
+                                    cohort.weekEndTimestamp,
+                                    System.currentTimeMillis()
+                                )
+                                _uiState.update { it.copy(leagueMembers = animated) }
 
-                            // L'animation est calculée à l'affichage ; on persiste
-                            // aussi en base pour que le rang query (ORDER BY
-                            // weeklyXp DESC) reste cohérent entre les écrans.
-                            repository.persistBotAnimation(animated)
-                        }
+                                // L'animation est calculée à l'affichage ; on persiste
+                                // en base pour que le rang query (ORDER BY
+                                // weeklyXp DESC) reste cohérent entre les écrans.
+                                if (animated != members) {
+                                    repository.persistBotAnimation(animated)
+                                }
+                            }
                     }
+                } else {
+                    _uiState.update { it.copy(leagueMembers = emptyList()) }
                 }
             }
         }
@@ -510,7 +559,7 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             viewModelScope.launch {
                 val preStats = _uiState.value.userStats
                 val now = repository.currentClock.now()
-                val today = com.aistudio.medlingua.dzmed.domain.gamification.ProgressionManager.todayKey(now)
+                val today = GamificationEconomy.todayKey(now)
                 val beforeToday = if (preStats.goalDate == today) preStats.xpToday else 0
                 val goalHit = beforeToday < preStats.dailyGoal &&
                     beforeToday + state.levelScore >= preStats.dailyGoal
@@ -936,9 +985,9 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
         }
         viewModelScope.launch {
             val current = _uiState.value.userStats
-            // L'XP du diagnostic transite par ProgressionManager.addXp comme toute
+            // L'XP du diagnostic transite par GamificationEconomy.addXp comme toute
             // autre source : série, objectif quotidien, XP hebdo de ligue.
-            val outcome = com.aistudio.medlingua.dzmed.domain.gamification.ProgressionManager.addXp(
+            val outcome = GamificationEconomy.addXp(
                 current,
                 result.score * 5,
                 repository.currentClock.now()

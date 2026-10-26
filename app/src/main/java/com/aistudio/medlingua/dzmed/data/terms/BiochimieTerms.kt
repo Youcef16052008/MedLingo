@@ -1,339 +1,335 @@
 package com.aistudio.medlingua.dzmed.data.terms
-
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 
-/**
- * Biochimie — 434 termes médicaux.
- * Consolidé depuis les fichiers fragmentés de data/initial/.
- */
 object BiochimieTerms {
     val terms: List<MedicalTermEntity> = listOf(
         MedicalTermEntity(
             id = 644,
+            etymology = "Greek: γλυκύς (glykys) — 'sweet' + chemical suffix -ose denoting sugars.",
             termEn = "Glucose",
             termFr = "Glucose",
             termAr = "الغلوكوز / سكر العنب",
             definitionEn = "The principal six-carbon aldohexose monosaccharide serving as the universal cellular energy substrate.",
             definitionFr = "Aldohexose à 6 carbones, principal substrat énergétique directement utilisable par les cellules de l'organisme.",
             definitionAr = "سكر سداسي كربوني ألدهيدي أحادي يمثل ركيزة الطاقة الأولية والأساسية لجميع خلايا الجسم البشري.",
-            etymology = "Greek: γλυκύς (glykys) — 'sweet' + chemical suffix -ose denoting sugars.",
-            clinicalPearl = "Normal fasting plasma glucose ranges between 0.70 and 1.10 g/L (3.9 - 6.1 mmol/L); diagnosis of diabetes mellitus is confirmed at ≥1.26 g/L on two occasions.",
-            mnemonic = "D-glucose Fischer projection: 'Right-Left-Right-Right' (hydroxyl groups at C2, C3, C4, C5).",
             module = "Biochimie",
             chapter = "Glucides et Métabolisme",
+            ipaPhonetic = "/ˈɡluː.koʊs/",
             exampleEn = "Brain tissue is obligatorily dependent on a continuous supply of blood glucose for cellular respiration.",
             exampleFr = "Le tissu cérébral dépend obligatoirement d'un apport continu en glucose sanguin.",
             exampleAr = "يعتمد النسيج الدماغي اعتماداً كلياً وإلزامياً على الإمداد المستمر بالغلوكوز من الدم.",
-            ipaPhonetic = "/ˈɡluː.koʊs/",
+            clinicalPearl = "Normal fasting plasma glucose ranges between 0.70 and 1.10 g/L (3.9 - 6.1 mmol/L); diagnosis of diabetes mellitus is confirmed at ≥1.26 g/L on two occasions.",
+            mnemonic = "D-glucose Fischer projection: 'Right-Left-Right-Right' (hydroxyl groups at C2, C3, C4, C5).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 645,
+            etymology = "Greek: γλυκύς (glykys) — 'sweet' + λύσις (lysis) — 'dissolution / breaking down'.",
             termEn = "Glycolysis (Embden-Meyerhof-Parnas pathway)",
             termFr = "Glycolyse",
             termAr = "تحلل الغلوكوز / مسار إمبدن مايرهوف",
             definitionEn = "The universal anaerobic cytosolic 10-step catabolic pathway converting 1 mole of glucose into 2 moles of pyruvate with net generation of 2 ATP and 2 NADH.",
             definitionFr = "Voie catabolique cytosolique universelle en 10 étapes dégradant 1 molécule de glucose en 2 molécules de pyruvate avec un gain net de 2 ATP et 2 NADH.",
             definitionAr = "المسار التقويضي الخلوي اللاهوائي في السيتوبلازم المكون من 10 خطوات، يحول جزيء غلوكوز إلى جزيئين بيروفات وينتج 2 ATP و 2 NADH.",
-            etymology = "Greek: γλυκύς (glykys) — 'sweet' + λύσις (lysis) — 'dissolution / breaking down'.",
-            clinicalPearl = "Key regulatory rate-limiting pacemaker enzyme is Phosphofructokinase-1 (PFK-1), allosterically activated by AMP and Fructose-2,6-bisphosphate, inhibited by ATP and citrate.",
-            mnemonic = "Irreversible regulatory steps in glycolysis: 1 (Hexokinase), 3 (PFK-1), 10 (Pyruvate kinase).",
             module = "Biochimie",
             chapter = "Glucides et Métabolisme",
+            ipaPhonetic = "/ɡlaɪˈkɒl.ɪ.sɪs/",
             exampleEn = "In erythrocytes lacking mitochondria, anaerobic glycolysis to lactate is the sole source of ATP.",
             exampleFr = "Dans les érythrocytes dépourvus de mitochondries, la glycolyse anaérobie en lactate est l'unique source d'ATP.",
             exampleAr = "في كريات الدم الحمراء الخالية من الميتوكوندريا، يمثل التحلل اللاهوائي إلى لاكتات المصدر الوحيد لإنتاج ATP.",
-            ipaPhonetic = "/ɡlaɪˈkɒl.ɪ.sɪs/",
+            clinicalPearl = "Key regulatory rate-limiting pacemaker enzyme is Phosphofructokinase-1 (PFK-1), allosterically activated by AMP and Fructose-2,6-bisphosphate, inhibited by ATP and citrate.",
+            mnemonic = "Irreversible regulatory steps in glycolysis: 1 (Hexokinase), 3 (PFK-1), 10 (Pyruvate kinase).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 646,
+            etymology = "Greek: νέος (neos) — 'new' + γλυκύς (glykys) — 'sweet' + γένεσις (genesis) — 'origin / creation'.",
             termEn = "Gluconeogenesis",
             termFr = "Néoglucogenèse",
             termAr = "استحداث السكر / توليد الغلوكوز الحديث",
             definitionEn = "The anabolic metabolic pathway producing glucose from non-carbohydrate precursors (lactate, glycerol, alanine, and glucogenic amino acids) occurring mainly in liver and kidney.",
             definitionFr = "Synthèse hépatique et rénale de glucose à partir de précurseurs non glucidiques (lactate, glycérol, acides aminés glucoformateurs).",
             definitionAr = "المسار الأيضي البنائي لتصنيع الغلوكوز من ركائز غير سكرية مثل اللاكتات والغليسرول والأحماض الأمينية في الكبد والكلية.",
-            etymology = "Greek: νέος (neos) — 'new' + γλυκύς (glykys) — 'sweet' + γένεσις (genesis) — 'origin / creation'.",
-            clinicalPearl = "Pyruvate carboxylase and Phosphoenolpyruvate carboxykinase (PEPCK) bypass the irreversible step of pyruvate kinase during hepatic fasting adaptation.",
-            mnemonic = "Cori Cycle: Muscular lactate travels via blood to liver → Gluconeogenesis converts lactate back to glucose.",
             module = "Biochimie",
             chapter = "Glucides et Métabolisme",
+            ipaPhonetic = "/ˌɡluː.koʊˌnjuː.oʊˈdʒen.ə.sɪs/",
             exampleEn = "Prolonged starvation triggers hepatic gluconeogenesis to prevent fatal hypoglycemic crisis.",
             exampleFr = "Le jeûne prolongé stimule la néoglucogenèse hépatique pour prévenir l'hypoglycémie.",
             exampleAr = "يحفز الصيام المطول عملية استحداث السكر في الكبد للوقاية من هبوط السكر القاتل في الدم.",
-            ipaPhonetic = "/ˌɡluː.koʊˌnjuː.oʊˈdʒen.ə.sɪs/",
+            clinicalPearl = "Pyruvate carboxylase and Phosphoenolpyruvate carboxykinase (PEPCK) bypass the irreversible step of pyruvate kinase during hepatic fasting adaptation.",
+            mnemonic = "Cori Cycle: Muscular lactate travels via blood to liver → Gluconeogenesis converts lactate back to glucose.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 647,
+            etymology = "French: glycogène, coined by Claude Bernard from Greek glykys (sweet) + -gen (producer).",
             termEn = "Glycogen",
             termFr = "Glycogène",
             termAr = "الغليكوجين / النشا الحيواني",
             definitionEn = "The multibranched polysaccharide of glucose serving as the primary short-term storage form of carbohydrate in human liver and skeletal muscle.",
             definitionFr = "Polymère ramifié de glucose lié par des liaisons alpha(1→4) et alpha(1→6), forme de stockage glucidique du foie et des muscles.",
             definitionAr = "بوليمر متفرع من الغلوكوز بروابط ألفا (1-4) وألفا (1-6) يمثل الشكل الأساسي لتخزين الكربوهيدرات في الكبد والعضلات الهيكلية.",
-            etymology = "French: glycogène, coined by Claude Bernard from Greek glykys (sweet) + -gen (producer).",
-            clinicalPearl = "Hepatic glycogen maintain systemic blood glucose via Glucose-6-phosphatase; muscle glycogen lacks this enzyme and is used exclusively for muscular contraction.",
-            mnemonic = "Glycogen Branching enzyme = Amylo-(1,4→1,6)-transglycosylase; Debranching enzyme cuts branches.",
             module = "Biochimie",
             chapter = "Glucides et Métabolisme",
+            ipaPhonetic = "/ˈɡlaɪ.kə.dʒən/",
             exampleEn = "Hepatic glycogen stores are completely depleted after 18 to 24 hours of fasting.",
             exampleFr = "Les réserves de glycogène hépatique sont épuisées après 18 à 24 heures de jeûne.",
             exampleAr = "تنفد مخازن الغليكوجين الكبدي تماماً بعد 18 إلى 24 ساعة من الصيام.",
-            ipaPhonetic = "/ˈɡlaɪ.kə.dʒən/",
+            clinicalPearl = "Hepatic glycogen maintain systemic blood glucose via Glucose-6-phosphatase; muscle glycogen lacks this enzyme and is used exclusively for muscular contraction.",
+            mnemonic = "Glycogen Branching enzyme = Amylo-(1,4→1,6)-transglycosylase; Debranching enzyme cuts branches.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 648,
+            etymology = "Named after Nobel Laureate Sir Hans Adolf Krebs who formulated the cycle in 1937.",
             termEn = "Krebs Cycle (Citric Acid Cycle / TCA)",
             termFr = "Cycle de Krebs (Cycle de l'acide citrique)",
             termAr = "حلقة كريبس / دورة حمض الستريك",
             definitionEn = "The central mitochondrial amphibolic metabolic hub oxidising Acetyl-CoA into CO2, generating 3 NADH, 1 FADH2, and 1 GTP per turn.",
             definitionFr = "Voie métabolique centrale mitochondriale oxydant le radical acétyle de l'Acétyl-CoA en CO2 avec production d'équivalents réducteurs (NADH, FADH2) et GTP.",
             definitionAr = "المسار الأيضي المركزي داخل الميتوكوندريا لأكسدة جزيئات أسيتيل كو-أ إلى ثاني أكسيد الكربون وإنتاج مركبات حاملة للإلكترونات (NADH, FADH2) وطاقة GTP.",
-            etymology = "Named after Nobel Laureate Sir Hans Adolf Krebs who formulated the cycle in 1937.",
-            clinicalPearl = "The condensation of oxaloacetate (4C) and acetyl-CoA (2C) by citrate synthase is the first committed step; heavily inhibited by ATP, NADH, and succinyl-CoA.",
-            mnemonic = "Cycle intermediates: 'Citrate Is Krebs' Special Substrate For Making Oxaloacetate' (Citrate, Isocitrate, α-Ketoglutarate, Succinyl-CoA, Succinate, Fumarate, Malate, Oxaloacetate).",
             module = "Biochimie",
             chapter = "Glucides et Métabolisme",
+            ipaPhonetic = "/krebz ˈsaɪ.kəl/",
             exampleEn = "Each Acetyl-CoA entering the Krebs cycle yields approximately 10 ATP equivalents via oxidative phosphorylation.",
             exampleFr = "Chaque molécule d'Acétyl-CoA engagée dans le cycle de Krebs fournit l'équivalent de 10 ATP.",
             exampleAr = "ينتج عن كل جزيء أسيتيل كو-أ يدخل حلقة كريبس ما يعادل 10 جزيئات ATP تقريباً عبر الفسفرة التأكسدية.",
-            ipaPhonetic = "/krebz ˈsaɪ.kəl/",
+            clinicalPearl = "The condensation of oxaloacetate (4C) and acetyl-CoA (2C) by citrate synthase is the first committed step; heavily inhibited by ATP, NADH, and succinyl-CoA.",
+            mnemonic = "Cycle intermediates: 'Citrate Is Krebs' Special Substrate For Making Oxaloacetate' (Citrate, Isocitrate, α-Ketoglutarate, Succinyl-CoA, Succinate, Fumarate, Malate, Oxaloacetate).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 649,
+            etymology = "Latin: acidus (sharp / sour) + fat.",
             termEn = "Fatty Acid",
             termFr = "Acide gras",
             termAr = "الحمض الدهني",
             definitionEn = "A carboxylic acid featuring an aliphatic hydrocarbon chain, categorized as saturated or unsaturated, serving as vital building blocks for lipids and energy fuel.",
             definitionFr = "Acide carboxylique aliphatique à chaîne hydrocarbonée saturée ou insaturée, constituant majeur des lipides membranaires et de réserve.",
             definitionAr = "حمض كربوكسيلي ذو سلسلة هيدروكربونية أليفاتية مشبعة أو غير مشبعة، يشكل الوحدة البنائية الأساسية للدهون ومصدراً هاماً للطاقة.",
-            etymology = "Latin: acidus (sharp / sour) + fat.",
-            clinicalPearl = "Essential fatty acids linoleic acid (omega-6) and alpha-linolenic acid (omega-3) cannot be synthesized by human enzymes due to lack of delta-12 and delta-15 desaturases.",
-            mnemonic = "Saturated = No double bonds (solid at room temp); Unsaturated = One or more double bonds (fluid cis bonds).",
             module = "Biochimie",
             chapter = "Lipides et Lipoprotéines",
+            ipaPhonetic = "/ˈfæt.i ˈæs.ɪd/",
             exampleEn = "Palmitic acid is a 16-carbon saturated fatty acid that represents the final product of de novo fatty acid synthesis.",
             exampleFr = "L'acide palmitique est un acide gras saturé à 16 carbones issu de la lipogenèse.",
             exampleAr = "حمض البالميتيك هو حمض دهني مشبع يحتوي على 16 ذرة كربون وهو الناتج النهائي للتصنيع الحيوي للأحماض الدهنية.",
-            ipaPhonetic = "/ˈfæt.i ˈæs.ɪd/",
+            clinicalPearl = "Essential fatty acids linoleic acid (omega-6) and alpha-linolenic acid (omega-3) cannot be synthesized by human enzymes due to lack of delta-12 and delta-15 desaturases.",
+            mnemonic = "Saturated = No double bonds (solid at room temp); Unsaturated = One or more double bonds (fluid cis bonds).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 650,
+            etymology = "Greek: τρεῖς (treis) — 'three' + γλυκερός (glykeros) — 'sweet' (glycerol).",
             termEn = "Triglyceride (Triacylglycerol)",
             termFr = "Triglycéride (Triacylglycérol)",
             termAr = "الدهون الثلاثية / ثلاثي الغليسريد",
             definitionEn = "An ester derived from glycerol and three fatty acid molecules, acting as the primary high-density energy storage molecule in human adipose tissue.",
             definitionFr = "Triester de glycérol et de trois acides gras, représentant la forme majeure de stockage d'énergie anhydre dans le tissu adipeux.",
             definitionAr = "إستر ناتج عن اتحاد جزيء غليسرول مع ثلاثة أحماض دهنية، يشكل المخزن الرئيسي والمركز للطاقة في النسيج الدهني البشري.",
-            etymology = "Greek: τρεῖς (treis) — 'three' + γλυκερός (glykeros) — 'sweet' (glycerol).",
-            clinicalPearl = "Normal serum triglyceride level is <1.50 g/L (1.7 mmol/L); hypertriglyceridemia exceeding 10 g/L significantly escalates the risk of acute necrotizing pancreatitis.",
-            mnemonic = "Adipose hormone-sensitive lipase (HSL) hydrolyzes triglycerides into free fatty acids and glycerol during fasting, activated by glucagon and epinephrine.",
             module = "Biochimie",
             chapter = "Lipides et Lipoprotéines",
+            ipaPhonetic = "/traɪˈɡlɪs.ə.raɪd/",
             exampleEn = "White adipocytes store triglycerides in a single unilocular cytoplasmic lipid droplet.",
             exampleFr = "Les adipocytes blancs stockent les triglycérides dans une volumineuse vacuole lipidique uniloculaire.",
             exampleAr = "تخزن الخلايا الدهنية البيضاء الدهون الثلاثية في قطرة زيتية مفردة كبيرة الحجم داخل السيتوبلازم.",
-            ipaPhonetic = "/traɪˈɡlɪs.ə.raɪd/",
+            clinicalPearl = "Normal serum triglyceride level is <1.50 g/L (1.7 mmol/L); hypertriglyceridemia exceeding 10 g/L significantly escalates the risk of acute necrotizing pancreatitis.",
+            mnemonic = "Adipose hormone-sensitive lipase (HSL) hydrolyzes triglycerides into free fatty acids and glycerol during fasting, activated by glucagon and epinephrine.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 651,
+            etymology = "Greek: χολή (chole) — 'bile' + στερεός (stereos) — 'solid' + -ol (alcohol).",
             termEn = "Cholesterol",
             termFr = "Cholestérol",
             termAr = "الكولسترول / الكوليسترول",
             definitionEn = "A 27-carbon cyclopentanoperhydrophenanthrene steroid alcohol vital for cell membrane fluidity, bile acid synthesis, and steroid hormone biogenesis.",
             definitionFr = "Stérol amphiphile à 27 carbones, constituant essentiel des membranes plasmiques et précurseur des acides biliaires et hormones stéroïdiennes.",
             definitionAr = "مركب ستيرويدي حلقي كحولي يحتوي على 27 ذرة كربون، أساسي لمرونة الغشاء الخلوي وتصنيع الأحماض الصفراوية والهرمونات الستيرويدية.",
-            etymology = "Greek: χολή (chole) — 'bile' + στερεός (stereos) — 'solid' + -ol (alcohol).",
-            clinicalPearl = "Rate-limiting enzyme of cholesterol biosynthesis is HMG-CoA reductase (cytosolic), which is pharmacologically inhibited by statin drugs.",
-            mnemonic = "Cholesterol is precursor to: 'Vitamin D, Bile acids, Cortisol, Aldosterone, Estrogen, Progesterone, Testosterone'.",
             module = "Biochimie",
             chapter = "Lipides et Lipoprotéines",
+            ipaPhonetic = "/kəˈles.tə.rɒl/",
             exampleEn = "Circulating LDL particles transport cholesterol from the liver to peripheral tissues.",
             exampleFr = "Les particules de LDL transportent le cholestérol du foie vers les tissus périphériques.",
             exampleAr = "تنقل جزيئات البروتين الشحمي منخفض الكثافة (LDL) الكولسترول من الكبد إلى الأنسجة المحيطية.",
-            ipaPhonetic = "/kəˈles.tə.rɒl/",
+            clinicalPearl = "Rate-limiting enzyme of cholesterol biosynthesis is HMG-CoA reductase (cytosolic), which is pharmacologically inhibited by statin drugs.",
+            mnemonic = "Cholesterol is precursor to: 'Vitamin D, Bile acids, Cortisol, Aldosterone, Estrogen, Progesterone, Testosterone'.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 652,
+            etymology = "Beta represents the third carbon from the carboxyl group (C-beta) where dehydrogenation occurs.",
             termEn = "Beta-Oxidation (β-Oxidation)",
             termFr = "Bêta-oxydation des acides gras",
             termAr = "الأكسدة بيتا للأحماض الدهنية",
             definitionEn = "The repeating four-step mitochondrial spiral process cleaving two-carbon acetyl-CoA units from the carboxyl end of fatty acyl-CoA chains.",
             definitionFr = "Voie mitochondriale cyclique en 4 étapes clivant séquentiellement des fragments à 2 carbones (acétyl-CoA) à partir de l'acide gras activé.",
             definitionAr = "المسار الدوري داخل الميتوكوندريا المكون من أربع خطوات متكررة لشطر وحدات ثنائية الكربون (أسيتيل كو-أ) من السلسلة الدهنية.",
-            etymology = "Beta represents the third carbon from the carboxyl group (C-beta) where dehydrogenation occurs.",
-            clinicalPearl = "Carnitine palmitoyltransferase-1 (CPT-1) controls fatty acyl-CoA entry into mitochondria, allosterically inhibited by malonyl-CoA during lipogenesis.",
-            mnemonic = "Four cyclic reactions of β-oxidation: 'O-H-O-T' (Oxidation [FAD], Hydration, Oxidation [NAD+], Thiolysis [CoA-SH]).",
             module = "Biochimie",
             chapter = "Lipides et Lipoprotéines",
+            ipaPhonetic = "/ˌbeɪ.tə ˌɒk.sɪˈdeɪ.ʃən/",
             exampleEn = "Beta-oxidation of one molecule of palmitate (16C) yields a net total of 106 ATP molecules.",
             exampleFr = "La bêta-oxydation d'une molécule de palmitate produit un gain net de 106 molécules d'ATP.",
             exampleAr = "تنتج عملية الأكسدة بيتا لجزيء واحد من حمض البالميتيك ربحاً صافياً مقداره 106 جزيئات ATP.",
-            ipaPhonetic = "/ˌbeɪ.tə ˌɒk.sɪˈdeɪ.ʃən/",
+            clinicalPearl = "Carnitine palmitoyltransferase-1 (CPT-1) controls fatty acyl-CoA entry into mitochondria, allosterically inhibited by malonyl-CoA during lipogenesis.",
+            mnemonic = "Four cyclic reactions of β-oxidation: 'O-H-O-T' (Oxidation [FAD], Hydration, Oxidation [NAD+], Thiolysis [CoA-SH]).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 653,
+            etymology = "German: Keton, from Aketon (acetone).",
             termEn = "Ketone Bodies",
             termFr = "Corps cétoniques",
             termAr = "الأجسام الكيتونية",
             definitionEn = "Water-soluble fuel molecules (Acetoacetate, Beta-hydroxybutyrate, Acetone) synthesized in hepatic mitochondria from excess acetyl-CoA during prolonged fasting or untreated diabetes.",
             definitionFr = "Composés hydrosolubles énergétiques (Acétoacétate, Bêta-hydroxybutyrate, Acétone) synthétisés par le foie lors du jeûne ou d'un déficit insulinique.",
             definitionAr = "مركبات طاقية ذائبة في الماء (أسيتوأسيتات، بيتا هيدروكسي بيوتيرات، أسيتون) ينتجها الكبد من فائض أسيتيل كو-أ أثناء الصيام أو السكري غير المعالج.",
-            etymology = "German: Keton, from Aketon (acetone).",
-            clinicalPearl = "Diabetic ketoacidosis (DKA) results from absolute insulin deficiency, driving massive lipolysis and unconstrained hepatic ketogenesis, causing severe metabolic acidosis.",
-            mnemonic = "The 3 Ketone bodies: Acetoacetate, Beta-hydroxybutyrate, Acetone (excreted in breath with fruity odor). Liver cannot utilize ketones due to lack of thiophorase.",
             module = "Biochimie",
             chapter = "Lipides et Lipoprotéines",
+            ipaPhonetic = "/ˈkiː.toʊn ˈbɒd.iz/",
             exampleEn = "During prolonged starvation, the human brain adapts to satisfy up to 60% of its energy needs using ketone bodies.",
             exampleFr = "En cas de jeûne prolongé, le cerveau adapte son métabolisme pour utiliser les corps cétoniques.",
             exampleAr = "في حالات الصيام الطويل، يتكيف الدماغ البشري ليستمد ما يصل إلى 60% من طاقته من الأجسام الكيتونية.",
-            ipaPhonetic = "/ˈkiː.toʊn ˈbɒd.iz/",
+            clinicalPearl = "Diabetic ketoacidosis (DKA) results from absolute insulin deficiency, driving massive lipolysis and unconstrained hepatic ketogenesis, causing severe metabolic acidosis.",
+            mnemonic = "The 3 Ketone bodies: Acetoacetate, Beta-hydroxybutyrate, Acetone (excreted in breath with fruity odor). Liver cannot utilize ketones due to lack of thiophorase.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 654,
+            etymology = "Greek: πεπτός (peptos) — 'digested / cooked'.",
             termEn = "Peptide Bond",
             termFr = "Liaison peptidique",
             termAr = "الرابطة الببتيدية",
             definitionEn = "The covalent amide bond formed through a dehydration condensation reaction between the alpha-carboxyl group of one amino acid and the alpha-amino group of another.",
             definitionFr = "Liaison amide covalente et plane formée par condensation entre le carboxyle d'un acide aminé et l'amine d'un second avec libération d'eau.",
             definitionAr = "رابطة أميدية تساهمية مستوية تنشأ عن تفاعل تكثيف مع نزع جزيء ماء بين مجموعة الكربوكسيل لحمض أميني ومجموعة الأمين لحمض أميني مجاور.",
-            etymology = "Greek: πεπτός (peptos) — 'digested / cooked'.",
-            clinicalPearl = "Due to resonance with the carbonyl pi electrons, the C-N peptide bond possesses ~40% double-bond character, making it rigid, planar, and predominantly trans in proteins.",
-            mnemonic = "Planar and rigid: No free rotation around the C-N peptide bond; rotation occurs only at phi (N-Cα) and psi (Cα-C) bonds.",
             module = "Biochimie",
             chapter = "Protéines et Acides Aminés",
+            ipaPhonetic = "/ˈpep.taɪd bɒnd/",
             exampleEn = "Ribosomal peptidyl transferase catalyzes the synthesis of each consecutive peptide bond during mRNA translation.",
             exampleFr = "La peptidyl-transférase ribosomique catalyse la synthèse des liaisons peptidiques lors de la traduction.",
             exampleAr = "يحفز إنزيم الببتيديل ترانسفيراز في الريبوسوم تشكيل كل رابطة ببتيدية متتالية أثناء ترجمة الرنا المرسال.",
-            ipaPhonetic = "/ˈpep.taɪd bɒnd/",
+            clinicalPearl = "Due to resonance with the carbonyl pi electrons, the C-N peptide bond possesses ~40% double-bond character, making it rigid, planar, and predominantly trans in proteins.",
+            mnemonic = "Planar and rigid: No free rotation around the C-N peptide bond; rotation occurs only at phi (N-Cα) and psi (Cα-C) bonds.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 655,
+            etymology = "Named after Leonor Michaelis and Maud Menten who published their equation in 1913.",
             termEn = "Michaelis-Menten Kinetics",
             termFr = "Cinétique de Michaelis-Menten",
             termAr = "حركية ميكائيليس مينتن الإنزيمية",
             definitionEn = "A hyperbolic mathematical model describing the rate of enzymatic reactions as a function of substrate concentration, defining Km (affinity) and Vmax (maximal velocity).",
             definitionFr = "Modèle mathématique hyperbolique décrivant la vitesse initiale d'une réaction enzymatique en fonction de la concentration en substrat.",
             definitionAr = "نموذج رياضي قطع زائدي يصف سرعة التفاعل الإنزيمي كدالة لتركيز الركيزة، محدداً ثابت ميكائيليس (Km) والسرعة القصوى (Vmax).",
-            etymology = "Named after Leonor Michaelis and Maud Menten who published their equation in 1913.",
-            clinicalPearl = "Km is the substrate concentration at which reaction rate is half of Vmax. A low Km indicates high enzyme-substrate affinity; competitive inhibitors increase apparent Km without changing Vmax.",
-            mnemonic = "Competitive Inhibition = Km increases, Vmax stays same; Non-competitive Inhibition = Vmax decreases, Km stays same.",
             module = "Biochimie",
             chapter = "Protéines et Acides Aminés",
+            ipaPhonetic = "/mɪˈkeɪ.lɪs ˈmen.tən/",
             exampleEn = "Glucokinase in hepatocytes has a much higher Km for glucose than hexokinase in muscle, preventing hepatic hypoglycemia.",
             exampleFr = "La glucokinase hépatique présente un Km plus élevé pour le glucose que l'hexokinase musculaire.",
             exampleAr = "يمتلك إنزيم الغلوكوكيناز في الكبد قيمة Km للغلوكوز أعلى بكثير مقارنة بالهيكسوكيناز في العضلات.",
-            ipaPhonetic = "/mɪˈkeɪ.lɪs ˈmen.tən/",
+            clinicalPearl = "Km is the substrate concentration at which reaction rate is half of Vmax. A low Km indicates high enzyme-substrate affinity; competitive inhibitors increase apparent Km without changing Vmax.",
+            mnemonic = "Competitive Inhibition = Km increases, Vmax stays same; Non-competitive Inhibition = Vmax decreases, Km stays same.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 656,
+            etymology = "Latin: nucleus — 'kernel / core' + -ide (chemical suffix).",
             termEn = "Nucleotide",
             termFr = "Nucléotide",
             termAr = "النيوكليوتيد / النوكليوتيد",
             definitionEn = "The monomeric molecular building unit of nucleic acids, consisting of a nitrogenous base (purine or pyrimidine), a pentose sugar, and one to three phosphate groups.",
             definitionFr = "Unité monomérique constitutive des acides nucléiques (ADN et ARN), formée d'une base azotée, d'un pentose et d'au moins un groupe phosphate.",
             definitionAr = "الوحدة البنائية الأحادية للأحماض النووية، وتتكون من قاعدة نيتروجينية (بورين أو بيريميدين)، وسكر خماسي، ومجموعة فوسفات واحدة أو أكثر.",
-            etymology = "Latin: nucleus — 'kernel / core' + -ide (chemical suffix).",
-            clinicalPearl = "Purines (Adenine, Guanine) contain two fused rings; Pyrimidines (Cytosine, Uracil, Thymine) have a single aromatic ring. Breakdown of purines produces uric acid, implicated in gout.",
-            mnemonic = "Purines = 'Pure As Gold' (Adenine, Guanine); Pyrimidines = 'CUT the Py' (Cytosine, Uracil, Thymine).",
             module = "Biochimie",
             chapter = "Acides Nucléiques et Génome",
+            ipaPhonetic = "/ˈnjuː.kli.ə.taɪd/",
             exampleEn = "Adenosine triphosphate is an energetic ribonucleotide that also acts as a coenzyme in nucleic acid synthesis.",
             exampleFr = "L'ATP est un ribonucléotide énergétique qui intervient aussi dans la synthèse des acides nucléiques.",
             exampleAr = "أدينوسين ثلاثي الفوسفات هو نيوكليوتيد ريبوزي طاقي يعمل أيضاً كإنزيم مساعد في تصنيع الأحماض النووية.",
-            ipaPhonetic = "/ˈnjuː.kli.ə.taɪd/",
+            clinicalPearl = "Purines (Adenine, Guanine) contain two fused rings; Pyrimidines (Cytosine, Uracil, Thymine) have a single aromatic ring. Breakdown of purines produces uric acid, implicated in gout.",
+            mnemonic = "Purines = 'Pure As Gold' (Adenine, Guanine); Pyrimidines = 'CUT the Py' (Cytosine, Uracil, Thymine).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 657,
+            etymology = "Latin: replicare — 'to fold back / copy / repeat'.",
             termEn = "DNA Replication",
             termFr = "Réplication de l'ADN",
             termAr = "تضاعف الحمض النووي (DNA)",
             definitionEn = "The high-fidelity semiconservative biological process of duplicating chromosomal DNA catalyzed by DNA polymerase in the 5' to 3' direction during the S phase.",
             definitionFr = "Processus biologique semi-conservatif et hautement fidèle de duplication de l'ADN génomique, catalysé par les ADN polymérases durant la phase S.",
             definitionAr = "العملية الحيوية نصف المحافظة وشديدة الدقة لمضاعفة الحمض النووي الجيني بمساعدة إنزيم بلمرة DNA في الاتجاه 5' إلى 3' خلال المرحلة S.",
-            etymology = "Latin: replicare — 'to fold back / copy / repeat'.",
-            clinicalPearl = "DNA polymerase III possesses intrinsic 3' to 5' exonuclease proofreading activity, reducing misincorporation replication errors down to 1 per 10^9 base pairs.",
-            mnemonic = "Replication enzymes: Helicase unwinds, Topoisomerase relieves supercoiling, Primase adds RNA primer, DNA Polymerase synthesizes, Ligase seals nicks.",
             module = "Biochimie",
             chapter = "Acides Nucléiques et Génome",
+            ipaPhonetic = "/ˌdiː.enˈeɪ ˌrep.lɪˈkeɪ.ʃən/",
             exampleEn = "The leading strand is synthesized continuously while the lagging strand requires discontinuous Okazaki fragments.",
             exampleFr = "Le brin précoce est synthétisé en continu tandis que le brin retardé nécessite des fragments d'Okazaki.",
             exampleAr = "يتم بناء الشريط المتقدم بشكل مستمر بينما يتطلب الشريط المتأخر تصنيع قطع أوكازاكي غير المتصلة.",
-            ipaPhonetic = "/ˌdiː.enˈeɪ ˌrep.lɪˈkeɪ.ʃən/",
+            clinicalPearl = "DNA polymerase III possesses intrinsic 3' to 5' exonuclease proofreading activity, reducing misincorporation replication errors down to 1 per 10^9 base pairs.",
+            mnemonic = "Replication enzymes: Helicase unwinds, Topoisomerase relieves supercoiling, Primase adds RNA primer, DNA Polymerase synthesizes, Ligase seals nicks.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 658,
+            etymology = "Phosphorus (Greek: phos 'light' + phoros 'bearer') + oxygenation.",
             termEn = "Oxidative Phosphorylation",
             termFr = "Phosphorylation oxydative",
             termAr = "الفسفرة التأكسدية الميتوكوندرية",
             definitionEn = "The mitochondrial metabolic process coupling the electron transport chain to ATP synthesis via the trans-membrane proton-motive force through ATP synthase (Complex V).",
             definitionFr = "Voie métabolique couplant le transfert d'électrons le long de la chaîne respiratoire mitochondriale à la synthèse d'ATP par l'ATP synthase.",
             definitionAr = "المسار الأيضي الذي يقرن تدفق الإلكترونات عبر السلسلة التنفسية للميتوكوندريا بتوليد ATP بواسطة إنزيم مخلقة ATP بفعل تدرج البروتونات.",
-            etymology = "Phosphorus (Greek: phos 'light' + phoros 'bearer') + oxygenation.",
-            clinicalPearl = "Cyanide and carbon monoxide block Complex IV (cytochrome c oxidase), causing instantaneous cessation of aerobic respiration and cellular histotoxic hypoxia.",
-            mnemonic = "Electron chain complexes: I (NADH dehydrogenase), II (Succinate dehydrogenase), III (Cytochrome bc1), IV (Cytochrome oxidase), V (ATP synthase).",
             module = "Biochimie",
             chapter = "Bioénergétique et Vitamines",
+            ipaPhonetic = "/ˈɒk.sɪ.də.tɪv ˌfɒs.fə.rɪˈleɪ.ʃən/",
             exampleEn = "Oxidative phosphorylation generates 26 to 28 of the 30 to 32 total ATP molecules derived from one molecule of glucose.",
             exampleFr = "La phosphorylation oxydative génère la grande majorité de l'ATP lors de la dégradation aérobie du glucose.",
             exampleAr = "تولد الفسفرة التأكسدية الغالبية العظمى من جزيئات ATP الناتجة عن الهدم الهوائي للغلوكوز.",
-            ipaPhonetic = "/ˈɒk.sɪ.də.tɪv ˌfɒs.fə.rɪˈleɪ.ʃən/",
+            clinicalPearl = "Cyanide and carbon monoxide block Complex IV (cytochrome c oxidase), causing instantaneous cessation of aerobic respiration and cellular histotoxic hypoxia.",
+            mnemonic = "Electron chain complexes: I (NADH dehydrogenase), II (Succinate dehydrogenase), III (Cytochrome bc1), IV (Cytochrome oxidase), V (ATP synthase).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 659,
+            etymology = "Greek: μίτος (mitos) — 'thread' + χονδρίον (chondrion) — 'granule / little grain'",
             termEn = "Mitochondria",
             termFr = "Mitochondrie",
             termAr = "الميتوكوندريا / المتقدرات",
             definitionEn = "Double-membrane cellular organelles responsible for aerobic ATP synthesis via the Krebs cycle and oxidative phosphorylation.",
             definitionFr = "Organites intracellulaires producteurs de la majorité de l'adénosine triphosphate (ATP) aérobie.",
             definitionAr = "عُضَيّات خلوية محاطة بغشاء مزدوج مسؤولة عن توليد معظم طاقة الخلية (ATP) عبر الفسفرة التأكسدية.",
-            etymology = "Greek: μίτος (mitos) — 'thread' + χονδρίον (chondrion) — 'granule / little grain'",
-            clinicalPearl = "Mitochondrial DNA is exclusively maternally inherited; defect leads to mitochondrial myopathies with ragged-red fibers.",
-            mnemonic = "Powerhouse: Outer membrane, Intermembrane space, Inner cristae membrane (ATP synthase), Matrix (Krebs).",
             module = "Biochimie",
             chapter = "Enzymes et Énergie",
+            ipaPhonetic = "/ˌmaɪ.təʊˈkɒn.dri.ə/",
             exampleEn = "Mitochondria synthesize more than 90% of cellular energy under aerobic conditions.",
             exampleFr = "Les mitochondries synthétisent plus de 90% de l'énergie cellulaire.",
             exampleAr = "تنتج الميتوكوندريا أكثر من 90% من طاقة الخلية في الظروف الهوائية.",
-            ipaPhonetic = "/ˌmaɪ.təʊˈkɒn.dri.ə/",
+            clinicalPearl = "Mitochondrial DNA is exclusively maternally inherited; defect leads to mitochondrial myopathies with ragged-red fibers.",
+            mnemonic = "Powerhouse: Outer membrane, Intermembrane space, Inner cristae membrane (ATP synthase), Matrix (Krebs).",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 660,
+            etymology = "From Adenine base + Ribose sugar + 3 high-energy phosphate ester phosphoanhydride bonds.",
             termEn = "Adenosine Triphosphate (ATP)",
             termFr = "Adénosine triphosphate (ATP)",
             termAr = "أدينوسين ثلاثي الفوسفات (ATP)",
             definitionEn = "The primary chemical energy carrier in all living cells, fueling endergonic enzymatic biological reactions.",
             definitionFr = "Nucléotide triphosphate servant de vecteur universel d'énergie chimique cellulaire.",
             definitionAr = "مركب نيوكليوتيدي عالي الطاقة يُعد الناقل الأساسي والعملة البيوكيميائية للطاقة في جميع الخلايا الحية.",
-            etymology = "From Adenine base + Ribose sugar + 3 high-energy phosphate ester phosphoanhydride bonds.",
-            clinicalPearl = "Hydrolysis of ATP to ADP and inorganic phosphate (Pi) yields approximately -30.5 kJ/mol (-7.3 kcal/mol) of free energy.",
-            mnemonic = "ATP = Universal biochemical energy currency; ADP + Pi = Discharged battery.",
             module = "Biochimie",
             chapter = "Glucides et Énergie",
+            ipaPhonetic = "/ˌeɪ.tiːˈpiː/",
             exampleEn = "Active sodium-potassium pumps consume roughly 30% of basal total cellular ATP.",
             exampleFr = "Les pompes sodium-potassium consomment environ 30% de l'ATP cellulaire de base.",
             exampleAr = "تستهلك مضخات الصوديوم والبوتاسيوم النشطة حوالي 30% من إجمالي ATP الخلوي الأساسي.",
-            ipaPhonetic = "/ˌeɪ.tiːˈpiː/",
+            clinicalPearl = "Hydrolysis of ATP to ADP and inorganic phosphate (Pi) yields approximately -30.5 kJ/mol (-7.3 kcal/mol) of free energy.",
+            mnemonic = "ATP = Universal biochemical energy currency; ADP + Pi = Discharged battery.",
         ),
-MedicalTermEntity(
+        MedicalTermEntity(
             id = 661,
+            etymology = "Greek: αἷμα (haima) — 'blood' + Latin: globus — 'sphere / round ball'",
             termEn = "Hemoglobin",
             termFr = "Hémoglobine",
             termAr = "خضاب الدم / الهيموغلوبين",
             definitionEn = "A globular tetrameric iron-containing metalloprotein in erythrocytes responsible for transporting oxygen to peripheral tissues.",
             definitionFr = "Métalloprotéine tétramérique contenant du fer, présente dans les globules rouges et transportant l'oxygène.",
             definitionAr = "بروتين كروي رباعي الوحدات يحتوي على ذرات الحديد في خلايا الدم الحمراء، ينقل الأكسجين للأنسجة.",
-            etymology = "Greek: αἷμα (haima) — 'blood' + Latin: globus — 'sphere / round ball'",
-            clinicalPearl = "Displays sigmoidal oxygen binding affinity due to positive cooperativity; shifts right with ↑2,3-BPG, ↑H+ (acidosis), ↑CO2, and ↑temperature.",
-            mnemonic = "Right-shift oxygen dissociation curve: 'CADET, face Right!' (CO2, Acidity, DPG, Exercise, Temperature).",
             module = "Biochimie",
             chapter = "Protéines",
+            ipaPhonetic = "/ˌhiː.məˈɡləʊ.bɪn/",
             exampleEn = "Adult hemoglobin (HbA) consists of two alpha and two beta polypeptide globin subunits.",
             exampleFr = "L'hémoglobine adulte (HbA) est formée de deux sous-unités alpha et deux sous-unités bêta.",
             exampleAr = "يتكون الهيموغلوبين البالغ (HbA) من وحدتين فرعيتين ألفا ووحدتين بيتا.",
-            ipaPhonetic = "/ˌhiː.məˈɡləʊ.bɪn/"
+            clinicalPearl = "Displays sigmoidal oxygen binding affinity due to positive cooperativity; shifts right with ↑2,3-BPG, ↑H+ (acidosis), ↑CO2, and ↑temperature.",
+            mnemonic = "Right-shift oxygen dissociation curve: 'CADET, face Right!' (CO2, Acidity, DPG, Exercise, Temperature).",
         ),
         MedicalTermEntity(
             id = 662,
+            etymology = "",
             termEn = "Biochemistry",
             termFr = "Biochimie",
             termAr = "الكيمياء الحيوية",
@@ -349,6 +345,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 663,
+            etymology = "",
             termEn = "Molecule",
             termFr = "Molécule",
             termAr = "الجزيء",
@@ -364,6 +361,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 664,
+            etymology = "",
             termEn = "Atom",
             termFr = "Atome",
             termAr = "الذرة",
@@ -379,6 +377,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 665,
+            etymology = "",
             termEn = "Chemical bond",
             termFr = "Liaison chimique",
             termAr = "الرابطة الكيميائية",
@@ -394,6 +393,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 666,
+            etymology = "",
             termEn = "Covalent bond",
             termFr = "Liaison covalente",
             termAr = "الرابطة التساهمية",
@@ -409,6 +409,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 667,
+            etymology = "",
             termEn = "Ionic bond",
             termFr = "Liaison ionique",
             termAr = "الرابطة الأيونية",
@@ -440,6 +441,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 669,
+            etymology = "",
             termEn = "Van der Waals forces",
             termFr = "Forces de Van der Waals",
             termAr = "قوى فان دير فالس",
@@ -449,6 +451,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Chimie de l'Eau",
             ipaPhonetic = "/væn dər wɔːlz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 670,
@@ -484,6 +489,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 672,
+            etymology = "",
             termEn = "Amphipathic",
             termFr = "Amphipathique",
             termAr = "مزدوج الألفة",
@@ -499,6 +505,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 673,
+            etymology = "",
             termEn = "Solute",
             termFr = "Soluté",
             termAr = "المذاب",
@@ -514,6 +521,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 674,
+            etymology = "",
             termEn = "Solvent",
             termFr = "Solvant",
             termAr = "المذيب",
@@ -529,6 +537,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 675,
+            etymology = "",
             termEn = "Acid",
             termFr = "Acide",
             termAr = "الحمض",
@@ -544,6 +553,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 676,
+            etymology = "",
             termEn = "Base (Alkali)",
             termFr = "Base (Alcali)",
             termAr = "القاعدة (القلوي)",
@@ -559,6 +569,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 677,
+            etymology = "",
             termEn = "Buffer",
             termFr = "Tampon",
             termAr = "المحلول الدارئ",
@@ -590,6 +601,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 679,
+            etymology = "",
             termEn = "Ion",
             termFr = "Ion",
             termAr = "الأيون (الشاردة)",
@@ -605,6 +617,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 680,
+            etymology = "",
             termEn = "Cation",
             termFr = "Cation",
             termAr = "الكاتيون (أيون موجب)",
@@ -620,6 +633,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 681,
+            etymology = "",
             termEn = "Anion",
             termFr = "Anion",
             termAr = "الأنيون (أيون سالب)",
@@ -635,6 +649,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 682,
+            etymology = "",
             termEn = "Molar concentration",
             termFr = "Concentration molaire",
             termAr = "التركيز المولاري",
@@ -650,6 +665,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 683,
+            etymology = "",
             termEn = "Dissociation",
             termFr = "Dissociation",
             termAr = "التفكك",
@@ -665,6 +681,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 684,
+            etymology = "",
             termEn = "Carbohydrate",
             termFr = "Glucide",
             termAr = "السكريات (الكربوهيدرات)",
@@ -680,6 +697,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 685,
+            etymology = "",
             termEn = "Monosaccharide",
             termFr = "Monosaccharide (Ose)",
             termAr = "السكر الأحادي",
@@ -695,6 +713,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 686,
+            etymology = "",
             termEn = "Fructose",
             termFr = "Fructose",
             termAr = "الفركتوز (سكر الفاكهة)",
@@ -710,6 +729,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 687,
+            etymology = "",
             termEn = "Galactose",
             termFr = "Galactose",
             termAr = "الغالاكتوز",
@@ -725,6 +745,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 688,
+            etymology = "",
             termEn = "Ribose",
             termFr = "Ribose",
             termAr = "الريبوز",
@@ -740,6 +761,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 689,
+            etymology = "",
             termEn = "Deoxyribose",
             termFr = "Désoxyribose",
             termAr = "الديوكسي ريبوز",
@@ -755,6 +777,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 690,
+            etymology = "",
             termEn = "Aldose",
             termFr = "Aldose",
             termAr = "الألدوز",
@@ -770,6 +793,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 691,
+            etymology = "",
             termEn = "Ketose",
             termFr = "Cétose",
             termAr = "الكيتوز",
@@ -785,6 +809,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 692,
+            etymology = "",
             termEn = "Disaccharide",
             termFr = "Disaccharide (Dioside)",
             termAr = "السكر الثنائي",
@@ -800,6 +825,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 693,
+            etymology = "",
             termEn = "Sucrose",
             termFr = "Saccharose (Sucrose)",
             termAr = "السكروز (سكر المائدة)",
@@ -809,9 +835,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈsuːkroʊs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 694,
+            etymology = "",
             termEn = "Lactose",
             termFr = "Lactose",
             termAr = "اللاكتوز (سكر الحليب)",
@@ -821,9 +851,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈlæktoʊs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 695,
+            etymology = "",
             termEn = "Maltose",
             termFr = "Maltose",
             termAr = "المالتوز (سكر الشعير)",
@@ -833,9 +867,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈmɔːltoʊs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 696,
+            etymology = "",
             termEn = "Polysaccharide",
             termFr = "Polysaccharide (Polyoside)",
             termAr = "السكر المتعدد (عديد السكاريد)",
@@ -851,6 +889,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 697,
+            etymology = "",
             termEn = "Starch",
             termFr = "Amidon",
             termAr = "النشا",
@@ -866,6 +905,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 698,
+            etymology = "",
             termEn = "Cellulose",
             termFr = "Cellulose",
             termAr = "السيلولوز",
@@ -881,6 +921,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 699,
+            etymology = "",
             termEn = "Glycosidic bond",
             termFr = "Liaison glycosidique (osidique)",
             termAr = "الرابطة الغليكوسيدية",
@@ -896,6 +937,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 700,
+            etymology = "",
             termEn = "Glycosaminoglycan (GAG)",
             termFr = "Glycosaminoglycane (GAG)",
             termAr = "الغليكوزأمينوغليكان",
@@ -905,9 +947,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˌɡlaɪkoʊsəˌmiːnoʊˈɡlaɪkæn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 701,
+            etymology = "",
             termEn = "Isomer",
             termFr = "Isomère",
             termAr = "المتشكل (الأيزومر)",
@@ -917,9 +963,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈaɪsəmər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 702,
+            etymology = "",
             termEn = "Epimer",
             termFr = "Épimère",
             termAr = "الإبيمر",
@@ -929,9 +979,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈɛpɪmər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 703,
+            etymology = "",
             termEn = "Anomer",
             termFr = "Anomère",
             termAr = "الأنومر",
@@ -941,9 +995,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Glucides",
             ipaPhonetic = "/ˈænəmər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 704,
+            etymology = "",
             termEn = "Reducing sugar",
             termFr = "Sucre réducteur",
             termAr = "السكر المرجع",
@@ -959,6 +1017,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 705,
+            etymology = "",
             termEn = "Glycoprotein",
             termFr = "Glycoprotéine",
             termAr = "البروتين السكري",
@@ -974,6 +1033,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 706,
+            etymology = "",
             termEn = "Glycolipid",
             termFr = "Glycolipide",
             termAr = "الدهن السكري",
@@ -989,6 +1049,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 707,
+            etymology = "",
             termEn = "Lipid",
             termFr = "Lipide",
             termAr = "الدهن (الليبيد)",
@@ -1004,6 +1065,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 708,
+            etymology = "",
             termEn = "Saturated fatty acid",
             termFr = "Acide gras saturé",
             termAr = "حمض دهني مشبع",
@@ -1019,6 +1081,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 709,
+            etymology = "",
             termEn = "Unsaturated fatty acid",
             termFr = "Acide gras insaturé",
             termAr = "حمض دهني غير مشبع",
@@ -1034,6 +1097,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 710,
+            etymology = "",
             termEn = "Monounsaturated fatty acid",
             termFr = "Acide gras monoinsaturé",
             termAr = "حمض دهني أحادي عدم الإشباع",
@@ -1049,6 +1113,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 711,
+            etymology = "",
             termEn = "Polyunsaturated fatty acid",
             termFr = "Acide gras polyinsaturé",
             termAr = "حمض دهني متعدد عدم الإشباع",
@@ -1064,6 +1129,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 712,
+            etymology = "",
             termEn = "Omega-3 fatty acid",
             termFr = "Acide gras oméga-3",
             termAr = "حمض دهني أوميغا-3",
@@ -1079,6 +1145,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 713,
+            etymology = "",
             termEn = "Omega-6 fatty acid",
             termFr = "Acide gras oméga-6",
             termAr = "حمض دهني أوميغا-6",
@@ -1094,6 +1161,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 714,
+            etymology = "",
             termEn = "Essential fatty acid",
             termFr = "Acide gras essentiel",
             termAr = "حمض دهني أساسي",
@@ -1109,6 +1177,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 715,
+            etymology = "",
             termEn = "Glycerol",
             termFr = "Glycérol",
             termAr = "الغليسرول",
@@ -1124,6 +1193,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 716,
+            etymology = "",
             termEn = "Phospholipid",
             termFr = "Phospholipide",
             termAr = "الفوسفوليبيد",
@@ -1139,6 +1209,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 717,
+            etymology = "",
             termEn = "Sphingolipid",
             termFr = "Sphingolipide",
             termAr = "الشحميات السفينغولية",
@@ -1154,6 +1225,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 718,
+            etymology = "",
             termEn = "Steroid",
             termFr = "Stéroïde",
             termAr = "الستيرويد",
@@ -1169,6 +1241,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 719,
+            etymology = "",
             termEn = "Lipoprotein",
             termFr = "Lipoprotéine",
             termAr = "البروتين الدهني",
@@ -1184,6 +1257,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 720,
+            etymology = "",
             termEn = "HDL (High-density lipoprotein)",
             termFr = "HDL (Lipoprotéine haute densité)",
             termAr = "البروتين الدهني عالي الكثافة",
@@ -1193,9 +1267,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/eɪtʃ diː ɛl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 721,
+            etymology = "",
             termEn = "LDL (Low-density lipoprotein)",
             termFr = "LDL (Lipoprotéine basse densité)",
             termAr = "البروتين الدهني منخفض الكثافة",
@@ -1205,9 +1283,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ɛl diː ɛl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 722,
+            etymology = "",
             termEn = "Ester bond",
             termFr = "Liaison ester",
             termAr = "الرابطة الإسترية",
@@ -1223,6 +1305,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 723,
+            etymology = "",
             termEn = "Saponification",
             termFr = "Saponification",
             termAr = "التصبن",
@@ -1238,6 +1321,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 724,
+            etymology = "",
             termEn = "Eicosanoid",
             termFr = "Éicosanoïde",
             termAr = "الإيكوزانويد",
@@ -1253,6 +1337,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 725,
+            etymology = "",
             termEn = "Prostaglandin",
             termFr = "Prostaglandine",
             termAr = "البروستاغلاندين",
@@ -1268,6 +1353,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 726,
+            etymology = "",
             termEn = "Wax",
             termFr = "Cire",
             termAr = "الشمع",
@@ -1283,6 +1369,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 727,
+            etymology = "",
             termEn = "Lipid peroxidation",
             termFr = "Peroxydation lipidique",
             termAr = "بيروكسدة الدهون",
@@ -1298,6 +1385,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 728,
+            etymology = "",
             termEn = "Ketone body",
             termFr = "Corps cétonique",
             termAr = "الجسم الكيتوني",
@@ -1307,9 +1395,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Lipides",
             ipaPhonetic = "/ˈkiːtoʊn ˈbɒdi/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 729,
+            etymology = "",
             termEn = "Beta-oxidation",
             termFr = "Bêta-oxydation",
             termAr = "الأكسدة البيتاوية",
@@ -1325,6 +1417,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 730,
+            etymology = "",
             termEn = "Amino acid",
             termFr = "Acide aminé",
             termAr = "الحمض الأميني",
@@ -1340,6 +1433,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 731,
+            etymology = "",
             termEn = "Essential amino acid",
             termFr = "Acide aminé essentiel",
             termAr = "حمض أميني أساسي",
@@ -1355,6 +1449,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 732,
+            etymology = "",
             termEn = "Non-essential amino acid",
             termFr = "Acide aminé non essentiel",
             termAr = "حمض أميني غير أساسي",
@@ -1370,6 +1465,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 733,
+            etymology = "",
             termEn = "Dipeptide",
             termFr = "Dipeptide",
             termAr = "ثنائي الببتيد",
@@ -1385,6 +1481,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 734,
+            etymology = "",
             termEn = "Polypeptide",
             termFr = "Polypeptide",
             termAr = "عديد الببتيد",
@@ -1400,6 +1497,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 735,
+            etymology = "",
             termEn = "Protein",
             termFr = "Protéine",
             termAr = "البروتين",
@@ -1415,6 +1513,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 736,
+            etymology = "",
             termEn = "Primary structure",
             termFr = "Structure primaire",
             termAr = "البنية الأولية",
@@ -1430,6 +1529,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 737,
+            etymology = "",
             termEn = "Secondary structure",
             termFr = "Structure secondaire",
             termAr = "البنية الثانوية",
@@ -1439,9 +1539,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈsɛkəndɛri/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 738,
+            etymology = "",
             termEn = "Alpha helix",
             termFr = "Hélice alpha",
             termAr = "اللولب ألفا",
@@ -1457,6 +1561,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 739,
+            etymology = "",
             termEn = "Beta sheet",
             termFr = "Feuillet bêta",
             termAr = "الصفيحة بيتا",
@@ -1472,6 +1577,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 740,
+            etymology = "",
             termEn = "Tertiary structure",
             termFr = "Structure tertiaire",
             termAr = "البنية الثالثية",
@@ -1487,6 +1593,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 741,
+            etymology = "",
             termEn = "Quaternary structure",
             termFr = "Structure quaternaire",
             termAr = "البنية الرباعية",
@@ -1502,6 +1609,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 742,
+            etymology = "",
             termEn = "Denaturation",
             termFr = "Dénaturation",
             termAr = "التمسخ (التغيير الطبيعي)",
@@ -1517,6 +1625,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 743,
+            etymology = "",
             termEn = "Disulfide bond",
             termFr = "Pont disulfure",
             termAr = "الرابطة ثنائية الكبريت",
@@ -1543,6 +1652,7 @@ MedicalTermEntity(
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈɡlɒbjʊlər/",
             exampleEn = "The globular protein is the spherical compact protein that is water-soluble (e.g., hemoglobin, enzymes).",
+            exampleFr = "",
             exampleAr = "البروتين الكروي هو بروتين كروي مدمج قابل للذوبان في الماء (مثل الهيموغلوبين والإنزيمات).",
         ),
         MedicalTermEntity(
@@ -1558,10 +1668,12 @@ MedicalTermEntity(
             chapter = "Acides Aminés et Protéines",
             ipaPhonetic = "/ˈfaɪbrəs/",
             exampleEn = "The fibrous protein is the elongated structural protein insoluble in water (e.g., collagen, keratin).",
+            exampleFr = "",
             exampleAr = "البروتين الليفي هو بروتين بنائي ممتد غير قابل للذوبان في الماء (مثل الكولاجين والكيراتين).",
         ),
         MedicalTermEntity(
             id = 746,
+            etymology = "",
             termEn = "Collagen",
             termFr = "Collagène",
             termAr = "الكولاجين",
@@ -1577,6 +1689,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 747,
+            etymology = "",
             termEn = "Keratin",
             termFr = "Kératine",
             termAr = "الكيراتين",
@@ -1592,6 +1705,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 748,
+            etymology = "",
             termEn = "Albumin",
             termFr = "Albumine",
             termAr = "الألبومين",
@@ -1607,6 +1721,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 749,
+            etymology = "",
             termEn = "Globulin",
             termFr = "Globuline",
             termAr = "الغلوبولين",
@@ -1638,6 +1753,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 751,
+            etymology = "",
             termEn = "Enzyme",
             termFr = "Enzyme",
             termAr = "الإنزيم (الخميرة)",
@@ -1653,6 +1769,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 752,
+            etymology = "",
             termEn = "Substrate",
             termFr = "Substrat",
             termAr = "الركيزة (المادة المتفاعلة)",
@@ -1668,6 +1785,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 753,
+            etymology = "",
             termEn = "Active site",
             termFr = "Site actif",
             termAr = "الموقع الفعال",
@@ -1683,6 +1801,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 754,
+            etymology = "",
             termEn = "Enzyme-substrate complex",
             termFr = "Complexe enzyme-substrat",
             termAr = "معقد الإنزيم-الركيزة",
@@ -1698,6 +1817,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 755,
+            etymology = "",
             termEn = "Lock and key model",
             termFr = "Modèle clé-serrure",
             termAr = "نموذج القفل والمفتاح",
@@ -1713,6 +1833,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 756,
+            etymology = "",
             termEn = "Induced fit model",
             termFr = "Modèle de l'ajustement induit",
             termAr = "نموذج التكيف المُحَثّ",
@@ -1728,6 +1849,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 757,
+            etymology = "",
             termEn = "Cofactor",
             termFr = "Cofacteur",
             termAr = "العامل المساعد",
@@ -1743,6 +1865,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 758,
+            etymology = "",
             termEn = "Coenzyme",
             termFr = "Coenzyme",
             termAr = "المرافق الإنزيمي",
@@ -1758,6 +1881,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 759,
+            etymology = "",
             termEn = "Apoenzyme",
             termFr = "Apoenzyme",
             termAr = "الإنزيم البدئي",
@@ -1773,6 +1897,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 760,
+            etymology = "",
             termEn = "Holoenzyme",
             termFr = "Holoenzyme",
             termAr = "الإنزيم الكامل",
@@ -1788,6 +1913,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 761,
+            etymology = "",
             termEn = "Competitive inhibition",
             termFr = "Inhibition compétitive",
             termAr = "التثبيط التنافسي",
@@ -1797,9 +1923,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/kəmˈpɛtɪtɪv ɪnˈhɪbɪʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 762,
+            etymology = "",
             termEn = "Non-competitive inhibition",
             termFr = "Inhibition non compétitive",
             termAr = "التثبيط غير التنافسي",
@@ -1809,9 +1939,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/nɒn kəmˈpɛtɪtɪv/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 763,
+            etymology = "",
             termEn = "Allosteric regulation",
             termFr = "Régulation allostérique",
             termAr = "التنظيم التفارغي",
@@ -1821,9 +1955,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌæləˈstɛrɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 764,
+            etymology = "",
             termEn = "Vmax",
             termFr = "Vmax",
             termAr = "السرعة القصوى",
@@ -1839,6 +1977,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 765,
+            etymology = "",
             termEn = "Km (Michaelis constant)",
             termFr = "Km (Constante de Michaelis)",
             termAr = "ثابت ميكائيليس",
@@ -1854,6 +1993,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 766,
+            etymology = "",
             termEn = "Isoenzyme (Isozyme)",
             termFr = "Isoenzyme (Isozyme)",
             termAr = "الإنزيم المتماثل",
@@ -1863,9 +2003,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Enzymologie",
             ipaPhonetic = "/ˌaɪsoʊˈɛnzaɪm/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 767,
+            etymology = "",
             termEn = "Zymogen (Proenzyme)",
             termFr = "Zymogène (Proenzyme)",
             termAr = "مولد الإنزيم (طليعة الإنزيم)",
@@ -1877,9 +2021,11 @@ MedicalTermEntity(
             ipaPhonetic = "/ˈzaɪmədʒən/",
             exampleEn = "The zymogen (proenzyme) is the inactive enzyme precursor requiring activation (e.g., pepsinogen → pepsin).",
             exampleFr = "La zymogène (Proenzyme) est précurseur enzymatique inactif nécessitant une activation.",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 768,
+            etymology = "",
             termEn = "Activation energy",
             termFr = "Énergie d'activation",
             termAr = "طاقة التنشيط",
@@ -1895,6 +2041,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 769,
+            etymology = "",
             termEn = "Nucleic acid",
             termFr = "Acide nucléique",
             termAr = "الحمض النووي",
@@ -1910,6 +2057,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 770,
+            etymology = "",
             termEn = "DNA (Deoxyribonucleic acid)",
             termFr = "ADN (Acide désoxyribonucléique)",
             termAr = "الحمض النووي الريبي منقوص الأكسجين",
@@ -1925,6 +2073,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 771,
+            etymology = "",
             termEn = "RNA (Ribonucleic acid)",
             termFr = "ARN (Acide ribonucléique)",
             termAr = "الحمض النووي الريبي",
@@ -1940,6 +2089,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 772,
+            etymology = "",
             termEn = "Nucleoside",
             termFr = "Nucléoside",
             termAr = "النيوكليوزيد",
@@ -1955,6 +2105,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 773,
+            etymology = "",
             termEn = "Nitrogenous base",
             termFr = "Base azotée",
             termAr = "القاعدة النيتروجينية",
@@ -1970,6 +2121,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 774,
+            etymology = "",
             termEn = "Purine",
             termFr = "Purine",
             termAr = "البيورين",
@@ -1985,6 +2137,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 775,
+            etymology = "",
             termEn = "Pyrimidine",
             termFr = "Pyrimidine",
             termAr = "البيريميدين",
@@ -2000,6 +2153,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 776,
+            etymology = "",
             termEn = "Adenine (A)",
             termFr = "Adénine (A)",
             termAr = "الأدينين",
@@ -2015,6 +2169,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 777,
+            etymology = "",
             termEn = "Guanine (G)",
             termFr = "Guanine (G)",
             termAr = "الغوانين",
@@ -2030,6 +2185,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 778,
+            etymology = "",
             termEn = "Cytosine (C)",
             termFr = "Cytosine (C)",
             termAr = "السيتوزين",
@@ -2045,6 +2201,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 779,
+            etymology = "",
             termEn = "Thymine (T)",
             termFr = "Thymine (T)",
             termAr = "الثايمين",
@@ -2060,6 +2217,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 780,
+            etymology = "",
             termEn = "Uracil (U)",
             termFr = "Uracile (U)",
             termAr = "اليوراسيل",
@@ -2075,6 +2233,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 781,
+            etymology = "",
             termEn = "Complementary base pairing",
             termFr = "Appariement des bases complémentaires",
             termAr = "تزاوج القواعد المتكاملة",
@@ -2090,6 +2249,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 782,
+            etymology = "",
             termEn = "Double helix",
             termFr = "Double hélice",
             termAr = "اللولب المزدوج",
@@ -2105,6 +2265,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 783,
+            etymology = "",
             termEn = "Phosphodiester bond",
             termFr = "Liaison phosphodiester",
             termAr = "الرابطة الفوسفودايسترية",
@@ -2120,6 +2281,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 784,
+            etymology = "",
             termEn = "Replication",
             termFr = "Réplication",
             termAr = "التضاعف (النسخ المتماثل)",
@@ -2135,6 +2297,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 785,
+            etymology = "",
             termEn = "Transcription",
             termFr = "Transcription",
             termAr = "النسخ",
@@ -2150,6 +2313,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 786,
+            etymology = "",
             termEn = "Translation",
             termFr = "Traduction",
             termAr = "الترجمة",
@@ -2165,6 +2329,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 787,
+            etymology = "",
             termEn = "Codon",
             termFr = "Codon",
             termAr = "الكودون (الشيفرة الثلاثية)",
@@ -2180,6 +2345,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 788,
+            etymology = "",
             termEn = "Anticodon",
             termFr = "Anticodon",
             termAr = "الكودون المضاد",
@@ -2195,6 +2361,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 789,
+            etymology = "",
             termEn = "mRNA (Messenger RNA)",
             termFr = "ARNm (ARN messager)",
             termAr = "الحمض النووي الريبي الرسول",
@@ -2210,6 +2377,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 790,
+            etymology = "",
             termEn = "tRNA (Transfer RNA)",
             termFr = "ARNt (ARN de transfert)",
             termAr = "الحمض النووي الريبي الناقل",
@@ -2225,6 +2393,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 791,
+            etymology = "",
             termEn = "rRNA (Ribosomal RNA)",
             termFr = "ARNr (ARN ribosomal)",
             termAr = "الحمض النووي الريبي الريبوسومي",
@@ -2240,6 +2409,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 792,
+            etymology = "",
             termEn = "Gene",
             termFr = "Gène",
             termAr = "الجين (المورثة)",
@@ -2255,6 +2425,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 793,
+            etymology = "",
             termEn = "Genetic code",
             termFr = "Code génétique",
             termAr = "الشيفرة الوراثية",
@@ -2270,6 +2441,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 794,
+            etymology = "",
             termEn = "Mutation",
             termFr = "Mutation",
             termAr = "الطفرة",
@@ -2285,6 +2457,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 795,
+            etymology = "",
             termEn = "Vitamin",
             termFr = "Vitamine",
             termAr = "الفيتامين",
@@ -2300,6 +2473,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 796,
+            etymology = "",
             termEn = "Water-soluble vitamin",
             termFr = "Vitamine hydrosoluble",
             termAr = "فيتامين ذواب في الماء",
@@ -2315,6 +2489,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 797,
+            etymology = "",
             termEn = "Fat-soluble vitamin",
             termFr = "Vitamine liposoluble",
             termAr = "فيتامين ذواب في الدهون",
@@ -2330,6 +2505,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 798,
+            etymology = "",
             termEn = "Vitamin A (Retinol)",
             termFr = "Vitamine A (Rétinol)",
             termAr = "فيتامين أ (الريتينول)",
@@ -2345,6 +2521,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 799,
+            etymology = "",
             termEn = "Vitamin B1 (Thiamine)",
             termFr = "Vitamine B1 (Thiamine)",
             termAr = "فيتامين ب1 (الثيامين)",
@@ -2360,6 +2537,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 800,
+            etymology = "",
             termEn = "Vitamin B2 (Riboflavin)",
             termFr = "Vitamine B2 (Riboflavine)",
             termAr = "فيتامين ب2 (الريبوفلافين)",
@@ -2375,6 +2553,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 801,
+            etymology = "",
             termEn = "Vitamin B3 (Niacin)",
             termFr = "Vitamine B3 (Niacine)",
             termAr = "فيتامين ب3 (النياسين)",
@@ -2390,6 +2569,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 802,
+            etymology = "",
             termEn = "Vitamin B5 (Pantothenic acid)",
             termFr = "Vitamine B5 (Acide pantothénique)",
             termAr = "فيتامين ب5 (حمض البانتوثينيك)",
@@ -2405,6 +2585,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 803,
+            etymology = "",
             termEn = "Vitamin B6 (Pyridoxine)",
             termFr = "Vitamine B6 (Pyridoxine)",
             termAr = "فيتامين ب6 (البيريدوكسين)",
@@ -2420,6 +2601,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 804,
+            etymology = "",
             termEn = "Vitamin B9 (Folic acid)",
             termFr = "Vitamine B9 (Acide folique)",
             termAr = "فيتامين ب9 (حمض الفوليك)",
@@ -2429,9 +2611,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/ˈfoʊlɪk ˈæsɪd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 805,
+            etymology = "",
             termEn = "Vitamin B12 (Cobalamin)",
             termFr = "Vitamine B12 (Cobalamine)",
             termAr = "فيتامين ب12 (الكوبالامين)",
@@ -2441,9 +2627,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Vitamines et Minéraux",
             ipaPhonetic = "/koʊˈbæləmɪn/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 806,
+            etymology = "",
             termEn = "Vitamin C (Ascorbic acid)",
             termFr = "Vitamine C (Acide ascorbique)",
             termAr = "فيتامين ج (حمض الأسكوربيك)",
@@ -2459,6 +2649,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 807,
+            etymology = "",
             termEn = "Vitamin D (Calciferol)",
             termFr = "Vitamine D (Calciférol)",
             termAr = "فيتامين د (الكالسيفيرول)",
@@ -2474,6 +2665,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 808,
+            etymology = "",
             termEn = "Vitamin E (Tocopherol)",
             termFr = "Vitamine E (Tocophérol)",
             termAr = "فيتامين هـ (التوكوفيرول)",
@@ -2489,6 +2681,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 809,
+            etymology = "",
             termEn = "Vitamin K",
             termFr = "Vitamine K",
             termAr = "فيتامين ك",
@@ -2520,6 +2713,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 811,
+            etymology = "",
             termEn = "Free radical",
             termFr = "Radical libre",
             termAr = "الجذر الحر",
@@ -2535,6 +2729,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 812,
+            etymology = "",
             termEn = "Trace element",
             termFr = "Oligoélément",
             termAr = "العنصر النزر",
@@ -2548,8 +2743,9 @@ MedicalTermEntity(
             exampleFr = "L'oligoélément est minéral requis en très petites quantités (fer, zinc, cuivre, iode).",
             exampleAr = "العنصر النزر هو معدن مطلوب بكميات صغيرة جداً (الحديد والزنك والنحاس واليود).",
         ),
-                MedicalTermEntity(
+        MedicalTermEntity(
             id = 814,
+            etymology = "",
             termEn = "Pyruvate",
             termFr = "Pyruvate",
             termAr = "البيروفات",
@@ -2565,6 +2761,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 815,
+            etymology = "",
             termEn = "Acetyl-CoA",
             termFr = "Acétyl-CoA",
             termAr = "أسيتيل مساعد الإنزيم أ",
@@ -2578,7 +2775,7 @@ MedicalTermEntity(
             exampleFr = "L'acétyl-CoA est intermédiaire métabolique clé reliant glycolyse, oxydation des acides gras et cycle de Krebs.",
             exampleAr = "أسيتيل مساعد الإنزيم أ هو وسيط أيضي رئيسي يربط بين تحلل السكر وأكسدة الأحماض الدهنية ودورة كريبس.",
         ),
-                MedicalTermEntity(
+        MedicalTermEntity(
             id = 817,
             etymology = "Greek: ἤλεκτρον (ēlektron) — 'Electricity / Current'",
             termEn = "Electron transport chain (ETC)",
@@ -2596,6 +2793,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 818,
+            etymology = "",
             termEn = "NAD+ / NADH",
             termFr = "NAD+ / NADH",
             termAr = "ثنائي نيوكليوتيد النيكوتيناميد والأدينين",
@@ -2611,6 +2809,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 819,
+            etymology = "",
             termEn = "FAD / FADH2",
             termFr = "FAD / FADH2",
             termAr = "ثنائي نيوكليوتيد الفلافين والأدينين",
@@ -2642,6 +2841,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 821,
+            etymology = "",
             termEn = "Glycogenolysis",
             termFr = "Glycogénolyse",
             termAr = "تحلل الغليكوجين",
@@ -2657,6 +2857,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 822,
+            etymology = "",
             termEn = "Pentose phosphate pathway",
             termFr = "Voie des pentoses phosphates",
             termAr = "مسار فوسفات البنتوز",
@@ -2688,6 +2889,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 824,
+            etymology = "",
             termEn = "Lipolysis",
             termFr = "Lipolyse",
             termAr = "تحلل الدهون",
@@ -2719,6 +2921,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 826,
+            etymology = "",
             termEn = "Transamination",
             termFr = "Transamination",
             termAr = "نقل الأمين",
@@ -2734,6 +2937,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 827,
+            etymology = "",
             termEn = "Deamination",
             termFr = "Désamination",
             termAr = "نزع الأمين",
@@ -2749,6 +2953,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 828,
+            etymology = "",
             termEn = "Urea cycle",
             termFr = "Cycle de l'urée",
             termAr = "دورة اليوريا",
@@ -2764,6 +2969,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 829,
+            etymology = "",
             termEn = "Oxidation",
             termFr = "Oxydation",
             termAr = "الأكسدة",
@@ -2779,6 +2985,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 830,
+            etymology = "",
             termEn = "Reduction",
             termFr = "Réduction",
             termAr = "الإرجاع",
@@ -2794,6 +3001,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 831,
+            etymology = "",
             termEn = "Redox reaction",
             termFr = "Réaction d'oxydo-réduction",
             termAr = "تفاعل أكسدة-إرجاع",
@@ -2809,6 +3017,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 832,
+            etymology = "",
             termEn = "Substrate-level phosphorylation",
             termFr = "Phosphorylation au niveau du substrat",
             termAr = "الفسفرة على مستوى الركيزة",
@@ -2840,6 +3049,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 834,
+            etymology = "",
             termEn = "ATP synthase",
             termFr = "ATP synthase",
             termAr = "إنزيم تصنيع الـATP",
@@ -2855,6 +3065,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 835,
+            etymology = "",
             termEn = "Signal transduction",
             termFr = "Transduction du signal",
             termAr = "نقل الإشارة",
@@ -2870,6 +3081,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 836,
+            etymology = "",
             termEn = "Second messenger",
             termFr = "Second messager",
             termAr = "الرسول الثاني",
@@ -2885,6 +3097,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 837,
+            etymology = "",
             termEn = "Cyclic AMP (cAMP)",
             termFr = "AMP cyclique (AMPc)",
             termAr = "الأدينوسين أحادي الفوسفات الحلقي",
@@ -2900,6 +3113,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 838,
+            etymology = "",
             termEn = "G protein",
             termFr = "Protéine G",
             termAr = "البروتين G",
@@ -2931,6 +3145,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 840,
+            etymology = "",
             termEn = "Phosphorylation",
             termFr = "Phosphorylation",
             termAr = "الفسفرة",
@@ -2946,6 +3161,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 841,
+            etymology = "",
             termEn = "Dephosphorylation",
             termFr = "Déphosphorylation",
             termAr = "نزع الفسفرة",
@@ -2961,6 +3177,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 842,
+            etymology = "",
             termEn = "Receptor",
             termFr = "Récepteur",
             termAr = "المستقبل",
@@ -2976,6 +3193,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 843,
+            etymology = "",
             termEn = "Ligand",
             termFr = "Ligand",
             termAr = "الربيطة",
@@ -3001,6 +3219,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/blʌd ˈɡluːkoʊs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 845,
@@ -3014,6 +3235,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌhaɪpərɡlaɪˈsiːmiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 846,
@@ -3027,9 +3251,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˌhaɪpoʊɡlaɪˈsiːmiə/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 847,
+            etymology = "",
             termEn = "Diabetes mellitus",
             termFr = "Diabète sucré",
             termAr = "داء السكري",
@@ -3045,6 +3273,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 848,
+            etymology = "",
             termEn = "Glycated hemoglobin (HbA1c)",
             termFr = "Hémoglobine glyquée (HbA1c)",
             termAr = "الهيموغلوبين السكري",
@@ -3060,6 +3289,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 849,
+            etymology = "",
             termEn = "Bilirubin",
             termFr = "Bilirubine",
             termAr = "البيليروبين",
@@ -3091,6 +3321,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 851,
+            etymology = "",
             termEn = "Liver function test (LFT)",
             termFr = "Bilan hépatique",
             termAr = "اختبار وظائف الكبد",
@@ -3100,9 +3331,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Biochimie Clinique",
             ipaPhonetic = "/ˈlɪvər ˈfʌŋkʃən/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 852,
+            etymology = "",
             termEn = "ALT (Alanine aminotransferase)",
             termFr = "ALAT (Alanine aminotransférase)",
             termAr = "ناقلة أمين الألانين",
@@ -3118,6 +3353,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 853,
+            etymology = "",
             termEn = "AST (Aspartate aminotransferase)",
             termFr = "ASAT (Aspartate aminotransférase)",
             termAr = "ناقلة أمين الأسبارتات",
@@ -3133,6 +3369,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 854,
+            etymology = "",
             termEn = "Creatine kinase (CK)",
             termFr = "Créatine kinase (CK)",
             termAr = "كيناز الكرياتين",
@@ -3180,6 +3417,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 857,
+            etymology = "",
             termEn = "Phospholipid bilayer",
             termFr = "Bicouche phospholipidique",
             termAr = "الطبقة الثنائية الفوسفوليبيدية",
@@ -3195,6 +3433,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 858,
+            etymology = "",
             termEn = "Glycocalyx",
             termFr = "Glycocalyx",
             termAr = "الغلاف السكري",
@@ -3210,6 +3449,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 859,
+            etymology = "",
             termEn = "Proteoglycan",
             termFr = "Protéoglycane",
             termAr = "البروتيوغليكان",
@@ -3225,6 +3465,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 860,
+            etymology = "",
             termEn = "Heme",
             termFr = "Hème",
             termAr = "الهيم",
@@ -3240,6 +3481,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 861,
+            etymology = "",
             termEn = "Porphyrin",
             termFr = "Porphyrine",
             termAr = "البورفيرين",
@@ -3255,6 +3497,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 862,
+            etymology = "",
             termEn = "Allosteric enzyme",
             termFr = "Enzyme allostérique",
             termAr = "إنزيم تفارغي",
@@ -3270,6 +3513,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 863,
+            etymology = "",
             termEn = "Feedback inhibition",
             termFr = "Inhibition par rétroaction",
             termAr = "التثبيط بالتغذية الراجعة",
@@ -3285,6 +3529,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 864,
+            etymology = "",
             termEn = "Cori cycle",
             termFr = "Cycle de Cori",
             termAr = "دورة كوري",
@@ -3300,6 +3545,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 865,
+            etymology = "",
             termEn = "Lactic acid (Lactate)",
             termFr = "Acide lactique (Lactate)",
             termAr = "حمض اللبن (اللاكتات)",
@@ -3315,6 +3561,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 866,
+            etymology = "",
             termEn = "Fermentation",
             termFr = "Fermentation",
             termAr = "التخمر",
@@ -3330,6 +3577,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 867,
+            etymology = "",
             termEn = "Coenzyme A (CoA)",
             termFr = "Coenzyme A (CoA)",
             termAr = "مرافق الإنزيم أ",
@@ -3345,6 +3593,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 868,
+            etymology = "",
             termEn = "Biotin (Vitamin B7)",
             termFr = "Biotine (Vitamine B7)",
             termAr = "البيوتين (فيتامين ب7)",
@@ -3360,6 +3609,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 869,
+            etymology = "",
             termEn = "Oxidase",
             termFr = "Oxydase",
             termAr = "الأكسيداز",
@@ -3375,6 +3625,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 870,
+            etymology = "",
             termEn = "Dehydrogenase",
             termFr = "Déshydrogénase",
             termAr = "نازعة الهيدروجين",
@@ -3390,6 +3641,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 871,
+            etymology = "",
             termEn = "Transferase",
             termFr = "Transférase",
             termAr = "الناقلة",
@@ -3421,6 +3673,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 873,
+            etymology = "",
             termEn = "Lyase",
             termFr = "Lyase",
             termAr = "الإنزيم المفكك",
@@ -3436,6 +3689,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 874,
+            etymology = "",
             termEn = "Isomerase",
             termFr = "Isomérase",
             termAr = "إنزيم التماكب",
@@ -3451,6 +3705,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 875,
+            etymology = "",
             termEn = "Ligase",
             termFr = "Ligase",
             termAr = "الإنزيم الرابط",
@@ -3466,6 +3721,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 876,
+            etymology = "",
             termEn = "Metabolic syndrome",
             termFr = "Syndrome métabolique",
             termAr = "المتلازمة الأيضية",
@@ -3481,6 +3737,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 877,
+            etymology = "",
             termEn = "Chemistry",
             termFr = "Chimie",
             termAr = "الكيمياء",
@@ -3496,6 +3753,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 878,
+            etymology = "",
             termEn = "Matter",
             termFr = "Matière",
             termAr = "المادة",
@@ -3511,6 +3769,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 879,
+            etymology = "",
             termEn = "Element",
             termFr = "Élément",
             termAr = "العنصر",
@@ -3526,6 +3785,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 880,
+            etymology = "",
             termEn = "Proton",
             termFr = "Proton",
             termAr = "البروتون",
@@ -3541,6 +3801,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 881,
+            etymology = "",
             termEn = "Neutron",
             termFr = "Neutron",
             termAr = "النيوترون",
@@ -3572,6 +3833,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 883,
+            etymology = "",
             termEn = "Atomic number (Z)",
             termFr = "Numéro atomique (Z)",
             termAr = "العدد الذري",
@@ -3587,6 +3849,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 884,
+            etymology = "",
             termEn = "Mass number (A)",
             termFr = "Nombre de masse (A)",
             termAr = "العدد الكتلي",
@@ -3602,6 +3865,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 885,
+            etymology = "",
             termEn = "Isotope",
             termFr = "Isotope",
             termAr = "النظير",
@@ -3611,9 +3875,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈaɪsətoʊp/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 886,
+            etymology = "",
             termEn = "Atomic mass (Atomic weight)",
             termFr = "Masse atomique (Poids atomique)",
             termAr = "الكتلة الذرية",
@@ -3645,6 +3913,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 888,
+            etymology = "",
             termEn = "Orbital",
             termFr = "Orbitale",
             termAr = "المدار",
@@ -3692,6 +3961,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 891,
+            etymology = "",
             termEn = "Periodic table",
             termFr = "Tableau périodique",
             termAr = "الجدول الدوري",
@@ -3707,6 +3977,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 892,
+            etymology = "",
             termEn = "Period",
             termFr = "Période",
             termAr = "الدورة",
@@ -3722,6 +3993,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 893,
+            etymology = "",
             termEn = "Group (Family)",
             termFr = "Groupe (Famille)",
             termAr = "المجموعة",
@@ -3753,6 +4025,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 895,
+            etymology = "",
             termEn = "Ionization energy",
             termFr = "Énergie d'ionisation",
             termAr = "طاقة التأين",
@@ -3784,6 +4057,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 897,
+            etymology = "",
             termEn = "Atomic radius",
             termFr = "Rayon atomique",
             termAr = "نصف القطر الذري",
@@ -3793,9 +4067,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/əˈtɒmɪk ˈreɪdiəs/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 898,
+            etymology = "",
             termEn = "Quantum number",
             termFr = "Nombre quantique",
             termAr = "العدد الكمومي",
@@ -3811,6 +4089,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 899,
+            etymology = "",
             termEn = "Polar covalent bond",
             termFr = "Liaison covalente polaire",
             termAr = "الرابطة التساهمية القطبية",
@@ -3826,6 +4105,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 900,
+            etymology = "",
             termEn = "Non-polar covalent bond",
             termFr = "Liaison covalente non polaire (apolaire)",
             termAr = "الرابطة التساهمية غير القطبية",
@@ -3841,6 +4121,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 901,
+            etymology = "",
             termEn = "Single bond",
             termFr = "Liaison simple",
             termAr = "الرابطة الأحادية",
@@ -3856,6 +4137,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 902,
+            etymology = "",
             termEn = "Double bond",
             termFr = "Liaison double",
             termAr = "الرابطة المزدوجة",
@@ -3871,6 +4153,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 903,
+            etymology = "",
             termEn = "Triple bond",
             termFr = "Liaison triple",
             termAr = "الرابطة الثلاثية",
@@ -3886,6 +4169,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 904,
+            etymology = "",
             termEn = "Sigma bond (σ)",
             termFr = "Liaison sigma (σ)",
             termAr = "الرابطة سيغما",
@@ -3901,6 +4185,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 905,
+            etymology = "",
             termEn = "Pi bond (π)",
             termFr = "Liaison pi (π)",
             termAr = "الرابطة باي",
@@ -3916,6 +4201,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 906,
+            etymology = "",
             termEn = "Coordinate bond (Dative bond)",
             termFr = "Liaison de coordination (Liaison dative)",
             termAr = "الرابطة التناسقية",
@@ -3931,6 +4217,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 907,
+            etymology = "",
             termEn = "Metallic bond",
             termFr = "Liaison métallique",
             termAr = "الرابطة الفلزية",
@@ -3946,6 +4233,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 908,
+            etymology = "",
             termEn = "Lewis structure",
             termFr = "Structure de Lewis",
             termAr = "بنية لويس",
@@ -3961,6 +4249,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 909,
+            etymology = "",
             termEn = "Lone pair",
             termFr = "Paire libre (Doublet non liant)",
             termAr = "زوج الإلكترونات الحر",
@@ -3976,6 +4265,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 910,
+            etymology = "",
             termEn = "Octet rule",
             termFr = "Règle de l'octet",
             termAr = "قاعدة الثمانية",
@@ -3991,6 +4281,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 911,
+            etymology = "",
             termEn = "VSEPR theory",
             termFr = "Théorie VSEPR",
             termAr = "نظرية تنافر أزواج الإلكترونات",
@@ -4006,6 +4297,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 912,
+            etymology = "",
             termEn = "Hybridization",
             termFr = "Hybridation",
             termAr = "التهجين",
@@ -4021,6 +4313,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 913,
+            etymology = "",
             termEn = "Dipole moment",
             termFr = "Moment dipolaire",
             termAr = "العزم ثنائي القطب",
@@ -4036,6 +4329,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 914,
+            etymology = "",
             termEn = "Molecular geometry",
             termFr = "Géométrie moléculaire",
             termAr = "الشكل الهندسي للجزيء",
@@ -4051,6 +4345,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 915,
+            etymology = "",
             termEn = "Chemical reaction",
             termFr = "Réaction chimique",
             termAr = "التفاعل الكيميائي",
@@ -4066,6 +4361,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 916,
+            etymology = "",
             termEn = "Reactant",
             termFr = "Réactif",
             termAr = "المتفاعل",
@@ -4081,6 +4377,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 917,
+            etymology = "",
             termEn = "Product",
             termFr = "Produit",
             termAr = "الناتج",
@@ -4096,6 +4393,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 918,
+            etymology = "",
             termEn = "Chemical equation",
             termFr = "Équation chimique",
             termAr = "المعادلة الكيميائية",
@@ -4111,6 +4409,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 919,
+            etymology = "",
             termEn = "Balanced equation",
             termFr = "Équation équilibrée",
             termAr = "المعادلة الموزونة",
@@ -4126,6 +4425,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 920,
+            etymology = "",
             termEn = "Stoichiometry",
             termFr = "Stœchiométrie",
             termAr = "الكيمياء الحسابية (قياس التفاعل)",
@@ -4141,6 +4441,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 921,
+            etymology = "",
             termEn = "Mole (mol)",
             termFr = "Mole (mol)",
             termAr = "المول",
@@ -4156,6 +4457,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 922,
+            etymology = "",
             termEn = "Molar mass",
             termFr = "Masse molaire",
             termAr = "الكتلة المولارية",
@@ -4171,6 +4473,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 923,
+            etymology = "",
             termEn = "Avogadro's number",
             termFr = "Nombre d'Avogadro",
             termAr = "عدد أفوغادرو",
@@ -4180,9 +4483,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Réactions Chimiques",
             ipaPhonetic = "/ˌævəˈɡɑːdroʊz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 924,
+            etymology = "",
             termEn = "Limiting reagent",
             termFr = "Réactif limitant",
             termAr = "المتفاعل المحدد",
@@ -4198,6 +4505,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 925,
+            etymology = "",
             termEn = "Excess reagent",
             termFr = "Réactif en excès",
             termAr = "المتفاعل الفائض",
@@ -4213,6 +4521,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 926,
+            etymology = "",
             termEn = "Yield",
             termFr = "Rendement",
             termAr = "المردود",
@@ -4228,6 +4537,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 927,
+            etymology = "",
             termEn = "Oxidation state (number)",
             termFr = "Degré (nombre) d'oxydation",
             termAr = "حالة (عدد) الأكسدة",
@@ -4243,6 +4553,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 928,
+            etymology = "",
             termEn = "Precipitation reaction",
             termFr = "Réaction de précipitation",
             termAr = "تفاعل الترسيب",
@@ -4258,6 +4569,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 929,
+            etymology = "",
             termEn = "Neutralization reaction",
             termFr = "Réaction de neutralisation",
             termAr = "تفاعل التعادل",
@@ -4273,6 +4585,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 930,
+            etymology = "",
             termEn = "Combustion reaction",
             termFr = "Réaction de combustion",
             termAr = "تفاعل الاحتراق",
@@ -4304,6 +4617,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 932,
+            etymology = "",
             termEn = "Condensation reaction",
             termFr = "Réaction de condensation",
             termAr = "تفاعل التكثيف",
@@ -4319,6 +4633,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 933,
+            etymology = "",
             termEn = "Catalyst",
             termFr = "Catalyseur",
             termAr = "المحفز (العامل الحفاز)",
@@ -4334,6 +4649,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 934,
+            etymology = "",
             termEn = "Solution",
             termFr = "Solution",
             termAr = "المحلول",
@@ -4349,6 +4665,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 935,
+            etymology = "",
             termEn = "Solubility",
             termFr = "Solubilité",
             termAr = "الذوبانية (قابلية الذوبان)",
@@ -4364,6 +4681,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 936,
+            etymology = "",
             termEn = "Saturated solution",
             termFr = "Solution saturée",
             termAr = "محلول مشبع",
@@ -4379,6 +4697,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 937,
+            etymology = "",
             termEn = "Unsaturated solution",
             termFr = "Solution insaturée",
             termAr = "محلول غير مشبع",
@@ -4394,6 +4713,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 938,
+            etymology = "",
             termEn = "Supersaturated solution",
             termFr = "Solution sursaturée",
             termAr = "محلول فوق الإشباع",
@@ -4409,6 +4729,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 939,
+            etymology = "",
             termEn = "Molarity (M)",
             termFr = "Molarité (M)",
             termAr = "المولارية",
@@ -4418,9 +4739,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/moʊˈlærɪti/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 940,
+            etymology = "",
             termEn = "Molality (m)",
             termFr = "Molalité (m)",
             termAr = "المولالية",
@@ -4430,9 +4755,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/moʊˈlælɪti/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 941,
+            etymology = "",
             termEn = "Dilution",
             termFr = "Dilution",
             termAr = "التخفيف",
@@ -4448,6 +4777,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 942,
+            etymology = "",
             termEn = "Colloid",
             termFr = "Colloïde",
             termAr = "الغروي",
@@ -4463,6 +4793,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 943,
+            etymology = "",
             termEn = "Suspension",
             termFr = "Suspension",
             termAr = "المعلق",
@@ -4494,6 +4825,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 945,
+            etymology = "",
             termEn = "Base",
             termFr = "Base",
             termAr = "القاعدة",
@@ -4509,6 +4841,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 946,
+            etymology = "",
             termEn = "Brønsted-Lowry acid",
             termFr = "Acide de Brønsted-Lowry",
             termAr = "حمض برونستد-لوري",
@@ -4524,6 +4857,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 947,
+            etymology = "",
             termEn = "Brønsted-Lowry base",
             termFr = "Base de Brønsted-Lowry",
             termAr = "قاعدة برونستد-لوري",
@@ -4539,6 +4873,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 948,
+            etymology = "",
             termEn = "Lewis acid",
             termFr = "Acide de Lewis",
             termAr = "حمض لويس",
@@ -4554,6 +4889,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 949,
+            etymology = "",
             termEn = "Lewis base",
             termFr = "Base de Lewis",
             termAr = "قاعدة لويس",
@@ -4569,6 +4905,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 950,
+            etymology = "",
             termEn = "Strong acid",
             termFr = "Acide fort",
             termAr = "حمض قوي",
@@ -4579,9 +4916,12 @@ MedicalTermEntity(
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/strɒŋ ˈæsɪd/",
             exampleEn = "The strong acid is the acid that completely dissociates in water (e.g., HCl, H₂SO₄, HNO₃).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 951,
+            etymology = "",
             termEn = "Weak acid",
             termFr = "Acide faible",
             termAr = "حمض ضعيف",
@@ -4592,9 +4932,12 @@ MedicalTermEntity(
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/wiːk ˈæsɪd/",
             exampleEn = "The weak acid is the acid that partially dissociates in water (e.g., CH₃COOH, H₂CO₃).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 952,
+            etymology = "",
             termEn = "pH",
             termFr = "pH",
             termAr = "الأس الهيدروجيني",
@@ -4604,9 +4947,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/piː eɪtʃ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 953,
+            etymology = "",
             termEn = "pOH",
             termFr = "pOH",
             termAr = "الأس الهيدروكسيلي",
@@ -4616,9 +4963,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/piː oʊ eɪtʃ/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 954,
+            etymology = "",
             termEn = "Conjugate acid",
             termFr = "Acide conjugué",
             termAr = "الحمض المرافق",
@@ -4634,6 +4985,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 955,
+            etymology = "",
             termEn = "Conjugate base",
             termFr = "Base conjuguée",
             termAr = "القاعدة المرافقة",
@@ -4649,6 +5001,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 956,
+            etymology = "",
             termEn = "Buffer solution",
             termFr = "Solution tampon",
             termAr = "المحلول الدارئ",
@@ -4664,6 +5017,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 957,
+            etymology = "",
             termEn = "Henderson-Hasselbalch equation",
             termFr = "Équation de Henderson-Hasselbalch",
             termAr = "معادلة هندرسون-هاسلبالخ",
@@ -4673,9 +5027,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/ˈhɛndərsən ˈhæsəlbɑːlk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 958,
+            etymology = "",
             termEn = "Titration",
             termFr = "Titrage",
             termAr = "المعايرة",
@@ -4691,6 +5049,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 959,
+            etymology = "",
             termEn = "Equivalence point",
             termFr = "Point d'équivalence",
             termAr = "نقطة التكافؤ",
@@ -4706,6 +5065,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 960,
+            etymology = "",
             termEn = "Indicator",
             termFr = "Indicateur",
             termAr = "الكاشف",
@@ -4721,6 +5081,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 961,
+            etymology = "",
             termEn = "Amphoteric substance",
             termFr = "Substance amphotère",
             termAr = "مادة مذبذبة",
@@ -4731,6 +5092,8 @@ MedicalTermEntity(
             chapter = "Acides, Bases et pH",
             ipaPhonetic = "/æmˈfɒtərɪk/",
             exampleEn = "The amphoteric substance is the substance that can act as both an acid and a base (e.g., water, amino acids).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 962,
@@ -4750,6 +5113,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 963,
+            etymology = "",
             termEn = "Enthalpy (H)",
             termFr = "Enthalpie (H)",
             termAr = "المحتوى الحراري",
@@ -4765,6 +5129,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 964,
+            etymology = "",
             termEn = "Exothermic reaction",
             termFr = "Réaction exothermique",
             termAr = "تفاعل طارد للحرارة",
@@ -4780,6 +5145,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 965,
+            etymology = "",
             termEn = "Endothermic reaction",
             termFr = "Réaction endothermique",
             termAr = "تفاعل ماص للحرارة",
@@ -4795,6 +5161,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 966,
+            etymology = "",
             termEn = "Hess's law",
             termFr = "Loi de Hess",
             termAr = "قانون هس",
@@ -4810,6 +5177,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 967,
+            etymology = "",
             termEn = "Activation energy (Ea)",
             termFr = "Énergie d'activation (Ea)",
             termAr = "طاقة التنشيط",
@@ -4825,6 +5193,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 968,
+            etymology = "",
             termEn = "Reaction rate",
             termFr = "Vitesse de réaction",
             termAr = "سرعة التفاعل",
@@ -4840,6 +5209,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 969,
+            etymology = "",
             termEn = "Rate law",
             termFr = "Loi de vitesse",
             termAr = "قانون السرعة",
@@ -4855,6 +5225,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 970,
+            etymology = "",
             termEn = "Order of reaction",
             termFr = "Ordre de réaction",
             termAr = "رتبة التفاعل",
@@ -4870,6 +5241,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 971,
+            etymology = "",
             termEn = "Chemical equilibrium",
             termFr = "Équilibre chimique",
             termAr = "التوازن الكيميائي",
@@ -4885,6 +5257,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 972,
+            etymology = "",
             termEn = "Equilibrium constant (K)",
             termFr = "Constante d'équilibre (K)",
             termAr = "ثابت التوازن",
@@ -4900,6 +5273,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 973,
+            etymology = "",
             termEn = "Le Chatelier's principle",
             termFr = "Principe de Le Chatelier",
             termAr = "مبدأ لوشاتيليه",
@@ -4909,9 +5283,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/ləˈʃætəljeɪz/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 974,
+            etymology = "",
             termEn = "Ka (Acid dissociation constant)",
             termFr = "Ka (Constante de dissociation acide)",
             termAr = "ثابت تفكك الحمض",
@@ -4927,6 +5305,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 975,
+            etymology = "",
             termEn = "Kb (Base dissociation constant)",
             termFr = "Kb (Constante de dissociation basique)",
             termAr = "ثابت تفكك القاعدة",
@@ -4942,6 +5321,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 976,
+            etymology = "",
             termEn = "Kw (Ion product of water)",
             termFr = "Ke (Produit ionique de l'eau)",
             termAr = "حاصل الضرب الأيوني للماء",
@@ -4951,9 +5331,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Équilibre Chimique",
             ipaPhonetic = "/keɪ ˈdʌbəljuː/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 977,
+            etymology = "",
             termEn = "Ksp (Solubility product)",
             termFr = "Kps (Produit de solubilité)",
             termAr = "حاصل ضرب الذوبان",
@@ -4969,6 +5353,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 978,
+            etymology = "",
             termEn = "Reversible reaction",
             termFr = "Réaction réversible",
             termAr = "تفاعل عكوس",
@@ -4984,6 +5369,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 979,
+            etymology = "",
             termEn = "Organic chemistry",
             termFr = "Chimie organique",
             termAr = "الكيمياء العضوية",
@@ -4999,6 +5385,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 980,
+            etymology = "",
             termEn = "Carbon",
             termFr = "Carbone",
             termAr = "الكربون",
@@ -5030,6 +5417,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 982,
+            etymology = "",
             termEn = "Functional group",
             termFr = "Groupe fonctionnel",
             termAr = "المجموعة الوظيفية",
@@ -5045,6 +5433,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 983,
+            etymology = "",
             termEn = "Structural formula",
             termFr = "Formule développée",
             termAr = "الصيغة البنائية",
@@ -5060,6 +5449,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 984,
+            etymology = "",
             termEn = "Molecular formula",
             termFr = "Formule moléculaire (brute)",
             termAr = "الصيغة الجزيئية",
@@ -5070,9 +5460,12 @@ MedicalTermEntity(
             chapter = "Chimie Organique",
             ipaPhonetic = "/məˈlɛkjʊlər/",
             exampleEn = "The molecular formula is the formula showing the actual number and types of atoms in a molecule (e.g., C₆H₁₂O₆).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 985,
+            etymology = "",
             termEn = "Empirical formula",
             termFr = "Formule empirique",
             termAr = "الصيغة الأولية (التجريبية)",
@@ -5083,9 +5476,12 @@ MedicalTermEntity(
             chapter = "Chimie Organique",
             ipaPhonetic = "/ɪmˈpɪrɪkəl/",
             exampleEn = "The empirical formula is the simplest whole-number ratio of atoms in a compound (e.g., CH₂O for glucose).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 986,
+            etymology = "",
             termEn = "Homologous series",
             termFr = "Série homologue",
             termAr = "السلسلة المتشابهة",
@@ -5101,6 +5497,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 987,
+            etymology = "",
             termEn = "Saturated compound",
             termFr = "Composé saturé",
             termAr = "مركب مشبع",
@@ -5116,6 +5513,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 988,
+            etymology = "",
             termEn = "Unsaturated compound",
             termFr = "Composé insaturé",
             termAr = "مركب غير مشبع",
@@ -5131,6 +5529,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 989,
+            etymology = "",
             termEn = "Alkane",
             termFr = "Alcane",
             termAr = "الألكان",
@@ -5146,6 +5545,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 990,
+            etymology = "",
             termEn = "Methane (CH₄)",
             termFr = "Méthane (CH₄)",
             termAr = "الميثان",
@@ -5161,6 +5561,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 991,
+            etymology = "",
             termEn = "Ethane (C₂H₆)",
             termFr = "Éthane (C₂H₆)",
             termAr = "الإيثان",
@@ -5176,6 +5577,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 992,
+            etymology = "",
             termEn = "Alkene",
             termFr = "Alcène",
             termAr = "الألكين",
@@ -5191,6 +5593,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 993,
+            etymology = "",
             termEn = "Ethylene (Ethene, C₂H₄)",
             termFr = "Éthylène (Éthène, C₂H₄)",
             termAr = "الإيثيلين",
@@ -5206,6 +5609,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 994,
+            etymology = "",
             termEn = "Alkyne",
             termFr = "Alcyne",
             termAr = "الألكاين",
@@ -5221,6 +5625,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 995,
+            etymology = "",
             termEn = "Acetylene (Ethyne, C₂H₂)",
             termFr = "Acétylène (Éthyne, C₂H₂)",
             termAr = "الأسيتيلين",
@@ -5236,6 +5641,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 996,
+            etymology = "",
             termEn = "Cycloalkane",
             termFr = "Cycloalcane",
             termAr = "الألكان الحلقي",
@@ -5251,6 +5657,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 997,
+            etymology = "",
             termEn = "Aromatic compound",
             termFr = "Composé aromatique",
             termAr = "المركب الأروماتي (العطري)",
@@ -5266,6 +5673,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 998,
+            etymology = "",
             termEn = "Benzene (C₆H₆)",
             termFr = "Benzène (C₆H₆)",
             termAr = "البنزين",
@@ -5291,9 +5699,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Hydrocarbures",
             ipaPhonetic = "/diːˈloʊkəlaɪzd/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1000,
+            etymology = "",
             termEn = "Aliphatic compound",
             termFr = "Composé aliphatique",
             termAr = "المركب الأليفاتي",
@@ -5325,6 +5737,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1002,
+            etymology = "",
             termEn = "Alcohol",
             termFr = "Alcool",
             termAr = "الكحول",
@@ -5340,6 +5753,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1003,
+            etymology = "",
             termEn = "Methanol (CH₃OH)",
             termFr = "Méthanol (CH₃OH)",
             termAr = "الميثانول",
@@ -5355,6 +5769,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1004,
+            etymology = "",
             termEn = "Ethanol (C₂H₅OH)",
             termFr = "Éthanol (C₂H₅OH)",
             termAr = "الإيثانول",
@@ -5370,6 +5785,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1005,
+            etymology = "",
             termEn = "Phenol",
             termFr = "Phénol",
             termAr = "الفينول",
@@ -5385,6 +5801,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1006,
+            etymology = "",
             termEn = "Carbonyl group (C=O)",
             termFr = "Groupe carbonyle (C=O)",
             termAr = "مجموعة الكربونيل",
@@ -5400,6 +5817,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1007,
+            etymology = "",
             termEn = "Aldehyde (-CHO)",
             termFr = "Aldéhyde (-CHO)",
             termAr = "الألدهيد",
@@ -5415,6 +5833,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1008,
+            etymology = "",
             termEn = "Ketone (-CO-)",
             termFr = "Cétone (-CO-)",
             termAr = "الكيتون",
@@ -5430,6 +5849,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1009,
+            etymology = "",
             termEn = "Carboxyl group (-COOH)",
             termFr = "Groupe carboxyle (-COOH)",
             termAr = "مجموعة الكربوكسيل",
@@ -5445,6 +5865,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1010,
+            etymology = "",
             termEn = "Carboxylic acid",
             termFr = "Acide carboxylique",
             termAr = "الحمض الكربوكسيلي",
@@ -5455,9 +5876,12 @@ MedicalTermEntity(
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˌkɑːrbɒkˈsɪlɪk/",
             exampleEn = "The carboxylic acid is the organic acid containing the -COOH group (e.g., acetic acid, citric acid).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1011,
+            etymology = "",
             termEn = "Amino group (-NH₂)",
             termFr = "Groupe amine (-NH₂)",
             termAr = "مجموعة الأمين",
@@ -5473,6 +5897,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1012,
+            etymology = "",
             termEn = "Amine",
             termFr = "Amine",
             termAr = "الأمين",
@@ -5488,6 +5913,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1013,
+            etymology = "",
             termEn = "Ester (-COO-)",
             termFr = "Ester (-COO-)",
             termAr = "الإستر",
@@ -5503,6 +5929,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1014,
+            etymology = "",
             termEn = "Ether (-O-)",
             termFr = "Éther (-O-)",
             termAr = "الإيثر",
@@ -5518,6 +5945,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1015,
+            etymology = "",
             termEn = "Amide (-CONH₂)",
             termFr = "Amide (-CONH₂)",
             termAr = "الأميد",
@@ -5533,6 +5961,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1016,
+            etymology = "",
             termEn = "Thiol (-SH)",
             termFr = "Thiol (-SH)",
             termAr = "الثيول",
@@ -5548,6 +5977,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1017,
+            etymology = "",
             termEn = "Sulfhydryl group (-SH)",
             termFr = "Groupe sulfhydryle (-SH)",
             termAr = "مجموعة السلفهيدريل",
@@ -5563,6 +5993,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1018,
+            etymology = "",
             termEn = "Phosphate group (-PO₄)",
             termFr = "Groupe phosphate (-PO₄)",
             termAr = "مجموعة الفوسفات",
@@ -5578,6 +6009,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1019,
+            etymology = "",
             termEn = "Halide (R-X)",
             termFr = "Halogénoalcane (R-X)",
             termAr = "هاليد الألكيل",
@@ -5593,6 +6025,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1020,
+            etymology = "",
             termEn = "Anhydride",
             termFr = "Anhydride",
             termAr = "الأنهيدريد",
@@ -5608,6 +6041,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1021,
+            etymology = "",
             termEn = "Structural isomer (Constitutional)",
             termFr = "Isomère de constitution (structural)",
             termAr = "المتشكل البنائي",
@@ -5617,9 +6051,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈstrʌktʃərəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1022,
+            etymology = "",
             termEn = "Stereoisomer",
             termFr = "Stéréo-isomère",
             termAr = "المتشكل الفراغي",
@@ -5629,9 +6067,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌstɛrioʊˈaɪsəmər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1023,
+            etymology = "",
             termEn = "Geometric isomer (Cis-Trans)",
             termFr = "Isomère géométrique (Cis-Trans)",
             termAr = "المتشكل الهندسي",
@@ -5641,9 +6083,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌdʒiːəˈmɛtrɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1024,
+            etymology = "",
             termEn = "Cis isomer",
             termFr = "Isomère cis",
             termAr = "المتشكل سيس",
@@ -5659,6 +6105,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1025,
+            etymology = "",
             termEn = "Trans isomer",
             termFr = "Isomère trans",
             termAr = "المتشكل ترانس",
@@ -5674,6 +6121,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1026,
+            etymology = "",
             termEn = "Enantiomer",
             termFr = "Énantiomère",
             termAr = "المتشكل المرآتي",
@@ -5689,6 +6137,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1027,
+            etymology = "",
             termEn = "Chiral center (Asymmetric carbon)",
             termFr = "Centre chiral (Carbone asymétrique)",
             termAr = "المركز اللاتناظري",
@@ -5704,6 +6153,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1028,
+            etymology = "",
             termEn = "Chirality",
             termFr = "Chiralité",
             termAr = "اللاتناظر",
@@ -5719,6 +6169,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1029,
+            etymology = "",
             termEn = "Racemic mixture",
             termFr = "Mélange racémique",
             termAr = "المزيج الراسيمي",
@@ -5728,9 +6179,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/rəˈsiːmɪk/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1030,
+            etymology = "",
             termEn = "Optical activity",
             termFr = "Activité optique",
             termAr = "النشاط الضوئي",
@@ -5746,6 +6201,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1031,
+            etymology = "",
             termEn = "Dextrorotatory (D or +)",
             termFr = "Dextrogyre (D ou +)",
             termAr = "يميني الدوران",
@@ -5761,6 +6217,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1032,
+            etymology = "",
             termEn = "Levorotatory (L or -)",
             termFr = "Lévogyre (L ou -)",
             termAr = "يساري الدوران",
@@ -5776,6 +6233,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1033,
+            etymology = "",
             termEn = "R/S configuration",
             termFr = "Configuration R/S",
             termAr = "التكوين R/S",
@@ -5791,6 +6249,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1034,
+            etymology = "",
             termEn = "Conformational isomer",
             termFr = "Isomère de conformation",
             termAr = "المتشكل التوافقي",
@@ -5800,9 +6259,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˌkɒnfɔːrˈmeɪʃənəl/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1035,
+            etymology = "",
             termEn = "Tautomer",
             termFr = "Tautomère",
             termAr = "التوتومر",
@@ -5812,9 +6275,13 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Isomérie et Stéréochimie",
             ipaPhonetic = "/ˈtɔːtəmər/",
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1036,
+            etymology = "",
             termEn = "Addition reaction",
             termFr = "Réaction d'addition",
             termAr = "تفاعل الإضافة",
@@ -5830,6 +6297,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1037,
+            etymology = "",
             termEn = "Elimination reaction",
             termFr = "Réaction d'élimination",
             termAr = "تفاعل الحذف",
@@ -5845,6 +6313,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1038,
+            etymology = "",
             termEn = "Substitution reaction",
             termFr = "Réaction de substitution",
             termAr = "تفاعل الاستبدال",
@@ -5860,6 +6329,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1039,
+            etymology = "",
             termEn = "Nucleophilic substitution (SN)",
             termFr = "Substitution nucléophile (SN)",
             termAr = "الاستبدال النوكليوفيلي",
@@ -5891,6 +6361,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1041,
+            etymology = "",
             termEn = "Nucleophile",
             termFr = "Nucléophile",
             termAr = "المحب للنواة",
@@ -5922,6 +6393,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1043,
+            etymology = "",
             termEn = "Oxidation (organic)",
             termFr = "Oxydation (organique)",
             termAr = "الأكسدة (العضوية)",
@@ -5937,6 +6409,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1044,
+            etymology = "",
             termEn = "Reduction (organic)",
             termFr = "Réduction (organique)",
             termAr = "الإرجاع (العضوي)",
@@ -5952,6 +6425,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1045,
+            etymology = "",
             termEn = "Esterification",
             termFr = "Estérification",
             termAr = "الأسترة",
@@ -5967,6 +6441,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1046,
+            etymology = "",
             termEn = "Polymerization",
             termFr = "Polymérisation",
             termAr = "البلمرة",
@@ -5982,6 +6457,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1047,
+            etymology = "",
             termEn = "Dehydration reaction",
             termFr = "Réaction de déshydratation",
             termAr = "تفاعل نزع الماء",
@@ -5992,6 +6468,8 @@ MedicalTermEntity(
             chapter = "Réactions Organiques",
             ipaPhonetic = "/ˌdiːhaɪˈdreɪʃən/",
             exampleEn = "The dehydration reaction is the reaction removing water from a molecule (e.g., alcohol → alkene).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1048,
@@ -6011,6 +6489,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1049,
+            etymology = "",
             termEn = "Halogenation",
             termFr = "Halogénation",
             termAr = "الهلجنة",
@@ -6042,6 +6521,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1051,
+            etymology = "",
             termEn = "ATP (Adenosine triphosphate)",
             termFr = "ATP (Adénosine triphosphate)",
             termAr = "أدينوسين ثلاثي الفوسفات",
@@ -6057,6 +6537,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1052,
+            etymology = "",
             termEn = "Urea (CO(NH₂)₂)",
             termFr = "Urée (CO(NH₂)₂)",
             termAr = "اليوريا",
@@ -6104,6 +6585,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1055,
+            etymology = "",
             termEn = "Anode",
             termFr = "Anode",
             termAr = "المصعد (الأنود)",
@@ -6119,6 +6601,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1056,
+            etymology = "",
             termEn = "Cathode",
             termFr = "Cathode",
             termAr = "المهبط (الكاثود)",
@@ -6134,6 +6617,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1057,
+            etymology = "",
             termEn = "Galvanic cell (Voltaic cell)",
             termFr = "Pile galvanique (Pile voltaïque)",
             termAr = "الخلية الغلفانية",
@@ -6197,6 +6681,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1061,
+            etymology = "",
             termEn = "Polymer",
             termFr = "Polymère",
             termAr = "البوليمر",
@@ -6212,6 +6697,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1062,
+            etymology = "",
             termEn = "Monomer",
             termFr = "Monomère",
             termAr = "المونومر",
@@ -6227,6 +6713,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1063,
+            etymology = "",
             termEn = "Condensation polymer",
             termFr = "Polymère de condensation",
             termAr = "بوليمر التكثيف",
@@ -6242,6 +6729,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1064,
+            etymology = "",
             termEn = "Addition polymer",
             termFr = "Polymère d'addition",
             termAr = "بوليمر الإضافة",
@@ -6257,6 +6745,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1065,
+            etymology = "",
             termEn = "Resonance",
             termFr = "Résonance (Mésomérie)",
             termAr = "الرنين (الميزوميري)",
@@ -6272,6 +6761,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1066,
+            etymology = "",
             termEn = "Inductive effect",
             termFr = "Effet inductif",
             termAr = "التأثير الحثي",
@@ -6287,6 +6777,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1067,
+            etymology = "",
             termEn = "Mesomeric effect",
             termFr = "Effet mésomère",
             termAr = "التأثير الميزوميري",
@@ -6302,6 +6793,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1068,
+            etymology = "",
             termEn = "Organic solvent",
             termFr = "Solvant organique",
             termAr = "المذيب العضوي",
@@ -6312,9 +6804,12 @@ MedicalTermEntity(
             chapter = "Solutions et Concentrations",
             ipaPhonetic = "/ɔːrˈɡænɪk ˈsɒlvənt/",
             exampleEn = "The organic solvent is the carbon-based liquid used to dissolve other substances (e.g., ethanol, acetone, ether).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1069,
+            etymology = "",
             termEn = "Acyl group",
             termFr = "Groupe acyle",
             termAr = "مجموعة الأسيل",
@@ -6330,6 +6825,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1070,
+            etymology = "",
             termEn = "Alkyl group",
             termFr = "Groupe alkyle",
             termAr = "مجموعة الألكيل",
@@ -6345,6 +6841,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1071,
+            etymology = "",
             termEn = "Aryl group",
             termFr = "Groupe aryle",
             termAr = "مجموعة الأريل",
@@ -6355,9 +6852,12 @@ MedicalTermEntity(
             chapter = "Groupes Fonctionnels",
             ipaPhonetic = "/ˈærɪl/",
             exampleEn = "The aryl group is the group derived from an aromatic compound by removing one hydrogen (e.g., phenyl C₆H₅-).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1072,
+            etymology = "",
             termEn = "Enol",
             termFr = "Énol",
             termAr = "الإينول",
@@ -6373,6 +6873,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1073,
+            etymology = "",
             termEn = "Keto-enol tautomerism",
             termFr = "Tautomérie céto-énolique",
             termAr = "توتومرية الكيتو-إينول",
@@ -6388,6 +6889,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1074,
+            etymology = "",
             termEn = "Inorganic compound",
             termFr = "Composé inorganique (minéral)",
             termAr = "المركب غير العضوي",
@@ -6398,9 +6900,12 @@ MedicalTermEntity(
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˌɪnɔːrˈɡænɪk/",
             exampleEn = "The inorganic compound is the compound not based on carbon-hydrogen bonds (e.g., salts, metals, minerals).",
+            exampleFr = "",
+            exampleAr = "",
         ),
         MedicalTermEntity(
             id = 1075,
+            etymology = "",
             termEn = "Salt",
             termFr = "Sel",
             termAr = "الملح",
@@ -6416,6 +6921,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1076,
+            etymology = "",
             termEn = "Crystal",
             termFr = "Cristal",
             termAr = "البلورة",
@@ -6431,6 +6937,7 @@ MedicalTermEntity(
         ),
         MedicalTermEntity(
             id = 1077,
+            etymology = "",
             termEn = "Allotrope",
             termFr = "Allotrope",
             termAr = "التآصل",
@@ -6440,7 +6947,9 @@ MedicalTermEntity(
             module = "Biochimie",
             chapter = "Structure Atomique",
             ipaPhonetic = "/ˈæləˌtroʊp/",
-        )
-
+            exampleEn = "",
+            exampleFr = "",
+            exampleAr = "",
+        ),
     )
 }

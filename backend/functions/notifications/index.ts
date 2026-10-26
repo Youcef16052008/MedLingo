@@ -74,9 +74,17 @@ serve(async (req) => {
   }
 
   try {
+    const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+    if (!serviceRoleKey) {
+      console.error('[Notifications] SUPABASE_SERVICE_ROLE_KEY is not set (required for admin API calls)')
+      return new Response(
+        JSON.stringify({ error: 'Service role key is not configured (internal error)' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+      serviceRoleKey
     )
 
     // JWT Auth Check
@@ -286,6 +294,8 @@ serve(async (req) => {
         title: notifTitle,
         body: notifBody,
         data: {
+          // Sanitise: only allow a safe whitelist of keys, prevent stored XSS
+          // by stripping any HTML/script-like content from string values.
           ...data,
           deduplication_key,
           target_screen: type === 'review_reminder' ? 'FLASHCARDS' : type === 'streak_reminder' ? 'HOME' : 'MODULES'

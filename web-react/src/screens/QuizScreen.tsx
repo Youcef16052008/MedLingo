@@ -3,13 +3,17 @@ import { useT } from "../i18n/useT";
 import type { TKey } from "../i18n";
 import { update, useAppState } from "../domain/store";
 import type { AppState } from "../domain/store";
-import { lessonQuestions, quizExercises, quizExercisesForLevel } from "../domain/lessons";
-import { addXp, touchStreak, calculateGemsForLesson } from "../domain/gamification";
+import { startLesson, endLesson, addToReviewQueue, markReviewPlayed } from "../domain/store";
+import { lessonQuestions, quizExercises, quizExercisesForLevel, getReview } from "../domain/lessons";
+import { addXp, touchStreak, calculateGemsForLesson, goalStreakOf } from "../domain/gamification";
 import { lessonKey } from "../domain/path";
 import { modLabel } from "../data/modules";
-import { earnChest } from "../domain/chests";
+import { loadLessonData, getLessonEntry, getLessonMap, chapterIdOf } from "../data/load";
+import { earnChest, cadenceBonusChest } from "../domain/chests";
 import { claimTrophies, type TrophyId } from "../domain/trophies";
 import { fillScore } from "../domain/scoring";
+import { weakChapters } from "../domain/mastery";
+import { MODULES } from "../data/modules";
 import { shuffle, norm } from "../lib/utils";
 import { SessionTop } from "../components/SessionTop";
 import { RewardPopup, type RewardData } from "../components/RewardPopup";
@@ -19,6 +23,11 @@ import { navigate } from "../lib/router";
 import type { Exercise, Lang } from "../types";
 
 export const QUIZ_CAP = 10;
+/** WS5.3 — format EMD : 20 questions, 15 minutes, seuil de réussite 50 %. */
+export const EMD_QUESTION_COUNT = 20;
+export const EMD_DURATION_MIN = 15;
+export const EMD_MIN_QUESTIONS = 10;
+export const EMD_PASS_SCORE = 50;
 
 /* Miroir de LearningLevel.kt — 6 niveaux progressifs, chacun avec son icône,
    sa couleur et son objectif. `objectiveKey` pointe vers les i18n. */
@@ -48,8 +57,53 @@ function isLevelUnlocked(n: number, s: AppState): boolean {
   return scoreForLevel(n - 1, s) >= 70;
 }
 
+/**
+ * WS5.3 — compte à rebours de l'examen EMD. `onExpire` clôt la session une
+ * seule fois (l'échéance force `next()` qui termine normalement la séance).
+ * Horloge à la seconde : un examen est la seule session chronométrée.
+ */
+function ExamCountdown({ endsAt, onExpire }: { endsAt: number; onExpire: () => void }) {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const id = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(id);
+  }, []);
+  const left = Math.max(0, endsAt - now);
+  useEffect(() => {
+    if (left === 0) onExpire();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [left === 0]);
+  const min = Math.floor(left / 60_000);
+  const sec = Math.floor((left % 60_000) / 1000);
+  const urgent = left < 60_000;
+  return (
+    <div
+      role="timer"
+      aria-live="off"
+      style={{
+        textAlign: "center",
+        fontWeight: 700,
+        fontSize: 15,
+        margin: "4px 0",
+        color: urgent ? "#B3261E" : "#0B5A3C",
+        fontVariantNumeric: "tabular-nums",
+      }}
+    >
+      ⏱ {String(min).padStart(2, "0")}:{String(sec).padStart(2, "0")}
+    </div>
+  );
+}
+
 /** Cadre de session lue dans le hash : `#/quiz?module=anat&level=3`, `#/quiz?mode=exam`. */
-function frameFromHash(): { module?: string; level: number; mode?: string } {
+function frameFromHash(): {
+  module?: string;
+  level: number;
+  mode?: string;
+  /** Entrée de chapitre (LOT2) : trace la progression + alimente la file de révision. */
+  lesson?: string;
+  /** Leçon de révision (LOT2) : rejoue les exercices ratés (`getReview`). */
+  review?: string;
+} {
   if (typeof window === "undefined") return { level: 0 };
   const query = window.location.hash.split("?")[1] ?? "";
   const p = new URLSearchParams(query);
@@ -58,6 +112,8 @@ function frameFromHash(): { module?: string; level: number; mode?: string } {
     module: p.get("module") ?? undefined,
     level: Number.isFinite(raw) && raw >= 1 && raw <= 6 ? raw : 0,
     mode: p.get("mode") ?? undefined,
+    lesson: p.get("lesson") ?? undefined,
+    review: p.get("review") ?? undefined,
   };
 }
 
@@ -105,6 +161,9 @@ interface QuizState {
   matchPick: string | null;
   mistakesQ: number;
   alreadyResult: boolean;
+  /* WS5.3 — mode examen EMD : échéance globale (ms) + ratés pour le renvoi. */
+  examEndsAt: number | null;
+  wrong: Array<{ chapter: string; module: string }>;
 }
 
 const IDLE: QuizState = {
@@ -136,6 +195,8 @@ const IDLE: QuizState = {
   matchPick: null,
   mistakesQ: 0,
   alreadyResult: false,
+  examEndsAt: null,
+  wrong: [],
 };
 
 /** Prépare l'état d'une question (options mélangées, banque de mots, paires). */
@@ -152,6 +213,8 @@ function setupQuestion(ex: Exercise): Partial<QuizState> {
     alreadyResult: false,
     opts: [],
     answerIdx: -1,
+    examEndsAt: null,
+    wrong: [],
     bank: [],
     pairs: [],
     lefts: [],
@@ -172,6 +235,17 @@ function setupQuestion(ex: Exercise): Partial<QuizState> {
     base.pairs = pairs;
     base.lefts = shuffle(pairs.map((p) => p.l));
     base.rights = shuffle(pairs.map((p) => p.r));
+  } else if (ex.type === "pair") {
+    // Type "pair" dans le corpus : format question/réponse (fill-in-the-blank)
+    // Exemple : options=['Quel:est'], answer='Heart valve'
+    const q = ex.qFr || ex.qEn || ex.qAr || "";
+    const a = ex.answer || "";
+    if (q && a) {
+      const pairs: Pair[] = [{ l: q, r: a }];
+      base.pairs = pairs;
+      base.lefts = shuffle([q]);
+      base.rights = shuffle([a]);
+    }
   }
   return base;
 }
@@ -206,6 +280,12 @@ export function QuizScreen() {
   const finishedRef = useRef(false);
   const advToRef = useRef(-1);
 
+  const submittingRef = useRef(false);
+  /** Cadre LOT2 : entrée de chapitre en cours (progression + file de révision). */
+  const lessonRef = useRef<{ id: string; chapterId: string } | null>(null);
+  const missedRef = useRef<Array<number | string>>([]);
+  /** Cadre LOT2 : leçon de révision en cours (marquée jouée à la fin). */
+  const reviewRef = useRef<string | null>(null);
   const patch = (p: Partial<QuizState>) => setQ((prev) => ({ ...prev, ...p }));
 
   const begin = (level: number) => {
@@ -233,24 +313,106 @@ export function QuizScreen() {
     return true;
   };
 
-  // Démarrage automatique quand on arrive avec un cadre (`?module=`, `?mode=exam`).
-  // Un cadre invalide (module/niveau inconnu) affiche une erreur au lieu de
-  // retomber silencieusement sur l'écran de choix de niveau (B34).
+  /** Leçon de révision (LOT2) : rejoue les exercices ratés d'une leçon. */
+  /**
+   * WS5.3 — examen EMD de module : 20 questions tirées de TOUT le corpus du
+   * module (tous niveaux), chrono global 15 min. À l'échéance la session se
+   * clôt (le bouton Vérifier devient inopérant). Résultat : score + renvoi
+   * aux chapitres les plus ratés.
+   */
+  const beginExamEmd = (moduleId: string) => {
+    const mod = MODULES.find((m) => m.id === moduleId);
+    if (!mod) return false;
+    const pool = quizExercises().filter((e) => e.module === mod.fr);
+    const list = shuffle(pool).slice(0, EMD_QUESTION_COUNT);
+    if (list.length < EMD_MIN_QUESTIONS) return false;
+    goalHitRef.current = false;
+    finishedRef.current = false;
+    advToRef.current = -1;
+    lessonRef.current = null;
+    reviewRef.current = null;
+    setQ({
+      ...IDLE,
+      phase: "play",
+      moduleId,
+      level: 0,
+      list,
+      examEndsAt: Date.now() + EMD_DURATION_MIN * 60_000,
+      ...setupQuestion(list[0]),
+    });
+    return true;
+  };
+
+  const beginReview = (entryId: string) => {
+    const list = getReview(entryId);
+    if (!list || !list.length) return false;
+    goalHitRef.current = false;
+    finishedRef.current = false;
+    advToRef.current = -1;
+    reviewRef.current = entryId;
+    setQ({ ...IDLE, phase: "play", list, ...setupQuestion(list[0]) });
+    return true;
+  };
+
+  // Démarrage automatique quand on arrive avec un cadre (`?module=`, `?mode=exam`,
+  // `?lesson=`, `?review=`). Un cadre invalide (module/niveau inconnu) affiche
+  // une erreur au lieu de retomber silencieusement sur l'écran de choix (B34).
   useEffect(() => {
     if (started.current) return;
-    started.current = true;
     const f = frameFromHash();
-    if (f.module) {
-      if (!f.level || !beginLesson(f.module, f.level)) {
-        toast(t("invalidLesson"));
-        navigate("quiz");
+    const run = () => {
+      started.current = true;
+      if (f.review) {
+        if (!beginReview(f.review)) {
+          toast(t("invalidLesson"));
+          navigate("review");
+        }
+        return;
       }
-    } else if (f.mode === "exam") {
-      if (!begin(0)) {
-        toast(t("invalidLesson"));
-        navigate("quiz");
+      if (f.module) {
+        if (f.lesson) {
+          // Cadre chapitre (LOT2) : trace la leçon (progression + file de révision).
+          const entry = getLessonEntry(f.lesson);
+          if (!entry) {
+            toast(t("invalidLesson"));
+            navigate("quiz");
+            return;
+          }
+          startLesson(entry.id, f.module, chapterIdOf(entry));
+          lessonRef.current = { id: entry.id, chapterId: chapterIdOf(entry) };
+          missedRef.current = [];
+        }
+        if (!f.level || !beginLesson(f.module, f.level)) {
+          toast(t("invalidLesson"));
+          navigate("quiz");
+        }
+      } else if (f.mode === "exam") {
+        // WS5.3 : `?mode=exam&module=X` = examen EMD du module (chrono) ;
+        // sans module, examen mixte historique (tout le corpus).
+        if (f.module) {
+          if (!beginExamEmd(f.module)) {
+            toast(t("invalidLesson"));
+            navigate("quiz");
+          }
+        } else if (!begin(0)) {
+          toast(t("invalidLesson"));
+          navigate("quiz");
+        }
       }
+    };
+    // `?lesson=`/`?review=` ont besoin de lesson_map.json, chargé
+    // paresseusement (WS2.1 : plus de 1,8 Mo au démarrage global).
+    if ((f.lesson || f.review) && Object.keys(getLessonMap()).length === 0) {
+      loadLessonData()
+        .then(run)
+        .catch(() => {
+          started.current = true;
+          toast(t("invalidLesson"));
+          navigate(f.review ? "review" : "quiz");
+        });
+      return;
     }
+    run();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -266,7 +428,11 @@ export function QuizScreen() {
    * ni point « correct », exactement comme `checkFill` côté Android.
    */
   const submit = (ok: boolean, partialXp = 0) => {
-    if (q.phase !== "play" || q.alreadyResult) return;
+    if (q.phase !== "play" || q.alreadyResult || submittingRef.current) return;
+    // WS5.3 : échéance EMD dépassée → plus aucune soumission (la session se
+    // clôt via l'effet chrono ci-dessous).
+    if (q.examEndsAt !== null && Date.now() > q.examEndsAt) return;
+    submittingRef.current = true;
     const ex = q.list[q.i];
     const now = Date.now();
 
@@ -291,17 +457,30 @@ export function QuizScreen() {
       correctN: prev.correctN + (ok ? 1 : 0),
       xp: prev.xp + (ok ? ex.points : partialXp),
     }));
+
+    submittingRef.current = false;
   };
 
   const check = () => {
     if (q.phase !== "play" || q.checked) return;
     const ex = q.list[q.i];
-    if (ex.type === "fill_blank") {
+    // Cadre chapitre (LOT2) : un raté alimente la file de révision en fin de leçon.
+    const trackMiss = (ok: boolean) => {
+      if (!ok && lessonRef.current && !missedRef.current.includes(ex.id)) {
+        missedRef.current.push(ex.id);
+      }
+      if (!ok) setQ((prev) => ({ ...prev, wrong: [...prev.wrong, { chapter: ex.chapter, module: ex.module }] }));
+    };
+    // fill_blank, gap et pair : réponse en saisie libre (voir `fillScore`/scoring).
+    if (ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair") {
       const score = fillScore(q.fillVal, ex.answer);
+      trackMiss(score === 1);
       submit(score === 1, score === 0.5 ? Math.floor(ex.points / 2) : 0);
       return;
     }
-    submit(evalAnswer(q, ex));
+    const ok = evalAnswer(q, ex);
+    trackMiss(ok);
+    submit(ok);
   };
 
   /** Question suivante — la session se termine normalement, sans barrière de cœurs. */
@@ -336,8 +515,36 @@ export function QuizScreen() {
         }
         if (gems > 0) draft.gems += gems;
         earnChest(draft, "quiz", 0);
+        // WS4 levier 3 : objectif du jour atteint + cadence de 3 journées
+        // consécutives → 1 coffre bonus (récompense variable, non achetable).
+        if (
+          draft.xpToday >= draft.dailyGoal &&
+          draft.dailyGoal > 0 &&
+          cadenceBonusChest(goalStreakOf(draft, now))
+        ) {
+          earnChest(draft, "quiz", 0);
+        }
         trophies = claimTrophies(draft, now);
       });
+      // Cadres LOT2 (WS2.1) : clôturer la leçon de chapitre (progression +
+      // file de révision) ou marquer la révision comme jouée.
+      const lesson = lessonRef.current;
+      if (lesson) {
+        endLesson(lesson.id, score, missedRef.current);
+        if (missedRef.current.length > 0) {
+          addToReviewQueue({
+            lessonId: lesson.id,
+            exIds: missedRef.current,
+            chapterId: lesson.chapterId,
+            moduleId: q.moduleId ?? "",
+          });
+        }
+        lessonRef.current = null;
+      }
+      if (reviewRef.current) {
+        markReviewPlayed(reviewRef.current);
+        reviewRef.current = null;
+      }
       setReward({ xp: q.xp, gems, goalHit: goalHitRef.current, trophies });
       setQ((prev) => ({ ...prev, phase: "done", i, gems }));
     } else {
@@ -392,7 +599,7 @@ export function QuizScreen() {
           return (
             <div
               key={lvl.n}
-              className={`level-card ${unlocked ? "" : "locked"}`}
+              className={`level-card ${unlocked ? "" : "locked"} chip-row`}
               style={{ "--lvl-color": lvl.color } as React.CSSProperties}
             >
               <div className="level-card-top">
@@ -422,9 +629,8 @@ export function QuizScreen() {
                 )}
                 <button
                   type="button"
-                  className="level-start"
+                  className="level-start chip"
                   style={{ background: unlocked ? lvl.color : "#CBD5E1" }}
-                  disabled={!unlocked}
                   onClick={() => patch({ level: lvl.n })}
                 >
                   ▶ {t("startTraining")}
@@ -484,6 +690,26 @@ export function QuizScreen() {
               <span>💎 {t("statGems")}</span>
             </div>
           </div>
+          {/* WS5.3 — renvoi EMD : les chapitres les plus ratés, chacun
+              renvoyant à l'examen du module pour retravailler. */}
+          {q.examEndsAt !== null && q.wrong.length > 0 && (
+            <div style={{ marginTop: 12, textAlign: "left" }}>
+              <b className="tiny">{t("emdChapters")}</b>
+              <ul className="plain" style={{ margin: "4px 0" }}>
+                {weakChapters(q.wrong).slice(0, 4).map((w) => (
+                  <li key={`${w.module}|${w.chapter}`} className="tiny">
+                    📖 {w.chapter} ({modLabel(w.module, lang)}) — {w.count}{" "}
+                    {w.count > 1 ? t("emdMistakes") : t("emdMistake")}
+                  </li>
+                ))}
+              </ul>
+              {score >= EMD_PASS_SCORE ? (
+                <p className="tiny" style={{ color: "#0E8A5F" }}>✅ {t("emdPassed")}</p>
+              ) : (
+                <p className="tiny" style={{ color: "#B3261E" }}>— {t("emdFailed")} ({score}%)</p>
+              )}
+            </div>
+          )}
           <a className="btn block" href={q.moduleId ? "#/path" : "#/practice"}>
             {t("homeLbl")}
           </a>
@@ -547,7 +773,7 @@ export function QuizScreen() {
         ))}
       </div>
     );
-  } else if (ex.type === "fill_blank") {
+  } else if (ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair") {
     body = (
       <>
         <p className="tiny">{t("typeHint")}</p>
@@ -670,7 +896,7 @@ export function QuizScreen() {
   const correctText = ex.type === "matching" ? ex.options.join("  |  ") : ex.answer;
   const exp = expText(ex, lang);
   const canCheck =
-    ex.type === "fill_blank"
+    ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair"
       ? !!q.fillVal.trim()
       : ex.type === "sentence_order"
         ? q.wordSel.length > 0
@@ -679,6 +905,10 @@ export function QuizScreen() {
   return (
     <>
       <SessionTop index={q.i} total={q.list.length} onExit={askExit} />
+      {/* WS5.3 : chrono EMD — restant, en rouge sous 60 s. */}
+      {q.examEndsAt !== null && (
+        <ExamCountdown endsAt={q.examEndsAt} onExpire={next} />
+      )}
       {ctx && <div className="quiz-ctx">{ctx}</div>}
       <p className="eyebrow">
         {q.moduleId

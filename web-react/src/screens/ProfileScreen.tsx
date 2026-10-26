@@ -11,6 +11,7 @@ import { GoalRing } from "../components/GoalRing";
 import { useDialog } from "../components/DialogProvider";
 import { useToast } from "../components/ToastProvider";
 import type { Lang } from "../types";
+import { MasteryCertificate } from "../components/MasteryCertificate";
 
 const LANGS: { id: Lang; label: string }[] = [
   { id: "fr", label: "FR" },
@@ -61,6 +62,9 @@ export function ProfileScreen() {
 
   return (
     <div className="profile-screen">
+      <h1 className="profile-screen-title">{t("profileTitle")} — {PROFILE.name}</h1>
+      {/* WS4 levier 7 : certificat de maîtrise (visible dès 1 module ≥ 90 %). */}
+      <MasteryCertificate best={s.moduleBest} />
       {/* ===== Carte profil étudiant (gradient #146B43 → #15803D) ===== */}
       <div className="card profile-hero">
         <div className="profile-hero-row">

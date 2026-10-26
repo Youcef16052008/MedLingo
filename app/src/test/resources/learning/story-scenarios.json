@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "comment": "Scénarios de test PARTAGÉS web/Kotlin (guide §6.2) : mêmes entrées → mêmes décisions du moteur. Exécutés par StorySessionEngineTest (Android, via fichier) et scenarios.test.ts (web, via fs). Ne pas dupliquer : ce fichier est l'unique source.",
+  "scenarios": [
+    {
+      "id": "full-happy-path",
+      "duePhraseIds": [],
+      "actions": [
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "Yes" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "No" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "a headache" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "a headache" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "Lina" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_DRILL", "value": "has" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_DRILL", "value": "does" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_DRILL", "value": "have" },
+        { "type": "ADVANCE" },
+        { "type": "RETELL_DONE", "attempted": true },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "a sore throat" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "no" },
+        { "type": "ADVANCE" },
+        { "type": "TRANSFER_TASK_DONE", "attempted": true },
+        { "type": "ADVANCE" }
+      ],
+      "expect": {
+        "finished": true,
+        "step": "TRANSFER_AND_SUMMARY",
+        "firstTry": 10,
+        "helped": 0,
+        "mistakes": 0,
+        "difficultPhrases": []
+      }
+    },
+    {
+      "id": "negation-error-then-retry",
+      "duePhraseIds": [],
+      "actions": [
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "yes" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "yes" },
+        { "type": "SUBMIT_ANSWER", "value": "no" }
+      ],
+      "expect": {
+        "finished": false,
+        "step": "CIRCLING",
+        "firstTry": 1,
+        "helped": 0,
+        "mistakes": 1,
+        "difficultPhrases": ["en:no-fever:v1"]
+      }
+    },
+    {
+      "id": "reveal-is-helped-not-mistake",
+      "duePhraseIds": [],
+      "actions": [
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "REVEAL" }
+      ],
+      "expect": {
+        "finished": false,
+        "step": "CIRCLING",
+        "firstTry": 0,
+        "helped": 1,
+        "mistakes": 0,
+        "difficultPhrases": []
+      }
+    },
+    {
+      "id": "help-after-success-removes-first-try",
+      "duePhraseIds": [],
+      "actions": [
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "ADVANCE" },
+        { "type": "SUBMIT_ANSWER", "value": "yes" },
+        { "type": "HELP" }
+      ],
+      "expect": {
+        "finished": false,
+        "step": "CIRCLING",
+        "firstTry": 0,
+        "helped": 1,
+        "mistakes": 0,
+        "difficultPhrases": []
+      }
+    },
+    {
+      "id": "review-rated-recorded-and-advanced",
+      "duePhraseIds": ["en:no-fever:v1"],
+      "actions": [
+        { "type": "REVIEW_RATED", "phraseId": "en:no-fever:v1", "remembered": false },
+        { "type": "ADVANCE" }
+      ],
+      "expect": {
+        "finished": false,
+        "step": "LISTEN_DISCOVER",
+        "firstTry": 0,
+        "helped": 0,
+        "mistakes": 0,
+        "difficultPhrases": []
+      }
+    },
+    {
+      "id": "invalid-action-ignored-during-listening",
+      "duePhraseIds": [],
+      "actions": [
+        { "type": "SUBMIT_ANSWER", "value": "yes" }
+      ],
+      "expect": {
+        "finished": false,
+        "step": "LISTEN_DISCOVER",
+        "firstTry": 0,
+        "helped": 0,
+        "mistakes": 0,
+        "difficultPhrases": []
+      }
+    }
+  ]
+}
