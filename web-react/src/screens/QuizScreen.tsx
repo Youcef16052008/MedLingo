@@ -12,6 +12,8 @@ import { loadLessonData, getLessonEntry, getLessonMap, chapterIdOf } from "../da
 import { earnChest, cadenceBonusChest } from "../domain/chests";
 import { claimTrophies, type TrophyId } from "../domain/trophies";
 import { fillScore } from "../domain/scoring";
+import { weakChapters } from "../domain/mastery";
+import { MODULES } from "../data/modules";
 import { shuffle, norm } from "../lib/utils";
 import { SessionTop } from "../components/SessionTop";
 import { RewardPopup, type RewardData } from "../components/RewardPopup";
@@ -21,6 +23,11 @@ import { navigate } from "../lib/router";
 import type { Exercise, Lang } from "../types";
 
 export const QUIZ_CAP = 10;
+/** WS5.3 — format EMD : 20 questions, 15 minutes, seuil de réussite 50 %. */
+export const EMD_QUESTION_COUNT = 20;
+export const EMD_DURATION_MIN = 15;
+export const EMD_MIN_QUESTIONS = 10;
+export const EMD_PASS_SCORE = 50;
 
 /* Miroir de LearningLevel.kt — 6 niveaux progressifs, chacun avec son icône,
    sa couleur et son objectif. `objectiveKey` pointe vers les i18n. */
@@ -48,6 +55,43 @@ function scoreForLevel(n: number, s: AppState): number {
 function isLevelUnlocked(n: number, s: AppState): boolean {
   if (n === 1) return true;
   return scoreForLevel(n - 1, s) >= 70;
+}
+
+/**
+ * WS5.3 — compte à rebours de l'examen EMD. `onExpire` clôt la session une
+ * seule fois (l'échéance force `next()` qui termine normalement la séance).
+ * Horloge à la seconde : un examen est la seule session chronométrée.
+ */
+function ExamCountdown({ endsAt, onExpire }: { endsAt: number; onExpire: () => void }) {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const id = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(id);
+  }, []);
+  const left = Math.max(0, endsAt - now);
+  useEffect(() => {
+    if (left === 0) onExpire();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [left === 0]);
+  const min = Math.floor(left / 60_000);
+  const sec = Math.floor((left % 60_000) / 1000);
+  const urgent = left < 60_000;
+  return (
+    <div
+      role="timer"
+      aria-live="off"
+      style={{
+        textAlign: "center",
+        fontWeight: 700,
+        fontSize: 15,
+        margin: "4px 0",
+        color: urgent ? "#B3261E" : "#0B5A3C",
+        fontVariantNumeric: "tabular-nums",
+      }}
+    >
+      ⏱ {String(min).padStart(2, "0")}:{String(sec).padStart(2, "0")}
+    </div>
+  );
 }
 
 /** Cadre de session lue dans le hash : `#/quiz?module=anat&level=3`, `#/quiz?mode=exam`. */
@@ -117,6 +161,9 @@ interface QuizState {
   matchPick: string | null;
   mistakesQ: number;
   alreadyResult: boolean;
+  /* WS5.3 — mode examen EMD : échéance globale (ms) + ratés pour le renvoi. */
+  examEndsAt: number | null;
+  wrong: Array<{ chapter: string; module: string }>;
 }
 
 const IDLE: QuizState = {
@@ -148,6 +195,8 @@ const IDLE: QuizState = {
   matchPick: null,
   mistakesQ: 0,
   alreadyResult: false,
+  examEndsAt: null,
+  wrong: [],
 };
 
 /** Prépare l'état d'une question (options mélangées, banque de mots, paires). */
@@ -164,6 +213,8 @@ function setupQuestion(ex: Exercise): Partial<QuizState> {
     alreadyResult: false,
     opts: [],
     answerIdx: -1,
+    examEndsAt: null,
+    wrong: [],
     bank: [],
     pairs: [],
     lefts: [],
@@ -263,6 +314,35 @@ export function QuizScreen() {
   };
 
   /** Leçon de révision (LOT2) : rejoue les exercices ratés d'une leçon. */
+  /**
+   * WS5.3 — examen EMD de module : 20 questions tirées de TOUT le corpus du
+   * module (tous niveaux), chrono global 15 min. À l'échéance la session se
+   * clôt (le bouton Vérifier devient inopérant). Résultat : score + renvoi
+   * aux chapitres les plus ratés.
+   */
+  const beginExamEmd = (moduleId: string) => {
+    const mod = MODULES.find((m) => m.id === moduleId);
+    if (!mod) return false;
+    const pool = quizExercises().filter((e) => e.module === mod.fr);
+    const list = shuffle(pool).slice(0, EMD_QUESTION_COUNT);
+    if (list.length < EMD_MIN_QUESTIONS) return false;
+    goalHitRef.current = false;
+    finishedRef.current = false;
+    advToRef.current = -1;
+    lessonRef.current = null;
+    reviewRef.current = null;
+    setQ({
+      ...IDLE,
+      phase: "play",
+      moduleId,
+      level: 0,
+      list,
+      examEndsAt: Date.now() + EMD_DURATION_MIN * 60_000,
+      ...setupQuestion(list[0]),
+    });
+    return true;
+  };
+
   const beginReview = (entryId: string) => {
     const list = getReview(entryId);
     if (!list || !list.length) return false;
@@ -307,7 +387,14 @@ export function QuizScreen() {
           navigate("quiz");
         }
       } else if (f.mode === "exam") {
-        if (!begin(0)) {
+        // WS5.3 : `?mode=exam&module=X` = examen EMD du module (chrono) ;
+        // sans module, examen mixte historique (tout le corpus).
+        if (f.module) {
+          if (!beginExamEmd(f.module)) {
+            toast(t("invalidLesson"));
+            navigate("quiz");
+          }
+        } else if (!begin(0)) {
           toast(t("invalidLesson"));
           navigate("quiz");
         }
@@ -342,6 +429,9 @@ export function QuizScreen() {
    */
   const submit = (ok: boolean, partialXp = 0) => {
     if (q.phase !== "play" || q.alreadyResult || submittingRef.current) return;
+    // WS5.3 : échéance EMD dépassée → plus aucune soumission (la session se
+    // clôt via l'effet chrono ci-dessous).
+    if (q.examEndsAt !== null && Date.now() > q.examEndsAt) return;
     submittingRef.current = true;
     const ex = q.list[q.i];
     const now = Date.now();
@@ -379,6 +469,7 @@ export function QuizScreen() {
       if (!ok && lessonRef.current && !missedRef.current.includes(ex.id)) {
         missedRef.current.push(ex.id);
       }
+      if (!ok) setQ((prev) => ({ ...prev, wrong: [...prev.wrong, { chapter: ex.chapter, module: ex.module }] }));
     };
     // fill_blank, gap et pair : réponse en saisie libre (voir `fillScore`/scoring).
     if (ex.type === "fill_blank" || ex.type === "gap" || ex.type === "pair") {
@@ -599,6 +690,26 @@ export function QuizScreen() {
               <span>💎 {t("statGems")}</span>
             </div>
           </div>
+          {/* WS5.3 — renvoi EMD : les chapitres les plus ratés, chacun
+              renvoyant à l'examen du module pour retravailler. */}
+          {q.examEndsAt !== null && q.wrong.length > 0 && (
+            <div style={{ marginTop: 12, textAlign: "left" }}>
+              <b className="tiny">{t("emdChapters")}</b>
+              <ul className="plain" style={{ margin: "4px 0" }}>
+                {weakChapters(q.wrong).slice(0, 4).map((w) => (
+                  <li key={`${w.module}|${w.chapter}`} className="tiny">
+                    📖 {w.chapter} ({modLabel(w.module, lang)}) — {w.count}{" "}
+                    {w.count > 1 ? t("emdMistakes") : t("emdMistake")}
+                  </li>
+                ))}
+              </ul>
+              {score >= EMD_PASS_SCORE ? (
+                <p className="tiny" style={{ color: "#0E8A5F" }}>✅ {t("emdPassed")}</p>
+              ) : (
+                <p className="tiny" style={{ color: "#B3261E" }}>— {t("emdFailed")} ({score}%)</p>
+              )}
+            </div>
+          )}
           <a className="btn block" href={q.moduleId ? "#/path" : "#/practice"}>
             {t("homeLbl")}
           </a>
@@ -794,6 +905,10 @@ export function QuizScreen() {
   return (
     <>
       <SessionTop index={q.i} total={q.list.length} onExit={askExit} />
+      {/* WS5.3 : chrono EMD — restant, en rouge sous 60 s. */}
+      {q.examEndsAt !== null && (
+        <ExamCountdown endsAt={q.examEndsAt} onExpire={next} />
+      )}
       {ctx && <div className="quiz-ctx">{ctx}</div>}
       <p className="eyebrow">
         {q.moduleId
