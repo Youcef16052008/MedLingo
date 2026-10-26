@@ -6,7 +6,9 @@ import { describe, it, expect } from "vitest";
  * Garantit aussi le contrat mixte number|string des ids (corpus v2).
  */
 describe("boucle de révision (startLesson → endLesson → queue → played)", () => {
-  it("une leçon ratée alimente la file puis la sort une fois rejouée", async () => {
+  // timeout généreux : ce fichier tourne en parallèle de bulkExercises
+  // (~30 s de génération) — le timeout par défaut 5 s flakait sous charge.
+  it("une leçon ratée alimente la file puis la sort une fois rejouée", { timeout: 60_000 }, async () => {
     const m = await import("../store");
     m.resetProgress(Date.now());
     m.startLesson("anat-Angiologie-l1", "anat", "anat-Angiologie");
@@ -33,7 +35,7 @@ describe("boucle de révision (startLesson → endLesson → queue → played)",
     expect(m.getState().reviewQueue[0].status).toBe("played");
   });
 
-  it("une leçon sans raté ne demande pas de relecture", async () => {
+  it("une leçon sans raté ne demande pas de relecture", { timeout: 60_000 }, async () => {
     const m = await import("../store");
     m.resetProgress(Date.now());
     m.startLesson("physio-L1", "physio", "physio-L1");
