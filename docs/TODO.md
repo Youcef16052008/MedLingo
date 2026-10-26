@@ -1,6 +1,6 @@
 # MedLingo — À faire (le reste)
 
-**Dernière mise à jour : 25/10/2026** · **Pilotage unique : [`PLAN_MAITRE_2026.md`](PLAN_MAITRE_2026.md)** (consolide les 40 rapports du dépôt, workstreams WS0–WS6, ADRs, gouvernance documentaire) · Stratégie : [`RAPPORT_COMPETITIF_ET_PLAN_2026.md`](RAPPORT_COMPETITIF_ET_PLAN_2026.md) · Constat qualité : [`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md).
+**Dernière mise à jour : 25/10/2026 (fin des workstreams dev)** · **État : WS0→WS5 tous livrés — les seules actions restantes sont HUMAINES (ci-dessous §rouge) + WS5 résiduel (dictées audio, parité Android du moteur de maîtrise)** · **Pilotage unique : [`PLAN_MAITRE_2026.md`](PLAN_MAITRE_2026.md)** (consolide les 40 rapports du dépôt, workstreams WS0–WS6, ADRs, gouvernance documentaire) · Stratégie : [`RAPPORT_COMPETITIF_ET_PLAN_2026.md`](RAPPORT_COMPETITIF_ET_PLAN_2026.md) · Constat qualité : [`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md).
 
 ---
 

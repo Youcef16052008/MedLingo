@@ -159,6 +159,9 @@ R1 juridique (trade dress : garder la palette verte, zéro emprunt) · R2 exacti
 | Date | Workstream | Commit | Vérifications | Notes |
 |---|---|---|---|---|
 | 25/10 | Création | `1a9a4c5` | — | Fusionne 40 documents ; WS0 détaillé dans TODO.md |
+| 25/10 | **WS4 complet (8/8 leviers)** | `32c8dbe`/`6d39b3d` | vitest 5107 · gradlew 0 | Coffres cadencés (3 j), cliffhangers, certificats, widget série, rappels locaux (push cloud REJETÉ — ADR-2), bots « simulateur » |
+| 25/10 | **WS5 livré** | `b3b9195`/`580d3a3` | vitest 5114 ×3 runs | Moteur de maîtrise pur, Mes faiblesses, examen EMD (chrono + renvoi chapitres) ; flake reviewFlow blindé |
+| 25/10 | **Push + PR → main** | _(ce commit)_ | CI GitHub | 49+ commits fusionnés via PR ; dev WS0→WS5 terminé, portes humaines restantes (relecture, keystore, CGU, pilote) |
 | 25/10 | **WS0 exécuté** | _(ce commit)_ | vitest **5094/5094** · gradlew unitaires **exit 0** · check:stories OK · tsc + build OK · garde orphelins démontrée (corpus intact) · review_server 400/415/200 | BUG-001/002/003/004/005/006/007/013/014 corrigés avec tests de régression ; CI committée (check:stories + lint strict) ; 38 documents archivés dans `docs/archive/` ; `.gitattributes`/`.gitignore` |
 
 ---

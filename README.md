@@ -9,6 +9,8 @@ de répétition espacée **SM-2**, prononciation TTS et tableau de bord de progr
 - **Package** : `com.aistudio.medlingua.dzmed`
 - **Stack** : Kotlin · Jetpack Compose (Material 3) · Room · Navigation Compose · Coroutines · AGP 9.1.1 / Gradle 9.3.1
 - **minSdk 24** · **targetSdk / compileSdk 36.1**
+- **Aussi** : web React 19 + Vite (`web-react/`, PWA offline) · backend Supabase (dormant — l'app ne demande AUCUNE permission réseau)
+- **Statut (25/10/2026)** : dev complet — workstreams WS0→WS5 livrés (stabilisation 36 findings, contenu 13 000 exercices + 814 histoires, intégration, release dossier, 8 leviers d'engagement, moteur de maîtrise + examen EMD). **Portes restantes (humaines)** : relecture des histoires (`web-react && npm run review`), keystore + CGU, pilote étudiant. Pilotage : [docs/PLAN_MAITRE_2026.md](docs/PLAN_MAITRE_2026.md).
 
 ## Fonctionnalités
 
