@@ -1044,3 +1044,406 @@ h3 { font-size: 1.05rem; font-weight: 700; }
 
   /* ===== TABBAR DARK ===== */
   [data-theme="dark"] .tabbar { background: color-mix(in srgb, var(--surface) 92%, transparent); }
+
+/* ============================================================
+   R-02 (2026-11-07): modal / toast / reward / sheet layer restored.
+   Ported from the legacy src/styles.css block (term detail sheet,
+   overlay/dialog, toast, reward pop-up). Aliases map legacy tokens to
+   the hybrid design system so the rules render without a full stylesheet
+   swap. See docs/review/REVIEW_2026-11-07.md (R-02) and plan Phase 1.
+   ============================================================ */
+:root {
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 26px;
+  --font-display: "Inter", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  --duo-green: var(--success);
+  --duo-green-dark: var(--success);
+  --duo-yellow: var(--amber);
+  --duo-yellow-dark: var(--amber-d);
+}
+/* ---------- term detail sheet ---------- */
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, .55);
+  z-index: 40;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.sheet {
+  width: min(100%, var(--col));
+  max-height: 86dvh;
+  overflow: auto;
+  background: var(--surface);
+  border-radius: 22px 22px 0 0;
+  padding: 20px 18px calc(20px + env(safe-area-inset-bottom));
+  animation: sheet-up .25s ease;
+}
+.sheet-grip { width: 44px; height: 5px; border-radius: 99px; background: var(--line); margin: 0 auto 14px; }
+.sheet dl { margin: 14px 0 0; }
+.sheet dt { font-size: .72rem; font-weight: 700; color: var(--ink-3); letter-spacing: .06em; margin-top: 12px; }
+.sheet dd { margin: 3px 0 0; font-size: .94rem; line-height: 1.55; }
+
+/* ---------- overlay / dialog ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(15, 23, 42, .6);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.dialog {
+  width: min(100%, 400px);
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 24px 22px;
+  text-align: center;
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, .5);
+  animation: pop .22s ease;
+}
+.dialog .dlg-ico { font-size: 2.6rem; line-height: 1; margin-bottom: 8px; }
+.dialog h2 { margin-bottom: 8px; }
+.dialog p { margin: 0 0 18px; color: var(--ink-2); font-size: .92rem; }
+.dialog .dlg-actions { display: grid; gap: 10px; }
+
+.toast {
+  position: fixed;
+  bottom: calc(var(--nav-h) + 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: .87rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .6);
+  animation: toast-in .25s ease;
+  max-width: calc(100% - 32px);
+  text-align: center;
+}
+
+/* ---------- empty & skeleton ---------- */
+.empty {
+  text-align: center;
+  padding: 44px 18px;
+  color: var(--ink-2);
+}
+.empty .empty-ico { font-size: 2.4rem; display: block; margin-bottom: 10px; }
+.skeleton {
+  border-radius: var(--radius);
+  background: linear-gradient(100deg, var(--surface-2) 40%, color-mix(in srgb, var(--surface-2) 50%, var(--surface)) 50%, var(--surface-2) 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  min-height: 90px;
+  margin-bottom: 12px;
+}
+
+/* ---------- animations ---------- */
+@keyframes shimmer { to { background-position-x: -200%; } }
+@keyframes pop { from { transform: scale(.92); opacity: 0; } }
+@keyframes sheet-up { from { transform: translateY(40px); opacity: 0; } }
+@keyframes toast-in { from { transform: translate(-50%, 12px); opacity: 0; } }
+@keyframes shake { 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ============================================================
+   Surfaces Duolingo (parcours, rÃ©vision, ligues, rÃ©compenses)
+   Palette d'accent : ne s'applique qu'Ã  ces nouvelles surfaces.
+   ============================================================ */
+:root {
+  --duo-green: #58CC02;
+  --duo-blue: #1CB0F6;
+  --duo-yellow: #FFC800;
+  --duo-red: #FF4B4B;
+  --duo-purple: #CE82FF;
+  --duo-green-dark: #46A302;
+  --duo-blue-dark: #1899D6;
+}
+
+/* ---------- hub RÃ©vision ---------- */
+.practice-grid { display: grid; gap: 12px; }
+.practice-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+.practice-card h3 { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--ink); }
+.practice-card .tiny { color: var(--ink-3); }
+/* BoÃ®te d'icÃ´ne â€” PracticeScreen.kt : carrÃ© 44.dp arrondi 12.dp teintÃ©. */
+.practice-ico {
+  flex: 0 0 auto;
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center;
+  font-size: 22px; line-height: 1;
+}
+.practice-card.teal .practice-ico { background: #E0F2F1; }
+.practice-card.azure .practice-ico { background: #E0F2FE; }
+.practice-card.amber .practice-ico { background: #FEF3C7; }
+.practice-card.violet .practice-ico { background: #F3E8FF; }
+.practice-badge {
+  background: #E65100;
+  color: #fff;
+  border-radius: 10px;
+  font-size: .68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+}
+.practice-card:active { transform: translateY(2px); border-bottom-width: 1px; }
+
+/* ---------- ligues ---------- */
+/* ==================== Ligues â€” LeagueScreen.kt ==================== */
+.league-screen { display: flex; flex-direction: column; gap: 16px; }
+
+/* --- LeagueHeader : carte blanche rayon 20 + liserÃ© de couleur de palier --- */
+.league-hero {
+  border-radius: 20px;
+  padding: 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.league-hero-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.league-hero-ico {
+  flex: 0 0 auto;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 24px; line-height: 1;
+}
+.league-hero-title { display: block; font-size: 16px; font-weight: 800; color: var(--ink); }
+.league-hero-sub { display: block; font-size: 11px; color: var(--ink-3); }
+.league-hero-badge {
+  flex: 0 0 auto;
+  border-radius: 12px; padding: 6px 12px;
+  font-size: 12px; font-weight: 700; color: #fff;
+}
+
+/* --- Carte zones promotion / relÃ©gation (fond var(--surface-2), rayon 16) --- */
+.league-zones { border-radius: 16px; padding: 12px; background: var(--surface-2); }
+.league-zones-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin-bottom: 4px;
+}
+.league-zone-up { font-size: 11px; font-weight: 700; color: #16A34A; }
+.league-zone-down { font-size: 11px; font-weight: 700; color: #DC2626; }
+.league-zones-week { display: block; font-size: 11px; color: var(--ink-3); }
+
+/* --- LeagueMemberRow --- */
+.league-list { display: flex; flex-direction: column; gap: 8px; }
+.league-row {
+  display: grid;
+  grid-template-columns: 28px 36px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--surface-2);
+  border-radius: 14px;
+}
+.league-row.zone-green { background: #F0FDF4; border-color: #BBF7D0; }
+.league-row.zone-red { background: #FEF2F2; border-color: #FECACA; }
+/* `isCurrentUser` prime sur la zone (StatsProfileScreen.kt : when isCurrentUser -> #ECFDF5). */
+.league-row.you { background: #ECFDF5; border-color: #10B981; box-shadow: 0 2px 6px rgba(15,23,42,.08); }
+.league-rank {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 12px; font-weight: 700; color: var(--ink-2);
+  background: var(--surface-2);
+}
+.league-row.zone-green .league-rank { background: #DCFCE7; }
+.league-row.zone-red .league-rank { background: #FEE2E2; }
+.league-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 18px; line-height: 1;
+  background: var(--surface-2);
+}
+.league-id { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.league-name {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 13px; font-weight: 700; color: var(--ink);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.league-row.you .league-name { font-weight: 800; }
+.league-you-tag {
+  font-size: 8px; font-weight: 700; color: #fff;
+  background: #10B981; border-radius: 6px; padding: 1px 4px;
+}
+.league-sub { font-size: 10px; color: var(--ink-3); }
+.league-xp-col { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.league-xp-col > b { font-size: 14px; font-weight: 800; color: var(--ink); white-space: nowrap; }
+.league-xp-col > b.up { color: #16A34A; }
+.league-xp-col > b.down { color: #DC2626; }
+.league-xp-col > span { font-size: 9px; font-weight: 700; }
+.league-xp-col > span.up { color: #16A34A; }
+.league-xp-col > span.down { color: #DC2626; }
+
+/* ============================ Medi (mascotte) ============================ */
+.medi { display: flex; gap: 10px; align-items: flex-start; margin: 2px 0 10px; }
+.medi-avatar {
+  position: relative; flex: 0 0 auto;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 1.6rem;
+  background: var(--green-50);
+}
+.medi-badge { position: absolute; right: -2px; bottom: -2px; font-size: .75rem; padding: 2px; }
+.medi.mood-celebrating .medi-bubble { background: color-mix(in srgb, #FFC800 12%, var(--surface)); }
+.medi.mood-motivating .medi-bubble { background: color-mix(in srgb, #1CB0F6 12%, var(--surface)); }
+.medi.mood-frustrated .medi-bubble { background: color-mix(in srgb, #FF4B4B 12%, var(--surface)); }
+.medi.mood-happy .medi-bubble { background: color-mix(in srgb, #58CC02 12%, var(--surface)); }
+.medi-bubble {
+  position: relative; margin: 0;
+  background: var(--surface); border: none;
+  border-radius: 14px; padding: 9px 13px;
+  font-size: .9rem; line-height: 1.4; color: #1E293B; font-weight: 500;
+}
+.medi-bubble::before { display: none; }
+
+/* ==================== En-tÃªte du parcours (anneau) ==================== */
+.path-head { padding: 16px; }
+.path-head-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.path-goal { margin: 0 0 10px; color: var(--ink-3); }
+.goal-ring { position: relative; width: 74px; height: 74px; flex: 0 0 auto; }
+.goal-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.goal-track { fill: none; stroke: #E0E0E0; stroke-width: 8; }
+.goal-fill {
+  fill: none; stroke: var(--duo-green); stroke-width: 8; stroke-linecap: round;
+  transition: stroke-dashoffset .7s ease;
+}
+.goal-ring.done .goal-fill { stroke: var(--duo-yellow); }
+.goal-ring > span { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.25rem; }
+.streak-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+/* StreakPill de PathScreen.kt : fond #FFF7ED, texte #EA580C, rayon 20.dp,
+   padding horizontal 10 / vertical 6, 12.sp bold. */
+.streak-pill {
+  background: #FFF7ED;
+  color: #EA580C; border-radius: 20px;
+  padding: 6px 10px; font-size: .75rem; font-weight: 700;
+  border: none;
+}
+.freeze-btn { margin-left: auto; }
+.freeze-btn:disabled { opacity: .5; cursor: not-allowed; }
+/* Caisse â€” PathScreen.kt : Text plein, fond #FFF3C4, rayon 12.dp,
+   padding vertical 10 / horizontal 12, 13.sp bold, #1E293B. */
+.chest-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 12px; width: 100%; justify-content: center;
+  padding: 10px 12px; border-radius: 12px;
+  border: none;
+  background: #FFF3C4;
+  color: #1E293B; font-weight: 700; cursor: pointer;
+  font: inherit;
+}
+.chest-badge:hover { filter: brightness(.97); }
+
+/* ========================= UnitÃ©s + nÅ“uds ========================= */
+.path-units { display: flex; flex-direction: column; gap: 22px; }
+.path-unit { display: flex; flex-direction: column; gap: 12px; }
+.unit-banner {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border-radius: var(--radius-md);
+  color: #fff; box-shadow: 0 3px 0 rgba(0, 0, 0, .18);
+}
+.unit-ico { font-size: 1.6rem; }
+.unit-name { flex: 1; min-width: 0; }
+.unit-name h3 { margin: 0; font-size: 1.02rem; color: #fff; }
+.unit-name p { margin: 2px 0 0; font-size: .78rem; opacity: .9; }
+.unit-medal { font-size: 1.3rem; }
+.unit-path {
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  padding: 6px 0 2px;
+}
+.path-node {
+  position: relative; width: 74px; height: 66px;
+  border: none; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1px; cursor: pointer; padding: 0;
+  background: var(--duo-green); color: #fff;
+  box-shadow: 0 4px 0 var(--duo-green-dark);
+  transition: transform .12s ease, filter .12s ease;
+}
+.path-node:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--duo-green-dark); }
+.path-node .node-face { font-size: 1.4rem; line-height: 1; }
+.path-node .node-meta { font-size: .62rem; font-weight: 800; letter-spacing: .04em; }
+.path-node.locked {
+  background: #E5E7EB; color: #9CA3AF;
+  box-shadow: 0 4px 0 #D1D5DB; cursor: not-allowed;
+}
+.path-node.done { background: var(--duo-green); box-shadow: 0 4px 0 var(--duo-green-dark); }
+.path-node.done.silver { background: #94A3B8; box-shadow: 0 4px 0 var(--ink-3); }
+.path-node.done.gold { background: var(--duo-yellow); box-shadow: 0 4px 0 #D9A400; color: #4A3A00; }
+.path-node.next { animation: node-pulse 1.6s ease-in-out infinite; }
+.path-node.next::after {
+  content: ""; position: absolute; inset: -6px;
+  border: 3px solid color-mix(in srgb, var(--duo-green) 55%, transparent);
+  border-radius: 50%;
+}
+@keyframes node-pulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.path-node.boss { width: 88px; height: 80px; background: var(--duo-purple); box-shadow: 0 4px 0 #A855D8; }
+.path-node.boss .node-face { font-size: 1.7rem; }
+.path-node.boss.locked { background: #E5E7EB; box-shadow: 0 4px 0 #D1D5DB; color: #9CA3AF; }
+
+/* ===================== Pop-up de rÃ©compense ===================== */
+.reward-overlay {
+  position: fixed; inset: 0; z-index: 80;
+  display: grid; place-items: center;
+  background: rgba(15, 23, 42, .55);
+  animation: fade-in .18s ease;
+}
+.reward-card {
+  width: min(360px, calc(100vw - 32px));
+  background: var(--surface); border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  padding: 20px; text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+  animation: reward-pop .28s cubic-bezier(.2, 1.4, .4, 1);
+}
+.reward-card .medi { justify-content: center; }
+.reward-xp {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 2.4rem; color: var(--duo-green);
+  line-height: 1;
+}
+.reward-label { margin: 4px 0 12px; font-size: .85rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
+.reward-rows { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.reward-rows li {
+  display: flex; justify-content: space-between; gap: 8px;
+  background: color-mix(in srgb, var(--duo-green) 8%, var(--surface));
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 8px 11px; font-size: .88rem; font-weight: 700;
+}
+.reward-rows li span { color: var(--ink-3); font-weight: 600; }
+.reward-rows li.gold { background: color-mix(in srgb, var(--duo-yellow) 18%, var(--surface)); }
+.reward-chest {
+  width: 100%; margin-bottom: 10px;
+  background: var(--duo-yellow); color: #4A3A00;
+  box-shadow: 0 4px 0 #D9A400;
+}
+.reward-chest-open {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-bottom: 10px; padding: 11px;
+  border-radius: var(--radius-md); font-weight: 800;
+  background: color-mix(in srgb, var(--duo-green) 14%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--duo-green) 45%, transparent);
+  animation: reward-pop .3s cubic-bezier(.2, 1.4, .4, 1);
+}
+@keyframes reward-pop {
+  from { transform: scale(.86); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }

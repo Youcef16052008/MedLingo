@@ -18,6 +18,7 @@ import { FlashScreen } from "./screens/FlashScreen";
 import { QuizScreen } from "./screens/QuizScreen";
 import { StorySessionScreen } from "./screens/StorySessionScreen";
 import { ProfileScreen } from "./screens/ProfileScreen";
+import { LoginScreen } from "./screens/LoginScreen";
 import { lazy, Suspense } from "react";
 // ... other imports ...
 
@@ -268,6 +269,9 @@ function Shell() {
     case "review":
       // `#/review` (LOT2/WS2.1) — hub des révisions en attente.
       screen = <ReviewHubScreen />;
+      break;
+    case "login":
+      screen = <LoginScreen />;
       break;
     case "profile":
       screen = <ProfileScreen />;
