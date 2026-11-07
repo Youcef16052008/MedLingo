@@ -119,23 +119,23 @@
 
 ### Tasks
 
-- [ ] **2.1 R‑03 — build-time precache manifest.**
+- [x] **2.1 R-03 — build-time precache manifest.**
   - Add `web-react/scripts/patch-sw-precache.mjs`: read `dist/index.html` for `src`/`href` `/assets/...`, enumerate `dist/assets/*.js|*.css`, rewrite the `SHELL` array (or inject a `PRECACHE` list) in the copied `dist/sw.js`.
   - Derive the cache name from a content hash (e.g. hash of the file list) so deploys invalidate cleanly.
   - Wire `package.json`: `"build": "tsc --noEmit -p tsconfig.json && vite build && node scripts/patch-sw-precache.mjs"`.
   - Add `scripts/check-precache.mjs` and a CI step: assert every `dist/index.html` asset and every `dist/assets/*.js|*.css` appears in `dist/sw.js`; assert no stale hashed files remain.
   - **Test:** unit test for the patcher with fixture dist trees; CI contract check.
-- [ ] **2.2 R‑04 — ErrorBoundary.**
+- [x] **2.2 R-04 — ErrorBoundary.**
   - Add `src/components/ErrorBoundary.tsx` (class component, `getDerivedStateFromError`, retry button that reloads or resets).
   - Wrap the screen tree inside `App.tsx` (inside the shell, outside `Suspense`).
   - Add a one-shot `window.addEventListener("vite:preloadError", …)` guard that reloads at most once per session (sessionStorage flag) to recover from stale chunks.
   - **Test:** lazy import rejects → boundary fallback renders (jsdom); second rejection does not loop.
-- [ ] **2.3 R‑35 — no synchronous bulk build during warm-up.**
+- [x] **2.3 R-35 — no synchronous bulk build during warm-up.**
   - Add `whenBulkReady(): Promise<void>` (or make `warmBulkCache` return a promise) resolved when the background pass completes.
   - Quiz pool builder awaits readiness and shows the existing skeleton; never call `buildAllSync()` from a user interaction.
   - Optional: build only the requested module synchronously and merge into the cache.
   - **Test:** with `warming` in progress, the builder resolves asynchronously and performs no single task > 100 ms (instrument with a timer wrapper around the generator).
-- [ ] **2.4 Offline E2E (manual or Playwright if approved).** Fresh profile → load once → DevTools Offline → reload → app boots; navigate to a lazy route offline → boundary/retry, not blank.
+- [x] **2.4 Offline E2E (manual or Playwright if approved).** Fresh profile → load once → DevTools Offline → reload → app boots; navigate to a lazy route offline → boundary/retry, not blank.
 
 ### Gate G2
 
