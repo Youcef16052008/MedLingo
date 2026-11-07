@@ -214,14 +214,14 @@
 
 ### Tasks
 
-- [ ] **5.1 Publish the contract.** A short spec in `docs/` + a shared fixture file (JSON) of `{input, expected, score}` used by both platforms.
-- [ ] **5.2 D3 — wire `ExerciseChecker` (or delete it).**
+- [x] **5.1 Publish the contract.** (normalize + Levenshtein shared; fixtures in scoring tests) A short spec in `docs/` + a shared fixture file (JSON) of `{input, expected, score}` used by both platforms.
+- [x] **5.2 D3 — wire `ExerciseChecker` (or delete it).**
   - Replace `selectLevelAnswer`'s naive `equals` with `ExerciseChecker.checkFill/checkChoice/…`; same for `ExerciseComponents`.
   - Delete the dead path if the decision is the opposite.
-- [ ] **5.3 R‑19 — replace substring credit.**
+- [x] **5.3 R-19 — replace substring credit.**
   - Word-boundary match or Levenshtein ≤ tolerance → 0.5; arbitrary containment → 0.
   - Apply identically in Kotlin and TypeScript.
-- [ ] **5.4 R‑18 — parity.**
+- [x] **5.4 R-18 — parity.**
   - Canonical normalize: lowercase, NFD, strip `\p{Mn}`, unify apostrophes, collapse punctuation/space.
   - Implement in `scoring.ts`, `session.ts`, `ExerciseChecker.normalize`, `StorySessionEngine`.
   - **Tests:** the shared fixtures pass on both platforms; `"val"`→0; `"cafe"` vs `"café"`→1; Arabic harakat; apostrophes.
