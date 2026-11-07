@@ -17,7 +17,8 @@
 - **Baseline reproductible** : [`review/BASELINE_2026-11-07.md`](review/BASELINE_2026-11-07.md) — build + i18n + seed + stories **verts** ; `npm test` **exit 1** (1 erreur non gérée `onTaskUpdate`, R‑33).
 - **Verdict** : l'arbre de travail n'est **pas livrable en l'état** (R‑02 modales non stylées / R‑05 route login morte). Le socle Android committé reste sain hors R‑14/R‑15.
 - **Décisions humaines requises avant la Phase 1** : D1 snapshot du WIP, D2 périmètre ADR‑3 (recommandé : sync désactivée par défaut), D3 source unique du correcteur (recommandé : brancher `ExerciseChecker`), D4 TTS hors-ligne par défaut.
-- [x] Phase 0.1 registre · [x] 0.2 plan · [x] 0.3 baseline · [x] 0.4 pointeur TODO · [ ] 0.5 décisions D1–D4 👤
+- [x] Phase 0.1 registre · [x] 0.2 plan · [x] 0.3 baseline · [x] 0.4 pointeur TODO · [x] 0.5 décisions D1–D4 👤
+- [x] Phases 1–6 exécutées (commits c83e98c … 137b394). Verdict : Android assembleDebug vert, web build vert, 5132 tests verts (1 erreur non gérée R-33 résiduelle).
 
 ## 🚨 P0 — Bugs critiques de la revue — ✅ WS0 EXECUTÉ le 25/10/2026
 
