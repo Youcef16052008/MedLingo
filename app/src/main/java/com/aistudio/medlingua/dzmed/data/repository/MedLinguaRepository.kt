@@ -645,16 +645,27 @@ val currentClock: Clock get() = clock
      * été gagné (`null` s'il n'y a rien à ouvrir).
      */
     suspend fun openChest(rand: Random = Random.Default): ChestReward? = withContext(Dispatchers.IO) {
-        val stats = dao.getUserStatsOnce() ?: return@withContext null
-        if (stats.pendingChests <= 0) return@withContext null
-
-        val reward = ChestManager.openChest { rand.nextDouble() }
-        val updated = ChestManager.applyChestReward(stats, reward, clock.now())
-            .copy(
-                pendingChests = stats.pendingChests - 1,
-                chestsOpened = stats.chestsOpened + 1
-            )
-        mutateUserStats { _ -> updated }
+        var rewardHolder: ChestReward? = null
+        var updatedHolder: UserStatsEntity? = null
+        var wasEmpty = false
+        mutateUserStats { current ->
+            if (current.pendingChests <= 0) {
+                wasEmpty = true
+                return@mutateUserStats current
+            }
+            val reward = ChestManager.openChest { rand.nextDouble() }
+            val updated = ChestManager.applyChestReward(current, reward, clock.now())
+                .copy(
+                    pendingChests = current.pendingChests - 1,
+                    chestsOpened = current.chestsOpened + 1
+                )
+            rewardHolder = reward
+            updatedHolder = updated
+            updated
+        }
+        if (wasEmpty) return@withContext null
+        val reward = rewardHolder ?: return@withContext null
+        val updated = updatedHolder ?: return@withContext null
 
         // L'XP de caisse compte aussi dans la ligue (comme les autres sources).
         if (reward.kind == ChestKind.XP && reward.amount > 0 && updated.leagueCohortId != null) {
@@ -666,7 +677,7 @@ val currentClock: Clock get() = clock
                 GemsManager.createEarnTransaction(
                     amount = reward.amount,
                     reason = "chest",
-                    currentBalance = stats.gems,
+                    currentBalance = (updated.gems - reward.amount).coerceAtLeast(0),
                     timestamp = clock.now()
                 )
             )
@@ -676,14 +687,26 @@ val currentClock: Clock get() = clock
 
     /** Achète une congélation (200 💎). `false` si les gemmes manquent. */
     suspend fun buyFreeze(): Boolean = withContext(Dispatchers.IO) {
-        val stats = dao.getUserStatsOnce() ?: return@withContext false
-        val updated = GamificationEconomy.buyFreeze(stats) ?: return@withContext false
-        mutateUserStats { _ -> updated }
+        var ok = false
+        var updated: UserStatsEntity? = null
+        mutateUserStats { current ->
+            val u = GamificationEconomy.buyFreeze(current)
+            if (u == null) {
+                ok = false
+                current
+            } else {
+                ok = true
+                updated = u
+                u
+            }
+        }
+        if (!ok) return@withContext false
+        val u = updated ?: return@withContext false
         dao.insertGemsTransaction(
             GemsManager.createSpendTransaction(
                 amount = FREEZE_COST_GEMS,
                 reason = "streak_freeze",
-                currentBalance = stats.gems,
+                currentBalance = u.gems + FREEZE_COST_GEMS,
                 timestamp = clock.now()
             ) ?: return@withContext false
         )

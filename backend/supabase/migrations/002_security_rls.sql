@@ -1,5 +1,5 @@
 -- MedLingo security hardening: RLS policies, users bootstrap, view exposure.
--- Idempotent: safe to re-run.
+-- NOT fully idempotent: sections 4-5 use bare create policy. Apply once in order..
 
 -- === 1. users.id must default to the Auth user id ===
 -- RLS predicates are `auth.uid() = id`; a random uuid_generate_v4() default
