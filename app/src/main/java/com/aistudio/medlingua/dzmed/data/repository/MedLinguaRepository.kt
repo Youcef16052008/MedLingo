@@ -398,85 +398,93 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun recordLevelCompletion(level: Int, scorePercentage: Int, pointsEarned: Int, totalQuestions: Int, correctAnswers: Int): Boolean = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
-        val prevScore = current.getScoreForLevel(level)
-        val newScore = maxOf(prevScore, scorePercentage)
+        var prevScoreHolder = 0
+        var gemsEarnedHolder = 0
+        var isPerfectHolder = false
+        val updated = mutateUserStats { current ->
+            val prevScore = current.getScoreForLevel(level)
+            prevScoreHolder = prevScore
+            val newScore = maxOf(prevScore, scorePercentage)
 
-        // isPerfect is now derived inside calculateGemsForLesson; here we only need
-        // the flag for the ledger reason label, so keep it aligned with that rule.
-        val isPerfect = correctAnswers == totalQuestions && totalQuestions > 0
-        val gemsEarned = GemsManager.calculateGemsForLesson(correctAnswers, totalQuestions)
+            val isPerfect = correctAnswers == totalQuestions && totalQuestions > 0
+            isPerfectHolder = isPerfect
+            val gemsEarned = GemsManager.calculateGemsForLesson(correctAnswers, totalQuestions)
+            gemsEarnedHolder = gemsEarned
 
-        val xpStats = GamificationEconomy.addXp(current, pointsEarned, clock.now()).stats
-        var updated = when (level) {
-            1 -> xpStats.copy(level1Score = newScore)
-            2 -> xpStats.copy(level2Score = newScore)
-            3 -> xpStats.copy(level3Score = newScore)
-            4 -> xpStats.copy(level4Score = newScore)
-            5 -> xpStats.copy(level5Score = newScore)
-            6 -> xpStats.copy(level6Score = newScore)
-            else -> xpStats
-        }.copy(
-            quizzesCompleted = xpStats.quizzesCompleted + 1,
-            totalQuestionsAnswered = xpStats.totalQuestionsAnswered + totalQuestions,
-            correctAnswersCount = xpStats.correctAnswersCount + correctAnswers,
-            lessonsCompleted = xpStats.lessonsCompleted + 1,
-            perfectLessonsCount = if (isPerfect) xpStats.perfectLessonsCount + 1 else xpStats.perfectLessonsCount,
-            gems = xpStats.gems + gemsEarned
-        )
-        safeUpsertUserStats(updated)
+            val xpStats = GamificationEconomy.addXp(current, pointsEarned, clock.now()).stats
+            when (level) {
+                1 -> xpStats.copy(level1Score = newScore)
+                2 -> xpStats.copy(level2Score = newScore)
+                3 -> xpStats.copy(level3Score = newScore)
+                4 -> xpStats.copy(level4Score = newScore)
+                5 -> xpStats.copy(level5Score = newScore)
+                6 -> xpStats.copy(level6Score = newScore)
+                else -> xpStats
+            }.copy(
+                quizzesCompleted = xpStats.quizzesCompleted + 1,
+                totalQuestionsAnswered = xpStats.totalQuestionsAnswered + totalQuestions,
+                correctAnswersCount = xpStats.correctAnswersCount + correctAnswers,
+                lessonsCompleted = xpStats.lessonsCompleted + 1,
+                perfectLessonsCount = if (isPerfect) xpStats.perfectLessonsCount + 1 else xpStats.perfectLessonsCount,
+                gems = xpStats.gems + gemsEarned
+            )
+        }
 
         if (updated.leagueCohortId != null) {
             dao.addXpToCurrentUserInLeague(updated.leagueCohortId, pointsEarned)
         }
 
-        if (gemsEarned > 0) {
+        if (gemsEarnedHolder > 0) {
             dao.insertGemsTransaction(
                 GemsManager.createEarnTransaction(
-                    amount = gemsEarned,
-                    reason = if (isPerfect) "perfect_lesson" else "lesson_complete",
-                    currentBalance = current.gems,
+                    amount = gemsEarnedHolder,
+                    reason = if (isPerfectHolder) "perfect_lesson" else "lesson_complete",
+                    currentBalance = updated.gems - gemsEarnedHolder,
                     metadata = "level:$level score:$scorePercentage",
                     timestamp = clock.now()
                 )
             )
         }
 
-        scorePercentage >= 70 && prevScore < 70
+        scorePercentage >= 70 && prevScoreHolder < 70
     }
 
     suspend fun addGems(amount: Int, reason: String, metadata: String = "") = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
-        val newBalance = current.gems + amount
-        safeUpsertUserStats(current.copy(gems = newBalance))
-        dao.insertGemsTransaction(
-            GemsTransactionEntity(
-                type = "EARN",
-                amount = amount,
-                reason = reason,
-                timestamp = clock.now(),
-                balanceAfter = newBalance,
-                metadata = metadata
+        userStatsMutex.withLock {
+            val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
+            val newBalance = current.gems + amount
+            dao.upsertUserStatsAndGemsTransaction(
+                current.copy(gems = newBalance),
+                GemsTransactionEntity(
+                    type = "EARN",
+                    amount = amount,
+                    reason = reason,
+                    timestamp = clock.now(),
+                    balanceAfter = newBalance,
+                    metadata = metadata
+                )
             )
-        )
+        }
     }
 
     suspend fun spendGems(amount: Int, reason: String, metadata: String = ""): Boolean = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: return@withContext false
-        if (current.gems < amount) return@withContext false
-        val newBalance = current.gems - amount
-        safeUpsertUserStats(current.copy(gems = newBalance))
-        dao.insertGemsTransaction(
-            GemsTransactionEntity(
-                type = "SPEND",
-                amount = -amount,
-                reason = reason,
-                timestamp = clock.now(),
-                balanceAfter = newBalance,
-                metadata = metadata
+        userStatsMutex.withLock {
+            val current = dao.getUserStatsOnce() ?: return@withContext false
+            if (current.gems < amount) return@withContext false
+            val newBalance = current.gems - amount
+            dao.upsertUserStatsAndGemsTransaction(
+                current.copy(gems = newBalance),
+                GemsTransactionEntity(
+                    type = "SPEND",
+                    amount = -amount,
+                    reason = reason,
+                    timestamp = clock.now(),
+                    balanceAfter = newBalance,
+                    metadata = metadata
+                )
             )
-        )
-        true
+            true
+        }
     }
 
     /**
@@ -493,13 +501,20 @@ val currentClock: Clock get() = clock
     suspend fun purchaseSuper(months: Int = 1): Boolean = withContext(Dispatchers.IO) {
         val pricing = GemsManager.getSuperPricing()
         val cost = if (months >= 12) pricing.yearlyGems else pricing.monthlyGems * months
-        val current = dao.getUserStatsOnce() ?: return@withContext false
-        if (current.gems < cost) return@withContext false
-        val newBalance = current.gems - cost
         val expiresAt = clock.now() + (months * 30L * 24 * 60 * 60 * 1000)
-        safeUpsertUserStats(
-            current.copy(gems = newBalance, isSuper = true, superExpiresAt = expiresAt)
-        )
+        var ok = false
+        var newBalance = 0
+        mutateUserStats { s ->
+            if (s.gems < cost) {
+                ok = false
+                s
+            } else {
+                ok = true
+                newBalance = s.gems - cost
+                s.copy(gems = newBalance, isSuper = true, superExpiresAt = expiresAt)
+            }
+        }
+        if (!ok) return@withContext false
         dao.insertGemsTransaction(
             GemsTransactionEntity(
                 type = "PURCHASE",
@@ -550,7 +565,7 @@ val currentClock: Clock get() = clock
                 )
             }
 
-            safeUpsertUserStats(
+            mutateUserStats { _ ->
                 current.copy(
                     leagueCohortId = newCohort.cohortId,
                     leagueTier = nextTier,
@@ -559,7 +574,7 @@ val currentClock: Clock get() = clock
                     weeklyXpReset = newCohort.weekStartTimestamp,
                     gems = newGems
                 )
-            )
+            }
         }
     }
 
@@ -595,13 +610,11 @@ val currentClock: Clock get() = clock
     }
 
     suspend fun updateLanguage(langCode: String) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
-        safeUpsertUserStats(current.copy(selectedLanguageCode = langCode))
+        mutateUserStats { current -> current.copy(selectedLanguageCode = langCode) }
     }
 
     suspend fun toggleOfflineSimulation(isOffline: Boolean) = withContext(Dispatchers.IO) {
-        val current = dao.getUserStatsOnce() ?: UserStatsEntity.createFresh()
-        safeUpsertUserStats(current.copy(isOfflineSimulated = isOffline))
+        mutateUserStats { current -> current.copy(isOfflineSimulated = isOffline) }
     }
 
     // ==========================================================
@@ -623,8 +636,7 @@ val currentClock: Clock get() = clock
     /** Ajoute une caisse en attente si la session en mérite une. */
     suspend fun earnChest(source: ChestSource, score: Int): Boolean = withContext(Dispatchers.IO) {
         if (!ChestManager.earnsChest(source, score)) return@withContext false
-        val stats = dao.getUserStatsOnce() ?: return@withContext false
-        safeUpsertUserStats(stats.copy(pendingChests = stats.pendingChests + 1))
+        mutateUserStats { current -> current.copy(pendingChests = current.pendingChests + 1) }
         true
     }
 
@@ -642,7 +654,7 @@ val currentClock: Clock get() = clock
                 pendingChests = stats.pendingChests - 1,
                 chestsOpened = stats.chestsOpened + 1
             )
-        safeUpsertUserStats(updated)
+        mutateUserStats { _ -> updated }
 
         // L'XP de caisse compte aussi dans la ligue (comme les autres sources).
         if (reward.kind == ChestKind.XP && reward.amount > 0 && updated.leagueCohortId != null) {
@@ -666,7 +678,7 @@ val currentClock: Clock get() = clock
     suspend fun buyFreeze(): Boolean = withContext(Dispatchers.IO) {
         val stats = dao.getUserStatsOnce() ?: return@withContext false
         val updated = GamificationEconomy.buyFreeze(stats) ?: return@withContext false
-        safeUpsertUserStats(updated)
+        mutateUserStats { _ -> updated }
         dao.insertGemsTransaction(
             GemsManager.createSpendTransaction(
                 amount = FREEZE_COST_GEMS,
@@ -681,9 +693,9 @@ val currentClock: Clock get() = clock
     /** Change l'objectif quotidien (20 / 50 / 100 XP). */
     suspend fun setDailyGoal(goal: Int): Boolean = withContext(Dispatchers.IO) {
         if (goal !in DAILY_GOAL_OPTIONS) return@withContext false
-        val stats = dao.getUserStatsOnce() ?: return@withContext false
-        if (stats.dailyGoal == goal) return@withContext true
-        safeUpsertUserStats(stats.copy(dailyGoal = goal))
+        val current = dao.getUserStatsOnce() ?: return@withContext false
+        if (current.dailyGoal == goal) return@withContext true
+        mutateUserStats { s -> s.copy(dailyGoal = goal) }
         true
     }
 

@@ -11,7 +11,7 @@ import { STORY_STEPS, type Step, type SessionStats, type SessionState } from "..
  *
  * La persistance est localStorage — équivalent web de la base Room côté Android.
  * Aucune fonction ici ne lit l'horloge murale : `now` est passé par l'appelant,
- * ce qui garde les effets de temps reproductibles en test.
+ * Certaines fonctions lisent l'horloge murale via Date.now() pour les timestamps utilisateur.
  */
 
 export interface AppState {
@@ -115,9 +115,7 @@ export interface HeartManager {
 }
 
 /** État global de l'application. */
-export interface AppState {
 
-}
 
 /** Champs d'un ancien store qui ne sont plus écrits (cœurs et flashSuccess supprimés). */
 const DROPPED_KEYS = ["hearts", "heartsTs", "flashSuccess"];
@@ -190,10 +188,19 @@ function storage(): Storage | null {
 }
 
 /** Persiste l'état — échec silencieux (quota dépassé, stockage plein). */
+let persistError: string | null = null;
+
+export function getPersistError(): string | null {
+  return persistError;
+}
+
 function persist(): void {
   try {
     storage()?.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch {
+    persistError = null;
+  } catch (e) {
+    persistError = e instanceof Error ? e.message : String(e);
+    emit();
     /* quota/accès refusé : l'état en mémoire reste la source de vérité */
   }
 }
@@ -295,8 +302,14 @@ function coerceSm2(v: unknown): Record<string, Sched> {
       typeof o.ef === "number" &&
       typeof o.iv === "number" &&
       typeof o.due === "number" &&
+      Number.isFinite(o.rep) &&
       Number.isFinite(o.ef) &&
-      Number.isFinite(o.due)
+      Number.isFinite(o.iv) &&
+      Number.isFinite(o.due) &&
+      o.rep >= 0 &&
+      o.iv >= 0 &&
+      o.ef >= 1.3 &&
+      o.due >= 0
     ) {
       out[k] = { rep: o.rep, ef: o.ef, iv: o.iv, due: o.due };
     }
@@ -446,20 +459,8 @@ export function subscribe(fn: () => void): () => void {
  * les recettes ne modifient jamais l'objet rendu précédemment.
  */
 export function update(recipe: (draft: AppState) => void): void {
-  const draft: AppState = {
-    ...state,
-    sm2: { ...state.sm2 },
-    weeklyXp: { ...state.weeklyXp },
-    moduleBest: { ...state.moduleBest },
-    lessonBest: { ...state.lessonBest },
-    trophies: { ...state.trophies },
-    lessonProgress: { ...state.lessonProgress },
-    reviewQueue: [...state.reviewQueue],
-    heartManager: { ...state.heartManager },
-    storyProgress: { ...state.storyProgress },
-    exprSm2: { ...state.exprSm2 },
-    league: { ...state.league },
-  };
+  // Deep clone so recipes cannot mutate the previously rendered state (R-21).
+  const draft: AppState = structuredClone(state);
   recipe(draft);
   state = draft;
   persist();
@@ -499,36 +500,7 @@ export function startLesson(lessonId: string, _moduleId: string, _chapterId: str
   });
 }
 
-/** Enregistre une réponse. Retourne `true` si la leçon doit redémarrer (0 coeurs). */
-export function recordAnswer(lessonId: string, ok: boolean): boolean {
-  update((draft) => {
-    const progress = draft.lessonProgress[lessonId];
-    if (!progress) return;
-    const hm = draft.heartManager[lessonId];
-    if (!hm) return;
-    if (!ok) {
-      hm.hearts -= 1;
-      hm.mistakes += 1;
-      progress.mistakes += 1;
-      if (hm.hearts <= 0) {
-        // Leçon redémarrée du début
-        hm.hearts = 5;
-        hm.mistakes = 0;
-        progress.mistakes = 0;
-        return true; // signaler restart
-      }
-      progress.heartsRemain = hm.hearts;
-      progress.score = Math.max(0, (progress.score + (ok ? 20 : 0)) / 2);
-    } else {
-      hm.mistakes = 0;
-      progress.score = Math.max(0, (progress.score + 20) / 2);
-      if (progress.heartsRemain < hm.hearts) {
-        progress.heartsRemain = hm.hearts;
-      }
-    }
-  });
-  return false;
-}
+
 
 /** Finalise la leçon. Retourne le feedback : "continue" | "choice" (continue/revision). */
 export function endLesson(

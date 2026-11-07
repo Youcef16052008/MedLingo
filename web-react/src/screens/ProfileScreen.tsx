@@ -1,5 +1,6 @@
 import { useT } from "../i18n/useT";
 import { useAuth } from "../hooks/useAuth";
+import { SYNC_ENABLED } from "../lib/featureFlags";
 import type { TKey } from "../i18n";
 import { useAppState, resetProgress, update } from "../domain/store";
 import {
@@ -191,7 +192,7 @@ export function ProfileScreen() {
       </p>
 
       {/* ===== Espace utilisateur (ADR-3) ===== */}
-      {user ? (
+      {SYNC_ENABLED && (user ? (
         <div className="card profile-auth">
           <b className="profile-card-title">{"Espace utilisateur"}</b>
           <div className="profile-auth-row">
@@ -210,6 +211,7 @@ export function ProfileScreen() {
         <p className="tiny" style={{ textAlign: "center", marginTop: 16 }}>
           <a href="#/login" className="link">{"Accès comptes"}</a>
         </p>
+      )}
       )}
       </div>
   );

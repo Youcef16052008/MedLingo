@@ -162,6 +162,13 @@ interface MedicalDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertGemsTransaction(transaction: GemsTransactionEntity)
 
+    // R-16 (2026-11-07): atomic balance + ledger write.
+    @Transaction
+    suspend fun upsertUserStatsAndGemsTransaction(stats: UserStatsEntity, transaction: GemsTransactionEntity) {
+        upsertUserStats(stats)
+        insertGemsTransaction(transaction)
+    }
+
     // === DUOLINGO PHASE 1: League Cohorts ===
     @Query("SELECT * FROM league_cohorts WHERE isActive = 1 ORDER BY weekStartTimestamp DESC LIMIT 1")
     fun getActiveLeagueCohort(): Flow<LeagueCohortEntity?>

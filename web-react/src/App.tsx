@@ -33,6 +33,7 @@ import { ChapterScreen } from "./screens/ChapterScreen";
 import { navigate } from "./lib/router";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import { SYNC_ENABLED } from "./lib/featureFlags";
 
 function Shell() {
   const { t, lang } = useT();
@@ -272,7 +273,9 @@ function Shell() {
       screen = <ReviewHubScreen />;
       break;
     case "login":
-      screen = <LoginScreen />;
+      // ADR-3 is disabled by default (D2). When sync is off, the route
+      // falls through to the path screen instead of a half-wired login form.
+      screen = SYNC_ENABLED ? <LoginScreen /> : <PathScreen />;
       break;
     case "profile":
       screen = <ProfileScreen />;

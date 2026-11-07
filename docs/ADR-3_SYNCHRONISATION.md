@@ -1,6 +1,6 @@
 # ADR-3 — Comptes et synchronisation (Mise à jour)
 
-**Statut : ACTIVE — Activation immédiate demandée**
+**Statut : PLANNED (downgraded 2026-11-07, decision D2) — Activation immédiate demandée**
 
 ## Contexte
 
