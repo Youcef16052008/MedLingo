@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { describe, it, expect, beforeAll } from "vitest";
-import { render, screen, cleanup } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { setupFetchForTests } from "../../setupTests";
 
 describe("LoginScreen (R-05)", () => {

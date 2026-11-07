@@ -32,6 +32,7 @@ import { ReviewHubScreen } from "./screens/ReviewHubScreen";
 import { ChapterScreen } from "./screens/ChapterScreen";
 import { navigate } from "./lib/router";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 
 function Shell() {
   const { t, lang } = useT();
@@ -304,12 +305,30 @@ function Shell() {
   );
 }
 
+// One-shot recovery from stale chunks after a deploy (R-04).
+if (typeof window !== "undefined") {
+  let reloaded = false;
+  window.addEventListener("vite:preloadError", () => {
+    if (reloaded) return;
+    reloaded = true;
+    try {
+      if (sessionStorage.getItem("medlingo_preload_reloaded") === "1") return;
+      sessionStorage.setItem("medlingo_preload_reloaded", "1");
+    } catch {
+      // ignore
+    }
+    window.location.reload();
+  });
+}
+
 export default function App() {
   return (
-    <DialogProvider>
-      <ToastProvider>
-        <Shell />
-      </ToastProvider>
-    </DialogProvider>
+    <ErrorBoundary>
+      <DialogProvider>
+        <ToastProvider>
+          <Shell />
+        </ToastProvider>
+      </DialogProvider>
+    </ErrorBoundary>
   );
 }

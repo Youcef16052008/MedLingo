@@ -14,7 +14,7 @@ import { getExercises, termsOfModule, termById, getLessonMap } from "../data/loa
 import { modById, type Module } from "../data/modules";
 import { norm, shuffleWith } from "../lib/utils";
 import { mulberry32, hashSeed } from "./leagues";
-import { generateBulkExercises, resetBulkCache, warmBulkCache } from "./bulkExercises";
+import { generateBulkExercises, resetBulkCache, warmBulkCache, isBulkCacheReady } from "./bulkExercises";
 import type { Exercise, Term } from "../types";
 import { onDataChangedReview, type LessonMap } from "../data/load";
 
@@ -246,10 +246,23 @@ function build(
  * render de l'écran quiz (le compteur « N exercices » appelle
  * `quizExercisesForLevel`) relançait la génération complète et gelait l'UI.
  */
+// R-35: track whether the cached pool was built from a partial (warming)
+// snapshot so it can be rebuilt once the full cache is ready.
 let quizPoolCache: Exercise[] | null = null;
+let quizPoolCachePartial = false;
 
 export function quizExercises(): Exercise[] {
-  if (!quizPoolCache) quizPoolCache = [...getExercises(), ...generateBulkExercises()];
+  // Rebuild if we previously cached a partial pool and the full cache is now ready.
+  if (quizPoolCache && quizPoolCachePartial && isBulkCacheReady()) {
+    quizPoolCache = null;
+    quizPoolCachePartial = false;
+    levelPoolCache.clear();
+  }
+  if (!quizPoolCache) {
+    const partial = !isBulkCacheReady();
+    quizPoolCache = [...getExercises(), ...generateBulkExercises()];
+    quizPoolCachePartial = partial;
+  }
   return quizPoolCache;
 }
 
@@ -522,6 +535,7 @@ export function reviewLesson(
 /** Vide tous les caches dérivés des données (branchement de `terms.json`). */
 export function resetLessonCaches(): void {
   quizPoolCache = null;
+  quizPoolCachePartial = false;
   levelPoolCache.clear();
   lessonCache.clear();
   resetBulkCache();

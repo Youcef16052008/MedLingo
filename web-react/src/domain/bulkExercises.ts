@@ -632,11 +632,18 @@ export function generateBulkModule(moduleTitle: string, terms: Term[]): Exercise
  */
 let bulkCache: Exercise[] | null = null;
 let warming = false;
+// R-35: partial accumulation + readiness promise (no main-thread freeze).
+let warmingParts: Exercise[] = [];
+let warmingResolve: (() => void) | null = null;
+let warmingPromise: Promise<void> | null = null;
 
 /** Vide le cache (branchement des données : `loadOnce` / `setTestData`). */
 export function resetBulkCache(): void {
   bulkCache = null;
   warming = false;
+  warmingParts = [];
+  warmingPromise = null;
+  warmingResolve = null;
 }
 
 function buildAllSync(): Exercise[] {
@@ -652,11 +659,29 @@ function buildAllSync(): Exercise[] {
 
 export function generateBulkExercises(): Exercise[] {
   if (bulkCache) return bulkCache;
-  // Précharge en cours : on n'attend pas, on complète en synchrone.
+  // R-35: if a background warm-up is in progress, return a (possibly partial)
+  // snapshot WITHOUT aborting it and WITHOUT a synchronous full build, so the
+  // main thread never freezes. The caller can await whenBulkReady() to get
+  // the complete pool.
   if (warming) {
-    warming = false;
+    return [...warmingParts];
   }
   return buildAllSync();
+}
+
+/**
+ * Resolves when the background warm-up has finished (or immediately if the
+ * cache is already built / no warm-up is running). Use to avoid reading a
+ * partial pool.
+ */
+export function isBulkCacheReady(): boolean {
+  return bulkCache !== null;
+}
+
+export function whenBulkReady(): Promise<void> {
+  if (bulkCache) return Promise.resolve();
+  if (warmingPromise) return warmingPromise;
+  return Promise.resolve();
 }
 
 /**
@@ -668,17 +693,24 @@ export function generateBulkExercises(): Exercise[] {
 export function warmBulkCache(): void {
   if (bulkCache || warming) return;
   warming = true;
-  const parts: Exercise[] = [];
+  warmingParts = [];
+  warmingPromise = new Promise<void>((resolve) => {
+    warmingResolve = resolve;
+  });
   let i = 0;
   const step = () => {
     if (i >= MODULES.length) {
-      bulkCache = parts;
+      bulkCache = warmingParts;
       warming = false;
+      const r = warmingResolve;
+      warmingResolve = null;
+      warmingPromise = null;
+      if (r) r();
       return;
     }
     const mod = MODULES[i++];
     const terms = termsOfModule(mod.id);
-    if (terms.length) parts.push(...generateBulkModule(mod.fr, terms));
+    if (terms.length) warmingParts.push(...generateBulkModule(mod.fr, terms));
     setTimeout(step, 0);
   };
   step();
