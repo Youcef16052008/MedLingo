@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useT } from "../i18n/useT";
 import { useAppState } from "../domain/store";
-import { storyById } from "../learning/stories";
+import { storyById, getStories } from "../learning/stories";
 import type { Story } from "../learning/types";
 import { navigate } from "../lib/router";
 
@@ -14,6 +14,7 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
   const s = useAppState();
   const [search, setSearch] = useState("");
   const [filterChapter, setFilterChapter] = useState<string>("all");
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   const inProgressStories = useMemo(() => {
     return Object.entries(s.storyProgress || {})
@@ -29,8 +30,12 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
       .filter(Boolean) as Story[];
   }, [s.storyProgress]);
 
+  const allStories = useMemo(() => getStories(), []);
+
   const filteredStories = useMemo(() => {
-    let list = [...inProgressStories, ...completedStories];
+    let list = showAll
+      ? [...allStories]
+      : [...inProgressStories, ...completedStories];
     if (search) {
       const q = search.toLowerCase();
       list = list.filter((story) => {
@@ -47,11 +52,12 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
   // Get unique chapters
   const chapters = useMemo(() => {
     const chs = new Set<string>();
-    [...inProgressStories, ...completedStories].forEach((s) => {
+    const src = showAll ? allStories : [...inProgressStories, ...completedStories];
+    src.forEach((s) => {
       chs.add(s.chapter || "unknown");
     });
     return Array.from(chs);
-  }, [inProgressStories, completedStories]);
+  }, [showAll, allStories, inProgressStories, completedStories]);
 
   return (
     <div className="story-browser">
@@ -98,6 +104,16 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
           <span className="stat-value">{completedStories.length}</span>
           <span className="stat-label">Terminées</span>
         </div>
+      </div>
+
+      {/* Discover toggle (R-26) */}
+      <div style={{ marginBottom: 12 }}>
+        <button
+          className="btn ghost small"
+          onClick={() => setShowAll((v) => !v)}
+        >
+          {showAll ? "Mes histoires" : "Toutes les histoires"}
+        </button>
       </div>
 
       {/* Story list */}

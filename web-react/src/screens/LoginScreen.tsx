@@ -90,6 +90,7 @@ export function LoginScreen() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder={"Mot de passe"}
+                minLength={6}
                 required
                 autoComplete={isLogin ? "current-password" : "new-password"}
               />

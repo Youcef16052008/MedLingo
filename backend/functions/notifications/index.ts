@@ -29,6 +29,29 @@ function getCorsHeaders(origin: string | null): Record<string, string> {
   return headers
 }
 
+const NOTIF_DATA_WHITELIST = new Set([
+  "module_id",
+  "lesson_id",
+  "chapter_id",
+  "count",
+  "metadata",
+]);
+
+function sanitizeNotificationData(input: unknown): Record<string, unknown> {
+  const out: Record<string, unknown> = {};
+  if (!input || typeof input !== "object") return out;
+  for (const [k, v] of Object.entries(input as Record<string, unknown>)) {
+    if (!NOTIF_DATA_WHITELIST.has(k)) continue;
+    if (typeof v === "string") {
+      // Strip any HTML/script-like content.
+      out[k] = v.replace(/<[^>]*>/g, "").slice(0, 500);
+    } else if (typeof v === "number" || typeof v === "boolean") {
+      out[k] = v;
+    }
+  }
+  return out;
+}
+
 interface NotificationRequest {
   type: 'review_reminder' | 'streak_reminder' | 'clinical_pearl' | 'level_unlocked' | 'league_ending' | 'hearts_refilled'
   user_ids?: string[]
@@ -294,9 +317,10 @@ serve(async (req) => {
         title: notifTitle,
         body: notifBody,
         data: {
-          // Sanitise: only allow a safe whitelist of keys, prevent stored XSS
-          // by stripping any HTML/script-like content from string values.
-          ...data,
+          // R-27 (2026-11-07): whitelist-only sanitisation. Only a small set of
+          // known-safe keys are copied; everything else (incl. HTML/script-like
+          // content) is dropped. target_screen/deduplication_key are server-set.
+          ...sanitizeNotificationData(data),
           deduplication_key,
           target_screen: type === 'review_reminder' ? 'FLASHCARDS' : type === 'streak_reminder' ? 'HOME' : 'MODULES'
         },

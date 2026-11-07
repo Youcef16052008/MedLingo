@@ -211,7 +211,7 @@ export function ProfileScreen() {
         <p className="tiny" style={{ textAlign: "center", marginTop: 16 }}>
           <a href="#/login" className="link">{"Accès comptes"}</a>
         </p>
-      )}
+      )
       )}
       </div>
   );

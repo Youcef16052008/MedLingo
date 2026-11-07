@@ -19,8 +19,9 @@ export function PlayerScreen() {
   const xpToday = s.xpToday || 0;
   const dailyProgress = Math.min(100, Math.round((xpToday / dailyGoal) * 100));
 
-  const modulesCompleted = Object.keys(s.moduleBest || {}).length;
-  const lessonsCompleted = Object.keys(s.lessonBest || {}).length;
+  const COMPLETED_THRESHOLD = 70;
+  const modulesCompleted = Object.values(s.moduleBest || {}).filter((v) => (v ?? 0) >= COMPLETED_THRESHOLD).length;
+  const lessonsCompleted = Object.values(s.lessonBest || {}).filter((v) => (v ?? 0) >= COMPLETED_THRESHOLD).length;
 
   const handleStartLesson = () => {
     window.location.hash = "#/path";
@@ -31,7 +32,7 @@ export function PlayerScreen() {
   };
 
   const handleViewStories = () => {
-    window.location.hash = "#/story";
+    window.location.hash = "#/stories";
   };
 
   const handleViewProfile = () => {

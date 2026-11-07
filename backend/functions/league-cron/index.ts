@@ -192,7 +192,23 @@ serve(async (req) => {
             cohortOk = false
             continue
           }
-          if (alreadyMember) {
+          // R-28 (2026-11-07): idempotence guard against double gem credit on
+          // partial failure (gems credited, member insert failed). If a ledger
+          // row already exists for this user/target tier, treat as migrated.
+          let alreadyRewarded = false
+          if (gemsReward > 0) {
+            const { data: ledgerHit } = await supabase
+              .from('gems_ledger')
+              .select('id')
+              .eq('user_id', member.user_id)
+              .eq('reason', 'league_promotion')
+              .eq('metadata->>to', nextTier)
+              .limit(1)
+              .maybeSingle()
+            if (ledgerHit) alreadyRewarded = true
+          }
+
+          if (alreadyMember || alreadyRewarded) {
             results.push({
               user_id: member.user_id,
               old_cohort: cohort.cohort_id,

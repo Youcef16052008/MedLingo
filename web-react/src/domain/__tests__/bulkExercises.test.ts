@@ -1,8 +1,8 @@
-/**
- * Tests du générateur en masse — port web de `BulkExerciseGeneratorTest.kt`.
+﻿/**
+ * Tests du gÃ©nÃ©rateur en masse â€” port web de `BulkExerciseGeneratorTest.kt`.
  *
- * Ces tests garantissent les invariants de l'UI : si l'un échoue, l'écran de
- * quiz plante ou marque une bonne réponse comme fausse.
+ * Ces tests garantissent les invariants de l'UI : si l'un Ã©choue, l'Ã©cran de
+ * quiz plante ou marque une bonne rÃ©ponse comme fausse.
  */
 import { describe, it, expect, beforeAll } from "vitest";
 import { readFileSync } from "node:fs";
@@ -19,8 +19,8 @@ import {
 import type { Exercise, Term } from "../../types";
 
 /**
- * Timeout étendu pour ce fichier : `generateBulkExercises()` produit 13 512
- * exercices (classement des distracteurs par module) et prend ~8 s. Le défaut
+ * Timeout Ã©tendu pour ce fichier : `generateBulkExercises()` produit 13 512
+ * exercices (classement des distracteurs par module) et prend ~8 s. Le dÃ©faut
  * de vitest est 5 s.
  */
 const BULK_TIMEOUT = 120_000;
@@ -35,8 +35,8 @@ async function loadTestData(): Promise<void> {
   ) as Term[];
   setTestData(terms);
   await loadOnce().catch(() => {
-    /* `loadOnce` refait un fetch qui échoue en Node : `setTestData` a déjà
-     * branché `termsOfModule`, c'est tout ce dont le générateur a besoin. */
+    /* `loadOnce` refait un fetch qui Ã©choue en Node : `setTestData` a dÃ©jÃ 
+     * branchÃ© `termsOfModule`, c'est tout ce dont le gÃ©nÃ©rateur a besoin. */
   });
 }
 
@@ -49,8 +49,8 @@ const ALLOWED_TYPES = new Set([
   "clinical_case",
 ]);
 
-// Les tests attendent que les données soient chargées. Dans l'environnement de
-// test Node, `fetch("/data/terms.json")` échoue (URL relative) : on charge
+// Les tests attendent que les donnÃ©es soient chargÃ©es. Dans l'environnement de
+// test Node, `fetch("/data/terms.json")` Ã©choue (URL relative) : on charge
 // directement depuis le disque, comme le fait `i18n.test.ts`.
 let exercises: Exercise[] = [];
 
@@ -59,8 +59,8 @@ beforeAll(async () => {
   exercises = generateBulkExercises();
 }, 120_000);
 
-describe("bulkExercises — volume", () => {
-  it("dépasse 10 000 exercices", () => {
+describe("bulkExercises â€” volume", () => {
+  it("dÃ©passe 10 000 exercices", () => {
     expect(exercises.length, `total = ${exercises.length}`).toBeGreaterThanOrEqual(10_000);
   });
 
@@ -77,22 +77,22 @@ describe("bulkExercises — volume", () => {
   });
 });
 
-describe("bulkExercises — intégrité", () => {
-  it("aucun id n'est dupliqué", () => {
+describe("bulkExercises â€” intÃ©gritÃ©", () => {
+  it("aucun id n'est dupliquÃ©", () => {
     const ids = exercises.map((e) => e.id);
     const dupes = ids.filter((id, i) => ids.indexOf(id) !== i);
-    expect(dupes.length, `${dupes.length} ids dupliqués`).toBe(0);
+    expect(dupes.length, `${dupes.length} ids dupliquÃ©s`).toBe(0);
   });
 
-  it("tous les ids sont négatifs", () => {
-    // Les exercices générés ne doivent jamais collisionner avec les 112
-    // exercices écrits main (ids positifs dans exercises.json).
+  it("tous les ids sont nÃ©gatifs", () => {
+    // Les exercices gÃ©nÃ©rÃ©s ne doivent jamais collisionner avec les 112
+    // exercices Ã©crits main (ids positifs dans exercises.json).
     expect(exercises.every((e) => typeof e.id === "number" && e.id < 0)).toBe(true);
   });
 
-  it("tous les types sont supportés par l'UI", () => {
+  it("tous les types sont supportÃ©s par l'UI", () => {
     for (const e of exercises) {
-      expect(ALLOWED_TYPES.has(e.type), `type non géré : ${e.type}`).toBe(true);
+      expect(ALLOWED_TYPES.has(e.type), `type non gÃ©rÃ© : ${e.type}`).toBe(true);
     }
   });
 
@@ -112,14 +112,14 @@ describe("bulkExercises — intégrité", () => {
   });
 });
 
-describe("bulkExercises — contrats UI", () => {
-  it("la réponse est toujours une option des QCM", () => {
-    // `McqQuestionView` compare le texte de l'option à `answer` : si la réponse
+describe("bulkExercises â€” contrats UI", () => {
+  it("la rÃ©ponse est toujours une option des QCM", () => {
+    // `McqQuestionView` compare le texte de l'option Ã  `answer` : si la rÃ©ponse
     // n'est pas dans `options`, l'exercice est injouable.
     //
-    // `fill_blank` est exclu : c'est une saisie libre (`fillScore`), où
-    // `options` ne contient que la réponse acceptée (miroir d'`acceptedAnswers`
-    // côté Android).
+    // `fill_blank` est exclu : c'est une saisie libre (`fillScore`), oÃ¹
+    // `options` ne contient que la rÃ©ponse acceptÃ©e (miroir d'`acceptedAnswers`
+    // cÃ´tÃ© Android).
     const mcqLike = exercises.filter((x) => x.type === "mcq");
     for (const e of mcqLike) {
       expect(e.options.length, `ex ${e.id} : options vides`).toBeGreaterThan(0);
@@ -136,21 +136,21 @@ describe("bulkExercises — contrats UI", () => {
       expect(e.options.length, `ex ${e.id} : ${e.options.length} options`).toBeGreaterThanOrEqual(2);
       expect(e.options.length, `ex ${e.id} : ${e.options.length} options`).toBeLessThanOrEqual(4);
       const normalized = e.options.map((o) => o.trim().toLowerCase());
-      expect(new Set(normalized).size, `ex ${e.id} : options dupliquées`).toBe(normalized.length);
+      expect(new Set(normalized).size, `ex ${e.id} : options dupliquÃ©es`).toBe(normalized.length);
     }
   });
 
-  it("le matching a 4 paires bien formées", () => {
+  it("le matching a 4 paires bien formÃ©es", () => {
     for (const e of exercises.filter((x) => x.type === "matching")) {
       expect(e.options.length, `ex ${e.id} : ${e.options.length} paires`).toBe(4);
       for (const pair of e.options) {
         const parts = pair.split(":");
-        expect(parts.length, `ex ${e.id} : paire malformée '${pair}'`).toBe(2);
+        expect(parts.length, `ex ${e.id} : paire malformÃ©e '${pair}'`).toBe(2);
         for (const part of parts) {
-          expect(part.trim().length, `ex ${e.id} : côté de paire vide`).toBeGreaterThan(0);
+          expect(part.trim().length, `ex ${e.id} : cÃ´tÃ© de paire vide`).toBeGreaterThan(0);
         }
       }
-      // `checkMatchFromRaw` compare `answer` à `options` : ils doivent être
+      // `checkMatchFromRaw` compare `answer` Ã  `options` : ils doivent Ãªtre
       // identiques pour que les paires soient les bonnes.
       expect(e.answer, `ex ${e.id} : answer != options`).toBe(e.options.join("|"));
     }
@@ -160,7 +160,7 @@ describe("bulkExercises — contrats UI", () => {
     for (const e of exercises.filter((x) => x.type === "sentence_order")) {
       const answer = e.answer.split(" ").filter((w) => w.trim().length > 0);
       expect(answer.length, `ex ${e.id} : phrase vide`).toBeGreaterThan(0);
-      expect(new Set(answer), `ex ${e.id} : le pool ne correspond pas à la phrase`).toEqual(
+      expect(new Set(answer), `ex ${e.id} : le pool ne correspond pas Ã  la phrase`).toEqual(
         new Set(e.options)
       );
     }
@@ -187,9 +187,9 @@ describe("bulkExercises — contrats UI", () => {
 });
 
 /**
- * Indices d'un échantillon représentatif d'une liste (premiers, derniers,
- * un tous les 1 000). Utilisé pour comparer deux générations sans parcourir
- * les 13 512 exercices deux à deux.
+ * Indices d'un Ã©chantillon reprÃ©sentatif d'une liste (premiers, derniers,
+ * un tous les 1 000). UtilisÃ© pour comparer deux gÃ©nÃ©rations sans parcourir
+ * les 13 512 exercices deux Ã  deux.
  */
 function pickProbe(len: number): number[] {
   const probe = new Set<number>();
@@ -199,11 +199,11 @@ function pickProbe(len: number): number[] {
   return [...probe].sort((a, b) => a - b);
 }
 
-describe("bulkExercises — robustesse", () => {
-  it("la génération est déterministe (et survit à un reset de cache)", () => {
-    // La génération est mémoïsée : le deuxième appel sans reset rendrait la
-    // même instance et ne prouverait rien. On vide le cache entre les deux
-    // appels pour vérifier la vraie garantit : mêmes seeds → même corpus.
+describe("bulkExercises â€” robustesse", () => {
+  it("la gÃ©nÃ©ration est dÃ©terministe (et survit Ã  un reset de cache)", () => {
+    // La gÃ©nÃ©ration est mÃ©moÃ¯sÃ©e : le deuxiÃ¨me appel sans reset rendrait la
+    // mÃªme instance et ne prouverait rien. On vide le cache entre les deux
+    // appels pour vÃ©rifier la vraie garantit : mÃªmes seeds â†’ mÃªme corpus.
     const first = generateBulkExercises();
     resetBulkCache();
     const second = generateBulkExercises();
@@ -220,23 +220,23 @@ describe("bulkExercises — robustesse", () => {
     }
   }, BULK_TIMEOUT);
 
-  it("le cache est mémoïsé : deuxième appel instantané et identique", () => {
+  it("le cache est mÃ©moÃ¯sÃ© : deuxiÃ¨me appel instantanÃ© et identique", () => {
     resetBulkCache();
-    const first = generateBulkExercises(); // ~5-12 s : la vraie génération
+    const first = generateBulkExercises(); // ~5-12 s : la vraie gÃ©nÃ©ration
     const t0 = performance.now();
     const second = generateBulkExercises();
     const dt = performance.now() - t0;
-    expect(second).toBe(first); // même instance : aucun recalcul
-    expect(dt).toBeLessThan(50); // ms — le recalcul coûterait plusieurs secondes
+    expect(second).toBe(first); // mÃªme instance : aucun recalcul
+    expect(dt).toBeLessThan(50); // ms â€” le recalcul coÃ»terait plusieurs secondes
   }, BULK_TIMEOUT);
 
   it("un module vide ne plante pas", () => {
     expect(generateBulkModule("ModuleInexistant", [])).toEqual([]);
   });
 
-  it("au moins 3 types différents sont produits", () => {
+  it("au moins 3 types diffÃ©rents sont produits", () => {
     // Les 6 types de l'UI : mcq, fill_blank, matching, sentence_order, reading,
-    // clinical_case. Le tirage dépend des données disponibles (etymology 23 %,
+    // clinical_case. Le tirage dÃ©pend des donnÃ©es disponibles (etymology 23 %,
     // pearl 10 %, mnemo 3 %) ; on exige 3 types au lieu de 6 pour que le test
     // reste robuste si un module manque d'un champ.
     const types = new Set(exercises.map((e) => e.type));

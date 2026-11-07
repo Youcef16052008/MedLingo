@@ -607,14 +607,18 @@ function generateForTerm(
 }
 
 /** Génère les exercices d'un module entier. */
-export function generateBulkModule(moduleTitle: string, terms: Term[]): Exercise[] {
-  if (!terms.length) return [];
-  const pools = buildPools(terms);
+export function generateBulkModuleBatch(moduleTitle: string, allTerms: Term[], batchTerms: Term[]): Exercise[] {
+  if (!batchTerms.length) return [];
+  const pools = buildPools(allTerms);
   const out: Exercise[] = [];
-  for (const term of terms) {
-    out.push(...generateForTerm(moduleTitle, term, terms, pools));
+  for (const term of batchTerms) {
+    out.push(...generateForTerm(moduleTitle, term, allTerms, pools));
   }
   return out;
+}
+
+export function generateBulkModule(moduleTitle: string, terms: Term[]): Exercise[] {
+  return generateBulkModuleBatch(moduleTitle, terms, terms);
 }
 
 /**
@@ -697,10 +701,11 @@ export function warmBulkCache(): void {
   warmingPromise = new Promise<void>((resolve) => {
     warmingResolve = resolve;
   });
+  const parts: Exercise[] = [];
   let i = 0;
   const step = () => {
     if (i >= MODULES.length) {
-      bulkCache = warmingParts;
+      bulkCache = parts;
       warming = false;
       const r = warmingResolve;
       warmingResolve = null;
@@ -710,7 +715,9 @@ export function warmBulkCache(): void {
     }
     const mod = MODULES[i++];
     const terms = termsOfModule(mod.id);
-    if (terms.length) warmingParts.push(...generateBulkModule(mod.fr, terms));
+    if (terms.length) parts.push(...generateBulkModule(mod.fr, terms));
+    // Keep warmingParts in sync for the partial-snapshot path (R-35).
+    warmingParts = parts;
     setTimeout(step, 0);
   };
   step();

@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     if (typeof window === "undefined") return "light";
-    const saved = localStorage.getItem("medlingo_theme");
+    let saved: string | null = null;
+  try { saved = localStorage.getItem("medlingo_theme"); } catch { saved = null; }
     if (saved === "dark" || saved === "light") return saved;
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   });
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("medlingo_theme", theme);
+    try { localStorage.setItem("medlingo_theme", theme); } catch { /* ignore */ }
   }, [theme]);
 
   const toggle = () => {

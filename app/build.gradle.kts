@@ -4,7 +4,6 @@ plugins {
   alias(libs.plugins.kotlin.compose)
   alias(libs.plugins.kotlin.serialization)
   alias(libs.plugins.google.devtools.ksp)
-  alias(libs.plugins.secrets)
 }
 
 android {
@@ -15,7 +14,7 @@ android {
     applicationId = "com.aistudio.medlingua.dzmed"
     minSdk = 24
     targetSdk = 36
-    versionCode = 1
+    versionCode = (System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1)
     versionName = "1.0"
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -45,7 +44,15 @@ android {
       isMinifyEnabled = true
       isShrinkResources = true
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+      // R-01 (2026-11-07): fail fast instead of silently shipping an unsigned build,
+      // but only when a release variant is actually being assembled.
       val releaseKeystore = file(System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks")
+      val isReleaseTask = gradle.startParameter.taskNames.any { it.contains("Release", ignoreCase = true) }
+      if (isReleaseTask) {
+        require(releaseKeystore.exists()) {
+          "Release keystore not found at ${releaseKeystore}. Set KEYSTORE_PATH or provide my-upload-key.jks."
+        }
+      }
       if (releaseKeystore.exists()) {
         signingConfig = signingConfigs.getByName("release")
       }
@@ -65,14 +72,6 @@ android {
     includeInApk = false
     includeInBundle = true
   }
-}
-
-// Configure the Secrets Gradle Plugin to use .env and .env.example files
-// to match the convention used in Web projects.
-secrets {
-  propertiesFileName = ".env"
-  defaultPropertiesFileName = ".env.example"
-  ignoreList.add("FIREBASE_APPCHECK_DEBUG_TOKEN")
 }
 
 dependencies {
