@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Maquette 3 - Minimalist Centered</title>
+<style>
+:root {
+  --blue: #2563EB;
+  --blue-dark: #1E40AF;
+  --blue-light: #DBEAFE;
+  --blue-bg: #F0F7FF;
+  --white: #FFFFFF;
+  --gray-100: #F8FAFC;
+  --gray-200: #E2E8F0;
+  --gray-400: #94A3B8;
+  --gray-600: #475569;
+  --gray-900: #0F172A;
+  --green: #10B981;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--gray-900); min-height: 100vh; }
+.container { max-width: 640px; margin: 0 auto; padding: 40px 24px; }
+
+/* Header */
+.header { text-align: center; margin-bottom: 48px; }
+.logo { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.logo-icon { width: 36px; height: 36px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 18px; }
+.logo-text { font-size: 20px; font-weight: 800; color: var(--blue); }
+.greeting { font-size: 32px; font-weight: 800; color: var(--gray-900); margin-bottom: 4px; }
+.sub-greeting { font-size: 16px; color: var(--gray-400); }
+
+/* Stats row */
+.stats-row { display: flex; justify-content: center; gap: 32px; margin-bottom: 48px; }
+.stat { text-align: center; }
+.stat-value { font-size: 28px; font-weight: 800; color: var(--blue); }
+.stat-label { font-size: 12px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+/* Main CTA */
+.main-cta { background: var(--blue); border-radius: 20px; padding: 32px; text-align: center; color: white; margin-bottom: 40px; }
+.main-cta h2 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.main-cta p { opacity: 0.9; margin-bottom: 20px; font-size: 14px; }
+.main-cta button { background: white; color: var(--blue); padding: 14px 32px; border-radius: 12px; font-weight: 700; font-size: 15px; border: none; cursor: pointer; }
+
+/* Progress card */
+.progress-card { background: var(--gray-100); border-radius: 16px; padding: 24px; margin-bottom: 32px; }
+.progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.progress-title { font-size: 16px; font-weight: 700; }
+.progress-value { font-size: 14px; font-weight: 700; color: var(--blue); }
+.progress-bar { height: 10px; background: var(--gray-200); border-radius: 5px; overflow: hidden; margin-bottom: 8px; }
+.progress-fill { height: 100%; background: var(--blue); border-radius: 5px; }
+.progress-sub { font-size: 12px; color: var(--gray-400); }
+
+/* Module list */
+.module { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--gray-200); }
+.module:last-child { border-bottom: none; }
+.module-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; font-size: 20px; }
+.module-info { flex: 1; }
+.module-name { font-size: 15px; font-weight: 600; }
+.module-meta { font-size: 12px; color: var(--gray-400); }
+.module-progress { width: 60px; text-align: right; }
+.module-percent { font-size: 14px; font-weight: 700; color: var(--blue); }
+
+/* Quick links */
+.quick-links { display: flex; gap: 12px; margin-bottom: 32px; }
+.quick-link { flex: 1; text-align: center; padding: 16px; background: var(--gray-100); border-radius: 12px; text-decoration: none; color: var(--gray-900); font-size: 13px; font-weight: 600; transition: all 0.2s; }
+.quick-link:hover { background: var(--blue-light); color: var(--blue); }
+.quick-link .icon { font-size: 24px; display: block; margin-bottom: 4px; }
+
+/* Bottom nav */
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid var(--gray-200); padding: 12px 0; display: flex; justify-content: space-around; }
+.nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; color: var(--gray-400); font-weight: 600; }
+.nav-item.active { color: var(--blue); }
+.nav-icon { font-size: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">M</div>
+      <div class="logo-text">MedLingo</div>
+    </div>
+    <div class="greeting">Bonjour, Youcef 👋</div>
+    <div class="sub-greeting">Continue ton apprentissage médical</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat"><div class="stat-value">2,450</div><div class="stat-label">XP</div></div>
+    <div class="stat"><div class="stat-value">8</div><div class="stat-label">Niveau</div></div>
+    <div class="stat"><div class="stat-value">12</div><div class="stat-label">Série</div></div>
+    <div class="stat"><div class="stat-value">45</div><div class="stat-label">Leçons</div></div>
+  </div>
+
+  <div class="main-cta">
+    <h2>Prêt à apprendre ?</h2>
+    <p>Tu as 3 révisions en attente et 2 nouvelles leçons</p>
+    <button>▶ Commencer maintenant</button>
+  </div>
+
+  <div class="progress-card">
+    <div class="progress-header">
+      <div class="progress-title">Objectif quotidien</div>
+      <div class="progress-value">14 / 20 XP</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div>
+    <div class="progress-sub">Encore 6 XP pour atteindre ton objectif</div>
+  </div>
+
+  <div class="progress-card">
+    <div class="progress-header">
+      <div class="progress-title">Progression par module</div>
+    </div>
+    <div class="module">
+      <div class="module-icon">🦴</div>
+      <div class="module-info"><div class="module-name">Anatomie</div><div class="module-meta">45 termes · 120 exercices</div></div>
+      <div class="module-progress"><div class="module-percent">75%</div></div>
+    </div>
+    <div class="module">
+      <div class="module-icon">💊</div>
+      <div class="module-info"><div class="module-name">Pharmacologie</div><div class="module-meta">38 termes · 95 exercices</div></div>
+      <div class="module-progress"><div class="module-percent">45%</div></div>
+    </div>
+    <div class="module">
+      <div class="module-icon">🫀</div>
+      <div class="module-info"><div class="module-name">Cardiologie</div><div class="module-meta">32 termes · 80 exercices</div></div>
+      <div class="module-progress"><div class="module-percent">20%</div></div>
+    </div>
+  </div>
+
+  <div class="quick-links">
+    <a href="#" class="quick-link"><span class="icon">🃏</span>Flashcards</a>
+    <a href="#" class="quick-link"><span class="icon">📖</span>Histoires</a>
+    <a href="#" class="quick-link"><span class="icon">🔍</span>Recherche</a>
+    <a href="#" class="quick-link"><span class="icon">📊</span>Stats</a>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <div class="nav-item active"><span class="nav-icon">🏠</span>Accueil</div>
+  <div class="nav-item"><span class="nav-icon">📚</span>Leçons</div>
+  <div class="nav-item"><span class="nav-icon">🃏</span>Révision</div>
+  <div class="nav-item"><span class="nav-icon">📊</span>Stats</div>
+  <div class="nav-item"><span class="nav-icon">👤</span>Profil</div>
+</div>
+</body>
+</html>

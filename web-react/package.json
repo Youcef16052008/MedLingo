@@ -19,6 +19,8 @@
     "review": "python scripts/review_server.py"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "edge-tts-client": "^1.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

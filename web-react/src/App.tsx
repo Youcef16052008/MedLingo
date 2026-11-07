@@ -14,14 +14,23 @@ import { PathScreen } from "./screens/PathScreen";
 import { PracticeScreen } from "./screens/PracticeScreen";
 import { LeaguesScreen } from "./screens/LeaguesScreen";
 import { ModulesScreen } from "./screens/ModulesScreen";
-import { SearchScreen } from "./screens/SearchScreen";
 import { FlashScreen } from "./screens/FlashScreen";
 import { QuizScreen } from "./screens/QuizScreen";
 import { StorySessionScreen } from "./screens/StorySessionScreen";
 import { ProfileScreen } from "./screens/ProfileScreen";
+import { lazy, Suspense } from "react";
+// ... other imports ...
+
+// Lazy-loaded screens for performance
+const PlayerScreen = lazy(() => import("./screens/PlayerScreen").then(m => ({ default: m.PlayerScreen })));
+const EnhancedSearchScreen = lazy(() => import("./screens/EnhancedSearchScreen").then(m => ({ default: m.EnhancedSearchScreen })));
+const StoryBrowser = lazy(() => import("./screens/StoryBrowserScreen").then(m => ({ default: m.StoryBrowser })));
+const ProgressAnalytics = lazy(() => import("./components/ProgressAnalytics").then(m => ({ default: m.ProgressAnalytics })));
+const GamificationPanel = lazy(() => import("./components/GamificationPanel").then(m => ({ default: m.GamificationPanel })));
 import { ReviewHubScreen } from "./screens/ReviewHubScreen";
 import { ChapterScreen } from "./screens/ChapterScreen";
 import { navigate } from "./lib/router";
+import { ThemeToggle } from "./components/ThemeToggle";
 
 function Shell() {
   const { t, lang } = useT();
@@ -190,7 +199,7 @@ function Shell() {
       screen = <ModulesScreen />;
       break;
     case "search":
-      screen = <SearchScreen />;
+      screen = <Suspense fallback={<div className="skeleton" />}><EnhancedSearchScreen /></Suspense>;
       break;
     case "flash":
       screen = <FlashScreen key={param} param={param} onQuit={() => navigate("practice")} />;
@@ -199,6 +208,9 @@ function Shell() {
       // Clé = hash brut : un changement de query remonte l'écran et relance
       // le démarrage automatique (`?module=a` → `?module=b`).
       screen = <QuizScreen key={route} />;
+      break;
+    case "stories":
+      screen = <Suspense fallback={<div className="skeleton" />}><StoryBrowser onOpenStory={(id) => navigate(`story/${id}`)} /></Suspense>;
       break;
     case "story":
       // `#/story/:id` — séance narrative ; quitter ramène au parcours.
@@ -260,6 +272,15 @@ function Shell() {
     case "profile":
       screen = <ProfileScreen />;
       break;
+    case "player":
+      screen = <Suspense fallback={<div className="skeleton" />}><PlayerScreen /></Suspense>;
+      break;
+    case "analytics":
+      screen = <Suspense fallback={<div className="skeleton" />}><ProgressAnalytics /></Suspense>;
+      break;
+    case "gamification":
+      screen = <Suspense fallback={<div className="skeleton" />}><GamificationPanel /></Suspense>;
+      break;
     default:
       // `path` (défaut) et l'alias historique `home`
       screen = <PathScreen />;
@@ -272,6 +293,9 @@ function Shell() {
         {screen}
       </main>
       <TabBar route={route} />
+      <div style={{ position: "fixed", top: 16, right: 16, zIndex: 200 }}>
+        <ThemeToggle />
+      </div>
     </div>
   );
 }

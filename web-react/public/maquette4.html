@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Maquette 4 - Dashboard Grid</title>
+<style>
+:root {
+  --blue: #1D4ED8;
+  --blue-dark: #1E3A8A;
+  --blue-light: #93C5FD;
+  --blue-bg: #EFF6FF;
+  --white: #FFFFFF;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-400: #9CA3AF;
+  --gray-600: #4B5563;
+  --gray-900: #111827;
+  --green: #059669;
+  --orange: #D97706;
+  --red: #DC2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--gray-100); color: var(--gray-900); }
+.container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+/* Header */
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: white; padding: 16px 24px; border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-icon { width: 36px; height: 36px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 18px; }
+.logo-text { font-size: 18px; font-weight: 800; color: var(--blue); }
+.header-right { display: flex; gap: 12px; align-items: center; }
+.header-btn { padding: 8px 16px; border-radius: 10px; background: var(--blue-bg); color: var(--blue); font-weight: 600; font-size: 13px; border: none; cursor: pointer; }
+.header-stat { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--gray-600); }
+.avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--purple, #8B5CF6)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 14px; }
+
+/* Grid layout */
+.grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+/* Widget */
+.widget { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.widget-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.widget-title { font-size: 14px; font-weight: 700; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; }
+.widget-value { font-size: 32px; font-weight: 800; color: var(--gray-900); }
+.widget-sub { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+
+/* Welcome widget (spans 2 cols) */
+.welcome-widget { grid-column: span 2; background: linear-gradient(135deg, var(--blue), var(--blue-dark)); color: white; }
+.welcome-widget .widget-title { color: rgba(255,255,255,0.7); }
+.welcome-widget .widget-value { color: white; font-size: 24px; }
+.welcome-widget .widget-sub { color: rgba(255,255,255,0.8); }
+.welcome-actions { display: flex; gap: 12px; margin-top: 16px; }
+.welcome-btn { padding: 10px 20px; border-radius: 10px; font-weight: 600; font-size: 13px; border: none; cursor: pointer; }
+.welcome-btn.primary { background: white; color: var(--blue); }
+.welcome-btn.secondary { background: rgba(255,255,255,0.2); color: white; }
+
+/* Progress widget */
+.progress-widget { }
+.progress-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--gray-200); }
+.progress-item:last-child { border-bottom: none; }
+.progress-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; background: var(--gray-100); }
+.progress-info { flex: 1; }
+.progress-name { font-size: 13px; font-weight: 600; }
+.progress-meta { font-size: 11px; color: var(--gray-400); }
+.progress-bar { width: 80px; height: 6px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--blue); border-radius: 3px; }
+.progress-pct { font-size: 12px; font-weight: 700; color: var(--blue); width: 36px; text-align: right; }
+
+/* Stats row */
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+.stat-widget { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); text-align: center; }
+.stat-widget .icon { font-size: 28px; margin-bottom: 8px; }
+.stat-widget .value { font-size: 28px; font-weight: 800; color: var(--gray-900); }
+.stat-widget .label { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+
+/* Activity feed */
+.activity-widget { grid-column: span 2; }
+.activity-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--gray-200); }
+.activity-item:last-child { border-bottom: none; }
+.activity-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.activity-icon.blue { background: var(--blue-bg); }
+.activity-icon.green { background: #ECFDF5; }
+.activity-icon.orange { background: #FFF7ED; }
+.activity-text { flex: 1; }
+.activity-title { font-size: 13px; font-weight: 600; }
+.activity-time { font-size: 11px; color: var(--gray-400); }
+
+/* Goal widget */
+.goal-widget { }
+.goal-ring { width: 100px; height: 100px; margin: 0 auto 12px; position: relative; }
+.goal-ring svg { transform: rotate(-90deg); }
+.goal-ring-bg { fill: none; stroke: var(--gray-200); stroke-width: 8; }
+.goal-ring-fill { fill: none; stroke: var(--blue); stroke-width: 8; stroke-linecap: round; }
+.goal-ring-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.goal-ring-value { font-size: 20px; font-weight: 800; }
+.goal-ring-label { font-size: 10px; color: var(--gray-400); }
+.goal-info { text-align: center; }
+.goal-title { font-size: 14px; font-weight: 700; }
+.goal-sub { font-size: 12px; color: var(--gray-400); }
+
+/* Bottom nav */
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid var(--gray-200); padding: 8px 0 12px; display: flex; justify-content: space-around; z-index: 100; }
+.nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; color: var(--gray-400); font-weight: 600; padding: 4px 12px; }
+.nav-item.active { color: var(--blue); }
+.nav-icon { font-size: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">M</div>
+      <div class="logo-text">MedLingo</div>
+    </div>
+    <div class="header-right">
+      <button class="header-btn">🔍 Rechercher</button>
+      <div class="header-stat">🔥 12</div>
+      <div class="header-stat">💎 340</div>
+      <div class="avatar">Y</div>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-widget"><div class="icon">📚</div><div class="value">45</div><div class="label">Leçons</div></div>
+    <div class="stat-widget"><div class="icon">📖</div><div class="value">1,230</div><div class="label">Termes</div></div>
+    <div class="stat-widget"><div class="icon">✅</div><div class="value">3,420</div><div class="label">Exercices</div></div>
+    <div class="stat-widget"><div class="icon">⭐</div><div class="value">2,450</div><div class="label">XP Total</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="widget welcome-widget">
+      <div class="widget-title">Bienvenue</div>
+      <div class="widget-value">Bonjour, Youcef 👋</div>
+      <div class="widget-sub">Continue ton apprentissage de l'anglais médical</div>
+      <div class="welcome-actions">
+        <button class="welcome-btn primary">▶ Continuer la leçon</button>
+        <button class="welcome-btn secondary">🃏 Flashcards</button>
+      </div>
+    </div>
+
+    <div class="widget goal-widget">
+      <div class="widget-title">Objectif quotidien</div>
+      <div class="goal-ring">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <circle class="goal-ring-bg" cx="50" cy="50" r="42"></circle>
+          <circle class="goal-ring-fill" cx="50" cy="50" r="42" stroke-dasharray="263.9" stroke-dashoffset="79"></circle>
+        </svg>
+        <div class="goal-ring-text">
+          <div class="goal-ring-value">70%</div>
+          <div class="goal-ring-label">14/20 XP</div>
+        </div>
+      </div>
+      <div class="goal-info">
+        <div class="goal-title">Encore 6 XP</div>
+        <div class="goal-sub">pour atteindre ton objectif</div>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-header"><div class="widget-title">Ligues</div></div>
+      <div style="text-align:center;padding:16px 0;">
+        <div style="font-size:36px;margin-bottom:8px;">🏆</div>
+        <div style="font-size:18px;font-weight:800;color:var(--blue);">Bronze</div>
+        <div style="font-size:12px;color:var(--gray-400);">142 XP cette semaine</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="widget">
+      <div class="widget-header">
+        <div class="widget-title">Progression par module</div>
+        <a href="#" style="font-size:13px;color:var(--blue);text-decoration:none;font-weight:600;">Voir tout →</a>
+      </div>
+      <div class="progress-item">
+        <div class="progress-icon">🦴</div>
+        <div class="progress-info"><div class="progress-name">Anatomie</div><div class="progress-meta">45 termes · 120 exercices</div></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
+        <div class="progress-pct">75%</div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-icon">💊</div>
+        <div class="progress-info"><div class="progress-name">Pharmacologie</div><div class="progress-meta">38 termes · 95 exercices</div></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div>
+        <div class="progress-pct">45%</div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-icon">🫀</div>
+        <div class="progress-info"><div class="progress-name">Cardiologie</div><div class="progress-meta">32 termes · 80 exercices</div></div>
+        <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+        <div class="progress-pct">20%</div>
+      </div>
+    </div>
+
+    <div class="widget activity-widget">
+      <div class="widget-header"><div class="widget-title">Activité récente</div></div>
+      <div class="activity-item">
+        <div class="activity-icon blue">📚</div>
+        <div class="activity-text"><div class="activity-title">Leçon complétée: Anatomie 3.2</div><div class="activity-time">Il y a 2 heures</div></div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon green">✅</div>
+        <div class="activity-text"><div class="activity-title">10 exercices réussis</div><div class="activity-time">Il y a 3 heures</div></div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-icon orange">🃏</div>
+        <div class="activity-text"><div class="activity-title">5 flashcards révisées</div><div class="activity-time">Hier</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <div class="nav-item active"><span class="nav-icon">🏠</span>Accueil</div>
+  <div class="nav-item"><span class="nav-icon">📚</span>Leçons</div>
+  <div class="nav-item"><span class="nav-icon">🃏</span>Révision</div>
+  <div class="nav-item"><span class="nav-icon">📊</span>Stats</div>
+  <div class="nav-item"><span class="nav-icon">👤</span>Profil</div>
+</div>
+</body>
+</html>

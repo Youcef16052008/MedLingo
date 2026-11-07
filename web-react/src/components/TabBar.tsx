@@ -14,7 +14,7 @@ const TABS = [
   { id: "practice", icon: "fitness_center", key: "navPractice" },
   { id: "leagues", icon: "emoji_events", key: "navLeagues" },
   { id: "modules", icon: "menu_book", key: "navCourses" },
-  { id: "profile", icon: "person", key: "navProfile" },
+  { id: "player", icon: "person", key: "navProfile" },
 ] as const;
 
 export function TabBar({ route }: { route: string }) {

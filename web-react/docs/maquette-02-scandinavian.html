@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedLingo — Maquette 2 · Scandinavian Minimal</title>
+<style>
+  :root {
+    --bg: #FAF9F6;
+    --surface: #FFFFFF;
+    --surface-2: #F5F3EF;
+    --line: #E7E5E4;
+    --ink: #1C1917;
+    --ink-2: #57534E;
+    --ink-3: #A8A29E;
+    --green: #1F2937;
+    --amber: #D97706;
+    --teal: #0D9488;
+    --success: #15803D;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--ink);
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 560px; margin: 0 auto; padding: 0 20px; }
+  /* TopBar */
+  .topbar {
+    padding: 12px 16px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 20; background: var(--bg);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand-mark {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--green); display: grid; place-items: center;
+    color: #fff; font-size: 18px;
+  }
+  .brand-name { font-weight: 700; font-size: .9rem; }
+  /* Hero */
+  .hero {
+    padding: 28px 24px; background: var(--surface);
+    border-radius: var(--radius); box-shadow: 0 1px 3px rgba(28,25,23,.04);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; right: -60px; bottom: -60px;
+    width: 200px; height: 200px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(217,119,6,.12), transparent 70%);
+  }
+  .hero h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; }
+  .hero p { color: var(--ink-2); font-size: .88rem; max-width: 32ch; margin-bottom: 20px; }
+  .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    padding: 12px 20px; border-radius: var(--radius); font-weight: 600;
+    border: none; cursor: pointer; font-size: .85rem; display: inline-flex;
+    align-items: center; gap: 8px; text-decoration: none; color: inherit;
+  }
+  .btn-primary { background: var(--teal); color: #fff; box-shadow: 0 1px 2px rgba(13,148,136,.3); }
+  .btn-secondary { background: var(--surface-2); border: 1px solid var(--line); }
+  .btn-accent { color: var(--amber); font-weight: 700; }
+  /* Stats */
+  .stats { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+  .stat {
+    flex: 1; min-width: 80px; background: var(--surface-2);
+    border-radius: var(--radius); padding: 12px 14px;
+    border: 1px solid var(--line);
+  }
+  .stat .num { font-size: 1.2rem; font-weight: 800; color: var(--green); }
+  .stat .lbl { font-size: .65rem; color: var(--ink-3); font-weight: 600; }
+  /* Modules */
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; margin: 24px 0 12px; }
+  .section-head h2 { font-size: 1.05rem; font-weight: 800; }
+  .section-head a { font-size: .8rem; font-weight: 600; color: var(--teal); text-decoration: none; }
+  .module-grid { display: flex; flex-direction: column; gap: 8px; }
+  .module-card {
+    display: flex; align-items: center; gap: 12px; padding: 14px;
+    border-radius: var(--radius); background: var(--surface);
+    border: 1px solid var(--line); cursor: pointer;
+    transition: background .15s ease;
+  }
+  .module-card:hover { background: var(--surface-2); }
+  .module-ico { font-size: 24px; }
+  .module-info { flex: 1; min-width: 0; }
+  .module-info h3 { font-size: 14px; font-weight: 700; margin: 0 0 2px; }
+  .module-info .sub { font-size: .72rem; color: var(--ink-2); font-weight: 500; }
+  .module-bar { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; margin-top: 8px; }
+  .module-bar > div { height: 100%; border-radius: 999px; background: var(--green); }
+  .module-bar > div .pct { font-size: .62rem; font-weight: 700; color: #fff; }
+  /* Practice cards */
+  .practice-grid { display: grid; gap: 8px; }
+  .practice-card {
+    display: flex; align-items: center; gap: 12px; padding: 14px;
+    border-radius: var(--radius); background: var(--surface);
+    border: 1px solid var(--line); cursor: pointer;
+    transition: background .15s ease;
+  }
+  .practice-card:hover { background: var(--surface-2); }
+  .practice-ico { font-size: 24px; }
+  .practice-card h4 { font-size: 14px; font-weight: 700; margin: 0 0 2px; }
+  .practice-card .desc { font-size: .72rem; color: var(--ink-2); font-weight: 500; }
+  .practice-card .badge {
+    background: var(--amber); color: #fff; border-radius: 999px;
+    font-size: .62rem; font-weight: 700; padding: 2px 8px;
+  }
+  /* Flashcard */
+  .flash-stage { perspective: 1000px; margin: 16px 0; }
+  .flashcard {
+    position: relative; height: 280px; cursor: pointer;
+    transform-style: preserve-3d; transition: transform .45s cubic-bezier(.2,.7,.3,1);
+    border-radius: var(--radius); overflow: hidden;
+  }
+  .flashcard.flipped { transform: rotateY(180deg); }
+  .flash-face {
+    position: absolute; inset: 0; backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; border-radius: var(--radius);
+    padding: 20px;
+  }
+  .flash-front {
+    background: linear-gradient(135deg, var(--teal), #0891B2);
+    color: #fff;
+  }
+  .flash-front .mod { font-size: .7rem; font-weight: 600; opacity: .85; }
+  .flash-front .term { font-size: 2.2rem; font-weight: 800; margin-top: 12px; }
+  .flash-front .flip { margin-top: 14px; font-size: .7rem; font-weight: 600; opacity: .85; }
+  .flash-back { background: var(--surface); color: var(--ink); transform: rotateY(180deg); }
+  .flash-back .head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .flash-back .lang { font-size: 1.2rem; }
+  .flash-back .en { font-size: 1.2rem; font-weight: 800; }
+  .flash-back .en + .ex { font-size: .75rem; color: var(--ink-2); margin-top: 2px; }
+  .flash-back .speak { width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line); cursor: pointer; font-size: 16px; }
+  .flash-back .details { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+  .flash-back .detail {
+    background: var(--surface-2); border-radius: 10px; padding: 10px 12px;
+    font-size: .78rem; color: var(--ink-2);
+  }
+  .flash-back .detail b { color: var(--ink-3); font-size: .65rem; }
+  .rating-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 12px; }
+  .rating-btn {
+    padding: 10px; border-radius: var(--radius); border: none;
+    background: var(--surface-2); cursor: pointer; font-size: 22px;
+  }
+  .rating-btn .q { font-size: .6rem; font-weight: 700; color: var(--ink-3); }
+  /* Tabbar */
+  .tabbar {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 560px; height: 60px;
+    background: var(--surface); border-top: 1px solid var(--line);
+    display: flex; z-index: 30;
+  }
+  .tabbar a {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 2px; text-decoration: none; color: var(--ink-3);
+    font-size: .55rem; font-weight: 600;
+  }
+  .tabbar a.active { color: var(--teal); font-weight: 700; }
+  .tabbar a .ico { font-size: 22px; line-height: 1; }
+  .tabbar a.active .ico { transform: translateY(-1px); }
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1C1917; --surface: #292524; --surface-2: #3F3A35;
+      --line: #44403C; --ink: #FDFBF7; --ink-2: #A8A29E; --ink-3: #78716C;
+    }
+    .module-card:hover, .practice-card:hover { background: #3F3A35; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <span class="brand-mark">📖</span>
+        <span class="brand-name">MedLingo</span>
+      </div>
+      <span class="btn btn-secondary" style="padding:6px 14px;font-size:.8rem">FR</span>
+    </div>
+
+    <div class="hero">
+      <h1>Aprends l'anglais médical</h1>
+      <p>Flashcards SM-2, quiz et progression. 3 langues : FR · EN · AR.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary">▶ Commencer</button>
+        <button class="btn btn-secondary">Module</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">15</div><div class="lbl">Modules</div></div>
+      <div class="stat"><div class="num">4 512</div><div class="lbl">Termes</div></div>
+      <div class="stat"><div class="num">62%</div><div class="lbl">Progression</div></div>
+      <div class="stat"><div class="num">🔥 2</div><div class="lbl">Série</div></div>
+    </div>
+
+    <div class="section-head">
+      <h2>📚 Parcours</h2>
+      <a href="#">Tous →</a>
+    </div>
+    <div class="module-grid">
+      <div class="module-card">
+        <span class="module-ico">🦴</span>
+        <div class="module-info">
+          <h3>Anatomie</h3>
+          <div class="sub">12 chapitres · 312 termes</div>
+        </div>
+        <div class="module-bar"><div style="width:62%"><div class="pct">62%</div></div></div>
+      </div>
+      <div class="module-card">
+        <span class="module-ico">❤️</span>
+        <div class="module-info">
+          <h3>Physiologie</h3>
+          <div class="sub">10 chapitres · 287 termes</div>
+        </div>
+        <div class="module-bar"><div style="width:48%"><div class="pct">48%</div></div></div>
+      </div>
+      <div class="module-card">
+        <span class="module-ico">🧬</span>
+        <div class="module-info">
+          <h3>Biochimie</h3>
+          <div class="sub">8 chapitres · 245 termes</div>
+        </div>
+        <div class="module-bar"><div style="width:31%"><div class="pct">31%</div></div></div>
+      </div>
+      <div class="module-card">
+        <span class="module-ico">🔬</span>
+        <div class="module-info">
+          <h3>Histologie</h3>
+          <div class="sub">9 chapitres · 218 termes</div>
+        </div>
+        <div class="module-bar"><div style="width:24%"><div class="pct">24%</div></div></div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:24px">
+      <h2>🎯 Entrainement</h2>
+    </div>
+    <div class="practice-grid">
+      <div class="practice-card">
+        <span class="practice-ico">🔁</span>
+        <div><h4>Répétitions SM-2</h4><div class="desc">4 dues aujourd'hui · 3 restants</div><span class="badge">4 dues</span></div>
+      </div>
+      <div class="practice-card">
+        <span class="practice-ico">📝</span>
+        <div><h4>Quiz diagnostique</h4><div class="desc">20 Q · 15 minutes</div></div>
+      </div>
+      <div class="practice-card">
+        <span class="practice-ico">💪</span>
+        <div><h4>Faiblesses</h4><div class="desc">3 termes à revoir</div></div>
+      </div>
+      <div class="practice-card">
+        <span class="practice-ico">📖</span>
+        <div><h4>Histoires cliniques</h4><div class="desc">12 histoires · phrases</div></div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:24px">
+      <h2>🃏 Carte d'exemple</h2>
+    </div>
+    <div class="flash-stage">
+      <div class="flashcard">
+        <div class="flash-face flash-front">
+          <div class="mod">🦴 Anatomie · Lymphatique</div>
+          <div class="term">Lymph node</div>
+          <div class="flip">👆 Appuyez pour retourner</div>
+        </div>
+        <div class="flash-face flash-back">
+          <div class="head">
+            <span class="lang">🇬🇧</span>
+            <div class="en">Lymph node</div>
+            <span class="speak">🔊</span>
+          </div>
+          <div class="details">
+            <div class="detail"><b>FR</b> – Noyau lymphatique</div>
+            <div class="detail"><b>AR</b> – عقدة ليمفاوية</div>
+            <div class="detail"><b>IPA</b> – /ˈlɪmf noʊd/</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rating-row">
+      <button class="rating-btn">😫<div class="q">1</div></button>
+      <button class="rating-btn">😕<div class="q">2</div></button>
+      <button class="rating-btn">🤔<div class="q">3</div></button>
+      <button class="rating-btn">😊<div class="q">4</div></button>
+      <button class="rating-btn">🤩<div class="q">5</div></button>
+    </div>
+
+    <div class="tabbar">
+      <a href="#" class="active"><span class="ico">🏠</span>Accueil</a>
+      <a href="#"><span class="ico">📚</span>Modules</a>
+      <a href="#"><span class="ico">🔁</span>Révision<span style="position:absolute;top:-4px;right:-10px;background:#E65100;color:#fff;border-radius:999px;padding:2px 6px;font-size:.55rem;font-weight:700">4</span></a>
+      <a href="#"><span class="ico">📝</span>Quiz</a>
+      <a href="#"><span class="ico">👤</span>Profil</a>
+    </div>
+  </div>
+</body>
+</html>

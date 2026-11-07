@@ -15,7 +15,7 @@ class MedLinguaApp : Application() {
     val repository by lazy { AppModule.provideRepository(database.medicalDao()) }
     val ttsManager by lazy { AppModule.provideTtsManager(this) }
 
-    private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
+    private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     override fun onCreate() {
         super.onCreate()
@@ -24,9 +24,11 @@ class MedLinguaApp : Application() {
         // canal existant qu'au redémarrage, d'où la lecture synchrone ici —
         // après un changement de langue, il faut relancer l'app.
         val lang = try {
-            com.aistudio.medlingua.dzmed.localization.Language.fromCode(
-                database.medicalDao().getLanguageCodeBlocking() ?: "fr"
-            )
+            kotlinx.coroutines.runBlocking(kotlinx.coroutines.Dispatchers.IO) {
+                com.aistudio.medlingua.dzmed.localization.Language.fromCode(
+                    database.medicalDao().getLanguageCodeBlocking() ?: "fr"
+                )
+            }
         } catch (e: Exception) {
             com.aistudio.medlingua.dzmed.localization.Language.FRENCH
         }

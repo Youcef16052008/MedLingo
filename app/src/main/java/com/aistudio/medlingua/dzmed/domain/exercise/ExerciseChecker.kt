@@ -100,41 +100,94 @@ object ExerciseChecker {
     }
 
     /**
-     * Check Fill blank
-     * Input: user text vs accepted answers list
+     * Check Fill blank — Duolingo-grade corrector.
+     * Accepts exact match, accent/case/punctuation-insensitive match,
+     * and near-misses (typos) within edit-distance tolerance.
      */
     fun checkFill(userAnswer: String, acceptedAnswers: List<String>): CheckResult {
-        val normalizedUser = userAnswer.trim().lowercase()
-        val normalizedAccepted = acceptedAnswers.map { it.trim().lowercase() }.filter { it.isNotEmpty() }
-        val isCorrect = normalizedUser.isNotEmpty() && normalizedAccepted.any { it == normalizedUser }
+        val normalizedUser = normalize(userAnswer)
+        val normalizedAccepted = acceptedAnswers.map { normalize(it) }.filter { it.isNotEmpty() }
 
-        // Fuzzy (partial credit) only for meaningful answers: a 1-2 char answer like "a"
-        // would trivially satisfy contains() against any accepted answer.
-        val isFuzzyCorrect = !isCorrect &&
-            normalizedUser.length >= 3 &&
+        // Exact match
+        if (normalizedUser.isNotEmpty() && normalizedAccepted.any { it == normalizedUser }) {
+            return CheckResult(
+                isCorrect = true,
+                correctAnswer = acceptedAnswers.firstOrNull() ?: "",
+                userAnswer = userAnswer,
+                score = 1.0,
+                suggestion = acceptedAnswers.firstOrNull()
+            )
+        }
+
+        // Near-miss (typo) tolerance — Duolingo "almost correct"
+        val maxDist = if (normalizedUser.length <= 4) 1 else (normalizedUser.length / 10).coerceAtLeast(1).coerceAtMost(2)
+        var bestDist = Int.MAX_VALUE
+        var bestAccepted: String? = null
+        for (accepted in normalizedAccepted) {
+            val d = levenshtein(normalizedUser, accepted)
+            if (d < bestDist) { bestDist = d; bestAccepted = accepted }
+        }
+        val isAlmost = normalizedUser.length >= 3 && bestDist in 1..maxDist
+        if (isAlmost) {
+            // Map normalized bestAccepted back to original accepted answer (with accents)
+            val originalSuggestion = acceptedAnswers.firstOrNull { normalize(it) == bestAccepted } ?: acceptedAnswers.firstOrNull()
+            return CheckResult(
+                isCorrect = false,
+                correctAnswer = acceptedAnswers.firstOrNull() ?: "",
+                userAnswer = userAnswer,
+                score = 0.9,
+                isFuzzy = true,
+                explanation = "typo",
+                suggestion = originalSuggestion
+            )
+        }
+
+        // Substring fuzzy (legacy, partial credit)
+        val isFuzzyCorrect = normalizedUser.length >= 3 &&
             normalizedAccepted.any { accepted ->
                 normalizedUser.contains(accepted) || accepted.contains(normalizedUser)
             }
-
         return CheckResult(
-            isCorrect = isCorrect,
+            isCorrect = false,
             correctAnswer = acceptedAnswers.firstOrNull() ?: "",
             userAnswer = userAnswer,
-            score = if (isCorrect) 1.0 else if (isFuzzyCorrect) 0.5 else 0.0,
+            score = if (isFuzzyCorrect) 0.5 else 0.0,
             isFuzzy = isFuzzyCorrect
         )
     }
 
     // Helpers
-    private fun normalizeSentence(sentence: String): String {
-        return sentence.trim()
+    fun normalize(text: String): String {
+        val nfd = java.text.Normalizer.normalize(text, java.text.Normalizer.Form.NFD)
+        return nfd.trim()
             .lowercase()
             // Strip Arabic diacritics (harakat), tatweel and superscript alef
             .replace(Regex("[\\u0640\\u064B-\\u0652\\u0670]"), "")
+            // Strip combining marks (accents) for Latin medical terms
+            .replace(Regex("\\p{Mn}"), "")
             // Keep all Unicode letters (incl. Arabic) and digits; drop punctuation
             .replace(Regex("[^\\p{L}\\p{N} ]"), "")
             .replace(Regex("\\s+"), " ")
             .trim()
+    }
+
+    private fun normalizeSentence(sentence: String): String = normalize(sentence)
+
+    private fun levenshtein(a: String, b: String): Int {
+        if (a == b) return 0
+        if (a.isEmpty()) return b.length
+        if (b.isEmpty()) return a.length
+        val prev = IntArray(b.length + 1) { it }
+        val curr = IntArray(b.length + 1)
+        for (i in a.indices) {
+            curr[0] = i + 1
+            for (j in b.indices) {
+                val cost = if (a[i] == b[j]) 0 else 1
+                curr[j + 1] = minOf(curr[j] + 1, prev[j + 1] + 1, prev[j] + cost)
+            }
+            for (j in 0..b.length) prev[j] = curr[j]
+        }
+        return prev[b.length]
     }
 
     private fun parseMatchRaw(raw: String): List<MatchPair> {
@@ -152,7 +205,8 @@ data class CheckResult(
     val userAnswer: String,
     val score: Double, // 0.0 to 1.0
     val isFuzzy: Boolean = false,
-    val explanation: String? = null
+    val explanation: String? = null,
+    val suggestion: String? = null  // Duolingo-style "you have a typo": closest accepted answer
 )
 
 /**

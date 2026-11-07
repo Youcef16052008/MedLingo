@@ -72,9 +72,12 @@ sealed class Action {
  * ne jamais transformer une réponse pour la faire passer (§9 du guide).
  */
 fun normalizeAnswer(s: String): String =
-    s.lowercase()
+    java.text.Normalizer.normalize(s, java.text.Normalizer.Form.NFD)
+        .lowercase()
         .replace("\u2019", "'")
         .replace("\u02BC", "'")
+        .replace(Regex("[\\u0640\\u064B-\\u0652\\u0670]"), "")
+        .replace(Regex("\\p{Mn}"), "")
         .replace(Regex("[.,!?;:]+"), " ")
         .replace(Regex("\\s+"), " ")
         .trim()

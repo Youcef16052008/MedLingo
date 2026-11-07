@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedLingo DZ — Maquette Hybride · Clinical Teal + Modern Dark</title>
+<style>
+  /* ===== THEME VARIABLES ===== */
+  :root {
+    /* Light theme (default) */
+    --bg: #F0F7F4;
+    --bg-2: #E8F4ED;
+    --surface: #FFFFFF;
+    --surface-2: #F5FAF7;
+    --surface-3: #EAF6F1;
+    --line: #E2E8F0;
+    --line-2: #CBD5E1;
+    --ink: #0F172A;
+    --ink-2: #475569;
+    --ink-3: #94A3B8;
+    --ink-4: #CBD5E1;
+    --teal-900: #0F766E;
+    --teal-700: #0D9488;
+    --teal-500: #0891B2;
+    --teal-400: #22D3EE;
+    --teal-50: #E0F2F1;
+    --teal-glow: rgba(13, 148, 136, 0.15);
+    --amber: #F59E0B;
+    --amber-d: #D97706;
+    --amber-glow: rgba(245, 158, 11, 0.2);
+    --coral: #F97316;
+    --success: #15803D;
+    --danger: #DC2626;
+    --radius: 18px;
+    --radius-sm: 12px;
+    --radius-xs: 8px;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 8px 30px rgba(15, 23, 42, 0.12);
+    --shadow-glow: 0 0 40px var(--teal-glow);
+    --hero-gradient: linear-gradient(135deg, #0B4A2E 0%, #0D9488 60%, #0891B2 100%);
+  }
+
+  /* Dark theme */
+  [data-theme="dark"] {
+    --bg: #0A1512;
+    --bg-2: #0F1F1A;
+    --surface: #12211C;
+    --surface-2: #1A2E26;
+    --surface-3: #243A31;
+    --line: #2A3D35;
+    --line-2: #3D5A50;
+    --ink: #EAF6F1;
+    --ink-2: #9DB8AC;
+    --ink-3: #7C8F87;
+    --ink-4: #4A5E55;
+    --teal-900: #2DD4BF;
+    --teal-700: #14B8A6;
+    --teal-500: #06B6D4;
+    --teal-400: #22D3EE;
+    --teal-50: #052E2A;
+    --teal-glow: rgba(45, 212, 191, 0.25);
+    --amber: #F59E0B;
+    --amber-d: #F59E0B;
+    --amber-glow: rgba(245, 158, 11, 0.25);
+    --coral: #F97316;
+    --success: #10B981;
+    --danger: #EF4444;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 40px var(--teal-glow);
+    --hero-gradient: linear-gradient(135deg, #0B4A2E 0%, #0D9488 60%, #2DD4BF 100%);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--ink);
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  .container { max-width: 560px; margin: 0 auto; padding: 0 20px; }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: border-color .3s ease;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal-700), var(--teal-500));
+    display: grid; place-items: center; color: #fff; font-size: 22px;
+    box-shadow: 0 0 20px var(--teal-glow);
+    transition: box-shadow .3s ease;
+  }
+  .brand-name { font-weight: 800; font-size: .95rem; color: var(--ink); }
+  .brand-sub { font-size: .65rem; color: var(--ink-3); font-weight: 500; }
+  .theme-toggle {
+    width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+    background: var(--surface); border: 1px solid var(--line);
+    display: grid; place-items: center; font-size: 18px;
+    transition: background .2s, border-color .2s, transform .15s;
+  }
+  .theme-toggle:hover { transform: scale(1.05); border-color: var(--teal-700); }
+  .theme-toggle:active { transform: scale(0.95); }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative; overflow: hidden; border-radius: var(--radius);
+    padding: 24px 22px; background: var(--hero-gradient);
+    color: #fff; box-shadow: 0 8px 30px rgba(11, 74, 46, 0.25);
+    margin-top: 16px;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255,255,255,.15), transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "⚕"; position: absolute; right: -30px; top: -40px;
+    font-size: 200px; opacity: .12; transform: rotate(15deg);
+    pointer-events: none; filter: blur(2px);
+  }
+  .hero h1 { color: #fff; font-size: 1.9rem; font-weight: 800; margin-bottom: 8px; }
+  .hero p { color: #C7E6CB; font-size: .9rem; max-width: 30ch; margin-bottom: 16px; }
+  .hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
+  .hero .btn {
+    background: #F59E0B; border: none; color: #fff; font-weight: 700;
+    padding: 12px 24px; border-radius: var(--radius-sm);
+    box-shadow: 0 4px 0 #92400e; cursor: pointer;
+    transition: transform .12s, box-shadow .12s;
+  }
+  .hero .btn:hover { transform: translateY(-1px); box-shadow: 0 5px 0 #92400e; }
+  .hero .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #92400e; }
+  .hero .btn-secondary {
+    background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+    color: #fff; box-shadow: none; padding: 12px 24px; border-radius: var(--radius-sm);
+    font-weight: 600; cursor: pointer; transition: background .15s;
+  }
+  .hero .btn-secondary:hover { background: rgba(255,255,255,.25); }
+
+  /* ===== STATS ===== */
+  .stats { display: flex; gap: 8px; margin: 16px 0; flex-wrap: wrap; }
+  .stat {
+    flex: 1; min-width: 80px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: var(--radius-sm);
+    padding: 10px 12px; box-shadow: var(--shadow-sm);
+    transition: border-color .2s, transform .12s;
+  }
+  .stat:hover { border-color: var(--teal-700); transform: translateY(-1px); }
+  .stat b { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--teal-700); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .65rem; color: var(--ink-3); font-weight: 600; margin-left: 4px; }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin: 24px 0 12px;
+  }
+  .section-head h2 { font-size: 1.15rem; font-weight: 800; color: var(--ink); }
+  .section-head a {
+    font-size: .8rem; font-weight: 600; color: var(--teal-700);
+    text-decoration: none; transition: color .15s;
+  }
+  .section-head a:hover { color: var(--teal-900); }
+
+  /* ===== MODULE CARDS ===== */
+  .module-grid { display: flex; flex-direction: column; gap: 10px; }
+  .module-card {
+    display: flex; align-items: center; gap: 12px; padding: 14px;
+    border-radius: var(--radius); background: var(--surface);
+    border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+    text-decoration: none; color: var(--ink); cursor: pointer;
+    transition: transform .12s ease, border-color .2s, box-shadow .2s;
+  }
+  .module-card:hover { transform: translateY(-2px); border-color: var(--teal-700); box-shadow: var(--shadow-md); }
+  .module-card:active { transform: translateY(0); }
+  .module-ico {
+    width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+    display: grid; place-items: center; font-size: 24px;
+    background: color-mix(in srgb, var(--mod-color, var(--teal-700)) 12%, var(--surface));
+    transition: transform .15s;
+  }
+  .module-card:hover .module-ico { transform: scale(1.05); }
+  .module-card h3 { font-size: 15px; font-weight: 700; margin: 0; }
+  .module-card .sub { font-size: .75rem; color: var(--ink-3); font-weight: 500; margin-top: 2px; }
+  .module-card .progress-track {
+    flex: 1; height: 6px; border-radius: 999px; background: var(--line);
+    overflow: hidden; margin-top: 8px;
+  }
+  .module-card .progress-fill {
+    height: 100%; border-radius: inherit;
+    background: linear-gradient(90deg, var(--mod-color, var(--teal-700)), var(--teal-500));
+    transition: width .4s ease; position: relative;
+  }
+  .module-card .progress-fill::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent);
+    animation: shimmer 2.5s infinite;
+  }
+  .module-card .pct { font-size: .75rem; font-weight: 700; color: var(--teal-700); font-variant-numeric: tabular-nums; }
+  .module-actions { display: flex; gap: 6px; flex-shrink: 0; }
+  .module-actions button {
+    width: 32px; height: 32px; border-radius: 10px; border: none; cursor: pointer;
+    background: var(--surface-2); font-size: 14px; color: var(--ink-3);
+    transition: background .15s, color .15s;
+  }
+  .module-actions button:hover { background: var(--teal-700); color: #fff; }
+
+  /* ===== PRACTICE CARDS ===== */
+  .practice-grid { display: grid; gap: 8px; }
+  .practice-card {
+    display: flex; align-items: center; gap: 12px; padding: 14px;
+    border-radius: var(--radius); background: var(--surface);
+    border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+    text-decoration: none; color: var(--ink); cursor: pointer;
+    transition: transform .12s ease, border-color .2s;
+  }
+  .practice-card:hover { transform: translateY(-2px); border-color: var(--teal-700); }
+  .practice-ico { font-size: 26px; }
+  .practice-card h4 { font-size: 14px; font-weight: 700; margin: 0 0 2px; }
+  .practice-card .desc { font-size: .75rem; color: var(--ink-3); font-weight: 500; }
+  .practice-card .badge {
+    background: var(--amber); color: #fff; border-radius: 10px;
+    font-size: .68rem; font-weight: 700; padding: 2px 8px;
+    box-shadow: 0 2px 6px var(--amber-glow);
+  }
+  .practice-card .pill {
+    background: var(--surface-3); color: var(--teal-700); border-radius: 10px;
+    font-size: .68rem; font-weight: 700; padding: 2px 8px;
+  }
+
+  /* ===== FLASHCARD ===== */
+  .flash-stage { perspective: 1200px; margin: 16px 0; }
+  .flashcard {
+    position: relative; height: 320px; cursor: pointer;
+    transform-style: preserve-3d; transition: transform .5s cubic-bezier(.2, .7, .3, 1);
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .flashcard.flipped { transform: rotateY(180deg); }
+  .flash-face {
+    position: absolute; inset: 0; backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .flash-front {
+    background: linear-gradient(135deg, var(--teal-900), var(--teal-700), var(--teal-500));
+    color: #fff; padding: 20px;
+    display: flex; flex-direction: column;
+  }
+  .flash-front .ff-module {
+    background: rgba(255,255,255,.15); border-radius: 16px;
+    padding: 6px 12px; font-size: .75rem; font-weight: 600;
+    align-self: flex-start;
+  }
+  .flash-front .ff-term {
+    font-size: 2.4rem; font-weight: 800; line-height: 1.2; margin-top: 16px;
+    flex: 1;
+  }
+  .flash-front .ff-flip {
+    align-self: center; margin-top: 14px;
+    background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+    border-radius: 24px; padding: 8px 16px; font-size: .75rem; font-weight: 500;
+    transition: background .15s;
+  }
+  .flash-front .ff-flip:hover { background: rgba(255,255,255,.25); }
+  .flash-back {
+    background: var(--surface); border: 2px solid var(--teal-700);
+    transform: rotateY(180deg); padding: 20px; overflow-y: auto;
+  }
+  .flash-back .fb-head { display: flex; align-items: center; gap: 10px; }
+  .flash-back .fb-flag {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--teal-50); display: grid; place-items: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .flash-back .fb-en { font-size: 1.3rem; font-weight: 800; }
+  .flash-back .fb-en + span { color: var(--ink-2); font-size: .8rem; font-style: italic; }
+  .flash-back .fb-speak {
+    width: 40px; height: 40px; border: none; border-radius: 50%;
+    background: var(--teal-50); font-size: 18px; cursor: pointer;
+    flex-shrink: 0; transition: transform .15s;
+  }
+  .flash-back .fb-speak:hover { transform: scale(1.1); }
+  .flash-back .fb-detail {
+    background: var(--surface-2); border-radius: 12px; padding: 10px 12px;
+    font-size: .8rem; color: var(--ink-2); margin-top: 8px;
+  }
+  .flash-back .fb-detail b { color: var(--ink-3); font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; }
+  .rating-row {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px;
+  }
+  .rating-btn {
+    padding: 10px; border: none; background: var(--surface);
+    border: 1px solid var(--line); border-radius: var(--radius-sm);
+    cursor: pointer; font-size: 24px; transition: transform .12s, border-color .15s;
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+  }
+  .rating-btn:hover { transform: translateY(-2px); border-color: var(--teal-700); }
+  .rating-btn:active { transform: translateY(0); }
+  .rating-btn .q { font-size: .6rem; font-weight: 700; color: var(--ink-3); }
+
+  /* ===== TABBAR ===== */
+  .tabbar {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 560px; height: 64px;
+    background: var(--surface); border-top: 1px solid var(--line);
+    display: flex; z-index: 30; backdrop-filter: blur(16px);
+    transition: background .3s, border-color .3s;
+  }
+  .tabbar a {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 2px; text-decoration: none; color: var(--ink-3);
+    font-size: .6rem; font-weight: 600; transition: color .15s;
+    position: relative;
+  }
+  .tabbar a.active { color: var(--teal-700); font-weight: 700; }
+  .tabbar a .ico { font-size: 22px; line-height: 1; transition: transform .15s; }
+  .tabbar a.active .ico { transform: translateY(-2px) scale(1.1); }
+  .tab-badge {
+    position: absolute; top: 6px; right: 18px; min-width: 16px; height: 16px;
+    padding: 0 4px; border-radius: 999px; background: var(--amber);
+    color: #fff; font-size: .55rem; font-weight: 700; text-align: center;
+    box-shadow: 0 2px 6px var(--amber-glow);
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .6; }
+  }
+  .hero { animation: fadeInUp .5s ease-out; }
+  .stats > .stat { animation: fadeInUp .5s ease-out; }
+  .stats > .stat:nth-child(1) { animation-delay: .1s; }
+  .stats > .stat:nth-child(2) { animation-delay: .15s; }
+  .stats > .stat:nth-child(3) { animation-delay: .2s; }
+  .stats > .stat:nth-child(4) { animation-delay: .25s; }
+  .stats > .stat:nth-child(5) { animation-delay: .3s; }
+  .module-grid > .module-card { animation: fadeInUp .5s ease-out; }
+  .module-grid > .module-card:nth-child(1) { animation-delay: .1s; }
+  .module-grid > .module-card:nth-child(2) { animation-delay: .15s; }
+  .module-grid > .module-card:nth-child(3) { animation-delay: .2s; }
+  .module-grid > .module-card:nth-child(4) { animation-delay: .25s; }
+  .flashcard { animation: fadeInUp .5s ease-out .3s backwards; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+
+  /* ===== DARK MODE TOGGLE ===== */
+  .theme-toggle .sun { display: none; }
+  .theme-toggle .moon { display: inline; }
+  [data-theme="dark"] .theme-toggle .sun { display: inline; }
+  [data-theme="dark"] .theme-toggle .moon { display: none; }
+
+  /* ===== HERO GRADIENT DARK ===== */
+  [data-theme="dark"] .hero {
+    box-shadow: 0 8px 30px rgba(13, 148, 136, 0.35);
+  }
+
+  /* ===== STATS DARK ===== */
+  [data-theme="dark"] .stat b { color: var(--teal-700); }
+
+  /* ===== FLASHCARD DARK ===== */
+  [data-theme="dark"] .flash-front { background: linear-gradient(135deg, #0B4A2E, #0D9488, #2DD4BF); }
+  [data-theme="dark"] .flash-back .fb-flag { background: var(--surface-2); }
+  [data-theme="dark"] .flash-back .fb-detail { background: var(--surface-2); }
+  [data-theme="dark"] .rating-btn { background: var(--surface-2); }
+
+  /* ===== MODULE CARD DARK ===== */
+  [data-theme="dark"] .module-ico { background: color-mix(in srgb, var(--mod-color, var(--teal-700)) 15%, var(--surface)); }
+  [data-theme="dark"] .module-card:hover { border-color: var(--teal-700); box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+
+  /* ===== TABBAR DARK ===== */
+  [data-theme="dark"] .tabbar { background: color-mix(in srgb, var(--surface) 92%, transparent); }
+</style>
+</head>
+<body data-theme="light">
+  <div class="container">
+    <!-- TopBar -->
+    <div class="topbar">
+      <div class="brand">
+        <span class="brand-mark">⚕</span>
+        <div>
+          <div class="brand-name">MedLingo DZ</div>
+          <div class="brand-sub">Anglais médical · 15 modules</div>
+        </div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer de thème">
+        <span class="sun">☀️</span><span class="moon">🌙</span>
+      </button>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Apprenez l'anglais médical</h1>
+      <p>Flashcards SM-2, quiz et progression pour les étudiants en médecine. 3 langues : FR · EN · AR.</p>
+      <div class="hero-cta">
+        <button class="btn">▶ Commencer</button>
+        <button class="btn btn-secondary">Voir les modules</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat"><b>15</b><span>Modules</span></div>
+      <div class="stat"><b>4 512</b><span>Termes</span></div>
+      <div class="stat"><b>62%</b><span>Progression</span></div>
+      <div class="stat"><b>🔥 2</b><span>Série</span></div>
+      <div class="stat"><b>💎 3</b><span>Gemmes</span></div>
+    </div>
+
+    <!-- Modules -->
+    <div class="section-head">
+      <h2>📚 Parcours</h2>
+      <a href="#">Tous les modules →</a>
+    </div>
+    <div class="module-grid">
+      <a class="module-card" href="#" style="--mod-color:#146B43">
+        <span class="module-ico">🦴</span>
+        <div>
+          <h3>Anatomie</h3>
+          <div class="sub">12 chapitres · 312 termes</div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" style="width:62%"></div></div>
+        <div class="pct">62%</div>
+        <span class="module-actions">
+          <button title="Quiz">📝</button>
+          <button title="Détails">⋯</button>
+        </span>
+      </a>
+      <a class="module-card" href="#" style="--mod-color:#0F766E">
+        <span class="module-ico">❤️</span>
+        <div>
+          <h3>Physiologie</h3>
+          <div class="sub">10 chapitres · 287 termes</div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" style="width:48%"></div></div>
+        <div class="pct">48%</div>
+        <span class="module-actions">
+          <button title="Quiz">📝</button>
+          <button title="Détails">⋯</button>
+        </span>
+      </a>
+      <a class="module-card" href="#" style="--mod-color:#1565C0">
+        <span class="module-ico">🧬</span>
+        <div>
+          <h3>Biochimie</h3>
+          <div class="sub">8 chapitres · 245 termes</div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" style="width:31%"></div></div>
+        <div class="pct">31%</div>
+        <span class="module-actions">
+          <button title="Quiz">📝</button>
+          <button title="Détails">⋯</button>
+        </span>
+      </a>
+      <a class="module-card" href="#" style="--mod-color:#6A1B9A">
+        <span class="module-ico">🔬</span>
+        <div>
+          <h3>Histologie</h3>
+          <div class="sub">9 chapitres · 218 termes</div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" style="width:24%"></div></div>
+        <div class="pct">24%</div>
+        <span class="module-actions">
+          <button title="Quiz">📝</button>
+          <button title="Détails">⋯</button>
+        </span>
+      </a>
+    </div>
+
+    <!-- Practice hub -->
+    <div class="section-head" style="margin-top:24px">
+      <h2>🎯 Entrainement</h2>
+      <a href="#">Tout l'entraînement →</a>
+    </div>
+    <div class="practice-grid">
+      <a class="practice-card" href="#">
+        <span class="practice-ico">🔁</span>
+        <div><h4>Répétitions SM-2</h4><div class="desc">4 dues aujourd'hui · 3 restants</div><span class="badge">4</span></div>
+      </a>
+      <a class="practice-card" href="#">
+        <span class="practice-ico">📝</span>
+        <div><h4>Quiz diagnostique</h4><div class="desc">20 Q · 15 minutes · examen EMD</div></div>
+      </a>
+      <a class="practice-card" href="#">
+        <span class="practice-ico">💪</span>
+        <div><h4>Faiblesses</h4><div class="desc">Moteur de maîtrise : 3 termes faibles</div></div>
+      </a>
+      <a class="practice-card" href="#">
+        <span class="practice-ico">📖</span>
+        <div><h4>Histoires cliniques</h4><div class="desc">12 histoires · phrases à mémoriser</div></div>
+      </a>
+    </div>
+
+    <!-- Flashcard -->
+    <div class="section-head" style="margin-top:24px">
+      <h2>🃏 Carte d'exemple</h2>
+    </div>
+    <div class="flash-stage">
+      <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <div class="flash-face flash-front">
+          <div class="ff-module">🦴 Anatomie · Chapitre 3 · Lymphatique</div>
+          <div class="ff-term">Lymph node</div>
+          <div class="ff-flip">👆 Appuyez pour retourner</div>
+        </div>
+        <div class="flash-face flash-back">
+          <div class="fb-head">
+            <span class="fb-flag">🇬🇧</span>
+            <div>
+              <div class="fb-en">Lymph node</div>
+              <span>Small bean-shaped organ of the lymphatic system</span>
+            </div>
+            <button class="fb-speak">🔊</button>
+          </div>
+          <div class="fb-detail"><b>FR</b> – Noyau lymphatique</div>
+          <div class="fb-detail"><b>AR</b> – عقدة ليمفاوية</div>
+          <div class="fb-detail"><b>IPA</b> – /ˈlɪmf noʊd/</div>
+        </div>
+      </div>
+    </div>
+    <div class="rating-row">
+      <button class="rating-btn">😫 <div class="q">1</div></button>
+      <button class="rating-btn">😕 <div class="q">2</div></button>
+      <button class="rating-btn">🤔 <div class="q">3</div></button>
+      <button class="rating-btn">😊 <div class="q">4</div></button>
+      <button class="rating-btn">🤩 <div class="q">5</div></button>
+    </div>
+
+    <!-- Tabbar -->
+    <div class="tabbar">
+      <a href="#" class="active"><span class="ico">🏠</span><span class="lbl">Accueil</span></a>
+      <a href="#"><span class="ico">📚</span><span class="lbl">Modules</span></a>
+      <a href="#"><span class="ico">🔁</span><span class="lbl">Révision</span><span class="tab-badge">4</span></a>
+      <a href="#"><span class="ico">📝</span><span class="lbl">Quiz</span></a>
+      <a href="#"><span class="ico">👤</span><span class="lbl">Profil</span></a>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const current = body.getAttribute('data-theme');
+      body.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+    }
+  </script>
+</body>
+</html>

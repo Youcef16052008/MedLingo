@@ -73,7 +73,7 @@ fun PathScreen(
     val units: List<PathBuilder.LessonPathUnit> by lazy {
         val allUnits = mutableListOf<PathBuilder.LessonPathUnit>()
         InitialData.modulesList.forEach { moduleInfo ->
-            val chapterMap = (InitialData.chaptersOfModule(moduleInfo.id).distinct().map { chap ->
+            val chapterMap = (InitialData.chaptersOfModule(moduleInfo.titleFr).distinct().map { chap ->
                 chap to PathBuilder.PathChapter(
                     chapterId = chap,
                     title = chap,

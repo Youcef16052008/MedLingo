@@ -1,4 +1,5 @@
 import { useT } from "../i18n/useT";
+import { useAuth } from "../hooks/useAuth";
 import type { TKey } from "../i18n";
 import { useAppState, resetProgress, update } from "../domain/store";
 import {
@@ -36,6 +37,7 @@ export function ProfileScreen() {
   const { open } = useDialog();
   const toast = useToast();
   const s = useAppState();
+  const { user, signOut: doSignOut } = useAuth();
 
   const acc = s.answered ? Math.round((s.correct / s.answered) * 100) : 0;
   const goal = goalProgress(s, Date.now());
@@ -187,6 +189,28 @@ export function ProfileScreen() {
       <p className="tiny" style={{ textAlign: "center", marginTop: 24 }}>
         {t("aboutTxt")}
       </p>
-    </div>
+
+      {/* ===== Espace utilisateur (ADR-3) ===== */}
+      {user ? (
+        <div className="card profile-auth">
+          <b className="profile-card-title">{"Espace utilisateur"}</b>
+          <div className="profile-auth-row">
+            <span className="profile-avatar">👤</span>
+            <span>{user.email || "Anonyme"}</span>
+          </div>
+          <button
+            type="button"
+            className="btn danger small"
+            onClick={() => doSignOut().finally(() => { window.location.hash = "#/login"; })}
+          >
+            {"Déconnexion"}
+          </button>
+        </div>
+      ) : (
+        <p className="tiny" style={{ textAlign: "center", marginTop: 16 }}>
+          <a href="#/login" className="link">{"Accès comptes"}</a>
+        </p>
+      )}
+      </div>
   );
 }

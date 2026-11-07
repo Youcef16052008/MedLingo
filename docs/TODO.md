@@ -10,6 +10,15 @@
 - [x] **V0.1 — Dashboard de relecture** du corpus (commit `6fbf815`) : `npm run review`, verdicts langue/médecine persistés dans `data/review-verdicts.v1.json`, publication automatique ⟺ double approbation, harnais 5086/5086 vert, cycle testé bout-en-bout.
 - [x] **Revue profonde 20 analyses** (36 findings dont 5 critiques) — [`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md)
 
+## 🧭 Revue 07/11/2026 — plan de remédiation (Phase 0 en cours)
+
+- **Registre vérifié** (35 findings R‑01…R‑35, 2 critiques / 11 hauts) : [`review/REVIEW_2026-11-07.md`](review/REVIEW_2026-11-07.md)
+- **Plan complet par phases + portes de sortie** : [`plans/REMEDIATION_PLAN_2026-11.md`](plans/REMEDIATION_PLAN_2026-11.md)
+- **Baseline reproductible** : [`review/BASELINE_2026-11-07.md`](review/BASELINE_2026-11-07.md) — build + i18n + seed + stories **verts** ; `npm test` **exit 1** (1 erreur non gérée `onTaskUpdate`, R‑33).
+- **Verdict** : l'arbre de travail n'est **pas livrable en l'état** (R‑02 modales non stylées / R‑05 route login morte). Le socle Android committé reste sain hors R‑14/R‑15.
+- **Décisions humaines requises avant la Phase 1** : D1 snapshot du WIP, D2 périmètre ADR‑3 (recommandé : sync désactivée par défaut), D3 source unique du correcteur (recommandé : brancher `ExerciseChecker`), D4 TTS hors-ligne par défaut.
+- [x] Phase 0.1 registre · [x] 0.2 plan · [x] 0.3 baseline · [x] 0.4 pointeur TODO · [ ] 0.5 décisions D1–D4 👤
+
 ## 🚨 P0 — Bugs critiques de la revue — ✅ WS0 EXECUTÉ le 25/10/2026
 
 - [x] **BUG-001** web : `store.ts:336` — `reviewQueue` rechargé en objet → chaque `update()` crashe après rechargement (perte silencieuse de toute progression). **Corrigé** : `coerceArray` + gardes d'entrées + test roundtrip `persist→revive→update` (4 tests).
