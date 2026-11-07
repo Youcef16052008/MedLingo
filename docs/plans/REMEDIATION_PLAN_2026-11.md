@@ -153,16 +153,16 @@
 
 ### Tasks
 
-- [ ] **3.1 R‑11 — offline by default.**
+- [x] **3.1 R-11 — offline by default.**
   - Add a persisted setting `ttsMode: "offline" | "online"`, default `"offline"`.
   - `speak(text, lang)`: offline → `speechSynthesis`; online → edge-TTS only when the user opted in, with a one-time disclosure.
   - Update README, intro copy, and any "aucune donnée transmise" claims to state exactly what happens in each mode.
   - **Test:** network-blocked `speak` issues no external request; opt-in path is explicit.
-- [ ] **3.2 R‑12 — stream lifecycle.**
+- [x] **3.2 R-12 — stream lifecycle.**
   - `stream.on("error", reject)`; settle the pending promise on stop; add `speakGeneration`; revoke the blob URL in `stopSpeak`.
   - Guarantee fallback: any edge-TTS error/timeout falls back to Web Speech (unless disabled) within a bounded time.
   - **Test:** error-only stream → reject + fallback; stop during stream → no play, URL revoked; superseded speak does not play.
-- [ ] **3.3 R‑13 — capability check & gesture.**
+- [x] **3.3 R-13 — capability check & gesture.**
   - `canSpeak()` checks `speechSynthesis` (and the configured online client), not `AudioContext`.
   - Prime audio inside the gesture or handle `play()` rejection with a visible replay control.
   - **Test:** capability matrix; play rejection surfaces retry.
