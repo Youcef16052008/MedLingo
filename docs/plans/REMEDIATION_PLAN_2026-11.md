@@ -181,20 +181,20 @@
 
 ### Tasks
 
-- [ ] **4.1 R‑20/R‑21/R‑22 — web store.**
+- [x] **4.1 R-20/R-21/R-22 — web store.**
   - `coerceSm2`: `Number.isFinite(rep/iv)` + integer/range bounds (`rep >= 0`, `iv >= 0`, `ef` clamp 1.3–2.5+, `due >= 0`).
   - Deep-copy nested entries in `update()` recipes (or adopt immer); delete dead `recordAnswer`; inject `now` into lesson functions or fix the header.
   - Surface `persist()` failure (state flag + toast); remove the duplicate `AppState`.
   - **Tests:** corrupt/oversized SM‑2 fixtures; snapshot purity; throwing `setItem`.
-- [ ] **4.2 D2 — auth/sync scope.**
+- [x] **4.2 D2 — auth/sync scope.**
   - **If (b) disable:** gate `LoginScreen`, Profile auth card, and sync calls behind `VITE_ENABLE_SYNC` (default false); remove/neutralize dead `#/login` links; mark ADR‑3 PLANNED in docs; keep `LoginScreen` for the future.
   - **If (a) implement:** namespace local state per `user_id`; clear on logout; per-card SM‑2 merge; wire `useSync`; fix migration 003 (uuid PK + FK cascade + authenticated ALL policy + `DROP POLICY IF EXISTS` + remove redundant index); idempotent 002.
   - **Tests:** logout isolation; two-device merge; SQL policy allow/deny; migration re-run.
-- [ ] **4.3 R‑15/R‑16 — Android concurrency/economy.**
+- [x] **4.3 R-15/R-16 — Android concurrency/economy.**
   - Convert all remaining stats RMW sites to `mutateUserStats`.
   - Add a `@Transaction` DAO method for balance + ledger; call it from `addGems`/`spendGems`.
   - **Tests:** 50 concurrent `addGems(1)` → 50; rollback test.
-- [ ] **4.4 R‑14 — remove `runBlocking` from `onCreate`.**
+- [x] **4.4 R-14 — remove `runBlocking` from `onCreate`.**
   - Default language `"fr"`, apply persisted value from an async launch/splash; no synchronous DB read on main.
   - **Test:** slow-DAO StrictMode harness; main-thread time < 50 ms.
 
