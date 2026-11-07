@@ -1,7 +1,11 @@
-/** Equivalent web de TtsManager.kt — Microsoft Edge TTS (doctor voice).
-
+/** Equivalent web de TtsManager.kt - Microsoft Edge TTS (doctor voice).
+ *
  * Voix medecin : en-US-GuyNeural, rate -10%, pauses 1500ms entre sections.
  * Fallback : Web Speech API si edge-tts indisponible.
+ *
+ * R-11 (2026-11-07): offline (Web Speech) is the DEFAULT. Network edge-TTS
+ * is an explicit opt-in ("online" mode) because it transmits the studied term
+ * to a third party and requires connectivity.
  */
 
 import { EdgeTTSClient, ProsodyOptions, OUTPUT_FORMAT } from "edge-tts-client";
@@ -10,13 +14,48 @@ const DOCTOR_VOICE = "en-US-GuyNeural";
 const DOCTOR_RATE = -10; // percentage
 const DOCTOR_VOLUME = 100;
 
+export type TtsMode = "offline" | "online";
+
+let ttsMode: TtsMode = "offline";
+
+// Restore persisted preference (R-11).
+if (typeof window !== "undefined") {
+  try {
+    const saved = window.localStorage.getItem("medlingo_tts_mode");
+    if (saved === "online" || saved === "offline") ttsMode = saved;
+  } catch {
+    // ignore
+  }
+}
+
+export function getTtsMode(): TtsMode {
+  return ttsMode;
+}
+
+export function setTtsMode(mode: TtsMode): void {
+  ttsMode = mode === "online" ? "online" : "offline";
+  if (typeof window !== "undefined") {
+    try {
+      window.localStorage.setItem("medlingo_tts_mode", ttsMode);
+    } catch {
+      // ignore
+    }
+  }
+}
+
 let client: EdgeTTSClient | null = null;
 let speakTimer: number | undefined;
 let currentAudio: HTMLAudioElement | null = null;
+let currentAudioUrl: string | null = null;
+let speakGeneration = 0;
+let pendingResolve: (() => void) | null = null;
 
 /** Synthese vocale disponible sur cet appareil ? */
 export function canSpeak(): boolean {
-  return typeof window !== "undefined" && "AudioContext" in window;
+  if (typeof window === "undefined") return false;
+  // Web Speech is the offline baseline; edge-TTS only in online mode.
+  if ("speechSynthesis" in window) return true;
+  return ttsMode === "online";
 }
 
 /** Classe les voix disponibles pour la langue cible (anglais). */
@@ -37,28 +76,36 @@ function getClient(): EdgeTTSClient {
   return client;
 }
 
-/** Parle avec la voix medecin (edge-tts). */
+/** Parle avec la voix medecin (edge-tts en mode online, Web Speech sinon). */
 export function speak(text: string, code = "en-US", rate = 0.9): void {
   if (!text) return;
 
-  // Stop any ongoing speech
-  stopSpeak();
+  // Invalidate any in-flight speak.
+  speakGeneration++;
+  const gen = speakGeneration;
 
-  // Use edge-tts for English, fallback to Web Speech for others
-  if (code.startsWith("en")) {
-    speakEdgeTTS(text).catch((err) => {
-      console.warn("Edge TTS failed, falling back to Web Speech:", err);
-      fallbackSpeak(text, code, rate);
-    });
-  } else {
+  // Stop any ongoing speech
+  stopSpeakInternal(gen);
+
+  // Offline mode: always Web Speech (no third-party, no connectivity).
+  if (ttsMode === "offline" || !code.startsWith("en")) {
     fallbackSpeak(text, code, rate);
+    return;
   }
+
+  speakEdgeTTS(text, gen).catch((err) => {
+    if (gen !== speakGeneration) return; // superseded
+    console.warn("Edge TTS failed, falling back to Web Speech:", err);
+    fallbackSpeak(text, code, rate);
+  });
 }
 
 /** Parle avec edge-tts. */
-async function speakEdgeTTS(text: string): Promise<void> {
+async function speakEdgeTTS(text: string, gen: number): Promise<void> {
   const c = getClient();
   await c.setMetadata(DOCTOR_VOICE, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
+
+  if (gen !== speakGeneration) return; // superseded during await
 
   const options = new ProsodyOptions();
   options.rate = DOCTOR_RATE;
@@ -67,13 +114,31 @@ async function speakEdgeTTS(text: string): Promise<void> {
   const stream = c.toStream(text, options);
 
   const chunks: Uint8Array[] = [];
-  await new Promise<void>((resolve) => {
-    stream.on("data", (chunk: Uint8Array) => {
-      chunks.push(chunk);
-    });
-    stream.on("end", () => resolve());
-    stream.on("close", () => resolve());
+  const s = stream as any;
+  await new Promise<void>((resolve, reject) => {
+    const onData = (chunk: Uint8Array) => chunks.push(chunk);
+    const cleanup = () => {
+      s.removeListener("data", onData);
+      s.removeListener("end", onEnd);
+      s.removeListener("close", onClose);
+      s.removeListener("error", onError);
+    };
+    const onEnd = () => {
+      cleanup();
+      resolve();
+    };
+    const onClose = () => onEnd();
+    const onError = (e: unknown) => {
+      cleanup();
+      reject(e);
+    };
+    s.on("data", onData);
+    s.on("end", onEnd);
+    s.on("close", onClose);
+    s.on("error", onError);
   });
+
+  if (gen !== speakGeneration) return; // superseded during stream
 
   // Combine chunks into a single blob
   const totalLength = chunks.reduce((acc, c) => acc + c.length, 0);
@@ -84,24 +149,31 @@ async function speakEdgeTTS(text: string): Promise<void> {
     offset += chunk.length;
   }
 
+  if (gen !== speakGeneration) return; // superseded
+
   // Play the audio
   const blob = new Blob([audioData], { type: "audio/mpeg" });
   const url = URL.createObjectURL(blob);
   const audio = new Audio(url);
   currentAudio = audio;
+  currentAudioUrl = url;
 
   await new Promise<void>((resolve, reject) => {
-    audio.onended = () => {
+    pendingResolve = resolve;
+    const finish = (ok: boolean, err?: unknown) => {
+      if (pendingResolve !== resolve) return; // superseded
+      pendingResolve = null;
       URL.revokeObjectURL(url);
-      currentAudio = null;
-      resolve();
+      if (currentAudio === audio) {
+        currentAudio = null;
+        currentAudioUrl = null;
+      }
+      if (ok) resolve();
+      else reject(err ?? new Error("audio playback failed"));
     };
-    audio.onerror = (e) => {
-      URL.revokeObjectURL(url);
-      currentAudio = null;
-      reject(e);
-    };
-    audio.play().catch(reject);
+    audio.onended = () => finish(true);
+    audio.onerror = (e) => finish(false, e);
+    audio.play().catch((e) => finish(false, e));
   });
 }
 
@@ -121,9 +193,35 @@ function fallbackSpeak(text: string, code = "en-US", rate = 0.95): void {
 
 /** Coupe la synthese. */
 export function stopSpeak(): void {
+  speakGeneration++; // invalidate in-flight
+  stopSpeakInternal(speakGeneration);
+}
+
+function stopSpeakInternal(_gen: number): void {
   if (currentAudio) {
-    currentAudio.pause();
+    try {
+      currentAudio.pause();
+    } catch {
+      // ignore
+    }
+    if (currentAudioUrl) {
+      try {
+        URL.revokeObjectURL(currentAudioUrl);
+      } catch {
+        // ignore
+      }
+    }
     currentAudio = null;
+    currentAudioUrl = null;
+  }
+  if (pendingResolve) {
+    const r = pendingResolve;
+    pendingResolve = null;
+    try {
+      r();
+    } catch {
+      // ignore
+    }
   }
   if (client) {
     try {
