@@ -243,7 +243,7 @@
 - [x] **6.1 Security/deploy:** R-30 headers/CSP (vercel.json); R-31 secrets plugin removed; R-01 fail-fast signing + dynamic versionCode. (R-10 deferred: low impact, Supabase applies once.)
 - [x] **6.2 Content/UX:** R-23 counts (flag already DZ); R-25; R-26; R-06. (R-24 deferred), R-25, R-26, R-06 done; R-24 deferred) R‑23 counts + 🇩🇿 flag; R‑24 i18n literals + checker; R‑25 PlayerScreen link/counters; R‑26 StoryBrowser discovery + ThemeToggle guard; R‑06 login UX.
 - [x] **6.3 Backend:** R-27 whitelist sanitization in notifications; R-28 idempotence guard in league-cron. (R-29 deferred: optional, backend dormant.)
-- [~] **6.4 Test infrastructure:** R-34 vitest projects (node/jsdom) done. R-33 open: unhandled RPC timeout persists (bulkExercises heavy sync work); needs worker-thread offload or a separate process. Assertions all green (5132).
+- [x] **6.4 Test infrastructure:** R-34 vitest projects (node/jsdom) done. R-33 fixed: heavy tests now warm (yield) instead of sync-generate; full suite exits 0 with 0 unhandled errors (5132 tests).
   - **R‑33:** split the heavy generation out of the timed path (yield/chunk), tune worker/RPC limits, or upgrade vitest; CI gate on exit 0 **and** zero unhandled errors.
   - **R‑34:** split vitest into projects (`node` for domain, `jsdom` for UI); add UI/routing/SW tests; retarget Android checker tests to the live path.
   - Add a CI job that builds and inspects `dist/sw.js` (`check:precache`).

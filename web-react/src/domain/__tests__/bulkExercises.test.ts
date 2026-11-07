@@ -14,6 +14,8 @@ import {
   generateBulkExercises,
   generateBulkModule,
   resetBulkCache,
+  warmBulkCache,
+  whenBulkReady,
   EXERCISES_PER_TERM,
 } from "../bulkExercises";
 import type { Exercise, Term } from "../../types";
@@ -56,6 +58,9 @@ let exercises: Exercise[] = [];
 
 beforeAll(async () => {
   await loadTestData();
+  resetBulkCache();
+  warmBulkCache();
+  await whenBulkReady();
   exercises = generateBulkExercises();
 }, 120_000);
 
@@ -200,12 +205,17 @@ function pickProbe(len: number): number[] {
 }
 
 describe("bulkExercises â€” robustesse", () => {
-  it("la gÃ©nÃ©ration est dÃ©terministe (et survit Ã  un reset de cache)", () => {
+  it("la gÃ©nÃ©ration est dÃ©terministe (et survit Ã  un reset de cache)", async () => {
     // La gÃ©nÃ©ration est mÃ©moÃ¯sÃ©e : le deuxiÃ¨me appel sans reset rendrait la
     // mÃªme instance et ne prouverait rien. On vide le cache entre les deux
     // appels pour vÃ©rifier la vraie garantit : mÃªmes seeds â†’ mÃªme corpus.
+    resetBulkCache();
+    warmBulkCache();
+    await whenBulkReady();
     const first = generateBulkExercises();
     resetBulkCache();
+    warmBulkCache();
+    await whenBulkReady();
     const second = generateBulkExercises();
     expect(first.length).toBe(second.length);
     const probe = pickProbe(first.length);
@@ -220,9 +230,12 @@ describe("bulkExercises â€” robustesse", () => {
     }
   }, BULK_TIMEOUT);
 
-  it("le cache est mÃ©moÃ¯sÃ© : deuxiÃ¨me appel instantanÃ© et identique", () => {
+  it("le cache est mÃ©moÃ¯sÃ© : deuxiÃ¨me appel instantanÃ© et identique", async () => {
+
     resetBulkCache();
-    const first = generateBulkExercises(); // ~5-12 s : la vraie gÃ©nÃ©ration
+    warmBulkCache();
+    await whenBulkReady();
+    const first = generateBulkExercises(); // cached after warm
     const t0 = performance.now();
     const second = generateBulkExercises();
     const dt = performance.now() - t0;
