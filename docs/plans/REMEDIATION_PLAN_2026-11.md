@@ -91,18 +91,18 @@
 
 ### Tasks
 
-- [ ] **1.1 R‑02 — restore the modal layer.**
+- [x] **1.1 R‑02 — restore the modal layer.**
   - Port the `.overlay`, `.dialog`, `.dlg-actions`, `.dlg-ico`, `.toast`, `.reward-*`, `.sheet*` rules from `web-react/src/styles.css` (lines ~891–1262) into `styles/hybrid-design.css`, or `@import "./styles.css";` at the top of the hybrid sheet (watch cascade order).
   - Ensure `.overlay { position: fixed; inset: 0; z-index: 50; }`, backdrop, and focus styling.
   - Inventory every modal/toast class rendered in `components/` and grep the new sheet for each.
   - **Test:** a CSS contract test (node) parsing `hybrid-design.css` for the required selectors + `position:fixed`; a jsdom render test asserting the dialog element carries the expected class; a browser assertion that the intro CTA is the topmost element at its center.
-- [ ] **1.2 R‑05 — route the login screen.**
+- [x] **1.2 R‑05 — route the login screen.**
   - Import `LoginScreen`; add `case "login"` to the switch in `App.tsx`.
   - Add a route-guard fallback: unknown route names render Path **and** a visible notice (or redirect with `navigate("path")`).
   - Keep `#/login` valid for `ProfileScreen`/`PlayerProfile` sign-out targets.
   - **Test:** `#/login` renders an email input (jsdom); unknown `#/nope` does not silently alias Path.
-- [ ] **1.3 Sign-out target.** Verify all three `#/login` navigations land on the form after 1.2; add a test for the sign-out flow (mock Supabase, assert hash + rendered screen).
-- [ ] **1.4 Manual/browser verification.** Production preview at 390×844: intro CTA click → onboarding completes; `#/login` → form; sign-out → form.
+- [x] **1.3 Sign-out target.** Verify all three `#/login` navigations land on the form after 1.2; add a test for the sign-out flow (mock Supabase, assert hash + rendered screen).
+- [x] **1.4 Manual/browser verification.** Production preview at 390×844: intro CTA click → onboarding completes; `#/login` → form; sign-out → form.
 
 ### Gate G1
 
