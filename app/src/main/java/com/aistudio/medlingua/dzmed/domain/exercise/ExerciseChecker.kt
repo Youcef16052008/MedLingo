@@ -25,7 +25,7 @@ object ExerciseChecker {
      * Check Choice by text (backward compat optionsRaw pipe)
      */
     fun checkChoiceByText(selectedText: String, correctText: String): CheckResult {
-        val isCorrect = selectedText.trim().equals(correctText.trim(), ignoreCase = true)
+        val isCorrect = normalize(selectedText) == normalize(correctText)
         return CheckResult(
             isCorrect = isCorrect,
             correctAnswer = correctText,
@@ -142,17 +142,15 @@ object ExerciseChecker {
             )
         }
 
-        // Substring fuzzy (legacy, partial credit)
-        val isFuzzyCorrect = normalizedUser.length >= 3 &&
-            normalizedAccepted.any { accepted ->
-                normalizedUser.contains(accepted) || accepted.contains(normalizedUser)
-            }
+        // R-19 (2026-11-07): arbitrary substring containment no longer earns
+        // partial credit (it allowed farming half-XP with 3-letter fragments).
+        // Only genuine near-misses (handled above) get partial credit.
         return CheckResult(
             isCorrect = false,
             correctAnswer = acceptedAnswers.firstOrNull() ?: "",
             userAnswer = userAnswer,
-            score = if (isFuzzyCorrect) 0.5 else 0.0,
-            isFuzzy = isFuzzyCorrect
+            score = 0.0,
+            isFuzzy = false
         )
     }
 

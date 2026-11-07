@@ -522,7 +522,12 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun selectLevelAnswer(answer: String, correctAnswer: String, points: Int) {
         if (_uiState.value.levelIsAnswered) return
-        val isCorrect = answer.trim().equals(correctAnswer.trim(), ignoreCase = true)
+        // R-17/R-18/R-19 (2026-11-07): use ExerciseChecker (normalize + typo
+        // tolerance) instead of a naive accent-sensitive equals.
+        val check = com.aistudio.medlingua.dzmed.domain.exercise.ExerciseChecker.checkFill(
+            answer, listOf(correctAnswer)
+        )
+        val isCorrect = check.isCorrect || check.isFuzzy
         val newScore = if (isCorrect) _uiState.value.levelScore + points else _uiState.value.levelScore
         val newCorrectCount = if (isCorrect) _uiState.value.levelCorrectCount + 1 else _uiState.value.levelCorrectCount
 

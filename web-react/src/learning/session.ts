@@ -80,6 +80,9 @@ export type Action =
 export function normalizeAnswer(s: string): string {
   return s
     .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0640\u064B-\u0652\u0670]/g, "")
+    .replace(/\p{Mn}/gu, "")
     .replace(/[\u2019\u02BC]/g, "'")
     .replace(/[.,!?;:]+/g, " ")
     .replace(/\s+/g, " ")

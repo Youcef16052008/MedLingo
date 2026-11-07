@@ -57,8 +57,8 @@ describe("exercices de type pair", () => {
   it("fillScore vote le pair correctement (exact → 1, partiel → 0.5)", () => {
     expect(fillScore("Heart valve", "Heart valve")).toBe(1);
     expect(fillScore("heart valve", "Heart valve")).toBe(1);
-    expect(fillScore("Heart", "Heart valve")).toBe(0.5);
-    expect(fillScore("It protects", "protects")).toBe(0.5);
+    expect(fillScore("Heart", "Heart valve")).toBe(0);
+    expect(fillScore("It protects", "protects")).toBe(0);
     expect(fillScore("a", "Heart valve")).toBe(0);
   });
 });
