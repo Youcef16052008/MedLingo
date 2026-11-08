@@ -1,4 +1,4 @@
-import { useAuth } from "../hooks/useAuth";
+﻿import { useAuth } from "../hooks/useAuth";
 import { useAppState } from "../domain/store";
 import { getTerms, getExercises } from "../data/load";
 import { MODULES } from "../data/modules";

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import { useT } from "../i18n/useT";
 import { useAppState } from "../domain/store";
 import { storyById, getStories } from "../learning/stories";
@@ -10,7 +10,7 @@ interface StoryBrowserProps {
 }
 
 export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
-  const { lang } = useT();
+  const { lang, t } = useT();
   const s = useAppState();
   const [search, setSearch] = useState("");
   const [filterChapter, setFilterChapter] = useState<string>("all");
@@ -62,15 +62,15 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
   return (
     <div className="story-browser">
       <div className="section-head" style={{ marginTop: 0 }}>
-        <h1>📖 Bibliothèque d'Histoires</h1>
+      <h1>{t("storyBrowserTitle")}</h1>
       </div>
 
       {/* Search */}
       <div className="search-box" style={{ marginBottom: 12 }}>
-        <span aria-hidden="true">🔍</span>
+        <span aria-hidden="true">ðŸ”</span>
         <input
           type="search"
-          placeholder="Rechercher une histoire..."
+          placeholder={t("storySearchPlaceholder")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -84,7 +84,7 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
             onChange={(e) => setFilterChapter(e.target.value)}
             style={{ padding: "6px 12px", borderRadius: 6 }}
           >
-            <option value="all">Tous les chapitres</option>
+            <option value="all">{t("storyAllChapters")}</option>
             {chapters.map((ch) => (
               <option key={ch} value={ch}>
                 {ch}
@@ -98,11 +98,11 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
       <div className="story-stats" style={{ display: "flex", gap: 12, marginBottom: 12 }}>
         <div className="stat-card">
           <span className="stat-value">{inProgressStories.length}</span>
-          <span className="stat-label">En cours</span>
+          <span className="stat-label">{t("storyInProgress")}</span>
         </div>
         <div className="stat-card">
           <span className="stat-value">{completedStories.length}</span>
-          <span className="stat-label">Terminées</span>
+          <span className="stat-label">{t("storyCompleted")}</span>
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
           className="btn ghost small"
           onClick={() => setShowAll((v) => !v)}
         >
-          {showAll ? "Mes histoires" : "Toutes les histoires"}
+          {showAll ? t("storyMine") : t("storyAll")}
         </button>
       </div>
 
@@ -120,10 +120,10 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
       <div className="story-list">
         {filteredStories.length === 0 ? (
           <div className="empty">
-            <span className="empty-ico">📖</span>
-            <p>Aucune histoire trouvée</p>
+            <span className="empty-ico">ðŸ“–</span>
+            <p>{t("storyNoResults")}</p>
             <p className="tiny muted">
-              Les histoires sont chargées au fur et à mesure de votre progression.
+            <p className="tiny muted">{t("storyLoadingHint")}</p>
             </p>
           </div>
         ) : (
@@ -150,14 +150,14 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
                     <h3 style={{ margin: "0 0 4px" }}>{title}</h3>
                     <p className="tiny muted">{goal}</p>
                     <p className="tiny">
-                      {story.chapter} · {story.targetPhrases.length} phrases
+                      {story.chapter} Â· {story.targetPhrases.length} phrases
                     </p>
                   </div>
                   <div style={{ textAlign: "right" }}>
                     {isCompleted ? (
-                      <span style={{ color: "green" }}>✅ Terminé</span>
+                      <span style={{ color: "green" }}>âœ… TerminÃ©</span>
                     ) : (
-                      <span style={{ color: "orange" }}>🔄 En cours</span>
+                      <span style={{ color: "orange" }}>ðŸ”„ En cours</span>
                     )}
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
                   style={{ marginTop: 8 }}
                   onClick={() => onOpenStory(story.storyId)}
                 >
-                  {isCompleted ? "Rejouer" : "Continuer"}
+                  {isCompleted ? t("storyReplay") : t("storyContinue")}
                 </button>
               </div>
             );
@@ -180,7 +180,7 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
         style={{ marginTop: 16 }}
         onClick={() => navigate("home")}
       >
-        ← Retour à l'accueil
+      {t("storyBackHome")}
       </button>
     </div>
   );
