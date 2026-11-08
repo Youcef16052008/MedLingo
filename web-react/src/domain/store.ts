@@ -120,7 +120,25 @@ export interface HeartManager {
 /** Champs d'un ancien store qui ne sont plus écrits (cœurs et flashSuccess supprimés). */
 const DROPPED_KEYS = ["hearts", "heartsTs", "flashSuccess"];
 
-const STORAGE_KEY = "medlingo_web_v1";
+// R-08 (2026-11-08): per-user storage scope. Anonymous uses the default key;
+// authenticated users get a user-scoped key so progress doesn't leak between
+// accounts on a shared device.
+let STORAGE_KEY = "medlingo_web_v1";
+
+export function setStorageScope(userId: string | null): void {
+  const next = userId ? `medlingo_web_v1_${userId}` : "medlingo_web_v1";
+  if (next === STORAGE_KEY) return;
+  STORAGE_KEY = next;
+  // Reload state from the new scope (or defaults if empty).
+  state = revive(storage()?.getItem(STORAGE_KEY) ?? null, Date.now());
+  emit();
+}
+
+export function clearStoredProgress(): void {
+  try { storage()?.removeItem(STORAGE_KEY); } catch { /* ignore */ }
+  state = revive(null, Date.now());
+  emit();
+}
 
 /**
  * Les ids de termes web sont désormais ceux des seeds Android, et non un

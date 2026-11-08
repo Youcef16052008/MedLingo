@@ -34,6 +34,7 @@ import { navigate } from "./lib/router";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { SYNC_ENABLED } from "./lib/featureFlags";
+import { useAuth, useSync } from "./hooks/useAuth";
 
 function Shell() {
   const { t, lang } = useT();
@@ -324,12 +325,38 @@ if (typeof window !== "undefined") {
   });
 }
 
+function SyncManager() {
+  const { user } = useAuth();
+  const { syncProgress } = useSync();
+  useEffect(() => {
+    if (!SYNC_ENABLED || !user) return;
+    // Best-effort: push local progress on login. Per-card merge is a future
+    // milestone; for now we push the whole blob (LWW) when local is newer.
+    const state = getState();
+    const progress = {
+      xp: state.xp,
+      level: Math.floor(state.xp / 100) + 1,
+      streak: state.streak,
+      heart: state.heartManager ? 5 : 5,
+      birdbrain_vector: [],
+      lessons_completed: Object.keys(state.lessonBest || {}),
+      lessons_in_progress: Object.keys(state.lessonProgress || {}),
+      lessons_next_review: [],
+      league_position: null,
+      updated_at: new Date().toISOString(),
+    };
+    syncProgress(progress as any).catch(() => {});
+  }, [user]);
+  return null;
+}
+
 export default function App() {
   return (
     <ErrorBoundary>
       <DialogProvider>
         <ToastProvider>
           <Shell />
+          {SYNC_ENABLED && <SyncManager />}
         </ToastProvider>
       </DialogProvider>
     </ErrorBoundary>

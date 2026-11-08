@@ -8,6 +8,7 @@
  */
 
 import { useEffect, useState, useCallback } from 'react'
+import { setStorageScope, clearStoredProgress } from '../domain/store'
 import { 
   supabase, 
   type ProgressInput,
@@ -41,7 +42,13 @@ export function useAuth() {
   useEffect(() => {
     // Écouter les changements d'authentification
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
+      (event, session) => {
+        if (session?.user) {
+          setStorageScope(session.user.id)
+        } else if (event === 'SIGNED_OUT') {
+          setStorageScope(null)
+          clearStoredProgress()
+        }
         setAuthState(prev => ({
           ...prev,
           user: session?.user ? {
