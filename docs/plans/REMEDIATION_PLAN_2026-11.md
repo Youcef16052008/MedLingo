@@ -187,7 +187,7 @@
   - Surface `persist()` failure (state flag + toast); remove the duplicate `AppState`.
   - **Tests:** corrupt/oversized SM‑2 fixtures; snapshot purity; throwing `setItem`.
 - [x] **4.2 D2 — auth/sync scope.**
-  - **If (b) disable:** gate `LoginScreen`, Profile auth card, and sync calls behind `VITE_ENABLE_SYNC` (default false); remove/neutralize dead `#/login` links; mark ADR-3 PLANNED in docs; keep `LoginScreen` for the future. (Partial: per-user storage scope + logout clearing + useSync wired; full per-card merge deferred.)
+  - **If (b) disable:** gate `LoginScreen`, Profile auth card, and sync calls behind `VITE_ENABLE_SYNC` (default false); remove/neutralize dead `#/login` links; mark ADR-3 PLANNED in docs; keep `LoginScreen` for the future. (Done: per-user storage scope + logout clearing + useSync wired; full per-card merge via domain/syncMerge.ts with pull-merge-push syncNow(), migration-003 data jsonb alignment, 10 merge tests.)
   - **If (a) implement:** namespace local state per `user_id`; clear on logout; per-card SM‑2 merge; wire `useSync`; fix migration 003 (uuid PK + FK cascade + authenticated ALL policy + `DROP POLICY IF EXISTS` + remove redundant index); idempotent 002.
   - **Tests:** logout isolation; two-device merge; SQL policy allow/deny; migration re-run.
 - [x] **4.3 R-15/R-16 — Android concurrency/economy.**
@@ -241,9 +241,9 @@
 ### Tasks
 
 - [x] **6.1 Security/deploy:** R-30 headers/CSP (vercel.json); R-31 secrets plugin removed; R-01 fail-fast signing + dynamic versionCode. (R-10 deferred: low impact, Supabase applies once.)
-- [x] **6.2 Content/UX:** R-23, R-25, R-26, R-06 done. R-24 deferred (i18n literals sweep). R-23 counts (flag already DZ); R-25; R-26; R-06. (R-24 deferred), R-25, R-26, R-06 done; R-24 deferred) R‑23 counts + 🇩🇿 flag; R‑24 i18n literals + checker; R‑25 PlayerScreen link/counters; R‑26 StoryBrowser discovery + ThemeToggle guard; R‑06 login UX.
-- [x] **6.3 Backend:** R-27 whitelist sanitization in notifications; R-28 idempotence guard in league-cron. (R-29 deferred: optional, backend dormant.)
-- [x] **6.4 Test infrastructure:** R-34 vitest projects (node/jsdom) done. R-33 fixed: heavy tests now warm (yield) instead of sync-generate; full suite exits 0 with 0 unhandled errors (5132 tests).
+- [x] **6.2 Content/UX:** R-23 counts + 🇩🇿 flag; R-24 i18n literals + checker (full sweep: 304 keys x 3 languages, 0 dead keys, `check:i18n` green, `check:literals` gate added and verified); R-25 PlayerScreen link/counters; R-26 StoryBrowser discovery + ThemeToggle guard; R-06 login UX incl. confirmation-pending messaging.
+- [x] **6.3 Backend:** R-27 whitelist sanitization in notifications; R-28 idempotence guard in league-cron; R-29 shared rate limiting (migration 004 `rate_limits` + atomic `rate_limit_hit` RPC called from all three functions, in-memory fallback on DB error).
+- [x] **6.4 Test infrastructure:** R-34 vitest projects (node/jsdom) done. R-33 fixed: heavy tests now warm (yield) instead of sync-generate; full suite exits 0 with 0 unhandled errors (5142 tests). R-32 done: vite 7.3.7 + vitest 5.1.0 security bumps, `npm audit` 0 vulnerabilities.
   - **R‑33:** split the heavy generation out of the timed path (yield/chunk), tune worker/RPC limits, or upgrade vitest; CI gate on exit 0 **and** zero unhandled errors.
   - **R‑34:** split vitest into projects (`node` for domain, `jsdom` for UI); add UI/routing/SW tests; retarget Android checker tests to the live path.
   - Add a CI job that builds and inspects `dist/sw.js` (`check:precache`).
