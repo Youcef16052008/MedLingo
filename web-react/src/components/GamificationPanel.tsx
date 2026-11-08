@@ -1,9 +1,11 @@
 import { useAppState, update } from "../domain/store";
 import { rollover, weekStartKey, YOU } from "../domain/leagues";
+import { useT } from "../i18n/useT";
 import { useState } from "react";
 
 export function GamificationPanel() {
   const s = useAppState();
+  const { t } = useT();
   const [showChest, setShowChest] = useState(false);
 
   // Trophy info
@@ -58,7 +60,7 @@ export function GamificationPanel() {
 
       {/* Trophies */}
       <div className="gamification-section">
-        <h3>🏅 Trophées</h3>
+        <h3>🏅 {t("trophyTitle")}</h3>
         <div className="trophy-grid">
           {trophyCount > 0 ? (
             Object.entries(trophies).map(([id]) => (
@@ -68,10 +70,10 @@ export function GamificationPanel() {
               </div>
             ))
           ) : (
-            <p className="muted">Aucun trophée débloqué</p>
+            <p className="muted">{t("trophyNone")}</p>
           )}
         </div>
-        <p className="trophy-count">{trophyCount} trophées</p>
+        <p className="trophy-count">{trophyCount} {t("trophyCountLbl")}</p>
       </div>
 
       {/* Chests */}

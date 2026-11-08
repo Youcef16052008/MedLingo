@@ -67,7 +67,7 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
 
       {/* Search */}
       <div className="search-box" style={{ marginBottom: 12 }}>
-        <span aria-hidden="true">ðŸ”</span>
+        <span aria-hidden="true">🔍</span>
         <input
           type="search"
           placeholder={t("storySearchPlaceholder")}
@@ -120,7 +120,7 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
       <div className="story-list">
         {filteredStories.length === 0 ? (
           <div className="empty">
-            <span className="empty-ico">ðŸ“–</span>
+            <span className="empty-ico">📖</span>
             <p>{t("storyNoResults")}</p>
             <p className="tiny muted">
             <p className="tiny muted">{t("storyLoadingHint")}</p>
@@ -150,14 +150,14 @@ export function StoryBrowser({ onOpenStory }: StoryBrowserProps) {
                     <h3 style={{ margin: "0 0 4px" }}>{title}</h3>
                     <p className="tiny muted">{goal}</p>
                     <p className="tiny">
-                      {story.chapter} Â· {story.targetPhrases.length} phrases
+                      {story.chapter} · {story.targetPhrases.length} phrases
                     </p>
                   </div>
                   <div style={{ textAlign: "right" }}>
                     {isCompleted ? (
-                      <span style={{ color: "green" }}>âœ… TerminÃ©</span>
+                      <span style={{ color: "green" }}>{t("storyDone")}</span>
                     ) : (
-                      <span style={{ color: "orange" }}>ðŸ”„ En cours</span>
+                      <span style={{ color: "orange" }}>{t("storyInProgressShort")}</span>
                     )}
                   </div>
                 </div>

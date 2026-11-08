@@ -1,18 +1,20 @@
-/** 
+/**
  * LoginScreen - Authentification MedLingo (ADR-3)
- * 
+ *
  * Fonctionnalités :
  * - Connexion e-mail
- * - Inscription
+ * - Inscription (avec message "vérifiez votre e-mail" si confirmation requise)
  * - Connexion Google
  */
 
 import { useState } from "react"
 import { useAuth } from "../hooks/useAuth"
+import { useT } from "../i18n/useT"
 import { useToast } from "../components/ToastProvider"
 
 export function LoginScreen() {
   const { signIn, signUp, signInWithGoogle } = useAuth()
+  const { t } = useT()
   const toast = useToast()
 
   const [isLogin, setIsLogin] = useState(true)
@@ -23,15 +25,18 @@ export function LoginScreen() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    const result = isLogin 
+    const result = isLogin
       ? await signIn(email, password)
       : await signUp(email, password)
     setLoading(false)
     if (result.error) {
-      toast("Erreur : " + (result.error?.message || "inconnu"))
+      toast(t("loginErrorPrefix") + (result.error?.message || "?"))
+    } else if (!isLogin && !result.session) {
+      // R-06: signUp succeeded but email confirmation is pending —
+      // do NOT report a plain success that implies an active session.
+      toast(t("loginCheckEmail"))
     } else {
-      toast("Succès")
-      // Pour le moment, on reste en mode offline (ADR-3)
+      toast("✓ " + t("loginSuccess"))
     }
   }
 
@@ -45,9 +50,9 @@ export function LoginScreen() {
     <div className="login-screen">
       <div className="login-card">
         <div className="login-header">
-          <div className="login-logo">🦅</div>
-          <h1>{"MedLingo DZ - Authentifié"}</h1>
-          <p className="muted">Supabase Sync · Optionnel</p>
+          <div className="login-logo">🩺</div>
+          <h1>{t("loginTitle")}</h1>
+          <p className="muted">{t("loginSubtitle")}</p>
         </div>
 
         <div className="login-toggle">
@@ -56,40 +61,40 @@ export function LoginScreen() {
             className={`toggle ${isLogin ? "active" : ""}`}
             onClick={() => setIsLogin(true)}
           >
-            {"Connexion"}
+            {t("loginSignIn")}
           </button>
           <button
             type="button"
             className={`toggle ${!isLogin ? "active" : ""}`}
             onClick={() => setIsLogin(false)}
           >
-            {"Inscription"}
+            {t("loginSignUp")}
           </button>
         </div>
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="email">{"Email"}</label>
+            <label htmlFor="email">{t("loginEmail")}</label>
             <input
               id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="vous@exemple.com"
+              placeholder={t("loginEmailPlaceholder")}
               required
               autoComplete="email"
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">{"Mot de passe"}</label>
+            <label htmlFor="password">{t("loginPassword")}</label>
             <div className="input-with-icon">
               <input
                 id="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder={"Mot de passe"}
+                placeholder={t("loginPassword")}
                 minLength={6}
                 required
                 autoComplete={isLogin ? "current-password" : "new-password"}
@@ -103,17 +108,17 @@ export function LoginScreen() {
             disabled={loading || !email || !password}
           >
             {loading ? (
-              <span className="spinner">⟳</span>
+              <span className="spinner">⏳</span>
             ) : isLogin ? (
-              "Connexion"
+              t("loginSignIn")
             ) : (
-              "Inscription"
+              t("loginSignUp")
             )}
           </button>
         </form>
 
         <div className="login-divider">
-          <span>{"ou"}</span>
+          <span>{t("loginOr")}</span>
         </div>
 
         <button
@@ -122,18 +127,18 @@ export function LoginScreen() {
           onClick={handleGoogle}
           disabled={loading}
         >
-          <span className="google-icon">🔍</span>
+          <span className="google-icon">G</span>
           {"Google"}
         </button>
 
         <p className="login-footer">
-          {"Pas de compte ? "}
+          {t("loginNoAccount")}{" "}
           <button
             type="button"
             className="link"
             onClick={() => setIsLogin(false)}
           >
-            {"Inscription"}
+            {t("loginSignUp")}
           </button>
         </p>
       </div>

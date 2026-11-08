@@ -1,4 +1,5 @@
 ﻿import { useAuth } from "../hooks/useAuth";
+import { useT } from "../i18n/useT";
 import { useAppState } from "../domain/store";
 import { getTerms, getExercises } from "../data/load";
 import { MODULES } from "../data/modules";
@@ -6,6 +7,7 @@ import { MODULES } from "../data/modules";
 export function PlayerScreen() {
   const s = useAppState();
   const { user } = useAuth();
+  const { t } = useT();
 
   const totalTerms = getTerms().length;
   const totalExercises = getExercises().length;
@@ -43,38 +45,40 @@ export function PlayerScreen() {
     <div className="player-screen">
       <div className="player-header">
         <h1 className="player-title">
-          {user ? `Bonjour, ${user.email?.split("@")[0] || "Apprenant"} !` : "MedLingo"}
+          {user
+            ? `${t("playerGreeting")}, ${user.email?.split("@")[0] || t("profileGuest")} !`
+            : "MedLingo"}
         </h1>
-        <p className="player-subtitle">Votre parcours d'apprentissage médical</p>
+        <p className="player-subtitle">{t("playerSubtitle")}</p>
       </div>
 
       {/* Stats Cards */}
       <div className="player-stats-grid">
         <div className="stat-card">
-          <div className="stat-icon">⭐</div>
+          <div className="stat-icon">⚡</div>
           <div className="stat-value">{xp}</div>
-          <div className="stat-label">XP Total</div>
+          <div className="stat-label">{t("playerXpTotal")}</div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">📊</div>
+          <div className="stat-icon">📈</div>
           <div className="stat-value">{level}</div>
-          <div className="stat-label">Niveau</div>
+          <div className="stat-label">{t("playerLevel")}</div>
         </div>
         <div className="stat-card">
           <div className="stat-icon">🔥</div>
           <div className="stat-value">{streak}</div>
-          <div className="stat-label">Série</div>
+          <div className="stat-label">{t("statStreak")}</div>
         </div>
         <div className="stat-card">
           <div className="stat-icon">💎</div>
           <div className="stat-value">{gems}</div>
-          <div className="stat-label">Gemmes</div>
+          <div className="stat-label">{t("statGems")}</div>
         </div>
       </div>
 
       {/* Daily Goal Progress */}
       <div className="player-daily-goal">
-        <h2>Objectif Quotidien</h2>
+        <h2>{t("playerDailyGoal")}</h2>
         <div className="progress-bar">
           <div className="progress-fill" style={{ width: `${dailyProgress}%` }}></div>
         </div>
@@ -85,71 +89,71 @@ export function PlayerScreen() {
 
       {/* Corpus Stats */}
       <div className="player-corpus-stats">
-        <h2>Corpus Disponible</h2>
+        <h2>{t("playerCorpus")}</h2>
         <div className="corpus-grid">
           <div className="corpus-item">
             <span className="corpus-number">{totalTerms.toLocaleString()}</span>
-            <span className="corpus-label">Termes</span>
+            <span className="corpus-label">{t("playerTerms")}</span>
           </div>
           <div className="corpus-item">
             <span className="corpus-number">{totalExercises.toLocaleString()}</span>
-            <span className="corpus-label">Exercices</span>
+            <span className="corpus-label">{t("playerExercises")}</span>
           </div>
           <div className="corpus-item">
             <span className="corpus-number">{totalModules}</span>
-            <span className="corpus-label">Modules</span>
+            <span className="corpus-label">{t("playerModules")}</span>
           </div>
           <div className="corpus-item">
             <span className="corpus-number">{modulesCompleted}/{totalModules}</span>
-            <span className="corpus-label">Modules complétés</span>
+            <span className="corpus-label">{t("playerModulesCompleted")}</span>
           </div>
         </div>
       </div>
 
       {/* Quick Actions */}
       <div className="player-quick-actions">
-        <h2>Actions Rapides</h2>
+        <h2>{t("playerActions")}</h2>
         <div className="action-grid">
           <button className="action-card" onClick={handleStartLesson}>
             <span className="action-icon">📚</span>
-            <span className="action-label">Commencer une leçon</span>
+            <span className="action-label">{t("playerActionLesson")}</span>
           </button>
           <button className="action-card" onClick={handleStartQuiz}>
-            <span className="action-icon">🎯</span>
-            <span className="action-label">Pratiquer</span>
+            <span className="action-icon">✏️</span>
+            <span className="action-label">{t("playerActionPractice")}</span>
           </button>
           <button className="action-card" onClick={handleViewStories}>
             <span className="action-icon">📖</span>
-            <span className="action-label">Lire des histoires</span>
+            <span className="action-label">{t("playerActionStories")}</span>
           </button>
           <button className="action-card" onClick={handleViewProfile}>
             <span className="action-icon">👤</span>
-            <span className="action-label">Mon profil</span>
+            <span className="action-label">{t("playerActionProfile")}</span>
           </button>
           <button className="action-card" onClick={() => { window.location.hash = "#/analytics"; }}>
             <span className="action-icon">📊</span>
-            <span className="action-label">Analytics</span>
+            <span className="action-label">{t("playerAnalytics")}</span>
           </button>
           <button className="action-card" onClick={() => { window.location.hash = "#/gamification"; }}>
-            <span className="action-icon">🎮</span>
-            <span className="action-label">Gamification</span>
+            <span className="action-icon">🏆</span>
+            <span className="action-label">{t("playerGamification")}</span>
           </button>
         </div>
       </div>
 
       {/* Learning Progress */}
       <div className="player-progress">
-        <h2>Progression</h2>
+        <h2>{t("playerProgress")}</h2>
         <div className="progress-stats">
           <div className="progress-stat">
             <span className="progress-icon">✅</span>
             <span className="progress-value">{lessonsCompleted}</span>
-            <span className="progress-label">Leçons complétées</span>
+            <span className="progress-label">{t("playerLessonsCompleted")}</span>
           </div>
           <div className="progress-stat">
-            <span className="progress-icon">📖</span>
+            <span className="progress-icon">🎯</span>
             <span className="progress-value">{modulesCompleted}</span>
-            <span className="progress-label">Modules complétés</span>
+            <span className="progress-label">{t("playerModulesCompleted")}</span>
           </div>
         </div>
       </div>

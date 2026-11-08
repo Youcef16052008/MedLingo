@@ -327,25 +327,12 @@ if (typeof window !== "undefined") {
 
 function SyncManager() {
   const { user } = useAuth();
-  const { syncProgress } = useSync();
+  const { syncNow } = useSync();
   useEffect(() => {
     if (!SYNC_ENABLED || !user) return;
-    // Best-effort: push local progress on login. Per-card merge is a future
-    // milestone; for now we push the whole blob (LWW) when local is newer.
-    const state = getState();
-    const progress = {
-      xp: state.xp,
-      level: Math.floor(state.xp / 100) + 1,
-      streak: state.streak,
-      heart: state.heartManager ? 5 : 5,
-      birdbrain_vector: [],
-      lessons_completed: Object.keys(state.lessonBest || {}),
-      lessons_in_progress: Object.keys(state.lessonProgress || {}),
-      lessons_next_review: [],
-      league_position: null,
-      updated_at: new Date().toISOString(),
-    };
-    syncProgress(progress as any).catch(() => {});
+    // R-07: real pull-merge-push cycle (per-card merge, no blob LWW).
+    syncNow().catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
   return null;
 }

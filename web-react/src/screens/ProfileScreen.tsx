@@ -194,22 +194,22 @@ export function ProfileScreen() {
       {/* ===== Espace utilisateur (ADR-3) ===== */}
       {SYNC_ENABLED && (user ? (
         <div className="card profile-auth">
-          <b className="profile-card-title">{"Espace utilisateur"}</b>
+          <b className="profile-card-title">{t("authSpace")}</b>
           <div className="profile-auth-row">
             <span className="profile-avatar">👤</span>
-            <span>{user.email || "Anonyme"}</span>
+            <span>{user.email || t("authAnonymous")}</span>
           </div>
           <button
             type="button"
             className="btn danger small"
             onClick={() => doSignOut().finally(() => { window.location.hash = "#/login"; })}
           >
-            {"Déconnexion"}
+            {t("profileLogout")}
           </button>
         </div>
       ) : (
         <p className="tiny" style={{ textAlign: "center", marginTop: 16 }}>
-          <a href="#/login" className="link">{"Accès comptes"}</a>
+          <a href="#/login" className="link">{t("authAccounts")}</a>
         </p>
       )
       )}

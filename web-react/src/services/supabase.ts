@@ -17,23 +17,21 @@ const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_KEY || 'sb_publishable_N7iBhN
 export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
 // Types pour la synchronisation
+// Migration 003 : la table user_progress est (user_id uuid, data jsonb, updated_at).
+// Le blob distant est le SyncBlob du store (voir domain/syncMerge.ts), fusionné
+// carte par carte — jamais un last-write-wins sur le blob entier (R-08).
 export type UserProgress = {
   user_id: string
-  xp: number
-  level: number
-  streak: number
-  heart: number
-  birdbrain_vector: number[]
-  lessons_completed: string[]
-  lessons_in_progress: string[]
-  lessons_next_review: { lessonId: string; nextReview: number }[]
-  league_position: number | null
+  data: Record<string, unknown>
   updated_at: string
   created_at?: string
 }
 
 // Type pour l'entrée utilisateur (sans user_id, mais avec updated_at optionnel pour sync)
-export type ProgressInput = Omit<UserProgress, 'user_id' | 'created_at'> & { updated_at?: string }
+export type ProgressInput = {
+  data: Record<string, unknown>
+  updated_at?: string
+}
 
 /**
  * Obtenir l'ID utilisateur actuel (ou lever une erreur)
@@ -91,7 +89,8 @@ export async function getCurrentUser() {
 
 /**
  * Sauvegarder la progression (sync local → cloud)
- * Use case: last-write wins pour conflits SM-2
+ * Le blob est stocké tel quel dans la colonne jsonb `data` (migration 003).
+ * La fusion avec l'état distant est faite côté client par mergeSyncBlobs.
  */
 export async function saveProgress(progress: ProgressInput): Promise<{ data: any; error: any }> {
   const userId = await getCurrentUserId()
@@ -100,8 +99,8 @@ export async function saveProgress(progress: ProgressInput): Promise<{ data: any
     .from('user_progress')
     .upsert({
       user_id: userId,
-      ...progress,
-      updated_at: new Date().toISOString(),
+      data: progress.data,
+      updated_at: progress.updated_at ?? new Date().toISOString(),
     }, { onConflict: 'user_id' })
   
   return { data, error }

@@ -1,10 +1,12 @@
 import { useAppState } from "../domain/store";
 import { getTerms, getExercises } from "../data/load";
 import { MODULES } from "../data/modules";
+import { useT } from "../i18n/useT";
 import { useMemo } from "react";
 
 export function ProgressAnalytics() {
   const s = useAppState();
+  const { t } = useT();
   const terms = getTerms();
   const exercises = getExercises();
 
@@ -48,35 +50,35 @@ export function ProgressAnalytics() {
 
   return (
     <div className="progress-analytics">
-      <h2>📊 Analytics de Progression</h2>
+      <h2>📊 {t("analyticsTitle")}</h2>
 
       {/* Overall Stats */}
       <div className="analytics-overview">
         <div className="analytics-card">
           <span className="analytics-icon">📚</span>
           <span className="analytics-value">{totalLessons}</span>
-          <span className="analytics-label">Leçons complétées</span>
+          <span className="analytics-label">{t("playerLessonsCompleted")}</span>
         </div>
         <div className="analytics-card">
           <span className="analytics-icon">📖</span>
           <span className="analytics-value">{completedModules}/{totalModules}</span>
-          <span className="analytics-label">Modules complétés</span>
+          <span className="analytics-label">{t("playerModulesCompleted")}</span>
         </div>
         <div className="analytics-card">
           <span className="analytics-icon">🔄</span>
           <span className="analytics-value">{totalReviews}</span>
-          <span className="analytics-label">Révisions en attente</span>
+          <span className="analytics-label">{t("reviewsPending")}</span>
         </div>
         <div className="analytics-card">
           <span className="analytics-icon">📖</span>
           <span className="analytics-value">{completedStories}</span>
-          <span className="analytics-label">Histoires terminées</span>
+          <span className="analytics-label">{t("storiesCompleted")}</span>
         </div>
       </div>
 
       {/* Daily Goal */}
       <div className="analytics-daily">
-        <h3>Objectif Quotidien</h3>
+        <h3>{t("playerDailyGoal")}</h3>
         <div className="daily-progress-bar">
           <div className="daily-fill" style={{ width: `${dailyProgress}%` }}></div>
         </div>
@@ -85,7 +87,7 @@ export function ProgressAnalytics() {
 
       {/* Module Progress */}
       <div className="analytics-modules">
-        <h3>Progression par Module</h3>
+        <h3>{t("progressByModule")}</h3>
         <div className="module-list">
           {moduleProgress.map((mod) => (
             <div key={mod.id} className="module-item">
@@ -101,9 +103,9 @@ export function ProgressAnalytics() {
                 ></div>
               </div>
               <div className="module-stats">
-                <span>{mod.terms} termes</span>
-                <span>{mod.exercises} exercices</span>
-                <span>{mod.completed} complétés</span>
+                <span>{mod.terms} {t("termsLbl")}</span>
+                <span>{mod.exercises} {t("exCount")}</span>
+                <span>{mod.completed} {t("completedLbl")}</span>
               </div>
             </div>
           ))}
@@ -112,14 +114,14 @@ export function ProgressAnalytics() {
 
       {/* SM-2 Stats */}
       <div className="analytics-sm2">
-        <h3>🧠 Mémoire Spacée (SM-2)</h3>
+        <h3>{t("spacedMemory")}</h3>
         <div className="sm2-stats">
           <div className="sm2-item">
-            <span className="sm2-label">Termes en révision</span>
+            <span className="sm2-label">{t("termsInReview")}</span>
             <span className="sm2-value">{sm2Items}</span>
           </div>
           <div className="sm2-item">
-            <span className="sm2-label">Expressions en révision</span>
+            <span className="sm2-label">{t("exprsInReview")}</span>
             <span className="sm2-value">{exprSm2Items}</span>
           </div>
         </div>

@@ -59,7 +59,7 @@ export function EnhancedSearchScreen() {
   return (
     <>
       <div className="section-head" style={{ marginTop: 0 }}>
-        <h1>ðŸ” Recherche AvancÃ©e</h1>
+        <h1>{t("searchAdvancedTitle")}</h1>
       </div>
 
       {/* Tab selector */}
@@ -68,13 +68,13 @@ export function EnhancedSearchScreen() {
           className={`btn ${tab === "terms" ? "primary" : ""}`}
           onClick={() => setTab("terms")}
         >
-          ðŸ“š Termes ({getTerms().length})
+          📚 Termes ({getTerms().length})
         </button>
         <button
           className={`btn ${tab === "exercises" ? "primary" : ""}`}
           onClick={() => setTab("exercises")}
         >
-          ðŸ“ Exercices ({getExercises().length})
+          📝 Exercices ({getExercises().length})
         </button>
       </div>
 
@@ -96,7 +96,7 @@ export function EnhancedSearchScreen() {
 
       {/* Search box */}
       <div className="search-box">
-        <span aria-hidden="true">ðŸ”</span>
+        <span aria-hidden="true">🔍</span>
         <input
           type="search"
           autoFocus
@@ -117,14 +117,14 @@ export function EnhancedSearchScreen() {
           <>
             {termHits === null && (
               <div className="empty">
-                <span className="empty-ico">ðŸ“–</span>
-                Tapez au moins 2 caractÃ¨res
+                <span className="empty-ico">📖</span>
+                Tapez au moins 2 caractères
               </div>
             )}
             {termHits !== null && termHits.length === 0 && (
               <div className="empty">
-                <span className="empty-ico">ðŸ”</span>
-                Aucun terme trouvÃ©
+                <span className="empty-ico">🔍</span>
+                Aucun terme trouvé
               </div>
             )}
             {termHits?.map((x) => (
@@ -138,7 +138,7 @@ export function EnhancedSearchScreen() {
                 <span className="r-fr">{x.fr}</span>
                 <span className="tiny">
                   {modLabel(x.module, lang)}
-                  {x.chapter ? ` Â· ${x.chapter}` : ""}
+                  {x.chapter ? ` · ${x.chapter}` : ""}
                 </span>
               </button>
             ))}
@@ -149,14 +149,14 @@ export function EnhancedSearchScreen() {
           <>
             {exerciseHits === null && (
               <div className="empty">
-                <span className="empty-ico">ðŸ“–</span>
-                Tapez au moins 2 caractÃ¨res
+                <span className="empty-ico">📖</span>
+                Tapez au moins 2 caractères
               </div>
             )}
             {exerciseHits !== null && exerciseHits.length === 0 && (
               <div className="empty">
-                <span className="empty-ico">ðŸ”</span>
-                Aucun exercice trouvÃ©
+                <span className="empty-ico">🔍</span>
+                Aucun exercice trouvé
               </div>
             )}
             {exerciseHits?.map((x, idx) => (
@@ -164,7 +164,7 @@ export function EnhancedSearchScreen() {
                 <strong>{x.qFr || x.qEn || x.qAr}</strong>
                 <span className="tiny">
                   {modLabel(x.module, lang)}
-                  {x.chapter ? ` Â· ${x.chapter}` : ""}
+                  {x.chapter ? ` · ${x.chapter}` : ""}
                 </span>
                 <span className="tiny" style={{ display: "block", marginTop: 4, color: "#666" }}>
                   {x.expFr || x.expEn || x.expAr}

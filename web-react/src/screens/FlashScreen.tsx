@@ -259,7 +259,7 @@ export function FlashScreen({ param, onQuit }: FlashProps) {
               </button>
             </div>
             <div className="ff-center">
-              <span className="ff-nomenclature">🇫🇷 Nomenclature Médicale Française</span>
+              <span className="ff-nomenclature">{t("nomenclatureFr")}</span>
               <div className="ff-term-fr">{term.fr}</div>
               {term.ar && (
                 <div className="ff-term-ar" dir="rtl">🇸🇦 {term.ar}</div>
