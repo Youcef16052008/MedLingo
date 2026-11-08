@@ -40,13 +40,17 @@ interface BirdbrainVector {
   ability: number // scalar Elo-like
 }
 
-// Rate limiting: 50 req/min
+// Rate limiting: 50 req/min — R-29 : compteur partagé en Postgres (RPC
+// rate_limit_hit, migration 004) ; la Map locale sert de secours si la BDD
+// est injoignable.
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+const RATE_BUCKET = 'session-generator'
+const RATE_LIMIT = 50
+const RATE_WINDOW_S = 60
 
-function checkRateLimit(userId: string): boolean {
+function checkRateLimitLocal(userId: string): boolean {
   const now = Date.now()
-  const window = 60 * 1000
-  const limit = 50
+  const window = RATE_WINDOW_S * 1000
 
   const entry = rateLimitMap.get(userId)
   if (!entry || now > entry.resetAt) {
@@ -55,10 +59,28 @@ function checkRateLimit(userId: string): boolean {
   }
 
   entry.count++
-  if (entry.count > limit) {
+  if (entry.count > RATE_LIMIT) {
     return false
   }
   return true
+}
+
+async function checkRateLimit(
+  supabase: ReturnType<typeof createClient>,
+  userId: string
+): Promise<boolean> {
+  try {
+    const { data, error } = await supabase.rpc('rate_limit_hit', {
+      p_bucket: RATE_BUCKET,
+      p_key: userId,
+      p_limit: RATE_LIMIT,
+      p_window_seconds: RATE_WINDOW_S,
+    })
+    if (error) throw error
+    return data === true
+  } catch {
+    return checkRateLimitLocal(userId)
+  }
 }
 
 serve(async (req) => {
@@ -122,8 +144,8 @@ serve(async (req) => {
       )
     }
 
-    // Rate limit check
-    if (!checkRateLimit(user_id)) {
+    // Rate limit check (R-29 : compteur partagé en Postgres)
+    if (!(await checkRateLimit(supabase, user_id))) {
       return new Response(
         JSON.stringify({ error: 'Rate limit exceeded' }),
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 429 }
