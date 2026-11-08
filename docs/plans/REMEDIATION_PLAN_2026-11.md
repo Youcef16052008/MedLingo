@@ -187,7 +187,7 @@
   - Surface `persist()` failure (state flag + toast); remove the duplicate `AppState`.
   - **Tests:** corrupt/oversized SM‑2 fixtures; snapshot purity; throwing `setItem`.
 - [x] **4.2 D2 — auth/sync scope.**
-  - **If (b) disable:** gate `LoginScreen`, Profile auth card, and sync calls behind `VITE_ENABLE_SYNC` (default false); remove/neutralize dead `#/login` links; mark ADR‑3 PLANNED in docs; keep `LoginScreen` for the future.
+  - **If (b) disable:** gate `LoginScreen`, Profile auth card, and sync calls behind `VITE_ENABLE_SYNC` (default false); remove/neutralize dead `#/login` links; mark ADR-3 PLANNED in docs; keep `LoginScreen` for the future. (Partial: per-user storage scope + logout clearing + useSync wired; full per-card merge deferred.)
   - **If (a) implement:** namespace local state per `user_id`; clear on logout; per-card SM‑2 merge; wire `useSync`; fix migration 003 (uuid PK + FK cascade + authenticated ALL policy + `DROP POLICY IF EXISTS` + remove redundant index); idempotent 002.
   - **Tests:** logout isolation; two-device merge; SQL policy allow/deny; migration re-run.
 - [x] **4.3 R-15/R-16 — Android concurrency/economy.**
