@@ -46,6 +46,14 @@ object PathBuilder {
     fun lessonKey(moduleId: String, level: Int): String = "$moduleId:$level"
 
     /**
+     * Clé de stockage d'une leçon de chapitre (`moduleId|chapitre|niveau`).
+     * Le séparateur `|` ne peut pas apparaître dans un id de module, ce qui
+     * garantit l'unicité même si deux modules partagent un titre de chapitre.
+     */
+    fun chapterLessonKey(moduleId: String, chapter: String, level: Int): String =
+        "$moduleId|$chapter|$level"
+
+    /**
      * Construit les unités du parcours.
      * `lessonBest` : clé `module:level` → meilleur score ; le meilleur score du module
      * sert de repli d'affichage (comme sur le web) mais ne débloque rien à lui seul.
@@ -133,6 +141,83 @@ object PathBuilder {
         val module: PathModule,
         val chapters: List<PathChapter> = emptyList()
     )
+
+    /** Un chapitre réel du seed, avec ses 6 leçons (L1 → L6, L6 = BOSS). */
+    data class ChapterPath(
+        val chapterId: String,
+        val title: String,
+        val moduleId: String,
+        val nodes: List<PathNode>
+    )
+
+    /** Unité du parcours réel : un module et ses chapitres du seed. */
+    data class ModuleChapterPath(
+        val module: PathModule,
+        val chapters: List<ChapterPath>
+    )
+
+    /**
+     * Construit le parcours **Module → Chapitre → Leçons** à partir des
+     * chapitres réels du seed (`InitialData.chaptersOfModule`).
+     *
+     * Règles (spec §7) : 6 leçons par chapitre, déblocage séquentiel — L(n+1)
+     * s'ouvre dès que L(n) est validée à ≥ 70 %. L1 est toujours jouable, et
+     * les chapitres sont indépendants les uns des autres.
+     *
+     * `lessonBest` : clé [chapterLessonKey] → meilleur score.
+     * `chaptersByModule` : moduleId → titres de chapitres (ordre du seed).
+     */
+    fun buildChapterPath(
+        lessonBest: Map<String, Int>,
+        modules: List<PathModule>,
+        chaptersByModule: Map<String, List<String>>
+    ): List<ModuleChapterPath> = modules.map { module ->
+        val chapters = chaptersByModule[module.id].orEmpty().distinct().map { chapter ->
+            var previousDone = false
+            val nodes = (1..LEVELS_PER_UNIT).map { level ->
+                val score = lessonBest[chapterLessonKey(module.id, chapter, level)] ?: 0
+                val state = when {
+                    score >= UNLOCK_SCORE -> NodeState.DONE
+                    level == 1 -> NodeState.AVAILABLE
+                    previousDone -> NodeState.AVAILABLE
+                    else -> NodeState.LOCKED
+                }
+                previousDone = state == NodeState.DONE
+                PathNode(
+                    moduleId = module.id,
+                    level = level,
+                    state = state,
+                    score = score,
+                    isBoss = level == LEVELS_PER_UNIT
+                )
+            }
+            ChapterPath(
+                chapterId = chapter,
+                title = chapter,
+                moduleId = module.id,
+                nodes = nodes
+            )
+        }
+        ModuleChapterPath(module = module, chapters = chapters)
+    }
+
+    /** Leçons validées (≥ 70 %) dans une unité. */
+    fun completedLessons(unit: ModuleChapterPath): Int =
+        unit.chapters.sumOf { chapter -> chapter.nodes.count { it.state == NodeState.DONE } }
+
+    /** Nombre total de leçons d'une unité (6 × nombre de chapitres). */
+    fun totalLessons(unit: ModuleChapterPath): Int =
+        unit.chapters.sumOf { it.nodes.size }
+
+    /** Première leçon jouable d'une unité : son chapitre et son nœud. */
+    fun nextChapterLesson(unit: ModuleChapterPath): Pair<ChapterPath, PathNode>? =
+        unit.chapters.asSequence()
+            .mapNotNull { chapter ->
+                chapter.nodes.firstOrNull { it.state == NodeState.AVAILABLE }
+                    ?.let { chapter to it }
+            }
+            .firstOrNull()
+
 
     /** Type de leçon dans le parcours. */
     enum class LessonKind { NEW, REVIEW }

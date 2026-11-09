@@ -161,4 +161,61 @@ class PathBuilderTest {
         assertEquals(NodeState.AVAILABLE, path[0].nodes[0].state)
         assertEquals(NodeState.AVAILABLE, path[1].nodes[0].state)
     }
+
+    // ─── Parcours Module → Chapitre → Leçons ──────────────────────
+
+    private val chapters = mapOf(
+        "anat" to listOf("Angiologie", "Ostéologie"),
+        "physio" to listOf("Cardiologie")
+    )
+
+    @Test
+    fun `le parcours chapitre expose les chapitres reels et 6 lecons chacun`() {
+        val path = PathBuilder.buildChapterPath(emptyMap(), modules, chapters)
+        assertEquals(2, path.size)
+        assertEquals(listOf("Angiologie", "Ostéologie"), path[0].chapters.map { it.chapterId })
+        assertTrue(path[0].chapters.all { it.nodes.size == PathBuilder.LEVELS_PER_UNIT })
+        assertTrue(path[0].chapters.all { it.nodes.last().isBoss })
+        assertEquals(12, PathBuilder.totalLessons(path[0]))
+    }
+
+    @Test
+    fun `sans progression chaque chapitre ouvre L1 et verrouille la suite`() {
+        val unit = PathBuilder.buildChapterPath(emptyMap(), modules, chapters)[0]
+        for (chapter in unit.chapters) {
+            assertEquals(NodeState.AVAILABLE, chapter.nodes[0].state)
+            assertTrue(chapter.nodes.drop(1).all { it.state == NodeState.LOCKED })
+        }
+        assertEquals(0, PathBuilder.completedLessons(unit))
+    }
+
+    @Test
+    fun `valider L1 d un chapitre ouvre L2 sans toucher aux autres chapitres`() {
+        val best = mapOf(PathBuilder.chapterLessonKey("anat", "Angiologie", 1) to 80)
+        val unit = PathBuilder.buildChapterPath(best, modules, chapters)[0]
+        assertEquals(NodeState.DONE, unit.chapters[0].nodes[0].state)
+        assertEquals(NodeState.AVAILABLE, unit.chapters[0].nodes[1].state)
+        assertEquals(NodeState.LOCKED, unit.chapters[0].nodes[2].state)
+        assertEquals(NodeState.AVAILABLE, unit.chapters[1].nodes[0].state)
+        assertEquals(NodeState.LOCKED, unit.chapters[1].nodes[1].state)
+        assertEquals(1, PathBuilder.completedLessons(unit))
+    }
+
+    @Test
+    fun `les cles de lecon de chapitre sont uniques entre modules`() {
+        assertFalse(
+            PathBuilder.chapterLessonKey("anat", "Cardiologie", 1) ==
+                PathBuilder.chapterLessonKey("physio", "Cardiologie", 1)
+        )
+    }
+
+    @Test
+    fun `nextChapterLesson pointe la premiere lecon jouable`() {
+        val best = mapOf(PathBuilder.chapterLessonKey("anat", "Angiologie", 1) to 70)
+        val unit = PathBuilder.buildChapterPath(best, modules, chapters)[0]
+        val next = PathBuilder.nextChapterLesson(unit)
+        assertEquals("Angiologie", next?.first?.chapterId)
+        assertEquals(2, next?.second?.level)
+        assertEquals(NodeState.AVAILABLE, next?.second?.state)
+    }
 }

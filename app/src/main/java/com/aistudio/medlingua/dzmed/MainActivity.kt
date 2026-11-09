@@ -320,8 +320,8 @@ fun MedLinguaAppContent(
                             }
                             PathScreen(
                                 uiState = uiState,
-                                onOpenLesson = { moduleId, level ->
-                                    viewModel.startPathLesson(moduleId, level)
+                                onOpenLesson = { moduleId, chapter, level ->
+                                    viewModel.startChapterLesson(moduleId, chapter, level)
                                     showQuiz = true
                                 },
                                 onBuyFreeze = { viewModel.buyFreeze() },

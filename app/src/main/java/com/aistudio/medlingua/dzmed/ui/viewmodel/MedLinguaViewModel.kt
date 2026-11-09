@@ -117,6 +117,8 @@ data class UiState(
     val lessonBest: Map<String, Int> = emptyMap(),
     /** Module de la leçon en cours depuis le Parcours (`null` = quiz libre). */
     val pathLessonModuleId: String? = null,
+    /** Chapitre du seed de la leçon en cours (`null` = leçon de module entier). */
+    val pathLessonChapter: String? = null,
     /** Récompense à afficher dans la pop-up (spec §11). */
     val lastReward: RewardData? = null,
     /** Récompense tirée de la caisse ouverte dans la pop-up. */
@@ -451,16 +453,21 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
     fun startLevelTraining(level: Int) {
         val state = _uiState.value
         var exercisesForLevel = state.exercises.filter { it.level == level }
-        // Leçon ouverte depuis le Parcours : le pool est cadré au module tant qu'il
-        // reste au moins une question ; sinon on retombe sur tout le niveau.
+        // Leçon ouverte depuis le Parcours : le pool est cadré au module (et au
+        // chapitre quand la leçon vient d'un chapitre) tant qu'il reste au moins
+        // une question ; sinon on retombe sur tout le niveau.
         val moduleTitle = state.pathLessonModuleId?.let { id ->
             InitialData.modulesList.firstOrNull { it.id == id }?.titleFr
         }
+        val chapterTitle = state.pathLessonChapter
         if (moduleTitle != null) {
             // Leçon du Parcours : le pool est strictement cadré au module. Sans
             // exercices propres, la leçon reste vide (état dédié à l'écran) plutôt
             // que de faire jouer les questions d'un autre module.
             exercisesForLevel = exercisesForLevel.filter { it.module.equals(moduleTitle, ignoreCase = true) }
+            if (chapterTitle != null) {
+                exercisesForLevel = exercisesForLevel.filter { it.chapter.equals(chapterTitle, ignoreCase = true) }
+            }
 
             // PHASE 2 (rapport final §2) : compléter la leçon avec les questions
             // générées depuis les fiches du module. 10 modules sur 15 n'avaient
@@ -470,14 +477,24 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             //
             // `lessonQuestions` place déjà les exercices réels en tête et ajoute
             // le complément généré — on lui passe directement la liste filtrée.
-            if (exercisesForLevel.size < LessonGenerator.LESSON_SIZE) {
-                exercisesForLevel = LessonGenerator.lessonQuestions(
-                    moduleId = state.pathLessonModuleId!!,
-                    level = level,
-                    realExercises = exercisesForLevel,
-                    terms = InitialData.termsOfModule(moduleTitle)
-                )
+            //
+            // Toujours passer par lui, même quand le pool réel dépasse
+            // LESSON_SIZE : un chapitre peut compter des dizaines d'exercices
+            // réels pour un niveau, et une leçon du Parcours doit rester une
+            // séance courte et reproductible de LESSON_SIZE questions.
+            // Un chapitre restreint les fiches utilisées pour générer les
+            // questions : la leçon porte alors vraiment sur ce chapitre.
+            val terms = InitialData.termsOfModule(moduleTitle).let { moduleTerms ->
+                if (chapterTitle == null) moduleTerms
+                else moduleTerms.filter { it.chapter.equals(chapterTitle, ignoreCase = true) }
+                    .ifEmpty { moduleTerms }
             }
+            exercisesForLevel = LessonGenerator.lessonQuestions(
+                moduleId = state.pathLessonModuleId!!,
+                level = level,
+                realExercises = exercisesForLevel,
+                terms = terms
+            )
         }
         _uiState.update {
             it.copy(
@@ -499,7 +516,19 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
      * pool cadré module + niveau, score conservé dans `lesson_scores` en fin de leçon.
      */
     fun startPathLesson(moduleId: String, level: Int) {
-        _uiState.update { it.copy(pathLessonModuleId = moduleId) }
+        _uiState.update { it.copy(pathLessonModuleId = moduleId, pathLessonChapter = null) }
+        startLevelTrainingWithSpec(level)
+    }
+
+    /**
+     * Ouvre la leçon `level` du chapitre `chapter` (module `moduleId`) depuis le
+     * nœud du Parcours : pool cadré module + chapitre + niveau, score conservé
+     * dans `lesson_scores` (clé `module|chapitre|niveau`) en fin de leçon.
+     */
+    fun startChapterLesson(moduleId: String, chapter: String, level: Int) {
+        _uiState.update {
+            it.copy(pathLessonModuleId = moduleId, pathLessonChapter = chapter)
+        }
         startLevelTrainingWithSpec(level)
     }
 
@@ -508,6 +537,7 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             it.copy(
                 selectedLearningLevel = null,
                 pathLessonModuleId = null,
+                pathLessonChapter = null,
                 levelExercises = emptyList(),
                 levelCurrentIndex = 0,
                 levelScore = 0,
@@ -571,8 +601,13 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
 
                 // Leçon du Parcours : meilleur score conservé pour le déblocage ≥ 70 %.
                 val moduleId = state.pathLessonModuleId
+                val chapter = state.pathLessonChapter
                 if (moduleId != null) {
-                    repository.saveLessonScore(moduleId, level, percentage)
+                    if (chapter != null) {
+                        repository.saveChapterLessonScore(moduleId, chapter, level, percentage)
+                    } else {
+                        repository.saveLessonScore(moduleId, level, percentage)
+                    }
                 }
                 val justUnlocked = repository.recordLevelCompletion(
                     level = level,

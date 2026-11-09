@@ -26,8 +26,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -58,7 +59,7 @@ import java.util.Calendar
 @Composable
 fun PathScreen(
     uiState: UiState,
-    onOpenLesson: (moduleId: String, level: Int) -> Unit,
+    onOpenLesson: (moduleId: String, chapter: String, level: Int) -> Unit,
     onBuyFreeze: () -> Unit,
     onOpenChests: () -> Unit,
     onOpenStory: () -> Unit = {},
@@ -70,45 +71,34 @@ fun PathScreen(
     val goal = GamificationEconomy.goalProgress(stats, now)
     val due = uiState.dueFlashcardProgress.size
 
-    val units: List<PathBuilder.LessonPathUnit> by lazy {
-        val allUnits = mutableListOf<PathBuilder.LessonPathUnit>()
-        InitialData.modulesList.forEach { moduleInfo ->
-            val chapterMap = (InitialData.chaptersOfModule(moduleInfo.titleFr).distinct().map { chap ->
-                chap to PathBuilder.PathChapter(
-                    chapterId = chap,
-                    title = chap,
-                    moduleId = chap,
-                    nodes = (0 until 6).map { idx ->
-                        PathNode(
-                            moduleId = chap,
-                            level = idx + 1,
-                            state = NodeState.LOCKED,
-                            score = 0,
-                            isBoss = false
-                        )
-                    }
-                )
-            }).toMap()
-            allUnits += PathBuilder.buildLessonPath(
-                lessonBest = uiState.lessonBest,
-                modules = listOf(PathModule(moduleInfo.id, moduleTitle(moduleInfo, lang))),
-                chapterMap = chapterMap,
-                nodeStates = { _, _ -> NodeState.LOCKED },
-                onScore = { _, _ -> 0 }
-            )
-        }
-        allUnits
+    // Parcours réel : 15 modules → chapitres du seed → 6 leçons par chapitre.
+    // Les états viennent de `lesson_scores` (clé module|chapitre|niveau).
+    val modules = remember(lang) {
+        InitialData.modulesList.map { PathModule(it.id, moduleTitle(it, lang), it.colorHex) }
     }
-
-    val next = units.asSequence()
-        .flatMap { it.chapters.asSequence() }
-        .flatMap { it.nodes.asSequence() }
-        .firstOrNull { it.state == com.aistudio.medlingua.dzmed.domain.path.NodeState.AVAILABLE }
+    val chaptersByModule = remember {
+        InitialData.modulesList.associate { it.id to InitialData.chaptersOfModule(it.titleFr) }
+    }
+    val units = remember(uiState.lessonBest, modules) {
+        PathBuilder.buildChapterPath(uiState.lessonBest, modules, chaptersByModule)
+    }
+    val next = remember(units) {
+        units.firstNotNullOfOrNull { unit ->
+            PathBuilder.nextChapterLesson(unit)?.let { (chapter, node) ->
+                Triple(chapter.title, unit.module.title, node.level)
+            }
+        }
+    }
 
     val mood = when {
         goal.done -> MediMood.CELEBRATING
         stats.streakDays == 0 -> MediMood.MOTIVATING
         else -> MediMood.HAPPY
+    }
+    val greet = when (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
+        in 0..11 -> Strings.get("greet_morning", lang)
+        in 12..17 -> Strings.get("greet_afternoon", lang)
+        else -> Strings.get("greet_evening", lang)
     }
     var tipVisible by remember { mutableStateOf(false) }
 
@@ -158,10 +148,8 @@ fun PathScreen(
                 ) {
                     Medi(
                         mood = mood,
-                        message = next?.let { node ->
-                            val greet = "Bienvenue"
-                            val chapterTitle = "Chapitre ${node.moduleId.take(4)}"
-                            "$greet · $chapterTitle L${node.level}"
+                        message = next?.let { (chapter, _module, level) ->
+                            "$greet · $chapter L$level"
                         } ?: "Bienvenue",
                         lang = lang,
                         modifier = Modifier.weight(1f)
@@ -215,7 +203,10 @@ fun PathScreen(
                 color = Color(0xFF12211C)
             )
             Text(
-                text = Strings.get("path_sub", lang),
+                // Compte réel du seed : modules → chapitres → leçons.
+                text = "${units.size} modules · " +
+                    "${units.sumOf { it.chapters.size }} ${Strings.get("chapters_lbl", lang)} · " +
+                    "${units.sumOf { PathBuilder.totalLessons(it) }} ${Strings.get("lessons_lbl", lang)}",
                 fontSize = 12.sp,
                 color = Color(0xFF6B7877)
             )
@@ -268,12 +259,15 @@ private fun FreezeButton(enabled: Boolean, lang: Language, onClick: () -> Unit) 
 
 @Composable
 private fun UnitCard(
-    unit: PathBuilder.LessonPathUnit,
+    unit: PathBuilder.ModuleChapterPath,
     lang: Language,
-    onOpenLesson: (String, Int) -> Unit,
+    onOpenLesson: (String, String, Int) -> Unit,
     onShowTip: () -> Unit
 ) {
-    val pct = 0
+    val total = PathBuilder.totalLessons(unit)
+    val done = PathBuilder.completedLessons(unit)
+    val pct = if (total == 0) 0 else (done * 100) / total
+    var expandedChapter by remember(unit.module.id) { mutableStateOf<String?>(null) }
 
     Card(
         shape = RoundedCornerShape(18.dp),
@@ -291,7 +285,7 @@ private fun UnitCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                Text(text = "📘", fontSize = 22.sp)
+                Text(text = moduleIcon(unit.module.id), fontSize = 22.sp)
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = unit.module.title,
@@ -300,21 +294,32 @@ private fun UnitCard(
                         color = Color.White
                     )
                     Text(
-                        text = "${unit.chapters.size} chapitres",
+                        text = "${unit.chapters.size} ${Strings.get("chapters_lbl", lang)} · " +
+                            "$done/$total ${Strings.get("lessons_lbl", lang)} · $pct%",
                         fontSize = 12.sp,
                         color = Color.White.copy(alpha = 0.85f)
                     )
                 }
                 Text(
-                    text = "👑",
+                    text = when {
+                        pct == 100 -> "👑"
+                        pct >= 50 -> "🥇"
+                        else -> "📘"
+                    },
                     fontSize = 20.sp
                 )
             }
 
-            // Chapitres
+            // Chapitres du seed → 6 leçons chacun (dépliables)
             unit.chapters.forEach { chapter ->
                 ChapterMini(
                     chapter = chapter,
+                    expanded = expandedChapter == chapter.chapterId,
+                    onToggle = {
+                        expandedChapter =
+                            if (expandedChapter == chapter.chapterId) null else chapter.chapterId
+                    },
+                    lang = lang,
                     onOpenLesson = onOpenLesson,
                     onShowTip = onShowTip
                 )
@@ -325,48 +330,71 @@ private fun UnitCard(
 
 @Composable
 private fun ChapterMini(
-    chapter: PathBuilder.PathChapter,
-    onOpenLesson: (String, Int) -> Unit,
+    chapter: PathBuilder.ChapterPath,
+    expanded: Boolean,
+    onToggle: () -> Unit,
+    lang: Language,
+    onOpenLesson: (String, String, Int) -> Unit,
     onShowTip: () -> Unit
 ) {
-    var expanded by remember { mutableStateOf(false) }
+    val done = chapter.nodes.count { it.state == NodeState.DONE }
+    val total = chapter.nodes.size
+    val pct = if (total == 0) 0 else (done * 100) / total
 
     Card(
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = if (expanded) Color(0xFFE8F5E9) else Color.White),
+        colors = CardDefaults.cardColors(
+            containerColor = if (expanded) Color(0xFFE8F5E9) else Color.White
+        ),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 6.dp)
+            .padding(horizontal = 8.dp, vertical = 4.dp)
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(12.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
+        Column(modifier = Modifier.padding(horizontal = 12.dp)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onToggle() }
+                    .padding(vertical = 10.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = chapter.title,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = Color(0xFF12211C)
+                    )
+                    Text(
+                        text = "$total ${Strings.get("lessons_lbl", lang)} · $done/$total · $pct%",
+                        fontSize = 11.sp,
+                        color = Color(0xFF90A4AE)
+                    )
+                }
                 Text(
-                    text = chapter.title,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.Medium,
-                    color = Color(0xFF12211C)
-                )
-                Text(
-                    text = "${chapter.nodes.size} leçons",
-                    fontSize = 11.sp,
-                    color = Color(0xFF90A4AE)
+                    text = if (expanded) "▾" else "▸",
+                    fontSize = 16.sp,
+                    color = Color(0xFF1CB0F6)
                 )
             }
+
             if (expanded) {
-                Text(
-                    text = "▶",
-                    fontSize = 16.sp,
-                    modifier = Modifier.clickable { expanded = false }
-                )
-            } else {
-                Box(modifier = Modifier.size(16.dp))
+                Column(
+                    modifier = Modifier.padding(bottom = 10.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    chapter.nodes.forEach { node ->
+                        LessonNode(
+                            node = node,
+                            chapterId = chapter.chapterId,
+                            lang = lang,
+                            onOpenLesson = onOpenLesson,
+                            onShowTip = onShowTip
+                        )
+                    }
+                }
             }
         }
     }
@@ -374,8 +402,10 @@ private fun ChapterMini(
 
 @Composable
 private fun LessonNode(
-    node: PathBuilder.LessonNode,
-    onOpenLesson: (String, Int) -> Unit,
+    node: PathNode,
+    chapterId: String,
+    lang: Language,
+    onOpenLesson: (String, String, Int) -> Unit,
     onShowTip: () -> Unit
 ) {
     val state = node.state
@@ -384,48 +414,56 @@ private fun LessonNode(
     val face = when {
         done -> "✅"
         locked -> "🔒"
+        node.isBoss -> "👑"
         else -> "⭐"
     }
+    // Le niveau reste lisible même verrouillé : l'élève sait quelle leçon
+    // s'ouvrira ensuite (avant, la colonne était vide sous les 🔒).
     val meta = when {
         done -> "${node.score}%"
-        locked -> ""
-        else -> "L${node.levelIndex + 1}"
+        node.isBoss -> "BOSS"
+        else -> "L${node.level}"
     }
     val bg = when {
         done -> Color(0xFF58CC02)
         locked -> Color(0xFFCFD8DC)
         else -> Color(0xFF1CB0F6)
     }
-    val pulseAlpha = 1f
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = if ((node.levelIndex) % 2 == 0) 0.dp else 56.dp),
+            .padding(start = if ((node.level - 1) % 2 == 0) 0.dp else 56.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Box(
             modifier = Modifier
                 .size(56.dp)
-                .alpha(pulseAlpha)
                 .clip(CircleShape)
                 .background(bg)
+                // Lu par TalkBack et exposé à la hiérarchie UI (tests ADB).
+                .semantics {
+                    contentDescription = "${Strings.get("lesson_lbl", lang)} ${node.level}" +
+                        when {
+                            done -> " · ${node.score}%"
+                            locked -> " · ${Strings.get("lesson_locked_lbl", lang)}"
+                            else -> " · ${Strings.get("lesson_available_lbl", lang)}"
+                        }
+                }
                 .clickable {
-                    if (locked) onShowTip() else onOpenLesson(node.chapterId, node.levelIndex)
+                    if (locked) onShowTip() else onOpenLesson(node.moduleId, chapterId, node.level)
                 },
             contentAlignment = Alignment.Center
         ) {
             Text(text = face, fontSize = 22.sp)
         }
-        if (meta.isNotEmpty()) {
-            Text(
-                text = meta,
-                fontSize = 13.sp,
-                fontWeight = FontWeight.Bold,
-                color = if (locked) Color(0xFF6B7877) else Color(0xFF455A64)
-            )
-        }
+        Text(
+            text = meta,
+            fontSize = 13.sp,
+            fontWeight = FontWeight.Bold,
+            color = if (locked) Color(0xFF6B7877) else Color(0xFF455A64)
+        )
     }
 }
 

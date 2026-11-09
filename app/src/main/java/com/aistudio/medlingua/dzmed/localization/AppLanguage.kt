@@ -363,6 +363,10 @@ object Strings {
             "en" to "15 units · 6 lessons each"
         ),
         "lesson_lbl" to mapOf("ar" to "درس", "fr" to "Leçon", "en" to "Lesson"),
+        "lessons_lbl" to mapOf("ar" to "دروس", "fr" to "leçons", "en" to "lessons"),
+        "lesson_locked_lbl" to mapOf("ar" to "مقفل", "fr" to "verrouillée", "en" to "locked"),
+        "lesson_available_lbl" to mapOf("ar" to "متاح", "fr" to "disponible", "en" to "available"),
+        "chapters_lbl" to mapOf("ar" to "فصول", "fr" to "chapitres", "en" to "chapters"),
         "path_locked_text" to mapOf(
             "ar" to "مطلوب ٧٠٪ في الدرس السابق",
             "fr" to "70 % requis sur la leçon précédente",

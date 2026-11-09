@@ -731,4 +731,22 @@ val currentClock: Clock get() = clock
             LessonScoreEntity(lessonKey = key, moduleId = moduleId, level = level, best = score)
         )
     }
+
+    /**
+     * Conserve le meilleur score d'une leçon de chapitre
+     * (`module|chapitre|niveau`) — parcours Module → Chapitre → Leçon.
+     */
+    suspend fun saveChapterLessonScore(
+        moduleId: String,
+        chapter: String,
+        level: Int,
+        score: Int
+    ) = withContext(Dispatchers.IO) {
+        val key = PathBuilder.chapterLessonKey(moduleId, chapter, level)
+        val existing = dao.getAllLessonScoresOnce().firstOrNull { it.lessonKey == key }
+        if (existing != null && existing.best >= score) return@withContext
+        dao.upsertLessonScore(
+            LessonScoreEntity(lessonKey = key, moduleId = moduleId, level = level, best = score)
+        )
+    }
 }
