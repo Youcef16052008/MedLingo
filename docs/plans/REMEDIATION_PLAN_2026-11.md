@@ -1,6 +1,6 @@
 # Remediation Plan — MedLingo DZ (2026‑11)
 
-**Source of truth for findings:** [`docs/review/REVIEW_2026-11-07.md`](../review/REVIEW_2026-11-07.md) (R‑01…R‑35).
+**Source of truth for findings:** [`docs/review/REVIEW_2026-11-07.md`](../review/REVIEW_2026-11-07.md) (R‑01…R‑36).
 **Baseline:** [`docs/review/BASELINE_2026-11-07.md`](../review/BASELINE_2026-11-07.md).
 **Status:** Phase 0 in progress.
 **Owner:** dev agent; human approves gates marked 👤.
@@ -248,6 +248,7 @@
   - **R‑34:** split vitest into projects (`node` for domain, `jsdom` for UI); add UI/routing/SW tests; retarget Android checker tests to the live path.
   - Add a CI job that builds and inspects `dist/sw.js` (`check:precache`).
 - [x] **6.5 Docs:** ADR-3 downgraded to PLANNED; TODO pointer added; plan tracks progress. (README claims deferred to release checklist.)
+- [x] **6.6 R-36 — Parcours Android réparé.** Chapitres réels du seed (312) × 6 leçons = 1 872 leçons jouables ; progression `module|chapitre|niveau` ; déblocage séquentiel par chapitre (≥ 70 %) ; leçon bornée à 8 questions. Vérifié sur émulateur par deux E2E Artemis (`android-e2e/` : parcours 12/12, leçon 24/24 avec 100 % → déblocage persisté).
 
 ### Gate G6
 
@@ -268,6 +269,7 @@
 | Store | node | SM‑2 corruption, purity, persist failure (R‑20…R‑22) |
 | Perf | timing harness | no synchronous bulk build during warm-up (R‑35) |
 | Android | JUnit/instrumented | RMW concurrency, gems atomicity, main-thread, live checker |
+| Android E2E | Artemis (ADB + UIAutomator) | Parcours: chapitres/6 nœuds, leçon jouée 8/8 → 100 % → déblocage persisté (R‑36) |
 | DB | pgTAP/scratch SQL | RLS allow/deny, migration idempotence |
 | E2E | Playwright (optional, gate-approved) | offline boot, onboarding click, login, quiz typo/substring |
 
