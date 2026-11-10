@@ -22,6 +22,8 @@ import com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS
 import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
 import com.aistudio.medlingua.dzmed.domain.gamification.GoalProgress
 import com.aistudio.medlingua.dzmed.domain.gamification.LeagueBotAnimator
+import com.aistudio.medlingua.dzmed.domain.gamification.audio.SoundEffect
+import com.aistudio.medlingua.dzmed.domain.gamification.audio.SoundManager
 import com.aistudio.medlingua.dzmed.domain.lesson.LessonGenerator
 import com.aistudio.medlingua.dzmed.domain.sm2.ReviewResult
 import com.aistudio.medlingua.dzmed.localization.Language
@@ -558,6 +560,9 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             answer, listOf(correctAnswer)
         )
         val isCorrect = check.isCorrect || check.isFuzzy
+        // Retour sonore immédiat (SoundManager.play n'était appelé nulle part :
+        // l'app restait muette même après avoir chargé ses assets audio).
+        SoundManager.play(if (isCorrect) SoundEffect.CORRECT else SoundEffect.WRONG)
         val newScore = if (isCorrect) _uiState.value.levelScore + points else _uiState.value.levelScore
         val newCorrectCount = if (isCorrect) _uiState.value.levelCorrectCount + 1 else _uiState.value.levelCorrectCount
 
@@ -629,6 +634,15 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 }
                 val gems = com.aistudio.medlingua.dzmed.domain.gamification.GemsManager
                     .calculateGemsForLesson(correct, total)
+                // Fanfare de fin de leçon : 100 % > déblocage > objectif atteint.
+                SoundManager.play(
+                    when {
+                        total > 0 && correct == total -> SoundEffect.PERFECT
+                        justUnlocked -> SoundEffect.LEVEL_UP
+                        goalHit -> SoundEffect.GOAL_REACHED
+                        else -> SoundEffect.CHEST
+                    }
+                )
                 val lang = _uiState.value.currentLanguage
                 _uiState.update {
                     it.copy(

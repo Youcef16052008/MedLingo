@@ -19,6 +19,10 @@ class MedLinguaApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        // Effets sonores de gamification (bonne/mauvaise réponse, palier, série).
+        // Sans cet appel, SoundManager restait `initialized = false` et `play()`
+        // ne faisait rien : l'app était muette en toutes circonstances.
+        com.aistudio.medlingua.dzmed.domain.gamification.audio.SoundManager.init(this)
         // R-14 (2026-11-07): no runBlocking on the main thread. Channel
         // creation + reminder scheduling need the persisted language, so they
         // run in the IO scope and read it asynchronously (channels are created

@@ -1,8 +1,6 @@
 package com.aistudio.medlingua.dzmed.domain.gamification
 
 import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
-import com.aistudio.medlingua.dzmed.domain.gamification.audio.SoundEffect
-import com.aistudio.medlingua.dzmed.domain.gamification.audio.SoundManager
 import com.aistudio.medlingua.dzmed.domain.time.Clock
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -45,7 +43,8 @@ data class StreakOutcome(
 
 /**
  * Gamification complète : économie XP/gemmes, série 🔥, objectif ⭐, caisses 🎁.
- * Gestion des sons et notifications via SoundManager.
+ * Logique pure (aucun effet de bord) : les retours sonores sont joués par
+ * l'appelant via `SoundManager`.
  *
  * Économie XP amplifiée :
  * - QCM L1/L2 : 8-13 XP (comme web-react, pas 10-35) — trop généreux sur les débuts

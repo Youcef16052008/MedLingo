@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- WS4 levier 8 : widget de série 2×2 — rappel passif permanent, 100 % offline. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,10 +14,10 @@
         android:id="@+id/widget_streak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="🔥 0"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        tools:text="🔥 0" />
 
     <TextView
         android:id="@+id/widget_label"
@@ -30,8 +31,8 @@
         android:id="@+id/widget_gems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="💎 0"
         android:textSize="13sp"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="4dp" />
+        android:layout_marginTop="4dp"
+        tools:text="💎 0" />
 </LinearLayout>

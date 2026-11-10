@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-   Sample backup rules file; uncomment and customize as necessary.
-   See https://developer.android.com/guide/topics/data/autobackup
-   for details.
-   Note: This file is ignored for devices older than API 31
-   See https://developer.android.com/about/versions/12/backup-restore
+   Règles de sauvegarde pour Android 11 et antérieurs (ignorées à partir de
+   l'API 31, où `data_extraction_rules.xml` prend le relais).
+
+   Même intention que `android:allowBackup="false"` : rien ne sort de
+   l'appareil. Le fichier est référencé par le manifeste pour que la règle
+   soit lisible à un seul endroit, quel que soit l'âge du système.
+
+   Voir https://developer.android.com/guide/topics/data/autobackup
 -->
 <full-backup-content>
-    <!--
-   <include domain="sharedpref" path="."/>
-   <exclude domain="sharedpref" path="device.xml"/>
--->
+    <exclude domain="root" />
+    <exclude domain="file" />
+    <exclude domain="database" />
+    <exclude domain="sharedpref" />
+    <exclude domain="external" />
 </full-backup-content>
