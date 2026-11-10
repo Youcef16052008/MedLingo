@@ -134,18 +134,16 @@ private fun LeagueHeader(cohort: LeagueCohortEntity, memberCount: Int?) {
                         fontSize = 16.sp,
                         color = Color(0xFF0C1414)
                     )
-                    Text(
-                        // null while the member list is still loading: avoid flashing "0 members"
-            text = buildString {
-                append(cohort.cohortId.take(12))
-                append("...")
-                if (memberCount != null) {
-                    append(" • $memberCount membres")
-                }
-            },
-                        fontSize = 11.sp,
-                        color = Color(0xFF6B7877)
-                    )
+                    // Le sous-titre affichait `cohortId.take(12)` → « 179418240000… »,
+                    // c'est-à-dire l'epoch du lundi exposé à l'utilisateur.
+                    // On n'affiche que l'effectif, et rien tant qu'il charge.
+                    if (memberCount != null) {
+                        Text(
+                            text = "$memberCount membres",
+                            fontSize = 11.sp,
+                            color = Color(0xFF6B7877)
+                        )
+                    }
                 }
             }
 

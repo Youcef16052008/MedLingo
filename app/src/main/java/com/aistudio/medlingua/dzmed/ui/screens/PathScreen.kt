@@ -1045,7 +1045,8 @@ private fun StreakPill(text: String) {
 @Composable
 private fun FreezeButton(enabled: Boolean, lang: Language, onClick: () -> Unit) {
     Text(
-        text = "❄️ ${Strings.get("freeze_buy", lang)} · $ 💎",
+        text = "❄️ ${Strings.get("freeze_buy", lang)} · " +
+            "${com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS} 💎",
         fontSize = 12.sp,
         fontWeight = FontWeight.Bold,
         color = if (enabled) Color(0xFF0284C7) else Color(0xFF6B7877),

@@ -135,7 +135,11 @@ object ExerciseChecker {
                 isCorrect = false,
                 correctAnswer = acceptedAnswers.firstOrNull() ?: "",
                 userAnswer = userAnswer,
-                score = 0.9,
+                // R-18 parity: the web contract (`fillScore` in
+                // web-react/src/domain/scoring.ts) grants 0.5 for a near-miss
+                // and 1.0 only for an exact match. Android used to return 0.9,
+                // which made the same typo worth a different score per platform.
+                score = 0.5,
                 isFuzzy = true,
                 explanation = "typo",
                 suggestion = originalSuggestion
