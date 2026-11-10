@@ -1,11 +1,12 @@
-# Android E2E — parcours & leçons (R-36)
+# Android E2E — parcours, leçons & smoke transversal (R-36, R-37)
 
-Deux scripts de bout en bout qui pilotent **l'APK réel** sur un émulateur via
+Trois scripts de bout en bout qui pilotent **l'APK réel** sur un émulateur via
 **Artemis** (`AndroidAdbDriver` + `UIAutomatorClient`, sans clé LLM : tout est
 déterministe).
 
 | Script | Ce qu'il prouve |
 |---|---|
+| `medlingo_app_smoke_e2e.py` | L'app **démarre** (cold start mesuré), les **5 onglets** rendent leur contenu (Parcours, Révision, Ligues, Modules, Profil), le prix du gel affiche **200 💎** (plus de `$` parasite), Ligues n'expose **aucun identifiant de cohorte brut**, la **bascule de langue FR → EN → FR** (R-24) est effective sur le contenu *et* la barre de navigation, et logcat ne contient **ni FATAL EXCEPTION de l'app, ni ANR, ni crash natif**. |
 | `medlingo_path_e2e.py` | Le Parcours est un **drill-down** : un seul module est listé à la fois (11 chapitres réels du seed pour Anatomie, 6 leçons chacun, jamais « 0 chapitres ») ; taper un chapitre ouvre sa **page dédiée** avec les 6 nœuds L1→L6 (L6 = BOSS) ; L1 s'ouvre sur une vraie leçon (« Question 1 / 8 »). |
 | `medlingo_lesson_e2e.py` | Une leçon se joue **en entier** (8 questions, QCM + appariement), la même leçon est déterministe d'une passe à l'autre, un score 100 % est persisté dans `lesson_scores` et débloque la leçon suivante dans le Parcours. |
 
@@ -22,9 +23,13 @@ déterministe).
 Depuis la racine du dépôt artemis, avec les scripts copiés à côté :
 
 ```powershell
+uv run python medlingo_app_smoke_e2e.py
 uv run python medlingo_path_e2e.py
 uv run python medlingo_lesson_e2e.py
 ```
+
+Les trois sortent en `0` et affichent une ligne finale (`SMOKE OK`,
+`PARCOURS OK`, `LECON OK`).
 
 ## Notes d'implémentation
 
@@ -49,3 +54,11 @@ uv run python medlingo_lesson_e2e.py
   neutralisent le problème.
 - La base Room est lue en tirant `medlingua_dz.db` **et** ses `-wal` / `-shm`
   (Room écrit dans le WAL avant checkpoint).
+- **Emoji hors BMP** : le serveur UIAutomator2 renvoie `..` à la place de 💎
+  (U+1F48E, hors plan multilingue de base). Le smoke vérifie donc les
+  pictogrammes sur un `uiautomator dump` **brut**, pris *avant* `driver.connect()`
+  — après, les deux services UiAutomation se disputent l'enregistrement et
+  `uiautomator dump` plante (« UiAutomationService already registered! »).
+- **FATAL EXCEPTION attribuée au bon processus** : logcat mélange tous les
+  processus, y compris les outils de test. Le smoke ne compte comme échec que
+  les traces portant le **pid de MedLingo** (ou une ligne `Process: <pkg>`).

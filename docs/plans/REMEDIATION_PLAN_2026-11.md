@@ -249,6 +249,7 @@
   - Add a CI job that builds and inspects `dist/sw.js` (`check:precache`).
 - [x] **6.5 Docs:** ADR-3 downgraded to PLANNED; TODO pointer added; plan tracks progress. (README claims deferred to release checklist.)
 - [x] **6.6 R-36 — Parcours Android réparé.** Chapitres réels du seed (312) × 6 leçons = 1 872 leçons jouables ; progression `module|chapitre|niveau` ; déblocage séquentiel par chapitre (≥ 70 %) ; leçon bornée à 8 questions. Vérifié sur émulateur par deux E2E Artemis (`android-e2e/` : parcours 12/12, leçon 24/24 avec 100 % → déblocage persisté).
+- [x] **6.7 Revue vérifiée sur appareil (2026-11-10).** Premier passage du registre **sur émulateur** au lieu de la seule lecture statique. Trois E2E Artemis rejoués sur l'APK réel : smoke transversal **48/48** (5 onglets, gel à 200 💎, Ligues sans identifiant brut, bascule FR → EN → FR, logcat propre), parcours **13/13**, leçon **24/24**. Suite unitaire Android **294/294**, `lintDebug` **0 erreur** (61 avertissements, contre 67). Cinq défauts supplémentaires trouvés et corrigés dans la foulée — R-37 (score de faute de frappe 0,9 au lieu de 0,5 : suite unitaire rouge), R-38 (epoch de cohorte affiché dans Ligues), R-39 (`$` parasite sur le prix du gel), R-40 (retour sonore entièrement mort + `SoundManager` qui se rendait muet à vie, et qui sortait sur `STREAM_ALARM`), R-41 (règles de sauvegarde jamais branchées).
 
 ### Gate G6
 
@@ -270,6 +271,7 @@
 | Perf | timing harness | no synchronous bulk build during warm-up (R‑35) |
 | Android | JUnit/instrumented | RMW concurrency, gems atomicity, main-thread, live checker |
 | Android E2E | Artemis (ADB + UIAutomator) | Parcours: chapitres/6 nœuds, leçon jouée 8/8 → 100 % → déblocage persisté (R‑36) |
+| Android smoke | Artemis (ADB + UIAutomator) | cold start mesuré, 5 onglets, prix du gel, Ligues sans identifiant brut, i18n FR↔EN, logcat sans FATAL/ANR (R‑24, R‑38…R‑40) |
 | DB | pgTAP/scratch SQL | RLS allow/deny, migration idempotence |
 | E2E | Playwright (optional, gate-approved) | offline boot, onboarding click, login, quiz typo/substring |
 
