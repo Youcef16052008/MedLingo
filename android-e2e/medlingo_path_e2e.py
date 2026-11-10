@@ -2,10 +2,10 @@
 
 Scénario (déterministe, sans LLM) :
   1. relance l'app et attend l'onglet Parcours ;
-  2. vérifie que chaque unité affiche ses **chapitres réels** (`N chapitres`,
-     total de leçons = 6 x N) et qu'aucune unité n'affiche « 0 chapitres » ;
-  3. déplie le chapitre « Angiologie » (Anatomie) et vérifie les 6 nœuds
-     L1 → L6 (L1 jouable, les suivants verrouillés, L6 = BOSS) ;
+  2. vérifie que le module affiché liste ses **chapitres réels** (`N chapitres`,
+     total de leçons = 6 x N) et qu'aucun module n'affiche « 0 chapitres » ;
+  3. tape le chapitre « Angiologie » (Anatomie) → sa page dédiée s'ouvre avec
+     les 6 nœuds L1 → L6 (L1 jouable, les suivants verrouillés, L6 = BOSS) ;
   4. tape L1 et vérifie que la leçon s'ouvre (« Question 1 / 8 »).
 
 Usage : uv run python medlingo_path_e2e.py
@@ -108,17 +108,20 @@ async def main() -> int:
         )
     check("Angiologie" in texts(screen), "le chapitre réel « Angiologie » est listé")
 
-    # --- 3. Déplier Angiologie → 6 nœuds ------------------------------------
-    print("\n[3] Dépliage du chapitre Angiologie → 6 leçons")
+    # --- 3. Ouvrir la page du chapitre Angiologie → 6 nœuds ------------------
+    print("\n[3] Ouverture du chapitre Angiologie → page de leçons")
     chapter_row = find(screen, "Angiologie", exact=True)[0]
     cx, cy = center(chapter_row)
     await driver.tap(cx, cy)
-    screen = await settle(driver, 1.5)
-    check("▾" in texts(screen), "le chapitre est bien déplié (chevron ▾)")
-
-    # Les 6 nœuds dépassent la hauteur visible : on remonte le parcours.
-    await driver.swipe(360, 1300, 360, 620, duration_ms=400)
-    screen = await settle(driver, 1.5)
+    screen = await settle(driver, 2.0)
+    check(
+        "Tous les chapitres" in texts(screen),
+        "le chapitre ouvre sa page dédiée (retour « Tous les chapitres »)",
+    )
+    check(
+        "Leçons du chapitre" in texts(screen),
+        "l'en-tête « Leçons du chapitre » est affiché",
+    )
 
     def node_descs(current) -> dict[int, str]:
         found: dict[int, str] = {}
@@ -129,13 +132,23 @@ async def main() -> int:
                 found[int(match.group(1))] = desc
         return found
 
-    nodes = node_descs(screen)
+    # Les 6 nœuds dépassent la hauteur visible : on accumule sur plusieurs écrans
+    # (le libellé « BOSS » est sous le 6e nœud, donc plus bas que son cercle).
+    nodes: dict[int, str] = {}
+    seen_texts: set[str] = set()
+    for _ in range(4):
+        nodes.update(node_descs(screen))
+        seen_texts.update(texts(screen))
+        if sorted(nodes) == [1, 2, 3, 4, 5, 6] and "BOSS" in seen_texts:
+            break
+        await driver.swipe(360, 1300, 360, 700, duration_ms=400)
+        screen = await settle(driver, 1.2)
     print("    descs:", {k: v for k, v in sorted(nodes.items())})
     check(
         sorted(nodes) == [1, 2, 3, 4, 5, 6],
         f"les 6 leçons du chapitre sont présentes (vu {sorted(nodes)})",
     )
-    check("BOSS" in texts(screen), "le 6e nœud est marqué BOSS")
+    check("BOSS" in seen_texts, "le 6e nœud est marqué BOSS")
     locked = [lvl for lvl, desc in nodes.items() if "verrouillée" in desc]
     check(locked == [2, 3, 4, 5, 6], f"les leçons 2 à 6 sont verrouillées (vu {locked})")
     playable = [lvl for lvl, desc in nodes.items() if "verrouillée" not in desc]
@@ -143,7 +156,13 @@ async def main() -> int:
 
     # --- 4. Ouvrir la leçon L1 ---------------------------------------------
     print("\n[4] Ouverture de la leçon L1")
+    for _ in range(3):
+        await driver.swipe(360, 700, 360, 1400, duration_ms=300)
+        await asyncio.sleep(0.3)
+    screen = await settle(driver, 1.2)
     l1 = [el for el in screen.ui_elements if (el.get("content-desc") or "").strip() == nodes.get(1)]
+    if not l1:
+        l1 = [el for el in screen.ui_elements if "Leçon 1 · disponible" in (el.get("content-desc") or "")]
     if l1:
         sx, sy = center(l1[0])
         await driver.tap(sx, sy)

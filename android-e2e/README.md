@@ -6,7 +6,7 @@ déterministe).
 
 | Script | Ce qu'il prouve |
 |---|---|
-| `medlingo_path_e2e.py` | Le Parcours liste les **chapitres réels** du seed (11 pour Anatomie, 6 leçons chacun, jamais « 0 chapitres ») ; un chapitre se déplie en 6 nœuds L1→L6 (L6 = BOSS) ; L1 s'ouvre sur une vraie leçon (« Question 1 / 8 »). |
+| `medlingo_path_e2e.py` | Le Parcours est un **drill-down** : un seul module est listé à la fois (11 chapitres réels du seed pour Anatomie, 6 leçons chacun, jamais « 0 chapitres ») ; taper un chapitre ouvre sa **page dédiée** avec les 6 nœuds L1→L6 (L6 = BOSS) ; L1 s'ouvre sur une vraie leçon (« Question 1 / 8 »). |
 | `medlingo_lesson_e2e.py` | Une leçon se joue **en entier** (8 questions, QCM + appariement), la même leçon est déterministe d'une passe à l'autre, un score 100 % est persisté dans `lesson_scores` et débloque la leçon suivante dans le Parcours. |
 
 ## Pré-requis
@@ -28,6 +28,12 @@ uv run python medlingo_lesson_e2e.py
 
 ## Notes d'implémentation
 
+- **Navigation en trois niveaux** : le Parcours suit le modèle Duolingo — un
+  bouton « Continuer » (prochaine leçon jouable), un sélecteur de module
+  repliable (15 modules), la liste des chapitres **du module choisi** (recherche
+  repliée derrière une loupe), puis une page dédiée par chapitre avec son chemin
+  de 6 leçons. Rien n'est composé pour les autres modules : la page garde une
+  longueur raisonnable (312 chapitres / 1 872 leçons au total).
 - **Fixture reproductible** : `reset_chapter_progress()` remet le chapitre
   `Angiologie` dans un état connu via `run-as … sqlite3` (le parcours part d'un
   chapitre vierge ; la leçon part de L1/L2 validées, donc L3 est la leçon

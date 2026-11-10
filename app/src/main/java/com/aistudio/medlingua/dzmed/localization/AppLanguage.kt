@@ -372,6 +372,32 @@ object Strings {
             "fr" to "70 % requis sur la leçon précédente",
             "en" to "70 % required on the previous lesson"
         ),
+        "continue_lbl" to mapOf("ar" to "متابعة", "fr" to "Continuer", "en" to "Continue"),
+        "module_lbl" to mapOf("ar" to "الوحدة", "fr" to "Module", "en" to "Module"),
+        "change_lbl" to mapOf("ar" to "تغيير", "fr" to "Changer", "en" to "Change"),
+        "search_chapter" to mapOf(
+            "ar" to "ابحث عن فصل...",
+            "fr" to "Rechercher un chapitre...",
+            "en" to "Search a chapter..."
+        ),
+        "choose_chapter_hint" to mapOf(
+            "ar" to "اختر فصلاً لبدء دروسه",
+            "fr" to "Choisis un chapitre",
+            "en" to "Pick a chapter"
+        ),
+        "all_chapters" to mapOf("ar" to "كل الفصول", "fr" to "Tous les chapitres", "en" to "All chapters"),
+        "no_chapter_match" to mapOf(
+            "ar" to "لا يوجد فصل مطابق",
+            "fr" to "Aucun chapitre trouvé",
+            "en" to "No chapter found"
+        ),
+        "next_chapter_lbl" to mapOf("ar" to "الفصل التالي", "fr" to "Chapitre suivant", "en" to "Next chapter"),
+        "chapter_lessons_lbl" to mapOf("ar" to "دروس الفصل", "fr" to "Leçons du chapitre", "en" to "Chapter lessons"),
+        "path_done_all" to mapOf(
+            "ar" to "أكملت كل الدروس 🎉",
+            "fr" to "Tous les chapitres sont terminés 🎉",
+            "en" to "All chapters complete 🎉"
+        ),
         "stat_xp" to mapOf("ar" to "XP", "fr" to "XP", "en" to "XP"),
         "stat_streak" to mapOf("ar" to "يوم متتالٍ", "fr" to "Série", "en" to "Streak"),
         "stat_gems" to mapOf("ar" to "جواهر", "fr" to "Gemmes", "en" to "Gems"),

@@ -272,27 +272,34 @@ def has_lesson_nodes(screen) -> bool:
 
 
 async def open_chapter(driver, title: str = "Angiologie"):
-    """Déplie le chapitre une seule fois (re-taper le replierait) puis révèle les nœuds."""
+    """Ouvre la page dédiée du chapitre (parcours en drill-down :
+    module → liste des chapitres → page de leçons)."""
     screen = await driver.get_screen_data(skip_settling=True)
     for _ in range(3):
         if has_lesson_nodes(screen):
             return screen
         row = [el for el in screen.ui_elements if text_of(el) == title]
         if not row:
+            # Module sélectionné ≠ Anatomie (état d'une exécution précédente) :
+            # on repart de l'app fraîche, qui sélectionne le module de la
+            # prochaine leçon (Angiologie → Anatomie).
+            start_app()
             screen = await open_path(driver)
             row = [el for el in screen.ui_elements if text_of(el) == title]
             if not row:
                 return screen
-        # Un chapitre déjà déplié montre « ▾ » ; ne pas re-taper (cela replierait).
-        if not any(text_of(el) == "▾" for el in screen.ui_elements):
-            await driver.tap(*center(row[0]))
-            await asyncio.sleep(1.3)
-        for _ in range(4):
+        await driver.tap(*center(row[0]))
+        await asyncio.sleep(1.6)
+        screen = await driver.get_screen_data(skip_settling=True)
+        if has_lesson_nodes(screen):
+            return screen
+        # La page peut s'ouvrir un peu plus bas : on remonte les nœuds.
+        for _ in range(3):
+            await driver.swipe(360, 1250, 360, 900, duration_ms=300)
+            await asyncio.sleep(0.35)
             screen = await driver.get_screen_data(skip_settling=True)
             if has_lesson_nodes(screen):
                 return screen
-            await driver.swipe(360, 1250, 360, 850, duration_ms=300)
-            await asyncio.sleep(0.5)
     return screen
 
 
