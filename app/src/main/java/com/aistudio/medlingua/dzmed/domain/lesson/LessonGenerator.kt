@@ -301,20 +301,26 @@ object LessonGenerator {
     }
 
     /**
-     * Les 8 questions d'une leçon (ordre conservé : difficulté croissante).
-     * Déterministe pour un couple (moduleId, level) donné.
+     * Les questions d'une leçon (ordre conservé : difficulté croissante).
+     * Déterministe pour une graine (`moduleId:level` par défaut).
      *
      * @param moduleId id stable du module ("anat", "physio"…)
-     * @param level 1..6
-     * @param realExercises exercices écrits main du (module, niveau)
-     * @param terms termes du module (source des questions générées)
-     * @return liste d'au plus [LESSON_SIZE] exercices ; vide si le module est inconnu
+     * @param level palier 1..6 (difficulté et type de questions)
+     * @param realExercises exercices écrits main du (module, palier)
+     * @param terms termes de la leçon (source des questions générées)
+     * @param questionCount nombre de questions voulu (8 par défaut, 16 pour
+     *   une révision, 3/6 pour une leçon de 1/2 termes)
+     * @param seed graine du tirage — le parcours y met le chapitre et le nœud
+     *   pour que deux leçons différentes ne partagent jamais leurs questions
+     * @return liste d'au plus [questionCount] exercices ; vide si le module est inconnu
      */
     fun lessonQuestions(
         moduleId: String,
         level: Int,
         realExercises: List<ExerciseEntity>,
-        terms: List<MedicalTermEntity>
+        terms: List<MedicalTermEntity>,
+        questionCount: Int = LESSON_SIZE,
+        seed: String = "$moduleId:$level"
     ): List<ExerciseEntity> {
         if (level < 1 || level > 6) return emptyList()
 
@@ -323,7 +329,7 @@ object LessonGenerator {
             ?: return emptyList()
         if (terms.isEmpty()) return emptyList()
 
-        val rand = LessonRng.mulberry32(LessonRng.hashSeed("$moduleId:$level"))
+        val rand = LessonRng.mulberry32(LessonRng.hashSeed(seed))
 
         // 1. exercices réels du (module, niveau), au plus 4
         val real = realExercises.filter { ex ->
@@ -331,8 +337,8 @@ object LessonGenerator {
         }.take(REAL_EXERCISES_MAX)
 
         // 2. complétion générée
-        val needed = maxOf(0, LESSON_SIZE - real.size)
-        if (needed == 0) return real.take(LESSON_SIZE)
+        val needed = maxOf(0, questionCount - real.size)
+        if (needed == 0) return real.take(questionCount)
         val plan = lessonPlan(level, needed)
         val pool = LessonRng.shuffleWith(terms, rand).toMutableList()
 
@@ -340,7 +346,7 @@ object LessonGenerator {
         var cursor = 0
         var gen = 0
 
-        while (out.size < LESSON_SIZE && gen < needed * 3) {
+        while (out.size < questionCount && gen < needed * 3) {
             val kind = plan.getOrNull(gen) ?: Kind.FR_EN
             val term = pool[cursor % pool.size]
             val others = pool.filter { it.id != term.id }
@@ -348,7 +354,7 @@ object LessonGenerator {
             // écrits main (Room autoGenerate démarre à 1) — miroir du web
             // (`-1_000_000 - hash % 8_000_000`). `hashSeed` étant non signé en
             // JS, on normalise en Long positif avant modulo.
-            val id = -1_000_000 - ((LessonRng.hashSeed("$moduleId:$level:$gen").toLong() and 0xFFFFFFFFL) % 8_000_000L).toInt()
+            val id = -1_000_000 - ((LessonRng.hashSeed("$seed:$gen").toLong() and 0xFFFFFFFFL) % 8_000_000L).toInt()
             val difficulty = if (needed > 1) gen.toDouble() / (needed - 1) else 1.0
 
             val ex = build(kind, moduleTitle, term, level, id, others, rand, difficulty)
@@ -364,8 +370,8 @@ object LessonGenerator {
             }
         }
 
-        // 3. sécurité : on ne rend jamais plus de LESSON_SIZE questions
-        return out.take(LESSON_SIZE)
+        // 3. sécurité : on ne rend jamais plus de `questionCount` questions
+        return out.take(questionCount)
     }
 
     /** Score d'une leçon (0-100) à partir du nombre de bonnes réponses. */

@@ -10,8 +10,13 @@ déterministe — cf. `LessonGenerator.lessonQuestions`) :
 Vérifie ensuite :
   - l'écran de bilan s'affiche ;
   - la table Room `lesson_scores` contient `anat|Angiologie|2` ;
-  - de retour au Parcours, L2 passe à 100 %, L3 devient disponible,
-    le chapitre affiche 2/6 et l'unité Anatomie 2/66.
+  - de retour au Parcours, Leçon 2 passe à 100 %, la Révision 1 devient
+    disponible (facultative : les deux leçons sont réussies) et Leçon 3 aussi ;
+  - le chapitre Angiologie affiche 2/20 nœuds et l'unité Anatomie 2/N.
+
+Le découpage « 3 termes par leçon » (ChapterSyllabus) donne 13 leçons + 7
+révisions pour les 38 termes d'Angiologie : la fixture ne valide que L1, donc
+la première leçon jouable est bien la Leçon 2 (8 questions).
 
 Usage : uv run python medlingo_lesson_e2e.py
 """
@@ -268,7 +273,9 @@ async def open_path(driver):
 
 
 def has_lesson_nodes(screen) -> bool:
-    return any(desc_of(el).startswith("Leçon") for el in screen.ui_elements)
+    return any(
+        desc_of(el).startswith(("Leçon", "Révision")) for el in screen.ui_elements
+    )
 
 
 async def open_chapter(driver, title: str = "Angiologie"):
@@ -310,7 +317,7 @@ async def collect_lesson_nodes(driver, screen):
     for _ in range(6):
         for el in screen.ui_elements:
             desc = desc_of(el)
-            if desc.startswith("Leçon"):
+            if desc.startswith(("Leçon", "Révision")):
                 descs.add(desc)
             text = text_of(el)
             if text and text not in texts_seen:
@@ -327,7 +334,7 @@ async def open_available_lesson(driver, screen):
     node = [el for el in screen.ui_elements if "disponible" in desc_of(el)]
     if not node:
         return None, None, screen
-    match = re.match(r"^Leçon (\d) ", desc_of(node[0]))
+    match = re.match(r"^Leçon (\d+) ", desc_of(node[0]))
     level = int(match.group(1)) if match else None
     await driver.tap(*center(node[0]))
     screen = await wait_for(
@@ -492,26 +499,23 @@ def sql(statement: str) -> str:
     return adb("shell", command).decode("utf-8", "ignore").strip()
 
 
-def reset_chapter_progress(seed_l1_l2: bool = True) -> None:
+def reset_chapter_progress(seed_l1: bool = True) -> None:
     """Fixture reproductible : chapitre Angiologie remis dans un état connu.
 
-    `seed_l1_l2=True` → L1/L2 validées, L3 libre (scénario de leçon).
-    `seed_l1_l2=False` → chapitre vierge, L1 jouable (scénario du parcours).
+    `seed_l1=True` → seule la Leçon 1 est validée (85 %), la Leçon 2 est la
+    première leçon jouable (8 questions), la Révision 1 attend les deux leçons.
+    `seed_l1=False` → chapitre vierge, Leçon 1 jouable (scénario du parcours).
 
     Sans cela, chaque exécution jouerait la leçon suivante et le scénario ne
-    serait plus déterministe (L3 porte à la fois des QCM et un appariement).
+    serait plus déterministe.
     """
     adb("shell", "am", "force-stop", PKG)
     sql("delete from lesson_scores where lessonKey like 'anat|Angiologie|%'")
-    if not seed_l1_l2:
+    if not seed_l1:
         return
     sql(
         "insert into lesson_scores (lessonKey, moduleId, level, best) "
         "values ('anat|Angiologie|1', 'anat', 1, 85)"
-    )
-    sql(
-        "insert into lesson_scores (lessonKey, moduleId, level, best) "
-        "values ('anat|Angiologie|2', 'anat', 2, 100)"
     )
 
 
@@ -523,8 +527,8 @@ async def main() -> int:
     check(
         sql("select group_concat(lessonKey || '=' || best) from lesson_scores "
             "where lessonKey like 'anat|Angiologie|%'")
-        == "anat|Angiologie|1=85,anat|Angiologie|2=100",
-        "progression du chapitre réinitialisée (L1=85 %, L2=100 %, L3 libre)",
+        == "anat|Angiologie|1=85",
+        "progression du chapitre réinitialisée (Leçon 1=85 %, Leçon 2 libre)",
     )
     start_app()
     check(pull_db(), f"base Room récupérée ({DB_LOCAL})")
@@ -540,14 +544,39 @@ async def main() -> int:
     screen = await open_path(driver)
     check("Angiologie" in texts(screen), "le parcours affiche le chapitre Angiologie")
     screen = await open_chapter(driver)
+    await scroll_to_top(driver)
+    screen = await driver.get_screen_data(skip_settling=True)
+
+    # Totaux lus dans l'en-tête du chapitre, pas codés en dur : le découpage
+    # dépend du nombre de termes du seed.
+    chapter_total = 0
+    unit_total = 0
+    for text in texts(screen):
+        chapter_line = re.match(r"^\d+/(\d+) leçons", text)
+        unit_line = re.match(r"^moyenne \d+% · \d+/(\d+) leçons", text)
+        if chapter_line:
+            chapter_total = int(chapter_line.group(1))
+        if unit_line:
+            unit_total = int(unit_line.group(1))
+    check(
+        chapter_total == 20,
+        f"Angiologie compte 20 nœuds (13 leçons + 7 révisions, vu {chapter_total})",
+    )
+    check(unit_total > 0, f"l'unité Anatomie expose son total de nœuds ({unit_total})")
+
     label, level, screen = await open_available_lesson(driver, screen)
     check(label is not None, f"une leçon disponible s'ouvre ({label})")
     if label is None or level is None:
         return 1
+    check(level == 2, f"la Leçon 2 est la première leçon jouable (vu L{level})")
     lesson_key = f"anat|Angiologie|{level}"
     check(
         any(re.match(r"^Question 1 / 8", t) for t in texts(screen)),
-        "l'écran affiche « Question 1 / 8 » (leçon bornée à 8 questions)",
+        "l'écran affiche « Question 1 / 8 » (leçon de 3 termes)",
+    )
+    check(
+        any(t.startswith("Leçon 2 · 3 termes") for t in texts(screen)),
+        "l'en-tête de la leçon affiche « Leçon 2 · 3 termes »",
     )
 
     print("\n[2] Passe 1 — répondre A et mémoriser les bonnes réponses")
@@ -619,18 +648,36 @@ async def main() -> int:
     start_app()
     screen = await open_path(driver)
     screen = await open_chapter(driver)
+    await scroll_to_top(driver)
     descs, seen_texts, screen = await collect_lesson_nodes(driver, screen)
     print("    nœuds:", descs)
     check(
         any(d.startswith(f"Leçon {level} ") and d.endswith("%") for d in descs),
-        f"L{level} affiche son score ({[d for d in descs if d.startswith(f'Leçon {level} ')]})",
+        f"Leçon {level} affiche son score ({[d for d in descs if d.startswith(f'Leçon {level} ')]})",
     )
-    check(f"Leçon {level + 1} · disponible" in descs, f"L{level + 1} devient disponible")
-    if level + 2 <= 6:
-        check(f"Leçon {level + 2} · verrouillée" in descs, f"L{level + 2} reste verrouillée")
+    # Les deux leçons sont réussies → la Révision 1 est facultative, donc la
+    # suite s'ouvre sans elle (point de décision après L1 + L2).
+    check(
+        f"Révision 1 · 6 termes · disponible" in descs,
+        f"la Révision 1 devient disponible ({[d for d in descs if d.startswith('Révision 1')]})",
+    )
+    check(
+        f"Leçon {level + 1} · 3 termes · disponible" in descs,
+        f"Leçon {level + 1} devient disponible",
+    )
+    check(
+        f"Leçon {level + 2} · 3 termes · verrouillée" in descs,
+        f"Leçon {level + 2} reste verrouillée",
+    )
     joined = " | ".join(seen_texts)
-    check(f"{level}/6" in joined, f"le chapitre Angiologie affiche {level}/6 leçons")
-    check(f"{level}/66" in joined, f"l'unité Anatomie affiche {level}/66 leçons")
+    check(
+        f"{level}/{chapter_total}" in joined,
+        f"le chapitre Angiologie affiche {level}/{chapter_total} nœuds",
+    )
+    check(
+        f"{level}/{unit_total}" in joined,
+        f"l'unité Anatomie affiche {level}/{unit_total} nœuds",
+    )
 
     with open("medlingo_lesson_e2e.png", "wb") as fh:
         fh.write(screen.screenshot_bytes)

@@ -26,7 +26,15 @@ data class PathNode(
     val level: Int,
     val state: NodeState,
     val score: Int,
-    val isBoss: Boolean
+    val isBoss: Boolean,
+    /** Apprentissage (3 nouveaux termes) ou révision des leçons précédentes. */
+    val kind: ChapterSyllabus.Kind = ChapterSyllabus.Kind.NEW,
+    /** Révision **obligatoire** (au moins une leçon revue est sous 50 %) ou facultative. */
+    val required: Boolean = true,
+    /** Questions de la leçon (8 en apprentissage, jusqu'à 16 en révision). */
+    val questionCount: Int = ChapterSyllabus.NEW_LESSON_QUESTIONS,
+    /** Termes travaillés (3 en apprentissage, jusqu'à 6 en révision). */
+    val termCount: Int = 0
 )
 
 data class PathUnit(
@@ -142,12 +150,24 @@ object PathBuilder {
         val chapters: List<PathChapter> = emptyList()
     )
 
-    /** Un chapitre réel du seed, avec ses 6 leçons (L1 → L6, L6 = BOSS). */
+    /** Graine d'un chapitre : son titre et les ids des termes du seed. */
+    data class ChapterSeed(val title: String, val termIds: List<Int> = emptyList())
+
+    /**
+     * Un chapitre réel du seed, découpé en leçons par [ChapterSyllabus] :
+     * leçons de 3 nouveaux termes et révisions intercalées.
+     */
     data class ChapterPath(
         val chapterId: String,
         val title: String,
         val moduleId: String,
-        val nodes: List<PathNode>
+        val nodes: List<PathNode>,
+        /** AVAILABLE si le chapitre précédent est acquis, LOCKED sinon. */
+        val state: NodeState = NodeState.AVAILABLE,
+        /** Moyenne des leçons d'apprentissage (%). */
+        val average: Int = 0,
+        /** Toutes les leçons jouées et la moyenne ≥ 50 %. */
+        val completed: Boolean = false
     )
 
     /** Unité du parcours réel : un module et ses chapitres du seed. */
@@ -160,54 +180,123 @@ object PathBuilder {
      * Construit le parcours **Module → Chapitre → Leçons** à partir des
      * chapitres réels du seed (`InitialData.chaptersOfModule`).
      *
-     * Règles (spec §7) : 6 leçons par chapitre, déblocage séquentiel — L(n+1)
-     * s'ouvre dès que L(n) est validée à ≥ 70 %. L1 est toujours jouable, et
-     * les chapitres sont indépendants les uns des autres.
+     * Chaque chapitre est découpé par [ChapterSyllabus] : une leçon par
+     * 3 nouveaux termes, une révision après chaque paire de leçons.
+     *
+     * Déblocage :
+     *  - le nœud suivant s'ouvre dès que le précédent a été **joué** (score
+     *    enregistré, même < 50 %) — un élève peut avancer sans être parfait ;
+     *  - une révision **obligatoire** (une des 2 leçons revues est sous 50 %)
+     *    doit en revanche être **réussie** (≥ 50 %) pour ouvrir la suite ;
+     *  - une révision **facultative** ne bloque jamais : l'élève continue ou
+     *    révise, comme il veut (point de décision après L1 + L2) ;
+     *  - le chapitre suivant reste verrouillé tant que la moyenne des leçons
+     *    d'apprentissage du chapitre courant est < 50 % (ou que toutes ses
+     *    leçons n'ont pas été jouées).
      *
      * `lessonBest` : clé [chapterLessonKey] → meilleur score.
-     * `chaptersByModule` : moduleId → titres de chapitres (ordre du seed).
+     * `chaptersByModule` : moduleId → chapitres du seed (ordre du seed).
      */
     fun buildChapterPath(
         lessonBest: Map<String, Int>,
         modules: List<PathModule>,
-        chaptersByModule: Map<String, List<String>>
+        chaptersByModule: Map<String, List<ChapterSeed>>
     ): List<ModuleChapterPath> = modules.map { module ->
-        val chapters = chaptersByModule[module.id].orEmpty().distinct().map { chapter ->
-            var previousDone = false
-            val nodes = (1..LEVELS_PER_UNIT).map { level ->
-                val score = lessonBest[chapterLessonKey(module.id, chapter, level)] ?: 0
-                val state = when {
-                    score >= UNLOCK_SCORE -> NodeState.DONE
-                    level == 1 -> NodeState.AVAILABLE
-                    previousDone -> NodeState.AVAILABLE
-                    else -> NodeState.LOCKED
+        var previousChapterDone = true
+        val chapters = chaptersByModule[module.id].orEmpty()
+            .distinctBy { it.title }
+            .map { seed ->
+                val plan = ChapterSyllabus.plan(seed.termIds)
+                val scoreOf: (Int) -> Int? = { level ->
+                    lessonBest[chapterLessonKey(module.id, seed.title, level)]
                 }
-                previousDone = state == NodeState.DONE
-                PathNode(
+                val unlocked = previousChapterDone
+                // Une révision est obligatoire dès qu'une des leçons revues
+                // n'atteint pas 50 % (y compris jamais jouée).
+                val mandatory = plan
+                    .filter { it.kind == ChapterSyllabus.Kind.REVIEW }
+                    .associate { review ->
+                        review.level to review.reviewedLevels.any { lvl ->
+                            (scoreOf(lvl) ?: 0) < ChapterSyllabus.PASS_SCORE
+                        }
+                    }
+
+                var gateOpen = unlocked
+                val nodes = plan.map { lesson ->
+                    val best = scoreOf(lesson.level)
+                    val attempted = best != null
+                    val passed = (best ?: 0) >= ChapterSyllabus.PASS_SCORE
+                    val required = lesson.kind == ChapterSyllabus.Kind.NEW ||
+                        mandatory[lesson.level] == true
+                    val state = when {
+                        // une progression acquise n'est jamais rétrogradée
+                        passed -> NodeState.DONE
+                        !unlocked -> NodeState.LOCKED
+                        gateOpen -> NodeState.AVAILABLE
+                        else -> NodeState.LOCKED
+                    }
+                    gateOpen = when {
+                        !unlocked -> false
+                        // révision facultative : ni ouvre ni ferme la porte
+                        !required -> gateOpen
+                        // révision obligatoire : il faut la réussir
+                        lesson.kind == ChapterSyllabus.Kind.REVIEW -> passed
+                        // leçon d'apprentissage : il suffit de l'avoir jouée
+                        else -> attempted
+                    }
+                    PathNode(
+                        moduleId = module.id,
+                        level = lesson.level,
+                        state = state,
+                        score = best ?: 0,
+                        isBoss = false,
+                        kind = lesson.kind,
+                        required = required,
+                        questionCount = lesson.questionCount,
+                        termCount = lesson.termCount
+                    )
+                }
+
+                val learning = plan.filter { it.kind == ChapterSyllabus.Kind.NEW }
+                val learningScores = learning.map { scoreOf(it.level) ?: 0 }
+                val average = if (learningScores.isEmpty()) 0
+                else learningScores.sum() / learningScores.size
+                val completed = plan.isEmpty() || (
+                    learning.all { scoreOf(it.level) != null } &&
+                        plan.filter { it.kind == ChapterSyllabus.Kind.REVIEW && mandatory[it.level] == true }
+                            .all { (scoreOf(it.level) ?: 0) >= ChapterSyllabus.PASS_SCORE } &&
+                        average >= ChapterSyllabus.CHAPTER_UNLOCK_AVERAGE
+                    )
+                previousChapterDone = completed
+
+                ChapterPath(
+                    chapterId = seed.title,
+                    title = seed.title,
                     moduleId = module.id,
-                    level = level,
-                    state = state,
-                    score = score,
-                    isBoss = level == LEVELS_PER_UNIT
+                    nodes = nodes,
+                    state = when {
+                        completed -> NodeState.DONE
+                        unlocked -> NodeState.AVAILABLE
+                        else -> NodeState.LOCKED
+                    },
+                    average = average,
+                    completed = completed
                 )
             }
-            ChapterPath(
-                chapterId = chapter,
-                title = chapter,
-                moduleId = module.id,
-                nodes = nodes
-            )
-        }
         ModuleChapterPath(module = module, chapters = chapters)
     }
 
-    /** Leçons validées (≥ 70 %) dans une unité. */
+    /** Leçons réussies (≥ 50 %) dans une unité. */
     fun completedLessons(unit: ModuleChapterPath): Int =
         unit.chapters.sumOf { chapter -> chapter.nodes.count { it.state == NodeState.DONE } }
 
-    /** Nombre total de leçons d'une unité (6 × nombre de chapitres). */
+    /** Nombre total de leçons d'une unité (apprentissages + révisions). */
     fun totalLessons(unit: ModuleChapterPath): Int =
         unit.chapters.sumOf { it.nodes.size }
+
+    /** Vrai si le chapitre peut être ouvert (le précédent est acquis). */
+    fun isChapterOpen(chapter: ChapterPath): Boolean =
+        chapter.state != NodeState.LOCKED
 
     /** Première leçon jouable d'une unité : son chapitre et son nœud. */
     fun nextChapterLesson(unit: ModuleChapterPath): Pair<ChapterPath, PathNode>? =

@@ -462,7 +462,7 @@ private fun LevelExerciseSessionView(
 
                 Column {
                     Text(
-                        text = level.getTitle(currentLanguage),
+                        text = uiState.pathLessonLabel ?: level.getTitle(currentLanguage),
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFF0C1414)

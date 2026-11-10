@@ -55,6 +55,7 @@ import androidx.compose.ui.window.Popup
 import com.aistudio.medlingua.dzmed.data.initial.InitialData
 import com.aistudio.medlingua.dzmed.domain.gamification.GamificationEconomy
 import com.aistudio.medlingua.dzmed.domain.path.NodeState
+import com.aistudio.medlingua.dzmed.domain.path.ChapterSyllabus
 import com.aistudio.medlingua.dzmed.domain.path.PathBuilder
 import com.aistudio.medlingua.dzmed.domain.path.PathModule
 import com.aistudio.medlingua.dzmed.domain.path.PathNode
@@ -71,17 +72,18 @@ import java.util.Calendar
 /**
  * Onglet 📍 Parcours — navigation **Module → Chapitre → Leçons**.
  *
- * 15 modules × leurs chapitres du seed × 6 leçons = 312 chapitres / 1 872
- * leçons. Tout afficher d'un coup donnait une page interminable (et 312 lignes
- * composées à chaque recomposition). On suit donc le modèle Duolingo :
+ * 15 modules × leurs chapitres du seed × leçons de 3 termes (+ révisions).
+ * Tout afficher d'un coup donnait une page interminable (et des centaines de
+ * lignes composées à chaque recomposition). On suit donc le modèle Duolingo :
  *
  *  1. un seul bouton d'action « Continuer » (la prochaine leçon jouable) ;
  *  2. un sélecteur de module (panneau replié par défaut) ;
  *  3. la liste des chapitres **du module choisi** (avec recherche) ;
- *  4. taper un chapitre ouvre sa page dédiée : les 6 leçons en chemin vertical.
+ *  4. taper un chapitre ouvre sa page dédiée : ses leçons en chemin vertical.
  *
- * La page d'accueil ne rend plus qu'un module à la fois, et les leçons ne sont
- * composées qu'à l'intérieur d'un chapitre.
+ * Un chapitre est acquis (et ouvre le suivant) quand toutes ses leçons
+ * d'apprentissage sont jouées, ses révisions obligatoires réussies et sa
+ * moyenne ≥ 50 %.
  */
 @Composable
 fun PathScreen(
@@ -98,18 +100,27 @@ fun PathScreen(
     val goal = GamificationEconomy.goalProgress(stats, now)
     val due = uiState.dueFlashcardProgress.size
 
-    // Parcours réel : 15 modules → chapitres du seed → 6 leçons par chapitre.
-    // Les états viennent de `lesson_scores` (clé module|chapitre|niveau).
+    // Parcours réel : 15 modules → chapitres du seed → leçons découpées par
+    // `ChapterSyllabus` (3 nouveaux termes par leçon, révision après chaque
+    // paire). Les états viennent de `lesson_scores` (clé module|chapitre|niveau).
     val modules = remember(lang) {
         InitialData.modulesList.map { PathModule(it.id, moduleTitle(it, lang), it.colorHex) }
     }
     val chaptersByModule = remember {
-        InitialData.modulesList.associate { it.id to InitialData.chaptersOfModule(it.titleFr) }
+        InitialData.modulesList.associate { info ->
+            val terms = InitialData.termsOfModule(info.titleFr)
+            info.id to InitialData.chaptersOfModule(info.titleFr).map { chapter ->
+                PathBuilder.ChapterSeed(
+                    title = chapter,
+                    termIds = terms.filter { it.chapter == chapter }.map { it.id }
+                )
+            }
+        }
     }
     val units = remember(uiState.lessonBest, modules) {
         PathBuilder.buildChapterPath(uiState.lessonBest, modules, chaptersByModule)
     }
-    val next = remember(units) {
+    val next = remember(units, lang) {
         units.firstNotNullOfOrNull { unit ->
             PathBuilder.nextChapterLesson(unit)?.let { (chapter, node) ->
                 NextLesson(
@@ -117,7 +128,9 @@ fun PathScreen(
                     moduleTitle = unit.module.title,
                     chapterId = chapter.chapterId,
                     chapterTitle = chapter.title,
-                    level = node.level
+                    level = node.level,
+                    title = lessonTitle(node, lessonNumber(chapter.nodes, node), lang),
+                    termCount = node.termCount
                 )
             }
         }
@@ -160,7 +173,11 @@ fun PathScreen(
 
     val progressByModule = remember(units) {
         units.associate { unit ->
-            unit.module.id to (PathBuilder.completedLessons(unit) to PathBuilder.totalLessons(unit))
+            unit.module.id to ModuleProgress(
+                done = PathBuilder.completedLessons(unit),
+                total = PathBuilder.totalLessons(unit),
+                chapters = unit.chapters.size
+            )
         }
     }
     val chapters = remember(unit, query) {
@@ -208,7 +225,7 @@ fun PathScreen(
                     ) {
                         Medi(
                             mood = mood,
-                            message = next?.let { "$greet · ${it.chapterTitle} L${it.level}" }
+                            message = next?.let { "$greet · ${it.chapterTitle} ${it.title}" }
                                 ?: Strings.get("path_done_all", lang),
                             lang = lang,
                             modifier = Modifier.weight(1f)
@@ -377,8 +394,12 @@ fun PathScreen(
                         chapter = chapter,
                         lang = lang,
                         onClick = {
-                            openChapterId = chapter.chapterId
-                            query = ""
+                            if (PathBuilder.isChapterOpen(chapter)) {
+                                openChapterId = chapter.chapterId
+                                query = ""
+                            } else {
+                                tipVisible = true
+                            }
                         }
                     )
                 }
@@ -428,7 +449,10 @@ private data class NextLesson(
     val moduleTitle: String,
     val chapterId: String,
     val chapterTitle: String,
-    val level: Int
+    val level: Int,
+    /** « Leçon 3 » ou « Révision 2 ». */
+    val title: String,
+    val termCount: Int
 )
 
 @Composable
@@ -477,7 +501,7 @@ private fun ContinueCard(
                         overflow = TextOverflow.Ellipsis
                     )
                     Text(
-                        text = "${Strings.get("lesson_lbl", lang)} ${next.level}",
+                        text = "${next.title} · ${next.termCount} ${Strings.get("terms_lbl", lang)}",
                         fontSize = 12.sp,
                         color = Color.White.copy(alpha = 0.85f)
                     )
@@ -508,11 +532,14 @@ private fun ContinueCard(
  * 15 modules (2 colonnes). Un seul module est affiché à la fois dans la liste
  * des chapitres, donc la page garde une longueur raisonnable.
  */
+/** Avancement d'un module dans le sélecteur (leçons réussies / totales). */
+private data class ModuleProgress(val done: Int, val total: Int, val chapters: Int)
+
 @Composable
 private fun ModulePickerCard(
     unit: PathBuilder.ModuleChapterPath?,
     modules: List<PathModule>,
-    progressByModule: Map<String, Pair<Int, Int>>,
+    progressByModule: Map<String, ModuleProgress>,
     expanded: Boolean,
     lang: Language,
     onToggle: () -> Unit,
@@ -594,11 +621,13 @@ private fun ModulePickerCard(
                     modules.chunked(2).forEach { pair ->
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             pair.forEach { module ->
-                                val (mDone, mTotal) = progressByModule[module.id] ?: (0 to 0)
+                                val progress = progressByModule[module.id]
+                                    ?: ModuleProgress(0, 0, 0)
                                 ModuleTile(
                                     module = module,
-                                    done = mDone,
-                                    total = mTotal,
+                                    done = progress.done,
+                                    total = progress.total,
+                                    chapters = progress.chapters,
                                     selected = module.id == unit?.module?.id,
                                     lang = lang,
                                     onClick = { onSelect(module.id) },
@@ -619,6 +648,7 @@ private fun ModuleTile(
     module: PathModule,
     done: Int,
     total: Int,
+    chapters: Int,
     selected: Boolean,
     lang: Language,
     onClick: () -> Unit,
@@ -654,7 +684,7 @@ private fun ModuleTile(
             )
         }
         Text(
-            text = "${total / 6} ${Strings.get("chapters_lbl", lang)} · $pct%",
+            text = "$chapters ${Strings.get("chapters_lbl", lang)} · $pct%",
             fontSize = 10.sp,
             color = Color(0xFF6B7877)
         )
@@ -671,11 +701,16 @@ private fun ChapterRow(
     val done = chapter.nodes.count { it.state == NodeState.DONE }
     val total = chapter.nodes.size
     val pct = if (total == 0) 0 else (done * 100) / total
+    val locked = chapter.state == NodeState.LOCKED
+    val learning = chapter.nodes.count { it.kind == ChapterSyllabus.Kind.NEW }
+    val reviews = total - learning
 
     Card(
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = if (locked) Color(0xFFF5F7F6) else Color.White
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = if (locked) 0.dp else 2.dp),
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() }
@@ -689,39 +724,65 @@ private fun ChapterRow(
                 modifier = Modifier
                     .size(38.dp)
                     .clip(CircleShape)
-                    .background(if (pct == 100) Color(0xFFE8F8D8) else Color(0xFFE3F5EC)),
+                    .background(
+                        when {
+                            locked -> Color(0xFFECEFF1)
+                            chapter.completed -> Color(0xFFE8F8D8)
+                            else -> Color(0xFFE3F5EC)
+                        }
+                    ),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = if (pct == 100) "✅" else "📖", fontSize = 17.sp)
+                Text(
+                    text = when {
+                        locked -> "🔒"
+                        chapter.completed -> "✅"
+                        else -> "📖"
+                    },
+                    fontSize = 17.sp
+                )
             }
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text(
                     text = chapter.title,
                     fontSize = 15.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color(0xFF12211C),
+                    color = if (locked) Color(0xFF90A4AE) else Color(0xFF12211C),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
                 Text(
-                    text = "$total ${Strings.get("lessons_lbl", lang)} · $done/$total · $pct%",
+                    // « 30 termes · 10 leçons + 5 révisions · moyenne 62 % »
+                    text = "$learning ${Strings.get("lessons_lbl", lang)} + $reviews " +
+                        "${Strings.get("reviews_lbl", lang)} · $done/$total · " +
+                        "${Strings.get("average_lbl", lang)} ${chapter.average}%",
                     fontSize = 11.sp,
                     color = Color(0xFF90A4AE)
                 )
-                ProgressBar(pct = pct, color = Color(0xFF58CC02))
+                if (locked) {
+                    Text(
+                        text = Strings.get("chapter_locked_hint", lang),
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color(0xFFB0BEC5)
+                    )
+                } else {
+                    ProgressBar(pct = pct, color = Color(0xFF58CC02))
+                }
             }
             Text(
-                text = "›",
+                text = if (locked) "🔒" else "›",
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF1CB0F6)
+                color = if (locked) Color(0xFFB0BEC5) else Color(0xFF1CB0F6)
             )
         }
     }
 }
 
 /**
- * Page d'un chapitre : les 6 leçons en chemin vertical (zig-zag Duolingo).
+ * Page d'un chapitre : ses leçons en chemin vertical (zig-zag Duolingo) —
+ * apprentissages de 3 termes et révisions intercalées.
  * Seules les leçons de ce chapitre sont composées ici.
  */
 @Composable
@@ -836,7 +897,8 @@ private fun ChapterLessonPage(
                         color = Color(0xFF455A64)
                     )
                     Text(
-                        text = "$unitDone/$unitTotal ${Strings.get("lessons_lbl", lang)} · ${unit.module.title}",
+                        text = "${Strings.get("average_lbl", lang)} ${chapter.average}% · " +
+                            "$unitDone/$unitTotal ${Strings.get("lessons_lbl", lang)}",
                         fontSize = 11.sp,
                         color = Color(0xFF90A4AE)
                     )
@@ -854,6 +916,7 @@ private fun ChapterLessonPage(
         chapter.nodes.forEachIndexed { position, node ->
             LessonPathNode(
                 node = node,
+                number = lessonNumber(chapter.nodes, node),
                 chapterId = chapter.chapterId,
                 position = position,
                 lang = lang,
@@ -908,6 +971,7 @@ private fun ChapterNavButton(text: String, modifier: Modifier = Modifier, onClic
 @Composable
 private fun LessonPathNode(
     node: PathNode,
+    number: Int,
     chapterId: String,
     position: Int,
     lang: Language,
@@ -917,22 +981,29 @@ private fun LessonPathNode(
     val state = node.state
     val done = state == NodeState.DONE
     val locked = state == NodeState.LOCKED
+    val review = node.kind == ChapterSyllabus.Kind.REVIEW
     val face = when {
         done -> "✅"
         locked -> "🔒"
-        node.isBoss -> "👑"
+        review -> "🔁"
         else -> "⭐"
     }
+    val title = lessonTitle(node, number, lang)
     // Le niveau reste lisible même verrouillé : l'élève sait quelle leçon
     // s'ouvrira ensuite.
     val meta = when {
-        done -> "${node.score}%"
-        node.isBoss -> "BOSS"
-        else -> "L${node.level}"
+        done -> "${node.score}% · ${node.termCount} ${Strings.get("terms_lbl", lang)}"
+        review -> "${node.termCount} ${Strings.get("terms_lbl", lang)} · " +
+            Strings.get(
+                if (node.required) "review_required_lbl" else "review_optional_lbl",
+                lang
+            )
+        else -> "${node.termCount} ${Strings.get("terms_lbl", lang)}"
     }
     val bg = when {
         done -> Color(0xFF58CC02)
         locked -> Color(0xFFCFD8DC)
+        review -> Color(0xFFFF9600)
         else -> Color(0xFF1CB0F6)
     }
     // Zig-zag : 0, +40, 0, -40, 0, +40 (le chemin « serpente »).
@@ -957,11 +1028,11 @@ private fun LessonPathNode(
                     text = "${Strings.get("start_label", lang)} ▼",
                     fontSize = 9.sp,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color(0xFF1CB0F6),
+                    color = bg,
                     modifier = Modifier
                         .clip(RoundedCornerShape(10.dp))
                         .background(Color.White)
-                        .border(1.dp, Color(0xFF1CB0F6), RoundedCornerShape(10.dp))
+                        .border(1.dp, bg, RoundedCornerShape(10.dp))
                         .padding(horizontal = 8.dp, vertical = 3.dp)
                 )
                 Spacer(Modifier.height(4.dp))
@@ -975,7 +1046,8 @@ private fun LessonPathNode(
                     .border(4.dp, bg.copy(alpha = 0.25f), CircleShape)
                     // Lu par TalkBack et exposé à la hiérarchie UI (tests ADB).
                     .semantics {
-                        contentDescription = "${Strings.get("lesson_lbl", lang)} ${node.level}" +
+                        contentDescription = "$title · ${node.termCount} " +
+                            Strings.get("terms_lbl", lang) +
                             when {
                                 done -> " · ${node.score}%"
                                 locked -> " · ${Strings.get("lesson_locked_lbl", lang)}"
@@ -993,19 +1065,30 @@ private fun LessonPathNode(
             Spacer(Modifier.height(4.dp))
 
             Text(
-                text = "${Strings.get("lesson_lbl", lang)} ${node.level}",
+                text = title,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF455A64)
+                color = if (locked) Color(0xFF90A4AE) else Color(0xFF455A64)
             )
             Text(
                 text = meta,
                 fontSize = 11.sp,
-                fontWeight = if (node.isBoss) FontWeight.Bold else FontWeight.Normal,
+                fontWeight = if (review && node.required && !done) FontWeight.Bold
+                else FontWeight.Normal,
                 color = if (locked) Color(0xFF90A4AE) else Color(0xFF6B7877)
             )
         }
     }
+}
+
+/** Numéro d'affichage d'un nœud dans sa série (« Leçon 3 » / « Révision 2 »). */
+private fun lessonNumber(nodes: List<PathNode>, node: PathNode): Int =
+    nodes.filter { it.kind == node.kind }.indexOfFirst { it.level == node.level } + 1
+
+/** Intitulé localisé d'un nœud : « Leçon 3 » ou « Révision 2 ». */
+private fun lessonTitle(node: PathNode, number: Int, lang: Language): String {
+    val key = if (node.kind == ChapterSyllabus.Kind.REVIEW) "review_lbl" else "lesson_lbl"
+    return "${Strings.get(key, lang)} $number"
 }
 
 @Composable

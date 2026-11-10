@@ -1,5 +1,6 @@
 package com.aistudio.medlingua.dzmed
 
+import com.aistudio.medlingua.dzmed.domain.path.ChapterSyllabus
 import com.aistudio.medlingua.dzmed.domain.path.NodeState
 import com.aistudio.medlingua.dzmed.domain.path.PathBuilder
 import com.aistudio.medlingua.dzmed.domain.path.PathModule
@@ -165,40 +166,121 @@ class PathBuilderTest {
     // ─── Parcours Module → Chapitre → Leçons ──────────────────────
 
     private val chapters = mapOf(
-        "anat" to listOf("Angiologie", "Ostéologie"),
-        "physio" to listOf("Cardiologie")
+        "anat" to listOf(
+            PathBuilder.ChapterSeed("Angiologie", (1..6).toList()),
+            PathBuilder.ChapterSeed("Ostéologie", (7..9).toList())
+        ),
+        "physio" to listOf(PathBuilder.ChapterSeed("Cardiologie", (10..18).toList()))
     )
 
     @Test
-    fun `le parcours chapitre expose les chapitres reels et 6 lecons chacun`() {
+    fun `le parcours chapitre decoupe chaque chapitre en lecons de 3 termes`() {
         val path = PathBuilder.buildChapterPath(emptyMap(), modules, chapters)
         assertEquals(2, path.size)
         assertEquals(listOf("Angiologie", "Ostéologie"), path[0].chapters.map { it.chapterId })
-        assertTrue(path[0].chapters.all { it.nodes.size == PathBuilder.LEVELS_PER_UNIT })
-        assertTrue(path[0].chapters.all { it.nodes.last().isBoss })
-        assertEquals(12, PathBuilder.totalLessons(path[0]))
+
+        // 6 termes → 2 leçons de 3 + 1 révision de 6.
+        val angio = path[0].chapters[0]
+        assertEquals(
+            listOf(ChapterSyllabus.Kind.NEW, ChapterSyllabus.Kind.NEW, ChapterSyllabus.Kind.REVIEW),
+            angio.nodes.map { it.kind }
+        )
+        assertEquals(listOf(3, 3, 6), angio.nodes.map { it.termCount })
+        assertEquals(listOf(8, 8, 16), angio.nodes.map { it.questionCount })
+        assertTrue(angio.nodes.none { it.isBoss })
+
+        // 3 termes → une seule leçon (pas de révision d'une leçon unique).
+        assertEquals(1, path[0].chapters[1].nodes.size)
+
+        // 9 termes → 3 leçons + 2 révisions.
+        assertEquals(5, path[1].chapters[0].nodes.size)
+        assertEquals(4, PathBuilder.totalLessons(path[0]))
     }
 
     @Test
-    fun `sans progression chaque chapitre ouvre L1 et verrouille la suite`() {
+    fun `sans progression seul le premier chapitre ouvre sa premiere lecon`() {
         val unit = PathBuilder.buildChapterPath(emptyMap(), modules, chapters)[0]
-        for (chapter in unit.chapters) {
-            assertEquals(NodeState.AVAILABLE, chapter.nodes[0].state)
-            assertTrue(chapter.nodes.drop(1).all { it.state == NodeState.LOCKED })
-        }
+        val first = unit.chapters[0]
+        assertEquals(NodeState.AVAILABLE, first.nodes[0].state)
+        assertTrue(first.nodes.drop(1).all { it.state == NodeState.LOCKED })
+        assertEquals(NodeState.AVAILABLE, first.state)
+
+        // Les chapitres sont séquentiels : le suivant attend 50 % de moyenne.
+        val second = unit.chapters[1]
+        assertEquals(NodeState.LOCKED, second.state)
+        assertTrue(second.nodes.all { it.state == NodeState.LOCKED })
+        assertFalse(PathBuilder.isChapterOpen(second))
+
         assertEquals(0, PathBuilder.completedLessons(unit))
     }
 
     @Test
-    fun `valider L1 d un chapitre ouvre L2 sans toucher aux autres chapitres`() {
+    fun `jouer L1 ouvre L2 sans toucher au chapitre suivant`() {
         val best = mapOf(PathBuilder.chapterLessonKey("anat", "Angiologie", 1) to 80)
         val unit = PathBuilder.buildChapterPath(best, modules, chapters)[0]
         assertEquals(NodeState.DONE, unit.chapters[0].nodes[0].state)
         assertEquals(NodeState.AVAILABLE, unit.chapters[0].nodes[1].state)
+        // Révision obligatoire (L2 pas encore réussie) : elle reste fermée.
         assertEquals(NodeState.LOCKED, unit.chapters[0].nodes[2].state)
-        assertEquals(NodeState.AVAILABLE, unit.chapters[1].nodes[0].state)
-        assertEquals(NodeState.LOCKED, unit.chapters[1].nodes[1].state)
+        assertEquals(NodeState.LOCKED, unit.chapters[1].state)
         assertEquals(1, PathBuilder.completedLessons(unit))
+    }
+
+    @Test
+    fun `une revision facultative ne bloque pas la suite`() {
+        // 2 leçons réussies → révision facultative, l'élève peut continuer.
+        val best = mapOf(
+            PathBuilder.chapterLessonKey("physio", "Cardiologie", 1) to 80,
+            PathBuilder.chapterLessonKey("physio", "Cardiologie", 2) to 80
+        )
+        val chapter = PathBuilder.buildChapterPath(best, modules, chapters)[1].chapters[0]
+        assertFalse(chapter.nodes[2].required)
+        assertEquals(NodeState.AVAILABLE, chapter.nodes[2].state)
+        assertEquals(NodeState.AVAILABLE, chapter.nodes[3].state)
+        assertEquals(NodeState.LOCKED, chapter.nodes[4].state)
+    }
+
+    @Test
+    fun `une revision obligatoire doit etre reussie pour ouvrir la suite`() {
+        val failed = mapOf(
+            PathBuilder.chapterLessonKey("physio", "Cardiologie", 1) to 40,
+            PathBuilder.chapterLessonKey("physio", "Cardiologie", 2) to 40
+        )
+        val locked = PathBuilder.buildChapterPath(failed, modules, chapters)[1].chapters[0]
+        assertTrue(locked.nodes[2].required)
+        assertEquals(NodeState.AVAILABLE, locked.nodes[2].state)
+        assertEquals(NodeState.LOCKED, locked.nodes[3].state)
+
+        val passed = failed +
+            (PathBuilder.chapterLessonKey("physio", "Cardiologie", 3) to 60)
+        val open = PathBuilder.buildChapterPath(passed, modules, chapters)[1].chapters[0]
+        assertEquals(NodeState.DONE, open.nodes[2].state)
+        assertEquals(NodeState.AVAILABLE, open.nodes[3].state)
+    }
+
+    @Test
+    fun `le chapitre suivant exige 50 pourcent de moyenne`() {
+        // Leçons jouées mais moyennes sous 50 % → chapitre non acquis.
+        val weak = mapOf(
+            PathBuilder.chapterLessonKey("anat", "Angiologie", 1) to 40,
+            PathBuilder.chapterLessonKey("anat", "Angiologie", 2) to 40,
+            PathBuilder.chapterLessonKey("anat", "Angiologie", 3) to 60
+        )
+        val weakUnit = PathBuilder.buildChapterPath(weak, modules, chapters)[0]
+        assertEquals(40, weakUnit.chapters[0].average)
+        assertFalse(weakUnit.chapters[0].completed)
+        assertEquals(NodeState.LOCKED, weakUnit.chapters[1].state)
+
+        // 60 % de moyenne → le chapitre suivant s'ouvre (révision facultative).
+        val strong = mapOf(
+            PathBuilder.chapterLessonKey("anat", "Angiologie", 1) to 60,
+            PathBuilder.chapterLessonKey("anat", "Angiologie", 2) to 60
+        )
+        val strongUnit = PathBuilder.buildChapterPath(strong, modules, chapters)[0]
+        assertEquals(60, strongUnit.chapters[0].average)
+        assertTrue(strongUnit.chapters[0].completed)
+        assertEquals(NodeState.AVAILABLE, strongUnit.chapters[1].state)
+        assertTrue(PathBuilder.isChapterOpen(strongUnit.chapters[1]))
     }
 
     @Test

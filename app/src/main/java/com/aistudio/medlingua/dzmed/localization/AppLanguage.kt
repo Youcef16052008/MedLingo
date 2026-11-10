@@ -358,19 +358,38 @@ object Strings {
         "greet_evening" to mapOf("ar" to "مساء الخير", "fr" to "Bonsoir", "en" to "Good evening"),
         "path_title" to mapOf("ar" to "المسار", "fr" to "Parcours", "en" to "Path"),
         "path_sub" to mapOf(
-            "ar" to "١٥ وحدة · ٦ دروس لكل واحدة",
-            "fr" to "15 unités · 6 leçons chacune",
-            "en" to "15 units · 6 lessons each"
+            "ar" to "١٥ وحدة · دروس من ٣ مصطلحات + مراجعات",
+            "fr" to "15 unités · leçons de 3 termes + révisions",
+            "en" to "15 units · 3-term lessons + reviews"
         ),
         "lesson_lbl" to mapOf("ar" to "درس", "fr" to "Leçon", "en" to "Lesson"),
+        "review_lbl" to mapOf("ar" to "مراجعة", "fr" to "Révision", "en" to "Review"),
+        "reviews_lbl" to mapOf("ar" to "مراجعات", "fr" to "révisions", "en" to "reviews"),
+        "review_required_lbl" to mapOf(
+            "ar" to "إلزامية",
+            "fr" to "obligatoire",
+            "en" to "required"
+        ),
+        "review_optional_lbl" to mapOf(
+            "ar" to "اختيارية",
+            "fr" to "facultative",
+            "en" to "optional"
+        ),
+        "terms_lbl" to mapOf("ar" to "مصطلحات", "fr" to "termes", "en" to "terms"),
+        "average_lbl" to mapOf("ar" to "المعدل", "fr" to "moyenne", "en" to "average"),
+        "chapter_locked_hint" to mapOf(
+            "ar" to "أكمل الفصل السابق بمعدل ٥٠٪ على الأقل",
+            "fr" to "Termine le chapitre précédent avec 50 % de moyenne",
+            "en" to "Finish the previous chapter with a 50% average"
+        ),
         "lessons_lbl" to mapOf("ar" to "دروس", "fr" to "leçons", "en" to "lessons"),
         "lesson_locked_lbl" to mapOf("ar" to "مقفل", "fr" to "verrouillée", "en" to "locked"),
         "lesson_available_lbl" to mapOf("ar" to "متاح", "fr" to "disponible", "en" to "available"),
         "chapters_lbl" to mapOf("ar" to "فصول", "fr" to "chapitres", "en" to "chapters"),
         "path_locked_text" to mapOf(
-            "ar" to "مطلوب ٧٠٪ في الدرس السابق",
-            "fr" to "70 % requis sur la leçon précédente",
-            "en" to "70 % required on the previous lesson"
+            "ar" to "أكمل الدرس السابق أولاً",
+            "fr" to "Termine d'abord la leçon précédente",
+            "en" to "Finish the previous lesson first"
         ),
         "continue_lbl" to mapOf("ar" to "متابعة", "fr" to "Continuer", "en" to "Continue"),
         "module_lbl" to mapOf("ar" to "الوحدة", "fr" to "Module", "en" to "Module"),

@@ -25,8 +25,10 @@ import com.aistudio.medlingua.dzmed.domain.gamification.LeagueBotAnimator
 import com.aistudio.medlingua.dzmed.domain.gamification.audio.SoundEffect
 import com.aistudio.medlingua.dzmed.domain.gamification.audio.SoundManager
 import com.aistudio.medlingua.dzmed.domain.lesson.LessonGenerator
+import com.aistudio.medlingua.dzmed.domain.path.ChapterSyllabus
 import com.aistudio.medlingua.dzmed.domain.sm2.ReviewResult
 import com.aistudio.medlingua.dzmed.localization.Language
+import com.aistudio.medlingua.dzmed.localization.Strings
 import com.aistudio.medlingua.dzmed.ui.components.RewardData
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.Job
@@ -121,6 +123,10 @@ data class UiState(
     val pathLessonModuleId: String? = null,
     /** Chapitre du seed de la leçon en cours (`null` = leçon de module entier). */
     val pathLessonChapter: String? = null,
+    /** Intitulé de la leçon du Parcours (« Leçon 3 · 3 termes », « Révision 2 · 6 termes »). */
+    val pathLessonLabel: String? = null,
+    /** Palier 1..6 de la leçon du Parcours (difficulté des questions / stats). */
+    val pathLessonTier: Int? = null,
     /** Récompense à afficher dans la pop-up (spec §11). */
     val lastReward: RewardData? = null,
     /** Récompense tirée de la caisse ouverte dans la pop-up. */
@@ -462,6 +468,8 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             InitialData.modulesList.firstOrNull { it.id == id }?.titleFr
         }
         val chapterTitle = state.pathLessonChapter
+        var pathLessonLabel: String? = null
+        var pathLessonTier = level
         if (moduleTitle != null) {
             // Leçon du Parcours : le pool est strictement cadré au module. Sans
             // exercices propres, la leçon reste vide (état dédié à l'écran) plutôt
@@ -477,30 +485,52 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
             // nœud pulsait indéfiniment (P0-5 les a verrouillés ; maintenant on
             // les remplit). Tirage déterministe : mêmes questions à chaque visite.
             //
-            // `lessonQuestions` place déjà les exercices réels en tête et ajoute
-            // le complément généré — on lui passe directement la liste filtrée.
-            //
-            // Toujours passer par lui, même quand le pool réel dépasse
-            // LESSON_SIZE : un chapitre peut compter des dizaines d'exercices
-            // réels pour un niveau, et une leçon du Parcours doit rester une
-            // séance courte et reproductible de LESSON_SIZE questions.
-            // Un chapitre restreint les fiches utilisées pour générer les
-            // questions : la leçon porte alors vraiment sur ce chapitre.
-            val terms = InitialData.termsOfModule(moduleTitle).let { moduleTerms ->
-                if (chapterTitle == null) moduleTerms
-                else moduleTerms.filter { it.chapter.equals(chapterTitle, ignoreCase = true) }
-                    .ifEmpty { moduleTerms }
+            // Découpage « 3 termes » (ChapterSyllabus) : la leçon `level` ne
+            // travaille que **ses** termes — 3 nouveaux termes pour une leçon
+            // d'apprentissage, les 2 leçons revues pour une révision. Le palier
+            // de difficulté (1..6) est dérivé de la position dans le chapitre.
+            val moduleTerms = InitialData.termsOfModule(moduleTitle)
+            val chapterTerms = if (chapterTitle == null) moduleTerms
+            else moduleTerms.filter { it.chapter.equals(chapterTitle, ignoreCase = true) }
+                .ifEmpty { moduleTerms }
+
+            val plan = if (chapterTitle == null) emptyList()
+            else ChapterSyllabus.plan(chapterTerms.map { it.id })
+            val lesson = plan.firstOrNull { it.level == level }
+            val tier = if (plan.isEmpty()) level else ChapterSyllabus.tierFor(level, plan.size)
+            pathLessonTier = tier
+            val terms = if (lesson == null) chapterTerms
+            else chapterTerms.filter { it.id in lesson.termIds }
+
+            if (lesson != null) {
+                val lang = state.currentLanguage
+                val number = plan.filter { it.kind == lesson.kind }
+                    .indexOfFirst { it.level == level } + 1
+                val kindLabel = Strings.get(
+                    if (lesson.kind == ChapterSyllabus.Kind.REVIEW) "review_lbl" else "lesson_lbl",
+                    lang
+                )
+                pathLessonLabel = "$kindLabel $number · ${lesson.termCount} " +
+                    Strings.get("terms_lbl", lang)
             }
+
             exercisesForLevel = LessonGenerator.lessonQuestions(
                 moduleId = state.pathLessonModuleId!!,
-                level = level,
-                realExercises = exercisesForLevel,
-                terms = terms
+                level = tier,
+                // Leçon du chapitre : uniquement ses 3 termes, donc pas
+                // d'exercice écrit main d'un autre terme du chapitre.
+                realExercises = if (chapterTitle == null) exercisesForLevel else emptyList(),
+                terms = terms,
+                questionCount = lesson?.questionCount ?: LessonGenerator.LESSON_SIZE,
+                seed = if (chapterTitle == null) "${state.pathLessonModuleId}:$level"
+                else "${state.pathLessonModuleId}:$chapterTitle:$level"
             )
         }
         _uiState.update {
             it.copy(
                 selectedLearningLevel = level,
+                pathLessonLabel = pathLessonLabel,
+                pathLessonTier = pathLessonTier,
                 levelExercises = exercisesForLevel,
                 levelCurrentIndex = 0,
                 levelScore = 0,
@@ -540,6 +570,8 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 selectedLearningLevel = null,
                 pathLessonModuleId = null,
                 pathLessonChapter = null,
+                pathLessonLabel = null,
+                pathLessonTier = null,
                 levelExercises = emptyList(),
                 levelCurrentIndex = 0,
                 levelScore = 0,
@@ -614,8 +646,12 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                         repository.saveLessonScore(moduleId, level, percentage)
                     }
                 }
+                // Les statistiques de palier (XP, trophées, déblocage) suivent le
+                // **palier** 1..6, pas la position du nœud : un chapitre de 30
+                // termes a 15 nœuds mais reste borné à 6 paliers de difficulté.
+                val tier = state.pathLessonTier ?: level
                 val justUnlocked = repository.recordLevelCompletion(
-                    level = level,
+                    level = tier,
                     scorePercentage = percentage,
                     pointsEarned = state.levelScore,
                     totalQuestions = total,
@@ -623,11 +659,11 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 )
                 repository.earnChest(ChestSource.QUIZ, correct)
                 val freshTrophies = repository.claimNewTrophies()
-                if (justUnlocked && level < 6) {
-                    val nextLevelObj = com.aistudio.medlingua.dzmed.domain.learning.LearningLevel.fromNumber(level + 1)
+                if (justUnlocked && tier < 6) {
+                    val nextLevelObj = com.aistudio.medlingua.dzmed.domain.learning.LearningLevel.fromNumber(tier + 1)
                     com.aistudio.medlingua.dzmed.service.NotificationHelper.showLevelUnlockedNotification(
                         app,
-                        level + 1,
+                        tier + 1,
                         nextLevelObj.titleFr,
                         lang = _uiState.value.currentLanguage
                     )

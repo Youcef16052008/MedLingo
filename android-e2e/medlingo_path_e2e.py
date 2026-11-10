@@ -3,10 +3,13 @@
 Scénario (déterministe, sans LLM) :
   1. relance l'app et attend l'onglet Parcours ;
   2. vérifie que le module affiché liste ses **chapitres réels** (`N chapitres`,
-     total de leçons = 6 x N) et qu'aucun module n'affiche « 0 chapitres » ;
-  3. tape le chapitre « Angiologie » (Anatomie) → sa page dédiée s'ouvre avec
-     les 6 nœuds L1 → L6 (L1 jouable, les suivants verrouillés, L6 = BOSS) ;
-  4. tape L1 et vérifie que la leçon s'ouvre (« Question 1 / 8 »).
+     total de leçons > 0) et qu'aucun module n'affiche « 0 chapitres » ;
+  3. vérifie le découpage du chapitre « Angiologie » : 38 termes → 13 leçons de
+     3 termes + 7 révisions, soit 20 nœuds (règle « 3 termes par leçon ») ;
+  4. tape le chapitre → sa page dédiée s'ouvre avec Leçon 1 jouable, Leçon 2
+     verrouillée et Révision 1 (obligatoire) verrouillée — plus aucun « BOSS » ;
+  5. tape Leçon 1 et vérifie que la leçon s'ouvre (« Question 1 / 8 » et
+     l'en-tête « Leçon 1 · 3 termes »).
 
 Usage : uv run python medlingo_path_e2e.py
 """
@@ -27,6 +30,13 @@ SERIAL = "emulator-5554"
 ADB = r"C:\Users\pc\AppData\Local\Android\Sdk\platform-tools\adb.exe"
 PKG = "com.aistudio.medlingua.dzmed"
 ACTIVITY = f"{PKG}/.MainActivity"
+
+# Chapitre Angiologie du seed : 38 termes → 13 leçons (12×3 + 2 + 2) et
+# 7 révisions (une après chaque paire, la dernière seule).
+ANGIO_TERMS = 38
+ANGIO_LESSONS = 13
+ANGIO_REVIEWS = 7
+ANGIO_NODES = ANGIO_LESSONS + ANGIO_REVIEWS
 
 failures: list[str] = []
 checks = 0
@@ -76,9 +86,9 @@ async def settle(driver, seconds: float = 1.2):
 
 
 async def main() -> int:
-    print("[0] Chapitre Angiologie remis à zéro (L1 jouable, L2..L6 verrouillées)")
+    print("[0] Chapitre Angiologie remis à zéro (Leçon 1 jouable, la suite verrouillée)")
     hide_system_dialogs()
-    reset_chapter_progress(seed_l1_l2=False)
+    reset_chapter_progress(seed_l1=False)
     subprocess.run([ADB, "shell", "am", "start", "-n", ACTIVITY], check=False)
 
     client = AdbClient()
@@ -103,12 +113,33 @@ async def main() -> int:
     for text, match in banners[:4]:
         chapters, done, total = (int(v) for v in match.groups())
         check(
-            chapters > 0 and total == chapters * 6 and done <= total,
-            f"cohérence unité « {text} » ({chapters} chapitres x 6 = {total})",
+            chapters > 0 and total > 0 and done <= total,
+            f"cohérence unité « {text} » ({chapters} chapitres, {total} nœuds)",
         )
     check("Angiologie" in texts(screen), "le chapitre réel « Angiologie » est listé")
 
-    # --- 3. Ouvrir la page du chapitre Angiologie → 6 nœuds ------------------
+    # --- 2b. Découpage « 3 termes par leçon » visible dans la liste ---------
+    print("\n[2b] Découpage du chapitre (leçons de 3 termes + révisions)")
+    row_info = re.compile(
+        r"^(\d+) leçons \+ (\d+) révisions · (\d+)/(\d+) · moyenne (\d+)%$"
+    )
+    infos = [row_info.match(t) for t in texts(screen) if row_info.match(t)]
+    angio = next(
+        (
+            m
+            for m in infos
+            if tuple(int(v) for v in m.groups())
+            == (ANGIO_LESSONS, ANGIO_REVIEWS, 0, ANGIO_NODES, 0)
+        ),
+        None,
+    )
+    check(
+        angio is not None,
+        f"Angiologie affiche « {ANGIO_LESSONS} leçons + {ANGIO_REVIEWS} révisions · "
+        f"0/{ANGIO_NODES} · moyenne 0% » (vu {[m.group(0) for m in infos][:3]})",
+    )
+
+    # --- 3. Ouvrir la page du chapitre Angiologie ---------------------------
     print("\n[3] Ouverture du chapitre Angiologie → page de leçons")
     chapter_row = find(screen, "Angiologie", exact=True)[0]
     cx, cy = center(chapter_row)
@@ -122,47 +153,70 @@ async def main() -> int:
         "Leçons du chapitre" in texts(screen),
         "l'en-tête « Leçons du chapitre » est affiché",
     )
-
-    def node_descs(current) -> dict[int, str]:
-        found: dict[int, str] = {}
-        for el in current.ui_elements:
-            desc = (el.get("content-desc") or "").strip()
-            match = re.match(r"^Leçon (\d)", desc)
-            if match:
-                found[int(match.group(1))] = desc
-        return found
-
-    # Les 6 nœuds dépassent la hauteur visible : on accumule sur plusieurs écrans
-    # (le libellé « BOSS » est sous le 6e nœud, donc plus bas que son cercle).
-    nodes: dict[int, str] = {}
-    seen_texts: set[str] = set()
-    for _ in range(4):
-        nodes.update(node_descs(screen))
-        seen_texts.update(texts(screen))
-        if sorted(nodes) == [1, 2, 3, 4, 5, 6] and "BOSS" in seen_texts:
-            break
-        await driver.swipe(360, 1300, 360, 700, duration_ms=400)
-        screen = await settle(driver, 1.2)
-    print("    descs:", {k: v for k, v in sorted(nodes.items())})
+    joined = " | ".join(texts(screen))
     check(
-        sorted(nodes) == [1, 2, 3, 4, 5, 6],
-        f"les 6 leçons du chapitre sont présentes (vu {sorted(nodes)})",
+        f"0/{ANGIO_NODES} leçons" in joined,
+        f"la page du chapitre affiche 0/{ANGIO_NODES} leçons",
     )
-    check("BOSS" in seen_texts, "le 6e nœud est marqué BOSS")
-    locked = [lvl for lvl, desc in nodes.items() if "verrouillée" in desc]
-    check(locked == [2, 3, 4, 5, 6], f"les leçons 2 à 6 sont verrouillées (vu {locked})")
-    playable = [lvl for lvl, desc in nodes.items() if "verrouillée" not in desc]
-    check(playable == [1], f"seule L1 est jouable (vu {playable})")
 
-    # --- 4. Ouvrir la leçon L1 ---------------------------------------------
-    print("\n[4] Ouverture de la leçon L1")
+    # --- 3b. Les nœuds : Leçon 1 jouable, Leçon 2 et Révision 1 verrouillées -
+    print("\n[3b] Nœuds du chapitre : Leçon 1, Leçon 2, Révision 1")
+    seen_descs: dict[str, str] = {}
+    seen_texts: set[str] = set()
+    for _ in range(5):
+        for el in screen.ui_elements:
+            desc = (el.get("content-desc") or "").strip()
+            if desc.startswith(("Leçon ", "Révision ")):
+                seen_descs[desc.split(" · ")[0]] = desc
+            text = (el.get("text") or "").strip()
+            if text:
+                seen_texts.add(text)
+        # La légende du nœud (« 6 termes · obligatoire ») est sous le cercle :
+        # elle peut être hors écran quand seul le cercle est visible.
+        if {"Leçon 1", "Leçon 2", "Révision 1"} <= set(seen_descs) and any(
+            "obligatoire" in t or "facultative" in t for t in seen_texts
+        ):
+            break
+        await driver.swipe(360, 1300, 360, 800, duration_ms=350)
+        screen = await settle(driver, 1.0)
+    print("    descs:", {k: v for k, v in sorted(seen_descs.items())[:6]})
+    print(
+        "    légendes:",
+        sorted(t for t in seen_texts if "termes" in t and "·" in t)[:6],
+    )
+
+    check(
+        seen_descs.get("Leçon 1", "") == "Leçon 1 · 3 termes · disponible",
+        f"Leçon 1 est jouable avec 3 termes ({seen_descs.get('Leçon 1')!r})",
+    )
+    check(
+        seen_descs.get("Leçon 2", "") == "Leçon 2 · 3 termes · verrouillée",
+        f"Leçon 2 est verrouillée ({seen_descs.get('Leçon 2')!r})",
+    )
+    check(
+        seen_descs.get("Révision 1", "") == "Révision 1 · 6 termes · verrouillée",
+        f"Révision 1 (6 termes) suit les deux leçons ({seen_descs.get('Révision 1')!r})",
+    )
+    check(
+        any("obligatoire" in t for t in seen_texts),
+        "la révision est marquée « obligatoire » tant que les leçons ne sont pas réussies",
+    )
+    check(
+        not any("BOSS" in t for t in seen_texts),
+        "plus aucun nœud « BOSS » (remplacé par les révisions)",
+    )
+
+    # --- 4. Ouvrir la leçon 1 ----------------------------------------------
+    print("\n[4] Ouverture de la Leçon 1")
     for _ in range(3):
         await driver.swipe(360, 700, 360, 1400, duration_ms=300)
         await asyncio.sleep(0.3)
     screen = await settle(driver, 1.2)
-    l1 = [el for el in screen.ui_elements if (el.get("content-desc") or "").strip() == nodes.get(1)]
-    if not l1:
-        l1 = [el for el in screen.ui_elements if "Leçon 1 · disponible" in (el.get("content-desc") or "")]
+    l1 = [
+        el
+        for el in screen.ui_elements
+        if (el.get("content-desc") or "").strip().startswith("Leçon 1 · 3 termes")
+    ]
     if l1:
         sx, sy = center(l1[0])
         await driver.tap(sx, sy)
@@ -170,11 +224,15 @@ async def main() -> int:
         quiz = [t for t in texts(screen) if re.match(r"^Question \d+ / \d+", t)]
         check(bool(quiz), f"l'écran de leçon s'ouvre ({quiz[0] if quiz else 'aucun'})")
         check(
+            any(t.startswith("Leçon 1 · 3 termes") for t in texts(screen)),
+            "l'en-tête de la leçon affiche « Leçon 1 · 3 termes »",
+        )
+        check(
             not any("Aucun exercice" in t or "no_exercises" in t for t in texts(screen)),
             "la leçon n'est pas vide (pas de « no_exercises »)",
         )
     else:
-        check(False, "impossible de taper L1 (nœud introuvable)")
+        check(False, "impossible de taper Leçon 1 (nœud introuvable)")
 
     with open("medlingo_path_e2e.png", "wb") as fh:
         fh.write(screen.screenshot_bytes)
