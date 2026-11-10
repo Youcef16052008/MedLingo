@@ -43,6 +43,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -51,7 +53,10 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aistudio.medlingua.dzmed.localization.Language
 import com.aistudio.medlingua.dzmed.localization.Strings
+import com.aistudio.medlingua.dzmed.domain.explore.ExploreMode
+import com.aistudio.medlingua.dzmed.domain.explore.TermPoolBuilder
 import com.aistudio.medlingua.dzmed.ui.components.RewardPopup
+import com.aistudio.medlingua.dzmed.ui.screens.ExploreScreen
 import com.aistudio.medlingua.dzmed.ui.screens.FlashcardsScreen
 import com.aistudio.medlingua.dzmed.ui.screens.ModulesScreen
 import com.aistudio.medlingua.dzmed.ui.screens.PathScreen
@@ -96,6 +101,7 @@ enum class MainDestination(
 class MainActivity : ComponentActivity() {
     private var pendingTargetScreen = mutableStateOf<String?>(null)
 
+    @OptIn(androidx.compose.ui.ExperimentalComposeUiApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -104,7 +110,19 @@ class MainActivity : ComponentActivity() {
             MyApplicationTheme {
                 val darkTheme = androidx.compose.foundation.isSystemInDarkTheme()
                 var introVisible by remember { mutableStateOf(true) }
-                Box(modifier = Modifier.fillMaxSize()) {
+                // E2E (Artemis / uiautomator) : Compose dessine tout dans une
+                // seule vue, donc `Modifier.testTag` n'apparaît pas dans l'arbre
+                // d'accessibilité. En debug uniquement, on publie les tags en
+                // `resource-id` pour que les tests puissent cibler les composants ;
+                // les builds de production gardent un arbre d'accessibilité minimal.
+                val rootModifier = if (BuildConfig.DEBUG) {
+                    Modifier
+                        .fillMaxSize()
+                        .semantics { testTagsAsResourceId = true }
+                } else {
+                    Modifier.fillMaxSize()
+                }
+                Box(modifier = rootModifier) {
                     MedLinguaAppContent(
                         initialTarget = pendingTargetScreen.value,
                         onTargetHandled = { pendingTargetScreen.value = null }
@@ -151,6 +169,7 @@ fun MedLinguaAppContent(
     var showFlash by remember { mutableStateOf(false) }
     var showStory by remember { mutableStateOf(false) }
     var showReview by remember { mutableStateOf(false) }  // LOT2/WS2.1 : hub révisions
+    var showExplore by remember { mutableStateOf(false) }  // exploration multi-modules
     val lang = uiState.currentLanguage
 
     // Runtime Permission for Notifications (Android 13+ / Tiramisu)
@@ -194,12 +213,16 @@ fun MedLinguaAppContent(
 
     // BackHandler: ferme le quiz/les flashcards, sinon revient au Parcours
     BackHandler(
-        enabled = showQuiz || showFlash || showStory || showReview || currentDestination != MainDestination.PATH
+        enabled = showQuiz || showFlash || showStory || showReview || showExplore || currentDestination != MainDestination.PATH
     ) {
         when {
             showQuiz -> showQuiz = false
             showFlash -> showFlash = false
             showReview -> showReview = false
+            showExplore -> {
+                viewModel.exitExploreSession()
+                showExplore = false
+            }
             // Séance histoire : suspendue (progression déjà sauvegardée) + TTS coupé.
             showStory -> {
                 (context.applicationContext as? MedLinguaApp)?.ttsManager?.stop()
@@ -335,7 +358,17 @@ fun MedLinguaAppContent(
                             uiState = uiState,
                             onOpenReview = { showFlash = true },
                             onOpenQuiz = { showQuiz = true },
-                            onOpenWeak = { showFlash = true },
+                            onOpenWeak = {
+                                // « Termes faibles » = cartes jamais notées 4–5 :
+                                // exactement le mode À revoir de l'exploration.
+                                viewModel.startExploreSession(
+                                    modules = emptySet(),
+                                    mode = ExploreMode.TO_REVIEW,
+                                    count = TermPoolBuilder.DEFAULT_COUNT,
+                                    seed = System.currentTimeMillis()
+                                )
+                                showExplore = true
+                            },
                             onOpenExam = { showQuiz = true }
                         )
                     }
@@ -368,7 +401,16 @@ fun MedLinguaAppContent(
                                 // onSpeak always carries termEn: force the English voice
                                 viewModel.speak(termText, lang = "en")
                             },
-                            onToggleBookmark = { viewModel.toggleBookmark(it) }
+                            onToggleBookmark = { viewModel.toggleBookmark(it) },
+                            onStartExplore = { modules, mode, count ->
+                                viewModel.startExploreSession(
+                                    modules = modules,
+                                    mode = mode,
+                                    count = count,
+                                    seed = System.currentTimeMillis()
+                                )
+                                showExplore = true
+                            }
                         )
                     }
                     MainDestination.PROFILE -> {
@@ -420,9 +462,36 @@ fun MedLinguaAppContent(
                     }
                 }
 
-                // ---- Overlay : quiz / leçon plein écran ----
-                if (showQuiz) {
+                // ---- Overlay : exploration multi-modules (écrit + vocal) ----
+                if (showExplore) {
                     Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        ExploreScreen(
+                            uiState = uiState,
+                            onAnswerChange = { viewModel.setExploreAnswer(it) },
+                            onCheck = { viewModel.checkExploreAnswer() },
+                            onReveal = { viewModel.revealExploreAnswer() },
+                            onRate = { viewModel.rateExplore(it) },
+                            onRestart = { viewModel.restartExploreSession() },
+                            onExit = {
+                                viewModel.exitExploreSession()
+                                showExplore = false
+                            },
+                            onSpeak = { text -> viewModel.speak(text, lang = "en") },
+                            onVoiceResult = { text ->
+                                viewModel.setExploreAnswer(text)
+                                viewModel.setExploreVoiceStatus(null)
+                            },
+                            onVoiceStatus = { viewModel.setExploreVoiceStatus(it) }
+                        )
+                    }
+                }
+
+                // ---- Overlay : quiz / leçon plein écran ----
+                if (showQuiz) {                    Box(
                         modifier = Modifier
                             .fillMaxSize()
                             .background(Color.White)

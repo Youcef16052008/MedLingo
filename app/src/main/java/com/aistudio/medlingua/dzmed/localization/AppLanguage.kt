@@ -672,7 +672,95 @@ object Strings {
         "story_summary_mistakes" to mapOf("ar" to "للمراجعة", "fr" to "À revoir", "en" to "To review"),
         "story_summary_production" to mapOf("ar" to "محاولة إنتاج", "fr" to "Production essayée", "en" to "Production attempted"),
         "story_summary_phrases" to mapOf("ar" to "تعبيرات لإعادة العمل", "fr" to "Expressions à retravailler", "en" to "Expressions to rework"),
-        "story_quit_resume" to mapOf("ar" to "تم حفظ الجلسة: يمكنك استئنافها.", "fr" to "La séance est enregistrée : tu pourras la reprendre.", "en" to "Your session is saved — you can resume it.")
+        "story_quit_resume" to mapOf("ar" to "تم حفظ الجلسة: يمكنك استئنافها.", "fr" to "La séance est enregistrée : tu pourras la reprendre.", "en" to "Your session is saved — you can resume it."),
+        // === Exploration multi-modules + correction d'écriture / vocal ===
+        "explore_title" to mapOf("ar" to "استكشاف المعجم الطبي", "fr" to "Explorer le lexique", "en" to "Explore the lexicon"),
+        "explore_close" to mapOf("ar" to "إغلاق", "fr" to "Fermer", "en" to "Close"),
+        "explore_back" to mapOf("ar" to "رجوع", "fr" to "Retour", "en" to "Back"),
+        "explore_modules_short" to mapOf("ar" to "مقرر", "fr" to "module(s)", "en" to "module(s)"),
+        "explore_term_fr" to mapOf("ar" to "المصطلح بالفرنسية", "fr" to "Terme en français", "en" to "French term"),
+        "explore_write_hint" to mapOf(
+            "ar" to "اكتب المصطلح بالإنجليزية قبل قلب البطاقة",
+            "fr" to "Écris le mot en anglais avant de retourner la carte",
+            "en" to "Write the English word before flipping the card"
+        ),
+        "explore_write_placeholder" to mapOf("ar" to "المصطلح بالإنجليزية…", "fr" to "Mot anglais…", "en" to "English word…"),
+        "explore_voice" to mapOf("ar" to "إملاء صوتي", "fr" to "Dicter", "en" to "Dictate"),
+        "explore_voice_prompt" to mapOf("ar" to "قل المصطلح بالإنجليزية", "fr" to "Dis le mot en anglais", "en" to "Say the English word"),
+        "explore_voice_listening" to mapOf("ar" to "🎙️ جاري الاستماع…", "fr" to "🎙️ Écoute en cours…", "en" to "🎙️ Listening…"),
+        "explore_voice_unavailable" to mapOf(
+            "ar" to "التعرّف الصوتي غير متوفر على هذا الجهاز — اكتب المصطلح.",
+            "fr" to "Reconnaissance vocale indisponible sur cet appareil — écris le mot.",
+            "en" to "Voice recognition is unavailable on this device — type the word."
+        ),
+        "explore_voice_denied" to mapOf(
+            "ar" to "تم رفض الميكروفون — اسمح به أو اكتب المصطلح.",
+            "fr" to "Micro refusé — autorise le micro ou écris le mot.",
+            "en" to "Microphone denied — allow it or type the word."
+        ),
+        "explore_voice_nothing" to mapOf(
+            "ar" to "لم يُسمع شيء — أعد المحاولة أو اكتب المصطلح.",
+            "fr" to "Rien entendu — réessaie ou écris le mot.",
+            "en" to "Nothing heard — try again or type the word."
+        ),
+        "explore_reveal" to mapOf("ar" to "إظهار الإجابة", "fr" to "Voir la réponse", "en" to "Show answer"),
+        "explore_check" to mapOf("ar" to "تحقق", "fr" to "Vérifier", "en" to "Check"),
+        "explore_verdict_exact" to mapOf("ar" to "مطابق تماماً!", "fr" to "Exact !", "en" to "Exact!"),
+        "explore_verdict_accent" to mapOf("ar" to "شبه مثالي (حركات/حالة الأحرف)", "fr" to "Presque parfait (accent/casse)", "en" to "Almost perfect (accent/case)"),
+        "explore_verdict_near" to mapOf("ar" to "قريب — بعض الأحرف", "fr" to "Presque — quelques lettres", "en" to "Close — a few letters"),
+        "explore_verdict_wrong" to mapOf("ar" to "ليس بعد", "fr" to "Pas encore", "en" to "Not yet"),
+        "explore_verdict_empty" to mapOf("ar" to "إجابة فارغة", "fr" to "Réponse vide", "en" to "Empty answer"),
+        "explore_verdict_revealed" to mapOf("ar" to "تم إظهار الإجابة", "fr" to "Réponse révélée", "en" to "Answer revealed"),
+        "explore_expected" to mapOf("ar" to "الإجابة المتوقعة", "fr" to "Réponse attendue", "en" to "Expected answer"),
+        "explore_issues" to mapOf("ar" to "ما رصده المصحّح", "fr" to "Ce que le correcteur a vu", "en" to "What the corrector found"),
+        "explore_suggested_quality" to mapOf("ar" to "الدرجة المقترحة: {q}/5", "fr" to "Note proposée : {q}/5", "en" to "Suggested grade: {q}/5"),
+        "explore_issue_empty" to mapOf("ar" to "لا توجد إجابة", "fr" to "Aucune réponse", "en" to "No answer"),
+        "explore_issue_accent" to mapOf("ar" to "حركة ناقصة أو زائدة", "fr" to "Accent manquant ou en trop", "en" to "Missing or extra accent"),
+        "explore_issue_case" to mapOf("ar" to "حالة الأحرف", "fr" to "Majuscule/minuscule", "en" to "Letter case"),
+        "explore_issue_article" to mapOf("ar" to "أداة التعريف (the/a/an)", "fr" to "Article (the/a/an)", "en" to "Article (the/a/an)"),
+        "explore_issue_plural" to mapOf("ar" to "الجمع (-s)", "fr" to "Pluriel (-s)", "en" to "Plural (-s)"),
+        "explore_issue_hyphen" to mapOf("ar" to "الشرطة/الفراغ", "fr" to "Trait d'union / espace", "en" to "Hyphen / space"),
+        "explore_issue_missing" to mapOf("ar" to "أحرف ناقصة", "fr" to "Lettre(s) manquante(s)", "en" to "Missing letter(s)"),
+        "explore_issue_extra" to mapOf("ar" to "أحرف زائدة", "fr" to "Lettre(s) en trop", "en" to "Extra letter(s)"),
+        "explore_issue_substituted" to mapOf("ar" to "أحرف مبدّلة", "fr" to "Lettre(s) remplacée(s)", "en" to "Substituted letter(s)"),
+        "explore_issue_word_order" to mapOf("ar" to "ترتيب الكلمات", "fr" to "Ordre des mots", "en" to "Word order"),
+        "explore_issue_wrong_language" to mapOf("ar" to "كلمة فرنسية بدل الإنجليزية", "fr" to "Mot français au lieu de l'anglais", "en" to "French word instead of English"),
+        "explore_issue_meaning" to mapOf("ar" to "المعنى غير مستحضر", "fr" to "Sens non retrouvé", "en" to "Meaning not recalled"),
+        "explore_rate" to mapOf(
+            "ar" to "تقييمك (يحدّث المراجعة المتباعدة)",
+            "fr" to "Ta note (met à jour la révision espacée)",
+            "en" to "Your grade (updates spaced repetition)"
+        ),
+        "explore_summary_title" to mapOf("ar" to "انتهت الجلسة", "fr" to "Session terminée", "en" to "Session complete"),
+        "explore_summary_sub" to mapOf("ar" to "تم إنجاز {n} بطاقة", "fr" to "{n} cartes travaillées", "en" to "{n} cards completed"),
+        "explore_summary_average" to mapOf("ar" to "المعدل /100", "fr" to "Score moyen /100", "en" to "Average score /100"),
+        "explore_summary_correct" to mapOf("ar" to "ناجحة", "fr" to "Réussies", "en" to "Correct"),
+        "explore_summary_restart" to mapOf("ar" to "سحب جديد", "fr" to "Nouveau tirage", "en" to "New draw"),
+        "explore_summary_exit" to mapOf("ar" to "خروج", "fr" to "Quitter", "en" to "Quit"),
+        "explore_empty_title" to mapOf("ar" to "لا توجد بطاقات لهذا الاختيار", "fr" to "Aucune carte pour ce choix", "en" to "No cards for this selection"),
+        "explore_empty_hint" to mapOf(
+            "ar" to "غيّر الوضع أو المقررات: «للمراجعة» يحتوي فقط على البطاقات التي أخطأت فيها، و«تم إنجازها» على ما درسته.",
+            "fr" to "Change de mode ou de modules : « À revoir » ne contient que les cartes ratées, « Déjà faits » celles déjà étudiées.",
+            "en" to "Change the mode or modules: “To review” only holds missed cards, “Done” only studied ones."
+        ),
+        "explore_max_hint" to mapOf("ar" to "الحد الأقصى {n} بطاقة في الجلسة", "fr" to "Maximum {n} cartes par session", "en" to "Maximum {n} cards per session"),
+        "explore_panel_title" to mapOf("ar" to "استكشاف متعدد المقررات", "fr" to "Exploration multi-modules", "en" to "Multi-module exploration"),
+        "explore_panel_sub" to mapOf(
+            "ar" to "اختر عدة مقررات ووضعاً وكمية (حتى 300).",
+            "fr" to "Choisis plusieurs modules, un mode et une quantité (max 300).",
+            "en" to "Pick several modules, a mode and a quantity (max 300)."
+        ),
+        "explore_panel_open" to mapOf("ar" to "إعداد الاستكشاف", "fr" to "Configurer l'exploration", "en" to "Set up exploration"),
+        "explore_panel_hide" to mapOf("ar" to "إخفاء", "fr" to "Masquer", "en" to "Hide"),
+        "explore_modules_label" to mapOf("ar" to "المقررات (اختيار متعدد)", "fr" to "Modules (plusieurs choix)", "en" to "Modules (multi-select)"),
+        "explore_count_label" to mapOf("ar" to "الكمية", "fr" to "Quantité", "en" to "Quantity"),
+        "explore_available" to mapOf("ar" to "{n} بطاقة متاحة", "fr" to "{n} cartes disponibles", "en" to "{n} cards available"),
+        "explore_launch" to mapOf("ar" to "ابدأ الاستكشاف", "fr" to "Lancer l'exploration", "en" to "Start exploring"),
+        "explore_module_action" to mapOf("ar" to "استكشف", "fr" to "Explorer", "en" to "Explore"),
+        "explore_mode_all" to mapOf("ar" to "الكل", "fr" to "Tous", "en" to "All"),
+        "explore_mode_random" to mapOf("ar" to "عشوائي", "fr" to "Au hasard", "en" to "Random"),
+        "explore_mode_done" to mapOf("ar" to "تم إنجازها", "fr" to "Déjà faits", "en" to "Already done"),
+        "explore_mode_review" to mapOf("ar" to "للمراجعة", "fr" to "À revoir", "en" to "To review")
     )
 
     fun get(key: String, language: Language): String {

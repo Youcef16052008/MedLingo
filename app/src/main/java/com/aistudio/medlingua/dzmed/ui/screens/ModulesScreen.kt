@@ -65,6 +65,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aistudio.medlingua.dzmed.data.initial.InitialData
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
+import com.aistudio.medlingua.dzmed.domain.explore.ExploreMode
+import com.aistudio.medlingua.dzmed.domain.explore.TermPoolBuilder
 import com.aistudio.medlingua.dzmed.ui.components.TermIllustrationView
 import com.aistudio.medlingua.dzmed.localization.Language
 import com.aistudio.medlingua.dzmed.localization.Strings
@@ -81,11 +83,25 @@ fun ModulesScreen(
     onSearchQueryChange: (String) -> Unit,
     onSpeak: (String) -> Unit,
     onToggleBookmark: (MedicalTermEntity) -> Unit,
+    onStartExplore: (Set<String>, ExploreMode, Int) -> Unit = { _, _, _ -> },
     modifier: Modifier = Modifier
 ) {
     val lang = uiState.currentLanguage
     // 0 = Vue Figma Catalogue des Modules; 1 = Vue Dictionnaire / Lexique des Termes
     var selectedViewTab by remember { mutableIntStateOf(if (uiState.selectedModuleFilter != "All") 1 else 0) }
+
+    // === Panneau d'exploration multi-modules ===
+    var exploreExpanded by remember { mutableStateOf(true) }
+    var exploreMode by remember { mutableStateOf(ExploreMode.RANDOM) }
+    var exploreModules by remember { mutableStateOf(emptySet<String>()) }
+    var exploreCount by remember { mutableIntStateOf(TermPoolBuilder.DEFAULT_COUNT) }
+    val progressByTermId = remember(uiState.flashcardProgressList) {
+        uiState.flashcardProgressList.associateBy { it.termId }
+    }
+    val exploreCounts = remember(uiState.allTerms, progressByTermId, exploreModules) {
+        TermPoolBuilder.countsByMode(uiState.allTerms, progressByTermId, exploreModules)
+    }
+    val exploreAvailable = exploreCounts[exploreMode] ?: 0
 
     // Module progress = terms of the module whose last review quality was >= 3
     // (ModuleInfo.progress is a static 0f seed value and never moved)
@@ -273,6 +289,27 @@ fun ModulesScreen(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 item {
+                    ExplorePanel(
+                        lang = lang,
+                        expanded = exploreExpanded,
+                        onToggleExpanded = { exploreExpanded = !exploreExpanded },
+                        mode = exploreMode,
+                        onModeChange = { exploreMode = it },
+                        selectedModules = exploreModules,
+                        onToggleModule = { module ->
+                            exploreModules = if (module in exploreModules) exploreModules - module
+                            else exploreModules + module
+                        },
+                        onClearModules = { exploreModules = emptySet() },
+                        counts = exploreCounts,
+                        available = exploreAvailable,
+                        count = exploreCount,
+                        onCountChange = { exploreCount = it },
+                        onLaunch = { onStartExplore(exploreModules, exploreMode, exploreCount) }
+                    )
+                }
+
+                item {
                     // Clinical Faculty Banner
                     Card(
                         shape = RoundedCornerShape(18.dp),
@@ -337,6 +374,13 @@ fun ModulesScreen(
                             onModuleFilterChange(mod.titleFr)
                             onChapterFilterChange(chapterName)
                             selectedViewTab = 1
+                        },
+                        onExplore = {
+                            onStartExplore(
+                                setOf(mod.titleFr),
+                                ExploreMode.RANDOM,
+                                TermPoolBuilder.DEFAULT_COUNT
+                            )
                         }
                     )
                 }
@@ -552,7 +596,8 @@ private fun FigmaModuleDetailedCard(
     currentLanguage: Language,
     progress: Float = module.progress,
     onOpenModuleTerms: () -> Unit,
-    onChapterClick: (String) -> Unit
+    onChapterClick: (String) -> Unit,
+    onExplore: () -> Unit = {}
 ) {
     Card(
         shape = RoundedCornerShape(20.dp),
@@ -680,6 +725,25 @@ private fun FigmaModuleDetailedCard(
                     )
                     Text(text = "→", fontSize = 14.sp, color = Color.White)
                 }
+            }
+
+            OutlinedButton(
+                onClick = onExplore,
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(38.dp)
+                    .testTag("explore_module_random_${module.id}")
+            ) {
+                Text(text = "🎲", fontSize = 13.sp)
+                Spacer(Modifier.width(6.dp))
+                Text(
+                    text = Strings.get("explore_module_action", currentLanguage) +
+                        " · ${TermPoolBuilder.DEFAULT_COUNT}",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = MedGreenDark
+                )
             }
         }
     }
@@ -936,5 +1000,214 @@ fun MedicalTermCard(
                 }
             }
         }
+    }
+}
+
+// ========================================================
+// EXPLORATION MULTI-MODULES (modes + quantité + lancement)
+// ========================================================
+@Composable
+private fun ExplorePanel(
+    lang: Language,
+    expanded: Boolean,
+    onToggleExpanded: () -> Unit,
+    mode: ExploreMode,
+    onModeChange: (ExploreMode) -> Unit,
+    selectedModules: Set<String>,
+    onToggleModule: (String) -> Unit,
+    onClearModules: () -> Unit,
+    counts: Map<ExploreMode, Int>,
+    available: Int,
+    count: Int,
+    onCountChange: (Int) -> Unit,
+    onLaunch: () -> Unit
+) {
+    Card(
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .testTag("explore_panel")
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(14.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onToggleExpanded() }
+                    .testTag("explore_panel_header"),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(36.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFFE3F5EC)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = "🧭", fontSize = 18.sp)
+                }
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = Strings.get("explore_panel_title", lang),
+                        fontWeight = FontWeight.ExtraBold,
+                        fontSize = 14.sp,
+                        color = Color(0xFF0C1414)
+                    )
+                    Text(
+                        text = Strings.get("explore_panel_sub", lang),
+                        fontSize = 10.sp,
+                        color = Color(0xFF6B7877)
+                    )
+                }
+                Text(
+                    text = Strings.get(
+                        if (expanded) "explore_panel_hide" else "explore_panel_open",
+                        lang
+                    ),
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = MedGreenDark
+                )
+            }
+
+            AnimatedVisibility(visible = expanded) {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    // --- Mode ---
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        ExploreMode.entries.forEach { entry ->
+                            ExploreChip(
+                                label = exploreModeLabel(entry, lang) + " · " + (counts[entry] ?: 0),
+                                selected = entry == mode,
+                                onClick = { onModeChange(entry) },
+                                tag = "explore_mode_" + entry.name.lowercase()
+                            )
+                        }
+                    }
+
+                    // --- Modules (multi-sélection) ---
+                    Text(
+                        text = Strings.get("explore_modules_label", lang),
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF6B7877)
+                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        ExploreChip(
+                            label = Strings.get("explore_mode_all", lang),
+                            selected = selectedModules.isEmpty(),
+                            onClick = onClearModules,
+                            tag = "explore_modules_all"
+                        )
+                        InitialData.modulesList.forEach { mod ->
+                            ExploreChip(
+                                label = if (lang == Language.ARABIC) mod.titleAr else mod.titleFr,
+                                selected = mod.titleFr in selectedModules,
+                                onClick = { onToggleModule(mod.titleFr) },
+                                tag = "explore_module_chip_" + mod.id
+                            )
+                        }
+                    }
+
+                    // --- Quantité ---
+                    Text(
+                        text = Strings.get("explore_count_label", lang),
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF6B7877)
+                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        TermPoolBuilder.COUNTS.forEach { quantity ->
+                            ExploreChip(
+                                label = quantity.toString(),
+                                selected = quantity == count,
+                                onClick = { onCountChange(quantity) },
+                                tag = "explore_count_" + quantity
+                            )
+                        }
+                    }
+
+                    Text(
+                        text = Strings.get("explore_available", lang)
+                            .replace("{n}", available.toString()),
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = if (available > 0) MedGreenDark else Color(0xFFDC2626),
+                        modifier = Modifier.testTag("explore_available_label")
+                    )
+                    ExploreLimitHint(lang)
+
+                    Button(
+                        onClick = onLaunch,
+                        enabled = available > 0,
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = MedGreenPrimary),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(44.dp)
+                            .testTag("explore_launch_btn")
+                    ) {
+                        // La quantité choisie apparaît sur le bouton : l'élève
+                        // sait combien de cartes la session va tirer.
+                        Text(
+                            text = Strings.get("explore_launch", lang) + " · " + count,
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.White
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ExploreChip(
+    label: String,
+    selected: Boolean,
+    onClick: () -> Unit,
+    tag: String
+) {
+    Box(
+        modifier = Modifier
+            .clip(RoundedCornerShape(12.dp))
+            .background(if (selected) MedGreenDark else Color(0xFFF0F7F4))
+            .border(
+                1.dp,
+                if (selected) MedGreenDark else Color(0xFFDFEAE4),
+                RoundedCornerShape(12.dp)
+            )
+            .clickable { onClick() }
+            .padding(horizontal = 10.dp, vertical = 6.dp)
+            .testTag(tag)
+    ) {
+        Text(
+            text = label,
+            fontSize = 11.sp,
+            fontWeight = FontWeight.Bold,
+            color = if (selected) Color.White else Color(0xFF475050)
+        )
     }
 }

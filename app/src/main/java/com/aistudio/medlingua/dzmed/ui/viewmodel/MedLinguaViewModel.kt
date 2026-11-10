@@ -16,6 +16,9 @@ import com.aistudio.medlingua.dzmed.data.local.entity.LeagueMemberEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
 import com.aistudio.medlingua.dzmed.domain.exercise.ExerciseSpec
+import com.aistudio.medlingua.dzmed.domain.explore.ExploreMode
+import com.aistudio.medlingua.dzmed.domain.explore.TermPoolBuilder
+import com.aistudio.medlingua.dzmed.domain.writing.WritingCorrector
 import com.aistudio.medlingua.dzmed.domain.gamification.ChestReward
 import com.aistudio.medlingua.dzmed.domain.gamification.ChestSource
 import com.aistudio.medlingua.dzmed.domain.gamification.FREEZE_COST_GEMS
@@ -130,7 +133,30 @@ data class UiState(
     /** Récompense à afficher dans la pop-up (spec §11). */
     val lastReward: RewardData? = null,
     /** Récompense tirée de la caisse ouverte dans la pop-up. */
-    val pendingChestReward: ChestReward? = null
+    val pendingChestReward: ChestReward? = null,
+    // === Exploration multi-modules + auto-correction d'écriture/vocal ===
+    /** Deck figé de la session d'exploration en cours (vide = pas de session). */
+    val exploreTerms: List<MedicalTermEntity> = emptyList(),
+    val exploreIndex: Int = 0,
+    val exploreMode: ExploreMode = ExploreMode.RANDOM,
+    /** Modules choisis ; vide = tous les modules. */
+    val exploreModules: List<String> = emptyList(),
+    val exploreRequestedCount: Int = TermPoolBuilder.DEFAULT_COUNT,
+    /** Nombre de cartes disponibles pour la configuration courante. */
+    val exploreAvailable: Int = 0,
+    /** Bilan de la session (atteinte quand [exploreIndex] >= taille du deck). */
+    val exploreFinished: Boolean = false,
+    val exploreCorrect: Int = 0,
+    val exploreAnswered: Int = 0,
+    val exploreScoreSum: Int = 0,
+    /** Saisie de l'élève pour la carte courante. */
+    val exploreAnswer: String = "",
+    /** Verdict du correcteur (null tant que la carte n'est pas vérifiée). */
+    val exploreVerdict: WritingCorrector.Result? = null,
+    /** La réponse a été révélée sans écrire (bouton « Voir la réponse »). */
+    val exploreRevealed: Boolean = false,
+    /** Message d'état de la reconnaissance vocale (indisponible, en écoute…). */
+    val exploreVoiceStatus: String? = null
 )
 
 class MedLinguaViewModel(application: Application) : AndroidViewModel(application) {
@@ -449,6 +475,125 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                 it.copy(
                     isCardFlipped = false,
                     activeFlashcardIndex = prev
+                )
+            }
+        }
+    }
+
+    // ========================================================
+    // EXPLORATION MULTI-MODULES + AUTO-CORRECTION ÉCRITE/VOCALE
+    // ========================================================
+
+    /**
+     * Ouvre une session d'exploration : deck figé (module(s) + mode + quantité)
+     * puis saisie/correction carte par carte.
+     *
+     * @param modules modules choisis ; ensemble vide = tous
+     * @param seed graine du tirage aléatoire (identique = même deck)
+     */
+    fun startExploreSession(
+        modules: Set<String>,
+        mode: ExploreMode,
+        count: Int,
+        seed: Long = 0L
+    ) {
+        val state = _uiState.value
+        val progress = state.flashcardProgressList.associateBy { it.termId }
+        val sanitized = TermPoolBuilder.sanitizeCount(count)
+        val deck = TermPoolBuilder.build(state.allTerms, progress, modules, mode, sanitized, seed)
+        val available = TermPoolBuilder.available(state.allTerms, progress, modules, mode).size
+        _uiState.update {
+            it.copy(
+                exploreTerms = deck,
+                exploreIndex = 0,
+                exploreMode = mode,
+                exploreModules = modules.toList(),
+                exploreRequestedCount = sanitized,
+                exploreAvailable = available,
+                exploreFinished = false,
+                exploreCorrect = 0,
+                exploreAnswered = 0,
+                exploreScoreSum = 0,
+                exploreAnswer = "",
+                exploreVerdict = null,
+                exploreRevealed = false,
+                exploreVoiceStatus = null,
+                isCardFlipped = false,
+                lastReviewResult = null
+            )
+        }
+    }
+
+    /** Relance la même configuration avec un nouveau tirage. */
+    fun restartExploreSession() {
+        val state = _uiState.value
+        startExploreSession(
+            modules = state.exploreModules.toSet(),
+            mode = state.exploreMode,
+            count = state.exploreRequestedCount,
+            seed = System.currentTimeMillis()
+        )
+    }
+
+    fun exitExploreSession() {
+        _uiState.update {
+            it.copy(
+                exploreTerms = emptyList(),
+                exploreIndex = 0,
+                exploreFinished = false,
+                exploreAnswer = "",
+                exploreVerdict = null,
+                exploreRevealed = false,
+                exploreVoiceStatus = null
+            )
+        }
+    }
+
+    fun setExploreAnswer(text: String) {
+        _uiState.update { it.copy(exploreAnswer = text) }
+    }
+
+    fun setExploreVoiceStatus(status: String?) {
+        _uiState.update { it.copy(exploreVoiceStatus = status) }
+    }
+
+    /** Corrige la saisie (ou le texte reconnu par le micro) contre le terme. */
+    fun checkExploreAnswer() {
+        val state = _uiState.value
+        val term = state.exploreTerms.getOrNull(state.exploreIndex) ?: return
+        val result = WritingCorrector.check(state.exploreAnswer, term.termEn, term.termFr)
+        SoundManager.play(if (result.isAccepted) SoundEffect.CORRECT else SoundEffect.WRONG)
+        _uiState.update { it.copy(exploreVerdict = result, exploreRevealed = true) }
+    }
+
+    /** Révèle la réponse sans écrire (l'élève s'auto-évalue). */
+    fun revealExploreAnswer() {
+        _uiState.update { it.copy(exploreRevealed = true, exploreVerdict = null) }
+    }
+
+    /** Enregistre la carte courante (SM-2) puis passe à la suivante. */
+    fun rateExplore(quality: Int) {
+        viewModelScope.launch {
+            val state = _uiState.value
+            val term = state.exploreTerms.getOrNull(state.exploreIndex) ?: return@launch
+            val result = repository.submitFlashcardRating(term.id, quality)
+            val freshTrophies = repository.claimNewTrophies()
+            val verdict = state.exploreVerdict
+            val nextIndex = state.exploreIndex + 1
+            _uiState.update {
+                it.copy(
+                    exploreIndex = nextIndex,
+                    exploreAnswered = it.exploreAnswered + 1,
+                    exploreCorrect = it.exploreCorrect + if (verdict?.isAccepted == true) 1 else 0,
+                    exploreScoreSum = it.exploreScoreSum + (verdict?.score ?: 0),
+                    exploreFinished = nextIndex >= it.exploreTerms.size,
+                    exploreAnswer = "",
+                    exploreVerdict = null,
+                    exploreRevealed = false,
+                    exploreVoiceStatus = null,
+                    isCardFlipped = false,
+                    lastReviewResult = result,
+                    trophies = it.trophies + freshTrophies.map { trophy -> trophy.name }
                 )
             }
         }

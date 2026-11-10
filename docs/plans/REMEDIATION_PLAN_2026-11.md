@@ -328,3 +328,54 @@
 2. Phase 1.1: port the modal layer + CSS contract test.
 3. Phase 1.2: route `LoginScreen` + guard.
 4. Re-run the browser golden path and record screenshots in the gate report.
+
+---
+
+## 16. Addendum — R‑43 : exploration multi-modules + correcteur d'écriture (2026‑11‑10)
+
+Hors périmètre du registre initial, livré sur la même branche après R‑42.
+
+### 16.1 Périmètre fonctionnel
+
+| Élément | Contenu |
+|---------|---------|
+| Hub | `ExplorePanel` dans l'onglet **Modules**, déplié par défaut + raccourci « Explorer » par module |
+| Modes | `ALL`, `RANDOM` (graine déterministe), `DONE` (ligne `flashcard_progress`), `TO_REVIEW` (`lastQuality <= 3`) |
+| Sélection | **plusieurs modules** simultanément (Set d'ids) |
+| Quantités | `10, 25, 50, 100, 150, 200, 300` — `MAX_CARDS = 300`, défaut **50** |
+| Session | overlay plein écran : progression `n/N`, terme FR, saisie, micro, « Voir la réponse », verdict, notes SM‑2 |
+| Persistance | `flashcard_progress` réutilisée (SM‑2 + XP) — **aucune migration** |
+
+### 16.2 Correcteur d'écriture
+
+`WritingCorrector` renvoie `Verdict(score, quality, issues, expected, diff)` :
+
+- `EXACT` 100 / q5 · `ACCENT` 95 / q5 · `NEAR` 55–94 / q3–4 · `WRONG` 0–54 / q1–2 · `EMPTY` 0 / q1.
+- Issues : accent, casse, article, pluriel, trait d'union, lettre
+  manquante / en trop / substituée, ordre des mots, mauvaise langue, sens.
+- Normalisation : ligatures (œ/æ/ß), articles ignorés pour la distance,
+  mots triés pour l'ordre. Erreur d'ordre seule → `NEAR` (70) ; article omis
+  → `NEAR` (≥ 90) + issue `ARTICLE`.
+
+### 16.3 Décisions
+
+| Date | ID | Décision | By |
+|------|----|----------|----|
+| 2026‑11‑10 | D5 | Hub d'exploration dans l'onglet Modules (panneau dépliable), pas une 6ᵉ destination | 👤 |
+| 2026‑11‑10 | D6 | `testTagsAsResourceId` **en debug uniquement** (`BuildConfig.DEBUG`) | agent |
+| 2026‑11‑10 | D7 | Voix via `RecognizerIntent` + `RECORD_AUDIO` runtime, dégradation localisée si aucun moteur | agent |
+| 2026‑11‑10 | D8 | Pas de migration : les résultats d'exploration écrivent dans `flashcard_progress` | agent |
+
+### 16.4 Vérifications
+
+- `assembleDebug` OK, `adb install -r` OK.
+- Suite unitaire **334/334** ; `lintDebug` **0 erreur / 61 avertissements**.
+- E2E `emulator-5554` : exploration **48/48**, parcours **17/17**, leçon **29/29**, smoke **48/48**.
+
+### 16.5 Suivi
+
+- **ANR intermittent** au premier affichage de l'onglet Modules (pré-existant,
+  trace du 2026‑11‑09) → à profiler (`Macrobenchmark` / `Perfetto`) et à
+  traiter en R‑44 si confirmé sur appareil physique.
+- Mode `DONE` / `TO_REVIEW` : pas encore couverts par l'E2E (seul `ALL` +
+  `RANDOM` le sont) ; couverture à ajouter.
