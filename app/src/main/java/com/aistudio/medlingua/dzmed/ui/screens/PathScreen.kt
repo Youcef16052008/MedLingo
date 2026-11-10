@@ -309,7 +309,8 @@ fun PathScreen(
                     ) {
                         Column {
                             Text(
-                                text = "${chapters.size} ${Strings.get("chapters_lbl", lang)}",
+                                text = "${chapters.size} " +
+                                    Strings.count(chapters.size, "chapter_one_lbl", "chapters_lbl", lang),
                                 fontSize = 16.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color(0xFF12211C)
@@ -501,7 +502,8 @@ private fun ContinueCard(
                         overflow = TextOverflow.Ellipsis
                     )
                     Text(
-                        text = "${next.title} · ${next.termCount} ${Strings.get("terms_lbl", lang)}",
+                        text = "${next.title} · ${next.termCount} " +
+                            Strings.count(next.termCount, "term_one_lbl", "terms_lbl", lang),
                         fontSize = 12.sp,
                         color = Color.White.copy(alpha = 0.85f)
                     )
@@ -593,8 +595,16 @@ private fun ModulePickerCard(
                     )
                     Text(
                         // Compteur conservé pour l'onglet : « N chapitres · x/y leçons ».
-                        text = "${unit?.chapters?.size ?: 0} ${Strings.get("chapters_lbl", lang)} · " +
-                            "$done/$total ${Strings.get("lessons_lbl", lang)} · $pct%",
+                        text = "${unit?.chapters?.size ?: 0} " +
+                            Strings.count(
+                                unit?.chapters?.size ?: 0,
+                                "chapter_one_lbl",
+                                "chapters_lbl",
+                                lang
+                            ) + " · " +
+                            "$done/$total " +
+                            Strings.count(total, "lesson_one_lbl", "lessons_lbl", lang) +
+                            " · $pct%",
                         fontSize = 11.sp,
                         color = Color(0xFF6B7877)
                     )
@@ -684,7 +694,8 @@ private fun ModuleTile(
             )
         }
         Text(
-            text = "$chapters ${Strings.get("chapters_lbl", lang)} · $pct%",
+            text = "$chapters " +
+                Strings.count(chapters, "chapter_one_lbl", "chapters_lbl", lang) + " · $pct%",
             fontSize = 10.sp,
             color = Color(0xFF6B7877)
         )
@@ -753,8 +764,11 @@ private fun ChapterRow(
                 )
                 Text(
                     // « 30 termes · 10 leçons + 5 révisions · moyenne 62 % »
-                    text = "$learning ${Strings.get("lessons_lbl", lang)} + $reviews " +
-                        "${Strings.get("reviews_lbl", lang)} · $done/$total · " +
+                    text = "$learning " +
+                        Strings.count(learning, "lesson_one_lbl", "lessons_lbl", lang) +
+                        " + $reviews " +
+                        Strings.count(reviews, "review_one_lbl", "reviews_lbl", lang) +
+                        " · $done/$total · " +
                         "${Strings.get("average_lbl", lang)} ${chapter.average}%",
                     fontSize = 11.sp,
                     color = Color(0xFF90A4AE)
@@ -891,14 +905,17 @@ private fun ChapterLessonPage(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
-                        text = "$done/$total ${Strings.get("lessons_lbl", lang)} · $pct%",
+                        text = "$done/$total " +
+                            Strings.count(total, "lesson_one_lbl", "lessons_lbl", lang) +
+                            " · $pct%",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = Color(0xFF455A64)
                     )
                     Text(
                         text = "${Strings.get("average_lbl", lang)} ${chapter.average}% · " +
-                            "$unitDone/$unitTotal ${Strings.get("lessons_lbl", lang)}",
+                            "$unitDone/$unitTotal " +
+                            Strings.count(unitTotal, "lesson_one_lbl", "lessons_lbl", lang),
                         fontSize = 11.sp,
                         color = Color(0xFF90A4AE)
                     )
@@ -991,14 +1008,15 @@ private fun LessonPathNode(
     val title = lessonTitle(node, number, lang)
     // Le niveau reste lisible même verrouillé : l'élève sait quelle leçon
     // s'ouvrira ensuite.
+    val termLabel = Strings.count(node.termCount, "term_one_lbl", "terms_lbl", lang)
     val meta = when {
-        done -> "${node.score}% · ${node.termCount} ${Strings.get("terms_lbl", lang)}"
-        review -> "${node.termCount} ${Strings.get("terms_lbl", lang)} · " +
+        done -> "${node.score}% · ${node.termCount} $termLabel"
+        review -> "${node.termCount} $termLabel · " +
             Strings.get(
                 if (node.required) "review_required_lbl" else "review_optional_lbl",
                 lang
             )
-        else -> "${node.termCount} ${Strings.get("terms_lbl", lang)}"
+        else -> "${node.termCount} $termLabel"
     }
     val bg = when {
         done -> Color(0xFF58CC02)
@@ -1046,8 +1064,7 @@ private fun LessonPathNode(
                     .border(4.dp, bg.copy(alpha = 0.25f), CircleShape)
                     // Lu par TalkBack et exposé à la hiérarchie UI (tests ADB).
                     .semantics {
-                        contentDescription = "$title · ${node.termCount} " +
-                            Strings.get("terms_lbl", lang) +
+                        contentDescription = "$title · ${node.termCount} $termLabel" +
                             when {
                                 done -> " · ${node.score}%"
                                 locked -> " · ${Strings.get("lesson_locked_lbl", lang)}"

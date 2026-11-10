@@ -511,7 +511,7 @@ class MedLinguaViewModel(application: Application) : AndroidViewModel(applicatio
                     lang
                 )
                 pathLessonLabel = "$kindLabel $number · ${lesson.termCount} " +
-                    Strings.get("terms_lbl", lang)
+                    Strings.count(lesson.termCount, "term_one_lbl", "terms_lbl", lang)
             }
 
             exercisesForLevel = LessonGenerator.lessonQuestions(

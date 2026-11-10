@@ -363,6 +363,9 @@ object Strings {
             "en" to "15 units · 3-term lessons + reviews"
         ),
         "lesson_lbl" to mapOf("ar" to "درس", "fr" to "Leçon", "en" to "Lesson"),
+        "lesson_one_lbl" to mapOf("ar" to "درس", "fr" to "leçon", "en" to "lesson"),
+        "review_one_lbl" to mapOf("ar" to "مراجعة", "fr" to "révision", "en" to "review"),
+        "term_one_lbl" to mapOf("ar" to "مصطلح", "fr" to "terme", "en" to "term"),
         "review_lbl" to mapOf("ar" to "مراجعة", "fr" to "Révision", "en" to "Review"),
         "reviews_lbl" to mapOf("ar" to "مراجعات", "fr" to "révisions", "en" to "reviews"),
         "review_required_lbl" to mapOf(
@@ -386,6 +389,7 @@ object Strings {
         "lesson_locked_lbl" to mapOf("ar" to "مقفل", "fr" to "verrouillée", "en" to "locked"),
         "lesson_available_lbl" to mapOf("ar" to "متاح", "fr" to "disponible", "en" to "available"),
         "chapters_lbl" to mapOf("ar" to "فصول", "fr" to "chapitres", "en" to "chapters"),
+        "chapter_one_lbl" to mapOf("ar" to "فصل", "fr" to "chapitre", "en" to "chapter"),
         "path_locked_text" to mapOf(
             "ar" to "أكمل الدرس السابق أولاً",
             "fr" to "Termine d'abord la leçon précédente",
@@ -674,4 +678,11 @@ object Strings {
     fun get(key: String, language: Language): String {
         return translations[key]?.get(language.code) ?: translations[key]?.get("fr") ?: key
     }
+
+    /**
+     * Libellé accordé en nombre : `oneKey` pour 1, `manyKey` sinon.
+     * « 1 leçon + 0 révision » et non « 1 leçons + 0 révisions ».
+     */
+    fun count(count: Int, oneKey: String, manyKey: String, language: Language): String =
+        get(if (count == 1) oneKey else manyKey, language)
 }
