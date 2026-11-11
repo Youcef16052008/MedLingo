@@ -10,7 +10,7 @@ import org.junit.Test
 /**
  * Accords en nombre des libellés du Parcours.
  *
- * 34 chapitres du seed n'ont qu'**un seul** terme : sans accord, l'UI affichait
+ * 33 chapitres du seed n'ont qu'**un seul** terme : sans accord, l'UI affichait
  * « 1 leçons + 0 révisions » ou « Leçon 1 · 1 termes ». Ce test prouve que
  * chaque paire singulier/pluriel existe dans les 3 langues et que
  * [Strings.count] choisit la bonne forme.
@@ -70,7 +70,7 @@ class StringsCountTest {
 
     @Test
     fun `un chapitre d'un seul terme s'affiche au singulier`() {
-        // Cas réel du seed : 34 chapitres n'ont qu'un terme → 1 leçon, 0 révision.
+        // Cas réel du seed : 33 chapitres n'ont qu'un terme → 1 leçon, 0 révision.
         val fr = Language.FRENCH
         val text = "1 " + Strings.count(1, "lesson_one_lbl", "lessons_lbl", fr) +
             " + 0 " + Strings.count(0, "review_one_lbl", "reviews_lbl", fr)
