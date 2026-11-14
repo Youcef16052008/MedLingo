@@ -5537,6 +5537,8 @@
     "name": "Common Illnesses & Conditions",
     "moduleId": "clinical_en",
     "termIds": [
+      1777,
+      1778,
       3918,
       3919,
       3920,
@@ -5588,9 +5590,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          3918,
-          3919,
-          3920
+          1777,
+          1778,
+          3918
         ],
         "questionCount": 8
       },
@@ -5600,9 +5602,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          3921,
-          3922,
-          3923
+          3919,
+          3920,
+          3921
         ],
         "questionCount": 8
       },
@@ -5612,9 +5614,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          3924,
-          3925,
-          3926
+          3922,
+          3923,
+          3924
         ],
         "questionCount": 8
       },
@@ -5624,9 +5626,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          3927,
-          3928,
-          3929
+          3925,
+          3926,
+          3927
         ],
         "questionCount": 8
       },
@@ -5636,9 +5638,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          3930,
-          3931,
-          3932
+          3928,
+          3929,
+          3930
         ],
         "questionCount": 8
       },
@@ -5648,9 +5650,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          3933,
-          3934,
-          3935
+          3931,
+          3932,
+          3933
         ],
         "questionCount": 8
       },
@@ -5660,9 +5662,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          3936,
-          3937,
-          3938
+          3934,
+          3935,
+          3936
         ],
         "questionCount": 8
       },
@@ -5672,9 +5674,9 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          3939,
-          3940,
-          3941
+          3937,
+          3938,
+          3939
         ],
         "questionCount": 8
       },
@@ -5684,9 +5686,9 @@
         "kind": "new",
         "level": 9,
         "termIds": [
-          3942,
-          3943,
-          3944
+          3940,
+          3941,
+          3942
         ],
         "questionCount": 8
       },
@@ -5696,9 +5698,9 @@
         "kind": "new",
         "level": 10,
         "termIds": [
-          3945,
-          3946,
-          3947
+          3943,
+          3944,
+          3945
         ],
         "questionCount": 8
       },
@@ -5708,9 +5710,9 @@
         "kind": "new",
         "level": 11,
         "termIds": [
-          3948,
-          3949,
-          3950
+          3946,
+          3947,
+          3948
         ],
         "questionCount": 8
       },
@@ -5720,9 +5722,9 @@
         "kind": "new",
         "level": 12,
         "termIds": [
-          3951,
-          3952,
-          3953
+          3949,
+          3950,
+          3951
         ],
         "questionCount": 8
       },
@@ -5732,9 +5734,9 @@
         "kind": "new",
         "level": 13,
         "termIds": [
-          3954,
-          3955,
-          3956
+          3952,
+          3953,
+          3954
         ],
         "questionCount": 8
       },
@@ -5744,9 +5746,9 @@
         "kind": "new",
         "level": 14,
         "termIds": [
-          3957,
-          3918,
-          3919
+          3955,
+          3956,
+          3957
         ],
         "questionCount": 8
       },
@@ -11005,6 +11007,14 @@
     "name": "Enzymologie",
     "moduleId": "biochim",
     "termIds": [
+      654,
+      655,
+      656,
+      657,
+      658,
+      659,
+      660,
+      661,
       751,
       752,
       753,
@@ -11033,9 +11043,9 @@
       874,
       875
     ],
-    "lessonCount": 13,
-    "newLessonCount": 9,
-    "reviewLessonCount": 4,
+    "lessonCount": 18,
+    "newLessonCount": 12,
+    "reviewLessonCount": 6,
     "modules": [
       {
         "id": "biochim-Enzymologie-l1",
@@ -11043,9 +11053,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          751,
-          752,
-          753
+          654,
+          655,
+          656
         ],
         "questionCount": 8
       },
@@ -11055,9 +11065,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          754,
-          755,
-          756
+          657,
+          658,
+          659
         ],
         "questionCount": 8
       },
@@ -11067,9 +11077,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          757,
-          758,
-          759
+          660,
+          661,
+          751
         ],
         "questionCount": 8
       },
@@ -11079,9 +11089,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          760,
-          761,
-          762
+          752,
+          753,
+          754
         ],
         "questionCount": 8
       },
@@ -11091,9 +11101,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          763,
-          764,
-          765
+          755,
+          756,
+          757
         ],
         "questionCount": 8
       },
@@ -11103,9 +11113,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          766,
-          767,
-          768
+          758,
+          759,
+          760
         ],
         "questionCount": 8
       },
@@ -11115,9 +11125,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          862,
-          863,
-          869
+          761,
+          762,
+          763
         ],
         "questionCount": 8
       },
@@ -11127,9 +11137,9 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          870,
-          871,
-          872
+          764,
+          765,
+          766
         ],
         "questionCount": 8
       },
@@ -11139,47 +11149,47 @@
         "kind": "new",
         "level": 9,
         "termIds": [
-          873,
-          874,
-          875
+          767,
+          768,
+          862
         ],
         "questionCount": 8
       },
       {
         "id": "biochim-Enzymologie-l10",
         "chapterId": "biochim-Enzymologie",
-        "kind": "review",
+        "kind": "new",
         "level": 10,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "biochim-Enzymologie-l1",
-          "biochim-Enzymologie-l2"
-        ]
+        "termIds": [
+          863,
+          869,
+          870
+        ],
+        "questionCount": 8
       },
       {
         "id": "biochim-Enzymologie-l11",
         "chapterId": "biochim-Enzymologie",
-        "kind": "review",
+        "kind": "new",
         "level": 11,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "biochim-Enzymologie-l3",
-          "biochim-Enzymologie-l4"
-        ]
+        "termIds": [
+          871,
+          872,
+          873
+        ],
+        "questionCount": 8
       },
       {
         "id": "biochim-Enzymologie-l12",
         "chapterId": "biochim-Enzymologie",
-        "kind": "review",
+        "kind": "new",
         "level": 12,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "biochim-Enzymologie-l5",
-          "biochim-Enzymologie-l6"
-        ]
+        "termIds": [
+          874,
+          875,
+          654
+        ],
+        "questionCount": 8
       },
       {
         "id": "biochim-Enzymologie-l13",
@@ -11189,8 +11199,68 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "biochim-Enzymologie-l1",
+          "biochim-Enzymologie-l2"
+        ]
+      },
+      {
+        "id": "biochim-Enzymologie-l14",
+        "chapterId": "biochim-Enzymologie",
+        "kind": "review",
+        "level": 14,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "biochim-Enzymologie-l3",
+          "biochim-Enzymologie-l4"
+        ]
+      },
+      {
+        "id": "biochim-Enzymologie-l15",
+        "chapterId": "biochim-Enzymologie",
+        "kind": "review",
+        "level": 15,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "biochim-Enzymologie-l5",
+          "biochim-Enzymologie-l6"
+        ]
+      },
+      {
+        "id": "biochim-Enzymologie-l16",
+        "chapterId": "biochim-Enzymologie",
+        "kind": "review",
+        "level": 16,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "biochim-Enzymologie-l7",
           "biochim-Enzymologie-l8"
+        ]
+      },
+      {
+        "id": "biochim-Enzymologie-l17",
+        "chapterId": "biochim-Enzymologie",
+        "kind": "review",
+        "level": 17,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "biochim-Enzymologie-l9",
+          "biochim-Enzymologie-l10"
+        ]
+      },
+      {
+        "id": "biochim-Enzymologie-l18",
+        "chapterId": "biochim-Enzymologie",
+        "kind": "review",
+        "level": 18,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "biochim-Enzymologie-l11",
+          "biochim-Enzymologie-l12"
         ]
       }
     ]
@@ -14126,6 +14196,10 @@
     "name": "Optique Médicale",
     "moduleId": "biophys",
     "termIds": [
+      1310,
+      1311,
+      1312,
+      1313,
       1386,
       1387,
       1388,
@@ -14158,9 +14232,9 @@
       1415,
       1416
     ],
-    "lessonCount": 16,
-    "newLessonCount": 11,
-    "reviewLessonCount": 5,
+    "lessonCount": 18,
+    "newLessonCount": 12,
+    "reviewLessonCount": 6,
     "modules": [
       {
         "id": "biophys-Optique Médicale-l1",
@@ -14168,9 +14242,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          1386,
-          1387,
-          1388
+          1310,
+          1311,
+          1312
         ],
         "questionCount": 8
       },
@@ -14180,9 +14254,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          1389,
-          1390,
-          1391
+          1313,
+          1386,
+          1387
         ],
         "questionCount": 8
       },
@@ -14192,9 +14266,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          1392,
-          1393,
-          1394
+          1388,
+          1389,
+          1390
         ],
         "questionCount": 8
       },
@@ -14204,9 +14278,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          1395,
-          1396,
-          1397
+          1391,
+          1392,
+          1393
         ],
         "questionCount": 8
       },
@@ -14216,9 +14290,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          1398,
-          1399,
-          1400
+          1394,
+          1395,
+          1396
         ],
         "questionCount": 8
       },
@@ -14228,9 +14302,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          1401,
-          1402,
-          1403
+          1397,
+          1398,
+          1399
         ],
         "questionCount": 8
       },
@@ -14240,9 +14314,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          1404,
-          1405,
-          1406
+          1400,
+          1401,
+          1402
         ],
         "questionCount": 8
       },
@@ -14252,9 +14326,9 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          1407,
-          1408,
-          1409
+          1403,
+          1404,
+          1405
         ],
         "questionCount": 8
       },
@@ -14264,9 +14338,9 @@
         "kind": "new",
         "level": 9,
         "termIds": [
-          1410,
-          1411,
-          1412
+          1406,
+          1407,
+          1408
         ],
         "questionCount": 8
       },
@@ -14276,9 +14350,9 @@
         "kind": "new",
         "level": 10,
         "termIds": [
-          1413,
-          1414,
-          1415
+          1409,
+          1410,
+          1411
         ],
         "questionCount": 8
       },
@@ -14288,23 +14362,23 @@
         "kind": "new",
         "level": 11,
         "termIds": [
-          1416,
-          1386,
-          1387
+          1412,
+          1413,
+          1414
         ],
         "questionCount": 8
       },
       {
         "id": "biophys-Optique Médicale-l12",
         "chapterId": "biophys-Optique Médicale",
-        "kind": "review",
+        "kind": "new",
         "level": 12,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "biophys-Optique Médicale-l1",
-          "biophys-Optique Médicale-l2"
-        ]
+        "termIds": [
+          1415,
+          1416,
+          1310
+        ],
+        "questionCount": 8
       },
       {
         "id": "biophys-Optique Médicale-l13",
@@ -14314,8 +14388,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "biophys-Optique Médicale-l3",
-          "biophys-Optique Médicale-l4"
+          "biophys-Optique Médicale-l1",
+          "biophys-Optique Médicale-l2"
         ]
       },
       {
@@ -14326,8 +14400,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "biophys-Optique Médicale-l5",
-          "biophys-Optique Médicale-l6"
+          "biophys-Optique Médicale-l3",
+          "biophys-Optique Médicale-l4"
         ]
       },
       {
@@ -14338,8 +14412,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "biophys-Optique Médicale-l7",
-          "biophys-Optique Médicale-l8"
+          "biophys-Optique Médicale-l5",
+          "biophys-Optique Médicale-l6"
         ]
       },
       {
@@ -14350,8 +14424,32 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "biophys-Optique Médicale-l7",
+          "biophys-Optique Médicale-l8"
+        ]
+      },
+      {
+        "id": "biophys-Optique Médicale-l17",
+        "chapterId": "biophys-Optique Médicale",
+        "kind": "review",
+        "level": 17,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "biophys-Optique Médicale-l9",
           "biophys-Optique Médicale-l10"
+        ]
+      },
+      {
+        "id": "biophys-Optique Médicale-l18",
+        "chapterId": "biophys-Optique Médicale",
+        "kind": "review",
+        "level": 18,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "biophys-Optique Médicale-l11",
+          "biophys-Optique Médicale-l12"
         ]
       }
     ]
@@ -16689,6 +16787,10 @@
     "name": "Types Cellulaires",
     "moduleId": "cytol",
     "termIds": [
+      1785,
+      1786,
+      1787,
+      1788,
       2970,
       2971,
       2972,
@@ -16720,9 +16822,9 @@
       2998,
       2999
     ],
-    "lessonCount": 15,
-    "newLessonCount": 10,
-    "reviewLessonCount": 5,
+    "lessonCount": 18,
+    "newLessonCount": 12,
+    "reviewLessonCount": 6,
     "modules": [
       {
         "id": "cytol-Types Cellulaires-l1",
@@ -16730,9 +16832,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          2970,
-          2971,
-          2972
+          1785,
+          1786,
+          1787
         ],
         "questionCount": 8
       },
@@ -16742,9 +16844,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          2973,
-          2974,
-          2975
+          1788,
+          2970,
+          2971
         ],
         "questionCount": 8
       },
@@ -16754,9 +16856,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          2976,
-          2977,
-          2978
+          2972,
+          2973,
+          2974
         ],
         "questionCount": 8
       },
@@ -16766,9 +16868,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          2979,
-          2980,
-          2981
+          2975,
+          2976,
+          2977
         ],
         "questionCount": 8
       },
@@ -16778,9 +16880,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          2982,
-          2983,
-          2984
+          2978,
+          2979,
+          2980
         ],
         "questionCount": 8
       },
@@ -16790,9 +16892,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          2985,
-          2986,
-          2987
+          2981,
+          2982,
+          2983
         ],
         "questionCount": 8
       },
@@ -16802,9 +16904,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          2988,
-          2989,
-          2990
+          2984,
+          2985,
+          2986
         ],
         "questionCount": 8
       },
@@ -16814,9 +16916,9 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          2991,
-          2992,
-          2993
+          2987,
+          2988,
+          2989
         ],
         "questionCount": 8
       },
@@ -16826,9 +16928,9 @@
         "kind": "new",
         "level": 9,
         "termIds": [
-          2994,
-          2995,
-          2996
+          2990,
+          2991,
+          2992
         ],
         "questionCount": 8
       },
@@ -16838,35 +16940,35 @@
         "kind": "new",
         "level": 10,
         "termIds": [
-          2997,
-          2998,
-          2999
+          2993,
+          2994,
+          2995
         ],
         "questionCount": 8
       },
       {
         "id": "cytol-Types Cellulaires-l11",
         "chapterId": "cytol-Types Cellulaires",
-        "kind": "review",
+        "kind": "new",
         "level": 11,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "cytol-Types Cellulaires-l1",
-          "cytol-Types Cellulaires-l2"
-        ]
+        "termIds": [
+          2996,
+          2997,
+          2998
+        ],
+        "questionCount": 8
       },
       {
         "id": "cytol-Types Cellulaires-l12",
         "chapterId": "cytol-Types Cellulaires",
-        "kind": "review",
+        "kind": "new",
         "level": 12,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "cytol-Types Cellulaires-l3",
-          "cytol-Types Cellulaires-l4"
-        ]
+        "termIds": [
+          2999,
+          1785,
+          1786
+        ],
+        "questionCount": 8
       },
       {
         "id": "cytol-Types Cellulaires-l13",
@@ -16876,8 +16978,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "cytol-Types Cellulaires-l5",
-          "cytol-Types Cellulaires-l6"
+          "cytol-Types Cellulaires-l1",
+          "cytol-Types Cellulaires-l2"
         ]
       },
       {
@@ -16888,8 +16990,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "cytol-Types Cellulaires-l7",
-          "cytol-Types Cellulaires-l8"
+          "cytol-Types Cellulaires-l3",
+          "cytol-Types Cellulaires-l4"
         ]
       },
       {
@@ -16900,8 +17002,44 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "cytol-Types Cellulaires-l5",
+          "cytol-Types Cellulaires-l6"
+        ]
+      },
+      {
+        "id": "cytol-Types Cellulaires-l16",
+        "chapterId": "cytol-Types Cellulaires",
+        "kind": "review",
+        "level": 16,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "cytol-Types Cellulaires-l7",
+          "cytol-Types Cellulaires-l8"
+        ]
+      },
+      {
+        "id": "cytol-Types Cellulaires-l17",
+        "chapterId": "cytol-Types Cellulaires",
+        "kind": "review",
+        "level": 17,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "cytol-Types Cellulaires-l9",
           "cytol-Types Cellulaires-l10"
+        ]
+      },
+      {
+        "id": "cytol-Types Cellulaires-l18",
+        "chapterId": "cytol-Types Cellulaires",
+        "kind": "review",
+        "level": 18,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "cytol-Types Cellulaires-l11",
+          "cytol-Types Cellulaires-l12"
         ]
       }
     ]
@@ -18428,6 +18566,12 @@
     "name": "Termes Complémentaires",
     "moduleId": "embryo",
     "termIds": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
       3365,
       3366,
       3367,
@@ -18459,9 +18603,9 @@
       3393,
       3394
     ],
-    "lessonCount": 15,
-    "newLessonCount": 10,
-    "reviewLessonCount": 5,
+    "lessonCount": 18,
+    "newLessonCount": 12,
+    "reviewLessonCount": 6,
     "modules": [
       {
         "id": "embryo-Termes Complémentaires-l1",
@@ -18469,9 +18613,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          3365,
-          3366,
-          3367
+          2021,
+          2022,
+          2023
         ],
         "questionCount": 8
       },
@@ -18481,9 +18625,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          3368,
-          3369,
-          3370
+          2024,
+          2025,
+          2026
         ],
         "questionCount": 8
       },
@@ -18493,9 +18637,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          3371,
-          3372,
-          3373
+          3365,
+          3366,
+          3367
         ],
         "questionCount": 8
       },
@@ -18505,9 +18649,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          3374,
-          3375,
-          3376
+          3368,
+          3369,
+          3370
         ],
         "questionCount": 8
       },
@@ -18517,9 +18661,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          3377,
-          3378,
-          3379
+          3371,
+          3372,
+          3373
         ],
         "questionCount": 8
       },
@@ -18529,9 +18673,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          3380,
-          3381,
-          3382
+          3374,
+          3375,
+          3376
         ],
         "questionCount": 8
       },
@@ -18541,9 +18685,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          3383,
-          3384,
-          3385
+          3377,
+          3378,
+          3379
         ],
         "questionCount": 8
       },
@@ -18553,9 +18697,9 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          3386,
-          3387,
-          3388
+          3380,
+          3381,
+          3382
         ],
         "questionCount": 8
       },
@@ -18565,9 +18709,9 @@
         "kind": "new",
         "level": 9,
         "termIds": [
-          3389,
-          3390,
-          3391
+          3383,
+          3384,
+          3385
         ],
         "questionCount": 8
       },
@@ -18577,35 +18721,35 @@
         "kind": "new",
         "level": 10,
         "termIds": [
-          3392,
-          3393,
-          3394
+          3386,
+          3387,
+          3388
         ],
         "questionCount": 8
       },
       {
         "id": "embryo-Termes Complémentaires-l11",
         "chapterId": "embryo-Termes Complémentaires",
-        "kind": "review",
+        "kind": "new",
         "level": 11,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "embryo-Termes Complémentaires-l1",
-          "embryo-Termes Complémentaires-l2"
-        ]
+        "termIds": [
+          3389,
+          3390,
+          3391
+        ],
+        "questionCount": 8
       },
       {
         "id": "embryo-Termes Complémentaires-l12",
         "chapterId": "embryo-Termes Complémentaires",
-        "kind": "review",
+        "kind": "new",
         "level": 12,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "embryo-Termes Complémentaires-l3",
-          "embryo-Termes Complémentaires-l4"
-        ]
+        "termIds": [
+          3392,
+          3393,
+          3394
+        ],
+        "questionCount": 8
       },
       {
         "id": "embryo-Termes Complémentaires-l13",
@@ -18615,8 +18759,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "embryo-Termes Complémentaires-l5",
-          "embryo-Termes Complémentaires-l6"
+          "embryo-Termes Complémentaires-l1",
+          "embryo-Termes Complémentaires-l2"
         ]
       },
       {
@@ -18627,8 +18771,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "embryo-Termes Complémentaires-l7",
-          "embryo-Termes Complémentaires-l8"
+          "embryo-Termes Complémentaires-l3",
+          "embryo-Termes Complémentaires-l4"
         ]
       },
       {
@@ -18639,8 +18783,44 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "embryo-Termes Complémentaires-l5",
+          "embryo-Termes Complémentaires-l6"
+        ]
+      },
+      {
+        "id": "embryo-Termes Complémentaires-l16",
+        "chapterId": "embryo-Termes Complémentaires",
+        "kind": "review",
+        "level": 16,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "embryo-Termes Complémentaires-l7",
+          "embryo-Termes Complémentaires-l8"
+        ]
+      },
+      {
+        "id": "embryo-Termes Complémentaires-l17",
+        "chapterId": "embryo-Termes Complémentaires",
+        "kind": "review",
+        "level": 17,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "embryo-Termes Complémentaires-l9",
           "embryo-Termes Complémentaires-l10"
+        ]
+      },
+      {
+        "id": "embryo-Termes Complémentaires-l18",
+        "chapterId": "embryo-Termes Complémentaires",
+        "kind": "review",
+        "level": 18,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "embryo-Termes Complémentaires-l11",
+          "embryo-Termes Complémentaires-l12"
         ]
       }
     ]
@@ -19928,6 +20108,11 @@
     "name": "Structure ADN et ARN",
     "moduleId": "genet",
     "termIds": [
+      1613,
+      1614,
+      1615,
+      1616,
+      1617,
       1634,
       1635,
       1636,
@@ -19952,9 +20137,9 @@
       1655,
       1656
     ],
-    "lessonCount": 12,
-    "newLessonCount": 8,
-    "reviewLessonCount": 4,
+    "lessonCount": 15,
+    "newLessonCount": 10,
+    "reviewLessonCount": 5,
     "modules": [
       {
         "id": "genet-Structure ADN et ARN-l1",
@@ -19962,9 +20147,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          1634,
-          1635,
-          1636
+          1613,
+          1614,
+          1615
         ],
         "questionCount": 8
       },
@@ -19974,9 +20159,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          1637,
-          1638,
-          1639
+          1616,
+          1617,
+          1634
         ],
         "questionCount": 8
       },
@@ -19986,9 +20171,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          1640,
-          1641,
-          1642
+          1635,
+          1636,
+          1637
         ],
         "questionCount": 8
       },
@@ -19998,9 +20183,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          1643,
-          1644,
-          1645
+          1638,
+          1639,
+          1640
         ],
         "questionCount": 8
       },
@@ -20010,9 +20195,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          1646,
-          1647,
-          1648
+          1641,
+          1642,
+          1643
         ],
         "questionCount": 8
       },
@@ -20022,9 +20207,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          1649,
-          1650,
-          1651
+          1644,
+          1645,
+          1646
         ],
         "questionCount": 8
       },
@@ -20034,9 +20219,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          1652,
-          1653,
-          1654
+          1647,
+          1648,
+          1649
         ],
         "questionCount": 8
       },
@@ -20046,35 +20231,35 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          1655,
-          1656,
-          1634
+          1650,
+          1651,
+          1652
         ],
         "questionCount": 8
       },
       {
         "id": "genet-Structure ADN et ARN-l9",
         "chapterId": "genet-Structure ADN et ARN",
-        "kind": "review",
+        "kind": "new",
         "level": 9,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "genet-Structure ADN et ARN-l1",
-          "genet-Structure ADN et ARN-l2"
-        ]
+        "termIds": [
+          1653,
+          1654,
+          1655
+        ],
+        "questionCount": 8
       },
       {
         "id": "genet-Structure ADN et ARN-l10",
         "chapterId": "genet-Structure ADN et ARN",
-        "kind": "review",
+        "kind": "new",
         "level": 10,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "genet-Structure ADN et ARN-l3",
-          "genet-Structure ADN et ARN-l4"
-        ]
+        "termIds": [
+          1656,
+          1613,
+          1614
+        ],
+        "questionCount": 8
       },
       {
         "id": "genet-Structure ADN et ARN-l11",
@@ -20084,8 +20269,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "genet-Structure ADN et ARN-l5",
-          "genet-Structure ADN et ARN-l6"
+          "genet-Structure ADN et ARN-l1",
+          "genet-Structure ADN et ARN-l2"
         ]
       },
       {
@@ -20096,8 +20281,44 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "genet-Structure ADN et ARN-l3",
+          "genet-Structure ADN et ARN-l4"
+        ]
+      },
+      {
+        "id": "genet-Structure ADN et ARN-l13",
+        "chapterId": "genet-Structure ADN et ARN",
+        "kind": "review",
+        "level": 13,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "genet-Structure ADN et ARN-l5",
+          "genet-Structure ADN et ARN-l6"
+        ]
+      },
+      {
+        "id": "genet-Structure ADN et ARN-l14",
+        "chapterId": "genet-Structure ADN et ARN",
+        "kind": "review",
+        "level": 14,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "genet-Structure ADN et ARN-l7",
           "genet-Structure ADN et ARN-l8"
+        ]
+      },
+      {
+        "id": "genet-Structure ADN et ARN-l15",
+        "chapterId": "genet-Structure ADN et ARN",
+        "kind": "review",
+        "level": 15,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "genet-Structure ADN et ARN-l9",
+          "genet-Structure ADN et ARN-l10"
         ]
       }
     ]
@@ -22053,6 +22274,13 @@
     "name": "Tissu Épithélial",
     "moduleId": "histo",
     "termIds": [
+      1078,
+      1079,
+      1080,
+      1081,
+      1083,
+      1084,
+      1085,
       1117,
       1118,
       1119,
@@ -22077,9 +22305,9 @@
       1138,
       1139
     ],
-    "lessonCount": 12,
-    "newLessonCount": 8,
-    "reviewLessonCount": 4,
+    "lessonCount": 15,
+    "newLessonCount": 10,
+    "reviewLessonCount": 5,
     "modules": [
       {
         "id": "histo-Tissu Épithélial-l1",
@@ -22087,9 +22315,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          1117,
-          1118,
-          1119
+          1078,
+          1079,
+          1080
         ],
         "questionCount": 8
       },
@@ -22099,9 +22327,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          1120,
-          1121,
-          1122
+          1081,
+          1083,
+          1084
         ],
         "questionCount": 8
       },
@@ -22111,9 +22339,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          1123,
-          1124,
-          1125
+          1085,
+          1117,
+          1118
         ],
         "questionCount": 8
       },
@@ -22123,9 +22351,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          1126,
-          1127,
-          1128
+          1119,
+          1120,
+          1121
         ],
         "questionCount": 8
       },
@@ -22135,9 +22363,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          1129,
-          1130,
-          1131
+          1122,
+          1123,
+          1124
         ],
         "questionCount": 8
       },
@@ -22147,9 +22375,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          1132,
-          1133,
-          1134
+          1125,
+          1126,
+          1127
         ],
         "questionCount": 8
       },
@@ -22159,9 +22387,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          1135,
-          1136,
-          1137
+          1128,
+          1129,
+          1130
         ],
         "questionCount": 8
       },
@@ -22171,35 +22399,35 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          1138,
-          1139,
-          1117
+          1131,
+          1132,
+          1133
         ],
         "questionCount": 8
       },
       {
         "id": "histo-Tissu Épithélial-l9",
         "chapterId": "histo-Tissu Épithélial",
-        "kind": "review",
+        "kind": "new",
         "level": 9,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "histo-Tissu Épithélial-l1",
-          "histo-Tissu Épithélial-l2"
-        ]
+        "termIds": [
+          1134,
+          1135,
+          1136
+        ],
+        "questionCount": 8
       },
       {
         "id": "histo-Tissu Épithélial-l10",
         "chapterId": "histo-Tissu Épithélial",
-        "kind": "review",
+        "kind": "new",
         "level": 10,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "histo-Tissu Épithélial-l3",
-          "histo-Tissu Épithélial-l4"
-        ]
+        "termIds": [
+          1137,
+          1138,
+          1139
+        ],
+        "questionCount": 8
       },
       {
         "id": "histo-Tissu Épithélial-l11",
@@ -22209,8 +22437,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "histo-Tissu Épithélial-l5",
-          "histo-Tissu Épithélial-l6"
+          "histo-Tissu Épithélial-l1",
+          "histo-Tissu Épithélial-l2"
         ]
       },
       {
@@ -22221,8 +22449,44 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "histo-Tissu Épithélial-l3",
+          "histo-Tissu Épithélial-l4"
+        ]
+      },
+      {
+        "id": "histo-Tissu Épithélial-l13",
+        "chapterId": "histo-Tissu Épithélial",
+        "kind": "review",
+        "level": 13,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "histo-Tissu Épithélial-l5",
+          "histo-Tissu Épithélial-l6"
+        ]
+      },
+      {
+        "id": "histo-Tissu Épithélial-l14",
+        "chapterId": "histo-Tissu Épithélial",
+        "kind": "review",
+        "level": 14,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "histo-Tissu Épithélial-l7",
           "histo-Tissu Épithélial-l8"
+        ]
+      },
+      {
+        "id": "histo-Tissu Épithélial-l15",
+        "chapterId": "histo-Tissu Épithélial",
+        "kind": "review",
+        "level": 15,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "histo-Tissu Épithélial-l9",
+          "histo-Tissu Épithélial-l10"
         ]
       }
     ]
@@ -23948,6 +24212,13 @@
     "name": "Épidémiologie",
     "moduleId": "info_med",
     "termIds": [
+      1789,
+      1790,
+      1791,
+      1792,
+      1793,
+      1794,
+      1795,
       1947,
       1948,
       1949,
@@ -23971,9 +24242,9 @@
       1967,
       1968
     ],
-    "lessonCount": 12,
-    "newLessonCount": 8,
-    "reviewLessonCount": 4,
+    "lessonCount": 15,
+    "newLessonCount": 10,
+    "reviewLessonCount": 5,
     "modules": [
       {
         "id": "info_med-Épidémiologie-l1",
@@ -23981,9 +24252,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          1947,
-          1948,
-          1949
+          1789,
+          1790,
+          1791
         ],
         "questionCount": 8
       },
@@ -23993,9 +24264,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          1950,
-          1951,
-          1952
+          1792,
+          1793,
+          1794
         ],
         "questionCount": 8
       },
@@ -24005,9 +24276,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          1953,
-          1954,
-          1955
+          1795,
+          1947,
+          1948
         ],
         "questionCount": 8
       },
@@ -24017,9 +24288,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          1956,
-          1957,
-          1958
+          1949,
+          1950,
+          1951
         ],
         "questionCount": 8
       },
@@ -24029,9 +24300,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          1959,
-          1960,
-          1961
+          1952,
+          1953,
+          1954
         ],
         "questionCount": 8
       },
@@ -24041,9 +24312,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          1962,
-          1963,
-          1964
+          1955,
+          1956,
+          1957
         ],
         "questionCount": 8
       },
@@ -24053,9 +24324,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          1965,
-          1966,
-          1967
+          1958,
+          1959,
+          1960
         ],
         "questionCount": 8
       },
@@ -24065,35 +24336,35 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          1968,
-          1947,
-          1948
+          1961,
+          1962,
+          1963
         ],
         "questionCount": 8
       },
       {
         "id": "info_med-Épidémiologie-l9",
         "chapterId": "info_med-Épidémiologie",
-        "kind": "review",
+        "kind": "new",
         "level": 9,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "info_med-Épidémiologie-l1",
-          "info_med-Épidémiologie-l2"
-        ]
+        "termIds": [
+          1964,
+          1965,
+          1966
+        ],
+        "questionCount": 8
       },
       {
         "id": "info_med-Épidémiologie-l10",
         "chapterId": "info_med-Épidémiologie",
-        "kind": "review",
+        "kind": "new",
         "level": 10,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "info_med-Épidémiologie-l3",
-          "info_med-Épidémiologie-l4"
-        ]
+        "termIds": [
+          1967,
+          1968,
+          1789
+        ],
+        "questionCount": 8
       },
       {
         "id": "info_med-Épidémiologie-l11",
@@ -24103,8 +24374,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "info_med-Épidémiologie-l5",
-          "info_med-Épidémiologie-l6"
+          "info_med-Épidémiologie-l1",
+          "info_med-Épidémiologie-l2"
         ]
       },
       {
@@ -24115,8 +24386,44 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "info_med-Épidémiologie-l3",
+          "info_med-Épidémiologie-l4"
+        ]
+      },
+      {
+        "id": "info_med-Épidémiologie-l13",
+        "chapterId": "info_med-Épidémiologie",
+        "kind": "review",
+        "level": 13,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "info_med-Épidémiologie-l5",
+          "info_med-Épidémiologie-l6"
+        ]
+      },
+      {
+        "id": "info_med-Épidémiologie-l14",
+        "chapterId": "info_med-Épidémiologie",
+        "kind": "review",
+        "level": 14,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "info_med-Épidémiologie-l7",
           "info_med-Épidémiologie-l8"
+        ]
+      },
+      {
+        "id": "info_med-Épidémiologie-l15",
+        "chapterId": "info_med-Épidémiologie",
+        "kind": "review",
+        "level": 15,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "info_med-Épidémiologie-l9",
+          "info_med-Épidémiologie-l10"
         ]
       }
     ]
@@ -28225,6 +28532,11 @@
     "name": "Physiologie Cellulaire",
     "moduleId": "physio",
     "termIds": [
+      413,
+      414,
+      415,
+      416,
+      422,
       423,
       424,
       425,
@@ -28266,8 +28578,8 @@
       461,
       462
     ],
-    "lessonCount": 21,
-    "newLessonCount": 14,
+    "lessonCount": 22,
+    "newLessonCount": 15,
     "reviewLessonCount": 7,
     "modules": [
       {
@@ -28276,9 +28588,9 @@
         "kind": "new",
         "level": 1,
         "termIds": [
-          423,
-          424,
-          425
+          413,
+          414,
+          415
         ],
         "questionCount": 8
       },
@@ -28288,9 +28600,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
-          426,
-          427,
-          428
+          416,
+          422,
+          423
         ],
         "questionCount": 8
       },
@@ -28300,9 +28612,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          429,
-          430,
-          431
+          424,
+          425,
+          426
         ],
         "questionCount": 8
       },
@@ -28312,9 +28624,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          432,
-          433,
-          434
+          427,
+          428,
+          429
         ],
         "questionCount": 8
       },
@@ -28324,9 +28636,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          435,
-          436,
-          437
+          430,
+          431,
+          432
         ],
         "questionCount": 8
       },
@@ -28336,9 +28648,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          438,
-          439,
-          440
+          433,
+          434,
+          435
         ],
         "questionCount": 8
       },
@@ -28348,9 +28660,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          441,
-          442,
-          443
+          436,
+          437,
+          438
         ],
         "questionCount": 8
       },
@@ -28360,9 +28672,9 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          444,
-          445,
-          446
+          439,
+          440,
+          441
         ],
         "questionCount": 8
       },
@@ -28372,9 +28684,9 @@
         "kind": "new",
         "level": 9,
         "termIds": [
-          447,
-          448,
-          449
+          442,
+          443,
+          444
         ],
         "questionCount": 8
       },
@@ -28384,9 +28696,9 @@
         "kind": "new",
         "level": 10,
         "termIds": [
-          450,
-          451,
-          452
+          445,
+          446,
+          447
         ],
         "questionCount": 8
       },
@@ -28396,9 +28708,9 @@
         "kind": "new",
         "level": 11,
         "termIds": [
-          453,
-          454,
-          455
+          448,
+          449,
+          450
         ],
         "questionCount": 8
       },
@@ -28408,9 +28720,9 @@
         "kind": "new",
         "level": 12,
         "termIds": [
-          456,
-          457,
-          458
+          451,
+          452,
+          453
         ],
         "questionCount": 8
       },
@@ -28420,9 +28732,9 @@
         "kind": "new",
         "level": 13,
         "termIds": [
-          459,
-          460,
-          461
+          454,
+          455,
+          456
         ],
         "questionCount": 8
       },
@@ -28432,23 +28744,23 @@
         "kind": "new",
         "level": 14,
         "termIds": [
-          462,
-          423,
-          424
+          457,
+          458,
+          459
         ],
         "questionCount": 8
       },
       {
         "id": "physio-Physiologie Cellulaire-l15",
         "chapterId": "physio-Physiologie Cellulaire",
-        "kind": "review",
+        "kind": "new",
         "level": 15,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "physio-Physiologie Cellulaire-l1",
-          "physio-Physiologie Cellulaire-l2"
-        ]
+        "termIds": [
+          460,
+          461,
+          462
+        ],
+        "questionCount": 8
       },
       {
         "id": "physio-Physiologie Cellulaire-l16",
@@ -28458,8 +28770,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "physio-Physiologie Cellulaire-l3",
-          "physio-Physiologie Cellulaire-l4"
+          "physio-Physiologie Cellulaire-l1",
+          "physio-Physiologie Cellulaire-l2"
         ]
       },
       {
@@ -28470,8 +28782,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "physio-Physiologie Cellulaire-l5",
-          "physio-Physiologie Cellulaire-l6"
+          "physio-Physiologie Cellulaire-l3",
+          "physio-Physiologie Cellulaire-l4"
         ]
       },
       {
@@ -28482,8 +28794,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "physio-Physiologie Cellulaire-l7",
-          "physio-Physiologie Cellulaire-l8"
+          "physio-Physiologie Cellulaire-l5",
+          "physio-Physiologie Cellulaire-l6"
         ]
       },
       {
@@ -28494,8 +28806,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "physio-Physiologie Cellulaire-l9",
-          "physio-Physiologie Cellulaire-l10"
+          "physio-Physiologie Cellulaire-l7",
+          "physio-Physiologie Cellulaire-l8"
         ]
       },
       {
@@ -28506,8 +28818,8 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
-          "physio-Physiologie Cellulaire-l11",
-          "physio-Physiologie Cellulaire-l12"
+          "physio-Physiologie Cellulaire-l9",
+          "physio-Physiologie Cellulaire-l10"
         ]
       },
       {
@@ -28515,6 +28827,18 @@
         "chapterId": "physio-Physiologie Cellulaire",
         "kind": "review",
         "level": 21,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "physio-Physiologie Cellulaire-l11",
+          "physio-Physiologie Cellulaire-l12"
+        ]
+      },
+      {
+        "id": "physio-Physiologie Cellulaire-l22",
+        "chapterId": "physio-Physiologie Cellulaire",
+        "kind": "review",
+        "level": 22,
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
@@ -33758,8 +34082,15 @@
     "termIds": [
       1768,
       1769,
+      1770,
       1771,
       1772,
+      1773,
+      1774,
+      1775,
+      1776,
+      3618,
+      3619,
       3631,
       3632,
       3633,
@@ -33784,9 +34115,9 @@
       3652,
       3653
     ],
-    "lessonCount": 13,
-    "newLessonCount": 9,
-    "reviewLessonCount": 4,
+    "lessonCount": 18,
+    "newLessonCount": 12,
+    "reviewLessonCount": 6,
     "modules": [
       {
         "id": "termino-Préfixes et Suffixes-l1",
@@ -33796,7 +34127,7 @@
         "termIds": [
           1768,
           1769,
-          1771
+          1770
         ],
         "questionCount": 8
       },
@@ -33806,9 +34137,9 @@
         "kind": "new",
         "level": 2,
         "termIds": [
+          1771,
           1772,
-          3631,
-          3632
+          1773
         ],
         "questionCount": 8
       },
@@ -33818,9 +34149,9 @@
         "kind": "new",
         "level": 3,
         "termIds": [
-          3633,
-          3634,
-          3635
+          1774,
+          1775,
+          1776
         ],
         "questionCount": 8
       },
@@ -33830,9 +34161,9 @@
         "kind": "new",
         "level": 4,
         "termIds": [
-          3636,
-          3637,
-          3638
+          3618,
+          3619,
+          3631
         ],
         "questionCount": 8
       },
@@ -33842,9 +34173,9 @@
         "kind": "new",
         "level": 5,
         "termIds": [
-          3639,
-          3640,
-          3641
+          3632,
+          3633,
+          3634
         ],
         "questionCount": 8
       },
@@ -33854,9 +34185,9 @@
         "kind": "new",
         "level": 6,
         "termIds": [
-          3642,
-          3643,
-          3644
+          3635,
+          3636,
+          3637
         ],
         "questionCount": 8
       },
@@ -33866,9 +34197,9 @@
         "kind": "new",
         "level": 7,
         "termIds": [
-          3645,
-          3646,
-          3647
+          3638,
+          3639,
+          3640
         ],
         "questionCount": 8
       },
@@ -33878,9 +34209,9 @@
         "kind": "new",
         "level": 8,
         "termIds": [
-          3648,
-          3649,
-          3650
+          3641,
+          3642,
+          3643
         ],
         "questionCount": 8
       },
@@ -33890,47 +34221,47 @@
         "kind": "new",
         "level": 9,
         "termIds": [
-          3651,
-          3652,
-          3653
+          3644,
+          3645,
+          3646
         ],
         "questionCount": 8
       },
       {
         "id": "termino-Préfixes et Suffixes-l10",
         "chapterId": "termino-Préfixes et Suffixes",
-        "kind": "review",
+        "kind": "new",
         "level": 10,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "termino-Préfixes et Suffixes-l1",
-          "termino-Préfixes et Suffixes-l2"
-        ]
+        "termIds": [
+          3647,
+          3648,
+          3649
+        ],
+        "questionCount": 8
       },
       {
         "id": "termino-Préfixes et Suffixes-l11",
         "chapterId": "termino-Préfixes et Suffixes",
-        "kind": "review",
+        "kind": "new",
         "level": 11,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "termino-Préfixes et Suffixes-l3",
-          "termino-Préfixes et Suffixes-l4"
-        ]
+        "termIds": [
+          3650,
+          3651,
+          3652
+        ],
+        "questionCount": 8
       },
       {
         "id": "termino-Préfixes et Suffixes-l12",
         "chapterId": "termino-Préfixes et Suffixes",
-        "kind": "review",
+        "kind": "new",
         "level": 12,
-        "termIds": [],
-        "questionCount": 16,
-        "reviewedLessonIds": [
-          "termino-Préfixes et Suffixes-l5",
-          "termino-Préfixes et Suffixes-l6"
-        ]
+        "termIds": [
+          3653,
+          1768,
+          1769
+        ],
+        "questionCount": 8
       },
       {
         "id": "termino-Préfixes et Suffixes-l13",
@@ -33940,8 +34271,68 @@
         "termIds": [],
         "questionCount": 16,
         "reviewedLessonIds": [
+          "termino-Préfixes et Suffixes-l1",
+          "termino-Préfixes et Suffixes-l2"
+        ]
+      },
+      {
+        "id": "termino-Préfixes et Suffixes-l14",
+        "chapterId": "termino-Préfixes et Suffixes",
+        "kind": "review",
+        "level": 14,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "termino-Préfixes et Suffixes-l3",
+          "termino-Préfixes et Suffixes-l4"
+        ]
+      },
+      {
+        "id": "termino-Préfixes et Suffixes-l15",
+        "chapterId": "termino-Préfixes et Suffixes",
+        "kind": "review",
+        "level": 15,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "termino-Préfixes et Suffixes-l5",
+          "termino-Préfixes et Suffixes-l6"
+        ]
+      },
+      {
+        "id": "termino-Préfixes et Suffixes-l16",
+        "chapterId": "termino-Préfixes et Suffixes",
+        "kind": "review",
+        "level": 16,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
           "termino-Préfixes et Suffixes-l7",
           "termino-Préfixes et Suffixes-l8"
+        ]
+      },
+      {
+        "id": "termino-Préfixes et Suffixes-l17",
+        "chapterId": "termino-Préfixes et Suffixes",
+        "kind": "review",
+        "level": 17,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "termino-Préfixes et Suffixes-l9",
+          "termino-Préfixes et Suffixes-l10"
+        ]
+      },
+      {
+        "id": "termino-Préfixes et Suffixes-l18",
+        "chapterId": "termino-Préfixes et Suffixes",
+        "kind": "review",
+        "level": 18,
+        "termIds": [],
+        "questionCount": 16,
+        "reviewedLessonIds": [
+          "termino-Préfixes et Suffixes-l11",
+          "termino-Préfixes et Suffixes-l12"
         ]
       }
     ]
