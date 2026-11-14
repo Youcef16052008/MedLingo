@@ -1,10 +1,15 @@
 name: Android
 
+# P0.5 : mêmes déclencheurs que web.yml — branche de travail à la demande
+# (workflow_dispatch), PR et main ; pas de duplication push+PR.
 on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 env:
   GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx2g -Dfile.encoding=UTF-8"
@@ -23,6 +28,9 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      # P0.5 : debug.keystore n'est pas commité — build.gradle.kts retombe sur
+      # la signature debug standard d'AGP en son absence (aucune clé committée,
+      # signature release inchangée).
       - name: Assemble debug
         run: ./gradlew :app:assembleDebug --no-daemon --console=plain
 

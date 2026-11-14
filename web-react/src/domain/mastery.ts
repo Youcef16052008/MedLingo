@@ -2,20 +2,26 @@
  * WS5.1 — moteur de maîtrise unifié (calcul PUR, testable).
  *
  * Fait converger les trois signaux déjà présents dans le store :
- *  - `moduleBest`  : meilleur score de quiz par module (0–100) — la maîtrise
- *    déclarée par les exercices ;
+ *  - `moduleBest`  : meilleur score de quiz PAR MODULE (0–100) — la maîtrise
+ *    déclarée par les exercices. La clé est l'id du module (`moduleBest[moduleId]`,
+ *    écrit par QuizScreen en fin de session) — JAMAIS une clé globale `quiz`.
  *  - `sm2`         : cartes de révision espacée par terme — la mémoire ;
  *  - l'historique  : `answered`/`correct` — la pratique.
  *
  * Transparence (le différenciateur vs Duolingo) : l'étudiant voit POURQUOI —
  * force par module, cartes dues, termes les plus faibles. Prévisible et
  * auditable : mêmes entrées → mêmes sorties.
+ *
+ * ⚠️ Sémantique honnête : ce chiffre est un INDICATEUR DE PROGRESSION
+ * pédagogique, pas une certification de compétence médicale.
  */
 import type { Sched } from "./sm2";
 import { modById } from "../data/modules";
 
 export interface MasteryInput {
   moduleBest: Record<string, number>;
+  /** Id du module calculé — le meilleur score est lu dans `moduleBest[moduleId]`. */
+  moduleId: string;
   sm2: Record<string, Sched>;
   /** Termes du module (ids) — fourni par l'appelant depuis terms.json. */
   termIds: number[];
@@ -41,13 +47,20 @@ function isDue(card: Sched | undefined, now: number): boolean {
   return !!card && card.due <= now;
 }
 
+/** Score de quiz borné 0–100 ; valeur non finie (corruption en mémoire) → 0. */
+function clampScore(raw: number): number {
+  return Number.isFinite(raw) ? Math.max(0, Math.min(100, raw)) : 0;
+}
+
 /**
  * Force d'un module : le quiz pèse 60 % (best score), la mémoire SM-2 40 %
  * (couverture des termes pondérée par la santé des cartes). Un module jamais
  * touché → 0. Aucun terme dans le module → le quiz seul décide.
  */
 export function moduleMastery(input: MasteryInput, now: number): ModuleMastery {
-  const quizBest = Math.max(0, Math.min(100, input.moduleBest["quiz"] ?? 0));
+  // Contrat P0.2 : le meilleur score du quiz est lu PAR MODULE
+  // (`moduleBest[moduleId]`, écrit par QuizScreen) — plus de clé globale `quiz`.
+  const quizBest = clampScore(input.moduleBest[input.moduleId] ?? 0);
   const total = input.termIds.length;
 
   let started = 0;
@@ -85,8 +98,22 @@ export function masteryOverview(
   now: number
 ): Array<{ id: string } & ModuleMastery> {
   return termsByModule
-    .map((m) => ({ id: m.id, ...moduleMastery({ moduleBest, sm2, termIds: m.termIds, dailyGoal: 20 }, now) }))
+    .map((m) => ({ id: m.id, ...moduleMastery({ moduleBest, moduleId: m.id, sm2, termIds: m.termIds, dailyGoal: 20 }, now) }))
     .sort((a, b) => a.force - b.force);
+}
+
+/**
+ * Écriture unique du meilleur score de quiz par module — utilisée par
+ * QuizScreen en fin de session et par les tests d'intégration. Le meilleur
+ * score existant est toujours conservé (max), jamais écrasé par un score
+ * plus faible.
+ */
+export function recordModuleQuizBest(
+  draft: { moduleBest: Record<string, number> },
+  moduleId: string,
+  score: number
+): void {
+  draft.moduleBest[moduleId] = Math.max(draft.moduleBest[moduleId] ?? 0, score);
 }
 
 /**

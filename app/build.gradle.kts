@@ -29,12 +29,20 @@ android {
       keyPassword = System.getenv("KEY_PASSWORD")
     }
     create("debugConfig") {
-      storeFile = file("${rootDir}/debug.keystore")
-      val debugStorePassword = System.getenv("DEBUG_STORE_PASSWORD") ?: "android"
-      val debugKeyPassword = System.getenv("DEBUG_KEY_PASSWORD") ?: "android"
-      storePassword = debugStorePassword
-      keyAlias = "androiddebugkey"
-      keyPassword = debugKeyPassword
+      // P0.5 : `debug.keystore` (racine) est volontairement non commité
+      // (.gitignore) — il sert en local. S'il est absent (CI, checkout
+      // propre), cette config reste sans storeFile : le buildType `debug`
+      // retombe alors sur la signature debug STANDARD d'AGP (~/.android),
+      // au lieu de faire échouer assembleDebug.
+      val debugStore = file("${rootDir}/debug.keystore")
+      if (debugStore.exists()) {
+        storeFile = debugStore
+        val debugStorePassword = System.getenv("DEBUG_STORE_PASSWORD") ?: "android"
+        val debugKeyPassword = System.getenv("DEBUG_KEY_PASSWORD") ?: "android"
+        storePassword = debugStorePassword
+        keyAlias = "androiddebugkey"
+        keyPassword = debugKeyPassword
+      }
     }
   }
 
@@ -57,7 +65,14 @@ android {
         signingConfig = signingConfigs.getByName("release")
       }
     }
-    debug { signingConfig = signingConfigs.getByName("debugConfig") }
+    debug {
+      // P0.5 : signature debug personnalisée seulement si le keystore local
+      // existe ; sinon signature debug standard d'AGP (aucune clé committée,
+      // signature release inchangée).
+      if (file("${rootDir}/debug.keystore").exists()) {
+        signingConfig = signingConfigs.getByName("debugConfig")
+      }
+    }
   }
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_17

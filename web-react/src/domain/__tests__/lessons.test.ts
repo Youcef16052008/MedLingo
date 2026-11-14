@@ -47,11 +47,15 @@ function transformExercises(exercises: Exercise[]): Exercise[] {
 
 vi.mock("../../data/load", async () => {
   const { readFileSync } = await import("node:fs");
-  const terms = JSON.parse(readFileSync("C:/Users/pc/Desktop/MedLingo/web-react/public/data/terms.json", "utf8")) as Term[];
-  const rawExercises = JSON.parse(readFileSync("C:/Users/pc/Desktop/MedLingo/web-react/public/data/exercises.json", "utf8")) as Exercise[];
+  const { fileURLToPath } = await import("node:url");
+  // Résolution relative à ce fichier de test : le mock doit rester portable
+  // (checkout Linux, CI, autre emplacement local) — aucun chemin absolu machine.
+  const dataDir = fileURLToPath(new URL("../../../public/data/", import.meta.url));
+  const terms = JSON.parse(readFileSync(`${dataDir}terms.json`, "utf8")) as Term[];
+  const rawExercises = JSON.parse(readFileSync(`${dataDir}exercises.json`, "utf8")) as Exercise[];
   const exercises = transformExercises(rawExercises);
   const byFr = (id: string) => MODULES.find((m) => m.id === id)?.fr ?? "__inconnu__";
-  const lessonMap = JSON.parse(readFileSync("C:/Users/pc/Desktop/MedLingo/web-react/public/data/lesson_map.json", "utf8"));
+  const lessonMap = JSON.parse(readFileSync(`${dataDir}lesson_map.json`, "utf8"));
   return {
     loadOnce: () => Promise.resolve(),
     isLoaded: () => true,
@@ -59,8 +63,8 @@ vi.mock("../../data/load", async () => {
     getExercises: () => exercises,
     termById: (id: string | number) => terms.find((t) => String(t.id) === String(id)),
     termsOfModule: (id: string) => terms.filter((t) => t.module === byFr(id)),
-    getLessonMap: () => JSON.parse(readFileSync("C:/Users/pc/Desktop/MedLingo/web-react/public/data/lesson_map.json", "utf8")),
-    getChapters: () => JSON.parse(readFileSync("C:/Users/pc/Desktop/MedLingo/web-react/public/data/chapters.json", "utf8")),
+    getLessonMap: () => JSON.parse(readFileSync(`${dataDir}lesson_map.json`, "utf8")),
+    getChapters: () => JSON.parse(readFileSync(`${dataDir}chapters.json`, "utf8")),
     getLessonEntry: (id: string) => lessonMap[id] ?? undefined,
     // Invalidation de cache : sans données dynamiques dans ce mock, un
     // no-op suffit (les caches restent valides pour toute la durée du test).

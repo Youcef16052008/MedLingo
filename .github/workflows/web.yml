@@ -1,10 +1,16 @@
 name: Web
 
+# P0.5 : contrôles sur la branche de travail (workflow_dispatch), les PR et
+# main. Un push non-main n'est exécuté qu'à la demande → pas de duplication
+# push+PR quand une PR est ouverte sur la même branche.
 on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build-test:
@@ -40,6 +46,11 @@ jobs:
       # revendiqué (check-stories.mjs) mais n'était exécutée nulle part en CI.
       - name: Stories parity check
         run: npm run check:stories
+
+      # P0.5 : le précache (service worker) est un artefact vérifié — un
+      # fichier hashed non préchargé passerait inaperçu jusqu'au navigateur.
+      - name: Precache check
+        run: npm run check:precache
 
       - name: Build
         run: npm run build

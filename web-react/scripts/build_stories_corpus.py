@@ -600,19 +600,26 @@ def apply_verdicts(all_stories, verdicts):
 
     Règle : une histoire est `published` ⟺ relecture langue ET médecine
     « approved ». Tout autre verdict (needs_fixes/rejected) la retient en
-    `draft`. Dès qu'un verdict existe il est AUTORITAIRE (même pour les
-    pilotes) ; sans verdict, le statut du builder tient (le pilote dev
-    clinical-symptoms-001 reste published tant qu'il n'est pas jugé).
+    `draft`. Sans verdict à jour, une histoire est TOUJOURS `draft` —
+    aucune exception, y compris pour les pilotes dev (verrou P0.4).
     Pure : aucun fichier n'est lu ni écrit ici."""
     published = 0
     for s in all_stories:
         v = verdicts.get(s["storyId"])
         if not v:
+            # Verrou P0.4 : pas de relecture → pas de publication, même si le
+            # builder a écrit `published` (ancienne exception du pilote dev).
+            s["publicationStatus"] = "draft"
             continue
         for dim in ("language", "medical"):
             if dim in v:
                 s["review"][dim] = v[dim]["verdict"]
-        if s["review"]["language"] == "approved" and s["review"]["medical"] == "approved":
+        # Décision explicite à partir des verdicts (pas de l'état muté) :
+        # il faut DEUX approvals explicites dans le sidecar, jamais un
+        # `approved` hérité du builder qui survivrait à un verdict partiel.
+        lang = (v.get("language") or {}).get("verdict")
+        med = (v.get("medical") or {}).get("verdict")
+        if lang == "approved" and med == "approved":
             s["publicationStatus"] = "published"
             published += 1
         else:

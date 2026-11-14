@@ -114,6 +114,9 @@ class StorySchemaException(message: String) : Exception(message)
 /**
  * Analyse le contenu brut. Une version de schéma inconnue est un échec franc,
  * pas un contenu partiellement interprété ; les `draft` ne sont jamais servis.
+ * Verrou P0.4 : la double approbation (langue ET médecine) est vérifiée AU
+ * CHARGEMENT — un corpus régénéré à la main ne contourne pas le verrou
+ * (miroir de `web-react/src/learning/stories.ts`).
  */
 fun parseStoryFile(raw: String): List<Story> {
     val json = Json { ignoreUnknownKeys = true }
@@ -123,5 +126,9 @@ fun parseStoryFile(raw: String): List<Story> {
             "stories.v1.json : schemaVersion ${file.schemaVersion} non supporté (attendu $SUPPORTED_STORIES_SCHEMA)"
         )
     }
-    return file.stories.filter { it.publicationStatus == "published" }
+    return file.stories.filter {
+        it.publicationStatus == "published" &&
+            it.review.language == "approved" &&
+            it.review.medical == "approved"
+    }
 }

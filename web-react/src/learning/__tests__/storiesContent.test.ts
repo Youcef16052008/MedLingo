@@ -63,14 +63,11 @@ describe("contenu des histoires (pilote ×10)", () => {
     return v?.language?.verdict === "approved" && v?.medical?.verdict === "approved";
   }
 
-  it("publication ⟺ double approbation dans le sidecar (V0.1) — verdict AUTORITAIRE, même sur le pilote", () => {
-    // BUG-015 : le pilote dev clinical-symptoms-001 est publié par son builder
-    // SANS verdict ; dès qu'un verdict existe sur lui, il l'emporte (un rejet
-    // le retire). L'ancien test l'exigeait published inconditionnellement —
-    // faux échec dès qu'un relecteur le juge.
-    const expectedPublished = raw.stories.filter(
-      (s) => publishedPerVerdicts(s.storyId) || (!verdicts[s.storyId] && s.storyId === "clinical-symptoms-001")
-    );
+  it("publication ⟺ double approbation dans le sidecar (V0.1) — AUCUNE exception, même sur le pilote", () => {
+    // P0.4 : verrou de publication strict — `published` ⟺ relecture langue
+    // ET médecine « approved » dans le sidecar. L'ancienne exception du
+    // pilote dev (BUG-015) est supprimée : sans verdict, tout est draft.
+    const expectedPublished = raw.stories.filter((s) => publishedPerVerdicts(s.storyId));
     expect(raw.stories.filter((s) => s.publicationStatus === "published")).toEqual(expectedPublished);
     for (const s of raw.stories) {
       const v = verdicts[s.storyId];

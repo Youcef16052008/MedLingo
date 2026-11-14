@@ -22,9 +22,24 @@ class StorySessionEngineTest {
         private val DAY_MS = 86_400_000L
         private val NOW = 1_700_000_000_000L
 
-        private val story: Story = parseStoryFile(
-            File("src/main/assets/learning/stories.v1.json").readText()
-        ).first { it.storyId == "clinical-symptoms-001" }
+        /**
+         * Fixture de test uniquement (verrou P0.4) : le corpus régénéré est
+         * intégralement `draft` — AUCUNE relecture humaine à ce jour, et nous
+         * ne créons PAS de faux verdict dans le sidecar. On force EN MÉMOIRE
+         * le statut + les verdicts du pilote pour exercer le moteur ; ce
+         * n'est pas une approbation réelle et rien n'est écrit sur disque.
+         */
+        private val story: Story = run {
+            val json = Json { ignoreUnknownKeys = true }
+            val file = json.decodeFromString<StoryFile>(
+                File("src/main/assets/learning/stories.v1.json").readText()
+            )
+            val pilot = file.stories.first { it.storyId == "clinical-symptoms-001" }
+            pilot.copy(
+                publicationStatus = "published",
+                review = StoryReview(language = "approved", medical = "approved")
+            )
+        }
     }
 
     /* ---------- normalisation ---------- */
@@ -141,9 +156,40 @@ class StorySessionEngineTest {
 
     @Test
     fun `les drafts ne sont jamais servis`() {
-        val raw = File("src/main/assets/learning/stories.v1.json").readText()
-        val draft = raw.replace("\"publicationStatus\": \"published\"", "\"publicationStatus\": \"draft\"")
-        assertTrue(parseStoryFile(draft).isEmpty())
+        val json = Json { ignoreUnknownKeys = true }
+        val draft = story.copy(publicationStatus = "draft")
+        val raw = json.encodeToString(StoryFile.serializer(), StoryFile(1, listOf(draft)))
+        assertTrue(parseStoryFile(raw).isEmpty())
+    }
+
+    @Test
+    fun `verrou P0-4 - published sans double approbation refuse au chargement`() {
+        val json = Json { ignoreUnknownKeys = true }
+        val combos = listOf(
+            StoryReview("pending", "pending"),
+            StoryReview("approved", "pending"),
+            StoryReview("pending", "approved"),
+            StoryReview("needs_fixes", "approved"),
+            StoryReview("approved", "rejected")
+        )
+        for (review in combos) {
+            val file = StoryFile(1, listOf(story.copy(storyId = "lock-test", review = review)))
+            val served = parseStoryFile(json.encodeToString(StoryFile.serializer(), file))
+            assertTrue("verdicts ${review.language}/${review.medical} doivent refuser la publication", served.isEmpty())
+        }
+        // Double approbation → servi.
+        val ok = StoryFile(
+            1,
+            listOf(story.copy(storyId = "lock-test", review = StoryReview("approved", "approved")))
+        )
+        assertEquals(1, parseStoryFile(json.encodeToString(StoryFile.serializer(), ok)).size)
+    }
+
+    @Test
+    fun `zero histoire approuvee - liste vide geree`() {
+        val json = Json { ignoreUnknownKeys = true }
+        val served = parseStoryFile(json.encodeToString(StoryFile.serializer(), StoryFile(1, emptyList())))
+        assertTrue(served.isEmpty())
     }
 
     /* ---------- scénarios partagés web/Kotlin ---------- */

@@ -17,6 +17,18 @@ let failed = false;
 /** Le chargement a-t-il abouti (même vide : tout en draft) ou échoué ? */
 let settled = false;
 
+/** Verrou P0.4 : une histoire est servie seulement si statut `published`
+ *  ET double relecture approuvée (langue ET médecine) pour cette version.
+ *  La défense est ici AU CHARGEMENT, pas seulement dans le générateur :
+ *  un corpus régénéré à la main ne contourne pas le verrou. */
+function isPublishable(s: Story): boolean {
+  return (
+    s.publicationStatus === "published" &&
+    s.review.language === "approved" &&
+    s.review.medical === "approved"
+  );
+}
+
 /** Valide la version du fichier ; une version inconnue est un échec franc,
  *  pas un contenu partiellement interprété. */
 function ingest(raw: unknown): Story[] {
@@ -26,7 +38,7 @@ function ingest(raw: unknown): Story[] {
       `stories.v1.json : schemaVersion ${String((data as StoryFile | null)?.schemaVersion)} non supporté (attendu ${SUPPORTED_STORIES_SCHEMA})`
     );
   }
-  return (data.stories ?? []).filter((s) => s.publicationStatus === "published");
+  return (data.stories ?? []).filter(isPublishable);
 }
 
 async function fetchJson<T>(path: string): Promise<T> {
@@ -73,7 +85,7 @@ export const getStories = (): Story[] => stories;
 export function nextStoryInChapter(current: Story): Story | null {
   return (
     stories
-      .filter((s) => s.publicationStatus === "published")
+      .filter(isPublishable)
       .find(
         (s) =>
           s.storyId > current.storyId &&

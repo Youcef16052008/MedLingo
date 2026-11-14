@@ -34,9 +34,29 @@ function ui(jsx: ReactElement) {
 }
 
 beforeAll(() => {
-  const file = JSON.parse(
+  /**
+   * Fixture de test uniquement (verrou P0.4) : le corpus est intégralement
+   * `draft` (aucune relecture humaine à ce jour, pas de faux verdict dans le
+   * sidecar). On force EN MÉMOIRE le statut + verdicts du pilote pour rendre
+   * l'écran testable ; ce n'est pas une approbation réelle, rien n'est écrit.
+   */
+  const raw = JSON.parse(
     readFileSync(join(__dirname, "..", "..", "..", "public", "data", "stories.v1.json"), "utf-8")
   ) as StoryFile;
+  const pilotRaw = raw.stories.find((s) => s.storyId === "clinical-symptoms-001");
+  if (!pilotRaw) throw new Error("histoire pilote absente du corpus");
+  const file: StoryFile = {
+    ...raw,
+    stories: raw.stories.map((s) =>
+      s.storyId === pilotRaw.storyId
+        ? {
+            ...pilotRaw,
+            publicationStatus: "published" as const,
+            review: { language: "approved", medical: "approved" },
+          }
+        : s
+    ),
+  };
   setStories(file);
   localStorage.clear();
   resetProgress(Date.now());

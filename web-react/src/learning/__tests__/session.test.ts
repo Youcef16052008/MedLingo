@@ -16,7 +16,7 @@ import {
   checkAccepted,
   STORY_STEPS,
 } from "../session";
-import { setStories, storyById } from "../stories";
+import { setStories, storyById, getStories, isStoryLoaded } from "../stories";
 import { revive, makeDefaults } from "../../domain/store";
 import type { Story, StoryFile } from "../types";
 
@@ -24,10 +24,28 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const NOW = 1_700_000_000_000;
 const DAY = 86_400_000;
 
-/** L'histoire pilote réelle — le test valide le contenu publié, pas une copie. */
-const file = JSON.parse(
+/**
+ * Fixture de test uniquement (verrou P0.4) : le corpus régénéré est
+ * intégralement `draft` — AUCUNE relecture humaine à ce jour, et nous ne
+ * créons PAS de faux verdict dans le sidecar (`review-verdicts.v1.json`
+ * reste vide). Pour exercer le moteur, on force EN MÉMOIRE le statut et les
+ * verdicts du pilote ; ce n'est pas une approbation réelle et rien n'est
+ * écrit sur disque.
+ */
+const raw = JSON.parse(
   readFileSync(join(__dirname, "..", "..", "..", "public", "data", "stories.v1.json"), "utf-8")
 ) as StoryFile;
+const pilotRaw = raw.stories.find((s) => s.storyId === "clinical-symptoms-001");
+if (!pilotRaw) throw new Error("histoire pilote absente du corpus");
+const pilotFixture: Story = {
+  ...pilotRaw,
+  publicationStatus: "published",
+  review: { language: "approved", medical: "approved" },
+};
+const file: StoryFile = {
+  ...raw,
+  stories: raw.stories.map((s) => (s.storyId === pilotRaw.storyId ? pilotFixture : s)),
+};
 setStories(file);
 const story = storyById("clinical-symptoms-001") as Story;
 
@@ -366,6 +384,40 @@ describe("chargeur d'histoires", () => {
     const draft = { ...file, stories: [{ ...story, storyId: "x", publicationStatus: "draft" as const }] };
     setStories(draft);
     expect(storyById("x")).toBeUndefined();
+    setStories(file); // restaurer
+  });
+
+  it("P0.4 : `published` sans double approbation → jamais servi (défense au chargement)", () => {
+    const combos = [
+      { language: "pending", medical: "pending" },
+      { language: "approved", medical: "pending" },
+      { language: "pending", medical: "approved" },
+      { language: "needs_fixes", medical: "approved" },
+      { language: "approved", medical: "rejected" },
+    ] as const;
+    for (const review of combos) {
+      const attempt = {
+        ...file,
+        stories: [{ ...story, storyId: "lock-test", review: { ...review } }],
+      };
+      setStories(attempt);
+      expect(storyById("lock-test")).toBeUndefined();
+    }
+    // Double approbation → servi.
+    const ok = {
+      ...file,
+      stories: [{ ...story, storyId: "lock-test", review: { language: "approved", medical: "approved" } }],
+    };
+    setStories(ok);
+    expect(storyById("lock-test")).toBeDefined();
+    setStories(file); // restaurer
+  });
+
+  it("P0.4 : zéro histoire approuvée → liste vide gérée, écran honnête", () => {
+    const empty = { ...file, stories: [] };
+    setStories(empty);
+    expect(getStories()).toEqual([]);
+    expect(isStoryLoaded()).toBe(false);
     setStories(file); // restaurer
   });
 

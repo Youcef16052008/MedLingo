@@ -12,7 +12,7 @@ import { loadLessonData, getLessonEntry, getLessonMap, chapterIdOf } from "../da
 import { earnChest, cadenceBonusChest } from "../domain/chests";
 import { claimTrophies, type TrophyId } from "../domain/trophies";
 import { fillScore } from "../domain/scoring";
-import { weakChapters } from "../domain/mastery";
+import { recordModuleQuizBest, weakChapters } from "../domain/mastery";
 import { MODULES } from "../data/modules";
 import { shuffle, norm } from "../lib/utils";
 import { SessionTop } from "../components/SessionTop";
@@ -500,7 +500,9 @@ export function QuizScreen() {
         if (q.moduleId) {
           const key = lessonKey(q.moduleId, q.level);
           draft.lessonBest[key] = Math.max(draft.lessonBest[key] ?? 0, score);
-          draft.moduleBest[q.moduleId] = Math.max(draft.moduleBest[q.moduleId] ?? 0, score);
+          // Contrat P0.2 : écriture unique par module (la même que celle testée
+          // en intégration) — pas de clé globale `quiz`.
+          recordModuleQuizBest(draft, q.moduleId, score);
         } else if (score >= 100) {
           // F9 : quiz libre parfait → pseudo-clé `free` (ignorée par le
           // parcours, exclue de `module_master`) — débloque « Sans faute »

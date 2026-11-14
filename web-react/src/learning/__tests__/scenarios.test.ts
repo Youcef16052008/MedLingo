@@ -8,6 +8,7 @@ import {
   sessionSummary,
 } from "../session";
 import { setStories, storyById } from "../stories";
+import type { StoryFile } from "../types";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -24,9 +25,26 @@ const REPO = join(__dirname, "..", "..", "..", "..");
 const scenariosFile = JSON.parse(
   readFileSync(join(REPO, "app", "src", "test", "resources", "learning", "story-scenarios.json"), "utf-8")
 );
-const storyFile = JSON.parse(
+/**
+ * Fixture de test uniquement (verrou P0.4) : le corpus est intégralement
+ * `draft` (aucune relecture humaine à ce jour, pas de faux verdict dans le
+ * sidecar). On force EN MÉMOIRE le statut + verdicts du pilote pour exercer
+ * le moteur partagé ; ce n'est pas une approbation réelle, rien n'est écrit.
+ */
+const storyFileRaw = JSON.parse(
   readFileSync(join(REPO, "app", "src", "main", "assets", "learning", "stories.v1.json"), "utf-8")
-);
+) as StoryFile;
+const pilotRaw = storyFileRaw.stories.find((s) => s.storyId === "clinical-symptoms-001");
+if (!pilotRaw) throw new Error("histoire pilote absente du fichier Android");
+const pilotFixture = {
+  ...pilotRaw,
+  publicationStatus: "published" as const,
+  review: { language: "approved", medical: "approved" },
+};
+const storyFile: StoryFile = {
+  ...storyFileRaw,
+  stories: storyFileRaw.stories.map((s) => (s.storyId === pilotRaw.storyId ? pilotFixture : s)),
+};
 setStories(storyFile);
 const story = storyById("clinical-symptoms-001");
 if (!story) throw new Error("histoire pilote absente du fichier Android");
