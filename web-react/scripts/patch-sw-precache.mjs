@@ -59,8 +59,15 @@ const newArr =
   "const SHELL = [\n" + allEntries.map((e) => `  "${e}",`).join("\n") + "\n];";
 sw = sw.slice(0, start) + newArr + sw.slice(end + 2);
 
-// Derive a cache name from the precache list so deploys invalidate cleanly.
-const hash = crypto.createHash("sha256").update(allEntries.join("|")).digest("hex").slice(0, 8);
+// Derive a cache name from the precache list AND the worker logic, so that a
+// change to sw.js alone (e.g. the P2.4 response-sanitising fix) also
+// invalidates the old cache on existing clients.
+const logicForHash = sw.replace(/const CACHE = "medlingo-web-[^"]*"/, "");
+const hash = crypto
+  .createHash("sha256")
+  .update(allEntries.join("|") + "|sw:" + logicForHash)
+  .digest("hex")
+  .slice(0, 8);
 sw = sw.replace(/const CACHE = "medlingo-web-v\d+"/, `const CACHE = "medlingo-web-${hash}"`);
 
 fs.writeFileSync(swPath, sw);

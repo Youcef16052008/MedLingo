@@ -1447,3 +1447,49 @@ h3 { font-size: 1.05rem; font-weight: 700; }
   to { transform: scale(1); opacity: 1; }
 }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ============================================================
+   Boutons et chips — restauration P2.4 (12/11/2026)
+   Les classes `.btn*` et `.stat-chip` étaient utilisées par les
+   écrans (dont le pilote Anatomie) mais ABSENTES de cette feuille :
+   les boutons héritaient du style UA (fond #F0F0F0, texte hérité
+   clair) → contraste 1.03:1 en thème sombre (audit P2.4, mesure
+   réelle). Section ajoutée avec les tokens de CE système ; les
+   couleurs primaires/danger sont fixes pour garantir AA (≥ 4.5:1)
+   dans les DEUX thèmes.
+   ============================================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 20px; border: 0; border-radius: var(--radius-sm);
+  background: #0F766E; color: #FFFFFF; /* 5.6:1 sur les deux thèmes */
+  font-weight: 800; font-size: 15px; cursor: pointer; text-decoration: none;
+  box-shadow: 0 3px 0 rgba(15, 23, 42, .3);
+  transition: transform .08s, filter .15s;
+}
+.btn:hover { filter: brightness(1.1); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+.btn.block { width: 100%; }
+.btn.small { padding: 8px 14px; font-size: .85rem; }
+.btn:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+.btn.ghost {
+  background: transparent; color: var(--ink); /* ~15:1 sur les deux thèmes */
+  border: 2px solid var(--line-2); box-shadow: none;
+}
+.btn.danger { background: #B91C1C; color: #FFFFFF; } /* 6.4:1 fixe */
+
+.stat-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 600; font-size: .85rem; font-variant-numeric: tabular-nums;
+}
+/* Miroir de GemsLeagueTopBar.kt : chaque puce a sa propre teinte. */
+.stat-chip.streak { background: #FFF7ED; border-color: #FFF7ED; }
+.stat-chip.streak b { color: #EA580C; }
+.stat-chip.gems { background: #EFF6FF; border-color: #EFF6FF; }
+.stat-chip.gems b { color: #2563EB; }
+.stat-chip.league {
+  background: #FEF3C7; border-color: #FEF3C7; color: #D97706;
+  cursor: pointer; font: inherit; padding: 4px 10px;
+}

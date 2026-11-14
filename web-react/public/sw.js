@@ -42,6 +42,53 @@ self.addEventListener("activate", (event) => {
 });
 
 /**
+ * putSanitized — stocke une réponse SANS `Content-Encoding`/`Content-Length`
+ * ni `Vary`.
+ *
+ * Pourquoi (audit P2.4, 12/11/2026, deux constats réels hors-ligne) :
+ *  1. le corps fourni par fetch() est déjà décompressé mais la réponse garde
+ *     l'en-tête `Content-Encoding: gzip` du serveur (vite preview, nginx,
+ *     CDN...) — resservie telle quelle depuis le cache hors-ligne, elle casse
+ *     (net::ERR_FAILED) et l'application apparaît vide ;
+ *  2. `Vary: Origin` émis par le serveur casse le matching du cache du SW
+ *     pour les sous-ressources chargées par le document (les requêtes du SW
+ *     et celles du document n'exposent pas le même Origin) → mêmes
+ *     symptômes. Dans CE cache, on ne sert que cette application sur cette
+ *     origine : `Vary` n'a pas d'utilité.
+ * Les réponses opaques (polices) ne sont pas lisibles : elles restent
+ * stockées brutes (repli).
+ */
+async function putSanitized(cache, req, res) {
+  try {
+    const headers = new Headers(res.headers);
+    headers.delete("Content-Encoding");
+    headers.delete("Content-Length");
+    headers.delete("Vary");
+    const body = await res.arrayBuffer();
+    await cache.put(req, new Response(body, { status: res.status, statusText: res.statusText, headers }));
+  } catch {
+    await cache.put(req, res).catch(() => undefined);
+  }
+}
+
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(CACHE);
+      // Les entrées sont récupérées en parallèle (l'ancienne boucle séquentielle
+      // aurait ajouté ~22 allers-retours au temps d'installation).
+      await Promise.allSettled(
+        SHELL.map(async (url) => {
+          const res = await fetch(url, { cache: "reload" });
+          if (res.ok) await putSanitized(cache, url, res);
+        })
+      );
+      await self.skipWaiting();
+    })()
+  );
+});
+
+/**
  * Stratégie :
  *  - navigations (SPA) → réseau d'abord pour propager les mises à jour,
  *    repli sur le shell caché uniquement hors-ligne ;
@@ -90,7 +137,7 @@ self.addEventListener("fetch", (event) => {
             const copy = res.clone();
             caches
               .open(CACHE)
-              .then((c) => c.put("./index.html", copy))
+              .then((c) => putSanitized(c, "./index.html", copy))
               .catch(() => undefined);
           }
           return res;
@@ -107,8 +154,7 @@ self.addEventListener("fetch", (event) => {
       const refresh = fetch(req)
         .then((res) => {
           if (res.ok) {
-            const copy = res.clone();
-            caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => undefined);
+            caches.open(CACHE).then((c) => putSanitized(c, req, res)).catch(() => undefined);
           }
           return res;
         })
