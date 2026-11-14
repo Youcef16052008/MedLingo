@@ -1,9 +1,11 @@
 package com.aistudio.medlingua.dzmed.di
 
 import android.content.Context
-import com.aistudio.medlingua.dzmed.data.local.database.MedLinguaDatabase
+import com.aistudio.medlingua.dzmed.data.local.dao.KnowledgeGraphDao
 import com.aistudio.medlingua.dzmed.data.local.dao.MedicalDao
 import com.aistudio.medlingua.dzmed.data.local.dao.ReviewQueueDao
+import com.aistudio.medlingua.dzmed.data.local.database.MedLinguaDatabase
+import com.aistudio.medlingua.dzmed.data.repository.KnowledgeGraphRepository
 import com.aistudio.medlingua.dzmed.data.repository.MedLinguaRepository
 import com.aistudio.medlingua.dzmed.domain.time.Clock
 import com.aistudio.medlingua.dzmed.domain.time.SystemClock
@@ -16,6 +18,14 @@ object AppModule {
     
     fun provideRepository(dao: MedicalDao, clock: Clock = SystemClock): MedLinguaRepository {
         return MedLinguaRepository(dao, clock)
+    }
+    
+    fun provideKnowledgeGraphDao(database: MedLinguaDatabase): KnowledgeGraphDao {
+        return database.knowledgeGraphDao()
+    }
+    
+    fun provideKnowledgeGraphRepository(dao: KnowledgeGraphDao): KnowledgeGraphRepository {
+        return KnowledgeGraphRepository(dao)
     }
     
     fun provideReviewQueueDao(database: MedLinguaDatabase): ReviewQueueDao {

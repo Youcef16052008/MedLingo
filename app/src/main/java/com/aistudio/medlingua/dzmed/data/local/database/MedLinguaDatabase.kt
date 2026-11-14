@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.aistudio.medlingua.dzmed.data.initial.InitialData
+import com.aistudio.medlingua.dzmed.data.local.dao.KnowledgeGraphDao
 import com.aistudio.medlingua.dzmed.data.local.dao.MedicalDao
 import com.aistudio.medlingua.dzmed.data.local.dao.ReviewQueueDao
 import com.aistudio.medlingua.dzmed.data.local.dao.StoryDao
@@ -16,11 +16,14 @@ import com.aistudio.medlingua.dzmed.data.local.entity.FlashcardProgressEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.GemsTransactionEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.LeagueCohortEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.LeagueMemberEntity
+import com.aistudio.medlingua.dzmed.data.local.entity.KnowledgeGraphEdgeEntity
+import com.aistudio.medlingua.dzmed.data.local.entity.KnowledgeGraphNodeEntity
+import com.aistudio.medlingua.dzmed.data.local.entity.KnowledgeGraphReportEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.LessonScoreEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.MedicalTermEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.PhraseProgressEntity
-import com.aistudio.medlingua.dzmed.data.local.entity.StorySessionProgressEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.ReviewQueueItem
+import com.aistudio.medlingua.dzmed.data.local.entity.StorySessionProgressEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.TrophyEntity
 import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
 
@@ -38,42 +41,19 @@ import com.aistudio.medlingua.dzmed.data.local.entity.UserStatsEntity
         LessonScoreEntity::class,
         ReviewQueueItem::class,
         StorySessionProgressEntity::class,
-        PhraseProgressEntity::class
+        PhraseProgressEntity::class,
+        KnowledgeGraphNodeEntity::class,
+        KnowledgeGraphEdgeEntity::class,
+        KnowledgeGraphReportEntity::class
     ],
-    // v9 : les ids des seeds ont été dédupliqués (1..N) après l'intégration des
-    // dumps SQL, ce qui a RENUMÉROTÉ les termes. Aucune colonne n'a changé, mais
-    // `flashcard_progress.termId` pointe sur `medical_terms.id` : sans MIGRATION_8_9
-    // l'historique de révision de chaque utilisateur se retrouverait rattaché au
-    // mauvais terme. La migration le ré-attache par (termEn, module) au lieu de
-    // supprimer la base.
-    //
-    // v10 : suppression du système de cœurs (hearts/heartsUpdatedAt/maxHearts) et
-    // ajout de l'objectif quotidien, des caisses et des trophées — MIGRATION_9_10.
-    //
-    // v11 : index sur `medical_terms` — `module` (écrans de module),
-    // `(module, chapter)` (tri de getAllTerms) et `(termEn, module)`
-    // (restoreBookmark). Avant, chacune de ces requêtes scannait les 4 504
-    // lignes (défaut D2, revue database v2).
-    //
-    // v12 : suppression de la colonne legacy `example` (défaut D3). Elle
-    // dupliquait `exampleEn` (692 valeurs identiques sur 972) et n'était lue
-    // par aucun code — grep strict : 0 lecteur.
-    //
-    // v13 : `review_queue.missed_ex_ids` — la colonne et MIGRATION_12_13
-    // existaient mais `version` était restée à 12 : la migration ne pouvait
-    // jamais s'exécuter et les bases existantes validaient le schéma contre
-    // une entité qui avait déjà la colonne (crash assuré). Le bump à 13 rend
-    // le chemin d'upgrade réel.
-    //
-    // v14 : mode histoire — tables neuves `story_session_progress` et
-    // `phrase_progress` (mémoire d'expressions SÉPARÉE des `termId`).
-    version = 14,
+    version = 15,
     exportSchema = true
 )
 abstract class MedLinguaDatabase : RoomDatabase() {
     abstract fun medicalDao(): MedicalDao
     abstract fun reviewQueueDao(): ReviewQueueDao
     abstract fun storyDao(): StoryDao
+    abstract fun knowledgeGraphDao(): KnowledgeGraphDao
 
     companion object {
         @Volatile
@@ -93,9 +73,9 @@ abstract class MedLinguaDatabase : RoomDatabase() {
                     MIGRATION_10_11,
                     MIGRATION_11_12,
                     MIGRATION_12_13,
-                    MIGRATION_13_14
-                )
-                    .build()
+                    MIGRATION_13_14,
+                    MIGRATION_14_15
+                ).build()
                 INSTANCE = instance
                 instance
             }
@@ -103,477 +83,62 @@ abstract class MedLinguaDatabase : RoomDatabase() {
     }
 }
 
-/**
- * Ré-attache l'historique de révision aux bons termes après la renumérotation des seeds.
- *
- * Le calcul est délégué à [TermIdMigrationPlan] : une base v8 contient des termes dont
- * l'id ne correspond plus au seed courant, donc `flashcard_progress.termId` pointerait
- * sur le mauvais terme. Aucun signet, aucune progression et aucune statistique n'est
- * sacrifié — c'est tout l'intérêt de cette migration par rapport à un drop de tables.
- */
-private val MIGRATION_8_9 = object : Migration(8, 9) {
+private val MIGRATION_14_15 = object : Migration(14, 15) {
     override fun migrate(database: SupportSQLiteDatabase) {
-        // En tête : certaines colonnes et certains index ont été ajoutés aux entités sans
-        // migration lors des builds de développement. Tous les chemins d'upgrade passent
-        // ici (v6→7→8→9, v7→8→9, v8→9), donc c'est le seul endroit qui peut réparer le
-        // schéma quelle que soit la version de départ. Sans cela Room refuse l'ouverture
-        // après la migration et l'app crash au démarrage.
-        ensureEntityDrift(database)
-
-        val stored = ArrayList<TermIdMigrationPlan.TermIdentity>()
-        // Les colonnes de `medical_terms` portent les noms Kotlin de l'entité (camelCase,
-        // sans @ColumnInfo) : c'est aussi ce que le MedicalDao interroge. Un schéma en
-        // snake_case n'existe nulle part, et `term_en` faisait échouer la migration — donc
-        // le démarrage — chez tout utilisateur à partir de la v8.
-        database.query("SELECT id, termEn, module FROM medical_terms").use { c ->
-            val idIdx = c.getColumnIndexOrThrow("id")
-            val enIdx = c.getColumnIndexOrThrow("termEn")
-            val modIdx = c.getColumnIndexOrThrow("module")
-            while (c.moveToNext()) {
-                stored += TermIdMigrationPlan.TermIdentity(
-                    id = c.getInt(idIdx),
-                    termEn = c.getString(enIdx),
-                    module = c.getString(modIdx)
-                )
-            }
-        }
-
-        // On collecte avant d'écrire : modifier une table pendant qu'un curseur la parcourt
-        // laisse l'itération sans garantie.
-        val progressIds = LinkedHashSet<Int>()
-        database.query("SELECT termId FROM flashcard_progress").use { c ->
-            while (c.moveToNext()) progressIds += c.getInt(0)
-        }
-
-        val seed = InitialData.terms.map {
-            TermIdMigrationPlan.TermIdentity(id = it.id, termEn = it.termEn, module = it.module)
-        }
-        val plan = TermIdMigrationPlan.compute(stored, seed, progressIds)
-
-        // Un déplacement peut viser un id qu'un autre déplacement va libérer : l'ancien
-        // id 3 (Neurone) devient 4 pendant que l'ancien 7 (Cell) devient 3. Appliqué dans
-        // l'ordre, un UPDATE OR REPLACE écraserait la progression de Neurone avec celle de
-        // Cell, et l'historique de Neurone serait perdu. On passe donc par des ids
-        // temporaires négatifs — ils ne peuvent entrer en collision avec un id de seed,
-        // qui est toujours positif, et rendent l'opération ordre-indépendante.
-        plan.progressRemap.entries.forEachIndexed { i, (oldId, _) ->
-            database.execSQL(
-                "UPDATE OR REPLACE flashcard_progress SET termId = ? WHERE termId = ?",
-                arrayOf<Any>(-(i + 1), oldId)
-            )
-        }
-        plan.progressRemap.values.forEachIndexed { i, newId ->
-            database.execSQL(
-                "UPDATE OR REPLACE flashcard_progress SET termId = ? WHERE termId = ?",
-                arrayOf<Any>(newId, -(i + 1))
-            )
-        }
-
-        // Les termes retirés du seed ne doivent plus apparaître dans le lexique.
-        plan.droppedTermIds.forEach { oldId ->
-            database.execSQL("DELETE FROM medical_terms WHERE id = ?", arrayOf<Any>(oldId))
-        }
-
-        // Et plus aucune progression ne doit référencer un terme inexistant.
-        plan.droppedProgressIds.forEach { termId ->
-            database.execSQL("DELETE FROM flashcard_progress WHERE termId = ?", arrayOf<Any>(termId))
-        }
-    }
-}
-
-/**
- * Répare le schéma quand une entité a gagné un champ ou un index sans migration.
- *
- * Les specs d'exercices, l'économie de cœurs/pierres et les index de ligues ont été ajoutés
- * aux entités au fil des builds de développement sans migration dédiée : seule une base
- * créée à neuf avec le schéma courant passait la validation de Room. Chaque entrée est
- * idempotente — appliquée seulement si elle manque — pour couvrir un départ en v6, v7 ou v8
- * sans avoir à reconstituer l'ordre exact des changements.
- *
- * Les noms d'index reprennent ceux que Room génère (index_<table>_<colonnes>) : la
- * validation compare les index, pas seulement les colonnes.
- */
-private fun ensureEntityDrift(db: SupportSQLiteDatabase) {
-    val missingColumns = mapOf(
-        "exercises" to listOf(
-            "specJson TEXT NOT NULL DEFAULT ''",
-            "isSpecMigrated INTEGER NOT NULL DEFAULT 0",
-            "version INTEGER NOT NULL DEFAULT 1"
-        ),
-        "user_stats" to listOf(
-            "gems INTEGER NOT NULL DEFAULT 100"
-        )
-    )
-
-    for ((table, definitions) in missingColumns) {
-        val existing = HashSet<String>()
-        db.query("PRAGMA table_info($table)").use { c ->
-            val nameIdx = c.getColumnIndexOrThrow("name")
-            while (c.moveToNext()) existing += c.getString(nameIdx)
-        }
-        // Une table absente ne peut pas être altérée ; Room la signalerait de toute façon.
-        if (existing.isEmpty()) continue
-        for (definition in definitions) {
-            val name = definition.substringBefore(' ')
-            if (name !in existing) db.execSQL("ALTER TABLE $table ADD COLUMN $definition")
-        }
-    }
-
-    listOf(
-        "user_stats" to "CREATE INDEX IF NOT EXISTS index_user_stats_weeklyXp ON user_stats(weeklyXp)",
-        "league_cohorts" to "CREATE INDEX IF NOT EXISTS index_league_cohorts_tier ON league_cohorts(tier)",
-        "league_cohorts" to "CREATE INDEX IF NOT EXISTS index_league_cohorts_weekStartTimestamp ON league_cohorts(weekStartTimestamp)",
-        "league_cohorts" to "CREATE INDEX IF NOT EXISTS index_league_cohorts_isActive ON league_cohorts(isActive)"
-    ).forEach { (table, statement) ->
-        // Une table manquante ferait échouer toute la migration ; Room la signale ensuite
-        // par sa propre validation, avec un message exploitable.
-        db.query(
-            "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
-            arrayOf(table)
-        ).use { if (it.moveToFirst()) db.execSQL(statement) }
-    }
-}
-
-private val MIGRATION_6_7 = object : Migration(6, 7) {
-    override fun migrate(database: SupportSQLiteDatabase) {
-        // Add new columns for league system
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN weeklyXp INTEGER NOT NULL DEFAULT 0")
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN leagueCohortId TEXT")
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN leagueTier TEXT NOT NULL DEFAULT 'BRONZE'")
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN isSuper INTEGER NOT NULL DEFAULT 0")
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN superExpiresAt INTEGER")
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN streakFreezeCount INTEGER NOT NULL DEFAULT 0")
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN perfectLessonsCount INTEGER NOT NULL DEFAULT 0")
-        database.execSQL("ALTER TABLE user_stats ADD COLUMN lessonsCompleted INTEGER NOT NULL DEFAULT 0")
-        
-        // Create league_cohorts table
-        database.execSQL("""
-            CREATE TABLE league_cohorts (
-                cohortId TEXT NOT NULL PRIMARY KEY,
-                weekStartTimestamp INTEGER NOT NULL,
-                weekEndTimestamp INTEGER NOT NULL,
-                tier TEXT NOT NULL DEFAULT 'BRONZE',
-                isActive INTEGER NOT NULL DEFAULT 1,
-                isPromoted INTEGER NOT NULL DEFAULT 0,
-                isDemoted INTEGER NOT NULL DEFAULT 0,
-                createdAt INTEGER NOT NULL DEFAULT 0
-            )
-        """)
-        
-        // Create league_members table
-        database.execSQL("""
-            CREATE TABLE league_members (
-                id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                cohortId TEXT NOT NULL,
-                userId INTEGER NOT NULL DEFAULT 1,
-                displayName TEXT NOT NULL,
-                avatarEmoji TEXT NOT NULL DEFAULT '👨‍⚕️',
-                weeklyXp INTEGER NOT NULL DEFAULT 0,
-                totalXp INTEGER NOT NULL DEFAULT 0,
-                streakDays INTEGER NOT NULL DEFAULT 0,
-                rank INTEGER NOT NULL DEFAULT 0,
-                isCurrentUser INTEGER NOT NULL DEFAULT 0,
-                isBot INTEGER NOT NULL DEFAULT 0,
-                lastActiveTimestamp INTEGER NOT NULL DEFAULT 0
-            )
-        """)
-        
-        // Create gems_transactions table
-        database.execSQL("""
-            CREATE TABLE gems_transactions (
-                id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                userId INTEGER NOT NULL DEFAULT 1,
-                type TEXT NOT NULL,
-                amount INTEGER NOT NULL,
-                reason TEXT NOT NULL,
-                timestamp INTEGER NOT NULL DEFAULT 0,
-                balanceAfter INTEGER NOT NULL DEFAULT 0,
-                metadata TEXT NOT NULL DEFAULT ''
-            )
-        """)
-        
-        // Create indexes
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_league_members_cohortId ON league_members(cohortId)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_league_members_cohortId_weeklyXp ON league_members(cohortId, weeklyXp)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_gems_transactions_userId ON gems_transactions(userId)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_gems_transactions_timestamp ON gems_transactions(timestamp)")
-    }
-}
-
-private val MIGRATION_7_8 = object : Migration(7, 8) {
-    override fun migrate(database: SupportSQLiteDatabase) {
-        // Add any additional schema changes here
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_user_stats_leagueCohortId ON user_stats(leagueCohortId)")
-    }
-}
-
-/**
- * v9 → v10 : fin des cœurs, début de l'objectif quotidien / des caisses / des trophées.
- *
- * `user_stats` est reconstruit (CREATE … INSERT SELECT … DROP … RENAME) : Room refuse
- * d'altérer une table pour *retirer* une colonne, et les cœurs (`hearts`, `heartsUpdatedAt`,
- * `maxHearts`) disparaissent du modèle. Toutes les données existantes sont conservées —
- * seules les colonnes de cœurs sont abandonnées.
- *
- * Colonnes ajoutées : objectif quotidien (`xpToday`, `goalDate`, `dailyGoal`),
- * série (`lastStudy`, `goalDays`), caisses (`pendingChests`, `chestsOpened`),
- * contre `flashReviewed` (trophée 🗂️) et `weeklyXpReset` (reset hebdomadaire).
- * Les congélations réutilisent `streakFreezeCount`, déjà présent en v9.
- */
-internal val MIGRATION_9_10 = object : Migration(9, 10) {
-    override fun migrate(database: SupportSQLiteDatabase) {
-        // Colonnes / index rajoutés aux entités au fil des builds de dev : la source du
-        // INSERT SELECT doit être complète quelle que soit la version de départ (v6 à v9).
-        ensureEntityDrift(database)
-
+        // Ajoute les tables du graphe de connaissances.
+        // Table neuve : aucune donnée existante n'est touchée.
         database.execSQL(
             """
-            CREATE TABLE user_stats_new (
-                id INTEGER NOT NULL PRIMARY KEY,
-                streakDays INTEGER NOT NULL,
-                learnedTermsCount INTEGER NOT NULL,
-                totalPoints INTEGER NOT NULL,
-                quizzesCompleted INTEGER NOT NULL,
-                totalQuestionsAnswered INTEGER NOT NULL,
-                correctAnswersCount INTEGER NOT NULL,
-                isOfflineSimulated INTEGER NOT NULL,
-                selectedLanguageCode TEXT NOT NULL,
-                level1Score INTEGER NOT NULL,
-                level2Score INTEGER NOT NULL,
-                level3Score INTEGER NOT NULL,
-                level4Score INTEGER NOT NULL,
-                level5Score INTEGER NOT NULL,
-                level6Score INTEGER NOT NULL,
-                gems INTEGER NOT NULL,
-                weeklyXp INTEGER NOT NULL,
-                leagueCohortId TEXT,
-                leagueTier TEXT NOT NULL,
-                isSuper INTEGER NOT NULL,
-                superExpiresAt INTEGER,
-                streakFreezeCount INTEGER NOT NULL,
-                perfectLessonsCount INTEGER NOT NULL,
-                lessonsCompleted INTEGER NOT NULL,
-                xpToday INTEGER NOT NULL,
-                goalDate TEXT NOT NULL,
-                dailyGoal INTEGER NOT NULL,
-                lastStudy TEXT NOT NULL,
-                goalDays INTEGER NOT NULL,
-                flashReviewed INTEGER NOT NULL,
-                pendingChests INTEGER NOT NULL,
-                chestsOpened INTEGER NOT NULL,
-                weeklyXpReset INTEGER NOT NULL
-            )
-            """.trimIndent()
-        )
-
-        database.execSQL(
-            """
-            INSERT INTO user_stats_new (
-                id, streakDays, learnedTermsCount, totalPoints, quizzesCompleted,
-                totalQuestionsAnswered, correctAnswersCount, isOfflineSimulated,
-                selectedLanguageCode, level1Score, level2Score, level3Score,
-                level4Score, level5Score, level6Score, gems, weeklyXp,
-                leagueCohortId, leagueTier, isSuper, superExpiresAt,
-                streakFreezeCount, perfectLessonsCount, lessonsCompleted,
-                xpToday, goalDate, dailyGoal, lastStudy, goalDays, flashReviewed,
-                pendingChests, chestsOpened, weeklyXpReset
-            )
-            SELECT
-                id, streakDays, learnedTermsCount, totalPoints, quizzesCompleted,
-                totalQuestionsAnswered, correctAnswersCount, isOfflineSimulated,
-                selectedLanguageCode, level1Score, level2Score, level3Score,
-                level4Score, level5Score, level6Score, gems, weeklyXp,
-                leagueCohortId, leagueTier, isSuper, superExpiresAt,
-                streakFreezeCount, perfectLessonsCount, lessonsCompleted,
-                0, '', 50, '', 0, 0, 0, 0, 0
-            FROM user_stats
-            """.trimIndent()
-        )
-
-        database.execSQL("DROP TABLE user_stats")
-        database.execSQL("ALTER TABLE user_stats_new RENAME TO user_stats")
-        // DROP TABLE emporte ses index : Room les attend sur la table renommée.
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_user_stats_weeklyXp ON user_stats(weeklyXp)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_user_stats_leagueCohortId ON user_stats(leagueCohortId)")
-
-        database.execSQL(
-            "CREATE TABLE IF NOT EXISTS trophies (id TEXT NOT NULL PRIMARY KEY, earnedAt INTEGER NOT NULL)"
-        )
-        // Meilleurs scores du parcours (module:niveau) : requis par le déblocage 70 %,
-        // table neuve — pas de donnée historique à migrer.
-        database.execSQL(
-            """
-            CREATE TABLE IF NOT EXISTS lesson_scores (
-                lessonKey TEXT NOT NULL PRIMARY KEY,
-                moduleId TEXT NOT NULL,
-                level INTEGER NOT NULL,
-                best INTEGER NOT NULL
-            )
-            """.trimIndent()
-        )
-    }
-}
-
-/**
- * v10 → v11 : index sur `medical_terms` (défaut D2, revue database v2).
- *
- * `getTermsByModule` (écrans de module), `getAllTerms` (`ORDER BY module, id`)
- * et `restoreBookmark` (`WHERE termEn AND module`) filtraient une table de
- * 4 504 lignes sans aucun index : full scan à chaque appel.
- *
- * Les noms reprennent ceux que Room génère (`index_<table>_<colonnes>`) pour
- * que la validation post-migration passe. `IF NOT EXISTS` rend la migration
- * idempotente — sans risque si l'index existait déjà.
- */
-internal val MIGRATION_10_11 = object : Migration(10, 11) {
-    override fun migrate(database: SupportSQLiteDatabase) {
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module ON medical_terms(module)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module_chapter ON medical_terms(module, chapter)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_termEn_module ON medical_terms(termEn, module)")
-    }
-}
-
-/**
- * v11 → v12 : suppression de la colonne legacy `example` (défaut D3).
- *
- * `example` dupliquait `exampleEn` (692 valeurs identiques sur 972, 71 %) et
- * n'était lue par aucun code — toutes les lectures vont à `exampleEn` /
- * `exampleFr` / `exampleAr`. 100 % de colonne morte.
- *
- * Room refuse d'altérer une table pour *retirer* une colonne : la table est
- * reconstruite (CREATE … INSERT SELECT … DROP … RENAME), même motif que
- * `MIGRATION_9_10`. Toutes les autres colonnes et toutes les données sont
- * conservées ; les index v11 sont recréés sur la table renommée car DROP TABLE
- * les emporte.
- */
-internal val MIGRATION_11_12 = object : Migration(11, 12) {
-    override fun migrate(database: SupportSQLiteDatabase) {
-        database.execSQL(
-            """
-            CREATE TABLE medical_terms_new (
-                id INTEGER NOT NULL PRIMARY KEY,
+            CREATE TABLE IF NOT EXISTS knowledge_graph_nodes (
+                nodeId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 termEn TEXT NOT NULL,
                 termFr TEXT NOT NULL,
                 termAr TEXT NOT NULL,
                 definitionEn TEXT NOT NULL,
                 definitionFr TEXT NOT NULL,
                 definitionAr TEXT NOT NULL,
-                etymology TEXT NOT NULL,
-                clinicalPearl TEXT NOT NULL,
-                mnemonic TEXT NOT NULL,
-                module TEXT NOT NULL,
-                chapter TEXT NOT NULL,
-                exampleEn TEXT NOT NULL,
-                exampleFr TEXT NOT NULL,
-                exampleAr TEXT NOT NULL,
-                imageAsset TEXT NOT NULL,
-                audioAsset TEXT NOT NULL,
-                ipaPhonetic TEXT NOT NULL,
-                isBookmarked INTEGER NOT NULL
-            )
-            """.trimIndent()
-        )
-
-        // Toutes les colonnes sauf `example` : aucune donnée n'est perdue.
-        database.execSQL(
-            """
-            INSERT INTO medical_terms_new (
-                id, termEn, termFr, termAr, definitionEn, definitionFr, definitionAr,
-                etymology, clinicalPearl, mnemonic, module, chapter,
-                exampleEn, exampleFr, exampleAr, imageAsset, audioAsset,
-                ipaPhonetic, isBookmarked
-            )
-            SELECT
-                id, termEn, termFr, termAr, definitionEn, definitionFr, definitionAr,
-                etymology, clinicalPearl, mnemonic, module, chapter,
-                exampleEn, exampleFr, exampleAr, imageAsset, audioAsset,
-                ipaPhonetic, isBookmarked
-            FROM medical_terms
-            """.trimIndent()
-        )
-
-        database.execSQL("DROP TABLE medical_terms")
-        database.execSQL("ALTER TABLE medical_terms_new RENAME TO medical_terms")
-
-        // DROP TABLE emporte ses index : on recrée ceux de la v11.
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module ON medical_terms(module)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_module_chapter ON medical_terms(module, chapter)")
-        database.execSQL("CREATE INDEX IF NOT EXISTS index_medical_terms_termEn_module ON medical_terms(termEn, module)")
-    }
-}
-/**
- * v12 → v13 : table `review_queue` (hub « Revisions en attente »).
- *
- * Historique : l'entité `ReviewQueueItem` et cette migration ont été écrites
- * en parallèle sans export de schéma — la v12 committée ne contient PAS la
- * table, et l'`ALTER TABLE review_queue ADD COLUMN missed_ex_ids` d'origine
- * aurait planté (« no such table ») sur toute base v12 réelle, avec en plus
- * un nom de colonne erroné (l'entité expose `missedExIds`, camelCase).
- *
- * La migration CRÉE donc la table à la forme exacte de l'entité (validée par
- * l'identifiant de schéma de 13.json). Table neuve : aucune donnée existante
- * n'est touchée.
- */
-internal val MIGRATION_12_13 = object : Migration(12, 13) {
-    override fun migrate(database: SupportSQLiteDatabase) {
-        database.execSQL(
-            """
-            CREATE TABLE IF NOT EXISTS review_queue (
-                id TEXT NOT NULL PRIMARY KEY,
-                lessonId TEXT NOT NULL,
-                chapterId TEXT NOT NULL,
-                title TEXT NOT NULL,
-                questionCount INTEGER NOT NULL,
-                status TEXT NOT NULL,
-                missedExIds TEXT NOT NULL
-            )
-            """.trimIndent()
-        )
-    }
-}
-
-/**
- * v13 → v14 : mode « histoire » — deux tables NEUVES, aucune donnée existante
- * n'est lue, déplacée ou supprimée (guide d'intégration §8 : jamais de repli
- * destructif).
- *
- * `story_session_progress` : progression/reprise de séance + récompense
- * idempotente. `phrase_progress` : SM-2 des expressions (`en:…:v1`), espace
- * de clés séparé de `flashcard_progress` (termId numériques).
- */
-internal val MIGRATION_13_14 = object : Migration(13, 14) {
-    override fun migrate(database: SupportSQLiteDatabase) {
-        database.execSQL(
-            """
-            CREATE TABLE IF NOT EXISTS story_session_progress (
-                storyId TEXT NOT NULL PRIMARY KEY,
-                contentVersion INTEGER NOT NULL,
-                step TEXT NOT NULL,
-                qIndex INTEGER NOT NULL,
-                drillIndex INTEGER NOT NULL,
-                reviewIndex INTEGER NOT NULL,
-                statsJson TEXT NOT NULL,
-                reviewRatingsJson TEXT NOT NULL,
-                retellAttempted INTEGER NOT NULL,
-                transferTaskAttempted INTEGER NOT NULL,
-                transferTaskPending INTEGER NOT NULL,
-                savedAt INTEGER NOT NULL,
-                completedAt INTEGER NOT NULL,
-                rewardClaimed INTEGER NOT NULL
+                etymology TEXT NOT NULL DEFAULT '',
+                clinicalPearl TEXT NOT NULL DEFAULT '',
+                mnemonic TEXT NOT NULL DEFAULT '',
+                module TEXT NOT NULL DEFAULT '',
+                chapter TEXT NOT NULL DEFAULT '',
+                exEn TEXT NOT NULL DEFAULT '',
+                exFr TEXT NOT NULL DEFAULT '',
+                exAr TEXT NOT NULL DEFAULT '',
+                ipa TEXT NOT NULL DEFAULT '',
+                isBookmarked INTEGER NOT NULL DEFAULT 0
             )
             """.trimIndent()
         )
         database.execSQL(
             """
-            CREATE TABLE IF NOT EXISTS phrase_progress (
-                phraseId TEXT NOT NULL PRIMARY KEY,
-                repetitions INTEGER NOT NULL,
-                easeFactor REAL NOT NULL,
-                intervalDays INTEGER NOT NULL,
-                nextReviewTimestamp INTEGER NOT NULL,
-                lastReviewedTimestamp INTEGER NOT NULL
+            CREATE TABLE IF NOT EXISTS knowledge_graph_edges (
+                edgeId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                fromNodeId INTEGER NOT NULL,
+                toNodeId INTEGER NOT NULL,
+                relationType TEXT NOT NULL,
+                confidence TEXT NOT NULL DEFAULT 'high',
+                evidence TEXT NOT NULL DEFAULT '',
+                FOREIGN KEY (fromNodeId) REFERENCES knowledge_graph_nodes(nodeId)
             )
             """.trimIndent()
         )
+        database.execSQL(
+            """
+            CREATE TABLE IF NOT EXISTS knowledge_graph_report (
+                reportKey TEXT NOT NULL PRIMARY KEY,
+                totalNodes INTEGER NOT NULL DEFAULT 0,
+                totalEdges INTEGER NOT NULL DEFAULT 0,
+                semanticEdges INTEGER NOT NULL DEFAULT 0,
+                structuralEdges INTEGER NOT NULL DEFAULT 0,
+                relationBreakdown TEXT NOT NULL DEFAULT ''
+            )
+            """.trimIndent()
+        )
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_kg_nodes_module ON knowledge_graph_nodes(module)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_kg_nodes_chapter ON knowledge_graph_nodes(module, chapter)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_kg_edges_fromNodeId ON knowledge_graph_edges(fromNodeId)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_kg_edges_toNodeId ON knowledge_graph_edges(toNodeId)")
+        database.execSQL("CREATE INDEX IF NOT EXISTS index_kg_edges_relationType ON knowledge_graph_edges(relationType)")
     }
 }
