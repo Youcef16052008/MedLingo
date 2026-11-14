@@ -1,5 +1,11 @@
 # PLAN MAÎTRE MedLingo — 2026
 
+> **Renvoi (12/11/2026)** : le cycle de travail en cours est le **pilote Anatomie** —
+> plan [`PLAN_PILOTE_ANATOMIE.md`](PLAN_PILOTE_ANATOMIE.md), journal d'exécution
+> [`PILOTE_ANATOMIE_SUIVI.md`](PILOTE_ANATOMIE_SUIVI.md). Ce plan maître reste le document
+> de pilotage global ; ses constats historiques ci-dessous sont datés du 25/10/2026 et ne
+> doivent pas être relus comme des résultats frais.
+
 **Le document unique de pilotage.** Tout ce qui suit supersede et consolide les ~40 rapports/plans du dépôt (10–25 octobre 2026). Il est construit sur : (1) la digestion croisée de tous les documents historiques, (2) la vérification de leurs claims contre l'état réel du dépôt au 25/10/2026, (3) la revue profonde à 36 findings ([`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md)), (4) la stratégie « dépasser Duolingo » ([`RAPPORT_COMPETITIF_ET_PLAN_2026.md`](RAPPORT_COMPETITIF_ET_PLAN_2026.md)).
 
 **Points d'entrée :** ce plan (pilotage) · [`TODO.md`](TODO.md) (exécution immédiate) · [`REVIEW_PROFONDE_20_ANALYSES.md`](REVIEW_PROFONDE_20_ANALYSES.md) (qualité, bugs détaillés) · [`RELECTURE_HISTOIRES.md`](RELECTURE_HISTOIRES.md) (campagne humaine).

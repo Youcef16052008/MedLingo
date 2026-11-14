@@ -10,7 +10,7 @@ de répétition espacée **SM-2**, prononciation TTS et tableau de bord de progr
 - **Stack** : Kotlin · Jetpack Compose (Material 3) · Room · Navigation Compose · Coroutines · AGP 9.1.1 / Gradle 9.3.1
 - **minSdk 24** · **targetSdk / compileSdk 36.1**
 - **Aussi** : web React 19 + Vite (`web-react/`, PWA offline) · backend Supabase (dormant — l'app ne demande AUCUNE permission réseau)
-- **Statut (25/10/2026)** : dev complet — workstreams WS0→WS5 livrés (stabilisation 36 findings, contenu 13 000 exercices + 814 histoires, intégration, release dossier, 8 leviers d'engagement, moteur de maîtrise + examen EMD). **Portes restantes (humaines)** : relecture des histoires (`web-react && npm run review`), keystore + CGU, pilote étudiant. Pilotage : [docs/PLAN_MAITRE_2026.md](docs/PLAN_MAITRE_2026.md).
+- **Statut (12/11/2026)** : dev complet — workstreams WS0→WS5 livrés (stabilisation 36 findings, contenu 13 000 exercices + 814 histoires, intégration, release dossier, 8 leviers d'engagement, moteur de maîtrise + examen EMD). **Cycle courant** : pilote Anatomie — parcours web + Android prêts, contenu 100 % `draft` (**0 concept relu/approuvé** : le parcours réel refuse de démarrer tant que les deux relectures humaines n'ont pas eu lieu) — plan [docs/PLAN_PILOTE_ANATOMIE.md](docs/PLAN_PILOTE_ANATOMIE.md), suivi [docs/PILOTE_ANATOMIE_SUIVI.md](docs/PILOTE_ANATOMIE_SUIVI.md). **Portes restantes (humaines)** : relecture des histoires (`web-react && npm run review`), deux relectures du contenu pilote (linguistique + anatomique), keystore + CGU. Pilotage : [docs/PLAN_MAITRE_2026.md](docs/PLAN_MAITRE_2026.md).
 
 ## Fonctionnalités
 
@@ -33,8 +33,7 @@ de répétition espacée **SM-2**, prononciation TTS et tableau de bord de progr
 
 ### Android Studio
 1. **Open** le répertoire du projet et laisser Android Studio corriger les incompatibilités d'import.
-2. Créer un fichier `.env` à la racine avec `GEMINI_API_KEY` (voir `.env.example`).
-3. Lancer sur un émulateur ou un appareil physique.
+2. Lancer sur un émulateur ou un appareil physique.
 
 ### Ligne de commande
 ```bash
@@ -44,14 +43,15 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 adb shell am start -n com.aistudio.medlingua.dzmed/.MainActivity
 ```
 
-> **Note signature debug** : `app/build.gradle.kts` référence `debug.keystore` à la racine du projet
-> (alias `androiddebugkey`, mot de passe `android`). Ce fichier est gitignoré ; générez-le si absent :
+> **Note signature debug** : `app/build.gradle.kts` applique le `debug.keystore` de la racine
+> (alias `androiddebugkey`, mot de passe `android`) **seulement s'il existe** — ce fichier est
+> gitignoré ; générez-le si besoin :
 > ```bash
 > keytool -genkeypair -v -keystore debug.keystore -storepass android -keypass android \
 >         -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
 >         -dname "CN=Android Debug,O=Android,C=US"
 > ```
-> Sinon, supprimez la ligne `debug { signingConfig = signingConfigs.getByName("debugConfig") }`.
+> Sans lui, le build debug utilise la clé de signature debug par défaut de l'AGP (aucune ligne à supprimer).
 
 ### Tests
 ```bash
@@ -68,7 +68,7 @@ Le dossier `backend/` (schéma Supabase, RLS, seed) **n'est pas branché** : la 
 + un fichier `secrets.properties` (voir `GUIDE_BACKEND.md`).
 
 **Le seed SQL est maintenu** : `npm run check:seed` (web) et un test Android (`SeedIntegrityTest`)
-vérifient à chaque build qu'il couvre bien l'intégralité du corpus (4 504 termes, 112 exercices).
+vérifient à chaque build qu'il couvre bien l'intégralité du corpus (4 504 termes, 13 000 exercices).
 Ne pas le régénérer après modification des seeds crée une dérive silencieuse.
 
 ## Web
@@ -79,8 +79,8 @@ Un port web React/TS existe dans `web-react/` :
 cd web-react
 npm i
 npm run extract      # regenere terms.json/exercises.json depuis les seeds Kotlin
-npm run test         # 143/143 tests — 0 failures (README was updated from "136/138" after fixing web path.test.ts)
-npm run check:i18n   # 164 clés × 3 langues, 0 morte
+npm run test         # suite vitest complète — 39 fichiers / 5 231 tests PASS au 11/11/2026
+npm run check:i18n   # parité i18n ar/fr/en — 369 clés ×3, 0 morte, au 11/11/2026
 npm run check:seed   # coherence du seed SQL backend
 npm run design       # 35 checks de computed styles (parité design web ↔ Android)
 npm run build        # tsc strict + vite  → dist/ (utilisable sur Vercel)
@@ -95,7 +95,7 @@ dp→px, tailles sp→px, typographie, structure des composants.
 - **10 écrans alignés** : top bar, bottom bar, parcours, révision, modules, profil, ligues,
   quiz, flashcards (+ parcours des leçons)
 - **Validé par exécution** : `npm run design` (Playwright, viewport 390×844) — 35/35 vérifications
-  de computed styles OK, `tsc --noEmit` 0 erreur, `vitest run` 127 tests 0 échec
+  de computed styles OK, `tsc --noEmit` 0 erreur, `npm run test` 0 échec (5 231 tests au 11/11/2026)
 - **Bug de routage corrigé** : le paramètre de route (`#/flash/anat`) était supprimé par
   `routeName()` avant lecture — la session flashcards se construisait sur un module vide
 
@@ -113,17 +113,11 @@ douce — inspiré des systèmes santé modernes et validé WCAG AA. Spec compl�
 de design) : placement diagnostic initial, gestion hors-ligne par module, notifications,
 sélecteur d'objectif quotidien. L'écran Recherche est web-only.
 
-## AI Studio
+## Origine AI Studio
 
-Ce projet a été généré avec [Google AI Studio](https://ai.studio/apps/27222750-8219-4b37-bdfb-7a04f2543115).
+Ce projet a été généré à l'origine avec [Google AI Studio](https://ai.studio/apps/27222750-8219-4b37-bdfb-7a04f2543115).
 
-View your app in AI Studio: https://ai.studio/apps/27222750-8219-4b37-bdfb-7a04f2543115
-
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+Aucune clé Gemini n'est nécessaire : l'application est 100 % hors-ligne et n'appelle aucune API
+distante (le `.env.example` hérité d'AI Studio est un vestige sans effet ; inutilité vérifiée
+dans le code le 12/11/2026). Pour lancer l'app, suivre « Lancer en local » ci-dessus.
 
