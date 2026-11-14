@@ -17,6 +17,8 @@ import { ModulesScreen } from "./screens/ModulesScreen";
 import { FlashScreen } from "./screens/FlashScreen";
 import { QuizScreen } from "./screens/QuizScreen";
 import { StorySessionScreen } from "./screens/StorySessionScreen";
+import { PilotScreen } from "./screens/PilotScreen";
+import { PilotMeasureScreen } from "./screens/PilotMeasureScreen";
 import { ProfileScreen } from "./screens/ProfileScreen";
 import { LoginScreen } from "./screens/LoginScreen";
 import { lazy, Suspense } from "react";
@@ -30,6 +32,7 @@ const ProgressAnalytics = lazy(() => import("./components/ProgressAnalytics").th
 const GamificationPanel = lazy(() => import("./components/GamificationPanel").then(m => ({ default: m.GamificationPanel })));
 import { ReviewHubScreen } from "./screens/ReviewHubScreen";
 import { ChapterScreen } from "./screens/ChapterScreen";
+import { TreeIndexScreen } from "./screens/TreeIndexScreen";
 import { navigate } from "./lib/router";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { ErrorBoundary } from "./components/ErrorBoundary";
@@ -202,6 +205,9 @@ function Shell() {
     case "modules":
       screen = <ModulesScreen />;
       break;
+    case "tree":
+      screen = <TreeIndexScreen />;
+      break;
     case "search":
       screen = <Suspense fallback={<div className="skeleton" />}><EnhancedSearchScreen /></Suspense>;
       break;
@@ -289,6 +295,11 @@ function Shell() {
       break;
     case "gamification":
       screen = <Suspense fallback={<div className="skeleton" />}><GamificationPanel /></Suspense>;
+      break;
+    case "pilot":
+      // P2.1 — pilote Anatomie : moteur et persistance ISOLÉS du reste de l'app.
+      // `#/pilot/mesure` — P3.1/P3.2 : écran de mesure T0/T1/T2 (séparé).
+      screen = param === "mesure" ? <PilotMeasureScreen /> : <PilotScreen />;
       break;
     default:
       // `path` (défaut) et l'alias historique `home`

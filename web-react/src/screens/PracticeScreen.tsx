@@ -55,6 +55,14 @@ export function PracticeScreen() {
       href: "#/quiz?mode=exam",
       tone: "violet",
     },
+    {
+      // P2.1 — entrée du pilote Anatomie (route dédiée, moteur isolé).
+      icon: "🧪",
+      title: t("pilotTitle"),
+      desc: t("pilotObjective"),
+      href: "#/pilot",
+      tone: "azure",
+    },
   ] as const;
 
   return (

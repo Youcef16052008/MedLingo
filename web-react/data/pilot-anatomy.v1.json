@@ -1,0 +1,3054 @@
+{
+  "schemaVersion": 1,
+  "id": "pilot-anatomy",
+  "contentVersion": "0.1.0",
+  "generatedAt": "2026-11-11T00:00:00.000Z",
+  "generatedFrom": "scripts/build_pilot_manifest.mjs ← public/data/terms.json (sélection manuelle de 30 legacyRef, P1.2) — contenu ENTIERMENT draft, relectures humaines pending",
+  "concepts": [
+    {
+      "id": "anatomy-u1-01-head",
+      "unit": 1,
+      "order": 1,
+      "legacyRef": 3958,
+      "labelEn": "Head",
+      "hints": {
+        "fr": "Tête",
+        "ar": "الرأس"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Head » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The upper part of the body containing the brain",
+        "fr": "Partie supérieure du corps contenant le cerveau",
+        "ar": "الجزء العلوي من الجسم الذي يحتوي على الدماغ"
+      },
+      "example": {
+        "en": "He hit his head on the door.",
+        "fr": "Il s'est cogné la tête contre la porte.",
+        "ar": "اصطدم رأسه بالباب."
+      },
+      "selectionNote": "Hypothèse à examiner : « head » apparaît dans des plaintes très fréquentes (headache, head injury) ; indispensable en triage.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-01-head-rec",
+          "conceptId": "anatomy-u1-01-head",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The upper part of the body containing the brain'?",
+            "fr": "Quel terme correspond à cette définition : 'The upper part of the body containing the brain' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The upper part of the body containing the brain'؟"
+          },
+          "options": [
+            "Neck",
+            "Skull",
+            "Abdomen",
+            "Head"
+          ],
+          "answer": "Head",
+          "explanation": {
+            "en": "The upper part of the body containing the brain",
+            "fr": "Partie supérieure du corps contenant le cerveau",
+            "ar": "الجزء العلوي من الجسم الذي يحتوي على الدماغ"
+          }
+        },
+        {
+          "id": "anatomy-u1-01-head-und",
+          "conceptId": "anatomy-u1-01-head",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'He hit his ______ on the door.'",
+            "fr": "Complétez par le terme correct : 'He hit his ______ on the door.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'He hit his ______ on the door.'"
+          },
+          "options": [
+            "Skull",
+            "Abdomen",
+            "Head",
+            "Neck"
+          ],
+          "answer": "Head",
+          "explanation": {
+            "en": "The upper part of the body containing the brain",
+            "fr": "Partie supérieure du corps contenant le cerveau",
+            "ar": "الجزء العلوي من الجسم الذي يحتوي على الدماغ"
+          }
+        },
+        {
+          "id": "anatomy-u1-01-head-recal",
+          "conceptId": "anatomy-u1-01-head",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Tête'",
+            "fr": "Écrivez le terme anglais pour : 'Tête'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Tête'"
+          },
+          "answer": "Head",
+          "explanation": {
+            "en": "The upper part of the body containing the brain",
+            "fr": "Partie supérieure du corps contenant le cerveau",
+            "ar": "الجزء العلوي من الجسم الذي يحتوي على الدماغ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-02-neck",
+      "unit": 1,
+      "order": 2,
+      "legacyRef": 3959,
+      "labelEn": "Neck",
+      "hints": {
+        "fr": "Cou",
+        "ar": "الرقبة"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Neck » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The part of the body connecting the head to the torso",
+        "fr": "Partie du corps reliant la tête au torse",
+        "ar": "الجزء الذي يربط الرأس بالجذع"
+      },
+      "example": {
+        "en": "She has neck pain after sleeping badly.",
+        "fr": "Elle a mal au cou après avoir mal dormi.",
+        "ar": "تشكو من ألم في الرقبة بعد نوم سيئ."
+      },
+      "selectionNote": "Hypothèse à examiner : « neck » est central en traumatologie et douleur cervicale ; hautement utile en anamnèse.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-02-neck-rec",
+          "conceptId": "anatomy-u1-02-neck",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The part of the body connecting the head to the torso'?",
+            "fr": "Quel terme correspond à cette définition : 'The part of the body connecting the head to the torso' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The part of the body connecting the head to the torso'؟"
+          },
+          "options": [
+            "Head",
+            "Neck",
+            "Pelvis",
+            "Foot"
+          ],
+          "answer": "Neck",
+          "explanation": {
+            "en": "The part of the body connecting the head to the torso",
+            "fr": "Partie du corps reliant la tête au torse",
+            "ar": "الجزء الذي يربط الرأس بالجذع"
+          }
+        },
+        {
+          "id": "anatomy-u1-02-neck-und",
+          "conceptId": "anatomy-u1-02-neck",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'She has ______ pain after sleeping badly.'",
+            "fr": "Complétez par le terme correct : 'She has ______ pain after sleeping badly.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'She has ______ pain after sleeping badly.'"
+          },
+          "options": [
+            "Head",
+            "Foot",
+            "Neck",
+            "Pelvis"
+          ],
+          "answer": "Neck",
+          "explanation": {
+            "en": "The part of the body connecting the head to the torso",
+            "fr": "Partie du corps reliant la tête au torse",
+            "ar": "الجزء الذي يربط الرأس بالجذع"
+          }
+        },
+        {
+          "id": "anatomy-u1-02-neck-recal",
+          "conceptId": "anatomy-u1-02-neck",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Cou'",
+            "fr": "Écrivez le terme anglais pour : 'Cou'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Cou'"
+          },
+          "answer": "Neck",
+          "explanation": {
+            "en": "The part of the body connecting the head to the torso",
+            "fr": "Partie du corps reliant la tête au torse",
+            "ar": "الجزء الذي يربط الرأس بالجذع"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-03-chest",
+      "unit": 1,
+      "order": 3,
+      "legacyRef": 3960,
+      "labelEn": "Chest",
+      "hints": {
+        "fr": "Poitrine",
+        "ar": "الصدر"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Chest » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The area of the body between the neck and abdomen",
+        "fr": "Région du corps située entre le cou et l'abdomen",
+        "ar": "منطقة الجسم الواقعة بين الرقبة والبطن"
+      },
+      "example": {
+        "en": "He had tightness in his chest.",
+        "fr": "Il ressentait une oppression dans la poitrine.",
+        "ar": "شعر بضيق في الصدر."
+      },
+      "selectionNote": "Hypothèse à examiner : « chest » (chest pain) est une des plaintes les plus fréquentes aux urgences.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-03-chest-rec",
+          "conceptId": "anatomy-u1-03-chest",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The area of the body between the neck and abdomen'?",
+            "fr": "Quel terme correspond à cette définition : 'The area of the body between the neck and abdomen' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The area of the body between the neck and abdomen'؟"
+          },
+          "options": [
+            "Head",
+            "Chest",
+            "Pelvis",
+            "Spine (Backbone)"
+          ],
+          "answer": "Chest",
+          "explanation": {
+            "en": "The area of the body between the neck and abdomen",
+            "fr": "Région du corps située entre le cou et l'abdomen",
+            "ar": "منطقة الجسم الواقعة بين الرقبة والبطن"
+          }
+        },
+        {
+          "id": "anatomy-u1-03-chest-und",
+          "conceptId": "anatomy-u1-03-chest",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'He had tightness in his ______.'",
+            "fr": "Complétez par le terme correct : 'He had tightness in his ______.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'He had tightness in his ______.'"
+          },
+          "options": [
+            "Pelvis",
+            "Spine (Backbone)",
+            "Chest",
+            "Head"
+          ],
+          "answer": "Chest",
+          "explanation": {
+            "en": "The area of the body between the neck and abdomen",
+            "fr": "Région du corps située entre le cou et l'abdomen",
+            "ar": "منطقة الجسم الواقعة بين الرقبة والبطن"
+          }
+        },
+        {
+          "id": "anatomy-u1-03-chest-recal",
+          "conceptId": "anatomy-u1-03-chest",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Poitrine'",
+            "fr": "Écrivez le terme anglais pour : 'Poitrine'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Poitrine'"
+          },
+          "answer": "Chest",
+          "explanation": {
+            "en": "The area of the body between the neck and abdomen",
+            "fr": "Région du corps située entre le cou et l'abdomen",
+            "ar": "منطقة الجسم الواقعة بين الرقبة والبطن"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-04-abdomen",
+      "unit": 1,
+      "order": 4,
+      "legacyRef": 105,
+      "labelEn": "Abdomen",
+      "hints": {
+        "fr": "Abdomen",
+        "ar": "البطن"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Abdomen » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The region of the body between the thorax and the pelvis.",
+        "fr": "La région du corps entre le thorax et le bassin.",
+        "ar": "منطقة الجسم بين الصدر والحوض."
+      },
+      "example": {
+        "en": "The abdomen contains most of the digestive organs.",
+        "fr": "L'abdomen contient la plupart des organes digestifs.",
+        "ar": "يحتوي البطن معظم الأعضاء الهضمية."
+      },
+      "selectionNote": "Hypothèse à examiner : « abdomen » structure toute l'anamnèse digestive ; terme identique FR/EN, d'où un rappel par définition.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-04-abdomen-rec",
+          "conceptId": "anatomy-u1-04-abdomen",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The region of the body between the thorax and the pelvis.'?",
+            "fr": "Quel terme correspond à cette définition : 'The region of the body between the thorax and the pelvis.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The region of the body between the thorax and the pelvis.'؟"
+          },
+          "options": [
+            "Chest",
+            "Head",
+            "Abdomen",
+            "Neck"
+          ],
+          "answer": "Abdomen",
+          "explanation": {
+            "en": "The region of the body between the thorax and the pelvis.",
+            "fr": "La région du corps entre le thorax et le bassin.",
+            "ar": "منطقة الجسم بين الصدر والحوض."
+          }
+        },
+        {
+          "id": "anatomy-u1-04-abdomen-und",
+          "conceptId": "anatomy-u1-04-abdomen",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The ______ contains most of the digestive organs.'",
+            "fr": "Complétez par le terme correct : 'The ______ contains most of the digestive organs.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The ______ contains most of the digestive organs.'"
+          },
+          "options": [
+            "Chest",
+            "Neck",
+            "Head",
+            "Abdomen"
+          ],
+          "answer": "Abdomen",
+          "explanation": {
+            "en": "The region of the body between the thorax and the pelvis.",
+            "fr": "La région du corps entre le thorax et le bassin.",
+            "ar": "منطقة الجسم بين الصدر والحوض."
+          }
+        },
+        {
+          "id": "anatomy-u1-04-abdomen-recal",
+          "conceptId": "anatomy-u1-04-abdomen",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the term that matches this definition: 'The region of the body between the thorax and the pelvis.'",
+            "fr": "Écrivez le terme qui correspond à cette définition : 'The region of the body between the thorax and the pelvis.'",
+            "ar": "اكتب المصطلح الذي يوافق هذا التعريف: 'The region of the body between the thorax and the pelvis.'"
+          },
+          "answer": "Abdomen",
+          "explanation": {
+            "en": "The region of the body between the thorax and the pelvis.",
+            "fr": "La région du corps entre le thorax et le bassin.",
+            "ar": "منطقة الجسم بين الصدر والحوض."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-05-pelvis",
+      "unit": 1,
+      "order": 5,
+      "legacyRef": 3986,
+      "labelEn": "Pelvis",
+      "hints": {
+        "fr": "Bassin / Pelvis",
+        "ar": "الحوض"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Pelvis » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The large bony structure at the base of the spine",
+        "fr": "Large structure osseuse à la base de la colonne vertébrale",
+        "ar": "بنية عظمية كبيرة في قاعدة العمود الفقري"
+      },
+      "example": {
+        "en": "She fractured her pelvis.",
+        "fr": "Elle s'est fracturé le bassin.",
+        "ar": "كسرت عظم الحوض."
+      },
+      "selectionNote": "Hypothèse à examiner : « pelvis » fréquent en gynéco-urologie et traumatologie ; le FR « Bassin / Pelvis » cite le terme EN.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-05-pelvis-rec",
+          "conceptId": "anatomy-u1-05-pelvis",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The large bony structure at the base of the spine'?",
+            "fr": "Quel terme correspond à cette définition : 'The large bony structure at the base of the spine' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The large bony structure at the base of the spine'؟"
+          },
+          "options": [
+            "Pelvis",
+            "Neck",
+            "Head",
+            "Foot"
+          ],
+          "answer": "Pelvis",
+          "explanation": {
+            "en": "The large bony structure at the base of the spine",
+            "fr": "Large structure osseuse à la base de la colonne vertébrale",
+            "ar": "بنية عظمية كبيرة في قاعدة العمود الفقري"
+          }
+        },
+        {
+          "id": "anatomy-u1-05-pelvis-und",
+          "conceptId": "anatomy-u1-05-pelvis",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'She fractured her ______.'",
+            "fr": "Complétez par le terme correct : 'She fractured her ______.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'She fractured her ______.'"
+          },
+          "options": [
+            "Foot",
+            "Head",
+            "Pelvis",
+            "Neck"
+          ],
+          "answer": "Pelvis",
+          "explanation": {
+            "en": "The large bony structure at the base of the spine",
+            "fr": "Large structure osseuse à la base de la colonne vertébrale",
+            "ar": "بنية عظمية كبيرة في قاعدة العمود الفقري"
+          }
+        },
+        {
+          "id": "anatomy-u1-05-pelvis-recal",
+          "conceptId": "anatomy-u1-05-pelvis",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the term that matches this definition: 'The large bony structure at the base of the spine'",
+            "fr": "Écrivez le terme qui correspond à cette définition : 'The large bony structure at the base of the spine'",
+            "ar": "اكتب المصطلح الذي يوافق هذا التعريف: 'The large bony structure at the base of the spine'"
+          },
+          "answer": "Pelvis",
+          "explanation": {
+            "en": "The large bony structure at the base of the spine",
+            "fr": "Large structure osseuse à la base de la colonne vertébrale",
+            "ar": "بنية عظمية كبيرة في قاعدة العمود الفقري"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-06-back",
+      "unit": 1,
+      "order": 6,
+      "legacyRef": 3962,
+      "labelEn": "Back",
+      "hints": {
+        "fr": "Dos",
+        "ar": "الظهر"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Back » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The rear surface of the human body from neck to pelvis",
+        "fr": "Face postérieure du corps humain, du cou au bassin",
+        "ar": "الظهر البشري من الرقبة إلى الحوض"
+      },
+      "example": {
+        "en": "He threw out his back lifting heavy boxes.",
+        "fr": "Il s'est bloqué le dos en soulevant des cartons lourds.",
+        "ar": "أصيب بألم حاد في الظهر بعد حمل صناديق ثقيلة."
+      },
+      "selectionNote": "Hypothèse à examiner : « back » (back pain) est une plainte très répandue et socialement coûteuse.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-06-back-rec",
+          "conceptId": "anatomy-u1-06-back",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The rear surface of the human body from neck to pelvis'?",
+            "fr": "Quel terme correspond à cette définition : 'The rear surface of the human body from neck to pelvis' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The rear surface of the human body from neck to pelvis'؟"
+          },
+          "options": [
+            "Hand",
+            "Back",
+            "Pelvis",
+            "Chest"
+          ],
+          "answer": "Back",
+          "explanation": {
+            "en": "The rear surface of the human body from neck to pelvis",
+            "fr": "Face postérieure du corps humain, du cou au bassin",
+            "ar": "الظهر البشري من الرقبة إلى الحوض"
+          }
+        },
+        {
+          "id": "anatomy-u1-06-back-und",
+          "conceptId": "anatomy-u1-06-back",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'He threw out his ______ lifting heavy boxes.'",
+            "fr": "Complétez par le terme correct : 'He threw out his ______ lifting heavy boxes.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'He threw out his ______ lifting heavy boxes.'"
+          },
+          "options": [
+            "Chest",
+            "Hand",
+            "Pelvis",
+            "Back"
+          ],
+          "answer": "Back",
+          "explanation": {
+            "en": "The rear surface of the human body from neck to pelvis",
+            "fr": "Face postérieure du corps humain, du cou au bassin",
+            "ar": "الظهر البشري من الرقبة إلى الحوض"
+          }
+        },
+        {
+          "id": "anatomy-u1-06-back-recal",
+          "conceptId": "anatomy-u1-06-back",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Dos'",
+            "fr": "Écrivez le terme anglais pour : 'Dos'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Dos'"
+          },
+          "answer": "Back",
+          "explanation": {
+            "en": "The rear surface of the human body from neck to pelvis",
+            "fr": "Face postérieure du corps humain, du cou au bassin",
+            "ar": "الظهر البشري من الرقبة إلى الحوض"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-07-skull",
+      "unit": 1,
+      "order": 7,
+      "legacyRef": 245,
+      "labelEn": "Skull",
+      "hints": {
+        "fr": "Crâne",
+        "ar": "الجمجمة"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Skull » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The bony structure that forms the head and protects the brain.",
+        "fr": "Structure osseuse formant la tête et protégeant le cerveau.",
+        "ar": "الهيكل العظمي الذي يشكل الرأس ويحمي الدماغ."
+      },
+      "example": {
+        "en": "The skull consists of 22 bones.",
+        "fr": "Le crâne est composé de 22 os.",
+        "ar": "تتكون الجمجمة من 22 عظمة."
+      },
+      "selectionNote": "Hypothèse à examiner : « skull » indispensable pour les traumatismes crâniens et l'imagerie.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-07-skull-rec",
+          "conceptId": "anatomy-u1-07-skull",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The bony structure that forms the head and protects the brain.'?",
+            "fr": "Quel terme correspond à cette définition : 'The bony structure that forms the head and protects the brain.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The bony structure that forms the head and protects the brain.'؟"
+          },
+          "options": [
+            "Foot",
+            "Chest",
+            "Skull",
+            "Back"
+          ],
+          "answer": "Skull",
+          "explanation": {
+            "en": "The bony structure that forms the head and protects the brain.",
+            "fr": "Structure osseuse formant la tête et protégeant le cerveau.",
+            "ar": "الهيكل العظمي الذي يشكل الرأس ويحمي الدماغ."
+          }
+        },
+        {
+          "id": "anatomy-u1-07-skull-und",
+          "conceptId": "anatomy-u1-07-skull",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The ______ consists of 22 bones.'",
+            "fr": "Complétez par le terme correct : 'The ______ consists of 22 bones.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The ______ consists of 22 bones.'"
+          },
+          "options": [
+            "Skull",
+            "Chest",
+            "Back",
+            "Foot"
+          ],
+          "answer": "Skull",
+          "explanation": {
+            "en": "The bony structure that forms the head and protects the brain.",
+            "fr": "Structure osseuse formant la tête et protégeant le cerveau.",
+            "ar": "الهيكل العظمي الذي يشكل الرأس ويحمي الدماغ."
+          }
+        },
+        {
+          "id": "anatomy-u1-07-skull-recal",
+          "conceptId": "anatomy-u1-07-skull",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Crâne'",
+            "fr": "Écrivez le terme anglais pour : 'Crâne'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Crâne'"
+          },
+          "answer": "Skull",
+          "explanation": {
+            "en": "The bony structure that forms the head and protects the brain.",
+            "fr": "Structure osseuse formant la tête et protégeant le cerveau.",
+            "ar": "الهيكل العظمي الذي يشكل الرأس ويحمي الدماغ."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-08-spine",
+      "unit": 1,
+      "order": 8,
+      "legacyRef": 3984,
+      "labelEn": "Spine (Backbone)",
+      "hints": {
+        "fr": "Colonne vertébrale",
+        "ar": "العمود الفقري"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Spine (Backbone) » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The series of vertebrae forming the backbone",
+        "fr": "Ensemble des vertèbres formant la colonne vertébrale",
+        "ar": "مجموعة الفقرات التي تشكّل العمود الفقري"
+      },
+      "example": {
+        "en": "She injured her spine in the accident.",
+        "fr": "Elle s'est blessée à la colonne vertébrale dans l'accident.",
+        "ar": "أصيبت في العمود الفقري أثناء الحادث."
+      },
+      "acceptedVariants": [
+        "Backbone"
+      ],
+      "selectionNote": "Hypothèse à examiner : « spine » couvre rachialgie et imagerie ; variante « Backbone » acceptée explicitement.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-08-spine-rec",
+          "conceptId": "anatomy-u1-08-spine",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The series of vertebrae forming the backbone'?",
+            "fr": "Quel terme correspond à cette définition : 'The series of vertebrae forming the backbone' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The series of vertebrae forming the backbone'؟"
+          },
+          "options": [
+            "Chest",
+            "Head",
+            "Spine (Backbone)",
+            "Skull"
+          ],
+          "answer": "Spine (Backbone)",
+          "explanation": {
+            "en": "The series of vertebrae forming the backbone",
+            "fr": "Ensemble des vertèbres formant la colonne vertébrale",
+            "ar": "مجموعة الفقرات التي تشكّل العمود الفقري"
+          }
+        },
+        {
+          "id": "anatomy-u1-08-spine-und",
+          "conceptId": "anatomy-u1-08-spine",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term is described here: 'Ensemble des vertèbres formant la colonne vertébrale'?",
+            "fr": "Quel terme est décrit ici : 'Ensemble des vertèbres formant la colonne vertébrale' ?",
+            "ar": "أي مصطلح يوصف هنا: 'Ensemble des vertèbres formant la colonne vertébrale'؟"
+          },
+          "options": [
+            "Spine (Backbone)",
+            "Head",
+            "Skull",
+            "Chest"
+          ],
+          "answer": "Spine (Backbone)",
+          "explanation": {
+            "en": "The series of vertebrae forming the backbone",
+            "fr": "Ensemble des vertèbres formant la colonne vertébrale",
+            "ar": "مجموعة الفقرات التي تشكّل العمود الفقري"
+          }
+        },
+        {
+          "id": "anatomy-u1-08-spine-recal",
+          "conceptId": "anatomy-u1-08-spine",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Colonne vertébrale'",
+            "fr": "Écrivez le terme anglais pour : 'Colonne vertébrale'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Colonne vertébrale'"
+          },
+          "answer": "Spine (Backbone)",
+          "explanation": {
+            "en": "The series of vertebrae forming the backbone",
+            "fr": "Ensemble des vertèbres formant la colonne vertébrale",
+            "ar": "مجموعة الفقرات التي تشكّل العمود الفقري"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-09-hand",
+      "unit": 1,
+      "order": 9,
+      "legacyRef": 3967,
+      "labelEn": "Hand",
+      "hints": {
+        "fr": "Main",
+        "ar": "اليد"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Hand » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The end part of a person's arm beyond the wrist",
+        "fr": "Extrémité du bras située au-delà du poignet",
+        "ar": "طرف الذراع الواقع بعد الرسغ"
+      },
+      "example": {
+        "en": "Wash your hands frequently.",
+        "fr": "Lavez-vous souvent les mains.",
+        "ar": "اغسل يديك كثيرًا."
+      },
+      "selectionNote": "Hypothèse à examiner : « hand » fréquent en traumatologie de la main, très utilisable en pratique.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-09-hand-rec",
+          "conceptId": "anatomy-u1-09-hand",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The end part of a person's arm beyond the wrist'?",
+            "fr": "Quel terme correspond à cette définition : 'The end part of a person's arm beyond the wrist' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The end part of a person's arm beyond the wrist'؟"
+          },
+          "options": [
+            "Foot",
+            "Chest",
+            "Back",
+            "Hand"
+          ],
+          "answer": "Hand",
+          "explanation": {
+            "en": "The end part of a person's arm beyond the wrist",
+            "fr": "Extrémité du bras située au-delà du poignet",
+            "ar": "طرف الذراع الواقع بعد الرسغ"
+          }
+        },
+        {
+          "id": "anatomy-u1-09-hand-und",
+          "conceptId": "anatomy-u1-09-hand",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term is described here: 'Extrémité du bras située au-delà du poignet'?",
+            "fr": "Quel terme est décrit ici : 'Extrémité du bras située au-delà du poignet' ?",
+            "ar": "أي مصطلح يوصف هنا: 'Extrémité du bras située au-delà du poignet'؟"
+          },
+          "options": [
+            "Hand",
+            "Foot",
+            "Back",
+            "Chest"
+          ],
+          "answer": "Hand",
+          "explanation": {
+            "en": "The end part of a person's arm beyond the wrist",
+            "fr": "Extrémité du bras située au-delà du poignet",
+            "ar": "طرف الذراع الواقع بعد الرسغ"
+          }
+        },
+        {
+          "id": "anatomy-u1-09-hand-recal",
+          "conceptId": "anatomy-u1-09-hand",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Main'",
+            "fr": "Écrivez le terme anglais pour : 'Main'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Main'"
+          },
+          "answer": "Hand",
+          "explanation": {
+            "en": "The end part of a person's arm beyond the wrist",
+            "fr": "Extrémité du bras située au-delà du poignet",
+            "ar": "طرف الذراع الواقع بعد الرسغ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u1-10-foot",
+      "unit": 1,
+      "order": 10,
+      "legacyRef": 3974,
+      "labelEn": "Foot",
+      "hints": {
+        "fr": "Pied",
+        "ar": "القدم"
+      },
+      "languageObjective": "Unité « Parties du corps » : reconnaître et produire le terme EN « Foot » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The lower extremity of the leg below the ankle",
+        "fr": "Extrémité inférieure de la jambe, sous la cheville",
+        "ar": "الطرف السفلي للساق أسفل الكاحل"
+      },
+      "example": {
+        "en": "She had pain in her left foot.",
+        "fr": "Elle avait mal au pied gauche.",
+        "ar": "كانت تشكو من ألم في قدمها اليسرى."
+      },
+      "selectionNote": "Hypothèse à examiner : « foot » (diabète, podologie) très fréquent en consultation.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u1-10-foot-rec",
+          "conceptId": "anatomy-u1-10-foot",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The lower extremity of the leg below the ankle'?",
+            "fr": "Quel terme correspond à cette définition : 'The lower extremity of the leg below the ankle' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The lower extremity of the leg below the ankle'؟"
+          },
+          "options": [
+            "Foot",
+            "Spine (Backbone)",
+            "Head",
+            "Hand"
+          ],
+          "answer": "Foot",
+          "explanation": {
+            "en": "The lower extremity of the leg below the ankle",
+            "fr": "Extrémité inférieure de la jambe, sous la cheville",
+            "ar": "الطرف السفلي للساق أسفل الكاحل"
+          }
+        },
+        {
+          "id": "anatomy-u1-10-foot-und",
+          "conceptId": "anatomy-u1-10-foot",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'She had pain in her left ______.'",
+            "fr": "Complétez par le terme correct : 'She had pain in her left ______.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'She had pain in her left ______.'"
+          },
+          "options": [
+            "Hand",
+            "Head",
+            "Foot",
+            "Spine (Backbone)"
+          ],
+          "answer": "Foot",
+          "explanation": {
+            "en": "The lower extremity of the leg below the ankle",
+            "fr": "Extrémité inférieure de la jambe, sous la cheville",
+            "ar": "الطرف السفلي للساق أسفل الكاحل"
+          }
+        },
+        {
+          "id": "anatomy-u1-10-foot-recal",
+          "conceptId": "anatomy-u1-10-foot",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Pied'",
+            "fr": "Écrivez le terme anglais pour : 'Pied'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Pied'"
+          },
+          "answer": "Foot",
+          "explanation": {
+            "en": "The lower extremity of the leg below the ankle",
+            "fr": "Extrémité inférieure de la jambe, sous la cheville",
+            "ar": "الطرف السفلي للساق أسفل الكاحل"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-01-heart",
+      "unit": 2,
+      "order": 1,
+      "legacyRef": 1,
+      "labelEn": "Heart",
+      "hints": {
+        "fr": "Cœur",
+        "ar": "القلب"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Heart » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The muscular organ that pumps blood through the circulatory system.",
+        "fr": "L'organe musculaire qui propulse le sang à travers la circulation.",
+        "ar": "العضو العضلي الذي يضخ الدم في جهاز الدوران."
+      },
+      "example": {
+        "en": "The heart is located in the middle mediastinum.",
+        "fr": "Le cœur est situé dans le médiastin moyen.",
+        "ar": "يقع القلب في المنصف الأوسط."
+      },
+      "selectionNote": "Hypothèse à examiner : « heart » est l'organe le plus cité en clinique (insuffisance, IDM) ; id terms.json #1.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-01-heart-rec",
+          "conceptId": "anatomy-u2-01-heart",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The muscular organ that pumps blood through the circulatory system.'?",
+            "fr": "Quel terme correspond à cette définition : 'The muscular organ that pumps blood through the circulatory system.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The muscular organ that pumps blood through the circulatory system.'؟"
+          },
+          "options": [
+            "Heart",
+            "Intestine",
+            "Liver",
+            "Pancreas"
+          ],
+          "answer": "Heart",
+          "explanation": {
+            "en": "The muscular organ that pumps blood through the circulatory system.",
+            "fr": "L'organe musculaire qui propulse le sang à travers la circulation.",
+            "ar": "العضو العضلي الذي يضخ الدم في جهاز الدوران."
+          }
+        },
+        {
+          "id": "anatomy-u2-01-heart-und",
+          "conceptId": "anatomy-u2-01-heart",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The ______ is located in the middle mediastinum.'",
+            "fr": "Complétez par le terme correct : 'The ______ is located in the middle mediastinum.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The ______ is located in the middle mediastinum.'"
+          },
+          "options": [
+            "Liver",
+            "Intestine",
+            "Heart",
+            "Pancreas"
+          ],
+          "answer": "Heart",
+          "explanation": {
+            "en": "The muscular organ that pumps blood through the circulatory system.",
+            "fr": "L'organe musculaire qui propulse le sang à travers la circulation.",
+            "ar": "العضو العضلي الذي يضخ الدم في جهاز الدوران."
+          }
+        },
+        {
+          "id": "anatomy-u2-01-heart-recal",
+          "conceptId": "anatomy-u2-01-heart",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Cœur'",
+            "fr": "Écrivez le terme anglais pour : 'Cœur'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Cœur'"
+          },
+          "answer": "Heart",
+          "explanation": {
+            "en": "The muscular organ that pumps blood through the circulatory system.",
+            "fr": "L'organe musculaire qui propulse le sang à travers la circulation.",
+            "ar": "العضو العضلي الذي يضخ الدم في جهاز الدوران."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-02-lung",
+      "unit": 2,
+      "order": 2,
+      "legacyRef": 343,
+      "labelEn": "Lung",
+      "hints": {
+        "fr": "Poumon",
+        "ar": "الرئة"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Lung » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The paired organ of respiration, containing the bronchi and alveoli.",
+        "fr": "L'organe pair de la respiration, contenant les bronches et les alvéoles.",
+        "ar": "العضو التنفسي المزدوج، يحوي القصبات والأسناخ."
+      },
+      "example": {
+        "en": "The right lung has three lobes.",
+        "fr": "Le poumon droit a trois lobes.",
+        "ar": "للرئة اليمنى ثلاثة فصوص."
+      },
+      "selectionNote": "Hypothèse à examiner : « lung » central en pneumologie ; le pluriel « lungs » est admis en usage.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-02-lung-rec",
+          "conceptId": "anatomy-u2-02-lung",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The paired organ of respiration, containing the bronchi and alveoli.'?",
+            "fr": "Quel terme correspond à cette définition : 'The paired organ of respiration, containing the bronchi and alveoli.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The paired organ of respiration, containing the bronchi and alveoli.'؟"
+          },
+          "options": [
+            "Lung",
+            "Brain",
+            "Kidney",
+            "Heart"
+          ],
+          "answer": "Lung",
+          "explanation": {
+            "en": "The paired organ of respiration, containing the bronchi and alveoli.",
+            "fr": "L'organe pair de la respiration, contenant les bronches et les alvéoles.",
+            "ar": "العضو التنفسي المزدوج، يحوي القصبات والأسناخ."
+          }
+        },
+        {
+          "id": "anatomy-u2-02-lung-und",
+          "conceptId": "anatomy-u2-02-lung",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The right ______ has three lobes.'",
+            "fr": "Complétez par le terme correct : 'The right ______ has three lobes.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The right ______ has three lobes.'"
+          },
+          "options": [
+            "Heart",
+            "Lung",
+            "Kidney",
+            "Brain"
+          ],
+          "answer": "Lung",
+          "explanation": {
+            "en": "The paired organ of respiration, containing the bronchi and alveoli.",
+            "fr": "L'organe pair de la respiration, contenant les bronches et les alvéoles.",
+            "ar": "العضو التنفسي المزدوج، يحوي القصبات والأسناخ."
+          }
+        },
+        {
+          "id": "anatomy-u2-02-lung-recal",
+          "conceptId": "anatomy-u2-02-lung",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Poumon'",
+            "fr": "Écrivez le terme anglais pour : 'Poumon'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Poumon'"
+          },
+          "answer": "Lung",
+          "explanation": {
+            "en": "The paired organ of respiration, containing the bronchi and alveoli.",
+            "fr": "L'organe pair de la respiration, contenant les bronches et les alvéoles.",
+            "ar": "العضو التنفسي المزدوج، يحوي القصبات والأسناخ."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-03-brain",
+      "unit": 2,
+      "order": 3,
+      "legacyRef": 190,
+      "labelEn": "Brain",
+      "hints": {
+        "fr": "Cerveau",
+        "ar": "الدماغ"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Brain » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The central organ of the nervous system, enclosed in the skull.",
+        "fr": "L'organe central du système nerveux, enfermé dans le crâne.",
+        "ar": "العضو المركزي للجهاز العصبي، محاط بالجمجمة."
+      },
+      "example": {
+        "en": "The adult brain weighs approximately 1.4 kg.",
+        "fr": "Le cerveau adulte pèse environ 1,4 kg.",
+        "ar": "يزن دماغ البالغ حوالي 1.4 كيلوغرام."
+      },
+      "selectionNote": "Hypothèse à examiner : « brain » indispensable en neurologie et neurotraumatologie.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-03-brain-rec",
+          "conceptId": "anatomy-u2-03-brain",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The central organ of the nervous system, enclosed in the skull.'?",
+            "fr": "Quel terme correspond à cette définition : 'The central organ of the nervous system, enclosed in the skull.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The central organ of the nervous system, enclosed in the skull.'؟"
+          },
+          "options": [
+            "Intestine",
+            "Brain",
+            "Heart",
+            "Spleen"
+          ],
+          "answer": "Brain",
+          "explanation": {
+            "en": "The central organ of the nervous system, enclosed in the skull.",
+            "fr": "L'organe central du système nerveux, enfermé dans le crâne.",
+            "ar": "العضو المركزي للجهاز العصبي، محاط بالجمجمة."
+          }
+        },
+        {
+          "id": "anatomy-u2-03-brain-und",
+          "conceptId": "anatomy-u2-03-brain",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The adult ______ weighs approximately 1.4 kg.'",
+            "fr": "Complétez par le terme correct : 'The adult ______ weighs approximately 1.4 kg.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The adult ______ weighs approximately 1.4 kg.'"
+          },
+          "options": [
+            "Brain",
+            "Heart",
+            "Intestine",
+            "Spleen"
+          ],
+          "answer": "Brain",
+          "explanation": {
+            "en": "The central organ of the nervous system, enclosed in the skull.",
+            "fr": "L'organe central du système nerveux, enfermé dans le crâne.",
+            "ar": "العضو المركزي للجهاز العصبي، محاط بالجمجمة."
+          }
+        },
+        {
+          "id": "anatomy-u2-03-brain-recal",
+          "conceptId": "anatomy-u2-03-brain",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Cerveau'",
+            "fr": "Écrivez le terme anglais pour : 'Cerveau'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Cerveau'"
+          },
+          "answer": "Brain",
+          "explanation": {
+            "en": "The central organ of the nervous system, enclosed in the skull.",
+            "fr": "L'organe central du système nerveux, enfermé dans le crâne.",
+            "ar": "العضو المركزي للجهاز العصبي، محاط بالجمجمة."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-04-liver",
+      "unit": 2,
+      "order": 4,
+      "legacyRef": 93,
+      "labelEn": "Liver",
+      "hints": {
+        "fr": "Foie",
+        "ar": "الكبد"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Liver » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The largest abdominal organ, performing metabolism, detoxification and bile production.",
+        "fr": "Le plus grand organe abdominal, assurant métabolisme, détoxification et production de bile.",
+        "ar": "أكبر أعضاء البطن، مسؤول عن الاستقلاب وإزالة السمية وإنتاج الصفراء."
+      },
+      "example": {
+        "en": "The liver is located in the right upper abdomen.",
+        "fr": "Le foie est situé dans l'hypochondre droit.",
+        "ar": "يقع الكبد في أعلى البطن أيمن الجهة."
+      },
+      "selectionNote": "Hypothèse à examiner : « liver » fréquent (hépatologie, bilan hépatique) ; définition non ambiguë.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-04-liver-rec",
+          "conceptId": "anatomy-u2-04-liver",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The largest abdominal organ, performing metabolism, detoxification and bile production.'?",
+            "fr": "Quel terme correspond à cette définition : 'The largest abdominal organ, performing metabolism, detoxification and bile production.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The largest abdominal organ, performing metabolism, detoxification and bile production.'؟"
+          },
+          "options": [
+            "Lung",
+            "Pancreas",
+            "Spleen",
+            "Liver"
+          ],
+          "answer": "Liver",
+          "explanation": {
+            "en": "The largest abdominal organ, performing metabolism, detoxification and bile production.",
+            "fr": "Le plus grand organe abdominal, assurant métabolisme, détoxification et production de bile.",
+            "ar": "أكبر أعضاء البطن، مسؤول عن الاستقلاب وإزالة السمية وإنتاج الصفراء."
+          }
+        },
+        {
+          "id": "anatomy-u2-04-liver-und",
+          "conceptId": "anatomy-u2-04-liver",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The ______ is located in the right upper abdomen.'",
+            "fr": "Complétez par le terme correct : 'The ______ is located in the right upper abdomen.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The ______ is located in the right upper abdomen.'"
+          },
+          "options": [
+            "Pancreas",
+            "Lung",
+            "Liver",
+            "Spleen"
+          ],
+          "answer": "Liver",
+          "explanation": {
+            "en": "The largest abdominal organ, performing metabolism, detoxification and bile production.",
+            "fr": "Le plus grand organe abdominal, assurant métabolisme, détoxification et production de bile.",
+            "ar": "أكبر أعضاء البطن، مسؤول عن الاستقلاب وإزالة السمية وإنتاج الصفراء."
+          }
+        },
+        {
+          "id": "anatomy-u2-04-liver-recal",
+          "conceptId": "anatomy-u2-04-liver",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Foie'",
+            "fr": "Écrivez le terme anglais pour : 'Foie'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Foie'"
+          },
+          "answer": "Liver",
+          "explanation": {
+            "en": "The largest abdominal organ, performing metabolism, detoxification and bile production.",
+            "fr": "Le plus grand organe abdominal, assurant métabolisme, détoxification et production de bile.",
+            "ar": "أكبر أعضاء البطن، مسؤول عن الاستقلاب وإزالة السمية وإنتاج الصفراء."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-05-stomach",
+      "unit": 2,
+      "order": 5,
+      "legacyRef": 82,
+      "labelEn": "Stomach",
+      "hints": {
+        "fr": "Estomac",
+        "ar": "المعدة"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Stomach » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The dilated part of the digestive tract that stores and churns food.",
+        "fr": "La partie dilatée du tube digestif qui stocke et malax les aliments.",
+        "ar": "الجزء المتمدد من القناة الهضمية الذي يخزن الطعام ويخلطه."
+      },
+      "example": {
+        "en": "The stomach secretes acid and pepsin.",
+        "fr": "L'estomac sécrète de l'acide et de la pepsine.",
+        "ar": "تفرز المعدة الحمض والبيبسين."
+      },
+      "selectionNote": "Hypothèse à examiner : « stomach » très utilisé en gastro-entérologie courante.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-05-stomach-rec",
+          "conceptId": "anatomy-u2-05-stomach",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The dilated part of the digestive tract that stores and churns food.'?",
+            "fr": "Quel terme correspond à cette définition : 'The dilated part of the digestive tract that stores and churns food.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The dilated part of the digestive tract that stores and churns food.'؟"
+          },
+          "options": [
+            "Brain",
+            "Intestine",
+            "Stomach",
+            "Liver"
+          ],
+          "answer": "Stomach",
+          "explanation": {
+            "en": "The dilated part of the digestive tract that stores and churns food.",
+            "fr": "La partie dilatée du tube digestif qui stocke et malax les aliments.",
+            "ar": "الجزء المتمدد من القناة الهضمية الذي يخزن الطعام ويخلطه."
+          }
+        },
+        {
+          "id": "anatomy-u2-05-stomach-und",
+          "conceptId": "anatomy-u2-05-stomach",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The ______ secretes acid and pepsin.'",
+            "fr": "Complétez par le terme correct : 'The ______ secretes acid and pepsin.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The ______ secretes acid and pepsin.'"
+          },
+          "options": [
+            "Stomach",
+            "Intestine",
+            "Liver",
+            "Brain"
+          ],
+          "answer": "Stomach",
+          "explanation": {
+            "en": "The dilated part of the digestive tract that stores and churns food.",
+            "fr": "La partie dilatée du tube digestif qui stocke et malax les aliments.",
+            "ar": "الجزء المتمدد من القناة الهضمية الذي يخزن الطعام ويخلطه."
+          }
+        },
+        {
+          "id": "anatomy-u2-05-stomach-recal",
+          "conceptId": "anatomy-u2-05-stomach",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Estomac'",
+            "fr": "Écrivez le terme anglais pour : 'Estomac'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Estomac'"
+          },
+          "answer": "Stomach",
+          "explanation": {
+            "en": "The dilated part of the digestive tract that stores and churns food.",
+            "fr": "La partie dilatée du tube digestif qui stocke et malax les aliments.",
+            "ar": "الجزء المتمدد من القناة الهضمية الذي يخزن الطعام ويخلطه."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-06-kidney",
+      "unit": 2,
+      "order": 6,
+      "legacyRef": 384,
+      "labelEn": "Kidney",
+      "hints": {
+        "fr": "Rein",
+        "ar": "الكلیة"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Kidney » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The bean-shaped organ that filters blood and produces urine.",
+        "fr": "L'organe en forme de haricot qui filtre le sang et produit l'urine.",
+        "ar": "العضو على شكل حبة الفاصولاء يرشّح الدم وينتج البول."
+      },
+      "example": {
+        "en": "The two kidneys lie behind the abdominal cavity.",
+        "fr": "Les deux reins se trouvent derrière la cavité abdominale.",
+        "ar": "تقع الكليتان خلف التجويف البطني."
+      },
+      "selectionNote": "Hypothèse à examiner : « kidney » central en néphrologie ; à distinguer du pluriel « kidneys ».",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-06-kidney-rec",
+          "conceptId": "anatomy-u2-06-kidney",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The bean-shaped organ that filters blood and produces urine.'?",
+            "fr": "Quel terme correspond à cette définition : 'The bean-shaped organ that filters blood and produces urine.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The bean-shaped organ that filters blood and produces urine.'؟"
+          },
+          "options": [
+            "Lung",
+            "Intestine",
+            "Spleen",
+            "Kidney"
+          ],
+          "answer": "Kidney",
+          "explanation": {
+            "en": "The bean-shaped organ that filters blood and produces urine.",
+            "fr": "L'organe en forme de haricot qui filtre le sang et produit l'urine.",
+            "ar": "العضو على شكل حبة الفاصولاء يرشّح الدم وينتج البول."
+          }
+        },
+        {
+          "id": "anatomy-u2-06-kidney-und",
+          "conceptId": "anatomy-u2-06-kidney",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term is described here: 'L'organe en forme de haricot qui filtre le sang et produit l'urine.'?",
+            "fr": "Quel terme est décrit ici : 'L'organe en forme de haricot qui filtre le sang et produit l'urine.' ?",
+            "ar": "أي مصطلح يوصف هنا: 'L'organe en forme de haricot qui filtre le sang et produit l'urine.'؟"
+          },
+          "options": [
+            "Intestine",
+            "Lung",
+            "Kidney",
+            "Spleen"
+          ],
+          "answer": "Kidney",
+          "explanation": {
+            "en": "The bean-shaped organ that filters blood and produces urine.",
+            "fr": "L'organe en forme de haricot qui filtre le sang et produit l'urine.",
+            "ar": "العضو على شكل حبة الفاصولاء يرشّح الدم وينتج البول."
+          }
+        },
+        {
+          "id": "anatomy-u2-06-kidney-recal",
+          "conceptId": "anatomy-u2-06-kidney",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Rein'",
+            "fr": "Écrivez le terme anglais pour : 'Rein'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Rein'"
+          },
+          "answer": "Kidney",
+          "explanation": {
+            "en": "The bean-shaped organ that filters blood and produces urine.",
+            "fr": "L'organe en forme de haricot qui filtre le sang et produit l'urine.",
+            "ar": "العضو على شكل حبة الفاصولاء يرشّح الدم وينتج البول."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-07-intestine",
+      "unit": 2,
+      "order": 7,
+      "legacyRef": 3994,
+      "labelEn": "Intestine",
+      "hints": {
+        "fr": "Intestin",
+        "ar": "الأمعاء"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Intestine » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The long tube that digests and absorbs food",
+        "fr": "Long tube qui digère et absorbe les aliments",
+        "ar": "أنبوب طويل يهضم ويمتص الطعام"
+      },
+      "example": {
+        "en": "The intestines absorb nutrients from food.",
+        "fr": "Les intestins absorbent les nutriments des aliments.",
+        "ar": "تمتص الأمعاء العناصر الغذائية من الطعام."
+      },
+      "selectionNote": "Hypothèse à examiner : « intestine » générique et utile avant l'apprentissage small/large bowel.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-07-intestine-rec",
+          "conceptId": "anatomy-u2-07-intestine",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The long tube that digests and absorbs food'?",
+            "fr": "Quel terme correspond à cette définition : 'The long tube that digests and absorbs food' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The long tube that digests and absorbs food'؟"
+          },
+          "options": [
+            "Kidney",
+            "Brain",
+            "Spleen",
+            "Intestine"
+          ],
+          "answer": "Intestine",
+          "explanation": {
+            "en": "The long tube that digests and absorbs food",
+            "fr": "Long tube qui digère et absorbe les aliments",
+            "ar": "أنبوب طويل يهضم ويمتص الطعام"
+          }
+        },
+        {
+          "id": "anatomy-u2-07-intestine-und",
+          "conceptId": "anatomy-u2-07-intestine",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term is described here: 'Long tube qui digère et absorbe les aliments'?",
+            "fr": "Quel terme est décrit ici : 'Long tube qui digère et absorbe les aliments' ?",
+            "ar": "أي مصطلح يوصف هنا: 'Long tube qui digère et absorbe les aliments'؟"
+          },
+          "options": [
+            "Kidney",
+            "Spleen",
+            "Intestine",
+            "Brain"
+          ],
+          "answer": "Intestine",
+          "explanation": {
+            "en": "The long tube that digests and absorbs food",
+            "fr": "Long tube qui digère et absorbe les aliments",
+            "ar": "أنبوب طويل يهضم ويمتص الطعام"
+          }
+        },
+        {
+          "id": "anatomy-u2-07-intestine-recal",
+          "conceptId": "anatomy-u2-07-intestine",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Intestin'",
+            "fr": "Écrivez le terme anglais pour : 'Intestin'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Intestin'"
+          },
+          "answer": "Intestine",
+          "explanation": {
+            "en": "The long tube that digests and absorbs food",
+            "fr": "Long tube qui digère et absorbe les aliments",
+            "ar": "أنبوب طويل يهضم ويمتص الطعام"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-08-bladder",
+      "unit": 2,
+      "order": 8,
+      "legacyRef": 3997,
+      "labelEn": "Bladder",
+      "hints": {
+        "fr": "Vessie",
+        "ar": "المثانة"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Bladder » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The organ that stores urine",
+        "fr": "Organe qui stocke l'urine",
+        "ar": "العضو الذي يخزن البول"
+      },
+      "example": {
+        "en": "A full bladder causes the urge to urinate.",
+        "fr": "Une vessie pleine donne envie d'uriner.",
+        "ar": "تسبب المثانة الممتلئة الرغبة في التبول."
+      },
+      "selectionNote": "Hypothèse à examiner : « bladder » fréquent en urologie et rétention urinaire.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-08-bladder-rec",
+          "conceptId": "anatomy-u2-08-bladder",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The organ that stores urine'?",
+            "fr": "Quel terme correspond à cette définition : 'The organ that stores urine' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The organ that stores urine'؟"
+          },
+          "options": [
+            "Bladder",
+            "Pancreas",
+            "Kidney",
+            "Liver"
+          ],
+          "answer": "Bladder",
+          "explanation": {
+            "en": "The organ that stores urine",
+            "fr": "Organe qui stocke l'urine",
+            "ar": "العضو الذي يخزن البول"
+          }
+        },
+        {
+          "id": "anatomy-u2-08-bladder-und",
+          "conceptId": "anatomy-u2-08-bladder",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'A full ______ causes the urge to urinate.'",
+            "fr": "Complétez par le terme correct : 'A full ______ causes the urge to urinate.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'A full ______ causes the urge to urinate.'"
+          },
+          "options": [
+            "Pancreas",
+            "Kidney",
+            "Liver",
+            "Bladder"
+          ],
+          "answer": "Bladder",
+          "explanation": {
+            "en": "The organ that stores urine",
+            "fr": "Organe qui stocke l'urine",
+            "ar": "العضو الذي يخزن البول"
+          }
+        },
+        {
+          "id": "anatomy-u2-08-bladder-recal",
+          "conceptId": "anatomy-u2-08-bladder",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Vessie'",
+            "fr": "Écrivez le terme anglais pour : 'Vessie'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Vessie'"
+          },
+          "answer": "Bladder",
+          "explanation": {
+            "en": "The organ that stores urine",
+            "fr": "Organe qui stocke l'urine",
+            "ar": "العضو الذي يخزن البول"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-09-spleen",
+      "unit": 2,
+      "order": 9,
+      "legacyRef": 242,
+      "labelEn": "Spleen",
+      "hints": {
+        "fr": "Rate",
+        "ar": "الطحال"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Spleen » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "An organ filtering blood and recycling old red blood cells",
+        "fr": "Organe filtrant le sang et recyclant les vieux globules rouges",
+        "ar": "عضو يرشح الدم ويعيد تدوير كريات الدم الحمراء القديمة"
+      },
+      "example": {
+        "en": "The spleen is the organ filtering blood and recycling old red blood cells.",
+        "fr": "La rate est organe filtrant le sang et recyclant les vieux globules rouges.",
+        "ar": "الطحال هو عضو يرشح الدم ويعيد تدوير كريات الدم الحمراء القديمة."
+      },
+      "selectionNote": "Hypothèse à examiner : « spleen » utile en hématologie et traumatisme abdominal.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-09-spleen-rec",
+          "conceptId": "anatomy-u2-09-spleen",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'An organ filtering blood and recycling old red blood cells'?",
+            "fr": "Quel terme correspond à cette définition : 'An organ filtering blood and recycling old red blood cells' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'An organ filtering blood and recycling old red blood cells'؟"
+          },
+          "options": [
+            "Spleen",
+            "Brain",
+            "Heart",
+            "Intestine"
+          ],
+          "answer": "Spleen",
+          "explanation": {
+            "en": "An organ filtering blood and recycling old red blood cells",
+            "fr": "Organe filtrant le sang et recyclant les vieux globules rouges",
+            "ar": "عضو يرشح الدم ويعيد تدوير كريات الدم الحمراء القديمة"
+          }
+        },
+        {
+          "id": "anatomy-u2-09-spleen-und",
+          "conceptId": "anatomy-u2-09-spleen",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The ______ is the organ filtering blood and recycling old red blood cells.'",
+            "fr": "Complétez par le terme correct : 'The ______ is the organ filtering blood and recycling old red blood cells.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The ______ is the organ filtering blood and recycling old red blood cells.'"
+          },
+          "options": [
+            "Heart",
+            "Intestine",
+            "Spleen",
+            "Brain"
+          ],
+          "answer": "Spleen",
+          "explanation": {
+            "en": "An organ filtering blood and recycling old red blood cells",
+            "fr": "Organe filtrant le sang et recyclant les vieux globules rouges",
+            "ar": "عضو يرشح الدم ويعيد تدوير كريات الدم الحمراء القديمة"
+          }
+        },
+        {
+          "id": "anatomy-u2-09-spleen-recal",
+          "conceptId": "anatomy-u2-09-spleen",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Rate'",
+            "fr": "Écrivez le terme anglais pour : 'Rate'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Rate'"
+          },
+          "answer": "Spleen",
+          "explanation": {
+            "en": "An organ filtering blood and recycling old red blood cells",
+            "fr": "Organe filtrant le sang et recyclant les vieux globules rouges",
+            "ar": "عضو يرشح الدم ويعيد تدوير كريات الدم الحمراء القديمة"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u2-10-pancreas",
+      "unit": 2,
+      "order": 10,
+      "legacyRef": 96,
+      "labelEn": "Pancreas",
+      "hints": {
+        "fr": "Pancréas",
+        "ar": "البنكرياس"
+      },
+      "languageObjective": "Unité « Organes principaux » : reconnaître et produire le terme EN « Pancreas » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "The organ behind the stomach with digestive and hormonal functions.",
+        "fr": "L'organe derrière l'estomac aux fonctions digestives et hormonales.",
+        "ar": "العضو خلف المعدة ذو الوظائف الهضمية والهرمونية."
+      },
+      "example": {
+        "en": "The pancreas secretes insulin and digestive enzymes.",
+        "fr": "Le pancréas sécrète l'insuline et des enzymes digestives.",
+        "ar": "يفرز البنكرياس الأنسولين وإنزيمات هاضمة."
+      },
+      "selectionNote": "Hypothèse à examiner : « pancreas » indispensable (pancréatite, diabète).",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u2-10-pancreas-rec",
+          "conceptId": "anatomy-u2-10-pancreas",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'The organ behind the stomach with digestive and hormonal functions.'?",
+            "fr": "Quel terme correspond à cette définition : 'The organ behind the stomach with digestive and hormonal functions.' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'The organ behind the stomach with digestive and hormonal functions.'؟"
+          },
+          "options": [
+            "Bladder",
+            "Pancreas",
+            "Liver",
+            "Lung"
+          ],
+          "answer": "Pancreas",
+          "explanation": {
+            "en": "The organ behind the stomach with digestive and hormonal functions.",
+            "fr": "L'organe derrière l'estomac aux fonctions digestives et hormonales.",
+            "ar": "العضو خلف المعدة ذو الوظائف الهضمية والهرمونية."
+          }
+        },
+        {
+          "id": "anatomy-u2-10-pancreas-und",
+          "conceptId": "anatomy-u2-10-pancreas",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: 'The ______ secretes insulin and digestive enzymes.'",
+            "fr": "Complétez par le terme correct : 'The ______ secretes insulin and digestive enzymes.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: 'The ______ secretes insulin and digestive enzymes.'"
+          },
+          "options": [
+            "Bladder",
+            "Liver",
+            "Pancreas",
+            "Lung"
+          ],
+          "answer": "Pancreas",
+          "explanation": {
+            "en": "The organ behind the stomach with digestive and hormonal functions.",
+            "fr": "L'organe derrière l'estomac aux fonctions digestives et hormonales.",
+            "ar": "العضو خلف المعدة ذو الوظائف الهضمية والهرمونية."
+          }
+        },
+        {
+          "id": "anatomy-u2-10-pancreas-recal",
+          "conceptId": "anatomy-u2-10-pancreas",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the term that matches this definition: 'The organ behind the stomach with digestive and hormonal functions.'",
+            "fr": "Écrivez le terme qui correspond à cette définition : 'The organ behind the stomach with digestive and hormonal functions.'",
+            "ar": "اكتب المصطلح الذي يوافق هذا التعريف: 'The organ behind the stomach with digestive and hormonal functions.'"
+          },
+          "answer": "Pancreas",
+          "explanation": {
+            "en": "The organ behind the stomach with digestive and hormonal functions.",
+            "fr": "L'organe derrière l'estomac aux fonctions digestives et hormonales.",
+            "ar": "العضو خلف المعدة ذو الوظائف الهضمية والهرمونية."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-01-superior",
+      "unit": 3,
+      "order": 1,
+      "legacyRef": 113,
+      "labelEn": "Superior (Cranial)",
+      "hints": {
+        "fr": "Supérieur (Crânial)",
+        "ar": "علوي (قحفي)"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Superior (Cranial) » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated above or toward the head",
+        "fr": "Situé au-dessus ou vers la tête",
+        "ar": "يقع أعلى أو باتجاه الرأس"
+      },
+      "example": {
+        "en": "Superior (Cranial) refers to situated above or toward the head.",
+        "fr": "La supérieur (Crânial) est situé au-dessus ou vers la tête.",
+        "ar": "علوي (قحفي) هو يقع أعلى أو باتجاه الرأس."
+      },
+      "acceptedVariants": [
+        "Cranial"
+      ],
+      "selectionNote": "Hypothèse à examiner : « superior » structure tout repère anatomique ; cadre enseigné explicitement (P1.2, localisation).",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-01-superior-rec",
+          "conceptId": "anatomy-u3-01-superior",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated above or toward the head'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated above or toward the head' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated above or toward the head'؟"
+          },
+          "options": [
+            "Proximal",
+            "Medial",
+            "Superior (Cranial)",
+            "Posterior (Dorsal)"
+          ],
+          "answer": "Superior (Cranial)",
+          "explanation": {
+            "en": "Situated above or toward the head",
+            "fr": "Situé au-dessus ou vers la tête",
+            "ar": "يقع أعلى أو باتجاه الرأس"
+          }
+        },
+        {
+          "id": "anatomy-u3-01-superior-und",
+          "conceptId": "anatomy-u3-01-superior",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated above or toward the head.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated above or toward the head.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated above or toward the head.'"
+          },
+          "options": [
+            "Posterior (Dorsal)",
+            "Superior (Cranial)",
+            "Medial",
+            "Proximal"
+          ],
+          "answer": "Superior (Cranial)",
+          "explanation": {
+            "en": "Situated above or toward the head",
+            "fr": "Situé au-dessus ou vers la tête",
+            "ar": "يقع أعلى أو باتجاه الرأس"
+          }
+        },
+        {
+          "id": "anatomy-u3-01-superior-recal",
+          "conceptId": "anatomy-u3-01-superior",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Supérieur (Crânial)'",
+            "fr": "Écrivez le terme anglais pour : 'Supérieur (Crânial)'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Supérieur (Crânial)'"
+          },
+          "answer": "Superior (Cranial)",
+          "explanation": {
+            "en": "Situated above or toward the head",
+            "fr": "Situé au-dessus ou vers la tête",
+            "ar": "يقع أعلى أو باتجاه الرأس"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-02-inferior",
+      "unit": 3,
+      "order": 2,
+      "legacyRef": 114,
+      "labelEn": "Inferior (Caudal)",
+      "hints": {
+        "fr": "Inférieur (Caudal)",
+        "ar": "سفلي (ذنبي)"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Inferior (Caudal) » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated below or toward the feet",
+        "fr": "Situé en dessous ou vers les pieds",
+        "ar": "يقع أسفل أو باتجاه القدمين"
+      },
+      "example": {
+        "en": "Inferior (Caudal) refers to situated below or toward the feet.",
+        "fr": "L'inférieur (Caudal) est situé en dessous ou vers les pieds.",
+        "ar": "سفلي (ذنبي) هو يقع أسفل أو باتجاه القدمين."
+      },
+      "acceptedVariants": [
+        "Caudal"
+      ],
+      "selectionNote": "Hypothèse à examiner : « inferior » est l'opposé systématique de « superior » ; enseignés ensemble.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-02-inferior-rec",
+          "conceptId": "anatomy-u3-02-inferior",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated below or toward the feet'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated below or toward the feet' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated below or toward the feet'؟"
+          },
+          "options": [
+            "Superior (Cranial)",
+            "Lateral",
+            "Inferior (Caudal)",
+            "Proximal"
+          ],
+          "answer": "Inferior (Caudal)",
+          "explanation": {
+            "en": "Situated below or toward the feet",
+            "fr": "Situé en dessous ou vers les pieds",
+            "ar": "يقع أسفل أو باتجاه القدمين"
+          }
+        },
+        {
+          "id": "anatomy-u3-02-inferior-und",
+          "conceptId": "anatomy-u3-02-inferior",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated below or toward the feet.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated below or toward the feet.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated below or toward the feet.'"
+          },
+          "options": [
+            "Proximal",
+            "Lateral",
+            "Inferior (Caudal)",
+            "Superior (Cranial)"
+          ],
+          "answer": "Inferior (Caudal)",
+          "explanation": {
+            "en": "Situated below or toward the feet",
+            "fr": "Situé en dessous ou vers les pieds",
+            "ar": "يقع أسفل أو باتجاه القدمين"
+          }
+        },
+        {
+          "id": "anatomy-u3-02-inferior-recal",
+          "conceptId": "anatomy-u3-02-inferior",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Inférieur (Caudal)'",
+            "fr": "Écrivez le terme anglais pour : 'Inférieur (Caudal)'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Inférieur (Caudal)'"
+          },
+          "answer": "Inferior (Caudal)",
+          "explanation": {
+            "en": "Situated below or toward the feet",
+            "fr": "Situé en dessous ou vers les pieds",
+            "ar": "يقع أسفل أو باتجاه القدمين"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-03-anterior",
+      "unit": 3,
+      "order": 3,
+      "legacyRef": 111,
+      "labelEn": "Anterior (Ventral)",
+      "hints": {
+        "fr": "Antérieur (Ventral)",
+        "ar": "أمامي (بطني)"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Anterior (Ventral) » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated at or toward the front of the body",
+        "fr": "Situé à l'avant du corps",
+        "ar": "يقع في الجهة الأمامية من الجسم"
+      },
+      "example": {
+        "en": "Anterior (Ventral) refers to situated at or toward the front of the body.",
+        "fr": "L'antérieur (Ventral) est situé à l'avant du corps.",
+        "ar": "أمامي (بطني) هو يقع في الجهة الأمامية من الجسم."
+      },
+      "acceptedVariants": [
+        "Ventral"
+      ],
+      "selectionNote": "Hypothèse à examiner : « anterior » très fréquent (face antérieure) ; variante « Ventral » acceptée.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-03-anterior-rec",
+          "conceptId": "anatomy-u3-03-anterior",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated at or toward the front of the body'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated at or toward the front of the body' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated at or toward the front of the body'؟"
+          },
+          "options": [
+            "Medial",
+            "Anterior (Ventral)",
+            "Lateral",
+            "Distal"
+          ],
+          "answer": "Anterior (Ventral)",
+          "explanation": {
+            "en": "Situated at or toward the front of the body",
+            "fr": "Situé à l'avant du corps",
+            "ar": "يقع في الجهة الأمامية من الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-03-anterior-und",
+          "conceptId": "anatomy-u3-03-anterior",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated at or toward the front of the body.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated at or toward the front of the body.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated at or toward the front of the body.'"
+          },
+          "options": [
+            "Distal",
+            "Lateral",
+            "Medial",
+            "Anterior (Ventral)"
+          ],
+          "answer": "Anterior (Ventral)",
+          "explanation": {
+            "en": "Situated at or toward the front of the body",
+            "fr": "Situé à l'avant du corps",
+            "ar": "يقع في الجهة الأمامية من الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-03-anterior-recal",
+          "conceptId": "anatomy-u3-03-anterior",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Antérieur (Ventral)'",
+            "fr": "Écrivez le terme anglais pour : 'Antérieur (Ventral)'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Antérieur (Ventral)'"
+          },
+          "answer": "Anterior (Ventral)",
+          "explanation": {
+            "en": "Situated at or toward the front of the body",
+            "fr": "Situé à l'avant du corps",
+            "ar": "يقع في الجهة الأمامية من الجسم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-04-posterior",
+      "unit": 3,
+      "order": 4,
+      "legacyRef": 112,
+      "labelEn": "Posterior (Dorsal)",
+      "hints": {
+        "fr": "Postérieur (Dorsal)",
+        "ar": "خلفي (ظهري)"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Posterior (Dorsal) » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated at or toward the back of the body",
+        "fr": "Situé à l'arrière du corps",
+        "ar": "يقع في الجهة الخلفية من الجسم"
+      },
+      "example": {
+        "en": "Posterior (Dorsal) refers to situated at or toward the back of the body.",
+        "fr": "La postérieur (Dorsal) est situé à l'arrière du corps.",
+        "ar": "خلفي (ظهري) هو يقع في الجهة الخلفية من الجسم."
+      },
+      "acceptedVariants": [
+        "Dorsal"
+      ],
+      "selectionNote": "Hypothèse à examiner : « posterior » fréquent (face postérieure) ; variante « Dorsal » acceptée.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-04-posterior-rec",
+          "conceptId": "anatomy-u3-04-posterior",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated at or toward the back of the body'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated at or toward the back of the body' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated at or toward the back of the body'؟"
+          },
+          "options": [
+            "Inferior (Caudal)",
+            "Posterior (Dorsal)",
+            "Distal",
+            "Medial"
+          ],
+          "answer": "Posterior (Dorsal)",
+          "explanation": {
+            "en": "Situated at or toward the back of the body",
+            "fr": "Situé à l'arrière du corps",
+            "ar": "يقع في الجهة الخلفية من الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-04-posterior-und",
+          "conceptId": "anatomy-u3-04-posterior",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated at or toward the back of the body.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated at or toward the back of the body.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated at or toward the back of the body.'"
+          },
+          "options": [
+            "Distal",
+            "Posterior (Dorsal)",
+            "Medial",
+            "Inferior (Caudal)"
+          ],
+          "answer": "Posterior (Dorsal)",
+          "explanation": {
+            "en": "Situated at or toward the back of the body",
+            "fr": "Situé à l'arrière du corps",
+            "ar": "يقع في الجهة الخلفية من الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-04-posterior-recal",
+          "conceptId": "anatomy-u3-04-posterior",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Postérieur (Dorsal)'",
+            "fr": "Écrivez le terme anglais pour : 'Postérieur (Dorsal)'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Postérieur (Dorsal)'"
+          },
+          "answer": "Posterior (Dorsal)",
+          "explanation": {
+            "en": "Situated at or toward the back of the body",
+            "fr": "Situé à l'arrière du corps",
+            "ar": "يقع في الجهة الخلفية من الجسم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-05-medial",
+      "unit": 3,
+      "order": 5,
+      "legacyRef": 115,
+      "labelEn": "Medial",
+      "hints": {
+        "fr": "Médial",
+        "ar": "إنسي"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Medial » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated closer to the midline of the body",
+        "fr": "Situé plus proche de la ligne médiane",
+        "ar": "يقع أقرب إلى الخط الأوسط للجسم"
+      },
+      "example": {
+        "en": "Medial refers to situated closer to the midline of the body.",
+        "fr": "Le médial est situé plus proche de la ligne médiane.",
+        "ar": "إنسي هو يقع أقرب إلى الخط الأوسط للجسم."
+      },
+      "selectionNote": "Hypothèse à examiner : « medial » vs « lateral » est LE repère médian ; pair enseigné ensemble.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-05-medial-rec",
+          "conceptId": "anatomy-u3-05-medial",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated closer to the midline of the body'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated closer to the midline of the body' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated closer to the midline of the body'؟"
+          },
+          "options": [
+            "Distal",
+            "Proximal",
+            "Inferior (Caudal)",
+            "Medial"
+          ],
+          "answer": "Medial",
+          "explanation": {
+            "en": "Situated closer to the midline of the body",
+            "fr": "Situé plus proche de la ligne médiane",
+            "ar": "يقع أقرب إلى الخط الأوسط للجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-05-medial-und",
+          "conceptId": "anatomy-u3-05-medial",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated closer to the midline of the body.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated closer to the midline of the body.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated closer to the midline of the body.'"
+          },
+          "options": [
+            "Medial",
+            "Proximal",
+            "Inferior (Caudal)",
+            "Distal"
+          ],
+          "answer": "Medial",
+          "explanation": {
+            "en": "Situated closer to the midline of the body",
+            "fr": "Situé plus proche de la ligne médiane",
+            "ar": "يقع أقرب إلى الخط الأوسط للجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-05-medial-recal",
+          "conceptId": "anatomy-u3-05-medial",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the term that matches this definition: 'Situated closer to the midline of the body'",
+            "fr": "Écrivez le terme qui correspond à cette définition : 'Situated closer to the midline of the body'",
+            "ar": "اكتب المصطلح الذي يوافق هذا التعريف: 'Situated closer to the midline of the body'"
+          },
+          "answer": "Medial",
+          "explanation": {
+            "en": "Situated closer to the midline of the body",
+            "fr": "Situé plus proche de la ligne médiane",
+            "ar": "يقع أقرب إلى الخط الأوسط للجسم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-06-lateral",
+      "unit": 3,
+      "order": 6,
+      "legacyRef": 116,
+      "labelEn": "Lateral",
+      "hints": {
+        "fr": "Latéral",
+        "ar": "وحشي"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Lateral » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated farther from the midline of the body",
+        "fr": "Situé plus loin de la ligne médiane",
+        "ar": "يقع أبعد عن الخط الأوسط للجسم"
+      },
+      "example": {
+        "en": "Lateral refers to situated farther from the midline of the body.",
+        "fr": "Le latéral est situé plus loin de la ligne médiane.",
+        "ar": "وحشي هو يقع أبعد عن الخط الأوسط للجسم."
+      },
+      "selectionNote": "Hypothèse à examiner : « lateral » (côté) ; ambigu sans contexte — l'exemple fournit TOUJOURS un contexte.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-06-lateral-rec",
+          "conceptId": "anatomy-u3-06-lateral",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated farther from the midline of the body'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated farther from the midline of the body' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated farther from the midline of the body'؟"
+          },
+          "options": [
+            "Superficial",
+            "Distal",
+            "Posterior (Dorsal)",
+            "Lateral"
+          ],
+          "answer": "Lateral",
+          "explanation": {
+            "en": "Situated farther from the midline of the body",
+            "fr": "Situé plus loin de la ligne médiane",
+            "ar": "يقع أبعد عن الخط الأوسط للجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-06-lateral-und",
+          "conceptId": "anatomy-u3-06-lateral",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated farther from the midline of the body.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated farther from the midline of the body.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated farther from the midline of the body.'"
+          },
+          "options": [
+            "Lateral",
+            "Posterior (Dorsal)",
+            "Superficial",
+            "Distal"
+          ],
+          "answer": "Lateral",
+          "explanation": {
+            "en": "Situated farther from the midline of the body",
+            "fr": "Situé plus loin de la ligne médiane",
+            "ar": "يقع أبعد عن الخط الأوسط للجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-06-lateral-recal",
+          "conceptId": "anatomy-u3-06-lateral",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the term that matches this definition: 'Situated farther from the midline of the body'",
+            "fr": "Écrivez le terme qui correspond à cette définition : 'Situated farther from the midline of the body'",
+            "ar": "اكتب المصطلح الذي يوافق هذا التعريف: 'Situated farther from the midline of the body'"
+          },
+          "answer": "Lateral",
+          "explanation": {
+            "en": "Situated farther from the midline of the body",
+            "fr": "Situé plus loin de la ligne médiane",
+            "ar": "يقع أبعد عن الخط الأوسط للجسم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-07-proximal",
+      "unit": 3,
+      "order": 7,
+      "legacyRef": 117,
+      "labelEn": "Proximal",
+      "hints": {
+        "fr": "Proximal",
+        "ar": "داني (قريب)"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Proximal » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated closer to the point of attachment or origin",
+        "fr": "Situé plus proche du point d'attache",
+        "ar": "يقع أقرب إلى نقطة الارتباط أو الأصل"
+      },
+      "example": {
+        "en": "Proximal refers to situated closer to the point of attachment or origin.",
+        "fr": "Le proximal est situé plus proche du point d'attache.",
+        "ar": "داني (قريب) هو يقع أقرب إلى نقطة الارتباط أو الأصل."
+      },
+      "selectionNote": "Hypothèse à examiner : « proximal » propre aux membres ; le FR « Proximal » est identique → rappel par définition.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-07-proximal-rec",
+          "conceptId": "anatomy-u3-07-proximal",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated closer to the point of attachment or origin'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated closer to the point of attachment or origin' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated closer to the point of attachment or origin'؟"
+          },
+          "options": [
+            "Superficial",
+            "Proximal",
+            "Distal",
+            "Anterior (Ventral)"
+          ],
+          "answer": "Proximal",
+          "explanation": {
+            "en": "Situated closer to the point of attachment or origin",
+            "fr": "Situé plus proche du point d'attache",
+            "ar": "يقع أقرب إلى نقطة الارتباط أو الأصل"
+          }
+        },
+        {
+          "id": "anatomy-u3-07-proximal-und",
+          "conceptId": "anatomy-u3-07-proximal",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated closer to the point of attachment or origin.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated closer to the point of attachment or origin.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated closer to the point of attachment or origin.'"
+          },
+          "options": [
+            "Superficial",
+            "Distal",
+            "Proximal",
+            "Anterior (Ventral)"
+          ],
+          "answer": "Proximal",
+          "explanation": {
+            "en": "Situated closer to the point of attachment or origin",
+            "fr": "Situé plus proche du point d'attache",
+            "ar": "يقع أقرب إلى نقطة الارتباط أو الأصل"
+          }
+        },
+        {
+          "id": "anatomy-u3-07-proximal-recal",
+          "conceptId": "anatomy-u3-07-proximal",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the term that matches this definition: 'Situated closer to the point of attachment or origin'",
+            "fr": "Écrivez le terme qui correspond à cette définition : 'Situated closer to the point of attachment or origin'",
+            "ar": "اكتب المصطلح الذي يوافق هذا التعريف: 'Situated closer to the point of attachment or origin'"
+          },
+          "answer": "Proximal",
+          "explanation": {
+            "en": "Situated closer to the point of attachment or origin",
+            "fr": "Situé plus proche du point d'attache",
+            "ar": "يقع أقرب إلى نقطة الارتباط أو الأصل"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-08-distal",
+      "unit": 3,
+      "order": 8,
+      "legacyRef": 118,
+      "labelEn": "Distal",
+      "hints": {
+        "fr": "Distal",
+        "ar": "قاصي (بعيد)"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Distal » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated farther from the point of attachment or origin",
+        "fr": "Situé plus loin du point d'attache",
+        "ar": "يقع أبعد عن نقطة الارتباط أو الأصل"
+      },
+      "example": {
+        "en": "Distal refers to situated farther from the point of attachment or origin.",
+        "fr": "Le distal est situé plus loin du point d'attache.",
+        "ar": "قاصي (بعيد) هو يقع أبعد عن نقطة الارتباط أو الأصل."
+      },
+      "selectionNote": "Hypothèse à examiner : « distal » opposé de « proximal » ; FR identique → rappel par définition.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-08-distal-rec",
+          "conceptId": "anatomy-u3-08-distal",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated farther from the point of attachment or origin'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated farther from the point of attachment or origin' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated farther from the point of attachment or origin'؟"
+          },
+          "options": [
+            "Inferior (Caudal)",
+            "Posterior (Dorsal)",
+            "Lateral",
+            "Distal"
+          ],
+          "answer": "Distal",
+          "explanation": {
+            "en": "Situated farther from the point of attachment or origin",
+            "fr": "Situé plus loin du point d'attache",
+            "ar": "يقع أبعد عن نقطة الارتباط أو الأصل"
+          }
+        },
+        {
+          "id": "anatomy-u3-08-distal-und",
+          "conceptId": "anatomy-u3-08-distal",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated farther from the point of attachment or origin.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated farther from the point of attachment or origin.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated farther from the point of attachment or origin.'"
+          },
+          "options": [
+            "Posterior (Dorsal)",
+            "Inferior (Caudal)",
+            "Distal",
+            "Lateral"
+          ],
+          "answer": "Distal",
+          "explanation": {
+            "en": "Situated farther from the point of attachment or origin",
+            "fr": "Situé plus loin du point d'attache",
+            "ar": "يقع أبعد عن نقطة الارتباط أو الأصل"
+          }
+        },
+        {
+          "id": "anatomy-u3-08-distal-recal",
+          "conceptId": "anatomy-u3-08-distal",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the term that matches this definition: 'Situated farther from the point of attachment or origin'",
+            "fr": "Écrivez le terme qui correspond à cette définition : 'Situated farther from the point of attachment or origin'",
+            "ar": "اكتب المصطلح الذي يوافق هذا التعريف: 'Situated farther from the point of attachment or origin'"
+          },
+          "answer": "Distal",
+          "explanation": {
+            "en": "Situated farther from the point of attachment or origin",
+            "fr": "Situé plus loin du point d'attache",
+            "ar": "يقع أبعد عن نقطة الارتباط أو الأصل"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-09-superficial",
+      "unit": 3,
+      "order": 9,
+      "legacyRef": 119,
+      "labelEn": "Superficial",
+      "hints": {
+        "fr": "Superficiel",
+        "ar": "سطحي"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Superficial » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated closer to the surface of the body",
+        "fr": "Situé plus près de la surface du corps",
+        "ar": "يقع أقرب إلى سطح الجسم"
+      },
+      "example": {
+        "en": "Superficial refers to situated closer to the surface of the body.",
+        "fr": "La superficiel est situé plus près de la surface du corps.",
+        "ar": "سطحي هو يقع أقرب إلى سطح الجسم."
+      },
+      "selectionNote": "Hypothèse à examiner : « superficial » courant en dermatologie et plaies ; quasi-cognate mais orthographe différente.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-09-superficial-rec",
+          "conceptId": "anatomy-u3-09-superficial",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated closer to the surface of the body'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated closer to the surface of the body' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated closer to the surface of the body'؟"
+          },
+          "options": [
+            "Superficial",
+            "Inferior (Caudal)",
+            "Lateral",
+            "Medial"
+          ],
+          "answer": "Superficial",
+          "explanation": {
+            "en": "Situated closer to the surface of the body",
+            "fr": "Situé plus près de la surface du corps",
+            "ar": "يقع أقرب إلى سطح الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-09-superficial-und",
+          "conceptId": "anatomy-u3-09-superficial",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated closer to the surface of the body.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated closer to the surface of the body.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated closer to the surface of the body.'"
+          },
+          "options": [
+            "Medial",
+            "Superficial",
+            "Lateral",
+            "Inferior (Caudal)"
+          ],
+          "answer": "Superficial",
+          "explanation": {
+            "en": "Situated closer to the surface of the body",
+            "fr": "Situé plus près de la surface du corps",
+            "ar": "يقع أقرب إلى سطح الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-09-superficial-recal",
+          "conceptId": "anatomy-u3-09-superficial",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Superficiel'",
+            "fr": "Écrivez le terme anglais pour : 'Superficiel'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Superficiel'"
+          },
+          "answer": "Superficial",
+          "explanation": {
+            "en": "Situated closer to the surface of the body",
+            "fr": "Situé plus près de la surface du corps",
+            "ar": "يقع أقرب إلى سطح الجسم"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anatomy-u3-10-deep",
+      "unit": 3,
+      "order": 10,
+      "legacyRef": 120,
+      "labelEn": "Deep",
+      "hints": {
+        "fr": "Profond",
+        "ar": "عميق"
+      },
+      "languageObjective": "Unité « Localisation anatomique » : reconnaître et produire le terme EN « Deep » à partir d'une définition simple, le distinguer des termes voisins de la même unité.",
+      "definition": {
+        "en": "Situated farther from the surface of the body",
+        "fr": "Situé plus loin de la surface du corps",
+        "ar": "يقع أبعد عن سطح الجسم"
+      },
+      "example": {
+        "en": "Deep refers to situated farther from the surface of the body.",
+        "fr": "La profond est situé plus loin de la surface du corps.",
+        "ar": "عميق هو يقع أبعد عن سطح الجسم."
+      },
+      "selectionNote": "Hypothèse à examiner : « deep » opposé de « superficial » ; monosyllabe haute fréquence.",
+      "status": "draft",
+      "contentVersion": "0.1.0",
+      "reviews": {
+        "linguistic": {
+          "status": "pending"
+        },
+        "medical": {
+          "status": "pending"
+        }
+      },
+      "exercises": [
+        {
+          "id": "anatomy-u3-10-deep-rec",
+          "conceptId": "anatomy-u3-10-deep",
+          "objective": "recognize",
+          "role": "assessment",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Which term matches this definition: 'Situated farther from the surface of the body'?",
+            "fr": "Quel terme correspond à cette définition : 'Situated farther from the surface of the body' ?",
+            "ar": "أي مصطلح يوافق هذا التعريف: 'Situated farther from the surface of the body'؟"
+          },
+          "options": [
+            "Distal",
+            "Inferior (Caudal)",
+            "Deep",
+            "Proximal"
+          ],
+          "answer": "Deep",
+          "explanation": {
+            "en": "Situated farther from the surface of the body",
+            "fr": "Situé plus loin de la surface du corps",
+            "ar": "يقع أبعد عن سطح الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-10-deep-und",
+          "conceptId": "anatomy-u3-10-deep",
+          "objective": "understand",
+          "role": "practice",
+          "kind": "mcq",
+          "prompt": {
+            "en": "Fill in the blank with the correct term: '______ refers to situated farther from the surface of the body.'",
+            "fr": "Complétez par le terme correct : '______ refers to situated farther from the surface of the body.'",
+            "ar": "أكمل الفراغ بالمصطلح الصحيح: '______ refers to situated farther from the surface of the body.'"
+          },
+          "options": [
+            "Deep",
+            "Proximal",
+            "Inferior (Caudal)",
+            "Distal"
+          ],
+          "answer": "Deep",
+          "explanation": {
+            "en": "Situated farther from the surface of the body",
+            "fr": "Situé plus loin de la surface du corps",
+            "ar": "يقع أبعد عن سطح الجسم"
+          }
+        },
+        {
+          "id": "anatomy-u3-10-deep-recal",
+          "conceptId": "anatomy-u3-10-deep",
+          "objective": "recall",
+          "role": "practice",
+          "kind": "free_input",
+          "prompt": {
+            "en": "Type the English term for: 'Profond'",
+            "fr": "Écrivez le terme anglais pour : 'Profond'",
+            "ar": "اكتب المصطلح الإنجليزي لـ: 'Profond'"
+          },
+          "answer": "Deep",
+          "explanation": {
+            "en": "Situated farther from the surface of the body",
+            "fr": "Situé plus loin de la surface du corps",
+            "ar": "يقع أبعد عن سطح الجسم"
+          }
+        }
+      ]
+    }
+  ]
+}
