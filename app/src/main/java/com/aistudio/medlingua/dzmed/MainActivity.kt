@@ -82,6 +82,8 @@ import com.aistudio.medlingua.dzmed.ui.components.GemsLeagueTopBar
 import com.aistudio.medlingua.dzmed.ui.components.LeagueScreen
 import com.aistudio.medlingua.dzmed.ui.components.SuperPaywallDialog
 import com.aistudio.medlingua.dzmed.ui.screens.StorySessionScreen
+import com.aistudio.medlingua.dzmed.ui.screens.PilotScreen
+import com.aistudio.medlingua.dzmed.ui.screens.PilotMeasureScreen
 import com.aistudio.medlingua.dzmed.data.story.StoryAssetSource
 import com.aistudio.medlingua.dzmed.data.repository.StoryRepository
 import com.aistudio.medlingua.dzmed.service.NotificationHelper
@@ -170,6 +172,8 @@ fun MedLinguaAppContent(
     var showStory by remember { mutableStateOf(false) }
     var showReview by remember { mutableStateOf(false) }  // LOT2/WS2.1 : hub révisions
     var showExplore by remember { mutableStateOf(false) }  // exploration multi-modules
+    var showPilot by remember { mutableStateOf(false) }  // P4 : pilote Anatomie (entraînement)
+    var showPilotMeasure by remember { mutableStateOf(false) }  // P4 : mesure T0/T1/T2
     val lang = uiState.currentLanguage
 
     // Runtime Permission for Notifications (Android 13+ / Tiramisu)
@@ -213,7 +217,7 @@ fun MedLinguaAppContent(
 
     // BackHandler: ferme le quiz/les flashcards, sinon revient au Parcours
     BackHandler(
-        enabled = showQuiz || showFlash || showStory || showReview || showExplore || currentDestination != MainDestination.PATH
+        enabled = showQuiz || showFlash || showStory || showReview || showExplore || showPilot || showPilotMeasure || currentDestination != MainDestination.PATH
     ) {
         when {
             showQuiz -> showQuiz = false
@@ -223,6 +227,11 @@ fun MedLinguaAppContent(
                 viewModel.exitExploreSession()
                 showExplore = false
             }
+            // Pilote Anatomie : la progression est déjà persistée ; le retour
+            // depuis la mesure réouvre l'écran d'entraînement (T0/T1/T2 gardes
+            // intactes). Aucune récompense n'est distribuée.
+            showPilotMeasure -> showPilotMeasure = false
+            showPilot -> showPilot = false
             // Séance histoire : suspendue (progression déjà sauvegardée) + TTS coupé.
             showStory -> {
                 (context.applicationContext as? MedLinguaApp)?.ttsManager?.stop()
@@ -349,7 +358,8 @@ fun MedLinguaAppContent(
                                 },
                                 onBuyFreeze = { viewModel.buyFreeze() },
                                 onOpenChests = { viewModel.openChestRewardPopup() },
-                                onOpenStory = { showStory = true }
+                                onOpenStory = { showStory = true },
+                                onOpenPilot = { showPilot = true }
                             )
                         }
                     }
@@ -557,6 +567,33 @@ fun MedLinguaAppContent(
                                 onExit = { showStory = false }
                             )
                         }
+                    }
+                }
+
+                // ---- Overlay : pilote Anatomie — entraînement puis mesure (P4) ----
+                if (showPilot) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        PilotScreen(
+                            lang = lang,
+                            onExit = { showPilot = false },
+                            onOpenMeasure = { showPilotMeasure = true }
+                        )
+                    }
+                }
+                if (showPilotMeasure) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
+                    ) {
+                        PilotMeasureScreen(
+                            lang = lang,
+                            onExit = { showPilotMeasure = false }
+                        )
                     }
                 }
 

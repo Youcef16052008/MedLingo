@@ -92,6 +92,7 @@ fun PathScreen(
     onBuyFreeze: () -> Unit,
     onOpenChests: () -> Unit,
     onOpenStory: () -> Unit = {},
+    onOpenPilot: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val lang = uiState.currentLanguage
@@ -433,6 +434,37 @@ fun PathScreen(
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(Strings.get("story_start", lang))
+                    }
+                }
+            }
+        }
+
+        // ---- Pilote Anatomie (P4) : étude pilote isolée, sans points ni SM-2 ----
+        item(key = "pilot") {
+            Card(
+                shape = RoundedCornerShape(20.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFE8EEF9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(
+                        "🔬 " + Strings.get("pilot_title", lang),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp,
+                        color = MedGreenDark
+                    )
+                    Text(
+                        Strings.get("pilot_subtitle", lang),
+                        fontSize = 12.sp,
+                        color = Color(0xFF6B7877)
+                    )
+                    Button(
+                        onClick = onOpenPilot,
+                        colors = ButtonDefaults.buttonColors(containerColor = MedGreenDark),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(Strings.get("pilot_start", lang))
                     }
                 }
             }
