@@ -10,11 +10,11 @@ class KnowledgeGraphRepository(
     private val dao: KnowledgeGraphDao
 ) {
 
-    val nodes: List<KnowledgeGraphNodeEntity>
-        get() = dao.getAllNodes()
+    // Les accesseurs DAO sont `suspend` (Room refuse l'I/O sur le thread principal) :
+    // des propriétés non-suspend ne compilaient pas. Appel depuis un coroutine uniquement.
+    suspend fun getAllNodes(): List<KnowledgeGraphNodeEntity> = dao.getAllNodes()
 
-    val edges: List<KnowledgeGraphEdgeEntity>
-        get() = dao.getAllEdges()
+    suspend fun getAllEdges(): List<KnowledgeGraphEdgeEntity> = dao.getAllEdges()
 
     suspend fun getNodesByModule(module: String): List<KnowledgeGraphNodeEntity> {
         return dao.getNodesByModule(module)

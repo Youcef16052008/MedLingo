@@ -30,7 +30,7 @@ class KnowledgeGraphViewModel(
 
     fun loadAllNodes() {
         viewModelScope.launch {
-            val nodes = repository.nodes
+            val nodes = repository.getAllNodes()
             _uiState.value = _uiState.value.copy(
                 nodes = nodes,
                 isLoading = false
