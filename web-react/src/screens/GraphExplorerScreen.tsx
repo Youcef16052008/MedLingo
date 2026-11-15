@@ -90,10 +90,10 @@ export function GraphExplorerScreen() {
         />
       </div>
 
-      {loading && <p className="tiny">Chargement du graphe…</p>}
+      {loading && <p className="tiny">{t("loading")}</p>}
 
       {!loading && filteredNodes.length === 0 && (
-        <p className="tiny">Aucun terme trouvé</p>
+        <p className="tiny">{t("noResults")}</p>
       )}
 
       <div style={{ overflowY: "auto", maxHeight: "600px", border: "1px solid var(--border)", borderRadius: 8, padding: 8 }}>
@@ -130,7 +130,7 @@ export function GraphExplorerScreen() {
             {nodes.find((n) => n.id === selectedNode)?.module} • {nodes.find((n) => n.id === selectedNode)?.chapter}
           </p>
           <div style={{ marginTop: 8, whiteSpace: "pre-wrap" }}>
-            <strong style={{ color: "var(--foreground)" }}>Définition:</strong>
+            <strong style={{ color: "var(--foreground)" }}>{t("defLbl")}:</strong>
             <p style={{ margin: "4px 0", color: "var(--foreground)" }}>
               {nodes.find((n) => n.id === selectedNode)?.defEn}
             </p>

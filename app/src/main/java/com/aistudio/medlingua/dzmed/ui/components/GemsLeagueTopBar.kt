@@ -49,7 +49,8 @@ fun GemsLeagueTopBar(
             icon = "🔥",
             value = "$streakDays",
             bgColor = Color(0xFFFFF7ED),
-            textColor = Color(0xFFEA580C),
+            // P2.4 : #EA580C sur #FFF7ED = 3,35:1 ; #9A3412 = 6,88:1 (parité web).
+            textColor = Color(0xFF9A3412),
             onClick = {}
         )
 
@@ -67,7 +68,9 @@ fun GemsLeagueTopBar(
             icon = getLeagueIcon(leagueTier),
             value = leagueTier.take(4),
             bgColor = Color(0xFFFEF3C7),
-            textColor = Color(0xFFD97706),
+            // P2.4 : #D97706 sur #FEF3C7 = 2,86:1 (échec AA) ; #92400E = 6,37:1.
+            // Même teinte que `.stat-chip.league` de hybrid-design.css (parité web).
+            textColor = Color(0xFF92400E),
             onClick = onLeagueClick,
             extra = "${weeklyXp}XP"
         )

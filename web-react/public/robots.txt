@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# L'application est une SPA servie depuis un hash router (#/...).
+# Aucun contenu éditorial indexable n'est exposé : seules les pages
+# publiques statiques (index.html, manifeste, assets) sont crawlables.
+Disallow: /data/

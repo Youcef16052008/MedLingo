@@ -1166,7 +1166,8 @@ private fun StreakPill(text: String) {
         text = text,
         fontSize = 12.sp,
         fontWeight = FontWeight.Bold,
-        color = Color(0xFFEA580C),
+        // P2.4 : #EA580C sur #FFF7ED = 3,35:1 ; #9A3412 = 6,88:1 (parité web).
+        color = Color(0xFF9A3412),
         modifier = Modifier
             .clip(RoundedCornerShape(20.dp))
             .background(Color(0xFFFFF7ED))

@@ -1,7 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import "./styles/hybrid-design.css";
+// Ordre et priorités des feuilles : voir src/styles/entry.css.
+import "./styles/entry.css";
 
 const root = document.getElementById("root");
 if (!root) throw new Error("#root introuvable dans index.html");

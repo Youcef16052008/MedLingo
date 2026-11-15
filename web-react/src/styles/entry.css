@@ -1,0 +1,30 @@
+/* Point d'entrée unique des styles.
+ *
+ * Trois feuilles cohabitent :
+ *  - `../styles.css`      : socle historique, écrit pour les écrans existants ;
+ *  - `./duolingo.css`     : composants « gamification » (coffres, ligue, SM-2,
+ *                           trophées, cartes d'histoire) que le socle ne définit
+ *                           pas : 26 classes du JSX n'existent que là ;
+ *  - `hybrid-design.css`  : design system courant, ne couvre qu'une partie des
+ *                           classes mais doit gagner partout où il s'exprime.
+ *
+ * Le simple ordre d'import ne suffit pas : le socle contient des sélecteurs plus
+ * spécifiques (`.path-node.available.next`) qui écraseraient le design system
+ * même déclaré après. Les cascade layers règlent exactement ce cas : à
+ * spécificité quelconque, une déclaration de la couche `design` gagne sur la
+ * couche `legacy`, et `legacy` comble uniquement les propriétés que le design
+ * system ne déclare pas.
+ *
+ * Les feuilles non importées ici sont inventoriées dans `README.md`.
+ */
+@layer legacy, design;
+
+/* `duolingo.css` est déclarée AVANT `styles.css` dans la même couche : ses
+ * règles génériques (`.card { background }`) ont la même spécificité que les
+ * règles du socle et écraseraient le dégradé de `.profile-hero` (mesuré :
+ * nom du profil blanc sur blanc, 1:1). Le socle doit donc passer en dernier
+ * à spécificité égale ; les classes que seul `duolingo.css` définit (coffres,
+ * ligue, SM-2, trophées, cartes d'histoire) restent appliquées. */
+@import "./duolingo.css" layer(legacy);
+@import "../styles.css" layer(legacy);
+@import "./hybrid-design.css" layer(design);
