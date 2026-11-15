@@ -11,7 +11,26 @@
 
 import fs from "fs";
 import path from "path";
-import { vi } from "vitest";
+import { vi, afterEach } from "vitest";
+
+/**
+ * Démonte les arbres React après chaque test.
+ *
+ * `@testing-library/react` n'active son cleanup automatique que si `globals: true`
+ * (ce n'est pas le cas ici). Sans lui, les composants restent montés d'un test à
+ * l'autre et React garde du travail planifié (scheduler → `setImmediate`) qui se
+ * déclenche après la destruction de jsdom en fin de fichier :
+ * « ReferenceError: window is not defined », levée en tâche de fond, qui faisait
+ * sortir la suite en exit 1 alors que tous les tests passaient.
+ *
+ * Le projet `domain` tourne en environnement `node` (pas de `document`) : le hook
+ * y est un no-op.
+ */
+afterEach(async () => {
+  if (typeof document === "undefined") return;
+  const { cleanup } = await import("@testing-library/react");
+  cleanup();
+});
 
 export function loadTestData(): { chapters: any[]; lessonMap: any } {
   const baseDir = path.resolve(__dirname, "..", "public", "data");
