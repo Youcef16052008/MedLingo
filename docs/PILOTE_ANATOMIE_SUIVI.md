@@ -664,6 +664,218 @@ substitué par un contrôle de non-débordement à 1000×700.
 `web-react/shots/pilot-small-*.png`. Scripts de diagnostic temporaires supprimés après
 usage (aucun reste).
 
+### Lot « CSS mort » — feuilles réellement chargées (15/11/2026)
+
+**Cause racine (vérifiée sur l'historique).** Le commit `9a627dc` (7/11, « wip: snapshot
+ADR-3… ») a remplacé dans `web-react/src/main.tsx` `import "./styles.css"` par
+`import "./styles/hybrid-design.css"` sans reporter les classes que seule la feuille
+historique définissait. Tout le reste de l'application (hors pilote) retombait sur les
+styles par défaut du navigateur — le constat P2.4 ci-dessus n'était que le symptôme le
+plus visible, sur les boutons.
+
+**Mesure (extraction statique des `className` du JSX, `web-react/src/**/*.tsx`).**
+
+| | classes |
+| --- | --- |
+| posées dans le JSX | 361 |
+| couvertes par `hybrid-design.css` seule | 110 |
+| couvertes par `styles.css` seule | 241 |
+| couvertes par `duolingo.css` seule (dont 26 exclusives) | 68 |
+| **couvertes avant ce lot** (`styles` + `hybrid`) | **245** (116 sans règle) |
+| **couvertes après ce lot** (`styles` + `duolingo` + `hybrid`) | **288** (73 sans règle) |
+
+Aucune des huit feuilles ne définit les 73 classes restantes.
+
+**Correctif : `web-react/src/styles/entry.css` (nouveau), importé seul par `main.tsx`.**
+
+```css
+@layer legacy, design;
+@import "./duolingo.css" layer(legacy);
+@import "../styles.css" layer(legacy);
+@import "./hybrid-design.css" layer(design);
+```
+
+Trois décisions, chacune justifiée par une mesure :
+
+1. **Cascade layers plutôt qu'un ordre d'import.** Le socle contient des sélecteurs plus
+   spécifiques que le design system (`.path-node.available.next`) : déclaré après, il
+   écrasait `hybrid-design.css`. Avec les couches, une déclaration `design` gagne à
+   spécificité quelconque, et `legacy` ne comble que les propriétés que le design system
+   ne déclare pas. Vérifié dans le bundle : `@layer legacy,design;@layer legacy{…}`.
+2. **`duolingo.css` est indispensable** : 26 classes du JSX n'existent que là (coffres
+   `chest-*`, ligue `league-current|info|xp`, SM-2 `sm2-*`, trophées `trophy-icon|item|name`,
+   `story-card`, `module-progress-bar`, `speak-btn`, `primary`/`secondary`). Sans elle, ces
+   composants restaient sans style.
+3. **`duolingo.css` avant `styles.css` dans la même couche.** Testé dans l'autre ordre :
+   son `.card { background }` a la même spécificité que `.profile-hero` et écrasait le
+   dégradé du profil → nom du profil **blanc sur blanc (1:1)**, mesuré. Le socle doit donc
+   passer en dernier à spécificité égale.
+
+**Effets de bord des couches, rétablis dans la couche `design`** (fin de
+`hybrid-design.css`, section « Réimport du socle »). Le reset `button { color: inherit }`
+du design system battait trois règles du socle :
+
+- `.lang-switch button.active` : « FR » actif reprenait l'encre → **2,73:1** ;
+- `.path-node .node-meta` : `--ink-3` sur le vert du nœud « prochaine leçon » → **2,52:1**
+  (encre foncée rétablie : 9,06:1) ;
+- `.freeze-buy:disabled` : le bouton « Congeler » désactivé reprenait l'encre normale et
+  paraissait actif (gris `--ink-3` rétabli, 4,83:1).
+
+**Contrastes corrigés (mesurés, thème clair et sombre).**
+
+| Élément | Avant | Après |
+| --- | --- | --- |
+| `--ink-3` (deux `:root` de `hybrid-design.css`) | `#94A3B8` — 2,56:1 sur blanc, 2,36:1 sur `--bg` | `#5F6D82` — 5,25:1 / 4,83:1 |
+| puce ligue `.stat-chip.league` (+ `b` dans `styles.css`) | `#D97706` — 2,86:1 | `#92400E` — 6,37:1 |
+| puce série `.stat-chip.streak`, `.streak-pill`, `.profile-streak-line` | `#EA580C` — 3,35:1 / 3,56:1 | `#9A3412` — 6,88:1 / 7,31:1 |
+
+Parité Android appliquée aux mêmes teintes : `GemsLeagueTopBar.kt` (ligue + série) et
+`PathScreen.kt` (`StreakPill`).
+
+**Mesure avant/après** (sonde Playwright maison, 6 routes — `path`, `profile`, `modules`,
+`pilot?dev=1`, `review`, `flash` —, 617 éléments textuels, couleurs normalisées par canvas
+pour gérer `color(srgb …)` et `color-mix()`, fonds translucides composités, textes posés sur
+dégradé/image exclus) : **34 → 30 échecs AA** hors composants désactivés (path 12 → 8,
+profile 12, modules 10, review 0, flash 0, pilote 0) ; 12 éléments non mesurables
+(dégradés). Le total « avant » n'est **pas** comparable terme à terme : le layout défaillant
+laissait 85 éléments non mesurables, donc une partie des échecs d'alors n'était même pas
+mesurable.
+
+**Lighthouse (Chrome, build de production, 15/11/2026)** : accessibilité **0,96**
+(`#/pilot?dev=1`), **0,94** (`#/path`, `#/modules`), **0,91** (`#/profile`) ; **SEO 1,0 sur
+les quatre routes** (0,8 avant) grâce à `web-react/public/robots.txt` (nouveau).
+
+**Débordement horizontal corrigé** : `#/modules` en 390×844 débordait (`scrollWidth >
+clientWidth`) ; plus aucun débordement après réimport, sur les quatre routes testées.
+
+**Résiduels documentés, NON corrigés** (mesurés, décision explicite de ne pas les traiter
+ici) :
+
+- bandeaux d'unité `#E65100` / `#00897B` / `#0288D1` avec texte blanc : 3,79 / 4,32 / 3,86:1.
+  Ces teintes viennent des données de module, partagées avec `InitialData.kt` : les changer
+  est une décision de parité Android, pas un correctif CSS ;
+- accents de module en 12 px : 3,17–4,36:1 (mêmes teintes, texte petit) ;
+- libellés de trophées verrouillés `#90A4AE` en 8,96 px : 2,59:1 (composants inactifs) ;
+- `header.topbar .brand-name em` (signalé par Lighthouse sur les quatre routes) ;
+- `p.medi-bubble` (texte sur dégradé : non mesurable par la sonde, signalé par Lighthouse) ;
+- **73 classes du JSX sans aucune règle dans les huit feuilles**, sur des écrans
+  atteignables : `#/player`, `#/analytics`, `#/stories`, `#/search`, `#/tree`, les
+  sous-parties `profile-*` du profil et `#/login` (quand `SYNC_ENABLED`). Certaines sont
+  partiellement stylées en ligne (`PlayerScreen` : 69 attributs `style`/`className`).
+  Cela demande un lot dédié (écrire les styles manquants écran par écran), pas un
+  rapiéçage dans ce lot.
+
+**Feuilles orphelines restantes** : `components.css`, `maquette5.css`, `mobile.css`,
+`premium.css`, `tokens.css`. Mesure : aucune n'a de classe exclusive — tout ce qu'elles
+définissent est déjà couvert par les feuilles chargées. Elles ne sont pas supprimées (leur
+contenu n'a jamais été arbitré) mais ne sont plus une source de style. Inventaire écrit
+dans `web-react/src/styles/README.md`.
+
+**Android réparé au passage (pré-existant, sans lien avec le CSS).** Le commit `c1e7cdd`
+avait laissé la branche **non compilable** : `:app:compileDebugKotlin` échouait avant toute
+modification de ce lot.
+
+- `MedLinguaDatabase.kt` référençait `MIGRATION_6_7` … `MIGRATION_13_14`, supprimées lors de
+  la réécriture du fichier pour la v15 (seule `MIGRATION_14_15` subsistait). Restaurées
+  depuis `9163f04` (dernière version qui les portait, avec `ensureEntityDrift` et
+  `TermIdMigrationPlan`) — les tests `MigrationV10Test`, `MigrationV12Test` et
+  `MigrationV13_14Test` les référencent, elles n'étaient donc pas facultatives.
+- `KnowledgeGraphRepository` exposait `val nodes` / `val edges` non-`suspend` au-dessus
+  d'appels DAO `suspend` → `suspend fun getAllNodes()` / `getAllEdges()`, appelants mis à
+  jour dans `KnowledgeGraphViewModel`.
+- `GraphExplorerScreen.kt` : `BorderStroke` importé depuis `androidx.compose.foundation.border`
+  (paquet inexistant ; c'est `androidx.compose.foundation.BorderStroke`) et
+  `Icons.Default.ArrowBack` / `Icons.Default.Close` utilisés sur des imports `outlined`.
+  Corrigé selon la convention du projet (`Icons.AutoMirrored.Filled.ArrowBack`,
+  `Icons.Default.Close`).
+
+**Vérifications exécutées sur l'état final des fichiers (15/11/2026, codes de sortie réels).**
+
+Web (`web-react/`) :
+
+| Commande | Résultat |
+| --- | --- |
+| `npm run build` | **EXIT 0** — `✓ built in 17.01s`, `precached 22 entries, cache medlingo-web-42c7bd36` |
+| `npx tsc --noEmit` | **EXIT 0** |
+| `npm run check:i18n` | **EXIT 0** |
+| `npm run check:seed` | **EXIT 0** |
+| `npm run check:exercise-quality` | **EXIT 0** |
+| `npm run check:pilot` | **EXIT 0** |
+| `npm run check:pilot-parity` | **EXIT 0** |
+| `npm run check:precache` | **EXIT 0** |
+| `npm run check:stories` | **EXIT 0** |
+| `npm run check:literals` | **EXIT 0** |
+| `npx vitest run` | voir note ci-dessous |
+| `e2e/check_pilot_small.mjs` | **EXIT 0** — 24/24 (FR + AR) |
+| `e2e/check_pilot_offline.mjs` | **EXIT 0** — 6/6 |
+
+**Note vitest — deux vrais défauts trouvés et corrigés en vérifiant (pas du bruit).**
+
+Premier passage lancé **en parallèle** de `./gradlew :app:lintDebug` : `EXIT 1`, `31`
+fichiers sur `39` seulement, `1` échec (`bulkExercises.test.ts` > « robustesse », *Test
+timed out in 120000ms*) et `8` erreurs `[vitest-pool]: Failed to start forks worker`.
+Second passage, Gradle terminé, machine au repos : **`EXIT 1` à nouveau**, mais cette fois
+`31` fichiers **passés**, `5187` tests passés, `0` échec — et toujours `8` erreurs
+`Failed to start forks worker`. Conclusion : ce n'était pas un artefact de charge. Le pool
+`forks` (défaut) ne démarrait pas 8 workers sur cette machine (12 CPU logiques, Windows) ;
+**8 fichiers de test n'étaient jamais exécutés** et le process sortait malgré tout en 1.
+Autrement dit, `npm test` mentait dans les deux sens : des fichiers non exécutés d'un côté,
+un exit 1 sans échec de test de l'autre.
+
+Correctif 1 — `web-react/vite.config.ts` : `pool: "threads"` (commenté avec les mesures).
+Mesure : `threads` → `39` fichiers, exit 0. Aucun test ne dépend d'une isolation par
+processus (aucun `process.pid` / `child_process` / `process.exit` dans `src/**/*.test.*`).
+
+Correctif 2 — le pool `threads` a fait remonter une tâche React qui se déclenchait après la
+destruction de jsdom : `ReferenceError: window is not defined` levée depuis
+`src/screens/__tests__/loginRoute.test.tsx`, `1` erreur non gérée → `EXIT 1` alors que les
+`39` fichiers passaient. Cause : `@testing-library/react` n'active son cleanup automatique
+que si `globals: true` (ce n'est pas la config ici), donc les arbres rendus restaient montés.
+Correctif dans `web-react/src/setupTests.ts` : `afterEach(cleanup)` sous garde
+`typeof document !== "undefined"` (le projet `domain` tourne en `node`, le hook y est un
+no-op).
+
+Correctif 3 — une fois le cleanup en place, `loginRoute.test.tsx` > « App routing: #/login »
+a échoué **à raison**. Ce test ne passait que grâce au DOM laissé par le test précédent : il
+cherchait un `input[type="email"]` dans tout le `document` après avoir monté `App` sur
+`#/login`, or `App.tsx` fait `screen = SYNC_ENABLED ? <LoginScreen /> : <PathScreen />` et
+`SYNC_ENABLED` vaut **false** par défaut (décision D2). Le test ne testait donc pas ce qu'il
+annonçait. Réécrit en deux cas explicites : sync désactivée → la route ne monte pas de
+formulaire (contrat D2) ; sync activée (via `vi.doMock` + `vi.resetModules`) → le formulaire
+est monté. `3` tests, dont la couverture réelle des deux branches.
+
+**Résultat final (deux passages consécutifs, machine au repos) : `npm test` → `EXIT 0`,
+`39` fichiers, `5232` tests, `0` échec, `0` erreur non gérée, ~102 s** (contre ~274 s et
+exit 1 avec `forks`).
+
+Android (`./gradlew :app:testDebugUnitTest :app:lintDebug`, 15/11/2026) :
+
+| | Résultat |
+| --- | --- |
+| `./gradlew` | **EXIT 0** — `BUILD SUCCESSFUL in 20m 35s`, `41 actionable tasks: 13 executed, 28 up-to-date` |
+| `:app:testDebugUnitTest` | **422 tests, 0 échec, 0 erreur, 0 ignoré** (50 fichiers XML de résultats) |
+| `:app:lintDebug` | **0 erreur, 72 avertissements** (`app/build/reports/lint-results-debug.txt`) |
+
+`./gradlew :app:compileDebugKotlin` avait été vérifié séparément **EXIT 0, 0 erreur**
+avant de lancer la suite. Non exécuté : `:app:connectedDebugAndroidTest` (aucun
+appareil/émulateur) — voir §3, limites du Lot G.
+
+**Fichiers touchés** : `web-react/src/styles/entry.css` (nouveau),
+`web-react/src/main.tsx`, `web-react/src/styles.css`,
+`web-react/src/styles/hybrid-design.css`, `web-react/src/styles/README.md` (nouveau),
+`web-react/public/robots.txt` (nouveau), `web-react/src/screens/GraphExplorerScreen.tsx`
+(littéraux FR passés par `t()` pour `check:literals`),
+`app/src/main/java/…/ui/components/GemsLeagueTopBar.kt`,
+`app/src/main/java/…/ui/screens/PathScreen.kt`,
+`app/src/main/java/…/data/local/database/MedLinguaDatabase.kt`,
+`app/src/main/java/…/data/repository/KnowledgeGraphRepository.kt`,
+`app/src/main/java/…/ui/viewmodel/KnowledgeGraphViewModel.kt`,
+`app/src/main/java/…/ui/screens/GraphExplorerScreen.kt`,
+`web-react/vite.config.ts` (pool `threads`),
+`web-react/src/setupTests.ts` (`afterEach(cleanup)`),
+`web-react/src/screens/__tests__/loginRoute.test.tsx` (deux branches D2 réellement
+couvertes). Scripts de diagnostic temporaires supprimés après usage (aucun reste).
+
 ### Limites transverses (rappel, non closes)
 - P0.1 acceptation « depuis un checkout Linux propre » : non vérifiable depuis cette machine
   Windows ; la correction rend les chemins indépendants du poste, mais la preuve CI reste à
@@ -691,11 +903,22 @@ Restant :
    - Fixer par écrit les modalités de suppression et la durée de conservation des
      données (protocole §3) — AVANT toute collecte.
    - Définir la liste des participants (5 volontaires) et le calendrier T0/T1/T2.
-3. **Lot « CSS mort » (recommandé, hors pilote)** : `styles.css`, `components.css`,
-   `duolingo.css`, `mobile.css`, `maquette5.css` et `tokens.css` ne sont importés par
-   aucun point d'entrée — hors pilote, toute l'app s'affiche avec des styles UA
-   (constat P2.4, §3). À traiter comme un lot dédié : inventaire des feuilles, décision
-   importer / supprimer, puis audit visuel réel. Ne pas mélanger avec le pilote.
+3. ~~**Lot « CSS mort »**~~ — **fait le 15/11/2026** (§3, lot « CSS mort »). Les feuilles
+   sont désormais chargées via `web-react/src/styles/entry.css` (couches `legacy` /
+   `design`), 288 des 361 classes du JSX sont couvertes. Reste de ce lot, à traiter
+   séparément :
+   - **73 classes du JSX sans aucune règle dans les huit feuilles**, sur des écrans
+     atteignables : `#/player`, `#/analytics`, `#/stories`, `#/search`, `#/tree`, les
+     sous-parties `profile-*` du profil et `#/login` (quand `SYNC_ENABLED`). Lot dédié,
+     écran par écran (écrire les styles manquants), pas un rapiéçage.
+   - **Contrastes résiduels mesurés et non corrigés** (bandeaux d'unité, accents de module
+     en 12 px, libellés de trophées verrouillés, `brand-name em`, `p.medi-bubble`) —
+     détail chiffré en §3.
+   - **Cinq feuilles orphelines** (`components.css`, `maquette5.css`, `mobile.css`,
+     `premium.css`, `tokens.css`) : mesurées sans classe exclusive, ni importées ni
+     supprimées (contenu jamais arbitré). Inventaire dans `web-react/src/styles/README.md`.
+   - Aucun **audit visuel humain** n'a eu lieu : les mesures sont automatisées
+     (Playwright + Lighthouse), pas une validation esthétique.
 
 ## 5. Blocages humains ouverts
 - Relectures linguistique et anatomique : aucune disponibilité connue à ce jour → le
